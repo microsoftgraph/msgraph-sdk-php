@@ -25,35 +25,35 @@ class CompanyPortalBlockedAction extends Entity
 {
 
     /**
-    * Gets the platform
-    * Device OS/Platform
+    * Gets the action
+    * Device Action
     *
-    * @return DevicePlatformType The platform
+    * @return CompanyPortalAction The action
     */
-    public function getPlatform()
+    public function getAction()
     {
-        if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
-                return $this->_propDict["platform"];
+        if (array_key_exists("action", $this->_propDict)) {
+            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\CompanyPortalAction")) {
+                return $this->_propDict["action"];
             } else {
-                $this->_propDict["platform"] = new DevicePlatformType($this->_propDict["platform"]);
-                return $this->_propDict["platform"];
+                $this->_propDict["action"] = new CompanyPortalAction($this->_propDict["action"]);
+                return $this->_propDict["action"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the platform
-    * Device OS/Platform
+    * Sets the action
+    * Device Action
     *
-    * @param DevicePlatformType $val The value to assign to the platform
+    * @param CompanyPortalAction $val The value to assign to the action
     *
     * @return CompanyPortalBlockedAction The CompanyPortalBlockedAction
     */
-    public function setPlatform($val)
+    public function setAction($val)
     {
-        $this->_propDict["platform"] = $val;
+        $this->_propDict["action"] = $val;
          return $this;
     }
 
@@ -91,35 +91,35 @@ class CompanyPortalBlockedAction extends Entity
     }
 
     /**
-    * Gets the action
-    * Device Action
+    * Gets the platform
+    * Device OS/Platform
     *
-    * @return CompanyPortalAction The action
+    * @return DevicePlatformType The platform
     */
-    public function getAction()
+    public function getPlatform()
     {
-        if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\CompanyPortalAction")) {
-                return $this->_propDict["action"];
+        if (array_key_exists("platform", $this->_propDict)) {
+            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
+                return $this->_propDict["platform"];
             } else {
-                $this->_propDict["action"] = new CompanyPortalAction($this->_propDict["action"]);
-                return $this->_propDict["action"];
+                $this->_propDict["platform"] = new DevicePlatformType($this->_propDict["platform"]);
+                return $this->_propDict["platform"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the action
-    * Device Action
+    * Sets the platform
+    * Device OS/Platform
     *
-    * @param CompanyPortalAction $val The value to assign to the action
+    * @param DevicePlatformType $val The value to assign to the platform
     *
     * @return CompanyPortalBlockedAction The CompanyPortalBlockedAction
     */
-    public function setAction($val)
+    public function setPlatform($val)
     {
-        $this->_propDict["action"] = $val;
+        $this->_propDict["platform"] = $val;
          return $this;
     }
 }

@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DirectorySizeQuota extends Entity
 {
     /**
-    * Gets the used
-    *
-    * @return int The used
-    */
-    public function getUsed()
-    {
-        if (array_key_exists("used", $this->_propDict)) {
-            return $this->_propDict["used"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the used
-    *
-    * @param int $val The value of the used
-    *
-    * @return DirectorySizeQuota
-    */
-    public function setUsed($val)
-    {
-        $this->_propDict["used"] = $val;
-        return $this;
-    }
-    /**
     * Gets the total
     *
     * @return int The total
@@ -73,6 +47,32 @@ class DirectorySizeQuota extends Entity
     public function setTotal($val)
     {
         $this->_propDict["total"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the used
+    *
+    * @return int The used
+    */
+    public function getUsed()
+    {
+        if (array_key_exists("used", $this->_propDict)) {
+            return $this->_propDict["used"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the used
+    *
+    * @param int $val The value of the used
+    *
+    * @return DirectorySizeQuota
+    */
+    public function setUsed($val)
+    {
+        $this->_propDict["used"] = $val;
         return $this;
     }
 }

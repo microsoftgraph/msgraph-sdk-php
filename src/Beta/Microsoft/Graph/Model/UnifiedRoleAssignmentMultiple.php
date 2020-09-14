@@ -25,29 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class UnifiedRoleAssignmentMultiple extends Entity
 {
     /**
-    * Gets the roleDefinitionId
+    * Gets the appScopeIds
     *
-    * @return string The roleDefinitionId
+    * @return string The appScopeIds
     */
-    public function getRoleDefinitionId()
+    public function getAppScopeIds()
     {
-        if (array_key_exists("roleDefinitionId", $this->_propDict)) {
-            return $this->_propDict["roleDefinitionId"];
+        if (array_key_exists("appScopeIds", $this->_propDict)) {
+            return $this->_propDict["appScopeIds"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the roleDefinitionId
+    * Sets the appScopeIds
     *
-    * @param string $val The roleDefinitionId
+    * @param string $val The appScopeIds
     *
     * @return UnifiedRoleAssignmentMultiple
     */
-    public function setRoleDefinitionId($val)
+    public function setAppScopeIds($val)
     {
-        $this->_propDict["roleDefinitionId"] = $val;
+        $this->_propDict["appScopeIds"] = $val;
         return $this;
     }
     
@@ -79,33 +79,6 @@ class UnifiedRoleAssignmentMultiple extends Entity
     }
     
     /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return UnifiedRoleAssignmentMultiple
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     *
     * @return string The description
@@ -129,33 +102,6 @@ class UnifiedRoleAssignmentMultiple extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the principalIds
-    *
-    * @return string The principalIds
-    */
-    public function getPrincipalIds()
-    {
-        if (array_key_exists("principalIds", $this->_propDict)) {
-            return $this->_propDict["principalIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the principalIds
-    *
-    * @param string $val The principalIds
-    *
-    * @return UnifiedRoleAssignmentMultiple
-    */
-    public function setPrincipalIds($val)
-    {
-        $this->_propDict["principalIds"] = $val;
         return $this;
     }
     
@@ -187,88 +133,111 @@ class UnifiedRoleAssignmentMultiple extends Entity
     }
     
     /**
-    * Gets the appScopeIds
+    * Gets the displayName
     *
-    * @return string The appScopeIds
+    * @return string The displayName
     */
-    public function getAppScopeIds()
+    public function getDisplayName()
     {
-        if (array_key_exists("appScopeIds", $this->_propDict)) {
-            return $this->_propDict["appScopeIds"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the appScopeIds
+    * Sets the displayName
     *
-    * @param string $val The appScopeIds
+    * @param string $val The displayName
     *
     * @return UnifiedRoleAssignmentMultiple
     */
-    public function setAppScopeIds($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["appScopeIds"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the roleDefinition
+    * Gets the principalIds
     *
-    * @return UnifiedRoleDefinition The roleDefinition
+    * @return string The principalIds
     */
-    public function getRoleDefinition()
+    public function getPrincipalIds()
     {
-        if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
-                return $this->_propDict["roleDefinition"];
-            } else {
-                $this->_propDict["roleDefinition"] = new UnifiedRoleDefinition($this->_propDict["roleDefinition"]);
-                return $this->_propDict["roleDefinition"];
-            }
+        if (array_key_exists("principalIds", $this->_propDict)) {
+            return $this->_propDict["principalIds"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the roleDefinition
+    * Sets the principalIds
     *
-    * @param UnifiedRoleDefinition $val The roleDefinition
+    * @param string $val The principalIds
     *
     * @return UnifiedRoleAssignmentMultiple
     */
-    public function setRoleDefinition($val)
+    public function setPrincipalIds($val)
     {
-        $this->_propDict["roleDefinition"] = $val;
+        $this->_propDict["principalIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleDefinitionId
+    *
+    * @return string The roleDefinitionId
+    */
+    public function getRoleDefinitionId()
+    {
+        if (array_key_exists("roleDefinitionId", $this->_propDict)) {
+            return $this->_propDict["roleDefinitionId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleDefinitionId
+    *
+    * @param string $val The roleDefinitionId
+    *
+    * @return UnifiedRoleAssignmentMultiple
+    */
+    public function setRoleDefinitionId($val)
+    {
+        $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the principals
+     * Gets the appScopes
      *
-     * @return array The principals
+     * @return array The appScopes
      */
-    public function getPrincipals()
+    public function getAppScopes()
     {
-        if (array_key_exists("principals", $this->_propDict)) {
-           return $this->_propDict["principals"];
+        if (array_key_exists("appScopes", $this->_propDict)) {
+           return $this->_propDict["appScopes"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the principals
+    * Sets the appScopes
     *
-    * @param DirectoryObject $val The principals
+    * @param AppScope $val The appScopes
     *
     * @return UnifiedRoleAssignmentMultiple
     */
-    public function setPrincipals($val)
+    public function setAppScopes($val)
     {
-		$this->_propDict["principals"] = $val;
+		$this->_propDict["appScopes"] = $val;
         return $this;
     }
     
@@ -302,29 +271,60 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
 
      /** 
-     * Gets the appScopes
+     * Gets the principals
      *
-     * @return array The appScopes
+     * @return array The principals
      */
-    public function getAppScopes()
+    public function getPrincipals()
     {
-        if (array_key_exists("appScopes", $this->_propDict)) {
-           return $this->_propDict["appScopes"];
+        if (array_key_exists("principals", $this->_propDict)) {
+           return $this->_propDict["principals"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the appScopes
+    * Sets the principals
     *
-    * @param AppScope $val The appScopes
+    * @param DirectoryObject $val The principals
     *
     * @return UnifiedRoleAssignmentMultiple
     */
-    public function setAppScopes($val)
+    public function setPrincipals($val)
     {
-		$this->_propDict["appScopes"] = $val;
+		$this->_propDict["principals"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleDefinition
+    *
+    * @return UnifiedRoleDefinition The roleDefinition
+    */
+    public function getRoleDefinition()
+    {
+        if (array_key_exists("roleDefinition", $this->_propDict)) {
+            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
+                return $this->_propDict["roleDefinition"];
+            } else {
+                $this->_propDict["roleDefinition"] = new UnifiedRoleDefinition($this->_propDict["roleDefinition"]);
+                return $this->_propDict["roleDefinition"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the roleDefinition
+    *
+    * @param UnifiedRoleDefinition $val The roleDefinition
+    *
+    * @return UnifiedRoleAssignmentMultiple
+    */
+    public function setRoleDefinition($val)
+    {
+        $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
     

@@ -25,56 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Account extends Entity
 {
     /**
-    * Gets the number
+    * Gets the blocked
     *
-    * @return string The number
+    * @return bool The blocked
     */
-    public function getNumber()
+    public function getBlocked()
     {
-        if (array_key_exists("number", $this->_propDict)) {
-            return $this->_propDict["number"];
+        if (array_key_exists("blocked", $this->_propDict)) {
+            return $this->_propDict["blocked"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the number
+    * Sets the blocked
     *
-    * @param string $val The number
-    *
-    * @return Account
-    */
-    public function setNumber($val)
-    {
-        $this->_propDict["number"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
+    * @param bool $val The blocked
     *
     * @return Account
     */
-    public function setDisplayName($val)
+    public function setBlocked($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["blocked"] = boolval($val);
         return $this;
     }
     
@@ -106,56 +79,29 @@ class Account extends Entity
     }
     
     /**
-    * Gets the subCategory
+    * Gets the displayName
     *
-    * @return string The subCategory
+    * @return string The displayName
     */
-    public function getSubCategory()
+    public function getDisplayName()
     {
-        if (array_key_exists("subCategory", $this->_propDict)) {
-            return $this->_propDict["subCategory"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the subCategory
+    * Sets the displayName
     *
-    * @param string $val The subCategory
-    *
-    * @return Account
-    */
-    public function setSubCategory($val)
-    {
-        $this->_propDict["subCategory"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the blocked
-    *
-    * @return bool The blocked
-    */
-    public function getBlocked()
-    {
-        if (array_key_exists("blocked", $this->_propDict)) {
-            return $this->_propDict["blocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the blocked
-    *
-    * @param bool $val The blocked
+    * @param string $val The displayName
     *
     * @return Account
     */
-    public function setBlocked($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["blocked"] = boolval($val);
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -187,6 +133,60 @@ class Account extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the number
+    *
+    * @return string The number
+    */
+    public function getNumber()
+    {
+        if (array_key_exists("number", $this->_propDict)) {
+            return $this->_propDict["number"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the number
+    *
+    * @param string $val The number
+    *
+    * @return Account
+    */
+    public function setNumber($val)
+    {
+        $this->_propDict["number"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the subCategory
+    *
+    * @return string The subCategory
+    */
+    public function getSubCategory()
+    {
+        if (array_key_exists("subCategory", $this->_propDict)) {
+            return $this->_propDict["subCategory"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the subCategory
+    *
+    * @param string $val The subCategory
+    *
+    * @return Account
+    */
+    public function setSubCategory($val)
+    {
+        $this->_propDict["subCategory"] = $val;
         return $this;
     }
     

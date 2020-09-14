@@ -23,33 +23,67 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AppliedConditionalAccessPolicy extends Entity
 {
+
     /**
-    * Gets the id
-    * Unique GUID of the conditional access policy.
+    * Gets the conditionsNotSatisfied
     *
-    * @return string The id
+    * @return ConditionalAccessConditions The conditionsNotSatisfied
     */
-    public function getId()
+    public function getConditionsNotSatisfied()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
+        if (array_key_exists("conditionsNotSatisfied", $this->_propDict)) {
+            if (is_a($this->_propDict["conditionsNotSatisfied"], "Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
+                return $this->_propDict["conditionsNotSatisfied"];
+            } else {
+                $this->_propDict["conditionsNotSatisfied"] = new ConditionalAccessConditions($this->_propDict["conditionsNotSatisfied"]);
+                return $this->_propDict["conditionsNotSatisfied"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the id
-    * Unique GUID of the conditional access policy.
+    * Sets the conditionsNotSatisfied
     *
-    * @param string $val The value of the id
+    * @param ConditionalAccessConditions $val The value to assign to the conditionsNotSatisfied
     *
-    * @return AppliedConditionalAccessPolicy
+    * @return AppliedConditionalAccessPolicy The AppliedConditionalAccessPolicy
     */
-    public function setId($val)
+    public function setConditionsNotSatisfied($val)
     {
-        $this->_propDict["id"] = $val;
-        return $this;
+        $this->_propDict["conditionsNotSatisfied"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the conditionsSatisfied
+    *
+    * @return ConditionalAccessConditions The conditionsSatisfied
+    */
+    public function getConditionsSatisfied()
+    {
+        if (array_key_exists("conditionsSatisfied", $this->_propDict)) {
+            if (is_a($this->_propDict["conditionsSatisfied"], "Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
+                return $this->_propDict["conditionsSatisfied"];
+            } else {
+                $this->_propDict["conditionsSatisfied"] = new ConditionalAccessConditions($this->_propDict["conditionsSatisfied"]);
+                return $this->_propDict["conditionsSatisfied"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the conditionsSatisfied
+    *
+    * @param ConditionalAccessConditions $val The value to assign to the conditionsSatisfied
+    *
+    * @return AppliedConditionalAccessPolicy The AppliedConditionalAccessPolicy
+    */
+    public function setConditionsSatisfied($val)
+    {
+        $this->_propDict["conditionsSatisfied"] = $val;
+         return $this;
     }
     /**
     * Gets the displayName
@@ -135,67 +169,33 @@ class AppliedConditionalAccessPolicy extends Entity
         $this->_propDict["enforcedSessionControls"] = $val;
         return $this;
     }
-
     /**
-    * Gets the conditionsSatisfied
+    * Gets the id
+    * Unique GUID of the conditional access policy.
     *
-    * @return ConditionalAccessConditions The conditionsSatisfied
+    * @return string The id
     */
-    public function getConditionsSatisfied()
+    public function getId()
     {
-        if (array_key_exists("conditionsSatisfied", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionsSatisfied"], "Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
-                return $this->_propDict["conditionsSatisfied"];
-            } else {
-                $this->_propDict["conditionsSatisfied"] = new ConditionalAccessConditions($this->_propDict["conditionsSatisfied"]);
-                return $this->_propDict["conditionsSatisfied"];
-            }
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the conditionsSatisfied
+    * Sets the id
+    * Unique GUID of the conditional access policy.
     *
-    * @param ConditionalAccessConditions $val The value to assign to the conditionsSatisfied
+    * @param string $val The value of the id
     *
-    * @return AppliedConditionalAccessPolicy The AppliedConditionalAccessPolicy
+    * @return AppliedConditionalAccessPolicy
     */
-    public function setConditionsSatisfied($val)
+    public function setId($val)
     {
-        $this->_propDict["conditionsSatisfied"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the conditionsNotSatisfied
-    *
-    * @return ConditionalAccessConditions The conditionsNotSatisfied
-    */
-    public function getConditionsNotSatisfied()
-    {
-        if (array_key_exists("conditionsNotSatisfied", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionsNotSatisfied"], "Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
-                return $this->_propDict["conditionsNotSatisfied"];
-            } else {
-                $this->_propDict["conditionsNotSatisfied"] = new ConditionalAccessConditions($this->_propDict["conditionsNotSatisfied"]);
-                return $this->_propDict["conditionsNotSatisfied"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the conditionsNotSatisfied
-    *
-    * @param ConditionalAccessConditions $val The value to assign to the conditionsNotSatisfied
-    *
-    * @return AppliedConditionalAccessPolicy The AppliedConditionalAccessPolicy
-    */
-    public function setConditionsNotSatisfied($val)
-    {
-        $this->_propDict["conditionsNotSatisfied"] = $val;
-         return $this;
+        $this->_propDict["id"] = $val;
+        return $this;
     }
 
     /**

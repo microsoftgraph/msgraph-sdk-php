@@ -25,6 +25,35 @@ namespace Microsoft\Graph\Model;
 class Site extends BaseItem
 {
     /**
+    * Gets the displayName
+    * The full title for the site. Read-only.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The full title for the site. Read-only.
+    *
+    * @param string $val The displayName
+    *
+    * @return Site
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the error
     *
     * @return PublicError The error
@@ -52,35 +81,6 @@ class Site extends BaseItem
     public function setError($val)
     {
         $this->_propDict["error"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * The full title for the site. Read-only.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The full title for the site. Read-only.
-    *
-    * @param string $val The displayName
-    *
-    * @return Site
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
         return $this;
     }
     

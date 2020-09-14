@@ -25,6 +25,68 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfileCertificateProfileBase
 {
     /**
+    * Gets the certificateStore
+    * Target store certificate
+    *
+    * @return CertificateStore The certificateStore
+    */
+    public function getCertificateStore()
+    {
+        if (array_key_exists("certificateStore", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
+                return $this->_propDict["certificateStore"];
+            } else {
+                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
+                return $this->_propDict["certificateStore"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateStore
+    * Target store certificate
+    *
+    * @param CertificateStore $val The certificateStore
+    *
+    * @return AndroidWorkProfilePkcsCertificateProfile
+    */
+    public function setCertificateStore($val)
+    {
+        $this->_propDict["certificateStore"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateTemplateName
+    * PKCS Certificate Template Name
+    *
+    * @return string The certificateTemplateName
+    */
+    public function getCertificateTemplateName()
+    {
+        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
+            return $this->_propDict["certificateTemplateName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateTemplateName
+    * PKCS Certificate Template Name
+    *
+    * @param string $val The certificateTemplateName
+    *
+    * @return AndroidWorkProfilePkcsCertificateProfile
+    */
+    public function setCertificateTemplateName($val)
+    {
+        $this->_propDict["certificateTemplateName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the certificationAuthority
     * PKCS Certification Authority
     *
@@ -82,32 +144,33 @@ class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfileCertifi
         return $this;
     }
     
-    /**
-    * Gets the certificateTemplateName
-    * PKCS Certificate Template Name
-    *
-    * @return string The certificateTemplateName
-    */
-    public function getCertificateTemplateName()
+
+     /** 
+     * Gets the customSubjectAlternativeNames
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The customSubjectAlternativeNames
+     */
+    public function getCustomSubjectAlternativeNames()
     {
-        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
-            return $this->_propDict["certificateTemplateName"];
+        if (array_key_exists("customSubjectAlternativeNames", $this->_propDict)) {
+           return $this->_propDict["customSubjectAlternativeNames"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the certificateTemplateName
-    * PKCS Certificate Template Name
+    /** 
+    * Sets the customSubjectAlternativeNames
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
-    * @param string $val The certificateTemplateName
+    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *
     * @return AndroidWorkProfilePkcsCertificateProfile
     */
-    public function setCertificateTemplateName($val)
+    public function setCustomSubjectAlternativeNames($val)
     {
-        $this->_propDict["certificateTemplateName"] = $val;
+		$this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
     
@@ -166,69 +229,6 @@ class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfileCertifi
     public function setSubjectNameFormatString($val)
     {
         $this->_propDict["subjectNameFormatString"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certificateStore
-    * Target store certificate
-    *
-    * @return CertificateStore The certificateStore
-    */
-    public function getCertificateStore()
-    {
-        if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
-                return $this->_propDict["certificateStore"];
-            } else {
-                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
-                return $this->_propDict["certificateStore"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the certificateStore
-    * Target store certificate
-    *
-    * @param CertificateStore $val The certificateStore
-    *
-    * @return AndroidWorkProfilePkcsCertificateProfile
-    */
-    public function setCertificateStore($val)
-    {
-        $this->_propDict["certificateStore"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     *
-     * @return array The customSubjectAlternativeNames
-     */
-    public function getCustomSubjectAlternativeNames()
-    {
-        if (array_key_exists("customSubjectAlternativeNames", $this->_propDict)) {
-           return $this->_propDict["customSubjectAlternativeNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-    *
-    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
-    *
-    * @return AndroidWorkProfilePkcsCertificateProfile
-    */
-    public function setCustomSubjectAlternativeNames($val)
-    {
-		$this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
     

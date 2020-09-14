@@ -26,34 +26,6 @@ class TermsOfUseContainer extends Entity
 {
 
      /** 
-     * Gets the agreements
-     *
-     * @return array The agreements
-     */
-    public function getAgreements()
-    {
-        if (array_key_exists("agreements", $this->_propDict)) {
-           return $this->_propDict["agreements"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the agreements
-    *
-    * @param Agreement $val The agreements
-    *
-    * @return TermsOfUseContainer
-    */
-    public function setAgreements($val)
-    {
-		$this->_propDict["agreements"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the agreementAcceptances
      *
      * @return array The agreementAcceptances
@@ -77,6 +49,34 @@ class TermsOfUseContainer extends Entity
     public function setAgreementAcceptances($val)
     {
 		$this->_propDict["agreementAcceptances"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the agreements
+     *
+     * @return array The agreements
+     */
+    public function getAgreements()
+    {
+        if (array_key_exists("agreements", $this->_propDict)) {
+           return $this->_propDict["agreements"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the agreements
+    *
+    * @param Agreement $val The agreements
+    *
+    * @return TermsOfUseContainer
+    */
+    public function setAgreements($val)
+    {
+		$this->_propDict["agreements"] = $val;
         return $this;
     }
     

@@ -33,32 +33,6 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
     }
 
     /**
-    * Gets the userId
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    *
-    * @param string $val The value of the userId
-    *
-    * @return AccessReviewInstanceDecisionItemUserTarget
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the userDisplayName
     *
     * @return string The userDisplayName
@@ -82,6 +56,32 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
     public function setUserDisplayName($val)
     {
         $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    *
+    * @param string $val The value of the userId
+    *
+    * @return AccessReviewInstanceDecisionItemUserTarget
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
         return $this;
     }
     /**

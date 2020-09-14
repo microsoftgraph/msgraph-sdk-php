@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyDefinitionFile extends Entity
 {
     /**
-    * Gets the displayName
-    * The localized friendly name of the ADMX file.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The localized friendly name of the ADMX file.
-    *
-    * @param string $val The displayName
-    *
-    * @return GroupPolicyDefinitionFile
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * The localized description of the policy settings in the ADMX file. The default value is empty.
     *
@@ -79,6 +50,35 @@ class GroupPolicyDefinitionFile extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The localized friendly name of the ADMX file.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The localized friendly name of the ADMX file.
+    *
+    * @param string $val The displayName
+    *
+    * @return GroupPolicyDefinitionFile
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -112,60 +112,35 @@ class GroupPolicyDefinitionFile extends Entity
     }
     
     /**
-    * Gets the targetPrefix
-    * Specifies the logical name that refers to the namespace within the ADMX file.
+    * Gets the lastModifiedDateTime
+    * The date and time the entity was last modified.
     *
-    * @return string The targetPrefix
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getTargetPrefix()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("targetPrefix", $this->_propDict)) {
-            return $this->_propDict["targetPrefix"];
-        } else {
-            return null;
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the targetPrefix
-    * Specifies the logical name that refers to the namespace within the ADMX file.
+    * Sets the lastModifiedDateTime
+    * The date and time the entity was last modified.
     *
-    * @param string $val The targetPrefix
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return GroupPolicyDefinitionFile
     */
-    public function setTargetPrefix($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["targetPrefix"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the targetNamespace
-    * Specifies the URI used to identify the namespace within the ADMX file.
-    *
-    * @return string The targetNamespace
-    */
-    public function getTargetNamespace()
-    {
-        if (array_key_exists("targetNamespace", $this->_propDict)) {
-            return $this->_propDict["targetNamespace"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the targetNamespace
-    * Specifies the URI used to identify the namespace within the ADMX file.
-    *
-    * @param string $val The targetNamespace
-    *
-    * @return GroupPolicyDefinitionFile
-    */
-    public function setTargetNamespace($val)
-    {
-        $this->_propDict["targetNamespace"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -232,35 +207,60 @@ class GroupPolicyDefinitionFile extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * The date and time the entity was last modified.
+    * Gets the targetNamespace
+    * Specifies the URI used to identify the namespace within the ADMX file.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The targetNamespace
     */
-    public function getLastModifiedDateTime()
+    public function getTargetNamespace()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
+        if (array_key_exists("targetNamespace", $this->_propDict)) {
+            return $this->_propDict["targetNamespace"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
-    * The date and time the entity was last modified.
+    * Sets the targetNamespace
+    * Specifies the URI used to identify the namespace within the ADMX file.
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param string $val The targetNamespace
     *
     * @return GroupPolicyDefinitionFile
     */
-    public function setLastModifiedDateTime($val)
+    public function setTargetNamespace($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["targetNamespace"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the targetPrefix
+    * Specifies the logical name that refers to the namespace within the ADMX file.
+    *
+    * @return string The targetPrefix
+    */
+    public function getTargetPrefix()
+    {
+        if (array_key_exists("targetPrefix", $this->_propDict)) {
+            return $this->_propDict["targetPrefix"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetPrefix
+    * Specifies the logical name that refers to the namespace within the ADMX file.
+    *
+    * @param string $val The targetPrefix
+    *
+    * @return GroupPolicyDefinitionFile
+    */
+    public function setTargetPrefix($val)
+    {
+        $this->_propDict["targetPrefix"] = $val;
         return $this;
     }
     

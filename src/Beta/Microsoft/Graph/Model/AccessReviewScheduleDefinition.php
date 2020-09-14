@@ -25,29 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessReviewScheduleDefinition extends Entity
 {
     /**
-    * Gets the displayName
+    * Gets the createdBy
     *
-    * @return string The displayName
+    * @return UserIdentity The createdBy
     */
-    public function getDisplayName()
+    public function getCreatedBy()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
+    * Sets the createdBy
     *
-    * @param string $val The displayName
+    * @param UserIdentity $val The createdBy
     *
     * @return AccessReviewScheduleDefinition
     */
-    public function setDisplayName($val)
+    public function setCreatedBy($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdBy"] = $val;
         return $this;
     }
     
@@ -79,64 +83,6 @@ class AccessReviewScheduleDefinition extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return AccessReviewScheduleDefinition
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the status
-    *
-    * @return string The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
-    *
-    * @return AccessReviewScheduleDefinition
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -195,33 +141,88 @@ class AccessReviewScheduleDefinition extends Entity
     }
     
     /**
-    * Gets the createdBy
+    * Gets the displayName
     *
-    * @return UserIdentity The createdBy
+    * @return string The displayName
     */
-    public function getCreatedBy()
+    public function getDisplayName()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
-                return $this->_propDict["createdBy"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdBy
+    * Sets the lastModifiedDateTime
     *
-    * @param UserIdentity $val The createdBy
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return AccessReviewScheduleDefinition
     */
-    public function setCreatedBy($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["createdBy"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the reviewers
+     *
+     * @return array The reviewers
+     */
+    public function getReviewers()
+    {
+        if (array_key_exists("reviewers", $this->_propDict)) {
+           return $this->_propDict["reviewers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the reviewers
+    *
+    * @param AccessReviewReviewerScope $val The reviewers
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setReviewers($val)
+    {
+		$this->_propDict["reviewers"] = $val;
         return $this;
     }
     
@@ -256,34 +257,6 @@ class AccessReviewScheduleDefinition extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the reviewers
-     *
-     * @return array The reviewers
-     */
-    public function getReviewers()
-    {
-        if (array_key_exists("reviewers", $this->_propDict)) {
-           return $this->_propDict["reviewers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the reviewers
-    *
-    * @param AccessReviewReviewerScope $val The reviewers
-    *
-    * @return AccessReviewScheduleDefinition
-    */
-    public function setReviewers($val)
-    {
-		$this->_propDict["reviewers"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the settings
     *
@@ -312,6 +285,33 @@ class AccessReviewScheduleDefinition extends Entity
     public function setSettings($val)
     {
         $this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

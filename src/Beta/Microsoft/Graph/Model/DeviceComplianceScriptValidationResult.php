@@ -25,6 +25,39 @@ class DeviceComplianceScriptValidationResult extends Entity
 {
 
     /**
+    * Gets the ruleErrors
+    * Errors in json for the script for rules.
+    *
+    * @return DeviceComplianceScriptRuleError The ruleErrors
+    */
+    public function getRuleErrors()
+    {
+        if (array_key_exists("ruleErrors", $this->_propDict)) {
+            if (is_a($this->_propDict["ruleErrors"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRuleError")) {
+                return $this->_propDict["ruleErrors"];
+            } else {
+                $this->_propDict["ruleErrors"] = new DeviceComplianceScriptRuleError($this->_propDict["ruleErrors"]);
+                return $this->_propDict["ruleErrors"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the ruleErrors
+    * Errors in json for the script for rules.
+    *
+    * @param DeviceComplianceScriptRuleError $val The value to assign to the ruleErrors
+    *
+    * @return DeviceComplianceScriptValidationResult The DeviceComplianceScriptValidationResult
+    */
+    public function setRuleErrors($val)
+    {
+        $this->_propDict["ruleErrors"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the rules
     * Parsed rules from json.
     *
@@ -87,39 +120,6 @@ class DeviceComplianceScriptValidationResult extends Entity
     public function setScriptErrors($val)
     {
         $this->_propDict["scriptErrors"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the ruleErrors
-    * Errors in json for the script for rules.
-    *
-    * @return DeviceComplianceScriptRuleError The ruleErrors
-    */
-    public function getRuleErrors()
-    {
-        if (array_key_exists("ruleErrors", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleErrors"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRuleError")) {
-                return $this->_propDict["ruleErrors"];
-            } else {
-                $this->_propDict["ruleErrors"] = new DeviceComplianceScriptRuleError($this->_propDict["ruleErrors"]);
-                return $this->_propDict["ruleErrors"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the ruleErrors
-    * Errors in json for the script for rules.
-    *
-    * @param DeviceComplianceScriptRuleError $val The value to assign to the ruleErrors
-    *
-    * @return DeviceComplianceScriptValidationResult The DeviceComplianceScriptValidationResult
-    */
-    public function setRuleErrors($val)
-    {
-        $this->_propDict["ruleErrors"] = $val;
          return $this;
     }
 }

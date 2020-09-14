@@ -23,34 +23,6 @@ namespace Microsoft\Graph\Model;
 */
 class ConditionalAccessGrantControls extends Entity
 {
-    /**
-    * Gets the operator
-    * Defines the relationship of the grant controls. Possible values: AND, OR.
-    *
-    * @return string The operator
-    */
-    public function getOperator()
-    {
-        if (array_key_exists("operator", $this->_propDict)) {
-            return $this->_propDict["operator"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the operator
-    * Defines the relationship of the grant controls. Possible values: AND, OR.
-    *
-    * @param string $val The value of the operator
-    *
-    * @return ConditionalAccessGrantControls
-    */
-    public function setOperator($val)
-    {
-        $this->_propDict["operator"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the builtInControls
@@ -110,6 +82,34 @@ class ConditionalAccessGrantControls extends Entity
     public function setCustomAuthenticationFactors($val)
     {
         $this->_propDict["customAuthenticationFactors"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the operator
+    * Defines the relationship of the grant controls. Possible values: AND, OR.
+    *
+    * @return string The operator
+    */
+    public function getOperator()
+    {
+        if (array_key_exists("operator", $this->_propDict)) {
+            return $this->_propDict["operator"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the operator
+    * Defines the relationship of the grant controls. Possible values: AND, OR.
+    *
+    * @param string $val The value of the operator
+    *
+    * @return ConditionalAccessGrantControls
+    */
+    public function setOperator($val)
+    {
+        $this->_propDict["operator"] = $val;
         return $this;
     }
     /**

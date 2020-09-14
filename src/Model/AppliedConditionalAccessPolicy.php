@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class AppliedConditionalAccessPolicy extends Entity
 {
     /**
-    * Gets the id
-    * Unique GUID of the conditional access policy.
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * Unique GUID of the conditional access policy.
-    *
-    * @param string $val The value of the id
-    *
-    * @return AppliedConditionalAccessPolicy
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
     *
@@ -133,6 +105,34 @@ class AppliedConditionalAccessPolicy extends Entity
     public function setEnforcedSessionControls($val)
     {
         $this->_propDict["enforcedSessionControls"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    * Unique GUID of the conditional access policy.
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    * Unique GUID of the conditional access policy.
+    *
+    * @param string $val The value of the id
+    *
+    * @return AppliedConditionalAccessPolicy
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
         return $this;
     }
 

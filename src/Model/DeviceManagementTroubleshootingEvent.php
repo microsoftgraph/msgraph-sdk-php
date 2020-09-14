@@ -25,6 +25,35 @@ namespace Microsoft\Graph\Model;
 class DeviceManagementTroubleshootingEvent extends Entity
 {
     /**
+    * Gets the correlationId
+    * Id used for tracing the failure in the service.
+    *
+    * @return string The correlationId
+    */
+    public function getCorrelationId()
+    {
+        if (array_key_exists("correlationId", $this->_propDict)) {
+            return $this->_propDict["correlationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the correlationId
+    * Id used for tracing the failure in the service.
+    *
+    * @param string $val The correlationId
+    *
+    * @return DeviceManagementTroubleshootingEvent
+    */
+    public function setCorrelationId($val)
+    {
+        $this->_propDict["correlationId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the eventDateTime
     * Time when the event occurred .
     *
@@ -54,35 +83,6 @@ class DeviceManagementTroubleshootingEvent extends Entity
     public function setEventDateTime($val)
     {
         $this->_propDict["eventDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the correlationId
-    * Id used for tracing the failure in the service.
-    *
-    * @return string The correlationId
-    */
-    public function getCorrelationId()
-    {
-        if (array_key_exists("correlationId", $this->_propDict)) {
-            return $this->_propDict["correlationId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the correlationId
-    * Id used for tracing the failure in the service.
-    *
-    * @param string $val The correlationId
-    *
-    * @return DeviceManagementTroubleshootingEvent
-    */
-    public function setCorrelationId($val)
-    {
-        $this->_propDict["correlationId"] = $val;
         return $this;
     }
     

@@ -25,87 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintConnector extends Entity
 {
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return PrintConnector
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the fullyQualifiedDomainName
-    *
-    * @return string The fullyQualifiedDomainName
-    */
-    public function getFullyQualifiedDomainName()
-    {
-        if (array_key_exists("fullyQualifiedDomainName", $this->_propDict)) {
-            return $this->_propDict["fullyQualifiedDomainName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the fullyQualifiedDomainName
-    *
-    * @param string $val The fullyQualifiedDomainName
-    *
-    * @return PrintConnector
-    */
-    public function setFullyQualifiedDomainName($val)
-    {
-        $this->_propDict["fullyQualifiedDomainName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the operatingSystem
-    *
-    * @return string The operatingSystem
-    */
-    public function getOperatingSystem()
-    {
-        if (array_key_exists("operatingSystem", $this->_propDict)) {
-            return $this->_propDict["operatingSystem"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the operatingSystem
-    *
-    * @param string $val The operatingSystem
-    *
-    * @return PrintConnector
-    */
-    public function setOperatingSystem($val)
-    {
-        $this->_propDict["operatingSystem"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appVersion
     *
     * @return string The appVersion
@@ -164,6 +83,33 @@ class PrintConnector extends Entity
     }
     
     /**
+    * Gets the fullyQualifiedDomainName
+    *
+    * @return string The fullyQualifiedDomainName
+    */
+    public function getFullyQualifiedDomainName()
+    {
+        if (array_key_exists("fullyQualifiedDomainName", $this->_propDict)) {
+            return $this->_propDict["fullyQualifiedDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fullyQualifiedDomainName
+    *
+    * @param string $val The fullyQualifiedDomainName
+    *
+    * @return PrintConnector
+    */
+    public function setFullyQualifiedDomainName($val)
+    {
+        $this->_propDict["fullyQualifiedDomainName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the location
     *
     * @return PrinterLocation The location
@@ -191,6 +137,60 @@ class PrintConnector extends Entity
     public function setLocation($val)
     {
         $this->_propDict["location"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return PrintConnector
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the operatingSystem
+    *
+    * @return string The operatingSystem
+    */
+    public function getOperatingSystem()
+    {
+        if (array_key_exists("operatingSystem", $this->_propDict)) {
+            return $this->_propDict["operatingSystem"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the operatingSystem
+    *
+    * @param string $val The operatingSystem
+    *
+    * @return PrintConnector
+    */
+    public function setOperatingSystem($val)
+    {
+        $this->_propDict["operatingSystem"] = $val;
         return $this;
     }
     

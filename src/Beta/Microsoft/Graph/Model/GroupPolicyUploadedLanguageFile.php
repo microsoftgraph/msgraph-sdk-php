@@ -23,62 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class GroupPolicyUploadedLanguageFile extends Entity
 {
-    /**
-    * Gets the fileName
-    * The file name of the uploaded ADML file.
-    *
-    * @return string The fileName
-    */
-    public function getFileName()
-    {
-        if (array_key_exists("fileName", $this->_propDict)) {
-            return $this->_propDict["fileName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the fileName
-    * The file name of the uploaded ADML file.
-    *
-    * @param string $val The value of the fileName
-    *
-    * @return GroupPolicyUploadedLanguageFile
-    */
-    public function setFileName($val)
-    {
-        $this->_propDict["fileName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the languageCode
-    * The language code of the uploaded ADML file.
-    *
-    * @return string The languageCode
-    */
-    public function getLanguageCode()
-    {
-        if (array_key_exists("languageCode", $this->_propDict)) {
-            return $this->_propDict["languageCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the languageCode
-    * The language code of the uploaded ADML file.
-    *
-    * @param string $val The value of the languageCode
-    *
-    * @return GroupPolicyUploadedLanguageFile
-    */
-    public function setLanguageCode($val)
-    {
-        $this->_propDict["languageCode"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the content
@@ -113,6 +57,34 @@ class GroupPolicyUploadedLanguageFile extends Entity
          return $this;
     }
     /**
+    * Gets the fileName
+    * The file name of the uploaded ADML file.
+    *
+    * @return string The fileName
+    */
+    public function getFileName()
+    {
+        if (array_key_exists("fileName", $this->_propDict)) {
+            return $this->_propDict["fileName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fileName
+    * The file name of the uploaded ADML file.
+    *
+    * @param string $val The value of the fileName
+    *
+    * @return GroupPolicyUploadedLanguageFile
+    */
+    public function setFileName($val)
+    {
+        $this->_propDict["fileName"] = $val;
+        return $this;
+    }
+    /**
     * Gets the id
     * Key of the entity.
     *
@@ -138,6 +110,34 @@ class GroupPolicyUploadedLanguageFile extends Entity
     public function setId($val)
     {
         $this->_propDict["id"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the languageCode
+    * The language code of the uploaded ADML file.
+    *
+    * @return string The languageCode
+    */
+    public function getLanguageCode()
+    {
+        if (array_key_exists("languageCode", $this->_propDict)) {
+            return $this->_propDict["languageCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the languageCode
+    * The language code of the uploaded ADML file.
+    *
+    * @param string $val The value of the languageCode
+    *
+    * @return GroupPolicyUploadedLanguageFile
+    */
+    public function setLanguageCode($val)
+    {
+        $this->_propDict["languageCode"] = $val;
         return $this;
     }
 

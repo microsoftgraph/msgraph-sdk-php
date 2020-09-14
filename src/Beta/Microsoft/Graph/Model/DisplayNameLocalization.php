@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DisplayNameLocalization extends Entity
 {
     /**
-    * Gets the languageTag
-    *
-    * @return string The languageTag
-    */
-    public function getLanguageTag()
-    {
-        if (array_key_exists("languageTag", $this->_propDict)) {
-            return $this->_propDict["languageTag"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the languageTag
-    *
-    * @param string $val The value of the languageTag
-    *
-    * @return DisplayNameLocalization
-    */
-    public function setLanguageTag($val)
-    {
-        $this->_propDict["languageTag"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -73,6 +47,32 @@ class DisplayNameLocalization extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the languageTag
+    *
+    * @return string The languageTag
+    */
+    public function getLanguageTag()
+    {
+        if (array_key_exists("languageTag", $this->_propDict)) {
+            return $this->_propDict["languageTag"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the languageTag
+    *
+    * @param string $val The value of the languageTag
+    *
+    * @return DisplayNameLocalization
+    */
+    public function setLanguageTag($val)
+    {
+        $this->_propDict["languageTag"] = $val;
         return $this;
     }
 }

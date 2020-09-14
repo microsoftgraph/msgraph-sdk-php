@@ -53,39 +53,6 @@ class CustomTimeZone extends TimeZoneBase
     }
 
     /**
-    * Gets the standardOffset
-    * Specifies when the time zone switches from daylight saving time to standard time.
-    *
-    * @return StandardTimeZoneOffset The standardOffset
-    */
-    public function getStandardOffset()
-    {
-        if (array_key_exists("standardOffset", $this->_propDict)) {
-            if (is_a($this->_propDict["standardOffset"], "Microsoft\Graph\Model\StandardTimeZoneOffset")) {
-                return $this->_propDict["standardOffset"];
-            } else {
-                $this->_propDict["standardOffset"] = new StandardTimeZoneOffset($this->_propDict["standardOffset"]);
-                return $this->_propDict["standardOffset"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the standardOffset
-    * Specifies when the time zone switches from daylight saving time to standard time.
-    *
-    * @param StandardTimeZoneOffset $val The value to assign to the standardOffset
-    *
-    * @return CustomTimeZone The CustomTimeZone
-    */
-    public function setStandardOffset($val)
-    {
-        $this->_propDict["standardOffset"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the daylightOffset
     * Specifies when the time zone switches from standard time to daylight saving time.
     *
@@ -115,6 +82,39 @@ class CustomTimeZone extends TimeZoneBase
     public function setDaylightOffset($val)
     {
         $this->_propDict["daylightOffset"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the standardOffset
+    * Specifies when the time zone switches from daylight saving time to standard time.
+    *
+    * @return StandardTimeZoneOffset The standardOffset
+    */
+    public function getStandardOffset()
+    {
+        if (array_key_exists("standardOffset", $this->_propDict)) {
+            if (is_a($this->_propDict["standardOffset"], "Microsoft\Graph\Model\StandardTimeZoneOffset")) {
+                return $this->_propDict["standardOffset"];
+            } else {
+                $this->_propDict["standardOffset"] = new StandardTimeZoneOffset($this->_propDict["standardOffset"]);
+                return $this->_propDict["standardOffset"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the standardOffset
+    * Specifies when the time zone switches from daylight saving time to standard time.
+    *
+    * @param StandardTimeZoneOffset $val The value to assign to the standardOffset
+    *
+    * @return CustomTimeZone The CustomTimeZone
+    */
+    public function setStandardOffset($val)
+    {
+        $this->_propDict["standardOffset"] = $val;
          return $this;
     }
 }

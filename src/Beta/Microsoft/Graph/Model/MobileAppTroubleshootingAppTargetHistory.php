@@ -24,31 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingHistoryItem
 {
     /**
-    * Gets the securityGroupId
-    * AAD security group id to which it was targeted.
+    * Gets the errorCode
+    * Error code for the failure, empty if no failure.
     *
-    * @return string The securityGroupId
+    * @return string The errorCode
     */
-    public function getSecurityGroupId()
+    public function getErrorCode()
     {
-        if (array_key_exists("securityGroupId", $this->_propDict)) {
-            return $this->_propDict["securityGroupId"];
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the securityGroupId
-    * AAD security group id to which it was targeted.
+    * Sets the errorCode
+    * Error code for the failure, empty if no failure.
     *
-    * @param string $val The value of the securityGroupId
+    * @param string $val The value of the errorCode
     *
     * @return MobileAppTroubleshootingAppTargetHistory
     */
-    public function setSecurityGroupId($val)
+    public function setErrorCode($val)
     {
-        $this->_propDict["securityGroupId"] = $val;
+        $this->_propDict["errorCode"] = $val;
         return $this;
     }
 
@@ -85,31 +85,31 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
          return $this;
     }
     /**
-    * Gets the errorCode
-    * Error code for the failure, empty if no failure.
+    * Gets the securityGroupId
+    * AAD security group id to which it was targeted.
     *
-    * @return string The errorCode
+    * @return string The securityGroupId
     */
-    public function getErrorCode()
+    public function getSecurityGroupId()
     {
-        if (array_key_exists("errorCode", $this->_propDict)) {
-            return $this->_propDict["errorCode"];
+        if (array_key_exists("securityGroupId", $this->_propDict)) {
+            return $this->_propDict["securityGroupId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the errorCode
-    * Error code for the failure, empty if no failure.
+    * Sets the securityGroupId
+    * AAD security group id to which it was targeted.
     *
-    * @param string $val The value of the errorCode
+    * @param string $val The value of the securityGroupId
     *
     * @return MobileAppTroubleshootingAppTargetHistory
     */
-    public function setErrorCode($val)
+    public function setSecurityGroupId($val)
     {
-        $this->_propDict["errorCode"] = $val;
+        $this->_propDict["securityGroupId"] = $val;
         return $this;
     }
 }

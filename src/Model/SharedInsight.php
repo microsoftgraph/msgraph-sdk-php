@@ -57,31 +57,36 @@ class SharedInsight extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the sharingHistory
-     *
-     * @return array The sharingHistory
-     */
-    public function getSharingHistory()
+    /**
+    * Gets the resourceReference
+    * Reference properties of the shared document, such as the url and type of the document. Read-only
+    *
+    * @return ResourceReference The resourceReference
+    */
+    public function getResourceReference()
     {
-        if (array_key_exists("sharingHistory", $this->_propDict)) {
-           return $this->_propDict["sharingHistory"];
-        } else {
-            return null;
+        if (array_key_exists("resourceReference", $this->_propDict)) {
+            if (is_a($this->_propDict["resourceReference"], "Microsoft\Graph\Model\ResourceReference")) {
+                return $this->_propDict["resourceReference"];
+            } else {
+                $this->_propDict["resourceReference"] = new ResourceReference($this->_propDict["resourceReference"]);
+                return $this->_propDict["resourceReference"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the sharingHistory
+    /**
+    * Sets the resourceReference
+    * Reference properties of the shared document, such as the url and type of the document. Read-only
     *
-    * @param SharingDetail $val The sharingHistory
+    * @param ResourceReference $val The resourceReference
     *
     * @return SharedInsight
     */
-    public function setSharingHistory($val)
+    public function setResourceReference($val)
     {
-		$this->_propDict["sharingHistory"] = $val;
+        $this->_propDict["resourceReference"] = $val;
         return $this;
     }
     
@@ -118,36 +123,31 @@ class SharedInsight extends Entity
         return $this;
     }
     
-    /**
-    * Gets the resourceReference
-    * Reference properties of the shared document, such as the url and type of the document. Read-only
-    *
-    * @return ResourceReference The resourceReference
-    */
-    public function getResourceReference()
+
+     /** 
+     * Gets the sharingHistory
+     *
+     * @return array The sharingHistory
+     */
+    public function getSharingHistory()
     {
-        if (array_key_exists("resourceReference", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceReference"], "Microsoft\Graph\Model\ResourceReference")) {
-                return $this->_propDict["resourceReference"];
-            } else {
-                $this->_propDict["resourceReference"] = new ResourceReference($this->_propDict["resourceReference"]);
-                return $this->_propDict["resourceReference"];
-            }
+        if (array_key_exists("sharingHistory", $this->_propDict)) {
+           return $this->_propDict["sharingHistory"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the resourceReference
-    * Reference properties of the shared document, such as the url and type of the document. Read-only
+    /** 
+    * Sets the sharingHistory
     *
-    * @param ResourceReference $val The resourceReference
+    * @param SharingDetail $val The sharingHistory
     *
     * @return SharedInsight
     */
-    public function setResourceReference($val)
+    public function setSharingHistory($val)
     {
-        $this->_propDict["resourceReference"] = $val;
+		$this->_propDict["sharingHistory"] = $val;
         return $this;
     }
     

@@ -25,137 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Item extends Entity
 {
     /**
-    * Gets the number
+    * Gets the baseUnitOfMeasureId
     *
-    * @return string The number
+    * @return string The baseUnitOfMeasureId
     */
-    public function getNumber()
+    public function getBaseUnitOfMeasureId()
     {
-        if (array_key_exists("number", $this->_propDict)) {
-            return $this->_propDict["number"];
+        if (array_key_exists("baseUnitOfMeasureId", $this->_propDict)) {
+            return $this->_propDict["baseUnitOfMeasureId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the number
+    * Sets the baseUnitOfMeasureId
     *
-    * @param string $val The number
-    *
-    * @return Item
-    */
-    public function setNumber($val)
-    {
-        $this->_propDict["number"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
+    * @param string $val The baseUnitOfMeasureId
     *
     * @return Item
     */
-    public function setDisplayName($val)
+    public function setBaseUnitOfMeasureId($val)
     {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return Item
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the itemCategoryId
-    *
-    * @return string The itemCategoryId
-    */
-    public function getItemCategoryId()
-    {
-        if (array_key_exists("itemCategoryId", $this->_propDict)) {
-            return $this->_propDict["itemCategoryId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the itemCategoryId
-    *
-    * @param string $val The itemCategoryId
-    *
-    * @return Item
-    */
-    public function setItemCategoryId($val)
-    {
-        $this->_propDict["itemCategoryId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the itemCategoryCode
-    *
-    * @return string The itemCategoryCode
-    */
-    public function getItemCategoryCode()
-    {
-        if (array_key_exists("itemCategoryCode", $this->_propDict)) {
-            return $this->_propDict["itemCategoryCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the itemCategoryCode
-    *
-    * @param string $val The itemCategoryCode
-    *
-    * @return Item
-    */
-    public function setItemCategoryCode($val)
-    {
-        $this->_propDict["itemCategoryCode"] = $val;
+        $this->_propDict["baseUnitOfMeasureId"] = $val;
         return $this;
     }
     
@@ -187,29 +79,29 @@ class Item extends Entity
     }
     
     /**
-    * Gets the baseUnitOfMeasureId
+    * Gets the displayName
     *
-    * @return string The baseUnitOfMeasureId
+    * @return string The displayName
     */
-    public function getBaseUnitOfMeasureId()
+    public function getDisplayName()
     {
-        if (array_key_exists("baseUnitOfMeasureId", $this->_propDict)) {
-            return $this->_propDict["baseUnitOfMeasureId"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the baseUnitOfMeasureId
+    * Sets the displayName
     *
-    * @param string $val The baseUnitOfMeasureId
+    * @param string $val The displayName
     *
     * @return Item
     */
-    public function setBaseUnitOfMeasureId($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["baseUnitOfMeasureId"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -272,33 +164,114 @@ class Item extends Entity
     }
     
     /**
-    * Gets the unitPrice
+    * Gets the itemCategoryCode
     *
-    * @return Decimal The unitPrice
+    * @return string The itemCategoryCode
     */
-    public function getUnitPrice()
+    public function getItemCategoryCode()
     {
-        if (array_key_exists("unitPrice", $this->_propDict)) {
-            if (is_a($this->_propDict["unitPrice"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["unitPrice"];
+        if (array_key_exists("itemCategoryCode", $this->_propDict)) {
+            return $this->_propDict["itemCategoryCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the itemCategoryCode
+    *
+    * @param string $val The itemCategoryCode
+    *
+    * @return Item
+    */
+    public function setItemCategoryCode($val)
+    {
+        $this->_propDict["itemCategoryCode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the itemCategoryId
+    *
+    * @return string The itemCategoryId
+    */
+    public function getItemCategoryId()
+    {
+        if (array_key_exists("itemCategoryId", $this->_propDict)) {
+            return $this->_propDict["itemCategoryId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the itemCategoryId
+    *
+    * @param string $val The itemCategoryId
+    *
+    * @return Item
+    */
+    public function setItemCategoryId($val)
+    {
+        $this->_propDict["itemCategoryId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
-                return $this->_propDict["unitPrice"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the unitPrice
+    * Sets the lastModifiedDateTime
     *
-    * @param Decimal $val The unitPrice
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return Item
     */
-    public function setUnitPrice($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["unitPrice"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the number
+    *
+    * @return string The number
+    */
+    public function getNumber()
+    {
+        if (array_key_exists("number", $this->_propDict)) {
+            return $this->_propDict["number"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the number
+    *
+    * @param string $val The number
+    *
+    * @return Item
+    */
+    public function setNumber($val)
+    {
+        $this->_propDict["number"] = $val;
         return $this;
     }
     
@@ -326,6 +299,87 @@ class Item extends Entity
     public function setPriceIncludesTax($val)
     {
         $this->_propDict["priceIncludesTax"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the taxGroupCode
+    *
+    * @return string The taxGroupCode
+    */
+    public function getTaxGroupCode()
+    {
+        if (array_key_exists("taxGroupCode", $this->_propDict)) {
+            return $this->_propDict["taxGroupCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the taxGroupCode
+    *
+    * @param string $val The taxGroupCode
+    *
+    * @return Item
+    */
+    public function setTaxGroupCode($val)
+    {
+        $this->_propDict["taxGroupCode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the taxGroupId
+    *
+    * @return string The taxGroupId
+    */
+    public function getTaxGroupId()
+    {
+        if (array_key_exists("taxGroupId", $this->_propDict)) {
+            return $this->_propDict["taxGroupId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the taxGroupId
+    *
+    * @param string $val The taxGroupId
+    *
+    * @return Item
+    */
+    public function setTaxGroupId($val)
+    {
+        $this->_propDict["taxGroupId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return Item
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
     
@@ -361,115 +415,33 @@ class Item extends Entity
     }
     
     /**
-    * Gets the taxGroupId
+    * Gets the unitPrice
     *
-    * @return string The taxGroupId
+    * @return Decimal The unitPrice
     */
-    public function getTaxGroupId()
+    public function getUnitPrice()
     {
-        if (array_key_exists("taxGroupId", $this->_propDict)) {
-            return $this->_propDict["taxGroupId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the taxGroupId
-    *
-    * @param string $val The taxGroupId
-    *
-    * @return Item
-    */
-    public function setTaxGroupId($val)
-    {
-        $this->_propDict["taxGroupId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the taxGroupCode
-    *
-    * @return string The taxGroupCode
-    */
-    public function getTaxGroupCode()
-    {
-        if (array_key_exists("taxGroupCode", $this->_propDict)) {
-            return $this->_propDict["taxGroupCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the taxGroupCode
-    *
-    * @param string $val The taxGroupCode
-    *
-    * @return Item
-    */
-    public function setTaxGroupCode($val)
-    {
-        $this->_propDict["taxGroupCode"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("unitPrice", $this->_propDict)) {
+            if (is_a($this->_propDict["unitPrice"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["unitPrice"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
+                return $this->_propDict["unitPrice"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the unitPrice
     *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return Item
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the picture
-     *
-     * @return array The picture
-     */
-    public function getPicture()
-    {
-        if (array_key_exists("picture", $this->_propDict)) {
-           return $this->_propDict["picture"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the picture
-    *
-    * @param Picture $val The picture
+    * @param Decimal $val The unitPrice
     *
     * @return Item
     */
-    public function setPicture($val)
+    public function setUnitPrice($val)
     {
-		$this->_propDict["picture"] = $val;
+        $this->_propDict["unitPrice"] = $val;
         return $this;
     }
     
@@ -501,6 +473,34 @@ class Item extends Entity
     public function setItemCategory($val)
     {
         $this->_propDict["itemCategory"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the picture
+     *
+     * @return array The picture
+     */
+    public function getPicture()
+    {
+        if (array_key_exists("picture", $this->_propDict)) {
+           return $this->_propDict["picture"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the picture
+    *
+    * @param Picture $val The picture
+    *
+    * @return Item
+    */
+    public function setPicture($val)
+    {
+		$this->_propDict["picture"] = $val;
         return $this;
     }
     

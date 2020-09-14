@@ -49,36 +49,31 @@ class ContentProperties extends Entity
         $this->_propDict["extensions"] = $val;
         return $this;
     }
-
     /**
-    * Gets the metadata
+    * Gets the lastModifiedBy
     *
-    * @return ContentMetadata The metadata
+    * @return string The lastModifiedBy
     */
-    public function getMetadata()
+    public function getLastModifiedBy()
     {
-        if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "Beta\Microsoft\Graph\Model\ContentMetadata")) {
-                return $this->_propDict["metadata"];
-            } else {
-                $this->_propDict["metadata"] = new ContentMetadata($this->_propDict["metadata"]);
-                return $this->_propDict["metadata"];
-            }
+        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
+            return $this->_propDict["lastModifiedBy"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the metadata
+    * Sets the lastModifiedBy
     *
-    * @param ContentMetadata $val The value to assign to the metadata
+    * @param string $val The value of the lastModifiedBy
     *
-    * @return ContentProperties The ContentProperties
+    * @return ContentProperties
     */
-    public function setMetadata($val)
+    public function setLastModifiedBy($val)
     {
-        $this->_propDict["metadata"] = $val;
-         return $this;
+        $this->_propDict["lastModifiedBy"] = $val;
+        return $this;
     }
 
     /**
@@ -111,30 +106,35 @@ class ContentProperties extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
          return $this;
     }
+
     /**
-    * Gets the lastModifiedBy
+    * Gets the metadata
     *
-    * @return string The lastModifiedBy
+    * @return ContentMetadata The metadata
     */
-    public function getLastModifiedBy()
+    public function getMetadata()
     {
-        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            return $this->_propDict["lastModifiedBy"];
-        } else {
-            return null;
+        if (array_key_exists("metadata", $this->_propDict)) {
+            if (is_a($this->_propDict["metadata"], "Beta\Microsoft\Graph\Model\ContentMetadata")) {
+                return $this->_propDict["metadata"];
+            } else {
+                $this->_propDict["metadata"] = new ContentMetadata($this->_propDict["metadata"]);
+                return $this->_propDict["metadata"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the lastModifiedBy
+    * Sets the metadata
     *
-    * @param string $val The value of the lastModifiedBy
+    * @param ContentMetadata $val The value to assign to the metadata
     *
-    * @return ContentProperties
+    * @return ContentProperties The ContentProperties
     */
-    public function setLastModifiedBy($val)
+    public function setMetadata($val)
     {
-        $this->_propDict["lastModifiedBy"] = $val;
-        return $this;
+        $this->_propDict["metadata"] = $val;
+         return $this;
     }
 }

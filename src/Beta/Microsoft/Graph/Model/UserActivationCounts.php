@@ -24,29 +24,81 @@ namespace Beta\Microsoft\Graph\Model;
 class UserActivationCounts extends Entity
 {
     /**
-    * Gets the productType
+    * Gets the activatedOnSharedComputer
     *
-    * @return string The productType
+    * @return bool The activatedOnSharedComputer
     */
-    public function getProductType()
+    public function getActivatedOnSharedComputer()
     {
-        if (array_key_exists("productType", $this->_propDict)) {
-            return $this->_propDict["productType"];
+        if (array_key_exists("activatedOnSharedComputer", $this->_propDict)) {
+            return $this->_propDict["activatedOnSharedComputer"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the productType
+    * Sets the activatedOnSharedComputer
     *
-    * @param string $val The value of the productType
+    * @param bool $val The value of the activatedOnSharedComputer
     *
     * @return UserActivationCounts
     */
-    public function setProductType($val)
+    public function setActivatedOnSharedComputer($val)
     {
-        $this->_propDict["productType"] = $val;
+        $this->_propDict["activatedOnSharedComputer"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the android
+    *
+    * @return int The android
+    */
+    public function getAndroid()
+    {
+        if (array_key_exists("android", $this->_propDict)) {
+            return $this->_propDict["android"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the android
+    *
+    * @param int $val The value of the android
+    *
+    * @return UserActivationCounts
+    */
+    public function setAndroid($val)
+    {
+        $this->_propDict["android"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the ios
+    *
+    * @return int The ios
+    */
+    public function getIos()
+    {
+        if (array_key_exists("ios", $this->_propDict)) {
+            return $this->_propDict["ios"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ios
+    *
+    * @param int $val The value of the ios
+    *
+    * @return UserActivationCounts
+    */
+    public function setIos($val)
+    {
+        $this->_propDict["ios"] = $val;
         return $this;
     }
 
@@ -81,32 +133,6 @@ class UserActivationCounts extends Entity
          return $this;
     }
     /**
-    * Gets the windows
-    *
-    * @return int The windows
-    */
-    public function getWindows()
-    {
-        if (array_key_exists("windows", $this->_propDict)) {
-            return $this->_propDict["windows"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the windows
-    *
-    * @param int $val The value of the windows
-    *
-    * @return UserActivationCounts
-    */
-    public function setWindows($val)
-    {
-        $this->_propDict["windows"] = $val;
-        return $this;
-    }
-    /**
     * Gets the mac
     *
     * @return int The mac
@@ -133,6 +159,58 @@ class UserActivationCounts extends Entity
         return $this;
     }
     /**
+    * Gets the productType
+    *
+    * @return string The productType
+    */
+    public function getProductType()
+    {
+        if (array_key_exists("productType", $this->_propDict)) {
+            return $this->_propDict["productType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the productType
+    *
+    * @param string $val The value of the productType
+    *
+    * @return UserActivationCounts
+    */
+    public function setProductType($val)
+    {
+        $this->_propDict["productType"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the windows
+    *
+    * @return int The windows
+    */
+    public function getWindows()
+    {
+        if (array_key_exists("windows", $this->_propDict)) {
+            return $this->_propDict["windows"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the windows
+    *
+    * @param int $val The value of the windows
+    *
+    * @return UserActivationCounts
+    */
+    public function setWindows($val)
+    {
+        $this->_propDict["windows"] = $val;
+        return $this;
+    }
+    /**
     * Gets the windows10Mobile
     *
     * @return int The windows10Mobile
@@ -156,84 +234,6 @@ class UserActivationCounts extends Entity
     public function setWindows10Mobile($val)
     {
         $this->_propDict["windows10Mobile"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the ios
-    *
-    * @return int The ios
-    */
-    public function getIos()
-    {
-        if (array_key_exists("ios", $this->_propDict)) {
-            return $this->_propDict["ios"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the ios
-    *
-    * @param int $val The value of the ios
-    *
-    * @return UserActivationCounts
-    */
-    public function setIos($val)
-    {
-        $this->_propDict["ios"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the android
-    *
-    * @return int The android
-    */
-    public function getAndroid()
-    {
-        if (array_key_exists("android", $this->_propDict)) {
-            return $this->_propDict["android"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the android
-    *
-    * @param int $val The value of the android
-    *
-    * @return UserActivationCounts
-    */
-    public function setAndroid($val)
-    {
-        $this->_propDict["android"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the activatedOnSharedComputer
-    *
-    * @return bool The activatedOnSharedComputer
-    */
-    public function getActivatedOnSharedComputer()
-    {
-        if (array_key_exists("activatedOnSharedComputer", $this->_propDict)) {
-            return $this->_propDict["activatedOnSharedComputer"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the activatedOnSharedComputer
-    *
-    * @param bool $val The value of the activatedOnSharedComputer
-    *
-    * @return UserActivationCounts
-    */
-    public function setActivatedOnSharedComputer($val)
-    {
-        $this->_propDict["activatedOnSharedComputer"] = $val;
         return $this;
     }
 }

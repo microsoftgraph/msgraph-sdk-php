@@ -23,36 +23,83 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class OverallPrintUsageSummary extends Entity
 {
-
     /**
-    * Gets the topUsers
+    * Gets the activePrintersCount
     *
-    * @return UserPrintUsageSummary The topUsers
+    * @return int The activePrintersCount
     */
-    public function getTopUsers()
+    public function getActivePrintersCount()
     {
-        if (array_key_exists("topUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["topUsers"], "Beta\Microsoft\Graph\Model\UserPrintUsageSummary")) {
-                return $this->_propDict["topUsers"];
-            } else {
-                $this->_propDict["topUsers"] = new UserPrintUsageSummary($this->_propDict["topUsers"]);
-                return $this->_propDict["topUsers"];
-            }
+        if (array_key_exists("activePrintersCount", $this->_propDict)) {
+            return $this->_propDict["activePrintersCount"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the topUsers
+    * Sets the activePrintersCount
     *
-    * @param UserPrintUsageSummary $val The value to assign to the topUsers
+    * @param int $val The value of the activePrintersCount
     *
-    * @return OverallPrintUsageSummary The OverallPrintUsageSummary
+    * @return OverallPrintUsageSummary
     */
-    public function setTopUsers($val)
+    public function setActivePrintersCount($val)
     {
-        $this->_propDict["topUsers"] = $val;
-         return $this;
+        $this->_propDict["activePrintersCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the activeUsersCount
+    *
+    * @return int The activeUsersCount
+    */
+    public function getActiveUsersCount()
+    {
+        if (array_key_exists("activeUsersCount", $this->_propDict)) {
+            return $this->_propDict["activeUsersCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the activeUsersCount
+    *
+    * @param int $val The value of the activeUsersCount
+    *
+    * @return OverallPrintUsageSummary
+    */
+    public function setActiveUsersCount($val)
+    {
+        $this->_propDict["activeUsersCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the daysInPeriod
+    *
+    * @return int The daysInPeriod
+    */
+    public function getDaysInPeriod()
+    {
+        if (array_key_exists("daysInPeriod", $this->_propDict)) {
+            return $this->_propDict["daysInPeriod"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the daysInPeriod
+    *
+    * @param int $val The value of the daysInPeriod
+    *
+    * @return OverallPrintUsageSummary
+    */
+    public function setDaysInPeriod($val)
+    {
+        $this->_propDict["daysInPeriod"] = $val;
+        return $this;
     }
 
     /**
@@ -85,82 +132,61 @@ class OverallPrintUsageSummary extends Entity
         $this->_propDict["topPrinters"] = $val;
          return $this;
     }
+
     /**
-    * Gets the daysInPeriod
+    * Gets the topUsers
     *
-    * @return int The daysInPeriod
+    * @return UserPrintUsageSummary The topUsers
     */
-    public function getDaysInPeriod()
+    public function getTopUsers()
     {
-        if (array_key_exists("daysInPeriod", $this->_propDict)) {
-            return $this->_propDict["daysInPeriod"];
+        if (array_key_exists("topUsers", $this->_propDict)) {
+            if (is_a($this->_propDict["topUsers"], "Beta\Microsoft\Graph\Model\UserPrintUsageSummary")) {
+                return $this->_propDict["topUsers"];
+            } else {
+                $this->_propDict["topUsers"] = new UserPrintUsageSummary($this->_propDict["topUsers"]);
+                return $this->_propDict["topUsers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the topUsers
+    *
+    * @param UserPrintUsageSummary $val The value to assign to the topUsers
+    *
+    * @return OverallPrintUsageSummary The OverallPrintUsageSummary
+    */
+    public function setTopUsers($val)
+    {
+        $this->_propDict["topUsers"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the totalIncompleteJobs
+    *
+    * @return int The totalIncompleteJobs
+    */
+    public function getTotalIncompleteJobs()
+    {
+        if (array_key_exists("totalIncompleteJobs", $this->_propDict)) {
+            return $this->_propDict["totalIncompleteJobs"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the daysInPeriod
+    * Sets the totalIncompleteJobs
     *
-    * @param int $val The value of the daysInPeriod
-    *
-    * @return OverallPrintUsageSummary
-    */
-    public function setDaysInPeriod($val)
-    {
-        $this->_propDict["daysInPeriod"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the activeUsersCount
-    *
-    * @return int The activeUsersCount
-    */
-    public function getActiveUsersCount()
-    {
-        if (array_key_exists("activeUsersCount", $this->_propDict)) {
-            return $this->_propDict["activeUsersCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the activeUsersCount
-    *
-    * @param int $val The value of the activeUsersCount
+    * @param int $val The value of the totalIncompleteJobs
     *
     * @return OverallPrintUsageSummary
     */
-    public function setActiveUsersCount($val)
+    public function setTotalIncompleteJobs($val)
     {
-        $this->_propDict["activeUsersCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the activePrintersCount
-    *
-    * @return int The activePrintersCount
-    */
-    public function getActivePrintersCount()
-    {
-        if (array_key_exists("activePrintersCount", $this->_propDict)) {
-            return $this->_propDict["activePrintersCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the activePrintersCount
-    *
-    * @param int $val The value of the activePrintersCount
-    *
-    * @return OverallPrintUsageSummary
-    */
-    public function setActivePrintersCount($val)
-    {
-        $this->_propDict["activePrintersCount"] = $val;
+        $this->_propDict["totalIncompleteJobs"] = $val;
         return $this;
     }
     /**
@@ -187,32 +213,6 @@ class OverallPrintUsageSummary extends Entity
     public function setTotalJobsProcessed($val)
     {
         $this->_propDict["totalJobsProcessed"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the totalIncompleteJobs
-    *
-    * @return int The totalIncompleteJobs
-    */
-    public function getTotalIncompleteJobs()
-    {
-        if (array_key_exists("totalIncompleteJobs", $this->_propDict)) {
-            return $this->_propDict["totalIncompleteJobs"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the totalIncompleteJobs
-    *
-    * @param int $val The value of the totalIncompleteJobs
-    *
-    * @return OverallPrintUsageSummary
-    */
-    public function setTotalIncompleteJobs($val)
-    {
-        $this->_propDict["totalIncompleteJobs"] = $val;
         return $this;
     }
 }

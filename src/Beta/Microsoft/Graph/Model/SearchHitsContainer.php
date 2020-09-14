@@ -55,32 +55,6 @@ class SearchHitsContainer extends Entity
          return $this;
     }
     /**
-    * Gets the total
-    *
-    * @return int The total
-    */
-    public function getTotal()
-    {
-        if (array_key_exists("total", $this->_propDict)) {
-            return $this->_propDict["total"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the total
-    *
-    * @param int $val The value of the total
-    *
-    * @return SearchHitsContainer
-    */
-    public function setTotal($val)
-    {
-        $this->_propDict["total"] = $val;
-        return $this;
-    }
-    /**
     * Gets the moreResultsAvailable
     *
     * @return bool The moreResultsAvailable
@@ -104,6 +78,32 @@ class SearchHitsContainer extends Entity
     public function setMoreResultsAvailable($val)
     {
         $this->_propDict["moreResultsAvailable"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the total
+    *
+    * @return int The total
+    */
+    public function getTotal()
+    {
+        if (array_key_exists("total", $this->_propDict)) {
+            return $this->_propDict["total"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the total
+    *
+    * @param int $val The value of the total
+    *
+    * @return SearchHitsContainer
+    */
+    public function setTotal($val)
+    {
+        $this->_propDict["total"] = $val;
         return $this;
     }
 }

@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsInformationProtectionWipeAction extends Entity
 {
     /**
+    * Gets the lastCheckInDateTime
+    * Last checkin time of the device that was targeted by this wipe action.
+    *
+    * @return \DateTime The lastCheckInDateTime
+    */
+    public function getLastCheckInDateTime()
+    {
+        if (array_key_exists("lastCheckInDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime")) {
+                return $this->_propDict["lastCheckInDateTime"];
+            } else {
+                $this->_propDict["lastCheckInDateTime"] = new \DateTime($this->_propDict["lastCheckInDateTime"]);
+                return $this->_propDict["lastCheckInDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastCheckInDateTime
+    * Last checkin time of the device that was targeted by this wipe action.
+    *
+    * @param \DateTime $val The lastCheckInDateTime
+    *
+    * @return WindowsInformationProtectionWipeAction
+    */
+    public function setLastCheckInDateTime($val)
+    {
+        $this->_propDict["lastCheckInDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
     * Wipe action status.
     *
@@ -58,60 +91,31 @@ class WindowsInformationProtectionWipeAction extends Entity
     }
     
     /**
-    * Gets the targetedUserId
-    * The UserId being targeted by this wipe action.
+    * Gets the targetedDeviceMacAddress
+    * Targeted device Mac address.
     *
-    * @return string The targetedUserId
+    * @return string The targetedDeviceMacAddress
     */
-    public function getTargetedUserId()
+    public function getTargetedDeviceMacAddress()
     {
-        if (array_key_exists("targetedUserId", $this->_propDict)) {
-            return $this->_propDict["targetedUserId"];
+        if (array_key_exists("targetedDeviceMacAddress", $this->_propDict)) {
+            return $this->_propDict["targetedDeviceMacAddress"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the targetedUserId
-    * The UserId being targeted by this wipe action.
+    * Sets the targetedDeviceMacAddress
+    * Targeted device Mac address.
     *
-    * @param string $val The targetedUserId
-    *
-    * @return WindowsInformationProtectionWipeAction
-    */
-    public function setTargetedUserId($val)
-    {
-        $this->_propDict["targetedUserId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the targetedDeviceRegistrationId
-    * The DeviceRegistrationId being targeted by this wipe action.
-    *
-    * @return string The targetedDeviceRegistrationId
-    */
-    public function getTargetedDeviceRegistrationId()
-    {
-        if (array_key_exists("targetedDeviceRegistrationId", $this->_propDict)) {
-            return $this->_propDict["targetedDeviceRegistrationId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the targetedDeviceRegistrationId
-    * The DeviceRegistrationId being targeted by this wipe action.
-    *
-    * @param string $val The targetedDeviceRegistrationId
+    * @param string $val The targetedDeviceMacAddress
     *
     * @return WindowsInformationProtectionWipeAction
     */
-    public function setTargetedDeviceRegistrationId($val)
+    public function setTargetedDeviceMacAddress($val)
     {
-        $this->_propDict["targetedDeviceRegistrationId"] = $val;
+        $this->_propDict["targetedDeviceMacAddress"] = $val;
         return $this;
     }
     
@@ -145,64 +149,60 @@ class WindowsInformationProtectionWipeAction extends Entity
     }
     
     /**
-    * Gets the targetedDeviceMacAddress
-    * Targeted device Mac address.
+    * Gets the targetedDeviceRegistrationId
+    * The DeviceRegistrationId being targeted by this wipe action.
     *
-    * @return string The targetedDeviceMacAddress
+    * @return string The targetedDeviceRegistrationId
     */
-    public function getTargetedDeviceMacAddress()
+    public function getTargetedDeviceRegistrationId()
     {
-        if (array_key_exists("targetedDeviceMacAddress", $this->_propDict)) {
-            return $this->_propDict["targetedDeviceMacAddress"];
+        if (array_key_exists("targetedDeviceRegistrationId", $this->_propDict)) {
+            return $this->_propDict["targetedDeviceRegistrationId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the targetedDeviceMacAddress
-    * Targeted device Mac address.
+    * Sets the targetedDeviceRegistrationId
+    * The DeviceRegistrationId being targeted by this wipe action.
     *
-    * @param string $val The targetedDeviceMacAddress
+    * @param string $val The targetedDeviceRegistrationId
     *
     * @return WindowsInformationProtectionWipeAction
     */
-    public function setTargetedDeviceMacAddress($val)
+    public function setTargetedDeviceRegistrationId($val)
     {
-        $this->_propDict["targetedDeviceMacAddress"] = $val;
+        $this->_propDict["targetedDeviceRegistrationId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the lastCheckInDateTime
-    * Last checkin time of the device that was targeted by this wipe action.
+    * Gets the targetedUserId
+    * The UserId being targeted by this wipe action.
     *
-    * @return \DateTime The lastCheckInDateTime
+    * @return string The targetedUserId
     */
-    public function getLastCheckInDateTime()
+    public function getTargetedUserId()
     {
-        if (array_key_exists("lastCheckInDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime")) {
-                return $this->_propDict["lastCheckInDateTime"];
-            } else {
-                $this->_propDict["lastCheckInDateTime"] = new \DateTime($this->_propDict["lastCheckInDateTime"]);
-                return $this->_propDict["lastCheckInDateTime"];
-            }
+        if (array_key_exists("targetedUserId", $this->_propDict)) {
+            return $this->_propDict["targetedUserId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastCheckInDateTime
-    * Last checkin time of the device that was targeted by this wipe action.
+    * Sets the targetedUserId
+    * The UserId being targeted by this wipe action.
     *
-    * @param \DateTime $val The lastCheckInDateTime
+    * @param string $val The targetedUserId
     *
     * @return WindowsInformationProtectionWipeAction
     */
-    public function setLastCheckInDateTime($val)
+    public function setTargetedUserId($val)
     {
-        $this->_propDict["lastCheckInDateTime"] = $val;
+        $this->_propDict["targetedUserId"] = $val;
         return $this;
     }
     

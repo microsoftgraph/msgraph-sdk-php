@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ConditionalAccessDeviceStates extends Entity
 {
     /**
-    * Gets the includeStates
-    *
-    * @return string The includeStates
-    */
-    public function getIncludeStates()
-    {
-        if (array_key_exists("includeStates", $this->_propDict)) {
-            return $this->_propDict["includeStates"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the includeStates
-    *
-    * @param string $val The value of the includeStates
-    *
-    * @return ConditionalAccessDeviceStates
-    */
-    public function setIncludeStates($val)
-    {
-        $this->_propDict["includeStates"] = $val;
-        return $this;
-    }
-    /**
     * Gets the excludeStates
     *
     * @return string The excludeStates
@@ -73,6 +47,32 @@ class ConditionalAccessDeviceStates extends Entity
     public function setExcludeStates($val)
     {
         $this->_propDict["excludeStates"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the includeStates
+    *
+    * @return string The includeStates
+    */
+    public function getIncludeStates()
+    {
+        if (array_key_exists("includeStates", $this->_propDict)) {
+            return $this->_propDict["includeStates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeStates
+    *
+    * @param string $val The value of the includeStates
+    *
+    * @return ConditionalAccessDeviceStates
+    */
+    public function setIncludeStates($val)
+    {
+        $this->_propDict["includeStates"] = $val;
         return $this;
     }
 }

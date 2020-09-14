@@ -25,6 +25,97 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
 {
     /**
+    * Gets the allowAllAppsAccess
+    * AllowAllAppsAccess setting
+    *
+    * @return bool The allowAllAppsAccess
+    */
+    public function getAllowAllAppsAccess()
+    {
+        if (array_key_exists("allowAllAppsAccess", $this->_propDict)) {
+            return $this->_propDict["allowAllAppsAccess"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowAllAppsAccess
+    * AllowAllAppsAccess setting
+    *
+    * @param bool $val The allowAllAppsAccess
+    *
+    * @return MacOSPkcsCertificateProfile
+    */
+    public function setAllowAllAppsAccess($val)
+    {
+        $this->_propDict["allowAllAppsAccess"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateStore
+    * Target store certificate
+    *
+    * @return CertificateStore The certificateStore
+    */
+    public function getCertificateStore()
+    {
+        if (array_key_exists("certificateStore", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
+                return $this->_propDict["certificateStore"];
+            } else {
+                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
+                return $this->_propDict["certificateStore"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the certificateStore
+    * Target store certificate
+    *
+    * @param CertificateStore $val The certificateStore
+    *
+    * @return MacOSPkcsCertificateProfile
+    */
+    public function setCertificateStore($val)
+    {
+        $this->_propDict["certificateStore"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateTemplateName
+    * PKCS certificate template name.
+    *
+    * @return string The certificateTemplateName
+    */
+    public function getCertificateTemplateName()
+    {
+        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
+            return $this->_propDict["certificateTemplateName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateTemplateName
+    * PKCS certificate template name.
+    *
+    * @param string $val The certificateTemplateName
+    *
+    * @return MacOSPkcsCertificateProfile
+    */
+    public function setCertificateTemplateName($val)
+    {
+        $this->_propDict["certificateTemplateName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the certificationAuthority
     * PKCS certification authority FQDN.
     *
@@ -82,32 +173,33 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
         return $this;
     }
     
-    /**
-    * Gets the certificateTemplateName
-    * PKCS certificate template name.
-    *
-    * @return string The certificateTemplateName
-    */
-    public function getCertificateTemplateName()
+
+     /** 
+     * Gets the customSubjectAlternativeNames
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The customSubjectAlternativeNames
+     */
+    public function getCustomSubjectAlternativeNames()
     {
-        if (array_key_exists("certificateTemplateName", $this->_propDict)) {
-            return $this->_propDict["certificateTemplateName"];
+        if (array_key_exists("customSubjectAlternativeNames", $this->_propDict)) {
+           return $this->_propDict["customSubjectAlternativeNames"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the certificateTemplateName
-    * PKCS certificate template name.
+    /** 
+    * Sets the customSubjectAlternativeNames
+    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
-    * @param string $val The certificateTemplateName
+    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *
     * @return MacOSPkcsCertificateProfile
     */
-    public function setCertificateTemplateName($val)
+    public function setCustomSubjectAlternativeNames($val)
     {
-        $this->_propDict["certificateTemplateName"] = $val;
+		$this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
     
@@ -166,98 +258,6 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
     public function setSubjectNameFormatString($val)
     {
         $this->_propDict["subjectNameFormatString"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certificateStore
-    * Target store certificate
-    *
-    * @return CertificateStore The certificateStore
-    */
-    public function getCertificateStore()
-    {
-        if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
-                return $this->_propDict["certificateStore"];
-            } else {
-                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
-                return $this->_propDict["certificateStore"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the certificateStore
-    * Target store certificate
-    *
-    * @param CertificateStore $val The certificateStore
-    *
-    * @return MacOSPkcsCertificateProfile
-    */
-    public function setCertificateStore($val)
-    {
-        $this->_propDict["certificateStore"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     *
-     * @return array The customSubjectAlternativeNames
-     */
-    public function getCustomSubjectAlternativeNames()
-    {
-        if (array_key_exists("customSubjectAlternativeNames", $this->_propDict)) {
-           return $this->_propDict["customSubjectAlternativeNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-    *
-    * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
-    *
-    * @return MacOSPkcsCertificateProfile
-    */
-    public function setCustomSubjectAlternativeNames($val)
-    {
-		$this->_propDict["customSubjectAlternativeNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the allowAllAppsAccess
-    * AllowAllAppsAccess setting
-    *
-    * @return bool The allowAllAppsAccess
-    */
-    public function getAllowAllAppsAccess()
-    {
-        if (array_key_exists("allowAllAppsAccess", $this->_propDict)) {
-            return $this->_propDict["allowAllAppsAccess"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowAllAppsAccess
-    * AllowAllAppsAccess setting
-    *
-    * @param bool $val The allowAllAppsAccess
-    *
-    * @return MacOSPkcsCertificateProfile
-    */
-    public function setAllowAllAppsAccess($val)
-    {
-        $this->_propDict["allowAllAppsAccess"] = boolval($val);
         return $this;
     }
     

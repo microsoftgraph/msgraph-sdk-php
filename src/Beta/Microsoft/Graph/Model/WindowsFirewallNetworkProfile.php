@@ -23,263 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WindowsFirewallNetworkProfile extends Entity
 {
-
-    /**
-    * Gets the firewallEnabled
-    * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
-    *
-    * @return StateManagementSetting The firewallEnabled
-    */
-    public function getFirewallEnabled()
-    {
-        if (array_key_exists("firewallEnabled", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallEnabled"], "Beta\Microsoft\Graph\Model\StateManagementSetting")) {
-                return $this->_propDict["firewallEnabled"];
-            } else {
-                $this->_propDict["firewallEnabled"] = new StateManagementSetting($this->_propDict["firewallEnabled"]);
-                return $this->_propDict["firewallEnabled"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the firewallEnabled
-    * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
-    *
-    * @param StateManagementSetting $val The value to assign to the firewallEnabled
-    *
-    * @return WindowsFirewallNetworkProfile The WindowsFirewallNetworkProfile
-    */
-    public function setFirewallEnabled($val)
-    {
-        $this->_propDict["firewallEnabled"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the stealthModeRequired
-    * Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-    *
-    * @return bool The stealthModeRequired
-    */
-    public function getStealthModeRequired()
-    {
-        if (array_key_exists("stealthModeRequired", $this->_propDict)) {
-            return $this->_propDict["stealthModeRequired"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the stealthModeRequired
-    * Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-    *
-    * @param bool $val The value of the stealthModeRequired
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setStealthModeRequired($val)
-    {
-        $this->_propDict["stealthModeRequired"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the stealthModeBlocked
-    * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-    *
-    * @return bool The stealthModeBlocked
-    */
-    public function getStealthModeBlocked()
-    {
-        if (array_key_exists("stealthModeBlocked", $this->_propDict)) {
-            return $this->_propDict["stealthModeBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the stealthModeBlocked
-    * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
-    *
-    * @param bool $val The value of the stealthModeBlocked
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setStealthModeBlocked($val)
-    {
-        $this->_propDict["stealthModeBlocked"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the incomingTrafficRequired
-    * Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-    *
-    * @return bool The incomingTrafficRequired
-    */
-    public function getIncomingTrafficRequired()
-    {
-        if (array_key_exists("incomingTrafficRequired", $this->_propDict)) {
-            return $this->_propDict["incomingTrafficRequired"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the incomingTrafficRequired
-    * Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-    *
-    * @param bool $val The value of the incomingTrafficRequired
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setIncomingTrafficRequired($val)
-    {
-        $this->_propDict["incomingTrafficRequired"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the incomingTrafficBlocked
-    * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-    *
-    * @return bool The incomingTrafficBlocked
-    */
-    public function getIncomingTrafficBlocked()
-    {
-        if (array_key_exists("incomingTrafficBlocked", $this->_propDict)) {
-            return $this->_propDict["incomingTrafficBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the incomingTrafficBlocked
-    * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
-    *
-    * @param bool $val The value of the incomingTrafficBlocked
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setIncomingTrafficBlocked($val)
-    {
-        $this->_propDict["incomingTrafficBlocked"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the unicastResponsesToMulticastBroadcastsRequired
-    * Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-    *
-    * @return bool The unicastResponsesToMulticastBroadcastsRequired
-    */
-    public function getUnicastResponsesToMulticastBroadcastsRequired()
-    {
-        if (array_key_exists("unicastResponsesToMulticastBroadcastsRequired", $this->_propDict)) {
-            return $this->_propDict["unicastResponsesToMulticastBroadcastsRequired"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the unicastResponsesToMulticastBroadcastsRequired
-    * Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-    *
-    * @param bool $val The value of the unicastResponsesToMulticastBroadcastsRequired
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setUnicastResponsesToMulticastBroadcastsRequired($val)
-    {
-        $this->_propDict["unicastResponsesToMulticastBroadcastsRequired"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the unicastResponsesToMulticastBroadcastsBlocked
-    * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-    *
-    * @return bool The unicastResponsesToMulticastBroadcastsBlocked
-    */
-    public function getUnicastResponsesToMulticastBroadcastsBlocked()
-    {
-        if (array_key_exists("unicastResponsesToMulticastBroadcastsBlocked", $this->_propDict)) {
-            return $this->_propDict["unicastResponsesToMulticastBroadcastsBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the unicastResponsesToMulticastBroadcastsBlocked
-    * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
-    *
-    * @param bool $val The value of the unicastResponsesToMulticastBroadcastsBlocked
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setUnicastResponsesToMulticastBroadcastsBlocked($val)
-    {
-        $this->_propDict["unicastResponsesToMulticastBroadcastsBlocked"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the inboundNotificationsRequired
-    * Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-    *
-    * @return bool The inboundNotificationsRequired
-    */
-    public function getInboundNotificationsRequired()
-    {
-        if (array_key_exists("inboundNotificationsRequired", $this->_propDict)) {
-            return $this->_propDict["inboundNotificationsRequired"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the inboundNotificationsRequired
-    * Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-    *
-    * @param bool $val The value of the inboundNotificationsRequired
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setInboundNotificationsRequired($val)
-    {
-        $this->_propDict["inboundNotificationsRequired"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the inboundNotificationsBlocked
-    * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-    *
-    * @return bool The inboundNotificationsBlocked
-    */
-    public function getInboundNotificationsBlocked()
-    {
-        if (array_key_exists("inboundNotificationsBlocked", $this->_propDict)) {
-            return $this->_propDict["inboundNotificationsBlocked"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the inboundNotificationsBlocked
-    * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
-    *
-    * @param bool $val The value of the inboundNotificationsBlocked
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setInboundNotificationsBlocked($val)
-    {
-        $this->_propDict["inboundNotificationsBlocked"] = $val;
-        return $this;
-    }
     /**
     * Gets the authorizedApplicationRulesFromGroupPolicyMerged
     * Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
@@ -334,62 +77,6 @@ class WindowsFirewallNetworkProfile extends Entity
     public function setAuthorizedApplicationRulesFromGroupPolicyNotMerged($val)
     {
         $this->_propDict["authorizedApplicationRulesFromGroupPolicyNotMerged"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the globalPortRulesFromGroupPolicyMerged
-    * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-    *
-    * @return bool The globalPortRulesFromGroupPolicyMerged
-    */
-    public function getGlobalPortRulesFromGroupPolicyMerged()
-    {
-        if (array_key_exists("globalPortRulesFromGroupPolicyMerged", $this->_propDict)) {
-            return $this->_propDict["globalPortRulesFromGroupPolicyMerged"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the globalPortRulesFromGroupPolicyMerged
-    * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-    *
-    * @param bool $val The value of the globalPortRulesFromGroupPolicyMerged
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setGlobalPortRulesFromGroupPolicyMerged($val)
-    {
-        $this->_propDict["globalPortRulesFromGroupPolicyMerged"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the globalPortRulesFromGroupPolicyNotMerged
-    * Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-    *
-    * @return bool The globalPortRulesFromGroupPolicyNotMerged
-    */
-    public function getGlobalPortRulesFromGroupPolicyNotMerged()
-    {
-        if (array_key_exists("globalPortRulesFromGroupPolicyNotMerged", $this->_propDict)) {
-            return $this->_propDict["globalPortRulesFromGroupPolicyNotMerged"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the globalPortRulesFromGroupPolicyNotMerged
-    * Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
-    *
-    * @param bool $val The value of the globalPortRulesFromGroupPolicyNotMerged
-    *
-    * @return WindowsFirewallNetworkProfile
-    */
-    public function setGlobalPortRulesFromGroupPolicyNotMerged($val)
-    {
-        $this->_propDict["globalPortRulesFromGroupPolicyNotMerged"] = $val;
         return $this;
     }
     /**
@@ -448,60 +135,121 @@ class WindowsFirewallNetworkProfile extends Entity
         $this->_propDict["connectionSecurityRulesFromGroupPolicyNotMerged"] = $val;
         return $this;
     }
+
     /**
-    * Gets the outboundConnectionsRequired
-    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    * Gets the firewallEnabled
+    * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
     *
-    * @return bool The outboundConnectionsRequired
+    * @return StateManagementSetting The firewallEnabled
     */
-    public function getOutboundConnectionsRequired()
+    public function getFirewallEnabled()
     {
-        if (array_key_exists("outboundConnectionsRequired", $this->_propDict)) {
-            return $this->_propDict["outboundConnectionsRequired"];
+        if (array_key_exists("firewallEnabled", $this->_propDict)) {
+            if (is_a($this->_propDict["firewallEnabled"], "Beta\Microsoft\Graph\Model\StateManagementSetting")) {
+                return $this->_propDict["firewallEnabled"];
+            } else {
+                $this->_propDict["firewallEnabled"] = new StateManagementSetting($this->_propDict["firewallEnabled"]);
+                return $this->_propDict["firewallEnabled"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the firewallEnabled
+    * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
+    *
+    * @param StateManagementSetting $val The value to assign to the firewallEnabled
+    *
+    * @return WindowsFirewallNetworkProfile The WindowsFirewallNetworkProfile
+    */
+    public function setFirewallEnabled($val)
+    {
+        $this->_propDict["firewallEnabled"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the globalPortRulesFromGroupPolicyMerged
+    * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
+    *
+    * @return bool The globalPortRulesFromGroupPolicyMerged
+    */
+    public function getGlobalPortRulesFromGroupPolicyMerged()
+    {
+        if (array_key_exists("globalPortRulesFromGroupPolicyMerged", $this->_propDict)) {
+            return $this->_propDict["globalPortRulesFromGroupPolicyMerged"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the outboundConnectionsRequired
-    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    * Sets the globalPortRulesFromGroupPolicyMerged
+    * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
     *
-    * @param bool $val The value of the outboundConnectionsRequired
+    * @param bool $val The value of the globalPortRulesFromGroupPolicyMerged
     *
     * @return WindowsFirewallNetworkProfile
     */
-    public function setOutboundConnectionsRequired($val)
+    public function setGlobalPortRulesFromGroupPolicyMerged($val)
     {
-        $this->_propDict["outboundConnectionsRequired"] = $val;
+        $this->_propDict["globalPortRulesFromGroupPolicyMerged"] = $val;
         return $this;
     }
     /**
-    * Gets the outboundConnectionsBlocked
-    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    * Gets the globalPortRulesFromGroupPolicyNotMerged
+    * Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
     *
-    * @return bool The outboundConnectionsBlocked
+    * @return bool The globalPortRulesFromGroupPolicyNotMerged
     */
-    public function getOutboundConnectionsBlocked()
+    public function getGlobalPortRulesFromGroupPolicyNotMerged()
     {
-        if (array_key_exists("outboundConnectionsBlocked", $this->_propDict)) {
-            return $this->_propDict["outboundConnectionsBlocked"];
+        if (array_key_exists("globalPortRulesFromGroupPolicyNotMerged", $this->_propDict)) {
+            return $this->_propDict["globalPortRulesFromGroupPolicyNotMerged"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the outboundConnectionsBlocked
-    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    * Sets the globalPortRulesFromGroupPolicyNotMerged
+    * Configures the firewall to prevent merging global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
     *
-    * @param bool $val The value of the outboundConnectionsBlocked
+    * @param bool $val The value of the globalPortRulesFromGroupPolicyNotMerged
     *
     * @return WindowsFirewallNetworkProfile
     */
-    public function setOutboundConnectionsBlocked($val)
+    public function setGlobalPortRulesFromGroupPolicyNotMerged($val)
     {
-        $this->_propDict["outboundConnectionsBlocked"] = $val;
+        $this->_propDict["globalPortRulesFromGroupPolicyNotMerged"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the inboundConnectionsBlocked
+    * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
+    *
+    * @return bool The inboundConnectionsBlocked
+    */
+    public function getInboundConnectionsBlocked()
+    {
+        if (array_key_exists("inboundConnectionsBlocked", $this->_propDict)) {
+            return $this->_propDict["inboundConnectionsBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inboundConnectionsBlocked
+    * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
+    *
+    * @param bool $val The value of the inboundConnectionsBlocked
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setInboundConnectionsBlocked($val)
+    {
+        $this->_propDict["inboundConnectionsBlocked"] = $val;
         return $this;
     }
     /**
@@ -533,31 +281,227 @@ class WindowsFirewallNetworkProfile extends Entity
         return $this;
     }
     /**
-    * Gets the inboundConnectionsBlocked
-    * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
+    * Gets the inboundNotificationsBlocked
+    * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
     *
-    * @return bool The inboundConnectionsBlocked
+    * @return bool The inboundNotificationsBlocked
     */
-    public function getInboundConnectionsBlocked()
+    public function getInboundNotificationsBlocked()
     {
-        if (array_key_exists("inboundConnectionsBlocked", $this->_propDict)) {
-            return $this->_propDict["inboundConnectionsBlocked"];
+        if (array_key_exists("inboundNotificationsBlocked", $this->_propDict)) {
+            return $this->_propDict["inboundNotificationsBlocked"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the inboundConnectionsBlocked
-    * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
+    * Sets the inboundNotificationsBlocked
+    * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
     *
-    * @param bool $val The value of the inboundConnectionsBlocked
+    * @param bool $val The value of the inboundNotificationsBlocked
     *
     * @return WindowsFirewallNetworkProfile
     */
-    public function setInboundConnectionsBlocked($val)
+    public function setInboundNotificationsBlocked($val)
     {
-        $this->_propDict["inboundConnectionsBlocked"] = $val;
+        $this->_propDict["inboundNotificationsBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the inboundNotificationsRequired
+    * Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
+    *
+    * @return bool The inboundNotificationsRequired
+    */
+    public function getInboundNotificationsRequired()
+    {
+        if (array_key_exists("inboundNotificationsRequired", $this->_propDict)) {
+            return $this->_propDict["inboundNotificationsRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inboundNotificationsRequired
+    * Allows the firewall to display notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
+    *
+    * @param bool $val The value of the inboundNotificationsRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setInboundNotificationsRequired($val)
+    {
+        $this->_propDict["inboundNotificationsRequired"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the incomingTrafficBlocked
+    * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
+    *
+    * @return bool The incomingTrafficBlocked
+    */
+    public function getIncomingTrafficBlocked()
+    {
+        if (array_key_exists("incomingTrafficBlocked", $this->_propDict)) {
+            return $this->_propDict["incomingTrafficBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incomingTrafficBlocked
+    * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
+    *
+    * @param bool $val The value of the incomingTrafficBlocked
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setIncomingTrafficBlocked($val)
+    {
+        $this->_propDict["incomingTrafficBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the incomingTrafficRequired
+    * Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
+    *
+    * @return bool The incomingTrafficRequired
+    */
+    public function getIncomingTrafficRequired()
+    {
+        if (array_key_exists("incomingTrafficRequired", $this->_propDict)) {
+            return $this->_propDict["incomingTrafficRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incomingTrafficRequired
+    * Configures the firewall to allow incoming traffic pursuant to other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
+    *
+    * @param bool $val The value of the incomingTrafficRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setIncomingTrafficRequired($val)
+    {
+        $this->_propDict["incomingTrafficRequired"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the outboundConnectionsBlocked
+    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    *
+    * @return bool The outboundConnectionsBlocked
+    */
+    public function getOutboundConnectionsBlocked()
+    {
+        if (array_key_exists("outboundConnectionsBlocked", $this->_propDict)) {
+            return $this->_propDict["outboundConnectionsBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the outboundConnectionsBlocked
+    * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    *
+    * @param bool $val The value of the outboundConnectionsBlocked
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setOutboundConnectionsBlocked($val)
+    {
+        $this->_propDict["outboundConnectionsBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the outboundConnectionsRequired
+    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    *
+    * @return bool The outboundConnectionsRequired
+    */
+    public function getOutboundConnectionsRequired()
+    {
+        if (array_key_exists("outboundConnectionsRequired", $this->_propDict)) {
+            return $this->_propDict["outboundConnectionsRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the outboundConnectionsRequired
+    * Configures the firewall to allow all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
+    *
+    * @param bool $val The value of the outboundConnectionsRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setOutboundConnectionsRequired($val)
+    {
+        $this->_propDict["outboundConnectionsRequired"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the policyRulesFromGroupPolicyMerged
+    * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    *
+    * @return bool The policyRulesFromGroupPolicyMerged
+    */
+    public function getPolicyRulesFromGroupPolicyMerged()
+    {
+        if (array_key_exists("policyRulesFromGroupPolicyMerged", $this->_propDict)) {
+            return $this->_propDict["policyRulesFromGroupPolicyMerged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyRulesFromGroupPolicyMerged
+    * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    *
+    * @param bool $val The value of the policyRulesFromGroupPolicyMerged
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setPolicyRulesFromGroupPolicyMerged($val)
+    {
+        $this->_propDict["policyRulesFromGroupPolicyMerged"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the policyRulesFromGroupPolicyNotMerged
+    * Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    *
+    * @return bool The policyRulesFromGroupPolicyNotMerged
+    */
+    public function getPolicyRulesFromGroupPolicyNotMerged()
+    {
+        if (array_key_exists("policyRulesFromGroupPolicyNotMerged", $this->_propDict)) {
+            return $this->_propDict["policyRulesFromGroupPolicyNotMerged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the policyRulesFromGroupPolicyNotMerged
+    * Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    *
+    * @param bool $val The value of the policyRulesFromGroupPolicyNotMerged
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setPolicyRulesFromGroupPolicyNotMerged($val)
+    {
+        $this->_propDict["policyRulesFromGroupPolicyNotMerged"] = $val;
         return $this;
     }
     /**
@@ -617,59 +561,115 @@ class WindowsFirewallNetworkProfile extends Entity
         return $this;
     }
     /**
-    * Gets the policyRulesFromGroupPolicyMerged
-    * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    * Gets the stealthModeBlocked
+    * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
     *
-    * @return bool The policyRulesFromGroupPolicyMerged
+    * @return bool The stealthModeBlocked
     */
-    public function getPolicyRulesFromGroupPolicyMerged()
+    public function getStealthModeBlocked()
     {
-        if (array_key_exists("policyRulesFromGroupPolicyMerged", $this->_propDict)) {
-            return $this->_propDict["policyRulesFromGroupPolicyMerged"];
+        if (array_key_exists("stealthModeBlocked", $this->_propDict)) {
+            return $this->_propDict["stealthModeBlocked"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the policyRulesFromGroupPolicyMerged
-    * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    * Sets the stealthModeBlocked
+    * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
     *
-    * @param bool $val The value of the policyRulesFromGroupPolicyMerged
+    * @param bool $val The value of the stealthModeBlocked
     *
     * @return WindowsFirewallNetworkProfile
     */
-    public function setPolicyRulesFromGroupPolicyMerged($val)
+    public function setStealthModeBlocked($val)
     {
-        $this->_propDict["policyRulesFromGroupPolicyMerged"] = $val;
+        $this->_propDict["stealthModeBlocked"] = $val;
         return $this;
     }
     /**
-    * Gets the policyRulesFromGroupPolicyNotMerged
-    * Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    * Gets the stealthModeRequired
+    * Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
     *
-    * @return bool The policyRulesFromGroupPolicyNotMerged
+    * @return bool The stealthModeRequired
     */
-    public function getPolicyRulesFromGroupPolicyNotMerged()
+    public function getStealthModeRequired()
     {
-        if (array_key_exists("policyRulesFromGroupPolicyNotMerged", $this->_propDict)) {
-            return $this->_propDict["policyRulesFromGroupPolicyNotMerged"];
+        if (array_key_exists("stealthModeRequired", $this->_propDict)) {
+            return $this->_propDict["stealthModeRequired"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the policyRulesFromGroupPolicyNotMerged
-    * Configures the firewall to prevent merging Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
+    * Sets the stealthModeRequired
+    * Allow the server to operate in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
     *
-    * @param bool $val The value of the policyRulesFromGroupPolicyNotMerged
+    * @param bool $val The value of the stealthModeRequired
     *
     * @return WindowsFirewallNetworkProfile
     */
-    public function setPolicyRulesFromGroupPolicyNotMerged($val)
+    public function setStealthModeRequired($val)
     {
-        $this->_propDict["policyRulesFromGroupPolicyNotMerged"] = $val;
+        $this->_propDict["stealthModeRequired"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the unicastResponsesToMulticastBroadcastsBlocked
+    * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
+    *
+    * @return bool The unicastResponsesToMulticastBroadcastsBlocked
+    */
+    public function getUnicastResponsesToMulticastBroadcastsBlocked()
+    {
+        if (array_key_exists("unicastResponsesToMulticastBroadcastsBlocked", $this->_propDict)) {
+            return $this->_propDict["unicastResponsesToMulticastBroadcastsBlocked"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the unicastResponsesToMulticastBroadcastsBlocked
+    * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
+    *
+    * @param bool $val The value of the unicastResponsesToMulticastBroadcastsBlocked
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setUnicastResponsesToMulticastBroadcastsBlocked($val)
+    {
+        $this->_propDict["unicastResponsesToMulticastBroadcastsBlocked"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the unicastResponsesToMulticastBroadcastsRequired
+    * Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
+    *
+    * @return bool The unicastResponsesToMulticastBroadcastsRequired
+    */
+    public function getUnicastResponsesToMulticastBroadcastsRequired()
+    {
+        if (array_key_exists("unicastResponsesToMulticastBroadcastsRequired", $this->_propDict)) {
+            return $this->_propDict["unicastResponsesToMulticastBroadcastsRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the unicastResponsesToMulticastBroadcastsRequired
+    * Configures the firewall to allow unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
+    *
+    * @param bool $val The value of the unicastResponsesToMulticastBroadcastsRequired
+    *
+    * @return WindowsFirewallNetworkProfile
+    */
+    public function setUnicastResponsesToMulticastBroadcastsRequired($val)
+    {
+        $this->_propDict["unicastResponsesToMulticastBroadcastsRequired"] = $val;
         return $this;
     }
 }

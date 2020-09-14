@@ -174,64 +174,6 @@ class Application extends DirectoryObject
     }
     
     /**
-    * Gets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
-    *
-    * @return bool The isFallbackPublicClient
-    */
-    public function getIsFallbackPublicClient()
-    {
-        if (array_key_exists("isFallbackPublicClient", $this->_propDict)) {
-            return $this->_propDict["isFallbackPublicClient"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
-    *
-    * @param bool $val The isFallbackPublicClient
-    *
-    * @return Application
-    */
-    public function setIsFallbackPublicClient($val)
-    {
-        $this->_propDict["isFallbackPublicClient"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
-    *
-    * @return string The identifierUris
-    */
-    public function getIdentifierUris()
-    {
-        if (array_key_exists("identifierUris", $this->_propDict)) {
-            return $this->_propDict["identifierUris"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
-    *
-    * @param string $val The identifierUris
-    *
-    * @return Application
-    */
-    public function setIdentifierUris($val)
-    {
-        $this->_propDict["identifierUris"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * The date and time the application was registered. Read-only.
     *
@@ -288,39 +230,6 @@ class Application extends DirectoryObject
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the publicClient
-    * Specifies settings for installed clients such as desktop or mobile devices.
-    *
-    * @return PublicClientApplication The publicClient
-    */
-    public function getPublicClient()
-    {
-        if (array_key_exists("publicClient", $this->_propDict)) {
-            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Model\PublicClientApplication")) {
-                return $this->_propDict["publicClient"];
-            } else {
-                $this->_propDict["publicClient"] = new PublicClientApplication($this->_propDict["publicClient"]);
-                return $this->_propDict["publicClient"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the publicClient
-    * Specifies settings for installed clients such as desktop or mobile devices.
-    *
-    * @param PublicClientApplication $val The publicClient
-    *
-    * @return Application
-    */
-    public function setPublicClient($val)
-    {
-        $this->_propDict["publicClient"] = $val;
         return $this;
     }
     
@@ -383,6 +292,35 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the identifierUris
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    *
+    * @return string The identifierUris
+    */
+    public function getIdentifierUris()
+    {
+        if (array_key_exists("identifierUris", $this->_propDict)) {
+            return $this->_propDict["identifierUris"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the identifierUris
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    *
+    * @param string $val The identifierUris
+    *
+    * @return Application
+    */
+    public function setIdentifierUris($val)
+    {
+        $this->_propDict["identifierUris"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the info
     * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
@@ -439,6 +377,35 @@ class Application extends DirectoryObject
     public function setIsDeviceOnlyAuthSupported($val)
     {
         $this->_propDict["isDeviceOnlyAuthSupported"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isFallbackPublicClient
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
+    *
+    * @return bool The isFallbackPublicClient
+    */
+    public function getIsFallbackPublicClient()
+    {
+        if (array_key_exists("isFallbackPublicClient", $this->_propDict)) {
+            return $this->_propDict["isFallbackPublicClient"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isFallbackPublicClient
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
+    *
+    * @param bool $val The isFallbackPublicClient
+    *
+    * @return Application
+    */
+    public function setIsFallbackPublicClient($val)
+    {
+        $this->_propDict["isFallbackPublicClient"] = boolval($val);
         return $this;
     }
     
@@ -656,6 +623,39 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the publicClient
+    * Specifies settings for installed clients such as desktop or mobile devices.
+    *
+    * @return PublicClientApplication The publicClient
+    */
+    public function getPublicClient()
+    {
+        if (array_key_exists("publicClient", $this->_propDict)) {
+            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Model\PublicClientApplication")) {
+                return $this->_propDict["publicClient"];
+            } else {
+                $this->_propDict["publicClient"] = new PublicClientApplication($this->_propDict["publicClient"]);
+                return $this->_propDict["publicClient"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the publicClient
+    * Specifies settings for installed clients such as desktop or mobile devices.
+    *
+    * @param PublicClientApplication $val The publicClient
+    *
+    * @return Application
+    */
+    public function setPublicClient($val)
+    {
+        $this->_propDict["publicClient"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the publisherDomain
     * The verified publisher domain for the application. Read-only.
     *
@@ -834,36 +834,6 @@ class Application extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the extensionProperties
-    * Read-only. Nullable.
-     *
-     * @return array The extensionProperties
-     */
-    public function getExtensionProperties()
-    {
-        if (array_key_exists("extensionProperties", $this->_propDict)) {
-           return $this->_propDict["extensionProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the extensionProperties
-    * Read-only. Nullable.
-    *
-    * @param ExtensionProperty $val The extensionProperties
-    *
-    * @return Application
-    */
-    public function setExtensionProperties($val)
-    {
-		$this->_propDict["extensionProperties"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the createdOnBehalfOf
     * Read-only.
@@ -894,6 +864,36 @@ class Application extends DirectoryObject
     public function setCreatedOnBehalfOf($val)
     {
         $this->_propDict["createdOnBehalfOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the extensionProperties
+    * Read-only. Nullable.
+     *
+     * @return array The extensionProperties
+     */
+    public function getExtensionProperties()
+    {
+        if (array_key_exists("extensionProperties", $this->_propDict)) {
+           return $this->_propDict["extensionProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the extensionProperties
+    * Read-only. Nullable.
+    *
+    * @param ExtensionProperty $val The extensionProperties
+    *
+    * @return Application
+    */
+    public function setExtensionProperties($val)
+    {
+		$this->_propDict["extensionProperties"] = $val;
         return $this;
     }
     
@@ -957,34 +957,6 @@ class Application extends DirectoryObject
     
 
      /** 
-     * Gets the tokenLifetimePolicies
-     *
-     * @return array The tokenLifetimePolicies
-     */
-    public function getTokenLifetimePolicies()
-    {
-        if (array_key_exists("tokenLifetimePolicies", $this->_propDict)) {
-           return $this->_propDict["tokenLifetimePolicies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the tokenLifetimePolicies
-    *
-    * @param TokenLifetimePolicy $val The tokenLifetimePolicies
-    *
-    * @return Application
-    */
-    public function setTokenLifetimePolicies($val)
-    {
-		$this->_propDict["tokenLifetimePolicies"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the tokenIssuancePolicies
      *
      * @return array The tokenIssuancePolicies
@@ -1008,6 +980,34 @@ class Application extends DirectoryObject
     public function setTokenIssuancePolicies($val)
     {
 		$this->_propDict["tokenIssuancePolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tokenLifetimePolicies
+     *
+     * @return array The tokenLifetimePolicies
+     */
+    public function getTokenLifetimePolicies()
+    {
+        if (array_key_exists("tokenLifetimePolicies", $this->_propDict)) {
+           return $this->_propDict["tokenLifetimePolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tokenLifetimePolicies
+    *
+    * @param TokenLifetimePolicy $val The tokenLifetimePolicies
+    *
+    * @return Application
+    */
+    public function setTokenLifetimePolicies($val)
+    {
+		$this->_propDict["tokenLifetimePolicies"] = $val;
         return $this;
     }
     

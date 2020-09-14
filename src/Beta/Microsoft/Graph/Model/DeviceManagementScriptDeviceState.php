@@ -25,101 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementScriptDeviceState extends Entity
 {
     /**
-    * Gets the runState
-    * State of latest run of the device management script.
-    *
-    * @return RunState The runState
-    */
-    public function getRunState()
-    {
-        if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "Beta\Microsoft\Graph\Model\RunState")) {
-                return $this->_propDict["runState"];
-            } else {
-                $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
-                return $this->_propDict["runState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the runState
-    * State of latest run of the device management script.
-    *
-    * @param RunState $val The runState
-    *
-    * @return DeviceManagementScriptDeviceState
-    */
-    public function setRunState($val)
-    {
-        $this->_propDict["runState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resultMessage
-    * Details of execution output.
-    *
-    * @return string The resultMessage
-    */
-    public function getResultMessage()
-    {
-        if (array_key_exists("resultMessage", $this->_propDict)) {
-            return $this->_propDict["resultMessage"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resultMessage
-    * Details of execution output.
-    *
-    * @param string $val The resultMessage
-    *
-    * @return DeviceManagementScriptDeviceState
-    */
-    public function setResultMessage($val)
-    {
-        $this->_propDict["resultMessage"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastStateUpdateDateTime
-    * Latest time the device management script executes.
-    *
-    * @return \DateTime The lastStateUpdateDateTime
-    */
-    public function getLastStateUpdateDateTime()
-    {
-        if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
-                return $this->_propDict["lastStateUpdateDateTime"];
-            } else {
-                $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
-                return $this->_propDict["lastStateUpdateDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastStateUpdateDateTime
-    * Latest time the device management script executes.
-    *
-    * @param \DateTime $val The lastStateUpdateDateTime
-    *
-    * @return DeviceManagementScriptDeviceState
-    */
-    public function setLastStateUpdateDateTime($val)
-    {
-        $this->_propDict["lastStateUpdateDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the errorCode
     * Error code corresponding to erroneous execution of the device management script.
     *
@@ -174,6 +79,101 @@ class DeviceManagementScriptDeviceState extends Entity
     public function setErrorDescription($val)
     {
         $this->_propDict["errorDescription"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastStateUpdateDateTime
+    * Latest time the device management script executes.
+    *
+    * @return \DateTime The lastStateUpdateDateTime
+    */
+    public function getLastStateUpdateDateTime()
+    {
+        if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
+                return $this->_propDict["lastStateUpdateDateTime"];
+            } else {
+                $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
+                return $this->_propDict["lastStateUpdateDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastStateUpdateDateTime
+    * Latest time the device management script executes.
+    *
+    * @param \DateTime $val The lastStateUpdateDateTime
+    *
+    * @return DeviceManagementScriptDeviceState
+    */
+    public function setLastStateUpdateDateTime($val)
+    {
+        $this->_propDict["lastStateUpdateDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resultMessage
+    * Details of execution output.
+    *
+    * @return string The resultMessage
+    */
+    public function getResultMessage()
+    {
+        if (array_key_exists("resultMessage", $this->_propDict)) {
+            return $this->_propDict["resultMessage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resultMessage
+    * Details of execution output.
+    *
+    * @param string $val The resultMessage
+    *
+    * @return DeviceManagementScriptDeviceState
+    */
+    public function setResultMessage($val)
+    {
+        $this->_propDict["resultMessage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the runState
+    * State of latest run of the device management script.
+    *
+    * @return RunState The runState
+    */
+    public function getRunState()
+    {
+        if (array_key_exists("runState", $this->_propDict)) {
+            if (is_a($this->_propDict["runState"], "Beta\Microsoft\Graph\Model\RunState")) {
+                return $this->_propDict["runState"];
+            } else {
+                $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);
+                return $this->_propDict["runState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the runState
+    * State of latest run of the device management script.
+    *
+    * @param RunState $val The runState
+    *
+    * @return DeviceManagementScriptDeviceState
+    */
+    public function setRunState($val)
+    {
+        $this->_propDict["runState"] = $val;
         return $this;
     }
     

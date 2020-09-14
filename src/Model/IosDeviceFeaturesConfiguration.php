@@ -53,35 +53,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         return $this;
     }
     
-    /**
-    * Gets the lockScreenFootnote
-    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-    *
-    * @return string The lockScreenFootnote
-    */
-    public function getLockScreenFootnote()
-    {
-        if (array_key_exists("lockScreenFootnote", $this->_propDict)) {
-            return $this->_propDict["lockScreenFootnote"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lockScreenFootnote
-    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-    *
-    * @param string $val The lockScreenFootnote
-    *
-    * @return IosDeviceFeaturesConfiguration
-    */
-    public function setLockScreenFootnote($val)
-    {
-        $this->_propDict["lockScreenFootnote"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the homeScreenDockIcons
@@ -139,6 +110,35 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function setHomeScreenPages($val)
     {
 		$this->_propDict["homeScreenPages"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lockScreenFootnote
+    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
+    *
+    * @return string The lockScreenFootnote
+    */
+    public function getLockScreenFootnote()
+    {
+        if (array_key_exists("lockScreenFootnote", $this->_propDict)) {
+            return $this->_propDict["lockScreenFootnote"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lockScreenFootnote
+    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
+    *
+    * @param string $val The lockScreenFootnote
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setLockScreenFootnote($val)
+    {
+        $this->_propDict["lockScreenFootnote"] = $val;
         return $this;
     }
     

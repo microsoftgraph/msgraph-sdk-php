@@ -25,37 +25,6 @@ class InformationProtectionContentLabel extends Entity
 {
 
     /**
-    * Gets the creationDateTime
-    *
-    * @return \DateTime The creationDateTime
-    */
-    public function getCreationDateTime()
-    {
-        if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
-                return $this->_propDict["creationDateTime"];
-            } else {
-                $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
-                return $this->_propDict["creationDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the creationDateTime
-    *
-    * @param \DateTime $val The value to assign to the creationDateTime
-    *
-    * @return InformationProtectionContentLabel The InformationProtectionContentLabel
-    */
-    public function setCreationDateTime($val)
-    {
-        $this->_propDict["creationDateTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the assignmentMethod
     *
     * @return AssignmentMethod The assignmentMethod
@@ -83,6 +52,37 @@ class InformationProtectionContentLabel extends Entity
     public function setAssignmentMethod($val)
     {
         $this->_propDict["assignmentMethod"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the creationDateTime
+    *
+    * @return \DateTime The creationDateTime
+    */
+    public function getCreationDateTime()
+    {
+        if (array_key_exists("creationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
+                return $this->_propDict["creationDateTime"];
+            } else {
+                $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
+                return $this->_propDict["creationDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the creationDateTime
+    *
+    * @param \DateTime $val The value to assign to the creationDateTime
+    *
+    * @return InformationProtectionContentLabel The InformationProtectionContentLabel
+    */
+    public function setCreationDateTime($val)
+    {
+        $this->_propDict["creationDateTime"] = $val;
          return $this;
     }
 

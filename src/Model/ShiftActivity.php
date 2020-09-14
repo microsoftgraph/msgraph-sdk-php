@@ -24,6 +24,95 @@ namespace Microsoft\Graph\Model;
 class ShiftActivity extends Entity
 {
     /**
+    * Gets the code
+    * Customer defined code for the shiftActivity. Required.
+    *
+    * @return string The code
+    */
+    public function getCode()
+    {
+        if (array_key_exists("code", $this->_propDict)) {
+            return $this->_propDict["code"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the code
+    * Customer defined code for the shiftActivity. Required.
+    *
+    * @param string $val The value of the code
+    *
+    * @return ShiftActivity
+    */
+    public function setCode($val)
+    {
+        $this->_propDict["code"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the displayName
+    * The name of the shiftActivity. Required.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    * The name of the shiftActivity. Required.
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return ShiftActivity
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the endDateTime
+    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
+    *
+    * @return \DateTime The endDateTime
+    */
+    public function getEndDateTime()
+    {
+        if (array_key_exists("endDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+                return $this->_propDict["endDateTime"];
+            } else {
+                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
+                return $this->_propDict["endDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the endDateTime
+    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
+    *
+    * @param \DateTime $val The value to assign to the endDateTime
+    *
+    * @return ShiftActivity The ShiftActivity
+    */
+    public function setEndDateTime($val)
+    {
+        $this->_propDict["endDateTime"] = $val;
+         return $this;
+    }
+    /**
     * Gets the isPaid
     * Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
     *
@@ -83,95 +172,6 @@ class ShiftActivity extends Entity
     {
         $this->_propDict["startDateTime"] = $val;
          return $this;
-    }
-
-    /**
-    * Gets the endDateTime
-    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
-    *
-    * @return \DateTime The endDateTime
-    */
-    public function getEndDateTime()
-    {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
-                return $this->_propDict["endDateTime"];
-            } else {
-                $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
-                return $this->_propDict["endDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the endDateTime
-    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
-    *
-    * @param \DateTime $val The value to assign to the endDateTime
-    *
-    * @return ShiftActivity The ShiftActivity
-    */
-    public function setEndDateTime($val)
-    {
-        $this->_propDict["endDateTime"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the code
-    * Customer defined code for the shiftActivity. Required.
-    *
-    * @return string The code
-    */
-    public function getCode()
-    {
-        if (array_key_exists("code", $this->_propDict)) {
-            return $this->_propDict["code"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the code
-    * Customer defined code for the shiftActivity. Required.
-    *
-    * @param string $val The value of the code
-    *
-    * @return ShiftActivity
-    */
-    public function setCode($val)
-    {
-        $this->_propDict["code"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the displayName
-    * The name of the shiftActivity. Required.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * The name of the shiftActivity. Required.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return ShiftActivity
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
     }
 
     /**

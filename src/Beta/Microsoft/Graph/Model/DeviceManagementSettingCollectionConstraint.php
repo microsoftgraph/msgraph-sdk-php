@@ -33,34 +33,6 @@ class DeviceManagementSettingCollectionConstraint extends DeviceManagementConstr
     }
 
     /**
-    * Gets the minimumLength
-    * The minimum number of elements in the collection
-    *
-    * @return int The minimumLength
-    */
-    public function getMinimumLength()
-    {
-        if (array_key_exists("minimumLength", $this->_propDict)) {
-            return $this->_propDict["minimumLength"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the minimumLength
-    * The minimum number of elements in the collection
-    *
-    * @param int $val The value of the minimumLength
-    *
-    * @return DeviceManagementSettingCollectionConstraint
-    */
-    public function setMinimumLength($val)
-    {
-        $this->_propDict["minimumLength"] = $val;
-        return $this;
-    }
-    /**
     * Gets the maximumLength
     * The maximum number of elements in the collection
     *
@@ -86,6 +58,34 @@ class DeviceManagementSettingCollectionConstraint extends DeviceManagementConstr
     public function setMaximumLength($val)
     {
         $this->_propDict["maximumLength"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the minimumLength
+    * The minimum number of elements in the collection
+    *
+    * @return int The minimumLength
+    */
+    public function getMinimumLength()
+    {
+        if (array_key_exists("minimumLength", $this->_propDict)) {
+            return $this->_propDict["minimumLength"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minimumLength
+    * The minimum number of elements in the collection
+    *
+    * @param int $val The value of the minimumLength
+    *
+    * @return DeviceManagementSettingCollectionConstraint
+    */
+    public function setMinimumLength($val)
+    {
+        $this->_propDict["minimumLength"] = $val;
         return $this;
     }
 }

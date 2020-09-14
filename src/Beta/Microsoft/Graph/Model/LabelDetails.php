@@ -24,55 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class LabelDetails extends Entity
 {
     /**
-    * Gets the id
+    * Gets the color
     *
-    * @return string The id
+    * @return string The color
     */
-    public function getId()
+    public function getColor()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("color", $this->_propDict)) {
+            return $this->_propDict["color"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
+    * Sets the color
     *
-    * @param string $val The value of the id
-    *
-    * @return LabelDetails
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    *
-    * @param string $val The value of the name
+    * @param string $val The value of the color
     *
     * @return LabelDetails
     */
-    public function setName($val)
+    public function setColor($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["color"] = $val;
         return $this;
     }
     /**
@@ -102,29 +76,81 @@ class LabelDetails extends Entity
         return $this;
     }
     /**
-    * Gets the color
+    * Gets the id
     *
-    * @return string The color
+    * @return string The id
     */
-    public function getColor()
+    public function getId()
     {
-        if (array_key_exists("color", $this->_propDict)) {
-            return $this->_propDict["color"];
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the color
+    * Sets the id
     *
-    * @param string $val The value of the color
+    * @param string $val The value of the id
     *
     * @return LabelDetails
     */
-    public function setColor($val)
+    public function setId($val)
     {
-        $this->_propDict["color"] = $val;
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isActive
+    *
+    * @return bool The isActive
+    */
+    public function getIsActive()
+    {
+        if (array_key_exists("isActive", $this->_propDict)) {
+            return $this->_propDict["isActive"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isActive
+    *
+    * @param bool $val The value of the isActive
+    *
+    * @return LabelDetails
+    */
+    public function setIsActive($val)
+    {
+        $this->_propDict["isActive"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The value of the name
+    *
+    * @return LabelDetails
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
     /**
@@ -177,32 +203,6 @@ class LabelDetails extends Entity
     public function setTooltip($val)
     {
         $this->_propDict["tooltip"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the isActive
-    *
-    * @return bool The isActive
-    */
-    public function getIsActive()
-    {
-        if (array_key_exists("isActive", $this->_propDict)) {
-            return $this->_propDict["isActive"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isActive
-    *
-    * @param bool $val The value of the isActive
-    *
-    * @return LabelDetails
-    */
-    public function setIsActive($val)
-    {
-        $this->_propDict["isActive"] = $val;
         return $this;
     }
 }

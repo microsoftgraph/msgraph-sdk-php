@@ -52,34 +52,6 @@ class ComanagementEligibleDevicesSummary extends Entity
         return $this;
     }
     /**
-    * Gets the eligibleCount
-    * Count of devices fully eligible for Co-Management
-    *
-    * @return int The eligibleCount
-    */
-    public function getEligibleCount()
-    {
-        if (array_key_exists("eligibleCount", $this->_propDict)) {
-            return $this->_propDict["eligibleCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the eligibleCount
-    * Count of devices fully eligible for Co-Management
-    *
-    * @param int $val The value of the eligibleCount
-    *
-    * @return ComanagementEligibleDevicesSummary
-    */
-    public function setEligibleCount($val)
-    {
-        $this->_propDict["eligibleCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the eligibleButNotAzureAdJoinedCount
     * Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
     *
@@ -108,31 +80,31 @@ class ComanagementEligibleDevicesSummary extends Entity
         return $this;
     }
     /**
-    * Gets the needsOsUpdateCount
-    * Count of devices that will be eligible for Co-Management after an OS update
+    * Gets the eligibleCount
+    * Count of devices fully eligible for Co-Management
     *
-    * @return int The needsOsUpdateCount
+    * @return int The eligibleCount
     */
-    public function getNeedsOsUpdateCount()
+    public function getEligibleCount()
     {
-        if (array_key_exists("needsOsUpdateCount", $this->_propDict)) {
-            return $this->_propDict["needsOsUpdateCount"];
+        if (array_key_exists("eligibleCount", $this->_propDict)) {
+            return $this->_propDict["eligibleCount"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the needsOsUpdateCount
-    * Count of devices that will be eligible for Co-Management after an OS update
+    * Sets the eligibleCount
+    * Count of devices fully eligible for Co-Management
     *
-    * @param int $val The value of the needsOsUpdateCount
+    * @param int $val The value of the eligibleCount
     *
     * @return ComanagementEligibleDevicesSummary
     */
-    public function setNeedsOsUpdateCount($val)
+    public function setEligibleCount($val)
     {
-        $this->_propDict["needsOsUpdateCount"] = $val;
+        $this->_propDict["eligibleCount"] = $val;
         return $this;
     }
     /**
@@ -161,6 +133,34 @@ class ComanagementEligibleDevicesSummary extends Entity
     public function setIneligibleCount($val)
     {
         $this->_propDict["ineligibleCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the needsOsUpdateCount
+    * Count of devices that will be eligible for Co-Management after an OS update
+    *
+    * @return int The needsOsUpdateCount
+    */
+    public function getNeedsOsUpdateCount()
+    {
+        if (array_key_exists("needsOsUpdateCount", $this->_propDict)) {
+            return $this->_propDict["needsOsUpdateCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the needsOsUpdateCount
+    * Count of devices that will be eligible for Co-Management after an OS update
+    *
+    * @param int $val The value of the needsOsUpdateCount
+    *
+    * @return ComanagementEligibleDevicesSummary
+    */
+    public function setNeedsOsUpdateCount($val)
+    {
+        $this->_propDict["needsOsUpdateCount"] = $val;
         return $this;
     }
 }

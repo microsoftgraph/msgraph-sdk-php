@@ -25,35 +25,35 @@ class CallRoute extends Entity
 {
 
     /**
-    * Gets the routingType
-    * Possible values are: forwarded, lookup, selfFork.
+    * Gets the final
+    * The identity that was resolved to in the call.
     *
-    * @return RoutingType The routingType
+    * @return IdentitySet The final
     */
-    public function getRoutingType()
+    public function getFinal()
     {
-        if (array_key_exists("routingType", $this->_propDict)) {
-            if (is_a($this->_propDict["routingType"], "Beta\Microsoft\Graph\Model\RoutingType")) {
-                return $this->_propDict["routingType"];
+        if (array_key_exists("final", $this->_propDict)) {
+            if (is_a($this->_propDict["final"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["final"];
             } else {
-                $this->_propDict["routingType"] = new RoutingType($this->_propDict["routingType"]);
-                return $this->_propDict["routingType"];
+                $this->_propDict["final"] = new IdentitySet($this->_propDict["final"]);
+                return $this->_propDict["final"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the routingType
-    * Possible values are: forwarded, lookup, selfFork.
+    * Sets the final
+    * The identity that was resolved to in the call.
     *
-    * @param RoutingType $val The value to assign to the routingType
+    * @param IdentitySet $val The value to assign to the final
     *
     * @return CallRoute The CallRoute
     */
-    public function setRoutingType($val)
+    public function setFinal($val)
     {
-        $this->_propDict["routingType"] = $val;
+        $this->_propDict["final"] = $val;
          return $this;
     }
 
@@ -91,35 +91,35 @@ class CallRoute extends Entity
     }
 
     /**
-    * Gets the final
-    * The identity that was resolved to in the call.
+    * Gets the routingType
+    * Possible values are: forwarded, lookup, selfFork.
     *
-    * @return IdentitySet The final
+    * @return RoutingType The routingType
     */
-    public function getFinal()
+    public function getRoutingType()
     {
-        if (array_key_exists("final", $this->_propDict)) {
-            if (is_a($this->_propDict["final"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["final"];
+        if (array_key_exists("routingType", $this->_propDict)) {
+            if (is_a($this->_propDict["routingType"], "Beta\Microsoft\Graph\Model\RoutingType")) {
+                return $this->_propDict["routingType"];
             } else {
-                $this->_propDict["final"] = new IdentitySet($this->_propDict["final"]);
-                return $this->_propDict["final"];
+                $this->_propDict["routingType"] = new RoutingType($this->_propDict["routingType"]);
+                return $this->_propDict["routingType"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the final
-    * The identity that was resolved to in the call.
+    * Sets the routingType
+    * Possible values are: forwarded, lookup, selfFork.
     *
-    * @param IdentitySet $val The value to assign to the final
+    * @param RoutingType $val The value to assign to the routingType
     *
     * @return CallRoute The CallRoute
     */
-    public function setFinal($val)
+    public function setRoutingType($val)
     {
-        $this->_propDict["final"] = $val;
+        $this->_propDict["routingType"] = $val;
          return $this;
     }
 }

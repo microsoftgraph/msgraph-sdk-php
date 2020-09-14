@@ -25,89 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementScript extends Entity
 {
     /**
-    * Gets the enforceSignatureCheck
-    * Indicate whether the script signature needs be checked.
+    * Gets the createdDateTime
+    * The date and time the device management script was created. This property is read-only.
     *
-    * @return bool The enforceSignatureCheck
+    * @return \DateTime The createdDateTime
     */
-    public function getEnforceSignatureCheck()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("enforceSignatureCheck", $this->_propDict)) {
-            return $this->_propDict["enforceSignatureCheck"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the enforceSignatureCheck
-    * Indicate whether the script signature needs be checked.
+    * Sets the createdDateTime
+    * The date and time the device management script was created. This property is read-only.
     *
-    * @param bool $val The enforceSignatureCheck
+    * @param \DateTime $val The createdDateTime
     *
     * @return DeviceManagementScript
     */
-    public function setEnforceSignatureCheck($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["enforceSignatureCheck"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the runAs32Bit
-    * A value indicating whether the PowerShell script should run as 32-bit
-    *
-    * @return bool The runAs32Bit
-    */
-    public function getRunAs32Bit()
-    {
-        if (array_key_exists("runAs32Bit", $this->_propDict)) {
-            return $this->_propDict["runAs32Bit"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the runAs32Bit
-    * A value indicating whether the PowerShell script should run as 32-bit
-    *
-    * @param bool $val The runAs32Bit
-    *
-    * @return DeviceManagementScript
-    */
-    public function setRunAs32Bit($val)
-    {
-        $this->_propDict["runAs32Bit"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Name of the device management script.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Name of the device management script.
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceManagementScript
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -141,68 +87,89 @@ class DeviceManagementScript extends Entity
     }
     
     /**
-    * Gets the scriptContent
-    * The script content.
+    * Gets the displayName
+    * Name of the device management script.
     *
-    * @return \GuzzleHttp\Psr7\Stream The scriptContent
+    * @return string The displayName
     */
-    public function getScriptContent()
+    public function getDisplayName()
     {
-        if (array_key_exists("scriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["scriptContent"];
-            } else {
-                $this->_propDict["scriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["scriptContent"]);
-                return $this->_propDict["scriptContent"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the scriptContent
-    * The script content.
+    * Sets the displayName
+    * Name of the device management script.
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The scriptContent
+    * @param string $val The displayName
     *
     * @return DeviceManagementScript
     */
-    public function setScriptContent($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["scriptContent"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the createdDateTime
-    * The date and time the device management script was created. This property is read-only.
+    * Gets the enforceSignatureCheck
+    * Indicate whether the script signature needs be checked.
     *
-    * @return \DateTime The createdDateTime
+    * @return bool The enforceSignatureCheck
     */
-    public function getCreatedDateTime()
+    public function getEnforceSignatureCheck()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("enforceSignatureCheck", $this->_propDict)) {
+            return $this->_propDict["enforceSignatureCheck"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
-    * The date and time the device management script was created. This property is read-only.
+    * Sets the enforceSignatureCheck
+    * Indicate whether the script signature needs be checked.
     *
-    * @param \DateTime $val The createdDateTime
+    * @param bool $val The enforceSignatureCheck
     *
     * @return DeviceManagementScript
     */
-    public function setCreatedDateTime($val)
+    public function setEnforceSignatureCheck($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["enforceSignatureCheck"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the fileName
+    * Script file name.
+    *
+    * @return string The fileName
+    */
+    public function getFileName()
+    {
+        if (array_key_exists("fileName", $this->_propDict)) {
+            return $this->_propDict["fileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fileName
+    * Script file name.
+    *
+    * @param string $val The fileName
+    *
+    * @return DeviceManagementScript
+    */
+    public function setFileName($val)
+    {
+        $this->_propDict["fileName"] = $val;
         return $this;
     }
     
@@ -240,6 +207,64 @@ class DeviceManagementScript extends Entity
     }
     
     /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tag IDs for this PowerShellScript instance.
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tag IDs for this PowerShellScript instance.
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return DeviceManagementScript
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the runAs32Bit
+    * A value indicating whether the PowerShell script should run as 32-bit
+    *
+    * @return bool The runAs32Bit
+    */
+    public function getRunAs32Bit()
+    {
+        if (array_key_exists("runAs32Bit", $this->_propDict)) {
+            return $this->_propDict["runAs32Bit"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the runAs32Bit
+    * A value indicating whether the PowerShell script should run as 32-bit
+    *
+    * @param bool $val The runAs32Bit
+    *
+    * @return DeviceManagementScript
+    */
+    public function setRunAs32Bit($val)
+    {
+        $this->_propDict["runAs32Bit"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the runAsAccount
     * Indicates the type of execution context.
     *
@@ -273,90 +298,35 @@ class DeviceManagementScript extends Entity
     }
     
     /**
-    * Gets the fileName
-    * Script file name.
+    * Gets the scriptContent
+    * The script content.
     *
-    * @return string The fileName
+    * @return \GuzzleHttp\Psr7\Stream The scriptContent
     */
-    public function getFileName()
+    public function getScriptContent()
     {
-        if (array_key_exists("fileName", $this->_propDict)) {
-            return $this->_propDict["fileName"];
-        } else {
-            return null;
+        if (array_key_exists("scriptContent", $this->_propDict)) {
+            if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["scriptContent"];
+            } else {
+                $this->_propDict["scriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["scriptContent"]);
+                return $this->_propDict["scriptContent"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the fileName
-    * Script file name.
+    * Sets the scriptContent
+    * The script content.
     *
-    * @param string $val The fileName
-    *
-    * @return DeviceManagementScript
-    */
-    public function setFileName($val)
-    {
-        $this->_propDict["fileName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tag IDs for this PowerShellScript instance.
-    *
-    * @return string The roleScopeTagIds
-    */
-    public function getRoleScopeTagIds()
-    {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tag IDs for this PowerShellScript instance.
-    *
-    * @param string $val The roleScopeTagIds
+    * @param \GuzzleHttp\Psr7\Stream $val The scriptContent
     *
     * @return DeviceManagementScript
     */
-    public function setRoleScopeTagIds($val)
+    public function setScriptContent($val)
     {
-        $this->_propDict["roleScopeTagIds"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the groupAssignments
-    * The list of group assignments for the device management script.
-     *
-     * @return array The groupAssignments
-     */
-    public function getGroupAssignments()
-    {
-        if (array_key_exists("groupAssignments", $this->_propDict)) {
-           return $this->_propDict["groupAssignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the groupAssignments
-    * The list of group assignments for the device management script.
-    *
-    * @param DeviceManagementScriptGroupAssignment $val The groupAssignments
-    *
-    * @return DeviceManagementScript
-    */
-    public function setGroupAssignments($val)
-    {
-		$this->_propDict["groupAssignments"] = $val;
+        $this->_propDict["scriptContent"] = $val;
         return $this;
     }
     
@@ -390,6 +360,66 @@ class DeviceManagementScript extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the deviceRunStates
+    * List of run states for this script across all devices.
+     *
+     * @return array The deviceRunStates
+     */
+    public function getDeviceRunStates()
+    {
+        if (array_key_exists("deviceRunStates", $this->_propDict)) {
+           return $this->_propDict["deviceRunStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceRunStates
+    * List of run states for this script across all devices.
+    *
+    * @param DeviceManagementScriptDeviceState $val The deviceRunStates
+    *
+    * @return DeviceManagementScript
+    */
+    public function setDeviceRunStates($val)
+    {
+		$this->_propDict["deviceRunStates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groupAssignments
+    * The list of group assignments for the device management script.
+     *
+     * @return array The groupAssignments
+     */
+    public function getGroupAssignments()
+    {
+        if (array_key_exists("groupAssignments", $this->_propDict)) {
+           return $this->_propDict["groupAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groupAssignments
+    * The list of group assignments for the device management script.
+    *
+    * @param DeviceManagementScriptGroupAssignment $val The groupAssignments
+    *
+    * @return DeviceManagementScript
+    */
+    public function setGroupAssignments($val)
+    {
+		$this->_propDict["groupAssignments"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the runSummary
     * Run summary for device management script.
@@ -420,36 +450,6 @@ class DeviceManagementScript extends Entity
     public function setRunSummary($val)
     {
         $this->_propDict["runSummary"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceRunStates
-    * List of run states for this script across all devices.
-     *
-     * @return array The deviceRunStates
-     */
-    public function getDeviceRunStates()
-    {
-        if (array_key_exists("deviceRunStates", $this->_propDict)) {
-           return $this->_propDict["deviceRunStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceRunStates
-    * List of run states for this script across all devices.
-    *
-    * @param DeviceManagementScriptDeviceState $val The deviceRunStates
-    *
-    * @return DeviceManagementScript
-    */
-    public function setDeviceRunStates($val)
-    {
-		$this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     

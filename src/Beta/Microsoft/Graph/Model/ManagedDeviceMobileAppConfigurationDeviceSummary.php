@@ -25,118 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
 {
     /**
-    * Gets the pendingCount
-    * Number of pending devices
+    * Gets the configurationVersion
+    * Version of the policy for that overview
     *
-    * @return int The pendingCount
+    * @return int The configurationVersion
     */
-    public function getPendingCount()
+    public function getConfigurationVersion()
     {
-        if (array_key_exists("pendingCount", $this->_propDict)) {
-            return $this->_propDict["pendingCount"];
+        if (array_key_exists("configurationVersion", $this->_propDict)) {
+            return $this->_propDict["configurationVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the pendingCount
-    * Number of pending devices
+    * Sets the configurationVersion
+    * Version of the policy for that overview
     *
-    * @param int $val The pendingCount
+    * @param int $val The configurationVersion
     *
     * @return ManagedDeviceMobileAppConfigurationDeviceSummary
     */
-    public function setPendingCount($val)
+    public function setConfigurationVersion($val)
     {
-        $this->_propDict["pendingCount"] = intval($val);
+        $this->_propDict["configurationVersion"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the notApplicableCount
-    * Number of not applicable devices
+    * Gets the conflictCount
+    * Number of devices in conflict
     *
-    * @return int The notApplicableCount
+    * @return int The conflictCount
     */
-    public function getNotApplicableCount()
+    public function getConflictCount()
     {
-        if (array_key_exists("notApplicableCount", $this->_propDict)) {
-            return $this->_propDict["notApplicableCount"];
+        if (array_key_exists("conflictCount", $this->_propDict)) {
+            return $this->_propDict["conflictCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the notApplicableCount
-    * Number of not applicable devices
+    * Sets the conflictCount
+    * Number of devices in conflict
     *
-    * @param int $val The notApplicableCount
-    *
-    * @return ManagedDeviceMobileAppConfigurationDeviceSummary
-    */
-    public function setNotApplicableCount($val)
-    {
-        $this->_propDict["notApplicableCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the notApplicablePlatformCount
-    * Number of not applicable devices due to mismatch platform and policy
-    *
-    * @return int The notApplicablePlatformCount
-    */
-    public function getNotApplicablePlatformCount()
-    {
-        if (array_key_exists("notApplicablePlatformCount", $this->_propDict)) {
-            return $this->_propDict["notApplicablePlatformCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the notApplicablePlatformCount
-    * Number of not applicable devices due to mismatch platform and policy
-    *
-    * @param int $val The notApplicablePlatformCount
+    * @param int $val The conflictCount
     *
     * @return ManagedDeviceMobileAppConfigurationDeviceSummary
     */
-    public function setNotApplicablePlatformCount($val)
+    public function setConflictCount($val)
     {
-        $this->_propDict["notApplicablePlatformCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the successCount
-    * Number of succeeded devices
-    *
-    * @return int The successCount
-    */
-    public function getSuccessCount()
-    {
-        if (array_key_exists("successCount", $this->_propDict)) {
-            return $this->_propDict["successCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the successCount
-    * Number of succeeded devices
-    *
-    * @param int $val The successCount
-    *
-    * @return ManagedDeviceMobileAppConfigurationDeviceSummary
-    */
-    public function setSuccessCount($val)
-    {
-        $this->_propDict["successCount"] = intval($val);
+        $this->_propDict["conflictCount"] = intval($val);
         return $this;
     }
     
@@ -199,35 +141,6 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     }
     
     /**
-    * Gets the conflictCount
-    * Number of devices in conflict
-    *
-    * @return int The conflictCount
-    */
-    public function getConflictCount()
-    {
-        if (array_key_exists("conflictCount", $this->_propDict)) {
-            return $this->_propDict["conflictCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the conflictCount
-    * Number of devices in conflict
-    *
-    * @param int $val The conflictCount
-    *
-    * @return ManagedDeviceMobileAppConfigurationDeviceSummary
-    */
-    public function setConflictCount($val)
-    {
-        $this->_propDict["conflictCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the lastUpdateDateTime
     * Last update time
     *
@@ -261,31 +174,118 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     }
     
     /**
-    * Gets the configurationVersion
-    * Version of the policy for that overview
+    * Gets the notApplicableCount
+    * Number of not applicable devices
     *
-    * @return int The configurationVersion
+    * @return int The notApplicableCount
     */
-    public function getConfigurationVersion()
+    public function getNotApplicableCount()
     {
-        if (array_key_exists("configurationVersion", $this->_propDict)) {
-            return $this->_propDict["configurationVersion"];
+        if (array_key_exists("notApplicableCount", $this->_propDict)) {
+            return $this->_propDict["notApplicableCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the configurationVersion
-    * Version of the policy for that overview
+    * Sets the notApplicableCount
+    * Number of not applicable devices
     *
-    * @param int $val The configurationVersion
+    * @param int $val The notApplicableCount
     *
     * @return ManagedDeviceMobileAppConfigurationDeviceSummary
     */
-    public function setConfigurationVersion($val)
+    public function setNotApplicableCount($val)
     {
-        $this->_propDict["configurationVersion"] = intval($val);
+        $this->_propDict["notApplicableCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the notApplicablePlatformCount
+    * Number of not applicable devices due to mismatch platform and policy
+    *
+    * @return int The notApplicablePlatformCount
+    */
+    public function getNotApplicablePlatformCount()
+    {
+        if (array_key_exists("notApplicablePlatformCount", $this->_propDict)) {
+            return $this->_propDict["notApplicablePlatformCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notApplicablePlatformCount
+    * Number of not applicable devices due to mismatch platform and policy
+    *
+    * @param int $val The notApplicablePlatformCount
+    *
+    * @return ManagedDeviceMobileAppConfigurationDeviceSummary
+    */
+    public function setNotApplicablePlatformCount($val)
+    {
+        $this->_propDict["notApplicablePlatformCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the pendingCount
+    * Number of pending devices
+    *
+    * @return int The pendingCount
+    */
+    public function getPendingCount()
+    {
+        if (array_key_exists("pendingCount", $this->_propDict)) {
+            return $this->_propDict["pendingCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the pendingCount
+    * Number of pending devices
+    *
+    * @param int $val The pendingCount
+    *
+    * @return ManagedDeviceMobileAppConfigurationDeviceSummary
+    */
+    public function setPendingCount($val)
+    {
+        $this->_propDict["pendingCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the successCount
+    * Number of succeeded devices
+    *
+    * @return int The successCount
+    */
+    public function getSuccessCount()
+    {
+        if (array_key_exists("successCount", $this->_propDict)) {
+            return $this->_propDict["successCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the successCount
+    * Number of succeeded devices
+    *
+    * @param int $val The successCount
+    *
+    * @return ManagedDeviceMobileAppConfigurationDeviceSummary
+    */
+    public function setSuccessCount($val)
+    {
+        $this->_propDict["successCount"] = intval($val);
         return $this;
     }
     

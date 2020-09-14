@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ConversationMember extends Entity
 {
     /**
-    * Gets the roles
-    * The roles for that user.
-    *
-    * @return string The roles
-    */
-    public function getRoles()
-    {
-        if (array_key_exists("roles", $this->_propDict)) {
-            return $this->_propDict["roles"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roles
-    * The roles for that user.
-    *
-    * @param string $val The roles
-    *
-    * @return ConversationMember
-    */
-    public function setRoles($val)
-    {
-        $this->_propDict["roles"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the displayName
     * The display name of the user.
     *
@@ -79,6 +50,35 @@ class ConversationMember extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roles
+    * The roles for that user.
+    *
+    * @return string The roles
+    */
+    public function getRoles()
+    {
+        if (array_key_exists("roles", $this->_propDict)) {
+            return $this->_propDict["roles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roles
+    * The roles for that user.
+    *
+    * @param string $val The roles
+    *
+    * @return ConversationMember
+    */
+    public function setRoles($val)
+    {
+        $this->_propDict["roles"] = $val;
         return $this;
     }
     

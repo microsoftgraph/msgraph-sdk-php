@@ -25,64 +25,35 @@ namespace Microsoft\Graph\Model;
 class NotificationMessageTemplate extends Entity
 {
     /**
-    * Gets the lastModifiedDateTime
-    * DateTime the object was last modified.
+    * Gets the brandingOptions
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return NotificationTemplateBrandingOptions The brandingOptions
     */
-    public function getLastModifiedDateTime()
+    public function getBrandingOptions()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("brandingOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["brandingOptions"], "Microsoft\Graph\Model\NotificationTemplateBrandingOptions")) {
+                return $this->_propDict["brandingOptions"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["brandingOptions"] = new NotificationTemplateBrandingOptions($this->_propDict["brandingOptions"]);
+                return $this->_propDict["brandingOptions"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
-    * DateTime the object was last modified.
+    * Sets the brandingOptions
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return NotificationMessageTemplate
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Display name for the Notification Message Template.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Display name for the Notification Message Template.
-    *
-    * @param string $val The displayName
+    * @param NotificationTemplateBrandingOptions $val The brandingOptions
     *
     * @return NotificationMessageTemplate
     */
-    public function setDisplayName($val)
+    public function setBrandingOptions($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["brandingOptions"] = $val;
         return $this;
     }
     
@@ -116,35 +87,64 @@ class NotificationMessageTemplate extends Entity
     }
     
     /**
-    * Gets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
+    * Gets the displayName
+    * Display name for the Notification Message Template.
     *
-    * @return NotificationTemplateBrandingOptions The brandingOptions
+    * @return string The displayName
     */
-    public function getBrandingOptions()
+    public function getDisplayName()
     {
-        if (array_key_exists("brandingOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["brandingOptions"], "Microsoft\Graph\Model\NotificationTemplateBrandingOptions")) {
-                return $this->_propDict["brandingOptions"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Display name for the Notification Message Template.
+    *
+    * @param string $val The displayName
+    *
+    * @return NotificationMessageTemplate
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * DateTime the object was last modified.
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["brandingOptions"] = new NotificationTemplateBrandingOptions($this->_propDict["brandingOptions"]);
-                return $this->_propDict["brandingOptions"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
+    * Sets the lastModifiedDateTime
+    * DateTime the object was last modified.
     *
-    * @param NotificationTemplateBrandingOptions $val The brandingOptions
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return NotificationMessageTemplate
     */
-    public function setBrandingOptions($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["brandingOptions"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     

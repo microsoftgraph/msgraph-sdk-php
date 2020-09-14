@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class Place extends Entity
 {
     /**
+    * Gets the address
+    * The street address of the place.
+    *
+    * @return PhysicalAddress The address
+    */
+    public function getAddress()
+    {
+        if (array_key_exists("address", $this->_propDict)) {
+            if (is_a($this->_propDict["address"], "Beta\Microsoft\Graph\Model\PhysicalAddress")) {
+                return $this->_propDict["address"];
+            } else {
+                $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
+                return $this->_propDict["address"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the address
+    * The street address of the place.
+    *
+    * @param PhysicalAddress $val The address
+    *
+    * @return Place
+    */
+    public function setAddress($val)
+    {
+        $this->_propDict["address"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The name associated with the place.
     *
@@ -112,39 +145,6 @@ class Place extends Entity
     public function setPhone($val)
     {
         $this->_propDict["phone"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the address
-    * The street address of the place.
-    *
-    * @return PhysicalAddress The address
-    */
-    public function getAddress()
-    {
-        if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Beta\Microsoft\Graph\Model\PhysicalAddress")) {
-                return $this->_propDict["address"];
-            } else {
-                $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
-                return $this->_propDict["address"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the address
-    * The street address of the place.
-    *
-    * @param PhysicalAddress $val The address
-    *
-    * @return Place
-    */
-    public function setAddress($val)
-    {
-        $this->_propDict["address"] = $val;
         return $this;
     }
     

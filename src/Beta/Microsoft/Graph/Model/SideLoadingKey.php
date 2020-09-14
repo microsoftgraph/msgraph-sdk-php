@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class SideLoadingKey extends Entity
 {
     /**
-    * Gets the value
-    * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
+    * Gets the description
+    * Side Loading Key description displayed to the ITPro Admins..
     *
-    * @return string The value
+    * @return string The description
     */
-    public function getValue()
+    public function getDescription()
     {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the value
-    * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
+    * Sets the description
+    * Side Loading Key description displayed to the ITPro Admins..
     *
-    * @param string $val The value
+    * @param string $val The description
     *
     * @return SideLoadingKey
     */
-    public function setValue($val)
+    public function setDescription($val)
     {
-        $this->_propDict["value"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -83,31 +83,31 @@ class SideLoadingKey extends Entity
     }
     
     /**
-    * Gets the description
-    * Side Loading Key description displayed to the ITPro Admins..
+    * Gets the lastUpdatedDateTime
+    * Side Loading Key Last Updated Date displayed to the ITPro Admins.
     *
-    * @return string The description
+    * @return string The lastUpdatedDateTime
     */
-    public function getDescription()
+    public function getLastUpdatedDateTime()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
+            return $this->_propDict["lastUpdatedDateTime"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
-    * Side Loading Key description displayed to the ITPro Admins..
+    * Sets the lastUpdatedDateTime
+    * Side Loading Key Last Updated Date displayed to the ITPro Admins.
     *
-    * @param string $val The description
+    * @param string $val The lastUpdatedDateTime
     *
     * @return SideLoadingKey
     */
-    public function setDescription($val)
+    public function setLastUpdatedDateTime($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["lastUpdatedDateTime"] = $val;
         return $this;
     }
     
@@ -141,31 +141,31 @@ class SideLoadingKey extends Entity
     }
     
     /**
-    * Gets the lastUpdatedDateTime
-    * Side Loading Key Last Updated Date displayed to the ITPro Admins.
+    * Gets the value
+    * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
     *
-    * @return string The lastUpdatedDateTime
+    * @return string The value
     */
-    public function getLastUpdatedDateTime()
+    public function getValue()
     {
-        if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            return $this->_propDict["lastUpdatedDateTime"];
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the lastUpdatedDateTime
-    * Side Loading Key Last Updated Date displayed to the ITPro Admins.
+    * Sets the value
+    * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
     *
-    * @param string $val The lastUpdatedDateTime
+    * @param string $val The value
     *
     * @return SideLoadingKey
     */
-    public function setLastUpdatedDateTime($val)
+    public function setValue($val)
     {
-        $this->_propDict["lastUpdatedDateTime"] = $val;
+        $this->_propDict["value"] = $val;
         return $this;
     }
     

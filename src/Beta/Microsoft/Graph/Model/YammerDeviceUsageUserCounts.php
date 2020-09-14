@@ -25,91 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class YammerDeviceUsageUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return YammerDeviceUsageUserCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the web
-    *
-    * @return int The web
-    */
-    public function getWeb()
-    {
-        if (array_key_exists("web", $this->_propDict)) {
-            return $this->_propDict["web"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the web
-    *
-    * @param int $val The web
-    *
-    * @return YammerDeviceUsageUserCounts
-    */
-    public function setWeb($val)
-    {
-        $this->_propDict["web"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the windowsPhone
-    *
-    * @return int The windowsPhone
-    */
-    public function getWindowsPhone()
-    {
-        if (array_key_exists("windowsPhone", $this->_propDict)) {
-            return $this->_propDict["windowsPhone"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the windowsPhone
-    *
-    * @param int $val The windowsPhone
-    *
-    * @return YammerDeviceUsageUserCounts
-    */
-    public function setWindowsPhone($val)
-    {
-        $this->_propDict["windowsPhone"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the androidPhone
     *
     * @return int The androidPhone
@@ -137,33 +52,6 @@ class YammerDeviceUsageUserCounts extends Entity
     }
     
     /**
-    * Gets the iPhone
-    *
-    * @return int The iPhone
-    */
-    public function getIPhone()
-    {
-        if (array_key_exists("iPhone", $this->_propDict)) {
-            return $this->_propDict["iPhone"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the iPhone
-    *
-    * @param int $val The iPhone
-    *
-    * @return YammerDeviceUsageUserCounts
-    */
-    public function setIPhone($val)
-    {
-        $this->_propDict["iPhone"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the iPad
     *
     * @return int The iPad
@@ -187,6 +75,33 @@ class YammerDeviceUsageUserCounts extends Entity
     public function setIPad($val)
     {
         $this->_propDict["iPad"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iPhone
+    *
+    * @return int The iPhone
+    */
+    public function getIPhone()
+    {
+        if (array_key_exists("iPhone", $this->_propDict)) {
+            return $this->_propDict["iPhone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iPhone
+    *
+    * @param int $val The iPhone
+    *
+    * @return YammerDeviceUsageUserCounts
+    */
+    public function setIPhone($val)
+    {
+        $this->_propDict["iPhone"] = intval($val);
         return $this;
     }
     
@@ -272,6 +187,91 @@ class YammerDeviceUsageUserCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return YammerDeviceUsageUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the web
+    *
+    * @return int The web
+    */
+    public function getWeb()
+    {
+        if (array_key_exists("web", $this->_propDict)) {
+            return $this->_propDict["web"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the web
+    *
+    * @param int $val The web
+    *
+    * @return YammerDeviceUsageUserCounts
+    */
+    public function setWeb($val)
+    {
+        $this->_propDict["web"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsPhone
+    *
+    * @return int The windowsPhone
+    */
+    public function getWindowsPhone()
+    {
+        if (array_key_exists("windowsPhone", $this->_propDict)) {
+            return $this->_propDict["windowsPhone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windowsPhone
+    *
+    * @param int $val The windowsPhone
+    *
+    * @return YammerDeviceUsageUserCounts
+    */
+    public function setWindowsPhone($val)
+    {
+        $this->_propDict["windowsPhone"] = intval($val);
         return $this;
     }
     

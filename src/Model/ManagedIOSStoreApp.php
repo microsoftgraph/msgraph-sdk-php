@@ -25,31 +25,35 @@ namespace Microsoft\Graph\Model;
 class ManagedIOSStoreApp extends ManagedApp
 {
     /**
-    * Gets the bundleId
-    * The app's Bundle ID.
+    * Gets the applicableDeviceType
+    * The iOS architecture for which this app can run on.
     *
-    * @return string The bundleId
+    * @return IosDeviceType The applicableDeviceType
     */
-    public function getBundleId()
+    public function getApplicableDeviceType()
     {
-        if (array_key_exists("bundleId", $this->_propDict)) {
-            return $this->_propDict["bundleId"];
-        } else {
-            return null;
+        if (array_key_exists("applicableDeviceType", $this->_propDict)) {
+            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Model\IosDeviceType")) {
+                return $this->_propDict["applicableDeviceType"];
+            } else {
+                $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
+                return $this->_propDict["applicableDeviceType"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the bundleId
-    * The app's Bundle ID.
+    * Sets the applicableDeviceType
+    * The iOS architecture for which this app can run on.
     *
-    * @param string $val The bundleId
+    * @param IosDeviceType $val The applicableDeviceType
     *
     * @return ManagedIOSStoreApp
     */
-    public function setBundleId($val)
+    public function setApplicableDeviceType($val)
     {
-        $this->_propDict["bundleId"] = $val;
+        $this->_propDict["applicableDeviceType"] = $val;
         return $this;
     }
     
@@ -83,35 +87,31 @@ class ManagedIOSStoreApp extends ManagedApp
     }
     
     /**
-    * Gets the applicableDeviceType
-    * The iOS architecture for which this app can run on.
+    * Gets the bundleId
+    * The app's Bundle ID.
     *
-    * @return IosDeviceType The applicableDeviceType
+    * @return string The bundleId
     */
-    public function getApplicableDeviceType()
+    public function getBundleId()
     {
-        if (array_key_exists("applicableDeviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceType"], "Microsoft\Graph\Model\IosDeviceType")) {
-                return $this->_propDict["applicableDeviceType"];
-            } else {
-                $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
-                return $this->_propDict["applicableDeviceType"];
-            }
+        if (array_key_exists("bundleId", $this->_propDict)) {
+            return $this->_propDict["bundleId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the applicableDeviceType
-    * The iOS architecture for which this app can run on.
+    * Sets the bundleId
+    * The app's Bundle ID.
     *
-    * @param IosDeviceType $val The applicableDeviceType
+    * @param string $val The bundleId
     *
     * @return ManagedIOSStoreApp
     */
-    public function setApplicableDeviceType($val)
+    public function setBundleId($val)
     {
-        $this->_propDict["applicableDeviceType"] = $val;
+        $this->_propDict["bundleId"] = $val;
         return $this;
     }
     

@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSynchronizationProfileStatus extends Entity
 {
     /**
-    * Gets the status
-    *
-    * @return EducationSynchronizationStatus The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\EducationSynchronizationStatus")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new EducationSynchronizationStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param EducationSynchronizationStatus $val The status
-    *
-    * @return EducationSynchronizationProfileStatus
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastSynchronizationDateTime
     *
     * @return \DateTime The lastSynchronizationDateTime
@@ -83,6 +52,37 @@ class EducationSynchronizationProfileStatus extends Entity
     public function setLastSynchronizationDateTime($val)
     {
         $this->_propDict["lastSynchronizationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return EducationSynchronizationStatus The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\EducationSynchronizationStatus")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new EducationSynchronizationStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param EducationSynchronizationStatus $val The status
+    *
+    * @return EducationSynchronizationProfileStatus
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

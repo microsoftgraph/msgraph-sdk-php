@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Initiator extends Entity
 {
     /**
-    * Gets the id
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    *
-    * @param string $val The value of the id
-    *
-    * @return Initiator
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -73,6 +47,32 @@ class Initiator extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return Initiator
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
         return $this;
     }
 

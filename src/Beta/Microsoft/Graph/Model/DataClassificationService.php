@@ -54,57 +54,29 @@ class DataClassificationService extends Entity
     
 
      /** 
-     * Gets the sensitiveTypes
+     * Gets the classifyFile
      *
-     * @return array The sensitiveTypes
+     * @return array The classifyFile
      */
-    public function getSensitiveTypes()
+    public function getClassifyFile()
     {
-        if (array_key_exists("sensitiveTypes", $this->_propDict)) {
-           return $this->_propDict["sensitiveTypes"];
+        if (array_key_exists("classifyFile", $this->_propDict)) {
+           return $this->_propDict["classifyFile"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the sensitiveTypes
+    * Sets the classifyFile
     *
-    * @param SensitiveType $val The sensitiveTypes
-    *
-    * @return DataClassificationService
-    */
-    public function setSensitiveTypes($val)
-    {
-		$this->_propDict["sensitiveTypes"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the jobs
-     *
-     * @return array The jobs
-     */
-    public function getJobs()
-    {
-        if (array_key_exists("jobs", $this->_propDict)) {
-           return $this->_propDict["jobs"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the jobs
-    *
-    * @param JobResponseBase $val The jobs
+    * @param FileClassificationRequest $val The classifyFile
     *
     * @return DataClassificationService
     */
-    public function setJobs($val)
+    public function setClassifyFile($val)
     {
-		$this->_propDict["jobs"] = $val;
+		$this->_propDict["classifyFile"] = $val;
         return $this;
     }
     
@@ -138,6 +110,34 @@ class DataClassificationService extends Entity
     
 
      /** 
+     * Gets the classifyText
+     *
+     * @return array The classifyText
+     */
+    public function getClassifyText()
+    {
+        if (array_key_exists("classifyText", $this->_propDict)) {
+           return $this->_propDict["classifyText"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the classifyText
+    *
+    * @param TextClassificationRequest $val The classifyText
+    *
+    * @return DataClassificationService
+    */
+    public function setClassifyText($val)
+    {
+		$this->_propDict["classifyText"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the classifyTextJobs
      *
      * @return array The classifyTextJobs
@@ -161,34 +161,6 @@ class DataClassificationService extends Entity
     public function setClassifyTextJobs($val)
     {
 		$this->_propDict["classifyTextJobs"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the evaluateLabelJobs
-     *
-     * @return array The evaluateLabelJobs
-     */
-    public function getEvaluateLabelJobs()
-    {
-        if (array_key_exists("evaluateLabelJobs", $this->_propDict)) {
-           return $this->_propDict["evaluateLabelJobs"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the evaluateLabelJobs
-    *
-    * @param JobResponseBase $val The evaluateLabelJobs
-    *
-    * @return DataClassificationService
-    */
-    public function setEvaluateLabelJobs($val)
-    {
-		$this->_propDict["evaluateLabelJobs"] = $val;
         return $this;
     }
     
@@ -222,6 +194,62 @@ class DataClassificationService extends Entity
     
 
      /** 
+     * Gets the evaluateLabelJobs
+     *
+     * @return array The evaluateLabelJobs
+     */
+    public function getEvaluateLabelJobs()
+    {
+        if (array_key_exists("evaluateLabelJobs", $this->_propDict)) {
+           return $this->_propDict["evaluateLabelJobs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the evaluateLabelJobs
+    *
+    * @param JobResponseBase $val The evaluateLabelJobs
+    *
+    * @return DataClassificationService
+    */
+    public function setEvaluateLabelJobs($val)
+    {
+		$this->_propDict["evaluateLabelJobs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the jobs
+     *
+     * @return array The jobs
+     */
+    public function getJobs()
+    {
+        if (array_key_exists("jobs", $this->_propDict)) {
+           return $this->_propDict["jobs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the jobs
+    *
+    * @param JobResponseBase $val The jobs
+    *
+    * @return DataClassificationService
+    */
+    public function setJobs($val)
+    {
+		$this->_propDict["jobs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the labelsAndPoliciesEvaluationJobs
      *
      * @return array The labelsAndPoliciesEvaluationJobs
@@ -250,57 +278,29 @@ class DataClassificationService extends Entity
     
 
      /** 
-     * Gets the classifyText
+     * Gets the sensitiveTypes
      *
-     * @return array The classifyText
+     * @return array The sensitiveTypes
      */
-    public function getClassifyText()
+    public function getSensitiveTypes()
     {
-        if (array_key_exists("classifyText", $this->_propDict)) {
-           return $this->_propDict["classifyText"];
+        if (array_key_exists("sensitiveTypes", $this->_propDict)) {
+           return $this->_propDict["sensitiveTypes"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the classifyText
+    * Sets the sensitiveTypes
     *
-    * @param TextClassificationRequest $val The classifyText
-    *
-    * @return DataClassificationService
-    */
-    public function setClassifyText($val)
-    {
-		$this->_propDict["classifyText"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the classifyFile
-     *
-     * @return array The classifyFile
-     */
-    public function getClassifyFile()
-    {
-        if (array_key_exists("classifyFile", $this->_propDict)) {
-           return $this->_propDict["classifyFile"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the classifyFile
-    *
-    * @param FileClassificationRequest $val The classifyFile
+    * @param SensitiveType $val The sensitiveTypes
     *
     * @return DataClassificationService
     */
-    public function setClassifyFile($val)
+    public function setSensitiveTypes($val)
     {
-		$this->_propDict["classifyFile"] = $val;
+		$this->_propDict["sensitiveTypes"] = $val;
         return $this;
     }
     

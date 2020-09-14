@@ -25,101 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration
 {
     /**
-    * Gets the iosRestriction
-    * Not yet documented
+    * Gets the androidForWorkRestriction
+    * Android for work restrictions based on platform, platform operating system version, and device ownership
     *
-    * @return DeviceEnrollmentPlatformRestriction The iosRestriction
+    * @return DeviceEnrollmentPlatformRestriction The androidForWorkRestriction
     */
-    public function getIosRestriction()
+    public function getAndroidForWorkRestriction()
     {
-        if (array_key_exists("iosRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["iosRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
-                return $this->_propDict["iosRestriction"];
+        if (array_key_exists("androidForWorkRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["androidForWorkRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+                return $this->_propDict["androidForWorkRestriction"];
             } else {
-                $this->_propDict["iosRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["iosRestriction"]);
-                return $this->_propDict["iosRestriction"];
+                $this->_propDict["androidForWorkRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["androidForWorkRestriction"]);
+                return $this->_propDict["androidForWorkRestriction"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the iosRestriction
-    * Not yet documented
+    * Sets the androidForWorkRestriction
+    * Android for work restrictions based on platform, platform operating system version, and device ownership
     *
-    * @param DeviceEnrollmentPlatformRestriction $val The iosRestriction
-    *
-    * @return DeviceEnrollmentPlatformRestrictionsConfiguration
-    */
-    public function setIosRestriction($val)
-    {
-        $this->_propDict["iosRestriction"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the windowsRestriction
-    * Not yet documented
-    *
-    * @return DeviceEnrollmentPlatformRestriction The windowsRestriction
-    */
-    public function getWindowsRestriction()
-    {
-        if (array_key_exists("windowsRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
-                return $this->_propDict["windowsRestriction"];
-            } else {
-                $this->_propDict["windowsRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["windowsRestriction"]);
-                return $this->_propDict["windowsRestriction"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the windowsRestriction
-    * Not yet documented
-    *
-    * @param DeviceEnrollmentPlatformRestriction $val The windowsRestriction
+    * @param DeviceEnrollmentPlatformRestriction $val The androidForWorkRestriction
     *
     * @return DeviceEnrollmentPlatformRestrictionsConfiguration
     */
-    public function setWindowsRestriction($val)
+    public function setAndroidForWorkRestriction($val)
     {
-        $this->_propDict["windowsRestriction"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the windowsMobileRestriction
-    * Not yet documented
-    *
-    * @return DeviceEnrollmentPlatformRestriction The windowsMobileRestriction
-    */
-    public function getWindowsMobileRestriction()
-    {
-        if (array_key_exists("windowsMobileRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsMobileRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
-                return $this->_propDict["windowsMobileRestriction"];
-            } else {
-                $this->_propDict["windowsMobileRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["windowsMobileRestriction"]);
-                return $this->_propDict["windowsMobileRestriction"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the windowsMobileRestriction
-    * Not yet documented
-    *
-    * @param DeviceEnrollmentPlatformRestriction $val The windowsMobileRestriction
-    *
-    * @return DeviceEnrollmentPlatformRestrictionsConfiguration
-    */
-    public function setWindowsMobileRestriction($val)
-    {
-        $this->_propDict["windowsMobileRestriction"] = $val;
+        $this->_propDict["androidForWorkRestriction"] = $val;
         return $this;
     }
     
@@ -157,35 +91,68 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     }
     
     /**
-    * Gets the androidForWorkRestriction
-    * Android for work restrictions based on platform, platform operating system version, and device ownership
+    * Gets the iosRestriction
+    * Not yet documented
     *
-    * @return DeviceEnrollmentPlatformRestriction The androidForWorkRestriction
+    * @return DeviceEnrollmentPlatformRestriction The iosRestriction
     */
-    public function getAndroidForWorkRestriction()
+    public function getIosRestriction()
     {
-        if (array_key_exists("androidForWorkRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["androidForWorkRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
-                return $this->_propDict["androidForWorkRestriction"];
+        if (array_key_exists("iosRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["iosRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+                return $this->_propDict["iosRestriction"];
             } else {
-                $this->_propDict["androidForWorkRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["androidForWorkRestriction"]);
-                return $this->_propDict["androidForWorkRestriction"];
+                $this->_propDict["iosRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["iosRestriction"]);
+                return $this->_propDict["iosRestriction"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the androidForWorkRestriction
-    * Android for work restrictions based on platform, platform operating system version, and device ownership
+    * Sets the iosRestriction
+    * Not yet documented
     *
-    * @param DeviceEnrollmentPlatformRestriction $val The androidForWorkRestriction
+    * @param DeviceEnrollmentPlatformRestriction $val The iosRestriction
     *
     * @return DeviceEnrollmentPlatformRestrictionsConfiguration
     */
-    public function setAndroidForWorkRestriction($val)
+    public function setIosRestriction($val)
     {
-        $this->_propDict["androidForWorkRestriction"] = $val;
+        $this->_propDict["iosRestriction"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the macOSRestriction
+    * Not yet documented
+    *
+    * @return DeviceEnrollmentPlatformRestriction The macOSRestriction
+    */
+    public function getMacOSRestriction()
+    {
+        if (array_key_exists("macOSRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["macOSRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+                return $this->_propDict["macOSRestriction"];
+            } else {
+                $this->_propDict["macOSRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["macOSRestriction"]);
+                return $this->_propDict["macOSRestriction"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the macOSRestriction
+    * Not yet documented
+    *
+    * @param DeviceEnrollmentPlatformRestriction $val The macOSRestriction
+    *
+    * @return DeviceEnrollmentPlatformRestrictionsConfiguration
+    */
+    public function setMacOSRestriction($val)
+    {
+        $this->_propDict["macOSRestriction"] = $val;
         return $this;
     }
     
@@ -223,35 +190,68 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     }
     
     /**
-    * Gets the macOSRestriction
+    * Gets the windowsMobileRestriction
     * Not yet documented
     *
-    * @return DeviceEnrollmentPlatformRestriction The macOSRestriction
+    * @return DeviceEnrollmentPlatformRestriction The windowsMobileRestriction
     */
-    public function getMacOSRestriction()
+    public function getWindowsMobileRestriction()
     {
-        if (array_key_exists("macOSRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["macOSRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
-                return $this->_propDict["macOSRestriction"];
+        if (array_key_exists("windowsMobileRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsMobileRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+                return $this->_propDict["windowsMobileRestriction"];
             } else {
-                $this->_propDict["macOSRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["macOSRestriction"]);
-                return $this->_propDict["macOSRestriction"];
+                $this->_propDict["windowsMobileRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["windowsMobileRestriction"]);
+                return $this->_propDict["windowsMobileRestriction"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the macOSRestriction
+    * Sets the windowsMobileRestriction
     * Not yet documented
     *
-    * @param DeviceEnrollmentPlatformRestriction $val The macOSRestriction
+    * @param DeviceEnrollmentPlatformRestriction $val The windowsMobileRestriction
     *
     * @return DeviceEnrollmentPlatformRestrictionsConfiguration
     */
-    public function setMacOSRestriction($val)
+    public function setWindowsMobileRestriction($val)
     {
-        $this->_propDict["macOSRestriction"] = $val;
+        $this->_propDict["windowsMobileRestriction"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsRestriction
+    * Not yet documented
+    *
+    * @return DeviceEnrollmentPlatformRestriction The windowsRestriction
+    */
+    public function getWindowsRestriction()
+    {
+        if (array_key_exists("windowsRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+                return $this->_propDict["windowsRestriction"];
+            } else {
+                $this->_propDict["windowsRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["windowsRestriction"]);
+                return $this->_propDict["windowsRestriction"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the windowsRestriction
+    * Not yet documented
+    *
+    * @param DeviceEnrollmentPlatformRestriction $val The windowsRestriction
+    *
+    * @return DeviceEnrollmentPlatformRestrictionsConfiguration
+    */
+    public function setWindowsRestriction($val)
+    {
+        $this->_propDict["windowsRestriction"] = $val;
         return $this;
     }
     

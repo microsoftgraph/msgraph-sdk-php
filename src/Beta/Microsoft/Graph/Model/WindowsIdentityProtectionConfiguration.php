@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the useSecurityKeyForSignin
-    * Boolean value used to enable the Windows Hello security key as a logon credential.
-    *
-    * @return bool The useSecurityKeyForSignin
-    */
-    public function getUseSecurityKeyForSignin()
-    {
-        if (array_key_exists("useSecurityKeyForSignin", $this->_propDict)) {
-            return $this->_propDict["useSecurityKeyForSignin"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the useSecurityKeyForSignin
-    * Boolean value used to enable the Windows Hello security key as a logon credential.
-    *
-    * @param bool $val The useSecurityKeyForSignin
-    *
-    * @return WindowsIdentityProtectionConfiguration
-    */
-    public function setUseSecurityKeyForSignin($val)
-    {
-        $this->_propDict["useSecurityKeyForSignin"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the enhancedAntiSpoofingForFacialFeaturesEnabled
     * Boolean value used to enable enhanced anti-spoofing for facial feature recognition on Windows Hello face authentication.
     *
@@ -83,93 +54,31 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the pinMinimumLength
-    * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
+    * Gets the pinExpirationInDays
+    * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
     *
-    * @return int The pinMinimumLength
+    * @return int The pinExpirationInDays
     */
-    public function getPinMinimumLength()
+    public function getPinExpirationInDays()
     {
-        if (array_key_exists("pinMinimumLength", $this->_propDict)) {
-            return $this->_propDict["pinMinimumLength"];
+        if (array_key_exists("pinExpirationInDays", $this->_propDict)) {
+            return $this->_propDict["pinExpirationInDays"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the pinMinimumLength
-    * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
+    * Sets the pinExpirationInDays
+    * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
     *
-    * @param int $val The pinMinimumLength
-    *
-    * @return WindowsIdentityProtectionConfiguration
-    */
-    public function setPinMinimumLength($val)
-    {
-        $this->_propDict["pinMinimumLength"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the pinMaximumLength
-    * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
-    *
-    * @return int The pinMaximumLength
-    */
-    public function getPinMaximumLength()
-    {
-        if (array_key_exists("pinMaximumLength", $this->_propDict)) {
-            return $this->_propDict["pinMaximumLength"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the pinMaximumLength
-    * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
-    *
-    * @param int $val The pinMaximumLength
+    * @param int $val The pinExpirationInDays
     *
     * @return WindowsIdentityProtectionConfiguration
     */
-    public function setPinMaximumLength($val)
+    public function setPinExpirationInDays($val)
     {
-        $this->_propDict["pinMaximumLength"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the pinUppercaseCharactersUsage
-    * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
-    *
-    * @return ConfigurationUsage The pinUppercaseCharactersUsage
-    */
-    public function getPinUppercaseCharactersUsage()
-    {
-        if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["pinUppercaseCharactersUsage"];
-            } else {
-                $this->_propDict["pinUppercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinUppercaseCharactersUsage"]);
-                return $this->_propDict["pinUppercaseCharactersUsage"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the pinUppercaseCharactersUsage
-    * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
-    *
-    * @param ConfigurationUsage $val The pinUppercaseCharactersUsage
-    *
-    * @return WindowsIdentityProtectionConfiguration
-    */
-    public function setPinUppercaseCharactersUsage($val)
-    {
-        $this->_propDict["pinUppercaseCharactersUsage"] = $val;
+        $this->_propDict["pinExpirationInDays"] = intval($val);
         return $this;
     }
     
@@ -207,64 +116,60 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the pinSpecialCharactersUsage
-    * Controls the ability to use special characters in the Windows Hello for Business PIN.
+    * Gets the pinMaximumLength
+    * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
     *
-    * @return ConfigurationUsage The pinSpecialCharactersUsage
+    * @return int The pinMaximumLength
     */
-    public function getPinSpecialCharactersUsage()
+    public function getPinMaximumLength()
     {
-        if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["pinSpecialCharactersUsage"];
-            } else {
-                $this->_propDict["pinSpecialCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinSpecialCharactersUsage"]);
-                return $this->_propDict["pinSpecialCharactersUsage"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the pinSpecialCharactersUsage
-    * Controls the ability to use special characters in the Windows Hello for Business PIN.
-    *
-    * @param ConfigurationUsage $val The pinSpecialCharactersUsage
-    *
-    * @return WindowsIdentityProtectionConfiguration
-    */
-    public function setPinSpecialCharactersUsage($val)
-    {
-        $this->_propDict["pinSpecialCharactersUsage"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the pinExpirationInDays
-    * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
-    *
-    * @return int The pinExpirationInDays
-    */
-    public function getPinExpirationInDays()
-    {
-        if (array_key_exists("pinExpirationInDays", $this->_propDict)) {
-            return $this->_propDict["pinExpirationInDays"];
+        if (array_key_exists("pinMaximumLength", $this->_propDict)) {
+            return $this->_propDict["pinMaximumLength"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the pinExpirationInDays
-    * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
+    * Sets the pinMaximumLength
+    * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
     *
-    * @param int $val The pinExpirationInDays
+    * @param int $val The pinMaximumLength
     *
     * @return WindowsIdentityProtectionConfiguration
     */
-    public function setPinExpirationInDays($val)
+    public function setPinMaximumLength($val)
     {
-        $this->_propDict["pinExpirationInDays"] = intval($val);
+        $this->_propDict["pinMaximumLength"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the pinMinimumLength
+    * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
+    *
+    * @return int The pinMinimumLength
+    */
+    public function getPinMinimumLength()
+    {
+        if (array_key_exists("pinMinimumLength", $this->_propDict)) {
+            return $this->_propDict["pinMinimumLength"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the pinMinimumLength
+    * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
+    *
+    * @param int $val The pinMinimumLength
+    *
+    * @return WindowsIdentityProtectionConfiguration
+    */
+    public function setPinMinimumLength($val)
+    {
+        $this->_propDict["pinMinimumLength"] = intval($val);
         return $this;
     }
     
@@ -323,6 +228,72 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function setPinRecoveryEnabled($val)
     {
         $this->_propDict["pinRecoveryEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the pinSpecialCharactersUsage
+    * Controls the ability to use special characters in the Windows Hello for Business PIN.
+    *
+    * @return ConfigurationUsage The pinSpecialCharactersUsage
+    */
+    public function getPinSpecialCharactersUsage()
+    {
+        if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["pinSpecialCharactersUsage"];
+            } else {
+                $this->_propDict["pinSpecialCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinSpecialCharactersUsage"]);
+                return $this->_propDict["pinSpecialCharactersUsage"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the pinSpecialCharactersUsage
+    * Controls the ability to use special characters in the Windows Hello for Business PIN.
+    *
+    * @param ConfigurationUsage $val The pinSpecialCharactersUsage
+    *
+    * @return WindowsIdentityProtectionConfiguration
+    */
+    public function setPinSpecialCharactersUsage($val)
+    {
+        $this->_propDict["pinSpecialCharactersUsage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the pinUppercaseCharactersUsage
+    * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
+    *
+    * @return ConfigurationUsage The pinUppercaseCharactersUsage
+    */
+    public function getPinUppercaseCharactersUsage()
+    {
+        if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["pinUppercaseCharactersUsage"];
+            } else {
+                $this->_propDict["pinUppercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinUppercaseCharactersUsage"]);
+                return $this->_propDict["pinUppercaseCharactersUsage"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the pinUppercaseCharactersUsage
+    * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
+    *
+    * @param ConfigurationUsage $val The pinUppercaseCharactersUsage
+    *
+    * @return WindowsIdentityProtectionConfiguration
+    */
+    public function setPinUppercaseCharactersUsage($val)
+    {
+        $this->_propDict["pinUppercaseCharactersUsage"] = $val;
         return $this;
     }
     
@@ -410,6 +381,35 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     public function setUseCertificatesForOnPremisesAuthEnabled($val)
     {
         $this->_propDict["useCertificatesForOnPremisesAuthEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the useSecurityKeyForSignin
+    * Boolean value used to enable the Windows Hello security key as a logon credential.
+    *
+    * @return bool The useSecurityKeyForSignin
+    */
+    public function getUseSecurityKeyForSignin()
+    {
+        if (array_key_exists("useSecurityKeyForSignin", $this->_propDict)) {
+            return $this->_propDict["useSecurityKeyForSignin"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the useSecurityKeyForSignin
+    * Boolean value used to enable the Windows Hello security key as a logon credential.
+    *
+    * @param bool $val The useSecurityKeyForSignin
+    *
+    * @return WindowsIdentityProtectionConfiguration
+    */
+    public function setUseSecurityKeyForSignin($val)
+    {
+        $this->_propDict["useSecurityKeyForSignin"] = boolval($val);
         return $this;
     }
     

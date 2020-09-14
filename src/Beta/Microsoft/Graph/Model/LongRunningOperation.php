@@ -87,6 +87,33 @@ class LongRunningOperation extends Entity
     }
     
     /**
+    * Gets the resourceLocation
+    *
+    * @return string The resourceLocation
+    */
+    public function getResourceLocation()
+    {
+        if (array_key_exists("resourceLocation", $this->_propDict)) {
+            return $this->_propDict["resourceLocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceLocation
+    *
+    * @param string $val The resourceLocation
+    *
+    * @return LongRunningOperation
+    */
+    public function setResourceLocation($val)
+    {
+        $this->_propDict["resourceLocation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
     *
     * @return LongRunningOperationStatus The status
@@ -141,33 +168,6 @@ class LongRunningOperation extends Entity
     public function setStatusDetail($val)
     {
         $this->_propDict["statusDetail"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourceLocation
-    *
-    * @return string The resourceLocation
-    */
-    public function getResourceLocation()
-    {
-        if (array_key_exists("resourceLocation", $this->_propDict)) {
-            return $this->_propDict["resourceLocation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the resourceLocation
-    *
-    * @param string $val The resourceLocation
-    *
-    * @return LongRunningOperation
-    */
-    public function setResourceLocation($val)
-    {
-        $this->_propDict["resourceLocation"] = $val;
         return $this;
     }
     

@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EncryptWithTemplate extends EncryptContent
 {
     /**
-    * Gets the templateId
-    *
-    * @return string The templateId
-    */
-    public function getTemplateId()
-    {
-        if (array_key_exists("templateId", $this->_propDict)) {
-            return $this->_propDict["templateId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the templateId
-    *
-    * @param string $val The value of the templateId
-    *
-    * @return EncryptWithTemplate
-    */
-    public function setTemplateId($val)
-    {
-        $this->_propDict["templateId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the availableForEncryption
     *
     * @return bool The availableForEncryption
@@ -73,6 +47,32 @@ class EncryptWithTemplate extends EncryptContent
     public function setAvailableForEncryption($val)
     {
         $this->_propDict["availableForEncryption"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the templateId
+    *
+    * @return string The templateId
+    */
+    public function getTemplateId()
+    {
+        if (array_key_exists("templateId", $this->_propDict)) {
+            return $this->_propDict["templateId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the templateId
+    *
+    * @param string $val The value of the templateId
+    *
+    * @return EncryptWithTemplate
+    */
+    public function setTemplateId($val)
+    {
+        $this->_propDict["templateId"] = $val;
         return $this;
     }
 }

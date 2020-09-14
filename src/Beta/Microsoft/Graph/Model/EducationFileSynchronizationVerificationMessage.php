@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationFileSynchronizationVerificationMessage extends Entity
 {
     /**
-    * Gets the type
+    * Gets the description
     *
-    * @return string The type
+    * @return string The description
     */
-    public function getType()
+    public function getDescription()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the type
+    * Sets the description
     *
-    * @param string $val The value of the type
+    * @param string $val The value of the description
     *
     * @return EducationFileSynchronizationVerificationMessage
     */
-    public function setType($val)
+    public function setDescription($val)
     {
-        $this->_propDict["type"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
     /**
@@ -76,29 +76,29 @@ class EducationFileSynchronizationVerificationMessage extends Entity
         return $this;
     }
     /**
-    * Gets the description
+    * Gets the type
     *
-    * @return string The description
+    * @return string The type
     */
-    public function getDescription()
+    public function getType()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the description
+    * Sets the type
     *
-    * @param string $val The value of the description
+    * @param string $val The value of the type
     *
     * @return EducationFileSynchronizationVerificationMessage
     */
-    public function setDescription($val)
+    public function setType($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["type"] = $val;
         return $this;
     }
 }

@@ -25,60 +25,110 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365GroupsActivityDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the exchangeMailboxStorageUsedInBytes
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The exchangeMailboxStorageUsedInBytes
     */
-    public function getReportRefreshDate()
+    public function getExchangeMailboxStorageUsedInBytes()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the groupId
-    *
-    * @return string The groupId
-    */
-    public function getGroupId()
-    {
-        if (array_key_exists("groupId", $this->_propDict)) {
-            return $this->_propDict["groupId"];
+        if (array_key_exists("exchangeMailboxStorageUsedInBytes", $this->_propDict)) {
+            return $this->_propDict["exchangeMailboxStorageUsedInBytes"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the groupId
+    * Sets the exchangeMailboxStorageUsedInBytes
     *
-    * @param string $val The groupId
+    * @param int $val The exchangeMailboxStorageUsedInBytes
     *
     * @return Office365GroupsActivityDetail
     */
-    public function setGroupId($val)
+    public function setExchangeMailboxStorageUsedInBytes($val)
     {
-        $this->_propDict["groupId"] = $val;
+        $this->_propDict["exchangeMailboxStorageUsedInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the exchangeMailboxTotalItemCount
+    *
+    * @return int The exchangeMailboxTotalItemCount
+    */
+    public function getExchangeMailboxTotalItemCount()
+    {
+        if (array_key_exists("exchangeMailboxTotalItemCount", $this->_propDict)) {
+            return $this->_propDict["exchangeMailboxTotalItemCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the exchangeMailboxTotalItemCount
+    *
+    * @param int $val The exchangeMailboxTotalItemCount
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setExchangeMailboxTotalItemCount($val)
+    {
+        $this->_propDict["exchangeMailboxTotalItemCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the exchangeReceivedEmailCount
+    *
+    * @return int The exchangeReceivedEmailCount
+    */
+    public function getExchangeReceivedEmailCount()
+    {
+        if (array_key_exists("exchangeReceivedEmailCount", $this->_propDict)) {
+            return $this->_propDict["exchangeReceivedEmailCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the exchangeReceivedEmailCount
+    *
+    * @param int $val The exchangeReceivedEmailCount
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setExchangeReceivedEmailCount($val)
+    {
+        $this->_propDict["exchangeReceivedEmailCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the externalMemberCount
+    *
+    * @return int The externalMemberCount
+    */
+    public function getExternalMemberCount()
+    {
+        if (array_key_exists("externalMemberCount", $this->_propDict)) {
+            return $this->_propDict["externalMemberCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalMemberCount
+    *
+    * @param int $val The externalMemberCount
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setExternalMemberCount($val)
+    {
+        $this->_propDict["externalMemberCount"] = intval($val);
         return $this;
     }
     
@@ -110,6 +160,60 @@ class Office365GroupsActivityDetail extends Entity
     }
     
     /**
+    * Gets the groupId
+    *
+    * @return string The groupId
+    */
+    public function getGroupId()
+    {
+        if (array_key_exists("groupId", $this->_propDict)) {
+            return $this->_propDict["groupId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupId
+    *
+    * @param string $val The groupId
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setGroupId($val)
+    {
+        $this->_propDict["groupId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the groupType
+    *
+    * @return string The groupType
+    */
+    public function getGroupType()
+    {
+        if (array_key_exists("groupType", $this->_propDict)) {
+            return $this->_propDict["groupType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the groupType
+    *
+    * @param string $val The groupType
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setGroupType($val)
+    {
+        $this->_propDict["groupType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isDeleted
     *
     * @return bool The isDeleted
@@ -133,33 +237,6 @@ class Office365GroupsActivityDetail extends Entity
     public function setIsDeleted($val)
     {
         $this->_propDict["isDeleted"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the ownerPrincipalName
-    *
-    * @return string The ownerPrincipalName
-    */
-    public function getOwnerPrincipalName()
-    {
-        if (array_key_exists("ownerPrincipalName", $this->_propDict)) {
-            return $this->_propDict["ownerPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ownerPrincipalName
-    *
-    * @param string $val The ownerPrincipalName
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setOwnerPrincipalName($val)
-    {
-        $this->_propDict["ownerPrincipalName"] = $val;
         return $this;
     }
     
@@ -195,33 +272,6 @@ class Office365GroupsActivityDetail extends Entity
     }
     
     /**
-    * Gets the groupType
-    *
-    * @return string The groupType
-    */
-    public function getGroupType()
-    {
-        if (array_key_exists("groupType", $this->_propDict)) {
-            return $this->_propDict["groupType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the groupType
-    *
-    * @param string $val The groupType
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setGroupType($val)
-    {
-        $this->_propDict["groupType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the memberCount
     *
     * @return int The memberCount
@@ -249,56 +299,87 @@ class Office365GroupsActivityDetail extends Entity
     }
     
     /**
-    * Gets the externalMemberCount
+    * Gets the ownerPrincipalName
     *
-    * @return int The externalMemberCount
+    * @return string The ownerPrincipalName
     */
-    public function getExternalMemberCount()
+    public function getOwnerPrincipalName()
     {
-        if (array_key_exists("externalMemberCount", $this->_propDict)) {
-            return $this->_propDict["externalMemberCount"];
+        if (array_key_exists("ownerPrincipalName", $this->_propDict)) {
+            return $this->_propDict["ownerPrincipalName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the externalMemberCount
+    * Sets the ownerPrincipalName
     *
-    * @param int $val The externalMemberCount
+    * @param string $val The ownerPrincipalName
     *
     * @return Office365GroupsActivityDetail
     */
-    public function setExternalMemberCount($val)
+    public function setOwnerPrincipalName($val)
     {
-        $this->_propDict["externalMemberCount"] = intval($val);
+        $this->_propDict["ownerPrincipalName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the exchangeReceivedEmailCount
+    * Gets the reportPeriod
     *
-    * @return int The exchangeReceivedEmailCount
+    * @return string The reportPeriod
     */
-    public function getExchangeReceivedEmailCount()
+    public function getReportPeriod()
     {
-        if (array_key_exists("exchangeReceivedEmailCount", $this->_propDict)) {
-            return $this->_propDict["exchangeReceivedEmailCount"];
+        if (array_key_exists("reportPeriod", $this->_propDict)) {
+            return $this->_propDict["reportPeriod"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the exchangeReceivedEmailCount
+    * Sets the reportPeriod
     *
-    * @param int $val The exchangeReceivedEmailCount
+    * @param string $val The reportPeriod
     *
     * @return Office365GroupsActivityDetail
     */
-    public function setExchangeReceivedEmailCount($val)
+    public function setReportPeriod($val)
     {
-        $this->_propDict["exchangeReceivedEmailCount"] = intval($val);
+        $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     
@@ -326,6 +407,87 @@ class Office365GroupsActivityDetail extends Entity
     public function setSharePointActiveFileCount($val)
     {
         $this->_propDict["sharePointActiveFileCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the sharePointSiteStorageUsedInBytes
+    *
+    * @return int The sharePointSiteStorageUsedInBytes
+    */
+    public function getSharePointSiteStorageUsedInBytes()
+    {
+        if (array_key_exists("sharePointSiteStorageUsedInBytes", $this->_propDict)) {
+            return $this->_propDict["sharePointSiteStorageUsedInBytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sharePointSiteStorageUsedInBytes
+    *
+    * @param int $val The sharePointSiteStorageUsedInBytes
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setSharePointSiteStorageUsedInBytes($val)
+    {
+        $this->_propDict["sharePointSiteStorageUsedInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the sharePointTotalFileCount
+    *
+    * @return int The sharePointTotalFileCount
+    */
+    public function getSharePointTotalFileCount()
+    {
+        if (array_key_exists("sharePointTotalFileCount", $this->_propDict)) {
+            return $this->_propDict["sharePointTotalFileCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sharePointTotalFileCount
+    *
+    * @param int $val The sharePointTotalFileCount
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setSharePointTotalFileCount($val)
+    {
+        $this->_propDict["sharePointTotalFileCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the yammerLikedMessageCount
+    *
+    * @return int The yammerLikedMessageCount
+    */
+    public function getYammerLikedMessageCount()
+    {
+        if (array_key_exists("yammerLikedMessageCount", $this->_propDict)) {
+            return $this->_propDict["yammerLikedMessageCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the yammerLikedMessageCount
+    *
+    * @param int $val The yammerLikedMessageCount
+    *
+    * @return Office365GroupsActivityDetail
+    */
+    public function setYammerLikedMessageCount($val)
+    {
+        $this->_propDict["yammerLikedMessageCount"] = intval($val);
         return $this;
     }
     
@@ -380,168 +542,6 @@ class Office365GroupsActivityDetail extends Entity
     public function setYammerReadMessageCount($val)
     {
         $this->_propDict["yammerReadMessageCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the yammerLikedMessageCount
-    *
-    * @return int The yammerLikedMessageCount
-    */
-    public function getYammerLikedMessageCount()
-    {
-        if (array_key_exists("yammerLikedMessageCount", $this->_propDict)) {
-            return $this->_propDict["yammerLikedMessageCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yammerLikedMessageCount
-    *
-    * @param int $val The yammerLikedMessageCount
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setYammerLikedMessageCount($val)
-    {
-        $this->_propDict["yammerLikedMessageCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the exchangeMailboxTotalItemCount
-    *
-    * @return int The exchangeMailboxTotalItemCount
-    */
-    public function getExchangeMailboxTotalItemCount()
-    {
-        if (array_key_exists("exchangeMailboxTotalItemCount", $this->_propDict)) {
-            return $this->_propDict["exchangeMailboxTotalItemCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the exchangeMailboxTotalItemCount
-    *
-    * @param int $val The exchangeMailboxTotalItemCount
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setExchangeMailboxTotalItemCount($val)
-    {
-        $this->_propDict["exchangeMailboxTotalItemCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the exchangeMailboxStorageUsedInBytes
-    *
-    * @return int The exchangeMailboxStorageUsedInBytes
-    */
-    public function getExchangeMailboxStorageUsedInBytes()
-    {
-        if (array_key_exists("exchangeMailboxStorageUsedInBytes", $this->_propDict)) {
-            return $this->_propDict["exchangeMailboxStorageUsedInBytes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the exchangeMailboxStorageUsedInBytes
-    *
-    * @param int $val The exchangeMailboxStorageUsedInBytes
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setExchangeMailboxStorageUsedInBytes($val)
-    {
-        $this->_propDict["exchangeMailboxStorageUsedInBytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the sharePointTotalFileCount
-    *
-    * @return int The sharePointTotalFileCount
-    */
-    public function getSharePointTotalFileCount()
-    {
-        if (array_key_exists("sharePointTotalFileCount", $this->_propDict)) {
-            return $this->_propDict["sharePointTotalFileCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sharePointTotalFileCount
-    *
-    * @param int $val The sharePointTotalFileCount
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setSharePointTotalFileCount($val)
-    {
-        $this->_propDict["sharePointTotalFileCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the sharePointSiteStorageUsedInBytes
-    *
-    * @return int The sharePointSiteStorageUsedInBytes
-    */
-    public function getSharePointSiteStorageUsedInBytes()
-    {
-        if (array_key_exists("sharePointSiteStorageUsedInBytes", $this->_propDict)) {
-            return $this->_propDict["sharePointSiteStorageUsedInBytes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the sharePointSiteStorageUsedInBytes
-    *
-    * @param int $val The sharePointSiteStorageUsedInBytes
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setSharePointSiteStorageUsedInBytes($val)
-    {
-        $this->_propDict["sharePointSiteStorageUsedInBytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the reportPeriod
-    *
-    * @return string The reportPeriod
-    */
-    public function getReportPeriod()
-    {
-        if (array_key_exists("reportPeriod", $this->_propDict)) {
-            return $this->_propDict["reportPeriod"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the reportPeriod
-    *
-    * @param string $val The reportPeriod
-    *
-    * @return Office365GroupsActivityDetail
-    */
-    public function setReportPeriod($val)
-    {
-        $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
     

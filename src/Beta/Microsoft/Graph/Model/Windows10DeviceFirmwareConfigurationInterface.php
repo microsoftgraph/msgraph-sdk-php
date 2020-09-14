@@ -25,68 +25,68 @@ namespace Beta\Microsoft\Graph\Model;
 class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
 {
     /**
-    * Gets the changeUefiSettingsPermission
-    * Defines the permission level granted to users to change UEFI settings.
+    * Gets the bootFromBuiltInNetworkAdapters
+    * Defines whether a user is allowed to boot from built-in network adapters.
     *
-    * @return ChangeUefiSettingsPermission The changeUefiSettingsPermission
+    * @return Enablement The bootFromBuiltInNetworkAdapters
     */
-    public function getChangeUefiSettingsPermission()
+    public function getBootFromBuiltInNetworkAdapters()
     {
-        if (array_key_exists("changeUefiSettingsPermission", $this->_propDict)) {
-            if (is_a($this->_propDict["changeUefiSettingsPermission"], "Beta\Microsoft\Graph\Model\ChangeUefiSettingsPermission")) {
-                return $this->_propDict["changeUefiSettingsPermission"];
+        if (array_key_exists("bootFromBuiltInNetworkAdapters", $this->_propDict)) {
+            if (is_a($this->_propDict["bootFromBuiltInNetworkAdapters"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["bootFromBuiltInNetworkAdapters"];
             } else {
-                $this->_propDict["changeUefiSettingsPermission"] = new ChangeUefiSettingsPermission($this->_propDict["changeUefiSettingsPermission"]);
-                return $this->_propDict["changeUefiSettingsPermission"];
+                $this->_propDict["bootFromBuiltInNetworkAdapters"] = new Enablement($this->_propDict["bootFromBuiltInNetworkAdapters"]);
+                return $this->_propDict["bootFromBuiltInNetworkAdapters"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the changeUefiSettingsPermission
-    * Defines the permission level granted to users to change UEFI settings.
+    * Sets the bootFromBuiltInNetworkAdapters
+    * Defines whether a user is allowed to boot from built-in network adapters.
     *
-    * @param ChangeUefiSettingsPermission $val The changeUefiSettingsPermission
+    * @param Enablement $val The bootFromBuiltInNetworkAdapters
     *
     * @return Windows10DeviceFirmwareConfigurationInterface
     */
-    public function setChangeUefiSettingsPermission($val)
+    public function setBootFromBuiltInNetworkAdapters($val)
     {
-        $this->_propDict["changeUefiSettingsPermission"] = $val;
+        $this->_propDict["bootFromBuiltInNetworkAdapters"] = $val;
         return $this;
     }
     
     /**
-    * Gets the virtualizationOfCpuAndIO
-    * Defines whether CPU and IO virtualization is enabled.
+    * Gets the bootFromExternalMedia
+    * Defines whether a user is allowed to boot from external media.
     *
-    * @return Enablement The virtualizationOfCpuAndIO
+    * @return Enablement The bootFromExternalMedia
     */
-    public function getVirtualizationOfCpuAndIO()
+    public function getBootFromExternalMedia()
     {
-        if (array_key_exists("virtualizationOfCpuAndIO", $this->_propDict)) {
-            if (is_a($this->_propDict["virtualizationOfCpuAndIO"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["virtualizationOfCpuAndIO"];
+        if (array_key_exists("bootFromExternalMedia", $this->_propDict)) {
+            if (is_a($this->_propDict["bootFromExternalMedia"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["bootFromExternalMedia"];
             } else {
-                $this->_propDict["virtualizationOfCpuAndIO"] = new Enablement($this->_propDict["virtualizationOfCpuAndIO"]);
-                return $this->_propDict["virtualizationOfCpuAndIO"];
+                $this->_propDict["bootFromExternalMedia"] = new Enablement($this->_propDict["bootFromExternalMedia"]);
+                return $this->_propDict["bootFromExternalMedia"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the virtualizationOfCpuAndIO
-    * Defines whether CPU and IO virtualization is enabled.
+    * Sets the bootFromExternalMedia
+    * Defines whether a user is allowed to boot from external media.
     *
-    * @param Enablement $val The virtualizationOfCpuAndIO
+    * @param Enablement $val The bootFromExternalMedia
     *
     * @return Windows10DeviceFirmwareConfigurationInterface
     */
-    public function setVirtualizationOfCpuAndIO($val)
+    public function setBootFromExternalMedia($val)
     {
-        $this->_propDict["virtualizationOfCpuAndIO"] = $val;
+        $this->_propDict["bootFromExternalMedia"] = $val;
         return $this;
     }
     
@@ -120,6 +120,39 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function setCameras($val)
     {
         $this->_propDict["cameras"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the changeUefiSettingsPermission
+    * Defines the permission level granted to users to change UEFI settings.
+    *
+    * @return ChangeUefiSettingsPermission The changeUefiSettingsPermission
+    */
+    public function getChangeUefiSettingsPermission()
+    {
+        if (array_key_exists("changeUefiSettingsPermission", $this->_propDict)) {
+            if (is_a($this->_propDict["changeUefiSettingsPermission"], "Beta\Microsoft\Graph\Model\ChangeUefiSettingsPermission")) {
+                return $this->_propDict["changeUefiSettingsPermission"];
+            } else {
+                $this->_propDict["changeUefiSettingsPermission"] = new ChangeUefiSettingsPermission($this->_propDict["changeUefiSettingsPermission"]);
+                return $this->_propDict["changeUefiSettingsPermission"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the changeUefiSettingsPermission
+    * Defines the permission level granted to users to change UEFI settings.
+    *
+    * @param ChangeUefiSettingsPermission $val The changeUefiSettingsPermission
+    *
+    * @return Windows10DeviceFirmwareConfigurationInterface
+    */
+    public function setChangeUefiSettingsPermission($val)
+    {
+        $this->_propDict["changeUefiSettingsPermission"] = $val;
         return $this;
     }
     
@@ -190,68 +223,35 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     }
     
     /**
-    * Gets the bootFromExternalMedia
-    * Defines whether a user is allowed to boot from external media.
+    * Gets the virtualizationOfCpuAndIO
+    * Defines whether CPU and IO virtualization is enabled.
     *
-    * @return Enablement The bootFromExternalMedia
+    * @return Enablement The virtualizationOfCpuAndIO
     */
-    public function getBootFromExternalMedia()
+    public function getVirtualizationOfCpuAndIO()
     {
-        if (array_key_exists("bootFromExternalMedia", $this->_propDict)) {
-            if (is_a($this->_propDict["bootFromExternalMedia"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["bootFromExternalMedia"];
+        if (array_key_exists("virtualizationOfCpuAndIO", $this->_propDict)) {
+            if (is_a($this->_propDict["virtualizationOfCpuAndIO"], "Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["virtualizationOfCpuAndIO"];
             } else {
-                $this->_propDict["bootFromExternalMedia"] = new Enablement($this->_propDict["bootFromExternalMedia"]);
-                return $this->_propDict["bootFromExternalMedia"];
+                $this->_propDict["virtualizationOfCpuAndIO"] = new Enablement($this->_propDict["virtualizationOfCpuAndIO"]);
+                return $this->_propDict["virtualizationOfCpuAndIO"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the bootFromExternalMedia
-    * Defines whether a user is allowed to boot from external media.
+    * Sets the virtualizationOfCpuAndIO
+    * Defines whether CPU and IO virtualization is enabled.
     *
-    * @param Enablement $val The bootFromExternalMedia
-    *
-    * @return Windows10DeviceFirmwareConfigurationInterface
-    */
-    public function setBootFromExternalMedia($val)
-    {
-        $this->_propDict["bootFromExternalMedia"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the bootFromBuiltInNetworkAdapters
-    * Defines whether a user is allowed to boot from built-in network adapters.
-    *
-    * @return Enablement The bootFromBuiltInNetworkAdapters
-    */
-    public function getBootFromBuiltInNetworkAdapters()
-    {
-        if (array_key_exists("bootFromBuiltInNetworkAdapters", $this->_propDict)) {
-            if (is_a($this->_propDict["bootFromBuiltInNetworkAdapters"], "Beta\Microsoft\Graph\Model\Enablement")) {
-                return $this->_propDict["bootFromBuiltInNetworkAdapters"];
-            } else {
-                $this->_propDict["bootFromBuiltInNetworkAdapters"] = new Enablement($this->_propDict["bootFromBuiltInNetworkAdapters"]);
-                return $this->_propDict["bootFromBuiltInNetworkAdapters"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the bootFromBuiltInNetworkAdapters
-    * Defines whether a user is allowed to boot from built-in network adapters.
-    *
-    * @param Enablement $val The bootFromBuiltInNetworkAdapters
+    * @param Enablement $val The virtualizationOfCpuAndIO
     *
     * @return Windows10DeviceFirmwareConfigurationInterface
     */
-    public function setBootFromBuiltInNetworkAdapters($val)
+    public function setVirtualizationOfCpuAndIO($val)
     {
-        $this->_propDict["bootFromBuiltInNetworkAdapters"] = $val;
+        $this->_propDict["virtualizationOfCpuAndIO"] = $val;
         return $this;
     }
     

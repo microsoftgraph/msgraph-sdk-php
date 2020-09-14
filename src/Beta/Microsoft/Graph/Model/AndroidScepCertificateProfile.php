@@ -25,93 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 {
     /**
-    * Gets the scepServerUrls
-    * SCEP Server Url(s)
+    * Gets the hashAlgorithm
+    * SCEP Hash Algorithm
     *
-    * @return string The scepServerUrls
+    * @return HashAlgorithms The hashAlgorithm
     */
-    public function getScepServerUrls()
+    public function getHashAlgorithm()
     {
-        if (array_key_exists("scepServerUrls", $this->_propDict)) {
-            return $this->_propDict["scepServerUrls"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the scepServerUrls
-    * SCEP Server Url(s)
-    *
-    * @param string $val The scepServerUrls
-    *
-    * @return AndroidScepCertificateProfile
-    */
-    public function setScepServerUrls($val)
-    {
-        $this->_propDict["scepServerUrls"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the subjectNameFormatString
-    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-    *
-    * @return string The subjectNameFormatString
-    */
-    public function getSubjectNameFormatString()
-    {
-        if (array_key_exists("subjectNameFormatString", $this->_propDict)) {
-            return $this->_propDict["subjectNameFormatString"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the subjectNameFormatString
-    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-    *
-    * @param string $val The subjectNameFormatString
-    *
-    * @return AndroidScepCertificateProfile
-    */
-    public function setSubjectNameFormatString($val)
-    {
-        $this->_propDict["subjectNameFormatString"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the keyUsage
-    * SCEP Key Usage
-    *
-    * @return KeyUsages The keyUsage
-    */
-    public function getKeyUsage()
-    {
-        if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Beta\Microsoft\Graph\Model\KeyUsages")) {
-                return $this->_propDict["keyUsage"];
+        if (array_key_exists("hashAlgorithm", $this->_propDict)) {
+            if (is_a($this->_propDict["hashAlgorithm"], "Beta\Microsoft\Graph\Model\HashAlgorithms")) {
+                return $this->_propDict["hashAlgorithm"];
             } else {
-                $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
-                return $this->_propDict["keyUsage"];
+                $this->_propDict["hashAlgorithm"] = new HashAlgorithms($this->_propDict["hashAlgorithm"]);
+                return $this->_propDict["hashAlgorithm"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the keyUsage
-    * SCEP Key Usage
+    * Sets the hashAlgorithm
+    * SCEP Hash Algorithm
     *
-    * @param KeyUsages $val The keyUsage
+    * @param HashAlgorithms $val The hashAlgorithm
     *
     * @return AndroidScepCertificateProfile
     */
-    public function setKeyUsage($val)
+    public function setHashAlgorithm($val)
     {
-        $this->_propDict["keyUsage"] = $val;
+        $this->_propDict["hashAlgorithm"] = $val;
         return $this;
     }
     
@@ -149,35 +91,64 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     
     /**
-    * Gets the hashAlgorithm
-    * SCEP Hash Algorithm
+    * Gets the keyUsage
+    * SCEP Key Usage
     *
-    * @return HashAlgorithms The hashAlgorithm
+    * @return KeyUsages The keyUsage
     */
-    public function getHashAlgorithm()
+    public function getKeyUsage()
     {
-        if (array_key_exists("hashAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["hashAlgorithm"], "Beta\Microsoft\Graph\Model\HashAlgorithms")) {
-                return $this->_propDict["hashAlgorithm"];
+        if (array_key_exists("keyUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["keyUsage"], "Beta\Microsoft\Graph\Model\KeyUsages")) {
+                return $this->_propDict["keyUsage"];
             } else {
-                $this->_propDict["hashAlgorithm"] = new HashAlgorithms($this->_propDict["hashAlgorithm"]);
-                return $this->_propDict["hashAlgorithm"];
+                $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
+                return $this->_propDict["keyUsage"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the hashAlgorithm
-    * SCEP Hash Algorithm
+    * Sets the keyUsage
+    * SCEP Key Usage
     *
-    * @param HashAlgorithms $val The hashAlgorithm
+    * @param KeyUsages $val The keyUsage
     *
     * @return AndroidScepCertificateProfile
     */
-    public function setHashAlgorithm($val)
+    public function setKeyUsage($val)
     {
-        $this->_propDict["hashAlgorithm"] = $val;
+        $this->_propDict["keyUsage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the scepServerUrls
+    * SCEP Server Url(s)
+    *
+    * @return string The scepServerUrls
+    */
+    public function getScepServerUrls()
+    {
+        if (array_key_exists("scepServerUrls", $this->_propDict)) {
+            return $this->_propDict["scepServerUrls"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the scepServerUrls
+    * SCEP Server Url(s)
+    *
+    * @param string $val The scepServerUrls
+    *
+    * @return AndroidScepCertificateProfile
+    */
+    public function setScepServerUrls($val)
+    {
+        $this->_propDict["scepServerUrls"] = $val;
         return $this;
     }
     
@@ -207,6 +178,35 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     public function setSubjectAlternativeNameFormatString($val)
     {
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+    *
+    * @return string The subjectNameFormatString
+    */
+    public function getSubjectNameFormatString()
+    {
+        if (array_key_exists("subjectNameFormatString", $this->_propDict)) {
+            return $this->_propDict["subjectNameFormatString"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
+    *
+    * @param string $val The subjectNameFormatString
+    *
+    * @return AndroidScepCertificateProfile
+    */
+    public function setSubjectNameFormatString($val)
+    {
+        $this->_propDict["subjectNameFormatString"] = $val;
         return $this;
     }
     

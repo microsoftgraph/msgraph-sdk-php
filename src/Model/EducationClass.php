@@ -25,89 +25,31 @@ namespace Microsoft\Graph\Model;
 class EducationClass extends Entity
 {
     /**
-    * Gets the displayName
-    * Name of the class.
+    * Gets the classCode
+    * Class code used by the school to identify the class.
     *
-    * @return string The displayName
+    * @return string The classCode
     */
-    public function getDisplayName()
+    public function getClassCode()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("classCode", $this->_propDict)) {
+            return $this->_propDict["classCode"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
-    * Name of the class.
+    * Sets the classCode
+    * Class code used by the school to identify the class.
     *
-    * @param string $val The displayName
-    *
-    * @return EducationClass
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mailNickname
-    * Mail name for sending email to all members, if this is enabled.
-    *
-    * @return string The mailNickname
-    */
-    public function getMailNickname()
-    {
-        if (array_key_exists("mailNickname", $this->_propDict)) {
-            return $this->_propDict["mailNickname"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mailNickname
-    * Mail name for sending email to all members, if this is enabled.
-    *
-    * @param string $val The mailNickname
+    * @param string $val The classCode
     *
     * @return EducationClass
     */
-    public function setMailNickname($val)
+    public function setClassCode($val)
     {
-        $this->_propDict["mailNickname"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * Description of the class.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * Description of the class.
-    *
-    * @param string $val The description
-    *
-    * @return EducationClass
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["classCode"] = $val;
         return $this;
     }
     
@@ -145,60 +87,60 @@ class EducationClass extends Entity
     }
     
     /**
-    * Gets the classCode
-    * Class code used by the school to identify the class.
+    * Gets the description
+    * Description of the class.
     *
-    * @return string The classCode
+    * @return string The description
     */
-    public function getClassCode()
+    public function getDescription()
     {
-        if (array_key_exists("classCode", $this->_propDict)) {
-            return $this->_propDict["classCode"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the classCode
-    * Class code used by the school to identify the class.
+    * Sets the description
+    * Description of the class.
     *
-    * @param string $val The classCode
+    * @param string $val The description
     *
     * @return EducationClass
     */
-    public function setClassCode($val)
+    public function setDescription($val)
     {
-        $this->_propDict["classCode"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
     /**
-    * Gets the externalName
-    * Name of the class in the syncing system.
+    * Gets the displayName
+    * Name of the class.
     *
-    * @return string The externalName
+    * @return string The displayName
     */
-    public function getExternalName()
+    public function getDisplayName()
     {
-        if (array_key_exists("externalName", $this->_propDict)) {
-            return $this->_propDict["externalName"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the externalName
-    * Name of the class in the syncing system.
+    * Sets the displayName
+    * Name of the class.
     *
-    * @param string $val The externalName
+    * @param string $val The displayName
     *
     * @return EducationClass
     */
-    public function setExternalName($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["externalName"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -228,6 +170,35 @@ class EducationClass extends Entity
     public function setExternalId($val)
     {
         $this->_propDict["externalId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalName
+    * Name of the class in the syncing system.
+    *
+    * @return string The externalName
+    */
+    public function getExternalName()
+    {
+        if (array_key_exists("externalName", $this->_propDict)) {
+            return $this->_propDict["externalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalName
+    * Name of the class in the syncing system.
+    *
+    * @param string $val The externalName
+    *
+    * @return EducationClass
+    */
+    public function setExternalName($val)
+    {
+        $this->_propDict["externalName"] = $val;
         return $this;
     }
     
@@ -265,6 +236,35 @@ class EducationClass extends Entity
     }
     
     /**
+    * Gets the mailNickname
+    * Mail name for sending email to all members, if this is enabled.
+    *
+    * @return string The mailNickname
+    */
+    public function getMailNickname()
+    {
+        if (array_key_exists("mailNickname", $this->_propDict)) {
+            return $this->_propDict["mailNickname"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mailNickname
+    * Mail name for sending email to all members, if this is enabled.
+    *
+    * @param string $val The mailNickname
+    *
+    * @return EducationClass
+    */
+    public function setMailNickname($val)
+    {
+        $this->_propDict["mailNickname"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the term
     * Term for this class.
     *
@@ -297,33 +297,36 @@ class EducationClass extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the schools
-    * All schools that this class is associated with. Nullable.
-     *
-     * @return array The schools
-     */
-    public function getSchools()
+    /**
+    * Gets the group
+    * The directory group corresponding to this class.
+    *
+    * @return Group The group
+    */
+    public function getGroup()
     {
-        if (array_key_exists("schools", $this->_propDict)) {
-           return $this->_propDict["schools"];
-        } else {
-            return null;
+        if (array_key_exists("group", $this->_propDict)) {
+            if (is_a($this->_propDict["group"], "Microsoft\Graph\Model\Group")) {
+                return $this->_propDict["group"];
+            } else {
+                $this->_propDict["group"] = new Group($this->_propDict["group"]);
+                return $this->_propDict["group"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the schools
-    * All schools that this class is associated with. Nullable.
+    /**
+    * Sets the group
+    * The directory group corresponding to this class.
     *
-    * @param EducationSchool $val The schools
+    * @param Group $val The group
     *
     * @return EducationClass
     */
-    public function setSchools($val)
+    public function setGroup($val)
     {
-		$this->_propDict["schools"] = $val;
+        $this->_propDict["group"] = $val;
         return $this;
     }
     
@@ -359,6 +362,36 @@ class EducationClass extends Entity
     
 
      /** 
+     * Gets the schools
+    * All schools that this class is associated with. Nullable.
+     *
+     * @return array The schools
+     */
+    public function getSchools()
+    {
+        if (array_key_exists("schools", $this->_propDict)) {
+           return $this->_propDict["schools"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the schools
+    * All schools that this class is associated with. Nullable.
+    *
+    * @param EducationSchool $val The schools
+    *
+    * @return EducationClass
+    */
+    public function setSchools($val)
+    {
+		$this->_propDict["schools"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the teachers
     * All teachers in the class. Nullable.
      *
@@ -384,39 +417,6 @@ class EducationClass extends Entity
     public function setTeachers($val)
     {
 		$this->_propDict["teachers"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the group
-    * The directory group corresponding to this class.
-    *
-    * @return Group The group
-    */
-    public function getGroup()
-    {
-        if (array_key_exists("group", $this->_propDict)) {
-            if (is_a($this->_propDict["group"], "Microsoft\Graph\Model\Group")) {
-                return $this->_propDict["group"];
-            } else {
-                $this->_propDict["group"] = new Group($this->_propDict["group"]);
-                return $this->_propDict["group"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the group
-    * The directory group corresponding to this class.
-    *
-    * @param Group $val The group
-    *
-    * @return EducationClass
-    */
-    public function setGroup($val)
-    {
-        $this->_propDict["group"] = $val;
         return $this;
     }
     

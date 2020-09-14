@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SitePage extends BaseItem
 {
     /**
-    * Gets the title
-    *
-    * @return string The title
-    */
-    public function getTitle()
-    {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the title
-    *
-    * @param string $val The title
-    *
-    * @return SitePage
-    */
-    public function setTitle($val)
-    {
-        $this->_propDict["title"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the contentType
     *
     * @return ContentTypeInfo The contentType
@@ -109,34 +82,6 @@ class SitePage extends BaseItem
         return $this;
     }
     
-
-     /** 
-     * Gets the webParts
-     *
-     * @return array The webParts
-     */
-    public function getWebParts()
-    {
-        if (array_key_exists("webParts", $this->_propDict)) {
-           return $this->_propDict["webParts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the webParts
-    *
-    * @param WebPart $val The webParts
-    *
-    * @return SitePage
-    */
-    public function setWebParts($val)
-    {
-		$this->_propDict["webParts"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the publishingState
     *
@@ -165,6 +110,61 @@ class SitePage extends BaseItem
     public function setPublishingState($val)
     {
         $this->_propDict["publishingState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the title
+    *
+    * @return string The title
+    */
+    public function getTitle()
+    {
+        if (array_key_exists("title", $this->_propDict)) {
+            return $this->_propDict["title"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the title
+    *
+    * @param string $val The title
+    *
+    * @return SitePage
+    */
+    public function setTitle($val)
+    {
+        $this->_propDict["title"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the webParts
+     *
+     * @return array The webParts
+     */
+    public function getWebParts()
+    {
+        if (array_key_exists("webParts", $this->_propDict)) {
+           return $this->_propDict["webParts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the webParts
+    *
+    * @param WebPart $val The webParts
+    *
+    * @return SitePage
+    */
+    public function setWebParts($val)
+    {
+		$this->_propDict["webParts"] = $val;
         return $this;
     }
     

@@ -23,62 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WindowsKioskProfile extends Entity
 {
-    /**
-    * Gets the profileId
-    * Key of the entity.
-    *
-    * @return string The profileId
-    */
-    public function getProfileId()
-    {
-        if (array_key_exists("profileId", $this->_propDict)) {
-            return $this->_propDict["profileId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the profileId
-    * Key of the entity.
-    *
-    * @param string $val The value of the profileId
-    *
-    * @return WindowsKioskProfile
-    */
-    public function setProfileId($val)
-    {
-        $this->_propDict["profileId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the profileName
-    * This is a friendly name??used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
-    *
-    * @return string The profileName
-    */
-    public function getProfileName()
-    {
-        if (array_key_exists("profileName", $this->_propDict)) {
-            return $this->_propDict["profileName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the profileName
-    * This is a friendly name??used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
-    *
-    * @param string $val The value of the profileName
-    *
-    * @return WindowsKioskProfile
-    */
-    public function setProfileName($val)
-    {
-        $this->_propDict["profileName"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the appConfiguration
@@ -111,6 +55,62 @@ class WindowsKioskProfile extends Entity
     {
         $this->_propDict["appConfiguration"] = $val;
          return $this;
+    }
+    /**
+    * Gets the profileId
+    * Key of the entity.
+    *
+    * @return string The profileId
+    */
+    public function getProfileId()
+    {
+        if (array_key_exists("profileId", $this->_propDict)) {
+            return $this->_propDict["profileId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the profileId
+    * Key of the entity.
+    *
+    * @param string $val The value of the profileId
+    *
+    * @return WindowsKioskProfile
+    */
+    public function setProfileId($val)
+    {
+        $this->_propDict["profileId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the profileName
+    * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+    *
+    * @return string The profileName
+    */
+    public function getProfileName()
+    {
+        if (array_key_exists("profileName", $this->_propDict)) {
+            return $this->_propDict["profileName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the profileName
+    * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+    *
+    * @param string $val The value of the profileName
+    *
+    * @return WindowsKioskProfile
+    */
+    public function setProfileName($val)
+    {
+        $this->_propDict["profileName"] = $val;
+        return $this;
     }
 
     /**

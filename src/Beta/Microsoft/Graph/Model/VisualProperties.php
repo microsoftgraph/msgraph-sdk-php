@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class VisualProperties extends Entity
 {
     /**
-    * Gets the title
-    *
-    * @return string The title
-    */
-    public function getTitle()
-    {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the title
-    *
-    * @param string $val The value of the title
-    *
-    * @return VisualProperties
-    */
-    public function setTitle($val)
-    {
-        $this->_propDict["title"] = $val;
-        return $this;
-    }
-    /**
     * Gets the body
     *
     * @return string The body
@@ -73,6 +47,32 @@ class VisualProperties extends Entity
     public function setBody($val)
     {
         $this->_propDict["body"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the title
+    *
+    * @return string The title
+    */
+    public function getTitle()
+    {
+        if (array_key_exists("title", $this->_propDict)) {
+            return $this->_propDict["title"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the title
+    *
+    * @param string $val The value of the title
+    *
+    * @return VisualProperties
+    */
+    public function setTitle($val)
+    {
+        $this->_propDict["title"] = $val;
         return $this;
     }
 }

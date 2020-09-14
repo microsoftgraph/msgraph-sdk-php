@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class VppLicensingType extends Entity
 {
     /**
-    * Gets the supportUserLicensing
-    * Whether the program supports the user licensing type.
-    *
-    * @return bool The supportUserLicensing
-    */
-    public function getSupportUserLicensing()
-    {
-        if (array_key_exists("supportUserLicensing", $this->_propDict)) {
-            return $this->_propDict["supportUserLicensing"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the supportUserLicensing
-    * Whether the program supports the user licensing type.
-    *
-    * @param bool $val The value of the supportUserLicensing
-    *
-    * @return VppLicensingType
-    */
-    public function setSupportUserLicensing($val)
-    {
-        $this->_propDict["supportUserLicensing"] = $val;
-        return $this;
-    }
-    /**
     * Gets the supportDeviceLicensing
     * Whether the program supports the device licensing type.
     *
@@ -77,6 +49,34 @@ class VppLicensingType extends Entity
     public function setSupportDeviceLicensing($val)
     {
         $this->_propDict["supportDeviceLicensing"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the supportsDeviceLicensing
+    * Whether the program supports the device licensing type.
+    *
+    * @return bool The supportsDeviceLicensing
+    */
+    public function getSupportsDeviceLicensing()
+    {
+        if (array_key_exists("supportsDeviceLicensing", $this->_propDict)) {
+            return $this->_propDict["supportsDeviceLicensing"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the supportsDeviceLicensing
+    * Whether the program supports the device licensing type.
+    *
+    * @param bool $val The value of the supportsDeviceLicensing
+    *
+    * @return VppLicensingType
+    */
+    public function setSupportsDeviceLicensing($val)
+    {
+        $this->_propDict["supportsDeviceLicensing"] = $val;
         return $this;
     }
     /**
@@ -108,31 +108,31 @@ class VppLicensingType extends Entity
         return $this;
     }
     /**
-    * Gets the supportsDeviceLicensing
-    * Whether the program supports the device licensing type.
+    * Gets the supportUserLicensing
+    * Whether the program supports the user licensing type.
     *
-    * @return bool The supportsDeviceLicensing
+    * @return bool The supportUserLicensing
     */
-    public function getSupportsDeviceLicensing()
+    public function getSupportUserLicensing()
     {
-        if (array_key_exists("supportsDeviceLicensing", $this->_propDict)) {
-            return $this->_propDict["supportsDeviceLicensing"];
+        if (array_key_exists("supportUserLicensing", $this->_propDict)) {
+            return $this->_propDict["supportUserLicensing"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the supportsDeviceLicensing
-    * Whether the program supports the device licensing type.
+    * Sets the supportUserLicensing
+    * Whether the program supports the user licensing type.
     *
-    * @param bool $val The value of the supportsDeviceLicensing
+    * @param bool $val The value of the supportUserLicensing
     *
     * @return VppLicensingType
     */
-    public function setSupportsDeviceLicensing($val)
+    public function setSupportUserLicensing($val)
     {
-        $this->_propDict["supportsDeviceLicensing"] = $val;
+        $this->_propDict["supportUserLicensing"] = $val;
         return $this;
     }
 }

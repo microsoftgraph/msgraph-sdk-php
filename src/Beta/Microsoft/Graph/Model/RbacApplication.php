@@ -26,34 +26,6 @@ class RbacApplication extends Entity
 {
 
      /** 
-     * Gets the roleDefinitions
-     *
-     * @return array The roleDefinitions
-     */
-    public function getRoleDefinitions()
-    {
-        if (array_key_exists("roleDefinitions", $this->_propDict)) {
-           return $this->_propDict["roleDefinitions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the roleDefinitions
-    *
-    * @param UnifiedRoleDefinition $val The roleDefinitions
-    *
-    * @return RbacApplication
-    */
-    public function setRoleDefinitions($val)
-    {
-		$this->_propDict["roleDefinitions"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the roleAssignments
      *
      * @return array The roleAssignments
@@ -77,6 +49,34 @@ class RbacApplication extends Entity
     public function setRoleAssignments($val)
     {
 		$this->_propDict["roleAssignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the roleDefinitions
+     *
+     * @return array The roleDefinitions
+     */
+    public function getRoleDefinitions()
+    {
+        if (array_key_exists("roleDefinitions", $this->_propDict)) {
+           return $this->_propDict["roleDefinitions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the roleDefinitions
+    *
+    * @param UnifiedRoleDefinition $val The roleDefinitions
+    *
+    * @return RbacApplication
+    */
+    public function setRoleDefinitions($val)
+    {
+		$this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
     

@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ResourceSpecificPermissionGrant extends DirectoryObject
 {
     /**
-    * Gets the clientId
-    *
-    * @return string The clientId
-    */
-    public function getClientId()
-    {
-        if (array_key_exists("clientId", $this->_propDict)) {
-            return $this->_propDict["clientId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the clientId
-    *
-    * @param string $val The clientId
-    *
-    * @return ResourceSpecificPermissionGrant
-    */
-    public function setClientId($val)
-    {
-        $this->_propDict["clientId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the clientAppId
     *
     * @return string The clientAppId
@@ -79,29 +52,56 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
     }
     
     /**
-    * Gets the resourceAppId
+    * Gets the clientId
     *
-    * @return string The resourceAppId
+    * @return string The clientId
     */
-    public function getResourceAppId()
+    public function getClientId()
     {
-        if (array_key_exists("resourceAppId", $this->_propDict)) {
-            return $this->_propDict["resourceAppId"];
+        if (array_key_exists("clientId", $this->_propDict)) {
+            return $this->_propDict["clientId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the resourceAppId
+    * Sets the clientId
     *
-    * @param string $val The resourceAppId
+    * @param string $val The clientId
     *
     * @return ResourceSpecificPermissionGrant
     */
-    public function setResourceAppId($val)
+    public function setClientId($val)
     {
-        $this->_propDict["resourceAppId"] = $val;
+        $this->_propDict["clientId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the permission
+    *
+    * @return string The permission
+    */
+    public function getPermission()
+    {
+        if (array_key_exists("permission", $this->_propDict)) {
+            return $this->_propDict["permission"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the permission
+    *
+    * @param string $val The permission
+    *
+    * @return ResourceSpecificPermissionGrant
+    */
+    public function setPermission($val)
+    {
+        $this->_propDict["permission"] = $val;
         return $this;
     }
     
@@ -133,29 +133,29 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
     }
     
     /**
-    * Gets the permission
+    * Gets the resourceAppId
     *
-    * @return string The permission
+    * @return string The resourceAppId
     */
-    public function getPermission()
+    public function getResourceAppId()
     {
-        if (array_key_exists("permission", $this->_propDict)) {
-            return $this->_propDict["permission"];
+        if (array_key_exists("resourceAppId", $this->_propDict)) {
+            return $this->_propDict["resourceAppId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the permission
+    * Sets the resourceAppId
     *
-    * @param string $val The permission
+    * @param string $val The resourceAppId
     *
     * @return ResourceSpecificPermissionGrant
     */
-    public function setPermission($val)
+    public function setResourceAppId($val)
     {
-        $this->_propDict["permission"] = $val;
+        $this->_propDict["resourceAppId"] = $val;
         return $this;
     }
     

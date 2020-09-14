@@ -54,35 +54,6 @@ class OnPremisesConditionalAccessSettings extends Entity
     }
     
     /**
-    * Gets the includedGroups
-    * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-    *
-    * @return string The includedGroups
-    */
-    public function getIncludedGroups()
-    {
-        if (array_key_exists("includedGroups", $this->_propDict)) {
-            return $this->_propDict["includedGroups"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the includedGroups
-    * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-    *
-    * @param string $val The includedGroups
-    *
-    * @return OnPremisesConditionalAccessSettings
-    */
-    public function setIncludedGroups($val)
-    {
-        $this->_propDict["includedGroups"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the excludedGroups
     * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
     *
@@ -108,6 +79,35 @@ class OnPremisesConditionalAccessSettings extends Entity
     public function setExcludedGroups($val)
     {
         $this->_propDict["excludedGroups"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the includedGroups
+    * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
+    *
+    * @return string The includedGroups
+    */
+    public function getIncludedGroups()
+    {
+        if (array_key_exists("includedGroups", $this->_propDict)) {
+            return $this->_propDict["includedGroups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the includedGroups
+    * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
+    *
+    * @param string $val The includedGroups
+    *
+    * @return OnPremisesConditionalAccessSettings
+    */
+    public function setIncludedGroups($val)
+    {
+        $this->_propDict["includedGroups"] = $val;
         return $this;
     }
     

@@ -25,91 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsDeviceUsageUserCounts extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return TeamsDeviceUsageUserCounts
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the web
-    *
-    * @return int The web
-    */
-    public function getWeb()
-    {
-        if (array_key_exists("web", $this->_propDict)) {
-            return $this->_propDict["web"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the web
-    *
-    * @param int $val The web
-    *
-    * @return TeamsDeviceUsageUserCounts
-    */
-    public function setWeb($val)
-    {
-        $this->_propDict["web"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the windowsPhone
-    *
-    * @return int The windowsPhone
-    */
-    public function getWindowsPhone()
-    {
-        if (array_key_exists("windowsPhone", $this->_propDict)) {
-            return $this->_propDict["windowsPhone"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the windowsPhone
-    *
-    * @param int $val The windowsPhone
-    *
-    * @return TeamsDeviceUsageUserCounts
-    */
-    public function setWindowsPhone($val)
-    {
-        $this->_propDict["windowsPhone"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the androidPhone
     *
     * @return int The androidPhone
@@ -191,33 +106,6 @@ class TeamsDeviceUsageUserCounts extends Entity
     }
     
     /**
-    * Gets the windows
-    *
-    * @return int The windows
-    */
-    public function getWindows()
-    {
-        if (array_key_exists("windows", $this->_propDict)) {
-            return $this->_propDict["windows"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the windows
-    *
-    * @param int $val The windows
-    *
-    * @return TeamsDeviceUsageUserCounts
-    */
-    public function setWindows($val)
-    {
-        $this->_propDict["windows"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the reportDate
     *
     * @return \DateTime The reportDate
@@ -272,6 +160,118 @@ class TeamsDeviceUsageUserCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return TeamsDeviceUsageUserCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the web
+    *
+    * @return int The web
+    */
+    public function getWeb()
+    {
+        if (array_key_exists("web", $this->_propDict)) {
+            return $this->_propDict["web"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the web
+    *
+    * @param int $val The web
+    *
+    * @return TeamsDeviceUsageUserCounts
+    */
+    public function setWeb($val)
+    {
+        $this->_propDict["web"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the windows
+    *
+    * @return int The windows
+    */
+    public function getWindows()
+    {
+        if (array_key_exists("windows", $this->_propDict)) {
+            return $this->_propDict["windows"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windows
+    *
+    * @param int $val The windows
+    *
+    * @return TeamsDeviceUsageUserCounts
+    */
+    public function setWindows($val)
+    {
+        $this->_propDict["windows"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsPhone
+    *
+    * @return int The windowsPhone
+    */
+    public function getWindowsPhone()
+    {
+        if (array_key_exists("windowsPhone", $this->_propDict)) {
+            return $this->_propDict["windowsPhone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windowsPhone
+    *
+    * @param int $val The windowsPhone
+    *
+    * @return TeamsDeviceUsageUserCounts
+    */
+    public function setWindowsPhone($val)
+    {
+        $this->_propDict["windowsPhone"] = intval($val);
         return $this;
     }
     

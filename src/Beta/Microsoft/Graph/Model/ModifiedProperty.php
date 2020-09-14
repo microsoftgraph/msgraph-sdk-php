@@ -52,34 +52,6 @@ class ModifiedProperty extends Entity
         return $this;
     }
     /**
-    * Gets the oldValue
-    * Indicates the previous value (before the update) for the property.
-    *
-    * @return string The oldValue
-    */
-    public function getOldValue()
-    {
-        if (array_key_exists("oldValue", $this->_propDict)) {
-            return $this->_propDict["oldValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the oldValue
-    * Indicates the previous value (before the update) for the property.
-    *
-    * @param string $val The value of the oldValue
-    *
-    * @return ModifiedProperty
-    */
-    public function setOldValue($val)
-    {
-        $this->_propDict["oldValue"] = $val;
-        return $this;
-    }
-    /**
     * Gets the newValue
     * Indicates the updated value for the propery.
     *
@@ -105,6 +77,34 @@ class ModifiedProperty extends Entity
     public function setNewValue($val)
     {
         $this->_propDict["newValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the oldValue
+    * Indicates the previous value (before the update) for the property.
+    *
+    * @return string The oldValue
+    */
+    public function getOldValue()
+    {
+        if (array_key_exists("oldValue", $this->_propDict)) {
+            return $this->_propDict["oldValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the oldValue
+    * Indicates the previous value (before the update) for the property.
+    *
+    * @param string $val The value of the oldValue
+    *
+    * @return ModifiedProperty
+    */
+    public function setOldValue($val)
+    {
+        $this->_propDict["oldValue"] = $val;
         return $this;
     }
 }

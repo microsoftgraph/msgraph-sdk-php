@@ -86,35 +86,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         return $this;
     }
     
-    /**
-    * Gets the lockScreenFootnote
-    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-    *
-    * @return string The lockScreenFootnote
-    */
-    public function getLockScreenFootnote()
-    {
-        if (array_key_exists("lockScreenFootnote", $this->_propDict)) {
-            return $this->_propDict["lockScreenFootnote"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lockScreenFootnote
-    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-    *
-    * @param string $val The lockScreenFootnote
-    *
-    * @return IosDeviceFeaturesConfiguration
-    */
-    public function setLockScreenFootnote($val)
-    {
-        $this->_propDict["lockScreenFootnote"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the homeScreenDockIcons
@@ -175,6 +146,68 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         return $this;
     }
     
+    /**
+    * Gets the iosSingleSignOnExtension
+    * Gets or sets a single sign-on extension profile.
+    *
+    * @return IosSingleSignOnExtension The iosSingleSignOnExtension
+    */
+    public function getIosSingleSignOnExtension()
+    {
+        if (array_key_exists("iosSingleSignOnExtension", $this->_propDict)) {
+            if (is_a($this->_propDict["iosSingleSignOnExtension"], "Beta\Microsoft\Graph\Model\IosSingleSignOnExtension")) {
+                return $this->_propDict["iosSingleSignOnExtension"];
+            } else {
+                $this->_propDict["iosSingleSignOnExtension"] = new IosSingleSignOnExtension($this->_propDict["iosSingleSignOnExtension"]);
+                return $this->_propDict["iosSingleSignOnExtension"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the iosSingleSignOnExtension
+    * Gets or sets a single sign-on extension profile.
+    *
+    * @param IosSingleSignOnExtension $val The iosSingleSignOnExtension
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setIosSingleSignOnExtension($val)
+    {
+        $this->_propDict["iosSingleSignOnExtension"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lockScreenFootnote
+    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
+    *
+    * @return string The lockScreenFootnote
+    */
+    public function getLockScreenFootnote()
+    {
+        if (array_key_exists("lockScreenFootnote", $this->_propDict)) {
+            return $this->_propDict["lockScreenFootnote"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lockScreenFootnote
+    * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
+    *
+    * @param string $val The lockScreenFootnote
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setLockScreenFootnote($val)
+    {
+        $this->_propDict["lockScreenFootnote"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the notificationSettings
@@ -202,6 +235,39 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function setNotificationSettings($val)
     {
 		$this->_propDict["notificationSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the singleSignOnExtension
+    * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
+    *
+    * @return SingleSignOnExtension The singleSignOnExtension
+    */
+    public function getSingleSignOnExtension()
+    {
+        if (array_key_exists("singleSignOnExtension", $this->_propDict)) {
+            if (is_a($this->_propDict["singleSignOnExtension"], "Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
+                return $this->_propDict["singleSignOnExtension"];
+            } else {
+                $this->_propDict["singleSignOnExtension"] = new SingleSignOnExtension($this->_propDict["singleSignOnExtension"]);
+                return $this->_propDict["singleSignOnExtension"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the singleSignOnExtension
+    * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
+    *
+    * @param SingleSignOnExtension $val The singleSignOnExtension
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setSingleSignOnExtension($val)
+    {
+        $this->_propDict["singleSignOnExtension"] = $val;
         return $this;
     }
     
@@ -301,72 +367,6 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function setWallpaperImage($val)
     {
         $this->_propDict["wallpaperImage"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the singleSignOnExtension
-    * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
-    *
-    * @return SingleSignOnExtension The singleSignOnExtension
-    */
-    public function getSingleSignOnExtension()
-    {
-        if (array_key_exists("singleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtension"], "Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
-                return $this->_propDict["singleSignOnExtension"];
-            } else {
-                $this->_propDict["singleSignOnExtension"] = new SingleSignOnExtension($this->_propDict["singleSignOnExtension"]);
-                return $this->_propDict["singleSignOnExtension"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the singleSignOnExtension
-    * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
-    *
-    * @param SingleSignOnExtension $val The singleSignOnExtension
-    *
-    * @return IosDeviceFeaturesConfiguration
-    */
-    public function setSingleSignOnExtension($val)
-    {
-        $this->_propDict["singleSignOnExtension"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the iosSingleSignOnExtension
-    * Gets or sets a single sign-on extension profile.
-    *
-    * @return IosSingleSignOnExtension The iosSingleSignOnExtension
-    */
-    public function getIosSingleSignOnExtension()
-    {
-        if (array_key_exists("iosSingleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["iosSingleSignOnExtension"], "Beta\Microsoft\Graph\Model\IosSingleSignOnExtension")) {
-                return $this->_propDict["iosSingleSignOnExtension"];
-            } else {
-                $this->_propDict["iosSingleSignOnExtension"] = new IosSingleSignOnExtension($this->_propDict["iosSingleSignOnExtension"]);
-                return $this->_propDict["iosSingleSignOnExtension"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the iosSingleSignOnExtension
-    * Gets or sets a single sign-on extension profile.
-    *
-    * @param IosSingleSignOnExtension $val The iosSingleSignOnExtension
-    *
-    * @return IosDeviceFeaturesConfiguration
-    */
-    public function setIosSingleSignOnExtension($val)
-    {
-        $this->_propDict["iosSingleSignOnExtension"] = $val;
         return $this;
     }
     

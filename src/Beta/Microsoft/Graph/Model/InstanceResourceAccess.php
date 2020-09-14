@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class InstanceResourceAccess extends Entity
 {
-    /**
-    * Gets the resourceAppId
-    *
-    * @return string The resourceAppId
-    */
-    public function getResourceAppId()
-    {
-        if (array_key_exists("resourceAppId", $this->_propDict)) {
-            return $this->_propDict["resourceAppId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the resourceAppId
-    *
-    * @param string $val The value of the resourceAppId
-    *
-    * @return InstanceResourceAccess
-    */
-    public function setResourceAppId($val)
-    {
-        $this->_propDict["resourceAppId"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the permissions
@@ -79,5 +53,31 @@ class InstanceResourceAccess extends Entity
     {
         $this->_propDict["permissions"] = $val;
          return $this;
+    }
+    /**
+    * Gets the resourceAppId
+    *
+    * @return string The resourceAppId
+    */
+    public function getResourceAppId()
+    {
+        if (array_key_exists("resourceAppId", $this->_propDict)) {
+            return $this->_propDict["resourceAppId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resourceAppId
+    *
+    * @param string $val The value of the resourceAppId
+    *
+    * @return InstanceResourceAccess
+    */
+    public function setResourceAppId($val)
+    {
+        $this->_propDict["resourceAppId"] = $val;
+        return $this;
     }
 }

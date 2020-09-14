@@ -25,60 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Mention extends Entity
 {
     /**
-    * Gets the mentioned
+    * Gets the application
     *
-    * @return EmailAddress The mentioned
+    * @return string The application
     */
-    public function getMentioned()
+    public function getApplication()
     {
-        if (array_key_exists("mentioned", $this->_propDict)) {
-            if (is_a($this->_propDict["mentioned"], "Beta\Microsoft\Graph\Model\EmailAddress")) {
-                return $this->_propDict["mentioned"];
-            } else {
-                $this->_propDict["mentioned"] = new EmailAddress($this->_propDict["mentioned"]);
-                return $this->_propDict["mentioned"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the mentioned
-    *
-    * @param EmailAddress $val The mentioned
-    *
-    * @return Mention
-    */
-    public function setMentioned($val)
-    {
-        $this->_propDict["mentioned"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mentionText
-    *
-    * @return string The mentionText
-    */
-    public function getMentionText()
-    {
-        if (array_key_exists("mentionText", $this->_propDict)) {
-            return $this->_propDict["mentionText"];
+        if (array_key_exists("application", $this->_propDict)) {
+            return $this->_propDict["application"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the mentionText
+    * Sets the application
     *
-    * @param string $val The mentionText
+    * @param string $val The application
     *
     * @return Mention
     */
-    public function setMentionText($val)
+    public function setApplication($val)
     {
-        $this->_propDict["mentionText"] = $val;
+        $this->_propDict["application"] = $val;
         return $this;
     }
     
@@ -172,37 +141,6 @@ class Mention extends Entity
     }
     
     /**
-    * Gets the serverCreatedDateTime
-    *
-    * @return \DateTime The serverCreatedDateTime
-    */
-    public function getServerCreatedDateTime()
-    {
-        if (array_key_exists("serverCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["serverCreatedDateTime"], "\DateTime")) {
-                return $this->_propDict["serverCreatedDateTime"];
-            } else {
-                $this->_propDict["serverCreatedDateTime"] = new \DateTime($this->_propDict["serverCreatedDateTime"]);
-                return $this->_propDict["serverCreatedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the serverCreatedDateTime
-    *
-    * @param \DateTime $val The serverCreatedDateTime
-    *
-    * @return Mention
-    */
-    public function setServerCreatedDateTime($val)
-    {
-        $this->_propDict["serverCreatedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deepLink
     *
     * @return string The deepLink
@@ -230,29 +168,91 @@ class Mention extends Entity
     }
     
     /**
-    * Gets the application
+    * Gets the mentioned
     *
-    * @return string The application
+    * @return EmailAddress The mentioned
     */
-    public function getApplication()
+    public function getMentioned()
     {
-        if (array_key_exists("application", $this->_propDict)) {
-            return $this->_propDict["application"];
+        if (array_key_exists("mentioned", $this->_propDict)) {
+            if (is_a($this->_propDict["mentioned"], "Beta\Microsoft\Graph\Model\EmailAddress")) {
+                return $this->_propDict["mentioned"];
+            } else {
+                $this->_propDict["mentioned"] = new EmailAddress($this->_propDict["mentioned"]);
+                return $this->_propDict["mentioned"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the mentioned
+    *
+    * @param EmailAddress $val The mentioned
+    *
+    * @return Mention
+    */
+    public function setMentioned($val)
+    {
+        $this->_propDict["mentioned"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the mentionText
+    *
+    * @return string The mentionText
+    */
+    public function getMentionText()
+    {
+        if (array_key_exists("mentionText", $this->_propDict)) {
+            return $this->_propDict["mentionText"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the application
+    * Sets the mentionText
     *
-    * @param string $val The application
+    * @param string $val The mentionText
     *
     * @return Mention
     */
-    public function setApplication($val)
+    public function setMentionText($val)
     {
-        $this->_propDict["application"] = $val;
+        $this->_propDict["mentionText"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the serverCreatedDateTime
+    *
+    * @return \DateTime The serverCreatedDateTime
+    */
+    public function getServerCreatedDateTime()
+    {
+        if (array_key_exists("serverCreatedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["serverCreatedDateTime"], "\DateTime")) {
+                return $this->_propDict["serverCreatedDateTime"];
+            } else {
+                $this->_propDict["serverCreatedDateTime"] = new \DateTime($this->_propDict["serverCreatedDateTime"]);
+                return $this->_propDict["serverCreatedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the serverCreatedDateTime
+    *
+    * @param \DateTime $val The serverCreatedDateTime
+    *
+    * @return Mention
+    */
+    public function setServerCreatedDateTime($val)
+    {
+        $this->_propDict["serverCreatedDateTime"] = $val;
         return $this;
     }
     

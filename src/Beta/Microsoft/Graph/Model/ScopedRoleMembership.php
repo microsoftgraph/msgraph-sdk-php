@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ScopedRoleMembership extends Entity
 {
     /**
-    * Gets the roleId
-    *
-    * @return string The roleId
-    */
-    public function getRoleId()
-    {
-        if (array_key_exists("roleId", $this->_propDict)) {
-            return $this->_propDict["roleId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleId
-    *
-    * @param string $val The roleId
-    *
-    * @return ScopedRoleMembership
-    */
-    public function setRoleId($val)
-    {
-        $this->_propDict["roleId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the administrativeUnitId
     *
     * @return string The administrativeUnitId
@@ -75,6 +48,33 @@ class ScopedRoleMembership extends Entity
     public function setAdministrativeUnitId($val)
     {
         $this->_propDict["administrativeUnitId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleId
+    *
+    * @return string The roleId
+    */
+    public function getRoleId()
+    {
+        if (array_key_exists("roleId", $this->_propDict)) {
+            return $this->_propDict["roleId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleId
+    *
+    * @param string $val The roleId
+    *
+    * @return ScopedRoleMembership
+    */
+    public function setRoleId($val)
+    {
+        $this->_propDict["roleId"] = $val;
         return $this;
     }
     

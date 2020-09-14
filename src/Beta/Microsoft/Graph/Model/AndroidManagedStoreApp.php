@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidManagedStoreApp extends MobileApp
 {
     /**
-    * Gets the packageId
-    * The package identifier.
-    *
-    * @return string The packageId
-    */
-    public function getPackageId()
-    {
-        if (array_key_exists("packageId", $this->_propDict)) {
-            return $this->_propDict["packageId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the packageId
-    * The package identifier.
-    *
-    * @param string $val The packageId
-    *
-    * @return AndroidManagedStoreApp
-    */
-    public function setPackageId($val)
-    {
-        $this->_propDict["packageId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appIdentifier
     * The Identity Name.
     *
@@ -83,64 +54,6 @@ class AndroidManagedStoreApp extends MobileApp
     }
     
     /**
-    * Gets the usedLicenseCount
-    * The number of VPP licenses in use.
-    *
-    * @return int The usedLicenseCount
-    */
-    public function getUsedLicenseCount()
-    {
-        if (array_key_exists("usedLicenseCount", $this->_propDict)) {
-            return $this->_propDict["usedLicenseCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the usedLicenseCount
-    * The number of VPP licenses in use.
-    *
-    * @param int $val The usedLicenseCount
-    *
-    * @return AndroidManagedStoreApp
-    */
-    public function setUsedLicenseCount($val)
-    {
-        $this->_propDict["usedLicenseCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the totalLicenseCount
-    * The total number of VPP licenses.
-    *
-    * @return int The totalLicenseCount
-    */
-    public function getTotalLicenseCount()
-    {
-        if (array_key_exists("totalLicenseCount", $this->_propDict)) {
-            return $this->_propDict["totalLicenseCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the totalLicenseCount
-    * The total number of VPP licenses.
-    *
-    * @param int $val The totalLicenseCount
-    *
-    * @return AndroidManagedStoreApp
-    */
-    public function setTotalLicenseCount($val)
-    {
-        $this->_propDict["totalLicenseCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the appStoreUrl
     * The Play for Work Store app URL.
     *
@@ -166,6 +79,36 @@ class AndroidManagedStoreApp extends MobileApp
     public function setAppStoreUrl($val)
     {
         $this->_propDict["appStoreUrl"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the appTracks
+    * The tracks that are visible to this enterprise.
+     *
+     * @return array The appTracks
+     */
+    public function getAppTracks()
+    {
+        if (array_key_exists("appTracks", $this->_propDict)) {
+           return $this->_propDict["appTracks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appTracks
+    * The tracks that are visible to this enterprise.
+    *
+    * @param AndroidManagedStoreAppTrack $val The appTracks
+    *
+    * @return AndroidManagedStoreApp
+    */
+    public function setAppTracks($val)
+    {
+		$this->_propDict["appTracks"] = $val;
         return $this;
     }
     
@@ -227,33 +170,32 @@ class AndroidManagedStoreApp extends MobileApp
         return $this;
     }
     
-
-     /** 
-     * Gets the appTracks
-    * The tracks that are visible to this enterprise.
-     *
-     * @return array The appTracks
-     */
-    public function getAppTracks()
+    /**
+    * Gets the packageId
+    * The package identifier.
+    *
+    * @return string The packageId
+    */
+    public function getPackageId()
     {
-        if (array_key_exists("appTracks", $this->_propDict)) {
-           return $this->_propDict["appTracks"];
+        if (array_key_exists("packageId", $this->_propDict)) {
+            return $this->_propDict["packageId"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the appTracks
-    * The tracks that are visible to this enterprise.
+    /**
+    * Sets the packageId
+    * The package identifier.
     *
-    * @param AndroidManagedStoreAppTrack $val The appTracks
+    * @param string $val The packageId
     *
     * @return AndroidManagedStoreApp
     */
-    public function setAppTracks($val)
+    public function setPackageId($val)
     {
-		$this->_propDict["appTracks"] = $val;
+        $this->_propDict["packageId"] = $val;
         return $this;
     }
     
@@ -283,6 +225,64 @@ class AndroidManagedStoreApp extends MobileApp
     public function setSupportsOemConfig($val)
     {
         $this->_propDict["supportsOemConfig"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the totalLicenseCount
+    * The total number of VPP licenses.
+    *
+    * @return int The totalLicenseCount
+    */
+    public function getTotalLicenseCount()
+    {
+        if (array_key_exists("totalLicenseCount", $this->_propDict)) {
+            return $this->_propDict["totalLicenseCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the totalLicenseCount
+    * The total number of VPP licenses.
+    *
+    * @param int $val The totalLicenseCount
+    *
+    * @return AndroidManagedStoreApp
+    */
+    public function setTotalLicenseCount($val)
+    {
+        $this->_propDict["totalLicenseCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the usedLicenseCount
+    * The number of VPP licenses in use.
+    *
+    * @return int The usedLicenseCount
+    */
+    public function getUsedLicenseCount()
+    {
+        if (array_key_exists("usedLicenseCount", $this->_propDict)) {
+            return $this->_propDict["usedLicenseCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the usedLicenseCount
+    * The number of VPP licenses in use.
+    *
+    * @param int $val The usedLicenseCount
+    *
+    * @return AndroidManagedStoreApp
+    */
+    public function setUsedLicenseCount($val)
+    {
+        $this->_propDict["usedLicenseCount"] = intval($val);
         return $this;
     }
     

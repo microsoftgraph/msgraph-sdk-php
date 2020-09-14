@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedule
 {
-    /**
-    * Gets the useUtc
-    * Indicate if the time is Utc or client local time.
-    *
-    * @return bool The useUtc
-    */
-    public function getUseUtc()
-    {
-        if (array_key_exists("useUtc", $this->_propDict)) {
-            return $this->_propDict["useUtc"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the useUtc
-    * Indicate if the time is Utc or client local time.
-    *
-    * @param bool $val The value of the useUtc
-    *
-    * @return DeviceHealthScriptTimeSchedule
-    */
-    public function setUseUtc($val)
-    {
-        $this->_propDict["useUtc"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the time
@@ -83,5 +55,33 @@ class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedule
     {
         $this->_propDict["time"] = $val;
          return $this;
+    }
+    /**
+    * Gets the useUtc
+    * Indicate if the time is Utc or client local time.
+    *
+    * @return bool The useUtc
+    */
+    public function getUseUtc()
+    {
+        if (array_key_exists("useUtc", $this->_propDict)) {
+            return $this->_propDict["useUtc"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the useUtc
+    * Indicate if the time is Utc or client local time.
+    *
+    * @param bool $val The value of the useUtc
+    *
+    * @return DeviceHealthScriptTimeSchedule
+    */
+    public function setUseUtc($val)
+    {
+        $this->_propDict["useUtc"] = $val;
+        return $this;
     }
 }

@@ -25,60 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsDeviceUsageUserDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the deletedDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime The deletedDate
     */
-    public function getReportRefreshDate()
+    public function getDeletedDate()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
+        if (array_key_exists("deletedDate", $this->_propDict)) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+                return $this->_propDict["deletedDate"];
             } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
+                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
+                return $this->_propDict["deletedDate"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the reportRefreshDate
+    * Sets the deletedDate
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param \DateTime $val The deletedDate
     *
     * @return TeamsDeviceUsageUserDetail
     */
-    public function setReportRefreshDate($val)
+    public function setDeletedDate($val)
     {
-        $this->_propDict["reportRefreshDate"] = $val;
+        $this->_propDict["deletedDate"] = $val;
         return $this;
     }
     
     /**
-    * Gets the userPrincipalName
+    * Gets the isDeleted
     *
-    * @return string The userPrincipalName
+    * @return bool The isDeleted
     */
-    public function getUserPrincipalName()
+    public function getIsDeleted()
     {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("isDeleted", $this->_propDict)) {
+            return $this->_propDict["isDeleted"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
+    * Sets the isDeleted
     *
-    * @param string $val The userPrincipalName
+    * @param bool $val The isDeleted
     *
     * @return TeamsDeviceUsageUserDetail
     */
-    public function setUserPrincipalName($val)
+    public function setIsDeleted($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
     
@@ -114,114 +114,87 @@ class TeamsDeviceUsageUserDetail extends Entity
     }
     
     /**
-    * Gets the isDeleted
+    * Gets the reportPeriod
     *
-    * @return bool The isDeleted
+    * @return string The reportPeriod
     */
-    public function getIsDeleted()
+    public function getReportPeriod()
     {
-        if (array_key_exists("isDeleted", $this->_propDict)) {
-            return $this->_propDict["isDeleted"];
+        if (array_key_exists("reportPeriod", $this->_propDict)) {
+            return $this->_propDict["reportPeriod"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isDeleted
+    * Sets the reportPeriod
     *
-    * @param bool $val The isDeleted
+    * @param string $val The reportPeriod
     *
     * @return TeamsDeviceUsageUserDetail
     */
-    public function setIsDeleted($val)
+    public function setReportPeriod($val)
     {
-        $this->_propDict["isDeleted"] = boolval($val);
+        $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
     
     /**
-    * Gets the deletedDate
+    * Gets the reportRefreshDate
     *
-    * @return \DateTime The deletedDate
+    * @return \DateTime The reportRefreshDate
     */
-    public function getDeletedDate()
+    public function getReportRefreshDate()
     {
-        if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
-                return $this->_propDict["deletedDate"];
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
             } else {
-                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
-                return $this->_propDict["deletedDate"];
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the deletedDate
+    * Sets the reportRefreshDate
     *
-    * @param \DateTime $val The deletedDate
+    * @param \DateTime $val The reportRefreshDate
     *
     * @return TeamsDeviceUsageUserDetail
     */
-    public function setDeletedDate($val)
+    public function setReportRefreshDate($val)
     {
-        $this->_propDict["deletedDate"] = $val;
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     
     /**
-    * Gets the usedWeb
+    * Gets the usedAndroidPhone
     *
-    * @return bool The usedWeb
+    * @return bool The usedAndroidPhone
     */
-    public function getUsedWeb()
+    public function getUsedAndroidPhone()
     {
-        if (array_key_exists("usedWeb", $this->_propDict)) {
-            return $this->_propDict["usedWeb"];
+        if (array_key_exists("usedAndroidPhone", $this->_propDict)) {
+            return $this->_propDict["usedAndroidPhone"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the usedWeb
+    * Sets the usedAndroidPhone
     *
-    * @param bool $val The usedWeb
-    *
-    * @return TeamsDeviceUsageUserDetail
-    */
-    public function setUsedWeb($val)
-    {
-        $this->_propDict["usedWeb"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the usedWindowsPhone
-    *
-    * @return bool The usedWindowsPhone
-    */
-    public function getUsedWindowsPhone()
-    {
-        if (array_key_exists("usedWindowsPhone", $this->_propDict)) {
-            return $this->_propDict["usedWindowsPhone"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the usedWindowsPhone
-    *
-    * @param bool $val The usedWindowsPhone
+    * @param bool $val The usedAndroidPhone
     *
     * @return TeamsDeviceUsageUserDetail
     */
-    public function setUsedWindowsPhone($val)
+    public function setUsedAndroidPhone($val)
     {
-        $this->_propDict["usedWindowsPhone"] = boolval($val);
+        $this->_propDict["usedAndroidPhone"] = boolval($val);
         return $this;
     }
     
@@ -280,29 +253,29 @@ class TeamsDeviceUsageUserDetail extends Entity
     }
     
     /**
-    * Gets the usedAndroidPhone
+    * Gets the usedWeb
     *
-    * @return bool The usedAndroidPhone
+    * @return bool The usedWeb
     */
-    public function getUsedAndroidPhone()
+    public function getUsedWeb()
     {
-        if (array_key_exists("usedAndroidPhone", $this->_propDict)) {
-            return $this->_propDict["usedAndroidPhone"];
+        if (array_key_exists("usedWeb", $this->_propDict)) {
+            return $this->_propDict["usedWeb"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the usedAndroidPhone
+    * Sets the usedWeb
     *
-    * @param bool $val The usedAndroidPhone
+    * @param bool $val The usedWeb
     *
     * @return TeamsDeviceUsageUserDetail
     */
-    public function setUsedAndroidPhone($val)
+    public function setUsedWeb($val)
     {
-        $this->_propDict["usedAndroidPhone"] = boolval($val);
+        $this->_propDict["usedWeb"] = boolval($val);
         return $this;
     }
     
@@ -334,29 +307,56 @@ class TeamsDeviceUsageUserDetail extends Entity
     }
     
     /**
-    * Gets the reportPeriod
+    * Gets the usedWindowsPhone
     *
-    * @return string The reportPeriod
+    * @return bool The usedWindowsPhone
     */
-    public function getReportPeriod()
+    public function getUsedWindowsPhone()
     {
-        if (array_key_exists("reportPeriod", $this->_propDict)) {
-            return $this->_propDict["reportPeriod"];
+        if (array_key_exists("usedWindowsPhone", $this->_propDict)) {
+            return $this->_propDict["usedWindowsPhone"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the reportPeriod
+    * Sets the usedWindowsPhone
     *
-    * @param string $val The reportPeriod
+    * @param bool $val The usedWindowsPhone
     *
     * @return TeamsDeviceUsageUserDetail
     */
-    public function setReportPeriod($val)
+    public function setUsedWindowsPhone($val)
     {
-        $this->_propDict["reportPeriod"] = $val;
+        $this->_propDict["usedWindowsPhone"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return TeamsDeviceUsageUserDetail
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

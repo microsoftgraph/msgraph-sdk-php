@@ -25,126 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
 {
     /**
-    * Gets the scepServerUrls
-    * SCEP Server Url(s).
+    * Gets the certificateStore
+    * Target store certificate
     *
-    * @return string The scepServerUrls
+    * @return CertificateStore The certificateStore
     */
-    public function getScepServerUrls()
+    public function getCertificateStore()
     {
-        if (array_key_exists("scepServerUrls", $this->_propDict)) {
-            return $this->_propDict["scepServerUrls"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the scepServerUrls
-    * SCEP Server Url(s).
-    *
-    * @param string $val The scepServerUrls
-    *
-    * @return Windows81SCEPCertificateProfile
-    */
-    public function setScepServerUrls($val)
-    {
-        $this->_propDict["scepServerUrls"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the subjectNameFormatString
-    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-    *
-    * @return string The subjectNameFormatString
-    */
-    public function getSubjectNameFormatString()
-    {
-        if (array_key_exists("subjectNameFormatString", $this->_propDict)) {
-            return $this->_propDict["subjectNameFormatString"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the subjectNameFormatString
-    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-    *
-    * @param string $val The subjectNameFormatString
-    *
-    * @return Windows81SCEPCertificateProfile
-    */
-    public function setSubjectNameFormatString($val)
-    {
-        $this->_propDict["subjectNameFormatString"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the keyUsage
-    * SCEP Key Usage.
-    *
-    * @return KeyUsages The keyUsage
-    */
-    public function getKeyUsage()
-    {
-        if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "Beta\Microsoft\Graph\Model\KeyUsages")) {
-                return $this->_propDict["keyUsage"];
+        if (array_key_exists("certificateStore", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
+                return $this->_propDict["certificateStore"];
             } else {
-                $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
-                return $this->_propDict["keyUsage"];
+                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
+                return $this->_propDict["certificateStore"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the keyUsage
-    * SCEP Key Usage.
+    * Sets the certificateStore
+    * Target store certificate
     *
-    * @param KeyUsages $val The keyUsage
-    *
-    * @return Windows81SCEPCertificateProfile
-    */
-    public function setKeyUsage($val)
-    {
-        $this->_propDict["keyUsage"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the keySize
-    * SCEP Key Size.
-    *
-    * @return KeySize The keySize
-    */
-    public function getKeySize()
-    {
-        if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "Beta\Microsoft\Graph\Model\KeySize")) {
-                return $this->_propDict["keySize"];
-            } else {
-                $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
-                return $this->_propDict["keySize"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the keySize
-    * SCEP Key Size.
-    *
-    * @param KeySize $val The keySize
+    * @param CertificateStore $val The certificateStore
     *
     * @return Windows81SCEPCertificateProfile
     */
-    public function setKeySize($val)
+    public function setCertificateStore($val)
     {
-        $this->_propDict["keySize"] = $val;
+        $this->_propDict["certificateStore"] = $val;
         return $this;
     }
     
@@ -182,6 +91,101 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     }
     
     /**
+    * Gets the keySize
+    * SCEP Key Size.
+    *
+    * @return KeySize The keySize
+    */
+    public function getKeySize()
+    {
+        if (array_key_exists("keySize", $this->_propDict)) {
+            if (is_a($this->_propDict["keySize"], "Beta\Microsoft\Graph\Model\KeySize")) {
+                return $this->_propDict["keySize"];
+            } else {
+                $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
+                return $this->_propDict["keySize"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the keySize
+    * SCEP Key Size.
+    *
+    * @param KeySize $val The keySize
+    *
+    * @return Windows81SCEPCertificateProfile
+    */
+    public function setKeySize($val)
+    {
+        $this->_propDict["keySize"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the keyUsage
+    * SCEP Key Usage.
+    *
+    * @return KeyUsages The keyUsage
+    */
+    public function getKeyUsage()
+    {
+        if (array_key_exists("keyUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["keyUsage"], "Beta\Microsoft\Graph\Model\KeyUsages")) {
+                return $this->_propDict["keyUsage"];
+            } else {
+                $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
+                return $this->_propDict["keyUsage"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the keyUsage
+    * SCEP Key Usage.
+    *
+    * @param KeyUsages $val The keyUsage
+    *
+    * @return Windows81SCEPCertificateProfile
+    */
+    public function setKeyUsage($val)
+    {
+        $this->_propDict["keyUsage"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the scepServerUrls
+    * SCEP Server Url(s).
+    *
+    * @return string The scepServerUrls
+    */
+    public function getScepServerUrls()
+    {
+        if (array_key_exists("scepServerUrls", $this->_propDict)) {
+            return $this->_propDict["scepServerUrls"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the scepServerUrls
+    * SCEP Server Url(s).
+    *
+    * @param string $val The scepServerUrls
+    *
+    * @return Windows81SCEPCertificateProfile
+    */
+    public function setScepServerUrls($val)
+    {
+        $this->_propDict["scepServerUrls"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
     *
@@ -211,35 +215,61 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     }
     
     /**
-    * Gets the certificateStore
-    * Target store certificate
+    * Gets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
-    * @return CertificateStore The certificateStore
+    * @return string The subjectNameFormatString
     */
-    public function getCertificateStore()
+    public function getSubjectNameFormatString()
     {
-        if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
-                return $this->_propDict["certificateStore"];
-            } else {
-                $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
-                return $this->_propDict["certificateStore"];
-            }
+        if (array_key_exists("subjectNameFormatString", $this->_propDict)) {
+            return $this->_propDict["subjectNameFormatString"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the certificateStore
-    * Target store certificate
+    * Sets the subjectNameFormatString
+    * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
-    * @param CertificateStore $val The certificateStore
+    * @param string $val The subjectNameFormatString
     *
     * @return Windows81SCEPCertificateProfile
     */
-    public function setCertificateStore($val)
+    public function setSubjectNameFormatString($val)
     {
-        $this->_propDict["certificateStore"] = $val;
+        $this->_propDict["subjectNameFormatString"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managedDeviceCertificateStates
+    * Certificate state for devices
+     *
+     * @return array The managedDeviceCertificateStates
+     */
+    public function getManagedDeviceCertificateStates()
+    {
+        if (array_key_exists("managedDeviceCertificateStates", $this->_propDict)) {
+           return $this->_propDict["managedDeviceCertificateStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managedDeviceCertificateStates
+    * Certificate state for devices
+    *
+    * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
+    *
+    * @return Windows81SCEPCertificateProfile
+    */
+    public function setManagedDeviceCertificateStates($val)
+    {
+		$this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
     
@@ -273,36 +303,6 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     public function setRootCertificate($val)
     {
         $this->_propDict["rootCertificate"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the managedDeviceCertificateStates
-    * Certificate state for devices
-     *
-     * @return array The managedDeviceCertificateStates
-     */
-    public function getManagedDeviceCertificateStates()
-    {
-        if (array_key_exists("managedDeviceCertificateStates", $this->_propDict)) {
-           return $this->_propDict["managedDeviceCertificateStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the managedDeviceCertificateStates
-    * Certificate state for devices
-    *
-    * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
-    *
-    * @return Windows81SCEPCertificateProfile
-    */
-    public function setManagedDeviceCertificateStates($val)
-    {
-		$this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
     

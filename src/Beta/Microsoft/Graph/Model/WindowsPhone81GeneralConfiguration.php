@@ -169,36 +169,6 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
         return $this;
     }
     
-
-     /** 
-     * Gets the compliantAppsList
-    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     *
-     * @return array The compliantAppsList
-     */
-    public function getCompliantAppsList()
-    {
-        if (array_key_exists("compliantAppsList", $this->_propDict)) {
-           return $this->_propDict["compliantAppsList"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the compliantAppsList
-    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-    *
-    * @param AppListItem $val The compliantAppsList
-    *
-    * @return WindowsPhone81GeneralConfiguration
-    */
-    public function setCompliantAppsList($val)
-    {
-		$this->_propDict["compliantAppsList"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the compliantAppListType
     * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -229,6 +199,36 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     public function setCompliantAppListType($val)
     {
         $this->_propDict["compliantAppListType"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     *
+     * @return array The compliantAppsList
+     */
+    public function getCompliantAppsList()
+    {
+        if (array_key_exists("compliantAppsList", $this->_propDict)) {
+           return $this->_propDict["compliantAppsList"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+    *
+    * @param AppListItem $val The compliantAppsList
+    *
+    * @return WindowsPhone81GeneralConfiguration
+    */
+    public function setCompliantAppsList($val)
+    {
+		$this->_propDict["compliantAppsList"] = $val;
         return $this;
     }
     
@@ -436,6 +436,35 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the passwordMinimumCharacterSetCount
+    * Number of character sets a password must contain.
+    *
+    * @return int The passwordMinimumCharacterSetCount
+    */
+    public function getPasswordMinimumCharacterSetCount()
+    {
+        if (array_key_exists("passwordMinimumCharacterSetCount", $this->_propDict)) {
+            return $this->_propDict["passwordMinimumCharacterSetCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinimumCharacterSetCount
+    * Number of character sets a password must contain.
+    *
+    * @param int $val The passwordMinimumCharacterSetCount
+    *
+    * @return WindowsPhone81GeneralConfiguration
+    */
+    public function setPasswordMinimumCharacterSetCount($val)
+    {
+        $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the passwordMinimumLength
     * Minimum length of passwords.
     *
@@ -494,35 +523,6 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passwordMinimumCharacterSetCount
-    * Number of character sets a password must contain.
-    *
-    * @return int The passwordMinimumCharacterSetCount
-    */
-    public function getPasswordMinimumCharacterSetCount()
-    {
-        if (array_key_exists("passwordMinimumCharacterSetCount", $this->_propDict)) {
-            return $this->_propDict["passwordMinimumCharacterSetCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passwordMinimumCharacterSetCount
-    * Number of character sets a password must contain.
-    *
-    * @param int $val The passwordMinimumCharacterSetCount
-    *
-    * @return WindowsPhone81GeneralConfiguration
-    */
-    public function setPasswordMinimumCharacterSetCount($val)
-    {
-        $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 0 to 24
     *
@@ -552,31 +552,31 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset.
+    * Gets the passwordRequired
+    * Indicates whether or not to require a password.
     *
-    * @return int The passwordSignInFailureCountBeforeFactoryReset
+    * @return bool The passwordRequired
     */
-    public function getPasswordSignInFailureCountBeforeFactoryReset()
+    public function getPasswordRequired()
     {
-        if (array_key_exists("passwordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
-            return $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"];
+        if (array_key_exists("passwordRequired", $this->_propDict)) {
+            return $this->_propDict["passwordRequired"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordSignInFailureCountBeforeFactoryReset
-    * Number of sign in failures allowed before factory reset.
+    * Sets the passwordRequired
+    * Indicates whether or not to require a password.
     *
-    * @param int $val The passwordSignInFailureCountBeforeFactoryReset
+    * @param bool $val The passwordRequired
     *
     * @return WindowsPhone81GeneralConfiguration
     */
-    public function setPasswordSignInFailureCountBeforeFactoryReset($val)
+    public function setPasswordRequired($val)
     {
-        $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
+        $this->_propDict["passwordRequired"] = boolval($val);
         return $this;
     }
     
@@ -614,31 +614,31 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passwordRequired
-    * Indicates whether or not to require a password.
+    * Gets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset.
     *
-    * @return bool The passwordRequired
+    * @return int The passwordSignInFailureCountBeforeFactoryReset
     */
-    public function getPasswordRequired()
+    public function getPasswordSignInFailureCountBeforeFactoryReset()
     {
-        if (array_key_exists("passwordRequired", $this->_propDict)) {
-            return $this->_propDict["passwordRequired"];
+        if (array_key_exists("passwordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
+            return $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordRequired
-    * Indicates whether or not to require a password.
+    * Sets the passwordSignInFailureCountBeforeFactoryReset
+    * Number of sign in failures allowed before factory reset.
     *
-    * @param bool $val The passwordRequired
+    * @param int $val The passwordSignInFailureCountBeforeFactoryReset
     *
     * @return WindowsPhone81GeneralConfiguration
     */
-    public function setPasswordRequired($val)
+    public function setPasswordSignInFailureCountBeforeFactoryReset($val)
     {
-        $this->_propDict["passwordRequired"] = boolval($val);
+        $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
         return $this;
     }
     
@@ -759,35 +759,6 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the wifiBlocked
-    * Indicates whether or not to block Wi-Fi.
-    *
-    * @return bool The wifiBlocked
-    */
-    public function getWifiBlocked()
-    {
-        if (array_key_exists("wifiBlocked", $this->_propDict)) {
-            return $this->_propDict["wifiBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the wifiBlocked
-    * Indicates whether or not to block Wi-Fi.
-    *
-    * @param bool $val The wifiBlocked
-    *
-    * @return WindowsPhone81GeneralConfiguration
-    */
-    public function setWifiBlocked($val)
-    {
-        $this->_propDict["wifiBlocked"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the wifiBlockAutomaticConnectHotspots
     * Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
     *
@@ -813,6 +784,35 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     public function setWifiBlockAutomaticConnectHotspots($val)
     {
         $this->_propDict["wifiBlockAutomaticConnectHotspots"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the wifiBlocked
+    * Indicates whether or not to block Wi-Fi.
+    *
+    * @return bool The wifiBlocked
+    */
+    public function getWifiBlocked()
+    {
+        if (array_key_exists("wifiBlocked", $this->_propDict)) {
+            return $this->_propDict["wifiBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the wifiBlocked
+    * Indicates whether or not to block Wi-Fi.
+    *
+    * @param bool $val The wifiBlocked
+    *
+    * @return WindowsPhone81GeneralConfiguration
+    */
+    public function setWifiBlocked($val)
+    {
+        $this->_propDict["wifiBlocked"] = boolval($val);
         return $this;
     }
     

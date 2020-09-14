@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class ManagedAndroidLobApp extends ManagedMobileLobApp
 {
     /**
-    * Gets the packageId
-    * The package identifier.
-    *
-    * @return string The packageId
-    */
-    public function getPackageId()
-    {
-        if (array_key_exists("packageId", $this->_propDict)) {
-            return $this->_propDict["packageId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the packageId
-    * The package identifier.
-    *
-    * @param string $val The packageId
-    *
-    * @return ManagedAndroidLobApp
-    */
-    public function setPackageId($val)
-    {
-        $this->_propDict["packageId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
@@ -87,31 +58,31 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     }
     
     /**
-    * Gets the versionName
-    * The version name of managed Android Line of Business (LoB) app.
+    * Gets the packageId
+    * The package identifier.
     *
-    * @return string The versionName
+    * @return string The packageId
     */
-    public function getVersionName()
+    public function getPackageId()
     {
-        if (array_key_exists("versionName", $this->_propDict)) {
-            return $this->_propDict["versionName"];
+        if (array_key_exists("packageId", $this->_propDict)) {
+            return $this->_propDict["packageId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the versionName
-    * The version name of managed Android Line of Business (LoB) app.
+    * Sets the packageId
+    * The package identifier.
     *
-    * @param string $val The versionName
+    * @param string $val The packageId
     *
     * @return ManagedAndroidLobApp
     */
-    public function setVersionName($val)
+    public function setPackageId($val)
     {
-        $this->_propDict["versionName"] = $val;
+        $this->_propDict["packageId"] = $val;
         return $this;
     }
     
@@ -141,6 +112,35 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     public function setVersionCode($val)
     {
         $this->_propDict["versionCode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the versionName
+    * The version name of managed Android Line of Business (LoB) app.
+    *
+    * @return string The versionName
+    */
+    public function getVersionName()
+    {
+        if (array_key_exists("versionName", $this->_propDict)) {
+            return $this->_propDict["versionName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the versionName
+    * The version name of managed Android Line of Business (LoB) app.
+    *
+    * @param string $val The versionName
+    *
+    * @return ManagedAndroidLobApp
+    */
+    public function setVersionName($val)
+    {
+        $this->_propDict["versionName"] = $val;
         return $this;
     }
     

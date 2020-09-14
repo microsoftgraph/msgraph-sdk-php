@@ -25,33 +25,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Printer extends PrinterBase
 {
     /**
-    * Gets the registeredDateTime
+    * Gets the acceptingJobs
     *
-    * @return \DateTime The registeredDateTime
+    * @return bool The acceptingJobs
     */
-    public function getRegisteredDateTime()
+    public function getAcceptingJobs()
     {
-        if (array_key_exists("registeredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["registeredDateTime"], "\DateTime")) {
-                return $this->_propDict["registeredDateTime"];
-            } else {
-                $this->_propDict["registeredDateTime"] = new \DateTime($this->_propDict["registeredDateTime"]);
-                return $this->_propDict["registeredDateTime"];
-            }
+        if (array_key_exists("acceptingJobs", $this->_propDict)) {
+            return $this->_propDict["acceptingJobs"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the registeredDateTime
+    * Sets the acceptingJobs
     *
-    * @param \DateTime $val The registeredDateTime
+    * @param bool $val The acceptingJobs
     *
     * @return Printer
     */
-    public function setRegisteredDateTime($val)
+    public function setAcceptingJobs($val)
     {
-        $this->_propDict["registeredDateTime"] = $val;
+        $this->_propDict["acceptingJobs"] = boolval($val);
         return $this;
     }
     
@@ -83,29 +79,61 @@ class Printer extends PrinterBase
     }
     
     /**
-    * Gets the acceptingJobs
+    * Gets the registeredDateTime
     *
-    * @return bool The acceptingJobs
+    * @return \DateTime The registeredDateTime
     */
-    public function getAcceptingJobs()
+    public function getRegisteredDateTime()
     {
-        if (array_key_exists("acceptingJobs", $this->_propDict)) {
-            return $this->_propDict["acceptingJobs"];
+        if (array_key_exists("registeredDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["registeredDateTime"], "\DateTime")) {
+                return $this->_propDict["registeredDateTime"];
+            } else {
+                $this->_propDict["registeredDateTime"] = new \DateTime($this->_propDict["registeredDateTime"]);
+                return $this->_propDict["registeredDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the registeredDateTime
+    *
+    * @param \DateTime $val The registeredDateTime
+    *
+    * @return Printer
+    */
+    public function setRegisteredDateTime($val)
+    {
+        $this->_propDict["registeredDateTime"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the allowedGroups
+     *
+     * @return array The allowedGroups
+     */
+    public function getAllowedGroups()
+    {
+        if (array_key_exists("allowedGroups", $this->_propDict)) {
+           return $this->_propDict["allowedGroups"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the acceptingJobs
+    /** 
+    * Sets the allowedGroups
     *
-    * @param bool $val The acceptingJobs
+    * @param PrintIdentity $val The allowedGroups
     *
     * @return Printer
     */
-    public function setAcceptingJobs($val)
+    public function setAllowedGroups($val)
     {
-        $this->_propDict["acceptingJobs"] = boolval($val);
+		$this->_propDict["allowedGroups"] = $val;
         return $this;
     }
     
@@ -139,29 +167,29 @@ class Printer extends PrinterBase
     
 
      /** 
-     * Gets the allowedGroups
+     * Gets the connectors
      *
-     * @return array The allowedGroups
+     * @return array The connectors
      */
-    public function getAllowedGroups()
+    public function getConnectors()
     {
-        if (array_key_exists("allowedGroups", $this->_propDict)) {
-           return $this->_propDict["allowedGroups"];
+        if (array_key_exists("connectors", $this->_propDict)) {
+           return $this->_propDict["connectors"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the allowedGroups
+    * Sets the connectors
     *
-    * @param PrintIdentity $val The allowedGroups
+    * @param PrintConnector $val The connectors
     *
     * @return Printer
     */
-    public function setAllowedGroups($val)
+    public function setConnectors($val)
     {
-		$this->_propDict["allowedGroups"] = $val;
+		$this->_propDict["connectors"] = $val;
         return $this;
     }
     
@@ -193,34 +221,6 @@ class Printer extends PrinterBase
     public function setShare($val)
     {
         $this->_propDict["share"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the connectors
-     *
-     * @return array The connectors
-     */
-    public function getConnectors()
-    {
-        if (array_key_exists("connectors", $this->_propDict)) {
-           return $this->_propDict["connectors"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the connectors
-    *
-    * @param PrintConnector $val The connectors
-    *
-    * @return Printer
-    */
-    public function setConnectors($val)
-    {
-		$this->_propDict["connectors"] = $val;
         return $this;
     }
     

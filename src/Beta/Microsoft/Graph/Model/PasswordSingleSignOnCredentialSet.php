@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class PasswordSingleSignOnCredentialSet extends Entity
 {
-    /**
-    * Gets the id
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    *
-    * @param string $val The value of the id
-    *
-    * @return PasswordSingleSignOnCredentialSet
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the credentials
@@ -79,5 +53,31 @@ class PasswordSingleSignOnCredentialSet extends Entity
     {
         $this->_propDict["credentials"] = $val;
          return $this;
+    }
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return PasswordSingleSignOnCredentialSet
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
     }
 }

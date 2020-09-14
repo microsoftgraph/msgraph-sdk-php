@@ -81,29 +81,29 @@ class PrivilegedAccess extends Entity
     
 
      /** 
-     * Gets the roleDefinitions
+     * Gets the roleAssignmentRequests
      *
-     * @return array The roleDefinitions
+     * @return array The roleAssignmentRequests
      */
-    public function getRoleDefinitions()
+    public function getRoleAssignmentRequests()
     {
-        if (array_key_exists("roleDefinitions", $this->_propDict)) {
-           return $this->_propDict["roleDefinitions"];
+        if (array_key_exists("roleAssignmentRequests", $this->_propDict)) {
+           return $this->_propDict["roleAssignmentRequests"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the roleDefinitions
+    * Sets the roleAssignmentRequests
     *
-    * @param GovernanceRoleDefinition $val The roleDefinitions
+    * @param GovernanceRoleAssignmentRequest $val The roleAssignmentRequests
     *
     * @return PrivilegedAccess
     */
-    public function setRoleDefinitions($val)
+    public function setRoleAssignmentRequests($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+		$this->_propDict["roleAssignmentRequests"] = $val;
         return $this;
     }
     
@@ -137,29 +137,29 @@ class PrivilegedAccess extends Entity
     
 
      /** 
-     * Gets the roleAssignmentRequests
+     * Gets the roleDefinitions
      *
-     * @return array The roleAssignmentRequests
+     * @return array The roleDefinitions
      */
-    public function getRoleAssignmentRequests()
+    public function getRoleDefinitions()
     {
-        if (array_key_exists("roleAssignmentRequests", $this->_propDict)) {
-           return $this->_propDict["roleAssignmentRequests"];
+        if (array_key_exists("roleDefinitions", $this->_propDict)) {
+           return $this->_propDict["roleDefinitions"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the roleAssignmentRequests
+    * Sets the roleDefinitions
     *
-    * @param GovernanceRoleAssignmentRequest $val The roleAssignmentRequests
+    * @param GovernanceRoleDefinition $val The roleDefinitions
     *
     * @return PrivilegedAccess
     */
-    public function setRoleAssignmentRequests($val)
+    public function setRoleDefinitions($val)
     {
-		$this->_propDict["roleAssignmentRequests"] = $val;
+		$this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
     

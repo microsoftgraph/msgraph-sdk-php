@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsKioskUWPApp extends WindowsKioskAppBase
 {
     /**
-    * Gets the appUserModelId
-    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
-    *
-    * @return string The appUserModelId
-    */
-    public function getAppUserModelId()
-    {
-        if (array_key_exists("appUserModelId", $this->_propDict)) {
-            return $this->_propDict["appUserModelId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the appUserModelId
-    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
-    *
-    * @param string $val The value of the appUserModelId
-    *
-    * @return WindowsKioskUWPApp
-    */
-    public function setAppUserModelId($val)
-    {
-        $this->_propDict["appUserModelId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the appId
     * This references an Intune App that will be target to the same assignments as Kiosk configuration
     *
@@ -77,6 +49,34 @@ class WindowsKioskUWPApp extends WindowsKioskAppBase
     public function setAppId($val)
     {
         $this->_propDict["appId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the appUserModelId
+    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
+    *
+    * @return string The appUserModelId
+    */
+    public function getAppUserModelId()
+    {
+        if (array_key_exists("appUserModelId", $this->_propDict)) {
+            return $this->_propDict["appUserModelId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appUserModelId
+    * This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
+    *
+    * @param string $val The value of the appUserModelId
+    *
+    * @return WindowsKioskUWPApp
+    */
+    public function setAppUserModelId($val)
+    {
+        $this->_propDict["appUserModelId"] = $val;
         return $this;
     }
     /**

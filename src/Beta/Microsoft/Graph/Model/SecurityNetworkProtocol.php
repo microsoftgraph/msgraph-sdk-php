@@ -31,6 +31,7 @@ class SecurityNetworkProtocol extends Enum
     */
     const IP = "ip";
     const ICMP = "icmp";
+    const UNKNOWN = "unknown";
     const IGMP = "igmp";
     const GGP = "ggp";
     const IPV4 = "ipv4";
@@ -52,5 +53,4 @@ class SecurityNetworkProtocol extends Enum
     const SPX = "spx";
     const SPX_II = "spxII";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const UNKNOWN = "unknown";
 }

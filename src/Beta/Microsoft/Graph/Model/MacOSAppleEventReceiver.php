@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSAppleEventReceiver extends Entity
 {
     /**
+    * Gets the allowed
+    * Allow or block this app from receiving Apple events.
+    *
+    * @return bool The allowed
+    */
+    public function getAllowed()
+    {
+        if (array_key_exists("allowed", $this->_propDict)) {
+            return $this->_propDict["allowed"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowed
+    * Allow or block this app from receiving Apple events.
+    *
+    * @param bool $val The value of the allowed
+    *
+    * @return MacOSAppleEventReceiver
+    */
+    public function setAllowed($val)
+    {
+        $this->_propDict["allowed"] = $val;
+        return $this;
+    }
+    /**
     * Gets the codeRequirement
     * Code requirement for the app or binary that receives the Apple Event.
     *
@@ -111,33 +139,5 @@ class MacOSAppleEventReceiver extends Entity
     {
         $this->_propDict["identifierType"] = $val;
          return $this;
-    }
-    /**
-    * Gets the allowed
-    * Allow or block this app from receiving Apple events.
-    *
-    * @return bool The allowed
-    */
-    public function getAllowed()
-    {
-        if (array_key_exists("allowed", $this->_propDict)) {
-            return $this->_propDict["allowed"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowed
-    * Allow or block this app from receiving Apple events.
-    *
-    * @param bool $val The value of the allowed
-    *
-    * @return MacOSAppleEventReceiver
-    */
-    public function setAllowed($val)
-    {
-        $this->_propDict["allowed"] = $val;
-        return $this;
     }
 }

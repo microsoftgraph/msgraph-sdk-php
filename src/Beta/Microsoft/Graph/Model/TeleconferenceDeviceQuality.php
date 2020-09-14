@@ -52,171 +52,31 @@ class TeleconferenceDeviceQuality extends Entity
         return $this;
     }
     /**
-    * Gets the participantId
-    * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+    * Gets the cloudServiceDeploymentEnvironment
+    * A geo-region where the service is deployed, such as ProdNoam.
     *
-    * @return string The participantId
+    * @return string The cloudServiceDeploymentEnvironment
     */
-    public function getParticipantId()
+    public function getCloudServiceDeploymentEnvironment()
     {
-        if (array_key_exists("participantId", $this->_propDict)) {
-            return $this->_propDict["participantId"];
+        if (array_key_exists("cloudServiceDeploymentEnvironment", $this->_propDict)) {
+            return $this->_propDict["cloudServiceDeploymentEnvironment"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the participantId
-    * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+    * Sets the cloudServiceDeploymentEnvironment
+    * A geo-region where the service is deployed, such as ProdNoam.
     *
-    * @param string $val The value of the participantId
-    *
-    * @return TeleconferenceDeviceQuality
-    */
-    public function setParticipantId($val)
-    {
-        $this->_propDict["participantId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the mediaLegId
-    * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-    *
-    * @return string The mediaLegId
-    */
-    public function getMediaLegId()
-    {
-        if (array_key_exists("mediaLegId", $this->_propDict)) {
-            return $this->_propDict["mediaLegId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the mediaLegId
-    * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-    *
-    * @param string $val The value of the mediaLegId
+    * @param string $val The value of the cloudServiceDeploymentEnvironment
     *
     * @return TeleconferenceDeviceQuality
     */
-    public function setMediaLegId($val)
+    public function setCloudServiceDeploymentEnvironment($val)
     {
-        $this->_propDict["mediaLegId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the deviceName
-    * The user media agent name, such as Cisco SX80.
-    *
-    * @return string The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceName
-    * The user media agent name, such as Cisco SX80.
-    *
-    * @param string $val The value of the deviceName
-    *
-    * @return TeleconferenceDeviceQuality
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the deviceDescription
-    * Any additional description, such as VTC Bldg 30/21.
-    *
-    * @return string The deviceDescription
-    */
-    public function getDeviceDescription()
-    {
-        if (array_key_exists("deviceDescription", $this->_propDict)) {
-            return $this->_propDict["deviceDescription"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceDescription
-    * Any additional description, such as VTC Bldg 30/21.
-    *
-    * @param string $val The value of the deviceDescription
-    *
-    * @return TeleconferenceDeviceQuality
-    */
-    public function setDeviceDescription($val)
-    {
-        $this->_propDict["deviceDescription"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the cloudServiceName
-    * The Azure deployed cloud service name, such as contoso.cloudapp.net.
-    *
-    * @return string The cloudServiceName
-    */
-    public function getCloudServiceName()
-    {
-        if (array_key_exists("cloudServiceName", $this->_propDict)) {
-            return $this->_propDict["cloudServiceName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the cloudServiceName
-    * The Azure deployed cloud service name, such as contoso.cloudapp.net.
-    *
-    * @param string $val The value of the cloudServiceName
-    *
-    * @return TeleconferenceDeviceQuality
-    */
-    public function setCloudServiceName($val)
-    {
-        $this->_propDict["cloudServiceName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the cloudServiceInstanceName
-    * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
-    *
-    * @return string The cloudServiceInstanceName
-    */
-    public function getCloudServiceInstanceName()
-    {
-        if (array_key_exists("cloudServiceInstanceName", $this->_propDict)) {
-            return $this->_propDict["cloudServiceInstanceName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the cloudServiceInstanceName
-    * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
-    *
-    * @param string $val The value of the cloudServiceInstanceName
-    *
-    * @return TeleconferenceDeviceQuality
-    */
-    public function setCloudServiceInstanceName($val)
-    {
-        $this->_propDict["cloudServiceInstanceName"] = $val;
+        $this->_propDict["cloudServiceDeploymentEnvironment"] = $val;
         return $this;
     }
     /**
@@ -248,31 +108,143 @@ class TeleconferenceDeviceQuality extends Entity
         return $this;
     }
     /**
-    * Gets the cloudServiceDeploymentEnvironment
-    * A geo-region where the service is deployed, such as ProdNoam.
+    * Gets the cloudServiceInstanceName
+    * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
     *
-    * @return string The cloudServiceDeploymentEnvironment
+    * @return string The cloudServiceInstanceName
     */
-    public function getCloudServiceDeploymentEnvironment()
+    public function getCloudServiceInstanceName()
     {
-        if (array_key_exists("cloudServiceDeploymentEnvironment", $this->_propDict)) {
-            return $this->_propDict["cloudServiceDeploymentEnvironment"];
+        if (array_key_exists("cloudServiceInstanceName", $this->_propDict)) {
+            return $this->_propDict["cloudServiceInstanceName"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the cloudServiceDeploymentEnvironment
-    * A geo-region where the service is deployed, such as ProdNoam.
+    * Sets the cloudServiceInstanceName
+    * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
     *
-    * @param string $val The value of the cloudServiceDeploymentEnvironment
+    * @param string $val The value of the cloudServiceInstanceName
     *
     * @return TeleconferenceDeviceQuality
     */
-    public function setCloudServiceDeploymentEnvironment($val)
+    public function setCloudServiceInstanceName($val)
     {
-        $this->_propDict["cloudServiceDeploymentEnvironment"] = $val;
+        $this->_propDict["cloudServiceInstanceName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the cloudServiceName
+    * The Azure deployed cloud service name, such as contoso.cloudapp.net.
+    *
+    * @return string The cloudServiceName
+    */
+    public function getCloudServiceName()
+    {
+        if (array_key_exists("cloudServiceName", $this->_propDict)) {
+            return $this->_propDict["cloudServiceName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the cloudServiceName
+    * The Azure deployed cloud service name, such as contoso.cloudapp.net.
+    *
+    * @param string $val The value of the cloudServiceName
+    *
+    * @return TeleconferenceDeviceQuality
+    */
+    public function setCloudServiceName($val)
+    {
+        $this->_propDict["cloudServiceName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the deviceDescription
+    * Any additional description, such as VTC Bldg 30/21.
+    *
+    * @return string The deviceDescription
+    */
+    public function getDeviceDescription()
+    {
+        if (array_key_exists("deviceDescription", $this->_propDict)) {
+            return $this->_propDict["deviceDescription"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceDescription
+    * Any additional description, such as VTC Bldg 30/21.
+    *
+    * @param string $val The value of the deviceDescription
+    *
+    * @return TeleconferenceDeviceQuality
+    */
+    public function setDeviceDescription($val)
+    {
+        $this->_propDict["deviceDescription"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the deviceName
+    * The user media agent name, such as Cisco SX80.
+    *
+    * @return string The deviceName
+    */
+    public function getDeviceName()
+    {
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceName
+    * The user media agent name, such as Cisco SX80.
+    *
+    * @param string $val The value of the deviceName
+    *
+    * @return TeleconferenceDeviceQuality
+    */
+    public function setDeviceName($val)
+    {
+        $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the mediaLegId
+    * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
+    *
+    * @return string The mediaLegId
+    */
+    public function getMediaLegId()
+    {
+        if (array_key_exists("mediaLegId", $this->_propDict)) {
+            return $this->_propDict["mediaLegId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the mediaLegId
+    * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
+    *
+    * @param string $val The value of the mediaLegId
+    *
+    * @return TeleconferenceDeviceQuality
+    */
+    public function setMediaLegId($val)
+    {
+        $this->_propDict["mediaLegId"] = $val;
         return $this;
     }
 
@@ -307,5 +279,33 @@ class TeleconferenceDeviceQuality extends Entity
     {
         $this->_propDict["mediaQualityList"] = $val;
          return $this;
+    }
+    /**
+    * Gets the participantId
+    * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+    *
+    * @return string The participantId
+    */
+    public function getParticipantId()
+    {
+        if (array_key_exists("participantId", $this->_propDict)) {
+            return $this->_propDict["participantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the participantId
+    * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+    *
+    * @param string $val The value of the participantId
+    *
+    * @return TeleconferenceDeviceQuality
+    */
+    public function setParticipantId($val)
+    {
+        $this->_propDict["participantId"] = $val;
+        return $this;
     }
 }

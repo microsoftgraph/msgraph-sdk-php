@@ -25,6 +25,93 @@ namespace Beta\Microsoft\Graph\Model;
 class UserAppInstallStatus extends Entity
 {
     /**
+    * Gets the failedDeviceCount
+    * Failed Device Count.
+    *
+    * @return int The failedDeviceCount
+    */
+    public function getFailedDeviceCount()
+    {
+        if (array_key_exists("failedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["failedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the failedDeviceCount
+    * Failed Device Count.
+    *
+    * @param int $val The failedDeviceCount
+    *
+    * @return UserAppInstallStatus
+    */
+    public function setFailedDeviceCount($val)
+    {
+        $this->_propDict["failedDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the installedDeviceCount
+    * Installed Device Count.
+    *
+    * @return int The installedDeviceCount
+    */
+    public function getInstalledDeviceCount()
+    {
+        if (array_key_exists("installedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["installedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the installedDeviceCount
+    * Installed Device Count.
+    *
+    * @param int $val The installedDeviceCount
+    *
+    * @return UserAppInstallStatus
+    */
+    public function setInstalledDeviceCount($val)
+    {
+        $this->_propDict["installedDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the notInstalledDeviceCount
+    * Not installed device count.
+    *
+    * @return int The notInstalledDeviceCount
+    */
+    public function getNotInstalledDeviceCount()
+    {
+        if (array_key_exists("notInstalledDeviceCount", $this->_propDict)) {
+            return $this->_propDict["notInstalledDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notInstalledDeviceCount
+    * Not installed device count.
+    *
+    * @param int $val The notInstalledDeviceCount
+    *
+    * @return UserAppInstallStatus
+    */
+    public function setNotInstalledDeviceCount($val)
+    {
+        $this->_propDict["notInstalledDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the userName
     * User name.
     *
@@ -79,93 +166,6 @@ class UserAppInstallStatus extends Entity
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the installedDeviceCount
-    * Installed Device Count.
-    *
-    * @return int The installedDeviceCount
-    */
-    public function getInstalledDeviceCount()
-    {
-        if (array_key_exists("installedDeviceCount", $this->_propDict)) {
-            return $this->_propDict["installedDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the installedDeviceCount
-    * Installed Device Count.
-    *
-    * @param int $val The installedDeviceCount
-    *
-    * @return UserAppInstallStatus
-    */
-    public function setInstalledDeviceCount($val)
-    {
-        $this->_propDict["installedDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the failedDeviceCount
-    * Failed Device Count.
-    *
-    * @return int The failedDeviceCount
-    */
-    public function getFailedDeviceCount()
-    {
-        if (array_key_exists("failedDeviceCount", $this->_propDict)) {
-            return $this->_propDict["failedDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the failedDeviceCount
-    * Failed Device Count.
-    *
-    * @param int $val The failedDeviceCount
-    *
-    * @return UserAppInstallStatus
-    */
-    public function setFailedDeviceCount($val)
-    {
-        $this->_propDict["failedDeviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the notInstalledDeviceCount
-    * Not installed device count.
-    *
-    * @return int The notInstalledDeviceCount
-    */
-    public function getNotInstalledDeviceCount()
-    {
-        if (array_key_exists("notInstalledDeviceCount", $this->_propDict)) {
-            return $this->_propDict["notInstalledDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the notInstalledDeviceCount
-    * Not installed device count.
-    *
-    * @param int $val The notInstalledDeviceCount
-    *
-    * @return UserAppInstallStatus
-    */
-    public function setNotInstalledDeviceCount($val)
-    {
-        $this->_propDict["notInstalledDeviceCount"] = intval($val);
         return $this;
     }
     

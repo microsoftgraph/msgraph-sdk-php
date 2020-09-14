@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
 {
     /**
-    * Gets the displayName
-    * The name of the notebook.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * The name of the notebook.
-    *
-    * @param string $val The displayName
-    *
-    * @return OnenoteEntityHierarchyModel
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdBy
     * Identity of the user, device, and application which created the item. Read-only.
     *
@@ -83,6 +54,35 @@ class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel
     public function setCreatedBy($val)
     {
         $this->_propDict["createdBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The name of the notebook.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The name of the notebook.
+    *
+    * @param string $val The displayName
+    *
+    * @return OnenoteEntityHierarchyModel
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     

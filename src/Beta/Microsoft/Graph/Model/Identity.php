@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Identity extends Entity
 {
     /**
-    * Gets the id
-    * Unique identifier for the identity.
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * Unique identifier for the identity.
-    *
-    * @param string $val The value of the id
-    *
-    * @return Identity
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
     *
@@ -77,6 +49,34 @@ class Identity extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the id
+    * Unique identifier for the identity.
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    * Unique identifier for the identity.
+    *
+    * @param string $val The value of the id
+    *
+    * @return Identity
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
         return $this;
     }
 }

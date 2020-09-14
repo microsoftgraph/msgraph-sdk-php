@@ -24,6 +24,260 @@ namespace Beta\Microsoft\Graph\Model;
 class ArchivedPrintJob extends Entity
 {
     /**
+    * Gets the acquiredByPrinter
+    *
+    * @return bool The acquiredByPrinter
+    */
+    public function getAcquiredByPrinter()
+    {
+        if (array_key_exists("acquiredByPrinter", $this->_propDict)) {
+            return $this->_propDict["acquiredByPrinter"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the acquiredByPrinter
+    *
+    * @param bool $val The value of the acquiredByPrinter
+    *
+    * @return ArchivedPrintJob
+    */
+    public function setAcquiredByPrinter($val)
+    {
+        $this->_propDict["acquiredByPrinter"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the acquiredDateTime
+    *
+    * @return \DateTime The acquiredDateTime
+    */
+    public function getAcquiredDateTime()
+    {
+        if (array_key_exists("acquiredDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["acquiredDateTime"], "\DateTime")) {
+                return $this->_propDict["acquiredDateTime"];
+            } else {
+                $this->_propDict["acquiredDateTime"] = new \DateTime($this->_propDict["acquiredDateTime"]);
+                return $this->_propDict["acquiredDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the acquiredDateTime
+    *
+    * @param \DateTime $val The value to assign to the acquiredDateTime
+    *
+    * @return ArchivedPrintJob The ArchivedPrintJob
+    */
+    public function setAcquiredDateTime($val)
+    {
+        $this->_propDict["acquiredDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the blackAndWhitePageCount
+    *
+    * @return int The blackAndWhitePageCount
+    */
+    public function getBlackAndWhitePageCount()
+    {
+        if (array_key_exists("blackAndWhitePageCount", $this->_propDict)) {
+            return $this->_propDict["blackAndWhitePageCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the blackAndWhitePageCount
+    *
+    * @param int $val The value of the blackAndWhitePageCount
+    *
+    * @return ArchivedPrintJob
+    */
+    public function setBlackAndWhitePageCount($val)
+    {
+        $this->_propDict["blackAndWhitePageCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the colorPageCount
+    *
+    * @return int The colorPageCount
+    */
+    public function getColorPageCount()
+    {
+        if (array_key_exists("colorPageCount", $this->_propDict)) {
+            return $this->_propDict["colorPageCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the colorPageCount
+    *
+    * @param int $val The value of the colorPageCount
+    *
+    * @return ArchivedPrintJob
+    */
+    public function setColorPageCount($val)
+    {
+        $this->_propDict["colorPageCount"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the completionDateTime
+    *
+    * @return \DateTime The completionDateTime
+    */
+    public function getCompletionDateTime()
+    {
+        if (array_key_exists("completionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["completionDateTime"], "\DateTime")) {
+                return $this->_propDict["completionDateTime"];
+            } else {
+                $this->_propDict["completionDateTime"] = new \DateTime($this->_propDict["completionDateTime"]);
+                return $this->_propDict["completionDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the completionDateTime
+    *
+    * @param \DateTime $val The value to assign to the completionDateTime
+    *
+    * @return ArchivedPrintJob The ArchivedPrintJob
+    */
+    public function setCompletionDateTime($val)
+    {
+        $this->_propDict["completionDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the copiesPrinted
+    *
+    * @return int The copiesPrinted
+    */
+    public function getCopiesPrinted()
+    {
+        if (array_key_exists("copiesPrinted", $this->_propDict)) {
+            return $this->_propDict["copiesPrinted"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the copiesPrinted
+    *
+    * @param int $val The value of the copiesPrinted
+    *
+    * @return ArchivedPrintJob
+    */
+    public function setCopiesPrinted($val)
+    {
+        $this->_propDict["copiesPrinted"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the createdBy
+    *
+    * @return UserIdentity The createdBy
+    */
+    public function getCreatedBy()
+    {
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the createdBy
+    *
+    * @param UserIdentity $val The value to assign to the createdBy
+    *
+    * @return ArchivedPrintJob The ArchivedPrintJob
+    */
+    public function setCreatedBy($val)
+    {
+        $this->_propDict["createdBy"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The value to assign to the createdDateTime
+    *
+    * @return ArchivedPrintJob The ArchivedPrintJob
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the duplexPageCount
+    *
+    * @return int The duplexPageCount
+    */
+    public function getDuplexPageCount()
+    {
+        if (array_key_exists("duplexPageCount", $this->_propDict)) {
+            return $this->_propDict["duplexPageCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the duplexPageCount
+    *
+    * @param int $val The value of the duplexPageCount
+    *
+    * @return ArchivedPrintJob
+    */
+    public function setDuplexPageCount($val)
+    {
+        $this->_propDict["duplexPageCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the id
     *
     * @return string The id
@@ -47,6 +301,32 @@ class ArchivedPrintJob extends Entity
     public function setId($val)
     {
         $this->_propDict["id"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the pageCount
+    *
+    * @return int The pageCount
+    */
+    public function getPageCount()
+    {
+        if (array_key_exists("pageCount", $this->_propDict)) {
+            return $this->_propDict["pageCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the pageCount
+    *
+    * @param int $val The value of the pageCount
+    *
+    * @return ArchivedPrintJob
+    */
+    public function setPageCount($val)
+    {
+        $this->_propDict["pageCount"] = $val;
         return $this;
     }
     /**
@@ -106,229 +386,6 @@ class ArchivedPrintJob extends Entity
         $this->_propDict["processingState"] = $val;
          return $this;
     }
-
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the createdDateTime
-    *
-    * @param \DateTime $val The value to assign to the createdDateTime
-    *
-    * @return ArchivedPrintJob The ArchivedPrintJob
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the acquiredDateTime
-    *
-    * @return \DateTime The acquiredDateTime
-    */
-    public function getAcquiredDateTime()
-    {
-        if (array_key_exists("acquiredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["acquiredDateTime"], "\DateTime")) {
-                return $this->_propDict["acquiredDateTime"];
-            } else {
-                $this->_propDict["acquiredDateTime"] = new \DateTime($this->_propDict["acquiredDateTime"]);
-                return $this->_propDict["acquiredDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the acquiredDateTime
-    *
-    * @param \DateTime $val The value to assign to the acquiredDateTime
-    *
-    * @return ArchivedPrintJob The ArchivedPrintJob
-    */
-    public function setAcquiredDateTime($val)
-    {
-        $this->_propDict["acquiredDateTime"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the completionDateTime
-    *
-    * @return \DateTime The completionDateTime
-    */
-    public function getCompletionDateTime()
-    {
-        if (array_key_exists("completionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completionDateTime"], "\DateTime")) {
-                return $this->_propDict["completionDateTime"];
-            } else {
-                $this->_propDict["completionDateTime"] = new \DateTime($this->_propDict["completionDateTime"]);
-                return $this->_propDict["completionDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the completionDateTime
-    *
-    * @param \DateTime $val The value to assign to the completionDateTime
-    *
-    * @return ArchivedPrintJob The ArchivedPrintJob
-    */
-    public function setCompletionDateTime($val)
-    {
-        $this->_propDict["completionDateTime"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the acquiredByPrinter
-    *
-    * @return bool The acquiredByPrinter
-    */
-    public function getAcquiredByPrinter()
-    {
-        if (array_key_exists("acquiredByPrinter", $this->_propDict)) {
-            return $this->_propDict["acquiredByPrinter"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the acquiredByPrinter
-    *
-    * @param bool $val The value of the acquiredByPrinter
-    *
-    * @return ArchivedPrintJob
-    */
-    public function setAcquiredByPrinter($val)
-    {
-        $this->_propDict["acquiredByPrinter"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the copiesPrinted
-    *
-    * @return int The copiesPrinted
-    */
-    public function getCopiesPrinted()
-    {
-        if (array_key_exists("copiesPrinted", $this->_propDict)) {
-            return $this->_propDict["copiesPrinted"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the copiesPrinted
-    *
-    * @param int $val The value of the copiesPrinted
-    *
-    * @return ArchivedPrintJob
-    */
-    public function setCopiesPrinted($val)
-    {
-        $this->_propDict["copiesPrinted"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the pageCount
-    *
-    * @return int The pageCount
-    */
-    public function getPageCount()
-    {
-        if (array_key_exists("pageCount", $this->_propDict)) {
-            return $this->_propDict["pageCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the pageCount
-    *
-    * @param int $val The value of the pageCount
-    *
-    * @return ArchivedPrintJob
-    */
-    public function setPageCount($val)
-    {
-        $this->_propDict["pageCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the blackAndWhitePageCount
-    *
-    * @return int The blackAndWhitePageCount
-    */
-    public function getBlackAndWhitePageCount()
-    {
-        if (array_key_exists("blackAndWhitePageCount", $this->_propDict)) {
-            return $this->_propDict["blackAndWhitePageCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the blackAndWhitePageCount
-    *
-    * @param int $val The value of the blackAndWhitePageCount
-    *
-    * @return ArchivedPrintJob
-    */
-    public function setBlackAndWhitePageCount($val)
-    {
-        $this->_propDict["blackAndWhitePageCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the colorPageCount
-    *
-    * @return int The colorPageCount
-    */
-    public function getColorPageCount()
-    {
-        if (array_key_exists("colorPageCount", $this->_propDict)) {
-            return $this->_propDict["colorPageCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the colorPageCount
-    *
-    * @param int $val The value of the colorPageCount
-    *
-    * @return ArchivedPrintJob
-    */
-    public function setColorPageCount($val)
-    {
-        $this->_propDict["colorPageCount"] = $val;
-        return $this;
-    }
     /**
     * Gets the simplexPageCount
     *
@@ -354,62 +411,5 @@ class ArchivedPrintJob extends Entity
     {
         $this->_propDict["simplexPageCount"] = $val;
         return $this;
-    }
-    /**
-    * Gets the duplexPageCount
-    *
-    * @return int The duplexPageCount
-    */
-    public function getDuplexPageCount()
-    {
-        if (array_key_exists("duplexPageCount", $this->_propDict)) {
-            return $this->_propDict["duplexPageCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the duplexPageCount
-    *
-    * @param int $val The value of the duplexPageCount
-    *
-    * @return ArchivedPrintJob
-    */
-    public function setDuplexPageCount($val)
-    {
-        $this->_propDict["duplexPageCount"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the createdBy
-    *
-    * @return UserIdentity The createdBy
-    */
-    public function getCreatedBy()
-    {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
-                return $this->_propDict["createdBy"];
-            } else {
-                $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the createdBy
-    *
-    * @param UserIdentity $val The value to assign to the createdBy
-    *
-    * @return ArchivedPrintJob The ArchivedPrintJob
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
-         return $this;
     }
 }

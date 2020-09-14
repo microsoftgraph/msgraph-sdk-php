@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SharePointSiteUsagePages extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return SharePointSiteUsagePages
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the siteType
-    *
-    * @return string The siteType
-    */
-    public function getSiteType()
-    {
-        if (array_key_exists("siteType", $this->_propDict)) {
-            return $this->_propDict["siteType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the siteType
-    *
-    * @param string $val The siteType
-    *
-    * @return SharePointSiteUsagePages
-    */
-    public function setSiteType($val)
-    {
-        $this->_propDict["siteType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the pageViewCount
     *
     * @return int The pageViewCount
@@ -164,6 +106,64 @@ class SharePointSiteUsagePages extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return SharePointSiteUsagePages
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the siteType
+    *
+    * @return string The siteType
+    */
+    public function getSiteType()
+    {
+        if (array_key_exists("siteType", $this->_propDict)) {
+            return $this->_propDict["siteType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the siteType
+    *
+    * @param string $val The siteType
+    *
+    * @return SharePointSiteUsagePages
+    */
+    public function setSiteType($val)
+    {
+        $this->_propDict["siteType"] = $val;
         return $this;
     }
     

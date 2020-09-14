@@ -25,226 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class CustomerPayment extends Entity
 {
     /**
-    * Gets the journalDisplayName
-    *
-    * @return string The journalDisplayName
-    */
-    public function getJournalDisplayName()
-    {
-        if (array_key_exists("journalDisplayName", $this->_propDict)) {
-            return $this->_propDict["journalDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the journalDisplayName
-    *
-    * @param string $val The journalDisplayName
-    *
-    * @return CustomerPayment
-    */
-    public function setJournalDisplayName($val)
-    {
-        $this->_propDict["journalDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lineNumber
-    *
-    * @return int The lineNumber
-    */
-    public function getLineNumber()
-    {
-        if (array_key_exists("lineNumber", $this->_propDict)) {
-            return $this->_propDict["lineNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lineNumber
-    *
-    * @param int $val The lineNumber
-    *
-    * @return CustomerPayment
-    */
-    public function setLineNumber($val)
-    {
-        $this->_propDict["lineNumber"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the customerId
-    *
-    * @return string The customerId
-    */
-    public function getCustomerId()
-    {
-        if (array_key_exists("customerId", $this->_propDict)) {
-            return $this->_propDict["customerId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customerId
-    *
-    * @param string $val The customerId
-    *
-    * @return CustomerPayment
-    */
-    public function setCustomerId($val)
-    {
-        $this->_propDict["customerId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customerNumber
-    *
-    * @return string The customerNumber
-    */
-    public function getCustomerNumber()
-    {
-        if (array_key_exists("customerNumber", $this->_propDict)) {
-            return $this->_propDict["customerNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customerNumber
-    *
-    * @param string $val The customerNumber
-    *
-    * @return CustomerPayment
-    */
-    public function setCustomerNumber($val)
-    {
-        $this->_propDict["customerNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the contactId
-    *
-    * @return string The contactId
-    */
-    public function getContactId()
-    {
-        if (array_key_exists("contactId", $this->_propDict)) {
-            return $this->_propDict["contactId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the contactId
-    *
-    * @param string $val The contactId
-    *
-    * @return CustomerPayment
-    */
-    public function setContactId($val)
-    {
-        $this->_propDict["contactId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the postingDate
-    *
-    * @return \DateTime The postingDate
-    */
-    public function getPostingDate()
-    {
-        if (array_key_exists("postingDate", $this->_propDict)) {
-            if (is_a($this->_propDict["postingDate"], "\DateTime")) {
-                return $this->_propDict["postingDate"];
-            } else {
-                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
-                return $this->_propDict["postingDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the postingDate
-    *
-    * @param \DateTime $val The postingDate
-    *
-    * @return CustomerPayment
-    */
-    public function setPostingDate($val)
-    {
-        $this->_propDict["postingDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the documentNumber
-    *
-    * @return string The documentNumber
-    */
-    public function getDocumentNumber()
-    {
-        if (array_key_exists("documentNumber", $this->_propDict)) {
-            return $this->_propDict["documentNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the documentNumber
-    *
-    * @param string $val The documentNumber
-    *
-    * @return CustomerPayment
-    */
-    public function setDocumentNumber($val)
-    {
-        $this->_propDict["documentNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the externalDocumentNumber
-    *
-    * @return string The externalDocumentNumber
-    */
-    public function getExternalDocumentNumber()
-    {
-        if (array_key_exists("externalDocumentNumber", $this->_propDict)) {
-            return $this->_propDict["externalDocumentNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the externalDocumentNumber
-    *
-    * @param string $val The externalDocumentNumber
-    *
-    * @return CustomerPayment
-    */
-    public function setExternalDocumentNumber($val)
-    {
-        $this->_propDict["externalDocumentNumber"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the amount
     *
     * @return Decimal The amount
@@ -330,6 +110,114 @@ class CustomerPayment extends Entity
     }
     
     /**
+    * Gets the comment
+    *
+    * @return string The comment
+    */
+    public function getComment()
+    {
+        if (array_key_exists("comment", $this->_propDict)) {
+            return $this->_propDict["comment"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the comment
+    *
+    * @param string $val The comment
+    *
+    * @return CustomerPayment
+    */
+    public function setComment($val)
+    {
+        $this->_propDict["comment"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the contactId
+    *
+    * @return string The contactId
+    */
+    public function getContactId()
+    {
+        if (array_key_exists("contactId", $this->_propDict)) {
+            return $this->_propDict["contactId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the contactId
+    *
+    * @param string $val The contactId
+    *
+    * @return CustomerPayment
+    */
+    public function setContactId($val)
+    {
+        $this->_propDict["contactId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customerId
+    *
+    * @return string The customerId
+    */
+    public function getCustomerId()
+    {
+        if (array_key_exists("customerId", $this->_propDict)) {
+            return $this->_propDict["customerId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customerId
+    *
+    * @param string $val The customerId
+    *
+    * @return CustomerPayment
+    */
+    public function setCustomerId($val)
+    {
+        $this->_propDict["customerId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customerNumber
+    *
+    * @return string The customerNumber
+    */
+    public function getCustomerNumber()
+    {
+        if (array_key_exists("customerNumber", $this->_propDict)) {
+            return $this->_propDict["customerNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customerNumber
+    *
+    * @param string $val The customerNumber
+    *
+    * @return CustomerPayment
+    */
+    public function setCustomerNumber($val)
+    {
+        $this->_propDict["customerNumber"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     *
     * @return string The description
@@ -357,29 +245,83 @@ class CustomerPayment extends Entity
     }
     
     /**
-    * Gets the comment
+    * Gets the documentNumber
     *
-    * @return string The comment
+    * @return string The documentNumber
     */
-    public function getComment()
+    public function getDocumentNumber()
     {
-        if (array_key_exists("comment", $this->_propDict)) {
-            return $this->_propDict["comment"];
+        if (array_key_exists("documentNumber", $this->_propDict)) {
+            return $this->_propDict["documentNumber"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the comment
+    * Sets the documentNumber
     *
-    * @param string $val The comment
+    * @param string $val The documentNumber
     *
     * @return CustomerPayment
     */
-    public function setComment($val)
+    public function setDocumentNumber($val)
     {
-        $this->_propDict["comment"] = $val;
+        $this->_propDict["documentNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalDocumentNumber
+    *
+    * @return string The externalDocumentNumber
+    */
+    public function getExternalDocumentNumber()
+    {
+        if (array_key_exists("externalDocumentNumber", $this->_propDict)) {
+            return $this->_propDict["externalDocumentNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalDocumentNumber
+    *
+    * @param string $val The externalDocumentNumber
+    *
+    * @return CustomerPayment
+    */
+    public function setExternalDocumentNumber($val)
+    {
+        $this->_propDict["externalDocumentNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the journalDisplayName
+    *
+    * @return string The journalDisplayName
+    */
+    public function getJournalDisplayName()
+    {
+        if (array_key_exists("journalDisplayName", $this->_propDict)) {
+            return $this->_propDict["journalDisplayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the journalDisplayName
+    *
+    * @param string $val The journalDisplayName
+    *
+    * @return CustomerPayment
+    */
+    public function setJournalDisplayName($val)
+    {
+        $this->_propDict["journalDisplayName"] = $val;
         return $this;
     }
     
@@ -411,6 +353,64 @@ class CustomerPayment extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lineNumber
+    *
+    * @return int The lineNumber
+    */
+    public function getLineNumber()
+    {
+        if (array_key_exists("lineNumber", $this->_propDict)) {
+            return $this->_propDict["lineNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lineNumber
+    *
+    * @param int $val The lineNumber
+    *
+    * @return CustomerPayment
+    */
+    public function setLineNumber($val)
+    {
+        $this->_propDict["lineNumber"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the postingDate
+    *
+    * @return \DateTime The postingDate
+    */
+    public function getPostingDate()
+    {
+        if (array_key_exists("postingDate", $this->_propDict)) {
+            if (is_a($this->_propDict["postingDate"], "\DateTime")) {
+                return $this->_propDict["postingDate"];
+            } else {
+                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
+                return $this->_propDict["postingDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the postingDate
+    *
+    * @param \DateTime $val The postingDate
+    *
+    * @return CustomerPayment
+    */
+    public function setPostingDate($val)
+    {
+        $this->_propDict["postingDate"] = $val;
         return $this;
     }
     

@@ -57,62 +57,6 @@ class AttachmentItem extends Entity
          return $this;
     }
     /**
-    * Gets the name
-    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
-    *
-    * @param string $val The value of the name
-    *
-    * @return AttachmentItem
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the size
-    * The length of the attachment in bytes. Required.
-    *
-    * @return int The size
-    */
-    public function getSize()
-    {
-        if (array_key_exists("size", $this->_propDict)) {
-            return $this->_propDict["size"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the size
-    * The length of the attachment in bytes. Required.
-    *
-    * @param int $val The value of the size
-    *
-    * @return AttachmentItem
-    */
-    public function setSize($val)
-    {
-        $this->_propDict["size"] = $val;
-        return $this;
-    }
-    /**
     * Gets the contentType
     * The nature of the data in the attachment. Optional.
     *
@@ -166,6 +110,62 @@ class AttachmentItem extends Entity
     public function setIsInline($val)
     {
         $this->_propDict["isInline"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the name
+    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
+    *
+    * @param string $val The value of the name
+    *
+    * @return AttachmentItem
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the size
+    * The length of the attachment in bytes. Required.
+    *
+    * @return int The size
+    */
+    public function getSize()
+    {
+        if (array_key_exists("size", $this->_propDict)) {
+            return $this->_propDict["size"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the size
+    * The length of the attachment in bytes. Required.
+    *
+    * @param int $val The value of the size
+    *
+    * @return AttachmentItem
+    */
+    public function setSize($val)
+    {
+        $this->_propDict["size"] = $val;
         return $this;
     }
 }

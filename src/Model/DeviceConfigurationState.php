@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 */
 class DeviceConfigurationState extends Entity
 {
-
-     /** 
-     * Gets the settingStates
-     *
-     * @return array The settingStates
-     */
-    public function getSettingStates()
-    {
-        if (array_key_exists("settingStates", $this->_propDict)) {
-           return $this->_propDict["settingStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the settingStates
-    *
-    * @param DeviceConfigurationSettingState $val The settingStates
-    *
-    * @return DeviceConfigurationState
-    */
-    public function setSettingStates($val)
-    {
-		$this->_propDict["settingStates"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the displayName
     * The name of the policy for this policyBase
@@ -78,35 +50,6 @@ class DeviceConfigurationState extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the version
-    * The version of the policy
-    *
-    * @return int The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    * The version of the policy
-    *
-    * @param int $val The version
-    *
-    * @return DeviceConfigurationState
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = intval($val);
         return $this;
     }
     
@@ -144,6 +87,63 @@ class DeviceConfigurationState extends Entity
     }
     
     /**
+    * Gets the settingCount
+    * Count of how many setting a policy holds
+    *
+    * @return int The settingCount
+    */
+    public function getSettingCount()
+    {
+        if (array_key_exists("settingCount", $this->_propDict)) {
+            return $this->_propDict["settingCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingCount
+    * Count of how many setting a policy holds
+    *
+    * @param int $val The settingCount
+    *
+    * @return DeviceConfigurationState
+    */
+    public function setSettingCount($val)
+    {
+        $this->_propDict["settingCount"] = intval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the settingStates
+     *
+     * @return array The settingStates
+     */
+    public function getSettingStates()
+    {
+        if (array_key_exists("settingStates", $this->_propDict)) {
+           return $this->_propDict["settingStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the settingStates
+    *
+    * @param DeviceConfigurationSettingState $val The settingStates
+    *
+    * @return DeviceConfigurationState
+    */
+    public function setSettingStates($val)
+    {
+		$this->_propDict["settingStates"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the state
     * The compliance state of the policy
     *
@@ -177,31 +177,31 @@ class DeviceConfigurationState extends Entity
     }
     
     /**
-    * Gets the settingCount
-    * Count of how many setting a policy holds
+    * Gets the version
+    * The version of the policy
     *
-    * @return int The settingCount
+    * @return int The version
     */
-    public function getSettingCount()
+    public function getVersion()
     {
-        if (array_key_exists("settingCount", $this->_propDict)) {
-            return $this->_propDict["settingCount"];
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the settingCount
-    * Count of how many setting a policy holds
+    * Sets the version
+    * The version of the policy
     *
-    * @param int $val The settingCount
+    * @param int $val The version
     *
     * @return DeviceConfigurationState
     */
-    public function setSettingCount($val)
+    public function setVersion($val)
     {
-        $this->_propDict["settingCount"] = intval($val);
+        $this->_propDict["version"] = intval($val);
         return $this;
     }
     

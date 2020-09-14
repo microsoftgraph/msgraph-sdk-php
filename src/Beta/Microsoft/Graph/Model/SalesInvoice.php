@@ -25,29 +25,392 @@ namespace Beta\Microsoft\Graph\Model;
 class SalesInvoice extends Entity
 {
     /**
-    * Gets the number
+    * Gets the billingPostalAddress
     *
-    * @return string The number
+    * @return PostalAddressType The billingPostalAddress
     */
-    public function getNumber()
+    public function getBillingPostalAddress()
     {
-        if (array_key_exists("number", $this->_propDict)) {
-            return $this->_propDict["number"];
+        if (array_key_exists("billingPostalAddress", $this->_propDict)) {
+            if (is_a($this->_propDict["billingPostalAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
+                return $this->_propDict["billingPostalAddress"];
+            } else {
+                $this->_propDict["billingPostalAddress"] = new PostalAddressType($this->_propDict["billingPostalAddress"]);
+                return $this->_propDict["billingPostalAddress"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the billingPostalAddress
+    *
+    * @param PostalAddressType $val The billingPostalAddress
+    *
+    * @return SalesInvoice
+    */
+    public function setBillingPostalAddress($val)
+    {
+        $this->_propDict["billingPostalAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the billToCustomerId
+    *
+    * @return string The billToCustomerId
+    */
+    public function getBillToCustomerId()
+    {
+        if (array_key_exists("billToCustomerId", $this->_propDict)) {
+            return $this->_propDict["billToCustomerId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the number
+    * Sets the billToCustomerId
     *
-    * @param string $val The number
+    * @param string $val The billToCustomerId
     *
     * @return SalesInvoice
     */
-    public function setNumber($val)
+    public function setBillToCustomerId($val)
     {
-        $this->_propDict["number"] = $val;
+        $this->_propDict["billToCustomerId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the billToCustomerNumber
+    *
+    * @return string The billToCustomerNumber
+    */
+    public function getBillToCustomerNumber()
+    {
+        if (array_key_exists("billToCustomerNumber", $this->_propDict)) {
+            return $this->_propDict["billToCustomerNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the billToCustomerNumber
+    *
+    * @param string $val The billToCustomerNumber
+    *
+    * @return SalesInvoice
+    */
+    public function setBillToCustomerNumber($val)
+    {
+        $this->_propDict["billToCustomerNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the billToName
+    *
+    * @return string The billToName
+    */
+    public function getBillToName()
+    {
+        if (array_key_exists("billToName", $this->_propDict)) {
+            return $this->_propDict["billToName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the billToName
+    *
+    * @param string $val The billToName
+    *
+    * @return SalesInvoice
+    */
+    public function setBillToName($val)
+    {
+        $this->_propDict["billToName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the currencyCode
+    *
+    * @return string The currencyCode
+    */
+    public function getCurrencyCode()
+    {
+        if (array_key_exists("currencyCode", $this->_propDict)) {
+            return $this->_propDict["currencyCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the currencyCode
+    *
+    * @param string $val The currencyCode
+    *
+    * @return SalesInvoice
+    */
+    public function setCurrencyCode($val)
+    {
+        $this->_propDict["currencyCode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the currencyId
+    *
+    * @return string The currencyId
+    */
+    public function getCurrencyId()
+    {
+        if (array_key_exists("currencyId", $this->_propDict)) {
+            return $this->_propDict["currencyId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the currencyId
+    *
+    * @param string $val The currencyId
+    *
+    * @return SalesInvoice
+    */
+    public function setCurrencyId($val)
+    {
+        $this->_propDict["currencyId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customerId
+    *
+    * @return string The customerId
+    */
+    public function getCustomerId()
+    {
+        if (array_key_exists("customerId", $this->_propDict)) {
+            return $this->_propDict["customerId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customerId
+    *
+    * @param string $val The customerId
+    *
+    * @return SalesInvoice
+    */
+    public function setCustomerId($val)
+    {
+        $this->_propDict["customerId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customerName
+    *
+    * @return string The customerName
+    */
+    public function getCustomerName()
+    {
+        if (array_key_exists("customerName", $this->_propDict)) {
+            return $this->_propDict["customerName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customerName
+    *
+    * @param string $val The customerName
+    *
+    * @return SalesInvoice
+    */
+    public function setCustomerName($val)
+    {
+        $this->_propDict["customerName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customerNumber
+    *
+    * @return string The customerNumber
+    */
+    public function getCustomerNumber()
+    {
+        if (array_key_exists("customerNumber", $this->_propDict)) {
+            return $this->_propDict["customerNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customerNumber
+    *
+    * @param string $val The customerNumber
+    *
+    * @return SalesInvoice
+    */
+    public function setCustomerNumber($val)
+    {
+        $this->_propDict["customerNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the customerPurchaseOrderReference
+    *
+    * @return string The customerPurchaseOrderReference
+    */
+    public function getCustomerPurchaseOrderReference()
+    {
+        if (array_key_exists("customerPurchaseOrderReference", $this->_propDict)) {
+            return $this->_propDict["customerPurchaseOrderReference"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customerPurchaseOrderReference
+    *
+    * @param string $val The customerPurchaseOrderReference
+    *
+    * @return SalesInvoice
+    */
+    public function setCustomerPurchaseOrderReference($val)
+    {
+        $this->_propDict["customerPurchaseOrderReference"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the discountAmount
+    *
+    * @return Decimal The discountAmount
+    */
+    public function getDiscountAmount()
+    {
+        if (array_key_exists("discountAmount", $this->_propDict)) {
+            if (is_a($this->_propDict["discountAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["discountAmount"];
+            } else {
+                $this->_propDict["discountAmount"] = new Decimal($this->_propDict["discountAmount"]);
+                return $this->_propDict["discountAmount"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the discountAmount
+    *
+    * @param Decimal $val The discountAmount
+    *
+    * @return SalesInvoice
+    */
+    public function setDiscountAmount($val)
+    {
+        $this->_propDict["discountAmount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the discountAppliedBeforeTax
+    *
+    * @return bool The discountAppliedBeforeTax
+    */
+    public function getDiscountAppliedBeforeTax()
+    {
+        if (array_key_exists("discountAppliedBeforeTax", $this->_propDict)) {
+            return $this->_propDict["discountAppliedBeforeTax"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the discountAppliedBeforeTax
+    *
+    * @param bool $val The discountAppliedBeforeTax
+    *
+    * @return SalesInvoice
+    */
+    public function setDiscountAppliedBeforeTax($val)
+    {
+        $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the dueDate
+    *
+    * @return \DateTime The dueDate
+    */
+    public function getDueDate()
+    {
+        if (array_key_exists("dueDate", $this->_propDict)) {
+            if (is_a($this->_propDict["dueDate"], "\DateTime")) {
+                return $this->_propDict["dueDate"];
+            } else {
+                $this->_propDict["dueDate"] = new \DateTime($this->_propDict["dueDate"]);
+                return $this->_propDict["dueDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the dueDate
+    *
+    * @param \DateTime $val The dueDate
+    *
+    * @return SalesInvoice
+    */
+    public function setDueDate($val)
+    {
+        $this->_propDict["dueDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the email
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the email
+    *
+    * @param string $val The email
+    *
+    * @return SalesInvoice
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
         return $this;
     }
     
@@ -110,423 +473,60 @@ class SalesInvoice extends Entity
     }
     
     /**
-    * Gets the dueDate
+    * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The dueDate
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getDueDate()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("dueDate", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDate"], "\DateTime")) {
-                return $this->_propDict["dueDate"];
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
             } else {
-                $this->_propDict["dueDate"] = new \DateTime($this->_propDict["dueDate"]);
-                return $this->_propDict["dueDate"];
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the dueDate
+    * Sets the lastModifiedDateTime
     *
-    * @param \DateTime $val The dueDate
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return SalesInvoice
     */
-    public function setDueDate($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["dueDate"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the customerPurchaseOrderReference
+    * Gets the number
     *
-    * @return string The customerPurchaseOrderReference
+    * @return string The number
     */
-    public function getCustomerPurchaseOrderReference()
+    public function getNumber()
     {
-        if (array_key_exists("customerPurchaseOrderReference", $this->_propDict)) {
-            return $this->_propDict["customerPurchaseOrderReference"];
+        if (array_key_exists("number", $this->_propDict)) {
+            return $this->_propDict["number"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the customerPurchaseOrderReference
+    * Sets the number
     *
-    * @param string $val The customerPurchaseOrderReference
-    *
-    * @return SalesInvoice
-    */
-    public function setCustomerPurchaseOrderReference($val)
-    {
-        $this->_propDict["customerPurchaseOrderReference"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customerId
-    *
-    * @return string The customerId
-    */
-    public function getCustomerId()
-    {
-        if (array_key_exists("customerId", $this->_propDict)) {
-            return $this->_propDict["customerId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customerId
-    *
-    * @param string $val The customerId
+    * @param string $val The number
     *
     * @return SalesInvoice
     */
-    public function setCustomerId($val)
+    public function setNumber($val)
     {
-        $this->_propDict["customerId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customerNumber
-    *
-    * @return string The customerNumber
-    */
-    public function getCustomerNumber()
-    {
-        if (array_key_exists("customerNumber", $this->_propDict)) {
-            return $this->_propDict["customerNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customerNumber
-    *
-    * @param string $val The customerNumber
-    *
-    * @return SalesInvoice
-    */
-    public function setCustomerNumber($val)
-    {
-        $this->_propDict["customerNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customerName
-    *
-    * @return string The customerName
-    */
-    public function getCustomerName()
-    {
-        if (array_key_exists("customerName", $this->_propDict)) {
-            return $this->_propDict["customerName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the customerName
-    *
-    * @param string $val The customerName
-    *
-    * @return SalesInvoice
-    */
-    public function setCustomerName($val)
-    {
-        $this->_propDict["customerName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the billToName
-    *
-    * @return string The billToName
-    */
-    public function getBillToName()
-    {
-        if (array_key_exists("billToName", $this->_propDict)) {
-            return $this->_propDict["billToName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the billToName
-    *
-    * @param string $val The billToName
-    *
-    * @return SalesInvoice
-    */
-    public function setBillToName($val)
-    {
-        $this->_propDict["billToName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the billToCustomerId
-    *
-    * @return string The billToCustomerId
-    */
-    public function getBillToCustomerId()
-    {
-        if (array_key_exists("billToCustomerId", $this->_propDict)) {
-            return $this->_propDict["billToCustomerId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the billToCustomerId
-    *
-    * @param string $val The billToCustomerId
-    *
-    * @return SalesInvoice
-    */
-    public function setBillToCustomerId($val)
-    {
-        $this->_propDict["billToCustomerId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the billToCustomerNumber
-    *
-    * @return string The billToCustomerNumber
-    */
-    public function getBillToCustomerNumber()
-    {
-        if (array_key_exists("billToCustomerNumber", $this->_propDict)) {
-            return $this->_propDict["billToCustomerNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the billToCustomerNumber
-    *
-    * @param string $val The billToCustomerNumber
-    *
-    * @return SalesInvoice
-    */
-    public function setBillToCustomerNumber($val)
-    {
-        $this->_propDict["billToCustomerNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the shipToName
-    *
-    * @return string The shipToName
-    */
-    public function getShipToName()
-    {
-        if (array_key_exists("shipToName", $this->_propDict)) {
-            return $this->_propDict["shipToName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the shipToName
-    *
-    * @param string $val The shipToName
-    *
-    * @return SalesInvoice
-    */
-    public function setShipToName($val)
-    {
-        $this->_propDict["shipToName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the shipToContact
-    *
-    * @return string The shipToContact
-    */
-    public function getShipToContact()
-    {
-        if (array_key_exists("shipToContact", $this->_propDict)) {
-            return $this->_propDict["shipToContact"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the shipToContact
-    *
-    * @param string $val The shipToContact
-    *
-    * @return SalesInvoice
-    */
-    public function setShipToContact($val)
-    {
-        $this->_propDict["shipToContact"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the sellingPostalAddress
-    *
-    * @return PostalAddressType The sellingPostalAddress
-    */
-    public function getSellingPostalAddress()
-    {
-        if (array_key_exists("sellingPostalAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["sellingPostalAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
-                return $this->_propDict["sellingPostalAddress"];
-            } else {
-                $this->_propDict["sellingPostalAddress"] = new PostalAddressType($this->_propDict["sellingPostalAddress"]);
-                return $this->_propDict["sellingPostalAddress"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sellingPostalAddress
-    *
-    * @param PostalAddressType $val The sellingPostalAddress
-    *
-    * @return SalesInvoice
-    */
-    public function setSellingPostalAddress($val)
-    {
-        $this->_propDict["sellingPostalAddress"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the billingPostalAddress
-    *
-    * @return PostalAddressType The billingPostalAddress
-    */
-    public function getBillingPostalAddress()
-    {
-        if (array_key_exists("billingPostalAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["billingPostalAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
-                return $this->_propDict["billingPostalAddress"];
-            } else {
-                $this->_propDict["billingPostalAddress"] = new PostalAddressType($this->_propDict["billingPostalAddress"]);
-                return $this->_propDict["billingPostalAddress"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the billingPostalAddress
-    *
-    * @param PostalAddressType $val The billingPostalAddress
-    *
-    * @return SalesInvoice
-    */
-    public function setBillingPostalAddress($val)
-    {
-        $this->_propDict["billingPostalAddress"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the shippingPostalAddress
-    *
-    * @return PostalAddressType The shippingPostalAddress
-    */
-    public function getShippingPostalAddress()
-    {
-        if (array_key_exists("shippingPostalAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["shippingPostalAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
-                return $this->_propDict["shippingPostalAddress"];
-            } else {
-                $this->_propDict["shippingPostalAddress"] = new PostalAddressType($this->_propDict["shippingPostalAddress"]);
-                return $this->_propDict["shippingPostalAddress"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the shippingPostalAddress
-    *
-    * @param PostalAddressType $val The shippingPostalAddress
-    *
-    * @return SalesInvoice
-    */
-    public function setShippingPostalAddress($val)
-    {
-        $this->_propDict["shippingPostalAddress"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the currencyId
-    *
-    * @return string The currencyId
-    */
-    public function getCurrencyId()
-    {
-        if (array_key_exists("currencyId", $this->_propDict)) {
-            return $this->_propDict["currencyId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the currencyId
-    *
-    * @param string $val The currencyId
-    *
-    * @return SalesInvoice
-    */
-    public function setCurrencyId($val)
-    {
-        $this->_propDict["currencyId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the currencyCode
-    *
-    * @return string The currencyCode
-    */
-    public function getCurrencyCode()
-    {
-        if (array_key_exists("currencyCode", $this->_propDict)) {
-            return $this->_propDict["currencyCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the currencyCode
-    *
-    * @param string $val The currencyCode
-    *
-    * @return SalesInvoice
-    */
-    public function setCurrencyCode($val)
-    {
-        $this->_propDict["currencyCode"] = $val;
+        $this->_propDict["number"] = $val;
         return $this;
     }
     
@@ -612,56 +612,29 @@ class SalesInvoice extends Entity
     }
     
     /**
-    * Gets the shipmentMethodId
+    * Gets the phoneNumber
     *
-    * @return string The shipmentMethodId
+    * @return string The phoneNumber
     */
-    public function getShipmentMethodId()
+    public function getPhoneNumber()
     {
-        if (array_key_exists("shipmentMethodId", $this->_propDict)) {
-            return $this->_propDict["shipmentMethodId"];
+        if (array_key_exists("phoneNumber", $this->_propDict)) {
+            return $this->_propDict["phoneNumber"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the shipmentMethodId
+    * Sets the phoneNumber
     *
-    * @param string $val The shipmentMethodId
-    *
-    * @return SalesInvoice
-    */
-    public function setShipmentMethodId($val)
-    {
-        $this->_propDict["shipmentMethodId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the salesperson
-    *
-    * @return string The salesperson
-    */
-    public function getSalesperson()
-    {
-        if (array_key_exists("salesperson", $this->_propDict)) {
-            return $this->_propDict["salesperson"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the salesperson
-    *
-    * @param string $val The salesperson
+    * @param string $val The phoneNumber
     *
     * @return SalesInvoice
     */
-    public function setSalesperson($val)
+    public function setPhoneNumber($val)
     {
-        $this->_propDict["salesperson"] = $val;
+        $this->_propDict["phoneNumber"] = $val;
         return $this;
     }
     
@@ -693,60 +666,199 @@ class SalesInvoice extends Entity
     }
     
     /**
-    * Gets the discountAmount
+    * Gets the salesperson
     *
-    * @return Decimal The discountAmount
+    * @return string The salesperson
     */
-    public function getDiscountAmount()
+    public function getSalesperson()
     {
-        if (array_key_exists("discountAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["discountAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["discountAmount"];
-            } else {
-                $this->_propDict["discountAmount"] = new Decimal($this->_propDict["discountAmount"]);
-                return $this->_propDict["discountAmount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the discountAmount
-    *
-    * @param Decimal $val The discountAmount
-    *
-    * @return SalesInvoice
-    */
-    public function setDiscountAmount($val)
-    {
-        $this->_propDict["discountAmount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the discountAppliedBeforeTax
-    *
-    * @return bool The discountAppliedBeforeTax
-    */
-    public function getDiscountAppliedBeforeTax()
-    {
-        if (array_key_exists("discountAppliedBeforeTax", $this->_propDict)) {
-            return $this->_propDict["discountAppliedBeforeTax"];
+        if (array_key_exists("salesperson", $this->_propDict)) {
+            return $this->_propDict["salesperson"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the discountAppliedBeforeTax
+    * Sets the salesperson
     *
-    * @param bool $val The discountAppliedBeforeTax
+    * @param string $val The salesperson
     *
     * @return SalesInvoice
     */
-    public function setDiscountAppliedBeforeTax($val)
+    public function setSalesperson($val)
     {
-        $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
+        $this->_propDict["salesperson"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sellingPostalAddress
+    *
+    * @return PostalAddressType The sellingPostalAddress
+    */
+    public function getSellingPostalAddress()
+    {
+        if (array_key_exists("sellingPostalAddress", $this->_propDict)) {
+            if (is_a($this->_propDict["sellingPostalAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
+                return $this->_propDict["sellingPostalAddress"];
+            } else {
+                $this->_propDict["sellingPostalAddress"] = new PostalAddressType($this->_propDict["sellingPostalAddress"]);
+                return $this->_propDict["sellingPostalAddress"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sellingPostalAddress
+    *
+    * @param PostalAddressType $val The sellingPostalAddress
+    *
+    * @return SalesInvoice
+    */
+    public function setSellingPostalAddress($val)
+    {
+        $this->_propDict["sellingPostalAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the shipmentMethodId
+    *
+    * @return string The shipmentMethodId
+    */
+    public function getShipmentMethodId()
+    {
+        if (array_key_exists("shipmentMethodId", $this->_propDict)) {
+            return $this->_propDict["shipmentMethodId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the shipmentMethodId
+    *
+    * @param string $val The shipmentMethodId
+    *
+    * @return SalesInvoice
+    */
+    public function setShipmentMethodId($val)
+    {
+        $this->_propDict["shipmentMethodId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the shippingPostalAddress
+    *
+    * @return PostalAddressType The shippingPostalAddress
+    */
+    public function getShippingPostalAddress()
+    {
+        if (array_key_exists("shippingPostalAddress", $this->_propDict)) {
+            if (is_a($this->_propDict["shippingPostalAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
+                return $this->_propDict["shippingPostalAddress"];
+            } else {
+                $this->_propDict["shippingPostalAddress"] = new PostalAddressType($this->_propDict["shippingPostalAddress"]);
+                return $this->_propDict["shippingPostalAddress"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the shippingPostalAddress
+    *
+    * @param PostalAddressType $val The shippingPostalAddress
+    *
+    * @return SalesInvoice
+    */
+    public function setShippingPostalAddress($val)
+    {
+        $this->_propDict["shippingPostalAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the shipToContact
+    *
+    * @return string The shipToContact
+    */
+    public function getShipToContact()
+    {
+        if (array_key_exists("shipToContact", $this->_propDict)) {
+            return $this->_propDict["shipToContact"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the shipToContact
+    *
+    * @param string $val The shipToContact
+    *
+    * @return SalesInvoice
+    */
+    public function setShipToContact($val)
+    {
+        $this->_propDict["shipToContact"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the shipToName
+    *
+    * @return string The shipToName
+    */
+    public function getShipToName()
+    {
+        if (array_key_exists("shipToName", $this->_propDict)) {
+            return $this->_propDict["shipToName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the shipToName
+    *
+    * @param string $val The shipToName
+    *
+    * @return SalesInvoice
+    */
+    public function setShipToName($val)
+    {
+        $this->_propDict["shipToName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return SalesInvoice
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -782,37 +894,6 @@ class SalesInvoice extends Entity
     }
     
     /**
-    * Gets the totalTaxAmount
-    *
-    * @return Decimal The totalTaxAmount
-    */
-    public function getTotalTaxAmount()
-    {
-        if (array_key_exists("totalTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["totalTaxAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
-                return $this->_propDict["totalTaxAmount"];
-            } else {
-                $this->_propDict["totalTaxAmount"] = new Decimal($this->_propDict["totalTaxAmount"]);
-                return $this->_propDict["totalTaxAmount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the totalTaxAmount
-    *
-    * @param Decimal $val The totalTaxAmount
-    *
-    * @return SalesInvoice
-    */
-    public function setTotalTaxAmount($val)
-    {
-        $this->_propDict["totalTaxAmount"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the totalAmountIncludingTax
     *
     * @return Decimal The totalAmountIncludingTax
@@ -844,173 +925,33 @@ class SalesInvoice extends Entity
     }
     
     /**
-    * Gets the status
+    * Gets the totalTaxAmount
     *
-    * @return string The status
+    * @return Decimal The totalTaxAmount
     */
-    public function getStatus()
+    public function getTotalTaxAmount()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param string $val The status
-    *
-    * @return SalesInvoice
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the lastModifiedDateTime
-    *
-    * @return \DateTime The lastModifiedDateTime
-    */
-    public function getLastModifiedDateTime()
-    {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("totalTaxAmount", $this->_propDict)) {
+            if (is_a($this->_propDict["totalTaxAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+                return $this->_propDict["totalTaxAmount"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["totalTaxAmount"] = new Decimal($this->_propDict["totalTaxAmount"]);
+                return $this->_propDict["totalTaxAmount"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the totalTaxAmount
     *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return SalesInvoice
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the phoneNumber
-    *
-    * @return string The phoneNumber
-    */
-    public function getPhoneNumber()
-    {
-        if (array_key_exists("phoneNumber", $this->_propDict)) {
-            return $this->_propDict["phoneNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the phoneNumber
-    *
-    * @param string $val The phoneNumber
+    * @param Decimal $val The totalTaxAmount
     *
     * @return SalesInvoice
     */
-    public function setPhoneNumber($val)
+    public function setTotalTaxAmount($val)
     {
-        $this->_propDict["phoneNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the email
-    *
-    * @return string The email
-    */
-    public function getEmail()
-    {
-        if (array_key_exists("email", $this->_propDict)) {
-            return $this->_propDict["email"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the email
-    *
-    * @param string $val The email
-    *
-    * @return SalesInvoice
-    */
-    public function setEmail($val)
-    {
-        $this->_propDict["email"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the salesInvoiceLines
-     *
-     * @return array The salesInvoiceLines
-     */
-    public function getSalesInvoiceLines()
-    {
-        if (array_key_exists("salesInvoiceLines", $this->_propDict)) {
-           return $this->_propDict["salesInvoiceLines"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the salesInvoiceLines
-    *
-    * @param SalesInvoiceLine $val The salesInvoiceLines
-    *
-    * @return SalesInvoice
-    */
-    public function setSalesInvoiceLines($val)
-    {
-		$this->_propDict["salesInvoiceLines"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the customer
-    *
-    * @return Customer The customer
-    */
-    public function getCustomer()
-    {
-        if (array_key_exists("customer", $this->_propDict)) {
-            if (is_a($this->_propDict["customer"], "Beta\Microsoft\Graph\Model\Customer")) {
-                return $this->_propDict["customer"];
-            } else {
-                $this->_propDict["customer"] = new Customer($this->_propDict["customer"]);
-                return $this->_propDict["customer"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the customer
-    *
-    * @param Customer $val The customer
-    *
-    * @return SalesInvoice
-    */
-    public function setCustomer($val)
-    {
-        $this->_propDict["customer"] = $val;
+        $this->_propDict["totalTaxAmount"] = $val;
         return $this;
     }
     
@@ -1046,6 +987,37 @@ class SalesInvoice extends Entity
     }
     
     /**
+    * Gets the customer
+    *
+    * @return Customer The customer
+    */
+    public function getCustomer()
+    {
+        if (array_key_exists("customer", $this->_propDict)) {
+            if (is_a($this->_propDict["customer"], "Beta\Microsoft\Graph\Model\Customer")) {
+                return $this->_propDict["customer"];
+            } else {
+                $this->_propDict["customer"] = new Customer($this->_propDict["customer"]);
+                return $this->_propDict["customer"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the customer
+    *
+    * @param Customer $val The customer
+    *
+    * @return SalesInvoice
+    */
+    public function setCustomer($val)
+    {
+        $this->_propDict["customer"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the paymentTerm
     *
     * @return PaymentTerm The paymentTerm
@@ -1073,6 +1045,34 @@ class SalesInvoice extends Entity
     public function setPaymentTerm($val)
     {
         $this->_propDict["paymentTerm"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the salesInvoiceLines
+     *
+     * @return array The salesInvoiceLines
+     */
+    public function getSalesInvoiceLines()
+    {
+        if (array_key_exists("salesInvoiceLines", $this->_propDict)) {
+           return $this->_propDict["salesInvoiceLines"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the salesInvoiceLines
+    *
+    * @param SalesInvoiceLine $val The salesInvoiceLines
+    *
+    * @return SalesInvoice
+    */
+    public function setSalesInvoiceLines($val)
+    {
+		$this->_propDict["salesInvoiceLines"] = $val;
         return $this;
     }
     

@@ -25,93 +25,6 @@ namespace Microsoft\Graph\Model;
 class DeviceEnrollmentConfiguration extends Entity
 {
     /**
-    * Gets the displayName
-    * Not yet documented
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Not yet documented
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceEnrollmentConfiguration
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * Not yet documented
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * Not yet documented
-    *
-    * @param string $val The description
-    *
-    * @return DeviceEnrollmentConfiguration
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the priority
-    * Not yet documented
-    *
-    * @return int The priority
-    */
-    public function getPriority()
-    {
-        if (array_key_exists("priority", $this->_propDict)) {
-            return $this->_propDict["priority"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the priority
-    * Not yet documented
-    *
-    * @param int $val The priority
-    *
-    * @return DeviceEnrollmentConfiguration
-    */
-    public function setPriority($val)
-    {
-        $this->_propDict["priority"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * Not yet documented
     *
@@ -145,6 +58,64 @@ class DeviceEnrollmentConfiguration extends Entity
     }
     
     /**
+    * Gets the description
+    * Not yet documented
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * Not yet documented
+    *
+    * @param string $val The description
+    *
+    * @return DeviceEnrollmentConfiguration
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Not yet documented
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Not yet documented
+    *
+    * @param string $val The displayName
+    *
+    * @return DeviceEnrollmentConfiguration
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * Not yet documented
     *
@@ -174,6 +145,35 @@ class DeviceEnrollmentConfiguration extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the priority
+    * Not yet documented
+    *
+    * @return int The priority
+    */
+    public function getPriority()
+    {
+        if (array_key_exists("priority", $this->_propDict)) {
+            return $this->_propDict["priority"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the priority
+    * Not yet documented
+    *
+    * @param int $val The priority
+    *
+    * @return DeviceEnrollmentConfiguration
+    */
+    public function setPriority($val)
+    {
+        $this->_propDict["priority"] = intval($val);
         return $this;
     }
     

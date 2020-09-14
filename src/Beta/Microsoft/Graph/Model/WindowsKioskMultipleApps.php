@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
 {
+    /**
+    * Gets the allowAccessToDownloadsFolder
+    * This setting allows access to Downloads folder in file explorer.
+    *
+    * @return bool The allowAccessToDownloadsFolder
+    */
+    public function getAllowAccessToDownloadsFolder()
+    {
+        if (array_key_exists("allowAccessToDownloadsFolder", $this->_propDict)) {
+            return $this->_propDict["allowAccessToDownloadsFolder"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowAccessToDownloadsFolder
+    * This setting allows access to Downloads folder in file explorer.
+    *
+    * @param bool $val The value of the allowAccessToDownloadsFolder
+    *
+    * @return WindowsKioskMultipleApps
+    */
+    public function setAllowAccessToDownloadsFolder($val)
+    {
+        $this->_propDict["allowAccessToDownloadsFolder"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the apps
@@ -57,62 +85,6 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
          return $this;
     }
     /**
-    * Gets the showTaskBar
-    * This setting allows the admin to specify whether the Task Bar is shown or not.
-    *
-    * @return bool The showTaskBar
-    */
-    public function getShowTaskBar()
-    {
-        if (array_key_exists("showTaskBar", $this->_propDict)) {
-            return $this->_propDict["showTaskBar"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the showTaskBar
-    * This setting allows the admin to specify whether the Task Bar is shown or not.
-    *
-    * @param bool $val The value of the showTaskBar
-    *
-    * @return WindowsKioskMultipleApps
-    */
-    public function setShowTaskBar($val)
-    {
-        $this->_propDict["showTaskBar"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the allowAccessToDownloadsFolder
-    * This setting allows access to Downloads folder in file explorer.
-    *
-    * @return bool The allowAccessToDownloadsFolder
-    */
-    public function getAllowAccessToDownloadsFolder()
-    {
-        if (array_key_exists("allowAccessToDownloadsFolder", $this->_propDict)) {
-            return $this->_propDict["allowAccessToDownloadsFolder"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowAccessToDownloadsFolder
-    * This setting allows access to Downloads folder in file explorer.
-    *
-    * @param bool $val The value of the allowAccessToDownloadsFolder
-    *
-    * @return WindowsKioskMultipleApps
-    */
-    public function setAllowAccessToDownloadsFolder($val)
-    {
-        $this->_propDict["allowAccessToDownloadsFolder"] = $val;
-        return $this;
-    }
-    /**
     * Gets the disallowDesktopApps
     * This setting indicates that desktop apps are allowed. Default to true.
     *
@@ -140,10 +112,38 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
         $this->_propDict["disallowDesktopApps"] = $val;
         return $this;
     }
+    /**
+    * Gets the showTaskBar
+    * This setting allows the admin to specify whether the Task Bar is shown or not.
+    *
+    * @return bool The showTaskBar
+    */
+    public function getShowTaskBar()
+    {
+        if (array_key_exists("showTaskBar", $this->_propDict)) {
+            return $this->_propDict["showTaskBar"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the showTaskBar
+    * This setting allows the admin to specify whether the Task Bar is shown or not.
+    *
+    * @param bool $val The value of the showTaskBar
+    *
+    * @return WindowsKioskMultipleApps
+    */
+    public function setShowTaskBar($val)
+    {
+        $this->_propDict["showTaskBar"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the startMenuLayoutXml
-    * Allows admins to override the default Start layout and prevents the user from changing it.??The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+    * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
     *
     * @return \GuzzleHttp\Psr7\Stream The startMenuLayoutXml
     */
@@ -162,7 +162,7 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
 
     /**
     * Sets the startMenuLayoutXml
-    * Allows admins to override the default Start layout and prevents the user from changing it.??The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+    * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the startMenuLayoutXml
     *

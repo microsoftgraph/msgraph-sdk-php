@@ -25,31 +25,61 @@ namespace Beta\Microsoft\Graph\Model;
 class EmbeddedSIMActivationCodePool extends Entity
 {
     /**
-    * Gets the displayName
-    * The admin defined name of the embedded SIM activation code pool.
+    * Gets the activationCodeCount
+    * The total count of activation codes which belong to this pool.
     *
-    * @return string The displayName
+    * @return int The activationCodeCount
     */
-    public function getDisplayName()
+    public function getActivationCodeCount()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("activationCodeCount", $this->_propDict)) {
+            return $this->_propDict["activationCodeCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
-    * The admin defined name of the embedded SIM activation code pool.
+    * Sets the activationCodeCount
+    * The total count of activation codes which belong to this pool.
     *
-    * @param string $val The displayName
+    * @param int $val The activationCodeCount
     *
     * @return EmbeddedSIMActivationCodePool
     */
-    public function setDisplayName($val)
+    public function setActivationCodeCount($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["activationCodeCount"] = intval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the activationCodes
+    * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
+     *
+     * @return array The activationCodes
+     */
+    public function getActivationCodes()
+    {
+        if (array_key_exists("activationCodes", $this->_propDict)) {
+           return $this->_propDict["activationCodes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the activationCodes
+    * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
+    *
+    * @param EmbeddedSIMActivationCode $val The activationCodes
+    *
+    * @return EmbeddedSIMActivationCodePool
+    */
+    public function setActivationCodes($val)
+    {
+		$this->_propDict["activationCodes"] = $val;
         return $this;
     }
     
@@ -87,6 +117,35 @@ class EmbeddedSIMActivationCodePool extends Entity
     }
     
     /**
+    * Gets the displayName
+    * The admin defined name of the embedded SIM activation code pool.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The admin defined name of the embedded SIM activation code pool.
+    *
+    * @param string $val The displayName
+    *
+    * @return EmbeddedSIMActivationCodePool
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the modifiedDateTime
     * The time the embedded SIM activation code pool was last modified. Updated service side.
     *
@@ -116,65 +175,6 @@ class EmbeddedSIMActivationCodePool extends Entity
     public function setModifiedDateTime($val)
     {
         $this->_propDict["modifiedDateTime"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the activationCodes
-    * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
-     *
-     * @return array The activationCodes
-     */
-    public function getActivationCodes()
-    {
-        if (array_key_exists("activationCodes", $this->_propDict)) {
-           return $this->_propDict["activationCodes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the activationCodes
-    * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
-    *
-    * @param EmbeddedSIMActivationCode $val The activationCodes
-    *
-    * @return EmbeddedSIMActivationCodePool
-    */
-    public function setActivationCodes($val)
-    {
-		$this->_propDict["activationCodes"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the activationCodeCount
-    * The total count of activation codes which belong to this pool.
-    *
-    * @return int The activationCodeCount
-    */
-    public function getActivationCodeCount()
-    {
-        if (array_key_exists("activationCodeCount", $this->_propDict)) {
-            return $this->_propDict["activationCodeCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the activationCodeCount
-    * The total count of activation codes which belong to this pool.
-    *
-    * @param int $val The activationCodeCount
-    *
-    * @return EmbeddedSIMActivationCodePool
-    */
-    public function setActivationCodeCount($val)
-    {
-        $this->_propDict["activationCodeCount"] = intval($val);
         return $this;
     }
     

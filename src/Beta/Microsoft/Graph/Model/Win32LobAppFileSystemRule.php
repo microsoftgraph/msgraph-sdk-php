@@ -33,31 +33,59 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
     }
 
     /**
-    * Gets the path
-    * The file or folder path to look up.
+    * Gets the check32BitOn64System
+    * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
     *
-    * @return string The path
+    * @return bool The check32BitOn64System
     */
-    public function getPath()
+    public function getCheck32BitOn64System()
     {
-        if (array_key_exists("path", $this->_propDict)) {
-            return $this->_propDict["path"];
+        if (array_key_exists("check32BitOn64System", $this->_propDict)) {
+            return $this->_propDict["check32BitOn64System"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the path
-    * The file or folder path to look up.
+    * Sets the check32BitOn64System
+    * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
     *
-    * @param string $val The value of the path
+    * @param bool $val The value of the check32BitOn64System
     *
     * @return Win32LobAppFileSystemRule
     */
-    public function setPath($val)
+    public function setCheck32BitOn64System($val)
     {
-        $this->_propDict["path"] = $val;
+        $this->_propDict["check32BitOn64System"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the comparisonValue
+    * The file or folder comparison value.
+    *
+    * @return string The comparisonValue
+    */
+    public function getComparisonValue()
+    {
+        if (array_key_exists("comparisonValue", $this->_propDict)) {
+            return $this->_propDict["comparisonValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the comparisonValue
+    * The file or folder comparison value.
+    *
+    * @param string $val The value of the comparisonValue
+    *
+    * @return Win32LobAppFileSystemRule
+    */
+    public function setComparisonValue($val)
+    {
+        $this->_propDict["comparisonValue"] = $val;
         return $this;
     }
     /**
@@ -86,34 +114,6 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
     public function setFileOrFolderName($val)
     {
         $this->_propDict["fileOrFolderName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the check32BitOn64System
-    * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
-    *
-    * @return bool The check32BitOn64System
-    */
-    public function getCheck32BitOn64System()
-    {
-        if (array_key_exists("check32BitOn64System", $this->_propDict)) {
-            return $this->_propDict["check32BitOn64System"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the check32BitOn64System
-    * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
-    *
-    * @param bool $val The value of the check32BitOn64System
-    *
-    * @return Win32LobAppFileSystemRule
-    */
-    public function setCheck32BitOn64System($val)
-    {
-        $this->_propDict["check32BitOn64System"] = $val;
         return $this;
     }
 
@@ -183,31 +183,31 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
          return $this;
     }
     /**
-    * Gets the comparisonValue
-    * The file or folder comparison value.
+    * Gets the path
+    * The file or folder path to look up.
     *
-    * @return string The comparisonValue
+    * @return string The path
     */
-    public function getComparisonValue()
+    public function getPath()
     {
-        if (array_key_exists("comparisonValue", $this->_propDict)) {
-            return $this->_propDict["comparisonValue"];
+        if (array_key_exists("path", $this->_propDict)) {
+            return $this->_propDict["path"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the comparisonValue
-    * The file or folder comparison value.
+    * Sets the path
+    * The file or folder path to look up.
     *
-    * @param string $val The value of the comparisonValue
+    * @param string $val The value of the path
     *
     * @return Win32LobAppFileSystemRule
     */
-    public function setComparisonValue($val)
+    public function setPath($val)
     {
-        $this->_propDict["comparisonValue"] = $val;
+        $this->_propDict["path"] = $val;
         return $this;
     }
 }

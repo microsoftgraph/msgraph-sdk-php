@@ -52,6 +52,33 @@ class OnPremisesAgentGroup extends Entity
     }
     
     /**
+    * Gets the isDefault
+    *
+    * @return bool The isDefault
+    */
+    public function getIsDefault()
+    {
+        if (array_key_exists("isDefault", $this->_propDict)) {
+            return $this->_propDict["isDefault"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDefault
+    *
+    * @param bool $val The isDefault
+    *
+    * @return OnPremisesAgentGroup
+    */
+    public function setIsDefault($val)
+    {
+        $this->_propDict["isDefault"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the publishingType
     *
     * @return OnPremisesPublishingType The publishingType
@@ -79,33 +106,6 @@ class OnPremisesAgentGroup extends Entity
     public function setPublishingType($val)
     {
         $this->_propDict["publishingType"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isDefault
-    *
-    * @return bool The isDefault
-    */
-    public function getIsDefault()
-    {
-        if (array_key_exists("isDefault", $this->_propDict)) {
-            return $this->_propDict["isDefault"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDefault
-    *
-    * @param bool $val The isDefault
-    *
-    * @return OnPremisesAgentGroup
-    */
-    public function setIsDefault($val)
-    {
-        $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
     

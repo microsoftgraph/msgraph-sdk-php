@@ -25,137 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class PrivilegedOperationEvent extends Entity
 {
     /**
-    * Gets the userId
+    * Gets the additionalInformation
     *
-    * @return string The userId
+    * @return string The additionalInformation
     */
-    public function getUserId()
+    public function getAdditionalInformation()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("additionalInformation", $this->_propDict)) {
+            return $this->_propDict["additionalInformation"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userId
+    * Sets the additionalInformation
     *
-    * @param string $val The userId
+    * @param string $val The additionalInformation
     *
     * @return PrivilegedOperationEvent
     */
-    public function setUserId($val)
+    public function setAdditionalInformation($val)
     {
-        $this->_propDict["userId"] = $val;
+        $this->_propDict["additionalInformation"] = $val;
         return $this;
     }
     
     /**
-    * Gets the userName
+    * Gets the creationDateTime
     *
-    * @return string The userName
+    * @return \DateTime The creationDateTime
     */
-    public function getUserName()
+    public function getCreationDateTime()
     {
-        if (array_key_exists("userName", $this->_propDict)) {
-            return $this->_propDict["userName"];
-        } else {
-            return null;
+        if (array_key_exists("creationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
+                return $this->_propDict["creationDateTime"];
+            } else {
+                $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
+                return $this->_propDict["creationDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the userName
+    * Sets the creationDateTime
     *
-    * @param string $val The userName
+    * @param \DateTime $val The creationDateTime
     *
     * @return PrivilegedOperationEvent
     */
-    public function setUserName($val)
+    public function setCreationDateTime($val)
     {
-        $this->_propDict["userName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userMail
-    *
-    * @return string The userMail
-    */
-    public function getUserMail()
-    {
-        if (array_key_exists("userMail", $this->_propDict)) {
-            return $this->_propDict["userMail"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userMail
-    *
-    * @param string $val The userMail
-    *
-    * @return PrivilegedOperationEvent
-    */
-    public function setUserMail($val)
-    {
-        $this->_propDict["userMail"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleId
-    *
-    * @return string The roleId
-    */
-    public function getRoleId()
-    {
-        if (array_key_exists("roleId", $this->_propDict)) {
-            return $this->_propDict["roleId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleId
-    *
-    * @param string $val The roleId
-    *
-    * @return PrivilegedOperationEvent
-    */
-    public function setRoleId($val)
-    {
-        $this->_propDict["roleId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the roleName
-    *
-    * @return string The roleName
-    */
-    public function getRoleName()
-    {
-        if (array_key_exists("roleName", $this->_propDict)) {
-            return $this->_propDict["roleName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleName
-    *
-    * @param string $val The roleName
-    *
-    * @return PrivilegedOperationEvent
-    */
-    public function setRoleName($val)
-    {
-        $this->_propDict["roleName"] = $val;
+        $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
     
@@ -191,33 +114,56 @@ class PrivilegedOperationEvent extends Entity
     }
     
     /**
-    * Gets the creationDateTime
+    * Gets the referenceKey
     *
-    * @return \DateTime The creationDateTime
+    * @return string The referenceKey
     */
-    public function getCreationDateTime()
+    public function getReferenceKey()
     {
-        if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
-                return $this->_propDict["creationDateTime"];
-            } else {
-                $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
-                return $this->_propDict["creationDateTime"];
-            }
+        if (array_key_exists("referenceKey", $this->_propDict)) {
+            return $this->_propDict["referenceKey"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the creationDateTime
+    * Sets the referenceKey
     *
-    * @param \DateTime $val The creationDateTime
+    * @param string $val The referenceKey
     *
     * @return PrivilegedOperationEvent
     */
-    public function setCreationDateTime($val)
+    public function setReferenceKey($val)
     {
-        $this->_propDict["creationDateTime"] = $val;
+        $this->_propDict["referenceKey"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the referenceSystem
+    *
+    * @return string The referenceSystem
+    */
+    public function getReferenceSystem()
+    {
+        if (array_key_exists("referenceSystem", $this->_propDict)) {
+            return $this->_propDict["referenceSystem"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the referenceSystem
+    *
+    * @param string $val The referenceSystem
+    *
+    * @return PrivilegedOperationEvent
+    */
+    public function setReferenceSystem($val)
+    {
+        $this->_propDict["referenceSystem"] = $val;
         return $this;
     }
     
@@ -276,33 +222,6 @@ class PrivilegedOperationEvent extends Entity
     }
     
     /**
-    * Gets the tenantId
-    *
-    * @return string The tenantId
-    */
-    public function getTenantId()
-    {
-        if (array_key_exists("tenantId", $this->_propDict)) {
-            return $this->_propDict["tenantId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tenantId
-    *
-    * @param string $val The tenantId
-    *
-    * @return PrivilegedOperationEvent
-    */
-    public function setTenantId($val)
-    {
-        $this->_propDict["tenantId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the requestType
     *
     * @return string The requestType
@@ -330,83 +249,164 @@ class PrivilegedOperationEvent extends Entity
     }
     
     /**
-    * Gets the additionalInformation
+    * Gets the roleId
     *
-    * @return string The additionalInformation
+    * @return string The roleId
     */
-    public function getAdditionalInformation()
+    public function getRoleId()
     {
-        if (array_key_exists("additionalInformation", $this->_propDict)) {
-            return $this->_propDict["additionalInformation"];
+        if (array_key_exists("roleId", $this->_propDict)) {
+            return $this->_propDict["roleId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the additionalInformation
+    * Sets the roleId
     *
-    * @param string $val The additionalInformation
+    * @param string $val The roleId
     *
     * @return PrivilegedOperationEvent
     */
-    public function setAdditionalInformation($val)
+    public function setRoleId($val)
     {
-        $this->_propDict["additionalInformation"] = $val;
+        $this->_propDict["roleId"] = $val;
         return $this;
     }
     
     /**
-    * Gets the referenceKey
+    * Gets the roleName
     *
-    * @return string The referenceKey
+    * @return string The roleName
     */
-    public function getReferenceKey()
+    public function getRoleName()
     {
-        if (array_key_exists("referenceKey", $this->_propDict)) {
-            return $this->_propDict["referenceKey"];
+        if (array_key_exists("roleName", $this->_propDict)) {
+            return $this->_propDict["roleName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the referenceKey
+    * Sets the roleName
     *
-    * @param string $val The referenceKey
+    * @param string $val The roleName
     *
     * @return PrivilegedOperationEvent
     */
-    public function setReferenceKey($val)
+    public function setRoleName($val)
     {
-        $this->_propDict["referenceKey"] = $val;
+        $this->_propDict["roleName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the referenceSystem
+    * Gets the tenantId
     *
-    * @return string The referenceSystem
+    * @return string The tenantId
     */
-    public function getReferenceSystem()
+    public function getTenantId()
     {
-        if (array_key_exists("referenceSystem", $this->_propDict)) {
-            return $this->_propDict["referenceSystem"];
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the referenceSystem
+    * Sets the tenantId
     *
-    * @param string $val The referenceSystem
+    * @param string $val The tenantId
     *
     * @return PrivilegedOperationEvent
     */
-    public function setReferenceSystem($val)
+    public function setTenantId($val)
     {
-        $this->_propDict["referenceSystem"] = $val;
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userId
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userId
+    *
+    * @param string $val The userId
+    *
+    * @return PrivilegedOperationEvent
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userMail
+    *
+    * @return string The userMail
+    */
+    public function getUserMail()
+    {
+        if (array_key_exists("userMail", $this->_propDict)) {
+            return $this->_propDict["userMail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userMail
+    *
+    * @param string $val The userMail
+    *
+    * @return PrivilegedOperationEvent
+    */
+    public function setUserMail($val)
+    {
+        $this->_propDict["userMail"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userName
+    *
+    * @return string The userName
+    */
+    public function getUserName()
+    {
+        if (array_key_exists("userName", $this->_propDict)) {
+            return $this->_propDict["userName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userName
+    *
+    * @param string $val The userName
+    *
+    * @return PrivilegedOperationEvent
+    */
+    public function setUserName($val)
+    {
+        $this->_propDict["userName"] = $val;
         return $this;
     }
     

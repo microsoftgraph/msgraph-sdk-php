@@ -25,31 +25,31 @@ namespace Microsoft\Graph\Model;
 class CalendarGroup extends Entity
 {
     /**
-    * Gets the name
-    * The group name.
+    * Gets the changeKey
+    * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
-    * @return string The name
+    * @return string The changeKey
     */
-    public function getName()
+    public function getChangeKey()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
+        if (array_key_exists("changeKey", $this->_propDict)) {
+            return $this->_propDict["changeKey"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the name
-    * The group name.
+    * Sets the changeKey
+    * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
-    * @param string $val The name
+    * @param string $val The changeKey
     *
     * @return CalendarGroup
     */
-    public function setName($val)
+    public function setChangeKey($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["changeKey"] = $val;
         return $this;
     }
     
@@ -83,31 +83,31 @@ class CalendarGroup extends Entity
     }
     
     /**
-    * Gets the changeKey
-    * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+    * Gets the name
+    * The group name.
     *
-    * @return string The changeKey
+    * @return string The name
     */
-    public function getChangeKey()
+    public function getName()
     {
-        if (array_key_exists("changeKey", $this->_propDict)) {
-            return $this->_propDict["changeKey"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the changeKey
-    * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+    * Sets the name
+    * The group name.
     *
-    * @param string $val The changeKey
+    * @param string $val The name
     *
     * @return CalendarGroup
     */
-    public function setChangeKey($val)
+    public function setName($val)
     {
-        $this->_propDict["changeKey"] = $val;
+        $this->_propDict["name"] = $val;
         return $this;
     }
     

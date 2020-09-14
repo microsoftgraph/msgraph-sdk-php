@@ -25,122 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class RestrictedAppsViolation extends Entity
 {
     /**
-    * Gets the userId
-    * User unique identifier, must be Guid
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userId
-    * User unique identifier, must be Guid
-    *
-    * @param string $val The userId
-    *
-    * @return RestrictedAppsViolation
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userName
-    * User name
-    *
-    * @return string The userName
-    */
-    public function getUserName()
-    {
-        if (array_key_exists("userName", $this->_propDict)) {
-            return $this->_propDict["userName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userName
-    * User name
-    *
-    * @param string $val The userName
-    *
-    * @return RestrictedAppsViolation
-    */
-    public function setUserName($val)
-    {
-        $this->_propDict["userName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the managedDeviceId
-    * Managed device unique identifier, must be Guid
-    *
-    * @return string The managedDeviceId
-    */
-    public function getManagedDeviceId()
-    {
-        if (array_key_exists("managedDeviceId", $this->_propDict)) {
-            return $this->_propDict["managedDeviceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceId
-    * Managed device unique identifier, must be Guid
-    *
-    * @param string $val The managedDeviceId
-    *
-    * @return RestrictedAppsViolation
-    */
-    public function setManagedDeviceId($val)
-    {
-        $this->_propDict["managedDeviceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceName
-    * Device name
-    *
-    * @return string The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceName
-    * Device name
-    *
-    * @param string $val The deviceName
-    *
-    * @return RestrictedAppsViolation
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceConfigurationId
     * Device configuration profile unique identifier, must be Guid
     *
@@ -199,6 +83,64 @@ class RestrictedAppsViolation extends Entity
     }
     
     /**
+    * Gets the deviceName
+    * Device name
+    *
+    * @return string The deviceName
+    */
+    public function getDeviceName()
+    {
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceName
+    * Device name
+    *
+    * @param string $val The deviceName
+    *
+    * @return RestrictedAppsViolation
+    */
+    public function setDeviceName($val)
+    {
+        $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceId
+    * Managed device unique identifier, must be Guid
+    *
+    * @return string The managedDeviceId
+    */
+    public function getManagedDeviceId()
+    {
+        if (array_key_exists("managedDeviceId", $this->_propDict)) {
+            return $this->_propDict["managedDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedDeviceId
+    * Managed device unique identifier, must be Guid
+    *
+    * @param string $val The managedDeviceId
+    *
+    * @return RestrictedAppsViolation
+    */
+    public function setManagedDeviceId($val)
+    {
+        $this->_propDict["managedDeviceId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the platformType
     * Platform type
     *
@@ -228,6 +170,36 @@ class RestrictedAppsViolation extends Entity
     public function setPlatformType($val)
     {
         $this->_propDict["platformType"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the restrictedApps
+    * List of violated restricted apps
+     *
+     * @return array The restrictedApps
+     */
+    public function getRestrictedApps()
+    {
+        if (array_key_exists("restrictedApps", $this->_propDict)) {
+           return $this->_propDict["restrictedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the restrictedApps
+    * List of violated restricted apps
+    *
+    * @param ManagedDeviceReportedApp $val The restrictedApps
+    *
+    * @return RestrictedAppsViolation
+    */
+    public function setRestrictedApps($val)
+    {
+		$this->_propDict["restrictedApps"] = $val;
         return $this;
     }
     
@@ -264,33 +236,61 @@ class RestrictedAppsViolation extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the restrictedApps
-    * List of violated restricted apps
-     *
-     * @return array The restrictedApps
-     */
-    public function getRestrictedApps()
+    /**
+    * Gets the userId
+    * User unique identifier, must be Guid
+    *
+    * @return string The userId
+    */
+    public function getUserId()
     {
-        if (array_key_exists("restrictedApps", $this->_propDict)) {
-           return $this->_propDict["restrictedApps"];
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the restrictedApps
-    * List of violated restricted apps
+    /**
+    * Sets the userId
+    * User unique identifier, must be Guid
     *
-    * @param ManagedDeviceReportedApp $val The restrictedApps
+    * @param string $val The userId
     *
     * @return RestrictedAppsViolation
     */
-    public function setRestrictedApps($val)
+    public function setUserId($val)
     {
-		$this->_propDict["restrictedApps"] = $val;
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userName
+    * User name
+    *
+    * @return string The userName
+    */
+    public function getUserName()
+    {
+        if (array_key_exists("userName", $this->_propDict)) {
+            return $this->_propDict["userName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userName
+    * User name
+    *
+    * @param string $val The userName
+    *
+    * @return RestrictedAppsViolation
+    */
+    public function setUserName($val)
+    {
+        $this->_propDict["userName"] = $val;
         return $this;
     }
     

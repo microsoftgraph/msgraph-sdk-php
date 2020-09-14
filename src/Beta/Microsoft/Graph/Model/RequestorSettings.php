@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class RequestorSettings extends Entity
 {
     /**
-    * Gets the scopeType
-    *
-    * @return string The scopeType
-    */
-    public function getScopeType()
-    {
-        if (array_key_exists("scopeType", $this->_propDict)) {
-            return $this->_propDict["scopeType"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the scopeType
-    *
-    * @param string $val The value of the scopeType
-    *
-    * @return RequestorSettings
-    */
-    public function setScopeType($val)
-    {
-        $this->_propDict["scopeType"] = $val;
-        return $this;
-    }
-    /**
     * Gets the acceptRequests
     *
     * @return bool The acceptRequests
@@ -105,5 +79,31 @@ class RequestorSettings extends Entity
     {
         $this->_propDict["allowedRequestors"] = $val;
          return $this;
+    }
+    /**
+    * Gets the scopeType
+    *
+    * @return string The scopeType
+    */
+    public function getScopeType()
+    {
+        if (array_key_exists("scopeType", $this->_propDict)) {
+            return $this->_propDict["scopeType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the scopeType
+    *
+    * @param string $val The value of the scopeType
+    *
+    * @return RequestorSettings
+    */
+    public function setScopeType($val)
+    {
+        $this->_propDict["scopeType"] = $val;
+        return $this;
     }
 }

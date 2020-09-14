@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsEnrollmentStatusScreenSettings extends Entity
 {
     /**
-    * Gets the hideInstallationProgress
-    * Show or hide installation progress to user
-    *
-    * @return bool The hideInstallationProgress
-    */
-    public function getHideInstallationProgress()
-    {
-        if (array_key_exists("hideInstallationProgress", $this->_propDict)) {
-            return $this->_propDict["hideInstallationProgress"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the hideInstallationProgress
-    * Show or hide installation progress to user
-    *
-    * @param bool $val The value of the hideInstallationProgress
-    *
-    * @return WindowsEnrollmentStatusScreenSettings
-    */
-    public function setHideInstallationProgress($val)
-    {
-        $this->_propDict["hideInstallationProgress"] = $val;
-        return $this;
-    }
-    /**
     * Gets the allowDeviceUseBeforeProfileAndAppInstallComplete
     * Allow or block user to use device before profile and app installation complete
     *
@@ -80,31 +52,31 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
         return $this;
     }
     /**
-    * Gets the blockDeviceSetupRetryByUser
-    * Allow the user to retry the setup on installation failure
+    * Gets the allowDeviceUseOnInstallFailure
+    * Allow the user to continue using the device on installation failure
     *
-    * @return bool The blockDeviceSetupRetryByUser
+    * @return bool The allowDeviceUseOnInstallFailure
     */
-    public function getBlockDeviceSetupRetryByUser()
+    public function getAllowDeviceUseOnInstallFailure()
     {
-        if (array_key_exists("blockDeviceSetupRetryByUser", $this->_propDict)) {
-            return $this->_propDict["blockDeviceSetupRetryByUser"];
+        if (array_key_exists("allowDeviceUseOnInstallFailure", $this->_propDict)) {
+            return $this->_propDict["allowDeviceUseOnInstallFailure"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the blockDeviceSetupRetryByUser
-    * Allow the user to retry the setup on installation failure
+    * Sets the allowDeviceUseOnInstallFailure
+    * Allow the user to continue using the device on installation failure
     *
-    * @param bool $val The value of the blockDeviceSetupRetryByUser
+    * @param bool $val The value of the allowDeviceUseOnInstallFailure
     *
     * @return WindowsEnrollmentStatusScreenSettings
     */
-    public function setBlockDeviceSetupRetryByUser($val)
+    public function setAllowDeviceUseOnInstallFailure($val)
     {
-        $this->_propDict["blockDeviceSetupRetryByUser"] = $val;
+        $this->_propDict["allowDeviceUseOnInstallFailure"] = $val;
         return $this;
     }
     /**
@@ -136,6 +108,34 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
         return $this;
     }
     /**
+    * Gets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
+    *
+    * @return bool The blockDeviceSetupRetryByUser
+    */
+    public function getBlockDeviceSetupRetryByUser()
+    {
+        if (array_key_exists("blockDeviceSetupRetryByUser", $this->_propDict)) {
+            return $this->_propDict["blockDeviceSetupRetryByUser"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the blockDeviceSetupRetryByUser
+    * Allow the user to retry the setup on installation failure
+    *
+    * @param bool $val The value of the blockDeviceSetupRetryByUser
+    *
+    * @return WindowsEnrollmentStatusScreenSettings
+    */
+    public function setBlockDeviceSetupRetryByUser($val)
+    {
+        $this->_propDict["blockDeviceSetupRetryByUser"] = $val;
+        return $this;
+    }
+    /**
     * Gets the customErrorMessage
     * Set custom error message to show upon installation failure
     *
@@ -164,6 +164,34 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
         return $this;
     }
     /**
+    * Gets the hideInstallationProgress
+    * Show or hide installation progress to user
+    *
+    * @return bool The hideInstallationProgress
+    */
+    public function getHideInstallationProgress()
+    {
+        if (array_key_exists("hideInstallationProgress", $this->_propDict)) {
+            return $this->_propDict["hideInstallationProgress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hideInstallationProgress
+    * Show or hide installation progress to user
+    *
+    * @param bool $val The value of the hideInstallationProgress
+    *
+    * @return WindowsEnrollmentStatusScreenSettings
+    */
+    public function setHideInstallationProgress($val)
+    {
+        $this->_propDict["hideInstallationProgress"] = $val;
+        return $this;
+    }
+    /**
     * Gets the installProgressTimeoutInMinutes
     * Set installation progress timeout in minutes
     *
@@ -189,34 +217,6 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     public function setInstallProgressTimeoutInMinutes($val)
     {
         $this->_propDict["installProgressTimeoutInMinutes"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the allowDeviceUseOnInstallFailure
-    * Allow the user to continue using the device on installation failure
-    *
-    * @return bool The allowDeviceUseOnInstallFailure
-    */
-    public function getAllowDeviceUseOnInstallFailure()
-    {
-        if (array_key_exists("allowDeviceUseOnInstallFailure", $this->_propDict)) {
-            return $this->_propDict["allowDeviceUseOnInstallFailure"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowDeviceUseOnInstallFailure
-    * Allow the user to continue using the device on installation failure
-    *
-    * @param bool $val The value of the allowDeviceUseOnInstallFailure
-    *
-    * @return WindowsEnrollmentStatusScreenSettings
-    */
-    public function setAllowDeviceUseOnInstallFailure($val)
-    {
-        $this->_propDict["allowDeviceUseOnInstallFailure"] = $val;
         return $this;
     }
 }

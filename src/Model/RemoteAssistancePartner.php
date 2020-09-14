@@ -54,31 +54,35 @@ class RemoteAssistancePartner extends Entity
     }
     
     /**
-    * Gets the onboardingUrl
-    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+    * Gets the lastConnectionDateTime
+    * Timestamp of the last request sent to Intune by the TEM partner.
     *
-    * @return string The onboardingUrl
+    * @return \DateTime The lastConnectionDateTime
     */
-    public function getOnboardingUrl()
+    public function getLastConnectionDateTime()
     {
-        if (array_key_exists("onboardingUrl", $this->_propDict)) {
-            return $this->_propDict["onboardingUrl"];
-        } else {
-            return null;
+        if (array_key_exists("lastConnectionDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastConnectionDateTime"], "\DateTime")) {
+                return $this->_propDict["lastConnectionDateTime"];
+            } else {
+                $this->_propDict["lastConnectionDateTime"] = new \DateTime($this->_propDict["lastConnectionDateTime"]);
+                return $this->_propDict["lastConnectionDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the onboardingUrl
-    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+    * Sets the lastConnectionDateTime
+    * Timestamp of the last request sent to Intune by the TEM partner.
     *
-    * @param string $val The onboardingUrl
+    * @param \DateTime $val The lastConnectionDateTime
     *
     * @return RemoteAssistancePartner
     */
-    public function setOnboardingUrl($val)
+    public function setLastConnectionDateTime($val)
     {
-        $this->_propDict["onboardingUrl"] = $val;
+        $this->_propDict["lastConnectionDateTime"] = $val;
         return $this;
     }
     
@@ -116,35 +120,31 @@ class RemoteAssistancePartner extends Entity
     }
     
     /**
-    * Gets the lastConnectionDateTime
-    * Timestamp of the last request sent to Intune by the TEM partner.
+    * Gets the onboardingUrl
+    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
     *
-    * @return \DateTime The lastConnectionDateTime
+    * @return string The onboardingUrl
     */
-    public function getLastConnectionDateTime()
+    public function getOnboardingUrl()
     {
-        if (array_key_exists("lastConnectionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastConnectionDateTime"], "\DateTime")) {
-                return $this->_propDict["lastConnectionDateTime"];
-            } else {
-                $this->_propDict["lastConnectionDateTime"] = new \DateTime($this->_propDict["lastConnectionDateTime"]);
-                return $this->_propDict["lastConnectionDateTime"];
-            }
+        if (array_key_exists("onboardingUrl", $this->_propDict)) {
+            return $this->_propDict["onboardingUrl"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastConnectionDateTime
-    * Timestamp of the last request sent to Intune by the TEM partner.
+    * Sets the onboardingUrl
+    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
     *
-    * @param \DateTime $val The lastConnectionDateTime
+    * @param string $val The onboardingUrl
     *
     * @return RemoteAssistancePartner
     */
-    public function setLastConnectionDateTime($val)
+    public function setOnboardingUrl($val)
     {
-        $this->_propDict["lastConnectionDateTime"] = $val;
+        $this->_propDict["onboardingUrl"] = $val;
         return $this;
     }
     

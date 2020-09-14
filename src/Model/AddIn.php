@@ -49,32 +49,6 @@ class AddIn extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param string $val The value of the type
-    *
-    * @return AddIn
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the addInProperties
@@ -105,5 +79,31 @@ class AddIn extends Entity
     {
         $this->_propDict["properties"] = $val;
          return $this;
+    }
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param string $val The value of the type
+    *
+    * @return AddIn
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
     }
 }

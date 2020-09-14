@@ -25,122 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class ImportedAppleDeviceIdentity extends Entity
 {
     /**
-    * Gets the serialNumber
-    * Device serial number
+    * Gets the createdDateTime
+    * Created Date Time of the device
     *
-    * @return string The serialNumber
+    * @return \DateTime The createdDateTime
     */
-    public function getSerialNumber()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("serialNumber", $this->_propDict)) {
-            return $this->_propDict["serialNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the serialNumber
-    * Device serial number
-    *
-    * @param string $val The serialNumber
-    *
-    * @return ImportedAppleDeviceIdentity
-    */
-    public function setSerialNumber($val)
-    {
-        $this->_propDict["serialNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the requestedEnrollmentProfileId
-    * Enrollment profile Id admin intends to apply to the device during next enrollment
-    *
-    * @return string The requestedEnrollmentProfileId
-    */
-    public function getRequestedEnrollmentProfileId()
-    {
-        if (array_key_exists("requestedEnrollmentProfileId", $this->_propDict)) {
-            return $this->_propDict["requestedEnrollmentProfileId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the requestedEnrollmentProfileId
-    * Enrollment profile Id admin intends to apply to the device during next enrollment
-    *
-    * @param string $val The requestedEnrollmentProfileId
-    *
-    * @return ImportedAppleDeviceIdentity
-    */
-    public function setRequestedEnrollmentProfileId($val)
-    {
-        $this->_propDict["requestedEnrollmentProfileId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the requestedEnrollmentProfileAssignmentDateTime
-    * The time enrollment profile was assigned to the device
-    *
-    * @return \DateTime The requestedEnrollmentProfileAssignmentDateTime
-    */
-    public function getRequestedEnrollmentProfileAssignmentDateTime()
-    {
-        if (array_key_exists("requestedEnrollmentProfileAssignmentDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestedEnrollmentProfileAssignmentDateTime"], "\DateTime")) {
-                return $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"];
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
             } else {
-                $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"] = new \DateTime($this->_propDict["requestedEnrollmentProfileAssignmentDateTime"]);
-                return $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"];
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the requestedEnrollmentProfileAssignmentDateTime
-    * The time enrollment profile was assigned to the device
+    * Sets the createdDateTime
+    * Created Date Time of the device
     *
-    * @param \DateTime $val The requestedEnrollmentProfileAssignmentDateTime
+    * @param \DateTime $val The createdDateTime
     *
     * @return ImportedAppleDeviceIdentity
     */
-    public function setRequestedEnrollmentProfileAssignmentDateTime($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the isSupervised
-    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
+    * Gets the description
+    * The description of the device
     *
-    * @return bool The isSupervised
+    * @return string The description
     */
-    public function getIsSupervised()
+    public function getDescription()
     {
-        if (array_key_exists("isSupervised", $this->_propDict)) {
-            return $this->_propDict["isSupervised"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isSupervised
-    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
+    * Sets the description
+    * The description of the device
     *
-    * @param bool $val The isSupervised
+    * @param string $val The description
     *
     * @return ImportedAppleDeviceIdentity
     */
-    public function setIsSupervised($val)
+    public function setDescription($val)
     {
-        $this->_propDict["isSupervised"] = boolval($val);
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -178,6 +120,39 @@ class ImportedAppleDeviceIdentity extends Entity
     }
     
     /**
+    * Gets the enrollmentState
+    * The state of the device in Intune
+    *
+    * @return EnrollmentState The enrollmentState
+    */
+    public function getEnrollmentState()
+    {
+        if (array_key_exists("enrollmentState", $this->_propDict)) {
+            if (is_a($this->_propDict["enrollmentState"], "Beta\Microsoft\Graph\Model\EnrollmentState")) {
+                return $this->_propDict["enrollmentState"];
+            } else {
+                $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
+                return $this->_propDict["enrollmentState"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the enrollmentState
+    * The state of the device in Intune
+    *
+    * @param EnrollmentState $val The enrollmentState
+    *
+    * @return ImportedAppleDeviceIdentity
+    */
+    public function setEnrollmentState($val)
+    {
+        $this->_propDict["enrollmentState"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isDeleted
     * Indicates if the device is deleted from Apple Business Manager
     *
@@ -207,35 +182,31 @@ class ImportedAppleDeviceIdentity extends Entity
     }
     
     /**
-    * Gets the createdDateTime
-    * Created Date Time of the device
+    * Gets the isSupervised
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
     *
-    * @return \DateTime The createdDateTime
+    * @return bool The isSupervised
     */
-    public function getCreatedDateTime()
+    public function getIsSupervised()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("isSupervised", $this->_propDict)) {
+            return $this->_propDict["isSupervised"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
-    * Created Date Time of the device
+    * Sets the isSupervised
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
     *
-    * @param \DateTime $val The createdDateTime
+    * @param bool $val The isSupervised
     *
     * @return ImportedAppleDeviceIdentity
     */
-    public function setCreatedDateTime($val)
+    public function setIsSupervised($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["isSupervised"] = boolval($val);
         return $this;
     }
     
@@ -273,68 +244,6 @@ class ImportedAppleDeviceIdentity extends Entity
     }
     
     /**
-    * Gets the description
-    * The description of the device
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * The description of the device
-    *
-    * @param string $val The description
-    *
-    * @return ImportedAppleDeviceIdentity
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the enrollmentState
-    * The state of the device in Intune
-    *
-    * @return EnrollmentState The enrollmentState
-    */
-    public function getEnrollmentState()
-    {
-        if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Beta\Microsoft\Graph\Model\EnrollmentState")) {
-                return $this->_propDict["enrollmentState"];
-            } else {
-                $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
-                return $this->_propDict["enrollmentState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the enrollmentState
-    * The state of the device in Intune
-    *
-    * @param EnrollmentState $val The enrollmentState
-    *
-    * @return ImportedAppleDeviceIdentity
-    */
-    public function setEnrollmentState($val)
-    {
-        $this->_propDict["enrollmentState"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the platform
     * The platform of the Device.
     *
@@ -364,6 +273,97 @@ class ImportedAppleDeviceIdentity extends Entity
     public function setPlatform($val)
     {
         $this->_propDict["platform"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the requestedEnrollmentProfileAssignmentDateTime
+    * The time enrollment profile was assigned to the device
+    *
+    * @return \DateTime The requestedEnrollmentProfileAssignmentDateTime
+    */
+    public function getRequestedEnrollmentProfileAssignmentDateTime()
+    {
+        if (array_key_exists("requestedEnrollmentProfileAssignmentDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["requestedEnrollmentProfileAssignmentDateTime"], "\DateTime")) {
+                return $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"];
+            } else {
+                $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"] = new \DateTime($this->_propDict["requestedEnrollmentProfileAssignmentDateTime"]);
+                return $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the requestedEnrollmentProfileAssignmentDateTime
+    * The time enrollment profile was assigned to the device
+    *
+    * @param \DateTime $val The requestedEnrollmentProfileAssignmentDateTime
+    *
+    * @return ImportedAppleDeviceIdentity
+    */
+    public function setRequestedEnrollmentProfileAssignmentDateTime($val)
+    {
+        $this->_propDict["requestedEnrollmentProfileAssignmentDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the requestedEnrollmentProfileId
+    * Enrollment profile Id admin intends to apply to the device during next enrollment
+    *
+    * @return string The requestedEnrollmentProfileId
+    */
+    public function getRequestedEnrollmentProfileId()
+    {
+        if (array_key_exists("requestedEnrollmentProfileId", $this->_propDict)) {
+            return $this->_propDict["requestedEnrollmentProfileId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the requestedEnrollmentProfileId
+    * Enrollment profile Id admin intends to apply to the device during next enrollment
+    *
+    * @param string $val The requestedEnrollmentProfileId
+    *
+    * @return ImportedAppleDeviceIdentity
+    */
+    public function setRequestedEnrollmentProfileId($val)
+    {
+        $this->_propDict["requestedEnrollmentProfileId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the serialNumber
+    * Device serial number
+    *
+    * @return string The serialNumber
+    */
+    public function getSerialNumber()
+    {
+        if (array_key_exists("serialNumber", $this->_propDict)) {
+            return $this->_propDict["serialNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the serialNumber
+    * Device serial number
+    *
+    * @param string $val The serialNumber
+    *
+    * @return ImportedAppleDeviceIdentity
+    */
+    public function setSerialNumber($val)
+    {
+        $this->_propDict["serialNumber"] = $val;
         return $this;
     }
     

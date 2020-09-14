@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfiguration
 {
     /**
-    * Gets the eapType
-    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
-    *
-    * @return AndroidEapType The eapType
-    */
-    public function getEapType()
-    {
-        if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\AndroidEapType")) {
-                return $this->_propDict["eapType"];
-            } else {
-                $this->_propDict["eapType"] = new AndroidEapType($this->_propDict["eapType"]);
-                return $this->_propDict["eapType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the eapType
-    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
-    *
-    * @param AndroidEapType $val The eapType
-    *
-    * @return AndroidForWorkEnterpriseWiFiConfiguration
-    */
-    public function setEapType($val)
-    {
-        $this->_propDict["eapType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the authenticationMethod
     * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
     *
@@ -87,6 +54,39 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     public function setAuthenticationMethod($val)
     {
         $this->_propDict["authenticationMethod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the eapType
+    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    *
+    * @return AndroidEapType The eapType
+    */
+    public function getEapType()
+    {
+        if (array_key_exists("eapType", $this->_propDict)) {
+            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\AndroidEapType")) {
+                return $this->_propDict["eapType"];
+            } else {
+                $this->_propDict["eapType"] = new AndroidEapType($this->_propDict["eapType"]);
+                return $this->_propDict["eapType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the eapType
+    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    *
+    * @param AndroidEapType $val The eapType
+    *
+    * @return AndroidForWorkEnterpriseWiFiConfiguration
+    */
+    public function setEapType($val)
+    {
+        $this->_propDict["eapType"] = $val;
         return $this;
     }
     
@@ -186,39 +186,6 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     }
     
     /**
-    * Gets the rootCertificateForServerValidation
-    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
-    *
-    * @return AndroidForWorkTrustedRootCertificate The rootCertificateForServerValidation
-    */
-    public function getRootCertificateForServerValidation()
-    {
-        if (array_key_exists("rootCertificateForServerValidation", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificateForServerValidation"], "Beta\Microsoft\Graph\Model\AndroidForWorkTrustedRootCertificate")) {
-                return $this->_propDict["rootCertificateForServerValidation"];
-            } else {
-                $this->_propDict["rootCertificateForServerValidation"] = new AndroidForWorkTrustedRootCertificate($this->_propDict["rootCertificateForServerValidation"]);
-                return $this->_propDict["rootCertificateForServerValidation"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the rootCertificateForServerValidation
-    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
-    *
-    * @param AndroidForWorkTrustedRootCertificate $val The rootCertificateForServerValidation
-    *
-    * @return AndroidForWorkEnterpriseWiFiConfiguration
-    */
-    public function setRootCertificateForServerValidation($val)
-    {
-        $this->_propDict["rootCertificateForServerValidation"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the identityCertificateForClientAuthentication
     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
     *
@@ -248,6 +215,39 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     public function setIdentityCertificateForClientAuthentication($val)
     {
         $this->_propDict["identityCertificateForClientAuthentication"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the rootCertificateForServerValidation
+    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
+    *
+    * @return AndroidForWorkTrustedRootCertificate The rootCertificateForServerValidation
+    */
+    public function getRootCertificateForServerValidation()
+    {
+        if (array_key_exists("rootCertificateForServerValidation", $this->_propDict)) {
+            if (is_a($this->_propDict["rootCertificateForServerValidation"], "Beta\Microsoft\Graph\Model\AndroidForWorkTrustedRootCertificate")) {
+                return $this->_propDict["rootCertificateForServerValidation"];
+            } else {
+                $this->_propDict["rootCertificateForServerValidation"] = new AndroidForWorkTrustedRootCertificate($this->_propDict["rootCertificateForServerValidation"]);
+                return $this->_propDict["rootCertificateForServerValidation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the rootCertificateForServerValidation
+    * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
+    *
+    * @param AndroidForWorkTrustedRootCertificate $val The rootCertificateForServerValidation
+    *
+    * @return AndroidForWorkEnterpriseWiFiConfiguration
+    */
+    public function setRootCertificateForServerValidation($val)
+    {
+        $this->_propDict["rootCertificateForServerValidation"] = $val;
         return $this;
     }
     

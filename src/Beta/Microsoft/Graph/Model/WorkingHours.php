@@ -58,39 +58,6 @@ class WorkingHours extends Entity
     }
 
     /**
-    * Gets the startTime
-    * The time of the day that the user starts working.
-    *
-    * @return TimeOfDay The startTime
-    */
-    public function getStartTime()
-    {
-        if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
-                return $this->_propDict["startTime"];
-            } else {
-                $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);
-                return $this->_propDict["startTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startTime
-    * The time of the day that the user starts working.
-    *
-    * @param TimeOfDay $val The value to assign to the startTime
-    *
-    * @return WorkingHours The WorkingHours
-    */
-    public function setStartTime($val)
-    {
-        $this->_propDict["startTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the endTime
     * The time of the day that the user stops working.
     *
@@ -120,6 +87,39 @@ class WorkingHours extends Entity
     public function setEndTime($val)
     {
         $this->_propDict["endTime"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startTime
+    * The time of the day that the user starts working.
+    *
+    * @return TimeOfDay The startTime
+    */
+    public function getStartTime()
+    {
+        if (array_key_exists("startTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["startTime"];
+            } else {
+                $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);
+                return $this->_propDict["startTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startTime
+    * The time of the day that the user starts working.
+    *
+    * @param TimeOfDay $val The value to assign to the startTime
+    *
+    * @return WorkingHours The WorkingHours
+    */
+    public function setStartTime($val)
+    {
+        $this->_propDict["startTime"] = $val;
          return $this;
     }
 

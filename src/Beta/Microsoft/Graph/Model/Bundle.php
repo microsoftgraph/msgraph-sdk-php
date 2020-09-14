@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class Bundle extends Entity
 {
-    /**
-    * Gets the childCount
-    *
-    * @return int The childCount
-    */
-    public function getChildCount()
-    {
-        if (array_key_exists("childCount", $this->_propDict)) {
-            return $this->_propDict["childCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the childCount
-    *
-    * @param int $val The value of the childCount
-    *
-    * @return Bundle
-    */
-    public function setChildCount($val)
-    {
-        $this->_propDict["childCount"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the album
@@ -79,5 +53,31 @@ class Bundle extends Entity
     {
         $this->_propDict["album"] = $val;
          return $this;
+    }
+    /**
+    * Gets the childCount
+    *
+    * @return int The childCount
+    */
+    public function getChildCount()
+    {
+        if (array_key_exists("childCount", $this->_propDict)) {
+            return $this->_propDict["childCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the childCount
+    *
+    * @param int $val The value of the childCount
+    *
+    * @return Bundle
+    */
+    public function setChildCount($val)
+    {
+        $this->_propDict["childCount"] = $val;
+        return $this;
     }
 }

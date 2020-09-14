@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
 {
     /**
+    * Gets the authenticationMethod
+    * Authentication method.
+    *
+    * @return VpnAuthenticationMethod The authenticationMethod
+    */
+    public function getAuthenticationMethod()
+    {
+        if (array_key_exists("authenticationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
+                return $this->_propDict["authenticationMethod"];
+            } else {
+                $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
+                return $this->_propDict["authenticationMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationMethod
+    * Authentication method.
+    *
+    * @param VpnAuthenticationMethod $val The authenticationMethod
+    *
+    * @return WindowsPhone81VpnConfiguration
+    */
+    public function setAuthenticationMethod($val)
+    {
+        $this->_propDict["authenticationMethod"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the bypassVpnOnCompanyWifi
     * Bypass VPN on company Wi-Fi.
     *
@@ -83,35 +116,31 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     }
     
     /**
-    * Gets the authenticationMethod
-    * Authentication method.
+    * Gets the dnsSuffixSearchList
+    * DNS suffix search list.
     *
-    * @return VpnAuthenticationMethod The authenticationMethod
+    * @return string The dnsSuffixSearchList
     */
-    public function getAuthenticationMethod()
+    public function getDnsSuffixSearchList()
     {
-        if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
-                return $this->_propDict["authenticationMethod"];
-            } else {
-                $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
-                return $this->_propDict["authenticationMethod"];
-            }
+        if (array_key_exists("dnsSuffixSearchList", $this->_propDict)) {
+            return $this->_propDict["dnsSuffixSearchList"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the authenticationMethod
-    * Authentication method.
+    * Sets the dnsSuffixSearchList
+    * DNS suffix search list.
     *
-    * @param VpnAuthenticationMethod $val The authenticationMethod
+    * @param string $val The dnsSuffixSearchList
     *
     * @return WindowsPhone81VpnConfiguration
     */
-    public function setAuthenticationMethod($val)
+    public function setDnsSuffixSearchList($val)
     {
-        $this->_propDict["authenticationMethod"] = $val;
+        $this->_propDict["dnsSuffixSearchList"] = $val;
         return $this;
     }
     
@@ -141,35 +170,6 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     public function setRememberUserCredentials($val)
     {
         $this->_propDict["rememberUserCredentials"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the dnsSuffixSearchList
-    * DNS suffix search list.
-    *
-    * @return string The dnsSuffixSearchList
-    */
-    public function getDnsSuffixSearchList()
-    {
-        if (array_key_exists("dnsSuffixSearchList", $this->_propDict)) {
-            return $this->_propDict["dnsSuffixSearchList"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the dnsSuffixSearchList
-    * DNS suffix search list.
-    *
-    * @param string $val The dnsSuffixSearchList
-    *
-    * @return WindowsPhone81VpnConfiguration
-    */
-    public function setDnsSuffixSearchList($val)
-    {
-        $this->_propDict["dnsSuffixSearchList"] = $val;
         return $this;
     }
     

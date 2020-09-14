@@ -23,89 +23,38 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AndroidForWorkAppConfigurationSchemaItem extends Entity
 {
+
     /**
-    * Gets the schemaItemKey
-    * Unique key the application uses to identify the item
+    * Gets the dataType
+    * The type of value this item describes
     *
-    * @return string The schemaItemKey
+    * @return AndroidForWorkAppConfigurationSchemaItemDataType The dataType
     */
-    public function getSchemaItemKey()
+    public function getDataType()
     {
-        if (array_key_exists("schemaItemKey", $this->_propDict)) {
-            return $this->_propDict["schemaItemKey"];
-        } else {
-            return null;
+        if (array_key_exists("dataType", $this->_propDict)) {
+            if (is_a($this->_propDict["dataType"], "Beta\Microsoft\Graph\Model\AndroidForWorkAppConfigurationSchemaItemDataType")) {
+                return $this->_propDict["dataType"];
+            } else {
+                $this->_propDict["dataType"] = new AndroidForWorkAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
+                return $this->_propDict["dataType"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the schemaItemKey
-    * Unique key the application uses to identify the item
+    * Sets the dataType
+    * The type of value this item describes
     *
-    * @param string $val The value of the schemaItemKey
+    * @param AndroidForWorkAppConfigurationSchemaItemDataType $val The value to assign to the dataType
     *
-    * @return AndroidForWorkAppConfigurationSchemaItem
+    * @return AndroidForWorkAppConfigurationSchemaItem The AndroidForWorkAppConfigurationSchemaItem
     */
-    public function setSchemaItemKey($val)
+    public function setDataType($val)
     {
-        $this->_propDict["schemaItemKey"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the displayName
-    * Human readable name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * Human readable name
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return AndroidForWorkAppConfigurationSchemaItem
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the description
-    * Description of what the item controls within the application
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the description
-    * Description of what the item controls within the application
-    *
-    * @param string $val The value of the description
-    *
-    * @return AndroidForWorkAppConfigurationSchemaItem
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
+        $this->_propDict["dataType"] = $val;
+         return $this;
     }
     /**
     * Gets the defaultBoolValue
@@ -164,6 +113,34 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
         return $this;
     }
     /**
+    * Gets the defaultStringArrayValue
+    * Default value for string array type items, if specified by the app developer
+    *
+    * @return string The defaultStringArrayValue
+    */
+    public function getDefaultStringArrayValue()
+    {
+        if (array_key_exists("defaultStringArrayValue", $this->_propDict)) {
+            return $this->_propDict["defaultStringArrayValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultStringArrayValue
+    * Default value for string array type items, if specified by the app developer
+    *
+    * @param string $val The value of the defaultStringArrayValue
+    *
+    * @return AndroidForWorkAppConfigurationSchemaItem
+    */
+    public function setDefaultStringArrayValue($val)
+    {
+        $this->_propDict["defaultStringArrayValue"] = $val;
+        return $this;
+    }
+    /**
     * Gets the defaultStringValue
     * Default value for string type items, if specified by the app developer
     *
@@ -192,65 +169,88 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
         return $this;
     }
     /**
-    * Gets the defaultStringArrayValue
-    * Default value for string array type items, if specified by the app developer
+    * Gets the description
+    * Description of what the item controls within the application
     *
-    * @return string The defaultStringArrayValue
+    * @return string The description
     */
-    public function getDefaultStringArrayValue()
+    public function getDescription()
     {
-        if (array_key_exists("defaultStringArrayValue", $this->_propDict)) {
-            return $this->_propDict["defaultStringArrayValue"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the defaultStringArrayValue
-    * Default value for string array type items, if specified by the app developer
+    * Sets the description
+    * Description of what the item controls within the application
     *
-    * @param string $val The value of the defaultStringArrayValue
+    * @param string $val The value of the description
     *
     * @return AndroidForWorkAppConfigurationSchemaItem
     */
-    public function setDefaultStringArrayValue($val)
+    public function setDescription($val)
     {
-        $this->_propDict["defaultStringArrayValue"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
-
     /**
-    * Gets the dataType
-    * The type of value this item describes
+    * Gets the displayName
+    * Human readable name
     *
-    * @return AndroidForWorkAppConfigurationSchemaItemDataType The dataType
+    * @return string The displayName
     */
-    public function getDataType()
+    public function getDisplayName()
     {
-        if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "Beta\Microsoft\Graph\Model\AndroidForWorkAppConfigurationSchemaItemDataType")) {
-                return $this->_propDict["dataType"];
-            } else {
-                $this->_propDict["dataType"] = new AndroidForWorkAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
-                return $this->_propDict["dataType"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the dataType
-    * The type of value this item describes
+    * Sets the displayName
+    * Human readable name
     *
-    * @param AndroidForWorkAppConfigurationSchemaItemDataType $val The value to assign to the dataType
+    * @param string $val The value of the displayName
     *
-    * @return AndroidForWorkAppConfigurationSchemaItem The AndroidForWorkAppConfigurationSchemaItem
+    * @return AndroidForWorkAppConfigurationSchemaItem
     */
-    public function setDataType($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["dataType"] = $val;
-         return $this;
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the schemaItemKey
+    * Unique key the application uses to identify the item
+    *
+    * @return string The schemaItemKey
+    */
+    public function getSchemaItemKey()
+    {
+        if (array_key_exists("schemaItemKey", $this->_propDict)) {
+            return $this->_propDict["schemaItemKey"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the schemaItemKey
+    * Unique key the application uses to identify the item
+    *
+    * @param string $val The value of the schemaItemKey
+    *
+    * @return AndroidForWorkAppConfigurationSchemaItem
+    */
+    public function setSchemaItemKey($val)
+    {
+        $this->_propDict["schemaItemKey"] = $val;
+        return $this;
     }
 
     /**

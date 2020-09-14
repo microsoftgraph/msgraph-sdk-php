@@ -24,6 +24,62 @@ namespace Beta\Microsoft\Graph\Model;
 class AppListItem extends Entity
 {
     /**
+    * Gets the appId
+    * The application or bundle identifier of the application
+    *
+    * @return string The appId
+    */
+    public function getAppId()
+    {
+        if (array_key_exists("appId", $this->_propDict)) {
+            return $this->_propDict["appId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appId
+    * The application or bundle identifier of the application
+    *
+    * @param string $val The value of the appId
+    *
+    * @return AppListItem
+    */
+    public function setAppId($val)
+    {
+        $this->_propDict["appId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the appStoreUrl
+    * The Store URL of the application
+    *
+    * @return string The appStoreUrl
+    */
+    public function getAppStoreUrl()
+    {
+        if (array_key_exists("appStoreUrl", $this->_propDict)) {
+            return $this->_propDict["appStoreUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appStoreUrl
+    * The Store URL of the application
+    *
+    * @param string $val The value of the appStoreUrl
+    *
+    * @return AppListItem
+    */
+    public function setAppStoreUrl($val)
+    {
+        $this->_propDict["appStoreUrl"] = $val;
+        return $this;
+    }
+    /**
     * Gets the name
     * The application name
     *
@@ -77,62 +133,6 @@ class AppListItem extends Entity
     public function setPublisher($val)
     {
         $this->_propDict["publisher"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the appStoreUrl
-    * The Store URL of the application
-    *
-    * @return string The appStoreUrl
-    */
-    public function getAppStoreUrl()
-    {
-        if (array_key_exists("appStoreUrl", $this->_propDict)) {
-            return $this->_propDict["appStoreUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the appStoreUrl
-    * The Store URL of the application
-    *
-    * @param string $val The value of the appStoreUrl
-    *
-    * @return AppListItem
-    */
-    public function setAppStoreUrl($val)
-    {
-        $this->_propDict["appStoreUrl"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the appId
-    * The application or bundle identifier of the application
-    *
-    * @return string The appId
-    */
-    public function getAppId()
-    {
-        if (array_key_exists("appId", $this->_propDict)) {
-            return $this->_propDict["appId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the appId
-    * The application or bundle identifier of the application
-    *
-    * @param string $val The value of the appId
-    *
-    * @return AppListItem
-    */
-    public function setAppId($val)
-    {
-        $this->_propDict["appId"] = $val;
         return $this;
     }
 }

@@ -24,65 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class OfficeClientConfiguration extends Entity
 {
-    /**
-    * Gets the userPreferencePayload
-    *
-    * @return \GuzzleHttp\Psr7\Stream The userPreferencePayload
-    */
-    public function getUserPreferencePayload()
+
+     /** 
+     * Gets the checkinStatuses
+     *
+     * @return array The checkinStatuses
+     */
+    public function getCheckinStatuses()
     {
-        if (array_key_exists("userPreferencePayload", $this->_propDict)) {
-            if (is_a($this->_propDict["userPreferencePayload"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["userPreferencePayload"];
-            } else {
-                $this->_propDict["userPreferencePayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["userPreferencePayload"]);
-                return $this->_propDict["userPreferencePayload"];
-            }
+        if (array_key_exists("checkinStatuses", $this->_propDict)) {
+           return $this->_propDict["checkinStatuses"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the userPreferencePayload
+    /** 
+    * Sets the checkinStatuses
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The userPreferencePayload
+    * @param OfficeClientCheckinStatus $val The checkinStatuses
     *
     * @return OfficeClientConfiguration
     */
-    public function setUserPreferencePayload($val)
+    public function setCheckinStatuses($val)
     {
-        $this->_propDict["userPreferencePayload"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the policyPayload
-    *
-    * @return \GuzzleHttp\Psr7\Stream The policyPayload
-    */
-    public function getPolicyPayload()
-    {
-        if (array_key_exists("policyPayload", $this->_propDict)) {
-            if (is_a($this->_propDict["policyPayload"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["policyPayload"];
-            } else {
-                $this->_propDict["policyPayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["policyPayload"]);
-                return $this->_propDict["policyPayload"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the policyPayload
-    *
-    * @param \GuzzleHttp\Psr7\Stream $val The policyPayload
-    *
-    * @return OfficeClientConfiguration
-    */
-    public function setPolicyPayload($val)
-    {
-        $this->_propDict["policyPayload"] = $val;
+		$this->_propDict["checkinStatuses"] = $val;
         return $this;
     }
     
@@ -137,6 +103,37 @@ class OfficeClientConfiguration extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the policyPayload
+    *
+    * @return \GuzzleHttp\Psr7\Stream The policyPayload
+    */
+    public function getPolicyPayload()
+    {
+        if (array_key_exists("policyPayload", $this->_propDict)) {
+            if (is_a($this->_propDict["policyPayload"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["policyPayload"];
+            } else {
+                $this->_propDict["policyPayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["policyPayload"]);
+                return $this->_propDict["policyPayload"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the policyPayload
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The policyPayload
+    *
+    * @return OfficeClientConfiguration
+    */
+    public function setPolicyPayload($val)
+    {
+        $this->_propDict["policyPayload"] = $val;
         return $this;
     }
     
@@ -198,31 +195,34 @@ class OfficeClientConfiguration extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the checkinStatuses
-     *
-     * @return array The checkinStatuses
-     */
-    public function getCheckinStatuses()
+    /**
+    * Gets the userPreferencePayload
+    *
+    * @return \GuzzleHttp\Psr7\Stream The userPreferencePayload
+    */
+    public function getUserPreferencePayload()
     {
-        if (array_key_exists("checkinStatuses", $this->_propDict)) {
-           return $this->_propDict["checkinStatuses"];
-        } else {
-            return null;
+        if (array_key_exists("userPreferencePayload", $this->_propDict)) {
+            if (is_a($this->_propDict["userPreferencePayload"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["userPreferencePayload"];
+            } else {
+                $this->_propDict["userPreferencePayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["userPreferencePayload"]);
+                return $this->_propDict["userPreferencePayload"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the checkinStatuses
+    /**
+    * Sets the userPreferencePayload
     *
-    * @param OfficeClientCheckinStatus $val The checkinStatuses
+    * @param \GuzzleHttp\Psr7\Stream $val The userPreferencePayload
     *
     * @return OfficeClientConfiguration
     */
-    public function setCheckinStatuses($val)
+    public function setUserPreferencePayload($val)
     {
-		$this->_propDict["checkinStatuses"] = $val;
+        $this->_propDict["userPreferencePayload"] = $val;
         return $this;
     }
     

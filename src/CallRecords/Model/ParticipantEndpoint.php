@@ -25,39 +25,6 @@ class ParticipantEndpoint extends Endpoint
 {
 
     /**
-    * Gets the identity
-    * Identity associated with the endpoint.
-    *
-    * @return Microsoft\Graph\Model\IdentitySet The identity
-    */
-    public function getIdentity()
-    {
-        if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["identity"];
-            } else {
-                $this->_propDict["identity"] = new Microsoft\Graph\Model\IdentitySet($this->_propDict["identity"]);
-                return $this->_propDict["identity"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the identity
-    * Identity associated with the endpoint.
-    *
-    * @param Microsoft\Graph\Model\IdentitySet $val The value to assign to the identity
-    *
-    * @return ParticipantEndpoint The ParticipantEndpoint
-    */
-    public function setIdentity($val)
-    {
-        $this->_propDict["identity"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the feedback
     * The feedback provided by the user of this endpoint about the quality of the session.
     *
@@ -87,6 +54,39 @@ class ParticipantEndpoint extends Endpoint
     public function setFeedback($val)
     {
         $this->_propDict["feedback"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the identity
+    * Identity associated with the endpoint.
+    *
+    * @return Microsoft\Graph\Model\IdentitySet The identity
+    */
+    public function getIdentity()
+    {
+        if (array_key_exists("identity", $this->_propDict)) {
+            if (is_a($this->_propDict["identity"], "Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["identity"];
+            } else {
+                $this->_propDict["identity"] = new Microsoft\Graph\Model\IdentitySet($this->_propDict["identity"]);
+                return $this->_propDict["identity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the identity
+    * Identity associated with the endpoint.
+    *
+    * @param Microsoft\Graph\Model\IdentitySet $val The value to assign to the identity
+    *
+    * @return ParticipantEndpoint The ParticipantEndpoint
+    */
+    public function setIdentity($val)
+    {
+        $this->_propDict["identity"] = $val;
          return $this;
     }
 }

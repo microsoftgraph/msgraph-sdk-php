@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SkypeForBusinessActivityCounts extends Entity
 {
     /**
-    * Gets the peerToPeer
-    *
-    * @return int The peerToPeer
-    */
-    public function getPeerToPeer()
-    {
-        if (array_key_exists("peerToPeer", $this->_propDict)) {
-            return $this->_propDict["peerToPeer"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the peerToPeer
-    *
-    * @param int $val The peerToPeer
-    *
-    * @return SkypeForBusinessActivityCounts
-    */
-    public function setPeerToPeer($val)
-    {
-        $this->_propDict["peerToPeer"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the organized
     *
     * @return int The organized
@@ -106,33 +79,29 @@ class SkypeForBusinessActivityCounts extends Entity
     }
     
     /**
-    * Gets the reportRefreshDate
+    * Gets the peerToPeer
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The peerToPeer
     */
-    public function getReportRefreshDate()
+    public function getPeerToPeer()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
+        if (array_key_exists("peerToPeer", $this->_propDict)) {
+            return $this->_propDict["peerToPeer"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the reportRefreshDate
+    * Sets the peerToPeer
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param int $val The peerToPeer
     *
     * @return SkypeForBusinessActivityCounts
     */
-    public function setReportRefreshDate($val)
+    public function setPeerToPeer($val)
     {
-        $this->_propDict["reportRefreshDate"] = $val;
+        $this->_propDict["peerToPeer"] = intval($val);
         return $this;
     }
     
@@ -191,6 +160,37 @@ class SkypeForBusinessActivityCounts extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return SkypeForBusinessActivityCounts
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     

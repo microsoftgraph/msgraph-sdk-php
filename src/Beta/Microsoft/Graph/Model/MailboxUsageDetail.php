@@ -25,149 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class MailboxUsageDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return MailboxUsageDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return MailboxUsageDetail
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return MailboxUsageDetail
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isDeleted
-    *
-    * @return bool The isDeleted
-    */
-    public function getIsDeleted()
-    {
-        if (array_key_exists("isDeleted", $this->_propDict)) {
-            return $this->_propDict["isDeleted"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDeleted
-    *
-    * @param bool $val The isDeleted
-    *
-    * @return MailboxUsageDetail
-    */
-    public function setIsDeleted($val)
-    {
-        $this->_propDict["isDeleted"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the deletedDate
-    *
-    * @return \DateTime The deletedDate
-    */
-    public function getDeletedDate()
-    {
-        if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
-                return $this->_propDict["deletedDate"];
-            } else {
-                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
-                return $this->_propDict["deletedDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deletedDate
-    *
-    * @param \DateTime $val The deletedDate
-    *
-    * @return MailboxUsageDetail
-    */
-    public function setDeletedDate($val)
-    {
-        $this->_propDict["deletedDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDate
     *
     * @return \DateTime The createdDate
@@ -199,87 +56,33 @@ class MailboxUsageDetail extends Entity
     }
     
     /**
-    * Gets the lastActivityDate
+    * Gets the deletedDate
     *
-    * @return \DateTime The lastActivityDate
+    * @return \DateTime The deletedDate
     */
-    public function getLastActivityDate()
+    public function getDeletedDate()
     {
-        if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
-                return $this->_propDict["lastActivityDate"];
+        if (array_key_exists("deletedDate", $this->_propDict)) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+                return $this->_propDict["deletedDate"];
             } else {
-                $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
-                return $this->_propDict["lastActivityDate"];
+                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
+                return $this->_propDict["deletedDate"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the lastActivityDate
+    * Sets the deletedDate
     *
-    * @param \DateTime $val The lastActivityDate
-    *
-    * @return MailboxUsageDetail
-    */
-    public function setLastActivityDate($val)
-    {
-        $this->_propDict["lastActivityDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the itemCount
-    *
-    * @return int The itemCount
-    */
-    public function getItemCount()
-    {
-        if (array_key_exists("itemCount", $this->_propDict)) {
-            return $this->_propDict["itemCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the itemCount
-    *
-    * @param int $val The itemCount
+    * @param \DateTime $val The deletedDate
     *
     * @return MailboxUsageDetail
     */
-    public function setItemCount($val)
+    public function setDeletedDate($val)
     {
-        $this->_propDict["itemCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the storageUsedInBytes
-    *
-    * @return int The storageUsedInBytes
-    */
-    public function getStorageUsedInBytes()
-    {
-        if (array_key_exists("storageUsedInBytes", $this->_propDict)) {
-            return $this->_propDict["storageUsedInBytes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the storageUsedInBytes
-    *
-    * @param int $val The storageUsedInBytes
-    *
-    * @return MailboxUsageDetail
-    */
-    public function setStorageUsedInBytes($val)
-    {
-        $this->_propDict["storageUsedInBytes"] = intval($val);
+        $this->_propDict["deletedDate"] = $val;
         return $this;
     }
     
@@ -338,6 +141,60 @@ class MailboxUsageDetail extends Entity
     }
     
     /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isDeleted
+    *
+    * @return bool The isDeleted
+    */
+    public function getIsDeleted()
+    {
+        if (array_key_exists("isDeleted", $this->_propDict)) {
+            return $this->_propDict["isDeleted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDeleted
+    *
+    * @param bool $val The isDeleted
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setIsDeleted($val)
+    {
+        $this->_propDict["isDeleted"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the issueWarningQuotaInBytes
     *
     * @return int The issueWarningQuotaInBytes
@@ -361,6 +218,64 @@ class MailboxUsageDetail extends Entity
     public function setIssueWarningQuotaInBytes($val)
     {
         $this->_propDict["issueWarningQuotaInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the itemCount
+    *
+    * @return int The itemCount
+    */
+    public function getItemCount()
+    {
+        if (array_key_exists("itemCount", $this->_propDict)) {
+            return $this->_propDict["itemCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the itemCount
+    *
+    * @param int $val The itemCount
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setItemCount($val)
+    {
+        $this->_propDict["itemCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the lastActivityDate
+    *
+    * @return \DateTime The lastActivityDate
+    */
+    public function getLastActivityDate()
+    {
+        if (array_key_exists("lastActivityDate", $this->_propDict)) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
+                return $this->_propDict["lastActivityDate"];
+            } else {
+                $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
+                return $this->_propDict["lastActivityDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastActivityDate
+    *
+    * @param \DateTime $val The lastActivityDate
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setLastActivityDate($val)
+    {
+        $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
     
@@ -442,6 +357,91 @@ class MailboxUsageDetail extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the storageUsedInBytes
+    *
+    * @return int The storageUsedInBytes
+    */
+    public function getStorageUsedInBytes()
+    {
+        if (array_key_exists("storageUsedInBytes", $this->_propDict)) {
+            return $this->_propDict["storageUsedInBytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the storageUsedInBytes
+    *
+    * @param int $val The storageUsedInBytes
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setStorageUsedInBytes($val)
+    {
+        $this->_propDict["storageUsedInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return MailboxUsageDetail
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

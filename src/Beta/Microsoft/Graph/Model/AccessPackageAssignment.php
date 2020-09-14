@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessPackageAssignment extends Entity
 {
     /**
-    * Gets the catalogId
-    *
-    * @return string The catalogId
-    */
-    public function getCatalogId()
-    {
-        if (array_key_exists("catalogId", $this->_propDict)) {
-            return $this->_propDict["catalogId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the catalogId
-    *
-    * @param string $val The catalogId
-    *
-    * @return AccessPackageAssignment
-    */
-    public function setCatalogId($val)
-    {
-        $this->_propDict["catalogId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the accessPackageId
     *
     * @return string The accessPackageId
@@ -106,29 +79,29 @@ class AccessPackageAssignment extends Entity
     }
     
     /**
-    * Gets the targetId
+    * Gets the assignmentState
     *
-    * @return string The targetId
+    * @return string The assignmentState
     */
-    public function getTargetId()
+    public function getAssignmentState()
     {
-        if (array_key_exists("targetId", $this->_propDict)) {
-            return $this->_propDict["targetId"];
+        if (array_key_exists("assignmentState", $this->_propDict)) {
+            return $this->_propDict["assignmentState"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the targetId
+    * Sets the assignmentState
     *
-    * @param string $val The targetId
+    * @param string $val The assignmentState
     *
     * @return AccessPackageAssignment
     */
-    public function setTargetId($val)
+    public function setAssignmentState($val)
     {
-        $this->_propDict["targetId"] = $val;
+        $this->_propDict["assignmentState"] = $val;
         return $this;
     }
     
@@ -160,56 +133,29 @@ class AccessPackageAssignment extends Entity
     }
     
     /**
-    * Gets the assignmentState
+    * Gets the catalogId
     *
-    * @return string The assignmentState
+    * @return string The catalogId
     */
-    public function getAssignmentState()
+    public function getCatalogId()
     {
-        if (array_key_exists("assignmentState", $this->_propDict)) {
-            return $this->_propDict["assignmentState"];
+        if (array_key_exists("catalogId", $this->_propDict)) {
+            return $this->_propDict["catalogId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the assignmentState
+    * Sets the catalogId
     *
-    * @param string $val The assignmentState
-    *
-    * @return AccessPackageAssignment
-    */
-    public function setAssignmentState($val)
-    {
-        $this->_propDict["assignmentState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isExtended
-    *
-    * @return bool The isExtended
-    */
-    public function getIsExtended()
-    {
-        if (array_key_exists("isExtended", $this->_propDict)) {
-            return $this->_propDict["isExtended"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isExtended
-    *
-    * @param bool $val The isExtended
+    * @param string $val The catalogId
     *
     * @return AccessPackageAssignment
     */
-    public function setIsExtended($val)
+    public function setCatalogId($val)
     {
-        $this->_propDict["isExtended"] = boolval($val);
+        $this->_propDict["catalogId"] = $val;
         return $this;
     }
     
@@ -241,6 +187,91 @@ class AccessPackageAssignment extends Entity
     public function setExpiredDateTime($val)
     {
         $this->_propDict["expiredDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isExtended
+    *
+    * @return bool The isExtended
+    */
+    public function getIsExtended()
+    {
+        if (array_key_exists("isExtended", $this->_propDict)) {
+            return $this->_propDict["isExtended"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isExtended
+    *
+    * @param bool $val The isExtended
+    *
+    * @return AccessPackageAssignment
+    */
+    public function setIsExtended($val)
+    {
+        $this->_propDict["isExtended"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the schedule
+    *
+    * @return RequestSchedule The schedule
+    */
+    public function getSchedule()
+    {
+        if (array_key_exists("schedule", $this->_propDict)) {
+            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\RequestSchedule")) {
+                return $this->_propDict["schedule"];
+            } else {
+                $this->_propDict["schedule"] = new RequestSchedule($this->_propDict["schedule"]);
+                return $this->_propDict["schedule"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the schedule
+    *
+    * @param RequestSchedule $val The schedule
+    *
+    * @return AccessPackageAssignment
+    */
+    public function setSchedule($val)
+    {
+        $this->_propDict["schedule"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the targetId
+    *
+    * @return string The targetId
+    */
+    public function getTargetId()
+    {
+        if (array_key_exists("targetId", $this->_propDict)) {
+            return $this->_propDict["targetId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetId
+    *
+    * @param string $val The targetId
+    *
+    * @return AccessPackageAssignment
+    */
+    public function setTargetId($val)
+    {
+        $this->_propDict["targetId"] = $val;
         return $this;
     }
     
@@ -306,37 +337,6 @@ class AccessPackageAssignment extends Entity
         return $this;
     }
     
-    /**
-    * Gets the target
-    *
-    * @return AccessPackageSubject The target
-    */
-    public function getTarget()
-    {
-        if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
-                return $this->_propDict["target"];
-            } else {
-                $this->_propDict["target"] = new AccessPackageSubject($this->_propDict["target"]);
-                return $this->_propDict["target"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the target
-    *
-    * @param AccessPackageSubject $val The target
-    *
-    * @return AccessPackageAssignment
-    */
-    public function setTarget($val)
-    {
-        $this->_propDict["target"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the accessPackageAssignmentRequests
@@ -390,6 +390,37 @@ class AccessPackageAssignment extends Entity
     public function setAccessPackageAssignmentResourceRoles($val)
     {
 		$this->_propDict["accessPackageAssignmentResourceRoles"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the target
+    *
+    * @return AccessPackageSubject The target
+    */
+    public function getTarget()
+    {
+        if (array_key_exists("target", $this->_propDict)) {
+            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
+                return $this->_propDict["target"];
+            } else {
+                $this->_propDict["target"] = new AccessPackageSubject($this->_propDict["target"]);
+                return $this->_propDict["target"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the target
+    *
+    * @param AccessPackageSubject $val The target
+    *
+    * @return AccessPackageAssignment
+    */
+    public function setTarget($val)
+    {
+        $this->_propDict["target"] = $val;
         return $this;
     }
     

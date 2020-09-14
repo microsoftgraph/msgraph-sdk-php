@@ -23,57 +23,36 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class RubricQuality extends Entity
 {
+
     /**
-    * Gets the qualityId
+    * Gets the criteria
     *
-    * @return string The qualityId
+    * @return RubricCriterion The criteria
     */
-    public function getQualityId()
+    public function getCriteria()
     {
-        if (array_key_exists("qualityId", $this->_propDict)) {
-            return $this->_propDict["qualityId"];
-        } else {
-            return null;
+        if (array_key_exists("criteria", $this->_propDict)) {
+            if (is_a($this->_propDict["criteria"], "Beta\Microsoft\Graph\Model\RubricCriterion")) {
+                return $this->_propDict["criteria"];
+            } else {
+                $this->_propDict["criteria"] = new RubricCriterion($this->_propDict["criteria"]);
+                return $this->_propDict["criteria"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the qualityId
+    * Sets the criteria
     *
-    * @param string $val The value of the qualityId
+    * @param RubricCriterion $val The value to assign to the criteria
     *
-    * @return RubricQuality
+    * @return RubricQuality The RubricQuality
     */
-    public function setQualityId($val)
+    public function setCriteria($val)
     {
-        $this->_propDict["qualityId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return RubricQuality
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
+        $this->_propDict["criteria"] = $val;
+         return $this;
     }
 
     /**
@@ -106,6 +85,58 @@ class RubricQuality extends Entity
         $this->_propDict["description"] = $val;
          return $this;
     }
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return RubricQuality
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the qualityId
+    *
+    * @return string The qualityId
+    */
+    public function getQualityId()
+    {
+        if (array_key_exists("qualityId", $this->_propDict)) {
+            return $this->_propDict["qualityId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the qualityId
+    *
+    * @param string $val The value of the qualityId
+    *
+    * @return RubricQuality
+    */
+    public function setQualityId($val)
+    {
+        $this->_propDict["qualityId"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the weight
@@ -135,37 +166,6 @@ class RubricQuality extends Entity
     public function setWeight($val)
     {
         $this->_propDict["weight"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the criteria
-    *
-    * @return RubricCriterion The criteria
-    */
-    public function getCriteria()
-    {
-        if (array_key_exists("criteria", $this->_propDict)) {
-            if (is_a($this->_propDict["criteria"], "Beta\Microsoft\Graph\Model\RubricCriterion")) {
-                return $this->_propDict["criteria"];
-            } else {
-                $this->_propDict["criteria"] = new RubricCriterion($this->_propDict["criteria"]);
-                return $this->_propDict["criteria"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the criteria
-    *
-    * @param RubricCriterion $val The value to assign to the criteria
-    *
-    * @return RubricQuality The RubricQuality
-    */
-    public function setCriteria($val)
-    {
-        $this->_propDict["criteria"] = $val;
          return $this;
     }
 }

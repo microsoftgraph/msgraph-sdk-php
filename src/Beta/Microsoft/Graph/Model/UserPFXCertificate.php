@@ -25,250 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class UserPFXCertificate extends Entity
 {
     /**
-    * Gets the thumbprint
-    * SHA-1 thumbprint of the PFX certificate.
+    * Gets the createdDateTime
+    * Date/time when this PFX certificate was imported.
     *
-    * @return string The thumbprint
+    * @return \DateTime The createdDateTime
     */
-    public function getThumbprint()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("thumbprint", $this->_propDict)) {
-            return $this->_propDict["thumbprint"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the thumbprint
-    * SHA-1 thumbprint of the PFX certificate.
-    *
-    * @param string $val The thumbprint
-    *
-    * @return UserPFXCertificate
-    */
-    public function setThumbprint($val)
-    {
-        $this->_propDict["thumbprint"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the intendedPurpose
-    * Certificate's intended purpose from the point-of-view of deployment.
-    *
-    * @return UserPfxIntendedPurpose The intendedPurpose
-    */
-    public function getIntendedPurpose()
-    {
-        if (array_key_exists("intendedPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedPurpose"], "Beta\Microsoft\Graph\Model\UserPfxIntendedPurpose")) {
-                return $this->_propDict["intendedPurpose"];
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
             } else {
-                $this->_propDict["intendedPurpose"] = new UserPfxIntendedPurpose($this->_propDict["intendedPurpose"]);
-                return $this->_propDict["intendedPurpose"];
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the intendedPurpose
-    * Certificate's intended purpose from the point-of-view of deployment.
+    * Sets the createdDateTime
+    * Date/time when this PFX certificate was imported.
     *
-    * @param UserPfxIntendedPurpose $val The intendedPurpose
-    *
-    * @return UserPFXCertificate
-    */
-    public function setIntendedPurpose($val)
-    {
-        $this->_propDict["intendedPurpose"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    * User Principal Name of the PFX certificate.
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    * User Principal Name of the PFX certificate.
-    *
-    * @param string $val The userPrincipalName
+    * @param \DateTime $val The createdDateTime
     *
     * @return UserPFXCertificate
     */
-    public function setUserPrincipalName($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the startDateTime
-    * Certificate's validity start date/time.
-    *
-    * @return \DateTime The startDateTime
-    */
-    public function getStartDateTime()
-    {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the startDateTime
-    * Certificate's validity start date/time.
-    *
-    * @param \DateTime $val The startDateTime
-    *
-    * @return UserPFXCertificate
-    */
-    public function setStartDateTime($val)
-    {
-        $this->_propDict["startDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the expirationDateTime
-    * Certificate's validity expiration date/time.
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    * Certificate's validity expiration date/time.
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return UserPFXCertificate
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the providerName
-    * Crypto provider used to encrypt this blob.
-    *
-    * @return string The providerName
-    */
-    public function getProviderName()
-    {
-        if (array_key_exists("providerName", $this->_propDict)) {
-            return $this->_propDict["providerName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the providerName
-    * Crypto provider used to encrypt this blob.
-    *
-    * @param string $val The providerName
-    *
-    * @return UserPFXCertificate
-    */
-    public function setProviderName($val)
-    {
-        $this->_propDict["providerName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the keyName
-    * Name of the key (within the provider) used to encrypt the blob.
-    *
-    * @return string The keyName
-    */
-    public function getKeyName()
-    {
-        if (array_key_exists("keyName", $this->_propDict)) {
-            return $this->_propDict["keyName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the keyName
-    * Name of the key (within the provider) used to encrypt the blob.
-    *
-    * @param string $val The keyName
-    *
-    * @return UserPFXCertificate
-    */
-    public function setKeyName($val)
-    {
-        $this->_propDict["keyName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the paddingScheme
-    * Padding scheme used by the provider during encryption/decryption.
-    *
-    * @return UserPfxPaddingScheme The paddingScheme
-    */
-    public function getPaddingScheme()
-    {
-        if (array_key_exists("paddingScheme", $this->_propDict)) {
-            if (is_a($this->_propDict["paddingScheme"], "Beta\Microsoft\Graph\Model\UserPfxPaddingScheme")) {
-                return $this->_propDict["paddingScheme"];
-            } else {
-                $this->_propDict["paddingScheme"] = new UserPfxPaddingScheme($this->_propDict["paddingScheme"]);
-                return $this->_propDict["paddingScheme"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the paddingScheme
-    * Padding scheme used by the provider during encryption/decryption.
-    *
-    * @param UserPfxPaddingScheme $val The paddingScheme
-    *
-    * @return UserPFXCertificate
-    */
-    public function setPaddingScheme($val)
-    {
-        $this->_propDict["paddingScheme"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -335,35 +120,97 @@ class UserPFXCertificate extends Entity
     }
     
     /**
-    * Gets the createdDateTime
-    * Date/time when this PFX certificate was imported.
+    * Gets the expirationDateTime
+    * Certificate's validity expiration date/time.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime The expirationDateTime
     */
-    public function getCreatedDateTime()
+    public function getExpirationDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
             } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdDateTime
-    * Date/time when this PFX certificate was imported.
+    * Sets the expirationDateTime
+    * Certificate's validity expiration date/time.
     *
-    * @param \DateTime $val The createdDateTime
+    * @param \DateTime $val The expirationDateTime
     *
     * @return UserPFXCertificate
     */
-    public function setCreatedDateTime($val)
+    public function setExpirationDateTime($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the intendedPurpose
+    * Certificate's intended purpose from the point-of-view of deployment.
+    *
+    * @return UserPfxIntendedPurpose The intendedPurpose
+    */
+    public function getIntendedPurpose()
+    {
+        if (array_key_exists("intendedPurpose", $this->_propDict)) {
+            if (is_a($this->_propDict["intendedPurpose"], "Beta\Microsoft\Graph\Model\UserPfxIntendedPurpose")) {
+                return $this->_propDict["intendedPurpose"];
+            } else {
+                $this->_propDict["intendedPurpose"] = new UserPfxIntendedPurpose($this->_propDict["intendedPurpose"]);
+                return $this->_propDict["intendedPurpose"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the intendedPurpose
+    * Certificate's intended purpose from the point-of-view of deployment.
+    *
+    * @param UserPfxIntendedPurpose $val The intendedPurpose
+    *
+    * @return UserPFXCertificate
+    */
+    public function setIntendedPurpose($val)
+    {
+        $this->_propDict["intendedPurpose"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the keyName
+    * Name of the key (within the provider) used to encrypt the blob.
+    *
+    * @return string The keyName
+    */
+    public function getKeyName()
+    {
+        if (array_key_exists("keyName", $this->_propDict)) {
+            return $this->_propDict["keyName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the keyName
+    * Name of the key (within the provider) used to encrypt the blob.
+    *
+    * @param string $val The keyName
+    *
+    * @return UserPFXCertificate
+    */
+    public function setKeyName($val)
+    {
+        $this->_propDict["keyName"] = $val;
         return $this;
     }
     
@@ -397,6 +244,159 @@ class UserPFXCertificate extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the paddingScheme
+    * Padding scheme used by the provider during encryption/decryption.
+    *
+    * @return UserPfxPaddingScheme The paddingScheme
+    */
+    public function getPaddingScheme()
+    {
+        if (array_key_exists("paddingScheme", $this->_propDict)) {
+            if (is_a($this->_propDict["paddingScheme"], "Beta\Microsoft\Graph\Model\UserPfxPaddingScheme")) {
+                return $this->_propDict["paddingScheme"];
+            } else {
+                $this->_propDict["paddingScheme"] = new UserPfxPaddingScheme($this->_propDict["paddingScheme"]);
+                return $this->_propDict["paddingScheme"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the paddingScheme
+    * Padding scheme used by the provider during encryption/decryption.
+    *
+    * @param UserPfxPaddingScheme $val The paddingScheme
+    *
+    * @return UserPFXCertificate
+    */
+    public function setPaddingScheme($val)
+    {
+        $this->_propDict["paddingScheme"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the providerName
+    * Crypto provider used to encrypt this blob.
+    *
+    * @return string The providerName
+    */
+    public function getProviderName()
+    {
+        if (array_key_exists("providerName", $this->_propDict)) {
+            return $this->_propDict["providerName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the providerName
+    * Crypto provider used to encrypt this blob.
+    *
+    * @param string $val The providerName
+    *
+    * @return UserPFXCertificate
+    */
+    public function setProviderName($val)
+    {
+        $this->_propDict["providerName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the startDateTime
+    * Certificate's validity start date/time.
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the startDateTime
+    * Certificate's validity start date/time.
+    *
+    * @param \DateTime $val The startDateTime
+    *
+    * @return UserPFXCertificate
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the thumbprint
+    * SHA-1 thumbprint of the PFX certificate.
+    *
+    * @return string The thumbprint
+    */
+    public function getThumbprint()
+    {
+        if (array_key_exists("thumbprint", $this->_propDict)) {
+            return $this->_propDict["thumbprint"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the thumbprint
+    * SHA-1 thumbprint of the PFX certificate.
+    *
+    * @param string $val The thumbprint
+    *
+    * @return UserPFXCertificate
+    */
+    public function setThumbprint($val)
+    {
+        $this->_propDict["thumbprint"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    * User Principal Name of the PFX certificate.
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    * User Principal Name of the PFX certificate.
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return UserPFXCertificate
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

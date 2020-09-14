@@ -25,29 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class ExactMatchDataStore extends Entity
 {
     /**
-    * Gets the displayName
+    * Gets the dataLastUpdatedDateTime
     *
-    * @return string The displayName
+    * @return \DateTime The dataLastUpdatedDateTime
     */
-    public function getDisplayName()
+    public function getDataLastUpdatedDateTime()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("dataLastUpdatedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["dataLastUpdatedDateTime"], "\DateTime")) {
+                return $this->_propDict["dataLastUpdatedDateTime"];
+            } else {
+                $this->_propDict["dataLastUpdatedDateTime"] = new \DateTime($this->_propDict["dataLastUpdatedDateTime"]);
+                return $this->_propDict["dataLastUpdatedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
+    * Sets the dataLastUpdatedDateTime
     *
-    * @param string $val The displayName
+    * @param \DateTime $val The dataLastUpdatedDateTime
     *
     * @return ExactMatchDataStore
     */
-    public function setDisplayName($val)
+    public function setDataLastUpdatedDateTime($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["dataLastUpdatedDateTime"] = $val;
         return $this;
     }
     
@@ -79,33 +83,29 @@ class ExactMatchDataStore extends Entity
     }
     
     /**
-    * Gets the dataLastUpdatedDateTime
+    * Gets the displayName
     *
-    * @return \DateTime The dataLastUpdatedDateTime
+    * @return string The displayName
     */
-    public function getDataLastUpdatedDateTime()
+    public function getDisplayName()
     {
-        if (array_key_exists("dataLastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dataLastUpdatedDateTime"], "\DateTime")) {
-                return $this->_propDict["dataLastUpdatedDateTime"];
-            } else {
-                $this->_propDict["dataLastUpdatedDateTime"] = new \DateTime($this->_propDict["dataLastUpdatedDateTime"]);
-                return $this->_propDict["dataLastUpdatedDateTime"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the dataLastUpdatedDateTime
+    * Sets the displayName
     *
-    * @param \DateTime $val The dataLastUpdatedDateTime
+    * @param string $val The displayName
     *
     * @return ExactMatchDataStore
     */
-    public function setDataLastUpdatedDateTime($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["dataLastUpdatedDateTime"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     

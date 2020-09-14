@@ -23,34 +23,6 @@ namespace Microsoft\Graph\Model;
 */
 class IosHomeScreenFolderPage extends Entity
 {
-    /**
-    * Gets the displayName
-    * Name of the folder page
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * Name of the folder page
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return IosHomeScreenFolderPage
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the apps
@@ -83,5 +55,33 @@ class IosHomeScreenFolderPage extends Entity
     {
         $this->_propDict["apps"] = $val;
          return $this;
+    }
+    /**
+    * Gets the displayName
+    * Name of the folder page
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    * Name of the folder page
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return IosHomeScreenFolderPage
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
     }
 }

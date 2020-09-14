@@ -26,60 +26,31 @@ class ConversationThread extends Entity
 {
 
      /** 
-     * Gets the toRecipients
-    * The To: recipients for the thread.
+     * Gets the ccRecipients
+    * The Cc: recipients for the thread.
      *
-     * @return array The toRecipients
+     * @return array The ccRecipients
      */
-    public function getToRecipients()
+    public function getCcRecipients()
     {
-        if (array_key_exists("toRecipients", $this->_propDict)) {
-           return $this->_propDict["toRecipients"];
+        if (array_key_exists("ccRecipients", $this->_propDict)) {
+           return $this->_propDict["ccRecipients"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the toRecipients
-    * The To: recipients for the thread.
+    * Sets the ccRecipients
+    * The Cc: recipients for the thread.
     *
-    * @param Recipient $val The toRecipients
-    *
-    * @return ConversationThread
-    */
-    public function setToRecipients($val)
-    {
-		$this->_propDict["toRecipients"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-    *
-    * @return string The topic
-    */
-    public function getTopic()
-    {
-        if (array_key_exists("topic", $this->_propDict)) {
-            return $this->_propDict["topic"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the topic
-    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-    *
-    * @param string $val The topic
+    * @param Recipient $val The ccRecipients
     *
     * @return ConversationThread
     */
-    public function setTopic($val)
+    public function setCcRecipients($val)
     {
-        $this->_propDict["topic"] = $val;
+		$this->_propDict["ccRecipients"] = $val;
         return $this;
     }
     
@@ -109,6 +80,35 @@ class ConversationThread extends Entity
     public function setHasAttachments($val)
     {
         $this->_propDict["hasAttachments"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isLocked
+    * Indicates if the thread is locked.
+    *
+    * @return bool The isLocked
+    */
+    public function getIsLocked()
+    {
+        if (array_key_exists("isLocked", $this->_propDict)) {
+            return $this->_propDict["isLocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isLocked
+    * Indicates if the thread is locked.
+    *
+    * @param bool $val The isLocked
+    *
+    * @return ConversationThread
+    */
+    public function setIsLocked($val)
+    {
+        $this->_propDict["isLocked"] = boolval($val);
         return $this;
     }
     
@@ -146,65 +146,6 @@ class ConversationThread extends Entity
     }
     
     /**
-    * Gets the uniqueSenders
-    * All the users that sent a message to this thread.
-    *
-    * @return string The uniqueSenders
-    */
-    public function getUniqueSenders()
-    {
-        if (array_key_exists("uniqueSenders", $this->_propDict)) {
-            return $this->_propDict["uniqueSenders"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the uniqueSenders
-    * All the users that sent a message to this thread.
-    *
-    * @param string $val The uniqueSenders
-    *
-    * @return ConversationThread
-    */
-    public function setUniqueSenders($val)
-    {
-        $this->_propDict["uniqueSenders"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the ccRecipients
-    * The Cc: recipients for the thread.
-     *
-     * @return array The ccRecipients
-     */
-    public function getCcRecipients()
-    {
-        if (array_key_exists("ccRecipients", $this->_propDict)) {
-           return $this->_propDict["ccRecipients"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the ccRecipients
-    * The Cc: recipients for the thread.
-    *
-    * @param Recipient $val The ccRecipients
-    *
-    * @return ConversationThread
-    */
-    public function setCcRecipients($val)
-    {
-		$this->_propDict["ccRecipients"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the preview
     * A short summary from the body of the latest post in this conversation.
     *
@@ -234,31 +175,90 @@ class ConversationThread extends Entity
     }
     
     /**
-    * Gets the isLocked
-    * Indicates if the thread is locked.
+    * Gets the topic
+    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
     *
-    * @return bool The isLocked
+    * @return string The topic
     */
-    public function getIsLocked()
+    public function getTopic()
     {
-        if (array_key_exists("isLocked", $this->_propDict)) {
-            return $this->_propDict["isLocked"];
+        if (array_key_exists("topic", $this->_propDict)) {
+            return $this->_propDict["topic"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isLocked
-    * Indicates if the thread is locked.
+    * Sets the topic
+    * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
     *
-    * @param bool $val The isLocked
+    * @param string $val The topic
     *
     * @return ConversationThread
     */
-    public function setIsLocked($val)
+    public function setTopic($val)
     {
-        $this->_propDict["isLocked"] = boolval($val);
+        $this->_propDict["topic"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the toRecipients
+    * The To: recipients for the thread.
+     *
+     * @return array The toRecipients
+     */
+    public function getToRecipients()
+    {
+        if (array_key_exists("toRecipients", $this->_propDict)) {
+           return $this->_propDict["toRecipients"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the toRecipients
+    * The To: recipients for the thread.
+    *
+    * @param Recipient $val The toRecipients
+    *
+    * @return ConversationThread
+    */
+    public function setToRecipients($val)
+    {
+		$this->_propDict["toRecipients"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the uniqueSenders
+    * All the users that sent a message to this thread.
+    *
+    * @return string The uniqueSenders
+    */
+    public function getUniqueSenders()
+    {
+        if (array_key_exists("uniqueSenders", $this->_propDict)) {
+            return $this->_propDict["uniqueSenders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the uniqueSenders
+    * All the users that sent a message to this thread.
+    *
+    * @param string $val The uniqueSenders
+    *
+    * @return ConversationThread
+    */
+    public function setUniqueSenders($val)
+    {
+        $this->_propDict["uniqueSenders"] = $val;
         return $this;
     }
     

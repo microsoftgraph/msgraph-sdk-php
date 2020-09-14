@@ -87,37 +87,6 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     }
     
     /**
-    * Gets the toTerm
-    *
-    * @return Term The toTerm
-    */
-    public function getToTerm()
-    {
-        if (array_key_exists("toTerm", $this->_propDict)) {
-            if (is_a($this->_propDict["toTerm"], "Beta\Microsoft\Graph\TermStore\Model\Term")) {
-                return $this->_propDict["toTerm"];
-            } else {
-                $this->_propDict["toTerm"] = new Term($this->_propDict["toTerm"]);
-                return $this->_propDict["toTerm"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the toTerm
-    *
-    * @param Term $val The toTerm
-    *
-    * @return Relation
-    */
-    public function setToTerm($val)
-    {
-        $this->_propDict["toTerm"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the set
     *
     * @return Set The set
@@ -145,6 +114,37 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     public function setSet($val)
     {
         $this->_propDict["set"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the toTerm
+    *
+    * @return Term The toTerm
+    */
+    public function getToTerm()
+    {
+        if (array_key_exists("toTerm", $this->_propDict)) {
+            if (is_a($this->_propDict["toTerm"], "Beta\Microsoft\Graph\TermStore\Model\Term")) {
+                return $this->_propDict["toTerm"];
+            } else {
+                $this->_propDict["toTerm"] = new Term($this->_propDict["toTerm"]);
+                return $this->_propDict["toTerm"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the toTerm
+    *
+    * @param Term $val The toTerm
+    *
+    * @return Relation
+    */
+    public function setToTerm($val)
+    {
+        $this->_propDict["toTerm"] = $val;
         return $this;
     }
     

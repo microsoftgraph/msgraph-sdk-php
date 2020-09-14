@@ -25,6 +25,93 @@ namespace Beta\Microsoft\Graph\Model;
 class Person extends Entity
 {
     /**
+    * Gets the birthday
+    * The person's birthday.
+    *
+    * @return string The birthday
+    */
+    public function getBirthday()
+    {
+        if (array_key_exists("birthday", $this->_propDict)) {
+            return $this->_propDict["birthday"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the birthday
+    * The person's birthday.
+    *
+    * @param string $val The birthday
+    *
+    * @return Person
+    */
+    public function setBirthday($val)
+    {
+        $this->_propDict["birthday"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the companyName
+    * The name of the person's company.
+    *
+    * @return string The companyName
+    */
+    public function getCompanyName()
+    {
+        if (array_key_exists("companyName", $this->_propDict)) {
+            return $this->_propDict["companyName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the companyName
+    * The name of the person's company.
+    *
+    * @param string $val The companyName
+    *
+    * @return Person
+    */
+    public function setCompanyName($val)
+    {
+        $this->_propDict["companyName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the department
+    * The person's department.
+    *
+    * @return string The department
+    */
+    public function getDepartment()
+    {
+        if (array_key_exists("department", $this->_propDict)) {
+            return $this->_propDict["department"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the department
+    * The person's department.
+    *
+    * @param string $val The department
+    *
+    * @return Person
+    */
+    public function setDepartment($val)
+    {
+        $this->_propDict["department"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The person's display name.
     *
@@ -50,6 +137,34 @@ class Person extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the emailAddresses
+     *
+     * @return array The emailAddresses
+     */
+    public function getEmailAddresses()
+    {
+        if (array_key_exists("emailAddresses", $this->_propDict)) {
+           return $this->_propDict["emailAddresses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the emailAddresses
+    *
+    * @param RankedEmailAddress $val The emailAddresses
+    *
+    * @return Person
+    */
+    public function setEmailAddresses($val)
+    {
+		$this->_propDict["emailAddresses"] = $val;
         return $this;
     }
     
@@ -83,60 +198,87 @@ class Person extends Entity
     }
     
     /**
-    * Gets the surname
-    * The person's surname.
+    * Gets the isFavorite
+    * true if the user has flagged this person as a favorite.
     *
-    * @return string The surname
+    * @return bool The isFavorite
     */
-    public function getSurname()
+    public function getIsFavorite()
     {
-        if (array_key_exists("surname", $this->_propDict)) {
-            return $this->_propDict["surname"];
+        if (array_key_exists("isFavorite", $this->_propDict)) {
+            return $this->_propDict["isFavorite"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the surname
-    * The person's surname.
+    * Sets the isFavorite
+    * true if the user has flagged this person as a favorite.
     *
-    * @param string $val The surname
+    * @param bool $val The isFavorite
     *
     * @return Person
     */
-    public function setSurname($val)
+    public function setIsFavorite($val)
     {
-        $this->_propDict["surname"] = $val;
+        $this->_propDict["isFavorite"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the birthday
-    * The person's birthday.
+    * Gets the mailboxType
     *
-    * @return string The birthday
+    * @return string The mailboxType
     */
-    public function getBirthday()
+    public function getMailboxType()
     {
-        if (array_key_exists("birthday", $this->_propDict)) {
-            return $this->_propDict["birthday"];
+        if (array_key_exists("mailboxType", $this->_propDict)) {
+            return $this->_propDict["mailboxType"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the birthday
-    * The person's birthday.
+    * Sets the mailboxType
     *
-    * @param string $val The birthday
+    * @param string $val The mailboxType
     *
     * @return Person
     */
-    public function setBirthday($val)
+    public function setMailboxType($val)
     {
-        $this->_propDict["birthday"] = $val;
+        $this->_propDict["mailboxType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the officeLocation
+    * The location of the person's office.
+    *
+    * @return string The officeLocation
+    */
+    public function getOfficeLocation()
+    {
+        if (array_key_exists("officeLocation", $this->_propDict)) {
+            return $this->_propDict["officeLocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the officeLocation
+    * The location of the person's office.
+    *
+    * @param string $val The officeLocation
+    *
+    * @return Person
+    */
+    public function setOfficeLocation($val)
+    {
+        $this->_propDict["officeLocation"] = $val;
         return $this;
     }
     
@@ -170,59 +312,31 @@ class Person extends Entity
     }
     
     /**
-    * Gets the isFavorite
-    * true if the user has flagged this person as a favorite.
+    * Gets the personType
+    * The type of person.
     *
-    * @return bool The isFavorite
+    * @return string The personType
     */
-    public function getIsFavorite()
+    public function getPersonType()
     {
-        if (array_key_exists("isFavorite", $this->_propDict)) {
-            return $this->_propDict["isFavorite"];
+        if (array_key_exists("personType", $this->_propDict)) {
+            return $this->_propDict["personType"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isFavorite
-    * true if the user has flagged this person as a favorite.
+    * Sets the personType
+    * The type of person.
     *
-    * @param bool $val The isFavorite
-    *
-    * @return Person
-    */
-    public function setIsFavorite($val)
-    {
-        $this->_propDict["isFavorite"] = boolval($val);
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the emailAddresses
-     *
-     * @return array The emailAddresses
-     */
-    public function getEmailAddresses()
-    {
-        if (array_key_exists("emailAddresses", $this->_propDict)) {
-           return $this->_propDict["emailAddresses"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the emailAddresses
-    *
-    * @param RankedEmailAddress $val The emailAddresses
+    * @param string $val The personType
     *
     * @return Person
     */
-    public function setEmailAddresses($val)
+    public function setPersonType($val)
     {
-		$this->_propDict["emailAddresses"] = $val;
+        $this->_propDict["personType"] = $val;
         return $this;
     }
     
@@ -286,179 +400,6 @@ class Person extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the websites
-    * The person's websites.
-     *
-     * @return array The websites
-     */
-    public function getWebsites()
-    {
-        if (array_key_exists("websites", $this->_propDict)) {
-           return $this->_propDict["websites"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the websites
-    * The person's websites.
-    *
-    * @param Website $val The websites
-    *
-    * @return Person
-    */
-    public function setWebsites($val)
-    {
-		$this->_propDict["websites"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the title
-    *
-    * @return string The title
-    */
-    public function getTitle()
-    {
-        if (array_key_exists("title", $this->_propDict)) {
-            return $this->_propDict["title"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the title
-    *
-    * @param string $val The title
-    *
-    * @return Person
-    */
-    public function setTitle($val)
-    {
-        $this->_propDict["title"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the companyName
-    * The name of the person's company.
-    *
-    * @return string The companyName
-    */
-    public function getCompanyName()
-    {
-        if (array_key_exists("companyName", $this->_propDict)) {
-            return $this->_propDict["companyName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the companyName
-    * The name of the person's company.
-    *
-    * @param string $val The companyName
-    *
-    * @return Person
-    */
-    public function setCompanyName($val)
-    {
-        $this->_propDict["companyName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the yomiCompany
-    * The phonetic Japanese name of the person's company.
-    *
-    * @return string The yomiCompany
-    */
-    public function getYomiCompany()
-    {
-        if (array_key_exists("yomiCompany", $this->_propDict)) {
-            return $this->_propDict["yomiCompany"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the yomiCompany
-    * The phonetic Japanese name of the person's company.
-    *
-    * @param string $val The yomiCompany
-    *
-    * @return Person
-    */
-    public function setYomiCompany($val)
-    {
-        $this->_propDict["yomiCompany"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the department
-    * The person's department.
-    *
-    * @return string The department
-    */
-    public function getDepartment()
-    {
-        if (array_key_exists("department", $this->_propDict)) {
-            return $this->_propDict["department"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the department
-    * The person's department.
-    *
-    * @param string $val The department
-    *
-    * @return Person
-    */
-    public function setDepartment($val)
-    {
-        $this->_propDict["department"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the officeLocation
-    * The location of the person's office.
-    *
-    * @return string The officeLocation
-    */
-    public function getOfficeLocation()
-    {
-        if (array_key_exists("officeLocation", $this->_propDict)) {
-            return $this->_propDict["officeLocation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the officeLocation
-    * The location of the person's office.
-    *
-    * @param string $val The officeLocation
-    *
-    * @return Person
-    */
-    public function setOfficeLocation($val)
-    {
-        $this->_propDict["officeLocation"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the profession
     * The person's profession.
@@ -517,58 +458,58 @@ class Person extends Entity
     }
     
     /**
-    * Gets the mailboxType
+    * Gets the surname
+    * The person's surname.
     *
-    * @return string The mailboxType
+    * @return string The surname
     */
-    public function getMailboxType()
+    public function getSurname()
     {
-        if (array_key_exists("mailboxType", $this->_propDict)) {
-            return $this->_propDict["mailboxType"];
+        if (array_key_exists("surname", $this->_propDict)) {
+            return $this->_propDict["surname"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the mailboxType
+    * Sets the surname
+    * The person's surname.
     *
-    * @param string $val The mailboxType
+    * @param string $val The surname
     *
     * @return Person
     */
-    public function setMailboxType($val)
+    public function setSurname($val)
     {
-        $this->_propDict["mailboxType"] = $val;
+        $this->_propDict["surname"] = $val;
         return $this;
     }
     
     /**
-    * Gets the personType
-    * The type of person.
+    * Gets the title
     *
-    * @return string The personType
+    * @return string The title
     */
-    public function getPersonType()
+    public function getTitle()
     {
-        if (array_key_exists("personType", $this->_propDict)) {
-            return $this->_propDict["personType"];
+        if (array_key_exists("title", $this->_propDict)) {
+            return $this->_propDict["title"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the personType
-    * The type of person.
+    * Sets the title
     *
-    * @param string $val The personType
+    * @param string $val The title
     *
     * @return Person
     */
-    public function setPersonType($val)
+    public function setTitle($val)
     {
-        $this->_propDict["personType"] = $val;
+        $this->_propDict["title"] = $val;
         return $this;
     }
     
@@ -598,6 +539,65 @@ class Person extends Entity
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the websites
+    * The person's websites.
+     *
+     * @return array The websites
+     */
+    public function getWebsites()
+    {
+        if (array_key_exists("websites", $this->_propDict)) {
+           return $this->_propDict["websites"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the websites
+    * The person's websites.
+    *
+    * @param Website $val The websites
+    *
+    * @return Person
+    */
+    public function setWebsites($val)
+    {
+		$this->_propDict["websites"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the yomiCompany
+    * The phonetic Japanese name of the person's company.
+    *
+    * @return string The yomiCompany
+    */
+    public function getYomiCompany()
+    {
+        if (array_key_exists("yomiCompany", $this->_propDict)) {
+            return $this->_propDict["yomiCompany"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the yomiCompany
+    * The phonetic Japanese name of the person's company.
+    *
+    * @param string $val The yomiCompany
+    *
+    * @return Person
+    */
+    public function setYomiCompany($val)
+    {
+        $this->_propDict["yomiCompany"] = $val;
         return $this;
     }
     

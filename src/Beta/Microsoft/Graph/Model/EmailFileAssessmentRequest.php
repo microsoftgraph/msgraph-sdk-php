@@ -25,31 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class EmailFileAssessmentRequest extends ThreatAssessmentRequest
 {
     /**
-    * Gets the recipientEmail
-    * The mail recipient whose policies are used to assess the mail.
+    * Gets the contentData
+    * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
     *
-    * @return string The recipientEmail
+    * @return string The contentData
     */
-    public function getRecipientEmail()
+    public function getContentData()
     {
-        if (array_key_exists("recipientEmail", $this->_propDict)) {
-            return $this->_propDict["recipientEmail"];
+        if (array_key_exists("contentData", $this->_propDict)) {
+            return $this->_propDict["contentData"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the recipientEmail
-    * The mail recipient whose policies are used to assess the mail.
+    * Sets the contentData
+    * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
     *
-    * @param string $val The recipientEmail
+    * @param string $val The contentData
     *
     * @return EmailFileAssessmentRequest
     */
-    public function setRecipientEmail($val)
+    public function setContentData($val)
     {
-        $this->_propDict["recipientEmail"] = $val;
+        $this->_propDict["contentData"] = $val;
         return $this;
     }
     
@@ -87,31 +87,31 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
     }
     
     /**
-    * Gets the contentData
-    * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+    * Gets the recipientEmail
+    * The mail recipient whose policies are used to assess the mail.
     *
-    * @return string The contentData
+    * @return string The recipientEmail
     */
-    public function getContentData()
+    public function getRecipientEmail()
     {
-        if (array_key_exists("contentData", $this->_propDict)) {
-            return $this->_propDict["contentData"];
+        if (array_key_exists("recipientEmail", $this->_propDict)) {
+            return $this->_propDict["recipientEmail"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the contentData
-    * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+    * Sets the recipientEmail
+    * The mail recipient whose policies are used to assess the mail.
     *
-    * @param string $val The contentData
+    * @param string $val The recipientEmail
     *
     * @return EmailFileAssessmentRequest
     */
-    public function setContentData($val)
+    public function setRecipientEmail($val)
     {
-        $this->_propDict["contentData"] = $val;
+        $this->_propDict["recipientEmail"] = $val;
         return $this;
     }
     

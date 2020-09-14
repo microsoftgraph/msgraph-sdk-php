@@ -23,34 +23,6 @@ namespace Microsoft\Graph\Model;
 */
 class UploadSession extends Entity
 {
-    /**
-    * Gets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
-    *
-    * @return string The uploadUrl
-    */
-    public function getUploadUrl()
-    {
-        if (array_key_exists("uploadUrl", $this->_propDict)) {
-            return $this->_propDict["uploadUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the uploadUrl
-    * The URL endpoint that accepts PUT requests for byte ranges of the file.
-    *
-    * @param string $val The value of the uploadUrl
-    *
-    * @return UploadSession
-    */
-    public function setUploadUrl($val)
-    {
-        $this->_propDict["uploadUrl"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the expirationDateTime
@@ -110,6 +82,34 @@ class UploadSession extends Entity
     public function setNextExpectedRanges($val)
     {
         $this->_propDict["nextExpectedRanges"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the uploadUrl
+    * The URL endpoint that accepts PUT requests for byte ranges of the file.
+    *
+    * @return string The uploadUrl
+    */
+    public function getUploadUrl()
+    {
+        if (array_key_exists("uploadUrl", $this->_propDict)) {
+            return $this->_propDict["uploadUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uploadUrl
+    * The URL endpoint that accepts PUT requests for byte ranges of the file.
+    *
+    * @param string $val The value of the uploadUrl
+    *
+    * @return UploadSession
+    */
+    public function setUploadUrl($val)
+    {
+        $this->_propDict["uploadUrl"] = $val;
         return $this;
     }
 }

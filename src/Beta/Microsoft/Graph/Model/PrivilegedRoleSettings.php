@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class PrivilegedRoleSettings extends Entity
 {
     /**
+    * Gets the approvalOnElevation
+    *
+    * @return bool The approvalOnElevation
+    */
+    public function getApprovalOnElevation()
+    {
+        if (array_key_exists("approvalOnElevation", $this->_propDict)) {
+            return $this->_propDict["approvalOnElevation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the approvalOnElevation
+    *
+    * @param bool $val The approvalOnElevation
+    *
+    * @return PrivilegedRoleSettings
+    */
+    public function setApprovalOnElevation($val)
+    {
+        $this->_propDict["approvalOnElevation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the approverIds
     *
     * @return string The approverIds
@@ -52,33 +79,87 @@ class PrivilegedRoleSettings extends Entity
     }
     
     /**
-    * Gets the minElevationDuration
+    * Gets the elevationDuration
     *
-    * @return Duration The minElevationDuration
+    * @return Duration The elevationDuration
     */
-    public function getMinElevationDuration()
+    public function getElevationDuration()
     {
-        if (array_key_exists("minElevationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["minElevationDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["minElevationDuration"];
+        if (array_key_exists("elevationDuration", $this->_propDict)) {
+            if (is_a($this->_propDict["elevationDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["elevationDuration"];
             } else {
-                $this->_propDict["minElevationDuration"] = new Duration($this->_propDict["minElevationDuration"]);
-                return $this->_propDict["minElevationDuration"];
+                $this->_propDict["elevationDuration"] = new Duration($this->_propDict["elevationDuration"]);
+                return $this->_propDict["elevationDuration"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the minElevationDuration
+    * Sets the elevationDuration
     *
-    * @param Duration $val The minElevationDuration
+    * @param Duration $val The elevationDuration
     *
     * @return PrivilegedRoleSettings
     */
-    public function setMinElevationDuration($val)
+    public function setElevationDuration($val)
     {
-        $this->_propDict["minElevationDuration"] = $val;
+        $this->_propDict["elevationDuration"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isMfaOnElevationConfigurable
+    *
+    * @return bool The isMfaOnElevationConfigurable
+    */
+    public function getIsMfaOnElevationConfigurable()
+    {
+        if (array_key_exists("isMfaOnElevationConfigurable", $this->_propDict)) {
+            return $this->_propDict["isMfaOnElevationConfigurable"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isMfaOnElevationConfigurable
+    *
+    * @param bool $val The isMfaOnElevationConfigurable
+    *
+    * @return PrivilegedRoleSettings
+    */
+    public function setIsMfaOnElevationConfigurable($val)
+    {
+        $this->_propDict["isMfaOnElevationConfigurable"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the lastGlobalAdmin
+    *
+    * @return bool The lastGlobalAdmin
+    */
+    public function getLastGlobalAdmin()
+    {
+        if (array_key_exists("lastGlobalAdmin", $this->_propDict)) {
+            return $this->_propDict["lastGlobalAdmin"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lastGlobalAdmin
+    *
+    * @param bool $val The lastGlobalAdmin
+    *
+    * @return PrivilegedRoleSettings
+    */
+    public function setLastGlobalAdmin($val)
+    {
+        $this->_propDict["lastGlobalAdmin"] = boolval($val);
         return $this;
     }
     
@@ -114,33 +195,60 @@ class PrivilegedRoleSettings extends Entity
     }
     
     /**
-    * Gets the elevationDuration
+    * Gets the mfaOnElevation
     *
-    * @return Duration The elevationDuration
+    * @return bool The mfaOnElevation
     */
-    public function getElevationDuration()
+    public function getMfaOnElevation()
     {
-        if (array_key_exists("elevationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["elevationDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["elevationDuration"];
+        if (array_key_exists("mfaOnElevation", $this->_propDict)) {
+            return $this->_propDict["mfaOnElevation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mfaOnElevation
+    *
+    * @param bool $val The mfaOnElevation
+    *
+    * @return PrivilegedRoleSettings
+    */
+    public function setMfaOnElevation($val)
+    {
+        $this->_propDict["mfaOnElevation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minElevationDuration
+    *
+    * @return Duration The minElevationDuration
+    */
+    public function getMinElevationDuration()
+    {
+        if (array_key_exists("minElevationDuration", $this->_propDict)) {
+            if (is_a($this->_propDict["minElevationDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["minElevationDuration"];
             } else {
-                $this->_propDict["elevationDuration"] = new Duration($this->_propDict["elevationDuration"]);
-                return $this->_propDict["elevationDuration"];
+                $this->_propDict["minElevationDuration"] = new Duration($this->_propDict["minElevationDuration"]);
+                return $this->_propDict["minElevationDuration"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the elevationDuration
+    * Sets the minElevationDuration
     *
-    * @param Duration $val The elevationDuration
+    * @param Duration $val The minElevationDuration
     *
     * @return PrivilegedRoleSettings
     */
-    public function setElevationDuration($val)
+    public function setMinElevationDuration($val)
     {
-        $this->_propDict["elevationDuration"] = $val;
+        $this->_propDict["minElevationDuration"] = $val;
         return $this;
     }
     
@@ -195,114 +303,6 @@ class PrivilegedRoleSettings extends Entity
     public function setTicketingInfoOnElevation($val)
     {
         $this->_propDict["ticketingInfoOnElevation"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the mfaOnElevation
-    *
-    * @return bool The mfaOnElevation
-    */
-    public function getMfaOnElevation()
-    {
-        if (array_key_exists("mfaOnElevation", $this->_propDict)) {
-            return $this->_propDict["mfaOnElevation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the mfaOnElevation
-    *
-    * @param bool $val The mfaOnElevation
-    *
-    * @return PrivilegedRoleSettings
-    */
-    public function setMfaOnElevation($val)
-    {
-        $this->_propDict["mfaOnElevation"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the lastGlobalAdmin
-    *
-    * @return bool The lastGlobalAdmin
-    */
-    public function getLastGlobalAdmin()
-    {
-        if (array_key_exists("lastGlobalAdmin", $this->_propDict)) {
-            return $this->_propDict["lastGlobalAdmin"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the lastGlobalAdmin
-    *
-    * @param bool $val The lastGlobalAdmin
-    *
-    * @return PrivilegedRoleSettings
-    */
-    public function setLastGlobalAdmin($val)
-    {
-        $this->_propDict["lastGlobalAdmin"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isMfaOnElevationConfigurable
-    *
-    * @return bool The isMfaOnElevationConfigurable
-    */
-    public function getIsMfaOnElevationConfigurable()
-    {
-        if (array_key_exists("isMfaOnElevationConfigurable", $this->_propDict)) {
-            return $this->_propDict["isMfaOnElevationConfigurable"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isMfaOnElevationConfigurable
-    *
-    * @param bool $val The isMfaOnElevationConfigurable
-    *
-    * @return PrivilegedRoleSettings
-    */
-    public function setIsMfaOnElevationConfigurable($val)
-    {
-        $this->_propDict["isMfaOnElevationConfigurable"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the approvalOnElevation
-    *
-    * @return bool The approvalOnElevation
-    */
-    public function getApprovalOnElevation()
-    {
-        if (array_key_exists("approvalOnElevation", $this->_propDict)) {
-            return $this->_propDict["approvalOnElevation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the approvalOnElevation
-    *
-    * @param bool $val The approvalOnElevation
-    *
-    * @return PrivilegedRoleSettings
-    */
-    public function setApprovalOnElevation($val)
-    {
-        $this->_propDict["approvalOnElevation"] = boolval($val);
         return $this;
     }
     

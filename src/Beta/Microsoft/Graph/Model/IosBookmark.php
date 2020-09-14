@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class IosBookmark extends Entity
 {
     /**
-    * Gets the url
-    * URL allowed to access
-    *
-    * @return string The url
-    */
-    public function getUrl()
-    {
-        if (array_key_exists("url", $this->_propDict)) {
-            return $this->_propDict["url"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the url
-    * URL allowed to access
-    *
-    * @param string $val The value of the url
-    *
-    * @return IosBookmark
-    */
-    public function setUrl($val)
-    {
-        $this->_propDict["url"] = $val;
-        return $this;
-    }
-    /**
     * Gets the bookmarkFolder
     * The folder into which the bookmark should be added in Safari
     *
@@ -105,6 +77,34 @@ class IosBookmark extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the url
+    * URL allowed to access
+    *
+    * @return string The url
+    */
+    public function getUrl()
+    {
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the url
+    * URL allowed to access
+    *
+    * @param string $val The value of the url
+    *
+    * @return IosBookmark
+    */
+    public function setUrl($val)
+    {
+        $this->_propDict["url"] = $val;
         return $this;
     }
 }

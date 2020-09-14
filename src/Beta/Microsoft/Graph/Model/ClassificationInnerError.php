@@ -23,6 +23,84 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ClassificationInnerError extends Entity
 {
+    /**
+    * Gets the activityId
+    *
+    * @return string The activityId
+    */
+    public function getActivityId()
+    {
+        if (array_key_exists("activityId", $this->_propDict)) {
+            return $this->_propDict["activityId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the activityId
+    *
+    * @param string $val The value of the activityId
+    *
+    * @return ClassificationInnerError
+    */
+    public function setActivityId($val)
+    {
+        $this->_propDict["activityId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the clientRequestId
+    *
+    * @return string The clientRequestId
+    */
+    public function getClientRequestId()
+    {
+        if (array_key_exists("clientRequestId", $this->_propDict)) {
+            return $this->_propDict["clientRequestId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the clientRequestId
+    *
+    * @param string $val The value of the clientRequestId
+    *
+    * @return ClassificationInnerError
+    */
+    public function setClientRequestId($val)
+    {
+        $this->_propDict["clientRequestId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the code
+    *
+    * @return string The code
+    */
+    public function getCode()
+    {
+        if (array_key_exists("code", $this->_propDict)) {
+            return $this->_propDict["code"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the code
+    *
+    * @param string $val The value of the code
+    *
+    * @return ClassificationInnerError
+    */
+    public function setCode($val)
+    {
+        $this->_propDict["code"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the errorDateTime
@@ -53,83 +131,5 @@ class ClassificationInnerError extends Entity
     {
         $this->_propDict["errorDateTime"] = $val;
          return $this;
-    }
-    /**
-    * Gets the code
-    *
-    * @return string The code
-    */
-    public function getCode()
-    {
-        if (array_key_exists("code", $this->_propDict)) {
-            return $this->_propDict["code"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the code
-    *
-    * @param string $val The value of the code
-    *
-    * @return ClassificationInnerError
-    */
-    public function setCode($val)
-    {
-        $this->_propDict["code"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the clientRequestId
-    *
-    * @return string The clientRequestId
-    */
-    public function getClientRequestId()
-    {
-        if (array_key_exists("clientRequestId", $this->_propDict)) {
-            return $this->_propDict["clientRequestId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the clientRequestId
-    *
-    * @param string $val The value of the clientRequestId
-    *
-    * @return ClassificationInnerError
-    */
-    public function setClientRequestId($val)
-    {
-        $this->_propDict["clientRequestId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the activityId
-    *
-    * @return string The activityId
-    */
-    public function getActivityId()
-    {
-        if (array_key_exists("activityId", $this->_propDict)) {
-            return $this->_propDict["activityId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the activityId
-    *
-    * @param string $val The value of the activityId
-    *
-    * @return ClassificationInnerError
-    */
-    public function setActivityId($val)
-    {
-        $this->_propDict["activityId"] = $val;
-        return $this;
     }
 }

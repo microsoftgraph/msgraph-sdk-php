@@ -81,6 +81,39 @@ class ApiApplication extends Entity
     }
 
     /**
+    * Gets the oauth2PermissionScopes
+    * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
+    *
+    * @return PermissionScope The oauth2PermissionScopes
+    */
+    public function getOauth2PermissionScopes()
+    {
+        if (array_key_exists("oauth2PermissionScopes", $this->_propDict)) {
+            if (is_a($this->_propDict["oauth2PermissionScopes"], "Microsoft\Graph\Model\PermissionScope")) {
+                return $this->_propDict["oauth2PermissionScopes"];
+            } else {
+                $this->_propDict["oauth2PermissionScopes"] = new PermissionScope($this->_propDict["oauth2PermissionScopes"]);
+                return $this->_propDict["oauth2PermissionScopes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the oauth2PermissionScopes
+    * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
+    *
+    * @param PermissionScope $val The value to assign to the oauth2PermissionScopes
+    *
+    * @return ApiApplication The ApiApplication
+    */
+    public function setOauth2PermissionScopes($val)
+    {
+        $this->_propDict["oauth2PermissionScopes"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the preAuthorizedApplications
     * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
     *
@@ -139,38 +172,5 @@ class ApiApplication extends Entity
     {
         $this->_propDict["requestedAccessTokenVersion"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the oauth2PermissionScopes
-    * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
-    *
-    * @return PermissionScope The oauth2PermissionScopes
-    */
-    public function getOauth2PermissionScopes()
-    {
-        if (array_key_exists("oauth2PermissionScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["oauth2PermissionScopes"], "Microsoft\Graph\Model\PermissionScope")) {
-                return $this->_propDict["oauth2PermissionScopes"];
-            } else {
-                $this->_propDict["oauth2PermissionScopes"] = new PermissionScope($this->_propDict["oauth2PermissionScopes"]);
-                return $this->_propDict["oauth2PermissionScopes"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the oauth2PermissionScopes
-    * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
-    *
-    * @param PermissionScope $val The value to assign to the oauth2PermissionScopes
-    *
-    * @return ApiApplication The ApiApplication
-    */
-    public function setOauth2PermissionScopes($val)
-    {
-        $this->_propDict["oauth2PermissionScopes"] = $val;
-         return $this;
     }
 }

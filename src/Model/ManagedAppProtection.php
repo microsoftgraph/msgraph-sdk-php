@@ -24,69 +24,33 @@ namespace Microsoft\Graph\Model;
 */
 class ManagedAppProtection extends ManagedAppPolicy
 {
-    /**
-    * Gets the periodOfflineBeforeAccessCheck
-    * The period after which access is checked when the device is not connected to the internet.
-    *
-    * @return Duration The periodOfflineBeforeAccessCheck
-    */
-    public function getPeriodOfflineBeforeAccessCheck()
+
+     /** 
+     * Gets the allowedDataStorageLocations
+    * Data storage locations where a user may store managed data.
+     *
+     * @return array The allowedDataStorageLocations
+     */
+    public function getAllowedDataStorageLocations()
     {
-        if (array_key_exists("periodOfflineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["periodOfflineBeforeAccessCheck"];
-            } else {
-                $this->_propDict["periodOfflineBeforeAccessCheck"] = new Duration($this->_propDict["periodOfflineBeforeAccessCheck"]);
-                return $this->_propDict["periodOfflineBeforeAccessCheck"];
-            }
+        if (array_key_exists("allowedDataStorageLocations", $this->_propDict)) {
+           return $this->_propDict["allowedDataStorageLocations"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the periodOfflineBeforeAccessCheck
-    * The period after which access is checked when the device is not connected to the internet.
+    /** 
+    * Sets the allowedDataStorageLocations
+    * Data storage locations where a user may store managed data.
     *
-    * @param Duration $val The periodOfflineBeforeAccessCheck
+    * @param ManagedAppDataStorageLocation $val The allowedDataStorageLocations
     *
     * @return ManagedAppProtection
     */
-    public function setPeriodOfflineBeforeAccessCheck($val)
+    public function setAllowedDataStorageLocations($val)
     {
-        $this->_propDict["periodOfflineBeforeAccessCheck"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the periodOnlineBeforeAccessCheck
-    * The period after which access is checked when the device is connected to the internet.
-    *
-    * @return Duration The periodOnlineBeforeAccessCheck
-    */
-    public function getPeriodOnlineBeforeAccessCheck()
-    {
-        if (array_key_exists("periodOnlineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["periodOnlineBeforeAccessCheck"];
-            } else {
-                $this->_propDict["periodOnlineBeforeAccessCheck"] = new Duration($this->_propDict["periodOnlineBeforeAccessCheck"]);
-                return $this->_propDict["periodOnlineBeforeAccessCheck"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the periodOnlineBeforeAccessCheck
-    * The period after which access is checked when the device is connected to the internet.
-    *
-    * @param Duration $val The periodOnlineBeforeAccessCheck
-    *
-    * @return ManagedAppProtection
-    */
-    public function setPeriodOnlineBeforeAccessCheck($val)
-    {
-        $this->_propDict["periodOnlineBeforeAccessCheck"] = $val;
+		$this->_propDict["allowedDataStorageLocations"] = $val;
         return $this;
     }
     
@@ -124,6 +88,39 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
+    * Gets the allowedOutboundClipboardSharingLevel
+    * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
+    *
+    * @return ManagedAppClipboardSharingLevel The allowedOutboundClipboardSharingLevel
+    */
+    public function getAllowedOutboundClipboardSharingLevel()
+    {
+        if (array_key_exists("allowedOutboundClipboardSharingLevel", $this->_propDict)) {
+            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "Microsoft\Graph\Model\ManagedAppClipboardSharingLevel")) {
+                return $this->_propDict["allowedOutboundClipboardSharingLevel"];
+            } else {
+                $this->_propDict["allowedOutboundClipboardSharingLevel"] = new ManagedAppClipboardSharingLevel($this->_propDict["allowedOutboundClipboardSharingLevel"]);
+                return $this->_propDict["allowedOutboundClipboardSharingLevel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the allowedOutboundClipboardSharingLevel
+    * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
+    *
+    * @param ManagedAppClipboardSharingLevel $val The allowedOutboundClipboardSharingLevel
+    *
+    * @return ManagedAppProtection
+    */
+    public function setAllowedOutboundClipboardSharingLevel($val)
+    {
+        $this->_propDict["allowedOutboundClipboardSharingLevel"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the allowedOutboundDataTransferDestinations
     * Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
     *
@@ -157,64 +154,31 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
-    * Gets the organizationalCredentialsRequired
-    * Indicates whether organizational credentials are required for app use.
+    * Gets the contactSyncBlocked
+    * Indicates whether contacts can be synced to the user's device.
     *
-    * @return bool The organizationalCredentialsRequired
+    * @return bool The contactSyncBlocked
     */
-    public function getOrganizationalCredentialsRequired()
+    public function getContactSyncBlocked()
     {
-        if (array_key_exists("organizationalCredentialsRequired", $this->_propDict)) {
-            return $this->_propDict["organizationalCredentialsRequired"];
+        if (array_key_exists("contactSyncBlocked", $this->_propDict)) {
+            return $this->_propDict["contactSyncBlocked"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the organizationalCredentialsRequired
-    * Indicates whether organizational credentials are required for app use.
+    * Sets the contactSyncBlocked
+    * Indicates whether contacts can be synced to the user's device.
     *
-    * @param bool $val The organizationalCredentialsRequired
-    *
-    * @return ManagedAppProtection
-    */
-    public function setOrganizationalCredentialsRequired($val)
-    {
-        $this->_propDict["organizationalCredentialsRequired"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the allowedOutboundClipboardSharingLevel
-    * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
-    *
-    * @return ManagedAppClipboardSharingLevel The allowedOutboundClipboardSharingLevel
-    */
-    public function getAllowedOutboundClipboardSharingLevel()
-    {
-        if (array_key_exists("allowedOutboundClipboardSharingLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "Microsoft\Graph\Model\ManagedAppClipboardSharingLevel")) {
-                return $this->_propDict["allowedOutboundClipboardSharingLevel"];
-            } else {
-                $this->_propDict["allowedOutboundClipboardSharingLevel"] = new ManagedAppClipboardSharingLevel($this->_propDict["allowedOutboundClipboardSharingLevel"]);
-                return $this->_propDict["allowedOutboundClipboardSharingLevel"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the allowedOutboundClipboardSharingLevel
-    * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
-    *
-    * @param ManagedAppClipboardSharingLevel $val The allowedOutboundClipboardSharingLevel
+    * @param bool $val The contactSyncBlocked
     *
     * @return ManagedAppProtection
     */
-    public function setAllowedOutboundClipboardSharingLevel($val)
+    public function setContactSyncBlocked($val)
     {
-        $this->_propDict["allowedOutboundClipboardSharingLevel"] = $val;
+        $this->_propDict["contactSyncBlocked"] = boolval($val);
         return $this;
     }
     
@@ -277,6 +241,97 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
+    * Gets the disableAppPinIfDevicePinIsSet
+    * Indicates whether use of the app pin is required if the device pin is set.
+    *
+    * @return bool The disableAppPinIfDevicePinIsSet
+    */
+    public function getDisableAppPinIfDevicePinIsSet()
+    {
+        if (array_key_exists("disableAppPinIfDevicePinIsSet", $this->_propDict)) {
+            return $this->_propDict["disableAppPinIfDevicePinIsSet"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disableAppPinIfDevicePinIsSet
+    * Indicates whether use of the app pin is required if the device pin is set.
+    *
+    * @param bool $val The disableAppPinIfDevicePinIsSet
+    *
+    * @return ManagedAppProtection
+    */
+    public function setDisableAppPinIfDevicePinIsSet($val)
+    {
+        $this->_propDict["disableAppPinIfDevicePinIsSet"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the fingerprintBlocked
+    * Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
+    *
+    * @return bool The fingerprintBlocked
+    */
+    public function getFingerprintBlocked()
+    {
+        if (array_key_exists("fingerprintBlocked", $this->_propDict)) {
+            return $this->_propDict["fingerprintBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the fingerprintBlocked
+    * Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
+    *
+    * @param bool $val The fingerprintBlocked
+    *
+    * @return ManagedAppProtection
+    */
+    public function setFingerprintBlocked($val)
+    {
+        $this->_propDict["fingerprintBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the managedBrowser
+    * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+    *
+    * @return ManagedBrowserType The managedBrowser
+    */
+    public function getManagedBrowser()
+    {
+        if (array_key_exists("managedBrowser", $this->_propDict)) {
+            if (is_a($this->_propDict["managedBrowser"], "Microsoft\Graph\Model\ManagedBrowserType")) {
+                return $this->_propDict["managedBrowser"];
+            } else {
+                $this->_propDict["managedBrowser"] = new ManagedBrowserType($this->_propDict["managedBrowser"]);
+                return $this->_propDict["managedBrowser"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the managedBrowser
+    * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+    *
+    * @param ManagedBrowserType $val The managedBrowser
+    *
+    * @return ManagedAppProtection
+    */
+    public function setManagedBrowser($val)
+    {
+        $this->_propDict["managedBrowser"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the managedBrowserToOpenLinksRequired
     * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
     *
@@ -306,31 +361,271 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
-    * Gets the saveAsBlocked
-    * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
+    * Gets the maximumPinRetries
+    * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
     *
-    * @return bool The saveAsBlocked
+    * @return int The maximumPinRetries
     */
-    public function getSaveAsBlocked()
+    public function getMaximumPinRetries()
     {
-        if (array_key_exists("saveAsBlocked", $this->_propDict)) {
-            return $this->_propDict["saveAsBlocked"];
+        if (array_key_exists("maximumPinRetries", $this->_propDict)) {
+            return $this->_propDict["maximumPinRetries"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the saveAsBlocked
-    * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
+    * Sets the maximumPinRetries
+    * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
     *
-    * @param bool $val The saveAsBlocked
+    * @param int $val The maximumPinRetries
     *
     * @return ManagedAppProtection
     */
-    public function setSaveAsBlocked($val)
+    public function setMaximumPinRetries($val)
     {
-        $this->_propDict["saveAsBlocked"] = boolval($val);
+        $this->_propDict["maximumPinRetries"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumPinLength
+    * Minimum pin length required for an app-level pin if PinRequired is set to True
+    *
+    * @return int The minimumPinLength
+    */
+    public function getMinimumPinLength()
+    {
+        if (array_key_exists("minimumPinLength", $this->_propDict)) {
+            return $this->_propDict["minimumPinLength"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumPinLength
+    * Minimum pin length required for an app-level pin if PinRequired is set to True
+    *
+    * @param int $val The minimumPinLength
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMinimumPinLength($val)
+    {
+        $this->_propDict["minimumPinLength"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumRequiredAppVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @return string The minimumRequiredAppVersion
+    */
+    public function getMinimumRequiredAppVersion()
+    {
+        if (array_key_exists("minimumRequiredAppVersion", $this->_propDict)) {
+            return $this->_propDict["minimumRequiredAppVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumRequiredAppVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @param string $val The minimumRequiredAppVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMinimumRequiredAppVersion($val)
+    {
+        $this->_propDict["minimumRequiredAppVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumRequiredOsVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @return string The minimumRequiredOsVersion
+    */
+    public function getMinimumRequiredOsVersion()
+    {
+        if (array_key_exists("minimumRequiredOsVersion", $this->_propDict)) {
+            return $this->_propDict["minimumRequiredOsVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumRequiredOsVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
+    *
+    * @param string $val The minimumRequiredOsVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMinimumRequiredOsVersion($val)
+    {
+        $this->_propDict["minimumRequiredOsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumWarningAppVersion
+    * Versions less than the specified version will result in warning message on the managed app.
+    *
+    * @return string The minimumWarningAppVersion
+    */
+    public function getMinimumWarningAppVersion()
+    {
+        if (array_key_exists("minimumWarningAppVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWarningAppVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWarningAppVersion
+    * Versions less than the specified version will result in warning message on the managed app.
+    *
+    * @param string $val The minimumWarningAppVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMinimumWarningAppVersion($val)
+    {
+        $this->_propDict["minimumWarningAppVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minimumWarningOsVersion
+    * Versions less than the specified version will result in warning message on the managed app from accessing company data.
+    *
+    * @return string The minimumWarningOsVersion
+    */
+    public function getMinimumWarningOsVersion()
+    {
+        if (array_key_exists("minimumWarningOsVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWarningOsVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minimumWarningOsVersion
+    * Versions less than the specified version will result in warning message on the managed app from accessing company data.
+    *
+    * @param string $val The minimumWarningOsVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMinimumWarningOsVersion($val)
+    {
+        $this->_propDict["minimumWarningOsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the organizationalCredentialsRequired
+    * Indicates whether organizational credentials are required for app use.
+    *
+    * @return bool The organizationalCredentialsRequired
+    */
+    public function getOrganizationalCredentialsRequired()
+    {
+        if (array_key_exists("organizationalCredentialsRequired", $this->_propDict)) {
+            return $this->_propDict["organizationalCredentialsRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the organizationalCredentialsRequired
+    * Indicates whether organizational credentials are required for app use.
+    *
+    * @param bool $val The organizationalCredentialsRequired
+    *
+    * @return ManagedAppProtection
+    */
+    public function setOrganizationalCredentialsRequired($val)
+    {
+        $this->_propDict["organizationalCredentialsRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the periodBeforePinReset
+    * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
+    *
+    * @return Duration The periodBeforePinReset
+    */
+    public function getPeriodBeforePinReset()
+    {
+        if (array_key_exists("periodBeforePinReset", $this->_propDict)) {
+            if (is_a($this->_propDict["periodBeforePinReset"], "Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["periodBeforePinReset"];
+            } else {
+                $this->_propDict["periodBeforePinReset"] = new Duration($this->_propDict["periodBeforePinReset"]);
+                return $this->_propDict["periodBeforePinReset"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the periodBeforePinReset
+    * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
+    *
+    * @param Duration $val The periodBeforePinReset
+    *
+    * @return ManagedAppProtection
+    */
+    public function setPeriodBeforePinReset($val)
+    {
+        $this->_propDict["periodBeforePinReset"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the periodOfflineBeforeAccessCheck
+    * The period after which access is checked when the device is not connected to the internet.
+    *
+    * @return Duration The periodOfflineBeforeAccessCheck
+    */
+    public function getPeriodOfflineBeforeAccessCheck()
+    {
+        if (array_key_exists("periodOfflineBeforeAccessCheck", $this->_propDict)) {
+            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["periodOfflineBeforeAccessCheck"];
+            } else {
+                $this->_propDict["periodOfflineBeforeAccessCheck"] = new Duration($this->_propDict["periodOfflineBeforeAccessCheck"]);
+                return $this->_propDict["periodOfflineBeforeAccessCheck"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the periodOfflineBeforeAccessCheck
+    * The period after which access is checked when the device is not connected to the internet.
+    *
+    * @param Duration $val The periodOfflineBeforeAccessCheck
+    *
+    * @return ManagedAppProtection
+    */
+    public function setPeriodOfflineBeforeAccessCheck($val)
+    {
+        $this->_propDict["periodOfflineBeforeAccessCheck"] = $val;
         return $this;
     }
     
@@ -368,118 +663,35 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
-    * Gets the pinRequired
-    * Indicates whether an app-level pin is required.
+    * Gets the periodOnlineBeforeAccessCheck
+    * The period after which access is checked when the device is connected to the internet.
     *
-    * @return bool The pinRequired
+    * @return Duration The periodOnlineBeforeAccessCheck
     */
-    public function getPinRequired()
+    public function getPeriodOnlineBeforeAccessCheck()
     {
-        if (array_key_exists("pinRequired", $this->_propDict)) {
-            return $this->_propDict["pinRequired"];
-        } else {
-            return null;
+        if (array_key_exists("periodOnlineBeforeAccessCheck", $this->_propDict)) {
+            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["periodOnlineBeforeAccessCheck"];
+            } else {
+                $this->_propDict["periodOnlineBeforeAccessCheck"] = new Duration($this->_propDict["periodOnlineBeforeAccessCheck"]);
+                return $this->_propDict["periodOnlineBeforeAccessCheck"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the pinRequired
-    * Indicates whether an app-level pin is required.
+    * Sets the periodOnlineBeforeAccessCheck
+    * The period after which access is checked when the device is connected to the internet.
     *
-    * @param bool $val The pinRequired
+    * @param Duration $val The periodOnlineBeforeAccessCheck
     *
     * @return ManagedAppProtection
     */
-    public function setPinRequired($val)
+    public function setPeriodOnlineBeforeAccessCheck($val)
     {
-        $this->_propDict["pinRequired"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the maximumPinRetries
-    * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
-    *
-    * @return int The maximumPinRetries
-    */
-    public function getMaximumPinRetries()
-    {
-        if (array_key_exists("maximumPinRetries", $this->_propDict)) {
-            return $this->_propDict["maximumPinRetries"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the maximumPinRetries
-    * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
-    *
-    * @param int $val The maximumPinRetries
-    *
-    * @return ManagedAppProtection
-    */
-    public function setMaximumPinRetries($val)
-    {
-        $this->_propDict["maximumPinRetries"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the simplePinBlocked
-    * Indicates whether simplePin is blocked.
-    *
-    * @return bool The simplePinBlocked
-    */
-    public function getSimplePinBlocked()
-    {
-        if (array_key_exists("simplePinBlocked", $this->_propDict)) {
-            return $this->_propDict["simplePinBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the simplePinBlocked
-    * Indicates whether simplePin is blocked.
-    *
-    * @param bool $val The simplePinBlocked
-    *
-    * @return ManagedAppProtection
-    */
-    public function setSimplePinBlocked($val)
-    {
-        $this->_propDict["simplePinBlocked"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumPinLength
-    * Minimum pin length required for an app-level pin if PinRequired is set to True
-    *
-    * @return int The minimumPinLength
-    */
-    public function getMinimumPinLength()
-    {
-        if (array_key_exists("minimumPinLength", $this->_propDict)) {
-            return $this->_propDict["minimumPinLength"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumPinLength
-    * Minimum pin length required for an app-level pin if PinRequired is set to True
-    *
-    * @param int $val The minimumPinLength
-    *
-    * @return ManagedAppProtection
-    */
-    public function setMinimumPinLength($val)
-    {
-        $this->_propDict["minimumPinLength"] = intval($val);
+        $this->_propDict["periodOnlineBeforeAccessCheck"] = $val;
         return $this;
     }
     
@@ -517,94 +729,31 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
-    * Gets the periodBeforePinReset
-    * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
+    * Gets the pinRequired
+    * Indicates whether an app-level pin is required.
     *
-    * @return Duration The periodBeforePinReset
+    * @return bool The pinRequired
     */
-    public function getPeriodBeforePinReset()
+    public function getPinRequired()
     {
-        if (array_key_exists("periodBeforePinReset", $this->_propDict)) {
-            if (is_a($this->_propDict["periodBeforePinReset"], "Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["periodBeforePinReset"];
-            } else {
-                $this->_propDict["periodBeforePinReset"] = new Duration($this->_propDict["periodBeforePinReset"]);
-                return $this->_propDict["periodBeforePinReset"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the periodBeforePinReset
-    * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
-    *
-    * @param Duration $val The periodBeforePinReset
-    *
-    * @return ManagedAppProtection
-    */
-    public function setPeriodBeforePinReset($val)
-    {
-        $this->_propDict["periodBeforePinReset"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the allowedDataStorageLocations
-    * Data storage locations where a user may store managed data.
-     *
-     * @return array The allowedDataStorageLocations
-     */
-    public function getAllowedDataStorageLocations()
-    {
-        if (array_key_exists("allowedDataStorageLocations", $this->_propDict)) {
-           return $this->_propDict["allowedDataStorageLocations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the allowedDataStorageLocations
-    * Data storage locations where a user may store managed data.
-    *
-    * @param ManagedAppDataStorageLocation $val The allowedDataStorageLocations
-    *
-    * @return ManagedAppProtection
-    */
-    public function setAllowedDataStorageLocations($val)
-    {
-		$this->_propDict["allowedDataStorageLocations"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the contactSyncBlocked
-    * Indicates whether contacts can be synced to the user's device.
-    *
-    * @return bool The contactSyncBlocked
-    */
-    public function getContactSyncBlocked()
-    {
-        if (array_key_exists("contactSyncBlocked", $this->_propDict)) {
-            return $this->_propDict["contactSyncBlocked"];
+        if (array_key_exists("pinRequired", $this->_propDict)) {
+            return $this->_propDict["pinRequired"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the contactSyncBlocked
-    * Indicates whether contacts can be synced to the user's device.
+    * Sets the pinRequired
+    * Indicates whether an app-level pin is required.
     *
-    * @param bool $val The contactSyncBlocked
+    * @param bool $val The pinRequired
     *
     * @return ManagedAppProtection
     */
-    public function setContactSyncBlocked($val)
+    public function setPinRequired($val)
     {
-        $this->_propDict["contactSyncBlocked"] = boolval($val);
+        $this->_propDict["pinRequired"] = boolval($val);
         return $this;
     }
     
@@ -638,209 +787,60 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
-    * Gets the fingerprintBlocked
-    * Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
+    * Gets the saveAsBlocked
+    * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
     *
-    * @return bool The fingerprintBlocked
+    * @return bool The saveAsBlocked
     */
-    public function getFingerprintBlocked()
+    public function getSaveAsBlocked()
     {
-        if (array_key_exists("fingerprintBlocked", $this->_propDict)) {
-            return $this->_propDict["fingerprintBlocked"];
+        if (array_key_exists("saveAsBlocked", $this->_propDict)) {
+            return $this->_propDict["saveAsBlocked"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the fingerprintBlocked
-    * Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
+    * Sets the saveAsBlocked
+    * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
     *
-    * @param bool $val The fingerprintBlocked
+    * @param bool $val The saveAsBlocked
     *
     * @return ManagedAppProtection
     */
-    public function setFingerprintBlocked($val)
+    public function setSaveAsBlocked($val)
     {
-        $this->_propDict["fingerprintBlocked"] = boolval($val);
+        $this->_propDict["saveAsBlocked"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the disableAppPinIfDevicePinIsSet
-    * Indicates whether use of the app pin is required if the device pin is set.
+    * Gets the simplePinBlocked
+    * Indicates whether simplePin is blocked.
     *
-    * @return bool The disableAppPinIfDevicePinIsSet
+    * @return bool The simplePinBlocked
     */
-    public function getDisableAppPinIfDevicePinIsSet()
+    public function getSimplePinBlocked()
     {
-        if (array_key_exists("disableAppPinIfDevicePinIsSet", $this->_propDict)) {
-            return $this->_propDict["disableAppPinIfDevicePinIsSet"];
+        if (array_key_exists("simplePinBlocked", $this->_propDict)) {
+            return $this->_propDict["simplePinBlocked"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the disableAppPinIfDevicePinIsSet
-    * Indicates whether use of the app pin is required if the device pin is set.
+    * Sets the simplePinBlocked
+    * Indicates whether simplePin is blocked.
     *
-    * @param bool $val The disableAppPinIfDevicePinIsSet
-    *
-    * @return ManagedAppProtection
-    */
-    public function setDisableAppPinIfDevicePinIsSet($val)
-    {
-        $this->_propDict["disableAppPinIfDevicePinIsSet"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumRequiredOsVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @return string The minimumRequiredOsVersion
-    */
-    public function getMinimumRequiredOsVersion()
-    {
-        if (array_key_exists("minimumRequiredOsVersion", $this->_propDict)) {
-            return $this->_propDict["minimumRequiredOsVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumRequiredOsVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @param string $val The minimumRequiredOsVersion
+    * @param bool $val The simplePinBlocked
     *
     * @return ManagedAppProtection
     */
-    public function setMinimumRequiredOsVersion($val)
+    public function setSimplePinBlocked($val)
     {
-        $this->_propDict["minimumRequiredOsVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumWarningOsVersion
-    * Versions less than the specified version will result in warning message on the managed app from accessing company data.
-    *
-    * @return string The minimumWarningOsVersion
-    */
-    public function getMinimumWarningOsVersion()
-    {
-        if (array_key_exists("minimumWarningOsVersion", $this->_propDict)) {
-            return $this->_propDict["minimumWarningOsVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumWarningOsVersion
-    * Versions less than the specified version will result in warning message on the managed app from accessing company data.
-    *
-    * @param string $val The minimumWarningOsVersion
-    *
-    * @return ManagedAppProtection
-    */
-    public function setMinimumWarningOsVersion($val)
-    {
-        $this->_propDict["minimumWarningOsVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumRequiredAppVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @return string The minimumRequiredAppVersion
-    */
-    public function getMinimumRequiredAppVersion()
-    {
-        if (array_key_exists("minimumRequiredAppVersion", $this->_propDict)) {
-            return $this->_propDict["minimumRequiredAppVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumRequiredAppVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
-    *
-    * @param string $val The minimumRequiredAppVersion
-    *
-    * @return ManagedAppProtection
-    */
-    public function setMinimumRequiredAppVersion($val)
-    {
-        $this->_propDict["minimumRequiredAppVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the minimumWarningAppVersion
-    * Versions less than the specified version will result in warning message on the managed app.
-    *
-    * @return string The minimumWarningAppVersion
-    */
-    public function getMinimumWarningAppVersion()
-    {
-        if (array_key_exists("minimumWarningAppVersion", $this->_propDict)) {
-            return $this->_propDict["minimumWarningAppVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the minimumWarningAppVersion
-    * Versions less than the specified version will result in warning message on the managed app.
-    *
-    * @param string $val The minimumWarningAppVersion
-    *
-    * @return ManagedAppProtection
-    */
-    public function setMinimumWarningAppVersion($val)
-    {
-        $this->_propDict["minimumWarningAppVersion"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the managedBrowser
-    * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
-    *
-    * @return ManagedBrowserType The managedBrowser
-    */
-    public function getManagedBrowser()
-    {
-        if (array_key_exists("managedBrowser", $this->_propDict)) {
-            if (is_a($this->_propDict["managedBrowser"], "Microsoft\Graph\Model\ManagedBrowserType")) {
-                return $this->_propDict["managedBrowser"];
-            } else {
-                $this->_propDict["managedBrowser"] = new ManagedBrowserType($this->_propDict["managedBrowser"]);
-                return $this->_propDict["managedBrowser"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the managedBrowser
-    * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
-    *
-    * @param ManagedBrowserType $val The managedBrowser
-    *
-    * @return ManagedAppProtection
-    */
-    public function setManagedBrowser($val)
-    {
-        $this->_propDict["managedBrowser"] = $val;
+        $this->_propDict["simplePinBlocked"] = boolval($val);
         return $this;
     }
     

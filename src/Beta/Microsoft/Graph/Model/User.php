@@ -233,7 +233,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
     *
     * @return string The companyName
     */
@@ -248,7 +248,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
     *
     * @param string $val The companyName
     *
@@ -492,6 +492,64 @@ class User extends DirectoryObject
     public function setEmployeeId($val)
     {
         $this->_propDict["employeeId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalUserState
+    * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
+    *
+    * @return string The externalUserState
+    */
+    public function getExternalUserState()
+    {
+        if (array_key_exists("externalUserState", $this->_propDict)) {
+            return $this->_propDict["externalUserState"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalUserState
+    * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
+    *
+    * @param string $val The externalUserState
+    *
+    * @return User
+    */
+    public function setExternalUserState($val)
+    {
+        $this->_propDict["externalUserState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalUserStateChangeDateTime
+    * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
+    *
+    * @return string The externalUserStateChangeDateTime
+    */
+    public function getExternalUserStateChangeDateTime()
+    {
+        if (array_key_exists("externalUserStateChangeDateTime", $this->_propDict)) {
+            return $this->_propDict["externalUserStateChangeDateTime"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalUserStateChangeDateTime
+    * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
+    *
+    * @param string $val The externalUserStateChangeDateTime
+    *
+    * @return User
+    */
+    public function setExternalUserStateChangeDateTime($val)
+    {
+        $this->_propDict["externalUserStateChangeDateTime"] = $val;
         return $this;
     }
     
@@ -791,7 +849,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
     *
     * @return string The mail
     */
@@ -806,7 +864,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
     *
     * @param string $val The mail
     *
@@ -877,6 +935,35 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the officeLocation
+    * The office location in the user's place of business.
+    *
+    * @return string The officeLocation
+    */
+    public function getOfficeLocation()
+    {
+        if (array_key_exists("officeLocation", $this->_propDict)) {
+            return $this->_propDict["officeLocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the officeLocation
+    * The office location in the user's place of business.
+    *
+    * @param string $val The officeLocation
+    *
+    * @return User
+    */
+    public function setOfficeLocation($val)
+    {
+        $this->_propDict["officeLocation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onPremisesDistinguishedName
     * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
@@ -902,6 +989,35 @@ class User extends DirectoryObject
     public function setOnPremisesDistinguishedName($val)
     {
         $this->_propDict["onPremisesDistinguishedName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesDomainName
+    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+    *
+    * @return string The onPremisesDomainName
+    */
+    public function getOnPremisesDomainName()
+    {
+        if (array_key_exists("onPremisesDomainName", $this->_propDict)) {
+            return $this->_propDict["onPremisesDomainName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesDomainName
+    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+    *
+    * @param string $val The onPremisesDomainName
+    *
+    * @return User
+    */
+    public function setOnPremisesDomainName($val)
+    {
+        $this->_propDict["onPremisesDomainName"] = $val;
         return $this;
     }
     
@@ -1031,6 +1147,35 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the onPremisesSamAccountName
+    * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+    *
+    * @return string The onPremisesSamAccountName
+    */
+    public function getOnPremisesSamAccountName()
+    {
+        if (array_key_exists("onPremisesSamAccountName", $this->_propDict)) {
+            return $this->_propDict["onPremisesSamAccountName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesSamAccountName
+    * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
+    *
+    * @param string $val The onPremisesSamAccountName
+    *
+    * @return User
+    */
+    public function setOnPremisesSamAccountName($val)
+    {
+        $this->_propDict["onPremisesSamAccountName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onPremisesSecurityIdentifier
     * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
     *
@@ -1085,64 +1230,6 @@ class User extends DirectoryObject
     public function setOnPremisesSyncEnabled($val)
     {
         $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the onPremisesDomainName
-    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
-    *
-    * @return string The onPremisesDomainName
-    */
-    public function getOnPremisesDomainName()
-    {
-        if (array_key_exists("onPremisesDomainName", $this->_propDict)) {
-            return $this->_propDict["onPremisesDomainName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the onPremisesDomainName
-    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
-    *
-    * @param string $val The onPremisesDomainName
-    *
-    * @return User
-    */
-    public function setOnPremisesDomainName($val)
-    {
-        $this->_propDict["onPremisesDomainName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the onPremisesSamAccountName
-    * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
-    *
-    * @return string The onPremisesSamAccountName
-    */
-    public function getOnPremisesSamAccountName()
-    {
-        if (array_key_exists("onPremisesSamAccountName", $this->_propDict)) {
-            return $this->_propDict["onPremisesSamAccountName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the onPremisesSamAccountName
-    * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
-    *
-    * @param string $val The onPremisesSamAccountName
-    *
-    * @return User
-    */
-    public function setOnPremisesSamAccountName($val)
-    {
-        $this->_propDict["onPremisesSamAccountName"] = $val;
         return $this;
     }
     
@@ -1267,35 +1354,6 @@ class User extends DirectoryObject
     }
     
     /**
-    * Gets the officeLocation
-    * The office location in the user's place of business.
-    *
-    * @return string The officeLocation
-    */
-    public function getOfficeLocation()
-    {
-        if (array_key_exists("officeLocation", $this->_propDict)) {
-            return $this->_propDict["officeLocation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the officeLocation
-    * The office location in the user's place of business.
-    *
-    * @param string $val The officeLocation
-    *
-    * @return User
-    */
-    public function setOfficeLocation($val)
-    {
-        $this->_propDict["officeLocation"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the postalCode
     * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
     *
@@ -1326,7 +1384,6 @@ class User extends DirectoryObject
     
     /**
     * Gets the preferredDataLocation
-    * The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
     *
     * @return string The preferredDataLocation
     */
@@ -1341,7 +1398,6 @@ class User extends DirectoryObject
     
     /**
     * Sets the preferredDataLocation
-    * The preferred data location for the user. For more information, see OneDrive Online Multi-Geo.
     *
     * @param string $val The preferredDataLocation
     *
@@ -1678,64 +1734,6 @@ class User extends DirectoryObject
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the externalUserState
-    * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
-    *
-    * @return string The externalUserState
-    */
-    public function getExternalUserState()
-    {
-        if (array_key_exists("externalUserState", $this->_propDict)) {
-            return $this->_propDict["externalUserState"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the externalUserState
-    * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
-    *
-    * @param string $val The externalUserState
-    *
-    * @return User
-    */
-    public function setExternalUserState($val)
-    {
-        $this->_propDict["externalUserState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the externalUserStateChangeDateTime
-    * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
-    *
-    * @return string The externalUserStateChangeDateTime
-    */
-    public function getExternalUserStateChangeDateTime()
-    {
-        if (array_key_exists("externalUserStateChangeDateTime", $this->_propDict)) {
-            return $this->_propDict["externalUserStateChangeDateTime"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the externalUserStateChangeDateTime
-    * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
-    *
-    * @param string $val The externalUserStateChangeDateTime
-    *
-    * @return User
-    */
-    public function setExternalUserStateChangeDateTime($val)
-    {
-        $this->_propDict["externalUserStateChangeDateTime"] = $val;
         return $this;
     }
     
@@ -2518,65 +2516,248 @@ class User extends DirectoryObject
     }
     
     /**
-    * Gets the outlook
-    * Read-only.
+    * Gets the calendar
+    * The user's primary calendar. Read-only.
     *
-    * @return OutlookUser The outlook
+    * @return Calendar The calendar
     */
-    public function getOutlook()
+    public function getCalendar()
     {
-        if (array_key_exists("outlook", $this->_propDict)) {
-            if (is_a($this->_propDict["outlook"], "Beta\Microsoft\Graph\Model\OutlookUser")) {
-                return $this->_propDict["outlook"];
+        if (array_key_exists("calendar", $this->_propDict)) {
+            if (is_a($this->_propDict["calendar"], "Beta\Microsoft\Graph\Model\Calendar")) {
+                return $this->_propDict["calendar"];
             } else {
-                $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
-                return $this->_propDict["outlook"];
+                $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
+                return $this->_propDict["calendar"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the outlook
-    * Read-only.
+    * Sets the calendar
+    * The user's primary calendar. Read-only.
     *
-    * @param OutlookUser $val The outlook
+    * @param Calendar $val The calendar
     *
     * @return User
     */
-    public function setOutlook($val)
+    public function setCalendar($val)
     {
-        $this->_propDict["outlook"] = $val;
+        $this->_propDict["calendar"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the messages
-    * The messages in a mailbox or folder. Read-only. Nullable.
+     * Gets the calendarGroups
+    * The user's calendar groups. Read-only. Nullable.
      *
-     * @return array The messages
+     * @return array The calendarGroups
      */
-    public function getMessages()
+    public function getCalendarGroups()
     {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
+        if (array_key_exists("calendarGroups", $this->_propDict)) {
+           return $this->_propDict["calendarGroups"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the messages
-    * The messages in a mailbox or folder. Read-only. Nullable.
+    * Sets the calendarGroups
+    * The user's calendar groups. Read-only. Nullable.
     *
-    * @param Message $val The messages
+    * @param CalendarGroup $val The calendarGroups
     *
     * @return User
     */
-    public function setMessages($val)
+    public function setCalendarGroups($val)
     {
-		$this->_propDict["messages"] = $val;
+		$this->_propDict["calendarGroups"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the calendars
+    * The user's calendars. Read-only. Nullable.
+     *
+     * @return array The calendars
+     */
+    public function getCalendars()
+    {
+        if (array_key_exists("calendars", $this->_propDict)) {
+           return $this->_propDict["calendars"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the calendars
+    * The user's calendars. Read-only. Nullable.
+    *
+    * @param Calendar $val The calendars
+    *
+    * @return User
+    */
+    public function setCalendars($val)
+    {
+		$this->_propDict["calendars"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the calendarView
+    * The calendar view for the calendar. Read-only. Nullable.
+     *
+     * @return array The calendarView
+     */
+    public function getCalendarView()
+    {
+        if (array_key_exists("calendarView", $this->_propDict)) {
+           return $this->_propDict["calendarView"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the calendarView
+    * The calendar view for the calendar. Read-only. Nullable.
+    *
+    * @param Event $val The calendarView
+    *
+    * @return User
+    */
+    public function setCalendarView($val)
+    {
+		$this->_propDict["calendarView"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the contactFolders
+    * The user's contacts folders. Read-only. Nullable.
+     *
+     * @return array The contactFolders
+     */
+    public function getContactFolders()
+    {
+        if (array_key_exists("contactFolders", $this->_propDict)) {
+           return $this->_propDict["contactFolders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the contactFolders
+    * The user's contacts folders. Read-only. Nullable.
+    *
+    * @param ContactFolder $val The contactFolders
+    *
+    * @return User
+    */
+    public function setContactFolders($val)
+    {
+		$this->_propDict["contactFolders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the contacts
+    * The user's contacts. Read-only. Nullable.
+     *
+     * @return array The contacts
+     */
+    public function getContacts()
+    {
+        if (array_key_exists("contacts", $this->_propDict)) {
+           return $this->_propDict["contacts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the contacts
+    * The user's contacts. Read-only. Nullable.
+    *
+    * @param Contact $val The contacts
+    *
+    * @return User
+    */
+    public function setContacts($val)
+    {
+		$this->_propDict["contacts"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the events
+    * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+     *
+     * @return array The events
+     */
+    public function getEvents()
+    {
+        if (array_key_exists("events", $this->_propDict)) {
+           return $this->_propDict["events"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the events
+    * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+    *
+    * @param Event $val The events
+    *
+    * @return User
+    */
+    public function setEvents($val)
+    {
+		$this->_propDict["events"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the inferenceClassification
+    * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+    *
+    * @return InferenceClassification The inferenceClassification
+    */
+    public function getInferenceClassification()
+    {
+        if (array_key_exists("inferenceClassification", $this->_propDict)) {
+            if (is_a($this->_propDict["inferenceClassification"], "Beta\Microsoft\Graph\Model\InferenceClassification")) {
+                return $this->_propDict["inferenceClassification"];
+            } else {
+                $this->_propDict["inferenceClassification"] = new InferenceClassification($this->_propDict["inferenceClassification"]);
+                return $this->_propDict["inferenceClassification"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the inferenceClassification
+    * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+    *
+    * @param InferenceClassification $val The inferenceClassification
+    *
+    * @return User
+    */
+    public function setInferenceClassification($val)
+    {
+        $this->_propDict["inferenceClassification"] = $val;
         return $this;
     }
     
@@ -2638,156 +2819,66 @@ class User extends DirectoryObject
         return $this;
     }
     
-    /**
-    * Gets the calendar
-    * The user's primary calendar. Read-only.
-    *
-    * @return Calendar The calendar
-    */
-    public function getCalendar()
+
+     /** 
+     * Gets the messages
+    * The messages in a mailbox or folder. Read-only. Nullable.
+     *
+     * @return array The messages
+     */
+    public function getMessages()
     {
-        if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Beta\Microsoft\Graph\Model\Calendar")) {
-                return $this->_propDict["calendar"];
+        if (array_key_exists("messages", $this->_propDict)) {
+           return $this->_propDict["messages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the messages
+    * The messages in a mailbox or folder. Read-only. Nullable.
+    *
+    * @param Message $val The messages
+    *
+    * @return User
+    */
+    public function setMessages($val)
+    {
+		$this->_propDict["messages"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the outlook
+    * Read-only.
+    *
+    * @return OutlookUser The outlook
+    */
+    public function getOutlook()
+    {
+        if (array_key_exists("outlook", $this->_propDict)) {
+            if (is_a($this->_propDict["outlook"], "Beta\Microsoft\Graph\Model\OutlookUser")) {
+                return $this->_propDict["outlook"];
             } else {
-                $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
-                return $this->_propDict["calendar"];
+                $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
+                return $this->_propDict["outlook"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the calendar
-    * The user's primary calendar. Read-only.
+    * Sets the outlook
+    * Read-only.
     *
-    * @param Calendar $val The calendar
-    *
-    * @return User
-    */
-    public function setCalendar($val)
-    {
-        $this->_propDict["calendar"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the calendars
-    * The user's calendars. Read-only. Nullable.
-     *
-     * @return array The calendars
-     */
-    public function getCalendars()
-    {
-        if (array_key_exists("calendars", $this->_propDict)) {
-           return $this->_propDict["calendars"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the calendars
-    * The user's calendars. Read-only. Nullable.
-    *
-    * @param Calendar $val The calendars
+    * @param OutlookUser $val The outlook
     *
     * @return User
     */
-    public function setCalendars($val)
+    public function setOutlook($val)
     {
-		$this->_propDict["calendars"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the calendarGroups
-    * The user's calendar groups. Read-only. Nullable.
-     *
-     * @return array The calendarGroups
-     */
-    public function getCalendarGroups()
-    {
-        if (array_key_exists("calendarGroups", $this->_propDict)) {
-           return $this->_propDict["calendarGroups"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the calendarGroups
-    * The user's calendar groups. Read-only. Nullable.
-    *
-    * @param CalendarGroup $val The calendarGroups
-    *
-    * @return User
-    */
-    public function setCalendarGroups($val)
-    {
-		$this->_propDict["calendarGroups"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the calendarView
-    * The calendar view for the calendar. Read-only. Nullable.
-     *
-     * @return array The calendarView
-     */
-    public function getCalendarView()
-    {
-        if (array_key_exists("calendarView", $this->_propDict)) {
-           return $this->_propDict["calendarView"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the calendarView
-    * The calendar view for the calendar. Read-only. Nullable.
-    *
-    * @param Event $val The calendarView
-    *
-    * @return User
-    */
-    public function setCalendarView($val)
-    {
-		$this->_propDict["calendarView"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the events
-    * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
-     *
-     * @return array The events
-     */
-    public function getEvents()
-    {
-        if (array_key_exists("events", $this->_propDict)) {
-           return $this->_propDict["events"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the events
-    * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
-    *
-    * @param Event $val The events
-    *
-    * @return User
-    */
-    public function setEvents($val)
-    {
-		$this->_propDict["events"] = $val;
+        $this->_propDict["outlook"] = $val;
         return $this;
     }
     
@@ -2818,99 +2909,6 @@ class User extends DirectoryObject
     public function setPeople($val)
     {
 		$this->_propDict["people"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the contacts
-    * The user's contacts. Read-only. Nullable.
-     *
-     * @return array The contacts
-     */
-    public function getContacts()
-    {
-        if (array_key_exists("contacts", $this->_propDict)) {
-           return $this->_propDict["contacts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the contacts
-    * The user's contacts. Read-only. Nullable.
-    *
-    * @param Contact $val The contacts
-    *
-    * @return User
-    */
-    public function setContacts($val)
-    {
-		$this->_propDict["contacts"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the contactFolders
-    * The user's contacts folders. Read-only. Nullable.
-     *
-     * @return array The contactFolders
-     */
-    public function getContactFolders()
-    {
-        if (array_key_exists("contactFolders", $this->_propDict)) {
-           return $this->_propDict["contactFolders"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the contactFolders
-    * The user's contacts folders. Read-only. Nullable.
-    *
-    * @param ContactFolder $val The contactFolders
-    *
-    * @return User
-    */
-    public function setContactFolders($val)
-    {
-		$this->_propDict["contactFolders"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the inferenceClassification
-    * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
-    *
-    * @return InferenceClassification The inferenceClassification
-    */
-    public function getInferenceClassification()
-    {
-        if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "Beta\Microsoft\Graph\Model\InferenceClassification")) {
-                return $this->_propDict["inferenceClassification"];
-            } else {
-                $this->_propDict["inferenceClassification"] = new InferenceClassification($this->_propDict["inferenceClassification"]);
-                return $this->_propDict["inferenceClassification"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the inferenceClassification
-    * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
-    *
-    * @param InferenceClassification $val The inferenceClassification
-    *
-    * @return User
-    */
-    public function setInferenceClassification($val)
-    {
-        $this->_propDict["inferenceClassification"] = $val;
         return $this;
     }
     
@@ -3098,34 +3096,6 @@ class User extends DirectoryObject
     
 
      /** 
-     * Gets the approvals
-     *
-     * @return array The approvals
-     */
-    public function getApprovals()
-    {
-        if (array_key_exists("approvals", $this->_propDict)) {
-           return $this->_propDict["approvals"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the approvals
-    *
-    * @param Approval $val The approvals
-    *
-    * @return User
-    */
-    public function setApprovals($val)
-    {
-		$this->_propDict["approvals"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the appConsentRequestsForApproval
      *
      * @return array The appConsentRequestsForApproval
@@ -3149,6 +3119,34 @@ class User extends DirectoryObject
     public function setAppConsentRequestsForApproval($val)
     {
 		$this->_propDict["appConsentRequestsForApproval"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the approvals
+     *
+     * @return array The approvals
+     */
+    public function getApprovals()
+    {
+        if (array_key_exists("approvals", $this->_propDict)) {
+           return $this->_propDict["approvals"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the approvals
+    *
+    * @param Approval $val The approvals
+    *
+    * @return User
+    */
+    public function setApprovals($val)
+    {
+		$this->_propDict["approvals"] = $val;
         return $this;
     }
     
@@ -3839,6 +3837,37 @@ class User extends DirectoryObject
     public function setTeamwork($val)
     {
         $this->_propDict["teamwork"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the todo
+    *
+    * @return Todo The todo
+    */
+    public function getTodo()
+    {
+        if (array_key_exists("todo", $this->_propDict)) {
+            if (is_a($this->_propDict["todo"], "Beta\Microsoft\Graph\Model\Todo")) {
+                return $this->_propDict["todo"];
+            } else {
+                $this->_propDict["todo"] = new Todo($this->_propDict["todo"]);
+                return $this->_propDict["todo"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the todo
+    *
+    * @param Todo $val The todo
+    *
+    * @return User
+    */
+    public function setTodo($val)
+    {
+        $this->_propDict["todo"] = $val;
         return $this;
     }
     

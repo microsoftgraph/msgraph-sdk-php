@@ -25,238 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
 {
     /**
-    * Gets the networkSingleSignOn
-    * Specify the network single sign on type.
+    * Gets the authenticationMethod
+    * Specify the authentication method.
     *
-    * @return NetworkSingleSignOnType The networkSingleSignOn
+    * @return WiFiAuthenticationMethod The authenticationMethod
     */
-    public function getNetworkSingleSignOn()
+    public function getAuthenticationMethod()
     {
-        if (array_key_exists("networkSingleSignOn", $this->_propDict)) {
-            if (is_a($this->_propDict["networkSingleSignOn"], "Beta\Microsoft\Graph\Model\NetworkSingleSignOnType")) {
-                return $this->_propDict["networkSingleSignOn"];
+        if (array_key_exists("authenticationMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+                return $this->_propDict["authenticationMethod"];
             } else {
-                $this->_propDict["networkSingleSignOn"] = new NetworkSingleSignOnType($this->_propDict["networkSingleSignOn"]);
-                return $this->_propDict["networkSingleSignOn"];
+                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
+                return $this->_propDict["authenticationMethod"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the networkSingleSignOn
-    * Specify the network single sign on type.
+    * Sets the authenticationMethod
+    * Specify the authentication method.
     *
-    * @param NetworkSingleSignOnType $val The networkSingleSignOn
+    * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
     * @return WindowsWifiEnterpriseEAPConfiguration
     */
-    public function setNetworkSingleSignOn($val)
+    public function setAuthenticationMethod($val)
     {
-        $this->_propDict["networkSingleSignOn"] = $val;
+        $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
     
     /**
-    * Gets the maximumAuthenticationTimeoutInSeconds
-    * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
+    * Gets the disableUserPromptForServerValidation
+    * Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
     *
-    * @return int The maximumAuthenticationTimeoutInSeconds
+    * @return bool The disableUserPromptForServerValidation
     */
-    public function getMaximumAuthenticationTimeoutInSeconds()
+    public function getDisableUserPromptForServerValidation()
     {
-        if (array_key_exists("maximumAuthenticationTimeoutInSeconds", $this->_propDict)) {
-            return $this->_propDict["maximumAuthenticationTimeoutInSeconds"];
+        if (array_key_exists("disableUserPromptForServerValidation", $this->_propDict)) {
+            return $this->_propDict["disableUserPromptForServerValidation"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the maximumAuthenticationTimeoutInSeconds
-    * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
+    * Sets the disableUserPromptForServerValidation
+    * Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
     *
-    * @param int $val The maximumAuthenticationTimeoutInSeconds
-    *
-    * @return WindowsWifiEnterpriseEAPConfiguration
-    */
-    public function setMaximumAuthenticationTimeoutInSeconds($val)
-    {
-        $this->_propDict["maximumAuthenticationTimeoutInSeconds"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the promptForAdditionalAuthenticationCredentials
-    * Specify whether the wifi connection should prompt for additional authentication credentials.
-    *
-    * @return bool The promptForAdditionalAuthenticationCredentials
-    */
-    public function getPromptForAdditionalAuthenticationCredentials()
-    {
-        if (array_key_exists("promptForAdditionalAuthenticationCredentials", $this->_propDict)) {
-            return $this->_propDict["promptForAdditionalAuthenticationCredentials"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the promptForAdditionalAuthenticationCredentials
-    * Specify whether the wifi connection should prompt for additional authentication credentials.
-    *
-    * @param bool $val The promptForAdditionalAuthenticationCredentials
+    * @param bool $val The disableUserPromptForServerValidation
     *
     * @return WindowsWifiEnterpriseEAPConfiguration
     */
-    public function setPromptForAdditionalAuthenticationCredentials($val)
+    public function setDisableUserPromptForServerValidation($val)
     {
-        $this->_propDict["promptForAdditionalAuthenticationCredentials"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the enablePairwiseMasterKeyCaching
-    * Specify whether the wifi connection should enable pairwise master key caching.
-    *
-    * @return bool The enablePairwiseMasterKeyCaching
-    */
-    public function getEnablePairwiseMasterKeyCaching()
-    {
-        if (array_key_exists("enablePairwiseMasterKeyCaching", $this->_propDict)) {
-            return $this->_propDict["enablePairwiseMasterKeyCaching"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the enablePairwiseMasterKeyCaching
-    * Specify whether the wifi connection should enable pairwise master key caching.
-    *
-    * @param bool $val The enablePairwiseMasterKeyCaching
-    *
-    * @return WindowsWifiEnterpriseEAPConfiguration
-    */
-    public function setEnablePairwiseMasterKeyCaching($val)
-    {
-        $this->_propDict["enablePairwiseMasterKeyCaching"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the maximumPairwiseMasterKeyCacheTimeInMinutes
-    * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
-    *
-    * @return int The maximumPairwiseMasterKeyCacheTimeInMinutes
-    */
-    public function getMaximumPairwiseMasterKeyCacheTimeInMinutes()
-    {
-        if (array_key_exists("maximumPairwiseMasterKeyCacheTimeInMinutes", $this->_propDict)) {
-            return $this->_propDict["maximumPairwiseMasterKeyCacheTimeInMinutes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the maximumPairwiseMasterKeyCacheTimeInMinutes
-    * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
-    *
-    * @param int $val The maximumPairwiseMasterKeyCacheTimeInMinutes
-    *
-    * @return WindowsWifiEnterpriseEAPConfiguration
-    */
-    public function setMaximumPairwiseMasterKeyCacheTimeInMinutes($val)
-    {
-        $this->_propDict["maximumPairwiseMasterKeyCacheTimeInMinutes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the maximumNumberOfPairwiseMasterKeysInCache
-    * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
-    *
-    * @return int The maximumNumberOfPairwiseMasterKeysInCache
-    */
-    public function getMaximumNumberOfPairwiseMasterKeysInCache()
-    {
-        if (array_key_exists("maximumNumberOfPairwiseMasterKeysInCache", $this->_propDict)) {
-            return $this->_propDict["maximumNumberOfPairwiseMasterKeysInCache"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the maximumNumberOfPairwiseMasterKeysInCache
-    * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
-    *
-    * @param int $val The maximumNumberOfPairwiseMasterKeysInCache
-    *
-    * @return WindowsWifiEnterpriseEAPConfiguration
-    */
-    public function setMaximumNumberOfPairwiseMasterKeysInCache($val)
-    {
-        $this->_propDict["maximumNumberOfPairwiseMasterKeysInCache"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the enablePreAuthentication
-    * Specify whether pre-authentication should be enabled.
-    *
-    * @return bool The enablePreAuthentication
-    */
-    public function getEnablePreAuthentication()
-    {
-        if (array_key_exists("enablePreAuthentication", $this->_propDict)) {
-            return $this->_propDict["enablePreAuthentication"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the enablePreAuthentication
-    * Specify whether pre-authentication should be enabled.
-    *
-    * @param bool $val The enablePreAuthentication
-    *
-    * @return WindowsWifiEnterpriseEAPConfiguration
-    */
-    public function setEnablePreAuthentication($val)
-    {
-        $this->_propDict["enablePreAuthentication"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the maximumPreAuthenticationAttempts
-    * Specify maximum pre-authentication attempts.  Valid range: 1-16
-    *
-    * @return int The maximumPreAuthenticationAttempts
-    */
-    public function getMaximumPreAuthenticationAttempts()
-    {
-        if (array_key_exists("maximumPreAuthenticationAttempts", $this->_propDict)) {
-            return $this->_propDict["maximumPreAuthenticationAttempts"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the maximumPreAuthenticationAttempts
-    * Specify maximum pre-authentication attempts.  Valid range: 1-16
-    *
-    * @param int $val The maximumPreAuthenticationAttempts
-    *
-    * @return WindowsWifiEnterpriseEAPConfiguration
-    */
-    public function setMaximumPreAuthenticationAttempts($val)
-    {
-        $this->_propDict["maximumPreAuthenticationAttempts"] = intval($val);
+        $this->_propDict["disableUserPromptForServerValidation"] = boolval($val);
         return $this;
     }
     
@@ -294,64 +120,60 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     }
     
     /**
-    * Gets the trustedServerCertificateNames
-    * Specify trusted server certificate names.
+    * Gets the enablePairwiseMasterKeyCaching
+    * Specify whether the wifi connection should enable pairwise master key caching.
     *
-    * @return string The trustedServerCertificateNames
+    * @return bool The enablePairwiseMasterKeyCaching
     */
-    public function getTrustedServerCertificateNames()
+    public function getEnablePairwiseMasterKeyCaching()
     {
-        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
-            return $this->_propDict["trustedServerCertificateNames"];
+        if (array_key_exists("enablePairwiseMasterKeyCaching", $this->_propDict)) {
+            return $this->_propDict["enablePairwiseMasterKeyCaching"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the trustedServerCertificateNames
-    * Specify trusted server certificate names.
+    * Sets the enablePairwiseMasterKeyCaching
+    * Specify whether the wifi connection should enable pairwise master key caching.
     *
-    * @param string $val The trustedServerCertificateNames
+    * @param bool $val The enablePairwiseMasterKeyCaching
     *
     * @return WindowsWifiEnterpriseEAPConfiguration
     */
-    public function setTrustedServerCertificateNames($val)
+    public function setEnablePairwiseMasterKeyCaching($val)
     {
-        $this->_propDict["trustedServerCertificateNames"] = $val;
+        $this->_propDict["enablePairwiseMasterKeyCaching"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the authenticationMethod
-    * Specify the authentication method.
+    * Gets the enablePreAuthentication
+    * Specify whether pre-authentication should be enabled.
     *
-    * @return WiFiAuthenticationMethod The authenticationMethod
+    * @return bool The enablePreAuthentication
     */
-    public function getAuthenticationMethod()
+    public function getEnablePreAuthentication()
     {
-        if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
-                return $this->_propDict["authenticationMethod"];
-            } else {
-                $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
-                return $this->_propDict["authenticationMethod"];
-            }
+        if (array_key_exists("enablePreAuthentication", $this->_propDict)) {
+            return $this->_propDict["enablePreAuthentication"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the authenticationMethod
-    * Specify the authentication method.
+    * Sets the enablePreAuthentication
+    * Specify whether pre-authentication should be enabled.
     *
-    * @param WiFiAuthenticationMethod $val The authenticationMethod
+    * @param bool $val The enablePreAuthentication
     *
     * @return WindowsWifiEnterpriseEAPConfiguration
     */
-    public function setAuthenticationMethod($val)
+    public function setEnablePreAuthentication($val)
     {
-        $this->_propDict["authenticationMethod"] = $val;
+        $this->_propDict["enablePreAuthentication"] = boolval($val);
         return $this;
     }
     
@@ -389,6 +211,155 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     }
     
     /**
+    * Gets the maximumAuthenticationTimeoutInSeconds
+    * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
+    *
+    * @return int The maximumAuthenticationTimeoutInSeconds
+    */
+    public function getMaximumAuthenticationTimeoutInSeconds()
+    {
+        if (array_key_exists("maximumAuthenticationTimeoutInSeconds", $this->_propDict)) {
+            return $this->_propDict["maximumAuthenticationTimeoutInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumAuthenticationTimeoutInSeconds
+    * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
+    *
+    * @param int $val The maximumAuthenticationTimeoutInSeconds
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setMaximumAuthenticationTimeoutInSeconds($val)
+    {
+        $this->_propDict["maximumAuthenticationTimeoutInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the maximumNumberOfPairwiseMasterKeysInCache
+    * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
+    *
+    * @return int The maximumNumberOfPairwiseMasterKeysInCache
+    */
+    public function getMaximumNumberOfPairwiseMasterKeysInCache()
+    {
+        if (array_key_exists("maximumNumberOfPairwiseMasterKeysInCache", $this->_propDict)) {
+            return $this->_propDict["maximumNumberOfPairwiseMasterKeysInCache"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumNumberOfPairwiseMasterKeysInCache
+    * Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
+    *
+    * @param int $val The maximumNumberOfPairwiseMasterKeysInCache
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setMaximumNumberOfPairwiseMasterKeysInCache($val)
+    {
+        $this->_propDict["maximumNumberOfPairwiseMasterKeysInCache"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the maximumPairwiseMasterKeyCacheTimeInMinutes
+    * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
+    *
+    * @return int The maximumPairwiseMasterKeyCacheTimeInMinutes
+    */
+    public function getMaximumPairwiseMasterKeyCacheTimeInMinutes()
+    {
+        if (array_key_exists("maximumPairwiseMasterKeyCacheTimeInMinutes", $this->_propDict)) {
+            return $this->_propDict["maximumPairwiseMasterKeyCacheTimeInMinutes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumPairwiseMasterKeyCacheTimeInMinutes
+    * Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
+    *
+    * @param int $val The maximumPairwiseMasterKeyCacheTimeInMinutes
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setMaximumPairwiseMasterKeyCacheTimeInMinutes($val)
+    {
+        $this->_propDict["maximumPairwiseMasterKeyCacheTimeInMinutes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the maximumPreAuthenticationAttempts
+    * Specify maximum pre-authentication attempts.  Valid range: 1-16
+    *
+    * @return int The maximumPreAuthenticationAttempts
+    */
+    public function getMaximumPreAuthenticationAttempts()
+    {
+        if (array_key_exists("maximumPreAuthenticationAttempts", $this->_propDict)) {
+            return $this->_propDict["maximumPreAuthenticationAttempts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumPreAuthenticationAttempts
+    * Specify maximum pre-authentication attempts.  Valid range: 1-16
+    *
+    * @param int $val The maximumPreAuthenticationAttempts
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setMaximumPreAuthenticationAttempts($val)
+    {
+        $this->_propDict["maximumPreAuthenticationAttempts"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the networkSingleSignOn
+    * Specify the network single sign on type.
+    *
+    * @return NetworkSingleSignOnType The networkSingleSignOn
+    */
+    public function getNetworkSingleSignOn()
+    {
+        if (array_key_exists("networkSingleSignOn", $this->_propDict)) {
+            if (is_a($this->_propDict["networkSingleSignOn"], "Beta\Microsoft\Graph\Model\NetworkSingleSignOnType")) {
+                return $this->_propDict["networkSingleSignOn"];
+            } else {
+                $this->_propDict["networkSingleSignOn"] = new NetworkSingleSignOnType($this->_propDict["networkSingleSignOn"]);
+                return $this->_propDict["networkSingleSignOn"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the networkSingleSignOn
+    * Specify the network single sign on type.
+    *
+    * @param NetworkSingleSignOnType $val The networkSingleSignOn
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setNetworkSingleSignOn($val)
+    {
+        $this->_propDict["networkSingleSignOn"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the outerIdentityPrivacyTemporaryValue
     * Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
     *
@@ -414,35 +385,6 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function setOuterIdentityPrivacyTemporaryValue($val)
     {
         $this->_propDict["outerIdentityPrivacyTemporaryValue"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the requireCryptographicBinding
-    * Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
-    *
-    * @return bool The requireCryptographicBinding
-    */
-    public function getRequireCryptographicBinding()
-    {
-        if (array_key_exists("requireCryptographicBinding", $this->_propDict)) {
-            return $this->_propDict["requireCryptographicBinding"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the requireCryptographicBinding
-    * Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
-    *
-    * @param bool $val The requireCryptographicBinding
-    *
-    * @return WindowsWifiEnterpriseEAPConfiguration
-    */
-    public function setRequireCryptographicBinding($val)
-    {
-        $this->_propDict["requireCryptographicBinding"] = boolval($val);
         return $this;
     }
     
@@ -476,61 +418,89 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     }
     
     /**
-    * Gets the disableUserPromptForServerValidation
-    * Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
+    * Gets the promptForAdditionalAuthenticationCredentials
+    * Specify whether the wifi connection should prompt for additional authentication credentials.
     *
-    * @return bool The disableUserPromptForServerValidation
+    * @return bool The promptForAdditionalAuthenticationCredentials
     */
-    public function getDisableUserPromptForServerValidation()
+    public function getPromptForAdditionalAuthenticationCredentials()
     {
-        if (array_key_exists("disableUserPromptForServerValidation", $this->_propDict)) {
-            return $this->_propDict["disableUserPromptForServerValidation"];
+        if (array_key_exists("promptForAdditionalAuthenticationCredentials", $this->_propDict)) {
+            return $this->_propDict["promptForAdditionalAuthenticationCredentials"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the disableUserPromptForServerValidation
-    * Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
+    * Sets the promptForAdditionalAuthenticationCredentials
+    * Specify whether the wifi connection should prompt for additional authentication credentials.
     *
-    * @param bool $val The disableUserPromptForServerValidation
+    * @param bool $val The promptForAdditionalAuthenticationCredentials
     *
     * @return WindowsWifiEnterpriseEAPConfiguration
     */
-    public function setDisableUserPromptForServerValidation($val)
+    public function setPromptForAdditionalAuthenticationCredentials($val)
     {
-        $this->_propDict["disableUserPromptForServerValidation"] = boolval($val);
+        $this->_propDict["promptForAdditionalAuthenticationCredentials"] = boolval($val);
         return $this;
     }
     
-
-     /** 
-     * Gets the rootCertificatesForServerValidation
-    * Specify root certificate for server validation.
-     *
-     * @return array The rootCertificatesForServerValidation
-     */
-    public function getRootCertificatesForServerValidation()
+    /**
+    * Gets the requireCryptographicBinding
+    * Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
+    *
+    * @return bool The requireCryptographicBinding
+    */
+    public function getRequireCryptographicBinding()
     {
-        if (array_key_exists("rootCertificatesForServerValidation", $this->_propDict)) {
-           return $this->_propDict["rootCertificatesForServerValidation"];
+        if (array_key_exists("requireCryptographicBinding", $this->_propDict)) {
+            return $this->_propDict["requireCryptographicBinding"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the rootCertificatesForServerValidation
-    * Specify root certificate for server validation.
+    /**
+    * Sets the requireCryptographicBinding
+    * Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
     *
-    * @param Windows81TrustedRootCertificate $val The rootCertificatesForServerValidation
+    * @param bool $val The requireCryptographicBinding
     *
     * @return WindowsWifiEnterpriseEAPConfiguration
     */
-    public function setRootCertificatesForServerValidation($val)
+    public function setRequireCryptographicBinding($val)
     {
-		$this->_propDict["rootCertificatesForServerValidation"] = $val;
+        $this->_propDict["requireCryptographicBinding"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the trustedServerCertificateNames
+    * Specify trusted server certificate names.
+    *
+    * @return string The trustedServerCertificateNames
+    */
+    public function getTrustedServerCertificateNames()
+    {
+        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
+            return $this->_propDict["trustedServerCertificateNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the trustedServerCertificateNames
+    * Specify trusted server certificate names.
+    *
+    * @param string $val The trustedServerCertificateNames
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setTrustedServerCertificateNames($val)
+    {
+        $this->_propDict["trustedServerCertificateNames"] = $val;
         return $this;
     }
     
@@ -597,6 +567,36 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function setRootCertificateForClientValidation($val)
     {
         $this->_propDict["rootCertificateForClientValidation"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the rootCertificatesForServerValidation
+    * Specify root certificate for server validation.
+     *
+     * @return array The rootCertificatesForServerValidation
+     */
+    public function getRootCertificatesForServerValidation()
+    {
+        if (array_key_exists("rootCertificatesForServerValidation", $this->_propDict)) {
+           return $this->_propDict["rootCertificatesForServerValidation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rootCertificatesForServerValidation
+    * Specify root certificate for server validation.
+    *
+    * @param Windows81TrustedRootCertificate $val The rootCertificatesForServerValidation
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setRootCertificatesForServerValidation($val)
+    {
+		$this->_propDict["rootCertificatesForServerValidation"] = $val;
         return $this;
     }
     

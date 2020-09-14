@@ -61,34 +61,6 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
         return $this;
     }
     /**
-    * Gets the binaryVersionLow
-    * The lower binary version.
-    *
-    * @return string The binaryVersionLow
-    */
-    public function getBinaryVersionLow()
-    {
-        if (array_key_exists("binaryVersionLow", $this->_propDict)) {
-            return $this->_propDict["binaryVersionLow"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the binaryVersionLow
-    * The lower binary version.
-    *
-    * @param string $val The value of the binaryVersionLow
-    *
-    * @return WindowsInformationProtectionDesktopApp
-    */
-    public function setBinaryVersionLow($val)
-    {
-        $this->_propDict["binaryVersionLow"] = $val;
-        return $this;
-    }
-    /**
     * Gets the binaryVersionHigh
     * The high binary version.
     *
@@ -114,6 +86,34 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     public function setBinaryVersionHigh($val)
     {
         $this->_propDict["binaryVersionHigh"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the binaryVersionLow
+    * The lower binary version.
+    *
+    * @return string The binaryVersionLow
+    */
+    public function getBinaryVersionLow()
+    {
+        if (array_key_exists("binaryVersionLow", $this->_propDict)) {
+            return $this->_propDict["binaryVersionLow"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the binaryVersionLow
+    * The lower binary version.
+    *
+    * @param string $val The value of the binaryVersionLow
+    *
+    * @return WindowsInformationProtectionDesktopApp
+    */
+    public function setBinaryVersionLow($val)
+    {
+        $this->_propDict["binaryVersionLow"] = $val;
         return $this;
     }
 }

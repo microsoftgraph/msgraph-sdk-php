@@ -33,34 +33,6 @@ class OmaSettingInteger extends OmaSetting
     }
 
     /**
-    * Gets the value
-    * Value.
-    *
-    * @return int The value
-    */
-    public function getValue()
-    {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the value
-    * Value.
-    *
-    * @param int $val The value of the value
-    *
-    * @return OmaSettingInteger
-    */
-    public function setValue($val)
-    {
-        $this->_propDict["value"] = $val;
-        return $this;
-    }
-    /**
     * Gets the isReadOnly
     * By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set
     *
@@ -86,6 +58,34 @@ class OmaSettingInteger extends OmaSetting
     public function setIsReadOnly($val)
     {
         $this->_propDict["isReadOnly"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the value
+    * Value.
+    *
+    * @return int The value
+    */
+    public function getValue()
+    {
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the value
+    * Value.
+    *
+    * @param int $val The value of the value
+    *
+    * @return OmaSettingInteger
+    */
+    public function setValue($val)
+    {
+        $this->_propDict["value"] = $val;
         return $this;
     }
 }

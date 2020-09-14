@@ -33,62 +33,6 @@ class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement
     }
 
     /**
-    * Gets the path
-    * The file or folder path to detect Win32 Line of Business (LoB) app
-    *
-    * @return string The path
-    */
-    public function getPath()
-    {
-        if (array_key_exists("path", $this->_propDict)) {
-            return $this->_propDict["path"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the path
-    * The file or folder path to detect Win32 Line of Business (LoB) app
-    *
-    * @param string $val The value of the path
-    *
-    * @return Win32LobAppFileSystemRequirement
-    */
-    public function setPath($val)
-    {
-        $this->_propDict["path"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the fileOrFolderName
-    * The file or folder name to detect Win32 Line of Business (LoB) app
-    *
-    * @return string The fileOrFolderName
-    */
-    public function getFileOrFolderName()
-    {
-        if (array_key_exists("fileOrFolderName", $this->_propDict)) {
-            return $this->_propDict["fileOrFolderName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the fileOrFolderName
-    * The file or folder name to detect Win32 Line of Business (LoB) app
-    *
-    * @param string $val The value of the fileOrFolderName
-    *
-    * @return Win32LobAppFileSystemRequirement
-    */
-    public function setFileOrFolderName($val)
-    {
-        $this->_propDict["fileOrFolderName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the check32BitOn64System
     * A value indicating whether this file or folder is for checking 32-bit app on 64-bit system
     *
@@ -148,5 +92,61 @@ class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement
     {
         $this->_propDict["detectionType"] = $val;
          return $this;
+    }
+    /**
+    * Gets the fileOrFolderName
+    * The file or folder name to detect Win32 Line of Business (LoB) app
+    *
+    * @return string The fileOrFolderName
+    */
+    public function getFileOrFolderName()
+    {
+        if (array_key_exists("fileOrFolderName", $this->_propDict)) {
+            return $this->_propDict["fileOrFolderName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fileOrFolderName
+    * The file or folder name to detect Win32 Line of Business (LoB) app
+    *
+    * @param string $val The value of the fileOrFolderName
+    *
+    * @return Win32LobAppFileSystemRequirement
+    */
+    public function setFileOrFolderName($val)
+    {
+        $this->_propDict["fileOrFolderName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the path
+    * The file or folder path to detect Win32 Line of Business (LoB) app
+    *
+    * @return string The path
+    */
+    public function getPath()
+    {
+        if (array_key_exists("path", $this->_propDict)) {
+            return $this->_propDict["path"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the path
+    * The file or folder path to detect Win32 Line of Business (LoB) app
+    *
+    * @param string $val The value of the path
+    *
+    * @return Win32LobAppFileSystemRequirement
+    */
+    public function setPath($val)
+    {
+        $this->_propDict["path"] = $val;
+        return $this;
     }
 }

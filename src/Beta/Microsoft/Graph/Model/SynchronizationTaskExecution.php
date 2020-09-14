@@ -285,37 +285,6 @@ class SynchronizationTaskExecution extends Entity
     }
 
     /**
-    * Gets the state
-    *
-    * @return SynchronizationTaskExecutionResult The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
-                return $this->_propDict["state"];
-            } else {
-                $this->_propDict["state"] = new SynchronizationTaskExecutionResult($this->_propDict["state"]);
-                return $this->_propDict["state"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the state
-    *
-    * @param SynchronizationTaskExecutionResult $val The value to assign to the state
-    *
-    * @return SynchronizationTaskExecution The SynchronizationTaskExecution
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the error
     *
     * @return SynchronizationError The error
@@ -343,6 +312,37 @@ class SynchronizationTaskExecution extends Entity
     public function setError($val)
     {
         $this->_propDict["error"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the state
+    *
+    * @return SynchronizationTaskExecutionResult The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new SynchronizationTaskExecutionResult($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the state
+    *
+    * @param SynchronizationTaskExecutionResult $val The value to assign to the state
+    *
+    * @return SynchronizationTaskExecution The SynchronizationTaskExecution
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
          return $this;
     }
 

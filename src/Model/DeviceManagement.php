@@ -25,6 +25,35 @@ namespace Microsoft\Graph\Model;
 class DeviceManagement extends Entity
 {
     /**
+    * Gets the intuneAccountId
+    * Intune Account Id for given tenant
+    *
+    * @return string The intuneAccountId
+    */
+    public function getIntuneAccountId()
+    {
+        if (array_key_exists("intuneAccountId", $this->_propDict)) {
+            return $this->_propDict["intuneAccountId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the intuneAccountId
+    * Intune Account Id for given tenant
+    *
+    * @param string $val The intuneAccountId
+    *
+    * @return DeviceManagement
+    */
+    public function setIntuneAccountId($val)
+    {
+        $this->_propDict["intuneAccountId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the settings
     * Account level settings.
     *
@@ -54,35 +83,6 @@ class DeviceManagement extends Entity
     public function setSettings($val)
     {
         $this->_propDict["settings"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the intuneAccountId
-    * Intune Account Id for given tenant
-    *
-    * @return string The intuneAccountId
-    */
-    public function getIntuneAccountId()
-    {
-        if (array_key_exists("intuneAccountId", $this->_propDict)) {
-            return $this->_propDict["intuneAccountId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the intuneAccountId
-    * Intune Account Id for given tenant
-    *
-    * @param string $val The intuneAccountId
-    *
-    * @return DeviceManagement
-    */
-    public function setIntuneAccountId($val)
-    {
-        $this->_propDict["intuneAccountId"] = $val;
         return $this;
     }
     
@@ -184,36 +184,6 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the deviceConfigurations
-    * The device configurations.
-     *
-     * @return array The deviceConfigurations
-     */
-    public function getDeviceConfigurations()
-    {
-        if (array_key_exists("deviceConfigurations", $this->_propDict)) {
-           return $this->_propDict["deviceConfigurations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceConfigurations
-    * The device configurations.
-    *
-    * @param DeviceConfiguration $val The deviceConfigurations
-    *
-    * @return DeviceManagement
-    */
-    public function setDeviceConfigurations($val)
-    {
-		$this->_propDict["deviceConfigurations"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the deviceCompliancePolicies
     * The device compliance policies.
      *
@@ -239,39 +209,6 @@ class DeviceManagement extends Entity
     public function setDeviceCompliancePolicies($val)
     {
 		$this->_propDict["deviceCompliancePolicies"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the softwareUpdateStatusSummary
-    * The software update status summary.
-    *
-    * @return SoftwareUpdateStatusSummary The softwareUpdateStatusSummary
-    */
-    public function getSoftwareUpdateStatusSummary()
-    {
-        if (array_key_exists("softwareUpdateStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
-                return $this->_propDict["softwareUpdateStatusSummary"];
-            } else {
-                $this->_propDict["softwareUpdateStatusSummary"] = new SoftwareUpdateStatusSummary($this->_propDict["softwareUpdateStatusSummary"]);
-                return $this->_propDict["softwareUpdateStatusSummary"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the softwareUpdateStatusSummary
-    * The software update status summary.
-    *
-    * @param SoftwareUpdateStatusSummary $val The softwareUpdateStatusSummary
-    *
-    * @return DeviceManagement
-    */
-    public function setSoftwareUpdateStatusSummary($val)
-    {
-        $this->_propDict["softwareUpdateStatusSummary"] = $val;
         return $this;
     }
     
@@ -373,6 +310,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the deviceConfigurations
+    * The device configurations.
+     *
+     * @return array The deviceConfigurations
+     */
+    public function getDeviceConfigurations()
+    {
+        if (array_key_exists("deviceConfigurations", $this->_propDict)) {
+           return $this->_propDict["deviceConfigurations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceConfigurations
+    * The device configurations.
+    *
+    * @param DeviceConfiguration $val The deviceConfigurations
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceConfigurations($val)
+    {
+		$this->_propDict["deviceConfigurations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the iosUpdateStatuses
     * The IOS software update installation statuses for this account.
      *
@@ -401,93 +368,66 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the deviceCategories
-    * The list of device categories with the tenant.
-     *
-     * @return array The deviceCategories
-     */
-    public function getDeviceCategories()
+    /**
+    * Gets the softwareUpdateStatusSummary
+    * The software update status summary.
+    *
+    * @return SoftwareUpdateStatusSummary The softwareUpdateStatusSummary
+    */
+    public function getSoftwareUpdateStatusSummary()
     {
-        if (array_key_exists("deviceCategories", $this->_propDict)) {
-           return $this->_propDict["deviceCategories"];
-        } else {
-            return null;
+        if (array_key_exists("softwareUpdateStatusSummary", $this->_propDict)) {
+            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
+                return $this->_propDict["softwareUpdateStatusSummary"];
+            } else {
+                $this->_propDict["softwareUpdateStatusSummary"] = new SoftwareUpdateStatusSummary($this->_propDict["softwareUpdateStatusSummary"]);
+                return $this->_propDict["softwareUpdateStatusSummary"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the deviceCategories
-    * The list of device categories with the tenant.
+    /**
+    * Sets the softwareUpdateStatusSummary
+    * The software update status summary.
     *
-    * @param DeviceCategory $val The deviceCategories
+    * @param SoftwareUpdateStatusSummary $val The softwareUpdateStatusSummary
     *
     * @return DeviceManagement
     */
-    public function setDeviceCategories($val)
+    public function setSoftwareUpdateStatusSummary($val)
     {
-		$this->_propDict["deviceCategories"] = $val;
+        $this->_propDict["softwareUpdateStatusSummary"] = $val;
         return $this;
     }
     
 
      /** 
-     * Gets the exchangeConnectors
-    * The list of Exchange Connectors configured by the tenant.
+     * Gets the complianceManagementPartners
+    * The list of Compliance Management Partners configured by the tenant.
      *
-     * @return array The exchangeConnectors
+     * @return array The complianceManagementPartners
      */
-    public function getExchangeConnectors()
+    public function getComplianceManagementPartners()
     {
-        if (array_key_exists("exchangeConnectors", $this->_propDict)) {
-           return $this->_propDict["exchangeConnectors"];
+        if (array_key_exists("complianceManagementPartners", $this->_propDict)) {
+           return $this->_propDict["complianceManagementPartners"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the exchangeConnectors
-    * The list of Exchange Connectors configured by the tenant.
+    * Sets the complianceManagementPartners
+    * The list of Compliance Management Partners configured by the tenant.
     *
-    * @param DeviceManagementExchangeConnector $val The exchangeConnectors
-    *
-    * @return DeviceManagement
-    */
-    public function setExchangeConnectors($val)
-    {
-		$this->_propDict["exchangeConnectors"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceEnrollmentConfigurations
-    * The list of device enrollment configurations
-     *
-     * @return array The deviceEnrollmentConfigurations
-     */
-    public function getDeviceEnrollmentConfigurations()
-    {
-        if (array_key_exists("deviceEnrollmentConfigurations", $this->_propDict)) {
-           return $this->_propDict["deviceEnrollmentConfigurations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceEnrollmentConfigurations
-    * The list of device enrollment configurations
-    *
-    * @param DeviceEnrollmentConfiguration $val The deviceEnrollmentConfigurations
+    * @param ComplianceManagementPartner $val The complianceManagementPartners
     *
     * @return DeviceManagement
     */
-    public function setDeviceEnrollmentConfigurations($val)
+    public function setComplianceManagementPartners($val)
     {
-		$this->_propDict["deviceEnrollmentConfigurations"] = $val;
+		$this->_propDict["complianceManagementPartners"] = $val;
         return $this;
     }
     
@@ -526,31 +466,61 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the mobileThreatDefenseConnectors
-    * The list of Mobile threat Defense connectors configured by the tenant.
+     * Gets the deviceCategories
+    * The list of device categories with the tenant.
      *
-     * @return array The mobileThreatDefenseConnectors
+     * @return array The deviceCategories
      */
-    public function getMobileThreatDefenseConnectors()
+    public function getDeviceCategories()
     {
-        if (array_key_exists("mobileThreatDefenseConnectors", $this->_propDict)) {
-           return $this->_propDict["mobileThreatDefenseConnectors"];
+        if (array_key_exists("deviceCategories", $this->_propDict)) {
+           return $this->_propDict["deviceCategories"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the mobileThreatDefenseConnectors
-    * The list of Mobile threat Defense connectors configured by the tenant.
+    * Sets the deviceCategories
+    * The list of device categories with the tenant.
     *
-    * @param MobileThreatDefenseConnector $val The mobileThreatDefenseConnectors
+    * @param DeviceCategory $val The deviceCategories
     *
     * @return DeviceManagement
     */
-    public function setMobileThreatDefenseConnectors($val)
+    public function setDeviceCategories($val)
     {
-		$this->_propDict["mobileThreatDefenseConnectors"] = $val;
+		$this->_propDict["deviceCategories"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceEnrollmentConfigurations
+    * The list of device enrollment configurations
+     *
+     * @return array The deviceEnrollmentConfigurations
+     */
+    public function getDeviceEnrollmentConfigurations()
+    {
+        if (array_key_exists("deviceEnrollmentConfigurations", $this->_propDict)) {
+           return $this->_propDict["deviceEnrollmentConfigurations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceEnrollmentConfigurations
+    * The list of device enrollment configurations
+    *
+    * @param DeviceEnrollmentConfiguration $val The deviceEnrollmentConfigurations
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceEnrollmentConfigurations($val)
+    {
+		$this->_propDict["deviceEnrollmentConfigurations"] = $val;
         return $this;
     }
     
@@ -586,31 +556,61 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the complianceManagementPartners
-    * The list of Compliance Management Partners configured by the tenant.
+     * Gets the exchangeConnectors
+    * The list of Exchange Connectors configured by the tenant.
      *
-     * @return array The complianceManagementPartners
+     * @return array The exchangeConnectors
      */
-    public function getComplianceManagementPartners()
+    public function getExchangeConnectors()
     {
-        if (array_key_exists("complianceManagementPartners", $this->_propDict)) {
-           return $this->_propDict["complianceManagementPartners"];
+        if (array_key_exists("exchangeConnectors", $this->_propDict)) {
+           return $this->_propDict["exchangeConnectors"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the complianceManagementPartners
-    * The list of Compliance Management Partners configured by the tenant.
+    * Sets the exchangeConnectors
+    * The list of Exchange Connectors configured by the tenant.
     *
-    * @param ComplianceManagementPartner $val The complianceManagementPartners
+    * @param DeviceManagementExchangeConnector $val The exchangeConnectors
     *
     * @return DeviceManagement
     */
-    public function setComplianceManagementPartners($val)
+    public function setExchangeConnectors($val)
     {
-		$this->_propDict["complianceManagementPartners"] = $val;
+		$this->_propDict["exchangeConnectors"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the mobileThreatDefenseConnectors
+    * The list of Mobile threat Defense connectors configured by the tenant.
+     *
+     * @return array The mobileThreatDefenseConnectors
+     */
+    public function getMobileThreatDefenseConnectors()
+    {
+        if (array_key_exists("mobileThreatDefenseConnectors", $this->_propDict)) {
+           return $this->_propDict["mobileThreatDefenseConnectors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileThreatDefenseConnectors
+    * The list of Mobile threat Defense connectors configured by the tenant.
+    *
+    * @param MobileThreatDefenseConnector $val The mobileThreatDefenseConnectors
+    *
+    * @return DeviceManagement
+    */
+    public function setMobileThreatDefenseConnectors($val)
+    {
+		$this->_propDict["mobileThreatDefenseConnectors"] = $val;
         return $this;
     }
     
@@ -647,6 +647,36 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the detectedApps
+    * The list of detected apps associated with a device.
+     *
+     * @return array The detectedApps
+     */
+    public function getDetectedApps()
+    {
+        if (array_key_exists("detectedApps", $this->_propDict)) {
+           return $this->_propDict["detectedApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the detectedApps
+    * The list of detected apps associated with a device.
+    *
+    * @param DetectedApp $val The detectedApps
+    *
+    * @return DeviceManagement
+    */
+    public function setDetectedApps($val)
+    {
+		$this->_propDict["detectedApps"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the managedDeviceOverview
     * Device overview
@@ -677,36 +707,6 @@ class DeviceManagement extends Entity
     public function setManagedDeviceOverview($val)
     {
         $this->_propDict["managedDeviceOverview"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the detectedApps
-    * The list of detected apps associated with a device.
-     *
-     * @return array The detectedApps
-     */
-    public function getDetectedApps()
-    {
-        if (array_key_exists("detectedApps", $this->_propDict)) {
-           return $this->_propDict["detectedApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the detectedApps
-    * The list of detected apps associated with a device.
-    *
-    * @param DetectedApp $val The detectedApps
-    *
-    * @return DeviceManagement
-    */
-    public function setDetectedApps($val)
-    {
-		$this->_propDict["detectedApps"] = $val;
         return $this;
     }
     
@@ -772,31 +772,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the roleDefinitions
-    * The Role Definitions.
+     * Gets the resourceOperations
+    * The Resource Operations.
      *
-     * @return array The roleDefinitions
+     * @return array The resourceOperations
      */
-    public function getRoleDefinitions()
+    public function getResourceOperations()
     {
-        if (array_key_exists("roleDefinitions", $this->_propDict)) {
-           return $this->_propDict["roleDefinitions"];
+        if (array_key_exists("resourceOperations", $this->_propDict)) {
+           return $this->_propDict["resourceOperations"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the roleDefinitions
-    * The Role Definitions.
+    * Sets the resourceOperations
+    * The Resource Operations.
     *
-    * @param RoleDefinition $val The roleDefinitions
+    * @param ResourceOperation $val The resourceOperations
     *
     * @return DeviceManagement
     */
-    public function setRoleDefinitions($val)
+    public function setResourceOperations($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+		$this->_propDict["resourceOperations"] = $val;
         return $this;
     }
     
@@ -832,31 +832,31 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the resourceOperations
-    * The Resource Operations.
+     * Gets the roleDefinitions
+    * The Role Definitions.
      *
-     * @return array The resourceOperations
+     * @return array The roleDefinitions
      */
-    public function getResourceOperations()
+    public function getRoleDefinitions()
     {
-        if (array_key_exists("resourceOperations", $this->_propDict)) {
-           return $this->_propDict["resourceOperations"];
+        if (array_key_exists("roleDefinitions", $this->_propDict)) {
+           return $this->_propDict["roleDefinitions"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the resourceOperations
-    * The Resource Operations.
+    * Sets the roleDefinitions
+    * The Role Definitions.
     *
-    * @param ResourceOperation $val The resourceOperations
+    * @param RoleDefinition $val The roleDefinitions
     *
     * @return DeviceManagement
     */
-    public function setResourceOperations($val)
+    public function setRoleDefinitions($val)
     {
-		$this->_propDict["resourceOperations"] = $val;
+		$this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
     

@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 class SignInStatus extends Entity
 {
     /**
+    * Gets the additionalDetails
+    * Provides additional details on the sign-in activity
+    *
+    * @return string The additionalDetails
+    */
+    public function getAdditionalDetails()
+    {
+        if (array_key_exists("additionalDetails", $this->_propDict)) {
+            return $this->_propDict["additionalDetails"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the additionalDetails
+    * Provides additional details on the sign-in activity
+    *
+    * @param string $val The value of the additionalDetails
+    *
+    * @return SignInStatus
+    */
+    public function setAdditionalDetails($val)
+    {
+        $this->_propDict["additionalDetails"] = $val;
+        return $this;
+    }
+    /**
     * Gets the errorCode
     * Provides the 5-6digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
     *
@@ -77,34 +105,6 @@ class SignInStatus extends Entity
     public function setFailureReason($val)
     {
         $this->_propDict["failureReason"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the additionalDetails
-    * Provides additional details on the sign-in activity
-    *
-    * @return string The additionalDetails
-    */
-    public function getAdditionalDetails()
-    {
-        if (array_key_exists("additionalDetails", $this->_propDict)) {
-            return $this->_propDict["additionalDetails"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the additionalDetails
-    * Provides additional details on the sign-in activity
-    *
-    * @param string $val The value of the additionalDetails
-    *
-    * @return SignInStatus
-    */
-    public function setAdditionalDetails($val)
-    {
-        $this->_propDict["additionalDetails"] = $val;
         return $this;
     }
 }

@@ -23,63 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class EducationResource extends Entity
 {
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return EducationResource
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the createdDateTime
-    *
-    * @param \DateTime $val The value to assign to the createdDateTime
-    *
-    * @return EducationResource The EducationResource
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-         return $this;
-    }
 
     /**
     * Gets the createdBy
@@ -113,34 +56,60 @@ class EducationResource extends Entity
     }
 
     /**
-    * Gets the lastModifiedDateTime
+    * Gets the createdDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime The createdDateTime
     */
-    public function getLastModifiedDateTime()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
             } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the lastModifiedDateTime
+    * Sets the createdDateTime
     *
-    * @param \DateTime $val The value to assign to the lastModifiedDateTime
+    * @param \DateTime $val The value to assign to the createdDateTime
     *
     * @return EducationResource The EducationResource
     */
-    public function setLastModifiedDateTime($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return EducationResource
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
     }
 
     /**
@@ -171,6 +140,37 @@ class EducationResource extends Entity
     public function setLastModifiedBy($val)
     {
         $this->_propDict["lastModifiedBy"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastModifiedDateTime
+    *
+    * @param \DateTime $val The value to assign to the lastModifiedDateTime
+    *
+    * @return EducationResource The EducationResource
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
          return $this;
     }
 }

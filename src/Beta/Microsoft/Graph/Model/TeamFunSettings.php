@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamFunSettings extends Entity
 {
     /**
+    * Gets the allowCustomMemes
+    * If set to true, enables users to include custom memes.
+    *
+    * @return bool The allowCustomMemes
+    */
+    public function getAllowCustomMemes()
+    {
+        if (array_key_exists("allowCustomMemes", $this->_propDict)) {
+            return $this->_propDict["allowCustomMemes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowCustomMemes
+    * If set to true, enables users to include custom memes.
+    *
+    * @param bool $val The value of the allowCustomMemes
+    *
+    * @return TeamFunSettings
+    */
+    public function setAllowCustomMemes($val)
+    {
+        $this->_propDict["allowCustomMemes"] = $val;
+        return $this;
+    }
+    /**
     * Gets the allowGiphy
     * If set to true, enables Giphy use.
     *
@@ -49,6 +77,34 @@ class TeamFunSettings extends Entity
     public function setAllowGiphy($val)
     {
         $this->_propDict["allowGiphy"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the allowStickersAndMemes
+    * If set to true, enables users to include stickers and memes.
+    *
+    * @return bool The allowStickersAndMemes
+    */
+    public function getAllowStickersAndMemes()
+    {
+        if (array_key_exists("allowStickersAndMemes", $this->_propDict)) {
+            return $this->_propDict["allowStickersAndMemes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowStickersAndMemes
+    * If set to true, enables users to include stickers and memes.
+    *
+    * @param bool $val The value of the allowStickersAndMemes
+    *
+    * @return TeamFunSettings
+    */
+    public function setAllowStickersAndMemes($val)
+    {
+        $this->_propDict["allowStickersAndMemes"] = $val;
         return $this;
     }
 
@@ -83,61 +139,5 @@ class TeamFunSettings extends Entity
     {
         $this->_propDict["giphyContentRating"] = $val;
          return $this;
-    }
-    /**
-    * Gets the allowStickersAndMemes
-    * If set to true, enables users to include stickers and memes.
-    *
-    * @return bool The allowStickersAndMemes
-    */
-    public function getAllowStickersAndMemes()
-    {
-        if (array_key_exists("allowStickersAndMemes", $this->_propDict)) {
-            return $this->_propDict["allowStickersAndMemes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowStickersAndMemes
-    * If set to true, enables users to include stickers and memes.
-    *
-    * @param bool $val The value of the allowStickersAndMemes
-    *
-    * @return TeamFunSettings
-    */
-    public function setAllowStickersAndMemes($val)
-    {
-        $this->_propDict["allowStickersAndMemes"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the allowCustomMemes
-    * If set to true, enables users to include custom memes.
-    *
-    * @return bool The allowCustomMemes
-    */
-    public function getAllowCustomMemes()
-    {
-        if (array_key_exists("allowCustomMemes", $this->_propDict)) {
-            return $this->_propDict["allowCustomMemes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowCustomMemes
-    * If set to true, enables users to include custom memes.
-    *
-    * @param bool $val The value of the allowCustomMemes
-    *
-    * @return TeamFunSettings
-    */
-    public function setAllowCustomMemes($val)
-    {
-        $this->_propDict["allowCustomMemes"] = $val;
-        return $this;
     }
 }

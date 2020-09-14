@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessPackageSubject extends Entity
 {
     /**
-    * Gets the objectId
-    *
-    * @return string The objectId
-    */
-    public function getObjectId()
-    {
-        if (array_key_exists("objectId", $this->_propDict)) {
-            return $this->_propDict["objectId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the objectId
-    *
-    * @param string $val The objectId
-    *
-    * @return AccessPackageSubject
-    */
-    public function setObjectId($val)
-    {
-        $this->_propDict["objectId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the altSecId
     *
     * @return string The altSecId
@@ -75,6 +48,33 @@ class AccessPackageSubject extends Entity
     public function setAltSecId($val)
     {
         $this->_propDict["altSecId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the connectedOrganizationId
+    *
+    * @return string The connectedOrganizationId
+    */
+    public function getConnectedOrganizationId()
+    {
+        if (array_key_exists("connectedOrganizationId", $this->_propDict)) {
+            return $this->_propDict["connectedOrganizationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the connectedOrganizationId
+    *
+    * @param string $val The connectedOrganizationId
+    *
+    * @return AccessPackageSubject
+    */
+    public function setConnectedOrganizationId($val)
+    {
+        $this->_propDict["connectedOrganizationId"] = $val;
         return $this;
     }
     
@@ -106,33 +106,6 @@ class AccessPackageSubject extends Entity
     }
     
     /**
-    * Gets the principalName
-    *
-    * @return string The principalName
-    */
-    public function getPrincipalName()
-    {
-        if (array_key_exists("principalName", $this->_propDict)) {
-            return $this->_propDict["principalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the principalName
-    *
-    * @param string $val The principalName
-    *
-    * @return AccessPackageSubject
-    */
-    public function setPrincipalName($val)
-    {
-        $this->_propDict["principalName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the email
     *
     * @return string The email
@@ -156,6 +129,33 @@ class AccessPackageSubject extends Entity
     public function setEmail($val)
     {
         $this->_propDict["email"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the objectId
+    *
+    * @return string The objectId
+    */
+    public function getObjectId()
+    {
+        if (array_key_exists("objectId", $this->_propDict)) {
+            return $this->_propDict["objectId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the objectId
+    *
+    * @param string $val The objectId
+    *
+    * @return AccessPackageSubject
+    */
+    public function setObjectId($val)
+    {
+        $this->_propDict["objectId"] = $val;
         return $this;
     }
     
@@ -187,6 +187,33 @@ class AccessPackageSubject extends Entity
     }
     
     /**
+    * Gets the principalName
+    *
+    * @return string The principalName
+    */
+    public function getPrincipalName()
+    {
+        if (array_key_exists("principalName", $this->_propDict)) {
+            return $this->_propDict["principalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the principalName
+    *
+    * @param string $val The principalName
+    *
+    * @return AccessPackageSubject
+    */
+    public function setPrincipalName($val)
+    {
+        $this->_propDict["principalName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the type
     *
     * @return string The type
@@ -210,33 +237,6 @@ class AccessPackageSubject extends Entity
     public function setType($val)
     {
         $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the connectedOrganizationId
-    *
-    * @return string The connectedOrganizationId
-    */
-    public function getConnectedOrganizationId()
-    {
-        if (array_key_exists("connectedOrganizationId", $this->_propDict)) {
-            return $this->_propDict["connectedOrganizationId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the connectedOrganizationId
-    *
-    * @param string $val The connectedOrganizationId
-    *
-    * @return AccessPackageSubject
-    */
-    public function setConnectedOrganizationId($val)
-    {
-        $this->_propDict["connectedOrganizationId"] = $val;
         return $this;
     }
     

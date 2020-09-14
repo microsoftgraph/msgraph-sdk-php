@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ConnectionOperation extends Entity
 {
     /**
-    * Gets the status
-    *
-    * @return ConnectionOperationStatus The status
-    */
-    public function getStatus()
-    {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ConnectionOperationStatus")) {
-                return $this->_propDict["status"];
-            } else {
-                $this->_propDict["status"] = new ConnectionOperationStatus($this->_propDict["status"]);
-                return $this->_propDict["status"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the status
-    *
-    * @param ConnectionOperationStatus $val The status
-    *
-    * @return ConnectionOperation
-    */
-    public function setStatus($val)
-    {
-        $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the error
     *
     * @return ErrorDetail The error
@@ -83,6 +52,37 @@ class ConnectionOperation extends Entity
     public function setError($val)
     {
         $this->_propDict["error"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return ConnectionOperationStatus The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ConnectionOperationStatus")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new ConnectionOperationStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param ConnectionOperationStatus $val The status
+    *
+    * @return ConnectionOperation
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

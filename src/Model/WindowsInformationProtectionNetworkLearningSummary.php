@@ -25,35 +25,6 @@ namespace Microsoft\Graph\Model;
 class WindowsInformationProtectionNetworkLearningSummary extends Entity
 {
     /**
-    * Gets the url
-    * Website url
-    *
-    * @return string The url
-    */
-    public function getUrl()
-    {
-        if (array_key_exists("url", $this->_propDict)) {
-            return $this->_propDict["url"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the url
-    * Website url
-    *
-    * @param string $val The url
-    *
-    * @return WindowsInformationProtectionNetworkLearningSummary
-    */
-    public function setUrl($val)
-    {
-        $this->_propDict["url"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceCount
     * Device Count
     *
@@ -79,6 +50,35 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity
     public function setDeviceCount($val)
     {
         $this->_propDict["deviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the url
+    * Website url
+    *
+    * @return string The url
+    */
+    public function getUrl()
+    {
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the url
+    * Website url
+    *
+    * @param string $val The url
+    *
+    * @return WindowsInformationProtectionNetworkLearningSummary
+    */
+    public function setUrl($val)
+    {
+        $this->_propDict["url"] = $val;
         return $this;
     }
     

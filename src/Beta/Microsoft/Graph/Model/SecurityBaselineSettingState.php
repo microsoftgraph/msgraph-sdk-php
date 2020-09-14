@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class SecurityBaselineSettingState extends Entity
 {
     /**
+    * Gets the settingCategoryId
+    * The setting category id which this setting belongs to
+    *
+    * @return string The settingCategoryId
+    */
+    public function getSettingCategoryId()
+    {
+        if (array_key_exists("settingCategoryId", $this->_propDict)) {
+            return $this->_propDict["settingCategoryId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingCategoryId
+    * The setting category id which this setting belongs to
+    *
+    * @param string $val The settingCategoryId
+    *
+    * @return SecurityBaselineSettingState
+    */
+    public function setSettingCategoryId($val)
+    {
+        $this->_propDict["settingCategoryId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the settingName
     * The setting name that is being reported
     *
@@ -83,35 +112,6 @@ class SecurityBaselineSettingState extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the settingCategoryId
-    * The setting category id which this setting belongs to
-    *
-    * @return string The settingCategoryId
-    */
-    public function getSettingCategoryId()
-    {
-        if (array_key_exists("settingCategoryId", $this->_propDict)) {
-            return $this->_propDict["settingCategoryId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the settingCategoryId
-    * The setting category id which this setting belongs to
-    *
-    * @param string $val The settingCategoryId
-    *
-    * @return SecurityBaselineSettingState
-    */
-    public function setSettingCategoryId($val)
-    {
-        $this->_propDict["settingCategoryId"] = $val;
         return $this;
     }
     

@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class RoleDefinition extends Entity
 {
     /**
+    * Gets the description
+    * Description of the Role definition.
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    * Description of the Role definition.
+    *
+    * @param string $val The description
+    *
+    * @return RoleDefinition
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * Display Name of the Role definition.
     *
@@ -54,31 +83,60 @@ class RoleDefinition extends Entity
     }
     
     /**
-    * Gets the description
-    * Description of the Role definition.
+    * Gets the isBuiltIn
+    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
     *
-    * @return string The description
+    * @return bool The isBuiltIn
     */
-    public function getDescription()
+    public function getIsBuiltIn()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("isBuiltIn", $this->_propDict)) {
+            return $this->_propDict["isBuiltIn"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the description
-    * Description of the Role definition.
+    * Sets the isBuiltIn
+    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
     *
-    * @param string $val The description
+    * @param bool $val The isBuiltIn
     *
     * @return RoleDefinition
     */
-    public function setDescription($val)
+    public function setIsBuiltIn($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["isBuiltIn"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isBuiltInRoleDefinition
+    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
+    *
+    * @return bool The isBuiltInRoleDefinition
+    */
+    public function getIsBuiltInRoleDefinition()
+    {
+        if (array_key_exists("isBuiltInRoleDefinition", $this->_propDict)) {
+            return $this->_propDict["isBuiltInRoleDefinition"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isBuiltInRoleDefinition
+    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
+    *
+    * @param bool $val The isBuiltInRoleDefinition
+    *
+    * @return RoleDefinition
+    */
+    public function setIsBuiltInRoleDefinition($val)
+    {
+        $this->_propDict["isBuiltInRoleDefinition"] = boolval($val);
         return $this;
     }
     
@@ -139,64 +197,6 @@ class RoleDefinition extends Entity
     public function setRolePermissions($val)
     {
 		$this->_propDict["rolePermissions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isBuiltInRoleDefinition
-    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-    *
-    * @return bool The isBuiltInRoleDefinition
-    */
-    public function getIsBuiltInRoleDefinition()
-    {
-        if (array_key_exists("isBuiltInRoleDefinition", $this->_propDict)) {
-            return $this->_propDict["isBuiltInRoleDefinition"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isBuiltInRoleDefinition
-    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-    *
-    * @param bool $val The isBuiltInRoleDefinition
-    *
-    * @return RoleDefinition
-    */
-    public function setIsBuiltInRoleDefinition($val)
-    {
-        $this->_propDict["isBuiltInRoleDefinition"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isBuiltIn
-    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-    *
-    * @return bool The isBuiltIn
-    */
-    public function getIsBuiltIn()
-    {
-        if (array_key_exists("isBuiltIn", $this->_propDict)) {
-            return $this->_propDict["isBuiltIn"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isBuiltIn
-    * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-    *
-    * @param bool $val The isBuiltIn
-    *
-    * @return RoleDefinition
-    */
-    public function setIsBuiltIn($val)
-    {
-        $this->_propDict["isBuiltIn"] = boolval($val);
         return $this;
     }
     

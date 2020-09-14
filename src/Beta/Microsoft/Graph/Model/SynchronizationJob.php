@@ -86,33 +86,6 @@ class SynchronizationJob extends Entity
         return $this;
     }
     
-    /**
-    * Gets the templateId
-    *
-    * @return string The templateId
-    */
-    public function getTemplateId()
-    {
-        if (array_key_exists("templateId", $this->_propDict)) {
-            return $this->_propDict["templateId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the templateId
-    *
-    * @param string $val The templateId
-    *
-    * @return SynchronizationJob
-    */
-    public function setTemplateId($val)
-    {
-        $this->_propDict["templateId"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the synchronizationJobSettings
@@ -138,6 +111,33 @@ class SynchronizationJob extends Entity
     public function setSynchronizationJobSettings($val)
     {
 		$this->_propDict["synchronizationJobSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the templateId
+    *
+    * @return string The templateId
+    */
+    public function getTemplateId()
+    {
+        if (array_key_exists("templateId", $this->_propDict)) {
+            return $this->_propDict["templateId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the templateId
+    *
+    * @param string $val The templateId
+    *
+    * @return SynchronizationJob
+    */
+    public function setTemplateId($val)
+    {
+        $this->_propDict["templateId"] = $val;
         return $this;
     }
     

@@ -25,6 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
 {
     /**
+    * Gets the deviceCount
+    * User experience analytics device startup process summarized count.
+    *
+    * @return int The deviceCount
+    */
+    public function getDeviceCount()
+    {
+        if (array_key_exists("deviceCount", $this->_propDict)) {
+            return $this->_propDict["deviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceCount
+    * User experience analytics device startup process summarized count.
+    *
+    * @param int $val The deviceCount
+    *
+    * @return UserExperienceAnalyticsDeviceStartupProcessPerformance
+    */
+    public function setDeviceCount($val)
+    {
+        $this->_propDict["deviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the medianImpactInMs
+    * User experience analytics device startup process median impact in milliseconds.
+    *
+    * @return int The medianImpactInMs
+    */
+    public function getMedianImpactInMs()
+    {
+        if (array_key_exists("medianImpactInMs", $this->_propDict)) {
+            return $this->_propDict["medianImpactInMs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the medianImpactInMs
+    * User experience analytics device startup process median impact in milliseconds.
+    *
+    * @param int $val The medianImpactInMs
+    *
+    * @return UserExperienceAnalyticsDeviceStartupProcessPerformance
+    */
+    public function setMedianImpactInMs($val)
+    {
+        $this->_propDict["medianImpactInMs"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the processName
     * User experience analytics device startup process name.
     *
@@ -108,64 +166,6 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     public function setPublisher($val)
     {
         $this->_propDict["publisher"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceCount
-    * User experience analytics device startup process summarized count.
-    *
-    * @return int The deviceCount
-    */
-    public function getDeviceCount()
-    {
-        if (array_key_exists("deviceCount", $this->_propDict)) {
-            return $this->_propDict["deviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceCount
-    * User experience analytics device startup process summarized count.
-    *
-    * @param int $val The deviceCount
-    *
-    * @return UserExperienceAnalyticsDeviceStartupProcessPerformance
-    */
-    public function setDeviceCount($val)
-    {
-        $this->_propDict["deviceCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the medianImpactInMs
-    * User experience analytics device startup process median impact in milliseconds.
-    *
-    * @return int The medianImpactInMs
-    */
-    public function getMedianImpactInMs()
-    {
-        if (array_key_exists("medianImpactInMs", $this->_propDict)) {
-            return $this->_propDict["medianImpactInMs"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the medianImpactInMs
-    * User experience analytics device startup process median impact in milliseconds.
-    *
-    * @param int $val The medianImpactInMs
-    *
-    * @return UserExperienceAnalyticsDeviceStartupProcessPerformance
-    */
-    public function setMedianImpactInMs($val)
-    {
-        $this->_propDict["medianImpactInMs"] = intval($val);
         return $this;
     }
     

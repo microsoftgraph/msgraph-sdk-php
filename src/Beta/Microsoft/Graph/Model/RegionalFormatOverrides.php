@@ -76,32 +76,6 @@ class RegionalFormatOverrides extends Entity
         return $this;
     }
     /**
-    * Gets the shortDateFormat
-    *
-    * @return string The shortDateFormat
-    */
-    public function getShortDateFormat()
-    {
-        if (array_key_exists("shortDateFormat", $this->_propDict)) {
-            return $this->_propDict["shortDateFormat"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the shortDateFormat
-    *
-    * @param string $val The value of the shortDateFormat
-    *
-    * @return RegionalFormatOverrides
-    */
-    public function setShortDateFormat($val)
-    {
-        $this->_propDict["shortDateFormat"] = $val;
-        return $this;
-    }
-    /**
     * Gets the longDateFormat
     *
     * @return string The longDateFormat
@@ -128,32 +102,6 @@ class RegionalFormatOverrides extends Entity
         return $this;
     }
     /**
-    * Gets the shortTimeFormat
-    *
-    * @return string The shortTimeFormat
-    */
-    public function getShortTimeFormat()
-    {
-        if (array_key_exists("shortTimeFormat", $this->_propDict)) {
-            return $this->_propDict["shortTimeFormat"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the shortTimeFormat
-    *
-    * @param string $val The value of the shortTimeFormat
-    *
-    * @return RegionalFormatOverrides
-    */
-    public function setShortTimeFormat($val)
-    {
-        $this->_propDict["shortTimeFormat"] = $val;
-        return $this;
-    }
-    /**
     * Gets the longTimeFormat
     *
     * @return string The longTimeFormat
@@ -177,6 +125,58 @@ class RegionalFormatOverrides extends Entity
     public function setLongTimeFormat($val)
     {
         $this->_propDict["longTimeFormat"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the shortDateFormat
+    *
+    * @return string The shortDateFormat
+    */
+    public function getShortDateFormat()
+    {
+        if (array_key_exists("shortDateFormat", $this->_propDict)) {
+            return $this->_propDict["shortDateFormat"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the shortDateFormat
+    *
+    * @param string $val The value of the shortDateFormat
+    *
+    * @return RegionalFormatOverrides
+    */
+    public function setShortDateFormat($val)
+    {
+        $this->_propDict["shortDateFormat"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the shortTimeFormat
+    *
+    * @return string The shortTimeFormat
+    */
+    public function getShortTimeFormat()
+    {
+        if (array_key_exists("shortTimeFormat", $this->_propDict)) {
+            return $this->_propDict["shortTimeFormat"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the shortTimeFormat
+    *
+    * @param string $val The value of the shortTimeFormat
+    *
+    * @return RegionalFormatOverrides
+    */
+    public function setShortTimeFormat($val)
+    {
+        $this->_propDict["shortTimeFormat"] = $val;
         return $this;
     }
     /**

@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 */
 class Term extends \Beta\Microsoft\Graph\Model\Entity
 {
-
-     /** 
-     * Gets the labels
-     *
-     * @return array The labels
-     */
-    public function getLabels()
-    {
-        if (array_key_exists("labels", $this->_propDict)) {
-           return $this->_propDict["labels"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the labels
-    *
-    * @param LocalizedLabel $val The labels
-    *
-    * @return Term
-    */
-    public function setLabels($val)
-    {
-		$this->_propDict["labels"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the createdDateTime
     *
@@ -83,6 +55,62 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the descriptions
+     *
+     * @return array The descriptions
+     */
+    public function getDescriptions()
+    {
+        if (array_key_exists("descriptions", $this->_propDict)) {
+           return $this->_propDict["descriptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the descriptions
+    *
+    * @param LocalizedDescription $val The descriptions
+    *
+    * @return Term
+    */
+    public function setDescriptions($val)
+    {
+		$this->_propDict["descriptions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the labels
+     *
+     * @return array The labels
+     */
+    public function getLabels()
+    {
+        if (array_key_exists("labels", $this->_propDict)) {
+           return $this->_propDict["labels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the labels
+    *
+    * @param LocalizedLabel $val The labels
+    *
+    * @return Term
+    */
+    public function setLabels($val)
+    {
+		$this->_propDict["labels"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the lastModifiedDateTime
     *
@@ -111,34 +139,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the descriptions
-     *
-     * @return array The descriptions
-     */
-    public function getDescriptions()
-    {
-        if (array_key_exists("descriptions", $this->_propDict)) {
-           return $this->_propDict["descriptions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the descriptions
-    *
-    * @param LocalizedDescription $val The descriptions
-    *
-    * @return Term
-    */
-    public function setDescriptions($val)
-    {
-		$this->_propDict["descriptions"] = $val;
         return $this;
     }
     

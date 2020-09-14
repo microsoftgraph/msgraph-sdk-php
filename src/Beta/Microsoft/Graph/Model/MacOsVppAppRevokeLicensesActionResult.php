@@ -23,118 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MacOsVppAppRevokeLicensesActionResult extends Entity
 {
-    /**
-    * Gets the userId
-    * UserId associated with the action.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    * UserId associated with the action.
-    *
-    * @param string $val The value of the userId
-    *
-    * @return MacOsVppAppRevokeLicensesActionResult
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the managedDeviceId
-    * DeviceId associated with the action.
-    *
-    * @return string The managedDeviceId
-    */
-    public function getManagedDeviceId()
-    {
-        if (array_key_exists("managedDeviceId", $this->_propDict)) {
-            return $this->_propDict["managedDeviceId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the managedDeviceId
-    * DeviceId associated with the action.
-    *
-    * @param string $val The value of the managedDeviceId
-    *
-    * @return MacOsVppAppRevokeLicensesActionResult
-    */
-    public function setManagedDeviceId($val)
-    {
-        $this->_propDict["managedDeviceId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the totalLicensesCount
-    * A count of the number of licenses for which revoke was attempted.
-    *
-    * @return int The totalLicensesCount
-    */
-    public function getTotalLicensesCount()
-    {
-        if (array_key_exists("totalLicensesCount", $this->_propDict)) {
-            return $this->_propDict["totalLicensesCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the totalLicensesCount
-    * A count of the number of licenses for which revoke was attempted.
-    *
-    * @param int $val The value of the totalLicensesCount
-    *
-    * @return MacOsVppAppRevokeLicensesActionResult
-    */
-    public function setTotalLicensesCount($val)
-    {
-        $this->_propDict["totalLicensesCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the failedLicensesCount
-    * A count of the number of licenses for which revoke failed.
-    *
-    * @return int The failedLicensesCount
-    */
-    public function getFailedLicensesCount()
-    {
-        if (array_key_exists("failedLicensesCount", $this->_propDict)) {
-            return $this->_propDict["failedLicensesCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the failedLicensesCount
-    * A count of the number of licenses for which revoke failed.
-    *
-    * @param int $val The value of the failedLicensesCount
-    *
-    * @return MacOsVppAppRevokeLicensesActionResult
-    */
-    public function setFailedLicensesCount($val)
-    {
-        $this->_propDict["failedLicensesCount"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the actionFailureReason
@@ -229,38 +117,33 @@ class MacOsVppAppRevokeLicensesActionResult extends Entity
         $this->_propDict["actionState"] = $val;
          return $this;
     }
-
     /**
-    * Gets the startDateTime
-    * Time the action was initiated
+    * Gets the failedLicensesCount
+    * A count of the number of licenses for which revoke failed.
     *
-    * @return \DateTime The startDateTime
+    * @return int The failedLicensesCount
     */
-    public function getStartDateTime()
+    public function getFailedLicensesCount()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
-                return $this->_propDict["startDateTime"];
-            } else {
-                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
-                return $this->_propDict["startDateTime"];
-            }
+        if (array_key_exists("failedLicensesCount", $this->_propDict)) {
+            return $this->_propDict["failedLicensesCount"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the startDateTime
-    * Time the action was initiated
+    * Sets the failedLicensesCount
+    * A count of the number of licenses for which revoke failed.
     *
-    * @param \DateTime $val The value to assign to the startDateTime
+    * @param int $val The value of the failedLicensesCount
     *
-    * @return MacOsVppAppRevokeLicensesActionResult The MacOsVppAppRevokeLicensesActionResult
+    * @return MacOsVppAppRevokeLicensesActionResult
     */
-    public function setStartDateTime($val)
+    public function setFailedLicensesCount($val)
     {
-        $this->_propDict["startDateTime"] = $val;
-         return $this;
+        $this->_propDict["failedLicensesCount"] = $val;
+        return $this;
     }
 
     /**
@@ -294,5 +177,122 @@ class MacOsVppAppRevokeLicensesActionResult extends Entity
     {
         $this->_propDict["lastUpdatedDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the managedDeviceId
+    * DeviceId associated with the action.
+    *
+    * @return string The managedDeviceId
+    */
+    public function getManagedDeviceId()
+    {
+        if (array_key_exists("managedDeviceId", $this->_propDict)) {
+            return $this->_propDict["managedDeviceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the managedDeviceId
+    * DeviceId associated with the action.
+    *
+    * @param string $val The value of the managedDeviceId
+    *
+    * @return MacOsVppAppRevokeLicensesActionResult
+    */
+    public function setManagedDeviceId($val)
+    {
+        $this->_propDict["managedDeviceId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the startDateTime
+    * Time the action was initiated
+    *
+    * @return \DateTime The startDateTime
+    */
+    public function getStartDateTime()
+    {
+        if (array_key_exists("startDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+                return $this->_propDict["startDateTime"];
+            } else {
+                $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
+                return $this->_propDict["startDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startDateTime
+    * Time the action was initiated
+    *
+    * @param \DateTime $val The value to assign to the startDateTime
+    *
+    * @return MacOsVppAppRevokeLicensesActionResult The MacOsVppAppRevokeLicensesActionResult
+    */
+    public function setStartDateTime($val)
+    {
+        $this->_propDict["startDateTime"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the totalLicensesCount
+    * A count of the number of licenses for which revoke was attempted.
+    *
+    * @return int The totalLicensesCount
+    */
+    public function getTotalLicensesCount()
+    {
+        if (array_key_exists("totalLicensesCount", $this->_propDict)) {
+            return $this->_propDict["totalLicensesCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the totalLicensesCount
+    * A count of the number of licenses for which revoke was attempted.
+    *
+    * @param int $val The value of the totalLicensesCount
+    *
+    * @return MacOsVppAppRevokeLicensesActionResult
+    */
+    public function setTotalLicensesCount($val)
+    {
+        $this->_propDict["totalLicensesCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userId
+    * UserId associated with the action.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    * UserId associated with the action.
+    *
+    * @param string $val The value of the userId
+    *
+    * @return MacOsVppAppRevokeLicensesActionResult
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
     }
 }

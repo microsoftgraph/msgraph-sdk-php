@@ -54,64 +54,118 @@ class ApplePushNotificationCertificate extends Entity
     }
     
     /**
-    * Gets the topicIdentifier
-    * Topic Id.
+    * Gets the certificate
+    * Not yet documented
     *
-    * @return string The topicIdentifier
+    * @return string The certificate
     */
-    public function getTopicIdentifier()
+    public function getCertificate()
     {
-        if (array_key_exists("topicIdentifier", $this->_propDict)) {
-            return $this->_propDict["topicIdentifier"];
+        if (array_key_exists("certificate", $this->_propDict)) {
+            return $this->_propDict["certificate"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the topicIdentifier
-    * Topic Id.
+    * Sets the certificate
+    * Not yet documented
     *
-    * @param string $val The topicIdentifier
+    * @param string $val The certificate
     *
     * @return ApplePushNotificationCertificate
     */
-    public function setTopicIdentifier($val)
+    public function setCertificate($val)
     {
-        $this->_propDict["topicIdentifier"] = $val;
+        $this->_propDict["certificate"] = $val;
         return $this;
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * Last modified date and time for Apple push notification certificate.
+    * Gets the certificateSerialNumber
+    * Certificate serial number. This property is read-only.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The certificateSerialNumber
     */
-    public function getLastModifiedDateTime()
+    public function getCertificateSerialNumber()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
+        if (array_key_exists("certificateSerialNumber", $this->_propDict)) {
+            return $this->_propDict["certificateSerialNumber"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
-    * Last modified date and time for Apple push notification certificate.
+    * Sets the certificateSerialNumber
+    * Certificate serial number. This property is read-only.
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param string $val The certificateSerialNumber
     *
     * @return ApplePushNotificationCertificate
     */
-    public function setLastModifiedDateTime($val)
+    public function setCertificateSerialNumber($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["certificateSerialNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateUploadFailureReason
+    * The reason the certificate upload failed.
+    *
+    * @return string The certificateUploadFailureReason
+    */
+    public function getCertificateUploadFailureReason()
+    {
+        if (array_key_exists("certificateUploadFailureReason", $this->_propDict)) {
+            return $this->_propDict["certificateUploadFailureReason"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateUploadFailureReason
+    * The reason the certificate upload failed.
+    *
+    * @param string $val The certificateUploadFailureReason
+    *
+    * @return ApplePushNotificationCertificate
+    */
+    public function setCertificateUploadFailureReason($val)
+    {
+        $this->_propDict["certificateUploadFailureReason"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the certificateUploadStatus
+    * The certificate upload status.
+    *
+    * @return string The certificateUploadStatus
+    */
+    public function getCertificateUploadStatus()
+    {
+        if (array_key_exists("certificateUploadStatus", $this->_propDict)) {
+            return $this->_propDict["certificateUploadStatus"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateUploadStatus
+    * The certificate upload status.
+    *
+    * @param string $val The certificateUploadStatus
+    *
+    * @return ApplePushNotificationCertificate
+    */
+    public function setCertificateUploadStatus($val)
+    {
+        $this->_propDict["certificateUploadStatus"] = $val;
         return $this;
     }
     
@@ -149,118 +203,64 @@ class ApplePushNotificationCertificate extends Entity
     }
     
     /**
-    * Gets the certificateUploadStatus
-    * The certificate upload status.
+    * Gets the lastModifiedDateTime
+    * Last modified date and time for Apple push notification certificate.
     *
-    * @return string The certificateUploadStatus
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getCertificateUploadStatus()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("certificateUploadStatus", $this->_propDict)) {
-            return $this->_propDict["certificateUploadStatus"];
-        } else {
-            return null;
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the certificateUploadStatus
-    * The certificate upload status.
+    * Sets the lastModifiedDateTime
+    * Last modified date and time for Apple push notification certificate.
     *
-    * @param string $val The certificateUploadStatus
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return ApplePushNotificationCertificate
     */
-    public function setCertificateUploadStatus($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["certificateUploadStatus"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
     /**
-    * Gets the certificateUploadFailureReason
-    * The reason the certificate upload failed.
+    * Gets the topicIdentifier
+    * Topic Id.
     *
-    * @return string The certificateUploadFailureReason
+    * @return string The topicIdentifier
     */
-    public function getCertificateUploadFailureReason()
+    public function getTopicIdentifier()
     {
-        if (array_key_exists("certificateUploadFailureReason", $this->_propDict)) {
-            return $this->_propDict["certificateUploadFailureReason"];
+        if (array_key_exists("topicIdentifier", $this->_propDict)) {
+            return $this->_propDict["topicIdentifier"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the certificateUploadFailureReason
-    * The reason the certificate upload failed.
+    * Sets the topicIdentifier
+    * Topic Id.
     *
-    * @param string $val The certificateUploadFailureReason
-    *
-    * @return ApplePushNotificationCertificate
-    */
-    public function setCertificateUploadFailureReason($val)
-    {
-        $this->_propDict["certificateUploadFailureReason"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certificateSerialNumber
-    * Certificate serial number. This property is read-only.
-    *
-    * @return string The certificateSerialNumber
-    */
-    public function getCertificateSerialNumber()
-    {
-        if (array_key_exists("certificateSerialNumber", $this->_propDict)) {
-            return $this->_propDict["certificateSerialNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the certificateSerialNumber
-    * Certificate serial number. This property is read-only.
-    *
-    * @param string $val The certificateSerialNumber
+    * @param string $val The topicIdentifier
     *
     * @return ApplePushNotificationCertificate
     */
-    public function setCertificateSerialNumber($val)
+    public function setTopicIdentifier($val)
     {
-        $this->_propDict["certificateSerialNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the certificate
-    * Not yet documented
-    *
-    * @return string The certificate
-    */
-    public function getCertificate()
-    {
-        if (array_key_exists("certificate", $this->_propDict)) {
-            return $this->_propDict["certificate"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the certificate
-    * Not yet documented
-    *
-    * @param string $val The certificate
-    *
-    * @return ApplePushNotificationCertificate
-    */
-    public function setCertificate($val)
-    {
-        $this->_propDict["certificate"] = $val;
+        $this->_propDict["topicIdentifier"] = $val;
         return $this;
     }
     

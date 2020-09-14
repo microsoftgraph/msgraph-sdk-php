@@ -79,90 +79,6 @@ class DeviceConfigurationTargetedUserAndDevice extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    /**
-    * Gets the userId
-    * The id of the user in the checkin.
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    * The id of the user in the checkin.
-    *
-    * @param string $val The value of the userId
-    *
-    * @return DeviceConfigurationTargetedUserAndDevice
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the userDisplayName
-    * The display name of the user in the checkin
-    *
-    * @return string The userDisplayName
-    */
-    public function getUserDisplayName()
-    {
-        if (array_key_exists("userDisplayName", $this->_propDict)) {
-            return $this->_propDict["userDisplayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userDisplayName
-    * The display name of the user in the checkin
-    *
-    * @param string $val The value of the userDisplayName
-    *
-    * @return DeviceConfigurationTargetedUserAndDevice
-    */
-    public function setUserDisplayName($val)
-    {
-        $this->_propDict["userDisplayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the userPrincipalName
-    * The UPN of the user in the checkin.
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userPrincipalName
-    * The UPN of the user in the checkin.
-    *
-    * @param string $val The value of the userPrincipalName
-    *
-    * @return DeviceConfigurationTargetedUserAndDevice
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the lastCheckinDateTime
@@ -195,5 +111,89 @@ class DeviceConfigurationTargetedUserAndDevice extends Entity
     {
         $this->_propDict["lastCheckinDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the userDisplayName
+    * The display name of the user in the checkin
+    *
+    * @return string The userDisplayName
+    */
+    public function getUserDisplayName()
+    {
+        if (array_key_exists("userDisplayName", $this->_propDict)) {
+            return $this->_propDict["userDisplayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userDisplayName
+    * The display name of the user in the checkin
+    *
+    * @param string $val The value of the userDisplayName
+    *
+    * @return DeviceConfigurationTargetedUserAndDevice
+    */
+    public function setUserDisplayName($val)
+    {
+        $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userId
+    * The id of the user in the checkin.
+    *
+    * @return string The userId
+    */
+    public function getUserId()
+    {
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userId
+    * The id of the user in the checkin.
+    *
+    * @param string $val The value of the userId
+    *
+    * @return DeviceConfigurationTargetedUserAndDevice
+    */
+    public function setUserId($val)
+    {
+        $this->_propDict["userId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userPrincipalName
+    * The UPN of the user in the checkin.
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userPrincipalName
+    * The UPN of the user in the checkin.
+    *
+    * @param string $val The value of the userPrincipalName
+    *
+    * @return DeviceConfigurationTargetedUserAndDevice
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
     }
 }

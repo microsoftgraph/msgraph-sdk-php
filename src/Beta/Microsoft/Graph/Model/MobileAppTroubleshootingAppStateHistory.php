@@ -56,6 +56,34 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
         $this->_propDict["actionType"] = $val;
          return $this;
     }
+    /**
+    * Gets the errorCode
+    * Error code for the failure, empty if no failure.
+    *
+    * @return string The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the errorCode
+    * Error code for the failure, empty if no failure.
+    *
+    * @param string $val The value of the errorCode
+    *
+    * @return MobileAppTroubleshootingAppStateHistory
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the runState
@@ -88,33 +116,5 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
     {
         $this->_propDict["runState"] = $val;
          return $this;
-    }
-    /**
-    * Gets the errorCode
-    * Error code for the failure, empty if no failure.
-    *
-    * @return string The errorCode
-    */
-    public function getErrorCode()
-    {
-        if (array_key_exists("errorCode", $this->_propDict)) {
-            return $this->_propDict["errorCode"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the errorCode
-    * Error code for the failure, empty if no failure.
-    *
-    * @param string $val The value of the errorCode
-    *
-    * @return MobileAppTroubleshootingAppStateHistory
-    */
-    public function setErrorCode($val)
-    {
-        $this->_propDict["errorCode"] = $val;
-        return $this;
     }
 }

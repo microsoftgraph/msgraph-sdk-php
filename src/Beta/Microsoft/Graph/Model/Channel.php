@@ -25,31 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class Channel extends Entity
 {
     /**
-    * Gets the displayName
-    * Channel name as it will appear to the user in Microsoft Teams.
+    * Gets the createdDateTime
     *
-    * @return string The displayName
+    * @return \DateTime The createdDateTime
     */
-    public function getDisplayName()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
-    * Channel name as it will appear to the user in Microsoft Teams.
+    * Sets the createdDateTime
     *
-    * @param string $val The displayName
+    * @param \DateTime $val The createdDateTime
     *
     * @return Channel
     */
-    public function setDisplayName($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -83,29 +85,31 @@ class Channel extends Entity
     }
     
     /**
-    * Gets the isFavoriteByDefault
+    * Gets the displayName
+    * Channel name as it will appear to the user in Microsoft Teams.
     *
-    * @return bool The isFavoriteByDefault
+    * @return string The displayName
     */
-    public function getIsFavoriteByDefault()
+    public function getDisplayName()
     {
-        if (array_key_exists("isFavoriteByDefault", $this->_propDict)) {
-            return $this->_propDict["isFavoriteByDefault"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isFavoriteByDefault
+    * Sets the displayName
+    * Channel name as it will appear to the user in Microsoft Teams.
     *
-    * @param bool $val The isFavoriteByDefault
+    * @param string $val The displayName
     *
     * @return Channel
     */
-    public function setIsFavoriteByDefault($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["isFavoriteByDefault"] = boolval($val);
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -139,31 +143,29 @@ class Channel extends Entity
     }
     
     /**
-    * Gets the webUrl
-    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    * Gets the isFavoriteByDefault
     *
-    * @return string The webUrl
+    * @return bool The isFavoriteByDefault
     */
-    public function getWebUrl()
+    public function getIsFavoriteByDefault()
     {
-        if (array_key_exists("webUrl", $this->_propDict)) {
-            return $this->_propDict["webUrl"];
+        if (array_key_exists("isFavoriteByDefault", $this->_propDict)) {
+            return $this->_propDict["isFavoriteByDefault"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the webUrl
-    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    * Sets the isFavoriteByDefault
     *
-    * @param string $val The webUrl
+    * @param bool $val The isFavoriteByDefault
     *
     * @return Channel
     */
-    public function setWebUrl($val)
+    public function setIsFavoriteByDefault($val)
     {
-        $this->_propDict["webUrl"] = $val;
+        $this->_propDict["isFavoriteByDefault"] = boolval($val);
         return $this;
     }
     
@@ -229,6 +231,96 @@ class Channel extends Entity
         return $this;
     }
     
+    /**
+    * Gets the webUrl
+    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webUrl
+    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    *
+    * @param string $val The webUrl
+    *
+    * @return Channel
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the filesFolder
+    * Metadata for the location where the channel's files are stored.
+    *
+    * @return DriveItem The filesFolder
+    */
+    public function getFilesFolder()
+    {
+        if (array_key_exists("filesFolder", $this->_propDict)) {
+            if (is_a($this->_propDict["filesFolder"], "Beta\Microsoft\Graph\Model\DriveItem")) {
+                return $this->_propDict["filesFolder"];
+            } else {
+                $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);
+                return $this->_propDict["filesFolder"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the filesFolder
+    * Metadata for the location where the channel's files are stored.
+    *
+    * @param DriveItem $val The filesFolder
+    *
+    * @return Channel
+    */
+    public function setFilesFolder($val)
+    {
+        $this->_propDict["filesFolder"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the members
+     *
+     * @return array The members
+     */
+    public function getMembers()
+    {
+        if (array_key_exists("members", $this->_propDict)) {
+           return $this->_propDict["members"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the members
+    *
+    * @param ConversationMember $val The members
+    *
+    * @return Channel
+    */
+    public function setMembers($val)
+    {
+		$this->_propDict["members"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the messages
@@ -286,67 +378,6 @@ class Channel extends Entity
     public function setTabs($val)
     {
 		$this->_propDict["tabs"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the members
-     *
-     * @return array The members
-     */
-    public function getMembers()
-    {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the members
-    *
-    * @param ConversationMember $val The members
-    *
-    * @return Channel
-    */
-    public function setMembers($val)
-    {
-		$this->_propDict["members"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the filesFolder
-    * Metadata for the location where the channel's files are stored.
-    *
-    * @return DriveItem The filesFolder
-    */
-    public function getFilesFolder()
-    {
-        if (array_key_exists("filesFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["filesFolder"], "Beta\Microsoft\Graph\Model\DriveItem")) {
-                return $this->_propDict["filesFolder"];
-            } else {
-                $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);
-                return $this->_propDict["filesFolder"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the filesFolder
-    * Metadata for the location where the channel's files are stored.
-    *
-    * @param DriveItem $val The filesFolder
-    *
-    * @return Channel
-    */
-    public function setFilesFolder($val)
-    {
-        $this->_propDict["filesFolder"] = $val;
         return $this;
     }
     

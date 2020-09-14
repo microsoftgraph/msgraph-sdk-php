@@ -25,39 +25,6 @@ class CustomUpdateTimeWindow extends Entity
 {
 
     /**
-    * Gets the startDay
-    * Start day of the time window
-    *
-    * @return DayOfWeek The startDay
-    */
-    public function getStartDay()
-    {
-        if (array_key_exists("startDay", $this->_propDict)) {
-            if (is_a($this->_propDict["startDay"], "Beta\Microsoft\Graph\Model\DayOfWeek")) {
-                return $this->_propDict["startDay"];
-            } else {
-                $this->_propDict["startDay"] = new DayOfWeek($this->_propDict["startDay"]);
-                return $this->_propDict["startDay"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startDay
-    * Start day of the time window
-    *
-    * @param DayOfWeek $val The value to assign to the startDay
-    *
-    * @return CustomUpdateTimeWindow The CustomUpdateTimeWindow
-    */
-    public function setStartDay($val)
-    {
-        $this->_propDict["startDay"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the endDay
     * End day of the time window
     *
@@ -91,39 +58,6 @@ class CustomUpdateTimeWindow extends Entity
     }
 
     /**
-    * Gets the startTime
-    * Start time of the time window
-    *
-    * @return TimeOfDay The startTime
-    */
-    public function getStartTime()
-    {
-        if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
-                return $this->_propDict["startTime"];
-            } else {
-                $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);
-                return $this->_propDict["startTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startTime
-    * Start time of the time window
-    *
-    * @param TimeOfDay $val The value to assign to the startTime
-    *
-    * @return CustomUpdateTimeWindow The CustomUpdateTimeWindow
-    */
-    public function setStartTime($val)
-    {
-        $this->_propDict["startTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the endTime
     * End time of the time window
     *
@@ -153,6 +87,72 @@ class CustomUpdateTimeWindow extends Entity
     public function setEndTime($val)
     {
         $this->_propDict["endTime"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startDay
+    * Start day of the time window
+    *
+    * @return DayOfWeek The startDay
+    */
+    public function getStartDay()
+    {
+        if (array_key_exists("startDay", $this->_propDict)) {
+            if (is_a($this->_propDict["startDay"], "Beta\Microsoft\Graph\Model\DayOfWeek")) {
+                return $this->_propDict["startDay"];
+            } else {
+                $this->_propDict["startDay"] = new DayOfWeek($this->_propDict["startDay"]);
+                return $this->_propDict["startDay"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startDay
+    * Start day of the time window
+    *
+    * @param DayOfWeek $val The value to assign to the startDay
+    *
+    * @return CustomUpdateTimeWindow The CustomUpdateTimeWindow
+    */
+    public function setStartDay($val)
+    {
+        $this->_propDict["startDay"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the startTime
+    * Start time of the time window
+    *
+    * @return TimeOfDay The startTime
+    */
+    public function getStartTime()
+    {
+        if (array_key_exists("startTime", $this->_propDict)) {
+            if (is_a($this->_propDict["startTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["startTime"];
+            } else {
+                $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);
+                return $this->_propDict["startTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startTime
+    * Start time of the time window
+    *
+    * @param TimeOfDay $val The value to assign to the startTime
+    *
+    * @return CustomUpdateTimeWindow The CustomUpdateTimeWindow
+    */
+    public function setStartTime($val)
+    {
+        $this->_propDict["startTime"] = $val;
          return $this;
     }
 }

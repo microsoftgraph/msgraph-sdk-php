@@ -323,308 +323,6 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the microsoftLauncherConfigurationEnabled
-    * Indicates whether or not to you want configure Microsoft Launcher.
-    *
-    * @return bool The microsoftLauncherConfigurationEnabled
-    */
-    public function getMicrosoftLauncherConfigurationEnabled()
-    {
-        if (array_key_exists("microsoftLauncherConfigurationEnabled", $this->_propDict)) {
-            return $this->_propDict["microsoftLauncherConfigurationEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the microsoftLauncherConfigurationEnabled
-    * Indicates whether or not to you want configure Microsoft Launcher.
-    *
-    * @param bool $val The microsoftLauncherConfigurationEnabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherConfigurationEnabled($val)
-    {
-        $this->_propDict["microsoftLauncherConfigurationEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherCustomWallpaperEnabled
-    * Indicates whether or not to configure the wallpaper on the targeted devices.
-    *
-    * @return bool The microsoftLauncherCustomWallpaperEnabled
-    */
-    public function getMicrosoftLauncherCustomWallpaperEnabled()
-    {
-        if (array_key_exists("microsoftLauncherCustomWallpaperEnabled", $this->_propDict)) {
-            return $this->_propDict["microsoftLauncherCustomWallpaperEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the microsoftLauncherCustomWallpaperEnabled
-    * Indicates whether or not to configure the wallpaper on the targeted devices.
-    *
-    * @param bool $val The microsoftLauncherCustomWallpaperEnabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherCustomWallpaperEnabled($val)
-    {
-        $this->_propDict["microsoftLauncherCustomWallpaperEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherCustomWallpaperImageUrl
-    * Indicates the URL for the image file to use as the wallpaper on the targeted devices.
-    *
-    * @return string The microsoftLauncherCustomWallpaperImageUrl
-    */
-    public function getMicrosoftLauncherCustomWallpaperImageUrl()
-    {
-        if (array_key_exists("microsoftLauncherCustomWallpaperImageUrl", $this->_propDict)) {
-            return $this->_propDict["microsoftLauncherCustomWallpaperImageUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the microsoftLauncherCustomWallpaperImageUrl
-    * Indicates the URL for the image file to use as the wallpaper on the targeted devices.
-    *
-    * @param string $val The microsoftLauncherCustomWallpaperImageUrl
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherCustomWallpaperImageUrl($val)
-    {
-        $this->_propDict["microsoftLauncherCustomWallpaperImageUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherCustomWallpaperAllowUserModification
-    * Indicates whether or not the user can modify the wallpaper to personalize their device.
-    *
-    * @return bool The microsoftLauncherCustomWallpaperAllowUserModification
-    */
-    public function getMicrosoftLauncherCustomWallpaperAllowUserModification()
-    {
-        if (array_key_exists("microsoftLauncherCustomWallpaperAllowUserModification", $this->_propDict)) {
-            return $this->_propDict["microsoftLauncherCustomWallpaperAllowUserModification"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the microsoftLauncherCustomWallpaperAllowUserModification
-    * Indicates whether or not the user can modify the wallpaper to personalize their device.
-    *
-    * @param bool $val The microsoftLauncherCustomWallpaperAllowUserModification
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherCustomWallpaperAllowUserModification($val)
-    {
-        $this->_propDict["microsoftLauncherCustomWallpaperAllowUserModification"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherFeedEnabled
-    * Indicates whether or not you want to enable the launcher feed on the device.
-    *
-    * @return bool The microsoftLauncherFeedEnabled
-    */
-    public function getMicrosoftLauncherFeedEnabled()
-    {
-        if (array_key_exists("microsoftLauncherFeedEnabled", $this->_propDict)) {
-            return $this->_propDict["microsoftLauncherFeedEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the microsoftLauncherFeedEnabled
-    * Indicates whether or not you want to enable the launcher feed on the device.
-    *
-    * @param bool $val The microsoftLauncherFeedEnabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherFeedEnabled($val)
-    {
-        $this->_propDict["microsoftLauncherFeedEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherFeedAllowUserModification
-    * Indicates whether or not the user can modify the launcher feed on the device.
-    *
-    * @return bool The microsoftLauncherFeedAllowUserModification
-    */
-    public function getMicrosoftLauncherFeedAllowUserModification()
-    {
-        if (array_key_exists("microsoftLauncherFeedAllowUserModification", $this->_propDict)) {
-            return $this->_propDict["microsoftLauncherFeedAllowUserModification"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the microsoftLauncherFeedAllowUserModification
-    * Indicates whether or not the user can modify the launcher feed on the device.
-    *
-    * @param bool $val The microsoftLauncherFeedAllowUserModification
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherFeedAllowUserModification($val)
-    {
-        $this->_propDict["microsoftLauncherFeedAllowUserModification"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherDockPresenceConfiguration
-    * Indicates whether or not you want to configure the device dock.
-    *
-    * @return MicrosoftLauncherDockPresence The microsoftLauncherDockPresenceConfiguration
-    */
-    public function getMicrosoftLauncherDockPresenceConfiguration()
-    {
-        if (array_key_exists("microsoftLauncherDockPresenceConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftLauncherDockPresenceConfiguration"], "Beta\Microsoft\Graph\Model\MicrosoftLauncherDockPresence")) {
-                return $this->_propDict["microsoftLauncherDockPresenceConfiguration"];
-            } else {
-                $this->_propDict["microsoftLauncherDockPresenceConfiguration"] = new MicrosoftLauncherDockPresence($this->_propDict["microsoftLauncherDockPresenceConfiguration"]);
-                return $this->_propDict["microsoftLauncherDockPresenceConfiguration"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the microsoftLauncherDockPresenceConfiguration
-    * Indicates whether or not you want to configure the device dock.
-    *
-    * @param MicrosoftLauncherDockPresence $val The microsoftLauncherDockPresenceConfiguration
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherDockPresenceConfiguration($val)
-    {
-        $this->_propDict["microsoftLauncherDockPresenceConfiguration"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherDockPresenceAllowUserModification
-    * Indicates whether or not the user can modify the device dock configuration on the device.
-    *
-    * @return bool The microsoftLauncherDockPresenceAllowUserModification
-    */
-    public function getMicrosoftLauncherDockPresenceAllowUserModification()
-    {
-        if (array_key_exists("microsoftLauncherDockPresenceAllowUserModification", $this->_propDict)) {
-            return $this->_propDict["microsoftLauncherDockPresenceAllowUserModification"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the microsoftLauncherDockPresenceAllowUserModification
-    * Indicates whether or not the user can modify the device dock configuration on the device.
-    *
-    * @param bool $val The microsoftLauncherDockPresenceAllowUserModification
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherDockPresenceAllowUserModification($val)
-    {
-        $this->_propDict["microsoftLauncherDockPresenceAllowUserModification"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the microsoftLauncherSearchBarPlacementConfiguration
-    * Indicates the search bar placement configuration on the device.
-    *
-    * @return MicrosoftLauncherSearchBarPlacement The microsoftLauncherSearchBarPlacementConfiguration
-    */
-    public function getMicrosoftLauncherSearchBarPlacementConfiguration()
-    {
-        if (array_key_exists("microsoftLauncherSearchBarPlacementConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"], "Beta\Microsoft\Graph\Model\MicrosoftLauncherSearchBarPlacement")) {
-                return $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"];
-            } else {
-                $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"] = new MicrosoftLauncherSearchBarPlacement($this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"]);
-                return $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the microsoftLauncherSearchBarPlacementConfiguration
-    * Indicates the search bar placement configuration on the device.
-    *
-    * @param MicrosoftLauncherSearchBarPlacement $val The microsoftLauncherSearchBarPlacementConfiguration
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setMicrosoftLauncherSearchBarPlacementConfiguration($val)
-    {
-        $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the enrollmentProfile
-    * Indicates which enrollment profile you want to configure.
-    *
-    * @return AndroidDeviceOwnerEnrollmentProfileType The enrollmentProfile
-    */
-    public function getEnrollmentProfile()
-    {
-        if (array_key_exists("enrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentProfile"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfileType")) {
-                return $this->_propDict["enrollmentProfile"];
-            } else {
-                $this->_propDict["enrollmentProfile"] = new AndroidDeviceOwnerEnrollmentProfileType($this->_propDict["enrollmentProfile"]);
-                return $this->_propDict["enrollmentProfile"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the enrollmentProfile
-    * Indicates which enrollment profile you want to configure.
-    *
-    * @param AndroidDeviceOwnerEnrollmentProfileType $val The enrollmentProfile
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setEnrollmentProfile($val)
-    {
-        $this->_propDict["enrollmentProfile"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the dataRoamingBlocked
     * Indicates whether or not to block a user from data roaming.
     *
@@ -683,31 +381,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the factoryResetDeviceAdministratorEmails
-    * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
+    * Gets the enrollmentProfile
+    * Indicates which enrollment profile you want to configure.
     *
-    * @return string The factoryResetDeviceAdministratorEmails
+    * @return AndroidDeviceOwnerEnrollmentProfileType The enrollmentProfile
     */
-    public function getFactoryResetDeviceAdministratorEmails()
+    public function getEnrollmentProfile()
     {
-        if (array_key_exists("factoryResetDeviceAdministratorEmails", $this->_propDict)) {
-            return $this->_propDict["factoryResetDeviceAdministratorEmails"];
-        } else {
-            return null;
+        if (array_key_exists("enrollmentProfile", $this->_propDict)) {
+            if (is_a($this->_propDict["enrollmentProfile"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfileType")) {
+                return $this->_propDict["enrollmentProfile"];
+            } else {
+                $this->_propDict["enrollmentProfile"] = new AndroidDeviceOwnerEnrollmentProfileType($this->_propDict["enrollmentProfile"]);
+                return $this->_propDict["enrollmentProfile"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the factoryResetDeviceAdministratorEmails
-    * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
+    * Sets the enrollmentProfile
+    * Indicates which enrollment profile you want to configure.
     *
-    * @param string $val The factoryResetDeviceAdministratorEmails
+    * @param AndroidDeviceOwnerEnrollmentProfileType $val The enrollmentProfile
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
-    public function setFactoryResetDeviceAdministratorEmails($val)
+    public function setEnrollmentProfile($val)
     {
-        $this->_propDict["factoryResetDeviceAdministratorEmails"] = $val;
+        $this->_propDict["enrollmentProfile"] = $val;
         return $this;
     }
     
@@ -737,6 +439,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setFactoryResetBlocked($val)
     {
         $this->_propDict["factoryResetBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the factoryResetDeviceAdministratorEmails
+    * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
+    *
+    * @return string The factoryResetDeviceAdministratorEmails
+    */
+    public function getFactoryResetDeviceAdministratorEmails()
+    {
+        if (array_key_exists("factoryResetDeviceAdministratorEmails", $this->_propDict)) {
+            return $this->_propDict["factoryResetDeviceAdministratorEmails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the factoryResetDeviceAdministratorEmails
+    * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
+    *
+    * @param string $val The factoryResetDeviceAdministratorEmails
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setFactoryResetDeviceAdministratorEmails($val)
+    {
+        $this->_propDict["factoryResetDeviceAdministratorEmails"] = $val;
         return $this;
     }
     
@@ -802,6 +533,309 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
+
+     /** 
+     * Gets the kioskModeApps
+    * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The kioskModeApps
+     */
+    public function getKioskModeApps()
+    {
+        if (array_key_exists("kioskModeApps", $this->_propDict)) {
+           return $this->_propDict["kioskModeApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the kioskModeApps
+    * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
+    *
+    * @param AppListItem $val The kioskModeApps
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeApps($val)
+    {
+		$this->_propDict["kioskModeApps"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeBluetoothConfigurationEnabled
+    * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+    *
+    * @return bool The kioskModeBluetoothConfigurationEnabled
+    */
+    public function getKioskModeBluetoothConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeBluetoothConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeBluetoothConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeBluetoothConfigurationEnabled
+    * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeBluetoothConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeBluetoothConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeBluetoothConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeDebugMenuEasyAccessEnabled
+    * Whether or not to allow a user to easy access to the debug menu in Kiosk Mode.
+    *
+    * @return bool The kioskModeDebugMenuEasyAccessEnabled
+    */
+    public function getKioskModeDebugMenuEasyAccessEnabled()
+    {
+        if (array_key_exists("kioskModeDebugMenuEasyAccessEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeDebugMenuEasyAccessEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeDebugMenuEasyAccessEnabled
+    * Whether or not to allow a user to easy access to the debug menu in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeDebugMenuEasyAccessEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeDebugMenuEasyAccessEnabled($val)
+    {
+        $this->_propDict["kioskModeDebugMenuEasyAccessEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeExitCode
+    * Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
+    *
+    * @return string The kioskModeExitCode
+    */
+    public function getKioskModeExitCode()
+    {
+        if (array_key_exists("kioskModeExitCode", $this->_propDict)) {
+            return $this->_propDict["kioskModeExitCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeExitCode
+    * Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
+    *
+    * @param string $val The kioskModeExitCode
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeExitCode($val)
+    {
+        $this->_propDict["kioskModeExitCode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeFlashlightConfigurationEnabled
+    * Whether or not to allow a user to use the flashlight in Kiosk Mode.
+    *
+    * @return bool The kioskModeFlashlightConfigurationEnabled
+    */
+    public function getKioskModeFlashlightConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeFlashlightConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeFlashlightConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeFlashlightConfigurationEnabled
+    * Whether or not to allow a user to use the flashlight in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeFlashlightConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeFlashlightConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeFlashlightConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeFolderIcon
+    * Folder icon configuration for managed home screen in Kiosk Mode.
+    *
+    * @return AndroidDeviceOwnerKioskModeFolderIcon The kioskModeFolderIcon
+    */
+    public function getKioskModeFolderIcon()
+    {
+        if (array_key_exists("kioskModeFolderIcon", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskModeFolderIcon"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeFolderIcon")) {
+                return $this->_propDict["kioskModeFolderIcon"];
+            } else {
+                $this->_propDict["kioskModeFolderIcon"] = new AndroidDeviceOwnerKioskModeFolderIcon($this->_propDict["kioskModeFolderIcon"]);
+                return $this->_propDict["kioskModeFolderIcon"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the kioskModeFolderIcon
+    * Folder icon configuration for managed home screen in Kiosk Mode.
+    *
+    * @param AndroidDeviceOwnerKioskModeFolderIcon $val The kioskModeFolderIcon
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeFolderIcon($val)
+    {
+        $this->_propDict["kioskModeFolderIcon"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeIconSize
+    * Icon size configuration for managed home screen in Kiosk Mode.
+    *
+    * @return AndroidDeviceOwnerKioskModeIconSize The kioskModeIconSize
+    */
+    public function getKioskModeIconSize()
+    {
+        if (array_key_exists("kioskModeIconSize", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskModeIconSize"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeIconSize")) {
+                return $this->_propDict["kioskModeIconSize"];
+            } else {
+                $this->_propDict["kioskModeIconSize"] = new AndroidDeviceOwnerKioskModeIconSize($this->_propDict["kioskModeIconSize"]);
+                return $this->_propDict["kioskModeIconSize"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the kioskModeIconSize
+    * Icon size configuration for managed home screen in Kiosk Mode.
+    *
+    * @param AndroidDeviceOwnerKioskModeIconSize $val The kioskModeIconSize
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeIconSize($val)
+    {
+        $this->_propDict["kioskModeIconSize"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedSettingsEntryDisabled
+    * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
+    *
+    * @return bool The kioskModeManagedSettingsEntryDisabled
+    */
+    public function getKioskModeManagedSettingsEntryDisabled()
+    {
+        if (array_key_exists("kioskModeManagedSettingsEntryDisabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedSettingsEntryDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedSettingsEntryDisabled
+    * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeManagedSettingsEntryDisabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedSettingsEntryDisabled($val)
+    {
+        $this->_propDict["kioskModeManagedSettingsEntryDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeMediaVolumeConfigurationEnabled
+    * Whether or not to allow a user to change the media volume in Kiosk Mode.
+    *
+    * @return bool The kioskModeMediaVolumeConfigurationEnabled
+    */
+    public function getKioskModeMediaVolumeConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeMediaVolumeConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeMediaVolumeConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeMediaVolumeConfigurationEnabled
+    * Whether or not to allow a user to change the media volume in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeMediaVolumeConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeMediaVolumeConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeMediaVolumeConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeScreenOrientation
+    * Screen orientation configuration for managed home screen in Kiosk Mode.
+    *
+    * @return AndroidDeviceOwnerKioskModeScreenOrientation The kioskModeScreenOrientation
+    */
+    public function getKioskModeScreenOrientation()
+    {
+        if (array_key_exists("kioskModeScreenOrientation", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskModeScreenOrientation"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeScreenOrientation")) {
+                return $this->_propDict["kioskModeScreenOrientation"];
+            } else {
+                $this->_propDict["kioskModeScreenOrientation"] = new AndroidDeviceOwnerKioskModeScreenOrientation($this->_propDict["kioskModeScreenOrientation"]);
+                return $this->_propDict["kioskModeScreenOrientation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the kioskModeScreenOrientation
+    * Screen orientation configuration for managed home screen in Kiosk Mode.
+    *
+    * @param AndroidDeviceOwnerKioskModeScreenOrientation $val The kioskModeScreenOrientation
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeScreenOrientation($val)
+    {
+        $this->_propDict["kioskModeScreenOrientation"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the kioskModeScreenSaverConfigurationEnabled
     * Whether or not to enable screen saver mode or not in Kiosk Mode.
@@ -832,31 +866,31 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the kioskModeScreenSaverImageUrl
-    * URL for an image that will be the device's screen saver in Kiosk Mode.
+    * Gets the kioskModeScreenSaverDetectMediaDisabled
+    * Whether or not the device screen should show the screen saver if audio/video is playing in Kiosk Mode.
     *
-    * @return string The kioskModeScreenSaverImageUrl
+    * @return bool The kioskModeScreenSaverDetectMediaDisabled
     */
-    public function getKioskModeScreenSaverImageUrl()
+    public function getKioskModeScreenSaverDetectMediaDisabled()
     {
-        if (array_key_exists("kioskModeScreenSaverImageUrl", $this->_propDict)) {
-            return $this->_propDict["kioskModeScreenSaverImageUrl"];
+        if (array_key_exists("kioskModeScreenSaverDetectMediaDisabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeScreenSaverDetectMediaDisabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the kioskModeScreenSaverImageUrl
-    * URL for an image that will be the device's screen saver in Kiosk Mode.
+    * Sets the kioskModeScreenSaverDetectMediaDisabled
+    * Whether or not the device screen should show the screen saver if audio/video is playing in Kiosk Mode.
     *
-    * @param string $val The kioskModeScreenSaverImageUrl
+    * @param bool $val The kioskModeScreenSaverDetectMediaDisabled
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
-    public function setKioskModeScreenSaverImageUrl($val)
+    public function setKioskModeScreenSaverDetectMediaDisabled($val)
     {
-        $this->_propDict["kioskModeScreenSaverImageUrl"] = $val;
+        $this->_propDict["kioskModeScreenSaverDetectMediaDisabled"] = boolval($val);
         return $this;
     }
     
@@ -890,6 +924,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeScreenSaverImageUrl
+    * URL for an image that will be the device's screen saver in Kiosk Mode.
+    *
+    * @return string The kioskModeScreenSaverImageUrl
+    */
+    public function getKioskModeScreenSaverImageUrl()
+    {
+        if (array_key_exists("kioskModeScreenSaverImageUrl", $this->_propDict)) {
+            return $this->_propDict["kioskModeScreenSaverImageUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeScreenSaverImageUrl
+    * URL for an image that will be the device's screen saver in Kiosk Mode.
+    *
+    * @param string $val The kioskModeScreenSaverImageUrl
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeScreenSaverImageUrl($val)
+    {
+        $this->_propDict["kioskModeScreenSaverImageUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeScreenSaverStartDelayInSeconds
     * The number of seconds the device needs to be inactive for before the screen saver is shown in Kiosk Mode. Valid values 1 to 9999999
     *
@@ -919,119 +982,60 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the kioskModeScreenSaverDetectMediaDisabled
-    * Whether or not the device screen should show the screen saver if audio/video is playing in Kiosk Mode.
+    * Gets the kioskModeShowAppNotificationBadge
+    * Whether or not to display application notification badges in Kiosk Mode.
     *
-    * @return bool The kioskModeScreenSaverDetectMediaDisabled
+    * @return bool The kioskModeShowAppNotificationBadge
     */
-    public function getKioskModeScreenSaverDetectMediaDisabled()
+    public function getKioskModeShowAppNotificationBadge()
     {
-        if (array_key_exists("kioskModeScreenSaverDetectMediaDisabled", $this->_propDict)) {
-            return $this->_propDict["kioskModeScreenSaverDetectMediaDisabled"];
+        if (array_key_exists("kioskModeShowAppNotificationBadge", $this->_propDict)) {
+            return $this->_propDict["kioskModeShowAppNotificationBadge"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the kioskModeScreenSaverDetectMediaDisabled
-    * Whether or not the device screen should show the screen saver if audio/video is playing in Kiosk Mode.
+    * Sets the kioskModeShowAppNotificationBadge
+    * Whether or not to display application notification badges in Kiosk Mode.
     *
-    * @param bool $val The kioskModeScreenSaverDetectMediaDisabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeScreenSaverDetectMediaDisabled($val)
-    {
-        $this->_propDict["kioskModeScreenSaverDetectMediaDisabled"] = boolval($val);
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the kioskModeApps
-    * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
-     *
-     * @return array The kioskModeApps
-     */
-    public function getKioskModeApps()
-    {
-        if (array_key_exists("kioskModeApps", $this->_propDict)) {
-           return $this->_propDict["kioskModeApps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the kioskModeApps
-    * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
-    *
-    * @param AppListItem $val The kioskModeApps
+    * @param bool $val The kioskModeShowAppNotificationBadge
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
-    public function setKioskModeApps($val)
+    public function setKioskModeShowAppNotificationBadge($val)
     {
-		$this->_propDict["kioskModeApps"] = $val;
+        $this->_propDict["kioskModeShowAppNotificationBadge"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the kioskModeWallpaperUrl
-    * URL to a publicly accessible image to use for the wallpaper when the device is in Kiosk Mode.
+    * Gets the kioskModeShowDeviceInfo
+    * Whether or not to allow a user to access basic device information.
     *
-    * @return string The kioskModeWallpaperUrl
+    * @return bool The kioskModeShowDeviceInfo
     */
-    public function getKioskModeWallpaperUrl()
+    public function getKioskModeShowDeviceInfo()
     {
-        if (array_key_exists("kioskModeWallpaperUrl", $this->_propDict)) {
-            return $this->_propDict["kioskModeWallpaperUrl"];
+        if (array_key_exists("kioskModeShowDeviceInfo", $this->_propDict)) {
+            return $this->_propDict["kioskModeShowDeviceInfo"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the kioskModeWallpaperUrl
-    * URL to a publicly accessible image to use for the wallpaper when the device is in Kiosk Mode.
+    * Sets the kioskModeShowDeviceInfo
+    * Whether or not to allow a user to access basic device information.
     *
-    * @param string $val The kioskModeWallpaperUrl
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeWallpaperUrl($val)
-    {
-        $this->_propDict["kioskModeWallpaperUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeExitCode
-    * Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
-    *
-    * @return string The kioskModeExitCode
-    */
-    public function getKioskModeExitCode()
-    {
-        if (array_key_exists("kioskModeExitCode", $this->_propDict)) {
-            return $this->_propDict["kioskModeExitCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeExitCode
-    * Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
-    *
-    * @param string $val The kioskModeExitCode
+    * @param bool $val The kioskModeShowDeviceInfo
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
-    public function setKioskModeExitCode($val)
+    public function setKioskModeShowDeviceInfo($val)
     {
-        $this->_propDict["kioskModeExitCode"] = $val;
+        $this->_propDict["kioskModeShowDeviceInfo"] = boolval($val);
         return $this;
     }
     
@@ -1098,333 +1102,31 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the kioskModeBluetoothConfigurationEnabled
-    * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+    * Gets the kioskModeWallpaperUrl
+    * URL to a publicly accessible image to use for the wallpaper when the device is in Kiosk Mode.
     *
-    * @return bool The kioskModeBluetoothConfigurationEnabled
+    * @return string The kioskModeWallpaperUrl
     */
-    public function getKioskModeBluetoothConfigurationEnabled()
+    public function getKioskModeWallpaperUrl()
     {
-        if (array_key_exists("kioskModeBluetoothConfigurationEnabled", $this->_propDict)) {
-            return $this->_propDict["kioskModeBluetoothConfigurationEnabled"];
+        if (array_key_exists("kioskModeWallpaperUrl", $this->_propDict)) {
+            return $this->_propDict["kioskModeWallpaperUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the kioskModeBluetoothConfigurationEnabled
-    * Whether or not to allow a user to configure Bluetooth settings in Kiosk Mode.
+    * Sets the kioskModeWallpaperUrl
+    * URL to a publicly accessible image to use for the wallpaper when the device is in Kiosk Mode.
     *
-    * @param bool $val The kioskModeBluetoothConfigurationEnabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeBluetoothConfigurationEnabled($val)
-    {
-        $this->_propDict["kioskModeBluetoothConfigurationEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeWiFiConfigurationEnabled
-    * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
-    *
-    * @return bool The kioskModeWiFiConfigurationEnabled
-    */
-    public function getKioskModeWiFiConfigurationEnabled()
-    {
-        if (array_key_exists("kioskModeWiFiConfigurationEnabled", $this->_propDict)) {
-            return $this->_propDict["kioskModeWiFiConfigurationEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeWiFiConfigurationEnabled
-    * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
-    *
-    * @param bool $val The kioskModeWiFiConfigurationEnabled
+    * @param string $val The kioskModeWallpaperUrl
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
-    public function setKioskModeWiFiConfigurationEnabled($val)
+    public function setKioskModeWallpaperUrl($val)
     {
-        $this->_propDict["kioskModeWiFiConfigurationEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeFlashlightConfigurationEnabled
-    * Whether or not to allow a user to use the flashlight in Kiosk Mode.
-    *
-    * @return bool The kioskModeFlashlightConfigurationEnabled
-    */
-    public function getKioskModeFlashlightConfigurationEnabled()
-    {
-        if (array_key_exists("kioskModeFlashlightConfigurationEnabled", $this->_propDict)) {
-            return $this->_propDict["kioskModeFlashlightConfigurationEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeFlashlightConfigurationEnabled
-    * Whether or not to allow a user to use the flashlight in Kiosk Mode.
-    *
-    * @param bool $val The kioskModeFlashlightConfigurationEnabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeFlashlightConfigurationEnabled($val)
-    {
-        $this->_propDict["kioskModeFlashlightConfigurationEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeMediaVolumeConfigurationEnabled
-    * Whether or not to allow a user to change the media volume in Kiosk Mode.
-    *
-    * @return bool The kioskModeMediaVolumeConfigurationEnabled
-    */
-    public function getKioskModeMediaVolumeConfigurationEnabled()
-    {
-        if (array_key_exists("kioskModeMediaVolumeConfigurationEnabled", $this->_propDict)) {
-            return $this->_propDict["kioskModeMediaVolumeConfigurationEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeMediaVolumeConfigurationEnabled
-    * Whether or not to allow a user to change the media volume in Kiosk Mode.
-    *
-    * @param bool $val The kioskModeMediaVolumeConfigurationEnabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeMediaVolumeConfigurationEnabled($val)
-    {
-        $this->_propDict["kioskModeMediaVolumeConfigurationEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeShowDeviceInfo
-    * Whether or not to allow a user to access basic device information.
-    *
-    * @return bool The kioskModeShowDeviceInfo
-    */
-    public function getKioskModeShowDeviceInfo()
-    {
-        if (array_key_exists("kioskModeShowDeviceInfo", $this->_propDict)) {
-            return $this->_propDict["kioskModeShowDeviceInfo"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeShowDeviceInfo
-    * Whether or not to allow a user to access basic device information.
-    *
-    * @param bool $val The kioskModeShowDeviceInfo
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeShowDeviceInfo($val)
-    {
-        $this->_propDict["kioskModeShowDeviceInfo"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeManagedSettingsEntryDisabled
-    * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
-    *
-    * @return bool The kioskModeManagedSettingsEntryDisabled
-    */
-    public function getKioskModeManagedSettingsEntryDisabled()
-    {
-        if (array_key_exists("kioskModeManagedSettingsEntryDisabled", $this->_propDict)) {
-            return $this->_propDict["kioskModeManagedSettingsEntryDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeManagedSettingsEntryDisabled
-    * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
-    *
-    * @param bool $val The kioskModeManagedSettingsEntryDisabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeManagedSettingsEntryDisabled($val)
-    {
-        $this->_propDict["kioskModeManagedSettingsEntryDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeDebugMenuEasyAccessEnabled
-    * Whether or not to allow a user to easy access to the debug menu in Kiosk Mode.
-    *
-    * @return bool The kioskModeDebugMenuEasyAccessEnabled
-    */
-    public function getKioskModeDebugMenuEasyAccessEnabled()
-    {
-        if (array_key_exists("kioskModeDebugMenuEasyAccessEnabled", $this->_propDict)) {
-            return $this->_propDict["kioskModeDebugMenuEasyAccessEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeDebugMenuEasyAccessEnabled
-    * Whether or not to allow a user to easy access to the debug menu in Kiosk Mode.
-    *
-    * @param bool $val The kioskModeDebugMenuEasyAccessEnabled
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeDebugMenuEasyAccessEnabled($val)
-    {
-        $this->_propDict["kioskModeDebugMenuEasyAccessEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeShowAppNotificationBadge
-    * Whether or not to display application notification badges in Kiosk Mode.
-    *
-    * @return bool The kioskModeShowAppNotificationBadge
-    */
-    public function getKioskModeShowAppNotificationBadge()
-    {
-        if (array_key_exists("kioskModeShowAppNotificationBadge", $this->_propDict)) {
-            return $this->_propDict["kioskModeShowAppNotificationBadge"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeShowAppNotificationBadge
-    * Whether or not to display application notification badges in Kiosk Mode.
-    *
-    * @param bool $val The kioskModeShowAppNotificationBadge
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeShowAppNotificationBadge($val)
-    {
-        $this->_propDict["kioskModeShowAppNotificationBadge"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeScreenOrientation
-    * Screen orientation configuration for managed home screen in Kiosk Mode.
-    *
-    * @return AndroidDeviceOwnerKioskModeScreenOrientation The kioskModeScreenOrientation
-    */
-    public function getKioskModeScreenOrientation()
-    {
-        if (array_key_exists("kioskModeScreenOrientation", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeScreenOrientation"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeScreenOrientation")) {
-                return $this->_propDict["kioskModeScreenOrientation"];
-            } else {
-                $this->_propDict["kioskModeScreenOrientation"] = new AndroidDeviceOwnerKioskModeScreenOrientation($this->_propDict["kioskModeScreenOrientation"]);
-                return $this->_propDict["kioskModeScreenOrientation"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the kioskModeScreenOrientation
-    * Screen orientation configuration for managed home screen in Kiosk Mode.
-    *
-    * @param AndroidDeviceOwnerKioskModeScreenOrientation $val The kioskModeScreenOrientation
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeScreenOrientation($val)
-    {
-        $this->_propDict["kioskModeScreenOrientation"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeIconSize
-    * Icon size configuration for managed home screen in Kiosk Mode.
-    *
-    * @return AndroidDeviceOwnerKioskModeIconSize The kioskModeIconSize
-    */
-    public function getKioskModeIconSize()
-    {
-        if (array_key_exists("kioskModeIconSize", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeIconSize"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeIconSize")) {
-                return $this->_propDict["kioskModeIconSize"];
-            } else {
-                $this->_propDict["kioskModeIconSize"] = new AndroidDeviceOwnerKioskModeIconSize($this->_propDict["kioskModeIconSize"]);
-                return $this->_propDict["kioskModeIconSize"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the kioskModeIconSize
-    * Icon size configuration for managed home screen in Kiosk Mode.
-    *
-    * @param AndroidDeviceOwnerKioskModeIconSize $val The kioskModeIconSize
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeIconSize($val)
-    {
-        $this->_propDict["kioskModeIconSize"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the kioskModeFolderIcon
-    * Folder icon configuration for managed home screen in Kiosk Mode.
-    *
-    * @return AndroidDeviceOwnerKioskModeFolderIcon The kioskModeFolderIcon
-    */
-    public function getKioskModeFolderIcon()
-    {
-        if (array_key_exists("kioskModeFolderIcon", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeFolderIcon"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeFolderIcon")) {
-                return $this->_propDict["kioskModeFolderIcon"];
-            } else {
-                $this->_propDict["kioskModeFolderIcon"] = new AndroidDeviceOwnerKioskModeFolderIcon($this->_propDict["kioskModeFolderIcon"]);
-                return $this->_propDict["kioskModeFolderIcon"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the kioskModeFolderIcon
-    * Folder icon configuration for managed home screen in Kiosk Mode.
-    *
-    * @param AndroidDeviceOwnerKioskModeFolderIcon $val The kioskModeFolderIcon
-    *
-    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
-    */
-    public function setKioskModeFolderIcon($val)
-    {
-        $this->_propDict["kioskModeFolderIcon"] = $val;
+        $this->_propDict["kioskModeWallpaperUrl"] = $val;
         return $this;
     }
     
@@ -1458,6 +1160,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeWiFiConfigurationEnabled
+    * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
+    *
+    * @return bool The kioskModeWiFiConfigurationEnabled
+    */
+    public function getKioskModeWiFiConfigurationEnabled()
+    {
+        if (array_key_exists("kioskModeWiFiConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeWiFiConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeWiFiConfigurationEnabled
+    * Whether or not to allow a user to configure Wi-Fi settings in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeWiFiConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeWiFiConfigurationEnabled($val)
+    {
+        $this->_propDict["kioskModeWiFiConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the microphoneForceMute
     * Indicates whether or not to block unmuting the microphone on the device.
     *
@@ -1483,6 +1214,275 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setMicrophoneForceMute($val)
     {
         $this->_propDict["microphoneForceMute"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherConfigurationEnabled
+    * Indicates whether or not to you want configure Microsoft Launcher.
+    *
+    * @return bool The microsoftLauncherConfigurationEnabled
+    */
+    public function getMicrosoftLauncherConfigurationEnabled()
+    {
+        if (array_key_exists("microsoftLauncherConfigurationEnabled", $this->_propDict)) {
+            return $this->_propDict["microsoftLauncherConfigurationEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftLauncherConfigurationEnabled
+    * Indicates whether or not to you want configure Microsoft Launcher.
+    *
+    * @param bool $val The microsoftLauncherConfigurationEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherConfigurationEnabled($val)
+    {
+        $this->_propDict["microsoftLauncherConfigurationEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherCustomWallpaperAllowUserModification
+    * Indicates whether or not the user can modify the wallpaper to personalize their device.
+    *
+    * @return bool The microsoftLauncherCustomWallpaperAllowUserModification
+    */
+    public function getMicrosoftLauncherCustomWallpaperAllowUserModification()
+    {
+        if (array_key_exists("microsoftLauncherCustomWallpaperAllowUserModification", $this->_propDict)) {
+            return $this->_propDict["microsoftLauncherCustomWallpaperAllowUserModification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftLauncherCustomWallpaperAllowUserModification
+    * Indicates whether or not the user can modify the wallpaper to personalize their device.
+    *
+    * @param bool $val The microsoftLauncherCustomWallpaperAllowUserModification
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherCustomWallpaperAllowUserModification($val)
+    {
+        $this->_propDict["microsoftLauncherCustomWallpaperAllowUserModification"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherCustomWallpaperEnabled
+    * Indicates whether or not to configure the wallpaper on the targeted devices.
+    *
+    * @return bool The microsoftLauncherCustomWallpaperEnabled
+    */
+    public function getMicrosoftLauncherCustomWallpaperEnabled()
+    {
+        if (array_key_exists("microsoftLauncherCustomWallpaperEnabled", $this->_propDict)) {
+            return $this->_propDict["microsoftLauncherCustomWallpaperEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftLauncherCustomWallpaperEnabled
+    * Indicates whether or not to configure the wallpaper on the targeted devices.
+    *
+    * @param bool $val The microsoftLauncherCustomWallpaperEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherCustomWallpaperEnabled($val)
+    {
+        $this->_propDict["microsoftLauncherCustomWallpaperEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherCustomWallpaperImageUrl
+    * Indicates the URL for the image file to use as the wallpaper on the targeted devices.
+    *
+    * @return string The microsoftLauncherCustomWallpaperImageUrl
+    */
+    public function getMicrosoftLauncherCustomWallpaperImageUrl()
+    {
+        if (array_key_exists("microsoftLauncherCustomWallpaperImageUrl", $this->_propDict)) {
+            return $this->_propDict["microsoftLauncherCustomWallpaperImageUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftLauncherCustomWallpaperImageUrl
+    * Indicates the URL for the image file to use as the wallpaper on the targeted devices.
+    *
+    * @param string $val The microsoftLauncherCustomWallpaperImageUrl
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherCustomWallpaperImageUrl($val)
+    {
+        $this->_propDict["microsoftLauncherCustomWallpaperImageUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherDockPresenceAllowUserModification
+    * Indicates whether or not the user can modify the device dock configuration on the device.
+    *
+    * @return bool The microsoftLauncherDockPresenceAllowUserModification
+    */
+    public function getMicrosoftLauncherDockPresenceAllowUserModification()
+    {
+        if (array_key_exists("microsoftLauncherDockPresenceAllowUserModification", $this->_propDict)) {
+            return $this->_propDict["microsoftLauncherDockPresenceAllowUserModification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftLauncherDockPresenceAllowUserModification
+    * Indicates whether or not the user can modify the device dock configuration on the device.
+    *
+    * @param bool $val The microsoftLauncherDockPresenceAllowUserModification
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherDockPresenceAllowUserModification($val)
+    {
+        $this->_propDict["microsoftLauncherDockPresenceAllowUserModification"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherDockPresenceConfiguration
+    * Indicates whether or not you want to configure the device dock.
+    *
+    * @return MicrosoftLauncherDockPresence The microsoftLauncherDockPresenceConfiguration
+    */
+    public function getMicrosoftLauncherDockPresenceConfiguration()
+    {
+        if (array_key_exists("microsoftLauncherDockPresenceConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["microsoftLauncherDockPresenceConfiguration"], "Beta\Microsoft\Graph\Model\MicrosoftLauncherDockPresence")) {
+                return $this->_propDict["microsoftLauncherDockPresenceConfiguration"];
+            } else {
+                $this->_propDict["microsoftLauncherDockPresenceConfiguration"] = new MicrosoftLauncherDockPresence($this->_propDict["microsoftLauncherDockPresenceConfiguration"]);
+                return $this->_propDict["microsoftLauncherDockPresenceConfiguration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the microsoftLauncherDockPresenceConfiguration
+    * Indicates whether or not you want to configure the device dock.
+    *
+    * @param MicrosoftLauncherDockPresence $val The microsoftLauncherDockPresenceConfiguration
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherDockPresenceConfiguration($val)
+    {
+        $this->_propDict["microsoftLauncherDockPresenceConfiguration"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherFeedAllowUserModification
+    * Indicates whether or not the user can modify the launcher feed on the device.
+    *
+    * @return bool The microsoftLauncherFeedAllowUserModification
+    */
+    public function getMicrosoftLauncherFeedAllowUserModification()
+    {
+        if (array_key_exists("microsoftLauncherFeedAllowUserModification", $this->_propDict)) {
+            return $this->_propDict["microsoftLauncherFeedAllowUserModification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftLauncherFeedAllowUserModification
+    * Indicates whether or not the user can modify the launcher feed on the device.
+    *
+    * @param bool $val The microsoftLauncherFeedAllowUserModification
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherFeedAllowUserModification($val)
+    {
+        $this->_propDict["microsoftLauncherFeedAllowUserModification"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherFeedEnabled
+    * Indicates whether or not you want to enable the launcher feed on the device.
+    *
+    * @return bool The microsoftLauncherFeedEnabled
+    */
+    public function getMicrosoftLauncherFeedEnabled()
+    {
+        if (array_key_exists("microsoftLauncherFeedEnabled", $this->_propDict)) {
+            return $this->_propDict["microsoftLauncherFeedEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftLauncherFeedEnabled
+    * Indicates whether or not you want to enable the launcher feed on the device.
+    *
+    * @param bool $val The microsoftLauncherFeedEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherFeedEnabled($val)
+    {
+        $this->_propDict["microsoftLauncherFeedEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftLauncherSearchBarPlacementConfiguration
+    * Indicates the search bar placement configuration on the device.
+    *
+    * @return MicrosoftLauncherSearchBarPlacement The microsoftLauncherSearchBarPlacementConfiguration
+    */
+    public function getMicrosoftLauncherSearchBarPlacementConfiguration()
+    {
+        if (array_key_exists("microsoftLauncherSearchBarPlacementConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"], "Beta\Microsoft\Graph\Model\MicrosoftLauncherSearchBarPlacement")) {
+                return $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"];
+            } else {
+                $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"] = new MicrosoftLauncherSearchBarPlacement($this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"]);
+                return $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the microsoftLauncherSearchBarPlacementConfiguration
+    * Indicates the search bar placement configuration on the device.
+    *
+    * @param MicrosoftLauncherSearchBarPlacement $val The microsoftLauncherSearchBarPlacementConfiguration
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setMicrosoftLauncherSearchBarPlacementConfiguration($val)
+    {
+        $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"] = $val;
         return $this;
     }
     
@@ -2251,31 +2251,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the systemUpdateWindowStartMinutesAfterMidnight
-    * Indicates the number of minutes after midnight that the system update window starts. Valid values 0 to 1440
+    * Gets the systemUpdateInstallType
+    * The type of system update configuration.
     *
-    * @return int The systemUpdateWindowStartMinutesAfterMidnight
+    * @return AndroidDeviceOwnerSystemUpdateInstallType The systemUpdateInstallType
     */
-    public function getSystemUpdateWindowStartMinutesAfterMidnight()
+    public function getSystemUpdateInstallType()
     {
-        if (array_key_exists("systemUpdateWindowStartMinutesAfterMidnight", $this->_propDict)) {
-            return $this->_propDict["systemUpdateWindowStartMinutesAfterMidnight"];
-        } else {
-            return null;
+        if (array_key_exists("systemUpdateInstallType", $this->_propDict)) {
+            if (is_a($this->_propDict["systemUpdateInstallType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerSystemUpdateInstallType")) {
+                return $this->_propDict["systemUpdateInstallType"];
+            } else {
+                $this->_propDict["systemUpdateInstallType"] = new AndroidDeviceOwnerSystemUpdateInstallType($this->_propDict["systemUpdateInstallType"]);
+                return $this->_propDict["systemUpdateInstallType"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the systemUpdateWindowStartMinutesAfterMidnight
-    * Indicates the number of minutes after midnight that the system update window starts. Valid values 0 to 1440
+    * Sets the systemUpdateInstallType
+    * The type of system update configuration.
     *
-    * @param int $val The systemUpdateWindowStartMinutesAfterMidnight
+    * @param AndroidDeviceOwnerSystemUpdateInstallType $val The systemUpdateInstallType
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
-    public function setSystemUpdateWindowStartMinutesAfterMidnight($val)
+    public function setSystemUpdateInstallType($val)
     {
-        $this->_propDict["systemUpdateWindowStartMinutesAfterMidnight"] = intval($val);
+        $this->_propDict["systemUpdateInstallType"] = $val;
         return $this;
     }
     
@@ -2309,35 +2313,31 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the systemUpdateInstallType
-    * The type of system update configuration.
+    * Gets the systemUpdateWindowStartMinutesAfterMidnight
+    * Indicates the number of minutes after midnight that the system update window starts. Valid values 0 to 1440
     *
-    * @return AndroidDeviceOwnerSystemUpdateInstallType The systemUpdateInstallType
+    * @return int The systemUpdateWindowStartMinutesAfterMidnight
     */
-    public function getSystemUpdateInstallType()
+    public function getSystemUpdateWindowStartMinutesAfterMidnight()
     {
-        if (array_key_exists("systemUpdateInstallType", $this->_propDict)) {
-            if (is_a($this->_propDict["systemUpdateInstallType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerSystemUpdateInstallType")) {
-                return $this->_propDict["systemUpdateInstallType"];
-            } else {
-                $this->_propDict["systemUpdateInstallType"] = new AndroidDeviceOwnerSystemUpdateInstallType($this->_propDict["systemUpdateInstallType"]);
-                return $this->_propDict["systemUpdateInstallType"];
-            }
+        if (array_key_exists("systemUpdateWindowStartMinutesAfterMidnight", $this->_propDict)) {
+            return $this->_propDict["systemUpdateWindowStartMinutesAfterMidnight"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the systemUpdateInstallType
-    * The type of system update configuration.
+    * Sets the systemUpdateWindowStartMinutesAfterMidnight
+    * Indicates the number of minutes after midnight that the system update window starts. Valid values 0 to 1440
     *
-    * @param AndroidDeviceOwnerSystemUpdateInstallType $val The systemUpdateInstallType
+    * @param int $val The systemUpdateWindowStartMinutesAfterMidnight
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
-    public function setSystemUpdateInstallType($val)
+    public function setSystemUpdateWindowStartMinutesAfterMidnight($val)
     {
-        $this->_propDict["systemUpdateInstallType"] = $val;
+        $this->_propDict["systemUpdateWindowStartMinutesAfterMidnight"] = intval($val);
         return $this;
     }
     

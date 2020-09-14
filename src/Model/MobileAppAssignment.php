@@ -58,39 +58,6 @@ class MobileAppAssignment extends Entity
     }
     
     /**
-    * Gets the target
-    * The target group assignment defined by the admin.
-    *
-    * @return DeviceAndAppManagementAssignmentTarget The target
-    */
-    public function getTarget()
-    {
-        if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
-                return $this->_propDict["target"];
-            } else {
-                $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
-                return $this->_propDict["target"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the target
-    * The target group assignment defined by the admin.
-    *
-    * @param DeviceAndAppManagementAssignmentTarget $val The target
-    *
-    * @return MobileAppAssignment
-    */
-    public function setTarget($val)
-    {
-        $this->_propDict["target"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the settings
     * The settings for target assignment defined by the admin.
     *
@@ -120,6 +87,39 @@ class MobileAppAssignment extends Entity
     public function setSettings($val)
     {
         $this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the target
+    * The target group assignment defined by the admin.
+    *
+    * @return DeviceAndAppManagementAssignmentTarget The target
+    */
+    public function getTarget()
+    {
+        if (array_key_exists("target", $this->_propDict)) {
+            if (is_a($this->_propDict["target"], "Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+                return $this->_propDict["target"];
+            } else {
+                $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
+                return $this->_propDict["target"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the target
+    * The target group assignment defined by the admin.
+    *
+    * @param DeviceAndAppManagementAssignmentTarget $val The target
+    *
+    * @return MobileAppAssignment
+    */
+    public function setTarget($val)
+    {
+        $this->_propDict["target"] = $val;
         return $this;
     }
     

@@ -25,89 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceHealthScript extends Entity
 {
     /**
-    * Gets the publisher
-    * Name of the device health script publisher
+    * Gets the createdDateTime
+    * The timestamp of when the device health script was created. This property is read-only.
     *
-    * @return string The publisher
+    * @return \DateTime The createdDateTime
     */
-    public function getPublisher()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("publisher", $this->_propDict)) {
-            return $this->_propDict["publisher"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the publisher
-    * Name of the device health script publisher
+    * Sets the createdDateTime
+    * The timestamp of when the device health script was created. This property is read-only.
     *
-    * @param string $val The publisher
+    * @param \DateTime $val The createdDateTime
     *
     * @return DeviceHealthScript
     */
-    public function setPublisher($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["publisher"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the version
-    * Version of the device health script
-    *
-    * @return string The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    * Version of the device health script
-    *
-    * @param string $val The version
-    *
-    * @return DeviceHealthScript
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Name of the device health script
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Name of the device health script
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceHealthScript
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -173,69 +119,149 @@ class DeviceHealthScript extends Entity
         return $this;
     }
     
-    /**
-    * Gets the remediationScriptContent
-    * The entire content of the remediation powershell script
-    *
-    * @return \GuzzleHttp\Psr7\Stream The remediationScriptContent
-    */
-    public function getRemediationScriptContent()
+
+     /** 
+     * Gets the detectionScriptParameters
+    * List of ComplexType DetectionScriptParameters objects.
+     *
+     * @return array The detectionScriptParameters
+     */
+    public function getDetectionScriptParameters()
     {
-        if (array_key_exists("remediationScriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["remediationScriptContent"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["remediationScriptContent"];
-            } else {
-                $this->_propDict["remediationScriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["remediationScriptContent"]);
-                return $this->_propDict["remediationScriptContent"];
-            }
+        if (array_key_exists("detectionScriptParameters", $this->_propDict)) {
+           return $this->_propDict["detectionScriptParameters"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the remediationScriptContent
-    * The entire content of the remediation powershell script
+    /** 
+    * Sets the detectionScriptParameters
+    * List of ComplexType DetectionScriptParameters objects.
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The remediationScriptContent
+    * @param DeviceHealthScriptParameter $val The detectionScriptParameters
     *
     * @return DeviceHealthScript
     */
-    public function setRemediationScriptContent($val)
+    public function setDetectionScriptParameters($val)
     {
-        $this->_propDict["remediationScriptContent"] = $val;
+		$this->_propDict["detectionScriptParameters"] = $val;
         return $this;
     }
     
     /**
-    * Gets the createdDateTime
-    * The timestamp of when the device health script was created. This property is read-only.
+    * Gets the displayName
+    * Name of the device health script
     *
-    * @return \DateTime The createdDateTime
+    * @return string The displayName
     */
-    public function getCreatedDateTime()
+    public function getDisplayName()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
-    * The timestamp of when the device health script was created. This property is read-only.
+    * Sets the displayName
+    * Name of the device health script
     *
-    * @param \DateTime $val The createdDateTime
+    * @param string $val The displayName
     *
     * @return DeviceHealthScript
     */
-    public function setCreatedDateTime($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enforceSignatureCheck
+    * Indicate whether the script signature needs be checked
+    *
+    * @return bool The enforceSignatureCheck
+    */
+    public function getEnforceSignatureCheck()
+    {
+        if (array_key_exists("enforceSignatureCheck", $this->_propDict)) {
+            return $this->_propDict["enforceSignatureCheck"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enforceSignatureCheck
+    * Indicate whether the script signature needs be checked
+    *
+    * @param bool $val The enforceSignatureCheck
+    *
+    * @return DeviceHealthScript
+    */
+    public function setEnforceSignatureCheck($val)
+    {
+        $this->_propDict["enforceSignatureCheck"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the highestAvailableVersion
+    * Highest available version for a Microsoft Proprietary script
+    *
+    * @return string The highestAvailableVersion
+    */
+    public function getHighestAvailableVersion()
+    {
+        if (array_key_exists("highestAvailableVersion", $this->_propDict)) {
+            return $this->_propDict["highestAvailableVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the highestAvailableVersion
+    * Highest available version for a Microsoft Proprietary script
+    *
+    * @param string $val The highestAvailableVersion
+    *
+    * @return DeviceHealthScript
+    */
+    public function setHighestAvailableVersion($val)
+    {
+        $this->_propDict["highestAvailableVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isGlobalScript
+    * Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
+    *
+    * @return bool The isGlobalScript
+    */
+    public function getIsGlobalScript()
+    {
+        if (array_key_exists("isGlobalScript", $this->_propDict)) {
+            return $this->_propDict["isGlobalScript"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isGlobalScript
+    * Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
+    *
+    * @param bool $val The isGlobalScript
+    *
+    * @return DeviceHealthScript
+    */
+    public function setIsGlobalScript($val)
+    {
+        $this->_propDict["isGlobalScript"] = boolval($val);
         return $this;
     }
     
@@ -273,210 +299,64 @@ class DeviceHealthScript extends Entity
     }
     
     /**
-    * Gets the runAsAccount
-    * Indicates the type of execution context
+    * Gets the publisher
+    * Name of the device health script publisher
     *
-    * @return RunAsAccountType The runAsAccount
+    * @return string The publisher
     */
-    public function getRunAsAccount()
+    public function getPublisher()
     {
-        if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "Beta\Microsoft\Graph\Model\RunAsAccountType")) {
-                return $this->_propDict["runAsAccount"];
+        if (array_key_exists("publisher", $this->_propDict)) {
+            return $this->_propDict["publisher"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the publisher
+    * Name of the device health script publisher
+    *
+    * @param string $val The publisher
+    *
+    * @return DeviceHealthScript
+    */
+    public function setPublisher($val)
+    {
+        $this->_propDict["publisher"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the remediationScriptContent
+    * The entire content of the remediation powershell script
+    *
+    * @return \GuzzleHttp\Psr7\Stream The remediationScriptContent
+    */
+    public function getRemediationScriptContent()
+    {
+        if (array_key_exists("remediationScriptContent", $this->_propDict)) {
+            if (is_a($this->_propDict["remediationScriptContent"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["remediationScriptContent"];
             } else {
-                $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
-                return $this->_propDict["runAsAccount"];
+                $this->_propDict["remediationScriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["remediationScriptContent"]);
+                return $this->_propDict["remediationScriptContent"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the runAsAccount
-    * Indicates the type of execution context
+    * Sets the remediationScriptContent
+    * The entire content of the remediation powershell script
     *
-    * @param RunAsAccountType $val The runAsAccount
-    *
-    * @return DeviceHealthScript
-    */
-    public function setRunAsAccount($val)
-    {
-        $this->_propDict["runAsAccount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the enforceSignatureCheck
-    * Indicate whether the script signature needs be checked
-    *
-    * @return bool The enforceSignatureCheck
-    */
-    public function getEnforceSignatureCheck()
-    {
-        if (array_key_exists("enforceSignatureCheck", $this->_propDict)) {
-            return $this->_propDict["enforceSignatureCheck"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the enforceSignatureCheck
-    * Indicate whether the script signature needs be checked
-    *
-    * @param bool $val The enforceSignatureCheck
+    * @param \GuzzleHttp\Psr7\Stream $val The remediationScriptContent
     *
     * @return DeviceHealthScript
     */
-    public function setEnforceSignatureCheck($val)
+    public function setRemediationScriptContent($val)
     {
-        $this->_propDict["enforceSignatureCheck"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the runAs32Bit
-    * Indicate whether PowerShell script(s) should run as 32-bit
-    *
-    * @return bool The runAs32Bit
-    */
-    public function getRunAs32Bit()
-    {
-        if (array_key_exists("runAs32Bit", $this->_propDict)) {
-            return $this->_propDict["runAs32Bit"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the runAs32Bit
-    * Indicate whether PowerShell script(s) should run as 32-bit
-    *
-    * @param bool $val The runAs32Bit
-    *
-    * @return DeviceHealthScript
-    */
-    public function setRunAs32Bit($val)
-    {
-        $this->_propDict["runAs32Bit"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tag IDs for the device health script
-    *
-    * @return string The roleScopeTagIds
-    */
-    public function getRoleScopeTagIds()
-    {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tag IDs for the device health script
-    *
-    * @param string $val The roleScopeTagIds
-    *
-    * @return DeviceHealthScript
-    */
-    public function setRoleScopeTagIds($val)
-    {
-        $this->_propDict["roleScopeTagIds"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isGlobalScript
-    * Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
-    *
-    * @return bool The isGlobalScript
-    */
-    public function getIsGlobalScript()
-    {
-        if (array_key_exists("isGlobalScript", $this->_propDict)) {
-            return $this->_propDict["isGlobalScript"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isGlobalScript
-    * Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
-    *
-    * @param bool $val The isGlobalScript
-    *
-    * @return DeviceHealthScript
-    */
-    public function setIsGlobalScript($val)
-    {
-        $this->_propDict["isGlobalScript"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the highestAvailableVersion
-    * Highest available version for a Microsoft Proprietary script
-    *
-    * @return string The highestAvailableVersion
-    */
-    public function getHighestAvailableVersion()
-    {
-        if (array_key_exists("highestAvailableVersion", $this->_propDict)) {
-            return $this->_propDict["highestAvailableVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the highestAvailableVersion
-    * Highest available version for a Microsoft Proprietary script
-    *
-    * @param string $val The highestAvailableVersion
-    *
-    * @return DeviceHealthScript
-    */
-    public function setHighestAvailableVersion($val)
-    {
-        $this->_propDict["highestAvailableVersion"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the detectionScriptParameters
-    * List of ComplexType DetectionScriptParameters objects.
-     *
-     * @return array The detectionScriptParameters
-     */
-    public function getDetectionScriptParameters()
-    {
-        if (array_key_exists("detectionScriptParameters", $this->_propDict)) {
-           return $this->_propDict["detectionScriptParameters"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the detectionScriptParameters
-    * List of ComplexType DetectionScriptParameters objects.
-    *
-    * @param DeviceHealthScriptParameter $val The detectionScriptParameters
-    *
-    * @return DeviceHealthScript
-    */
-    public function setDetectionScriptParameters($val)
-    {
-		$this->_propDict["detectionScriptParameters"] = $val;
+        $this->_propDict["remediationScriptContent"] = $val;
         return $this;
     }
     
@@ -510,6 +390,126 @@ class DeviceHealthScript extends Entity
         return $this;
     }
     
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tag IDs for the device health script
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tag IDs for the device health script
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return DeviceHealthScript
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the runAs32Bit
+    * Indicate whether PowerShell script(s) should run as 32-bit
+    *
+    * @return bool The runAs32Bit
+    */
+    public function getRunAs32Bit()
+    {
+        if (array_key_exists("runAs32Bit", $this->_propDict)) {
+            return $this->_propDict["runAs32Bit"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the runAs32Bit
+    * Indicate whether PowerShell script(s) should run as 32-bit
+    *
+    * @param bool $val The runAs32Bit
+    *
+    * @return DeviceHealthScript
+    */
+    public function setRunAs32Bit($val)
+    {
+        $this->_propDict["runAs32Bit"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the runAsAccount
+    * Indicates the type of execution context
+    *
+    * @return RunAsAccountType The runAsAccount
+    */
+    public function getRunAsAccount()
+    {
+        if (array_key_exists("runAsAccount", $this->_propDict)) {
+            if (is_a($this->_propDict["runAsAccount"], "Beta\Microsoft\Graph\Model\RunAsAccountType")) {
+                return $this->_propDict["runAsAccount"];
+            } else {
+                $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
+                return $this->_propDict["runAsAccount"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the runAsAccount
+    * Indicates the type of execution context
+    *
+    * @param RunAsAccountType $val The runAsAccount
+    *
+    * @return DeviceHealthScript
+    */
+    public function setRunAsAccount($val)
+    {
+        $this->_propDict["runAsAccount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    * Version of the device health script
+    *
+    * @return string The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    * Version of the device health script
+    *
+    * @param string $val The version
+    *
+    * @return DeviceHealthScript
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the assignments
@@ -537,6 +537,36 @@ class DeviceHealthScript extends Entity
     public function setAssignments($val)
     {
 		$this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceRunStates
+    * List of run states for the device health script across all devices
+     *
+     * @return array The deviceRunStates
+     */
+    public function getDeviceRunStates()
+    {
+        if (array_key_exists("deviceRunStates", $this->_propDict)) {
+           return $this->_propDict["deviceRunStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceRunStates
+    * List of run states for the device health script across all devices
+    *
+    * @param DeviceHealthScriptDeviceState $val The deviceRunStates
+    *
+    * @return DeviceHealthScript
+    */
+    public function setDeviceRunStates($val)
+    {
+		$this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     
@@ -570,36 +600,6 @@ class DeviceHealthScript extends Entity
     public function setRunSummary($val)
     {
         $this->_propDict["runSummary"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceRunStates
-    * List of run states for the device health script across all devices
-     *
-     * @return array The deviceRunStates
-     */
-    public function getDeviceRunStates()
-    {
-        if (array_key_exists("deviceRunStates", $this->_propDict)) {
-           return $this->_propDict["deviceRunStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceRunStates
-    * List of run states for the device health script across all devices
-    *
-    * @param DeviceHealthScriptDeviceState $val The deviceRunStates
-    *
-    * @return DeviceHealthScript
-    */
-    public function setDeviceRunStates($val)
-    {
-		$this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     

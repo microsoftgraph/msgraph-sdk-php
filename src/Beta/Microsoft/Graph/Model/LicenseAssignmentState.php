@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class LicenseAssignmentState extends Entity
 {
     /**
-    * Gets the skuId
+    * Gets the assignedByGroup
     *
-    * @return string The skuId
+    * @return string The assignedByGroup
     */
-    public function getSkuId()
+    public function getAssignedByGroup()
     {
-        if (array_key_exists("skuId", $this->_propDict)) {
-            return $this->_propDict["skuId"];
+        if (array_key_exists("assignedByGroup", $this->_propDict)) {
+            return $this->_propDict["assignedByGroup"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the skuId
+    * Sets the assignedByGroup
     *
-    * @param string $val The value of the skuId
+    * @param string $val The value of the assignedByGroup
     *
     * @return LicenseAssignmentState
     */
-    public function setSkuId($val)
+    public function setAssignedByGroup($val)
     {
-        $this->_propDict["skuId"] = $val;
+        $this->_propDict["assignedByGroup"] = $val;
         return $this;
     }
     /**
@@ -76,29 +76,55 @@ class LicenseAssignmentState extends Entity
         return $this;
     }
     /**
-    * Gets the assignedByGroup
+    * Gets the error
     *
-    * @return string The assignedByGroup
+    * @return string The error
     */
-    public function getAssignedByGroup()
+    public function getError()
     {
-        if (array_key_exists("assignedByGroup", $this->_propDict)) {
-            return $this->_propDict["assignedByGroup"];
+        if (array_key_exists("error", $this->_propDict)) {
+            return $this->_propDict["error"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the assignedByGroup
+    * Sets the error
     *
-    * @param string $val The value of the assignedByGroup
+    * @param string $val The value of the error
     *
     * @return LicenseAssignmentState
     */
-    public function setAssignedByGroup($val)
+    public function setError($val)
     {
-        $this->_propDict["assignedByGroup"] = $val;
+        $this->_propDict["error"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the skuId
+    *
+    * @return string The skuId
+    */
+    public function getSkuId()
+    {
+        if (array_key_exists("skuId", $this->_propDict)) {
+            return $this->_propDict["skuId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the skuId
+    *
+    * @param string $val The value of the skuId
+    *
+    * @return LicenseAssignmentState
+    */
+    public function setSkuId($val)
+    {
+        $this->_propDict["skuId"] = $val;
         return $this;
     }
     /**
@@ -125,32 +151,6 @@ class LicenseAssignmentState extends Entity
     public function setState($val)
     {
         $this->_propDict["state"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the error
-    *
-    * @return string The error
-    */
-    public function getError()
-    {
-        if (array_key_exists("error", $this->_propDict)) {
-            return $this->_propDict["error"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the error
-    *
-    * @param string $val The value of the error
-    *
-    * @return LicenseAssignmentState
-    */
-    public function setError($val)
-    {
-        $this->_propDict["error"] = $val;
         return $this;
     }
 }

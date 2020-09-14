@@ -26,62 +26,6 @@ class EducationRubricOutcome extends EducationOutcome
 {
 
      /** 
-     * Gets the rubricQualityFeedback
-     *
-     * @return array The rubricQualityFeedback
-     */
-    public function getRubricQualityFeedback()
-    {
-        if (array_key_exists("rubricQualityFeedback", $this->_propDict)) {
-           return $this->_propDict["rubricQualityFeedback"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the rubricQualityFeedback
-    *
-    * @param RubricQualityFeedbackModel $val The rubricQualityFeedback
-    *
-    * @return EducationRubricOutcome
-    */
-    public function setRubricQualityFeedback($val)
-    {
-		$this->_propDict["rubricQualityFeedback"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the rubricQualitySelectedLevels
-     *
-     * @return array The rubricQualitySelectedLevels
-     */
-    public function getRubricQualitySelectedLevels()
-    {
-        if (array_key_exists("rubricQualitySelectedLevels", $this->_propDict)) {
-           return $this->_propDict["rubricQualitySelectedLevels"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the rubricQualitySelectedLevels
-    *
-    * @param RubricQualitySelectedColumnModel $val The rubricQualitySelectedLevels
-    *
-    * @return EducationRubricOutcome
-    */
-    public function setRubricQualitySelectedLevels($val)
-    {
-		$this->_propDict["rubricQualitySelectedLevels"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the publishedRubricQualityFeedback
      *
      * @return array The publishedRubricQualityFeedback
@@ -133,6 +77,62 @@ class EducationRubricOutcome extends EducationOutcome
     public function setPublishedRubricQualitySelectedLevels($val)
     {
 		$this->_propDict["publishedRubricQualitySelectedLevels"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the rubricQualityFeedback
+     *
+     * @return array The rubricQualityFeedback
+     */
+    public function getRubricQualityFeedback()
+    {
+        if (array_key_exists("rubricQualityFeedback", $this->_propDict)) {
+           return $this->_propDict["rubricQualityFeedback"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rubricQualityFeedback
+    *
+    * @param RubricQualityFeedbackModel $val The rubricQualityFeedback
+    *
+    * @return EducationRubricOutcome
+    */
+    public function setRubricQualityFeedback($val)
+    {
+		$this->_propDict["rubricQualityFeedback"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the rubricQualitySelectedLevels
+     *
+     * @return array The rubricQualitySelectedLevels
+     */
+    public function getRubricQualitySelectedLevels()
+    {
+        if (array_key_exists("rubricQualitySelectedLevels", $this->_propDict)) {
+           return $this->_propDict["rubricQualitySelectedLevels"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rubricQualitySelectedLevels
+    *
+    * @param RubricQualitySelectedColumnModel $val The rubricQualitySelectedLevels
+    *
+    * @return EducationRubricOutcome
+    */
+    public function setRubricQualitySelectedLevels($val)
+    {
+		$this->_propDict["rubricQualitySelectedLevels"] = $val;
         return $this;
     }
     

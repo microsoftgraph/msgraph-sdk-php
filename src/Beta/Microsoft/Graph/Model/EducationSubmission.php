@@ -56,6 +56,157 @@ class EducationSubmission extends Entity
     }
     
     /**
+    * Gets the releasedBy
+    *
+    * @return IdentitySet The releasedBy
+    */
+    public function getReleasedBy()
+    {
+        if (array_key_exists("releasedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["releasedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["releasedBy"];
+            } else {
+                $this->_propDict["releasedBy"] = new IdentitySet($this->_propDict["releasedBy"]);
+                return $this->_propDict["releasedBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the releasedBy
+    *
+    * @param IdentitySet $val The releasedBy
+    *
+    * @return EducationSubmission
+    */
+    public function setReleasedBy($val)
+    {
+        $this->_propDict["releasedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the releasedDateTime
+    *
+    * @return \DateTime The releasedDateTime
+    */
+    public function getReleasedDateTime()
+    {
+        if (array_key_exists("releasedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["releasedDateTime"], "\DateTime")) {
+                return $this->_propDict["releasedDateTime"];
+            } else {
+                $this->_propDict["releasedDateTime"] = new \DateTime($this->_propDict["releasedDateTime"]);
+                return $this->_propDict["releasedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the releasedDateTime
+    *
+    * @param \DateTime $val The releasedDateTime
+    *
+    * @return EducationSubmission
+    */
+    public function setReleasedDateTime($val)
+    {
+        $this->_propDict["releasedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourcesFolderUrl
+    *
+    * @return string The resourcesFolderUrl
+    */
+    public function getResourcesFolderUrl()
+    {
+        if (array_key_exists("resourcesFolderUrl", $this->_propDict)) {
+            return $this->_propDict["resourcesFolderUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourcesFolderUrl
+    *
+    * @param string $val The resourcesFolderUrl
+    *
+    * @return EducationSubmission
+    */
+    public function setResourcesFolderUrl($val)
+    {
+        $this->_propDict["resourcesFolderUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the returnedBy
+    *
+    * @return IdentitySet The returnedBy
+    */
+    public function getReturnedBy()
+    {
+        if (array_key_exists("returnedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["returnedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["returnedBy"];
+            } else {
+                $this->_propDict["returnedBy"] = new IdentitySet($this->_propDict["returnedBy"]);
+                return $this->_propDict["returnedBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the returnedBy
+    *
+    * @param IdentitySet $val The returnedBy
+    *
+    * @return EducationSubmission
+    */
+    public function setReturnedBy($val)
+    {
+        $this->_propDict["returnedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the returnedDateTime
+    *
+    * @return \DateTime The returnedDateTime
+    */
+    public function getReturnedDateTime()
+    {
+        if (array_key_exists("returnedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["returnedDateTime"], "\DateTime")) {
+                return $this->_propDict["returnedDateTime"];
+            } else {
+                $this->_propDict["returnedDateTime"] = new \DateTime($this->_propDict["returnedDateTime"]);
+                return $this->_propDict["returnedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the returnedDateTime
+    *
+    * @param \DateTime $val The returnedDateTime
+    *
+    * @return EducationSubmission
+    */
+    public function setReturnedDateTime($val)
+    {
+        $this->_propDict["returnedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
     *
     * @return EducationSubmissionStatus The status
@@ -210,154 +361,31 @@ class EducationSubmission extends Entity
         return $this;
     }
     
-    /**
-    * Gets the releasedBy
-    *
-    * @return IdentitySet The releasedBy
-    */
-    public function getReleasedBy()
+
+     /** 
+     * Gets the outcomes
+     *
+     * @return array The outcomes
+     */
+    public function getOutcomes()
     {
-        if (array_key_exists("releasedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["releasedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["releasedBy"];
-            } else {
-                $this->_propDict["releasedBy"] = new IdentitySet($this->_propDict["releasedBy"]);
-                return $this->_propDict["releasedBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the releasedBy
-    *
-    * @param IdentitySet $val The releasedBy
-    *
-    * @return EducationSubmission
-    */
-    public function setReleasedBy($val)
-    {
-        $this->_propDict["releasedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the releasedDateTime
-    *
-    * @return \DateTime The releasedDateTime
-    */
-    public function getReleasedDateTime()
-    {
-        if (array_key_exists("releasedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["releasedDateTime"], "\DateTime")) {
-                return $this->_propDict["releasedDateTime"];
-            } else {
-                $this->_propDict["releasedDateTime"] = new \DateTime($this->_propDict["releasedDateTime"]);
-                return $this->_propDict["releasedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the releasedDateTime
-    *
-    * @param \DateTime $val The releasedDateTime
-    *
-    * @return EducationSubmission
-    */
-    public function setReleasedDateTime($val)
-    {
-        $this->_propDict["releasedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the returnedBy
-    *
-    * @return IdentitySet The returnedBy
-    */
-    public function getReturnedBy()
-    {
-        if (array_key_exists("returnedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["returnedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["returnedBy"];
-            } else {
-                $this->_propDict["returnedBy"] = new IdentitySet($this->_propDict["returnedBy"]);
-                return $this->_propDict["returnedBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the returnedBy
-    *
-    * @param IdentitySet $val The returnedBy
-    *
-    * @return EducationSubmission
-    */
-    public function setReturnedBy($val)
-    {
-        $this->_propDict["returnedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the returnedDateTime
-    *
-    * @return \DateTime The returnedDateTime
-    */
-    public function getReturnedDateTime()
-    {
-        if (array_key_exists("returnedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["returnedDateTime"], "\DateTime")) {
-                return $this->_propDict["returnedDateTime"];
-            } else {
-                $this->_propDict["returnedDateTime"] = new \DateTime($this->_propDict["returnedDateTime"]);
-                return $this->_propDict["returnedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the returnedDateTime
-    *
-    * @param \DateTime $val The returnedDateTime
-    *
-    * @return EducationSubmission
-    */
-    public function setReturnedDateTime($val)
-    {
-        $this->_propDict["returnedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the resourcesFolderUrl
-    *
-    * @return string The resourcesFolderUrl
-    */
-    public function getResourcesFolderUrl()
-    {
-        if (array_key_exists("resourcesFolderUrl", $this->_propDict)) {
-            return $this->_propDict["resourcesFolderUrl"];
+        if (array_key_exists("outcomes", $this->_propDict)) {
+           return $this->_propDict["outcomes"];
         } else {
             return null;
         }
     }
     
-    /**
-    * Sets the resourcesFolderUrl
+    /** 
+    * Sets the outcomes
     *
-    * @param string $val The resourcesFolderUrl
+    * @param EducationOutcome $val The outcomes
     *
     * @return EducationSubmission
     */
-    public function setResourcesFolderUrl($val)
+    public function setOutcomes($val)
     {
-        $this->_propDict["resourcesFolderUrl"] = $val;
+		$this->_propDict["outcomes"] = $val;
         return $this;
     }
     
@@ -414,34 +442,6 @@ class EducationSubmission extends Entity
     public function setSubmittedResources($val)
     {
 		$this->_propDict["submittedResources"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the outcomes
-     *
-     * @return array The outcomes
-     */
-    public function getOutcomes()
-    {
-        if (array_key_exists("outcomes", $this->_propDict)) {
-           return $this->_propDict["outcomes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the outcomes
-    *
-    * @param EducationOutcome $val The outcomes
-    *
-    * @return EducationSubmission
-    */
-    public function setOutcomes($val)
-    {
-		$this->_propDict["outcomes"] = $val;
         return $this;
     }
     

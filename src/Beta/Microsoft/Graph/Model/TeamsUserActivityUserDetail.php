@@ -25,118 +25,56 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsUserActivityUserDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the assignedProducts
     *
-    * @return \DateTime The reportRefreshDate
+    * @return string The assignedProducts
     */
-    public function getReportRefreshDate()
+    public function getAssignedProducts()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return TeamsUserActivityUserDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
+        if (array_key_exists("assignedProducts", $this->_propDict)) {
+            return $this->_propDict["assignedProducts"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the userPrincipalName
+    * Sets the assignedProducts
     *
-    * @param string $val The userPrincipalName
+    * @param string $val The assignedProducts
     *
     * @return TeamsUserActivityUserDetail
     */
-    public function setUserPrincipalName($val)
+    public function setAssignedProducts($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
     
     /**
-    * Gets the lastActivityDate
+    * Gets the callCount
     *
-    * @return \DateTime The lastActivityDate
+    * @return int The callCount
     */
-    public function getLastActivityDate()
+    public function getCallCount()
     {
-        if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
-                return $this->_propDict["lastActivityDate"];
-            } else {
-                $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
-                return $this->_propDict["lastActivityDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastActivityDate
-    *
-    * @param \DateTime $val The lastActivityDate
-    *
-    * @return TeamsUserActivityUserDetail
-    */
-    public function setLastActivityDate($val)
-    {
-        $this->_propDict["lastActivityDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isDeleted
-    *
-    * @return bool The isDeleted
-    */
-    public function getIsDeleted()
-    {
-        if (array_key_exists("isDeleted", $this->_propDict)) {
-            return $this->_propDict["isDeleted"];
+        if (array_key_exists("callCount", $this->_propDict)) {
+            return $this->_propDict["callCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isDeleted
+    * Sets the callCount
     *
-    * @param bool $val The isDeleted
+    * @param int $val The callCount
     *
     * @return TeamsUserActivityUserDetail
     */
-    public function setIsDeleted($val)
+    public function setCallCount($val)
     {
-        $this->_propDict["isDeleted"] = boolval($val);
+        $this->_propDict["callCount"] = intval($val);
         return $this;
     }
     
@@ -172,110 +110,87 @@ class TeamsUserActivityUserDetail extends Entity
     }
     
     /**
-    * Gets the assignedProducts
+    * Gets the hasOtherAction
     *
-    * @return string The assignedProducts
+    * @return bool The hasOtherAction
     */
-    public function getAssignedProducts()
+    public function getHasOtherAction()
     {
-        if (array_key_exists("assignedProducts", $this->_propDict)) {
-            return $this->_propDict["assignedProducts"];
+        if (array_key_exists("hasOtherAction", $this->_propDict)) {
+            return $this->_propDict["hasOtherAction"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the assignedProducts
+    * Sets the hasOtherAction
     *
-    * @param string $val The assignedProducts
+    * @param bool $val The hasOtherAction
     *
     * @return TeamsUserActivityUserDetail
     */
-    public function setAssignedProducts($val)
+    public function setHasOtherAction($val)
     {
-        $this->_propDict["assignedProducts"] = $val;
+        $this->_propDict["hasOtherAction"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the teamChatMessageCount
+    * Gets the isDeleted
     *
-    * @return int The teamChatMessageCount
+    * @return bool The isDeleted
     */
-    public function getTeamChatMessageCount()
+    public function getIsDeleted()
     {
-        if (array_key_exists("teamChatMessageCount", $this->_propDict)) {
-            return $this->_propDict["teamChatMessageCount"];
+        if (array_key_exists("isDeleted", $this->_propDict)) {
+            return $this->_propDict["isDeleted"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the teamChatMessageCount
+    * Sets the isDeleted
     *
-    * @param int $val The teamChatMessageCount
+    * @param bool $val The isDeleted
     *
     * @return TeamsUserActivityUserDetail
     */
-    public function setTeamChatMessageCount($val)
+    public function setIsDeleted($val)
     {
-        $this->_propDict["teamChatMessageCount"] = intval($val);
+        $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the privateChatMessageCount
+    * Gets the lastActivityDate
     *
-    * @return int The privateChatMessageCount
+    * @return \DateTime The lastActivityDate
     */
-    public function getPrivateChatMessageCount()
+    public function getLastActivityDate()
     {
-        if (array_key_exists("privateChatMessageCount", $this->_propDict)) {
-            return $this->_propDict["privateChatMessageCount"];
-        } else {
-            return null;
+        if (array_key_exists("lastActivityDate", $this->_propDict)) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
+                return $this->_propDict["lastActivityDate"];
+            } else {
+                $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
+                return $this->_propDict["lastActivityDate"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the privateChatMessageCount
+    * Sets the lastActivityDate
     *
-    * @param int $val The privateChatMessageCount
+    * @param \DateTime $val The lastActivityDate
     *
     * @return TeamsUserActivityUserDetail
     */
-    public function setPrivateChatMessageCount($val)
+    public function setLastActivityDate($val)
     {
-        $this->_propDict["privateChatMessageCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the callCount
-    *
-    * @return int The callCount
-    */
-    public function getCallCount()
-    {
-        if (array_key_exists("callCount", $this->_propDict)) {
-            return $this->_propDict["callCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the callCount
-    *
-    * @param int $val The callCount
-    *
-    * @return TeamsUserActivityUserDetail
-    */
-    public function setCallCount($val)
-    {
-        $this->_propDict["callCount"] = intval($val);
+        $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
     
@@ -307,29 +222,29 @@ class TeamsUserActivityUserDetail extends Entity
     }
     
     /**
-    * Gets the hasOtherAction
+    * Gets the privateChatMessageCount
     *
-    * @return bool The hasOtherAction
+    * @return int The privateChatMessageCount
     */
-    public function getHasOtherAction()
+    public function getPrivateChatMessageCount()
     {
-        if (array_key_exists("hasOtherAction", $this->_propDict)) {
-            return $this->_propDict["hasOtherAction"];
+        if (array_key_exists("privateChatMessageCount", $this->_propDict)) {
+            return $this->_propDict["privateChatMessageCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the hasOtherAction
+    * Sets the privateChatMessageCount
     *
-    * @param bool $val The hasOtherAction
+    * @param int $val The privateChatMessageCount
     *
     * @return TeamsUserActivityUserDetail
     */
-    public function setHasOtherAction($val)
+    public function setPrivateChatMessageCount($val)
     {
-        $this->_propDict["hasOtherAction"] = boolval($val);
+        $this->_propDict["privateChatMessageCount"] = intval($val);
         return $this;
     }
     
@@ -357,6 +272,91 @@ class TeamsUserActivityUserDetail extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return TeamsUserActivityUserDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the teamChatMessageCount
+    *
+    * @return int The teamChatMessageCount
+    */
+    public function getTeamChatMessageCount()
+    {
+        if (array_key_exists("teamChatMessageCount", $this->_propDict)) {
+            return $this->_propDict["teamChatMessageCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the teamChatMessageCount
+    *
+    * @param int $val The teamChatMessageCount
+    *
+    * @return TeamsUserActivityUserDetail
+    */
+    public function setTeamChatMessageCount($val)
+    {
+        $this->_propDict["teamChatMessageCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return TeamsUserActivityUserDetail
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

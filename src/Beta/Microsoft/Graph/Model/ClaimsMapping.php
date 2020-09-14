@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ClaimsMapping extends Entity
 {
     /**
-    * Gets the userId
-    *
-    * @return string The userId
-    */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    *
-    * @param string $val The value of the userId
-    *
-    * @return ClaimsMapping
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     *
     * @return string The displayName
@@ -73,6 +47,32 @@ class ClaimsMapping extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the email
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the email
+    *
+    * @param string $val The value of the email
+    *
+    * @return ClaimsMapping
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
         return $this;
     }
     /**
@@ -128,29 +128,29 @@ class ClaimsMapping extends Entity
         return $this;
     }
     /**
-    * Gets the email
+    * Gets the userId
     *
-    * @return string The email
+    * @return string The userId
     */
-    public function getEmail()
+    public function getUserId()
     {
-        if (array_key_exists("email", $this->_propDict)) {
-            return $this->_propDict["email"];
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the email
+    * Sets the userId
     *
-    * @param string $val The value of the email
+    * @param string $val The value of the userId
     *
     * @return ClaimsMapping
     */
-    public function setEmail($val)
+    public function setUserId($val)
     {
-        $this->_propDict["email"] = $val;
+        $this->_propDict["userId"] = $val;
         return $this;
     }
 }

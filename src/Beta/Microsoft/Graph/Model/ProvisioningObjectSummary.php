@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class ProvisioningObjectSummary extends Entity
 {
     /**
+    * Gets the action
+    *
+    * @return string The action
+    */
+    public function getAction()
+    {
+        if (array_key_exists("action", $this->_propDict)) {
+            return $this->_propDict["action"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the action
+    *
+    * @param string $val The action
+    *
+    * @return ProvisioningObjectSummary
+    */
+    public function setAction($val)
+    {
+        $this->_propDict["action"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the activityDateTime
     *
     * @return \DateTime The activityDateTime
@@ -56,56 +83,29 @@ class ProvisioningObjectSummary extends Entity
     }
     
     /**
-    * Gets the tenantId
+    * Gets the changeId
     *
-    * @return string The tenantId
+    * @return string The changeId
     */
-    public function getTenantId()
+    public function getChangeId()
     {
-        if (array_key_exists("tenantId", $this->_propDict)) {
-            return $this->_propDict["tenantId"];
+        if (array_key_exists("changeId", $this->_propDict)) {
+            return $this->_propDict["changeId"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the tenantId
+    * Sets the changeId
     *
-    * @param string $val The tenantId
-    *
-    * @return ProvisioningObjectSummary
-    */
-    public function setTenantId($val)
-    {
-        $this->_propDict["tenantId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the jobId
-    *
-    * @return string The jobId
-    */
-    public function getJobId()
-    {
-        if (array_key_exists("jobId", $this->_propDict)) {
-            return $this->_propDict["jobId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the jobId
-    *
-    * @param string $val The jobId
+    * @param string $val The changeId
     *
     * @return ProvisioningObjectSummary
     */
-    public function setJobId($val)
+    public function setChangeId($val)
     {
-        $this->_propDict["jobId"] = $val;
+        $this->_propDict["changeId"] = $val;
         return $this;
     }
     
@@ -137,60 +137,6 @@ class ProvisioningObjectSummary extends Entity
     }
     
     /**
-    * Gets the changeId
-    *
-    * @return string The changeId
-    */
-    public function getChangeId()
-    {
-        if (array_key_exists("changeId", $this->_propDict)) {
-            return $this->_propDict["changeId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the changeId
-    *
-    * @param string $val The changeId
-    *
-    * @return ProvisioningObjectSummary
-    */
-    public function setChangeId($val)
-    {
-        $this->_propDict["changeId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the action
-    *
-    * @return string The action
-    */
-    public function getAction()
-    {
-        if (array_key_exists("action", $this->_propDict)) {
-            return $this->_propDict["action"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the action
-    *
-    * @param string $val The action
-    *
-    * @return ProvisioningObjectSummary
-    */
-    public function setAction($val)
-    {
-        $this->_propDict["action"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the durationInMilliseconds
     *
     * @return int The durationInMilliseconds
@@ -214,37 +160,6 @@ class ProvisioningObjectSummary extends Entity
     public function setDurationInMilliseconds($val)
     {
         $this->_propDict["durationInMilliseconds"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the servicePrincipal
-    *
-    * @return ProvisioningServicePrincipal The servicePrincipal
-    */
-    public function getServicePrincipal()
-    {
-        if (array_key_exists("servicePrincipal", $this->_propDict)) {
-            if (is_a($this->_propDict["servicePrincipal"], "Beta\Microsoft\Graph\Model\ProvisioningServicePrincipal")) {
-                return $this->_propDict["servicePrincipal"];
-            } else {
-                $this->_propDict["servicePrincipal"] = new ProvisioningServicePrincipal($this->_propDict["servicePrincipal"]);
-                return $this->_propDict["servicePrincipal"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the servicePrincipal
-    *
-    * @param ProvisioningServicePrincipal $val The servicePrincipal
-    *
-    * @return ProvisioningObjectSummary
-    */
-    public function setServicePrincipal($val)
-    {
-        $this->_propDict["servicePrincipal"] = $val;
         return $this;
     }
     
@@ -280,64 +195,116 @@ class ProvisioningObjectSummary extends Entity
     }
     
     /**
-    * Gets the sourceSystem
+    * Gets the jobId
     *
-    * @return ProvisioningSystemDetails The sourceSystem
+    * @return string The jobId
     */
-    public function getSourceSystem()
+    public function getJobId()
     {
-        if (array_key_exists("sourceSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceSystem"], "Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
-                return $this->_propDict["sourceSystem"];
-            } else {
-                $this->_propDict["sourceSystem"] = new ProvisioningSystemDetails($this->_propDict["sourceSystem"]);
-                return $this->_propDict["sourceSystem"];
-            }
+        if (array_key_exists("jobId", $this->_propDict)) {
+            return $this->_propDict["jobId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the sourceSystem
+    * Sets the jobId
     *
-    * @param ProvisioningSystemDetails $val The sourceSystem
+    * @param string $val The jobId
     *
     * @return ProvisioningObjectSummary
     */
-    public function setSourceSystem($val)
+    public function setJobId($val)
     {
-        $this->_propDict["sourceSystem"] = $val;
+        $this->_propDict["jobId"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the modifiedProperties
+     *
+     * @return array The modifiedProperties
+     */
+    public function getModifiedProperties()
+    {
+        if (array_key_exists("modifiedProperties", $this->_propDict)) {
+           return $this->_propDict["modifiedProperties"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the modifiedProperties
+    *
+    * @param ModifiedProperty $val The modifiedProperties
+    *
+    * @return ProvisioningObjectSummary
+    */
+    public function setModifiedProperties($val)
+    {
+		$this->_propDict["modifiedProperties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the provisioningSteps
+     *
+     * @return array The provisioningSteps
+     */
+    public function getProvisioningSteps()
+    {
+        if (array_key_exists("provisioningSteps", $this->_propDict)) {
+           return $this->_propDict["provisioningSteps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the provisioningSteps
+    *
+    * @param ProvisioningStep $val The provisioningSteps
+    *
+    * @return ProvisioningObjectSummary
+    */
+    public function setProvisioningSteps($val)
+    {
+		$this->_propDict["provisioningSteps"] = $val;
         return $this;
     }
     
     /**
-    * Gets the targetSystem
+    * Gets the servicePrincipal
     *
-    * @return ProvisioningSystemDetails The targetSystem
+    * @return ProvisioningServicePrincipal The servicePrincipal
     */
-    public function getTargetSystem()
+    public function getServicePrincipal()
     {
-        if (array_key_exists("targetSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["targetSystem"], "Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
-                return $this->_propDict["targetSystem"];
+        if (array_key_exists("servicePrincipal", $this->_propDict)) {
+            if (is_a($this->_propDict["servicePrincipal"], "Beta\Microsoft\Graph\Model\ProvisioningServicePrincipal")) {
+                return $this->_propDict["servicePrincipal"];
             } else {
-                $this->_propDict["targetSystem"] = new ProvisioningSystemDetails($this->_propDict["targetSystem"]);
-                return $this->_propDict["targetSystem"];
+                $this->_propDict["servicePrincipal"] = new ProvisioningServicePrincipal($this->_propDict["servicePrincipal"]);
+                return $this->_propDict["servicePrincipal"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the targetSystem
+    * Sets the servicePrincipal
     *
-    * @param ProvisioningSystemDetails $val The targetSystem
+    * @param ProvisioningServicePrincipal $val The servicePrincipal
     *
     * @return ProvisioningObjectSummary
     */
-    public function setTargetSystem($val)
+    public function setServicePrincipal($val)
     {
-        $this->_propDict["targetSystem"] = $val;
+        $this->_propDict["servicePrincipal"] = $val;
         return $this;
     }
     
@@ -373,33 +340,33 @@ class ProvisioningObjectSummary extends Entity
     }
     
     /**
-    * Gets the targetIdentity
+    * Gets the sourceSystem
     *
-    * @return ProvisionedIdentity The targetIdentity
+    * @return ProvisioningSystemDetails The sourceSystem
     */
-    public function getTargetIdentity()
+    public function getSourceSystem()
     {
-        if (array_key_exists("targetIdentity", $this->_propDict)) {
-            if (is_a($this->_propDict["targetIdentity"], "Beta\Microsoft\Graph\Model\ProvisionedIdentity")) {
-                return $this->_propDict["targetIdentity"];
+        if (array_key_exists("sourceSystem", $this->_propDict)) {
+            if (is_a($this->_propDict["sourceSystem"], "Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
+                return $this->_propDict["sourceSystem"];
             } else {
-                $this->_propDict["targetIdentity"] = new ProvisionedIdentity($this->_propDict["targetIdentity"]);
-                return $this->_propDict["targetIdentity"];
+                $this->_propDict["sourceSystem"] = new ProvisioningSystemDetails($this->_propDict["sourceSystem"]);
+                return $this->_propDict["sourceSystem"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the targetIdentity
+    * Sets the sourceSystem
     *
-    * @param ProvisionedIdentity $val The targetIdentity
+    * @param ProvisioningSystemDetails $val The sourceSystem
     *
     * @return ProvisioningObjectSummary
     */
-    public function setTargetIdentity($val)
+    public function setSourceSystem($val)
     {
-        $this->_propDict["targetIdentity"] = $val;
+        $this->_propDict["sourceSystem"] = $val;
         return $this;
     }
     
@@ -434,59 +401,92 @@ class ProvisioningObjectSummary extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the provisioningSteps
-     *
-     * @return array The provisioningSteps
-     */
-    public function getProvisioningSteps()
+    /**
+    * Gets the targetIdentity
+    *
+    * @return ProvisionedIdentity The targetIdentity
+    */
+    public function getTargetIdentity()
     {
-        if (array_key_exists("provisioningSteps", $this->_propDict)) {
-           return $this->_propDict["provisioningSteps"];
-        } else {
-            return null;
+        if (array_key_exists("targetIdentity", $this->_propDict)) {
+            if (is_a($this->_propDict["targetIdentity"], "Beta\Microsoft\Graph\Model\ProvisionedIdentity")) {
+                return $this->_propDict["targetIdentity"];
+            } else {
+                $this->_propDict["targetIdentity"] = new ProvisionedIdentity($this->_propDict["targetIdentity"]);
+                return $this->_propDict["targetIdentity"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the provisioningSteps
+    /**
+    * Sets the targetIdentity
     *
-    * @param ProvisioningStep $val The provisioningSteps
+    * @param ProvisionedIdentity $val The targetIdentity
     *
     * @return ProvisioningObjectSummary
     */
-    public function setProvisioningSteps($val)
+    public function setTargetIdentity($val)
     {
-		$this->_propDict["provisioningSteps"] = $val;
+        $this->_propDict["targetIdentity"] = $val;
         return $this;
     }
     
-
-     /** 
-     * Gets the modifiedProperties
-     *
-     * @return array The modifiedProperties
-     */
-    public function getModifiedProperties()
+    /**
+    * Gets the targetSystem
+    *
+    * @return ProvisioningSystemDetails The targetSystem
+    */
+    public function getTargetSystem()
     {
-        if (array_key_exists("modifiedProperties", $this->_propDict)) {
-           return $this->_propDict["modifiedProperties"];
+        if (array_key_exists("targetSystem", $this->_propDict)) {
+            if (is_a($this->_propDict["targetSystem"], "Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
+                return $this->_propDict["targetSystem"];
+            } else {
+                $this->_propDict["targetSystem"] = new ProvisioningSystemDetails($this->_propDict["targetSystem"]);
+                return $this->_propDict["targetSystem"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the targetSystem
+    *
+    * @param ProvisioningSystemDetails $val The targetSystem
+    *
+    * @return ProvisioningObjectSummary
+    */
+    public function setTargetSystem($val)
+    {
+        $this->_propDict["targetSystem"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tenantId
+    *
+    * @return string The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the modifiedProperties
+    /**
+    * Sets the tenantId
     *
-    * @param ModifiedProperty $val The modifiedProperties
+    * @param string $val The tenantId
     *
     * @return ProvisioningObjectSummary
     */
-    public function setModifiedProperties($val)
+    public function setTenantId($val)
     {
-		$this->_propDict["modifiedProperties"] = $val;
+        $this->_propDict["tenantId"] = $val;
         return $this;
     }
     

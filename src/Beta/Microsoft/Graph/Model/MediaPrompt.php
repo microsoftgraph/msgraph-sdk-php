@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MediaPrompt extends Prompt
 {
+    /**
+    * Gets the loop
+    *
+    * @return int The loop
+    */
+    public function getLoop()
+    {
+        if (array_key_exists("loop", $this->_propDict)) {
+            return $this->_propDict["loop"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the loop
+    *
+    * @param int $val The value of the loop
+    *
+    * @return MediaPrompt
+    */
+    public function setLoop($val)
+    {
+        $this->_propDict["loop"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the mediaInfo
@@ -55,31 +81,5 @@ class MediaPrompt extends Prompt
     {
         $this->_propDict["mediaInfo"] = $val;
          return $this;
-    }
-    /**
-    * Gets the loop
-    *
-    * @return int The loop
-    */
-    public function getLoop()
-    {
-        if (array_key_exists("loop", $this->_propDict)) {
-            return $this->_propDict["loop"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the loop
-    *
-    * @param int $val The value of the loop
-    *
-    * @return MediaPrompt
-    */
-    public function setLoop($val)
-    {
-        $this->_propDict["loop"] = $val;
-        return $this;
     }
 }

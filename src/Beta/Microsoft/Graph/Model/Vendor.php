@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Vendor extends Entity
 {
     /**
-    * Gets the number
-    *
-    * @return string The number
-    */
-    public function getNumber()
-    {
-        if (array_key_exists("number", $this->_propDict)) {
-            return $this->_propDict["number"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the number
-    *
-    * @param string $val The number
-    *
-    * @return Vendor
-    */
-    public function setNumber($val)
-    {
-        $this->_propDict["number"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return Vendor
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the address
     *
     * @return PostalAddressType The address
@@ -106,276 +52,6 @@ class Vendor extends Entity
     public function setAddress($val)
     {
         $this->_propDict["address"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the phoneNumber
-    *
-    * @return string The phoneNumber
-    */
-    public function getPhoneNumber()
-    {
-        if (array_key_exists("phoneNumber", $this->_propDict)) {
-            return $this->_propDict["phoneNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the phoneNumber
-    *
-    * @param string $val The phoneNumber
-    *
-    * @return Vendor
-    */
-    public function setPhoneNumber($val)
-    {
-        $this->_propDict["phoneNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the email
-    *
-    * @return string The email
-    */
-    public function getEmail()
-    {
-        if (array_key_exists("email", $this->_propDict)) {
-            return $this->_propDict["email"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the email
-    *
-    * @param string $val The email
-    *
-    * @return Vendor
-    */
-    public function setEmail($val)
-    {
-        $this->_propDict["email"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the website
-    *
-    * @return string The website
-    */
-    public function getWebsite()
-    {
-        if (array_key_exists("website", $this->_propDict)) {
-            return $this->_propDict["website"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the website
-    *
-    * @param string $val The website
-    *
-    * @return Vendor
-    */
-    public function setWebsite($val)
-    {
-        $this->_propDict["website"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the taxRegistrationNumber
-    *
-    * @return string The taxRegistrationNumber
-    */
-    public function getTaxRegistrationNumber()
-    {
-        if (array_key_exists("taxRegistrationNumber", $this->_propDict)) {
-            return $this->_propDict["taxRegistrationNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the taxRegistrationNumber
-    *
-    * @param string $val The taxRegistrationNumber
-    *
-    * @return Vendor
-    */
-    public function setTaxRegistrationNumber($val)
-    {
-        $this->_propDict["taxRegistrationNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the currencyId
-    *
-    * @return string The currencyId
-    */
-    public function getCurrencyId()
-    {
-        if (array_key_exists("currencyId", $this->_propDict)) {
-            return $this->_propDict["currencyId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the currencyId
-    *
-    * @param string $val The currencyId
-    *
-    * @return Vendor
-    */
-    public function setCurrencyId($val)
-    {
-        $this->_propDict["currencyId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the currencyCode
-    *
-    * @return string The currencyCode
-    */
-    public function getCurrencyCode()
-    {
-        if (array_key_exists("currencyCode", $this->_propDict)) {
-            return $this->_propDict["currencyCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the currencyCode
-    *
-    * @param string $val The currencyCode
-    *
-    * @return Vendor
-    */
-    public function setCurrencyCode($val)
-    {
-        $this->_propDict["currencyCode"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the paymentTermsId
-    *
-    * @return string The paymentTermsId
-    */
-    public function getPaymentTermsId()
-    {
-        if (array_key_exists("paymentTermsId", $this->_propDict)) {
-            return $this->_propDict["paymentTermsId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the paymentTermsId
-    *
-    * @param string $val The paymentTermsId
-    *
-    * @return Vendor
-    */
-    public function setPaymentTermsId($val)
-    {
-        $this->_propDict["paymentTermsId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the paymentMethodId
-    *
-    * @return string The paymentMethodId
-    */
-    public function getPaymentMethodId()
-    {
-        if (array_key_exists("paymentMethodId", $this->_propDict)) {
-            return $this->_propDict["paymentMethodId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the paymentMethodId
-    *
-    * @param string $val The paymentMethodId
-    *
-    * @return Vendor
-    */
-    public function setPaymentMethodId($val)
-    {
-        $this->_propDict["paymentMethodId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the taxLiable
-    *
-    * @return bool The taxLiable
-    */
-    public function getTaxLiable()
-    {
-        if (array_key_exists("taxLiable", $this->_propDict)) {
-            return $this->_propDict["taxLiable"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the taxLiable
-    *
-    * @param bool $val The taxLiable
-    *
-    * @return Vendor
-    */
-    public function setTaxLiable($val)
-    {
-        $this->_propDict["taxLiable"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the blocked
-    *
-    * @return string The blocked
-    */
-    public function getBlocked()
-    {
-        if (array_key_exists("blocked", $this->_propDict)) {
-            return $this->_propDict["blocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the blocked
-    *
-    * @param string $val The blocked
-    *
-    * @return Vendor
-    */
-    public function setBlocked($val)
-    {
-        $this->_propDict["blocked"] = $val;
         return $this;
     }
     
@@ -411,6 +87,141 @@ class Vendor extends Entity
     }
     
     /**
+    * Gets the blocked
+    *
+    * @return string The blocked
+    */
+    public function getBlocked()
+    {
+        if (array_key_exists("blocked", $this->_propDict)) {
+            return $this->_propDict["blocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the blocked
+    *
+    * @param string $val The blocked
+    *
+    * @return Vendor
+    */
+    public function setBlocked($val)
+    {
+        $this->_propDict["blocked"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the currencyCode
+    *
+    * @return string The currencyCode
+    */
+    public function getCurrencyCode()
+    {
+        if (array_key_exists("currencyCode", $this->_propDict)) {
+            return $this->_propDict["currencyCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the currencyCode
+    *
+    * @param string $val The currencyCode
+    *
+    * @return Vendor
+    */
+    public function setCurrencyCode($val)
+    {
+        $this->_propDict["currencyCode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the currencyId
+    *
+    * @return string The currencyId
+    */
+    public function getCurrencyId()
+    {
+        if (array_key_exists("currencyId", $this->_propDict)) {
+            return $this->_propDict["currencyId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the currencyId
+    *
+    * @param string $val The currencyId
+    *
+    * @return Vendor
+    */
+    public function setCurrencyId($val)
+    {
+        $this->_propDict["currencyId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return Vendor
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the email
+    *
+    * @return string The email
+    */
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the email
+    *
+    * @param string $val The email
+    *
+    * @return Vendor
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     *
     * @return \DateTime The lastModifiedDateTime
@@ -441,31 +252,192 @@ class Vendor extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the picture
-     *
-     * @return array The picture
-     */
-    public function getPicture()
+    /**
+    * Gets the number
+    *
+    * @return string The number
+    */
+    public function getNumber()
     {
-        if (array_key_exists("picture", $this->_propDict)) {
-           return $this->_propDict["picture"];
+        if (array_key_exists("number", $this->_propDict)) {
+            return $this->_propDict["number"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the picture
+    /**
+    * Sets the number
     *
-    * @param Picture $val The picture
+    * @param string $val The number
     *
     * @return Vendor
     */
-    public function setPicture($val)
+    public function setNumber($val)
     {
-		$this->_propDict["picture"] = $val;
+        $this->_propDict["number"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the paymentMethodId
+    *
+    * @return string The paymentMethodId
+    */
+    public function getPaymentMethodId()
+    {
+        if (array_key_exists("paymentMethodId", $this->_propDict)) {
+            return $this->_propDict["paymentMethodId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the paymentMethodId
+    *
+    * @param string $val The paymentMethodId
+    *
+    * @return Vendor
+    */
+    public function setPaymentMethodId($val)
+    {
+        $this->_propDict["paymentMethodId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the paymentTermsId
+    *
+    * @return string The paymentTermsId
+    */
+    public function getPaymentTermsId()
+    {
+        if (array_key_exists("paymentTermsId", $this->_propDict)) {
+            return $this->_propDict["paymentTermsId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the paymentTermsId
+    *
+    * @param string $val The paymentTermsId
+    *
+    * @return Vendor
+    */
+    public function setPaymentTermsId($val)
+    {
+        $this->_propDict["paymentTermsId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the phoneNumber
+    *
+    * @return string The phoneNumber
+    */
+    public function getPhoneNumber()
+    {
+        if (array_key_exists("phoneNumber", $this->_propDict)) {
+            return $this->_propDict["phoneNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the phoneNumber
+    *
+    * @param string $val The phoneNumber
+    *
+    * @return Vendor
+    */
+    public function setPhoneNumber($val)
+    {
+        $this->_propDict["phoneNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the taxLiable
+    *
+    * @return bool The taxLiable
+    */
+    public function getTaxLiable()
+    {
+        if (array_key_exists("taxLiable", $this->_propDict)) {
+            return $this->_propDict["taxLiable"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the taxLiable
+    *
+    * @param bool $val The taxLiable
+    *
+    * @return Vendor
+    */
+    public function setTaxLiable($val)
+    {
+        $this->_propDict["taxLiable"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the taxRegistrationNumber
+    *
+    * @return string The taxRegistrationNumber
+    */
+    public function getTaxRegistrationNumber()
+    {
+        if (array_key_exists("taxRegistrationNumber", $this->_propDict)) {
+            return $this->_propDict["taxRegistrationNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the taxRegistrationNumber
+    *
+    * @param string $val The taxRegistrationNumber
+    *
+    * @return Vendor
+    */
+    public function setTaxRegistrationNumber($val)
+    {
+        $this->_propDict["taxRegistrationNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the website
+    *
+    * @return string The website
+    */
+    public function getWebsite()
+    {
+        if (array_key_exists("website", $this->_propDict)) {
+            return $this->_propDict["website"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the website
+    *
+    * @param string $val The website
+    *
+    * @return Vendor
+    */
+    public function setWebsite($val)
+    {
+        $this->_propDict["website"] = $val;
         return $this;
     }
     
@@ -501,6 +473,37 @@ class Vendor extends Entity
     }
     
     /**
+    * Gets the paymentMethod
+    *
+    * @return PaymentMethod The paymentMethod
+    */
+    public function getPaymentMethod()
+    {
+        if (array_key_exists("paymentMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["paymentMethod"], "Beta\Microsoft\Graph\Model\PaymentMethod")) {
+                return $this->_propDict["paymentMethod"];
+            } else {
+                $this->_propDict["paymentMethod"] = new PaymentMethod($this->_propDict["paymentMethod"]);
+                return $this->_propDict["paymentMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the paymentMethod
+    *
+    * @param PaymentMethod $val The paymentMethod
+    *
+    * @return Vendor
+    */
+    public function setPaymentMethod($val)
+    {
+        $this->_propDict["paymentMethod"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the paymentTerm
     *
     * @return PaymentTerm The paymentTerm
@@ -531,34 +534,31 @@ class Vendor extends Entity
         return $this;
     }
     
-    /**
-    * Gets the paymentMethod
-    *
-    * @return PaymentMethod The paymentMethod
-    */
-    public function getPaymentMethod()
+
+     /** 
+     * Gets the picture
+     *
+     * @return array The picture
+     */
+    public function getPicture()
     {
-        if (array_key_exists("paymentMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["paymentMethod"], "Beta\Microsoft\Graph\Model\PaymentMethod")) {
-                return $this->_propDict["paymentMethod"];
-            } else {
-                $this->_propDict["paymentMethod"] = new PaymentMethod($this->_propDict["paymentMethod"]);
-                return $this->_propDict["paymentMethod"];
-            }
+        if (array_key_exists("picture", $this->_propDict)) {
+           return $this->_propDict["picture"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the paymentMethod
+    /** 
+    * Sets the picture
     *
-    * @param PaymentMethod $val The paymentMethod
+    * @param Picture $val The picture
     *
     * @return Vendor
     */
-    public function setPaymentMethod($val)
+    public function setPicture($val)
     {
-        $this->_propDict["paymentMethod"] = $val;
+		$this->_propDict["picture"] = $val;
         return $this;
     }
     

@@ -24,61 +24,6 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 */
 class Set extends \Beta\Microsoft\Graph\Model\Entity
 {
-
-     /** 
-     * Gets the localizedNames
-     *
-     * @return array The localizedNames
-     */
-    public function getLocalizedNames()
-    {
-        if (array_key_exists("localizedNames", $this->_propDict)) {
-           return $this->_propDict["localizedNames"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the localizedNames
-    *
-    * @param LocalizedName $val The localizedNames
-    *
-    * @return Set
-    */
-    public function setLocalizedNames($val)
-    {
-		$this->_propDict["localizedNames"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return Set
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the createdDateTime
     *
@@ -110,6 +55,61 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return Set
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the localizedNames
+     *
+     * @return array The localizedNames
+     */
+    public function getLocalizedNames()
+    {
+        if (array_key_exists("localizedNames", $this->_propDict)) {
+           return $this->_propDict["localizedNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the localizedNames
+    *
+    * @param LocalizedName $val The localizedNames
+    *
+    * @return Set
+    */
+    public function setLocalizedNames($val)
+    {
+		$this->_propDict["localizedNames"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the setProperties
@@ -135,6 +135,34 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     public function setSetProperties($val)
     {
 		$this->_propDict["properties"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the children
+     *
+     * @return array The children
+     */
+    public function getChildren()
+    {
+        if (array_key_exists("children", $this->_propDict)) {
+           return $this->_propDict["children"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the children
+    *
+    * @param Term $val The children
+    *
+    * @return Set
+    */
+    public function setChildren($val)
+    {
+		$this->_propDict["children"] = $val;
         return $this;
     }
     
@@ -171,34 +199,6 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
 
      /** 
-     * Gets the terms
-     *
-     * @return array The terms
-     */
-    public function getTerms()
-    {
-        if (array_key_exists("terms", $this->_propDict)) {
-           return $this->_propDict["terms"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the terms
-    *
-    * @param Term $val The terms
-    *
-    * @return Set
-    */
-    public function setTerms($val)
-    {
-		$this->_propDict["terms"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the relations
      *
      * @return array The relations
@@ -227,29 +227,29 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
 
      /** 
-     * Gets the children
+     * Gets the terms
      *
-     * @return array The children
+     * @return array The terms
      */
-    public function getChildren()
+    public function getTerms()
     {
-        if (array_key_exists("children", $this->_propDict)) {
-           return $this->_propDict["children"];
+        if (array_key_exists("terms", $this->_propDict)) {
+           return $this->_propDict["terms"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the children
+    * Sets the terms
     *
-    * @param Term $val The children
+    * @param Term $val The terms
     *
     * @return Set
     */
-    public function setChildren($val)
+    public function setTerms($val)
     {
-		$this->_propDict["children"] = $val;
+		$this->_propDict["terms"] = $val;
         return $this;
     }
     

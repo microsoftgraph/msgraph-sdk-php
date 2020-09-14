@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ChatMessagePolicyViolationPolicyTip extends Entity
 {
     /**
-    * Gets the generalText
-    *
-    * @return string The generalText
-    */
-    public function getGeneralText()
-    {
-        if (array_key_exists("generalText", $this->_propDict)) {
-            return $this->_propDict["generalText"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the generalText
-    *
-    * @param string $val The value of the generalText
-    *
-    * @return ChatMessagePolicyViolationPolicyTip
-    */
-    public function setGeneralText($val)
-    {
-        $this->_propDict["generalText"] = $val;
-        return $this;
-    }
-    /**
     * Gets the complianceUrl
     *
     * @return string The complianceUrl
@@ -73,6 +47,32 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
     public function setComplianceUrl($val)
     {
         $this->_propDict["complianceUrl"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the generalText
+    *
+    * @return string The generalText
+    */
+    public function getGeneralText()
+    {
+        if (array_key_exists("generalText", $this->_propDict)) {
+            return $this->_propDict["generalText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the generalText
+    *
+    * @param string $val The value of the generalText
+    *
+    * @return ChatMessagePolicyViolationPolicyTip
+    */
+    public function setGeneralText($val)
+    {
+        $this->_propDict["generalText"] = $val;
         return $this;
     }
     /**

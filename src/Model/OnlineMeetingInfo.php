@@ -24,34 +24,6 @@ namespace Microsoft\Graph\Model;
 class OnlineMeetingInfo extends Entity
 {
     /**
-    * Gets the joinUrl
-    * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
-    *
-    * @return string The joinUrl
-    */
-    public function getJoinUrl()
-    {
-        if (array_key_exists("joinUrl", $this->_propDict)) {
-            return $this->_propDict["joinUrl"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the joinUrl
-    * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
-    *
-    * @param string $val The value of the joinUrl
-    *
-    * @return OnlineMeetingInfo
-    */
-    public function setJoinUrl($val)
-    {
-        $this->_propDict["joinUrl"] = $val;
-        return $this;
-    }
-    /**
     * Gets the conferenceId
     * The ID of the conference.
     *
@@ -80,87 +52,31 @@ class OnlineMeetingInfo extends Entity
         return $this;
     }
     /**
-    * Gets the tollNumber
-    * The toll number that can be used to join the conference.
+    * Gets the joinUrl
+    * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
     *
-    * @return string The tollNumber
+    * @return string The joinUrl
     */
-    public function getTollNumber()
+    public function getJoinUrl()
     {
-        if (array_key_exists("tollNumber", $this->_propDict)) {
-            return $this->_propDict["tollNumber"];
+        if (array_key_exists("joinUrl", $this->_propDict)) {
+            return $this->_propDict["joinUrl"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the tollNumber
-    * The toll number that can be used to join the conference.
+    * Sets the joinUrl
+    * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
     *
-    * @param string $val The value of the tollNumber
-    *
-    * @return OnlineMeetingInfo
-    */
-    public function setTollNumber($val)
-    {
-        $this->_propDict["tollNumber"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the tollFreeNumbers
-    * The toll free numbers that can be used to join the conference.
-    *
-    * @return string The tollFreeNumbers
-    */
-    public function getTollFreeNumbers()
-    {
-        if (array_key_exists("tollFreeNumbers", $this->_propDict)) {
-            return $this->_propDict["tollFreeNumbers"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tollFreeNumbers
-    * The toll free numbers that can be used to join the conference.
-    *
-    * @param string $val The value of the tollFreeNumbers
+    * @param string $val The value of the joinUrl
     *
     * @return OnlineMeetingInfo
     */
-    public function setTollFreeNumbers($val)
+    public function setJoinUrl($val)
     {
-        $this->_propDict["tollFreeNumbers"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the quickDial
-    * The pre-formatted quickdial for this call.
-    *
-    * @return string The quickDial
-    */
-    public function getQuickDial()
-    {
-        if (array_key_exists("quickDial", $this->_propDict)) {
-            return $this->_propDict["quickDial"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the quickDial
-    * The pre-formatted quickdial for this call.
-    *
-    * @param string $val The value of the quickDial
-    *
-    * @return OnlineMeetingInfo
-    */
-    public function setQuickDial($val)
-    {
-        $this->_propDict["quickDial"] = $val;
+        $this->_propDict["joinUrl"] = $val;
         return $this;
     }
 
@@ -195,5 +111,89 @@ class OnlineMeetingInfo extends Entity
     {
         $this->_propDict["phones"] = $val;
          return $this;
+    }
+    /**
+    * Gets the quickDial
+    * The pre-formatted quickdial for this call.
+    *
+    * @return string The quickDial
+    */
+    public function getQuickDial()
+    {
+        if (array_key_exists("quickDial", $this->_propDict)) {
+            return $this->_propDict["quickDial"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the quickDial
+    * The pre-formatted quickdial for this call.
+    *
+    * @param string $val The value of the quickDial
+    *
+    * @return OnlineMeetingInfo
+    */
+    public function setQuickDial($val)
+    {
+        $this->_propDict["quickDial"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tollFreeNumbers
+    * The toll free numbers that can be used to join the conference.
+    *
+    * @return string The tollFreeNumbers
+    */
+    public function getTollFreeNumbers()
+    {
+        if (array_key_exists("tollFreeNumbers", $this->_propDict)) {
+            return $this->_propDict["tollFreeNumbers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tollFreeNumbers
+    * The toll free numbers that can be used to join the conference.
+    *
+    * @param string $val The value of the tollFreeNumbers
+    *
+    * @return OnlineMeetingInfo
+    */
+    public function setTollFreeNumbers($val)
+    {
+        $this->_propDict["tollFreeNumbers"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tollNumber
+    * The toll number that can be used to join the conference.
+    *
+    * @return string The tollNumber
+    */
+    public function getTollNumber()
+    {
+        if (array_key_exists("tollNumber", $this->_propDict)) {
+            return $this->_propDict["tollNumber"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tollNumber
+    * The toll number that can be used to join the conference.
+    *
+    * @param string $val The value of the tollNumber
+    *
+    * @return OnlineMeetingInfo
+    */
+    public function setTollNumber($val)
+    {
+        $this->_propDict["tollNumber"] = $val;
+        return $this;
     }
 }

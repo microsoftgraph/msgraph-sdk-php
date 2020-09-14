@@ -56,34 +56,6 @@ class OutlookUser extends Entity
     
 
      /** 
-     * Gets the taskGroups
-     *
-     * @return array The taskGroups
-     */
-    public function getTaskGroups()
-    {
-        if (array_key_exists("taskGroups", $this->_propDict)) {
-           return $this->_propDict["taskGroups"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the taskGroups
-    *
-    * @param OutlookTaskGroup $val The taskGroups
-    *
-    * @return OutlookUser
-    */
-    public function setTaskGroups($val)
-    {
-		$this->_propDict["taskGroups"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the taskFolders
      *
      * @return array The taskFolders
@@ -107,6 +79,34 @@ class OutlookUser extends Entity
     public function setTaskFolders($val)
     {
 		$this->_propDict["taskFolders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the taskGroups
+     *
+     * @return array The taskGroups
+     */
+    public function getTaskGroups()
+    {
+        if (array_key_exists("taskGroups", $this->_propDict)) {
+           return $this->_propDict["taskGroups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the taskGroups
+    *
+    * @param OutlookTaskGroup $val The taskGroups
+    *
+    * @return OutlookUser
+    */
+    public function setTaskGroups($val)
+    {
+		$this->_propDict["taskGroups"] = $val;
         return $this;
     }
     

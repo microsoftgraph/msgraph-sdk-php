@@ -25,6 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class SiteUsageStorage extends Entity
 {
     /**
+    * Gets the reportDate
+    *
+    * @return \DateTime The reportDate
+    */
+    public function getReportDate()
+    {
+        if (array_key_exists("reportDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+                return $this->_propDict["reportDate"];
+            } else {
+                $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
+                return $this->_propDict["reportDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportDate
+    *
+    * @param \DateTime $val The reportDate
+    *
+    * @return SiteUsageStorage
+    */
+    public function setReportDate($val)
+    {
+        $this->_propDict["reportDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportPeriod
+    *
+    * @return string The reportPeriod
+    */
+    public function getReportPeriod()
+    {
+        if (array_key_exists("reportPeriod", $this->_propDict)) {
+            return $this->_propDict["reportPeriod"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the reportPeriod
+    *
+    * @param string $val The reportPeriod
+    *
+    * @return SiteUsageStorage
+    */
+    public function setReportPeriod($val)
+    {
+        $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the reportRefreshDate
     *
     * @return \DateTime The reportRefreshDate
@@ -106,64 +164,6 @@ class SiteUsageStorage extends Entity
     public function setStorageUsedInBytes($val)
     {
         $this->_propDict["storageUsedInBytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the reportDate
-    *
-    * @return \DateTime The reportDate
-    */
-    public function getReportDate()
-    {
-        if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
-                return $this->_propDict["reportDate"];
-            } else {
-                $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
-                return $this->_propDict["reportDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportDate
-    *
-    * @param \DateTime $val The reportDate
-    *
-    * @return SiteUsageStorage
-    */
-    public function setReportDate($val)
-    {
-        $this->_propDict["reportDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the reportPeriod
-    *
-    * @return string The reportPeriod
-    */
-    public function getReportPeriod()
-    {
-        if (array_key_exists("reportPeriod", $this->_propDict)) {
-            return $this->_propDict["reportPeriod"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the reportPeriod
-    *
-    * @param string $val The reportPeriod
-    *
-    * @return SiteUsageStorage
-    */
-    public function setReportPeriod($val)
-    {
-        $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
     

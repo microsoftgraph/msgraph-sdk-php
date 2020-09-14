@@ -23,38 +23,33 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ParticipantInfo extends Entity
 {
-
     /**
-    * Gets the identity
-    * The identitySet associated with this participant. Read-only.
+    * Gets the countryCode
+    * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
     *
-    * @return IdentitySet The identity
+    * @return string The countryCode
     */
-    public function getIdentity()
+    public function getCountryCode()
     {
-        if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["identity"];
-            } else {
-                $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
-                return $this->_propDict["identity"];
-            }
+        if (array_key_exists("countryCode", $this->_propDict)) {
+            return $this->_propDict["countryCode"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the identity
-    * The identitySet associated with this participant. Read-only.
+    * Sets the countryCode
+    * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
     *
-    * @param IdentitySet $val The value to assign to the identity
+    * @param string $val The value of the countryCode
     *
-    * @return ParticipantInfo The ParticipantInfo
+    * @return ParticipantInfo
     */
-    public function setIdentity($val)
+    public function setCountryCode($val)
     {
-        $this->_propDict["identity"] = $val;
-         return $this;
+        $this->_propDict["countryCode"] = $val;
+        return $this;
     }
 
     /**
@@ -89,33 +84,38 @@ class ParticipantInfo extends Entity
         $this->_propDict["endpointType"] = $val;
          return $this;
     }
+
     /**
-    * Gets the region
-    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+    * Gets the identity
+    * The identitySet associated with this participant. Read-only.
     *
-    * @return string The region
+    * @return IdentitySet The identity
     */
-    public function getRegion()
+    public function getIdentity()
     {
-        if (array_key_exists("region", $this->_propDict)) {
-            return $this->_propDict["region"];
-        } else {
-            return null;
+        if (array_key_exists("identity", $this->_propDict)) {
+            if (is_a($this->_propDict["identity"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["identity"];
+            } else {
+                $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
+                return $this->_propDict["identity"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the region
-    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+    * Sets the identity
+    * The identitySet associated with this participant. Read-only.
     *
-    * @param string $val The value of the region
+    * @param IdentitySet $val The value to assign to the identity
     *
-    * @return ParticipantInfo
+    * @return ParticipantInfo The ParticipantInfo
     */
-    public function setRegion($val)
+    public function setIdentity($val)
     {
-        $this->_propDict["region"] = $val;
-        return $this;
+        $this->_propDict["identity"] = $val;
+         return $this;
     }
     /**
     * Gets the languageId
@@ -146,31 +146,31 @@ class ParticipantInfo extends Entity
         return $this;
     }
     /**
-    * Gets the countryCode
-    * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+    * Gets the region
+    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
     *
-    * @return string The countryCode
+    * @return string The region
     */
-    public function getCountryCode()
+    public function getRegion()
     {
-        if (array_key_exists("countryCode", $this->_propDict)) {
-            return $this->_propDict["countryCode"];
+        if (array_key_exists("region", $this->_propDict)) {
+            return $this->_propDict["region"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the countryCode
-    * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+    * Sets the region
+    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
     *
-    * @param string $val The value of the countryCode
+    * @param string $val The value of the region
     *
     * @return ParticipantInfo
     */
-    public function setCountryCode($val)
+    public function setRegion($val)
     {
-        $this->_propDict["countryCode"] = $val;
+        $this->_propDict["region"] = $val;
         return $this;
     }
 }

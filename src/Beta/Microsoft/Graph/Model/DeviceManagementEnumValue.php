@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementEnumValue extends Entity
 {
     /**
-    * Gets the value
-    * The raw enum value text
-    *
-    * @return string The value
-    */
-    public function getValue()
-    {
-        if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the value
-    * The raw enum value text
-    *
-    * @param string $val The value of the value
-    *
-    * @return DeviceManagementEnumValue
-    */
-    public function setValue($val)
-    {
-        $this->_propDict["value"] = $val;
-        return $this;
-    }
-    /**
     * Gets the displayName
     * Display name for this enum value
     *
@@ -77,6 +49,34 @@ class DeviceManagementEnumValue extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the value
+    * The raw enum value text
+    *
+    * @return string The value
+    */
+    public function getValue()
+    {
+        if (array_key_exists("value", $this->_propDict)) {
+            return $this->_propDict["value"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the value
+    * The raw enum value text
+    *
+    * @param string $val The value of the value
+    *
+    * @return DeviceManagementEnumValue
+    */
+    public function setValue($val)
+    {
+        $this->_propDict["value"] = $val;
         return $this;
     }
 }

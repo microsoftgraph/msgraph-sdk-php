@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class PaymentTerm extends Entity
 {
     /**
+    * Gets the calculateDiscountOnCreditMemos
+    *
+    * @return bool The calculateDiscountOnCreditMemos
+    */
+    public function getCalculateDiscountOnCreditMemos()
+    {
+        if (array_key_exists("calculateDiscountOnCreditMemos", $this->_propDict)) {
+            return $this->_propDict["calculateDiscountOnCreditMemos"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the calculateDiscountOnCreditMemos
+    *
+    * @param bool $val The calculateDiscountOnCreditMemos
+    *
+    * @return PaymentTerm
+    */
+    public function setCalculateDiscountOnCreditMemos($val)
+    {
+        $this->_propDict["calculateDiscountOnCreditMemos"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the code
     *
     * @return string The code
@@ -48,60 +75,6 @@ class PaymentTerm extends Entity
     public function setCode($val)
     {
         $this->_propDict["code"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return PaymentTerm
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the dueDateCalculation
-    *
-    * @return string The dueDateCalculation
-    */
-    public function getDueDateCalculation()
-    {
-        if (array_key_exists("dueDateCalculation", $this->_propDict)) {
-            return $this->_propDict["dueDateCalculation"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the dueDateCalculation
-    *
-    * @param string $val The dueDateCalculation
-    *
-    * @return PaymentTerm
-    */
-    public function setDueDateCalculation($val)
-    {
-        $this->_propDict["dueDateCalculation"] = $val;
         return $this;
     }
     
@@ -164,29 +137,56 @@ class PaymentTerm extends Entity
     }
     
     /**
-    * Gets the calculateDiscountOnCreditMemos
+    * Gets the displayName
     *
-    * @return bool The calculateDiscountOnCreditMemos
+    * @return string The displayName
     */
-    public function getCalculateDiscountOnCreditMemos()
+    public function getDisplayName()
     {
-        if (array_key_exists("calculateDiscountOnCreditMemos", $this->_propDict)) {
-            return $this->_propDict["calculateDiscountOnCreditMemos"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the calculateDiscountOnCreditMemos
+    * Sets the displayName
     *
-    * @param bool $val The calculateDiscountOnCreditMemos
+    * @param string $val The displayName
     *
     * @return PaymentTerm
     */
-    public function setCalculateDiscountOnCreditMemos($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["calculateDiscountOnCreditMemos"] = boolval($val);
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the dueDateCalculation
+    *
+    * @return string The dueDateCalculation
+    */
+    public function getDueDateCalculation()
+    {
+        if (array_key_exists("dueDateCalculation", $this->_propDict)) {
+            return $this->_propDict["dueDateCalculation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dueDateCalculation
+    *
+    * @param string $val The dueDateCalculation
+    *
+    * @return PaymentTerm
+    */
+    public function setDueDateCalculation($val)
+    {
+        $this->_propDict["dueDateCalculation"] = $val;
         return $this;
     }
     

@@ -24,67 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ScheduleInformation extends Entity
 {
     /**
-    * Gets the scheduleId
-    * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
-    *
-    * @return string The scheduleId
-    */
-    public function getScheduleId()
-    {
-        if (array_key_exists("scheduleId", $this->_propDict)) {
-            return $this->_propDict["scheduleId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the scheduleId
-    * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
-    *
-    * @param string $val The value of the scheduleId
-    *
-    * @return ScheduleInformation
-    */
-    public function setScheduleId($val)
-    {
-        $this->_propDict["scheduleId"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the scheduleItems
-    * Contains the items that describe the availability of the user or resource.
-    *
-    * @return ScheduleItem The scheduleItems
-    */
-    public function getScheduleItems()
-    {
-        if (array_key_exists("scheduleItems", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleItems"], "Beta\Microsoft\Graph\Model\ScheduleItem")) {
-                return $this->_propDict["scheduleItems"];
-            } else {
-                $this->_propDict["scheduleItems"] = new ScheduleItem($this->_propDict["scheduleItems"]);
-                return $this->_propDict["scheduleItems"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the scheduleItems
-    * Contains the items that describe the availability of the user or resource.
-    *
-    * @param ScheduleItem $val The value to assign to the scheduleItems
-    *
-    * @return ScheduleInformation The ScheduleInformation
-    */
-    public function setScheduleItems($val)
-    {
-        $this->_propDict["scheduleItems"] = $val;
-         return $this;
-    }
-    /**
     * Gets the availabilityView
     * Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
     *
@@ -143,6 +82,67 @@ class ScheduleInformation extends Entity
     public function setError($val)
     {
         $this->_propDict["error"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the scheduleId
+    * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
+    *
+    * @return string The scheduleId
+    */
+    public function getScheduleId()
+    {
+        if (array_key_exists("scheduleId", $this->_propDict)) {
+            return $this->_propDict["scheduleId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the scheduleId
+    * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
+    *
+    * @param string $val The value of the scheduleId
+    *
+    * @return ScheduleInformation
+    */
+    public function setScheduleId($val)
+    {
+        $this->_propDict["scheduleId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the scheduleItems
+    * Contains the items that describe the availability of the user or resource.
+    *
+    * @return ScheduleItem The scheduleItems
+    */
+    public function getScheduleItems()
+    {
+        if (array_key_exists("scheduleItems", $this->_propDict)) {
+            if (is_a($this->_propDict["scheduleItems"], "Beta\Microsoft\Graph\Model\ScheduleItem")) {
+                return $this->_propDict["scheduleItems"];
+            } else {
+                $this->_propDict["scheduleItems"] = new ScheduleItem($this->_propDict["scheduleItems"]);
+                return $this->_propDict["scheduleItems"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the scheduleItems
+    * Contains the items that describe the availability of the user or resource.
+    *
+    * @param ScheduleItem $val The value to assign to the scheduleItems
+    *
+    * @return ScheduleInformation The ScheduleInformation
+    */
+    public function setScheduleItems($val)
+    {
+        $this->_propDict["scheduleItems"] = $val;
          return $this;
     }
 

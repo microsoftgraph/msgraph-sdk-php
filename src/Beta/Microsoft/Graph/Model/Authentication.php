@@ -26,146 +26,6 @@ class Authentication extends Entity
 {
 
      /** 
-     * Gets the methods
-     *
-     * @return array The methods
-     */
-    public function getMethods()
-    {
-        if (array_key_exists("methods", $this->_propDict)) {
-           return $this->_propDict["methods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the methods
-    *
-    * @param AuthenticationMethod $val The methods
-    *
-    * @return Authentication
-    */
-    public function setMethods($val)
-    {
-		$this->_propDict["methods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the securityQuestionMethods
-     *
-     * @return array The securityQuestionMethods
-     */
-    public function getSecurityQuestionMethods()
-    {
-        if (array_key_exists("securityQuestionMethods", $this->_propDict)) {
-           return $this->_propDict["securityQuestionMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the securityQuestionMethods
-    *
-    * @param SecurityQuestionAuthenticationMethod $val The securityQuestionMethods
-    *
-    * @return Authentication
-    */
-    public function setSecurityQuestionMethods($val)
-    {
-		$this->_propDict["securityQuestionMethods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the phoneMethods
-     *
-     * @return array The phoneMethods
-     */
-    public function getPhoneMethods()
-    {
-        if (array_key_exists("phoneMethods", $this->_propDict)) {
-           return $this->_propDict["phoneMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the phoneMethods
-    *
-    * @param PhoneAuthenticationMethod $val The phoneMethods
-    *
-    * @return Authentication
-    */
-    public function setPhoneMethods($val)
-    {
-		$this->_propDict["phoneMethods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the passwordMethods
-     *
-     * @return array The passwordMethods
-     */
-    public function getPasswordMethods()
-    {
-        if (array_key_exists("passwordMethods", $this->_propDict)) {
-           return $this->_propDict["passwordMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the passwordMethods
-    *
-    * @param PasswordAuthenticationMethod $val The passwordMethods
-    *
-    * @return Authentication
-    */
-    public function setPasswordMethods($val)
-    {
-		$this->_propDict["passwordMethods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the operations
-     *
-     * @return array The operations
-     */
-    public function getOperations()
-    {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the operations
-    *
-    * @param LongRunningOperation $val The operations
-    *
-    * @return Authentication
-    */
-    public function setOperations($val)
-    {
-		$this->_propDict["operations"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the emailMethods
      *
      * @return array The emailMethods
@@ -194,29 +54,57 @@ class Authentication extends Entity
     
 
      /** 
-     * Gets the oathMethods
+     * Gets the fido2Methods
      *
-     * @return array The oathMethods
+     * @return array The fido2Methods
      */
-    public function getOathMethods()
+    public function getFido2Methods()
     {
-        if (array_key_exists("oathMethods", $this->_propDict)) {
-           return $this->_propDict["oathMethods"];
+        if (array_key_exists("fido2Methods", $this->_propDict)) {
+           return $this->_propDict["fido2Methods"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the oathMethods
+    * Sets the fido2Methods
     *
-    * @param SoftwareOathAuthenticationMethod $val The oathMethods
+    * @param Fido2AuthenticationMethod $val The fido2Methods
     *
     * @return Authentication
     */
-    public function setOathMethods($val)
+    public function setFido2Methods($val)
     {
-		$this->_propDict["oathMethods"] = $val;
+		$this->_propDict["fido2Methods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the methods
+     *
+     * @return array The methods
+     */
+    public function getMethods()
+    {
+        if (array_key_exists("methods", $this->_propDict)) {
+           return $this->_propDict["methods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the methods
+    *
+    * @param AuthenticationMethod $val The methods
+    *
+    * @return Authentication
+    */
+    public function setMethods($val)
+    {
+		$this->_propDict["methods"] = $val;
         return $this;
     }
     
@@ -250,6 +138,62 @@ class Authentication extends Entity
     
 
      /** 
+     * Gets the oathMethods
+     *
+     * @return array The oathMethods
+     */
+    public function getOathMethods()
+    {
+        if (array_key_exists("oathMethods", $this->_propDict)) {
+           return $this->_propDict["oathMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the oathMethods
+    *
+    * @param SoftwareOathAuthenticationMethod $val The oathMethods
+    *
+    * @return Authentication
+    */
+    public function setOathMethods($val)
+    {
+		$this->_propDict["oathMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the operations
+     *
+     * @return array The operations
+     */
+    public function getOperations()
+    {
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the operations
+    *
+    * @param LongRunningOperation $val The operations
+    *
+    * @return Authentication
+    */
+    public function setOperations($val)
+    {
+		$this->_propDict["operations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the passwordlessMicrosoftAuthenticatorMethods
      *
      * @return array The passwordlessMicrosoftAuthenticatorMethods
@@ -278,29 +222,85 @@ class Authentication extends Entity
     
 
      /** 
-     * Gets the fido2Methods
+     * Gets the passwordMethods
      *
-     * @return array The fido2Methods
+     * @return array The passwordMethods
      */
-    public function getFido2Methods()
+    public function getPasswordMethods()
     {
-        if (array_key_exists("fido2Methods", $this->_propDict)) {
-           return $this->_propDict["fido2Methods"];
+        if (array_key_exists("passwordMethods", $this->_propDict)) {
+           return $this->_propDict["passwordMethods"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the fido2Methods
+    * Sets the passwordMethods
     *
-    * @param Fido2AuthenticationMethod $val The fido2Methods
+    * @param PasswordAuthenticationMethod $val The passwordMethods
     *
     * @return Authentication
     */
-    public function setFido2Methods($val)
+    public function setPasswordMethods($val)
     {
-		$this->_propDict["fido2Methods"] = $val;
+		$this->_propDict["passwordMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the phoneMethods
+     *
+     * @return array The phoneMethods
+     */
+    public function getPhoneMethods()
+    {
+        if (array_key_exists("phoneMethods", $this->_propDict)) {
+           return $this->_propDict["phoneMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the phoneMethods
+    *
+    * @param PhoneAuthenticationMethod $val The phoneMethods
+    *
+    * @return Authentication
+    */
+    public function setPhoneMethods($val)
+    {
+		$this->_propDict["phoneMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the securityQuestionMethods
+     *
+     * @return array The securityQuestionMethods
+     */
+    public function getSecurityQuestionMethods()
+    {
+        if (array_key_exists("securityQuestionMethods", $this->_propDict)) {
+           return $this->_propDict["securityQuestionMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the securityQuestionMethods
+    *
+    * @param SecurityQuestionAuthenticationMethod $val The securityQuestionMethods
+    *
+    * @return Authentication
+    */
+    public function setSecurityQuestionMethods($val)
+    {
+		$this->_propDict["securityQuestionMethods"] = $val;
         return $this;
     }
     

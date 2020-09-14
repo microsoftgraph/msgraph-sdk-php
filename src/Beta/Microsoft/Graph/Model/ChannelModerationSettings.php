@@ -23,68 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ChannelModerationSettings extends Entity
 {
-
-    /**
-    * Gets the userNewMessageRestriction
-    *
-    * @return UserNewMessageRestriction The userNewMessageRestriction
-    */
-    public function getUserNewMessageRestriction()
-    {
-        if (array_key_exists("userNewMessageRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["userNewMessageRestriction"], "Beta\Microsoft\Graph\Model\UserNewMessageRestriction")) {
-                return $this->_propDict["userNewMessageRestriction"];
-            } else {
-                $this->_propDict["userNewMessageRestriction"] = new UserNewMessageRestriction($this->_propDict["userNewMessageRestriction"]);
-                return $this->_propDict["userNewMessageRestriction"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the userNewMessageRestriction
-    *
-    * @param UserNewMessageRestriction $val The value to assign to the userNewMessageRestriction
-    *
-    * @return ChannelModerationSettings The ChannelModerationSettings
-    */
-    public function setUserNewMessageRestriction($val)
-    {
-        $this->_propDict["userNewMessageRestriction"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the replyRestriction
-    *
-    * @return ReplyRestriction The replyRestriction
-    */
-    public function getReplyRestriction()
-    {
-        if (array_key_exists("replyRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["replyRestriction"], "Beta\Microsoft\Graph\Model\ReplyRestriction")) {
-                return $this->_propDict["replyRestriction"];
-            } else {
-                $this->_propDict["replyRestriction"] = new ReplyRestriction($this->_propDict["replyRestriction"]);
-                return $this->_propDict["replyRestriction"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the replyRestriction
-    *
-    * @param ReplyRestriction $val The value to assign to the replyRestriction
-    *
-    * @return ChannelModerationSettings The ChannelModerationSettings
-    */
-    public function setReplyRestriction($val)
-    {
-        $this->_propDict["replyRestriction"] = $val;
-         return $this;
-    }
     /**
     * Gets the allowNewMessageFromBots
     *
@@ -136,5 +74,67 @@ class ChannelModerationSettings extends Entity
     {
         $this->_propDict["allowNewMessageFromConnectors"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the replyRestriction
+    *
+    * @return ReplyRestriction The replyRestriction
+    */
+    public function getReplyRestriction()
+    {
+        if (array_key_exists("replyRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["replyRestriction"], "Beta\Microsoft\Graph\Model\ReplyRestriction")) {
+                return $this->_propDict["replyRestriction"];
+            } else {
+                $this->_propDict["replyRestriction"] = new ReplyRestriction($this->_propDict["replyRestriction"]);
+                return $this->_propDict["replyRestriction"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the replyRestriction
+    *
+    * @param ReplyRestriction $val The value to assign to the replyRestriction
+    *
+    * @return ChannelModerationSettings The ChannelModerationSettings
+    */
+    public function setReplyRestriction($val)
+    {
+        $this->_propDict["replyRestriction"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the userNewMessageRestriction
+    *
+    * @return UserNewMessageRestriction The userNewMessageRestriction
+    */
+    public function getUserNewMessageRestriction()
+    {
+        if (array_key_exists("userNewMessageRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["userNewMessageRestriction"], "Beta\Microsoft\Graph\Model\UserNewMessageRestriction")) {
+                return $this->_propDict["userNewMessageRestriction"];
+            } else {
+                $this->_propDict["userNewMessageRestriction"] = new UserNewMessageRestriction($this->_propDict["userNewMessageRestriction"]);
+                return $this->_propDict["userNewMessageRestriction"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userNewMessageRestriction
+    *
+    * @param UserNewMessageRestriction $val The value to assign to the userNewMessageRestriction
+    *
+    * @return ChannelModerationSettings The ChannelModerationSettings
+    */
+    public function setUserNewMessageRestriction($val)
+    {
+        $this->_propDict["userNewMessageRestriction"] = $val;
+         return $this;
     }
 }

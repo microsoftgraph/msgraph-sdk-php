@@ -56,34 +56,6 @@ class BitLockerFixedDrivePolicy extends Entity
         $this->_propDict["encryptionMethod"] = $val;
          return $this;
     }
-    /**
-    * Gets the requireEncryptionForWriteAccess
-    * This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
-    *
-    * @return bool The requireEncryptionForWriteAccess
-    */
-    public function getRequireEncryptionForWriteAccess()
-    {
-        if (array_key_exists("requireEncryptionForWriteAccess", $this->_propDict)) {
-            return $this->_propDict["requireEncryptionForWriteAccess"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the requireEncryptionForWriteAccess
-    * This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
-    *
-    * @param bool $val The value of the requireEncryptionForWriteAccess
-    *
-    * @return BitLockerFixedDrivePolicy
-    */
-    public function setRequireEncryptionForWriteAccess($val)
-    {
-        $this->_propDict["requireEncryptionForWriteAccess"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the recoveryOptions
@@ -116,5 +88,33 @@ class BitLockerFixedDrivePolicy extends Entity
     {
         $this->_propDict["recoveryOptions"] = $val;
          return $this;
+    }
+    /**
+    * Gets the requireEncryptionForWriteAccess
+    * This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
+    *
+    * @return bool The requireEncryptionForWriteAccess
+    */
+    public function getRequireEncryptionForWriteAccess()
+    {
+        if (array_key_exists("requireEncryptionForWriteAccess", $this->_propDict)) {
+            return $this->_propDict["requireEncryptionForWriteAccess"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the requireEncryptionForWriteAccess
+    * This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
+    *
+    * @param bool $val The value of the requireEncryptionForWriteAccess
+    *
+    * @return BitLockerFixedDrivePolicy
+    */
+    public function setRequireEncryptionForWriteAccess($val)
+    {
+        $this->_propDict["requireEncryptionForWriteAccess"] = $val;
+        return $this;
     }
 }

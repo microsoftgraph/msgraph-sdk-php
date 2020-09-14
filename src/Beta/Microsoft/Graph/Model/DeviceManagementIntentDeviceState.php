@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementIntentDeviceState extends Entity
 {
     /**
-    * Gets the userPrincipalName
-    * The user principal name that is being reported on a device
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    * The user principal name that is being reported on a device
-    *
-    * @param string $val The userPrincipalName
-    *
-    * @return DeviceManagementIntentDeviceState
-    */
-    public function setUserPrincipalName($val)
-    {
-        $this->_propDict["userPrincipalName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userName
-    * The user name that is being reported on a device
-    *
-    * @return string The userName
-    */
-    public function getUserName()
-    {
-        if (array_key_exists("userName", $this->_propDict)) {
-            return $this->_propDict["userName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userName
-    * The user name that is being reported on a device
-    *
-    * @param string $val The userName
-    *
-    * @return DeviceManagementIntentDeviceState
-    */
-    public function setUserName($val)
-    {
-        $this->_propDict["userName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceDisplayName
     * Device name that is being reported
     *
@@ -108,6 +50,35 @@ class DeviceManagementIntentDeviceState extends Entity
     public function setDeviceDisplayName($val)
     {
         $this->_propDict["deviceDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceId
+    * Device id that is being reported
+    *
+    * @return string The deviceId
+    */
+    public function getDeviceId()
+    {
+        if (array_key_exists("deviceId", $this->_propDict)) {
+            return $this->_propDict["deviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceId
+    * Device id that is being reported
+    *
+    * @param string $val The deviceId
+    *
+    * @return DeviceManagementIntentDeviceState
+    */
+    public function setDeviceId($val)
+    {
+        $this->_propDict["deviceId"] = $val;
         return $this;
     }
     
@@ -178,31 +149,60 @@ class DeviceManagementIntentDeviceState extends Entity
     }
     
     /**
-    * Gets the deviceId
-    * Device id that is being reported
+    * Gets the userName
+    * The user name that is being reported on a device
     *
-    * @return string The deviceId
+    * @return string The userName
     */
-    public function getDeviceId()
+    public function getUserName()
     {
-        if (array_key_exists("deviceId", $this->_propDict)) {
-            return $this->_propDict["deviceId"];
+        if (array_key_exists("userName", $this->_propDict)) {
+            return $this->_propDict["userName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the deviceId
-    * Device id that is being reported
+    * Sets the userName
+    * The user name that is being reported on a device
     *
-    * @param string $val The deviceId
+    * @param string $val The userName
     *
     * @return DeviceManagementIntentDeviceState
     */
-    public function setDeviceId($val)
+    public function setUserName($val)
     {
-        $this->_propDict["deviceId"] = $val;
+        $this->_propDict["userName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    * The user principal name that is being reported on a device
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    * The user principal name that is being reported on a device
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return DeviceManagementIntentDeviceState
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

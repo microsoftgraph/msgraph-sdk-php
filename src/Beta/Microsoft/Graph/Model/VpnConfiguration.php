@@ -87,35 +87,6 @@ class VpnConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the role
-    * Role when connection type is set to Pulse Secure.
-    *
-    * @return string The role
-    */
-    public function getRole()
-    {
-        if (array_key_exists("role", $this->_propDict)) {
-            return $this->_propDict["role"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the role
-    * Role when connection type is set to Pulse Secure.
-    *
-    * @param string $val The role
-    *
-    * @return VpnConfiguration
-    */
-    public function setRole($val)
-    {
-        $this->_propDict["role"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the realm
     * Realm when connection type is set to Pulse Secure.
     *
@@ -141,6 +112,35 @@ class VpnConfiguration extends DeviceConfiguration
     public function setRealm($val)
     {
         $this->_propDict["realm"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the role
+    * Role when connection type is set to Pulse Secure.
+    *
+    * @return string The role
+    */
+    public function getRole()
+    {
+        if (array_key_exists("role", $this->_propDict)) {
+            return $this->_propDict["role"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the role
+    * Role when connection type is set to Pulse Secure.
+    *
+    * @param string $val The role
+    *
+    * @return VpnConfiguration
+    */
+    public function setRole($val)
+    {
+        $this->_propDict["role"] = $val;
         return $this;
     }
     

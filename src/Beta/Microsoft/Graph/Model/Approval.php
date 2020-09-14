@@ -26,34 +26,6 @@ class Approval extends Entity
 {
 
      /** 
-     * Gets the pendingSteps
-     *
-     * @return array The pendingSteps
-     */
-    public function getPendingSteps()
-    {
-        if (array_key_exists("pendingSteps", $this->_propDict)) {
-           return $this->_propDict["pendingSteps"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the pendingSteps
-    *
-    * @param ApprovalStep $val The pendingSteps
-    *
-    * @return Approval
-    */
-    public function setPendingSteps($val)
-    {
-		$this->_propDict["pendingSteps"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the completedSteps
      *
      * @return array The completedSteps
@@ -77,6 +49,34 @@ class Approval extends Entity
     public function setCompletedSteps($val)
     {
 		$this->_propDict["completedSteps"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the pendingSteps
+     *
+     * @return array The pendingSteps
+     */
+    public function getPendingSteps()
+    {
+        if (array_key_exists("pendingSteps", $this->_propDict)) {
+           return $this->_propDict["pendingSteps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the pendingSteps
+    *
+    * @param ApprovalStep $val The pendingSteps
+    *
+    * @return Approval
+    */
+    public function setPendingSteps($val)
+    {
+		$this->_propDict["pendingSteps"] = $val;
         return $this;
     }
     

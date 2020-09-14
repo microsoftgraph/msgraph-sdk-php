@@ -24,31 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 class HasPayloadLinkResultItem extends Entity
 {
     /**
-    * Gets the payloadId
-    * Key of the Payload, In the format of Guid.
+    * Gets the error
+    * Exception information indicates if check for this item was successful or not.Empty string for no error.
     *
-    * @return string The payloadId
+    * @return string The error
     */
-    public function getPayloadId()
+    public function getError()
     {
-        if (array_key_exists("payloadId", $this->_propDict)) {
-            return $this->_propDict["payloadId"];
+        if (array_key_exists("error", $this->_propDict)) {
+            return $this->_propDict["error"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the payloadId
-    * Key of the Payload, In the format of Guid.
+    * Sets the error
+    * Exception information indicates if check for this item was successful or not.Empty string for no error.
     *
-    * @param string $val The value of the payloadId
+    * @param string $val The value of the error
     *
     * @return HasPayloadLinkResultItem
     */
-    public function setPayloadId($val)
+    public function setError($val)
     {
-        $this->_propDict["payloadId"] = $val;
+        $this->_propDict["error"] = $val;
         return $this;
     }
     /**
@@ -80,31 +80,31 @@ class HasPayloadLinkResultItem extends Entity
         return $this;
     }
     /**
-    * Gets the error
-    * Exception information indicates if check for this item was successful or not.Empty string for no error.
+    * Gets the payloadId
+    * Key of the Payload, In the format of Guid.
     *
-    * @return string The error
+    * @return string The payloadId
     */
-    public function getError()
+    public function getPayloadId()
     {
-        if (array_key_exists("error", $this->_propDict)) {
-            return $this->_propDict["error"];
+        if (array_key_exists("payloadId", $this->_propDict)) {
+            return $this->_propDict["payloadId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the error
-    * Exception information indicates if check for this item was successful or not.Empty string for no error.
+    * Sets the payloadId
+    * Key of the Payload, In the format of Guid.
     *
-    * @param string $val The value of the error
+    * @param string $val The value of the payloadId
     *
     * @return HasPayloadLinkResultItem
     */
-    public function setError($val)
+    public function setPayloadId($val)
     {
-        $this->_propDict["error"] = $val;
+        $this->_propDict["payloadId"] = $val;
         return $this;
     }
 

@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementAutopilotPolicyStatusDetail extends Entity
 {
     /**
+    * Gets the complianceStatus
+    * The policy compliance status.
+    *
+    * @return DeviceManagementAutopilotPolicyComplianceStatus The complianceStatus
+    */
+    public function getComplianceStatus()
+    {
+        if (array_key_exists("complianceStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["complianceStatus"], "Beta\Microsoft\Graph\Model\DeviceManagementAutopilotPolicyComplianceStatus")) {
+                return $this->_propDict["complianceStatus"];
+            } else {
+                $this->_propDict["complianceStatus"] = new DeviceManagementAutopilotPolicyComplianceStatus($this->_propDict["complianceStatus"]);
+                return $this->_propDict["complianceStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the complianceStatus
+    * The policy compliance status.
+    *
+    * @param DeviceManagementAutopilotPolicyComplianceStatus $val The complianceStatus
+    *
+    * @return DeviceManagementAutopilotPolicyStatusDetail
+    */
+    public function setComplianceStatus($val)
+    {
+        $this->_propDict["complianceStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The friendly name of the policy.
     *
@@ -50,6 +83,39 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastReportedDateTime
+    * Timestamp of the reported policy status
+    *
+    * @return \DateTime The lastReportedDateTime
+    */
+    public function getLastReportedDateTime()
+    {
+        if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastReportedDateTime"];
+            } else {
+                $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
+                return $this->_propDict["lastReportedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastReportedDateTime
+    * Timestamp of the reported policy status
+    *
+    * @param \DateTime $val The lastReportedDateTime
+    *
+    * @return DeviceManagementAutopilotPolicyStatusDetail
+    */
+    public function setLastReportedDateTime($val)
+    {
+        $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
     
@@ -87,39 +153,6 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     }
     
     /**
-    * Gets the complianceStatus
-    * The policy compliance status.
-    *
-    * @return DeviceManagementAutopilotPolicyComplianceStatus The complianceStatus
-    */
-    public function getComplianceStatus()
-    {
-        if (array_key_exists("complianceStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceStatus"], "Beta\Microsoft\Graph\Model\DeviceManagementAutopilotPolicyComplianceStatus")) {
-                return $this->_propDict["complianceStatus"];
-            } else {
-                $this->_propDict["complianceStatus"] = new DeviceManagementAutopilotPolicyComplianceStatus($this->_propDict["complianceStatus"]);
-                return $this->_propDict["complianceStatus"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the complianceStatus
-    * The policy compliance status.
-    *
-    * @param DeviceManagementAutopilotPolicyComplianceStatus $val The complianceStatus
-    *
-    * @return DeviceManagementAutopilotPolicyStatusDetail
-    */
-    public function setComplianceStatus($val)
-    {
-        $this->_propDict["complianceStatus"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the trackedOnEnrollmentStatus
     * Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
     *
@@ -145,39 +178,6 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     public function setTrackedOnEnrollmentStatus($val)
     {
         $this->_propDict["trackedOnEnrollmentStatus"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the lastReportedDateTime
-    * Timestamp of the reported policy status
-    *
-    * @return \DateTime The lastReportedDateTime
-    */
-    public function getLastReportedDateTime()
-    {
-        if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastReportedDateTime"];
-            } else {
-                $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
-                return $this->_propDict["lastReportedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastReportedDateTime
-    * Timestamp of the reported policy status
-    *
-    * @param \DateTime $val The lastReportedDateTime
-    *
-    * @return DeviceManagementAutopilotPolicyStatusDetail
-    */
-    public function setLastReportedDateTime($val)
-    {
-        $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
     

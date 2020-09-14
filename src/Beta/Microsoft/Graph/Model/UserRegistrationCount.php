@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class UserRegistrationCount extends Entity
 {
+    /**
+    * Gets the registrationCount
+    *
+    * @return int The registrationCount
+    */
+    public function getRegistrationCount()
+    {
+        if (array_key_exists("registrationCount", $this->_propDict)) {
+            return $this->_propDict["registrationCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the registrationCount
+    *
+    * @param int $val The value of the registrationCount
+    *
+    * @return UserRegistrationCount
+    */
+    public function setRegistrationCount($val)
+    {
+        $this->_propDict["registrationCount"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the registrationStatus
@@ -53,31 +79,5 @@ class UserRegistrationCount extends Entity
     {
         $this->_propDict["registrationStatus"] = $val;
          return $this;
-    }
-    /**
-    * Gets the registrationCount
-    *
-    * @return int The registrationCount
-    */
-    public function getRegistrationCount()
-    {
-        if (array_key_exists("registrationCount", $this->_propDict)) {
-            return $this->_propDict["registrationCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the registrationCount
-    *
-    * @param int $val The value of the registrationCount
-    *
-    * @return UserRegistrationCount
-    */
-    public function setRegistrationCount($val)
-    {
-        $this->_propDict["registrationCount"] = $val;
-        return $this;
     }
 }

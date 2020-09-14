@@ -23,56 +23,61 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AddContentFooterAction extends InformationProtectionAction
 {
+
     /**
-    * Gets the uiElementName
+    * Gets the alignment
     *
-    * @return string The uiElementName
+    * @return ContentAlignment The alignment
     */
-    public function getUiElementName()
+    public function getAlignment()
     {
-        if (array_key_exists("uiElementName", $this->_propDict)) {
-            return $this->_propDict["uiElementName"];
+        if (array_key_exists("alignment", $this->_propDict)) {
+            if (is_a($this->_propDict["alignment"], "Beta\Microsoft\Graph\Model\ContentAlignment")) {
+                return $this->_propDict["alignment"];
+            } else {
+                $this->_propDict["alignment"] = new ContentAlignment($this->_propDict["alignment"]);
+                return $this->_propDict["alignment"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the alignment
+    *
+    * @param ContentAlignment $val The value to assign to the alignment
+    *
+    * @return AddContentFooterAction The AddContentFooterAction
+    */
+    public function setAlignment($val)
+    {
+        $this->_propDict["alignment"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the fontColor
+    *
+    * @return string The fontColor
+    */
+    public function getFontColor()
+    {
+        if (array_key_exists("fontColor", $this->_propDict)) {
+            return $this->_propDict["fontColor"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the uiElementName
+    * Sets the fontColor
     *
-    * @param string $val The value of the uiElementName
-    *
-    * @return AddContentFooterAction
-    */
-    public function setUiElementName($val)
-    {
-        $this->_propDict["uiElementName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the text
-    *
-    * @return string The text
-    */
-    public function getText()
-    {
-        if (array_key_exists("text", $this->_propDict)) {
-            return $this->_propDict["text"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the text
-    *
-    * @param string $val The value of the text
+    * @param string $val The value of the fontColor
     *
     * @return AddContentFooterAction
     */
-    public function setText($val)
+    public function setFontColor($val)
     {
-        $this->_propDict["text"] = $val;
+        $this->_propDict["fontColor"] = $val;
         return $this;
     }
     /**
@@ -128,63 +133,6 @@ class AddContentFooterAction extends InformationProtectionAction
         return $this;
     }
     /**
-    * Gets the fontColor
-    *
-    * @return string The fontColor
-    */
-    public function getFontColor()
-    {
-        if (array_key_exists("fontColor", $this->_propDict)) {
-            return $this->_propDict["fontColor"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the fontColor
-    *
-    * @param string $val The value of the fontColor
-    *
-    * @return AddContentFooterAction
-    */
-    public function setFontColor($val)
-    {
-        $this->_propDict["fontColor"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the alignment
-    *
-    * @return ContentAlignment The alignment
-    */
-    public function getAlignment()
-    {
-        if (array_key_exists("alignment", $this->_propDict)) {
-            if (is_a($this->_propDict["alignment"], "Beta\Microsoft\Graph\Model\ContentAlignment")) {
-                return $this->_propDict["alignment"];
-            } else {
-                $this->_propDict["alignment"] = new ContentAlignment($this->_propDict["alignment"]);
-                return $this->_propDict["alignment"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the alignment
-    *
-    * @param ContentAlignment $val The value to assign to the alignment
-    *
-    * @return AddContentFooterAction The AddContentFooterAction
-    */
-    public function setAlignment($val)
-    {
-        $this->_propDict["alignment"] = $val;
-         return $this;
-    }
-    /**
     * Gets the margin
     *
     * @return int The margin
@@ -208,6 +156,58 @@ class AddContentFooterAction extends InformationProtectionAction
     public function setMargin($val)
     {
         $this->_propDict["margin"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the text
+    *
+    * @return string The text
+    */
+    public function getText()
+    {
+        if (array_key_exists("text", $this->_propDict)) {
+            return $this->_propDict["text"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the text
+    *
+    * @param string $val The value of the text
+    *
+    * @return AddContentFooterAction
+    */
+    public function setText($val)
+    {
+        $this->_propDict["text"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the uiElementName
+    *
+    * @return string The uiElementName
+    */
+    public function getUiElementName()
+    {
+        if (array_key_exists("uiElementName", $this->_propDict)) {
+            return $this->_propDict["uiElementName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uiElementName
+    *
+    * @param string $val The value of the uiElementName
+    *
+    * @return AddContentFooterAction
+    */
+    public function setUiElementName($val)
+    {
+        $this->_propDict["uiElementName"] = $val;
         return $this;
     }
 }

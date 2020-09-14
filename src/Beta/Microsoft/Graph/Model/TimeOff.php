@@ -25,39 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class TimeOff extends ChangeTrackedEntity
 {
     /**
-    * Gets the sharedTimeOff
-    * The shared version of this timeOff that is viewable by both employees and managers. Required.
-    *
-    * @return TimeOffItem The sharedTimeOff
-    */
-    public function getSharedTimeOff()
-    {
-        if (array_key_exists("sharedTimeOff", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedTimeOff"], "Beta\Microsoft\Graph\Model\TimeOffItem")) {
-                return $this->_propDict["sharedTimeOff"];
-            } else {
-                $this->_propDict["sharedTimeOff"] = new TimeOffItem($this->_propDict["sharedTimeOff"]);
-                return $this->_propDict["sharedTimeOff"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the sharedTimeOff
-    * The shared version of this timeOff that is viewable by both employees and managers. Required.
-    *
-    * @param TimeOffItem $val The sharedTimeOff
-    *
-    * @return TimeOff
-    */
-    public function setSharedTimeOff($val)
-    {
-        $this->_propDict["sharedTimeOff"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the draftTimeOff
     * The draft version of this timeOff that is viewable by managers. Required.
     *
@@ -91,6 +58,66 @@ class TimeOff extends ChangeTrackedEntity
     }
     
     /**
+    * Gets the isStagedForDeletion
+    *
+    * @return bool The isStagedForDeletion
+    */
+    public function getIsStagedForDeletion()
+    {
+        if (array_key_exists("isStagedForDeletion", $this->_propDict)) {
+            return $this->_propDict["isStagedForDeletion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isStagedForDeletion
+    *
+    * @param bool $val The isStagedForDeletion
+    *
+    * @return TimeOff
+    */
+    public function setIsStagedForDeletion($val)
+    {
+        $this->_propDict["isStagedForDeletion"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the sharedTimeOff
+    * The shared version of this timeOff that is viewable by both employees and managers. Required.
+    *
+    * @return TimeOffItem The sharedTimeOff
+    */
+    public function getSharedTimeOff()
+    {
+        if (array_key_exists("sharedTimeOff", $this->_propDict)) {
+            if (is_a($this->_propDict["sharedTimeOff"], "Beta\Microsoft\Graph\Model\TimeOffItem")) {
+                return $this->_propDict["sharedTimeOff"];
+            } else {
+                $this->_propDict["sharedTimeOff"] = new TimeOffItem($this->_propDict["sharedTimeOff"]);
+                return $this->_propDict["sharedTimeOff"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the sharedTimeOff
+    * The shared version of this timeOff that is viewable by both employees and managers. Required.
+    *
+    * @param TimeOffItem $val The sharedTimeOff
+    *
+    * @return TimeOff
+    */
+    public function setSharedTimeOff($val)
+    {
+        $this->_propDict["sharedTimeOff"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the userId
     * ID of the user assigned to the timeOff. Required.
     *
@@ -116,33 +143,6 @@ class TimeOff extends ChangeTrackedEntity
     public function setUserId($val)
     {
         $this->_propDict["userId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the isStagedForDeletion
-    *
-    * @return bool The isStagedForDeletion
-    */
-    public function getIsStagedForDeletion()
-    {
-        if (array_key_exists("isStagedForDeletion", $this->_propDict)) {
-            return $this->_propDict["isStagedForDeletion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isStagedForDeletion
-    *
-    * @param bool $val The isStagedForDeletion
-    *
-    * @return TimeOff
-    */
-    public function setIsStagedForDeletion($val)
-    {
-        $this->_propDict["isStagedForDeletion"] = boolval($val);
         return $this;
     }
     

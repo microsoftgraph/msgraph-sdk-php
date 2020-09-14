@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class CountryRegion extends Entity
 {
     /**
+    * Gets the addressFormat
+    *
+    * @return string The addressFormat
+    */
+    public function getAddressFormat()
+    {
+        if (array_key_exists("addressFormat", $this->_propDict)) {
+            return $this->_propDict["addressFormat"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the addressFormat
+    *
+    * @param string $val The addressFormat
+    *
+    * @return CountryRegion
+    */
+    public function setAddressFormat($val)
+    {
+        $this->_propDict["addressFormat"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the code
     *
     * @return string The code
@@ -75,33 +102,6 @@ class CountryRegion extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the addressFormat
-    *
-    * @return string The addressFormat
-    */
-    public function getAddressFormat()
-    {
-        if (array_key_exists("addressFormat", $this->_propDict)) {
-            return $this->_propDict["addressFormat"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the addressFormat
-    *
-    * @param string $val The addressFormat
-    *
-    * @return CountryRegion
-    */
-    public function setAddressFormat($val)
-    {
-        $this->_propDict["addressFormat"] = $val;
         return $this;
     }
     

@@ -23,62 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 {
-    /**
-    * Gets the totalLicensesCount
-    * A count of the number of licenses that were attempted to revoke.
-    *
-    * @return int The totalLicensesCount
-    */
-    public function getTotalLicensesCount()
-    {
-        if (array_key_exists("totalLicensesCount", $this->_propDict)) {
-            return $this->_propDict["totalLicensesCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the totalLicensesCount
-    * A count of the number of licenses that were attempted to revoke.
-    *
-    * @param int $val The value of the totalLicensesCount
-    *
-    * @return VppTokenRevokeLicensesActionResult
-    */
-    public function setTotalLicensesCount($val)
-    {
-        $this->_propDict["totalLicensesCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the failedLicensesCount
-    * A count of the number of licenses that failed to revoke.
-    *
-    * @return int The failedLicensesCount
-    */
-    public function getFailedLicensesCount()
-    {
-        if (array_key_exists("failedLicensesCount", $this->_propDict)) {
-            return $this->_propDict["failedLicensesCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the failedLicensesCount
-    * A count of the number of licenses that failed to revoke.
-    *
-    * @param int $val The value of the failedLicensesCount
-    *
-    * @return VppTokenRevokeLicensesActionResult
-    */
-    public function setFailedLicensesCount($val)
-    {
-        $this->_propDict["failedLicensesCount"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the actionFailureReason
@@ -111,5 +55,61 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
     {
         $this->_propDict["actionFailureReason"] = $val;
          return $this;
+    }
+    /**
+    * Gets the failedLicensesCount
+    * A count of the number of licenses that failed to revoke.
+    *
+    * @return int The failedLicensesCount
+    */
+    public function getFailedLicensesCount()
+    {
+        if (array_key_exists("failedLicensesCount", $this->_propDict)) {
+            return $this->_propDict["failedLicensesCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the failedLicensesCount
+    * A count of the number of licenses that failed to revoke.
+    *
+    * @param int $val The value of the failedLicensesCount
+    *
+    * @return VppTokenRevokeLicensesActionResult
+    */
+    public function setFailedLicensesCount($val)
+    {
+        $this->_propDict["failedLicensesCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the totalLicensesCount
+    * A count of the number of licenses that were attempted to revoke.
+    *
+    * @return int The totalLicensesCount
+    */
+    public function getTotalLicensesCount()
+    {
+        if (array_key_exists("totalLicensesCount", $this->_propDict)) {
+            return $this->_propDict["totalLicensesCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the totalLicensesCount
+    * A count of the number of licenses that were attempted to revoke.
+    *
+    * @param int $val The value of the totalLicensesCount
+    *
+    * @return VppTokenRevokeLicensesActionResult
+    */
+    public function setTotalLicensesCount($val)
+    {
+        $this->_propDict["totalLicensesCount"] = $val;
+        return $this;
     }
 }

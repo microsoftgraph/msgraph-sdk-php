@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SearchResponse extends Entity
 {
-    /**
-    * Gets the searchTerms
-    *
-    * @return string The searchTerms
-    */
-    public function getSearchTerms()
-    {
-        if (array_key_exists("searchTerms", $this->_propDict)) {
-            return $this->_propDict["searchTerms"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the searchTerms
-    *
-    * @param string $val The value of the searchTerms
-    *
-    * @return SearchResponse
-    */
-    public function setSearchTerms($val)
-    {
-        $this->_propDict["searchTerms"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the hitsContainers
@@ -79,5 +53,31 @@ class SearchResponse extends Entity
     {
         $this->_propDict["hitsContainers"] = $val;
          return $this;
+    }
+    /**
+    * Gets the searchTerms
+    *
+    * @return string The searchTerms
+    */
+    public function getSearchTerms()
+    {
+        if (array_key_exists("searchTerms", $this->_propDict)) {
+            return $this->_propDict["searchTerms"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the searchTerms
+    *
+    * @param string $val The value of the searchTerms
+    *
+    * @return SearchResponse
+    */
+    public function setSearchTerms($val)
+    {
+        $this->_propDict["searchTerms"] = $val;
+        return $this;
     }
 }

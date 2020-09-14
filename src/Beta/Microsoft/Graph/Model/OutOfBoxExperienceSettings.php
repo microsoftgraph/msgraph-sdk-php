@@ -23,95 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class OutOfBoxExperienceSettings extends Entity
 {
-    /**
-    * Gets the hidePrivacySettings
-    * Show or hide privacy settings to user
-    *
-    * @return bool The hidePrivacySettings
-    */
-    public function getHidePrivacySettings()
-    {
-        if (array_key_exists("hidePrivacySettings", $this->_propDict)) {
-            return $this->_propDict["hidePrivacySettings"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the hidePrivacySettings
-    * Show or hide privacy settings to user
-    *
-    * @param bool $val The value of the hidePrivacySettings
-    *
-    * @return OutOfBoxExperienceSettings
-    */
-    public function setHidePrivacySettings($val)
-    {
-        $this->_propDict["hidePrivacySettings"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the hideEULA
-    * Show or hide EULA to user
-    *
-    * @return bool The hideEULA
-    */
-    public function getHideEULA()
-    {
-        if (array_key_exists("hideEULA", $this->_propDict)) {
-            return $this->_propDict["hideEULA"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the hideEULA
-    * Show or hide EULA to user
-    *
-    * @param bool $val The value of the hideEULA
-    *
-    * @return OutOfBoxExperienceSettings
-    */
-    public function setHideEULA($val)
-    {
-        $this->_propDict["hideEULA"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the userType
-    * Type of user
-    *
-    * @return WindowsUserType The userType
-    */
-    public function getUserType()
-    {
-        if (array_key_exists("userType", $this->_propDict)) {
-            if (is_a($this->_propDict["userType"], "Beta\Microsoft\Graph\Model\WindowsUserType")) {
-                return $this->_propDict["userType"];
-            } else {
-                $this->_propDict["userType"] = new WindowsUserType($this->_propDict["userType"]);
-                return $this->_propDict["userType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the userType
-    * Type of user
-    *
-    * @param WindowsUserType $val The value to assign to the userType
-    *
-    * @return OutOfBoxExperienceSettings The OutOfBoxExperienceSettings
-    */
-    public function setUserType($val)
-    {
-        $this->_propDict["userType"] = $val;
-         return $this;
-    }
 
     /**
     * Gets the deviceUsageType
@@ -146,6 +57,90 @@ class OutOfBoxExperienceSettings extends Entity
          return $this;
     }
     /**
+    * Gets the hideEscapeLink
+    * If set to true, then the user can't start over with different account, on company sign-in
+    *
+    * @return bool The hideEscapeLink
+    */
+    public function getHideEscapeLink()
+    {
+        if (array_key_exists("hideEscapeLink", $this->_propDict)) {
+            return $this->_propDict["hideEscapeLink"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hideEscapeLink
+    * If set to true, then the user can't start over with different account, on company sign-in
+    *
+    * @param bool $val The value of the hideEscapeLink
+    *
+    * @return OutOfBoxExperienceSettings
+    */
+    public function setHideEscapeLink($val)
+    {
+        $this->_propDict["hideEscapeLink"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the hideEULA
+    * Show or hide EULA to user
+    *
+    * @return bool The hideEULA
+    */
+    public function getHideEULA()
+    {
+        if (array_key_exists("hideEULA", $this->_propDict)) {
+            return $this->_propDict["hideEULA"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hideEULA
+    * Show or hide EULA to user
+    *
+    * @param bool $val The value of the hideEULA
+    *
+    * @return OutOfBoxExperienceSettings
+    */
+    public function setHideEULA($val)
+    {
+        $this->_propDict["hideEULA"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the hidePrivacySettings
+    * Show or hide privacy settings to user
+    *
+    * @return bool The hidePrivacySettings
+    */
+    public function getHidePrivacySettings()
+    {
+        if (array_key_exists("hidePrivacySettings", $this->_propDict)) {
+            return $this->_propDict["hidePrivacySettings"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hidePrivacySettings
+    * Show or hide privacy settings to user
+    *
+    * @param bool $val The value of the hidePrivacySettings
+    *
+    * @return OutOfBoxExperienceSettings
+    */
+    public function setHidePrivacySettings($val)
+    {
+        $this->_propDict["hidePrivacySettings"] = $val;
+        return $this;
+    }
+    /**
     * Gets the skipKeyboardSelectionPage
     * If set, then skip the keyboard selection page if Language and Region are set
     *
@@ -173,32 +168,37 @@ class OutOfBoxExperienceSettings extends Entity
         $this->_propDict["skipKeyboardSelectionPage"] = $val;
         return $this;
     }
+
     /**
-    * Gets the hideEscapeLink
-    * If set to true, then the user can't start over with different account, on company sign-in
+    * Gets the userType
+    * Type of user
     *
-    * @return bool The hideEscapeLink
+    * @return WindowsUserType The userType
     */
-    public function getHideEscapeLink()
+    public function getUserType()
     {
-        if (array_key_exists("hideEscapeLink", $this->_propDict)) {
-            return $this->_propDict["hideEscapeLink"];
-        } else {
-            return null;
+        if (array_key_exists("userType", $this->_propDict)) {
+            if (is_a($this->_propDict["userType"], "Beta\Microsoft\Graph\Model\WindowsUserType")) {
+                return $this->_propDict["userType"];
+            } else {
+                $this->_propDict["userType"] = new WindowsUserType($this->_propDict["userType"]);
+                return $this->_propDict["userType"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the hideEscapeLink
-    * If set to true, then the user can't start over with different account, on company sign-in
+    * Sets the userType
+    * Type of user
     *
-    * @param bool $val The value of the hideEscapeLink
+    * @param WindowsUserType $val The value to assign to the userType
     *
-    * @return OutOfBoxExperienceSettings
+    * @return OutOfBoxExperienceSettings The OutOfBoxExperienceSettings
     */
-    public function setHideEscapeLink($val)
+    public function setUserType($val)
     {
-        $this->_propDict["hideEscapeLink"] = $val;
-        return $this;
+        $this->_propDict["userType"] = $val;
+         return $this;
     }
 }

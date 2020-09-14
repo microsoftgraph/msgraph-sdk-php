@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class GovernanceNotificationTemplate extends Entity
 {
     /**
+    * Gets the culture
+    *
+    * @return string The culture
+    */
+    public function getCulture()
+    {
+        if (array_key_exists("culture", $this->_propDict)) {
+            return $this->_propDict["culture"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the culture
+    *
+    * @param string $val The value of the culture
+    *
+    * @return GovernanceNotificationTemplate
+    */
+    public function setCulture($val)
+    {
+        $this->_propDict["culture"] = $val;
+        return $this;
+    }
+    /**
     * Gets the id
     *
     * @return string The id
@@ -47,32 +73,6 @@ class GovernanceNotificationTemplate extends Entity
     public function setId($val)
     {
         $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the type
-    *
-    * @param string $val The value of the type
-    *
-    * @return GovernanceNotificationTemplate
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
         return $this;
     }
     /**
@@ -102,6 +102,32 @@ class GovernanceNotificationTemplate extends Entity
         return $this;
     }
     /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the type
+    *
+    * @param string $val The value of the type
+    *
+    * @return GovernanceNotificationTemplate
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
+        return $this;
+    }
+    /**
     * Gets the version
     *
     * @return string The version
@@ -125,32 +151,6 @@ class GovernanceNotificationTemplate extends Entity
     public function setVersion($val)
     {
         $this->_propDict["version"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the culture
-    *
-    * @return string The culture
-    */
-    public function getCulture()
-    {
-        if (array_key_exists("culture", $this->_propDict)) {
-            return $this->_propDict["culture"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the culture
-    *
-    * @param string $val The value of the culture
-    *
-    * @return GovernanceNotificationTemplate
-    */
-    public function setCulture($val)
-    {
-        $this->_propDict["culture"] = $val;
         return $this;
     }
 }

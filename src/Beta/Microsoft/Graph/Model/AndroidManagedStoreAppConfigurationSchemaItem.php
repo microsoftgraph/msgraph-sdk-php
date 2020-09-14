@@ -23,6 +23,207 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AndroidManagedStoreAppConfigurationSchemaItem extends Entity
 {
+
+    /**
+    * Gets the dataType
+    * The type of value this item describes
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItemDataType The dataType
+    */
+    public function getDataType()
+    {
+        if (array_key_exists("dataType", $this->_propDict)) {
+            if (is_a($this->_propDict["dataType"], "Beta\Microsoft\Graph\Model\AndroidManagedStoreAppConfigurationSchemaItemDataType")) {
+                return $this->_propDict["dataType"];
+            } else {
+                $this->_propDict["dataType"] = new AndroidManagedStoreAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
+                return $this->_propDict["dataType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the dataType
+    * The type of value this item describes
+    *
+    * @param AndroidManagedStoreAppConfigurationSchemaItemDataType $val The value to assign to the dataType
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem The AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setDataType($val)
+    {
+        $this->_propDict["dataType"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the defaultBoolValue
+    * Default value for boolean type items, if specified by the app developer
+    *
+    * @return bool The defaultBoolValue
+    */
+    public function getDefaultBoolValue()
+    {
+        if (array_key_exists("defaultBoolValue", $this->_propDict)) {
+            return $this->_propDict["defaultBoolValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultBoolValue
+    * Default value for boolean type items, if specified by the app developer
+    *
+    * @param bool $val The value of the defaultBoolValue
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setDefaultBoolValue($val)
+    {
+        $this->_propDict["defaultBoolValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the defaultIntValue
+    * Default value for integer type items, if specified by the app developer
+    *
+    * @return int The defaultIntValue
+    */
+    public function getDefaultIntValue()
+    {
+        if (array_key_exists("defaultIntValue", $this->_propDict)) {
+            return $this->_propDict["defaultIntValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultIntValue
+    * Default value for integer type items, if specified by the app developer
+    *
+    * @param int $val The value of the defaultIntValue
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setDefaultIntValue($val)
+    {
+        $this->_propDict["defaultIntValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the defaultStringArrayValue
+    * Default value for string array type items, if specified by the app developer
+    *
+    * @return string The defaultStringArrayValue
+    */
+    public function getDefaultStringArrayValue()
+    {
+        if (array_key_exists("defaultStringArrayValue", $this->_propDict)) {
+            return $this->_propDict["defaultStringArrayValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultStringArrayValue
+    * Default value for string array type items, if specified by the app developer
+    *
+    * @param string $val The value of the defaultStringArrayValue
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setDefaultStringArrayValue($val)
+    {
+        $this->_propDict["defaultStringArrayValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the defaultStringValue
+    * Default value for string type items, if specified by the app developer
+    *
+    * @return string The defaultStringValue
+    */
+    public function getDefaultStringValue()
+    {
+        if (array_key_exists("defaultStringValue", $this->_propDict)) {
+            return $this->_propDict["defaultStringValue"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultStringValue
+    * Default value for string type items, if specified by the app developer
+    *
+    * @param string $val The value of the defaultStringValue
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setDefaultStringValue($val)
+    {
+        $this->_propDict["defaultStringValue"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the description
+    * Description of what the item controls within the application
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    * Description of what the item controls within the application
+    *
+    * @param string $val The value of the description
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the displayName
+    * Human readable name
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    * Human readable name
+    *
+    * @param string $val The value of the displayName
+    *
+    * @return AndroidManagedStoreAppConfigurationSchemaItem
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
     /**
     * Gets the index
     * Unique index the application uses to maintain nested schema items
@@ -106,207 +307,6 @@ class AndroidManagedStoreAppConfigurationSchemaItem extends Entity
     {
         $this->_propDict["schemaItemKey"] = $val;
         return $this;
-    }
-    /**
-    * Gets the displayName
-    * Human readable name
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * Human readable name
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItem
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the description
-    * Description of what the item controls within the application
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the description
-    * Description of what the item controls within the application
-    *
-    * @param string $val The value of the description
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItem
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the defaultBoolValue
-    * Default value for boolean type items, if specified by the app developer
-    *
-    * @return bool The defaultBoolValue
-    */
-    public function getDefaultBoolValue()
-    {
-        if (array_key_exists("defaultBoolValue", $this->_propDict)) {
-            return $this->_propDict["defaultBoolValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the defaultBoolValue
-    * Default value for boolean type items, if specified by the app developer
-    *
-    * @param bool $val The value of the defaultBoolValue
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItem
-    */
-    public function setDefaultBoolValue($val)
-    {
-        $this->_propDict["defaultBoolValue"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the defaultIntValue
-    * Default value for integer type items, if specified by the app developer
-    *
-    * @return int The defaultIntValue
-    */
-    public function getDefaultIntValue()
-    {
-        if (array_key_exists("defaultIntValue", $this->_propDict)) {
-            return $this->_propDict["defaultIntValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the defaultIntValue
-    * Default value for integer type items, if specified by the app developer
-    *
-    * @param int $val The value of the defaultIntValue
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItem
-    */
-    public function setDefaultIntValue($val)
-    {
-        $this->_propDict["defaultIntValue"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the defaultStringValue
-    * Default value for string type items, if specified by the app developer
-    *
-    * @return string The defaultStringValue
-    */
-    public function getDefaultStringValue()
-    {
-        if (array_key_exists("defaultStringValue", $this->_propDict)) {
-            return $this->_propDict["defaultStringValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the defaultStringValue
-    * Default value for string type items, if specified by the app developer
-    *
-    * @param string $val The value of the defaultStringValue
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItem
-    */
-    public function setDefaultStringValue($val)
-    {
-        $this->_propDict["defaultStringValue"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the defaultStringArrayValue
-    * Default value for string array type items, if specified by the app developer
-    *
-    * @return string The defaultStringArrayValue
-    */
-    public function getDefaultStringArrayValue()
-    {
-        if (array_key_exists("defaultStringArrayValue", $this->_propDict)) {
-            return $this->_propDict["defaultStringArrayValue"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the defaultStringArrayValue
-    * Default value for string array type items, if specified by the app developer
-    *
-    * @param string $val The value of the defaultStringArrayValue
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItem
-    */
-    public function setDefaultStringArrayValue($val)
-    {
-        $this->_propDict["defaultStringArrayValue"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the dataType
-    * The type of value this item describes
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItemDataType The dataType
-    */
-    public function getDataType()
-    {
-        if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "Beta\Microsoft\Graph\Model\AndroidManagedStoreAppConfigurationSchemaItemDataType")) {
-                return $this->_propDict["dataType"];
-            } else {
-                $this->_propDict["dataType"] = new AndroidManagedStoreAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
-                return $this->_propDict["dataType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the dataType
-    * The type of value this item describes
-    *
-    * @param AndroidManagedStoreAppConfigurationSchemaItemDataType $val The value to assign to the dataType
-    *
-    * @return AndroidManagedStoreAppConfigurationSchemaItem The AndroidManagedStoreAppConfigurationSchemaItem
-    */
-    public function setDataType($val)
-    {
-        $this->_propDict["dataType"] = $val;
-         return $this;
     }
 
     /**

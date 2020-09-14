@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ExternalConnection extends Entity
 {
     /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return ExternalConnection
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    *
-    * @param string $val The description
-    *
-    * @return ExternalConnection
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the configuration
     *
     * @return Configuration The configuration
@@ -110,33 +56,84 @@ class ExternalConnection extends Entity
     }
     
     /**
-    * Gets the schema
+    * Gets the description
     *
-    * @return Schema The schema
+    * @return string The description
     */
-    public function getSchema()
+    public function getDescription()
     {
-        if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "Beta\Microsoft\Graph\Model\Schema")) {
-                return $this->_propDict["schema"];
-            } else {
-                $this->_propDict["schema"] = new Schema($this->_propDict["schema"]);
-                return $this->_propDict["schema"];
-            }
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the schema
+    * Sets the description
     *
-    * @param Schema $val The schema
+    * @param string $val The description
     *
     * @return ExternalConnection
     */
-    public function setSchema($val)
+    public function setDescription($val)
     {
-        $this->_propDict["schema"] = $val;
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return ExternalConnection
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the groups
+     *
+     * @return array The groups
+     */
+    public function getGroups()
+    {
+        if (array_key_exists("groups", $this->_propDict)) {
+           return $this->_propDict["groups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groups
+    *
+    * @param ExternalGroup $val The groups
+    *
+    * @return ExternalConnection
+    */
+    public function setGroups($val)
+    {
+		$this->_propDict["groups"] = $val;
         return $this;
     }
     
@@ -196,31 +193,34 @@ class ExternalConnection extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the groups
-     *
-     * @return array The groups
-     */
-    public function getGroups()
+    /**
+    * Gets the schema
+    *
+    * @return Schema The schema
+    */
+    public function getSchema()
     {
-        if (array_key_exists("groups", $this->_propDict)) {
-           return $this->_propDict["groups"];
-        } else {
-            return null;
+        if (array_key_exists("schema", $this->_propDict)) {
+            if (is_a($this->_propDict["schema"], "Beta\Microsoft\Graph\Model\Schema")) {
+                return $this->_propDict["schema"];
+            } else {
+                $this->_propDict["schema"] = new Schema($this->_propDict["schema"]);
+                return $this->_propDict["schema"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the groups
+    /**
+    * Sets the schema
     *
-    * @param ExternalGroup $val The groups
+    * @param Schema $val The schema
     *
     * @return ExternalConnection
     */
-    public function setGroups($val)
+    public function setSchema($val)
     {
-		$this->_propDict["groups"] = $val;
+        $this->_propDict["schema"] = $val;
         return $this;
     }
     

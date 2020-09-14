@@ -25,6 +25,37 @@ class Filter extends Entity
 {
 
     /**
+    * Gets the categoryFilterGroups
+    *
+    * @return FilterGroup The categoryFilterGroups
+    */
+    public function getCategoryFilterGroups()
+    {
+        if (array_key_exists("categoryFilterGroups", $this->_propDict)) {
+            if (is_a($this->_propDict["categoryFilterGroups"], "Beta\Microsoft\Graph\Model\FilterGroup")) {
+                return $this->_propDict["categoryFilterGroups"];
+            } else {
+                $this->_propDict["categoryFilterGroups"] = new FilterGroup($this->_propDict["categoryFilterGroups"]);
+                return $this->_propDict["categoryFilterGroups"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the categoryFilterGroups
+    *
+    * @param FilterGroup $val The value to assign to the categoryFilterGroups
+    *
+    * @return Filter The Filter
+    */
+    public function setCategoryFilterGroups($val)
+    {
+        $this->_propDict["categoryFilterGroups"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the groups
     *
     * @return FilterGroup The groups
@@ -83,37 +114,6 @@ class Filter extends Entity
     public function setInputFilterGroups($val)
     {
         $this->_propDict["inputFilterGroups"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the categoryFilterGroups
-    *
-    * @return FilterGroup The categoryFilterGroups
-    */
-    public function getCategoryFilterGroups()
-    {
-        if (array_key_exists("categoryFilterGroups", $this->_propDict)) {
-            if (is_a($this->_propDict["categoryFilterGroups"], "Beta\Microsoft\Graph\Model\FilterGroup")) {
-                return $this->_propDict["categoryFilterGroups"];
-            } else {
-                $this->_propDict["categoryFilterGroups"] = new FilterGroup($this->_propDict["categoryFilterGroups"]);
-                return $this->_propDict["categoryFilterGroups"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the categoryFilterGroups
-    *
-    * @param FilterGroup $val The value to assign to the categoryFilterGroups
-    *
-    * @return Filter The Filter
-    */
-    public function setCategoryFilterGroups($val)
-    {
-        $this->_propDict["categoryFilterGroups"] = $val;
          return $this;
     }
 }

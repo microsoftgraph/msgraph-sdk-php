@@ -81,34 +81,6 @@ class ApprovalWorkflowProvider extends Entity
     
 
      /** 
-     * Gets the policyTemplates
-     *
-     * @return array The policyTemplates
-     */
-    public function getPolicyTemplates()
-    {
-        if (array_key_exists("policyTemplates", $this->_propDict)) {
-           return $this->_propDict["policyTemplates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the policyTemplates
-    *
-    * @param GovernancePolicyTemplate $val The policyTemplates
-    *
-    * @return ApprovalWorkflowProvider
-    */
-    public function setPolicyTemplates($val)
-    {
-		$this->_propDict["policyTemplates"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the businessFlowsWithRequestsAwaitingMyDecision
      *
      * @return array The businessFlowsWithRequestsAwaitingMyDecision
@@ -132,6 +104,34 @@ class ApprovalWorkflowProvider extends Entity
     public function setBusinessFlowsWithRequestsAwaitingMyDecision($val)
     {
 		$this->_propDict["businessFlowsWithRequestsAwaitingMyDecision"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the policyTemplates
+     *
+     * @return array The policyTemplates
+     */
+    public function getPolicyTemplates()
+    {
+        if (array_key_exists("policyTemplates", $this->_propDict)) {
+           return $this->_propDict["policyTemplates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the policyTemplates
+    *
+    * @param GovernancePolicyTemplate $val The policyTemplates
+    *
+    * @return ApprovalWorkflowProvider
+    */
+    public function setPolicyTemplates($val)
+    {
+		$this->_propDict["policyTemplates"] = $val;
         return $this;
     }
     

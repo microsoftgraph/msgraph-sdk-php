@@ -23,6 +23,128 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class RetireScheduledManagedDevice extends Entity
 {
+
+    /**
+    * Gets the complianceState
+    * Managed Device ComplianceStatus
+    *
+    * @return ComplianceStatus The complianceState
+    */
+    public function getComplianceState()
+    {
+        if (array_key_exists("complianceState", $this->_propDict)) {
+            if (is_a($this->_propDict["complianceState"], "Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+                return $this->_propDict["complianceState"];
+            } else {
+                $this->_propDict["complianceState"] = new ComplianceStatus($this->_propDict["complianceState"]);
+                return $this->_propDict["complianceState"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the complianceState
+    * Managed Device ComplianceStatus
+    *
+    * @param ComplianceStatus $val The value to assign to the complianceState
+    *
+    * @return RetireScheduledManagedDevice The RetireScheduledManagedDevice
+    */
+    public function setComplianceState($val)
+    {
+        $this->_propDict["complianceState"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the deviceCompliancePolicyId
+    * Device Compliance PolicyId
+    *
+    * @return string The deviceCompliancePolicyId
+    */
+    public function getDeviceCompliancePolicyId()
+    {
+        if (array_key_exists("deviceCompliancePolicyId", $this->_propDict)) {
+            return $this->_propDict["deviceCompliancePolicyId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceCompliancePolicyId
+    * Device Compliance PolicyId
+    *
+    * @param string $val The value of the deviceCompliancePolicyId
+    *
+    * @return RetireScheduledManagedDevice
+    */
+    public function setDeviceCompliancePolicyId($val)
+    {
+        $this->_propDict["deviceCompliancePolicyId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the deviceCompliancePolicyName
+    * Device Compliance Policy Name
+    *
+    * @return string The deviceCompliancePolicyName
+    */
+    public function getDeviceCompliancePolicyName()
+    {
+        if (array_key_exists("deviceCompliancePolicyName", $this->_propDict)) {
+            return $this->_propDict["deviceCompliancePolicyName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceCompliancePolicyName
+    * Device Compliance Policy Name
+    *
+    * @param string $val The value of the deviceCompliancePolicyName
+    *
+    * @return RetireScheduledManagedDevice
+    */
+    public function setDeviceCompliancePolicyName($val)
+    {
+        $this->_propDict["deviceCompliancePolicyName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the deviceType
+    * Managed Device Device Type
+    *
+    * @return DeviceType The deviceType
+    */
+    public function getDeviceType()
+    {
+        if (array_key_exists("deviceType", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceType"], "Beta\Microsoft\Graph\Model\DeviceType")) {
+                return $this->_propDict["deviceType"];
+            } else {
+                $this->_propDict["deviceType"] = new DeviceType($this->_propDict["deviceType"]);
+                return $this->_propDict["deviceType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceType
+    * Managed Device Device Type
+    *
+    * @param DeviceType $val The value to assign to the deviceType
+    *
+    * @return RetireScheduledManagedDevice The RetireScheduledManagedDevice
+    */
+    public function setDeviceType($val)
+    {
+        $this->_propDict["deviceType"] = $val;
+         return $this;
+    }
     /**
     * Gets the id
     * Key of the entity.
@@ -109,105 +231,6 @@ class RetireScheduledManagedDevice extends Entity
     }
 
     /**
-    * Gets the deviceType
-    * Managed Device Device Type
-    *
-    * @return DeviceType The deviceType
-    */
-    public function getDeviceType()
-    {
-        if (array_key_exists("deviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceType"], "Beta\Microsoft\Graph\Model\DeviceType")) {
-                return $this->_propDict["deviceType"];
-            } else {
-                $this->_propDict["deviceType"] = new DeviceType($this->_propDict["deviceType"]);
-                return $this->_propDict["deviceType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the deviceType
-    * Managed Device Device Type
-    *
-    * @param DeviceType $val The value to assign to the deviceType
-    *
-    * @return RetireScheduledManagedDevice The RetireScheduledManagedDevice
-    */
-    public function setDeviceType($val)
-    {
-        $this->_propDict["deviceType"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the complianceState
-    * Managed Device ComplianceStatus
-    *
-    * @return ComplianceStatus The complianceState
-    */
-    public function getComplianceState()
-    {
-        if (array_key_exists("complianceState", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceState"], "Beta\Microsoft\Graph\Model\ComplianceStatus")) {
-                return $this->_propDict["complianceState"];
-            } else {
-                $this->_propDict["complianceState"] = new ComplianceStatus($this->_propDict["complianceState"]);
-                return $this->_propDict["complianceState"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the complianceState
-    * Managed Device ComplianceStatus
-    *
-    * @param ComplianceStatus $val The value to assign to the complianceState
-    *
-    * @return RetireScheduledManagedDevice The RetireScheduledManagedDevice
-    */
-    public function setComplianceState($val)
-    {
-        $this->_propDict["complianceState"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the retireAfterDateTime
-    * Managed Device Retire After DateTime
-    *
-    * @return \DateTime The retireAfterDateTime
-    */
-    public function getRetireAfterDateTime()
-    {
-        if (array_key_exists("retireAfterDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["retireAfterDateTime"], "\DateTime")) {
-                return $this->_propDict["retireAfterDateTime"];
-            } else {
-                $this->_propDict["retireAfterDateTime"] = new \DateTime($this->_propDict["retireAfterDateTime"]);
-                return $this->_propDict["retireAfterDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the retireAfterDateTime
-    * Managed Device Retire After DateTime
-    *
-    * @param \DateTime $val The value to assign to the retireAfterDateTime
-    *
-    * @return RetireScheduledManagedDevice The RetireScheduledManagedDevice
-    */
-    public function setRetireAfterDateTime($val)
-    {
-        $this->_propDict["retireAfterDateTime"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the managementAgent
     * Managed Device ManagementAgentType
     *
@@ -272,61 +295,38 @@ class RetireScheduledManagedDevice extends Entity
         $this->_propDict["ownerType"] = $val;
          return $this;
     }
+
     /**
-    * Gets the deviceCompliancePolicyName
-    * Device Compliance Policy Name
+    * Gets the retireAfterDateTime
+    * Managed Device Retire After DateTime
     *
-    * @return string The deviceCompliancePolicyName
+    * @return \DateTime The retireAfterDateTime
     */
-    public function getDeviceCompliancePolicyName()
+    public function getRetireAfterDateTime()
     {
-        if (array_key_exists("deviceCompliancePolicyName", $this->_propDict)) {
-            return $this->_propDict["deviceCompliancePolicyName"];
-        } else {
-            return null;
+        if (array_key_exists("retireAfterDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["retireAfterDateTime"], "\DateTime")) {
+                return $this->_propDict["retireAfterDateTime"];
+            } else {
+                $this->_propDict["retireAfterDateTime"] = new \DateTime($this->_propDict["retireAfterDateTime"]);
+                return $this->_propDict["retireAfterDateTime"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the deviceCompliancePolicyName
-    * Device Compliance Policy Name
+    * Sets the retireAfterDateTime
+    * Managed Device Retire After DateTime
     *
-    * @param string $val The value of the deviceCompliancePolicyName
+    * @param \DateTime $val The value to assign to the retireAfterDateTime
     *
-    * @return RetireScheduledManagedDevice
+    * @return RetireScheduledManagedDevice The RetireScheduledManagedDevice
     */
-    public function setDeviceCompliancePolicyName($val)
+    public function setRetireAfterDateTime($val)
     {
-        $this->_propDict["deviceCompliancePolicyName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the deviceCompliancePolicyId
-    * Device Compliance PolicyId
-    *
-    * @return string The deviceCompliancePolicyId
-    */
-    public function getDeviceCompliancePolicyId()
-    {
-        if (array_key_exists("deviceCompliancePolicyId", $this->_propDict)) {
-            return $this->_propDict["deviceCompliancePolicyId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceCompliancePolicyId
-    * Device Compliance PolicyId
-    *
-    * @param string $val The value of the deviceCompliancePolicyId
-    *
-    * @return RetireScheduledManagedDevice
-    */
-    public function setDeviceCompliancePolicyId($val)
-    {
-        $this->_propDict["deviceCompliancePolicyId"] = $val;
-        return $this;
+        $this->_propDict["retireAfterDateTime"] = $val;
+         return $this;
     }
     /**
     * Gets the roleScopeTagIds

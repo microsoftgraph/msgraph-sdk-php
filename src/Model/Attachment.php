@@ -25,6 +25,64 @@ namespace Microsoft\Graph\Model;
 class Attachment extends Entity
 {
     /**
+    * Gets the contentType
+    * The MIME type.
+    *
+    * @return string The contentType
+    */
+    public function getContentType()
+    {
+        if (array_key_exists("contentType", $this->_propDict)) {
+            return $this->_propDict["contentType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the contentType
+    * The MIME type.
+    *
+    * @param string $val The contentType
+    *
+    * @return Attachment
+    */
+    public function setContentType($val)
+    {
+        $this->_propDict["contentType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isInline
+    * true if the attachment is an inline attachment; otherwise, false.
+    *
+    * @return bool The isInline
+    */
+    public function getIsInline()
+    {
+        if (array_key_exists("isInline", $this->_propDict)) {
+            return $this->_propDict["isInline"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isInline
+    * true if the attachment is an inline attachment; otherwise, false.
+    *
+    * @param bool $val The isInline
+    *
+    * @return Attachment
+    */
+    public function setIsInline($val)
+    {
+        $this->_propDict["isInline"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
@@ -87,35 +145,6 @@ class Attachment extends Entity
     }
     
     /**
-    * Gets the contentType
-    * The MIME type.
-    *
-    * @return string The contentType
-    */
-    public function getContentType()
-    {
-        if (array_key_exists("contentType", $this->_propDict)) {
-            return $this->_propDict["contentType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the contentType
-    * The MIME type.
-    *
-    * @param string $val The contentType
-    *
-    * @return Attachment
-    */
-    public function setContentType($val)
-    {
-        $this->_propDict["contentType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the size
     * The length of the attachment in bytes.
     *
@@ -141,35 +170,6 @@ class Attachment extends Entity
     public function setSize($val)
     {
         $this->_propDict["size"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isInline
-    * true if the attachment is an inline attachment; otherwise, false.
-    *
-    * @return bool The isInline
-    */
-    public function getIsInline()
-    {
-        if (array_key_exists("isInline", $this->_propDict)) {
-            return $this->_propDict["isInline"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isInline
-    * true if the attachment is an inline attachment; otherwise, false.
-    *
-    * @param bool $val The isInline
-    *
-    * @return Attachment
-    */
-    public function setIsInline($val)
-    {
-        $this->_propDict["isInline"] = boolval($val);
         return $this;
     }
     

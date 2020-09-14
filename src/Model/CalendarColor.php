@@ -31,6 +31,7 @@ class CalendarColor extends Enum
     */
     const LIGHT_BLUE = "lightBlue";
     const LIGHT_GREEN = "lightGreen";
+    const AUTO = "auto";
     const LIGHT_ORANGE = "lightOrange";
     const LIGHT_GRAY = "lightGray";
     const LIGHT_YELLOW = "lightYellow";
@@ -39,5 +40,4 @@ class CalendarColor extends Enum
     const LIGHT_BROWN = "lightBrown";
     const LIGHT_RED = "lightRed";
     const MAX_COLOR = "maxColor";
-    const AUTO = "auto";
 }

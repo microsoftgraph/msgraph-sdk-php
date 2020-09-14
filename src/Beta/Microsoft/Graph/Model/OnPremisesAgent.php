@@ -25,33 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class OnPremisesAgent extends Entity
 {
     /**
-    * Gets the machineName
-    *
-    * @return string The machineName
-    */
-    public function getMachineName()
-    {
-        if (array_key_exists("machineName", $this->_propDict)) {
-            return $this->_propDict["machineName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the machineName
-    *
-    * @param string $val The machineName
-    *
-    * @return OnPremisesAgent
-    */
-    public function setMachineName($val)
-    {
-        $this->_propDict["machineName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the externalIp
     *
     * @return string The externalIp
@@ -75,6 +48,33 @@ class OnPremisesAgent extends Entity
     public function setExternalIp($val)
     {
         $this->_propDict["externalIp"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the machineName
+    *
+    * @return string The machineName
+    */
+    public function getMachineName()
+    {
+        if (array_key_exists("machineName", $this->_propDict)) {
+            return $this->_propDict["machineName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the machineName
+    *
+    * @param string $val The machineName
+    *
+    * @return OnPremisesAgent
+    */
+    public function setMachineName($val)
+    {
+        $this->_propDict["machineName"] = $val;
         return $this;
     }
     

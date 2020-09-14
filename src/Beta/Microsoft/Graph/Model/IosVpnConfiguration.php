@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class IosVpnConfiguration extends AppleVpnConfiguration
 {
     /**
-    * Gets the userDomain
-    * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
-    *
-    * @return string The userDomain
-    */
-    public function getUserDomain()
-    {
-        if (array_key_exists("userDomain", $this->_propDict)) {
-            return $this->_propDict["userDomain"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userDomain
-    * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
-    *
-    * @param string $val The userDomain
-    *
-    * @return IosVpnConfiguration
-    */
-    public function setUserDomain($val)
-    {
-        $this->_propDict["userDomain"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the strictEnforcement
-    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
-    *
-    * @return bool The strictEnforcement
-    */
-    public function getStrictEnforcement()
-    {
-        if (array_key_exists("strictEnforcement", $this->_propDict)) {
-            return $this->_propDict["strictEnforcement"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the strictEnforcement
-    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
-    *
-    * @param bool $val The strictEnforcement
-    *
-    * @return IosVpnConfiguration
-    */
-    public function setStrictEnforcement($val)
-    {
-        $this->_propDict["strictEnforcement"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the cloudName
     * Zscaler only. Zscaler cloud which the user is assigned to.
     *
@@ -140,6 +82,35 @@ class IosVpnConfiguration extends AppleVpnConfiguration
         return $this;
     }
     
+    /**
+    * Gets the strictEnforcement
+    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
+    *
+    * @return bool The strictEnforcement
+    */
+    public function getStrictEnforcement()
+    {
+        if (array_key_exists("strictEnforcement", $this->_propDict)) {
+            return $this->_propDict["strictEnforcement"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the strictEnforcement
+    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
+    *
+    * @param bool $val The strictEnforcement
+    *
+    * @return IosVpnConfiguration
+    */
+    public function setStrictEnforcement($val)
+    {
+        $this->_propDict["strictEnforcement"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the targetedMobileApps
@@ -171,35 +142,31 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     }
     
     /**
-    * Gets the identityCertificate
-    * Identity certificate for client authentication when authentication method is certificate.
+    * Gets the userDomain
+    * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
     *
-    * @return IosCertificateProfileBase The identityCertificate
+    * @return string The userDomain
     */
-    public function getIdentityCertificate()
+    public function getUserDomain()
     {
-        if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
-                return $this->_propDict["identityCertificate"];
-            } else {
-                $this->_propDict["identityCertificate"] = new IosCertificateProfileBase($this->_propDict["identityCertificate"]);
-                return $this->_propDict["identityCertificate"];
-            }
+        if (array_key_exists("userDomain", $this->_propDict)) {
+            return $this->_propDict["userDomain"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the identityCertificate
-    * Identity certificate for client authentication when authentication method is certificate.
+    * Sets the userDomain
+    * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
     *
-    * @param IosCertificateProfileBase $val The identityCertificate
+    * @param string $val The userDomain
     *
     * @return IosVpnConfiguration
     */
-    public function setIdentityCertificate($val)
+    public function setUserDomain($val)
     {
-        $this->_propDict["identityCertificate"] = $val;
+        $this->_propDict["userDomain"] = $val;
         return $this;
     }
     
@@ -233,6 +200,39 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     public function setDerivedCredentialSettings($val)
     {
         $this->_propDict["derivedCredentialSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
+    *
+    * @return IosCertificateProfileBase The identityCertificate
+    */
+    public function getIdentityCertificate()
+    {
+        if (array_key_exists("identityCertificate", $this->_propDict)) {
+            if (is_a($this->_propDict["identityCertificate"], "Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
+                return $this->_propDict["identityCertificate"];
+            } else {
+                $this->_propDict["identityCertificate"] = new IosCertificateProfileBase($this->_propDict["identityCertificate"]);
+                return $this->_propDict["identityCertificate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the identityCertificate
+    * Identity certificate for client authentication when authentication method is certificate.
+    *
+    * @param IosCertificateProfileBase $val The identityCertificate
+    *
+    * @return IosVpnConfiguration
+    */
+    public function setIdentityCertificate($val)
+    {
+        $this->_propDict["identityCertificate"] = $val;
         return $this;
     }
     

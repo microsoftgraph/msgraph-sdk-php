@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 class VpnDnsRule extends Entity
 {
     /**
+    * Gets the autoTrigger
+    * Automatically connect to the VPN when the device connects to this domain: Default False.
+    *
+    * @return bool The autoTrigger
+    */
+    public function getAutoTrigger()
+    {
+        if (array_key_exists("autoTrigger", $this->_propDict)) {
+            return $this->_propDict["autoTrigger"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the autoTrigger
+    * Automatically connect to the VPN when the device connects to this domain: Default False.
+    *
+    * @param bool $val The value of the autoTrigger
+    *
+    * @return VpnDnsRule
+    */
+    public function setAutoTrigger($val)
+    {
+        $this->_propDict["autoTrigger"] = $val;
+        return $this;
+    }
+    /**
     * Gets the name
     * Name.
     *
@@ -52,31 +80,31 @@ class VpnDnsRule extends Entity
         return $this;
     }
     /**
-    * Gets the servers
-    * Servers.
+    * Gets the persistent
+    * Keep this rule active even when the VPN is not connected: Default False
     *
-    * @return string The servers
+    * @return bool The persistent
     */
-    public function getServers()
+    public function getPersistent()
     {
-        if (array_key_exists("servers", $this->_propDict)) {
-            return $this->_propDict["servers"];
+        if (array_key_exists("persistent", $this->_propDict)) {
+            return $this->_propDict["persistent"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the servers
-    * Servers.
+    * Sets the persistent
+    * Keep this rule active even when the VPN is not connected: Default False
     *
-    * @param string $val The value of the servers
+    * @param bool $val The value of the persistent
     *
     * @return VpnDnsRule
     */
-    public function setServers($val)
+    public function setPersistent($val)
     {
-        $this->_propDict["servers"] = $val;
+        $this->_propDict["persistent"] = $val;
         return $this;
     }
     /**
@@ -108,59 +136,31 @@ class VpnDnsRule extends Entity
         return $this;
     }
     /**
-    * Gets the autoTrigger
-    * Automatically connect to the VPN when the device connects to this domain: Default False.
+    * Gets the servers
+    * Servers.
     *
-    * @return bool The autoTrigger
+    * @return string The servers
     */
-    public function getAutoTrigger()
+    public function getServers()
     {
-        if (array_key_exists("autoTrigger", $this->_propDict)) {
-            return $this->_propDict["autoTrigger"];
+        if (array_key_exists("servers", $this->_propDict)) {
+            return $this->_propDict["servers"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the autoTrigger
-    * Automatically connect to the VPN when the device connects to this domain: Default False.
+    * Sets the servers
+    * Servers.
     *
-    * @param bool $val The value of the autoTrigger
-    *
-    * @return VpnDnsRule
-    */
-    public function setAutoTrigger($val)
-    {
-        $this->_propDict["autoTrigger"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the persistent
-    * Keep this rule active even when the VPN is not connected: Default False
-    *
-    * @return bool The persistent
-    */
-    public function getPersistent()
-    {
-        if (array_key_exists("persistent", $this->_propDict)) {
-            return $this->_propDict["persistent"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the persistent
-    * Keep this rule active even when the VPN is not connected: Default False
-    *
-    * @param bool $val The value of the persistent
+    * @param string $val The value of the servers
     *
     * @return VpnDnsRule
     */
-    public function setPersistent($val)
+    public function setServers($val)
     {
-        $this->_propDict["persistent"] = $val;
+        $this->_propDict["servers"] = $val;
         return $this;
     }
 }

@@ -25,6 +25,39 @@ class RiskUserActivity extends Entity
 {
 
     /**
+    * Gets the detail
+    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    *
+    * @return RiskDetail The detail
+    */
+    public function getDetail()
+    {
+        if (array_key_exists("detail", $this->_propDict)) {
+            if (is_a($this->_propDict["detail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
+                return $this->_propDict["detail"];
+            } else {
+                $this->_propDict["detail"] = new RiskDetail($this->_propDict["detail"]);
+                return $this->_propDict["detail"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the detail
+    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    *
+    * @param RiskDetail $val The value to assign to the detail
+    *
+    * @return RiskUserActivity The RiskUserActivity
+    */
+    public function setDetail($val)
+    {
+        $this->_propDict["detail"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the eventTypes
     *
     * @return RiskEventType The eventTypes
@@ -81,38 +114,5 @@ class RiskUserActivity extends Entity
     {
         $this->_propDict["riskEventTypes"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the detail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-    *
-    * @return RiskDetail The detail
-    */
-    public function getDetail()
-    {
-        if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
-                return $this->_propDict["detail"];
-            } else {
-                $this->_propDict["detail"] = new RiskDetail($this->_propDict["detail"]);
-                return $this->_propDict["detail"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the detail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-    *
-    * @param RiskDetail $val The value to assign to the detail
-    *
-    * @return RiskUserActivity The RiskUserActivity
-    */
-    public function setDetail($val)
-    {
-        $this->_propDict["detail"] = $val;
-         return $this;
     }
 }

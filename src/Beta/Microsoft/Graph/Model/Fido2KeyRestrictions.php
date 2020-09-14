@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class Fido2KeyRestrictions extends Entity
 {
     /**
-    * Gets the isEnforced
+    * Gets the aaGuids
     *
-    * @return bool The isEnforced
+    * @return string The aaGuids
     */
-    public function getIsEnforced()
+    public function getAaGuids()
     {
-        if (array_key_exists("isEnforced", $this->_propDict)) {
-            return $this->_propDict["isEnforced"];
+        if (array_key_exists("aaGuids", $this->_propDict)) {
+            return $this->_propDict["aaGuids"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isEnforced
+    * Sets the aaGuids
     *
-    * @param bool $val The value of the isEnforced
+    * @param string $val The value of the aaGuids
     *
     * @return Fido2KeyRestrictions
     */
-    public function setIsEnforced($val)
+    public function setAaGuids($val)
     {
-        $this->_propDict["isEnforced"] = $val;
+        $this->_propDict["aaGuids"] = $val;
         return $this;
     }
 
@@ -81,29 +81,29 @@ class Fido2KeyRestrictions extends Entity
          return $this;
     }
     /**
-    * Gets the aaGuids
+    * Gets the isEnforced
     *
-    * @return string The aaGuids
+    * @return bool The isEnforced
     */
-    public function getAaGuids()
+    public function getIsEnforced()
     {
-        if (array_key_exists("aaGuids", $this->_propDict)) {
-            return $this->_propDict["aaGuids"];
+        if (array_key_exists("isEnforced", $this->_propDict)) {
+            return $this->_propDict["isEnforced"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the aaGuids
+    * Sets the isEnforced
     *
-    * @param string $val The value of the aaGuids
+    * @param bool $val The value of the isEnforced
     *
     * @return Fido2KeyRestrictions
     */
-    public function setAaGuids($val)
+    public function setIsEnforced($val)
     {
-        $this->_propDict["aaGuids"] = $val;
+        $this->_propDict["isEnforced"] = $val;
         return $this;
     }
 }

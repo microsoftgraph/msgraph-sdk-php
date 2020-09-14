@@ -25,93 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsAutopilotDeploymentProfile extends Entity
 {
     /**
-    * Gets the displayName
-    * Name of the profile
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Name of the profile
-    *
-    * @param string $val The displayName
-    *
-    * @return WindowsAutopilotDeploymentProfile
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * Description of the profile
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * Description of the profile
-    *
-    * @param string $val The description
-    *
-    * @return WindowsAutopilotDeploymentProfile
-    */
-    public function setDescription($val)
-    {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the language
-    * Language configured on the device
-    *
-    * @return string The language
-    */
-    public function getLanguage()
-    {
-        if (array_key_exists("language", $this->_propDict)) {
-            return $this->_propDict["language"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the language
-    * Language configured on the device
-    *
-    * @param string $val The language
-    *
-    * @return WindowsAutopilotDeploymentProfile
-    */
-    public function setLanguage($val)
-    {
-        $this->_propDict["language"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the createdDateTime
     * Profile creation time
     *
@@ -145,130 +58,31 @@ class WindowsAutopilotDeploymentProfile extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * Profile last modified time
+    * Gets the description
+    * Description of the profile
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The description
     */
-    public function getLastModifiedDateTime()
+    public function getDescription()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastModifiedDateTime
-    * Profile last modified time
-    *
-    * @param \DateTime $val The lastModifiedDateTime
-    *
-    * @return WindowsAutopilotDeploymentProfile
-    */
-    public function setLastModifiedDateTime($val)
-    {
-        $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the outOfBoxExperienceSettings
-    * Out of box experience setting
-    *
-    * @return OutOfBoxExperienceSettings The outOfBoxExperienceSettings
-    */
-    public function getOutOfBoxExperienceSettings()
-    {
-        if (array_key_exists("outOfBoxExperienceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Beta\Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
-                return $this->_propDict["outOfBoxExperienceSettings"];
-            } else {
-                $this->_propDict["outOfBoxExperienceSettings"] = new OutOfBoxExperienceSettings($this->_propDict["outOfBoxExperienceSettings"]);
-                return $this->_propDict["outOfBoxExperienceSettings"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the outOfBoxExperienceSettings
-    * Out of box experience setting
-    *
-    * @param OutOfBoxExperienceSettings $val The outOfBoxExperienceSettings
-    *
-    * @return WindowsAutopilotDeploymentProfile
-    */
-    public function setOutOfBoxExperienceSettings($val)
-    {
-        $this->_propDict["outOfBoxExperienceSettings"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the enrollmentStatusScreenSettings
-    * Enrollment status screen setting
-    *
-    * @return WindowsEnrollmentStatusScreenSettings The enrollmentStatusScreenSettings
-    */
-    public function getEnrollmentStatusScreenSettings()
-    {
-        if (array_key_exists("enrollmentStatusScreenSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Beta\Microsoft\Graph\Model\WindowsEnrollmentStatusScreenSettings")) {
-                return $this->_propDict["enrollmentStatusScreenSettings"];
-            } else {
-                $this->_propDict["enrollmentStatusScreenSettings"] = new WindowsEnrollmentStatusScreenSettings($this->_propDict["enrollmentStatusScreenSettings"]);
-                return $this->_propDict["enrollmentStatusScreenSettings"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the enrollmentStatusScreenSettings
-    * Enrollment status screen setting
-    *
-    * @param WindowsEnrollmentStatusScreenSettings $val The enrollmentStatusScreenSettings
-    *
-    * @return WindowsAutopilotDeploymentProfile
-    */
-    public function setEnrollmentStatusScreenSettings($val)
-    {
-        $this->_propDict["enrollmentStatusScreenSettings"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the extractHardwareHash
-    * HardwareHash Extraction for the profile
-    *
-    * @return bool The extractHardwareHash
-    */
-    public function getExtractHardwareHash()
-    {
-        if (array_key_exists("extractHardwareHash", $this->_propDict)) {
-            return $this->_propDict["extractHardwareHash"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the extractHardwareHash
-    * HardwareHash Extraction for the profile
+    * Sets the description
+    * Description of the profile
     *
-    * @param bool $val The extractHardwareHash
+    * @param string $val The description
     *
     * @return WindowsAutopilotDeploymentProfile
     */
-    public function setExtractHardwareHash($val)
+    public function setDescription($val)
     {
-        $this->_propDict["extractHardwareHash"] = boolval($val);
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -335,6 +149,35 @@ class WindowsAutopilotDeploymentProfile extends Entity
     }
     
     /**
+    * Gets the displayName
+    * Name of the profile
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Name of the profile
+    *
+    * @param string $val The displayName
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the enableWhiteGlove
     * Enable Autopilot White Glove for the profile.
     *
@@ -360,6 +203,163 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function setEnableWhiteGlove($val)
     {
         $this->_propDict["enableWhiteGlove"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the enrollmentStatusScreenSettings
+    * Enrollment status screen setting
+    *
+    * @return WindowsEnrollmentStatusScreenSettings The enrollmentStatusScreenSettings
+    */
+    public function getEnrollmentStatusScreenSettings()
+    {
+        if (array_key_exists("enrollmentStatusScreenSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Beta\Microsoft\Graph\Model\WindowsEnrollmentStatusScreenSettings")) {
+                return $this->_propDict["enrollmentStatusScreenSettings"];
+            } else {
+                $this->_propDict["enrollmentStatusScreenSettings"] = new WindowsEnrollmentStatusScreenSettings($this->_propDict["enrollmentStatusScreenSettings"]);
+                return $this->_propDict["enrollmentStatusScreenSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the enrollmentStatusScreenSettings
+    * Enrollment status screen setting
+    *
+    * @param WindowsEnrollmentStatusScreenSettings $val The enrollmentStatusScreenSettings
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setEnrollmentStatusScreenSettings($val)
+    {
+        $this->_propDict["enrollmentStatusScreenSettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the extractHardwareHash
+    * HardwareHash Extraction for the profile
+    *
+    * @return bool The extractHardwareHash
+    */
+    public function getExtractHardwareHash()
+    {
+        if (array_key_exists("extractHardwareHash", $this->_propDict)) {
+            return $this->_propDict["extractHardwareHash"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the extractHardwareHash
+    * HardwareHash Extraction for the profile
+    *
+    * @param bool $val The extractHardwareHash
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setExtractHardwareHash($val)
+    {
+        $this->_propDict["extractHardwareHash"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the language
+    * Language configured on the device
+    *
+    * @return string The language
+    */
+    public function getLanguage()
+    {
+        if (array_key_exists("language", $this->_propDict)) {
+            return $this->_propDict["language"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the language
+    * Language configured on the device
+    *
+    * @param string $val The language
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setLanguage($val)
+    {
+        $this->_propDict["language"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * Profile last modified time
+    *
+    * @return \DateTime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * Profile last modified time
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the outOfBoxExperienceSettings
+    * Out of box experience setting
+    *
+    * @return OutOfBoxExperienceSettings The outOfBoxExperienceSettings
+    */
+    public function getOutOfBoxExperienceSettings()
+    {
+        if (array_key_exists("outOfBoxExperienceSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Beta\Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
+                return $this->_propDict["outOfBoxExperienceSettings"];
+            } else {
+                $this->_propDict["outOfBoxExperienceSettings"] = new OutOfBoxExperienceSettings($this->_propDict["outOfBoxExperienceSettings"]);
+                return $this->_propDict["outOfBoxExperienceSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the outOfBoxExperienceSettings
+    * Out of box experience setting
+    *
+    * @param OutOfBoxExperienceSettings $val The outOfBoxExperienceSettings
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setOutOfBoxExperienceSettings($val)
+    {
+        $this->_propDict["outOfBoxExperienceSettings"] = $val;
         return $this;
     }
     

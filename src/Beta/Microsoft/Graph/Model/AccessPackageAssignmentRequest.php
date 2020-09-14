@@ -25,29 +25,149 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessPackageAssignmentRequest extends Entity
 {
     /**
-    * Gets the requestType
+    * Gets the completedDate
     *
-    * @return string The requestType
+    * @return \DateTime The completedDate
     */
-    public function getRequestType()
+    public function getCompletedDate()
     {
-        if (array_key_exists("requestType", $this->_propDict)) {
-            return $this->_propDict["requestType"];
+        if (array_key_exists("completedDate", $this->_propDict)) {
+            if (is_a($this->_propDict["completedDate"], "\DateTime")) {
+                return $this->_propDict["completedDate"];
+            } else {
+                $this->_propDict["completedDate"] = new \DateTime($this->_propDict["completedDate"]);
+                return $this->_propDict["completedDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the completedDate
+    *
+    * @param \DateTime $val The completedDate
+    *
+    * @return AccessPackageAssignmentRequest
+    */
+    public function setCompletedDate($val)
+    {
+        $this->_propDict["completedDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return AccessPackageAssignmentRequest
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the expirationDateTime
+    *
+    * @return \DateTime The expirationDateTime
+    */
+    public function getExpirationDateTime()
+    {
+        if (array_key_exists("expirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+                return $this->_propDict["expirationDateTime"];
+            } else {
+                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
+                return $this->_propDict["expirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the expirationDateTime
+    *
+    * @param \DateTime $val The expirationDateTime
+    *
+    * @return AccessPackageAssignmentRequest
+    */
+    public function setExpirationDateTime($val)
+    {
+        $this->_propDict["expirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isValidationOnly
+    *
+    * @return bool The isValidationOnly
+    */
+    public function getIsValidationOnly()
+    {
+        if (array_key_exists("isValidationOnly", $this->_propDict)) {
+            return $this->_propDict["isValidationOnly"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the requestType
+    * Sets the isValidationOnly
     *
-    * @param string $val The requestType
+    * @param bool $val The isValidationOnly
     *
     * @return AccessPackageAssignmentRequest
     */
-    public function setRequestType($val)
+    public function setIsValidationOnly($val)
     {
-        $this->_propDict["requestType"] = $val;
+        $this->_propDict["isValidationOnly"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the justification
+    *
+    * @return string The justification
+    */
+    public function getJustification()
+    {
+        if (array_key_exists("justification", $this->_propDict)) {
+            return $this->_propDict["justification"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the justification
+    *
+    * @param string $val The justification
+    *
+    * @return AccessPackageAssignmentRequest
+    */
+    public function setJustification($val)
+    {
+        $this->_propDict["justification"] = $val;
         return $this;
     }
     
@@ -106,149 +226,60 @@ class AccessPackageAssignmentRequest extends Entity
     }
     
     /**
-    * Gets the isValidationOnly
+    * Gets the requestType
     *
-    * @return bool The isValidationOnly
+    * @return string The requestType
     */
-    public function getIsValidationOnly()
+    public function getRequestType()
     {
-        if (array_key_exists("isValidationOnly", $this->_propDict)) {
-            return $this->_propDict["isValidationOnly"];
+        if (array_key_exists("requestType", $this->_propDict)) {
+            return $this->_propDict["requestType"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isValidationOnly
+    * Sets the requestType
     *
-    * @param bool $val The isValidationOnly
+    * @param string $val The requestType
     *
     * @return AccessPackageAssignmentRequest
     */
-    public function setIsValidationOnly($val)
+    public function setRequestType($val)
     {
-        $this->_propDict["isValidationOnly"] = boolval($val);
+        $this->_propDict["requestType"] = $val;
         return $this;
     }
     
     /**
-    * Gets the createdDateTime
+    * Gets the schedule
     *
-    * @return \DateTime The createdDateTime
+    * @return RequestSchedule The schedule
     */
-    public function getCreatedDateTime()
+    public function getSchedule()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
+        if (array_key_exists("schedule", $this->_propDict)) {
+            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\RequestSchedule")) {
+                return $this->_propDict["schedule"];
             } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
+                $this->_propDict["schedule"] = new RequestSchedule($this->_propDict["schedule"]);
+                return $this->_propDict["schedule"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdDateTime
+    * Sets the schedule
     *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return AccessPackageAssignmentRequest
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the completedDate
-    *
-    * @return \DateTime The completedDate
-    */
-    public function getCompletedDate()
-    {
-        if (array_key_exists("completedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDate"], "\DateTime")) {
-                return $this->_propDict["completedDate"];
-            } else {
-                $this->_propDict["completedDate"] = new \DateTime($this->_propDict["completedDate"]);
-                return $this->_propDict["completedDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the completedDate
-    *
-    * @param \DateTime $val The completedDate
+    * @param RequestSchedule $val The schedule
     *
     * @return AccessPackageAssignmentRequest
     */
-    public function setCompletedDate($val)
+    public function setSchedule($val)
     {
-        $this->_propDict["completedDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the expirationDateTime
-    *
-    * @return \DateTime The expirationDateTime
-    */
-    public function getExpirationDateTime()
-    {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
-                return $this->_propDict["expirationDateTime"];
-            } else {
-                $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
-                return $this->_propDict["expirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the expirationDateTime
-    *
-    * @param \DateTime $val The expirationDateTime
-    *
-    * @return AccessPackageAssignmentRequest
-    */
-    public function setExpirationDateTime($val)
-    {
-        $this->_propDict["expirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the justification
-    *
-    * @return string The justification
-    */
-    public function getJustification()
-    {
-        if (array_key_exists("justification", $this->_propDict)) {
-            return $this->_propDict["justification"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the justification
-    *
-    * @param string $val The justification
-    *
-    * @return AccessPackageAssignmentRequest
-    */
-    public function setJustification($val)
-    {
-        $this->_propDict["justification"] = $val;
+        $this->_propDict["schedule"] = $val;
         return $this;
     }
     

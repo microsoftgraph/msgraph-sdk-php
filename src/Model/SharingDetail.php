@@ -89,6 +89,37 @@ class SharingDetail extends Entity
         $this->_propDict["sharedDateTime"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the sharingReference
+    *
+    * @return ResourceReference The sharingReference
+    */
+    public function getSharingReference()
+    {
+        if (array_key_exists("sharingReference", $this->_propDict)) {
+            if (is_a($this->_propDict["sharingReference"], "Microsoft\Graph\Model\ResourceReference")) {
+                return $this->_propDict["sharingReference"];
+            } else {
+                $this->_propDict["sharingReference"] = new ResourceReference($this->_propDict["sharingReference"]);
+                return $this->_propDict["sharingReference"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sharingReference
+    *
+    * @param ResourceReference $val The value to assign to the sharingReference
+    *
+    * @return SharingDetail The SharingDetail
+    */
+    public function setSharingReference($val)
+    {
+        $this->_propDict["sharingReference"] = $val;
+         return $this;
+    }
     /**
     * Gets the sharingSubject
     * The subject with which the document was shared.
@@ -144,36 +175,5 @@ class SharingDetail extends Entity
     {
         $this->_propDict["sharingType"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the sharingReference
-    *
-    * @return ResourceReference The sharingReference
-    */
-    public function getSharingReference()
-    {
-        if (array_key_exists("sharingReference", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingReference"], "Microsoft\Graph\Model\ResourceReference")) {
-                return $this->_propDict["sharingReference"];
-            } else {
-                $this->_propDict["sharingReference"] = new ResourceReference($this->_propDict["sharingReference"]);
-                return $this->_propDict["sharingReference"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the sharingReference
-    *
-    * @param ResourceReference $val The value to assign to the sharingReference
-    *
-    * @return SharingDetail The SharingDetail
-    */
-    public function setSharingReference($val)
-    {
-        $this->_propDict["sharingReference"] = $val;
-         return $this;
     }
 }

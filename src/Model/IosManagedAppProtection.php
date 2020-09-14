@@ -58,31 +58,31 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
-    * Gets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
+    * Gets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
-    * @return string The minimumRequiredSdkVersion
+    * @return string The customBrowserProtocol
     */
-    public function getMinimumRequiredSdkVersion()
+    public function getCustomBrowserProtocol()
     {
-        if (array_key_exists("minimumRequiredSdkVersion", $this->_propDict)) {
-            return $this->_propDict["minimumRequiredSdkVersion"];
+        if (array_key_exists("customBrowserProtocol", $this->_propDict)) {
+            return $this->_propDict["customBrowserProtocol"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the minimumRequiredSdkVersion
-    * Versions less than the specified version will block the managed app from accessing company data.
+    * Sets the customBrowserProtocol
+    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
-    * @param string $val The minimumRequiredSdkVersion
+    * @param string $val The customBrowserProtocol
     *
     * @return IosManagedAppProtection
     */
-    public function setMinimumRequiredSdkVersion($val)
+    public function setCustomBrowserProtocol($val)
     {
-        $this->_propDict["minimumRequiredSdkVersion"] = $val;
+        $this->_propDict["customBrowserProtocol"] = $val;
         return $this;
     }
     
@@ -145,31 +145,31 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
-    * Gets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Gets the minimumRequiredSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
     *
-    * @return string The customBrowserProtocol
+    * @return string The minimumRequiredSdkVersion
     */
-    public function getCustomBrowserProtocol()
+    public function getMinimumRequiredSdkVersion()
     {
-        if (array_key_exists("customBrowserProtocol", $this->_propDict)) {
-            return $this->_propDict["customBrowserProtocol"];
+        if (array_key_exists("minimumRequiredSdkVersion", $this->_propDict)) {
+            return $this->_propDict["minimumRequiredSdkVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Sets the minimumRequiredSdkVersion
+    * Versions less than the specified version will block the managed app from accessing company data.
     *
-    * @param string $val The customBrowserProtocol
+    * @param string $val The minimumRequiredSdkVersion
     *
     * @return IosManagedAppProtection
     */
-    public function setCustomBrowserProtocol($val)
+    public function setMinimumRequiredSdkVersion($val)
     {
-        $this->_propDict["customBrowserProtocol"] = $val;
+        $this->_propDict["minimumRequiredSdkVersion"] = $val;
         return $this;
     }
     

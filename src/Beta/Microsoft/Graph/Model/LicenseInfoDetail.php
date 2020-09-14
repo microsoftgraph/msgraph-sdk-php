@@ -55,32 +55,6 @@ class LicenseInfoDetail extends Entity
          return $this;
     }
     /**
-    * Gets the totalLicenseCount
-    *
-    * @return int The totalLicenseCount
-    */
-    public function getTotalLicenseCount()
-    {
-        if (array_key_exists("totalLicenseCount", $this->_propDict)) {
-            return $this->_propDict["totalLicenseCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the totalLicenseCount
-    *
-    * @param int $val The value of the totalLicenseCount
-    *
-    * @return LicenseInfoDetail
-    */
-    public function setTotalLicenseCount($val)
-    {
-        $this->_propDict["totalLicenseCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the totalAssignedCount
     *
     * @return int The totalAssignedCount
@@ -104,6 +78,32 @@ class LicenseInfoDetail extends Entity
     public function setTotalAssignedCount($val)
     {
         $this->_propDict["totalAssignedCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the totalLicenseCount
+    *
+    * @return int The totalLicenseCount
+    */
+    public function getTotalLicenseCount()
+    {
+        if (array_key_exists("totalLicenseCount", $this->_propDict)) {
+            return $this->_propDict["totalLicenseCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the totalLicenseCount
+    *
+    * @param int $val The value of the totalLicenseCount
+    *
+    * @return LicenseInfoDetail
+    */
+    public function setTotalLicenseCount($val)
+    {
+        $this->_propDict["totalLicenseCount"] = $val;
         return $this;
     }
     /**

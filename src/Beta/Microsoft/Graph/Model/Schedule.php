@@ -54,31 +54,60 @@ class Schedule extends Entity
     }
     
     /**
-    * Gets the timeZone
-    * Indicates the time zone of the schedule team using tz database format. Required.
+    * Gets the offerShiftRequestsEnabled
+    * Indicates whether offer shift requests are enabled for the schedule.
     *
-    * @return string The timeZone
+    * @return bool The offerShiftRequestsEnabled
     */
-    public function getTimeZone()
+    public function getOfferShiftRequestsEnabled()
     {
-        if (array_key_exists("timeZone", $this->_propDict)) {
-            return $this->_propDict["timeZone"];
+        if (array_key_exists("offerShiftRequestsEnabled", $this->_propDict)) {
+            return $this->_propDict["offerShiftRequestsEnabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the timeZone
-    * Indicates the time zone of the schedule team using tz database format. Required.
+    * Sets the offerShiftRequestsEnabled
+    * Indicates whether offer shift requests are enabled for the schedule.
     *
-    * @param string $val The timeZone
+    * @param bool $val The offerShiftRequestsEnabled
     *
     * @return Schedule
     */
-    public function setTimeZone($val)
+    public function setOfferShiftRequestsEnabled($val)
     {
-        $this->_propDict["timeZone"] = $val;
+        $this->_propDict["offerShiftRequestsEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the openShiftsEnabled
+    * Indicates whether open shifts are enabled for the schedule.
+    *
+    * @return bool The openShiftsEnabled
+    */
+    public function getOpenShiftsEnabled()
+    {
+        if (array_key_exists("openShiftsEnabled", $this->_propDict)) {
+            return $this->_propDict["openShiftsEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the openShiftsEnabled
+    * Indicates whether open shifts are enabled for the schedule.
+    *
+    * @param bool $val The openShiftsEnabled
+    *
+    * @return Schedule
+    */
+    public function setOpenShiftsEnabled($val)
+    {
+        $this->_propDict["openShiftsEnabled"] = boolval($val);
         return $this;
     }
     
@@ -145,29 +174,31 @@ class Schedule extends Entity
     }
     
     /**
-    * Gets the workforceIntegrationIds
+    * Gets the swapShiftsRequestsEnabled
+    * Indicates whether swap shifts requests are enabled for the schedule.
     *
-    * @return string The workforceIntegrationIds
+    * @return bool The swapShiftsRequestsEnabled
     */
-    public function getWorkforceIntegrationIds()
+    public function getSwapShiftsRequestsEnabled()
     {
-        if (array_key_exists("workforceIntegrationIds", $this->_propDict)) {
-            return $this->_propDict["workforceIntegrationIds"];
+        if (array_key_exists("swapShiftsRequestsEnabled", $this->_propDict)) {
+            return $this->_propDict["swapShiftsRequestsEnabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the workforceIntegrationIds
+    * Sets the swapShiftsRequestsEnabled
+    * Indicates whether swap shifts requests are enabled for the schedule.
     *
-    * @param string $val The workforceIntegrationIds
+    * @param bool $val The swapShiftsRequestsEnabled
     *
     * @return Schedule
     */
-    public function setWorkforceIntegrationIds($val)
+    public function setSwapShiftsRequestsEnabled($val)
     {
-        $this->_propDict["workforceIntegrationIds"] = $val;
+        $this->_propDict["swapShiftsRequestsEnabled"] = boolval($val);
         return $this;
     }
     
@@ -201,93 +232,6 @@ class Schedule extends Entity
     }
     
     /**
-    * Gets the openShiftsEnabled
-    * Indicates whether open shifts are enabled for the schedule.
-    *
-    * @return bool The openShiftsEnabled
-    */
-    public function getOpenShiftsEnabled()
-    {
-        if (array_key_exists("openShiftsEnabled", $this->_propDict)) {
-            return $this->_propDict["openShiftsEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the openShiftsEnabled
-    * Indicates whether open shifts are enabled for the schedule.
-    *
-    * @param bool $val The openShiftsEnabled
-    *
-    * @return Schedule
-    */
-    public function setOpenShiftsEnabled($val)
-    {
-        $this->_propDict["openShiftsEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the swapShiftsRequestsEnabled
-    * Indicates whether swap shifts requests are enabled for the schedule.
-    *
-    * @return bool The swapShiftsRequestsEnabled
-    */
-    public function getSwapShiftsRequestsEnabled()
-    {
-        if (array_key_exists("swapShiftsRequestsEnabled", $this->_propDict)) {
-            return $this->_propDict["swapShiftsRequestsEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the swapShiftsRequestsEnabled
-    * Indicates whether swap shifts requests are enabled for the schedule.
-    *
-    * @param bool $val The swapShiftsRequestsEnabled
-    *
-    * @return Schedule
-    */
-    public function setSwapShiftsRequestsEnabled($val)
-    {
-        $this->_propDict["swapShiftsRequestsEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the offerShiftRequestsEnabled
-    * Indicates whether offer shift requests are enabled for the schedule.
-    *
-    * @return bool The offerShiftRequestsEnabled
-    */
-    public function getOfferShiftRequestsEnabled()
-    {
-        if (array_key_exists("offerShiftRequestsEnabled", $this->_propDict)) {
-            return $this->_propDict["offerShiftRequestsEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the offerShiftRequestsEnabled
-    * Indicates whether offer shift requests are enabled for the schedule.
-    *
-    * @param bool $val The offerShiftRequestsEnabled
-    *
-    * @return Schedule
-    */
-    public function setOfferShiftRequestsEnabled($val)
-    {
-        $this->_propDict["offerShiftRequestsEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the timeOffRequestsEnabled
     * Indicates whether time off requests are enabled for the schedule.
     *
@@ -316,33 +260,115 @@ class Schedule extends Entity
         return $this;
     }
     
+    /**
+    * Gets the timeZone
+    * Indicates the time zone of the schedule team using tz database format. Required.
+    *
+    * @return string The timeZone
+    */
+    public function getTimeZone()
+    {
+        if (array_key_exists("timeZone", $this->_propDict)) {
+            return $this->_propDict["timeZone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the timeZone
+    * Indicates the time zone of the schedule team using tz database format. Required.
+    *
+    * @param string $val The timeZone
+    *
+    * @return Schedule
+    */
+    public function setTimeZone($val)
+    {
+        $this->_propDict["timeZone"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the workforceIntegrationIds
+    *
+    * @return string The workforceIntegrationIds
+    */
+    public function getWorkforceIntegrationIds()
+    {
+        if (array_key_exists("workforceIntegrationIds", $this->_propDict)) {
+            return $this->_propDict["workforceIntegrationIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workforceIntegrationIds
+    *
+    * @param string $val The workforceIntegrationIds
+    *
+    * @return Schedule
+    */
+    public function setWorkforceIntegrationIds($val)
+    {
+        $this->_propDict["workforceIntegrationIds"] = $val;
+        return $this;
+    }
+    
 
      /** 
-     * Gets the shifts
-    * The shifts in the schedule.
+     * Gets the offerShiftRequests
      *
-     * @return array The shifts
+     * @return array The offerShiftRequests
      */
-    public function getShifts()
+    public function getOfferShiftRequests()
     {
-        if (array_key_exists("shifts", $this->_propDict)) {
-           return $this->_propDict["shifts"];
+        if (array_key_exists("offerShiftRequests", $this->_propDict)) {
+           return $this->_propDict["offerShiftRequests"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the shifts
-    * The shifts in the schedule.
+    * Sets the offerShiftRequests
     *
-    * @param Shift $val The shifts
+    * @param OfferShiftRequest $val The offerShiftRequests
     *
     * @return Schedule
     */
-    public function setShifts($val)
+    public function setOfferShiftRequests($val)
     {
-		$this->_propDict["shifts"] = $val;
+		$this->_propDict["offerShiftRequests"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the openShiftChangeRequests
+     *
+     * @return array The openShiftChangeRequests
+     */
+    public function getOpenShiftChangeRequests()
+    {
+        if (array_key_exists("openShiftChangeRequests", $this->_propDict)) {
+           return $this->_propDict["openShiftChangeRequests"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the openShiftChangeRequests
+    *
+    * @param OpenShiftChangeRequest $val The openShiftChangeRequests
+    *
+    * @return Schedule
+    */
+    public function setOpenShiftChangeRequests($val)
+    {
+		$this->_propDict["openShiftChangeRequests"] = $val;
         return $this;
     }
     
@@ -371,66 +397,6 @@ class Schedule extends Entity
     public function setOpenShifts($val)
     {
 		$this->_propDict["openShifts"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the timesOff
-    * The instances of times off in the schedule.
-     *
-     * @return array The timesOff
-     */
-    public function getTimesOff()
-    {
-        if (array_key_exists("timesOff", $this->_propDict)) {
-           return $this->_propDict["timesOff"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the timesOff
-    * The instances of times off in the schedule.
-    *
-    * @param TimeOff $val The timesOff
-    *
-    * @return Schedule
-    */
-    public function setTimesOff($val)
-    {
-		$this->_propDict["timesOff"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the timeOffReasons
-    * The set of reasons for a time off in the schedule.
-     *
-     * @return array The timeOffReasons
-     */
-    public function getTimeOffReasons()
-    {
-        if (array_key_exists("timeOffReasons", $this->_propDict)) {
-           return $this->_propDict["timeOffReasons"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the timeOffReasons
-    * The set of reasons for a time off in the schedule.
-    *
-    * @param TimeOffReason $val The timeOffReasons
-    *
-    * @return Schedule
-    */
-    public function setTimeOffReasons($val)
-    {
-		$this->_propDict["timeOffReasons"] = $val;
         return $this;
     }
     
@@ -466,6 +432,36 @@ class Schedule extends Entity
     
 
      /** 
+     * Gets the shifts
+    * The shifts in the schedule.
+     *
+     * @return array The shifts
+     */
+    public function getShifts()
+    {
+        if (array_key_exists("shifts", $this->_propDict)) {
+           return $this->_propDict["shifts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the shifts
+    * The shifts in the schedule.
+    *
+    * @param Shift $val The shifts
+    *
+    * @return Schedule
+    */
+    public function setShifts($val)
+    {
+		$this->_propDict["shifts"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the swapShiftsChangeRequests
      *
      * @return array The swapShiftsChangeRequests
@@ -494,57 +490,31 @@ class Schedule extends Entity
     
 
      /** 
-     * Gets the openShiftChangeRequests
+     * Gets the timeOffReasons
+    * The set of reasons for a time off in the schedule.
      *
-     * @return array The openShiftChangeRequests
+     * @return array The timeOffReasons
      */
-    public function getOpenShiftChangeRequests()
+    public function getTimeOffReasons()
     {
-        if (array_key_exists("openShiftChangeRequests", $this->_propDict)) {
-           return $this->_propDict["openShiftChangeRequests"];
+        if (array_key_exists("timeOffReasons", $this->_propDict)) {
+           return $this->_propDict["timeOffReasons"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the openShiftChangeRequests
+    * Sets the timeOffReasons
+    * The set of reasons for a time off in the schedule.
     *
-    * @param OpenShiftChangeRequest $val The openShiftChangeRequests
-    *
-    * @return Schedule
-    */
-    public function setOpenShiftChangeRequests($val)
-    {
-		$this->_propDict["openShiftChangeRequests"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the offerShiftRequests
-     *
-     * @return array The offerShiftRequests
-     */
-    public function getOfferShiftRequests()
-    {
-        if (array_key_exists("offerShiftRequests", $this->_propDict)) {
-           return $this->_propDict["offerShiftRequests"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the offerShiftRequests
-    *
-    * @param OfferShiftRequest $val The offerShiftRequests
+    * @param TimeOffReason $val The timeOffReasons
     *
     * @return Schedule
     */
-    public function setOfferShiftRequests($val)
+    public function setTimeOffReasons($val)
     {
-		$this->_propDict["offerShiftRequests"] = $val;
+		$this->_propDict["timeOffReasons"] = $val;
         return $this;
     }
     
@@ -573,6 +543,36 @@ class Schedule extends Entity
     public function setTimeOffRequests($val)
     {
 		$this->_propDict["timeOffRequests"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the timesOff
+    * The instances of times off in the schedule.
+     *
+     * @return array The timesOff
+     */
+    public function getTimesOff()
+    {
+        if (array_key_exists("timesOff", $this->_propDict)) {
+           return $this->_propDict["timesOff"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the timesOff
+    * The instances of times off in the schedule.
+    *
+    * @param TimeOff $val The timesOff
+    *
+    * @return Schedule
+    */
+    public function setTimesOff($val)
+    {
+		$this->_propDict["timesOff"] = $val;
         return $this;
     }
     

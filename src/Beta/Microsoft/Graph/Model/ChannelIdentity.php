@@ -24,32 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ChannelIdentity extends Entity
 {
     /**
-    * Gets the teamId
-    *
-    * @return string The teamId
-    */
-    public function getTeamId()
-    {
-        if (array_key_exists("teamId", $this->_propDict)) {
-            return $this->_propDict["teamId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the teamId
-    *
-    * @param string $val The value of the teamId
-    *
-    * @return ChannelIdentity
-    */
-    public function setTeamId($val)
-    {
-        $this->_propDict["teamId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the channelId
     *
     * @return string The channelId
@@ -73,6 +47,32 @@ class ChannelIdentity extends Entity
     public function setChannelId($val)
     {
         $this->_propDict["channelId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the teamId
+    *
+    * @return string The teamId
+    */
+    public function getTeamId()
+    {
+        if (array_key_exists("teamId", $this->_propDict)) {
+            return $this->_propDict["teamId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teamId
+    *
+    * @param string $val The value of the teamId
+    *
+    * @return ChannelIdentity
+    */
+    public function setTeamId($val)
+    {
+        $this->_propDict["teamId"] = $val;
         return $this;
     }
 }

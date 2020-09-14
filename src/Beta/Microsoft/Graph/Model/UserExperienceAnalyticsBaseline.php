@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsBaseline extends Entity
 {
     /**
+    * Gets the createdDateTime
+    * The date the custom baseline was created.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * The date the custom baseline was created.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return UserExperienceAnalyticsBaseline
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The name of the user experience analytics baseline.
     *
@@ -83,35 +116,35 @@ class UserExperienceAnalyticsBaseline extends Entity
     }
     
     /**
-    * Gets the createdDateTime
-    * The date the custom baseline was created.
+    * Gets the bestPracticesMetrics
+    * The user experience analytics best practices metrics.
     *
-    * @return \DateTime The createdDateTime
+    * @return UserExperienceAnalyticsCategory The bestPracticesMetrics
     */
-    public function getCreatedDateTime()
+    public function getBestPracticesMetrics()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
+        if (array_key_exists("bestPracticesMetrics", $this->_propDict)) {
+            if (is_a($this->_propDict["bestPracticesMetrics"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
+                return $this->_propDict["bestPracticesMetrics"];
             } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
+                $this->_propDict["bestPracticesMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["bestPracticesMetrics"]);
+                return $this->_propDict["bestPracticesMetrics"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the createdDateTime
-    * The date the custom baseline was created.
+    * Sets the bestPracticesMetrics
+    * The user experience analytics best practices metrics.
     *
-    * @param \DateTime $val The createdDateTime
+    * @param UserExperienceAnalyticsCategory $val The bestPracticesMetrics
     *
     * @return UserExperienceAnalyticsBaseline
     */
-    public function setCreatedDateTime($val)
+    public function setBestPracticesMetrics($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["bestPracticesMetrics"] = $val;
         return $this;
     }
     
@@ -145,39 +178,6 @@ class UserExperienceAnalyticsBaseline extends Entity
     public function setDeviceBootPerformanceMetrics($val)
     {
         $this->_propDict["deviceBootPerformanceMetrics"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the bestPracticesMetrics
-    * The user experience analytics best practices metrics.
-    *
-    * @return UserExperienceAnalyticsCategory The bestPracticesMetrics
-    */
-    public function getBestPracticesMetrics()
-    {
-        if (array_key_exists("bestPracticesMetrics", $this->_propDict)) {
-            if (is_a($this->_propDict["bestPracticesMetrics"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
-                return $this->_propDict["bestPracticesMetrics"];
-            } else {
-                $this->_propDict["bestPracticesMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["bestPracticesMetrics"]);
-                return $this->_propDict["bestPracticesMetrics"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the bestPracticesMetrics
-    * The user experience analytics best practices metrics.
-    *
-    * @param UserExperienceAnalyticsCategory $val The bestPracticesMetrics
-    *
-    * @return UserExperienceAnalyticsBaseline
-    */
-    public function setBestPracticesMetrics($val)
-    {
-        $this->_propDict["bestPracticesMetrics"] = $val;
         return $this;
     }
     

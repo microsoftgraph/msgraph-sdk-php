@@ -23,6 +23,98 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ChangeNotification extends Entity
 {
+
+    /**
+    * Gets the changeType
+    * Indicates the type of change that will raise the change notification. The supported values are: created, updated, deleted. Required.
+    *
+    * @return ChangeType The changeType
+    */
+    public function getChangeType()
+    {
+        if (array_key_exists("changeType", $this->_propDict)) {
+            if (is_a($this->_propDict["changeType"], "Beta\Microsoft\Graph\Model\ChangeType")) {
+                return $this->_propDict["changeType"];
+            } else {
+                $this->_propDict["changeType"] = new ChangeType($this->_propDict["changeType"]);
+                return $this->_propDict["changeType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the changeType
+    * Indicates the type of change that will raise the change notification. The supported values are: created, updated, deleted. Required.
+    *
+    * @param ChangeType $val The value to assign to the changeType
+    *
+    * @return ChangeNotification The ChangeNotification
+    */
+    public function setChangeType($val)
+    {
+        $this->_propDict["changeType"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the clientState
+    * Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
+    *
+    * @return string The clientState
+    */
+    public function getClientState()
+    {
+        if (array_key_exists("clientState", $this->_propDict)) {
+            return $this->_propDict["clientState"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the clientState
+    * Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
+    *
+    * @param string $val The value of the clientState
+    *
+    * @return ChangeNotification
+    */
+    public function setClientState($val)
+    {
+        $this->_propDict["clientState"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the encryptedContent
+    *
+    * @return ChangeNotificationEncryptedContent The encryptedContent
+    */
+    public function getEncryptedContent()
+    {
+        if (array_key_exists("encryptedContent", $this->_propDict)) {
+            if (is_a($this->_propDict["encryptedContent"], "Beta\Microsoft\Graph\Model\ChangeNotificationEncryptedContent")) {
+                return $this->_propDict["encryptedContent"];
+            } else {
+                $this->_propDict["encryptedContent"] = new ChangeNotificationEncryptedContent($this->_propDict["encryptedContent"]);
+                return $this->_propDict["encryptedContent"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the encryptedContent
+    *
+    * @param ChangeNotificationEncryptedContent $val The value to assign to the encryptedContent
+    *
+    * @return ChangeNotification The ChangeNotification
+    */
+    public function setEncryptedContent($val)
+    {
+        $this->_propDict["encryptedContent"] = $val;
+         return $this;
+    }
     /**
     * Gets the id
     * Unique ID for the notification. Optional.
@@ -51,33 +143,97 @@ class ChangeNotification extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
+
     /**
-    * Gets the subscriptionId
-    * The unique identifier of the subscription that generated the notification.
+    * Gets the lifecycleEvent
     *
-    * @return string The subscriptionId
+    * @return LifecycleEventType The lifecycleEvent
     */
-    public function getSubscriptionId()
+    public function getLifecycleEvent()
     {
-        if (array_key_exists("subscriptionId", $this->_propDict)) {
-            return $this->_propDict["subscriptionId"];
+        if (array_key_exists("lifecycleEvent", $this->_propDict)) {
+            if (is_a($this->_propDict["lifecycleEvent"], "Beta\Microsoft\Graph\Model\LifecycleEventType")) {
+                return $this->_propDict["lifecycleEvent"];
+            } else {
+                $this->_propDict["lifecycleEvent"] = new LifecycleEventType($this->_propDict["lifecycleEvent"]);
+                return $this->_propDict["lifecycleEvent"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lifecycleEvent
+    *
+    * @param LifecycleEventType $val The value to assign to the lifecycleEvent
+    *
+    * @return ChangeNotification The ChangeNotification
+    */
+    public function setLifecycleEvent($val)
+    {
+        $this->_propDict["lifecycleEvent"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the resource
+    * The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
+    *
+    * @return string The resource
+    */
+    public function getResource()
+    {
+        if (array_key_exists("resource", $this->_propDict)) {
+            return $this->_propDict["resource"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the subscriptionId
-    * The unique identifier of the subscription that generated the notification.
+    * Sets the resource
+    * The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
     *
-    * @param string $val The value of the subscriptionId
+    * @param string $val The value of the resource
     *
     * @return ChangeNotification
     */
-    public function setSubscriptionId($val)
+    public function setResource($val)
     {
-        $this->_propDict["subscriptionId"] = $val;
+        $this->_propDict["resource"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the resourceData
+    * The content of this property depends on the type of resource being subscribed to. Required.
+    *
+    * @return ResourceData The resourceData
+    */
+    public function getResourceData()
+    {
+        if (array_key_exists("resourceData", $this->_propDict)) {
+            if (is_a($this->_propDict["resourceData"], "Beta\Microsoft\Graph\Model\ResourceData")) {
+                return $this->_propDict["resourceData"];
+            } else {
+                $this->_propDict["resourceData"] = new ResourceData($this->_propDict["resourceData"]);
+                return $this->_propDict["resourceData"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the resourceData
+    * The content of this property depends on the type of resource being subscribed to. Required.
+    *
+    * @param ResourceData $val The value to assign to the resourceData
+    *
+    * @return ChangeNotification The ChangeNotification
+    */
+    public function setResourceData($val)
+    {
+        $this->_propDict["resourceData"] = $val;
+         return $this;
     }
 
     /**
@@ -113,92 +269,31 @@ class ChangeNotification extends Entity
          return $this;
     }
     /**
-    * Gets the clientState
-    * Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
+    * Gets the subscriptionId
+    * The unique identifier of the subscription that generated the notification.
     *
-    * @return string The clientState
+    * @return string The subscriptionId
     */
-    public function getClientState()
+    public function getSubscriptionId()
     {
-        if (array_key_exists("clientState", $this->_propDict)) {
-            return $this->_propDict["clientState"];
+        if (array_key_exists("subscriptionId", $this->_propDict)) {
+            return $this->_propDict["subscriptionId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the clientState
-    * Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
+    * Sets the subscriptionId
+    * The unique identifier of the subscription that generated the notification.
     *
-    * @param string $val The value of the clientState
-    *
-    * @return ChangeNotification
-    */
-    public function setClientState($val)
-    {
-        $this->_propDict["clientState"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the changeType
-    * Indicates the type of change that will raise the change notification. The supported values are: created, updated, deleted. Required.
-    *
-    * @return ChangeType The changeType
-    */
-    public function getChangeType()
-    {
-        if (array_key_exists("changeType", $this->_propDict)) {
-            if (is_a($this->_propDict["changeType"], "Beta\Microsoft\Graph\Model\ChangeType")) {
-                return $this->_propDict["changeType"];
-            } else {
-                $this->_propDict["changeType"] = new ChangeType($this->_propDict["changeType"]);
-                return $this->_propDict["changeType"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the changeType
-    * Indicates the type of change that will raise the change notification. The supported values are: created, updated, deleted. Required.
-    *
-    * @param ChangeType $val The value to assign to the changeType
-    *
-    * @return ChangeNotification The ChangeNotification
-    */
-    public function setChangeType($val)
-    {
-        $this->_propDict["changeType"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the resource
-    * The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
-    *
-    * @return string The resource
-    */
-    public function getResource()
-    {
-        if (array_key_exists("resource", $this->_propDict)) {
-            return $this->_propDict["resource"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the resource
-    * The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
-    *
-    * @param string $val The value of the resource
+    * @param string $val The value of the subscriptionId
     *
     * @return ChangeNotification
     */
-    public function setResource($val)
+    public function setSubscriptionId($val)
     {
-        $this->_propDict["resource"] = $val;
+        $this->_propDict["subscriptionId"] = $val;
         return $this;
     }
     /**
@@ -228,100 +323,5 @@ class ChangeNotification extends Entity
     {
         $this->_propDict["tenantId"] = $val;
         return $this;
-    }
-
-    /**
-    * Gets the encryptedContent
-    *
-    * @return ChangeNotificationEncryptedContent The encryptedContent
-    */
-    public function getEncryptedContent()
-    {
-        if (array_key_exists("encryptedContent", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptedContent"], "Beta\Microsoft\Graph\Model\ChangeNotificationEncryptedContent")) {
-                return $this->_propDict["encryptedContent"];
-            } else {
-                $this->_propDict["encryptedContent"] = new ChangeNotificationEncryptedContent($this->_propDict["encryptedContent"]);
-                return $this->_propDict["encryptedContent"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the encryptedContent
-    *
-    * @param ChangeNotificationEncryptedContent $val The value to assign to the encryptedContent
-    *
-    * @return ChangeNotification The ChangeNotification
-    */
-    public function setEncryptedContent($val)
-    {
-        $this->_propDict["encryptedContent"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the lifecycleEvent
-    *
-    * @return LifecycleEventType The lifecycleEvent
-    */
-    public function getLifecycleEvent()
-    {
-        if (array_key_exists("lifecycleEvent", $this->_propDict)) {
-            if (is_a($this->_propDict["lifecycleEvent"], "Beta\Microsoft\Graph\Model\LifecycleEventType")) {
-                return $this->_propDict["lifecycleEvent"];
-            } else {
-                $this->_propDict["lifecycleEvent"] = new LifecycleEventType($this->_propDict["lifecycleEvent"]);
-                return $this->_propDict["lifecycleEvent"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the lifecycleEvent
-    *
-    * @param LifecycleEventType $val The value to assign to the lifecycleEvent
-    *
-    * @return ChangeNotification The ChangeNotification
-    */
-    public function setLifecycleEvent($val)
-    {
-        $this->_propDict["lifecycleEvent"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the resourceData
-    * The content of this property depends on the type of resource being subscribed to. Required.
-    *
-    * @return ResourceData The resourceData
-    */
-    public function getResourceData()
-    {
-        if (array_key_exists("resourceData", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceData"], "Beta\Microsoft\Graph\Model\ResourceData")) {
-                return $this->_propDict["resourceData"];
-            } else {
-                $this->_propDict["resourceData"] = new ResourceData($this->_propDict["resourceData"]);
-                return $this->_propDict["resourceData"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the resourceData
-    * The content of this property depends on the type of resource being subscribed to. Required.
-    *
-    * @param ResourceData $val The value to assign to the resourceData
-    *
-    * @return ChangeNotification The ChangeNotification
-    */
-    public function setResourceData($val)
-    {
-        $this->_propDict["resourceData"] = $val;
-         return $this;
     }
 }

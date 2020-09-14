@@ -25,6 +25,118 @@ namespace Beta\Microsoft\Graph\Model;
 class GovernanceRoleAssignmentRequest extends Entity
 {
     /**
+    * Gets the assignmentState
+    *
+    * @return string The assignmentState
+    */
+    public function getAssignmentState()
+    {
+        if (array_key_exists("assignmentState", $this->_propDict)) {
+            return $this->_propDict["assignmentState"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the assignmentState
+    *
+    * @param string $val The assignmentState
+    *
+    * @return GovernanceRoleAssignmentRequest
+    */
+    public function setAssignmentState($val)
+    {
+        $this->_propDict["assignmentState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the linkedEligibleRoleAssignmentId
+    *
+    * @return string The linkedEligibleRoleAssignmentId
+    */
+    public function getLinkedEligibleRoleAssignmentId()
+    {
+        if (array_key_exists("linkedEligibleRoleAssignmentId", $this->_propDict)) {
+            return $this->_propDict["linkedEligibleRoleAssignmentId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the linkedEligibleRoleAssignmentId
+    *
+    * @param string $val The linkedEligibleRoleAssignmentId
+    *
+    * @return GovernanceRoleAssignmentRequest
+    */
+    public function setLinkedEligibleRoleAssignmentId($val)
+    {
+        $this->_propDict["linkedEligibleRoleAssignmentId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reason
+    *
+    * @return string The reason
+    */
+    public function getReason()
+    {
+        if (array_key_exists("reason", $this->_propDict)) {
+            return $this->_propDict["reason"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the reason
+    *
+    * @param string $val The reason
+    *
+    * @return GovernanceRoleAssignmentRequest
+    */
+    public function setReason($val)
+    {
+        $this->_propDict["reason"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the requestedDateTime
+    *
+    * @return \DateTime The requestedDateTime
+    */
+    public function getRequestedDateTime()
+    {
+        if (array_key_exists("requestedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["requestedDateTime"], "\DateTime")) {
+                return $this->_propDict["requestedDateTime"];
+            } else {
+                $this->_propDict["requestedDateTime"] = new \DateTime($this->_propDict["requestedDateTime"]);
+                return $this->_propDict["requestedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the requestedDateTime
+    *
+    * @param \DateTime $val The requestedDateTime
+    *
+    * @return GovernanceRoleAssignmentRequest
+    */
+    public function setRequestedDateTime($val)
+    {
+        $this->_propDict["requestedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the resourceId
     *
     * @return string The resourceId
@@ -79,168 +191,33 @@ class GovernanceRoleAssignmentRequest extends Entity
     }
     
     /**
-    * Gets the subjectId
+    * Gets the schedule
     *
-    * @return string The subjectId
+    * @return GovernanceSchedule The schedule
     */
-    public function getSubjectId()
+    public function getSchedule()
     {
-        if (array_key_exists("subjectId", $this->_propDict)) {
-            return $this->_propDict["subjectId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the subjectId
-    *
-    * @param string $val The subjectId
-    *
-    * @return GovernanceRoleAssignmentRequest
-    */
-    public function setSubjectId($val)
-    {
-        $this->_propDict["subjectId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the linkedEligibleRoleAssignmentId
-    *
-    * @return string The linkedEligibleRoleAssignmentId
-    */
-    public function getLinkedEligibleRoleAssignmentId()
-    {
-        if (array_key_exists("linkedEligibleRoleAssignmentId", $this->_propDict)) {
-            return $this->_propDict["linkedEligibleRoleAssignmentId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the linkedEligibleRoleAssignmentId
-    *
-    * @param string $val The linkedEligibleRoleAssignmentId
-    *
-    * @return GovernanceRoleAssignmentRequest
-    */
-    public function setLinkedEligibleRoleAssignmentId($val)
-    {
-        $this->_propDict["linkedEligibleRoleAssignmentId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the type
-    *
-    * @return string The type
-    */
-    public function getType()
-    {
-        if (array_key_exists("type", $this->_propDict)) {
-            return $this->_propDict["type"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the type
-    *
-    * @param string $val The type
-    *
-    * @return GovernanceRoleAssignmentRequest
-    */
-    public function setType($val)
-    {
-        $this->_propDict["type"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the assignmentState
-    *
-    * @return string The assignmentState
-    */
-    public function getAssignmentState()
-    {
-        if (array_key_exists("assignmentState", $this->_propDict)) {
-            return $this->_propDict["assignmentState"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the assignmentState
-    *
-    * @param string $val The assignmentState
-    *
-    * @return GovernanceRoleAssignmentRequest
-    */
-    public function setAssignmentState($val)
-    {
-        $this->_propDict["assignmentState"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the requestedDateTime
-    *
-    * @return \DateTime The requestedDateTime
-    */
-    public function getRequestedDateTime()
-    {
-        if (array_key_exists("requestedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestedDateTime"], "\DateTime")) {
-                return $this->_propDict["requestedDateTime"];
+        if (array_key_exists("schedule", $this->_propDict)) {
+            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\GovernanceSchedule")) {
+                return $this->_propDict["schedule"];
             } else {
-                $this->_propDict["requestedDateTime"] = new \DateTime($this->_propDict["requestedDateTime"]);
-                return $this->_propDict["requestedDateTime"];
+                $this->_propDict["schedule"] = new GovernanceSchedule($this->_propDict["schedule"]);
+                return $this->_propDict["schedule"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the requestedDateTime
+    * Sets the schedule
     *
-    * @param \DateTime $val The requestedDateTime
-    *
-    * @return GovernanceRoleAssignmentRequest
-    */
-    public function setRequestedDateTime($val)
-    {
-        $this->_propDict["requestedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the reason
-    *
-    * @return string The reason
-    */
-    public function getReason()
-    {
-        if (array_key_exists("reason", $this->_propDict)) {
-            return $this->_propDict["reason"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the reason
-    *
-    * @param string $val The reason
+    * @param GovernanceSchedule $val The schedule
     *
     * @return GovernanceRoleAssignmentRequest
     */
-    public function setReason($val)
+    public function setSchedule($val)
     {
-        $this->_propDict["reason"] = $val;
+        $this->_propDict["schedule"] = $val;
         return $this;
     }
     
@@ -276,33 +253,56 @@ class GovernanceRoleAssignmentRequest extends Entity
     }
     
     /**
-    * Gets the schedule
+    * Gets the subjectId
     *
-    * @return GovernanceSchedule The schedule
+    * @return string The subjectId
     */
-    public function getSchedule()
+    public function getSubjectId()
     {
-        if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\GovernanceSchedule")) {
-                return $this->_propDict["schedule"];
-            } else {
-                $this->_propDict["schedule"] = new GovernanceSchedule($this->_propDict["schedule"]);
-                return $this->_propDict["schedule"];
-            }
+        if (array_key_exists("subjectId", $this->_propDict)) {
+            return $this->_propDict["subjectId"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the schedule
+    * Sets the subjectId
     *
-    * @param GovernanceSchedule $val The schedule
+    * @param string $val The subjectId
     *
     * @return GovernanceRoleAssignmentRequest
     */
-    public function setSchedule($val)
+    public function setSubjectId($val)
     {
-        $this->_propDict["schedule"] = $val;
+        $this->_propDict["subjectId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return string The type
+    */
+    public function getType()
+    {
+        if (array_key_exists("type", $this->_propDict)) {
+            return $this->_propDict["type"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the type
+    *
+    * @param string $val The type
+    *
+    * @return GovernanceRoleAssignmentRequest
+    */
+    public function setType($val)
+    {
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

@@ -467,29 +467,29 @@ class OutlookTask extends OutlookItem
     
 
      /** 
-     * Gets the singleValueExtendedProperties
+     * Gets the attachments
      *
-     * @return array The singleValueExtendedProperties
+     * @return array The attachments
      */
-    public function getSingleValueExtendedProperties()
+    public function getAttachments()
     {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
+        if (array_key_exists("attachments", $this->_propDict)) {
+           return $this->_propDict["attachments"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the singleValueExtendedProperties
+    * Sets the attachments
     *
-    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
+    * @param Attachment $val The attachments
     *
     * @return OutlookTask
     */
-    public function setSingleValueExtendedProperties($val)
+    public function setAttachments($val)
     {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
+		$this->_propDict["attachments"] = $val;
         return $this;
     }
     
@@ -523,29 +523,29 @@ class OutlookTask extends OutlookItem
     
 
      /** 
-     * Gets the attachments
+     * Gets the singleValueExtendedProperties
      *
-     * @return array The attachments
+     * @return array The singleValueExtendedProperties
      */
-    public function getAttachments()
+    public function getSingleValueExtendedProperties()
     {
-        if (array_key_exists("attachments", $this->_propDict)) {
-           return $this->_propDict["attachments"];
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+           return $this->_propDict["singleValueExtendedProperties"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the attachments
+    * Sets the singleValueExtendedProperties
     *
-    * @param Attachment $val The attachments
+    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
     * @return OutlookTask
     */
-    public function setAttachments($val)
+    public function setSingleValueExtendedProperties($val)
     {
-		$this->_propDict["attachments"] = $val;
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

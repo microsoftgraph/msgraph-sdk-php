@@ -87,35 +87,6 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     }
     
     /**
-    * Gets the loginGroupOrDomain
-    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-    *
-    * @return string The loginGroupOrDomain
-    */
-    public function getLoginGroupOrDomain()
-    {
-        if (array_key_exists("loginGroupOrDomain", $this->_propDict)) {
-            return $this->_propDict["loginGroupOrDomain"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the loginGroupOrDomain
-    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-    *
-    * @param string $val The loginGroupOrDomain
-    *
-    * @return Windows81VpnConfiguration
-    */
-    public function setLoginGroupOrDomain($val)
-    {
-        $this->_propDict["loginGroupOrDomain"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the enableSplitTunneling
     * Enable split tunneling for the VPN.
     *
@@ -141,6 +112,35 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     public function setEnableSplitTunneling($val)
     {
         $this->_propDict["enableSplitTunneling"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the loginGroupOrDomain
+    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
+    *
+    * @return string The loginGroupOrDomain
+    */
+    public function getLoginGroupOrDomain()
+    {
+        if (array_key_exists("loginGroupOrDomain", $this->_propDict)) {
+            return $this->_propDict["loginGroupOrDomain"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the loginGroupOrDomain
+    * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
+    *
+    * @param string $val The loginGroupOrDomain
+    *
+    * @return Windows81VpnConfiguration
+    */
+    public function setLoginGroupOrDomain($val)
+    {
+        $this->_propDict["loginGroupOrDomain"] = $val;
         return $this;
     }
     

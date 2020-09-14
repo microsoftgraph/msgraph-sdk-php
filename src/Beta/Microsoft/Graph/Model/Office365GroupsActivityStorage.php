@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class Office365GroupsActivityStorage extends Entity
 {
     /**
-    * Gets the reportRefreshDate
-    *
-    * @return \DateTime The reportRefreshDate
-    */
-    public function getReportRefreshDate()
-    {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return Office365GroupsActivityStorage
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the mailboxStorageUsedInBytes
     *
     * @return int The mailboxStorageUsedInBytes
@@ -79,33 +48,6 @@ class Office365GroupsActivityStorage extends Entity
     public function setMailboxStorageUsedInBytes($val)
     {
         $this->_propDict["mailboxStorageUsedInBytes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the siteStorageUsedInBytes
-    *
-    * @return int The siteStorageUsedInBytes
-    */
-    public function getSiteStorageUsedInBytes()
-    {
-        if (array_key_exists("siteStorageUsedInBytes", $this->_propDict)) {
-            return $this->_propDict["siteStorageUsedInBytes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the siteStorageUsedInBytes
-    *
-    * @param int $val The siteStorageUsedInBytes
-    *
-    * @return Office365GroupsActivityStorage
-    */
-    public function setSiteStorageUsedInBytes($val)
-    {
-        $this->_propDict["siteStorageUsedInBytes"] = intval($val);
         return $this;
     }
     
@@ -164,6 +106,64 @@ class Office365GroupsActivityStorage extends Entity
     public function setReportPeriod($val)
     {
         $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return Office365GroupsActivityStorage
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the siteStorageUsedInBytes
+    *
+    * @return int The siteStorageUsedInBytes
+    */
+    public function getSiteStorageUsedInBytes()
+    {
+        if (array_key_exists("siteStorageUsedInBytes", $this->_propDict)) {
+            return $this->_propDict["siteStorageUsedInBytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the siteStorageUsedInBytes
+    *
+    * @param int $val The siteStorageUsedInBytes
+    *
+    * @return Office365GroupsActivityStorage
+    */
+    public function setSiteStorageUsedInBytes($val)
+    {
+        $this->_propDict["siteStorageUsedInBytes"] = intval($val);
         return $this;
     }
     

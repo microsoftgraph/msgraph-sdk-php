@@ -26,34 +26,6 @@ class TrustFramework extends Entity
 {
 
      /** 
-     * Gets the policies
-     *
-     * @return array The policies
-     */
-    public function getPolicies()
-    {
-        if (array_key_exists("policies", $this->_propDict)) {
-           return $this->_propDict["policies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the policies
-    *
-    * @param TrustFrameworkPolicy $val The policies
-    *
-    * @return TrustFramework
-    */
-    public function setPolicies($val)
-    {
-		$this->_propDict["policies"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the keySets
      *
      * @return array The keySets
@@ -77,6 +49,34 @@ class TrustFramework extends Entity
     public function setKeySets($val)
     {
 		$this->_propDict["keySets"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the policies
+     *
+     * @return array The policies
+     */
+    public function getPolicies()
+    {
+        if (array_key_exists("policies", $this->_propDict)) {
+           return $this->_propDict["policies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the policies
+    *
+    * @param TrustFrameworkPolicy $val The policies
+    *
+    * @return TrustFramework
+    */
+    public function setPolicies($val)
+    {
+		$this->_propDict["policies"] = $val;
         return $this;
     }
     

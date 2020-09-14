@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class PlannerTaskDetails extends PlannerDelta
 {
     /**
+    * Gets the checklist
+    * The collection of checklist items on the task.
+    *
+    * @return PlannerChecklistItems The checklist
+    */
+    public function getChecklist()
+    {
+        if (array_key_exists("checklist", $this->_propDict)) {
+            if (is_a($this->_propDict["checklist"], "Beta\Microsoft\Graph\Model\PlannerChecklistItems")) {
+                return $this->_propDict["checklist"];
+            } else {
+                $this->_propDict["checklist"] = new PlannerChecklistItems($this->_propDict["checklist"]);
+                return $this->_propDict["checklist"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the checklist
+    * The collection of checklist items on the task.
+    *
+    * @param PlannerChecklistItems $val The checklist
+    *
+    * @return PlannerTaskDetails
+    */
+    public function setChecklist($val)
+    {
+        $this->_propDict["checklist"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * Description of the task
     *
@@ -116,39 +149,6 @@ class PlannerTaskDetails extends PlannerDelta
     public function setReferences($val)
     {
         $this->_propDict["references"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the checklist
-    * The collection of checklist items on the task.
-    *
-    * @return PlannerChecklistItems The checklist
-    */
-    public function getChecklist()
-    {
-        if (array_key_exists("checklist", $this->_propDict)) {
-            if (is_a($this->_propDict["checklist"], "Beta\Microsoft\Graph\Model\PlannerChecklistItems")) {
-                return $this->_propDict["checklist"];
-            } else {
-                $this->_propDict["checklist"] = new PlannerChecklistItems($this->_propDict["checklist"]);
-                return $this->_propDict["checklist"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the checklist
-    * The collection of checklist items on the task.
-    *
-    * @param PlannerChecklistItems $val The checklist
-    *
-    * @return PlannerTaskDetails
-    */
-    public function setChecklist($val)
-    {
-        $this->_propDict["checklist"] = $val;
         return $this;
     }
     

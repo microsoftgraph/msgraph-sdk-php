@@ -54,31 +54,35 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     }
     
     /**
-    * Gets the displayName
-    * Display name for the enrollment profile.
+    * Gets the createdDateTime
+    * Date time the enrollment profile was created.
     *
-    * @return string The displayName
+    * @return \DateTime The createdDateTime
     */
-    public function getDisplayName()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the displayName
-    * Display name for the enrollment profile.
+    * Sets the createdDateTime
+    * Date time the enrollment profile was created.
     *
-    * @param string $val The displayName
+    * @param \DateTime $val The createdDateTime
     *
     * @return AndroidDeviceOwnerEnrollmentProfile
     */
-    public function setDisplayName($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -108,6 +112,64 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Display name for the enrollment profile.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Display name for the enrollment profile.
+    *
+    * @param string $val The displayName
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enrolledDeviceCount
+    * Total number of Android devices that have enrolled using this enrollment profile.
+    *
+    * @return int The enrolledDeviceCount
+    */
+    public function getEnrolledDeviceCount()
+    {
+        if (array_key_exists("enrolledDeviceCount", $this->_propDict)) {
+            return $this->_propDict["enrolledDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enrolledDeviceCount
+    * Total number of Android devices that have enrolled using this enrollment profile.
+    *
+    * @param int $val The enrolledDeviceCount
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setEnrolledDeviceCount($val)
+    {
+        $this->_propDict["enrolledDeviceCount"] = intval($val);
         return $this;
     }
     
@@ -145,39 +207,6 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     }
     
     /**
-    * Gets the createdDateTime
-    * Date time the enrollment profile was created.
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    * Date time the enrollment profile was created.
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return AndroidDeviceOwnerEnrollmentProfile
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastModifiedDateTime
     * Date time the enrollment profile was last modified.
     *
@@ -207,130 +236,6 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tokenValue
-    * Value of the most recently created token for this enrollment profile.
-    *
-    * @return string The tokenValue
-    */
-    public function getTokenValue()
-    {
-        if (array_key_exists("tokenValue", $this->_propDict)) {
-            return $this->_propDict["tokenValue"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tokenValue
-    * Value of the most recently created token for this enrollment profile.
-    *
-    * @param string $val The tokenValue
-    *
-    * @return AndroidDeviceOwnerEnrollmentProfile
-    */
-    public function setTokenValue($val)
-    {
-        $this->_propDict["tokenValue"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tokenCreationDateTime
-    * Date time the most recently created token was created.
-    *
-    * @return \DateTime The tokenCreationDateTime
-    */
-    public function getTokenCreationDateTime()
-    {
-        if (array_key_exists("tokenCreationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenCreationDateTime"], "\DateTime")) {
-                return $this->_propDict["tokenCreationDateTime"];
-            } else {
-                $this->_propDict["tokenCreationDateTime"] = new \DateTime($this->_propDict["tokenCreationDateTime"]);
-                return $this->_propDict["tokenCreationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the tokenCreationDateTime
-    * Date time the most recently created token was created.
-    *
-    * @param \DateTime $val The tokenCreationDateTime
-    *
-    * @return AndroidDeviceOwnerEnrollmentProfile
-    */
-    public function setTokenCreationDateTime($val)
-    {
-        $this->_propDict["tokenCreationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tokenExpirationDateTime
-    * Date time the most recently created token will expire.
-    *
-    * @return \DateTime The tokenExpirationDateTime
-    */
-    public function getTokenExpirationDateTime()
-    {
-        if (array_key_exists("tokenExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime")) {
-                return $this->_propDict["tokenExpirationDateTime"];
-            } else {
-                $this->_propDict["tokenExpirationDateTime"] = new \DateTime($this->_propDict["tokenExpirationDateTime"]);
-                return $this->_propDict["tokenExpirationDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the tokenExpirationDateTime
-    * Date time the most recently created token will expire.
-    *
-    * @param \DateTime $val The tokenExpirationDateTime
-    *
-    * @return AndroidDeviceOwnerEnrollmentProfile
-    */
-    public function setTokenExpirationDateTime($val)
-    {
-        $this->_propDict["tokenExpirationDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the enrolledDeviceCount
-    * Total number of Android devices that have enrolled using this enrollment profile.
-    *
-    * @return int The enrolledDeviceCount
-    */
-    public function getEnrolledDeviceCount()
-    {
-        if (array_key_exists("enrolledDeviceCount", $this->_propDict)) {
-            return $this->_propDict["enrolledDeviceCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the enrolledDeviceCount
-    * Total number of Android devices that have enrolled using this enrollment profile.
-    *
-    * @param int $val The enrolledDeviceCount
-    *
-    * @return AndroidDeviceOwnerEnrollmentProfile
-    */
-    public function setEnrolledDeviceCount($val)
-    {
-        $this->_propDict["enrolledDeviceCount"] = intval($val);
         return $this;
     }
     
@@ -422,6 +327,101 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function setRoleScopeTagIds($val)
     {
         $this->_propDict["roleScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenCreationDateTime
+    * Date time the most recently created token was created.
+    *
+    * @return \DateTime The tokenCreationDateTime
+    */
+    public function getTokenCreationDateTime()
+    {
+        if (array_key_exists("tokenCreationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["tokenCreationDateTime"], "\DateTime")) {
+                return $this->_propDict["tokenCreationDateTime"];
+            } else {
+                $this->_propDict["tokenCreationDateTime"] = new \DateTime($this->_propDict["tokenCreationDateTime"]);
+                return $this->_propDict["tokenCreationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the tokenCreationDateTime
+    * Date time the most recently created token was created.
+    *
+    * @param \DateTime $val The tokenCreationDateTime
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setTokenCreationDateTime($val)
+    {
+        $this->_propDict["tokenCreationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenExpirationDateTime
+    * Date time the most recently created token will expire.
+    *
+    * @return \DateTime The tokenExpirationDateTime
+    */
+    public function getTokenExpirationDateTime()
+    {
+        if (array_key_exists("tokenExpirationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime")) {
+                return $this->_propDict["tokenExpirationDateTime"];
+            } else {
+                $this->_propDict["tokenExpirationDateTime"] = new \DateTime($this->_propDict["tokenExpirationDateTime"]);
+                return $this->_propDict["tokenExpirationDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the tokenExpirationDateTime
+    * Date time the most recently created token will expire.
+    *
+    * @param \DateTime $val The tokenExpirationDateTime
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setTokenExpirationDateTime($val)
+    {
+        $this->_propDict["tokenExpirationDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tokenValue
+    * Value of the most recently created token for this enrollment profile.
+    *
+    * @return string The tokenValue
+    */
+    public function getTokenValue()
+    {
+        if (array_key_exists("tokenValue", $this->_propDict)) {
+            return $this->_propDict["tokenValue"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tokenValue
+    * Value of the most recently created token for this enrollment profile.
+    *
+    * @param string $val The tokenValue
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setTokenValue($val)
+    {
+        $this->_propDict["tokenValue"] = $val;
         return $this;
     }
     

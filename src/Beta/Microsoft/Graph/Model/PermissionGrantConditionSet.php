@@ -25,6 +25,114 @@ namespace Beta\Microsoft\Graph\Model;
 class PermissionGrantConditionSet extends Entity
 {
     /**
+    * Gets the clientApplicationIds
+    *
+    * @return string The clientApplicationIds
+    */
+    public function getClientApplicationIds()
+    {
+        if (array_key_exists("clientApplicationIds", $this->_propDict)) {
+            return $this->_propDict["clientApplicationIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the clientApplicationIds
+    *
+    * @param string $val The clientApplicationIds
+    *
+    * @return PermissionGrantConditionSet
+    */
+    public function setClientApplicationIds($val)
+    {
+        $this->_propDict["clientApplicationIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the clientApplicationPublisherIds
+    *
+    * @return string The clientApplicationPublisherIds
+    */
+    public function getClientApplicationPublisherIds()
+    {
+        if (array_key_exists("clientApplicationPublisherIds", $this->_propDict)) {
+            return $this->_propDict["clientApplicationPublisherIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the clientApplicationPublisherIds
+    *
+    * @param string $val The clientApplicationPublisherIds
+    *
+    * @return PermissionGrantConditionSet
+    */
+    public function setClientApplicationPublisherIds($val)
+    {
+        $this->_propDict["clientApplicationPublisherIds"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the clientApplicationsFromVerifiedPublisherOnly
+    *
+    * @return bool The clientApplicationsFromVerifiedPublisherOnly
+    */
+    public function getClientApplicationsFromVerifiedPublisherOnly()
+    {
+        if (array_key_exists("clientApplicationsFromVerifiedPublisherOnly", $this->_propDict)) {
+            return $this->_propDict["clientApplicationsFromVerifiedPublisherOnly"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the clientApplicationsFromVerifiedPublisherOnly
+    *
+    * @param bool $val The clientApplicationsFromVerifiedPublisherOnly
+    *
+    * @return PermissionGrantConditionSet
+    */
+    public function setClientApplicationsFromVerifiedPublisherOnly($val)
+    {
+        $this->_propDict["clientApplicationsFromVerifiedPublisherOnly"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the clientApplicationTenantIds
+    *
+    * @return string The clientApplicationTenantIds
+    */
+    public function getClientApplicationTenantIds()
+    {
+        if (array_key_exists("clientApplicationTenantIds", $this->_propDict)) {
+            return $this->_propDict["clientApplicationTenantIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the clientApplicationTenantIds
+    *
+    * @param string $val The clientApplicationTenantIds
+    *
+    * @return PermissionGrantConditionSet
+    */
+    public function setClientApplicationTenantIds($val)
+    {
+        $this->_propDict["clientApplicationTenantIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the permissionClassification
     *
     * @return string The permissionClassification
@@ -48,6 +156,33 @@ class PermissionGrantConditionSet extends Entity
     public function setPermissionClassification($val)
     {
         $this->_propDict["permissionClassification"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the permissions
+    *
+    * @return string The permissions
+    */
+    public function getPermissions()
+    {
+        if (array_key_exists("permissions", $this->_propDict)) {
+            return $this->_propDict["permissions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the permissions
+    *
+    * @param string $val The permissions
+    *
+    * @return PermissionGrantConditionSet
+    */
+    public function setPermissions($val)
+    {
+        $this->_propDict["permissions"] = $val;
         return $this;
     }
     
@@ -106,141 +241,6 @@ class PermissionGrantConditionSet extends Entity
     public function setResourceApplication($val)
     {
         $this->_propDict["resourceApplication"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the permissions
-    *
-    * @return string The permissions
-    */
-    public function getPermissions()
-    {
-        if (array_key_exists("permissions", $this->_propDict)) {
-            return $this->_propDict["permissions"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the permissions
-    *
-    * @param string $val The permissions
-    *
-    * @return PermissionGrantConditionSet
-    */
-    public function setPermissions($val)
-    {
-        $this->_propDict["permissions"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the clientApplicationIds
-    *
-    * @return string The clientApplicationIds
-    */
-    public function getClientApplicationIds()
-    {
-        if (array_key_exists("clientApplicationIds", $this->_propDict)) {
-            return $this->_propDict["clientApplicationIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the clientApplicationIds
-    *
-    * @param string $val The clientApplicationIds
-    *
-    * @return PermissionGrantConditionSet
-    */
-    public function setClientApplicationIds($val)
-    {
-        $this->_propDict["clientApplicationIds"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the clientApplicationTenantIds
-    *
-    * @return string The clientApplicationTenantIds
-    */
-    public function getClientApplicationTenantIds()
-    {
-        if (array_key_exists("clientApplicationTenantIds", $this->_propDict)) {
-            return $this->_propDict["clientApplicationTenantIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the clientApplicationTenantIds
-    *
-    * @param string $val The clientApplicationTenantIds
-    *
-    * @return PermissionGrantConditionSet
-    */
-    public function setClientApplicationTenantIds($val)
-    {
-        $this->_propDict["clientApplicationTenantIds"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the clientApplicationPublisherIds
-    *
-    * @return string The clientApplicationPublisherIds
-    */
-    public function getClientApplicationPublisherIds()
-    {
-        if (array_key_exists("clientApplicationPublisherIds", $this->_propDict)) {
-            return $this->_propDict["clientApplicationPublisherIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the clientApplicationPublisherIds
-    *
-    * @param string $val The clientApplicationPublisherIds
-    *
-    * @return PermissionGrantConditionSet
-    */
-    public function setClientApplicationPublisherIds($val)
-    {
-        $this->_propDict["clientApplicationPublisherIds"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the clientApplicationsFromVerifiedPublisherOnly
-    *
-    * @return bool The clientApplicationsFromVerifiedPublisherOnly
-    */
-    public function getClientApplicationsFromVerifiedPublisherOnly()
-    {
-        if (array_key_exists("clientApplicationsFromVerifiedPublisherOnly", $this->_propDict)) {
-            return $this->_propDict["clientApplicationsFromVerifiedPublisherOnly"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the clientApplicationsFromVerifiedPublisherOnly
-    *
-    * @param bool $val The clientApplicationsFromVerifiedPublisherOnly
-    *
-    * @return PermissionGrantConditionSet
-    */
-    public function setClientApplicationsFromVerifiedPublisherOnly($val)
-    {
-        $this->_propDict["clientApplicationsFromVerifiedPublisherOnly"] = boolval($val);
         return $this;
     }
     

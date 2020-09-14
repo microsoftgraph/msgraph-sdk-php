@@ -25,6 +25,105 @@ class CryptographySuite extends Entity
 {
 
     /**
+    * Gets the authenticationTransformConstants
+    * Authentication Transform Constants
+    *
+    * @return AuthenticationTransformConstant The authenticationTransformConstants
+    */
+    public function getAuthenticationTransformConstants()
+    {
+        if (array_key_exists("authenticationTransformConstants", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationTransformConstants"], "Beta\Microsoft\Graph\Model\AuthenticationTransformConstant")) {
+                return $this->_propDict["authenticationTransformConstants"];
+            } else {
+                $this->_propDict["authenticationTransformConstants"] = new AuthenticationTransformConstant($this->_propDict["authenticationTransformConstants"]);
+                return $this->_propDict["authenticationTransformConstants"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authenticationTransformConstants
+    * Authentication Transform Constants
+    *
+    * @param AuthenticationTransformConstant $val The value to assign to the authenticationTransformConstants
+    *
+    * @return CryptographySuite The CryptographySuite
+    */
+    public function setAuthenticationTransformConstants($val)
+    {
+        $this->_propDict["authenticationTransformConstants"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the cipherTransformConstants
+    * Cipher Transform Constants
+    *
+    * @return VpnEncryptionAlgorithmType The cipherTransformConstants
+    */
+    public function getCipherTransformConstants()
+    {
+        if (array_key_exists("cipherTransformConstants", $this->_propDict)) {
+            if (is_a($this->_propDict["cipherTransformConstants"], "Beta\Microsoft\Graph\Model\VpnEncryptionAlgorithmType")) {
+                return $this->_propDict["cipherTransformConstants"];
+            } else {
+                $this->_propDict["cipherTransformConstants"] = new VpnEncryptionAlgorithmType($this->_propDict["cipherTransformConstants"]);
+                return $this->_propDict["cipherTransformConstants"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the cipherTransformConstants
+    * Cipher Transform Constants
+    *
+    * @param VpnEncryptionAlgorithmType $val The value to assign to the cipherTransformConstants
+    *
+    * @return CryptographySuite The CryptographySuite
+    */
+    public function setCipherTransformConstants($val)
+    {
+        $this->_propDict["cipherTransformConstants"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the dhGroup
+    * Diffie Hellman Group
+    *
+    * @return DiffieHellmanGroup The dhGroup
+    */
+    public function getDhGroup()
+    {
+        if (array_key_exists("dhGroup", $this->_propDict)) {
+            if (is_a($this->_propDict["dhGroup"], "Beta\Microsoft\Graph\Model\DiffieHellmanGroup")) {
+                return $this->_propDict["dhGroup"];
+            } else {
+                $this->_propDict["dhGroup"] = new DiffieHellmanGroup($this->_propDict["dhGroup"]);
+                return $this->_propDict["dhGroup"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the dhGroup
+    * Diffie Hellman Group
+    *
+    * @param DiffieHellmanGroup $val The value to assign to the dhGroup
+    *
+    * @return CryptographySuite The CryptographySuite
+    */
+    public function setDhGroup($val)
+    {
+        $this->_propDict["dhGroup"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the encryptionMethod
     * Encryption Method
     *
@@ -87,105 +186,6 @@ class CryptographySuite extends Entity
     public function setIntegrityCheckMethod($val)
     {
         $this->_propDict["integrityCheckMethod"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the dhGroup
-    * Diffie Hellman Group
-    *
-    * @return DiffieHellmanGroup The dhGroup
-    */
-    public function getDhGroup()
-    {
-        if (array_key_exists("dhGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["dhGroup"], "Beta\Microsoft\Graph\Model\DiffieHellmanGroup")) {
-                return $this->_propDict["dhGroup"];
-            } else {
-                $this->_propDict["dhGroup"] = new DiffieHellmanGroup($this->_propDict["dhGroup"]);
-                return $this->_propDict["dhGroup"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the dhGroup
-    * Diffie Hellman Group
-    *
-    * @param DiffieHellmanGroup $val The value to assign to the dhGroup
-    *
-    * @return CryptographySuite The CryptographySuite
-    */
-    public function setDhGroup($val)
-    {
-        $this->_propDict["dhGroup"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the cipherTransformConstants
-    * Cipher Transform Constants
-    *
-    * @return VpnEncryptionAlgorithmType The cipherTransformConstants
-    */
-    public function getCipherTransformConstants()
-    {
-        if (array_key_exists("cipherTransformConstants", $this->_propDict)) {
-            if (is_a($this->_propDict["cipherTransformConstants"], "Beta\Microsoft\Graph\Model\VpnEncryptionAlgorithmType")) {
-                return $this->_propDict["cipherTransformConstants"];
-            } else {
-                $this->_propDict["cipherTransformConstants"] = new VpnEncryptionAlgorithmType($this->_propDict["cipherTransformConstants"]);
-                return $this->_propDict["cipherTransformConstants"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the cipherTransformConstants
-    * Cipher Transform Constants
-    *
-    * @param VpnEncryptionAlgorithmType $val The value to assign to the cipherTransformConstants
-    *
-    * @return CryptographySuite The CryptographySuite
-    */
-    public function setCipherTransformConstants($val)
-    {
-        $this->_propDict["cipherTransformConstants"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the authenticationTransformConstants
-    * Authentication Transform Constants
-    *
-    * @return AuthenticationTransformConstant The authenticationTransformConstants
-    */
-    public function getAuthenticationTransformConstants()
-    {
-        if (array_key_exists("authenticationTransformConstants", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationTransformConstants"], "Beta\Microsoft\Graph\Model\AuthenticationTransformConstant")) {
-                return $this->_propDict["authenticationTransformConstants"];
-            } else {
-                $this->_propDict["authenticationTransformConstants"] = new AuthenticationTransformConstant($this->_propDict["authenticationTransformConstants"]);
-                return $this->_propDict["authenticationTransformConstants"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the authenticationTransformConstants
-    * Authentication Transform Constants
-    *
-    * @param AuthenticationTransformConstant $val The value to assign to the authenticationTransformConstants
-    *
-    * @return CryptographySuite The CryptographySuite
-    */
-    public function setAuthenticationTransformConstants($val)
-    {
-        $this->_propDict["authenticationTransformConstants"] = $val;
          return $this;
     }
 

@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class OsVersionCount extends Entity
 {
     /**
-    * Gets the osVersion
-    * OS version
-    *
-    * @return string The osVersion
-    */
-    public function getOsVersion()
-    {
-        if (array_key_exists("osVersion", $this->_propDict)) {
-            return $this->_propDict["osVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the osVersion
-    * OS version
-    *
-    * @param string $val The value of the osVersion
-    *
-    * @return OsVersionCount
-    */
-    public function setOsVersion($val)
-    {
-        $this->_propDict["osVersion"] = $val;
-        return $this;
-    }
-    /**
     * Gets the deviceCount
     * Count of devices with malware for the OS version
     *
@@ -111,5 +83,33 @@ class OsVersionCount extends Entity
     {
         $this->_propDict["lastUpdateDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the osVersion
+    * OS version
+    *
+    * @return string The osVersion
+    */
+    public function getOsVersion()
+    {
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the osVersion
+    * OS version
+    *
+    * @param string $val The value of the osVersion
+    *
+    * @return OsVersionCount
+    */
+    public function setOsVersion($val)
+    {
+        $this->_propDict["osVersion"] = $val;
+        return $this;
     }
 }

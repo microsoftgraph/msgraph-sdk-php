@@ -170,6 +170,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the appleNewsBlocked
+    * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
+    *
+    * @return bool The appleNewsBlocked
+    */
+    public function getAppleNewsBlocked()
+    {
+        if (array_key_exists("appleNewsBlocked", $this->_propDict)) {
+            return $this->_propDict["appleNewsBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appleNewsBlocked
+    * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
+    *
+    * @param bool $val The appleNewsBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setAppleNewsBlocked($val)
+    {
+        $this->_propDict["appleNewsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the appleWatchBlockPairing
     * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
     *
@@ -227,35 +256,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
-    /**
-    * Gets the appleNewsBlocked
-    * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-    *
-    * @return bool The appleNewsBlocked
-    */
-    public function getAppleNewsBlocked()
-    {
-        if (array_key_exists("appleNewsBlocked", $this->_propDict)) {
-            return $this->_propDict["appleNewsBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the appleNewsBlocked
-    * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-    *
-    * @param bool $val The appleNewsBlocked
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setAppleNewsBlocked($val)
-    {
-        $this->_propDict["appleNewsBlocked"] = boolval($val);
-        return $this;
-    }
-    
 
      /** 
      * Gets the appsSingleAppModeList
@@ -283,69 +283,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setAppsSingleAppModeList($val)
     {
 		$this->_propDict["appsSingleAppModeList"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the appsVisibilityList
-    * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-     *
-     * @return array The appsVisibilityList
-     */
-    public function getAppsVisibilityList()
-    {
-        if (array_key_exists("appsVisibilityList", $this->_propDict)) {
-           return $this->_propDict["appsVisibilityList"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the appsVisibilityList
-    * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-    *
-    * @param AppListItem $val The appsVisibilityList
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setAppsVisibilityList($val)
-    {
-		$this->_propDict["appsVisibilityList"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the appsVisibilityListType
-    * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
-    *
-    * @return AppListType The appsVisibilityListType
-    */
-    public function getAppsVisibilityListType()
-    {
-        if (array_key_exists("appsVisibilityListType", $this->_propDict)) {
-            if (is_a($this->_propDict["appsVisibilityListType"], "Microsoft\Graph\Model\AppListType")) {
-                return $this->_propDict["appsVisibilityListType"];
-            } else {
-                $this->_propDict["appsVisibilityListType"] = new AppListType($this->_propDict["appsVisibilityListType"]);
-                return $this->_propDict["appsVisibilityListType"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the appsVisibilityListType
-    * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
-    *
-    * @param AppListType $val The appsVisibilityListType
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setAppsVisibilityListType($val)
-    {
-        $this->_propDict["appsVisibilityListType"] = $val;
         return $this;
     }
     
@@ -491,6 +428,69 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setAppStoreRequirePassword($val)
     {
         $this->_propDict["appStoreRequirePassword"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the appsVisibilityList
+    * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
+     *
+     * @return array The appsVisibilityList
+     */
+    public function getAppsVisibilityList()
+    {
+        if (array_key_exists("appsVisibilityList", $this->_propDict)) {
+           return $this->_propDict["appsVisibilityList"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appsVisibilityList
+    * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
+    *
+    * @param AppListItem $val The appsVisibilityList
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setAppsVisibilityList($val)
+    {
+		$this->_propDict["appsVisibilityList"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appsVisibilityListType
+    * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+    *
+    * @return AppListType The appsVisibilityListType
+    */
+    public function getAppsVisibilityListType()
+    {
+        if (array_key_exists("appsVisibilityListType", $this->_propDict)) {
+            if (is_a($this->_propDict["appsVisibilityListType"], "Microsoft\Graph\Model\AppListType")) {
+                return $this->_propDict["appsVisibilityListType"];
+            } else {
+                $this->_propDict["appsVisibilityListType"] = new AppListType($this->_propDict["appsVisibilityListType"]);
+                return $this->_propDict["appsVisibilityListType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appsVisibilityListType
+    * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+    *
+    * @param AppListType $val The appsVisibilityListType
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setAppsVisibilityListType($val)
+    {
+        $this->_propDict["appsVisibilityListType"] = $val;
         return $this;
     }
     
@@ -784,36 +784,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
-
-     /** 
-     * Gets the compliantAppsList
-    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     *
-     * @return array The compliantAppsList
-     */
-    public function getCompliantAppsList()
-    {
-        if (array_key_exists("compliantAppsList", $this->_propDict)) {
-           return $this->_propDict["compliantAppsList"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the compliantAppsList
-    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-    *
-    * @param AppListItem $val The compliantAppsList
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setCompliantAppsList($val)
-    {
-		$this->_propDict["compliantAppsList"] = $val;
-        return $this;
-    }
-    
     /**
     * Gets the compliantAppListType
     * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -844,6 +814,36 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setCompliantAppListType($val)
     {
         $this->_propDict["compliantAppListType"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     *
+     * @return array The compliantAppsList
+     */
+    public function getCompliantAppsList()
+    {
+        if (array_key_exists("compliantAppsList", $this->_propDict)) {
+           return $this->_propDict["compliantAppsList"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the compliantAppsList
+    * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+    *
+    * @param AppListItem $val The compliantAppsList
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setCompliantAppsList($val)
+    {
+		$this->_propDict["compliantAppsList"] = $val;
         return $this;
     }
     
@@ -1254,6 +1254,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the gameCenterBlocked
+    * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
+    *
+    * @return bool The gameCenterBlocked
+    */
+    public function getGameCenterBlocked()
+    {
+        if (array_key_exists("gameCenterBlocked", $this->_propDict)) {
+            return $this->_propDict["gameCenterBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the gameCenterBlocked
+    * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
+    *
+    * @param bool $val The gameCenterBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setGameCenterBlocked($val)
+    {
+        $this->_propDict["gameCenterBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the gamingBlockGameCenterFriends
     * Indicates whether or not to block the user from having friends in Game Center.
     *
@@ -1308,35 +1337,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setGamingBlockMultiplayer($val)
     {
         $this->_propDict["gamingBlockMultiplayer"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the gameCenterBlocked
-    * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-    *
-    * @return bool The gameCenterBlocked
-    */
-    public function getGameCenterBlocked()
-    {
-        if (array_key_exists("gameCenterBlocked", $this->_propDict)) {
-            return $this->_propDict["gameCenterBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the gameCenterBlocked
-    * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-    *
-    * @param bool $val The gameCenterBlocked
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setGameCenterBlocked($val)
-    {
-        $this->_propDict["gameCenterBlocked"] = boolval($val);
         return $this;
     }
     
@@ -2269,6 +2269,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeManagedAppId
+    * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
+    *
+    * @return string The kioskModeManagedAppId
+    */
+    public function getKioskModeManagedAppId()
+    {
+        if (array_key_exists("kioskModeManagedAppId", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedAppId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedAppId
+    * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
+    *
+    * @param string $val The kioskModeManagedAppId
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedAppId($val)
+    {
+        $this->_propDict["kioskModeManagedAppId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeRequireAssistiveTouch
     * Indicates whether or not to require assistive touch while in kiosk mode.
     *
@@ -2414,35 +2443,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the kioskModeManagedAppId
-    * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-    *
-    * @return string The kioskModeManagedAppId
-    */
-    public function getKioskModeManagedAppId()
-    {
-        if (array_key_exists("kioskModeManagedAppId", $this->_propDict)) {
-            return $this->_propDict["kioskModeManagedAppId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the kioskModeManagedAppId
-    * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-    *
-    * @param string $val The kioskModeManagedAppId
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setKioskModeManagedAppId($val)
-    {
-        $this->_propDict["kioskModeManagedAppId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lockScreenBlockControlCenter
     * Indicates whether or not to block the user from using control center on the lock screen.
     *
@@ -2555,6 +2555,39 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setLockScreenBlockTodayView($val)
     {
         $this->_propDict["lockScreenBlockTodayView"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the mediaContentRatingApps
+    * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+    *
+    * @return RatingAppsType The mediaContentRatingApps
+    */
+    public function getMediaContentRatingApps()
+    {
+        if (array_key_exists("mediaContentRatingApps", $this->_propDict)) {
+            if (is_a($this->_propDict["mediaContentRatingApps"], "Microsoft\Graph\Model\RatingAppsType")) {
+                return $this->_propDict["mediaContentRatingApps"];
+            } else {
+                $this->_propDict["mediaContentRatingApps"] = new RatingAppsType($this->_propDict["mediaContentRatingApps"]);
+                return $this->_propDict["mediaContentRatingApps"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the mediaContentRatingApps
+    * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+    *
+    * @param RatingAppsType $val The mediaContentRatingApps
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setMediaContentRatingApps($val)
+    {
+        $this->_propDict["mediaContentRatingApps"] = $val;
         return $this;
     }
     
@@ -2855,6 +2888,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
+    /**
+    * Gets the messagesBlocked
+    * Indicates whether or not to block the user from using the Messages app on the supervised device.
+    *
+    * @return bool The messagesBlocked
+    */
+    public function getMessagesBlocked()
+    {
+        if (array_key_exists("messagesBlocked", $this->_propDict)) {
+            return $this->_propDict["messagesBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the messagesBlocked
+    * Indicates whether or not to block the user from using the Messages app on the supervised device.
+    *
+    * @param bool $val The messagesBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setMessagesBlocked($val)
+    {
+        $this->_propDict["messagesBlocked"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the networkUsageRules
@@ -2882,68 +2944,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setNetworkUsageRules($val)
     {
 		$this->_propDict["networkUsageRules"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the mediaContentRatingApps
-    * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
-    *
-    * @return RatingAppsType The mediaContentRatingApps
-    */
-    public function getMediaContentRatingApps()
-    {
-        if (array_key_exists("mediaContentRatingApps", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingApps"], "Microsoft\Graph\Model\RatingAppsType")) {
-                return $this->_propDict["mediaContentRatingApps"];
-            } else {
-                $this->_propDict["mediaContentRatingApps"] = new RatingAppsType($this->_propDict["mediaContentRatingApps"]);
-                return $this->_propDict["mediaContentRatingApps"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the mediaContentRatingApps
-    * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
-    *
-    * @param RatingAppsType $val The mediaContentRatingApps
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setMediaContentRatingApps($val)
-    {
-        $this->_propDict["mediaContentRatingApps"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the messagesBlocked
-    * Indicates whether or not to block the user from using the Messages app on the supervised device.
-    *
-    * @return bool The messagesBlocked
-    */
-    public function getMessagesBlocked()
-    {
-        if (array_key_exists("messagesBlocked", $this->_propDict)) {
-            return $this->_propDict["messagesBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the messagesBlocked
-    * Indicates whether or not to block the user from using the Messages app on the supervised device.
-    *
-    * @param bool $val The messagesBlocked
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setMessagesBlocked($val)
-    {
-        $this->_propDict["messagesBlocked"] = boolval($val);
         return $this;
     }
     
@@ -2977,35 +2977,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passcodeBlockFingerprintUnlock
-    * Indicates whether or not to block fingerprint unlock.
-    *
-    * @return bool The passcodeBlockFingerprintUnlock
-    */
-    public function getPasscodeBlockFingerprintUnlock()
-    {
-        if (array_key_exists("passcodeBlockFingerprintUnlock", $this->_propDict)) {
-            return $this->_propDict["passcodeBlockFingerprintUnlock"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passcodeBlockFingerprintUnlock
-    * Indicates whether or not to block fingerprint unlock.
-    *
-    * @param bool $val The passcodeBlockFingerprintUnlock
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setPasscodeBlockFingerprintUnlock($val)
-    {
-        $this->_propDict["passcodeBlockFingerprintUnlock"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the passcodeBlockFingerprintModification
     * Block modification of registered Touch ID fingerprints when in supervised mode.
     *
@@ -3031,6 +3002,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setPasscodeBlockFingerprintModification($val)
     {
         $this->_propDict["passcodeBlockFingerprintModification"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passcodeBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
+    *
+    * @return bool The passcodeBlockFingerprintUnlock
+    */
+    public function getPasscodeBlockFingerprintUnlock()
+    {
+        if (array_key_exists("passcodeBlockFingerprintUnlock", $this->_propDict)) {
+            return $this->_propDict["passcodeBlockFingerprintUnlock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passcodeBlockFingerprintUnlock
+    * Indicates whether or not to block fingerprint unlock.
+    *
+    * @param bool $val The passcodeBlockFingerprintUnlock
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setPasscodeBlockFingerprintUnlock($val)
+    {
+        $this->_propDict["passcodeBlockFingerprintUnlock"] = boolval($val);
         return $this;
     }
     
@@ -3122,6 +3122,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the passcodeMinimumCharacterSetCount
+    * Number of character sets a passcode must contain. Valid values 0 to 4
+    *
+    * @return int The passcodeMinimumCharacterSetCount
+    */
+    public function getPasscodeMinimumCharacterSetCount()
+    {
+        if (array_key_exists("passcodeMinimumCharacterSetCount", $this->_propDict)) {
+            return $this->_propDict["passcodeMinimumCharacterSetCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passcodeMinimumCharacterSetCount
+    * Number of character sets a passcode must contain. Valid values 0 to 4
+    *
+    * @param int $val The passcodeMinimumCharacterSetCount
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setPasscodeMinimumCharacterSetCount($val)
+    {
+        $this->_propDict["passcodeMinimumCharacterSetCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the passcodeMinimumLength
     * Minimum length of passcode. Valid values 4 to 14
     *
@@ -3209,35 +3238,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passcodeMinimumCharacterSetCount
-    * Number of character sets a passcode must contain. Valid values 0 to 4
-    *
-    * @return int The passcodeMinimumCharacterSetCount
-    */
-    public function getPasscodeMinimumCharacterSetCount()
-    {
-        if (array_key_exists("passcodeMinimumCharacterSetCount", $this->_propDict)) {
-            return $this->_propDict["passcodeMinimumCharacterSetCount"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passcodeMinimumCharacterSetCount
-    * Number of character sets a passcode must contain. Valid values 0 to 4
-    *
-    * @param int $val The passcodeMinimumCharacterSetCount
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setPasscodeMinimumCharacterSetCount($val)
-    {
-        $this->_propDict["passcodeMinimumCharacterSetCount"] = intval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the passcodePreviousPasscodeBlockCount
     * Number of previous passcodes to block. Valid values 1 to 24
     *
@@ -3267,31 +3267,31 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passcodeSignInFailureCountBeforeWipe
-    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
+    * Gets the passcodeRequired
+    * Indicates whether or not to require a passcode.
     *
-    * @return int The passcodeSignInFailureCountBeforeWipe
+    * @return bool The passcodeRequired
     */
-    public function getPasscodeSignInFailureCountBeforeWipe()
+    public function getPasscodeRequired()
     {
-        if (array_key_exists("passcodeSignInFailureCountBeforeWipe", $this->_propDict)) {
-            return $this->_propDict["passcodeSignInFailureCountBeforeWipe"];
+        if (array_key_exists("passcodeRequired", $this->_propDict)) {
+            return $this->_propDict["passcodeRequired"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passcodeSignInFailureCountBeforeWipe
-    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
+    * Sets the passcodeRequired
+    * Indicates whether or not to require a passcode.
     *
-    * @param int $val The passcodeSignInFailureCountBeforeWipe
+    * @param bool $val The passcodeRequired
     *
     * @return IosGeneralDeviceConfiguration
     */
-    public function setPasscodeSignInFailureCountBeforeWipe($val)
+    public function setPasscodeRequired($val)
     {
-        $this->_propDict["passcodeSignInFailureCountBeforeWipe"] = intval($val);
+        $this->_propDict["passcodeRequired"] = boolval($val);
         return $this;
     }
     
@@ -3329,31 +3329,31 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the passcodeRequired
-    * Indicates whether or not to require a passcode.
+    * Gets the passcodeSignInFailureCountBeforeWipe
+    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
     *
-    * @return bool The passcodeRequired
+    * @return int The passcodeSignInFailureCountBeforeWipe
     */
-    public function getPasscodeRequired()
+    public function getPasscodeSignInFailureCountBeforeWipe()
     {
-        if (array_key_exists("passcodeRequired", $this->_propDict)) {
-            return $this->_propDict["passcodeRequired"];
+        if (array_key_exists("passcodeSignInFailureCountBeforeWipe", $this->_propDict)) {
+            return $this->_propDict["passcodeSignInFailureCountBeforeWipe"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passcodeRequired
-    * Indicates whether or not to require a passcode.
+    * Sets the passcodeSignInFailureCountBeforeWipe
+    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
     *
-    * @param bool $val The passcodeRequired
+    * @param int $val The passcodeSignInFailureCountBeforeWipe
     *
     * @return IosGeneralDeviceConfiguration
     */
-    public function setPasscodeRequired($val)
+    public function setPasscodeSignInFailureCountBeforeWipe($val)
     {
-        $this->_propDict["passcodeRequired"] = boolval($val);
+        $this->_propDict["passcodeSignInFailureCountBeforeWipe"] = intval($val);
         return $this;
     }
     
@@ -3416,6 +3416,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the safariBlocked
+    * Indicates whether or not to block the user from using Safari.
+    *
+    * @return bool The safariBlocked
+    */
+    public function getSafariBlocked()
+    {
+        if (array_key_exists("safariBlocked", $this->_propDict)) {
+            return $this->_propDict["safariBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the safariBlocked
+    * Indicates whether or not to block the user from using Safari.
+    *
+    * @param bool $val The safariBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setSafariBlocked($val)
+    {
+        $this->_propDict["safariBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the safariBlockJavaScript
     * Indicates whether or not to block JavaScript in Safari.
     *
@@ -3470,35 +3499,6 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setSafariBlockPopups($val)
     {
         $this->_propDict["safariBlockPopups"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the safariBlocked
-    * Indicates whether or not to block the user from using Safari.
-    *
-    * @return bool The safariBlocked
-    */
-    public function getSafariBlocked()
-    {
-        if (array_key_exists("safariBlocked", $this->_propDict)) {
-            return $this->_propDict["safariBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the safariBlocked
-    * Indicates whether or not to block the user from using Safari.
-    *
-    * @param bool $val The safariBlocked
-    *
-    * @return IosGeneralDeviceConfiguration
-    */
-    public function setSafariBlocked($val)
-    {
-        $this->_propDict["safariBlocked"] = boolval($val);
         return $this;
     }
     

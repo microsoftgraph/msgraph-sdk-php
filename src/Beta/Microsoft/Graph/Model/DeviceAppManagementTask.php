@@ -25,126 +25,31 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceAppManagementTask extends Entity
 {
     /**
-    * Gets the displayName
-    * The name.
+    * Gets the assignedTo
+    * The name or email of the admin this task is assigned to.
     *
-    * @return string The displayName
+    * @return string The assignedTo
     */
-    public function getDisplayName()
+    public function getAssignedTo()
     {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
+        if (array_key_exists("assignedTo", $this->_propDict)) {
+            return $this->_propDict["assignedTo"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the displayName
-    * The name.
+    * Sets the assignedTo
+    * The name or email of the admin this task is assigned to.
     *
-    * @param string $val The displayName
-    *
-    * @return DeviceAppManagementTask
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the description
-    * The description.
-    *
-    * @return string The description
-    */
-    public function getDescription()
-    {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the description
-    * The description.
-    *
-    * @param string $val The description
+    * @param string $val The assignedTo
     *
     * @return DeviceAppManagementTask
     */
-    public function setDescription($val)
+    public function setAssignedTo($val)
     {
-        $this->_propDict["description"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    * The created date.
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    * The created date.
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return DeviceAppManagementTask
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the dueDateTime
-    * The due date.
-    *
-    * @return \DateTime The dueDateTime
-    */
-    public function getDueDateTime()
-    {
-        if (array_key_exists("dueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDateTime"], "\DateTime")) {
-                return $this->_propDict["dueDateTime"];
-            } else {
-                $this->_propDict["dueDateTime"] = new \DateTime($this->_propDict["dueDateTime"]);
-                return $this->_propDict["dueDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the dueDateTime
-    * The due date.
-    *
-    * @param \DateTime $val The dueDateTime
-    *
-    * @return DeviceAppManagementTask
-    */
-    public function setDueDateTime($val)
-    {
-        $this->_propDict["dueDateTime"] = $val;
+        $this->_propDict["assignedTo"] = $val;
         return $this;
     }
     
@@ -182,35 +87,35 @@ class DeviceAppManagementTask extends Entity
     }
     
     /**
-    * Gets the priority
-    * The priority.
+    * Gets the createdDateTime
+    * The created date.
     *
-    * @return DeviceAppManagementTaskPriority The priority
+    * @return \DateTime The createdDateTime
     */
-    public function getPriority()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("priority", $this->_propDict)) {
-            if (is_a($this->_propDict["priority"], "Beta\Microsoft\Graph\Model\DeviceAppManagementTaskPriority")) {
-                return $this->_propDict["priority"];
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
             } else {
-                $this->_propDict["priority"] = new DeviceAppManagementTaskPriority($this->_propDict["priority"]);
-                return $this->_propDict["priority"];
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the priority
-    * The priority.
+    * Sets the createdDateTime
+    * The created date.
     *
-    * @param DeviceAppManagementTaskPriority $val The priority
+    * @param \DateTime $val The createdDateTime
     *
     * @return DeviceAppManagementTask
     */
-    public function setPriority($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["priority"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -273,31 +178,126 @@ class DeviceAppManagementTask extends Entity
     }
     
     /**
-    * Gets the assignedTo
-    * The name or email of the admin this task is assigned to.
+    * Gets the description
+    * The description.
     *
-    * @return string The assignedTo
+    * @return string The description
     */
-    public function getAssignedTo()
+    public function getDescription()
     {
-        if (array_key_exists("assignedTo", $this->_propDict)) {
-            return $this->_propDict["assignedTo"];
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the assignedTo
-    * The name or email of the admin this task is assigned to.
+    * Sets the description
+    * The description.
     *
-    * @param string $val The assignedTo
+    * @param string $val The description
     *
     * @return DeviceAppManagementTask
     */
-    public function setAssignedTo($val)
+    public function setDescription($val)
     {
-        $this->_propDict["assignedTo"] = $val;
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * The name.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * The name.
+    *
+    * @param string $val The displayName
+    *
+    * @return DeviceAppManagementTask
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the dueDateTime
+    * The due date.
+    *
+    * @return \DateTime The dueDateTime
+    */
+    public function getDueDateTime()
+    {
+        if (array_key_exists("dueDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["dueDateTime"], "\DateTime")) {
+                return $this->_propDict["dueDateTime"];
+            } else {
+                $this->_propDict["dueDateTime"] = new \DateTime($this->_propDict["dueDateTime"]);
+                return $this->_propDict["dueDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the dueDateTime
+    * The due date.
+    *
+    * @param \DateTime $val The dueDateTime
+    *
+    * @return DeviceAppManagementTask
+    */
+    public function setDueDateTime($val)
+    {
+        $this->_propDict["dueDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the priority
+    * The priority.
+    *
+    * @return DeviceAppManagementTaskPriority The priority
+    */
+    public function getPriority()
+    {
+        if (array_key_exists("priority", $this->_propDict)) {
+            if (is_a($this->_propDict["priority"], "Beta\Microsoft\Graph\Model\DeviceAppManagementTaskPriority")) {
+                return $this->_propDict["priority"];
+            } else {
+                $this->_propDict["priority"] = new DeviceAppManagementTaskPriority($this->_propDict["priority"]);
+                return $this->_propDict["priority"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the priority
+    * The priority.
+    *
+    * @param DeviceAppManagementTaskPriority $val The priority
+    *
+    * @return DeviceAppManagementTask
+    */
+    public function setPriority($val)
+    {
+        $this->_propDict["priority"] = $val;
         return $this;
     }
     

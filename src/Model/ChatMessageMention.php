@@ -51,34 +51,6 @@ class ChatMessageMention extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
-    /**
-    * Gets the mentionText
-    * String used to represent the mention. For example, a user's display name, a team name.
-    *
-    * @return string The mentionText
-    */
-    public function getMentionText()
-    {
-        if (array_key_exists("mentionText", $this->_propDict)) {
-            return $this->_propDict["mentionText"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the mentionText
-    * String used to represent the mention. For example, a user's display name, a team name.
-    *
-    * @param string $val The value of the mentionText
-    *
-    * @return ChatMessageMention
-    */
-    public function setMentionText($val)
-    {
-        $this->_propDict["mentionText"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the mentioned
@@ -111,5 +83,33 @@ class ChatMessageMention extends Entity
     {
         $this->_propDict["mentioned"] = $val;
          return $this;
+    }
+    /**
+    * Gets the mentionText
+    * String used to represent the mention. For example, a user's display name, a team name.
+    *
+    * @return string The mentionText
+    */
+    public function getMentionText()
+    {
+        if (array_key_exists("mentionText", $this->_propDict)) {
+            return $this->_propDict["mentionText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the mentionText
+    * String used to represent the mention. For example, a user's display name, a team name.
+    *
+    * @param string $val The value of the mentionText
+    *
+    * @return ChatMessageMention
+    */
+    public function setMentionText($val)
+    {
+        $this->_propDict["mentionText"] = $val;
+        return $this;
     }
 }

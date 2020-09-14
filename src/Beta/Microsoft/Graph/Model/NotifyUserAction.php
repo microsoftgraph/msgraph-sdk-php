@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class NotifyUserAction extends DlpActionInfo
 {
-    /**
-    * Gets the recipients
-    *
-    * @return string The recipients
-    */
-    public function getRecipients()
-    {
-        if (array_key_exists("recipients", $this->_propDict)) {
-            return $this->_propDict["recipients"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the recipients
-    *
-    * @param string $val The value of the recipients
-    *
-    * @return NotifyUserAction
-    */
-    public function setRecipients($val)
-    {
-        $this->_propDict["recipients"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the actionLastModifiedDateTime
@@ -79,6 +53,32 @@ class NotifyUserAction extends DlpActionInfo
     {
         $this->_propDict["actionLastModifiedDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the emailText
+    *
+    * @return string The emailText
+    */
+    public function getEmailText()
+    {
+        if (array_key_exists("emailText", $this->_propDict)) {
+            return $this->_propDict["emailText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the emailText
+    *
+    * @param string $val The value of the emailText
+    *
+    * @return NotifyUserAction
+    */
+    public function setEmailText($val)
+    {
+        $this->_propDict["emailText"] = $val;
+        return $this;
     }
 
     /**
@@ -112,32 +112,6 @@ class NotifyUserAction extends DlpActionInfo
          return $this;
     }
     /**
-    * Gets the emailText
-    *
-    * @return string The emailText
-    */
-    public function getEmailText()
-    {
-        if (array_key_exists("emailText", $this->_propDict)) {
-            return $this->_propDict["emailText"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the emailText
-    *
-    * @param string $val The value of the emailText
-    *
-    * @return NotifyUserAction
-    */
-    public function setEmailText($val)
-    {
-        $this->_propDict["emailText"] = $val;
-        return $this;
-    }
-    /**
     * Gets the policyTip
     *
     * @return string The policyTip
@@ -161,6 +135,32 @@ class NotifyUserAction extends DlpActionInfo
     public function setPolicyTip($val)
     {
         $this->_propDict["policyTip"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the recipients
+    *
+    * @return string The recipients
+    */
+    public function getRecipients()
+    {
+        if (array_key_exists("recipients", $this->_propDict)) {
+            return $this->_propDict["recipients"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recipients
+    *
+    * @param string $val The value of the recipients
+    *
+    * @return NotifyUserAction
+    */
+    public function setRecipients($val)
+    {
+        $this->_propDict["recipients"] = $val;
         return $this;
     }
 }

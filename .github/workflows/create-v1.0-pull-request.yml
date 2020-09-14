@@ -3,7 +3,7 @@
 
 # This action will automatically create a pull request against dev if the pushed branch
 # has a branch path spec likev 1.0/pipelinebuild/*. Configure this action by updating the
-# environment variable values[0]. 
+# environment variable values[0].
 
 name: "create pull request"
 
@@ -14,14 +14,14 @@ on:
     branches:
       - "v1.0/pipelinebuild/*"
     paths:
-      - 'src/Model/*.php'
+      - 'src/**/*.php'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "create-pull-request"
   create-pull-request:
 
-    # GitHub Actions don't support skip ci yet like Azure Pipelines so this check will do the same. 
+    # GitHub Actions don't support skip ci yet like Azure Pipelines so this check will do the same.
     if: github.event_name == 'push' && !contains(toJson(github.event.commits), 'NO_CI') && !contains(toJson(github.event.commits), '[ci skip]') && !contains(toJson(github.event.commits), '[skip ci]')
 
     # The type of runner that the job will run on
@@ -32,7 +32,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
+
     # Create a pull request [1]
     - name: Create PR using the GitHub REST API via hub
       shell: bash

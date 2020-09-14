@@ -76,6 +76,32 @@ class YomiPersonName extends Entity
         return $this;
     }
     /**
+    * Gets the last
+    *
+    * @return string The last
+    */
+    public function getLast()
+    {
+        if (array_key_exists("last", $this->_propDict)) {
+            return $this->_propDict["last"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the last
+    *
+    * @param string $val The value of the last
+    *
+    * @return YomiPersonName
+    */
+    public function setLast($val)
+    {
+        $this->_propDict["last"] = $val;
+        return $this;
+    }
+    /**
     * Gets the maiden
     *
     * @return string The maiden
@@ -125,32 +151,6 @@ class YomiPersonName extends Entity
     public function setMiddle($val)
     {
         $this->_propDict["middle"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the last
-    *
-    * @return string The last
-    */
-    public function getLast()
-    {
-        if (array_key_exists("last", $this->_propDict)) {
-            return $this->_propDict["last"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the last
-    *
-    * @param string $val The value of the last
-    *
-    * @return YomiPersonName
-    */
-    public function setLast($val)
-    {
-        $this->_propDict["last"] = $val;
         return $this;
     }
 }

@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class MacOSSystemExtensionTypeMapping extends Entity
 {
-    /**
-    * Gets the teamIdentifier
-    * Gets or sets the team identifier used to sign the system extension.
-    *
-    * @return string The teamIdentifier
-    */
-    public function getTeamIdentifier()
-    {
-        if (array_key_exists("teamIdentifier", $this->_propDict)) {
-            return $this->_propDict["teamIdentifier"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the teamIdentifier
-    * Gets or sets the team identifier used to sign the system extension.
-    *
-    * @param string $val The value of the teamIdentifier
-    *
-    * @return MacOSSystemExtensionTypeMapping
-    */
-    public function setTeamIdentifier($val)
-    {
-        $this->_propDict["teamIdentifier"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the allowedTypes
@@ -83,5 +55,33 @@ class MacOSSystemExtensionTypeMapping extends Entity
     {
         $this->_propDict["allowedTypes"] = $val;
          return $this;
+    }
+    /**
+    * Gets the teamIdentifier
+    * Gets or sets the team identifier used to sign the system extension.
+    *
+    * @return string The teamIdentifier
+    */
+    public function getTeamIdentifier()
+    {
+        if (array_key_exists("teamIdentifier", $this->_propDict)) {
+            return $this->_propDict["teamIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the teamIdentifier
+    * Gets or sets the team identifier used to sign the system extension.
+    *
+    * @param string $val The value of the teamIdentifier
+    *
+    * @return MacOSSystemExtensionTypeMapping
+    */
+    public function setTeamIdentifier($val)
+    {
+        $this->_propDict["teamIdentifier"] = $val;
+        return $this;
     }
 }

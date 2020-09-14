@@ -25,64 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
 {
     /**
-    * Gets the networkName
-    * Network Name
-    *
-    * @return string The networkName
-    */
-    public function getNetworkName()
-    {
-        if (array_key_exists("networkName", $this->_propDict)) {
-            return $this->_propDict["networkName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the networkName
-    * Network Name
-    *
-    * @param string $val The networkName
-    *
-    * @return AndroidDeviceOwnerWiFiConfiguration
-    */
-    public function setNetworkName($val)
-    {
-        $this->_propDict["networkName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ssid
-    * This is the name of the Wi-Fi network that is broadcast to all devices.
-    *
-    * @return string The ssid
-    */
-    public function getSsid()
-    {
-        if (array_key_exists("ssid", $this->_propDict)) {
-            return $this->_propDict["ssid"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ssid
-    * This is the name of the Wi-Fi network that is broadcast to all devices.
-    *
-    * @param string $val The ssid
-    *
-    * @return AndroidDeviceOwnerWiFiConfiguration
-    */
-    public function setSsid($val)
-    {
-        $this->_propDict["ssid"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the connectAutomatically
     * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
     *
@@ -141,35 +83,31 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Gets the networkName
+    * Network Name
     *
-    * @return AndroidDeviceOwnerWiFiSecurityType The wiFiSecurityType
+    * @return string The networkName
     */
-    public function getWiFiSecurityType()
+    public function getNetworkName()
     {
-        if (array_key_exists("wiFiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wiFiSecurityType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerWiFiSecurityType")) {
-                return $this->_propDict["wiFiSecurityType"];
-            } else {
-                $this->_propDict["wiFiSecurityType"] = new AndroidDeviceOwnerWiFiSecurityType($this->_propDict["wiFiSecurityType"]);
-                return $this->_propDict["wiFiSecurityType"];
-            }
+        if (array_key_exists("networkName", $this->_propDict)) {
+            return $this->_propDict["networkName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Sets the networkName
+    * Network Name
     *
-    * @param AndroidDeviceOwnerWiFiSecurityType $val The wiFiSecurityType
+    * @param string $val The networkName
     *
     * @return AndroidDeviceOwnerWiFiConfiguration
     */
-    public function setWiFiSecurityType($val)
+    public function setNetworkName($val)
     {
-        $this->_propDict["wiFiSecurityType"] = $val;
+        $this->_propDict["networkName"] = $val;
         return $this;
     }
     
@@ -228,6 +166,68 @@ class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration
     public function setPreSharedKeyIsSet($val)
     {
         $this->_propDict["preSharedKeyIsSet"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
+    *
+    * @return string The ssid
+    */
+    public function getSsid()
+    {
+        if (array_key_exists("ssid", $this->_propDict)) {
+            return $this->_propDict["ssid"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ssid
+    * This is the name of the Wi-Fi network that is broadcast to all devices.
+    *
+    * @param string $val The ssid
+    *
+    * @return AndroidDeviceOwnerWiFiConfiguration
+    */
+    public function setSsid($val)
+    {
+        $this->_propDict["ssid"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the wiFiSecurityType
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    *
+    * @return AndroidDeviceOwnerWiFiSecurityType The wiFiSecurityType
+    */
+    public function getWiFiSecurityType()
+    {
+        if (array_key_exists("wiFiSecurityType", $this->_propDict)) {
+            if (is_a($this->_propDict["wiFiSecurityType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerWiFiSecurityType")) {
+                return $this->_propDict["wiFiSecurityType"];
+            } else {
+                $this->_propDict["wiFiSecurityType"] = new AndroidDeviceOwnerWiFiSecurityType($this->_propDict["wiFiSecurityType"]);
+                return $this->_propDict["wiFiSecurityType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the wiFiSecurityType
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    *
+    * @param AndroidDeviceOwnerWiFiSecurityType $val The wiFiSecurityType
+    *
+    * @return AndroidDeviceOwnerWiFiConfiguration
+    */
+    public function setWiFiSecurityType($val)
+    {
+        $this->_propDict["wiFiSecurityType"] = $val;
         return $this;
     }
     

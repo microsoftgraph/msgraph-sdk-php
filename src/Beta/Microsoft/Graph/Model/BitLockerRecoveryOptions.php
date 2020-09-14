@@ -51,98 +51,32 @@ class BitLockerRecoveryOptions extends Entity
         $this->_propDict["blockDataRecoveryAgent"] = $val;
         return $this;
     }
-
     /**
-    * Gets the recoveryPasswordUsage
-    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
+    * Gets the enableBitLockerAfterRecoveryInformationToStore
+    * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
     *
-    * @return ConfigurationUsage The recoveryPasswordUsage
+    * @return bool The enableBitLockerAfterRecoveryInformationToStore
     */
-    public function getRecoveryPasswordUsage()
+    public function getEnableBitLockerAfterRecoveryInformationToStore()
     {
-        if (array_key_exists("recoveryPasswordUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryPasswordUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["recoveryPasswordUsage"];
-            } else {
-                $this->_propDict["recoveryPasswordUsage"] = new ConfigurationUsage($this->_propDict["recoveryPasswordUsage"]);
-                return $this->_propDict["recoveryPasswordUsage"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the recoveryPasswordUsage
-    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
-    *
-    * @param ConfigurationUsage $val The value to assign to the recoveryPasswordUsage
-    *
-    * @return BitLockerRecoveryOptions The BitLockerRecoveryOptions
-    */
-    public function setRecoveryPasswordUsage($val)
-    {
-        $this->_propDict["recoveryPasswordUsage"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the recoveryKeyUsage
-    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
-    *
-    * @return ConfigurationUsage The recoveryKeyUsage
-    */
-    public function getRecoveryKeyUsage()
-    {
-        if (array_key_exists("recoveryKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["recoveryKeyUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
-                return $this->_propDict["recoveryKeyUsage"];
-            } else {
-                $this->_propDict["recoveryKeyUsage"] = new ConfigurationUsage($this->_propDict["recoveryKeyUsage"]);
-                return $this->_propDict["recoveryKeyUsage"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the recoveryKeyUsage
-    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
-    *
-    * @param ConfigurationUsage $val The value to assign to the recoveryKeyUsage
-    *
-    * @return BitLockerRecoveryOptions The BitLockerRecoveryOptions
-    */
-    public function setRecoveryKeyUsage($val)
-    {
-        $this->_propDict["recoveryKeyUsage"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the hideRecoveryOptions
-    * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
-    *
-    * @return bool The hideRecoveryOptions
-    */
-    public function getHideRecoveryOptions()
-    {
-        if (array_key_exists("hideRecoveryOptions", $this->_propDict)) {
-            return $this->_propDict["hideRecoveryOptions"];
+        if (array_key_exists("enableBitLockerAfterRecoveryInformationToStore", $this->_propDict)) {
+            return $this->_propDict["enableBitLockerAfterRecoveryInformationToStore"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the hideRecoveryOptions
-    * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
+    * Sets the enableBitLockerAfterRecoveryInformationToStore
+    * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
     *
-    * @param bool $val The value of the hideRecoveryOptions
+    * @param bool $val The value of the enableBitLockerAfterRecoveryInformationToStore
     *
     * @return BitLockerRecoveryOptions
     */
-    public function setHideRecoveryOptions($val)
+    public function setEnableBitLockerAfterRecoveryInformationToStore($val)
     {
-        $this->_propDict["hideRecoveryOptions"] = $val;
+        $this->_propDict["enableBitLockerAfterRecoveryInformationToStore"] = $val;
         return $this;
     }
     /**
@@ -171,6 +105,34 @@ class BitLockerRecoveryOptions extends Entity
     public function setEnableRecoveryInformationSaveToStore($val)
     {
         $this->_propDict["enableRecoveryInformationSaveToStore"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the hideRecoveryOptions
+    * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
+    *
+    * @return bool The hideRecoveryOptions
+    */
+    public function getHideRecoveryOptions()
+    {
+        if (array_key_exists("hideRecoveryOptions", $this->_propDict)) {
+            return $this->_propDict["hideRecoveryOptions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hideRecoveryOptions
+    * Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
+    *
+    * @param bool $val The value of the hideRecoveryOptions
+    *
+    * @return BitLockerRecoveryOptions
+    */
+    public function setHideRecoveryOptions($val)
+    {
+        $this->_propDict["hideRecoveryOptions"] = $val;
         return $this;
     }
 
@@ -206,32 +168,70 @@ class BitLockerRecoveryOptions extends Entity
         $this->_propDict["recoveryInformationToStore"] = $val;
          return $this;
     }
+
     /**
-    * Gets the enableBitLockerAfterRecoveryInformationToStore
-    * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
+    * Gets the recoveryKeyUsage
+    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
     *
-    * @return bool The enableBitLockerAfterRecoveryInformationToStore
+    * @return ConfigurationUsage The recoveryKeyUsage
     */
-    public function getEnableBitLockerAfterRecoveryInformationToStore()
+    public function getRecoveryKeyUsage()
     {
-        if (array_key_exists("enableBitLockerAfterRecoveryInformationToStore", $this->_propDict)) {
-            return $this->_propDict["enableBitLockerAfterRecoveryInformationToStore"];
-        } else {
-            return null;
+        if (array_key_exists("recoveryKeyUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["recoveryKeyUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["recoveryKeyUsage"];
+            } else {
+                $this->_propDict["recoveryKeyUsage"] = new ConfigurationUsage($this->_propDict["recoveryKeyUsage"]);
+                return $this->_propDict["recoveryKeyUsage"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the enableBitLockerAfterRecoveryInformationToStore
-    * Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
+    * Sets the recoveryKeyUsage
+    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
     *
-    * @param bool $val The value of the enableBitLockerAfterRecoveryInformationToStore
+    * @param ConfigurationUsage $val The value to assign to the recoveryKeyUsage
     *
-    * @return BitLockerRecoveryOptions
+    * @return BitLockerRecoveryOptions The BitLockerRecoveryOptions
     */
-    public function setEnableBitLockerAfterRecoveryInformationToStore($val)
+    public function setRecoveryKeyUsage($val)
     {
-        $this->_propDict["enableBitLockerAfterRecoveryInformationToStore"] = $val;
-        return $this;
+        $this->_propDict["recoveryKeyUsage"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the recoveryPasswordUsage
+    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
+    *
+    * @return ConfigurationUsage The recoveryPasswordUsage
+    */
+    public function getRecoveryPasswordUsage()
+    {
+        if (array_key_exists("recoveryPasswordUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["recoveryPasswordUsage"], "Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+                return $this->_propDict["recoveryPasswordUsage"];
+            } else {
+                $this->_propDict["recoveryPasswordUsage"] = new ConfigurationUsage($this->_propDict["recoveryPasswordUsage"]);
+                return $this->_propDict["recoveryPasswordUsage"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recoveryPasswordUsage
+    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
+    *
+    * @param ConfigurationUsage $val The value to assign to the recoveryPasswordUsage
+    *
+    * @return BitLockerRecoveryOptions The BitLockerRecoveryOptions
+    */
+    public function setRecoveryPasswordUsage($val)
+    {
+        $this->_propDict["recoveryPasswordUsage"] = $val;
+         return $this;
     }
 }

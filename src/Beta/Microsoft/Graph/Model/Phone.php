@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class Phone extends Entity
 {
+    /**
+    * Gets the number
+    * The phone number.
+    *
+    * @return string The number
+    */
+    public function getNumber()
+    {
+        if (array_key_exists("number", $this->_propDict)) {
+            return $this->_propDict["number"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the number
+    * The phone number.
+    *
+    * @param string $val The value of the number
+    *
+    * @return Phone
+    */
+    public function setNumber($val)
+    {
+        $this->_propDict["number"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the type
@@ -55,33 +83,5 @@ class Phone extends Entity
     {
         $this->_propDict["type"] = $val;
          return $this;
-    }
-    /**
-    * Gets the number
-    * The phone number.
-    *
-    * @return string The number
-    */
-    public function getNumber()
-    {
-        if (array_key_exists("number", $this->_propDict)) {
-            return $this->_propDict["number"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the number
-    * The phone number.
-    *
-    * @param string $val The value of the number
-    *
-    * @return Phone
-    */
-    public function setNumber($val)
-    {
-        $this->_propDict["number"] = $val;
-        return $this;
     }
 }

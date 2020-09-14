@@ -25,83 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class AgedAccountsPayable extends Entity
 {
     /**
-    * Gets the vendorNumber
+    * Gets the agedAsOfDate
     *
-    * @return string The vendorNumber
+    * @return \DateTime The agedAsOfDate
     */
-    public function getVendorNumber()
+    public function getAgedAsOfDate()
     {
-        if (array_key_exists("vendorNumber", $this->_propDict)) {
-            return $this->_propDict["vendorNumber"];
-        } else {
-            return null;
+        if (array_key_exists("agedAsOfDate", $this->_propDict)) {
+            if (is_a($this->_propDict["agedAsOfDate"], "\DateTime")) {
+                return $this->_propDict["agedAsOfDate"];
+            } else {
+                $this->_propDict["agedAsOfDate"] = new \DateTime($this->_propDict["agedAsOfDate"]);
+                return $this->_propDict["agedAsOfDate"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the vendorNumber
+    * Sets the agedAsOfDate
     *
-    * @param string $val The vendorNumber
+    * @param \DateTime $val The agedAsOfDate
     *
     * @return AgedAccountsPayable
     */
-    public function setVendorNumber($val)
+    public function setAgedAsOfDate($val)
     {
-        $this->_propDict["vendorNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the name
-    *
-    * @param string $val The name
-    *
-    * @return AgedAccountsPayable
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the currencyCode
-    *
-    * @return string The currencyCode
-    */
-    public function getCurrencyCode()
-    {
-        if (array_key_exists("currencyCode", $this->_propDict)) {
-            return $this->_propDict["currencyCode"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the currencyCode
-    *
-    * @param string $val The currencyCode
-    *
-    * @return AgedAccountsPayable
-    */
-    public function setCurrencyCode($val)
-    {
-        $this->_propDict["currencyCode"] = $val;
+        $this->_propDict["agedAsOfDate"] = $val;
         return $this;
     }
     
@@ -137,6 +87,33 @@ class AgedAccountsPayable extends Entity
     }
     
     /**
+    * Gets the currencyCode
+    *
+    * @return string The currencyCode
+    */
+    public function getCurrencyCode()
+    {
+        if (array_key_exists("currencyCode", $this->_propDict)) {
+            return $this->_propDict["currencyCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the currencyCode
+    *
+    * @param string $val The currencyCode
+    *
+    * @return AgedAccountsPayable
+    */
+    public function setCurrencyCode($val)
+    {
+        $this->_propDict["currencyCode"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the currentAmount
     *
     * @return Decimal The currentAmount
@@ -164,6 +141,33 @@ class AgedAccountsPayable extends Entity
     public function setCurrentAmount($val)
     {
         $this->_propDict["currentAmount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return AgedAccountsPayable
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
         return $this;
     }
     
@@ -261,37 +265,6 @@ class AgedAccountsPayable extends Entity
     }
     
     /**
-    * Gets the agedAsOfDate
-    *
-    * @return \DateTime The agedAsOfDate
-    */
-    public function getAgedAsOfDate()
-    {
-        if (array_key_exists("agedAsOfDate", $this->_propDict)) {
-            if (is_a($this->_propDict["agedAsOfDate"], "\DateTime")) {
-                return $this->_propDict["agedAsOfDate"];
-            } else {
-                $this->_propDict["agedAsOfDate"] = new \DateTime($this->_propDict["agedAsOfDate"]);
-                return $this->_propDict["agedAsOfDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the agedAsOfDate
-    *
-    * @param \DateTime $val The agedAsOfDate
-    *
-    * @return AgedAccountsPayable
-    */
-    public function setAgedAsOfDate($val)
-    {
-        $this->_propDict["agedAsOfDate"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the periodLengthFilter
     *
     * @return string The periodLengthFilter
@@ -315,6 +288,33 @@ class AgedAccountsPayable extends Entity
     public function setPeriodLengthFilter($val)
     {
         $this->_propDict["periodLengthFilter"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the vendorNumber
+    *
+    * @return string The vendorNumber
+    */
+    public function getVendorNumber()
+    {
+        if (array_key_exists("vendorNumber", $this->_propDict)) {
+            return $this->_propDict["vendorNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the vendorNumber
+    *
+    * @param string $val The vendorNumber
+    *
+    * @return AgedAccountsPayable
+    */
+    public function setVendorNumber($val)
+    {
+        $this->_propDict["vendorNumber"] = $val;
         return $this;
     }
     

@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class AudioRoutingGroup extends Entity
 {
     /**
+    * Gets the receivers
+    *
+    * @return string The receivers
+    */
+    public function getReceivers()
+    {
+        if (array_key_exists("receivers", $this->_propDict)) {
+            return $this->_propDict["receivers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the receivers
+    *
+    * @param string $val The receivers
+    *
+    * @return AudioRoutingGroup
+    */
+    public function setReceivers($val)
+    {
+        $this->_propDict["receivers"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the routingMode
     *
     * @return RoutingMode The routingMode
@@ -79,33 +106,6 @@ class AudioRoutingGroup extends Entity
     public function setSources($val)
     {
         $this->_propDict["sources"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the receivers
-    *
-    * @return string The receivers
-    */
-    public function getReceivers()
-    {
-        if (array_key_exists("receivers", $this->_propDict)) {
-            return $this->_propDict["receivers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the receivers
-    *
-    * @param string $val The receivers
-    *
-    * @return AudioRoutingGroup
-    */
-    public function setReceivers($val)
-    {
-        $this->_propDict["receivers"] = $val;
         return $this;
     }
     

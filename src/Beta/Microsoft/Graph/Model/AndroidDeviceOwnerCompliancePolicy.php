@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
+    * Gets the advancedThreatProtectionRequiredSecurityLevel
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    *
+    * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
+    */
+    public function getAdvancedThreatProtectionRequiredSecurityLevel()
+    {
+        if (array_key_exists("advancedThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
+            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+                return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
+            } else {
+                $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"]);
+                return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the advancedThreatProtectionRequiredSecurityLevel
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    *
+    * @param DeviceThreatProtectionLevel $val The advancedThreatProtectionRequiredSecurityLevel
+    *
+    * @return AndroidDeviceOwnerCompliancePolicy
+    */
+    public function setAdvancedThreatProtectionRequiredSecurityLevel($val)
+    {
+        $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deviceThreatProtectionEnabled
     * Require that devices have enabled device threat protection.
     *
@@ -87,122 +120,31 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * Gets the minAndroidSecurityPatchLevel
+    * Minimum Android security patch level.
     *
-    * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
+    * @return string The minAndroidSecurityPatchLevel
     */
-    public function getAdvancedThreatProtectionRequiredSecurityLevel()
+    public function getMinAndroidSecurityPatchLevel()
     {
-        if (array_key_exists("advancedThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
-                return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
-            } else {
-                $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"]);
-                return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
-    *
-    * @param DeviceThreatProtectionLevel $val The advancedThreatProtectionRequiredSecurityLevel
-    *
-    * @return AndroidDeviceOwnerCompliancePolicy
-    */
-    public function setAdvancedThreatProtectionRequiredSecurityLevel($val)
-    {
-        $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the securityRequireSafetyNetAttestationBasicIntegrity
-    * Require the device to pass the SafetyNet basic integrity check.
-    *
-    * @return bool The securityRequireSafetyNetAttestationBasicIntegrity
-    */
-    public function getSecurityRequireSafetyNetAttestationBasicIntegrity()
-    {
-        if (array_key_exists("securityRequireSafetyNetAttestationBasicIntegrity", $this->_propDict)) {
-            return $this->_propDict["securityRequireSafetyNetAttestationBasicIntegrity"];
+        if (array_key_exists("minAndroidSecurityPatchLevel", $this->_propDict)) {
+            return $this->_propDict["minAndroidSecurityPatchLevel"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the securityRequireSafetyNetAttestationBasicIntegrity
-    * Require the device to pass the SafetyNet basic integrity check.
+    * Sets the minAndroidSecurityPatchLevel
+    * Minimum Android security patch level.
     *
-    * @param bool $val The securityRequireSafetyNetAttestationBasicIntegrity
-    *
-    * @return AndroidDeviceOwnerCompliancePolicy
-    */
-    public function setSecurityRequireSafetyNetAttestationBasicIntegrity($val)
-    {
-        $this->_propDict["securityRequireSafetyNetAttestationBasicIntegrity"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the securityRequireSafetyNetAttestationCertifiedDevice
-    * Require the device to pass the SafetyNet certified device check.
-    *
-    * @return bool The securityRequireSafetyNetAttestationCertifiedDevice
-    */
-    public function getSecurityRequireSafetyNetAttestationCertifiedDevice()
-    {
-        if (array_key_exists("securityRequireSafetyNetAttestationCertifiedDevice", $this->_propDict)) {
-            return $this->_propDict["securityRequireSafetyNetAttestationCertifiedDevice"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the securityRequireSafetyNetAttestationCertifiedDevice
-    * Require the device to pass the SafetyNet certified device check.
-    *
-    * @param bool $val The securityRequireSafetyNetAttestationCertifiedDevice
+    * @param string $val The minAndroidSecurityPatchLevel
     *
     * @return AndroidDeviceOwnerCompliancePolicy
     */
-    public function setSecurityRequireSafetyNetAttestationCertifiedDevice($val)
+    public function setMinAndroidSecurityPatchLevel($val)
     {
-        $this->_propDict["securityRequireSafetyNetAttestationCertifiedDevice"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the osMinimumVersion
-    * Minimum Android version.
-    *
-    * @return string The osMinimumVersion
-    */
-    public function getOsMinimumVersion()
-    {
-        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
-            return $this->_propDict["osMinimumVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the osMinimumVersion
-    * Minimum Android version.
-    *
-    * @param string $val The osMinimumVersion
-    *
-    * @return AndroidDeviceOwnerCompliancePolicy
-    */
-    public function setOsMinimumVersion($val)
-    {
-        $this->_propDict["osMinimumVersion"] = $val;
+        $this->_propDict["minAndroidSecurityPatchLevel"] = $val;
         return $this;
     }
     
@@ -236,60 +178,60 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the minAndroidSecurityPatchLevel
-    * Minimum Android security patch level.
+    * Gets the osMinimumVersion
+    * Minimum Android version.
     *
-    * @return string The minAndroidSecurityPatchLevel
+    * @return string The osMinimumVersion
     */
-    public function getMinAndroidSecurityPatchLevel()
+    public function getOsMinimumVersion()
     {
-        if (array_key_exists("minAndroidSecurityPatchLevel", $this->_propDict)) {
-            return $this->_propDict["minAndroidSecurityPatchLevel"];
+        if (array_key_exists("osMinimumVersion", $this->_propDict)) {
+            return $this->_propDict["osMinimumVersion"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the minAndroidSecurityPatchLevel
-    * Minimum Android security patch level.
+    * Sets the osMinimumVersion
+    * Minimum Android version.
     *
-    * @param string $val The minAndroidSecurityPatchLevel
+    * @param string $val The osMinimumVersion
     *
     * @return AndroidDeviceOwnerCompliancePolicy
     */
-    public function setMinAndroidSecurityPatchLevel($val)
+    public function setOsMinimumVersion($val)
     {
-        $this->_propDict["minAndroidSecurityPatchLevel"] = $val;
+        $this->_propDict["osMinimumVersion"] = $val;
         return $this;
     }
     
     /**
-    * Gets the passwordRequired
-    * Require a password to unlock device.
+    * Gets the passwordExpirationDays
+    * Number of days before the password expires. Valid values 1 to 365
     *
-    * @return bool The passwordRequired
+    * @return int The passwordExpirationDays
     */
-    public function getPasswordRequired()
+    public function getPasswordExpirationDays()
     {
-        if (array_key_exists("passwordRequired", $this->_propDict)) {
-            return $this->_propDict["passwordRequired"];
+        if (array_key_exists("passwordExpirationDays", $this->_propDict)) {
+            return $this->_propDict["passwordExpirationDays"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordRequired
-    * Require a password to unlock device.
+    * Sets the passwordExpirationDays
+    * Number of days before the password expires. Valid values 1 to 365
     *
-    * @param bool $val The passwordRequired
+    * @param int $val The passwordExpirationDays
     *
     * @return AndroidDeviceOwnerCompliancePolicy
     */
-    public function setPasswordRequired($val)
+    public function setPasswordExpirationDays($val)
     {
-        $this->_propDict["passwordRequired"] = boolval($val);
+        $this->_propDict["passwordExpirationDays"] = intval($val);
         return $this;
     }
     
@@ -497,6 +439,93 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
+    * Gets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a password is required.
+    *
+    * @return int The passwordMinutesOfInactivityBeforeLock
+    */
+    public function getPasswordMinutesOfInactivityBeforeLock()
+    {
+        if (array_key_exists("passwordMinutesOfInactivityBeforeLock", $this->_propDict)) {
+            return $this->_propDict["passwordMinutesOfInactivityBeforeLock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinutesOfInactivityBeforeLock
+    * Minutes of inactivity before a password is required.
+    *
+    * @param int $val The passwordMinutesOfInactivityBeforeLock
+    *
+    * @return AndroidDeviceOwnerCompliancePolicy
+    */
+    public function setPasswordMinutesOfInactivityBeforeLock($val)
+    {
+        $this->_propDict["passwordMinutesOfInactivityBeforeLock"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordPreviousPasswordCountToBlock
+    * Number of previous passwords to block. Valid values 1 to 24
+    *
+    * @return int The passwordPreviousPasswordCountToBlock
+    */
+    public function getPasswordPreviousPasswordCountToBlock()
+    {
+        if (array_key_exists("passwordPreviousPasswordCountToBlock", $this->_propDict)) {
+            return $this->_propDict["passwordPreviousPasswordCountToBlock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordPreviousPasswordCountToBlock
+    * Number of previous passwords to block. Valid values 1 to 24
+    *
+    * @param int $val The passwordPreviousPasswordCountToBlock
+    *
+    * @return AndroidDeviceOwnerCompliancePolicy
+    */
+    public function setPasswordPreviousPasswordCountToBlock($val)
+    {
+        $this->_propDict["passwordPreviousPasswordCountToBlock"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordRequired
+    * Require a password to unlock device.
+    *
+    * @return bool The passwordRequired
+    */
+    public function getPasswordRequired()
+    {
+        if (array_key_exists("passwordRequired", $this->_propDict)) {
+            return $this->_propDict["passwordRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordRequired
+    * Require a password to unlock device.
+    *
+    * @param bool $val The passwordRequired
+    *
+    * @return AndroidDeviceOwnerCompliancePolicy
+    */
+    public function setPasswordRequired($val)
+    {
+        $this->_propDict["passwordRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the passwordRequiredType
     * Type of characters in password
     *
@@ -530,89 +559,60 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
-    * Gets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
+    * Gets the securityRequireSafetyNetAttestationBasicIntegrity
+    * Require the device to pass the SafetyNet basic integrity check.
     *
-    * @return int The passwordMinutesOfInactivityBeforeLock
+    * @return bool The securityRequireSafetyNetAttestationBasicIntegrity
     */
-    public function getPasswordMinutesOfInactivityBeforeLock()
+    public function getSecurityRequireSafetyNetAttestationBasicIntegrity()
     {
-        if (array_key_exists("passwordMinutesOfInactivityBeforeLock", $this->_propDict)) {
-            return $this->_propDict["passwordMinutesOfInactivityBeforeLock"];
+        if (array_key_exists("securityRequireSafetyNetAttestationBasicIntegrity", $this->_propDict)) {
+            return $this->_propDict["securityRequireSafetyNetAttestationBasicIntegrity"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordMinutesOfInactivityBeforeLock
-    * Minutes of inactivity before a password is required.
+    * Sets the securityRequireSafetyNetAttestationBasicIntegrity
+    * Require the device to pass the SafetyNet basic integrity check.
     *
-    * @param int $val The passwordMinutesOfInactivityBeforeLock
+    * @param bool $val The securityRequireSafetyNetAttestationBasicIntegrity
     *
     * @return AndroidDeviceOwnerCompliancePolicy
     */
-    public function setPasswordMinutesOfInactivityBeforeLock($val)
+    public function setSecurityRequireSafetyNetAttestationBasicIntegrity($val)
     {
-        $this->_propDict["passwordMinutesOfInactivityBeforeLock"] = intval($val);
+        $this->_propDict["securityRequireSafetyNetAttestationBasicIntegrity"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 365
+    * Gets the securityRequireSafetyNetAttestationCertifiedDevice
+    * Require the device to pass the SafetyNet certified device check.
     *
-    * @return int The passwordExpirationDays
+    * @return bool The securityRequireSafetyNetAttestationCertifiedDevice
     */
-    public function getPasswordExpirationDays()
+    public function getSecurityRequireSafetyNetAttestationCertifiedDevice()
     {
-        if (array_key_exists("passwordExpirationDays", $this->_propDict)) {
-            return $this->_propDict["passwordExpirationDays"];
+        if (array_key_exists("securityRequireSafetyNetAttestationCertifiedDevice", $this->_propDict)) {
+            return $this->_propDict["securityRequireSafetyNetAttestationCertifiedDevice"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the passwordExpirationDays
-    * Number of days before the password expires. Valid values 1 to 365
+    * Sets the securityRequireSafetyNetAttestationCertifiedDevice
+    * Require the device to pass the SafetyNet certified device check.
     *
-    * @param int $val The passwordExpirationDays
-    *
-    * @return AndroidDeviceOwnerCompliancePolicy
-    */
-    public function setPasswordExpirationDays($val)
-    {
-        $this->_propDict["passwordExpirationDays"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the passwordPreviousPasswordCountToBlock
-    * Number of previous passwords to block. Valid values 1 to 24
-    *
-    * @return int The passwordPreviousPasswordCountToBlock
-    */
-    public function getPasswordPreviousPasswordCountToBlock()
-    {
-        if (array_key_exists("passwordPreviousPasswordCountToBlock", $this->_propDict)) {
-            return $this->_propDict["passwordPreviousPasswordCountToBlock"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passwordPreviousPasswordCountToBlock
-    * Number of previous passwords to block. Valid values 1 to 24
-    *
-    * @param int $val The passwordPreviousPasswordCountToBlock
+    * @param bool $val The securityRequireSafetyNetAttestationCertifiedDevice
     *
     * @return AndroidDeviceOwnerCompliancePolicy
     */
-    public function setPasswordPreviousPasswordCountToBlock($val)
+    public function setSecurityRequireSafetyNetAttestationCertifiedDevice($val)
     {
-        $this->_propDict["passwordPreviousPasswordCountToBlock"] = intval($val);
+        $this->_propDict["securityRequireSafetyNetAttestationCertifiedDevice"] = boolval($val);
         return $this;
     }
     

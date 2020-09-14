@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class RevokeAppleVppLicensesActionResult extends DeviceActionResult
 {
     /**
-    * Gets the totalLicensesCount
-    * Total number of Apple Vpp licenses associated
-    *
-    * @return int The totalLicensesCount
-    */
-    public function getTotalLicensesCount()
-    {
-        if (array_key_exists("totalLicensesCount", $this->_propDict)) {
-            return $this->_propDict["totalLicensesCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the totalLicensesCount
-    * Total number of Apple Vpp licenses associated
-    *
-    * @param int $val The value of the totalLicensesCount
-    *
-    * @return RevokeAppleVppLicensesActionResult
-    */
-    public function setTotalLicensesCount($val)
-    {
-        $this->_propDict["totalLicensesCount"] = $val;
-        return $this;
-    }
-    /**
     * Gets the failedLicensesCount
     * Total number of Apple Vpp licenses that failed to revoke
     *
@@ -77,6 +49,34 @@ class RevokeAppleVppLicensesActionResult extends DeviceActionResult
     public function setFailedLicensesCount($val)
     {
         $this->_propDict["failedLicensesCount"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the totalLicensesCount
+    * Total number of Apple Vpp licenses associated
+    *
+    * @return int The totalLicensesCount
+    */
+    public function getTotalLicensesCount()
+    {
+        if (array_key_exists("totalLicensesCount", $this->_propDict)) {
+            return $this->_propDict["totalLicensesCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the totalLicensesCount
+    * Total number of Apple Vpp licenses associated
+    *
+    * @param int $val The value of the totalLicensesCount
+    *
+    * @return RevokeAppleVppLicensesActionResult
+    */
+    public function setTotalLicensesCount($val)
+    {
+        $this->_propDict["totalLicensesCount"] = $val;
         return $this;
     }
 }

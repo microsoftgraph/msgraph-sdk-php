@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintTask extends Entity
 {
     /**
+    * Gets the parentUrl
+    *
+    * @return string The parentUrl
+    */
+    public function getParentUrl()
+    {
+        if (array_key_exists("parentUrl", $this->_propDict)) {
+            return $this->_propDict["parentUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the parentUrl
+    *
+    * @param string $val The parentUrl
+    *
+    * @return PrintTask
+    */
+    public function setParentUrl($val)
+    {
+        $this->_propDict["parentUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
     *
     * @return PrintTaskStatus The status
@@ -52,33 +79,6 @@ class PrintTask extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the parentUrl
-    *
-    * @return string The parentUrl
-    */
-    public function getParentUrl()
-    {
-        if (array_key_exists("parentUrl", $this->_propDict)) {
-            return $this->_propDict["parentUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the parentUrl
-    *
-    * @param string $val The parentUrl
-    *
-    * @return PrintTask
-    */
-    public function setParentUrl($val)
-    {
-        $this->_propDict["parentUrl"] = $val;
         return $this;
     }
     

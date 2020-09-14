@@ -25,6 +25,95 @@ namespace Beta\Microsoft\Graph\Model;
 class EdiscoveryCase extends Entity
 {
     /**
+    * Gets the closedBy
+    *
+    * @return string The closedBy
+    */
+    public function getClosedBy()
+    {
+        if (array_key_exists("closedBy", $this->_propDict)) {
+            return $this->_propDict["closedBy"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the closedBy
+    *
+    * @param string $val The closedBy
+    *
+    * @return EdiscoveryCase
+    */
+    public function setClosedBy($val)
+    {
+        $this->_propDict["closedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the closedDateTime
+    *
+    * @return \DateTime The closedDateTime
+    */
+    public function getClosedDateTime()
+    {
+        if (array_key_exists("closedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["closedDateTime"], "\DateTime")) {
+                return $this->_propDict["closedDateTime"];
+            } else {
+                $this->_propDict["closedDateTime"] = new \DateTime($this->_propDict["closedDateTime"]);
+                return $this->_propDict["closedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the closedDateTime
+    *
+    * @param \DateTime $val The closedDateTime
+    *
+    * @return EdiscoveryCase
+    */
+    public function setClosedDateTime($val)
+    {
+        $this->_propDict["closedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return EdiscoveryCase
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     *
     * @return string The description
@@ -48,6 +137,60 @@ class EdiscoveryCase extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return EdiscoveryCase
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalId
+    *
+    * @return string The externalId
+    */
+    public function getExternalId()
+    {
+        if (array_key_exists("externalId", $this->_propDict)) {
+            return $this->_propDict["externalId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalId
+    *
+    * @param string $val The externalId
+    *
+    * @return EdiscoveryCase
+    */
+    public function setExternalId($val)
+    {
+        $this->_propDict["externalId"] = $val;
         return $this;
     }
     
@@ -137,149 +280,6 @@ class EdiscoveryCase extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the closedBy
-    *
-    * @return string The closedBy
-    */
-    public function getClosedBy()
-    {
-        if (array_key_exists("closedBy", $this->_propDict)) {
-            return $this->_propDict["closedBy"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the closedBy
-    *
-    * @param string $val The closedBy
-    *
-    * @return EdiscoveryCase
-    */
-    public function setClosedBy($val)
-    {
-        $this->_propDict["closedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the closedDateTime
-    *
-    * @return \DateTime The closedDateTime
-    */
-    public function getClosedDateTime()
-    {
-        if (array_key_exists("closedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["closedDateTime"], "\DateTime")) {
-                return $this->_propDict["closedDateTime"];
-            } else {
-                $this->_propDict["closedDateTime"] = new \DateTime($this->_propDict["closedDateTime"]);
-                return $this->_propDict["closedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the closedDateTime
-    *
-    * @param \DateTime $val The closedDateTime
-    *
-    * @return EdiscoveryCase
-    */
-    public function setClosedDateTime($val)
-    {
-        $this->_propDict["closedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the externalId
-    *
-    * @return string The externalId
-    */
-    public function getExternalId()
-    {
-        if (array_key_exists("externalId", $this->_propDict)) {
-            return $this->_propDict["externalId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the externalId
-    *
-    * @param string $val The externalId
-    *
-    * @return EdiscoveryCase
-    */
-    public function setExternalId($val)
-    {
-        $this->_propDict["externalId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return EdiscoveryCase
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return EdiscoveryCase
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     

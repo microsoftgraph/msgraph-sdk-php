@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ItemBody extends Entity
 {
+    /**
+    * Gets the content
+    * The content of the item.
+    *
+    * @return string The content
+    */
+    public function getContent()
+    {
+        if (array_key_exists("content", $this->_propDict)) {
+            return $this->_propDict["content"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the content
+    * The content of the item.
+    *
+    * @param string $val The value of the content
+    *
+    * @return ItemBody
+    */
+    public function setContent($val)
+    {
+        $this->_propDict["content"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the contentType
@@ -55,33 +83,5 @@ class ItemBody extends Entity
     {
         $this->_propDict["contentType"] = $val;
          return $this;
-    }
-    /**
-    * Gets the content
-    * The content of the item.
-    *
-    * @return string The content
-    */
-    public function getContent()
-    {
-        if (array_key_exists("content", $this->_propDict)) {
-            return $this->_propDict["content"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the content
-    * The content of the item.
-    *
-    * @param string $val The value of the content
-    *
-    * @return ItemBody
-    */
-    public function setContent($val)
-    {
-        $this->_propDict["content"] = $val;
-        return $this;
     }
 }

@@ -25,267 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class DepEnrollmentBaseProfile extends EnrollmentProfile
 {
     /**
-    * Gets the isDefault
-    * Indicates if this is the default profile
-    *
-    * @return bool The isDefault
-    */
-    public function getIsDefault()
-    {
-        if (array_key_exists("isDefault", $this->_propDict)) {
-            return $this->_propDict["isDefault"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isDefault
-    * Indicates if this is the default profile
-    *
-    * @param bool $val The isDefault
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setIsDefault($val)
-    {
-        $this->_propDict["isDefault"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-    *
-    * @return bool The supervisedModeEnabled
-    */
-    public function getSupervisedModeEnabled()
-    {
-        if (array_key_exists("supervisedModeEnabled", $this->_propDict)) {
-            return $this->_propDict["supervisedModeEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-    *
-    * @param bool $val The supervisedModeEnabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setSupervisedModeEnabled($val)
-    {
-        $this->_propDict["supervisedModeEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the supportDepartment
-    * Support department information
-    *
-    * @return string The supportDepartment
-    */
-    public function getSupportDepartment()
-    {
-        if (array_key_exists("supportDepartment", $this->_propDict)) {
-            return $this->_propDict["supportDepartment"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportDepartment
-    * Support department information
-    *
-    * @param string $val The supportDepartment
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setSupportDepartment($val)
-    {
-        $this->_propDict["supportDepartment"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the passCodeDisabled
-    * Indicates if Passcode setup pane is disabled
-    *
-    * @return bool The passCodeDisabled
-    */
-    public function getPassCodeDisabled()
-    {
-        if (array_key_exists("passCodeDisabled", $this->_propDict)) {
-            return $this->_propDict["passCodeDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passCodeDisabled
-    * Indicates if Passcode setup pane is disabled
-    *
-    * @param bool $val The passCodeDisabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setPassCodeDisabled($val)
-    {
-        $this->_propDict["passCodeDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the isMandatory
-    * Indicates if the profile is mandatory
-    *
-    * @return bool The isMandatory
-    */
-    public function getIsMandatory()
-    {
-        if (array_key_exists("isMandatory", $this->_propDict)) {
-            return $this->_propDict["isMandatory"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isMandatory
-    * Indicates if the profile is mandatory
-    *
-    * @param bool $val The isMandatory
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setIsMandatory($val)
-    {
-        $this->_propDict["isMandatory"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the locationDisabled
-    * Indicates if Location service setup pane is disabled
-    *
-    * @return bool The locationDisabled
-    */
-    public function getLocationDisabled()
-    {
-        if (array_key_exists("locationDisabled", $this->_propDict)) {
-            return $this->_propDict["locationDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the locationDisabled
-    * Indicates if Location service setup pane is disabled
-    *
-    * @param bool $val The locationDisabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setLocationDisabled($val)
-    {
-        $this->_propDict["locationDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the supportPhoneNumber
-    * Support phone number
-    *
-    * @return string The supportPhoneNumber
-    */
-    public function getSupportPhoneNumber()
-    {
-        if (array_key_exists("supportPhoneNumber", $this->_propDict)) {
-            return $this->_propDict["supportPhoneNumber"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the supportPhoneNumber
-    * Support phone number
-    *
-    * @param string $val The supportPhoneNumber
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setSupportPhoneNumber($val)
-    {
-        $this->_propDict["supportPhoneNumber"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the profileRemovalDisabled
-    * Indicates if the profile removal option is disabled
-    *
-    * @return bool The profileRemovalDisabled
-    */
-    public function getProfileRemovalDisabled()
-    {
-        if (array_key_exists("profileRemovalDisabled", $this->_propDict)) {
-            return $this->_propDict["profileRemovalDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the profileRemovalDisabled
-    * Indicates if the profile removal option is disabled
-    *
-    * @param bool $val The profileRemovalDisabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setProfileRemovalDisabled($val)
-    {
-        $this->_propDict["profileRemovalDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the restoreBlocked
-    * Indicates if Restore setup pane is blocked
-    *
-    * @return bool The restoreBlocked
-    */
-    public function getRestoreBlocked()
-    {
-        if (array_key_exists("restoreBlocked", $this->_propDict)) {
-            return $this->_propDict["restoreBlocked"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the restoreBlocked
-    * Indicates if Restore setup pane is blocked
-    *
-    * @param bool $val The restoreBlocked
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setRestoreBlocked($val)
-    {
-        $this->_propDict["restoreBlocked"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the appleIdDisabled
     * Indicates if Apple id setup pane is disabled
     *
@@ -311,64 +50,6 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     public function setAppleIdDisabled($val)
     {
         $this->_propDict["appleIdDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the termsAndConditionsDisabled
-    * Indicates if 'Terms and Conditions' setup pane is disabled
-    *
-    * @return bool The termsAndConditionsDisabled
-    */
-    public function getTermsAndConditionsDisabled()
-    {
-        if (array_key_exists("termsAndConditionsDisabled", $this->_propDict)) {
-            return $this->_propDict["termsAndConditionsDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the termsAndConditionsDisabled
-    * Indicates if 'Terms and Conditions' setup pane is disabled
-    *
-    * @param bool $val The termsAndConditionsDisabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setTermsAndConditionsDisabled($val)
-    {
-        $this->_propDict["termsAndConditionsDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the touchIdDisabled
-    * Indicates if touch id setup pane is disabled
-    *
-    * @return bool The touchIdDisabled
-    */
-    public function getTouchIdDisabled()
-    {
-        if (array_key_exists("touchIdDisabled", $this->_propDict)) {
-            return $this->_propDict["touchIdDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the touchIdDisabled
-    * Indicates if touch id setup pane is disabled
-    *
-    * @param bool $val The touchIdDisabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setTouchIdDisabled($val)
-    {
-        $this->_propDict["touchIdDisabled"] = boolval($val);
         return $this;
     }
     
@@ -402,60 +83,60 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     }
     
     /**
-    * Gets the zoomDisabled
-    * Indicates if zoom setup pane is disabled
+    * Gets the configurationWebUrl
+    * URL for setup assistant login
     *
-    * @return bool The zoomDisabled
+    * @return bool The configurationWebUrl
     */
-    public function getZoomDisabled()
+    public function getConfigurationWebUrl()
     {
-        if (array_key_exists("zoomDisabled", $this->_propDict)) {
-            return $this->_propDict["zoomDisabled"];
+        if (array_key_exists("configurationWebUrl", $this->_propDict)) {
+            return $this->_propDict["configurationWebUrl"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the zoomDisabled
-    * Indicates if zoom setup pane is disabled
+    * Sets the configurationWebUrl
+    * URL for setup assistant login
     *
-    * @param bool $val The zoomDisabled
+    * @param bool $val The configurationWebUrl
     *
     * @return DepEnrollmentBaseProfile
     */
-    public function setZoomDisabled($val)
+    public function setConfigurationWebUrl($val)
     {
-        $this->_propDict["zoomDisabled"] = boolval($val);
+        $this->_propDict["configurationWebUrl"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the siriDisabled
-    * Indicates if siri setup pane is disabled
+    * Gets the deviceNameTemplate
+    * Sets a literal or name pattern.
     *
-    * @return bool The siriDisabled
+    * @return string The deviceNameTemplate
     */
-    public function getSiriDisabled()
+    public function getDeviceNameTemplate()
     {
-        if (array_key_exists("siriDisabled", $this->_propDict)) {
-            return $this->_propDict["siriDisabled"];
+        if (array_key_exists("deviceNameTemplate", $this->_propDict)) {
+            return $this->_propDict["deviceNameTemplate"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the siriDisabled
-    * Indicates if siri setup pane is disabled
+    * Sets the deviceNameTemplate
+    * Sets a literal or name pattern.
     *
-    * @param bool $val The siriDisabled
+    * @param string $val The deviceNameTemplate
     *
     * @return DepEnrollmentBaseProfile
     */
-    public function setSiriDisabled($val)
+    public function setDeviceNameTemplate($val)
     {
-        $this->_propDict["siriDisabled"] = boolval($val);
+        $this->_propDict["deviceNameTemplate"] = $val;
         return $this;
     }
     
@@ -518,6 +199,122 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     }
     
     /**
+    * Gets the isDefault
+    * Indicates if this is the default profile
+    *
+    * @return bool The isDefault
+    */
+    public function getIsDefault()
+    {
+        if (array_key_exists("isDefault", $this->_propDict)) {
+            return $this->_propDict["isDefault"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDefault
+    * Indicates if this is the default profile
+    *
+    * @param bool $val The isDefault
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setIsDefault($val)
+    {
+        $this->_propDict["isDefault"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isMandatory
+    * Indicates if the profile is mandatory
+    *
+    * @return bool The isMandatory
+    */
+    public function getIsMandatory()
+    {
+        if (array_key_exists("isMandatory", $this->_propDict)) {
+            return $this->_propDict["isMandatory"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isMandatory
+    * Indicates if the profile is mandatory
+    *
+    * @param bool $val The isMandatory
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setIsMandatory($val)
+    {
+        $this->_propDict["isMandatory"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the locationDisabled
+    * Indicates if Location service setup pane is disabled
+    *
+    * @return bool The locationDisabled
+    */
+    public function getLocationDisabled()
+    {
+        if (array_key_exists("locationDisabled", $this->_propDict)) {
+            return $this->_propDict["locationDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the locationDisabled
+    * Indicates if Location service setup pane is disabled
+    *
+    * @param bool $val The locationDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setLocationDisabled($val)
+    {
+        $this->_propDict["locationDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @return bool The passCodeDisabled
+    */
+    public function getPassCodeDisabled()
+    {
+        if (array_key_exists("passCodeDisabled", $this->_propDict)) {
+            return $this->_propDict["passCodeDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @param bool $val The passCodeDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setPassCodeDisabled($val)
+    {
+        $this->_propDict["passCodeDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the privacyPaneDisabled
     * Indicates if privacy screen is disabled
     *
@@ -543,6 +340,64 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     public function setPrivacyPaneDisabled($val)
     {
         $this->_propDict["privacyPaneDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
+    *
+    * @return bool The profileRemovalDisabled
+    */
+    public function getProfileRemovalDisabled()
+    {
+        if (array_key_exists("profileRemovalDisabled", $this->_propDict)) {
+            return $this->_propDict["profileRemovalDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the profileRemovalDisabled
+    * Indicates if the profile removal option is disabled
+    *
+    * @param bool $val The profileRemovalDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setProfileRemovalDisabled($val)
+    {
+        $this->_propDict["profileRemovalDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the restoreBlocked
+    * Indicates if Restore setup pane is blocked
+    *
+    * @return bool The restoreBlocked
+    */
+    public function getRestoreBlocked()
+    {
+        if (array_key_exists("restoreBlocked", $this->_propDict)) {
+            return $this->_propDict["restoreBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the restoreBlocked
+    * Indicates if Restore setup pane is blocked
+    *
+    * @param bool $val The restoreBlocked
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setRestoreBlocked($val)
+    {
+        $this->_propDict["restoreBlocked"] = boolval($val);
         return $this;
     }
     
@@ -576,60 +431,205 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     }
     
     /**
-    * Gets the deviceNameTemplate
-    * Sets a literal or name pattern.
+    * Gets the siriDisabled
+    * Indicates if siri setup pane is disabled
     *
-    * @return string The deviceNameTemplate
+    * @return bool The siriDisabled
     */
-    public function getDeviceNameTemplate()
+    public function getSiriDisabled()
     {
-        if (array_key_exists("deviceNameTemplate", $this->_propDict)) {
-            return $this->_propDict["deviceNameTemplate"];
+        if (array_key_exists("siriDisabled", $this->_propDict)) {
+            return $this->_propDict["siriDisabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the deviceNameTemplate
-    * Sets a literal or name pattern.
+    * Sets the siriDisabled
+    * Indicates if siri setup pane is disabled
     *
-    * @param string $val The deviceNameTemplate
+    * @param bool $val The siriDisabled
     *
     * @return DepEnrollmentBaseProfile
     */
-    public function setDeviceNameTemplate($val)
+    public function setSiriDisabled($val)
     {
-        $this->_propDict["deviceNameTemplate"] = $val;
+        $this->_propDict["siriDisabled"] = boolval($val);
         return $this;
     }
     
     /**
-    * Gets the configurationWebUrl
-    * URL for setup assistant login
+    * Gets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
-    * @return bool The configurationWebUrl
+    * @return bool The supervisedModeEnabled
     */
-    public function getConfigurationWebUrl()
+    public function getSupervisedModeEnabled()
     {
-        if (array_key_exists("configurationWebUrl", $this->_propDict)) {
-            return $this->_propDict["configurationWebUrl"];
+        if (array_key_exists("supervisedModeEnabled", $this->_propDict)) {
+            return $this->_propDict["supervisedModeEnabled"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the configurationWebUrl
-    * URL for setup assistant login
+    * Sets the supervisedModeEnabled
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
-    * @param bool $val The configurationWebUrl
+    * @param bool $val The supervisedModeEnabled
     *
     * @return DepEnrollmentBaseProfile
     */
-    public function setConfigurationWebUrl($val)
+    public function setSupervisedModeEnabled($val)
     {
-        $this->_propDict["configurationWebUrl"] = boolval($val);
+        $this->_propDict["supervisedModeEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the supportDepartment
+    * Support department information
+    *
+    * @return string The supportDepartment
+    */
+    public function getSupportDepartment()
+    {
+        if (array_key_exists("supportDepartment", $this->_propDict)) {
+            return $this->_propDict["supportDepartment"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportDepartment
+    * Support department information
+    *
+    * @param string $val The supportDepartment
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setSupportDepartment($val)
+    {
+        $this->_propDict["supportDepartment"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the supportPhoneNumber
+    * Support phone number
+    *
+    * @return string The supportPhoneNumber
+    */
+    public function getSupportPhoneNumber()
+    {
+        if (array_key_exists("supportPhoneNumber", $this->_propDict)) {
+            return $this->_propDict["supportPhoneNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supportPhoneNumber
+    * Support phone number
+    *
+    * @param string $val The supportPhoneNumber
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setSupportPhoneNumber($val)
+    {
+        $this->_propDict["supportPhoneNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the termsAndConditionsDisabled
+    * Indicates if 'Terms and Conditions' setup pane is disabled
+    *
+    * @return bool The termsAndConditionsDisabled
+    */
+    public function getTermsAndConditionsDisabled()
+    {
+        if (array_key_exists("termsAndConditionsDisabled", $this->_propDict)) {
+            return $this->_propDict["termsAndConditionsDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the termsAndConditionsDisabled
+    * Indicates if 'Terms and Conditions' setup pane is disabled
+    *
+    * @param bool $val The termsAndConditionsDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setTermsAndConditionsDisabled($val)
+    {
+        $this->_propDict["termsAndConditionsDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the touchIdDisabled
+    * Indicates if touch id setup pane is disabled
+    *
+    * @return bool The touchIdDisabled
+    */
+    public function getTouchIdDisabled()
+    {
+        if (array_key_exists("touchIdDisabled", $this->_propDict)) {
+            return $this->_propDict["touchIdDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the touchIdDisabled
+    * Indicates if touch id setup pane is disabled
+    *
+    * @param bool $val The touchIdDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setTouchIdDisabled($val)
+    {
+        $this->_propDict["touchIdDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
+    *
+    * @return bool The zoomDisabled
+    */
+    public function getZoomDisabled()
+    {
+        if (array_key_exists("zoomDisabled", $this->_propDict)) {
+            return $this->_propDict["zoomDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
+    *
+    * @param bool $val The zoomDisabled
+    *
+    * @return DepEnrollmentBaseProfile
+    */
+    public function setZoomDisabled($val)
+    {
+        $this->_propDict["zoomDisabled"] = boolval($val);
         return $this;
     }
     

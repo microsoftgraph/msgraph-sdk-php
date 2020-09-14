@@ -54,35 +54,6 @@ class Invitation extends Entity
     }
     
     /**
-    * Gets the invitedUserType
-    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
-    *
-    * @return string The invitedUserType
-    */
-    public function getInvitedUserType()
-    {
-        if (array_key_exists("invitedUserType", $this->_propDict)) {
-            return $this->_propDict["invitedUserType"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the invitedUserType
-    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
-    *
-    * @param string $val The invitedUserType
-    *
-    * @return Invitation
-    */
-    public function setInvitedUserType($val)
-    {
-        $this->_propDict["invitedUserType"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the invitedUserEmailAddress
     * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (&amp;lt; &amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
     *
@@ -145,6 +116,93 @@ class Invitation extends Entity
     }
     
     /**
+    * Gets the invitedUserType
+    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
+    *
+    * @return string The invitedUserType
+    */
+    public function getInvitedUserType()
+    {
+        if (array_key_exists("invitedUserType", $this->_propDict)) {
+            return $this->_propDict["invitedUserType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the invitedUserType
+    * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
+    *
+    * @param string $val The invitedUserType
+    *
+    * @return Invitation
+    */
+    public function setInvitedUserType($val)
+    {
+        $this->_propDict["invitedUserType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the inviteRedeemUrl
+    * The URL the user can use to redeem their invitation. Read-only
+    *
+    * @return string The inviteRedeemUrl
+    */
+    public function getInviteRedeemUrl()
+    {
+        if (array_key_exists("inviteRedeemUrl", $this->_propDict)) {
+            return $this->_propDict["inviteRedeemUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the inviteRedeemUrl
+    * The URL the user can use to redeem their invitation. Read-only
+    *
+    * @param string $val The inviteRedeemUrl
+    *
+    * @return Invitation
+    */
+    public function setInviteRedeemUrl($val)
+    {
+        $this->_propDict["inviteRedeemUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the inviteRedirectUrl
+    * The URL the user should be redirected to once the invitation is redeemed. Required.
+    *
+    * @return string The inviteRedirectUrl
+    */
+    public function getInviteRedirectUrl()
+    {
+        if (array_key_exists("inviteRedirectUrl", $this->_propDict)) {
+            return $this->_propDict["inviteRedirectUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the inviteRedirectUrl
+    * The URL the user should be redirected to once the invitation is redeemed. Required.
+    *
+    * @param string $val The inviteRedirectUrl
+    *
+    * @return Invitation
+    */
+    public function setInviteRedirectUrl($val)
+    {
+        $this->_propDict["inviteRedirectUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the sendInvitationMessage
     * Indicates whether an email should be sent to the user being invited or not. The default is false.
     *
@@ -170,64 +228,6 @@ class Invitation extends Entity
     public function setSendInvitationMessage($val)
     {
         $this->_propDict["sendInvitationMessage"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the inviteRedirectUrl
-    * The URL user should be redirected to once the invitation is redeemed. Required.
-    *
-    * @return string The inviteRedirectUrl
-    */
-    public function getInviteRedirectUrl()
-    {
-        if (array_key_exists("inviteRedirectUrl", $this->_propDict)) {
-            return $this->_propDict["inviteRedirectUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the inviteRedirectUrl
-    * The URL user should be redirected to once the invitation is redeemed. Required.
-    *
-    * @param string $val The inviteRedirectUrl
-    *
-    * @return Invitation
-    */
-    public function setInviteRedirectUrl($val)
-    {
-        $this->_propDict["inviteRedirectUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the inviteRedeemUrl
-    * The URL user can use to redeem his invitation. Read-Only
-    *
-    * @return string The inviteRedeemUrl
-    */
-    public function getInviteRedeemUrl()
-    {
-        if (array_key_exists("inviteRedeemUrl", $this->_propDict)) {
-            return $this->_propDict["inviteRedeemUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the inviteRedeemUrl
-    * The URL user can use to redeem his invitation. Read-Only
-    *
-    * @param string $val The inviteRedeemUrl
-    *
-    * @return Invitation
-    */
-    public function setInviteRedeemUrl($val)
-    {
-        $this->_propDict["inviteRedeemUrl"] = $val;
         return $this;
     }
     

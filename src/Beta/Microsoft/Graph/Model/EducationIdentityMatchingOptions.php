@@ -81,32 +81,6 @@ class EducationIdentityMatchingOptions extends Entity
         return $this;
     }
     /**
-    * Gets the targetPropertyName
-    *
-    * @return string The targetPropertyName
-    */
-    public function getTargetPropertyName()
-    {
-        if (array_key_exists("targetPropertyName", $this->_propDict)) {
-            return $this->_propDict["targetPropertyName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the targetPropertyName
-    *
-    * @param string $val The value of the targetPropertyName
-    *
-    * @return EducationIdentityMatchingOptions
-    */
-    public function setTargetPropertyName($val)
-    {
-        $this->_propDict["targetPropertyName"] = $val;
-        return $this;
-    }
-    /**
     * Gets the targetDomain
     *
     * @return string The targetDomain
@@ -130,6 +104,32 @@ class EducationIdentityMatchingOptions extends Entity
     public function setTargetDomain($val)
     {
         $this->_propDict["targetDomain"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the targetPropertyName
+    *
+    * @return string The targetPropertyName
+    */
+    public function getTargetPropertyName()
+    {
+        if (array_key_exists("targetPropertyName", $this->_propDict)) {
+            return $this->_propDict["targetPropertyName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the targetPropertyName
+    *
+    * @param string $val The value of the targetPropertyName
+    *
+    * @return EducationIdentityMatchingOptions
+    */
+    public function setTargetPropertyName($val)
+    {
+        $this->_propDict["targetPropertyName"] = $val;
         return $this;
     }
 }

@@ -54,68 +54,6 @@ class RemoteAssistancePartner extends Entity
     }
     
     /**
-    * Gets the onboardingUrl
-    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-    *
-    * @return string The onboardingUrl
-    */
-    public function getOnboardingUrl()
-    {
-        if (array_key_exists("onboardingUrl", $this->_propDict)) {
-            return $this->_propDict["onboardingUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the onboardingUrl
-    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-    *
-    * @param string $val The onboardingUrl
-    *
-    * @return RemoteAssistancePartner
-    */
-    public function setOnboardingUrl($val)
-    {
-        $this->_propDict["onboardingUrl"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the onboardingStatus
-    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
-    *
-    * @return RemoteAssistanceOnboardingStatus The onboardingStatus
-    */
-    public function getOnboardingStatus()
-    {
-        if (array_key_exists("onboardingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["onboardingStatus"], "Beta\Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus")) {
-                return $this->_propDict["onboardingStatus"];
-            } else {
-                $this->_propDict["onboardingStatus"] = new RemoteAssistanceOnboardingStatus($this->_propDict["onboardingStatus"]);
-                return $this->_propDict["onboardingStatus"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the onboardingStatus
-    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
-    *
-    * @param RemoteAssistanceOnboardingStatus $val The onboardingStatus
-    *
-    * @return RemoteAssistancePartner
-    */
-    public function setOnboardingStatus($val)
-    {
-        $this->_propDict["onboardingStatus"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the lastConnectionDateTime
     * Timestamp of the last request sent to Intune by the TEM partner.
     *
@@ -178,6 +116,68 @@ class RemoteAssistancePartner extends Entity
     public function setOnboardingRequestExpiryDateTime($val)
     {
         $this->_propDict["onboardingRequestExpiryDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onboardingStatus
+    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
+    *
+    * @return RemoteAssistanceOnboardingStatus The onboardingStatus
+    */
+    public function getOnboardingStatus()
+    {
+        if (array_key_exists("onboardingStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["onboardingStatus"], "Beta\Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus")) {
+                return $this->_propDict["onboardingStatus"];
+            } else {
+                $this->_propDict["onboardingStatus"] = new RemoteAssistanceOnboardingStatus($this->_propDict["onboardingStatus"]);
+                return $this->_propDict["onboardingStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onboardingStatus
+    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
+    *
+    * @param RemoteAssistanceOnboardingStatus $val The onboardingStatus
+    *
+    * @return RemoteAssistancePartner
+    */
+    public function setOnboardingStatus($val)
+    {
+        $this->_propDict["onboardingStatus"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onboardingUrl
+    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+    *
+    * @return string The onboardingUrl
+    */
+    public function getOnboardingUrl()
+    {
+        if (array_key_exists("onboardingUrl", $this->_propDict)) {
+            return $this->_propDict["onboardingUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onboardingUrl
+    * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+    *
+    * @param string $val The onboardingUrl
+    *
+    * @return RemoteAssistancePartner
+    */
+    public function setOnboardingUrl($val)
+    {
+        $this->_propDict["onboardingUrl"] = $val;
         return $this;
     }
     

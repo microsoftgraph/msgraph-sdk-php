@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 class AirPrintDestination extends Entity
 {
     /**
+    * Gets the forceTls
+    * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
+    *
+    * @return bool The forceTls
+    */
+    public function getForceTls()
+    {
+        if (array_key_exists("forceTls", $this->_propDict)) {
+            return $this->_propDict["forceTls"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the forceTls
+    * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
+    *
+    * @param bool $val The value of the forceTls
+    *
+    * @return AirPrintDestination
+    */
+    public function setForceTls($val)
+    {
+        $this->_propDict["forceTls"] = $val;
+        return $this;
+    }
+    /**
     * Gets the ipAddress
     * The IP Address of the AirPrint destination.
     *
@@ -49,34 +77,6 @@ class AirPrintDestination extends Entity
     public function setIpAddress($val)
     {
         $this->_propDict["ipAddress"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the resourcePath
-    * The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
-    *
-    * @return string The resourcePath
-    */
-    public function getResourcePath()
-    {
-        if (array_key_exists("resourcePath", $this->_propDict)) {
-            return $this->_propDict["resourcePath"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the resourcePath
-    * The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
-    *
-    * @param string $val The value of the resourcePath
-    *
-    * @return AirPrintDestination
-    */
-    public function setResourcePath($val)
-    {
-        $this->_propDict["resourcePath"] = $val;
         return $this;
     }
     /**
@@ -108,31 +108,31 @@ class AirPrintDestination extends Entity
         return $this;
     }
     /**
-    * Gets the forceTls
-    * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
+    * Gets the resourcePath
+    * The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
     *
-    * @return bool The forceTls
+    * @return string The resourcePath
     */
-    public function getForceTls()
+    public function getResourcePath()
     {
-        if (array_key_exists("forceTls", $this->_propDict)) {
-            return $this->_propDict["forceTls"];
+        if (array_key_exists("resourcePath", $this->_propDict)) {
+            return $this->_propDict["resourcePath"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the forceTls
-    * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
+    * Sets the resourcePath
+    * The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
     *
-    * @param bool $val The value of the forceTls
+    * @param string $val The value of the resourcePath
     *
     * @return AirPrintDestination
     */
-    public function setForceTls($val)
+    public function setResourcePath($val)
     {
-        $this->_propDict["forceTls"] = $val;
+        $this->_propDict["resourcePath"] = $val;
         return $this;
     }
 }

@@ -24,29 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class DetectedSensitiveContentBase extends Entity
 {
     /**
-    * Gets the id
+    * Gets the confidence
     *
-    * @return string The id
+    * @return int The confidence
     */
-    public function getId()
+    public function getConfidence()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("confidence", $this->_propDict)) {
+            return $this->_propDict["confidence"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
+    * Sets the confidence
     *
-    * @param string $val The value of the id
+    * @param int $val The value of the confidence
     *
     * @return DetectedSensitiveContentBase
     */
-    public function setId($val)
+    public function setConfidence($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["confidence"] = $val;
         return $this;
     }
     /**
@@ -76,81 +76,29 @@ class DetectedSensitiveContentBase extends Entity
         return $this;
     }
     /**
-    * Gets the uniqueCount
+    * Gets the id
     *
-    * @return int The uniqueCount
+    * @return string The id
     */
-    public function getUniqueCount()
+    public function getId()
     {
-        if (array_key_exists("uniqueCount", $this->_propDict)) {
-            return $this->_propDict["uniqueCount"];
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the uniqueCount
+    * Sets the id
     *
-    * @param int $val The value of the uniqueCount
-    *
-    * @return DetectedSensitiveContentBase
-    */
-    public function setUniqueCount($val)
-    {
-        $this->_propDict["uniqueCount"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the confidence
-    *
-    * @return int The confidence
-    */
-    public function getConfidence()
-    {
-        if (array_key_exists("confidence", $this->_propDict)) {
-            return $this->_propDict["confidence"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the confidence
-    *
-    * @param int $val The value of the confidence
+    * @param string $val The value of the id
     *
     * @return DetectedSensitiveContentBase
     */
-    public function setConfidence($val)
+    public function setId($val)
     {
-        $this->_propDict["confidence"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the recommendedConfidence
-    *
-    * @return int The recommendedConfidence
-    */
-    public function getRecommendedConfidence()
-    {
-        if (array_key_exists("recommendedConfidence", $this->_propDict)) {
-            return $this->_propDict["recommendedConfidence"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the recommendedConfidence
-    *
-    * @param int $val The value of the recommendedConfidence
-    *
-    * @return DetectedSensitiveContentBase
-    */
-    public function setRecommendedConfidence($val)
-    {
-        $this->_propDict["recommendedConfidence"] = $val;
+        $this->_propDict["id"] = $val;
         return $this;
     }
 
@@ -183,5 +131,57 @@ class DetectedSensitiveContentBase extends Entity
     {
         $this->_propDict["matches"] = $val;
          return $this;
+    }
+    /**
+    * Gets the recommendedConfidence
+    *
+    * @return int The recommendedConfidence
+    */
+    public function getRecommendedConfidence()
+    {
+        if (array_key_exists("recommendedConfidence", $this->_propDict)) {
+            return $this->_propDict["recommendedConfidence"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recommendedConfidence
+    *
+    * @param int $val The value of the recommendedConfidence
+    *
+    * @return DetectedSensitiveContentBase
+    */
+    public function setRecommendedConfidence($val)
+    {
+        $this->_propDict["recommendedConfidence"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the uniqueCount
+    *
+    * @return int The uniqueCount
+    */
+    public function getUniqueCount()
+    {
+        if (array_key_exists("uniqueCount", $this->_propDict)) {
+            return $this->_propDict["uniqueCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uniqueCount
+    *
+    * @param int $val The value of the uniqueCount
+    *
+    * @return DetectedSensitiveContentBase
+    */
+    public function setUniqueCount($val)
+    {
+        $this->_propDict["uniqueCount"] = $val;
+        return $this;
     }
 }

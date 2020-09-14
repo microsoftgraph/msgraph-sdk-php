@@ -23,34 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceManagementSettingDependency extends Entity
 {
-    /**
-    * Gets the definitionId
-    * The setting definition ID of the setting depended on
-    *
-    * @return string The definitionId
-    */
-    public function getDefinitionId()
-    {
-        if (array_key_exists("definitionId", $this->_propDict)) {
-            return $this->_propDict["definitionId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the definitionId
-    * The setting definition ID of the setting depended on
-    *
-    * @param string $val The value of the definitionId
-    *
-    * @return DeviceManagementSettingDependency
-    */
-    public function setDefinitionId($val)
-    {
-        $this->_propDict["definitionId"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the constraints
@@ -83,5 +55,33 @@ class DeviceManagementSettingDependency extends Entity
     {
         $this->_propDict["constraints"] = $val;
          return $this;
+    }
+    /**
+    * Gets the definitionId
+    * The setting definition ID of the setting depended on
+    *
+    * @return string The definitionId
+    */
+    public function getDefinitionId()
+    {
+        if (array_key_exists("definitionId", $this->_propDict)) {
+            return $this->_propDict["definitionId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the definitionId
+    * The setting definition ID of the setting depended on
+    *
+    * @param string $val The value of the definitionId
+    *
+    * @return DeviceManagementSettingDependency
+    */
+    public function setDefinitionId($val)
+    {
+        $this->_propDict["definitionId"] = $val;
+        return $this;
     }
 }

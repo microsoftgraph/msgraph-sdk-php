@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class CustomSubjectAlternativeName extends Entity
 {
+    /**
+    * Gets the name
+    * Custom SAN Name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    * Custom SAN Name
+    *
+    * @param string $val The value of the name
+    *
+    * @return CustomSubjectAlternativeName
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the sanType
@@ -55,33 +83,5 @@ class CustomSubjectAlternativeName extends Entity
     {
         $this->_propDict["sanType"] = $val;
          return $this;
-    }
-    /**
-    * Gets the name
-    * Custom SAN Name
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    * Custom SAN Name
-    *
-    * @param string $val The value of the name
-    *
-    * @return CustomSubjectAlternativeName
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
     }
 }

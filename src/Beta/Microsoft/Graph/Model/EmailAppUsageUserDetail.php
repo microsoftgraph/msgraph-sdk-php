@@ -25,60 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class EmailAppUsageUserDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the deletedDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime The deletedDate
     */
-    public function getReportRefreshDate()
+    public function getDeletedDate()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
+        if (array_key_exists("deletedDate", $this->_propDict)) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+                return $this->_propDict["deletedDate"];
             } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
+                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
+                return $this->_propDict["deletedDate"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the reportRefreshDate
+    * Sets the deletedDate
     *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return EmailAppUsageUserDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userPrincipalName
-    *
-    * @return string The userPrincipalName
-    */
-    public function getUserPrincipalName()
-    {
-        if (array_key_exists("userPrincipalName", $this->_propDict)) {
-            return $this->_propDict["userPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userPrincipalName
-    *
-    * @param string $val The userPrincipalName
+    * @param \DateTime $val The deletedDate
     *
     * @return EmailAppUsageUserDetail
     */
-    public function setUserPrincipalName($val)
+    public function setDeletedDate($val)
     {
-        $this->_propDict["userPrincipalName"] = $val;
+        $this->_propDict["deletedDate"] = $val;
         return $this;
     }
     
@@ -110,6 +83,33 @@ class EmailAppUsageUserDetail extends Entity
     }
     
     /**
+    * Gets the imap4App
+    *
+    * @return string The imap4App
+    */
+    public function getImap4App()
+    {
+        if (array_key_exists("imap4App", $this->_propDict)) {
+            return $this->_propDict["imap4App"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the imap4App
+    *
+    * @param string $val The imap4App
+    *
+    * @return EmailAppUsageUserDetail
+    */
+    public function setImap4App($val)
+    {
+        $this->_propDict["imap4App"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isDeleted
     *
     * @return bool The isDeleted
@@ -133,37 +133,6 @@ class EmailAppUsageUserDetail extends Entity
     public function setIsDeleted($val)
     {
         $this->_propDict["isDeleted"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the deletedDate
-    *
-    * @return \DateTime The deletedDate
-    */
-    public function getDeletedDate()
-    {
-        if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
-                return $this->_propDict["deletedDate"];
-            } else {
-                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
-                return $this->_propDict["deletedDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deletedDate
-    *
-    * @param \DateTime $val The deletedDate
-    *
-    * @return EmailAppUsageUserDetail
-    */
-    public function setDeletedDate($val)
-    {
-        $this->_propDict["deletedDate"] = $val;
         return $this;
     }
     
@@ -226,6 +195,33 @@ class EmailAppUsageUserDetail extends Entity
     }
     
     /**
+    * Gets the otherForMobile
+    *
+    * @return string The otherForMobile
+    */
+    public function getOtherForMobile()
+    {
+        if (array_key_exists("otherForMobile", $this->_propDict)) {
+            return $this->_propDict["otherForMobile"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the otherForMobile
+    *
+    * @param string $val The otherForMobile
+    *
+    * @return EmailAppUsageUserDetail
+    */
+    public function setOtherForMobile($val)
+    {
+        $this->_propDict["otherForMobile"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the outlookForMac
     *
     * @return string The outlookForMac
@@ -249,33 +245,6 @@ class EmailAppUsageUserDetail extends Entity
     public function setOutlookForMac($val)
     {
         $this->_propDict["outlookForMac"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the outlookForWindows
-    *
-    * @return string The outlookForWindows
-    */
-    public function getOutlookForWindows()
-    {
-        if (array_key_exists("outlookForWindows", $this->_propDict)) {
-            return $this->_propDict["outlookForWindows"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the outlookForWindows
-    *
-    * @param string $val The outlookForWindows
-    *
-    * @return EmailAppUsageUserDetail
-    */
-    public function setOutlookForWindows($val)
-    {
-        $this->_propDict["outlookForWindows"] = $val;
         return $this;
     }
     
@@ -307,33 +276,6 @@ class EmailAppUsageUserDetail extends Entity
     }
     
     /**
-    * Gets the otherForMobile
-    *
-    * @return string The otherForMobile
-    */
-    public function getOtherForMobile()
-    {
-        if (array_key_exists("otherForMobile", $this->_propDict)) {
-            return $this->_propDict["otherForMobile"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the otherForMobile
-    *
-    * @param string $val The otherForMobile
-    *
-    * @return EmailAppUsageUserDetail
-    */
-    public function setOtherForMobile($val)
-    {
-        $this->_propDict["otherForMobile"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the outlookForWeb
     *
     * @return string The outlookForWeb
@@ -357,6 +299,33 @@ class EmailAppUsageUserDetail extends Entity
     public function setOutlookForWeb($val)
     {
         $this->_propDict["outlookForWeb"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the outlookForWindows
+    *
+    * @return string The outlookForWindows
+    */
+    public function getOutlookForWindows()
+    {
+        if (array_key_exists("outlookForWindows", $this->_propDict)) {
+            return $this->_propDict["outlookForWindows"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the outlookForWindows
+    *
+    * @param string $val The outlookForWindows
+    *
+    * @return EmailAppUsageUserDetail
+    */
+    public function setOutlookForWindows($val)
+    {
+        $this->_propDict["outlookForWindows"] = $val;
         return $this;
     }
     
@@ -388,29 +357,60 @@ class EmailAppUsageUserDetail extends Entity
     }
     
     /**
-    * Gets the imap4App
+    * Gets the reportPeriod
     *
-    * @return string The imap4App
+    * @return string The reportPeriod
     */
-    public function getImap4App()
+    public function getReportPeriod()
     {
-        if (array_key_exists("imap4App", $this->_propDict)) {
-            return $this->_propDict["imap4App"];
+        if (array_key_exists("reportPeriod", $this->_propDict)) {
+            return $this->_propDict["reportPeriod"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the imap4App
+    * Sets the reportPeriod
     *
-    * @param string $val The imap4App
+    * @param string $val The reportPeriod
     *
     * @return EmailAppUsageUserDetail
     */
-    public function setImap4App($val)
+    public function setReportPeriod($val)
     {
-        $this->_propDict["imap4App"] = $val;
+        $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return EmailAppUsageUserDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
     
@@ -442,29 +442,29 @@ class EmailAppUsageUserDetail extends Entity
     }
     
     /**
-    * Gets the reportPeriod
+    * Gets the userPrincipalName
     *
-    * @return string The reportPeriod
+    * @return string The userPrincipalName
     */
-    public function getReportPeriod()
+    public function getUserPrincipalName()
     {
-        if (array_key_exists("reportPeriod", $this->_propDict)) {
-            return $this->_propDict["reportPeriod"];
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the reportPeriod
+    * Sets the userPrincipalName
     *
-    * @param string $val The reportPeriod
+    * @param string $val The userPrincipalName
     *
     * @return EmailAppUsageUserDetail
     */
-    public function setReportPeriod($val)
+    public function setUserPrincipalName($val)
     {
-        $this->_propDict["reportPeriod"] = $val;
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

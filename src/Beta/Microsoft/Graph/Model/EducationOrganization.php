@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationOrganization extends Entity
 {
     /**
-    * Gets the displayName
-    * Organization display name.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Organization display name.
-    *
-    * @param string $val The displayName
-    *
-    * @return EducationOrganization
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * Organization description.
     *
@@ -79,6 +50,35 @@ class EducationOrganization extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Organization display name.
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Organization display name.
+    *
+    * @param string $val The displayName
+    *
+    * @return EducationOrganization
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     

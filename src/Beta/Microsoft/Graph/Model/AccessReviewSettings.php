@@ -24,138 +24,29 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessReviewSettings extends Entity
 {
     /**
-    * Gets the mailNotificationsEnabled
+    * Gets the accessRecommendationsEnabled
     *
-    * @return bool The mailNotificationsEnabled
+    * @return bool The accessRecommendationsEnabled
     */
-    public function getMailNotificationsEnabled()
+    public function getAccessRecommendationsEnabled()
     {
-        if (array_key_exists("mailNotificationsEnabled", $this->_propDict)) {
-            return $this->_propDict["mailNotificationsEnabled"];
+        if (array_key_exists("accessRecommendationsEnabled", $this->_propDict)) {
+            return $this->_propDict["accessRecommendationsEnabled"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the mailNotificationsEnabled
+    * Sets the accessRecommendationsEnabled
     *
-    * @param bool $val The value of the mailNotificationsEnabled
-    *
-    * @return AccessReviewSettings
-    */
-    public function setMailNotificationsEnabled($val)
-    {
-        $this->_propDict["mailNotificationsEnabled"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the remindersEnabled
-    *
-    * @return bool The remindersEnabled
-    */
-    public function getRemindersEnabled()
-    {
-        if (array_key_exists("remindersEnabled", $this->_propDict)) {
-            return $this->_propDict["remindersEnabled"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the remindersEnabled
-    *
-    * @param bool $val The value of the remindersEnabled
+    * @param bool $val The value of the accessRecommendationsEnabled
     *
     * @return AccessReviewSettings
     */
-    public function setRemindersEnabled($val)
+    public function setAccessRecommendationsEnabled($val)
     {
-        $this->_propDict["remindersEnabled"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the justificationRequiredOnApproval
-    *
-    * @return bool The justificationRequiredOnApproval
-    */
-    public function getJustificationRequiredOnApproval()
-    {
-        if (array_key_exists("justificationRequiredOnApproval", $this->_propDict)) {
-            return $this->_propDict["justificationRequiredOnApproval"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the justificationRequiredOnApproval
-    *
-    * @param bool $val The value of the justificationRequiredOnApproval
-    *
-    * @return AccessReviewSettings
-    */
-    public function setJustificationRequiredOnApproval($val)
-    {
-        $this->_propDict["justificationRequiredOnApproval"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the recurrenceSettings
-    *
-    * @return AccessReviewRecurrenceSettings The recurrenceSettings
-    */
-    public function getRecurrenceSettings()
-    {
-        if (array_key_exists("recurrenceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrenceSettings"], "Beta\Microsoft\Graph\Model\AccessReviewRecurrenceSettings")) {
-                return $this->_propDict["recurrenceSettings"];
-            } else {
-                $this->_propDict["recurrenceSettings"] = new AccessReviewRecurrenceSettings($this->_propDict["recurrenceSettings"]);
-                return $this->_propDict["recurrenceSettings"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the recurrenceSettings
-    *
-    * @param AccessReviewRecurrenceSettings $val The value to assign to the recurrenceSettings
-    *
-    * @return AccessReviewSettings The AccessReviewSettings
-    */
-    public function setRecurrenceSettings($val)
-    {
-        $this->_propDict["recurrenceSettings"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the autoReviewEnabled
-    *
-    * @return bool The autoReviewEnabled
-    */
-    public function getAutoReviewEnabled()
-    {
-        if (array_key_exists("autoReviewEnabled", $this->_propDict)) {
-            return $this->_propDict["autoReviewEnabled"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the autoReviewEnabled
-    *
-    * @param bool $val The value of the autoReviewEnabled
-    *
-    * @return AccessReviewSettings
-    */
-    public function setAutoReviewEnabled($val)
-    {
-        $this->_propDict["autoReviewEnabled"] = $val;
+        $this->_propDict["accessRecommendationsEnabled"] = $val;
         return $this;
     }
     /**
@@ -182,6 +73,58 @@ class AccessReviewSettings extends Entity
     public function setActivityDurationInDays($val)
     {
         $this->_propDict["activityDurationInDays"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the autoApplyReviewResultsEnabled
+    *
+    * @return bool The autoApplyReviewResultsEnabled
+    */
+    public function getAutoApplyReviewResultsEnabled()
+    {
+        if (array_key_exists("autoApplyReviewResultsEnabled", $this->_propDict)) {
+            return $this->_propDict["autoApplyReviewResultsEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the autoApplyReviewResultsEnabled
+    *
+    * @param bool $val The value of the autoApplyReviewResultsEnabled
+    *
+    * @return AccessReviewSettings
+    */
+    public function setAutoApplyReviewResultsEnabled($val)
+    {
+        $this->_propDict["autoApplyReviewResultsEnabled"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the autoReviewEnabled
+    *
+    * @return bool The autoReviewEnabled
+    */
+    public function getAutoReviewEnabled()
+    {
+        if (array_key_exists("autoReviewEnabled", $this->_propDict)) {
+            return $this->_propDict["autoReviewEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the autoReviewEnabled
+    *
+    * @param bool $val The value of the autoReviewEnabled
+    *
+    * @return AccessReviewSettings
+    */
+    public function setAutoReviewEnabled($val)
+    {
+        $this->_propDict["autoReviewEnabled"] = $val;
         return $this;
     }
 
@@ -216,55 +159,112 @@ class AccessReviewSettings extends Entity
          return $this;
     }
     /**
-    * Gets the autoApplyReviewResultsEnabled
+    * Gets the justificationRequiredOnApproval
     *
-    * @return bool The autoApplyReviewResultsEnabled
+    * @return bool The justificationRequiredOnApproval
     */
-    public function getAutoApplyReviewResultsEnabled()
+    public function getJustificationRequiredOnApproval()
     {
-        if (array_key_exists("autoApplyReviewResultsEnabled", $this->_propDict)) {
-            return $this->_propDict["autoApplyReviewResultsEnabled"];
+        if (array_key_exists("justificationRequiredOnApproval", $this->_propDict)) {
+            return $this->_propDict["justificationRequiredOnApproval"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the autoApplyReviewResultsEnabled
+    * Sets the justificationRequiredOnApproval
     *
-    * @param bool $val The value of the autoApplyReviewResultsEnabled
+    * @param bool $val The value of the justificationRequiredOnApproval
     *
     * @return AccessReviewSettings
     */
-    public function setAutoApplyReviewResultsEnabled($val)
+    public function setJustificationRequiredOnApproval($val)
     {
-        $this->_propDict["autoApplyReviewResultsEnabled"] = $val;
+        $this->_propDict["justificationRequiredOnApproval"] = $val;
         return $this;
     }
     /**
-    * Gets the accessRecommendationsEnabled
+    * Gets the mailNotificationsEnabled
     *
-    * @return bool The accessRecommendationsEnabled
+    * @return bool The mailNotificationsEnabled
     */
-    public function getAccessRecommendationsEnabled()
+    public function getMailNotificationsEnabled()
     {
-        if (array_key_exists("accessRecommendationsEnabled", $this->_propDict)) {
-            return $this->_propDict["accessRecommendationsEnabled"];
+        if (array_key_exists("mailNotificationsEnabled", $this->_propDict)) {
+            return $this->_propDict["mailNotificationsEnabled"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the accessRecommendationsEnabled
+    * Sets the mailNotificationsEnabled
     *
-    * @param bool $val The value of the accessRecommendationsEnabled
+    * @param bool $val The value of the mailNotificationsEnabled
     *
     * @return AccessReviewSettings
     */
-    public function setAccessRecommendationsEnabled($val)
+    public function setMailNotificationsEnabled($val)
     {
-        $this->_propDict["accessRecommendationsEnabled"] = $val;
+        $this->_propDict["mailNotificationsEnabled"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the recurrenceSettings
+    *
+    * @return AccessReviewRecurrenceSettings The recurrenceSettings
+    */
+    public function getRecurrenceSettings()
+    {
+        if (array_key_exists("recurrenceSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["recurrenceSettings"], "Beta\Microsoft\Graph\Model\AccessReviewRecurrenceSettings")) {
+                return $this->_propDict["recurrenceSettings"];
+            } else {
+                $this->_propDict["recurrenceSettings"] = new AccessReviewRecurrenceSettings($this->_propDict["recurrenceSettings"]);
+                return $this->_propDict["recurrenceSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recurrenceSettings
+    *
+    * @param AccessReviewRecurrenceSettings $val The value to assign to the recurrenceSettings
+    *
+    * @return AccessReviewSettings The AccessReviewSettings
+    */
+    public function setRecurrenceSettings($val)
+    {
+        $this->_propDict["recurrenceSettings"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the remindersEnabled
+    *
+    * @return bool The remindersEnabled
+    */
+    public function getRemindersEnabled()
+    {
+        if (array_key_exists("remindersEnabled", $this->_propDict)) {
+            return $this->_propDict["remindersEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the remindersEnabled
+    *
+    * @param bool $val The value of the remindersEnabled
+    *
+    * @return AccessReviewSettings
+    */
+    public function setRemindersEnabled($val)
+    {
+        $this->_propDict["remindersEnabled"] = $val;
         return $this;
     }
 }

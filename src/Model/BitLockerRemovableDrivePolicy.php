@@ -23,6 +23,34 @@ namespace Microsoft\Graph\Model;
 */
 class BitLockerRemovableDrivePolicy extends Entity
 {
+    /**
+    * Gets the blockCrossOrganizationWriteAccess
+    * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
+    *
+    * @return bool The blockCrossOrganizationWriteAccess
+    */
+    public function getBlockCrossOrganizationWriteAccess()
+    {
+        if (array_key_exists("blockCrossOrganizationWriteAccess", $this->_propDict)) {
+            return $this->_propDict["blockCrossOrganizationWriteAccess"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the blockCrossOrganizationWriteAccess
+    * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
+    *
+    * @param bool $val The value of the blockCrossOrganizationWriteAccess
+    *
+    * @return BitLockerRemovableDrivePolicy
+    */
+    public function setBlockCrossOrganizationWriteAccess($val)
+    {
+        $this->_propDict["blockCrossOrganizationWriteAccess"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the encryptionMethod
@@ -82,34 +110,6 @@ class BitLockerRemovableDrivePolicy extends Entity
     public function setRequireEncryptionForWriteAccess($val)
     {
         $this->_propDict["requireEncryptionForWriteAccess"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the blockCrossOrganizationWriteAccess
-    * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
-    *
-    * @return bool The blockCrossOrganizationWriteAccess
-    */
-    public function getBlockCrossOrganizationWriteAccess()
-    {
-        if (array_key_exists("blockCrossOrganizationWriteAccess", $this->_propDict)) {
-            return $this->_propDict["blockCrossOrganizationWriteAccess"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the blockCrossOrganizationWriteAccess
-    * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
-    *
-    * @param bool $val The value of the blockCrossOrganizationWriteAccess
-    *
-    * @return BitLockerRemovableDrivePolicy
-    */
-    public function setBlockCrossOrganizationWriteAccess($val)
-    {
-        $this->_propDict["blockCrossOrganizationWriteAccess"] = $val;
         return $this;
     }
 }

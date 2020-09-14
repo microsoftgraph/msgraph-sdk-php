@@ -50,32 +50,6 @@ class DataStoreField extends Entity
         return $this;
     }
     /**
-    * Gets the unique
-    *
-    * @return bool The unique
-    */
-    public function getUnique()
-    {
-        if (array_key_exists("unique", $this->_propDict)) {
-            return $this->_propDict["unique"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the unique
-    *
-    * @param bool $val The value of the unique
-    *
-    * @return DataStoreField
-    */
-    public function setUnique($val)
-    {
-        $this->_propDict["unique"] = $val;
-        return $this;
-    }
-    /**
     * Gets the searchable
     *
     * @return bool The searchable
@@ -99,6 +73,32 @@ class DataStoreField extends Entity
     public function setSearchable($val)
     {
         $this->_propDict["searchable"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the unique
+    *
+    * @return bool The unique
+    */
+    public function getUnique()
+    {
+        if (array_key_exists("unique", $this->_propDict)) {
+            return $this->_propDict["unique"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the unique
+    *
+    * @param bool $val The value of the unique
+    *
+    * @return DataStoreField
+    */
+    public function setUnique($val)
+    {
+        $this->_propDict["unique"] = $val;
         return $this;
     }
 }

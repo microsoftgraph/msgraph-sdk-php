@@ -58,39 +58,6 @@ class DeviceComplianceScriptDeviceState extends Entity
     }
     
     /**
-    * Gets the lastStateUpdateDateTime
-    * The last timestamp of when the device compliance script executed
-    *
-    * @return \DateTime The lastStateUpdateDateTime
-    */
-    public function getLastStateUpdateDateTime()
-    {
-        if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
-                return $this->_propDict["lastStateUpdateDateTime"];
-            } else {
-                $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
-                return $this->_propDict["lastStateUpdateDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the lastStateUpdateDateTime
-    * The last timestamp of when the device compliance script executed
-    *
-    * @param \DateTime $val The lastStateUpdateDateTime
-    *
-    * @return DeviceComplianceScriptDeviceState
-    */
-    public function setLastStateUpdateDateTime($val)
-    {
-        $this->_propDict["lastStateUpdateDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the expectedStateUpdateDateTime
     * The next timestamp of when the device compliance script is expected to execute
     *
@@ -120,6 +87,39 @@ class DeviceComplianceScriptDeviceState extends Entity
     public function setExpectedStateUpdateDateTime($val)
     {
         $this->_propDict["expectedStateUpdateDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastStateUpdateDateTime
+    * The last timestamp of when the device compliance script executed
+    *
+    * @return \DateTime The lastStateUpdateDateTime
+    */
+    public function getLastStateUpdateDateTime()
+    {
+        if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
+                return $this->_propDict["lastStateUpdateDateTime"];
+            } else {
+                $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
+                return $this->_propDict["lastStateUpdateDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastStateUpdateDateTime
+    * The last timestamp of when the device compliance script executed
+    *
+    * @param \DateTime $val The lastStateUpdateDateTime
+    *
+    * @return DeviceComplianceScriptDeviceState
+    */
+    public function setLastStateUpdateDateTime($val)
+    {
+        $this->_propDict["lastStateUpdateDateTime"] = $val;
         return $this;
     }
     
@@ -157,35 +157,6 @@ class DeviceComplianceScriptDeviceState extends Entity
     }
     
     /**
-    * Gets the scriptOutput
-    * Output of the detection script
-    *
-    * @return string The scriptOutput
-    */
-    public function getScriptOutput()
-    {
-        if (array_key_exists("scriptOutput", $this->_propDict)) {
-            return $this->_propDict["scriptOutput"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the scriptOutput
-    * Output of the detection script
-    *
-    * @param string $val The scriptOutput
-    *
-    * @return DeviceComplianceScriptDeviceState
-    */
-    public function setScriptOutput($val)
-    {
-        $this->_propDict["scriptOutput"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the scriptError
     * Error from the detection script
     *
@@ -211,6 +182,35 @@ class DeviceComplianceScriptDeviceState extends Entity
     public function setScriptError($val)
     {
         $this->_propDict["scriptError"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the scriptOutput
+    * Output of the detection script
+    *
+    * @return string The scriptOutput
+    */
+    public function getScriptOutput()
+    {
+        if (array_key_exists("scriptOutput", $this->_propDict)) {
+            return $this->_propDict["scriptOutput"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the scriptOutput
+    * Output of the detection script
+    *
+    * @param string $val The scriptOutput
+    *
+    * @return DeviceComplianceScriptDeviceState
+    */
+    public function setScriptOutput($val)
+    {
+        $this->_propDict["scriptOutput"] = $val;
         return $this;
     }
     

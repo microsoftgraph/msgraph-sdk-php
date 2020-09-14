@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
 {
     /**
-    * Gets the managedDeviceId
-    * The managed device ID.
-    *
-    * @return string The managedDeviceId
-    */
-    public function getManagedDeviceId()
-    {
-        if (array_key_exists("managedDeviceId", $this->_propDict)) {
-            return $this->_propDict["managedDeviceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the managedDeviceId
-    * The managed device ID.
-    *
-    * @param string $val The managedDeviceId
-    *
-    * @return IosVppAppAssignedDeviceLicense
-    */
-    public function setManagedDeviceId($val)
-    {
-        $this->_propDict["managedDeviceId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the deviceName
     * The device name.
     *
@@ -79,6 +50,35 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
     public function setDeviceName($val)
     {
         $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the managedDeviceId
+    * The managed device ID.
+    *
+    * @return string The managedDeviceId
+    */
+    public function getManagedDeviceId()
+    {
+        if (array_key_exists("managedDeviceId", $this->_propDict)) {
+            return $this->_propDict["managedDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedDeviceId
+    * The managed device ID.
+    *
+    * @param string $val The managedDeviceId
+    *
+    * @return IosVppAppAssignedDeviceLicense
+    */
+    public function setManagedDeviceId($val)
+    {
+        $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
     

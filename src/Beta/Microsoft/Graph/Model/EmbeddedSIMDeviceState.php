@@ -58,35 +58,31 @@ class EmbeddedSIMDeviceState extends Entity
     }
     
     /**
-    * Gets the modifiedDateTime
-    * The time the embedded SIM device status was last modified. Updated service side.
+    * Gets the deviceName
+    * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
     *
-    * @return \DateTime The modifiedDateTime
+    * @return string The deviceName
     */
-    public function getModifiedDateTime()
+    public function getDeviceName()
     {
-        if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["modifiedDateTime"];
-            } else {
-                $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
-                return $this->_propDict["modifiedDateTime"];
-            }
+        if (array_key_exists("deviceName", $this->_propDict)) {
+            return $this->_propDict["deviceName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the modifiedDateTime
-    * The time the embedded SIM device status was last modified. Updated service side.
+    * Sets the deviceName
+    * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
     *
-    * @param \DateTime $val The modifiedDateTime
+    * @param string $val The deviceName
     *
     * @return EmbeddedSIMDeviceState
     */
-    public function setModifiedDateTime($val)
+    public function setDeviceName($val)
     {
-        $this->_propDict["modifiedDateTime"] = $val;
+        $this->_propDict["deviceName"] = $val;
         return $this;
     }
     
@@ -124,89 +120,35 @@ class EmbeddedSIMDeviceState extends Entity
     }
     
     /**
-    * Gets the universalIntegratedCircuitCardIdentifier
-    * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
+    * Gets the modifiedDateTime
+    * The time the embedded SIM device status was last modified. Updated service side.
     *
-    * @return string The universalIntegratedCircuitCardIdentifier
+    * @return \DateTime The modifiedDateTime
     */
-    public function getUniversalIntegratedCircuitCardIdentifier()
+    public function getModifiedDateTime()
     {
-        if (array_key_exists("universalIntegratedCircuitCardIdentifier", $this->_propDict)) {
-            return $this->_propDict["universalIntegratedCircuitCardIdentifier"];
-        } else {
-            return null;
+        if (array_key_exists("modifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["modifiedDateTime"];
+            } else {
+                $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
+                return $this->_propDict["modifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the universalIntegratedCircuitCardIdentifier
-    * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
+    * Sets the modifiedDateTime
+    * The time the embedded SIM device status was last modified. Updated service side.
     *
-    * @param string $val The universalIntegratedCircuitCardIdentifier
+    * @param \DateTime $val The modifiedDateTime
     *
     * @return EmbeddedSIMDeviceState
     */
-    public function setUniversalIntegratedCircuitCardIdentifier($val)
+    public function setModifiedDateTime($val)
     {
-        $this->_propDict["universalIntegratedCircuitCardIdentifier"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the deviceName
-    * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
-    *
-    * @return string The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceName
-    * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
-    *
-    * @param string $val The deviceName
-    *
-    * @return EmbeddedSIMDeviceState
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the userName
-    * Username which the subscription was provisioned to e.g. joe@contoso.com
-    *
-    * @return string The userName
-    */
-    public function getUserName()
-    {
-        if (array_key_exists("userName", $this->_propDict)) {
-            return $this->_propDict["userName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the userName
-    * Username which the subscription was provisioned to e.g. joe@contoso.com
-    *
-    * @param string $val The userName
-    *
-    * @return EmbeddedSIMDeviceState
-    */
-    public function setUserName($val)
-    {
-        $this->_propDict["userName"] = $val;
+        $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
     
@@ -269,6 +211,64 @@ class EmbeddedSIMDeviceState extends Entity
     public function setStateDetails($val)
     {
         $this->_propDict["stateDetails"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the universalIntegratedCircuitCardIdentifier
+    * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
+    *
+    * @return string The universalIntegratedCircuitCardIdentifier
+    */
+    public function getUniversalIntegratedCircuitCardIdentifier()
+    {
+        if (array_key_exists("universalIntegratedCircuitCardIdentifier", $this->_propDict)) {
+            return $this->_propDict["universalIntegratedCircuitCardIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the universalIntegratedCircuitCardIdentifier
+    * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
+    *
+    * @param string $val The universalIntegratedCircuitCardIdentifier
+    *
+    * @return EmbeddedSIMDeviceState
+    */
+    public function setUniversalIntegratedCircuitCardIdentifier($val)
+    {
+        $this->_propDict["universalIntegratedCircuitCardIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userName
+    * Username which the subscription was provisioned to e.g. joe@contoso.com
+    *
+    * @return string The userName
+    */
+    public function getUserName()
+    {
+        if (array_key_exists("userName", $this->_propDict)) {
+            return $this->_propDict["userName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userName
+    * Username which the subscription was provisioned to e.g. joe@contoso.com
+    *
+    * @param string $val The userName
+    *
+    * @return EmbeddedSIMDeviceState
+    */
+    public function setUserName($val)
+    {
+        $this->_propDict["userName"] = $val;
         return $this;
     }
     

@@ -23,6 +23,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ManagedDeviceSummarizedAppState extends Entity
 {
+    /**
+    * Gets the deviceId
+    * DeviceId of device represented by this object
+    *
+    * @return string The deviceId
+    */
+    public function getDeviceId()
+    {
+        if (array_key_exists("deviceId", $this->_propDict)) {
+            return $this->_propDict["deviceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceId
+    * DeviceId of device represented by this object
+    *
+    * @param string $val The value of the deviceId
+    *
+    * @return ManagedDeviceSummarizedAppState
+    */
+    public function setDeviceId($val)
+    {
+        $this->_propDict["deviceId"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the summarizedAppState
@@ -55,33 +83,5 @@ class ManagedDeviceSummarizedAppState extends Entity
     {
         $this->_propDict["summarizedAppState"] = $val;
          return $this;
-    }
-    /**
-    * Gets the deviceId
-    * DeviceId of device represented by this object
-    *
-    * @return string The deviceId
-    */
-    public function getDeviceId()
-    {
-        if (array_key_exists("deviceId", $this->_propDict)) {
-            return $this->_propDict["deviceId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceId
-    * DeviceId of device represented by this object
-    *
-    * @param string $val The value of the deviceId
-    *
-    * @return ManagedDeviceSummarizedAppState
-    */
-    public function setDeviceId($val)
-    {
-        $this->_propDict["deviceId"] = $val;
-        return $this;
     }
 }

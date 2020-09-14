@@ -25,89 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceComplianceScript extends Entity
 {
     /**
-    * Gets the publisher
-    * Name of the device compliance script publisher
+    * Gets the createdDateTime
+    * The timestamp of when the device compliance script was created. This property is read-only.
     *
-    * @return string The publisher
+    * @return \DateTime The createdDateTime
     */
-    public function getPublisher()
+    public function getCreatedDateTime()
     {
-        if (array_key_exists("publisher", $this->_propDict)) {
-            return $this->_propDict["publisher"];
-        } else {
-            return null;
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the publisher
-    * Name of the device compliance script publisher
+    * Sets the createdDateTime
+    * The timestamp of when the device compliance script was created. This property is read-only.
     *
-    * @param string $val The publisher
+    * @param \DateTime $val The createdDateTime
     *
     * @return DeviceComplianceScript
     */
-    public function setPublisher($val)
+    public function setCreatedDateTime($val)
     {
-        $this->_propDict["publisher"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the version
-    * Version of the device compliance script
-    *
-    * @return string The version
-    */
-    public function getVersion()
-    {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the version
-    * Version of the device compliance script
-    *
-    * @param string $val The version
-    *
-    * @return DeviceComplianceScript
-    */
-    public function setVersion($val)
-    {
-        $this->_propDict["version"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    * Name of the device compliance script
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Name of the device compliance script
-    *
-    * @param string $val The displayName
-    *
-    * @return DeviceComplianceScript
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
+        $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
     
@@ -174,35 +120,60 @@ class DeviceComplianceScript extends Entity
     }
     
     /**
-    * Gets the createdDateTime
-    * The timestamp of when the device compliance script was created. This property is read-only.
+    * Gets the displayName
+    * Name of the device compliance script
     *
-    * @return \DateTime The createdDateTime
+    * @return string The displayName
     */
-    public function getCreatedDateTime()
+    public function getDisplayName()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the createdDateTime
-    * The timestamp of when the device compliance script was created. This property is read-only.
+    * Sets the displayName
+    * Name of the device compliance script
     *
-    * @param \DateTime $val The createdDateTime
+    * @param string $val The displayName
     *
     * @return DeviceComplianceScript
     */
-    public function setCreatedDateTime($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["createdDateTime"] = $val;
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enforceSignatureCheck
+    * Indicate whether the script signature needs be checked
+    *
+    * @return bool The enforceSignatureCheck
+    */
+    public function getEnforceSignatureCheck()
+    {
+        if (array_key_exists("enforceSignatureCheck", $this->_propDict)) {
+            return $this->_propDict["enforceSignatureCheck"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enforceSignatureCheck
+    * Indicate whether the script signature needs be checked
+    *
+    * @param bool $val The enforceSignatureCheck
+    *
+    * @return DeviceComplianceScript
+    */
+    public function setEnforceSignatureCheck($val)
+    {
+        $this->_propDict["enforceSignatureCheck"] = boolval($val);
         return $this;
     }
     
@@ -240,64 +211,60 @@ class DeviceComplianceScript extends Entity
     }
     
     /**
-    * Gets the runAsAccount
-    * Indicates the type of execution context
+    * Gets the publisher
+    * Name of the device compliance script publisher
     *
-    * @return RunAsAccountType The runAsAccount
+    * @return string The publisher
     */
-    public function getRunAsAccount()
+    public function getPublisher()
     {
-        if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "Beta\Microsoft\Graph\Model\RunAsAccountType")) {
-                return $this->_propDict["runAsAccount"];
-            } else {
-                $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
-                return $this->_propDict["runAsAccount"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the runAsAccount
-    * Indicates the type of execution context
-    *
-    * @param RunAsAccountType $val The runAsAccount
-    *
-    * @return DeviceComplianceScript
-    */
-    public function setRunAsAccount($val)
-    {
-        $this->_propDict["runAsAccount"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the enforceSignatureCheck
-    * Indicate whether the script signature needs be checked
-    *
-    * @return bool The enforceSignatureCheck
-    */
-    public function getEnforceSignatureCheck()
-    {
-        if (array_key_exists("enforceSignatureCheck", $this->_propDict)) {
-            return $this->_propDict["enforceSignatureCheck"];
+        if (array_key_exists("publisher", $this->_propDict)) {
+            return $this->_propDict["publisher"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the enforceSignatureCheck
-    * Indicate whether the script signature needs be checked
+    * Sets the publisher
+    * Name of the device compliance script publisher
     *
-    * @param bool $val The enforceSignatureCheck
+    * @param string $val The publisher
     *
     * @return DeviceComplianceScript
     */
-    public function setEnforceSignatureCheck($val)
+    public function setPublisher($val)
     {
-        $this->_propDict["enforceSignatureCheck"] = boolval($val);
+        $this->_propDict["publisher"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the roleScopeTagIds
+    * List of Scope Tag IDs for the device compliance script
+    *
+    * @return string The roleScopeTagIds
+    */
+    public function getRoleScopeTagIds()
+    {
+        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["roleScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the roleScopeTagIds
+    * List of Scope Tag IDs for the device compliance script
+    *
+    * @param string $val The roleScopeTagIds
+    *
+    * @return DeviceComplianceScript
+    */
+    public function setRoleScopeTagIds($val)
+    {
+        $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
     
@@ -331,31 +298,64 @@ class DeviceComplianceScript extends Entity
     }
     
     /**
-    * Gets the roleScopeTagIds
-    * List of Scope Tag IDs for the device compliance script
+    * Gets the runAsAccount
+    * Indicates the type of execution context
     *
-    * @return string The roleScopeTagIds
+    * @return RunAsAccountType The runAsAccount
     */
-    public function getRoleScopeTagIds()
+    public function getRunAsAccount()
     {
-        if (array_key_exists("roleScopeTagIds", $this->_propDict)) {
-            return $this->_propDict["roleScopeTagIds"];
+        if (array_key_exists("runAsAccount", $this->_propDict)) {
+            if (is_a($this->_propDict["runAsAccount"], "Beta\Microsoft\Graph\Model\RunAsAccountType")) {
+                return $this->_propDict["runAsAccount"];
+            } else {
+                $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
+                return $this->_propDict["runAsAccount"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the runAsAccount
+    * Indicates the type of execution context
+    *
+    * @param RunAsAccountType $val The runAsAccount
+    *
+    * @return DeviceComplianceScript
+    */
+    public function setRunAsAccount($val)
+    {
+        $this->_propDict["runAsAccount"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    * Version of the device compliance script
+    *
+    * @return string The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the roleScopeTagIds
-    * List of Scope Tag IDs for the device compliance script
+    * Sets the version
+    * Version of the device compliance script
     *
-    * @param string $val The roleScopeTagIds
+    * @param string $val The version
     *
     * @return DeviceComplianceScript
     */
-    public function setRoleScopeTagIds($val)
+    public function setVersion($val)
     {
-        $this->_propDict["roleScopeTagIds"] = $val;
+        $this->_propDict["version"] = $val;
         return $this;
     }
     
@@ -389,6 +389,36 @@ class DeviceComplianceScript extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the deviceRunStates
+    * List of run states for the device compliance script across all devices
+     *
+     * @return array The deviceRunStates
+     */
+    public function getDeviceRunStates()
+    {
+        if (array_key_exists("deviceRunStates", $this->_propDict)) {
+           return $this->_propDict["deviceRunStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceRunStates
+    * List of run states for the device compliance script across all devices
+    *
+    * @param DeviceComplianceScriptDeviceState $val The deviceRunStates
+    *
+    * @return DeviceComplianceScript
+    */
+    public function setDeviceRunStates($val)
+    {
+		$this->_propDict["deviceRunStates"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the runSummary
     * High level run summary for device compliance script.
@@ -419,36 +449,6 @@ class DeviceComplianceScript extends Entity
     public function setRunSummary($val)
     {
         $this->_propDict["runSummary"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the deviceRunStates
-    * List of run states for the device compliance script across all devices
-     *
-     * @return array The deviceRunStates
-     */
-    public function getDeviceRunStates()
-    {
-        if (array_key_exists("deviceRunStates", $this->_propDict)) {
-           return $this->_propDict["deviceRunStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceRunStates
-    * List of run states for the device compliance script across all devices
-    *
-    * @param DeviceComplianceScriptDeviceState $val The deviceRunStates
-    *
-    * @return DeviceComplianceScript
-    */
-    public function setDeviceRunStates($val)
-    {
-		$this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     

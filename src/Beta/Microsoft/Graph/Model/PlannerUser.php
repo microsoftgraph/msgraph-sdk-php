@@ -88,31 +88,57 @@ class PlannerUser extends PlannerDelta
     
 
      /** 
-     * Gets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+     * Gets the all
      *
-     * @return array The tasks
+     * @return array The all
      */
-    public function getTasks()
+    public function getAll()
     {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
+        if (array_key_exists("all", $this->_propDict)) {
+           return $this->_propDict["all"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+    * Sets the all
     *
-    * @param PlannerTask $val The tasks
+    * @param PlannerDelta $val The all
     *
     * @return PlannerUser
     */
-    public function setTasks($val)
+    public function setAll($val)
     {
-		$this->_propDict["tasks"] = $val;
+		$this->_propDict["all"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the favoritePlans
+     *
+     * @return array The favoritePlans
+     */
+    public function getFavoritePlans()
+    {
+        if (array_key_exists("favoritePlans", $this->_propDict)) {
+           return $this->_propDict["favoritePlans"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the favoritePlans
+    *
+    * @param PlannerPlan $val The favoritePlans
+    *
+    * @return PlannerUser
+    */
+    public function setFavoritePlans($val)
+    {
+		$this->_propDict["favoritePlans"] = $val;
         return $this;
     }
     
@@ -148,34 +174,6 @@ class PlannerUser extends PlannerDelta
     
 
      /** 
-     * Gets the favoritePlans
-     *
-     * @return array The favoritePlans
-     */
-    public function getFavoritePlans()
-    {
-        if (array_key_exists("favoritePlans", $this->_propDict)) {
-           return $this->_propDict["favoritePlans"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the favoritePlans
-    *
-    * @param PlannerPlan $val The favoritePlans
-    *
-    * @return PlannerUser
-    */
-    public function setFavoritePlans($val)
-    {
-		$this->_propDict["favoritePlans"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the recentPlans
      *
      * @return array The recentPlans
@@ -204,29 +202,31 @@ class PlannerUser extends PlannerDelta
     
 
      /** 
-     * Gets the all
+     * Gets the tasks
+    * Read-only. Nullable. Returns the plannerPlans shared with the user.
      *
-     * @return array The all
+     * @return array The tasks
      */
-    public function getAll()
+    public function getTasks()
     {
-        if (array_key_exists("all", $this->_propDict)) {
-           return $this->_propDict["all"];
+        if (array_key_exists("tasks", $this->_propDict)) {
+           return $this->_propDict["tasks"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the all
+    * Sets the tasks
+    * Read-only. Nullable. Returns the plannerPlans shared with the user.
     *
-    * @param PlannerDelta $val The all
+    * @param PlannerTask $val The tasks
     *
     * @return PlannerUser
     */
-    public function setAll($val)
+    public function setTasks($val)
     {
-		$this->_propDict["all"] = $val;
+		$this->_propDict["tasks"] = $val;
         return $this;
     }
     

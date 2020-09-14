@@ -58,35 +58,31 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     }
     
     /**
-    * Gets the lastModifiedDateTime
-    * Last modified time of the Assignment Filter.
+    * Gets the description
+    * Description of the Assignment Filter.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return string The description
     */
-    public function getLastModifiedDateTime()
+    public function getDescription()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
-                return $this->_propDict["lastModifiedDateTime"];
-            } else {
-                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
-                return $this->_propDict["lastModifiedDateTime"];
-            }
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
-    * Sets the lastModifiedDateTime
-    * Last modified time of the Assignment Filter.
+    * Sets the description
+    * Description of the Assignment Filter.
     *
-    * @param \DateTime $val The lastModifiedDateTime
+    * @param string $val The description
     *
     * @return DeviceAndAppManagementAssignmentFilter
     */
-    public function setLastModifiedDateTime($val)
+    public function setDescription($val)
     {
-        $this->_propDict["lastModifiedDateTime"] = $val;
+        $this->_propDict["description"] = $val;
         return $this;
     }
     
@@ -120,31 +116,35 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     }
     
     /**
-    * Gets the description
-    * Description of the Assignment Filter.
+    * Gets the lastModifiedDateTime
+    * Last modified time of the Assignment Filter.
     *
-    * @return string The description
+    * @return \DateTime The lastModifiedDateTime
     */
-    public function getDescription()
+    public function getLastModifiedDateTime()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
-        } else {
-            return null;
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the description
-    * Description of the Assignment Filter.
+    * Sets the lastModifiedDateTime
+    * Last modified time of the Assignment Filter.
     *
-    * @param string $val The description
+    * @param \DateTime $val The lastModifiedDateTime
     *
     * @return DeviceAndAppManagementAssignmentFilter
     */
-    public function setDescription($val)
+    public function setLastModifiedDateTime($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
     
@@ -182,35 +182,6 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     }
     
     /**
-    * Gets the rule
-    * Rule definition of the Assignment Filter.
-    *
-    * @return string The rule
-    */
-    public function getRule()
-    {
-        if (array_key_exists("rule", $this->_propDict)) {
-            return $this->_propDict["rule"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the rule
-    * Rule definition of the Assignment Filter.
-    *
-    * @param string $val The rule
-    *
-    * @return DeviceAndAppManagementAssignmentFilter
-    */
-    public function setRule($val)
-    {
-        $this->_propDict["rule"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the roleScopeTags
     * RoleScopeTags of the Assignment Filter.
     *
@@ -236,6 +207,35 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     public function setRoleScopeTags($val)
     {
         $this->_propDict["roleScopeTags"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the rule
+    * Rule definition of the Assignment Filter.
+    *
+    * @return string The rule
+    */
+    public function getRule()
+    {
+        if (array_key_exists("rule", $this->_propDict)) {
+            return $this->_propDict["rule"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the rule
+    * Rule definition of the Assignment Filter.
+    *
+    * @param string $val The rule
+    *
+    * @return DeviceAndAppManagementAssignmentFilter
+    */
+    public function setRule($val)
+    {
+        $this->_propDict["rule"] = $val;
         return $this;
     }
     

@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class PrintJobStatus extends Entity
 {
+    /**
+    * Gets the acquiredByPrinter
+    *
+    * @return bool The acquiredByPrinter
+    */
+    public function getAcquiredByPrinter()
+    {
+        if (array_key_exists("acquiredByPrinter", $this->_propDict)) {
+            return $this->_propDict["acquiredByPrinter"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the acquiredByPrinter
+    *
+    * @param bool $val The value of the acquiredByPrinter
+    *
+    * @return PrintJobStatus
+    */
+    public function setAcquiredByPrinter($val)
+    {
+        $this->_propDict["acquiredByPrinter"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the processingState
@@ -78,32 +104,6 @@ class PrintJobStatus extends Entity
     public function setProcessingStateDescription($val)
     {
         $this->_propDict["processingStateDescription"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the acquiredByPrinter
-    *
-    * @return bool The acquiredByPrinter
-    */
-    public function getAcquiredByPrinter()
-    {
-        if (array_key_exists("acquiredByPrinter", $this->_propDict)) {
-            return $this->_propDict["acquiredByPrinter"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the acquiredByPrinter
-    *
-    * @param bool $val The value of the acquiredByPrinter
-    *
-    * @return PrintJobStatus
-    */
-    public function setAcquiredByPrinter($val)
-    {
-        $this->_propDict["acquiredByPrinter"] = $val;
         return $this;
     }
 }

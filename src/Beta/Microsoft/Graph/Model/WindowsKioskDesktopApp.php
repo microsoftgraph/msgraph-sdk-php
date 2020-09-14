@@ -24,34 +24,6 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsKioskDesktopApp extends WindowsKioskAppBase
 {
     /**
-    * Gets the path
-    * Define the path of a desktop app
-    *
-    * @return string The path
-    */
-    public function getPath()
-    {
-        if (array_key_exists("path", $this->_propDict)) {
-            return $this->_propDict["path"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the path
-    * Define the path of a desktop app
-    *
-    * @param string $val The value of the path
-    *
-    * @return WindowsKioskDesktopApp
-    */
-    public function setPath($val)
-    {
-        $this->_propDict["path"] = $val;
-        return $this;
-    }
-    /**
     * Gets the desktopApplicationId
     * Define the DesktopApplicationID of the app
     *
@@ -105,6 +77,34 @@ class WindowsKioskDesktopApp extends WindowsKioskAppBase
     public function setDesktopApplicationLinkPath($val)
     {
         $this->_propDict["desktopApplicationLinkPath"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the path
+    * Define the path of a desktop app
+    *
+    * @return string The path
+    */
+    public function getPath()
+    {
+        if (array_key_exists("path", $this->_propDict)) {
+            return $this->_propDict["path"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the path
+    * Define the path of a desktop app
+    *
+    * @param string $val The value of the path
+    *
+    * @return WindowsKioskDesktopApp
+    */
+    public function setPath($val)
+    {
+        $this->_propDict["path"] = $val;
         return $this;
     }
 }

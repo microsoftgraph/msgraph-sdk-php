@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class ManagedAppPolicyDeploymentSummary extends Entity
 {
     /**
-    * Gets the displayName
-    * Not yet documented
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    * Not yet documented
-    *
-    * @param string $val The displayName
-    *
-    * @return ManagedAppPolicyDeploymentSummary
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the configurationDeployedUserCount
     * Not yet documented
     *
@@ -79,6 +50,65 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     public function setConfigurationDeployedUserCount($val)
     {
         $this->_propDict["configurationDeployedUserCount"] = intval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the configurationDeploymentSummaryPerApp
+    * Not yet documented
+     *
+     * @return array The configurationDeploymentSummaryPerApp
+     */
+    public function getConfigurationDeploymentSummaryPerApp()
+    {
+        if (array_key_exists("configurationDeploymentSummaryPerApp", $this->_propDict)) {
+           return $this->_propDict["configurationDeploymentSummaryPerApp"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the configurationDeploymentSummaryPerApp
+    * Not yet documented
+    *
+    * @param ManagedAppPolicyDeploymentSummaryPerApp $val The configurationDeploymentSummaryPerApp
+    *
+    * @return ManagedAppPolicyDeploymentSummary
+    */
+    public function setConfigurationDeploymentSummaryPerApp($val)
+    {
+		$this->_propDict["configurationDeploymentSummaryPerApp"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Not yet documented
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Not yet documented
+    *
+    * @param string $val The displayName
+    *
+    * @return ManagedAppPolicyDeploymentSummary
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
     
@@ -112,36 +142,6 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     public function setLastRefreshTime($val)
     {
         $this->_propDict["lastRefreshTime"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the configurationDeploymentSummaryPerApp
-    * Not yet documented
-     *
-     * @return array The configurationDeploymentSummaryPerApp
-     */
-    public function getConfigurationDeploymentSummaryPerApp()
-    {
-        if (array_key_exists("configurationDeploymentSummaryPerApp", $this->_propDict)) {
-           return $this->_propDict["configurationDeploymentSummaryPerApp"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the configurationDeploymentSummaryPerApp
-    * Not yet documented
-    *
-    * @param ManagedAppPolicyDeploymentSummaryPerApp $val The configurationDeploymentSummaryPerApp
-    *
-    * @return ManagedAppPolicyDeploymentSummary
-    */
-    public function setConfigurationDeploymentSummaryPerApp($val)
-    {
-		$this->_propDict["configurationDeploymentSummaryPerApp"] = $val;
         return $this;
     }
     

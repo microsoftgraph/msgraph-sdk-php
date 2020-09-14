@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class HybridAgentUpdaterConfiguration extends Entity
 {
+    /**
+    * Gets the allowUpdateConfigurationOverride
+    *
+    * @return bool The allowUpdateConfigurationOverride
+    */
+    public function getAllowUpdateConfigurationOverride()
+    {
+        if (array_key_exists("allowUpdateConfigurationOverride", $this->_propDict)) {
+            return $this->_propDict["allowUpdateConfigurationOverride"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowUpdateConfigurationOverride
+    *
+    * @param bool $val The value of the allowUpdateConfigurationOverride
+    *
+    * @return HybridAgentUpdaterConfiguration
+    */
+    public function setAllowUpdateConfigurationOverride($val)
+    {
+        $this->_propDict["allowUpdateConfigurationOverride"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the deferUpdateDateTime
@@ -84,31 +110,5 @@ class HybridAgentUpdaterConfiguration extends Entity
     {
         $this->_propDict["updateWindow"] = $val;
          return $this;
-    }
-    /**
-    * Gets the allowUpdateConfigurationOverride
-    *
-    * @return bool The allowUpdateConfigurationOverride
-    */
-    public function getAllowUpdateConfigurationOverride()
-    {
-        if (array_key_exists("allowUpdateConfigurationOverride", $this->_propDict)) {
-            return $this->_propDict["allowUpdateConfigurationOverride"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowUpdateConfigurationOverride
-    *
-    * @param bool $val The value of the allowUpdateConfigurationOverride
-    *
-    * @return HybridAgentUpdaterConfiguration
-    */
-    public function setAllowUpdateConfigurationOverride($val)
-    {
-        $this->_propDict["allowUpdateConfigurationOverride"] = $val;
-        return $this;
     }
 }

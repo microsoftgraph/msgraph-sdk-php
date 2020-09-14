@@ -25,114 +25,56 @@ namespace Beta\Microsoft\Graph\Model;
 class OneDriveUsageAccountDetail extends Entity
 {
     /**
-    * Gets the reportRefreshDate
+    * Gets the activeFileCount
     *
-    * @return \DateTime The reportRefreshDate
+    * @return int The activeFileCount
     */
-    public function getReportRefreshDate()
+    public function getActiveFileCount()
     {
-        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
-                return $this->_propDict["reportRefreshDate"];
-            } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
-                return $this->_propDict["reportRefreshDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reportRefreshDate
-    *
-    * @param \DateTime $val The reportRefreshDate
-    *
-    * @return OneDriveUsageAccountDetail
-    */
-    public function setReportRefreshDate($val)
-    {
-        $this->_propDict["reportRefreshDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the siteUrl
-    *
-    * @return string The siteUrl
-    */
-    public function getSiteUrl()
-    {
-        if (array_key_exists("siteUrl", $this->_propDict)) {
-            return $this->_propDict["siteUrl"];
+        if (array_key_exists("activeFileCount", $this->_propDict)) {
+            return $this->_propDict["activeFileCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the siteUrl
+    * Sets the activeFileCount
     *
-    * @param string $val The siteUrl
+    * @param int $val The activeFileCount
     *
     * @return OneDriveUsageAccountDetail
     */
-    public function setSiteUrl($val)
+    public function setActiveFileCount($val)
     {
-        $this->_propDict["siteUrl"] = $val;
+        $this->_propDict["activeFileCount"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the ownerDisplayName
+    * Gets the fileCount
     *
-    * @return string The ownerDisplayName
+    * @return int The fileCount
     */
-    public function getOwnerDisplayName()
+    public function getFileCount()
     {
-        if (array_key_exists("ownerDisplayName", $this->_propDict)) {
-            return $this->_propDict["ownerDisplayName"];
+        if (array_key_exists("fileCount", $this->_propDict)) {
+            return $this->_propDict["fileCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the ownerDisplayName
+    * Sets the fileCount
     *
-    * @param string $val The ownerDisplayName
-    *
-    * @return OneDriveUsageAccountDetail
-    */
-    public function setOwnerDisplayName($val)
-    {
-        $this->_propDict["ownerDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the ownerPrincipalName
-    *
-    * @return string The ownerPrincipalName
-    */
-    public function getOwnerPrincipalName()
-    {
-        if (array_key_exists("ownerPrincipalName", $this->_propDict)) {
-            return $this->_propDict["ownerPrincipalName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the ownerPrincipalName
-    *
-    * @param string $val The ownerPrincipalName
+    * @param int $val The fileCount
     *
     * @return OneDriveUsageAccountDetail
     */
-    public function setOwnerPrincipalName($val)
+    public function setFileCount($val)
     {
-        $this->_propDict["ownerPrincipalName"] = $val;
+        $this->_propDict["fileCount"] = intval($val);
         return $this;
     }
     
@@ -195,83 +137,141 @@ class OneDriveUsageAccountDetail extends Entity
     }
     
     /**
-    * Gets the fileCount
+    * Gets the ownerDisplayName
     *
-    * @return int The fileCount
+    * @return string The ownerDisplayName
     */
-    public function getFileCount()
+    public function getOwnerDisplayName()
     {
-        if (array_key_exists("fileCount", $this->_propDict)) {
-            return $this->_propDict["fileCount"];
+        if (array_key_exists("ownerDisplayName", $this->_propDict)) {
+            return $this->_propDict["ownerDisplayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the fileCount
+    * Sets the ownerDisplayName
     *
-    * @param int $val The fileCount
+    * @param string $val The ownerDisplayName
     *
     * @return OneDriveUsageAccountDetail
     */
-    public function setFileCount($val)
+    public function setOwnerDisplayName($val)
     {
-        $this->_propDict["fileCount"] = intval($val);
+        $this->_propDict["ownerDisplayName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the activeFileCount
+    * Gets the ownerPrincipalName
     *
-    * @return int The activeFileCount
+    * @return string The ownerPrincipalName
     */
-    public function getActiveFileCount()
+    public function getOwnerPrincipalName()
     {
-        if (array_key_exists("activeFileCount", $this->_propDict)) {
-            return $this->_propDict["activeFileCount"];
+        if (array_key_exists("ownerPrincipalName", $this->_propDict)) {
+            return $this->_propDict["ownerPrincipalName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the activeFileCount
+    * Sets the ownerPrincipalName
     *
-    * @param int $val The activeFileCount
+    * @param string $val The ownerPrincipalName
     *
     * @return OneDriveUsageAccountDetail
     */
-    public function setActiveFileCount($val)
+    public function setOwnerPrincipalName($val)
     {
-        $this->_propDict["activeFileCount"] = intval($val);
+        $this->_propDict["ownerPrincipalName"] = $val;
         return $this;
     }
     
     /**
-    * Gets the storageUsedInBytes
+    * Gets the reportPeriod
     *
-    * @return int The storageUsedInBytes
+    * @return string The reportPeriod
     */
-    public function getStorageUsedInBytes()
+    public function getReportPeriod()
     {
-        if (array_key_exists("storageUsedInBytes", $this->_propDict)) {
-            return $this->_propDict["storageUsedInBytes"];
+        if (array_key_exists("reportPeriod", $this->_propDict)) {
+            return $this->_propDict["reportPeriod"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the storageUsedInBytes
+    * Sets the reportPeriod
     *
-    * @param int $val The storageUsedInBytes
+    * @param string $val The reportPeriod
     *
     * @return OneDriveUsageAccountDetail
     */
-    public function setStorageUsedInBytes($val)
+    public function setReportPeriod($val)
     {
-        $this->_propDict["storageUsedInBytes"] = intval($val);
+        $this->_propDict["reportPeriod"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reportRefreshDate
+    *
+    * @return \DateTime The reportRefreshDate
+    */
+    public function getReportRefreshDate()
+    {
+        if (array_key_exists("reportRefreshDate", $this->_propDict)) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+                return $this->_propDict["reportRefreshDate"];
+            } else {
+                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                return $this->_propDict["reportRefreshDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reportRefreshDate
+    *
+    * @param \DateTime $val The reportRefreshDate
+    *
+    * @return OneDriveUsageAccountDetail
+    */
+    public function setReportRefreshDate($val)
+    {
+        $this->_propDict["reportRefreshDate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the siteUrl
+    *
+    * @return string The siteUrl
+    */
+    public function getSiteUrl()
+    {
+        if (array_key_exists("siteUrl", $this->_propDict)) {
+            return $this->_propDict["siteUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the siteUrl
+    *
+    * @param string $val The siteUrl
+    *
+    * @return OneDriveUsageAccountDetail
+    */
+    public function setSiteUrl($val)
+    {
+        $this->_propDict["siteUrl"] = $val;
         return $this;
     }
     
@@ -303,29 +303,29 @@ class OneDriveUsageAccountDetail extends Entity
     }
     
     /**
-    * Gets the reportPeriod
+    * Gets the storageUsedInBytes
     *
-    * @return string The reportPeriod
+    * @return int The storageUsedInBytes
     */
-    public function getReportPeriod()
+    public function getStorageUsedInBytes()
     {
-        if (array_key_exists("reportPeriod", $this->_propDict)) {
-            return $this->_propDict["reportPeriod"];
+        if (array_key_exists("storageUsedInBytes", $this->_propDict)) {
+            return $this->_propDict["storageUsedInBytes"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the reportPeriod
+    * Sets the storageUsedInBytes
     *
-    * @param string $val The reportPeriod
+    * @param int $val The storageUsedInBytes
     *
     * @return OneDriveUsageAccountDetail
     */
-    public function setReportPeriod($val)
+    public function setStorageUsedInBytes($val)
     {
-        $this->_propDict["reportPeriod"] = $val;
+        $this->_propDict["storageUsedInBytes"] = intval($val);
         return $this;
     }
     

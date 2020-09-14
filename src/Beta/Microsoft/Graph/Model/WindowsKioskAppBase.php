@@ -25,67 +25,6 @@ class WindowsKioskAppBase extends Entity
 {
 
     /**
-    * Gets the startLayoutTileSize
-    * The app tile size for the start layout
-    *
-    * @return WindowsAppStartLayoutTileSize The startLayoutTileSize
-    */
-    public function getStartLayoutTileSize()
-    {
-        if (array_key_exists("startLayoutTileSize", $this->_propDict)) {
-            if (is_a($this->_propDict["startLayoutTileSize"], "Beta\Microsoft\Graph\Model\WindowsAppStartLayoutTileSize")) {
-                return $this->_propDict["startLayoutTileSize"];
-            } else {
-                $this->_propDict["startLayoutTileSize"] = new WindowsAppStartLayoutTileSize($this->_propDict["startLayoutTileSize"]);
-                return $this->_propDict["startLayoutTileSize"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the startLayoutTileSize
-    * The app tile size for the start layout
-    *
-    * @param WindowsAppStartLayoutTileSize $val The value to assign to the startLayoutTileSize
-    *
-    * @return WindowsKioskAppBase The WindowsKioskAppBase
-    */
-    public function setStartLayoutTileSize($val)
-    {
-        $this->_propDict["startLayoutTileSize"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the name
-    * Represents the friendly name of an app
-    *
-    * @return string The name
-    */
-    public function getName()
-    {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the name
-    * Represents the friendly name of an app
-    *
-    * @param string $val The value of the name
-    *
-    * @return WindowsKioskAppBase
-    */
-    public function setName($val)
-    {
-        $this->_propDict["name"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the appType
     * The app type
     *
@@ -144,5 +83,66 @@ class WindowsKioskAppBase extends Entity
     {
         $this->_propDict["autoLaunch"] = $val;
         return $this;
+    }
+    /**
+    * Gets the name
+    * Represents the friendly name of an app
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    * Represents the friendly name of an app
+    *
+    * @param string $val The value of the name
+    *
+    * @return WindowsKioskAppBase
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the startLayoutTileSize
+    * The app tile size for the start layout
+    *
+    * @return WindowsAppStartLayoutTileSize The startLayoutTileSize
+    */
+    public function getStartLayoutTileSize()
+    {
+        if (array_key_exists("startLayoutTileSize", $this->_propDict)) {
+            if (is_a($this->_propDict["startLayoutTileSize"], "Beta\Microsoft\Graph\Model\WindowsAppStartLayoutTileSize")) {
+                return $this->_propDict["startLayoutTileSize"];
+            } else {
+                $this->_propDict["startLayoutTileSize"] = new WindowsAppStartLayoutTileSize($this->_propDict["startLayoutTileSize"]);
+                return $this->_propDict["startLayoutTileSize"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the startLayoutTileSize
+    * The app tile size for the start layout
+    *
+    * @param WindowsAppStartLayoutTileSize $val The value to assign to the startLayoutTileSize
+    *
+    * @return WindowsKioskAppBase The WindowsKioskAppBase
+    */
+    public function setStartLayoutTileSize($val)
+    {
+        $this->_propDict["startLayoutTileSize"] = $val;
+         return $this;
     }
 }

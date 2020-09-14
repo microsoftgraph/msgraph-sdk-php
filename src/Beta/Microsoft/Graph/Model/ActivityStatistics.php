@@ -56,33 +56,33 @@ class ActivityStatistics extends Entity
     }
     
     /**
-    * Gets the startDate
+    * Gets the duration
     *
-    * @return \DateTime The startDate
+    * @return Duration The duration
     */
-    public function getStartDate()
+    public function getDuration()
     {
-        if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime")) {
-                return $this->_propDict["startDate"];
+        if (array_key_exists("duration", $this->_propDict)) {
+            if (is_a($this->_propDict["duration"], "Beta\Microsoft\Graph\Model\Duration")) {
+                return $this->_propDict["duration"];
             } else {
-                $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
-                return $this->_propDict["startDate"];
+                $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
+                return $this->_propDict["duration"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the startDate
+    * Sets the duration
     *
-    * @param \DateTime $val The startDate
+    * @param Duration $val The duration
     *
     * @return ActivityStatistics
     */
-    public function setStartDate($val)
+    public function setDuration($val)
     {
-        $this->_propDict["startDate"] = $val;
+        $this->_propDict["duration"] = $val;
         return $this;
     }
     
@@ -118,6 +118,37 @@ class ActivityStatistics extends Entity
     }
     
     /**
+    * Gets the startDate
+    *
+    * @return \DateTime The startDate
+    */
+    public function getStartDate()
+    {
+        if (array_key_exists("startDate", $this->_propDict)) {
+            if (is_a($this->_propDict["startDate"], "\DateTime")) {
+                return $this->_propDict["startDate"];
+            } else {
+                $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
+                return $this->_propDict["startDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the startDate
+    *
+    * @param \DateTime $val The startDate
+    *
+    * @return ActivityStatistics
+    */
+    public function setStartDate($val)
+    {
+        $this->_propDict["startDate"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the timeZoneUsed
     *
     * @return string The timeZoneUsed
@@ -141,37 +172,6 @@ class ActivityStatistics extends Entity
     public function setTimeZoneUsed($val)
     {
         $this->_propDict["timeZoneUsed"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the duration
-    *
-    * @return Duration The duration
-    */
-    public function getDuration()
-    {
-        if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "Beta\Microsoft\Graph\Model\Duration")) {
-                return $this->_propDict["duration"];
-            } else {
-                $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
-                return $this->_propDict["duration"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the duration
-    *
-    * @param Duration $val The duration
-    *
-    * @return ActivityStatistics
-    */
-    public function setDuration($val)
-    {
-        $this->_propDict["duration"] = $val;
         return $this;
     }
     

@@ -23,33 +23,38 @@ namespace Microsoft\Graph\Model;
 */
 class WindowsInformationProtectionDataRecoveryCertificate extends Entity
 {
+
     /**
-    * Gets the subjectName
-    * Data recovery Certificate subject name
+    * Gets the certificate
+    * Data recovery Certificate
     *
-    * @return string The subjectName
+    * @return \GuzzleHttp\Psr7\Stream The certificate
     */
-    public function getSubjectName()
+    public function getCertificate()
     {
-        if (array_key_exists("subjectName", $this->_propDict)) {
-            return $this->_propDict["subjectName"];
-        } else {
-            return null;
+        if (array_key_exists("certificate", $this->_propDict)) {
+            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["certificate"];
+            } else {
+                $this->_propDict["certificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["certificate"]);
+                return $this->_propDict["certificate"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the subjectName
-    * Data recovery Certificate subject name
+    * Sets the certificate
+    * Data recovery Certificate
     *
-    * @param string $val The value of the subjectName
+    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the certificate
     *
-    * @return WindowsInformationProtectionDataRecoveryCertificate
+    * @return WindowsInformationProtectionDataRecoveryCertificate The WindowsInformationProtectionDataRecoveryCertificate
     */
-    public function setSubjectName($val)
+    public function setCertificate($val)
     {
-        $this->_propDict["subjectName"] = $val;
-        return $this;
+        $this->_propDict["certificate"] = $val;
+         return $this;
     }
     /**
     * Gets the description
@@ -112,37 +117,32 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
         $this->_propDict["expirationDateTime"] = $val;
          return $this;
     }
-
     /**
-    * Gets the certificate
-    * Data recovery Certificate
+    * Gets the subjectName
+    * Data recovery Certificate subject name
     *
-    * @return \GuzzleHttp\Psr7\Stream The certificate
+    * @return string The subjectName
     */
-    public function getCertificate()
+    public function getSubjectName()
     {
-        if (array_key_exists("certificate", $this->_propDict)) {
-            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream")) {
-                return $this->_propDict["certificate"];
-            } else {
-                $this->_propDict["certificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["certificate"]);
-                return $this->_propDict["certificate"];
-            }
+        if (array_key_exists("subjectName", $this->_propDict)) {
+            return $this->_propDict["subjectName"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the certificate
-    * Data recovery Certificate
+    * Sets the subjectName
+    * Data recovery Certificate subject name
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the certificate
+    * @param string $val The value of the subjectName
     *
-    * @return WindowsInformationProtectionDataRecoveryCertificate The WindowsInformationProtectionDataRecoveryCertificate
+    * @return WindowsInformationProtectionDataRecoveryCertificate
     */
-    public function setCertificate($val)
+    public function setSubjectName($val)
     {
-        $this->_propDict["certificate"] = $val;
-         return $this;
+        $this->_propDict["subjectName"] = $val;
+        return $this;
     }
 }

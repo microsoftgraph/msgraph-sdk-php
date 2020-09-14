@@ -49,6 +49,63 @@ class ApprovalStage extends Entity
         $this->_propDict["approvalStageTimeOutInDays"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the escalationApprovers
+    *
+    * @return UserSet The escalationApprovers
+    */
+    public function getEscalationApprovers()
+    {
+        if (array_key_exists("escalationApprovers", $this->_propDict)) {
+            if (is_a($this->_propDict["escalationApprovers"], "Beta\Microsoft\Graph\Model\UserSet")) {
+                return $this->_propDict["escalationApprovers"];
+            } else {
+                $this->_propDict["escalationApprovers"] = new UserSet($this->_propDict["escalationApprovers"]);
+                return $this->_propDict["escalationApprovers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the escalationApprovers
+    *
+    * @param UserSet $val The value to assign to the escalationApprovers
+    *
+    * @return ApprovalStage The ApprovalStage
+    */
+    public function setEscalationApprovers($val)
+    {
+        $this->_propDict["escalationApprovers"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the escalationTimeInMinutes
+    *
+    * @return int The escalationTimeInMinutes
+    */
+    public function getEscalationTimeInMinutes()
+    {
+        if (array_key_exists("escalationTimeInMinutes", $this->_propDict)) {
+            return $this->_propDict["escalationTimeInMinutes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the escalationTimeInMinutes
+    *
+    * @param int $val The value of the escalationTimeInMinutes
+    *
+    * @return ApprovalStage
+    */
+    public function setEscalationTimeInMinutes($val)
+    {
+        $this->_propDict["escalationTimeInMinutes"] = $val;
+        return $this;
+    }
     /**
     * Gets the isApproverJustificationRequired
     *
@@ -101,32 +158,6 @@ class ApprovalStage extends Entity
         $this->_propDict["isEscalationEnabled"] = $val;
         return $this;
     }
-    /**
-    * Gets the escalationTimeInMinutes
-    *
-    * @return int The escalationTimeInMinutes
-    */
-    public function getEscalationTimeInMinutes()
-    {
-        if (array_key_exists("escalationTimeInMinutes", $this->_propDict)) {
-            return $this->_propDict["escalationTimeInMinutes"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the escalationTimeInMinutes
-    *
-    * @param int $val The value of the escalationTimeInMinutes
-    *
-    * @return ApprovalStage
-    */
-    public function setEscalationTimeInMinutes($val)
-    {
-        $this->_propDict["escalationTimeInMinutes"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the primaryApprovers
@@ -156,37 +187,6 @@ class ApprovalStage extends Entity
     public function setPrimaryApprovers($val)
     {
         $this->_propDict["primaryApprovers"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the escalationApprovers
-    *
-    * @return UserSet The escalationApprovers
-    */
-    public function getEscalationApprovers()
-    {
-        if (array_key_exists("escalationApprovers", $this->_propDict)) {
-            if (is_a($this->_propDict["escalationApprovers"], "Beta\Microsoft\Graph\Model\UserSet")) {
-                return $this->_propDict["escalationApprovers"];
-            } else {
-                $this->_propDict["escalationApprovers"] = new UserSet($this->_propDict["escalationApprovers"]);
-                return $this->_propDict["escalationApprovers"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the escalationApprovers
-    *
-    * @param UserSet $val The value to assign to the escalationApprovers
-    *
-    * @return ApprovalStage The ApprovalStage
-    */
-    public function setEscalationApprovers($val)
-    {
-        $this->_propDict["escalationApprovers"] = $val;
          return $this;
     }
 }

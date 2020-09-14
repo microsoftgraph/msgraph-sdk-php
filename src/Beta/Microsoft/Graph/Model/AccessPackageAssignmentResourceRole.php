@@ -105,34 +105,31 @@ class AccessPackageAssignmentResourceRole extends Entity
         return $this;
     }
     
-    /**
-    * Gets the accessPackageResourceScope
-    *
-    * @return AccessPackageResourceScope The accessPackageResourceScope
-    */
-    public function getAccessPackageResourceScope()
+
+     /** 
+     * Gets the accessPackageAssignments
+     *
+     * @return array The accessPackageAssignments
+     */
+    public function getAccessPackageAssignments()
     {
-        if (array_key_exists("accessPackageResourceScope", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResourceScope"], "Beta\Microsoft\Graph\Model\AccessPackageResourceScope")) {
-                return $this->_propDict["accessPackageResourceScope"];
-            } else {
-                $this->_propDict["accessPackageResourceScope"] = new AccessPackageResourceScope($this->_propDict["accessPackageResourceScope"]);
-                return $this->_propDict["accessPackageResourceScope"];
-            }
+        if (array_key_exists("accessPackageAssignments", $this->_propDict)) {
+           return $this->_propDict["accessPackageAssignments"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the accessPackageResourceScope
+    /** 
+    * Sets the accessPackageAssignments
     *
-    * @param AccessPackageResourceScope $val The accessPackageResourceScope
+    * @param AccessPackageAssignment $val The accessPackageAssignments
     *
     * @return AccessPackageAssignmentResourceRole
     */
-    public function setAccessPackageResourceScope($val)
+    public function setAccessPackageAssignments($val)
     {
-        $this->_propDict["accessPackageResourceScope"] = $val;
+		$this->_propDict["accessPackageAssignments"] = $val;
         return $this;
     }
     
@@ -168,6 +165,37 @@ class AccessPackageAssignmentResourceRole extends Entity
     }
     
     /**
+    * Gets the accessPackageResourceScope
+    *
+    * @return AccessPackageResourceScope The accessPackageResourceScope
+    */
+    public function getAccessPackageResourceScope()
+    {
+        if (array_key_exists("accessPackageResourceScope", $this->_propDict)) {
+            if (is_a($this->_propDict["accessPackageResourceScope"], "Beta\Microsoft\Graph\Model\AccessPackageResourceScope")) {
+                return $this->_propDict["accessPackageResourceScope"];
+            } else {
+                $this->_propDict["accessPackageResourceScope"] = new AccessPackageResourceScope($this->_propDict["accessPackageResourceScope"]);
+                return $this->_propDict["accessPackageResourceScope"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the accessPackageResourceScope
+    *
+    * @param AccessPackageResourceScope $val The accessPackageResourceScope
+    *
+    * @return AccessPackageAssignmentResourceRole
+    */
+    public function setAccessPackageResourceScope($val)
+    {
+        $this->_propDict["accessPackageResourceScope"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the accessPackageSubject
     *
     * @return AccessPackageSubject The accessPackageSubject
@@ -195,34 +223,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     public function setAccessPackageSubject($val)
     {
         $this->_propDict["accessPackageSubject"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the accessPackageAssignments
-     *
-     * @return array The accessPackageAssignments
-     */
-    public function getAccessPackageAssignments()
-    {
-        if (array_key_exists("accessPackageAssignments", $this->_propDict)) {
-           return $this->_propDict["accessPackageAssignments"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the accessPackageAssignments
-    *
-    * @param AccessPackageAssignment $val The accessPackageAssignments
-    *
-    * @return AccessPackageAssignmentResourceRole
-    */
-    public function setAccessPackageAssignments($val)
-    {
-		$this->_propDict["accessPackageAssignments"] = $val;
         return $this;
     }
     

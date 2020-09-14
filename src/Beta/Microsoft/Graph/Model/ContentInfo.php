@@ -54,37 +54,6 @@ class ContentInfo extends Entity
         $this->_propDict["format"] = $val;
          return $this;
     }
-
-    /**
-    * Gets the state
-    *
-    * @return ContentState The state
-    */
-    public function getState()
-    {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ContentState")) {
-                return $this->_propDict["state"];
-            } else {
-                $this->_propDict["state"] = new ContentState($this->_propDict["state"]);
-                return $this->_propDict["state"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the state
-    *
-    * @param ContentState $val The value to assign to the state
-    *
-    * @return ContentInfo The ContentInfo
-    */
-    public function setState($val)
-    {
-        $this->_propDict["state"] = $val;
-         return $this;
-    }
     /**
     * Gets the identifier
     *
@@ -140,6 +109,37 @@ class ContentInfo extends Entity
     public function setMetadata($val)
     {
         $this->_propDict["metadata"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the state
+    *
+    * @return ContentState The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ContentState")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new ContentState($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the state
+    *
+    * @param ContentState $val The value to assign to the state
+    *
+    * @return ContentInfo The ContentInfo
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
          return $this;
     }
 }

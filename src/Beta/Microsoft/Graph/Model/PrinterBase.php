@@ -25,29 +25,122 @@ namespace Beta\Microsoft\Graph\Model;
 class PrinterBase extends Entity
 {
     /**
-    * Gets the name
+    * Gets the capabilities
     *
-    * @return string The name
+    * @return PrinterCapabilities The capabilities
     */
-    public function getName()
+    public function getCapabilities()
     {
-        if (array_key_exists("name", $this->_propDict)) {
-            return $this->_propDict["name"];
+        if (array_key_exists("capabilities", $this->_propDict)) {
+            if (is_a($this->_propDict["capabilities"], "Beta\Microsoft\Graph\Model\PrinterCapabilities")) {
+                return $this->_propDict["capabilities"];
+            } else {
+                $this->_propDict["capabilities"] = new PrinterCapabilities($this->_propDict["capabilities"]);
+                return $this->_propDict["capabilities"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the capabilities
+    *
+    * @param PrinterCapabilities $val The capabilities
+    *
+    * @return PrinterBase
+    */
+    public function setCapabilities($val)
+    {
+        $this->_propDict["capabilities"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defaults
+    *
+    * @return PrinterDefaults The defaults
+    */
+    public function getDefaults()
+    {
+        if (array_key_exists("defaults", $this->_propDict)) {
+            if (is_a($this->_propDict["defaults"], "Beta\Microsoft\Graph\Model\PrinterDefaults")) {
+                return $this->_propDict["defaults"];
+            } else {
+                $this->_propDict["defaults"] = new PrinterDefaults($this->_propDict["defaults"]);
+                return $this->_propDict["defaults"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defaults
+    *
+    * @param PrinterDefaults $val The defaults
+    *
+    * @return PrinterBase
+    */
+    public function setDefaults($val)
+    {
+        $this->_propDict["defaults"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isAcceptingJobs
+    *
+    * @return bool The isAcceptingJobs
+    */
+    public function getIsAcceptingJobs()
+    {
+        if (array_key_exists("isAcceptingJobs", $this->_propDict)) {
+            return $this->_propDict["isAcceptingJobs"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the name
+    * Sets the isAcceptingJobs
     *
-    * @param string $val The name
+    * @param bool $val The isAcceptingJobs
     *
     * @return PrinterBase
     */
-    public function setName($val)
+    public function setIsAcceptingJobs($val)
     {
-        $this->_propDict["name"] = $val;
+        $this->_propDict["isAcceptingJobs"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the location
+    *
+    * @return PrinterLocation The location
+    */
+    public function getLocation()
+    {
+        if (array_key_exists("location", $this->_propDict)) {
+            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\PrinterLocation")) {
+                return $this->_propDict["location"];
+            } else {
+                $this->_propDict["location"] = new PrinterLocation($this->_propDict["location"]);
+                return $this->_propDict["location"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the location
+    *
+    * @param PrinterLocation $val The location
+    *
+    * @return PrinterBase
+    */
+    public function setLocation($val)
+    {
+        $this->_propDict["location"] = $val;
         return $this;
     }
     
@@ -106,122 +199,29 @@ class PrinterBase extends Entity
     }
     
     /**
-    * Gets the isAcceptingJobs
+    * Gets the name
     *
-    * @return bool The isAcceptingJobs
+    * @return string The name
     */
-    public function getIsAcceptingJobs()
+    public function getName()
     {
-        if (array_key_exists("isAcceptingJobs", $this->_propDict)) {
-            return $this->_propDict["isAcceptingJobs"];
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the isAcceptingJobs
+    * Sets the name
     *
-    * @param bool $val The isAcceptingJobs
-    *
-    * @return PrinterBase
-    */
-    public function setIsAcceptingJobs($val)
-    {
-        $this->_propDict["isAcceptingJobs"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the defaults
-    *
-    * @return PrinterDefaults The defaults
-    */
-    public function getDefaults()
-    {
-        if (array_key_exists("defaults", $this->_propDict)) {
-            if (is_a($this->_propDict["defaults"], "Beta\Microsoft\Graph\Model\PrinterDefaults")) {
-                return $this->_propDict["defaults"];
-            } else {
-                $this->_propDict["defaults"] = new PrinterDefaults($this->_propDict["defaults"]);
-                return $this->_propDict["defaults"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the defaults
-    *
-    * @param PrinterDefaults $val The defaults
+    * @param string $val The name
     *
     * @return PrinterBase
     */
-    public function setDefaults($val)
+    public function setName($val)
     {
-        $this->_propDict["defaults"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the location
-    *
-    * @return PrinterLocation The location
-    */
-    public function getLocation()
-    {
-        if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\PrinterLocation")) {
-                return $this->_propDict["location"];
-            } else {
-                $this->_propDict["location"] = new PrinterLocation($this->_propDict["location"]);
-                return $this->_propDict["location"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the location
-    *
-    * @param PrinterLocation $val The location
-    *
-    * @return PrinterBase
-    */
-    public function setLocation($val)
-    {
-        $this->_propDict["location"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the capabilities
-    *
-    * @return PrinterCapabilities The capabilities
-    */
-    public function getCapabilities()
-    {
-        if (array_key_exists("capabilities", $this->_propDict)) {
-            if (is_a($this->_propDict["capabilities"], "Beta\Microsoft\Graph\Model\PrinterCapabilities")) {
-                return $this->_propDict["capabilities"];
-            } else {
-                $this->_propDict["capabilities"] = new PrinterCapabilities($this->_propDict["capabilities"]);
-                return $this->_propDict["capabilities"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the capabilities
-    *
-    * @param PrinterCapabilities $val The capabilities
-    *
-    * @return PrinterBase
-    */
-    public function setCapabilities($val)
-    {
-        $this->_propDict["capabilities"] = $val;
+        $this->_propDict["name"] = $val;
         return $this;
     }
     
