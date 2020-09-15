@@ -133,6 +133,60 @@ class EmailAppUsageVersionsUserCounts extends Entity
     }
     
     /**
+    * Gets the outlook2019
+    *
+    * @return int The outlook2019
+    */
+    public function getOutlook2019()
+    {
+        if (array_key_exists("outlook2019", $this->_propDict)) {
+            return $this->_propDict["outlook2019"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the outlook2019
+    *
+    * @param int $val The outlook2019
+    *
+    * @return EmailAppUsageVersionsUserCounts
+    */
+    public function setOutlook2019($val)
+    {
+        $this->_propDict["outlook2019"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the outlookM365
+    *
+    * @return int The outlookM365
+    */
+    public function getOutlookM365()
+    {
+        if (array_key_exists("outlookM365", $this->_propDict)) {
+            return $this->_propDict["outlookM365"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the outlookM365
+    *
+    * @param int $val The outlookM365
+    *
+    * @return EmailAppUsageVersionsUserCounts
+    */
+    public function setOutlookM365($val)
+    {
+        $this->_propDict["outlookM365"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the reportPeriod
     *
     * @return string The reportPeriod

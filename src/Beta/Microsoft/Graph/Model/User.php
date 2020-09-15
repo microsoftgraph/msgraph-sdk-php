@@ -467,6 +467,37 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the employeeHireDate
+    *
+    * @return \DateTime The employeeHireDate
+    */
+    public function getEmployeeHireDate()
+    {
+        if (array_key_exists("employeeHireDate", $this->_propDict)) {
+            if (is_a($this->_propDict["employeeHireDate"], "\DateTime")) {
+                return $this->_propDict["employeeHireDate"];
+            } else {
+                $this->_propDict["employeeHireDate"] = new \DateTime($this->_propDict["employeeHireDate"]);
+                return $this->_propDict["employeeHireDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the employeeHireDate
+    *
+    * @param \DateTime $val The employeeHireDate
+    *
+    * @return User
+    */
+    public function setEmployeeHireDate($val)
+    {
+        $this->_propDict["employeeHireDate"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the employeeId
     * The employee identifier assigned to the user by the organization. Supports $filter.
     *
@@ -492,6 +523,64 @@ class User extends DirectoryObject
     public function setEmployeeId($val)
     {
         $this->_propDict["employeeId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the employeeOrgData
+    *
+    * @return EmployeeOrgData The employeeOrgData
+    */
+    public function getEmployeeOrgData()
+    {
+        if (array_key_exists("employeeOrgData", $this->_propDict)) {
+            if (is_a($this->_propDict["employeeOrgData"], "Beta\Microsoft\Graph\Model\EmployeeOrgData")) {
+                return $this->_propDict["employeeOrgData"];
+            } else {
+                $this->_propDict["employeeOrgData"] = new EmployeeOrgData($this->_propDict["employeeOrgData"]);
+                return $this->_propDict["employeeOrgData"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the employeeOrgData
+    *
+    * @param EmployeeOrgData $val The employeeOrgData
+    *
+    * @return User
+    */
+    public function setEmployeeOrgData($val)
+    {
+        $this->_propDict["employeeOrgData"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the employeeType
+    *
+    * @return string The employeeType
+    */
+    public function getEmployeeType()
+    {
+        if (array_key_exists("employeeType", $this->_propDict)) {
+            return $this->_propDict["employeeType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the employeeType
+    *
+    * @param string $val The employeeType
+    *
+    * @return User
+    */
+    public function setEmployeeType($val)
+    {
+        $this->_propDict["employeeType"] = $val;
         return $this;
     }
     
