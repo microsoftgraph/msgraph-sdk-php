@@ -56,6 +56,37 @@ class OnlineMeeting extends Entity
     }
     
     /**
+    * Gets the allowedPresenters
+    *
+    * @return OnlineMeetingPresenters The allowedPresenters
+    */
+    public function getAllowedPresenters()
+    {
+        if (array_key_exists("allowedPresenters", $this->_propDict)) {
+            if (is_a($this->_propDict["allowedPresenters"], "Beta\Microsoft\Graph\Model\OnlineMeetingPresenters")) {
+                return $this->_propDict["allowedPresenters"];
+            } else {
+                $this->_propDict["allowedPresenters"] = new OnlineMeetingPresenters($this->_propDict["allowedPresenters"]);
+                return $this->_propDict["allowedPresenters"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the allowedPresenters
+    *
+    * @param OnlineMeetingPresenters $val The allowedPresenters
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowedPresenters($val)
+    {
+        $this->_propDict["allowedPresenters"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the audioConferencing
     * The phone access (dial-in) information for an online meeting. Read-only.
     *

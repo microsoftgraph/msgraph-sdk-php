@@ -56,6 +56,37 @@ class MeetingParticipantInfo extends Entity
         $this->_propDict["identity"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the role
+    *
+    * @return OnlineMeetingRole The role
+    */
+    public function getRole()
+    {
+        if (array_key_exists("role", $this->_propDict)) {
+            if (is_a($this->_propDict["role"], "Beta\Microsoft\Graph\Model\OnlineMeetingRole")) {
+                return $this->_propDict["role"];
+            } else {
+                $this->_propDict["role"] = new OnlineMeetingRole($this->_propDict["role"]);
+                return $this->_propDict["role"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the role
+    *
+    * @param OnlineMeetingRole $val The value to assign to the role
+    *
+    * @return MeetingParticipantInfo The MeetingParticipantInfo
+    */
+    public function setRole($val)
+    {
+        $this->_propDict["role"] = $val;
+         return $this;
+    }
     /**
     * Gets the upn
     * User principal name of the participant.

@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class Site extends BaseItem
 {
     /**
+    * Gets the deleted
+    *
+    * @return Deleted The deleted
+    */
+    public function getDeleted()
+    {
+        if (array_key_exists("deleted", $this->_propDict)) {
+            if (is_a($this->_propDict["deleted"], "Beta\Microsoft\Graph\Model\Deleted")) {
+                return $this->_propDict["deleted"];
+            } else {
+                $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
+                return $this->_propDict["deleted"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deleted
+    *
+    * @param Deleted $val The deleted
+    *
+    * @return Site
+    */
+    public function setDeleted($val)
+    {
+        $this->_propDict["deleted"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The full title for the site. Read-only.
     *
