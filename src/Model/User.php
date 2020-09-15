@@ -2285,6 +2285,34 @@ class User extends DirectoryObject
     
 
      /** 
+     * Gets the scopedRoleMemberOf
+     *
+     * @return array The scopedRoleMemberOf
+     */
+    public function getScopedRoleMemberOf()
+    {
+        if (array_key_exists("scopedRoleMemberOf", $this->_propDict)) {
+           return $this->_propDict["scopedRoleMemberOf"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the scopedRoleMemberOf
+    *
+    * @param ScopedRoleMembership $val The scopedRoleMemberOf
+    *
+    * @return User
+    */
+    public function setScopedRoleMemberOf($val)
+    {
+		$this->_propDict["scopedRoleMemberOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the transitiveMemberOf
      *
      * @return array The transitiveMemberOf

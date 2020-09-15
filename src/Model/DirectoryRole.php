@@ -141,4 +141,32 @@ class DirectoryRole extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the scopedMembers
+     *
+     * @return array The scopedMembers
+     */
+    public function getScopedMembers()
+    {
+        if (array_key_exists("scopedMembers", $this->_propDict)) {
+           return $this->_propDict["scopedMembers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the scopedMembers
+    *
+    * @param ScopedRoleMembership $val The scopedMembers
+    *
+    * @return DirectoryRole
+    */
+    public function setScopedMembers($val)
+    {
+		$this->_propDict["scopedMembers"] = $val;
+        return $this;
+    }
+    
 }

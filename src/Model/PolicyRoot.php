@@ -110,6 +110,34 @@ class PolicyRoot extends Entity
     
 
      /** 
+     * Gets the permissionGrantPolicies
+     *
+     * @return array The permissionGrantPolicies
+     */
+    public function getPermissionGrantPolicies()
+    {
+        if (array_key_exists("permissionGrantPolicies", $this->_propDict)) {
+           return $this->_propDict["permissionGrantPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the permissionGrantPolicies
+    *
+    * @param PermissionGrantPolicy $val The permissionGrantPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setPermissionGrantPolicies($val)
+    {
+		$this->_propDict["permissionGrantPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the tokenIssuancePolicies
      *
      * @return array The tokenIssuancePolicies
