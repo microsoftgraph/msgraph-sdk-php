@@ -168,6 +168,37 @@ class AccessReviewScheduleDefinition extends Entity
     }
     
     /**
+    * Gets the instanceEnumerationScope
+    *
+    * @return AccessReviewScope The instanceEnumerationScope
+    */
+    public function getInstanceEnumerationScope()
+    {
+        if (array_key_exists("instanceEnumerationScope", $this->_propDict)) {
+            if (is_a($this->_propDict["instanceEnumerationScope"], "Beta\Microsoft\Graph\Model\AccessReviewScope")) {
+                return $this->_propDict["instanceEnumerationScope"];
+            } else {
+                $this->_propDict["instanceEnumerationScope"] = new AccessReviewScope($this->_propDict["instanceEnumerationScope"]);
+                return $this->_propDict["instanceEnumerationScope"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the instanceEnumerationScope
+    *
+    * @param AccessReviewScope $val The instanceEnumerationScope
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setInstanceEnumerationScope($val)
+    {
+        $this->_propDict["instanceEnumerationScope"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     *
     * @return \DateTime The lastModifiedDateTime

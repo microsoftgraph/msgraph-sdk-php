@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ExactMatchDataStore extends Entity
 {
+
+     /** 
+     * Gets the columns
+     *
+     * @return array The columns
+     */
+    public function getColumns()
+    {
+        if (array_key_exists("columns", $this->_propDict)) {
+           return $this->_propDict["columns"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the columns
+    *
+    * @param ExactDataMatchStoreColumn $val The columns
+    *
+    * @return ExactMatchDataStore
+    */
+    public function setColumns($val)
+    {
+		$this->_propDict["columns"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the dataLastUpdatedDateTime
     *

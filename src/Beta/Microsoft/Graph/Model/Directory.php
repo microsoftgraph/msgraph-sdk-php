@@ -26,6 +26,34 @@ class Directory extends Entity
 {
 
      /** 
+     * Gets the administrativeUnits
+     *
+     * @return array The administrativeUnits
+     */
+    public function getAdministrativeUnits()
+    {
+        if (array_key_exists("administrativeUnits", $this->_propDict)) {
+           return $this->_propDict["administrativeUnits"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the administrativeUnits
+    *
+    * @param AdministrativeUnit $val The administrativeUnits
+    *
+    * @return Directory
+    */
+    public function setAdministrativeUnits($val)
+    {
+		$this->_propDict["administrativeUnits"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *

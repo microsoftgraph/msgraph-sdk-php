@@ -56,6 +56,37 @@ class AccessReviewInstance extends Entity
     }
     
     /**
+    * Gets the scope
+    *
+    * @return AccessReviewScope The scope
+    */
+    public function getScope()
+    {
+        if (array_key_exists("scope", $this->_propDict)) {
+            if (is_a($this->_propDict["scope"], "Beta\Microsoft\Graph\Model\AccessReviewScope")) {
+                return $this->_propDict["scope"];
+            } else {
+                $this->_propDict["scope"] = new AccessReviewScope($this->_propDict["scope"]);
+                return $this->_propDict["scope"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the scope
+    *
+    * @param AccessReviewScope $val The scope
+    *
+    * @return AccessReviewInstance
+    */
+    public function setScope($val)
+    {
+        $this->_propDict["scope"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the startDateTime
     *
     * @return \DateTime The startDateTime
