@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class ChangeTrackedEntity extends Entity
 {
     /**
+    * Gets the createdBy
+    *
+    * @return IdentitySet The createdBy
+    */
+    public function getCreatedBy()
+    {
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdBy
+    *
+    * @param IdentitySet $val The createdBy
+    *
+    * @return ChangeTrackedEntity
+    */
+    public function setCreatedBy($val)
+    {
+        $this->_propDict["createdBy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *

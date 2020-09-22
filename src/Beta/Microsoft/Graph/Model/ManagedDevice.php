@@ -1361,6 +1361,39 @@ class ManagedDevice extends Entity
     }
     
     /**
+    * Gets the managementFeatures
+    * Device management features
+    *
+    * @return ManagedDeviceManagementFeatures The managementFeatures
+    */
+    public function getManagementFeatures()
+    {
+        if (array_key_exists("managementFeatures", $this->_propDict)) {
+            if (is_a($this->_propDict["managementFeatures"], "Beta\Microsoft\Graph\Model\ManagedDeviceManagementFeatures")) {
+                return $this->_propDict["managementFeatures"];
+            } else {
+                $this->_propDict["managementFeatures"] = new ManagedDeviceManagementFeatures($this->_propDict["managementFeatures"]);
+                return $this->_propDict["managementFeatures"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the managementFeatures
+    * Device management features
+    *
+    * @param ManagedDeviceManagementFeatures $val The managementFeatures
+    *
+    * @return ManagedDevice
+    */
+    public function setManagementFeatures($val)
+    {
+        $this->_propDict["managementFeatures"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the managementState
     * Management state of the device. This property is read-only.
     *
@@ -1961,6 +1994,35 @@ class ManagedDevice extends Entity
     public function setSkuFamily($val)
     {
         $this->_propDict["skuFamily"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the skuNumber
+    * Device sku number, see also: https://docs.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+    *
+    * @return int The skuNumber
+    */
+    public function getSkuNumber()
+    {
+        if (array_key_exists("skuNumber", $this->_propDict)) {
+            return $this->_propDict["skuNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the skuNumber
+    * Device sku number, see also: https://docs.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+    *
+    * @param int $val The skuNumber
+    *
+    * @return ManagedDevice
+    */
+    public function setSkuNumber($val)
+    {
+        $this->_propDict["skuNumber"] = intval($val);
         return $this;
     }
     

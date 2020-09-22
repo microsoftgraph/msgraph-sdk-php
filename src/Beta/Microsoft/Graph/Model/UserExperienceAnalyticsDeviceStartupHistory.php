@@ -348,6 +348,64 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     }
     
     /**
+    * Gets the restartFaultBucket
+    * OS restart fault bucket. The fault bucket is used to find additional information about a system crash.
+    *
+    * @return string The restartFaultBucket
+    */
+    public function getRestartFaultBucket()
+    {
+        if (array_key_exists("restartFaultBucket", $this->_propDict)) {
+            return $this->_propDict["restartFaultBucket"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the restartFaultBucket
+    * OS restart fault bucket. The fault bucket is used to find additional information about a system crash.
+    *
+    * @param string $val The restartFaultBucket
+    *
+    * @return UserExperienceAnalyticsDeviceStartupHistory
+    */
+    public function setRestartFaultBucket($val)
+    {
+        $this->_propDict["restartFaultBucket"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the restartStopCode
+    * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason.
+    *
+    * @return string The restartStopCode
+    */
+    public function getRestartStopCode()
+    {
+        if (array_key_exists("restartStopCode", $this->_propDict)) {
+            return $this->_propDict["restartStopCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the restartStopCode
+    * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason.
+    *
+    * @param string $val The restartStopCode
+    *
+    * @return UserExperienceAnalyticsDeviceStartupHistory
+    */
+    public function setRestartStopCode($val)
+    {
+        $this->_propDict["restartStopCode"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the startTime
     * The user experience analytics device boot start time.
     *

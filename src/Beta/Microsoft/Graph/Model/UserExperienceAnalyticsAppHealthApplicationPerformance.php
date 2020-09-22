@@ -25,118 +25,118 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity
 {
     /**
-    * Gets the activeDevices
+    * Gets the activeDeviceCount
     * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
     *
-    * @return int The activeDevices
+    * @return int The activeDeviceCount
     */
-    public function getActiveDevices()
+    public function getActiveDeviceCount()
     {
-        if (array_key_exists("activeDevices", $this->_propDict)) {
-            return $this->_propDict["activeDevices"];
+        if (array_key_exists("activeDeviceCount", $this->_propDict)) {
+            return $this->_propDict["activeDeviceCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the activeDevices
+    * Sets the activeDeviceCount
     * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
     *
-    * @param int $val The activeDevices
+    * @param int $val The activeDeviceCount
     *
     * @return UserExperienceAnalyticsAppHealthApplicationPerformance
     */
-    public function setActiveDevices($val)
+    public function setActiveDeviceCount($val)
     {
-        $this->_propDict["activeDevices"] = intval($val);
+        $this->_propDict["activeDeviceCount"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the allOrgsHealthScore
-    * The median health score of the application across all organizations. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Gets the appCrashCount
+    * The number of crashes for the app. Valid values -2147483648 to 2147483647
     *
-    * @return float The allOrgsHealthScore
+    * @return int The appCrashCount
     */
-    public function getAllOrgsHealthScore()
+    public function getAppCrashCount()
     {
-        if (array_key_exists("allOrgsHealthScore", $this->_propDict)) {
-            return $this->_propDict["allOrgsHealthScore"];
+        if (array_key_exists("appCrashCount", $this->_propDict)) {
+            return $this->_propDict["appCrashCount"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the allOrgsHealthScore
-    * The median health score of the application across all organizations. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Sets the appCrashCount
+    * The number of crashes for the app. Valid values -2147483648 to 2147483647
     *
-    * @param float $val The allOrgsHealthScore
+    * @param int $val The appCrashCount
     *
     * @return UserExperienceAnalyticsAppHealthApplicationPerformance
     */
-    public function setAllOrgsHealthScore($val)
+    public function setAppCrashCount($val)
     {
-        $this->_propDict["allOrgsHealthScore"] = $val;
+        $this->_propDict["appCrashCount"] = intval($val);
         return $this;
     }
     
     /**
-    * Gets the allOrgsMeanTimeToFailure
-    * The median mean time to failure across all orgs for the app in minutes. Valid values -2147483648 to 2147483647
-    *
-    * @return int The allOrgsMeanTimeToFailure
-    */
-    public function getAllOrgsMeanTimeToFailure()
-    {
-        if (array_key_exists("allOrgsMeanTimeToFailure", $this->_propDict)) {
-            return $this->_propDict["allOrgsMeanTimeToFailure"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allOrgsMeanTimeToFailure
-    * The median mean time to failure across all orgs for the app in minutes. Valid values -2147483648 to 2147483647
-    *
-    * @param int $val The allOrgsMeanTimeToFailure
-    *
-    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
-    */
-    public function setAllOrgsMeanTimeToFailure($val)
-    {
-        $this->_propDict["allOrgsMeanTimeToFailure"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the appFriendlyName
+    * Gets the appDisplayName
     * The friendly name of the application.
     *
-    * @return string The appFriendlyName
+    * @return string The appDisplayName
     */
-    public function getAppFriendlyName()
+    public function getAppDisplayName()
     {
-        if (array_key_exists("appFriendlyName", $this->_propDict)) {
-            return $this->_propDict["appFriendlyName"];
+        if (array_key_exists("appDisplayName", $this->_propDict)) {
+            return $this->_propDict["appDisplayName"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the appFriendlyName
+    * Sets the appDisplayName
     * The friendly name of the application.
     *
-    * @param string $val The appFriendlyName
+    * @param string $val The appDisplayName
     *
     * @return UserExperienceAnalyticsAppHealthApplicationPerformance
     */
-    public function setAppFriendlyName($val)
+    public function setAppDisplayName($val)
     {
-        $this->_propDict["appFriendlyName"] = $val;
+        $this->_propDict["appDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appHangCount
+    * The number of hangs for the app. Valid values -2147483648 to 2147483647
+    *
+    * @return int The appHangCount
+    */
+    public function getAppHangCount()
+    {
+        if (array_key_exists("appHangCount", $this->_propDict)) {
+            return $this->_propDict["appHangCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appHangCount
+    * The number of hangs for the app. Valid values -2147483648 to 2147483647
+    *
+    * @param int $val The appHangCount
+    *
+    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
+    */
+    public function setAppHangCount($val)
+    {
+        $this->_propDict["appHangCount"] = intval($val);
         return $this;
     }
     
@@ -257,176 +257,60 @@ class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity
     }
     
     /**
-    * Gets the meanTimeToFailure
-    * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
-    *
-    * @return int The meanTimeToFailure
-    */
-    public function getMeanTimeToFailure()
-    {
-        if (array_key_exists("meanTimeToFailure", $this->_propDict)) {
-            return $this->_propDict["meanTimeToFailure"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the meanTimeToFailure
-    * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
-    *
-    * @param int $val The meanTimeToFailure
-    *
-    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
-    */
-    public function setMeanTimeToFailure($val)
-    {
-        $this->_propDict["meanTimeToFailure"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the memaTimeGenerated
-    * The time when aggregation was performed in MEMA.
-    *
-    * @return string The memaTimeGenerated
-    */
-    public function getMemaTimeGenerated()
-    {
-        if (array_key_exists("memaTimeGenerated", $this->_propDict)) {
-            return $this->_propDict["memaTimeGenerated"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the memaTimeGenerated
-    * The time when aggregation was performed in MEMA.
-    *
-    * @param string $val The memaTimeGenerated
-    *
-    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
-    */
-    public function setMemaTimeGenerated($val)
-    {
-        $this->_propDict["memaTimeGenerated"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the tenantId
-    * The id of the tenant associated with this app object.
-    *
-    * @return string The tenantId
-    */
-    public function getTenantId()
-    {
-        if (array_key_exists("tenantId", $this->_propDict)) {
-            return $this->_propDict["tenantId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tenantId
-    * The id of the tenant associated with this app object.
-    *
-    * @param string $val The tenantId
-    *
-    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
-    */
-    public function setTenantId($val)
-    {
-        $this->_propDict["tenantId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the totalAppCrashes
-    * The number of crashes for the app. Valid values -2147483648 to 2147483647
-    *
-    * @return int The totalAppCrashes
-    */
-    public function getTotalAppCrashes()
-    {
-        if (array_key_exists("totalAppCrashes", $this->_propDict)) {
-            return $this->_propDict["totalAppCrashes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the totalAppCrashes
-    * The number of crashes for the app. Valid values -2147483648 to 2147483647
-    *
-    * @param int $val The totalAppCrashes
-    *
-    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
-    */
-    public function setTotalAppCrashes($val)
-    {
-        $this->_propDict["totalAppCrashes"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the totalAppHangs
-    * The number of hangs for the app. Valid values -2147483648 to 2147483647
-    *
-    * @return int The totalAppHangs
-    */
-    public function getTotalAppHangs()
-    {
-        if (array_key_exists("totalAppHangs", $this->_propDict)) {
-            return $this->_propDict["totalAppHangs"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the totalAppHangs
-    * The number of hangs for the app. Valid values -2147483648 to 2147483647
-    *
-    * @param int $val The totalAppHangs
-    *
-    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
-    */
-    public function setTotalAppHangs($val)
-    {
-        $this->_propDict["totalAppHangs"] = intval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the totalAppUsageDuration
+    * Gets the appUsageDuration
     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
     *
-    * @return int The totalAppUsageDuration
+    * @return int The appUsageDuration
     */
-    public function getTotalAppUsageDuration()
+    public function getAppUsageDuration()
     {
-        if (array_key_exists("totalAppUsageDuration", $this->_propDict)) {
-            return $this->_propDict["totalAppUsageDuration"];
+        if (array_key_exists("appUsageDuration", $this->_propDict)) {
+            return $this->_propDict["appUsageDuration"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the totalAppUsageDuration
+    * Sets the appUsageDuration
     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
     *
-    * @param int $val The totalAppUsageDuration
+    * @param int $val The appUsageDuration
     *
     * @return UserExperienceAnalyticsAppHealthApplicationPerformance
     */
-    public function setTotalAppUsageDuration($val)
+    public function setAppUsageDuration($val)
     {
-        $this->_propDict["totalAppUsageDuration"] = intval($val);
+        $this->_propDict["appUsageDuration"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the meanTimeToFailureInMinutes
+    * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
+    *
+    * @return int The meanTimeToFailureInMinutes
+    */
+    public function getMeanTimeToFailureInMinutes()
+    {
+        if (array_key_exists("meanTimeToFailureInMinutes", $this->_propDict)) {
+            return $this->_propDict["meanTimeToFailureInMinutes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the meanTimeToFailureInMinutes
+    * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
+    *
+    * @param int $val The meanTimeToFailureInMinutes
+    *
+    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
+    */
+    public function setMeanTimeToFailureInMinutes($val)
+    {
+        $this->_propDict["meanTimeToFailureInMinutes"] = intval($val);
         return $this;
     }
     

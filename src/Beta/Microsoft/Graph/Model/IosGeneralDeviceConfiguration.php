@@ -286,6 +286,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the appClipsBlocked
+    * Prevents a user from adding any App Clips and removes any existing App Clips on the device.
+    *
+    * @return bool The appClipsBlocked
+    */
+    public function getAppClipsBlocked()
+    {
+        if (array_key_exists("appClipsBlocked", $this->_propDict)) {
+            return $this->_propDict["appClipsBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the appClipsBlocked
+    * Prevents a user from adding any App Clips and removes any existing App Clips on the device.
+    *
+    * @param bool $val The appClipsBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setAppClipsBlocked($val)
+    {
+        $this->_propDict["appClipsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the appleNewsBlocked
     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
     *

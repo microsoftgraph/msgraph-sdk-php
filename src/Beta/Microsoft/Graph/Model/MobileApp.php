@@ -505,6 +505,64 @@ class MobileApp extends Entity
     }
     
     /**
+    * Gets the supersededAppCount
+    * The total number of apps this app is directly or indirectly superseded by.
+    *
+    * @return int The supersededAppCount
+    */
+    public function getSupersededAppCount()
+    {
+        if (array_key_exists("supersededAppCount", $this->_propDict)) {
+            return $this->_propDict["supersededAppCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supersededAppCount
+    * The total number of apps this app is directly or indirectly superseded by.
+    *
+    * @param int $val The supersededAppCount
+    *
+    * @return MobileApp
+    */
+    public function setSupersededAppCount($val)
+    {
+        $this->_propDict["supersededAppCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the supersedingAppCount
+    * The total number of apps this app directly or indirectly supersedes.
+    *
+    * @return int The supersedingAppCount
+    */
+    public function getSupersedingAppCount()
+    {
+        if (array_key_exists("supersedingAppCount", $this->_propDict)) {
+            return $this->_propDict["supersedingAppCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the supersedingAppCount
+    * The total number of apps this app directly or indirectly supersedes.
+    *
+    * @param int $val The supersedingAppCount
+    *
+    * @return MobileApp
+    */
+    public function setSupersedingAppCount($val)
+    {
+        $this->_propDict["supersedingAppCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the uploadState
     * The upload state. Possible values are: 0 - `Not Ready`, 1 - `Ready`, 2 - `Processing`.
     *
@@ -659,7 +717,7 @@ class MobileApp extends Entity
 
      /** 
      * Gets the relationships
-    * List of relationships for this mobile app.
+    * The set of direct relationships for this app.
      *
      * @return array The relationships
      */
@@ -674,7 +732,7 @@ class MobileApp extends Entity
     
     /** 
     * Sets the relationships
-    * List of relationships for this mobile app.
+    * The set of direct relationships for this app.
     *
     * @param MobileAppRelationship $val The relationships
     *

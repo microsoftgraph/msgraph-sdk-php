@@ -245,6 +245,35 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
+    * Gets the biometricAuthenticationBlocked
+    * Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True.
+    *
+    * @return bool The biometricAuthenticationBlocked
+    */
+    public function getBiometricAuthenticationBlocked()
+    {
+        if (array_key_exists("biometricAuthenticationBlocked", $this->_propDict)) {
+            return $this->_propDict["biometricAuthenticationBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the biometricAuthenticationBlocked
+    * Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True.
+    *
+    * @param bool $val The biometricAuthenticationBlocked
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setBiometricAuthenticationBlocked($val)
+    {
+        $this->_propDict["biometricAuthenticationBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the customBrowserDisplayName
     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
@@ -743,6 +772,39 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function setRequiredAndroidSafetyNetDeviceAttestationType($val)
     {
         $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the requiredAndroidSafetyNetEvaluationType
+    * Defines the Android SafetyNet evaluation type requirement for a managed app to work.
+    *
+    * @return AndroidManagedAppSafetyNetEvaluationType The requiredAndroidSafetyNetEvaluationType
+    */
+    public function getRequiredAndroidSafetyNetEvaluationType()
+    {
+        if (array_key_exists("requiredAndroidSafetyNetEvaluationType", $this->_propDict)) {
+            if (is_a($this->_propDict["requiredAndroidSafetyNetEvaluationType"], "Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetEvaluationType")) {
+                return $this->_propDict["requiredAndroidSafetyNetEvaluationType"];
+            } else {
+                $this->_propDict["requiredAndroidSafetyNetEvaluationType"] = new AndroidManagedAppSafetyNetEvaluationType($this->_propDict["requiredAndroidSafetyNetEvaluationType"]);
+                return $this->_propDict["requiredAndroidSafetyNetEvaluationType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the requiredAndroidSafetyNetEvaluationType
+    * Defines the Android SafetyNet evaluation type requirement for a managed app to work.
+    *
+    * @param AndroidManagedAppSafetyNetEvaluationType $val The requiredAndroidSafetyNetEvaluationType
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setRequiredAndroidSafetyNetEvaluationType($val)
+    {
+        $this->_propDict["requiredAndroidSafetyNetEvaluationType"] = $val;
         return $this;
     }
     

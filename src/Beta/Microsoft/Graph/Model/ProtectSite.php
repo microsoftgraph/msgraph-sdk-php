@@ -63,4 +63,30 @@ class ProtectSite extends LabelActionBase
         $this->_propDict["accessType"] = $val;
          return $this;
     }
+    /**
+    * Gets the conditionalAccessProtectionLevelId
+    *
+    * @return string The conditionalAccessProtectionLevelId
+    */
+    public function getConditionalAccessProtectionLevelId()
+    {
+        if (array_key_exists("conditionalAccessProtectionLevelId", $this->_propDict)) {
+            return $this->_propDict["conditionalAccessProtectionLevelId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the conditionalAccessProtectionLevelId
+    *
+    * @param string $val The value of the conditionalAccessProtectionLevelId
+    *
+    * @return ProtectSite
+    */
+    public function setConditionalAccessProtectionLevelId($val)
+    {
+        $this->_propDict["conditionalAccessProtectionLevelId"] = $val;
+        return $this;
+    }
 }

@@ -101,7 +101,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Gets the notifications
-    * The notification status for this app assignment.
+    * The notification status for this app assignment. Possible values are: showAll, showReboot, hideAll.
     *
     * @return Win32LobAppNotification The notifications
     */
@@ -120,7 +120,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the notifications
-    * The notification status for this app assignment.
+    * The notification status for this app assignment. Possible values are: showAll, showReboot, hideAll.
     *
     * @param Win32LobAppNotification $val The value to assign to the notifications
     *

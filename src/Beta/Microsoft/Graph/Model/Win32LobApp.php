@@ -26,7 +26,7 @@ class Win32LobApp extends MobileLobApp
 {
     /**
     * Gets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
     *
     * @return WindowsArchitecture The applicableArchitectures
     */
@@ -45,7 +45,7 @@ class Win32LobApp extends MobileLobApp
     
     /**
     * Sets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
     *
     * @param WindowsArchitecture $val The applicableArchitectures
     *
@@ -146,33 +146,6 @@ class Win32LobApp extends MobileLobApp
     public function setInstallExperience($val)
     {
         $this->_propDict["installExperience"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the installLanguage
-    *
-    * @return string The installLanguage
-    */
-    public function getInstallLanguage()
-    {
-        if (array_key_exists("installLanguage", $this->_propDict)) {
-            return $this->_propDict["installLanguage"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the installLanguage
-    *
-    * @param string $val The installLanguage
-    *
-    * @return Win32LobApp
-    */
-    public function setInstallLanguage($val)
-    {
-        $this->_propDict["installLanguage"] = $val;
         return $this;
     }
     

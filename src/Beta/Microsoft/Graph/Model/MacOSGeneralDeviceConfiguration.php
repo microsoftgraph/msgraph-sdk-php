@@ -1455,4 +1455,37 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
+    /**
+    * Gets the updateDelayPolicy
+    * Determines whether to delay OS and/or app updates for macOS.
+    *
+    * @return MacOSSoftwareUpdateDelayPolicy The updateDelayPolicy
+    */
+    public function getUpdateDelayPolicy()
+    {
+        if (array_key_exists("updateDelayPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["updateDelayPolicy"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateDelayPolicy")) {
+                return $this->_propDict["updateDelayPolicy"];
+            } else {
+                $this->_propDict["updateDelayPolicy"] = new MacOSSoftwareUpdateDelayPolicy($this->_propDict["updateDelayPolicy"]);
+                return $this->_propDict["updateDelayPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the updateDelayPolicy
+    * Determines whether to delay OS and/or app updates for macOS.
+    *
+    * @param MacOSSoftwareUpdateDelayPolicy $val The updateDelayPolicy
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setUpdateDelayPolicy($val)
+    {
+        $this->_propDict["updateDelayPolicy"] = $val;
+        return $this;
+    }
+    
 }

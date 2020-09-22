@@ -119,7 +119,7 @@ class Win32LobAppRegistryRule extends Win32LobAppRule
 
     /**
     * Gets the operationType
-    * The registry operation type.
+    * The registry operation type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
     *
     * @return Win32LobAppRegistryRuleOperationType The operationType
     */
@@ -138,7 +138,7 @@ class Win32LobAppRegistryRule extends Win32LobAppRule
 
     /**
     * Sets the operationType
-    * The registry operation type.
+    * The registry operation type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
     *
     * @param Win32LobAppRegistryRuleOperationType $val The value to assign to the operationType
     *
@@ -152,7 +152,7 @@ class Win32LobAppRegistryRule extends Win32LobAppRule
 
     /**
     * Gets the operator
-    * The operator for registry detection.
+    * The operator for registry detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @return Win32LobAppRuleOperator The operator
     */
@@ -171,7 +171,7 @@ class Win32LobAppRegistryRule extends Win32LobAppRule
 
     /**
     * Sets the operator
-    * The operator for registry detection.
+    * The operator for registry detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @param Win32LobAppRuleOperator $val The value to assign to the operator
     *

@@ -442,6 +442,39 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
         return $this;
     }
     
+    /**
+    * Gets the requiredPasswordComplexity
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+.
+    *
+    * @return AndroidRequiredPasswordComplexity The requiredPasswordComplexity
+    */
+    public function getRequiredPasswordComplexity()
+    {
+        if (array_key_exists("requiredPasswordComplexity", $this->_propDict)) {
+            if (is_a($this->_propDict["requiredPasswordComplexity"], "Beta\Microsoft\Graph\Model\AndroidRequiredPasswordComplexity")) {
+                return $this->_propDict["requiredPasswordComplexity"];
+            } else {
+                $this->_propDict["requiredPasswordComplexity"] = new AndroidRequiredPasswordComplexity($this->_propDict["requiredPasswordComplexity"]);
+                return $this->_propDict["requiredPasswordComplexity"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the requiredPasswordComplexity
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+.
+    *
+    * @param AndroidRequiredPasswordComplexity $val The requiredPasswordComplexity
+    *
+    * @return AndroidCompliancePolicy
+    */
+    public function setRequiredPasswordComplexity($val)
+    {
+        $this->_propDict["requiredPasswordComplexity"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the restrictedApps

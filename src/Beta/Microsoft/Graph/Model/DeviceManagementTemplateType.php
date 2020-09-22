@@ -39,4 +39,5 @@ class DeviceManagementTemplateType extends Enum
     const MICROSOFT_OFFICE365_PRO_PLUS_SECURITY_BASELINE = "microsoftOffice365ProPlusSecurityBaseline";
     const DEVICE_COMPLIANCE = "deviceCompliance";
     const DEVICE_CONFIGURATION_FOR_OFFICE365 = "deviceConfigurationForOffice365";
+    const CLOUD_PC = "cloudPC";
 }

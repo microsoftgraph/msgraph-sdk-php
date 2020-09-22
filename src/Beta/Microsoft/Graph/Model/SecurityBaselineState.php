@@ -82,6 +82,35 @@ class SecurityBaselineState extends Entity
         return $this;
     }
     
+    /**
+    * Gets the userPrincipalName
+    * User Principal Name
+    *
+    * @return string The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    * User Principal Name
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return SecurityBaselineState
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the settingStates

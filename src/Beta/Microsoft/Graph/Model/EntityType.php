@@ -32,6 +32,10 @@ class EntityType extends Enum
     const EVENT = "event";
     const MESSAGE = "message";
     const DRIVE_ITEM = "driveItem";
-    const EXTERNAL_FILE = "externalFile";
     const EXTERNAL_ITEM = "externalItem";
+    const SITE = "site";
+    const GRAPHLIST = "list";
+    const LIST_ITEM = "listItem";
+    const DRIVE = "drive";
+    const UNKNOWNFUTUREVALUE = "unknownfuturevalue";
 }

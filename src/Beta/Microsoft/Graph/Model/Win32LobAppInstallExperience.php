@@ -26,7 +26,7 @@ class Win32LobAppInstallExperience extends Entity
 
     /**
     * Gets the deviceRestartBehavior
-    * Device restart behavior.
+    * Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force.
     *
     * @return Win32LobAppRestartBehavior The deviceRestartBehavior
     */
@@ -45,7 +45,7 @@ class Win32LobAppInstallExperience extends Entity
 
     /**
     * Sets the deviceRestartBehavior
-    * Device restart behavior.
+    * Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force.
     *
     * @param Win32LobAppRestartBehavior $val The value to assign to the deviceRestartBehavior
     *
