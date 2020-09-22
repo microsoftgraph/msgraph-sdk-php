@@ -84,6 +84,39 @@ class ChangeNotification extends Entity
         $this->_propDict["clientState"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the encryptedContent
+    * (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
+    *
+    * @return ChangeNotificationEncryptedContent The encryptedContent
+    */
+    public function getEncryptedContent()
+    {
+        if (array_key_exists("encryptedContent", $this->_propDict)) {
+            if (is_a($this->_propDict["encryptedContent"], "Microsoft\Graph\Model\ChangeNotificationEncryptedContent")) {
+                return $this->_propDict["encryptedContent"];
+            } else {
+                $this->_propDict["encryptedContent"] = new ChangeNotificationEncryptedContent($this->_propDict["encryptedContent"]);
+                return $this->_propDict["encryptedContent"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the encryptedContent
+    * (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
+    *
+    * @param ChangeNotificationEncryptedContent $val The value to assign to the encryptedContent
+    *
+    * @return ChangeNotification The ChangeNotification
+    */
+    public function setEncryptedContent($val)
+    {
+        $this->_propDict["encryptedContent"] = $val;
+         return $this;
+    }
     /**
     * Gets the id
     * Unique ID for the notification. Optional.
@@ -111,6 +144,37 @@ class ChangeNotification extends Entity
     {
         $this->_propDict["id"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the lifecycleEvent
+    *
+    * @return LifecycleEventType The lifecycleEvent
+    */
+    public function getLifecycleEvent()
+    {
+        if (array_key_exists("lifecycleEvent", $this->_propDict)) {
+            if (is_a($this->_propDict["lifecycleEvent"], "Microsoft\Graph\Model\LifecycleEventType")) {
+                return $this->_propDict["lifecycleEvent"];
+            } else {
+                $this->_propDict["lifecycleEvent"] = new LifecycleEventType($this->_propDict["lifecycleEvent"]);
+                return $this->_propDict["lifecycleEvent"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lifecycleEvent
+    *
+    * @param LifecycleEventType $val The value to assign to the lifecycleEvent
+    *
+    * @return ChangeNotification The ChangeNotification
+    */
+    public function setLifecycleEvent($val)
+    {
+        $this->_propDict["lifecycleEvent"] = $val;
+         return $this;
     }
     /**
     * Gets the resource

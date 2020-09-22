@@ -141,6 +141,64 @@ class Subscription extends Entity
     }
     
     /**
+    * Gets the encryptionCertificate
+    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
+    *
+    * @return string The encryptionCertificate
+    */
+    public function getEncryptionCertificate()
+    {
+        if (array_key_exists("encryptionCertificate", $this->_propDict)) {
+            return $this->_propDict["encryptionCertificate"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the encryptionCertificate
+    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
+    *
+    * @param string $val The encryptionCertificate
+    *
+    * @return Subscription
+    */
+    public function setEncryptionCertificate($val)
+    {
+        $this->_propDict["encryptionCertificate"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the encryptionCertificateId
+    * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
+    *
+    * @return string The encryptionCertificateId
+    */
+    public function getEncryptionCertificateId()
+    {
+        if (array_key_exists("encryptionCertificateId", $this->_propDict)) {
+            return $this->_propDict["encryptionCertificateId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the encryptionCertificateId
+    * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
+    *
+    * @param string $val The encryptionCertificateId
+    *
+    * @return Subscription
+    */
+    public function setEncryptionCertificateId($val)
+    {
+        $this->_propDict["encryptionCertificateId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the expirationDateTime
     * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
     *
@@ -174,8 +232,36 @@ class Subscription extends Entity
     }
     
     /**
+    * Gets the includeResourceData
+    * When set to true, change notifications include resource data (such as content of a chat message). Optional.
+    *
+    * @return bool The includeResourceData
+    */
+    public function getIncludeResourceData()
+    {
+        if (array_key_exists("includeResourceData", $this->_propDict)) {
+            return $this->_propDict["includeResourceData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the includeResourceData
+    * When set to true, change notifications include resource data (such as content of a chat message). Optional.
+    *
+    * @param bool $val The includeResourceData
+    *
+    * @return Subscription
+    */
+    public function setIncludeResourceData($val)
+    {
+        $this->_propDict["includeResourceData"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the latestSupportedTlsVersion
-    * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
     * @return string The latestSupportedTlsVersion
     */
@@ -190,7 +276,6 @@ class Subscription extends Entity
     
     /**
     * Sets the latestSupportedTlsVersion
-    * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
     * @param string $val The latestSupportedTlsVersion
     *
@@ -199,6 +284,33 @@ class Subscription extends Entity
     public function setLatestSupportedTlsVersion($val)
     {
         $this->_propDict["latestSupportedTlsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lifecycleNotificationUrl
+    *
+    * @return string The lifecycleNotificationUrl
+    */
+    public function getLifecycleNotificationUrl()
+    {
+        if (array_key_exists("lifecycleNotificationUrl", $this->_propDict)) {
+            return $this->_propDict["lifecycleNotificationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the lifecycleNotificationUrl
+    *
+    * @param string $val The lifecycleNotificationUrl
+    *
+    * @return Subscription
+    */
+    public function setLifecycleNotificationUrl($val)
+    {
+        $this->_propDict["lifecycleNotificationUrl"] = $val;
         return $this;
     }
     
