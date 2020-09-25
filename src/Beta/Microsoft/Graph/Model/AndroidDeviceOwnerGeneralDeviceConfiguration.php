@@ -1956,6 +1956,93 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the personalProfileAppsAllowInstallFromUnknownSources
+    * Indicates whether the user can install apps from unknown sources on the personal profile.
+    *
+    * @return bool The personalProfileAppsAllowInstallFromUnknownSources
+    */
+    public function getPersonalProfileAppsAllowInstallFromUnknownSources()
+    {
+        if (array_key_exists("personalProfileAppsAllowInstallFromUnknownSources", $this->_propDict)) {
+            return $this->_propDict["personalProfileAppsAllowInstallFromUnknownSources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the personalProfileAppsAllowInstallFromUnknownSources
+    * Indicates whether the user can install apps from unknown sources on the personal profile.
+    *
+    * @param bool $val The personalProfileAppsAllowInstallFromUnknownSources
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPersonalProfileAppsAllowInstallFromUnknownSources($val)
+    {
+        $this->_propDict["personalProfileAppsAllowInstallFromUnknownSources"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the personalProfileCameraBlocked
+    * Indicates whether to disable the use of the camera on the personal profile.
+    *
+    * @return bool The personalProfileCameraBlocked
+    */
+    public function getPersonalProfileCameraBlocked()
+    {
+        if (array_key_exists("personalProfileCameraBlocked", $this->_propDict)) {
+            return $this->_propDict["personalProfileCameraBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the personalProfileCameraBlocked
+    * Indicates whether to disable the use of the camera on the personal profile.
+    *
+    * @param bool $val The personalProfileCameraBlocked
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPersonalProfileCameraBlocked($val)
+    {
+        $this->_propDict["personalProfileCameraBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the personalProfileScreenCaptureBlocked
+    * Indicates whether to disable the capability to take screenshots on the personal profile.
+    *
+    * @return bool The personalProfileScreenCaptureBlocked
+    */
+    public function getPersonalProfileScreenCaptureBlocked()
+    {
+        if (array_key_exists("personalProfileScreenCaptureBlocked", $this->_propDict)) {
+            return $this->_propDict["personalProfileScreenCaptureBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the personalProfileScreenCaptureBlocked
+    * Indicates whether to disable the capability to take screenshots on the personal profile.
+    *
+    * @param bool $val The personalProfileScreenCaptureBlocked
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setPersonalProfileScreenCaptureBlocked($val)
+    {
+        $this->_propDict["personalProfileScreenCaptureBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the playStoreMode
     * Indicates the Play Store mode of the device.
     *
@@ -2570,6 +2657,329 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setWifiBlockEditPolicyDefinedConfigurations($val)
     {
         $this->_propDict["wifiBlockEditPolicyDefinedConfigurations"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordExpirationDays
+    * Indicates the number of days that a work profile password can be set before it expires and a new password will be required. Valid values 1 to 365
+    *
+    * @return int The workProfilePasswordExpirationDays
+    */
+    public function getWorkProfilePasswordExpirationDays()
+    {
+        if (array_key_exists("workProfilePasswordExpirationDays", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordExpirationDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordExpirationDays
+    * Indicates the number of days that a work profile password can be set before it expires and a new password will be required. Valid values 1 to 365
+    *
+    * @param int $val The workProfilePasswordExpirationDays
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordExpirationDays($val)
+    {
+        $this->_propDict["workProfilePasswordExpirationDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinimumLength
+    * Indicates the minimum length of the work profile password. Valid values 4 to 16
+    *
+    * @return int The workProfilePasswordMinimumLength
+    */
+    public function getWorkProfilePasswordMinimumLength()
+    {
+        if (array_key_exists("workProfilePasswordMinimumLength", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinimumLength"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinimumLength
+    * Indicates the minimum length of the work profile password. Valid values 4 to 16
+    *
+    * @param int $val The workProfilePasswordMinimumLength
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinimumLength($val)
+    {
+        $this->_propDict["workProfilePasswordMinimumLength"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinimumLetterCharacters
+    * Indicates the minimum number of letter characters required for the work profile password. Valid values 1 to 16
+    *
+    * @return int The workProfilePasswordMinimumLetterCharacters
+    */
+    public function getWorkProfilePasswordMinimumLetterCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinimumLetterCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinimumLetterCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinimumLetterCharacters
+    * Indicates the minimum number of letter characters required for the work profile password. Valid values 1 to 16
+    *
+    * @param int $val The workProfilePasswordMinimumLetterCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinimumLetterCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinimumLetterCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinimumLowerCaseCharacters
+    * Indicates the minimum number of lower-case characters required for the work profile password. Valid values 1 to 16
+    *
+    * @return int The workProfilePasswordMinimumLowerCaseCharacters
+    */
+    public function getWorkProfilePasswordMinimumLowerCaseCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinimumLowerCaseCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinimumLowerCaseCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinimumLowerCaseCharacters
+    * Indicates the minimum number of lower-case characters required for the work profile password. Valid values 1 to 16
+    *
+    * @param int $val The workProfilePasswordMinimumLowerCaseCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinimumLowerCaseCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinimumLowerCaseCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinimumNonLetterCharacters
+    * Indicates the minimum number of non-letter characters required for the work profile password. Valid values 1 to 16
+    *
+    * @return int The workProfilePasswordMinimumNonLetterCharacters
+    */
+    public function getWorkProfilePasswordMinimumNonLetterCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinimumNonLetterCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinimumNonLetterCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinimumNonLetterCharacters
+    * Indicates the minimum number of non-letter characters required for the work profile password. Valid values 1 to 16
+    *
+    * @param int $val The workProfilePasswordMinimumNonLetterCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinimumNonLetterCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinimumNonLetterCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinimumNumericCharacters
+    * Indicates the minimum number of numeric characters required for the work profile password. Valid values 1 to 16
+    *
+    * @return int The workProfilePasswordMinimumNumericCharacters
+    */
+    public function getWorkProfilePasswordMinimumNumericCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinimumNumericCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinimumNumericCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinimumNumericCharacters
+    * Indicates the minimum number of numeric characters required for the work profile password. Valid values 1 to 16
+    *
+    * @param int $val The workProfilePasswordMinimumNumericCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinimumNumericCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinimumNumericCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinimumSymbolCharacters
+    * Indicates the minimum number of symbol characters required for the work profile password. Valid values 1 to 16
+    *
+    * @return int The workProfilePasswordMinimumSymbolCharacters
+    */
+    public function getWorkProfilePasswordMinimumSymbolCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinimumSymbolCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinimumSymbolCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinimumSymbolCharacters
+    * Indicates the minimum number of symbol characters required for the work profile password. Valid values 1 to 16
+    *
+    * @param int $val The workProfilePasswordMinimumSymbolCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinimumSymbolCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinimumSymbolCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordMinimumUpperCaseCharacters
+    * Indicates the minimum number of upper-case letter characters required for the work profile password. Valid values 1 to 16
+    *
+    * @return int The workProfilePasswordMinimumUpperCaseCharacters
+    */
+    public function getWorkProfilePasswordMinimumUpperCaseCharacters()
+    {
+        if (array_key_exists("workProfilePasswordMinimumUpperCaseCharacters", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordMinimumUpperCaseCharacters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordMinimumUpperCaseCharacters
+    * Indicates the minimum number of upper-case letter characters required for the work profile password. Valid values 1 to 16
+    *
+    * @param int $val The workProfilePasswordMinimumUpperCaseCharacters
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordMinimumUpperCaseCharacters($val)
+    {
+        $this->_propDict["workProfilePasswordMinimumUpperCaseCharacters"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordPreviousPasswordCountToBlock
+    * Indicates the length of the work profile password history, where the user will not be able to enter a new password that is the same as any password in the history. Valid values 0 to 24
+    *
+    * @return int The workProfilePasswordPreviousPasswordCountToBlock
+    */
+    public function getWorkProfilePasswordPreviousPasswordCountToBlock()
+    {
+        if (array_key_exists("workProfilePasswordPreviousPasswordCountToBlock", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordPreviousPasswordCountToBlock"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordPreviousPasswordCountToBlock
+    * Indicates the length of the work profile password history, where the user will not be able to enter a new password that is the same as any password in the history. Valid values 0 to 24
+    *
+    * @param int $val The workProfilePasswordPreviousPasswordCountToBlock
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordPreviousPasswordCountToBlock($val)
+    {
+        $this->_propDict["workProfilePasswordPreviousPasswordCountToBlock"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordRequiredType
+    * Indicates the minimum password quality required on the work profile password.
+    *
+    * @return AndroidDeviceOwnerRequiredPasswordType The workProfilePasswordRequiredType
+    */
+    public function getWorkProfilePasswordRequiredType()
+    {
+        if (array_key_exists("workProfilePasswordRequiredType", $this->_propDict)) {
+            if (is_a($this->_propDict["workProfilePasswordRequiredType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
+                return $this->_propDict["workProfilePasswordRequiredType"];
+            } else {
+                $this->_propDict["workProfilePasswordRequiredType"] = new AndroidDeviceOwnerRequiredPasswordType($this->_propDict["workProfilePasswordRequiredType"]);
+                return $this->_propDict["workProfilePasswordRequiredType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the workProfilePasswordRequiredType
+    * Indicates the minimum password quality required on the work profile password.
+    *
+    * @param AndroidDeviceOwnerRequiredPasswordType $val The workProfilePasswordRequiredType
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordRequiredType($val)
+    {
+        $this->_propDict["workProfilePasswordRequiredType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset
+    * Indicates the number of times a user can enter an incorrect work profile password before the device is wiped. Valid values 4 to 11
+    *
+    * @return int The workProfilePasswordSignInFailureCountBeforeFactoryReset
+    */
+    public function getWorkProfilePasswordSignInFailureCountBeforeFactoryReset()
+    {
+        if (array_key_exists("workProfilePasswordSignInFailureCountBeforeFactoryReset", $this->_propDict)) {
+            return $this->_propDict["workProfilePasswordSignInFailureCountBeforeFactoryReset"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset
+    * Indicates the number of times a user can enter an incorrect work profile password before the device is wiped. Valid values 4 to 11
+    *
+    * @param int $val The workProfilePasswordSignInFailureCountBeforeFactoryReset
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setWorkProfilePasswordSignInFailureCountBeforeFactoryReset($val)
+    {
+        $this->_propDict["workProfilePasswordSignInFailureCountBeforeFactoryReset"] = intval($val);
         return $this;
     }
     

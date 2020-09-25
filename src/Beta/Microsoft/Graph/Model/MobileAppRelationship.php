@@ -82,4 +82,37 @@ class MobileAppRelationship extends Entity
         return $this;
     }
     
+    /**
+    * Gets the targetType
+    * The type of relationship indicating whether the target is a parent or child.
+    *
+    * @return MobileAppRelationshipType The targetType
+    */
+    public function getTargetType()
+    {
+        if (array_key_exists("targetType", $this->_propDict)) {
+            if (is_a($this->_propDict["targetType"], "Beta\Microsoft\Graph\Model\MobileAppRelationshipType")) {
+                return $this->_propDict["targetType"];
+            } else {
+                $this->_propDict["targetType"] = new MobileAppRelationshipType($this->_propDict["targetType"]);
+                return $this->_propDict["targetType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the targetType
+    * The type of relationship indicating whether the target is a parent or child.
+    *
+    * @param MobileAppRelationshipType $val The targetType
+    *
+    * @return MobileAppRelationship
+    */
+    public function setTargetType($val)
+    {
+        $this->_propDict["targetType"] = $val;
+        return $this;
+    }
+    
 }

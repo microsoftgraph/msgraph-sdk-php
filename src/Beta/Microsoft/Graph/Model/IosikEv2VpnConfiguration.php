@@ -451,6 +451,35 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     }
     
     /**
+    * Gets the mtuSizeInBytes
+    * Maximum transmission unit. Valid values 1 to 65536
+    *
+    * @return int The mtuSizeInBytes
+    */
+    public function getMtuSizeInBytes()
+    {
+        if (array_key_exists("mtuSizeInBytes", $this->_propDict)) {
+            return $this->_propDict["mtuSizeInBytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the mtuSizeInBytes
+    * Maximum transmission unit. Valid values 1 to 65536
+    *
+    * @param int $val The mtuSizeInBytes
+    *
+    * @return IosikEv2VpnConfiguration
+    */
+    public function setMtuSizeInBytes($val)
+    {
+        $this->_propDict["mtuSizeInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the remoteIdentifier
     * Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
     *

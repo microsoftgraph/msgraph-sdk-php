@@ -79,4 +79,35 @@ class SettingSource extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the sourceType
+    *
+    * @return SettingSourceType The sourceType
+    */
+    public function getSourceType()
+    {
+        if (array_key_exists("sourceType", $this->_propDict)) {
+            if (is_a($this->_propDict["sourceType"], "Beta\Microsoft\Graph\Model\SettingSourceType")) {
+                return $this->_propDict["sourceType"];
+            } else {
+                $this->_propDict["sourceType"] = new SettingSourceType($this->_propDict["sourceType"]);
+                return $this->_propDict["sourceType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sourceType
+    *
+    * @param SettingSourceType $val The value to assign to the sourceType
+    *
+    * @return SettingSource The SettingSource
+    */
+    public function setSourceType($val)
+    {
+        $this->_propDict["sourceType"] = $val;
+         return $this;
+    }
 }

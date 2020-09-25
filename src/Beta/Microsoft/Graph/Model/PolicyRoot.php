@@ -56,6 +56,37 @@ class PolicyRoot extends Entity
     }
     
     /**
+    * Gets the b2cAuthenticationMethodsPolicy
+    *
+    * @return B2cAuthenticationMethodsPolicy The b2cAuthenticationMethodsPolicy
+    */
+    public function getB2cAuthenticationMethodsPolicy()
+    {
+        if (array_key_exists("b2cAuthenticationMethodsPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["b2cAuthenticationMethodsPolicy"], "Beta\Microsoft\Graph\Model\B2cAuthenticationMethodsPolicy")) {
+                return $this->_propDict["b2cAuthenticationMethodsPolicy"];
+            } else {
+                $this->_propDict["b2cAuthenticationMethodsPolicy"] = new B2cAuthenticationMethodsPolicy($this->_propDict["b2cAuthenticationMethodsPolicy"]);
+                return $this->_propDict["b2cAuthenticationMethodsPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the b2cAuthenticationMethodsPolicy
+    *
+    * @param B2cAuthenticationMethodsPolicy $val The b2cAuthenticationMethodsPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setB2cAuthenticationMethodsPolicy($val)
+    {
+        $this->_propDict["b2cAuthenticationMethodsPolicy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deviceRegistrationPolicy
     *
     * @return DeviceRegistrationPolicy The deviceRegistrationPolicy

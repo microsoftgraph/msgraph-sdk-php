@@ -364,6 +364,35 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     }
     
     /**
+    * Gets the perAppVPNProfileId
+    * Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
+    *
+    * @return string The perAppVPNProfileId
+    */
+    public function getPerAppVPNProfileId()
+    {
+        if (array_key_exists("perAppVPNProfileId", $this->_propDict)) {
+            return $this->_propDict["perAppVPNProfileId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the perAppVPNProfileId
+    * Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
+    *
+    * @param string $val The perAppVPNProfileId
+    *
+    * @return IosEasEmailProfileConfiguration
+    */
+    public function setPerAppVPNProfileId($val)
+    {
+        $this->_propDict["perAppVPNProfileId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the requireSmime
     * Indicates whether or not to use S/MIME certificate.
     *

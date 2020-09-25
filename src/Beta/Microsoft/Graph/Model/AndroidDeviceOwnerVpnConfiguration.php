@@ -116,6 +116,35 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     }
     
     /**
+    * Gets the microsoftTunnelSiteId
+    * Microsoft Tunnel site ID.
+    *
+    * @return string The microsoftTunnelSiteId
+    */
+    public function getMicrosoftTunnelSiteId()
+    {
+        if (array_key_exists("microsoftTunnelSiteId", $this->_propDict)) {
+            return $this->_propDict["microsoftTunnelSiteId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftTunnelSiteId
+    * Microsoft Tunnel site ID.
+    *
+    * @param string $val The microsoftTunnelSiteId
+    *
+    * @return AndroidDeviceOwnerVpnConfiguration
+    */
+    public function setMicrosoftTunnelSiteId($val)
+    {
+        $this->_propDict["microsoftTunnelSiteId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the proxyServer
     * Proxy server.
     *
@@ -145,6 +174,36 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     public function setProxyServer($val)
     {
         $this->_propDict["proxyServer"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the targetedMobileApps
+    * Targeted mobile apps. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The targetedMobileApps
+     */
+    public function getTargetedMobileApps()
+    {
+        if (array_key_exists("targetedMobileApps", $this->_propDict)) {
+           return $this->_propDict["targetedMobileApps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the targetedMobileApps
+    * Targeted mobile apps. This collection can contain a maximum of 500 elements.
+    *
+    * @param AppListItem $val The targetedMobileApps
+    *
+    * @return AndroidDeviceOwnerVpnConfiguration
+    */
+    public function setTargetedMobileApps($val)
+    {
+		$this->_propDict["targetedMobileApps"] = $val;
         return $this;
     }
     

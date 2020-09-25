@@ -31,4 +31,5 @@ class KeySize extends Enum
     */
     const SIZE1024 = "size1024";
     const SIZE2048 = "size2048";
+    const SIZE4096 = "size4096";
 }

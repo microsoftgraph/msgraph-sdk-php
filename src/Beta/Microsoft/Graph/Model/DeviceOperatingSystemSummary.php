@@ -192,6 +192,34 @@ class DeviceOperatingSystemSummary extends Entity
         return $this;
     }
     /**
+    * Gets the aospUserlessCount
+    * Number of AOSP dedicated Android devices. Valid values 0 to 2147483647
+    *
+    * @return int The aospUserlessCount
+    */
+    public function getAospUserlessCount()
+    {
+        if (array_key_exists("aospUserlessCount", $this->_propDict)) {
+            return $this->_propDict["aospUserlessCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the aospUserlessCount
+    * Number of AOSP dedicated Android devices. Valid values 0 to 2147483647
+    *
+    * @param int $val The value of the aospUserlessCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setAospUserlessCount($val)
+    {
+        $this->_propDict["aospUserlessCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the configMgrDeviceCount
     * Number of ConfigMgr managed devices.
     *

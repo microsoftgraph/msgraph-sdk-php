@@ -24,6 +24,65 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class SecurityBaselineSettingState extends Entity
 {
+
+     /** 
+     * Gets the contributingPolicies
+    * The policies that contribute to this setting instance
+     *
+     * @return array The contributingPolicies
+     */
+    public function getContributingPolicies()
+    {
+        if (array_key_exists("contributingPolicies", $this->_propDict)) {
+           return $this->_propDict["contributingPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the contributingPolicies
+    * The policies that contribute to this setting instance
+    *
+    * @param SecurityBaselineContributingPolicy $val The contributingPolicies
+    *
+    * @return SecurityBaselineSettingState
+    */
+    public function setContributingPolicies($val)
+    {
+		$this->_propDict["contributingPolicies"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the errorCode
+    * The error code if the setting is in error state
+    *
+    * @return string The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the errorCode
+    * The error code if the setting is in error state
+    *
+    * @param string $val The errorCode
+    *
+    * @return SecurityBaselineSettingState
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the settingCategoryId
     * The setting category id which this setting belongs to
@@ -54,6 +113,64 @@ class SecurityBaselineSettingState extends Entity
     }
     
     /**
+    * Gets the settingCategoryName
+    * The setting category name which this setting belongs to
+    *
+    * @return string The settingCategoryName
+    */
+    public function getSettingCategoryName()
+    {
+        if (array_key_exists("settingCategoryName", $this->_propDict)) {
+            return $this->_propDict["settingCategoryName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingCategoryName
+    * The setting category name which this setting belongs to
+    *
+    * @param string $val The settingCategoryName
+    *
+    * @return SecurityBaselineSettingState
+    */
+    public function setSettingCategoryName($val)
+    {
+        $this->_propDict["settingCategoryName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settingId
+    * The setting id guid
+    *
+    * @return string The settingId
+    */
+    public function getSettingId()
+    {
+        if (array_key_exists("settingId", $this->_propDict)) {
+            return $this->_propDict["settingId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the settingId
+    * The setting id guid
+    *
+    * @param string $val The settingId
+    *
+    * @return SecurityBaselineSettingState
+    */
+    public function setSettingId($val)
+    {
+        $this->_propDict["settingId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the settingName
     * The setting name that is being reported
     *
@@ -79,6 +196,36 @@ class SecurityBaselineSettingState extends Entity
     public function setSettingName($val)
     {
         $this->_propDict["settingName"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the sourcePolicies
+    * The policies that contribute to this setting instance
+     *
+     * @return array The sourcePolicies
+     */
+    public function getSourcePolicies()
+    {
+        if (array_key_exists("sourcePolicies", $this->_propDict)) {
+           return $this->_propDict["sourcePolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sourcePolicies
+    * The policies that contribute to this setting instance
+    *
+    * @param SettingSource $val The sourcePolicies
+    *
+    * @return SecurityBaselineSettingState
+    */
+    public function setSourcePolicies($val)
+    {
+		$this->_propDict["sourcePolicies"] = $val;
         return $this;
     }
     

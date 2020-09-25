@@ -190,6 +190,39 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     }
     
     /**
+    * Gets the windowsHomeSkuRestriction
+    * Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
+    *
+    * @return DeviceEnrollmentPlatformRestriction The windowsHomeSkuRestriction
+    */
+    public function getWindowsHomeSkuRestriction()
+    {
+        if (array_key_exists("windowsHomeSkuRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsHomeSkuRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+                return $this->_propDict["windowsHomeSkuRestriction"];
+            } else {
+                $this->_propDict["windowsHomeSkuRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["windowsHomeSkuRestriction"]);
+                return $this->_propDict["windowsHomeSkuRestriction"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the windowsHomeSkuRestriction
+    * Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
+    *
+    * @param DeviceEnrollmentPlatformRestriction $val The windowsHomeSkuRestriction
+    *
+    * @return DeviceEnrollmentPlatformRestrictionsConfiguration
+    */
+    public function setWindowsHomeSkuRestriction($val)
+    {
+        $this->_propDict["windowsHomeSkuRestriction"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the windowsMobileRestriction
     * Not yet documented
     *

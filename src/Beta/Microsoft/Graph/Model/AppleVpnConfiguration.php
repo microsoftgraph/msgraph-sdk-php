@@ -180,6 +180,35 @@ class AppleVpnConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the disableOnDemandUserOverride
+    * Toggle to prevent user from disabling automatic VPN in the Settings app
+    *
+    * @return bool The disableOnDemandUserOverride
+    */
+    public function getDisableOnDemandUserOverride()
+    {
+        if (array_key_exists("disableOnDemandUserOverride", $this->_propDict)) {
+            return $this->_propDict["disableOnDemandUserOverride"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disableOnDemandUserOverride
+    * Toggle to prevent user from disabling automatic VPN in the Settings app
+    *
+    * @param bool $val The disableOnDemandUserOverride
+    *
+    * @return AppleVpnConfiguration
+    */
+    public function setDisableOnDemandUserOverride($val)
+    {
+        $this->_propDict["disableOnDemandUserOverride"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the enablePerApp
     * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
     *
@@ -234,6 +263,35 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function setEnableSplitTunneling($val)
     {
         $this->_propDict["enableSplitTunneling"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the excludedDomains
+    * Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
+    *
+    * @return string The excludedDomains
+    */
+    public function getExcludedDomains()
+    {
+        if (array_key_exists("excludedDomains", $this->_propDict)) {
+            return $this->_propDict["excludedDomains"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the excludedDomains
+    * Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
+    *
+    * @param string $val The excludedDomains
+    *
+    * @return AppleVpnConfiguration
+    */
+    public function setExcludedDomains($val)
+    {
+        $this->_propDict["excludedDomains"] = $val;
         return $this;
     }
     

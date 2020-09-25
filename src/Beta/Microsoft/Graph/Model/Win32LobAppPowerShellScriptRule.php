@@ -119,7 +119,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
 
     /**
     * Gets the operationType
-    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
+    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
     *
     * @return Win32LobAppPowerShellScriptRuleOperationType The operationType
     */
@@ -138,7 +138,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
 
     /**
     * Sets the operationType
-    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
+    * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
     *
     * @param Win32LobAppPowerShellScriptRuleOperationType $val The value to assign to the operationType
     *
@@ -152,7 +152,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
 
     /**
     * Gets the operator
-    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
+    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @return Win32LobAppRuleOperator The operator
     */
@@ -171,7 +171,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
 
     /**
     * Sets the operator
-    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
+    * The script output operator. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @param Win32LobAppRuleOperator $val The value to assign to the operator
     *

@@ -91,7 +91,7 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule
 
     /**
     * Gets the productVersionOperator
-    * The product version comparison operator.
+    * The product version comparison operator. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @return Win32LobAppRuleOperator The productVersionOperator
     */
@@ -110,7 +110,7 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule
 
     /**
     * Sets the productVersionOperator
-    * The product version comparison operator.
+    * The product version comparison operator. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @param Win32LobAppRuleOperator $val The value to assign to the productVersionOperator
     *

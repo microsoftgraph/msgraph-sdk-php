@@ -109,6 +109,37 @@ class ExternalConnection extends Entity
         return $this;
     }
     
+    /**
+    * Gets the state
+    *
+    * @return ConnectionState The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ConnectionState")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new ConnectionState($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the state
+    *
+    * @param ConnectionState $val The state
+    *
+    * @return ExternalConnection
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the groups
