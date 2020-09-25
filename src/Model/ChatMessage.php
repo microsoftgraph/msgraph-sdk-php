@@ -249,8 +249,41 @@ class ChatMessage extends Entity
     }
     
     /**
+    * Gets the lastEditedDateTime
+    * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Microsoft Teams UI. If no edits are made the value is null.
+    *
+    * @return \DateTime The lastEditedDateTime
+    */
+    public function getLastEditedDateTime()
+    {
+        if (array_key_exists("lastEditedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastEditedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastEditedDateTime"];
+            } else {
+                $this->_propDict["lastEditedDateTime"] = new \DateTime($this->_propDict["lastEditedDateTime"]);
+                return $this->_propDict["lastEditedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastEditedDateTime
+    * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Microsoft Teams UI. If no edits are made the value is null.
+    *
+    * @param \DateTime $val The lastEditedDateTime
+    *
+    * @return ChatMessage
+    */
+    public function setLastEditedDateTime($val)
+    {
+        $this->_propDict["lastEditedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
-    * Read only. Timestamp of when the chat message is created or edited, including when a reply is made (if it's a root chat message in a channel) or a reaction is added or removed.
+    * Read only. Timestamp when the chat message is created (initial setting) or edited, including when a reaction is added or removed.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -269,7 +302,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Read only. Timestamp of when the chat message is created or edited, including when a reply is made (if it's a root chat message in a channel) or a reaction is added or removed.
+    * Read only. Timestamp when the chat message is created (initial setting) or edited, including when a reaction is added or removed.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
