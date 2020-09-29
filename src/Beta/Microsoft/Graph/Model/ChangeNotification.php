@@ -87,6 +87,7 @@ class ChangeNotification extends Entity
 
     /**
     * Gets the encryptedContent
+    * (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
     *
     * @return ChangeNotificationEncryptedContent The encryptedContent
     */
@@ -105,6 +106,7 @@ class ChangeNotification extends Entity
 
     /**
     * Sets the encryptedContent
+    * (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
     *
     * @param ChangeNotificationEncryptedContent $val The value to assign to the encryptedContent
     *

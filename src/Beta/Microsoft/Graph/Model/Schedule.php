@@ -232,6 +232,37 @@ class Schedule extends Entity
     }
     
     /**
+    * Gets the timeClockSettings
+    *
+    * @return TimeClockSettings The timeClockSettings
+    */
+    public function getTimeClockSettings()
+    {
+        if (array_key_exists("timeClockSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["timeClockSettings"], "Beta\Microsoft\Graph\Model\TimeClockSettings")) {
+                return $this->_propDict["timeClockSettings"];
+            } else {
+                $this->_propDict["timeClockSettings"] = new TimeClockSettings($this->_propDict["timeClockSettings"]);
+                return $this->_propDict["timeClockSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the timeClockSettings
+    *
+    * @param TimeClockSettings $val The timeClockSettings
+    *
+    * @return Schedule
+    */
+    public function setTimeClockSettings($val)
+    {
+        $this->_propDict["timeClockSettings"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the timeOffRequestsEnabled
     * Indicates whether time off requests are enabled for the schedule.
     *
@@ -485,6 +516,34 @@ class Schedule extends Entity
     public function setSwapShiftsChangeRequests($val)
     {
 		$this->_propDict["swapShiftsChangeRequests"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the timeCards
+     *
+     * @return array The timeCards
+     */
+    public function getTimeCards()
+    {
+        if (array_key_exists("timeCards", $this->_propDict)) {
+           return $this->_propDict["timeCards"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the timeCards
+    *
+    * @param TimeCard $val The timeCards
+    *
+    * @return Schedule
+    */
+    public function setTimeCards($val)
+    {
+		$this->_propDict["timeCards"] = $val;
         return $this;
     }
     

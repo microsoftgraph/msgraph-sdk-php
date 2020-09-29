@@ -83,6 +83,35 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     }
     
     /**
+    * Gets the microsoftTunnelSiteId
+    * Microsoft Tunnel site ID.
+    *
+    * @return string The microsoftTunnelSiteId
+    */
+    public function getMicrosoftTunnelSiteId()
+    {
+        if (array_key_exists("microsoftTunnelSiteId", $this->_propDict)) {
+            return $this->_propDict["microsoftTunnelSiteId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftTunnelSiteId
+    * Microsoft Tunnel site ID.
+    *
+    * @param string $val The microsoftTunnelSiteId
+    *
+    * @return IosVpnConfiguration
+    */
+    public function setMicrosoftTunnelSiteId($val)
+    {
+        $this->_propDict["microsoftTunnelSiteId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the strictEnforcement
     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
     *

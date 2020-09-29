@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicySettingMapping extends Entity
 {
     /**
+    * Gets the admxSettingDefinitionId
+    * Admx Group Policy Id
+    *
+    * @return string The admxSettingDefinitionId
+    */
+    public function getAdmxSettingDefinitionId()
+    {
+        if (array_key_exists("admxSettingDefinitionId", $this->_propDict)) {
+            return $this->_propDict["admxSettingDefinitionId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the admxSettingDefinitionId
+    * Admx Group Policy Id
+    *
+    * @param string $val The admxSettingDefinitionId
+    *
+    * @return GroupPolicySettingMapping
+    */
+    public function setAdmxSettingDefinitionId($val)
+    {
+        $this->_propDict["admxSettingDefinitionId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the childIdList
     * List of Child Ids of the group policy setting.
     *

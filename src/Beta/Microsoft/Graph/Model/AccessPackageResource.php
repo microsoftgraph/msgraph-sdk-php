@@ -82,6 +82,34 @@ class AccessPackageResource extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the attributes
+     *
+     * @return array The attributes
+     */
+    public function getAttributes()
+    {
+        if (array_key_exists("attributes", $this->_propDict)) {
+           return $this->_propDict["attributes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the attributes
+    *
+    * @param AccessPackageResourceAttribute $val The attributes
+    *
+    * @return AccessPackageResource
+    */
+    public function setAttributes($val)
+    {
+		$this->_propDict["attributes"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the description
     *

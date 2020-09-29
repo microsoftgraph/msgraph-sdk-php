@@ -35,4 +35,6 @@ class UserExperienceAnalyticsOperatingSystemRestartCategory extends Enum
     const BLUE_SCREEN = "blueScreen";
     const SHUTDOWN_WITH_UPDATE = "shutdownWithUpdate";
     const SHUTDOWN_WITHOUT_UPDATE = "shutdownWithoutUpdate";
+    const LONG_POWER_BUTTON_PRESS = "longPowerButtonPress";
+    const BOOT_ERROR = "bootError";
 }

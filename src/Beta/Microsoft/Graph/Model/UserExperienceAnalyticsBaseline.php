@@ -181,4 +181,37 @@ class UserExperienceAnalyticsBaseline extends Entity
         return $this;
     }
     
+    /**
+    * Gets the rebootAnalyticsMetrics
+    * The user experience analytics reboot analytics metrics.
+    *
+    * @return UserExperienceAnalyticsCategory The rebootAnalyticsMetrics
+    */
+    public function getRebootAnalyticsMetrics()
+    {
+        if (array_key_exists("rebootAnalyticsMetrics", $this->_propDict)) {
+            if (is_a($this->_propDict["rebootAnalyticsMetrics"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
+                return $this->_propDict["rebootAnalyticsMetrics"];
+            } else {
+                $this->_propDict["rebootAnalyticsMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["rebootAnalyticsMetrics"]);
+                return $this->_propDict["rebootAnalyticsMetrics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the rebootAnalyticsMetrics
+    * The user experience analytics reboot analytics metrics.
+    *
+    * @param UserExperienceAnalyticsCategory $val The rebootAnalyticsMetrics
+    *
+    * @return UserExperienceAnalyticsBaseline
+    */
+    public function setRebootAnalyticsMetrics($val)
+    {
+        $this->_propDict["rebootAnalyticsMetrics"] = $val;
+        return $this;
+    }
+    
 }

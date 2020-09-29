@@ -83,6 +83,35 @@ class IosWiFiConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the disableMacAddressRandomization
+    * If set to true, forces devices connecting using this Wi-Fi profile to present their actual Wi-Fi MAC address instead of a random MAC address. Applies to iOS 14 and later.
+    *
+    * @return bool The disableMacAddressRandomization
+    */
+    public function getDisableMacAddressRandomization()
+    {
+        if (array_key_exists("disableMacAddressRandomization", $this->_propDict)) {
+            return $this->_propDict["disableMacAddressRandomization"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disableMacAddressRandomization
+    * If set to true, forces devices connecting using this Wi-Fi profile to present their actual Wi-Fi MAC address instead of a random MAC address. Applies to iOS 14 and later.
+    *
+    * @param bool $val The disableMacAddressRandomization
+    *
+    * @return IosWiFiConfiguration
+    */
+    public function setDisableMacAddressRandomization($val)
+    {
+        $this->_propDict["disableMacAddressRandomization"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the networkName
     * Network Name
     *

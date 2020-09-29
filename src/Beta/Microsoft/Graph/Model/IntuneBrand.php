@@ -169,8 +169,64 @@ class IntuneBrand extends Entity
         return $this;
     }
     /**
+    * Gets the customCanSeePrivacyMessage
+    * The custom privacy message used to explain what the organization can see and do on managed devices.
+    *
+    * @return string The customCanSeePrivacyMessage
+    */
+    public function getCustomCanSeePrivacyMessage()
+    {
+        if (array_key_exists("customCanSeePrivacyMessage", $this->_propDict)) {
+            return $this->_propDict["customCanSeePrivacyMessage"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customCanSeePrivacyMessage
+    * The custom privacy message used to explain what the organization can see and do on managed devices.
+    *
+    * @param string $val The value of the customCanSeePrivacyMessage
+    *
+    * @return IntuneBrand
+    */
+    public function setCustomCanSeePrivacyMessage($val)
+    {
+        $this->_propDict["customCanSeePrivacyMessage"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the customCantSeePrivacyMessage
+    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+    *
+    * @return string The customCantSeePrivacyMessage
+    */
+    public function getCustomCantSeePrivacyMessage()
+    {
+        if (array_key_exists("customCantSeePrivacyMessage", $this->_propDict)) {
+            return $this->_propDict["customCantSeePrivacyMessage"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customCantSeePrivacyMessage
+    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+    *
+    * @param string $val The value of the customCantSeePrivacyMessage
+    *
+    * @return IntuneBrand
+    */
+    public function setCustomCantSeePrivacyMessage($val)
+    {
+        $this->_propDict["customCantSeePrivacyMessage"] = $val;
+        return $this;
+    }
+    /**
     * Gets the customPrivacyMessage
-    * Custom privacy message.
+    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
     *
     * @return string The customPrivacyMessage
     */
@@ -185,7 +241,7 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the customPrivacyMessage
-    * Custom privacy message.
+    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
     *
     * @param string $val The value of the customPrivacyMessage
     *
@@ -228,6 +284,34 @@ class IntuneBrand extends Entity
     {
         $this->_propDict["darkBackgroundLogo"] = $val;
          return $this;
+    }
+    /**
+    * Gets the disableClientTelemetry
+    * Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
+    *
+    * @return bool The disableClientTelemetry
+    */
+    public function getDisableClientTelemetry()
+    {
+        if (array_key_exists("disableClientTelemetry", $this->_propDict)) {
+            return $this->_propDict["disableClientTelemetry"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the disableClientTelemetry
+    * Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
+    *
+    * @param bool $val The value of the disableClientTelemetry
+    *
+    * @return IntuneBrand
+    */
+    public function setDisableClientTelemetry($val)
+    {
+        $this->_propDict["disableClientTelemetry"] = $val;
+        return $this;
     }
     /**
     * Gets the displayName

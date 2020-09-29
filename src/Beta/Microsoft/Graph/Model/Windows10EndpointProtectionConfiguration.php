@@ -3999,6 +3999,35 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the firewallIPSecExemptionsNone
+    * Configures IPSec exemptions to no exemptions
+    *
+    * @return bool The firewallIPSecExemptionsNone
+    */
+    public function getFirewallIPSecExemptionsNone()
+    {
+        if (array_key_exists("firewallIPSecExemptionsNone", $this->_propDict)) {
+            return $this->_propDict["firewallIPSecExemptionsNone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the firewallIPSecExemptionsNone
+    * Configures IPSec exemptions to no exemptions
+    *
+    * @param bool $val The firewallIPSecExemptionsNone
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setFirewallIPSecExemptionsNone($val)
+    {
+        $this->_propDict["firewallIPSecExemptionsNone"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the firewallMergeKeyingModuleSettings
     * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
     *

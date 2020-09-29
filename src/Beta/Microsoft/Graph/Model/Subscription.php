@@ -142,6 +142,7 @@ class Subscription extends Entity
     
     /**
     * Gets the encryptionCertificate
+    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
     *
     * @return string The encryptionCertificate
     */
@@ -156,6 +157,7 @@ class Subscription extends Entity
     
     /**
     * Sets the encryptionCertificate
+    * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
     *
     * @param string $val The encryptionCertificate
     *
@@ -169,6 +171,7 @@ class Subscription extends Entity
     
     /**
     * Gets the encryptionCertificateId
+    * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
     *
     * @return string The encryptionCertificateId
     */
@@ -183,6 +186,7 @@ class Subscription extends Entity
     
     /**
     * Sets the encryptionCertificateId
+    * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
     *
     * @param string $val The encryptionCertificateId
     *
@@ -256,6 +260,7 @@ class Subscription extends Entity
     
     /**
     * Gets the includeResourceData
+    * When set to true, change notifications include resource data (such as content of a chat message). Optional.
     *
     * @return bool The includeResourceData
     */
@@ -270,6 +275,7 @@ class Subscription extends Entity
     
     /**
     * Sets the includeResourceData
+    * When set to true, change notifications include resource data (such as content of a chat message). Optional.
     *
     * @param bool $val The includeResourceData
     *
@@ -283,7 +289,6 @@ class Subscription extends Entity
     
     /**
     * Gets the latestSupportedTlsVersion
-    * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
     * @return string The latestSupportedTlsVersion
     */
@@ -298,7 +303,6 @@ class Subscription extends Entity
     
     /**
     * Sets the latestSupportedTlsVersion
-    * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
     *
     * @param string $val The latestSupportedTlsVersion
     *

@@ -26,6 +26,7 @@ class ScopedRoleMembership extends Entity
 {
     /**
     * Gets the administrativeUnitId
+    * Unique identifier for the administrative unit that the directory role is scoped to
     *
     * @return string The administrativeUnitId
     */
@@ -40,6 +41,7 @@ class ScopedRoleMembership extends Entity
     
     /**
     * Sets the administrativeUnitId
+    * Unique identifier for the administrative unit that the directory role is scoped to
     *
     * @param string $val The administrativeUnitId
     *
@@ -53,6 +55,7 @@ class ScopedRoleMembership extends Entity
     
     /**
     * Gets the roleId
+    * Unique identifier for the directory role that the member is in.
     *
     * @return string The roleId
     */
@@ -67,6 +70,7 @@ class ScopedRoleMembership extends Entity
     
     /**
     * Sets the roleId
+    * Unique identifier for the directory role that the member is in.
     *
     * @param string $val The roleId
     *
@@ -80,6 +84,7 @@ class ScopedRoleMembership extends Entity
     
     /**
     * Gets the roleMemberInfo
+    * Role member identity information. Represents the user that is a member of this scoped-role.
     *
     * @return Identity The roleMemberInfo
     */
@@ -98,6 +103,7 @@ class ScopedRoleMembership extends Entity
     
     /**
     * Sets the roleMemberInfo
+    * Role member identity information. Represents the user that is a member of this scoped-role.
     *
     * @param Identity $val The roleMemberInfo
     *

@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AccessPackageAssignmentRequest extends Entity
 {
+
+     /** 
+     * Gets the answers
+     *
+     * @return array The answers
+     */
+    public function getAnswers()
+    {
+        if (array_key_exists("answers", $this->_propDict)) {
+           return $this->_propDict["answers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the answers
+    *
+    * @param AccessPackageAnswer $val The answers
+    *
+    * @return AccessPackageAssignmentRequest
+    */
+    public function setAnswers($val)
+    {
+		$this->_propDict["answers"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the completedDate
     *

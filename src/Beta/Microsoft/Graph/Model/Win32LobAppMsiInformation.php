@@ -26,7 +26,7 @@ class Win32LobAppMsiInformation extends Entity
 
     /**
     * Gets the packageType
-    * The MSI package type.
+    * The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
     *
     * @return Win32LobAppMsiPackageType The packageType
     */
@@ -45,7 +45,7 @@ class Win32LobAppMsiInformation extends Entity
 
     /**
     * Sets the packageType
-    * The MSI package type.
+    * The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
     *
     * @param Win32LobAppMsiPackageType $val The value to assign to the packageType
     *

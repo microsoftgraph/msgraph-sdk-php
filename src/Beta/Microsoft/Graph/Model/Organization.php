@@ -741,31 +741,34 @@ class Organization extends DirectoryObject
         return $this;
     }
     
-
-     /** 
-     * Gets the brandings
-     *
-     * @return array The brandings
-     */
-    public function getBrandings()
+    /**
+    * Gets the branding
+    *
+    * @return OrganizationalBranding The branding
+    */
+    public function getBranding()
     {
-        if (array_key_exists("brandings", $this->_propDict)) {
-           return $this->_propDict["brandings"];
-        } else {
-            return null;
+        if (array_key_exists("branding", $this->_propDict)) {
+            if (is_a($this->_propDict["branding"], "Beta\Microsoft\Graph\Model\OrganizationalBranding")) {
+                return $this->_propDict["branding"];
+            } else {
+                $this->_propDict["branding"] = new OrganizationalBranding($this->_propDict["branding"]);
+                return $this->_propDict["branding"];
+            }
         }
+        return null;
     }
     
-    /** 
-    * Sets the brandings
+    /**
+    * Sets the branding
     *
-    * @param OrganizationalBranding $val The brandings
+    * @param OrganizationalBranding $val The branding
     *
     * @return Organization
     */
-    public function setBrandings($val)
+    public function setBranding($val)
     {
-		$this->_propDict["brandings"] = $val;
+        $this->_propDict["branding"] = $val;
         return $this;
     }
     

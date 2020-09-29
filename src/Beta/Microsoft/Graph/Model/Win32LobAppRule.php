@@ -26,7 +26,7 @@ class Win32LobAppRule extends Entity
 
     /**
     * Gets the ruleType
-    * The rule type indicating the purpose of the rule.
+    * The rule type indicating the purpose of the rule. Possible values are: detection, requirement.
     *
     * @return Win32LobAppRuleType The ruleType
     */
@@ -45,7 +45,7 @@ class Win32LobAppRule extends Entity
 
     /**
     * Sets the ruleType
-    * The rule type indicating the purpose of the rule.
+    * The rule type indicating the purpose of the rule. Possible values are: detection, requirement.
     *
     * @param Win32LobAppRuleType $val The value to assign to the ruleType
     *

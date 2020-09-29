@@ -119,7 +119,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Gets the operationType
-    * The file system operation type.
+    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
     *
     * @return Win32LobAppFileSystemOperationType The operationType
     */
@@ -138,7 +138,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Sets the operationType
-    * The file system operation type.
+    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
     *
     * @param Win32LobAppFileSystemOperationType $val The value to assign to the operationType
     *
@@ -152,7 +152,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Gets the operator
-    * The operator for file or folder detection.
+    * The operator for file or folder detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @return Win32LobAppRuleOperator The operator
     */
@@ -171,7 +171,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Sets the operator
-    * The operator for file or folder detection.
+    * The operator for file or folder detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @param Win32LobAppRuleOperator $val The value to assign to the operator
     *

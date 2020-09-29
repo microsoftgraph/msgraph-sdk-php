@@ -291,6 +291,35 @@ class IntuneBrandingProfile extends Entity
     }
     
     /**
+    * Gets the disableClientTelemetry
+    * Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
+    *
+    * @return bool The disableClientTelemetry
+    */
+    public function getDisableClientTelemetry()
+    {
+        if (array_key_exists("disableClientTelemetry", $this->_propDict)) {
+            return $this->_propDict["disableClientTelemetry"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disableClientTelemetry
+    * Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
+    *
+    * @param bool $val The disableClientTelemetry
+    *
+    * @return IntuneBrandingProfile
+    */
+    public function setDisableClientTelemetry($val)
+    {
+        $this->_propDict["disableClientTelemetry"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * Company/organization name that is displayed to end users
     *

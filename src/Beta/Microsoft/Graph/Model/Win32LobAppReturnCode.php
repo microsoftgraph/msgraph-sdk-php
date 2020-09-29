@@ -54,7 +54,7 @@ class Win32LobAppReturnCode extends Entity
 
     /**
     * Gets the type
-    * The type of return code.
+    * The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
     *
     * @return Win32LobAppReturnCodeType The type
     */
@@ -73,7 +73,7 @@ class Win32LobAppReturnCode extends Entity
 
     /**
     * Sets the type
-    * The type of return code.
+    * The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
     *
     * @param Win32LobAppReturnCodeType $val The value to assign to the type
     *

@@ -24,6 +24,63 @@ namespace Beta\Microsoft\Graph\Model;
 class SearchRequest extends Entity
 {
     /**
+    * Gets the aggregationFilters
+    *
+    * @return string The aggregationFilters
+    */
+    public function getAggregationFilters()
+    {
+        if (array_key_exists("aggregationFilters", $this->_propDict)) {
+            return $this->_propDict["aggregationFilters"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the aggregationFilters
+    *
+    * @param string $val The value of the aggregationFilters
+    *
+    * @return SearchRequest
+    */
+    public function setAggregationFilters($val)
+    {
+        $this->_propDict["aggregationFilters"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the aggregations
+    *
+    * @return AggregationOption The aggregations
+    */
+    public function getAggregations()
+    {
+        if (array_key_exists("aggregations", $this->_propDict)) {
+            if (is_a($this->_propDict["aggregations"], "Beta\Microsoft\Graph\Model\AggregationOption")) {
+                return $this->_propDict["aggregations"];
+            } else {
+                $this->_propDict["aggregations"] = new AggregationOption($this->_propDict["aggregations"]);
+                return $this->_propDict["aggregations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the aggregations
+    *
+    * @param AggregationOption $val The value to assign to the aggregations
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setAggregations($val)
+    {
+        $this->_propDict["aggregations"] = $val;
+         return $this;
+    }
+    /**
     * Gets the contentSources
     *
     * @return string The contentSources
@@ -107,6 +164,32 @@ class SearchRequest extends Entity
          return $this;
     }
     /**
+    * Gets the fields
+    *
+    * @return string The fields
+    */
+    public function getFields()
+    {
+        if (array_key_exists("fields", $this->_propDict)) {
+            return $this->_propDict["fields"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the fields
+    *
+    * @param string $val The value of the fields
+    *
+    * @return SearchRequest
+    */
+    public function setFields($val)
+    {
+        $this->_propDict["fields"] = $val;
+        return $this;
+    }
+    /**
     * Gets the from
     *
     * @return int The from
@@ -188,6 +271,37 @@ class SearchRequest extends Entity
     {
         $this->_propDict["size"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the sortProperties
+    *
+    * @return SortProperty The sortProperties
+    */
+    public function getSortProperties()
+    {
+        if (array_key_exists("sortProperties", $this->_propDict)) {
+            if (is_a($this->_propDict["sortProperties"], "Beta\Microsoft\Graph\Model\SortProperty")) {
+                return $this->_propDict["sortProperties"];
+            } else {
+                $this->_propDict["sortProperties"] = new SortProperty($this->_propDict["sortProperties"]);
+                return $this->_propDict["sortProperties"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sortProperties
+    *
+    * @param SortProperty $val The value to assign to the sortProperties
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setSortProperties($val)
+    {
+        $this->_propDict["sortProperties"] = $val;
+         return $this;
     }
     /**
     * Gets the stored_fields
