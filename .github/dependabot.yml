@@ -1,6 +1,6 @@
 version: 2
 updates:
-- package-ecosystem: php:composer
+- package-ecosystem: composer
   directory: "/"
   schedule:
     interval: daily
