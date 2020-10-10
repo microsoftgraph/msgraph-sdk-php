@@ -9,7 +9,7 @@ class GraphCollectionRequestTest extends TestCase
     private $client;
     private $reflectedRequestUrlHandler;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->collectionRequest = new GraphCollectionRequest("GET", "/endpoint", "token", "url", "/version");
         $this->collectionRequest->setReturnType(Model\User::class);

@@ -10,7 +10,7 @@ class GraphRequestTest extends TestCase
     protected $defaultHeaders;
     protected $client;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->requests = array(
             new GraphRequest("GET", "/endpoint", "token", "baseUrl", "/version"),
