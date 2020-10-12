@@ -237,6 +237,33 @@ class Calendar extends Entity
     }
     
     /**
+    * Gets the hexColor
+    *
+    * @return string The hexColor
+    */
+    public function getHexColor()
+    {
+        if (array_key_exists("hexColor", $this->_propDict)) {
+            return $this->_propDict["hexColor"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hexColor
+    *
+    * @param string $val The hexColor
+    *
+    * @return Calendar
+    */
+    public function setHexColor($val)
+    {
+        $this->_propDict["hexColor"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isRemovable
     * Indicates whether this user calendar can be deleted from the user mailbox.
     *

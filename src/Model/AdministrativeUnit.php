@@ -114,7 +114,7 @@ class AdministrativeUnit extends DirectoryObject
 
      /** 
      * Gets the members
-     * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+    * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
      *
      * @return array The members
      */
@@ -144,7 +144,7 @@ class AdministrativeUnit extends DirectoryObject
 
      /** 
      * Gets the scopedRoleMembers
-     * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+    * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
      *
      * @return array The scopedRoleMembers
      */
