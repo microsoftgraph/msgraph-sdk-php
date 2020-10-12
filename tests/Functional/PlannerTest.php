@@ -90,7 +90,7 @@ class PlannerTest extends TestCase
 
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $task = $this->_client->createRequest("GET", "/planner/tasks/" . $this->planTask->getId())
             ->setReturnType(Model\PlannerTask::class)

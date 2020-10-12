@@ -18,7 +18,7 @@ class ExcelTest extends TestCase
         $this->uploadTestFileContent($this->_fileId);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->deleteTestFile($this->_fileId);
     }
