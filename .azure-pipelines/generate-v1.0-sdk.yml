@@ -117,6 +117,7 @@ steps:
     workingDirectory: '$(Build.SourcesDirectory)/msgraph-sdk-php'
     pwsh: true 
     script: |
+      php -v
       composer install # Adds dependencies to vendor.
       .\vendor\bin\phpunit --exclude-group functional
 

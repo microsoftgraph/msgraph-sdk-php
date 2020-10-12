@@ -12,7 +12,7 @@ class PlannerTest extends TestCase
     private $planBucket;
     private $planTask;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $graphTestBase = new GraphTestBase();
         $this->_client = $graphTestBase->graphClient;

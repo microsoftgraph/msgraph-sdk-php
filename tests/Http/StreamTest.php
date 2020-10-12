@@ -15,7 +15,7 @@ class StreamTest extends TestCase
     private $body;
     private $container;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->root = vfsStream::setup('testDir');
 

@@ -9,7 +9,7 @@ class ExcelTest extends TestCase
     private $_client;
     private $_fileId;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $graphTestBase = new GraphTestBase();
         $this->_client = $graphTestBase->graphClient;
