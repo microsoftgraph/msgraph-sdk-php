@@ -388,7 +388,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the mailNickname
-    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Returned by default. Supports $filter.
+    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
     *
     * @return string The mailNickname
     */
@@ -403,7 +403,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the mailNickname
-    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Returned by default. Supports $filter.
+    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
     *
     * @param string $val The mailNickname
     *
