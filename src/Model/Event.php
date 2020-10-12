@@ -209,7 +209,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the iCalUId
-    * A unique identifier that is shared by all instances of an event across different calendars. Read-only.
+    * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
     *
     * @return string The iCalUId
     */
@@ -224,7 +224,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the iCalUId
-    * A unique identifier that is shared by all instances of an event across different calendars. Read-only.
+    * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
     *
     * @param string $val The iCalUId
     *
@@ -324,6 +324,33 @@ class Event extends OutlookItem
     public function setIsCancelled($val)
     {
         $this->_propDict["isCancelled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isDraft
+    *
+    * @return bool The isDraft
+    */
+    public function getIsDraft()
+    {
+        if (array_key_exists("isDraft", $this->_propDict)) {
+            return $this->_propDict["isDraft"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDraft
+    *
+    * @param bool $val The isDraft
+    *
+    * @return Event
+    */
+    public function setIsDraft($val)
+    {
+        $this->_propDict["isDraft"] = boolval($val);
         return $this;
     }
     
