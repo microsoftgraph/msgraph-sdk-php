@@ -833,12 +833,13 @@ class Device extends DirectoryObject
     */
     public function setKind($val)
     {
-        $this->_propDict["Kind"] = $val;
+        $this->_propDict["kind"] = $val;
         return $this;
     }
     
     /**
     * Gets the manufacturer
+    * Manufacturer of the device. Read-only.
     *
     * @return string The manufacturer
     */
@@ -853,6 +854,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the manufacturer
+    * Manufacturer of the device. Read-only.
     *
     * @param string $val The manufacturer
     *
@@ -860,12 +862,13 @@ class Device extends DirectoryObject
     */
     public function setManufacturer($val)
     {
-        $this->_propDict["Manufacturer"] = $val;
+        $this->_propDict["manufacturer"] = $val;
         return $this;
     }
     
     /**
     * Gets the model
+    * Model of the device. Read-only.
     *
     * @return string The model
     */
@@ -880,6 +883,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the model
+    * Model of the device. Read-only.
     *
     * @param string $val The model
     *
@@ -887,7 +891,7 @@ class Device extends DirectoryObject
     */
     public function setModel($val)
     {
-        $this->_propDict["Model"] = $val;
+        $this->_propDict["model"] = $val;
         return $this;
     }
     
@@ -914,7 +918,7 @@ class Device extends DirectoryObject
     */
     public function setName($val)
     {
-        $this->_propDict["Name"] = $val;
+        $this->_propDict["name"] = $val;
         return $this;
     }
     
@@ -941,7 +945,7 @@ class Device extends DirectoryObject
     */
     public function setPlatform($val)
     {
-        $this->_propDict["Platform"] = $val;
+        $this->_propDict["platform"] = $val;
         return $this;
     }
     
@@ -968,7 +972,7 @@ class Device extends DirectoryObject
     */
     public function setStatus($val)
     {
-        $this->_propDict["Status"] = $val;
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

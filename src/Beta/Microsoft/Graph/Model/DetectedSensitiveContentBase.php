@@ -101,37 +101,6 @@ class DetectedSensitiveContentBase extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
-
-    /**
-    * Gets the matches
-    *
-    * @return SensitiveContentLocation The matches
-    */
-    public function getMatches()
-    {
-        if (array_key_exists("matches", $this->_propDict)) {
-            if (is_a($this->_propDict["matches"], "Beta\Microsoft\Graph\Model\SensitiveContentLocation")) {
-                return $this->_propDict["matches"];
-            } else {
-                $this->_propDict["matches"] = new SensitiveContentLocation($this->_propDict["matches"]);
-                return $this->_propDict["matches"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the matches
-    *
-    * @param SensitiveContentLocation $val The value to assign to the matches
-    *
-    * @return DetectedSensitiveContentBase The DetectedSensitiveContentBase
-    */
-    public function setMatches($val)
-    {
-        $this->_propDict["matches"] = $val;
-         return $this;
-    }
     /**
     * Gets the recommendedConfidence
     *

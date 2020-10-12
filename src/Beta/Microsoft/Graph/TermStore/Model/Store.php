@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Store extends \Beta\Microsoft\Graph\Model\Entity
+class Store extends 
 {
     /**
     * Gets the defaultLanguageTag

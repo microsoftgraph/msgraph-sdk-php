@@ -32,4 +32,7 @@ class SingleSignOnMode extends Enum
     const NONE = "none";
     const ON_PREMISES_KERBEROS = "onPremisesKerberos";
     const SAML = "saml";
+    const PING_HEADER_BASED = "pingHeaderBased";
+    const AAD_HEADER_BASED = "aadHeaderBased";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

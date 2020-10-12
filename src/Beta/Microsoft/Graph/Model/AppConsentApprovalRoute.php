@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AadUserNotificationAudience File
+* AppConsentApprovalRoute File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
 /**
-* AadUserNotificationAudience class
+* AppConsentApprovalRoute class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,32 +22,34 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AadUserNotificationAudience extends TeamworkNotificationAudience
+class AppConsentApprovalRoute extends Entity
 {
-    /**
-    * Gets the userId
-    *
-    * @return string The userId
-    */
-    public function getUserId()
+
+     /** 
+     * Gets the appConsentRequests
+     *
+     * @return array The appConsentRequests
+     */
+    public function getAppConsentRequests()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("appConsentRequests", $this->_propDict)) {
+           return $this->_propDict["appConsentRequests"];
         } else {
             return null;
         }
     }
-
-    /**
-    * Sets the userId
+    
+    /** 
+    * Sets the appConsentRequests
     *
-    * @param string $val The value of the userId
+    * @param AppConsentRequest $val The appConsentRequests
     *
-    * @return AadUserNotificationAudience
+    * @return AppConsentApprovalRoute
     */
-    public function setUserId($val)
+    public function setAppConsentRequests($val)
     {
-        $this->_propDict["userId"] = $val;
+		$this->_propDict["appConsentRequests"] = $val;
         return $this;
     }
+    
 }
