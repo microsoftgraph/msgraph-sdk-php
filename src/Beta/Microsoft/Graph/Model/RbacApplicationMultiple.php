@@ -26,6 +26,34 @@ class RbacApplicationMultiple extends Entity
 {
 
      /** 
+     * Gets the resourceNamespaces
+     *
+     * @return array The resourceNamespaces
+     */
+    public function getResourceNamespaces()
+    {
+        if (array_key_exists("resourceNamespaces", $this->_propDict)) {
+           return $this->_propDict["resourceNamespaces"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the resourceNamespaces
+    *
+    * @param UnifiedRbacResourceNamespace $val The resourceNamespaces
+    *
+    * @return RbacApplicationMultiple
+    */
+    public function setResourceNamespaces($val)
+    {
+		$this->_propDict["resourceNamespaces"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the roleAssignments
      *
      * @return array The roleAssignments

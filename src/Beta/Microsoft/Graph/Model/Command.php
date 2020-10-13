@@ -47,7 +47,7 @@ class Command extends Entity
     */
     public function setAppServiceName($val)
     {
-        $this->_propDict["AppServiceName"] = $val;
+        $this->_propDict["appServiceName"] = $val;
         return $this;
     }
     
@@ -74,7 +74,7 @@ class Command extends Entity
     */
     public function setError($val)
     {
-        $this->_propDict["Error"] = $val;
+        $this->_propDict["error"] = $val;
         return $this;
     }
     
@@ -101,7 +101,7 @@ class Command extends Entity
     */
     public function setPackageFamilyName($val)
     {
-        $this->_propDict["PackageFamilyName"] = $val;
+        $this->_propDict["packageFamilyName"] = $val;
         return $this;
     }
     
@@ -159,7 +159,7 @@ class Command extends Entity
     */
     public function setPermissionTicket($val)
     {
-        $this->_propDict["PermissionTicket"] = $val;
+        $this->_propDict["permissionTicket"] = $val;
         return $this;
     }
     
@@ -186,7 +186,7 @@ class Command extends Entity
     */
     public function setPostBackUri($val)
     {
-        $this->_propDict["PostBackUri"] = $val;
+        $this->_propDict["postBackUri"] = $val;
         return $this;
     }
     
@@ -213,7 +213,7 @@ class Command extends Entity
     */
     public function setStatus($val)
     {
-        $this->_propDict["Status"] = $val;
+        $this->_propDict["status"] = $val;
         return $this;
     }
     
@@ -240,7 +240,7 @@ class Command extends Entity
     */
     public function setType($val)
     {
-        $this->_propDict["Type"] = $val;
+        $this->_propDict["type"] = $val;
         return $this;
     }
     

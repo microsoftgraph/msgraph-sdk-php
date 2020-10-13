@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SensitiveContentLocation File
+* ClassificationAttribute File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 /**
-* SensitiveContentLocation class
+* ClassificationAttribute class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitiveContentLocation extends SensitiveContentLocationBase
+class ClassificationAttribute extends Entity
 {
     /**
     * Gets the confidence
@@ -42,11 +42,37 @@ class SensitiveContentLocation extends SensitiveContentLocationBase
     *
     * @param int $val The value of the confidence
     *
-    * @return SensitiveContentLocation
+    * @return ClassificationAttribute
     */
     public function setConfidence($val)
     {
         $this->_propDict["confidence"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the count
+    *
+    * @return int The count
+    */
+    public function getCount()
+    {
+        if (array_key_exists("count", $this->_propDict)) {
+            return $this->_propDict["count"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the count
+    *
+    * @param int $val The value of the count
+    *
+    * @return ClassificationAttribute
+    */
+    public function setCount($val)
+    {
+        $this->_propDict["count"] = $val;
         return $this;
     }
 }

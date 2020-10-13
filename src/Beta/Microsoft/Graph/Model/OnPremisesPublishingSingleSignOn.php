@@ -25,9 +25,9 @@ class OnPremisesPublishingSingleSignOn extends Entity
 {
 
     /**
-    * Gets the KerberosSignOnSettings
+    * Gets the kerberosSignOnSettings
     *
-    * @return KerberosSignOnSettings The KerberosSignOnSettings
+    * @return KerberosSignOnSettings The kerberosSignOnSettings
     */
     public function getKerberosSignOnSettings()
     {
@@ -43,22 +43,22 @@ class OnPremisesPublishingSingleSignOn extends Entity
     }
 
     /**
-    * Sets the KerberosSignOnSettings
+    * Sets the kerberosSignOnSettings
     *
-    * @param KerberosSignOnSettings $val The value to assign to the KerberosSignOnSettings
+    * @param KerberosSignOnSettings $val The value to assign to the kerberosSignOnSettings
     *
     * @return OnPremisesPublishingSingleSignOn The OnPremisesPublishingSingleSignOn
     */
     public function setKerberosSignOnSettings($val)
     {
-        $this->_propDict["KerberosSignOnSettings"] = $val;
+        $this->_propDict["kerberosSignOnSettings"] = $val;
          return $this;
     }
 
     /**
-    * Gets the SingleSignOnMode
+    * Gets the singleSignOnMode
     *
-    * @return SingleSignOnMode The SingleSignOnMode
+    * @return SingleSignOnMode The singleSignOnMode
     */
     public function getSingleSignOnMode()
     {
@@ -74,15 +74,15 @@ class OnPremisesPublishingSingleSignOn extends Entity
     }
 
     /**
-    * Sets the SingleSignOnMode
+    * Sets the singleSignOnMode
     *
-    * @param SingleSignOnMode $val The value to assign to the SingleSignOnMode
+    * @param SingleSignOnMode $val The value to assign to the singleSignOnMode
     *
     * @return OnPremisesPublishingSingleSignOn The OnPremisesPublishingSingleSignOn
     */
     public function setSingleSignOnMode($val)
     {
-        $this->_propDict["SingleSignOnMode"] = $val;
+        $this->_propDict["singleSignOnMode"] = $val;
          return $this;
     }
 }

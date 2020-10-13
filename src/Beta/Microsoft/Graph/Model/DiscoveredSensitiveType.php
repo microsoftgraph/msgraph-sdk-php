@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DiscoveredSensitiveType extends Entity
 {
+
+    /**
+    * Gets the classificationAttributes
+    *
+    * @return ClassificationAttribute The classificationAttributes
+    */
+    public function getClassificationAttributes()
+    {
+        if (array_key_exists("classificationAttributes", $this->_propDict)) {
+            if (is_a($this->_propDict["classificationAttributes"], "Beta\Microsoft\Graph\Model\ClassificationAttribute")) {
+                return $this->_propDict["classificationAttributes"];
+            } else {
+                $this->_propDict["classificationAttributes"] = new ClassificationAttribute($this->_propDict["classificationAttributes"]);
+                return $this->_propDict["classificationAttributes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the classificationAttributes
+    *
+    * @param ClassificationAttribute $val The value to assign to the classificationAttributes
+    *
+    * @return DiscoveredSensitiveType The DiscoveredSensitiveType
+    */
+    public function setClassificationAttributes($val)
+    {
+        $this->_propDict["classificationAttributes"] = $val;
+         return $this;
+    }
     /**
     * Gets the confidence
     *

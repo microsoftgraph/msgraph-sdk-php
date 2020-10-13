@@ -25,6 +25,7 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
 {
     /**
     * Gets the complianceUrl
+    * The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
     *
     * @return string The complianceUrl
     */
@@ -39,6 +40,7 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
 
     /**
     * Sets the complianceUrl
+    * The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
     *
     * @param string $val The value of the complianceUrl
     *
@@ -51,6 +53,7 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
     }
     /**
     * Gets the generalText
+    * Explanatory text shown to the sender of the message.
     *
     * @return string The generalText
     */
@@ -65,6 +68,7 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
 
     /**
     * Sets the generalText
+    * Explanatory text shown to the sender of the message.
     *
     * @param string $val The value of the generalText
     *
@@ -77,6 +81,7 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
     }
     /**
     * Gets the matchedConditionDescriptions
+    * The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
     *
     * @return string The matchedConditionDescriptions
     */
@@ -91,6 +96,7 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
 
     /**
     * Sets the matchedConditionDescriptions
+    * The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
     *
     * @param string $val The value of the matchedConditionDescriptions
     *
