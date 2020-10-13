@@ -226,6 +226,34 @@ class Printer extends PrinterBase
     
 
      /** 
+     * Gets the shares
+     *
+     * @return array The shares
+     */
+    public function getShares()
+    {
+        if (array_key_exists("shares", $this->_propDict)) {
+           return $this->_propDict["shares"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the shares
+    *
+    * @param PrinterShare $val The shares
+    *
+    * @return Printer
+    */
+    public function setShares($val)
+    {
+		$this->_propDict["shares"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the taskTriggers
      *
      * @return array The taskTriggers

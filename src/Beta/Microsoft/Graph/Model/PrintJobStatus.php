@@ -49,6 +49,89 @@ class PrintJobStatus extends Entity
         $this->_propDict["acquiredByPrinter"] = $val;
         return $this;
     }
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    *
+    * @param string $val The value of the description
+    *
+    * @return PrintJobStatus
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the details
+    *
+    * @return PrintJobStateDetail The details
+    */
+    public function getDetails()
+    {
+        if (array_key_exists("details", $this->_propDict)) {
+            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\PrintJobStateDetail")) {
+                return $this->_propDict["details"];
+            } else {
+                $this->_propDict["details"] = new PrintJobStateDetail($this->_propDict["details"]);
+                return $this->_propDict["details"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the details
+    *
+    * @param PrintJobStateDetail $val The value to assign to the details
+    *
+    * @return PrintJobStatus The PrintJobStatus
+    */
+    public function setDetails($val)
+    {
+        $this->_propDict["details"] = $val;
+         return $this;
+    }
+    /**
+    * Gets the isAcquiredByPrinter
+    *
+    * @return bool The isAcquiredByPrinter
+    */
+    public function getIsAcquiredByPrinter()
+    {
+        if (array_key_exists("isAcquiredByPrinter", $this->_propDict)) {
+            return $this->_propDict["isAcquiredByPrinter"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isAcquiredByPrinter
+    *
+    * @param bool $val The value of the isAcquiredByPrinter
+    *
+    * @return PrintJobStatus
+    */
+    public function setIsAcquiredByPrinter($val)
+    {
+        $this->_propDict["isAcquiredByPrinter"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the processingState
@@ -105,5 +188,36 @@ class PrintJobStatus extends Entity
     {
         $this->_propDict["processingStateDescription"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the state
+    *
+    * @return PrintJobProcessingState The state
+    */
+    public function getState()
+    {
+        if (array_key_exists("state", $this->_propDict)) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\PrintJobProcessingState")) {
+                return $this->_propDict["state"];
+            } else {
+                $this->_propDict["state"] = new PrintJobProcessingState($this->_propDict["state"]);
+                return $this->_propDict["state"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the state
+    *
+    * @param PrintJobProcessingState $val The value to assign to the state
+    *
+    * @return PrintJobStatus The PrintJobStatus
+    */
+    public function setState($val)
+    {
+        $this->_propDict["state"] = $val;
+         return $this;
     }
 }

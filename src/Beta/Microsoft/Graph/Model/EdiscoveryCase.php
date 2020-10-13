@@ -27,21 +27,25 @@ class EdiscoveryCase extends Entity
     /**
     * Gets the closedBy
     *
-    * @return string The closedBy
+    * @return IdentitySet The closedBy
     */
     public function getClosedBy()
     {
         if (array_key_exists("closedBy", $this->_propDict)) {
-            return $this->_propDict["closedBy"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["closedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["closedBy"];
+            } else {
+                $this->_propDict["closedBy"] = new IdentitySet($this->_propDict["closedBy"]);
+                return $this->_propDict["closedBy"];
+            }
         }
+        return null;
     }
     
     /**
     * Sets the closedBy
     *
-    * @param string $val The closedBy
+    * @param IdentitySet $val The closedBy
     *
     * @return EdiscoveryCase
     */
@@ -197,21 +201,25 @@ class EdiscoveryCase extends Entity
     /**
     * Gets the lastModifiedBy
     *
-    * @return string The lastModifiedBy
+    * @return IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            return $this->_propDict["lastModifiedBy"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["lastModifiedBy"];
+            } else {
+                $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
+                return $this->_propDict["lastModifiedBy"];
+            }
         }
+        return null;
     }
     
     /**
     * Sets the lastModifiedBy
     *
-    * @param string $val The lastModifiedBy
+    * @param IdentitySet $val The lastModifiedBy
     *
     * @return EdiscoveryCase
     */
