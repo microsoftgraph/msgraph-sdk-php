@@ -31,7 +31,6 @@ class PrintJobProcessingState extends Enum
     */
     const UNKNOWN = "unknown";
     const PENDING = "pending";
-    const PENDING_HELD = "pendingHeld";
     const PROCESSING = "processing";
     const PAUSED = "paused";
     const STOPPED = "stopped";

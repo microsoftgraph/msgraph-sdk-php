@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PrinterDocumentConfiguration File
+* PrintJobConfiguration File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 /**
-* PrinterDocumentConfiguration class
+* PrintJobConfiguration class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PrinterDocumentConfiguration extends Entity
+class PrintJobConfiguration extends Entity
 {
     /**
     * Gets the collate
@@ -42,7 +42,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param bool $val The value of the collate
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setCollate($val)
     {
@@ -73,7 +73,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintColorMode $val The value to assign to the colorMode
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setColorMode($val)
     {
@@ -99,7 +99,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param int $val The value of the copies
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setCopies($val)
     {
@@ -125,7 +125,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param int $val The value of the dpi
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setDpi($val)
     {
@@ -156,42 +156,11 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintDuplexMode $val The value to assign to the duplexMode
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setDuplexMode($val)
     {
         $this->_propDict["duplexMode"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the feedDirection
-    *
-    * @return PrinterFeedDirection The feedDirection
-    */
-    public function getFeedDirection()
-    {
-        if (array_key_exists("feedDirection", $this->_propDict)) {
-            if (is_a($this->_propDict["feedDirection"], "Beta\Microsoft\Graph\Model\PrinterFeedDirection")) {
-                return $this->_propDict["feedDirection"];
-            } else {
-                $this->_propDict["feedDirection"] = new PrinterFeedDirection($this->_propDict["feedDirection"]);
-                return $this->_propDict["feedDirection"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the feedDirection
-    *
-    * @param PrinterFeedDirection $val The value to assign to the feedDirection
-    *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
-    */
-    public function setFeedDirection($val)
-    {
-        $this->_propDict["feedDirection"] = $val;
          return $this;
     }
 
@@ -218,7 +187,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrinterFeedOrientation $val The value to assign to the feedOrientation
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setFeedOrientation($val)
     {
@@ -249,7 +218,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintFinishing $val The value to assign to the finishings
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setFinishings($val)
     {
@@ -275,7 +244,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param bool $val The value of the fitPdfToPage
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setFitPdfToPage($val)
     {
@@ -301,7 +270,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param string $val The value of the inputBin
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setInputBin($val)
     {
@@ -332,7 +301,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintMargin $val The value to assign to the margin
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setMargin($val)
     {
@@ -358,7 +327,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param string $val The value of the mediaSize
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setMediaSize($val)
     {
@@ -384,7 +353,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param string $val The value of the mediaType
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setMediaType($val)
     {
@@ -415,7 +384,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintMultipageLayout $val The value to assign to the multipageLayout
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setMultipageLayout($val)
     {
@@ -446,7 +415,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintOrientation $val The value to assign to the orientation
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setOrientation($val)
     {
@@ -472,7 +441,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param string $val The value of the outputBin
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setOutputBin($val)
     {
@@ -503,7 +472,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param IntegerRange $val The value to assign to the pageRanges
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setPageRanges($val)
     {
@@ -529,7 +498,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param int $val The value of the pagesPerSheet
     *
-    * @return PrinterDocumentConfiguration
+    * @return PrintJobConfiguration
     */
     public function setPagesPerSheet($val)
     {
@@ -560,7 +529,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintQuality $val The value to assign to the quality
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setQuality($val)
     {
@@ -591,7 +560,7 @@ class PrinterDocumentConfiguration extends Entity
     *
     * @param PrintScaling $val The value to assign to the scaling
     *
-    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    * @return PrintJobConfiguration The PrintJobConfiguration
     */
     public function setScaling($val)
     {

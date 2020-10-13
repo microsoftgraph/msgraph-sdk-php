@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AadUserNotificationAudience File
+* PrintJobStateDetail File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,11 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* AadUserNotificationAudience class
+* PrintJobStateDetail class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,32 +24,17 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AadUserNotificationAudience extends TeamworkNotificationAudience
+class PrintJobStateDetail extends Enum
 {
     /**
-    * Gets the userId
-    *
-    * @return string The userId
+    * The Enum PrintJobStateDetail
     */
-    public function getUserId()
-    {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userId
-    *
-    * @param string $val The value of the userId
-    *
-    * @return AadUserNotificationAudience
-    */
-    public function setUserId($val)
-    {
-        $this->_propDict["userId"] = $val;
-        return $this;
-    }
+    const UPLOAD_PENDING = "uploadPending";
+    const TRANSFORMING = "transforming";
+    const COMPLETED_SUCCESSFULLY = "completedSuccessfully";
+    const COMPLETED_WITH_WARNINGS = "completedWithWarnings";
+    const COMPLETED_WITH_ERRORS = "completedWithErrors";
+    const RELEASE_WAIT = "releaseWait";
+    const INTERPRETING = "interpreting";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

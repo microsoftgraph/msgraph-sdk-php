@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentityGovernance extends Entity
+class IdentityGovernance extends 
 {
     /**
     * Gets the accessReviews
@@ -52,6 +52,37 @@ class IdentityGovernance extends Entity
     public function setAccessReviews($val)
     {
         $this->_propDict["accessReviews"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the appConsent
+    *
+    * @return AppConsentApprovalRoute The appConsent
+    */
+    public function getAppConsent()
+    {
+        if (array_key_exists("appConsent", $this->_propDict)) {
+            if (is_a($this->_propDict["appConsent"], "Beta\Microsoft\Graph\Model\AppConsentApprovalRoute")) {
+                return $this->_propDict["appConsent"];
+            } else {
+                $this->_propDict["appConsent"] = new AppConsentApprovalRoute($this->_propDict["appConsent"]);
+                return $this->_propDict["appConsent"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appConsent
+    *
+    * @param AppConsentApprovalRoute $val The appConsent
+    *
+    * @return IdentityGovernance
+    */
+    public function setAppConsent($val)
+    {
+        $this->_propDict["appConsent"] = $val;
         return $this;
     }
     

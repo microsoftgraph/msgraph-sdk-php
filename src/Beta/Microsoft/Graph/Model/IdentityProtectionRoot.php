@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentityProtectionRoot extends Entity
+class IdentityProtectionRoot extends 
 {
 
      /** 

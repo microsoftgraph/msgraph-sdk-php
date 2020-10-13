@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class BookingAppointment extends Entity
 {
     /**
+    * Gets the additionalInformation
+    *
+    * @return string The additionalInformation
+    */
+    public function getAdditionalInformation()
+    {
+        if (array_key_exists("additionalInformation", $this->_propDict)) {
+            return $this->_propDict["additionalInformation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the additionalInformation
+    *
+    * @param string $val The additionalInformation
+    *
+    * @return BookingAppointment
+    */
+    public function setAdditionalInformation($val)
+    {
+        $this->_propDict["additionalInformation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the customerEmailAddress
     *
     * @return string The customerEmailAddress
@@ -396,6 +423,60 @@ class BookingAppointment extends Entity
     public function setInvoiceUrl($val)
     {
         $this->_propDict["invoiceUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isLocationOnline
+    *
+    * @return bool The isLocationOnline
+    */
+    public function getIsLocationOnline()
+    {
+        if (array_key_exists("isLocationOnline", $this->_propDict)) {
+            return $this->_propDict["isLocationOnline"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isLocationOnline
+    *
+    * @param bool $val The isLocationOnline
+    *
+    * @return BookingAppointment
+    */
+    public function setIsLocationOnline($val)
+    {
+        $this->_propDict["isLocationOnline"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the onlineMeetingUrl
+    *
+    * @return string The onlineMeetingUrl
+    */
+    public function getOnlineMeetingUrl()
+    {
+        if (array_key_exists("onlineMeetingUrl", $this->_propDict)) {
+            return $this->_propDict["onlineMeetingUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onlineMeetingUrl
+    *
+    * @param string $val The onlineMeetingUrl
+    *
+    * @return BookingAppointment
+    */
+    public function setOnlineMeetingUrl($val)
+    {
+        $this->_propDict["onlineMeetingUrl"] = $val;
         return $this;
     }
     

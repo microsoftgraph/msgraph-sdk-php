@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AppCatalogs File
+* AppConsentApprovalRoute File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* AppCatalogs class
+* AppConsentApprovalRoute class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,33 +22,33 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AppCatalogs extends 
+class AppConsentApprovalRoute extends Entity
 {
 
      /** 
-     * Gets the teamsApps
+     * Gets the appConsentRequests
      *
-     * @return array The teamsApps
+     * @return array The appConsentRequests
      */
-    public function getTeamsApps()
+    public function getAppConsentRequests()
     {
-        if (array_key_exists("teamsApps", $this->_propDict)) {
-           return $this->_propDict["teamsApps"];
+        if (array_key_exists("appConsentRequests", $this->_propDict)) {
+           return $this->_propDict["appConsentRequests"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the teamsApps
+    * Sets the appConsentRequests
     *
-    * @param TeamsApp $val The teamsApps
+    * @param AppConsentRequest $val The appConsentRequests
     *
-    * @return AppCatalogs
+    * @return AppConsentApprovalRoute
     */
-    public function setTeamsApps($val)
+    public function setAppConsentRequests($val)
     {
-		$this->_propDict["teamsApps"] = $val;
+		$this->_propDict["appConsentRequests"] = $val;
         return $this;
     }
     

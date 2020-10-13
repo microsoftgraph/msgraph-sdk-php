@@ -26,6 +26,7 @@ class Channel extends Entity
 {
     /**
     * Gets the createdDateTime
+    * Read only. Timestamp at which the channel was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -44,6 +45,7 @@ class Channel extends Entity
     
     /**
     * Sets the createdDateTime
+    * Read only. Timestamp at which the channel was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -144,6 +146,7 @@ class Channel extends Entity
     
     /**
     * Gets the isFavoriteByDefault
+    * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
     *
     * @return bool The isFavoriteByDefault
     */
@@ -158,6 +161,7 @@ class Channel extends Entity
     
     /**
     * Sets the isFavoriteByDefault
+    * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
     *
     * @param bool $val The isFavoriteByDefault
     *
@@ -233,7 +237,7 @@ class Channel extends Entity
     
     /**
     * Gets the webUrl
-    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
     *
     * @return string The webUrl
     */
@@ -248,7 +252,7 @@ class Channel extends Entity
     
     /**
     * Sets the webUrl
-    * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
     *
     * @param string $val The webUrl
     *
