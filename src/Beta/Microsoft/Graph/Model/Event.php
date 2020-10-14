@@ -235,6 +235,33 @@ class Event extends OutlookItem
     }
     
     /**
+    * Gets the hideAttendees
+    *
+    * @return bool The hideAttendees
+    */
+    public function getHideAttendees()
+    {
+        if (array_key_exists("hideAttendees", $this->_propDict)) {
+            return $this->_propDict["hideAttendees"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideAttendees
+    *
+    * @param bool $val The hideAttendees
+    *
+    * @return Event
+    */
+    public function setHideAttendees($val)
+    {
+        $this->_propDict["hideAttendees"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the importance
     * The importance of the event. The possible values are: low, normal, high.
     *

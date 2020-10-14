@@ -27,21 +27,25 @@ class ReviewSetQuery extends Entity
     /**
     * Gets the createdBy
     *
-    * @return string The createdBy
+    * @return IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            return $this->_propDict["createdBy"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
         }
+        return null;
     }
     
     /**
     * Sets the createdBy
     *
-    * @param string $val The createdBy
+    * @param IdentitySet $val The createdBy
     *
     * @return ReviewSetQuery
     */
@@ -112,21 +116,25 @@ class ReviewSetQuery extends Entity
     /**
     * Gets the lastModifiedBy
     *
-    * @return string The lastModifiedBy
+    * @return IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            return $this->_propDict["lastModifiedBy"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["lastModifiedBy"];
+            } else {
+                $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
+                return $this->_propDict["lastModifiedBy"];
+            }
         }
+        return null;
     }
     
     /**
     * Sets the lastModifiedBy
     *
-    * @param string $val The lastModifiedBy
+    * @param IdentitySet $val The lastModifiedBy
     *
     * @return ReviewSetQuery
     */

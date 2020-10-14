@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PrintJobProcessingState File
+* PrintJobStateDetail File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* PrintJobProcessingState class
+* PrintJobStateDetail class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +24,17 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PrintJobProcessingState extends Enum
+class PrintJobStateDetail extends Enum
 {
     /**
-    * The Enum PrintJobProcessingState
+    * The Enum PrintJobStateDetail
     */
-    const UNKNOWN = "unknown";
-    const PENDING = "pending";
-    const PROCESSING = "processing";
-    const PAUSED = "paused";
-    const STOPPED = "stopped";
-    const COMPLETED = "completed";
-    const CANCELED = "canceled";
-    const ABORTED = "aborted";
+    const UPLOAD_PENDING = "uploadPending";
+    const TRANSFORMING = "transforming";
+    const COMPLETED_SUCCESSFULLY = "completedSuccessfully";
+    const COMPLETED_WITH_WARNINGS = "completedWithWarnings";
+    const COMPLETED_WITH_ERRORS = "completedWithErrors";
+    const RELEASE_WAIT = "releaseWait";
+    const INTERPRETING = "interpreting";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
