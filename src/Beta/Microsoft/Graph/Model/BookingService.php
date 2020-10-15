@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class BookingService extends BookingNamedEntity
 {
     /**
+    * Gets the additionalInformation
+    *
+    * @return string The additionalInformation
+    */
+    public function getAdditionalInformation()
+    {
+        if (array_key_exists("additionalInformation", $this->_propDict)) {
+            return $this->_propDict["additionalInformation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the additionalInformation
+    *
+    * @param string $val The additionalInformation
+    *
+    * @return BookingService
+    */
+    public function setAdditionalInformation($val)
+    {
+        $this->_propDict["additionalInformation"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the defaultDuration
     *
     * @return Duration The defaultDuration
@@ -225,6 +252,33 @@ class BookingService extends BookingNamedEntity
     public function setIsHiddenFromCustomers($val)
     {
         $this->_propDict["isHiddenFromCustomers"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isLocationOnline
+    *
+    * @return bool The isLocationOnline
+    */
+    public function getIsLocationOnline()
+    {
+        if (array_key_exists("isLocationOnline", $this->_propDict)) {
+            return $this->_propDict["isLocationOnline"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isLocationOnline
+    *
+    * @param bool $val The isLocationOnline
+    *
+    * @return BookingService
+    */
+    public function setIsLocationOnline($val)
+    {
+        $this->_propDict["isLocationOnline"] = boolval($val);
         return $this;
     }
     

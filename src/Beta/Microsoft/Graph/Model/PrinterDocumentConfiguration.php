@@ -196,6 +196,37 @@ class PrinterDocumentConfiguration extends Entity
     }
 
     /**
+    * Gets the feedOrientation
+    *
+    * @return PrinterFeedOrientation The feedOrientation
+    */
+    public function getFeedOrientation()
+    {
+        if (array_key_exists("feedOrientation", $this->_propDict)) {
+            if (is_a($this->_propDict["feedOrientation"], "Beta\Microsoft\Graph\Model\PrinterFeedOrientation")) {
+                return $this->_propDict["feedOrientation"];
+            } else {
+                $this->_propDict["feedOrientation"] = new PrinterFeedOrientation($this->_propDict["feedOrientation"]);
+                return $this->_propDict["feedOrientation"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the feedOrientation
+    *
+    * @param PrinterFeedOrientation $val The value to assign to the feedOrientation
+    *
+    * @return PrinterDocumentConfiguration The PrinterDocumentConfiguration
+    */
+    public function setFeedOrientation($val)
+    {
+        $this->_propDict["feedOrientation"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the finishings
     *
     * @return PrintFinishing The finishings

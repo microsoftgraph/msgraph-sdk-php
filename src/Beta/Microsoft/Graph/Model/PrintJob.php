@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class PrintJob extends Entity
 {
     /**
+    * Gets the configuration
+    *
+    * @return PrintJobConfiguration The configuration
+    */
+    public function getConfiguration()
+    {
+        if (array_key_exists("configuration", $this->_propDict)) {
+            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\Model\PrintJobConfiguration")) {
+                return $this->_propDict["configuration"];
+            } else {
+                $this->_propDict["configuration"] = new PrintJobConfiguration($this->_propDict["configuration"]);
+                return $this->_propDict["configuration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the configuration
+    *
+    * @param PrintJobConfiguration $val The configuration
+    *
+    * @return PrintJob
+    */
+    public function setConfiguration($val)
+    {
+        $this->_propDict["configuration"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdBy
     *
     * @return UserIdentity The createdBy
@@ -83,6 +114,87 @@ class PrintJob extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isFetchable
+    *
+    * @return bool The isFetchable
+    */
+    public function getIsFetchable()
+    {
+        if (array_key_exists("isFetchable", $this->_propDict)) {
+            return $this->_propDict["isFetchable"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isFetchable
+    *
+    * @param bool $val The isFetchable
+    *
+    * @return PrintJob
+    */
+    public function setIsFetchable($val)
+    {
+        $this->_propDict["isFetchable"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the redirectedFrom
+    *
+    * @return string The redirectedFrom
+    */
+    public function getRedirectedFrom()
+    {
+        if (array_key_exists("redirectedFrom", $this->_propDict)) {
+            return $this->_propDict["redirectedFrom"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the redirectedFrom
+    *
+    * @param string $val The redirectedFrom
+    *
+    * @return PrintJob
+    */
+    public function setRedirectedFrom($val)
+    {
+        $this->_propDict["redirectedFrom"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the redirectedTo
+    *
+    * @return string The redirectedTo
+    */
+    public function getRedirectedTo()
+    {
+        if (array_key_exists("redirectedTo", $this->_propDict)) {
+            return $this->_propDict["redirectedTo"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the redirectedTo
+    *
+    * @param string $val The redirectedTo
+    *
+    * @return PrintJob
+    */
+    public function setRedirectedTo($val)
+    {
+        $this->_propDict["redirectedTo"] = $val;
         return $this;
     }
     

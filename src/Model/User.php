@@ -3196,4 +3196,35 @@ class User extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the teamwork
+    *
+    * @return UserTeamwork The teamwork
+    */
+    public function getTeamwork()
+    {
+        if (array_key_exists("teamwork", $this->_propDict)) {
+            if (is_a($this->_propDict["teamwork"], "Microsoft\Graph\Model\UserTeamwork")) {
+                return $this->_propDict["teamwork"];
+            } else {
+                $this->_propDict["teamwork"] = new UserTeamwork($this->_propDict["teamwork"]);
+                return $this->_propDict["teamwork"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the teamwork
+    *
+    * @param UserTeamwork $val The teamwork
+    *
+    * @return User
+    */
+    public function setTeamwork($val)
+    {
+        $this->_propDict["teamwork"] = $val;
+        return $this;
+    }
+    
 }

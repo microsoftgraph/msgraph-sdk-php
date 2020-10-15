@@ -408,6 +408,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the policyViolation
+    * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
     *
     * @return ChatMessagePolicyViolation The policyViolation
     */
@@ -426,6 +427,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the policyViolation
+    * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
     *
     * @param ChatMessagePolicyViolation $val The policyViolation
     *

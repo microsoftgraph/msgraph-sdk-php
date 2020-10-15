@@ -13,7 +13,7 @@ class GraphResponseTest extends TestCase
     public $response;
     public $responseBody;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->responseBody = array('body' => 'content', 'displayName' => 'Bob Barker');
 

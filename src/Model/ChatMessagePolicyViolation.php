@@ -26,6 +26,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Gets the dlpAction
+    * The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
     *
     * @return ChatMessagePolicyViolationDlpActionTypes The dlpAction
     */
@@ -44,6 +45,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Sets the dlpAction
+    * The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
     *
     * @param ChatMessagePolicyViolationDlpActionTypes $val The value to assign to the dlpAction
     *
@@ -56,6 +58,7 @@ class ChatMessagePolicyViolation extends Entity
     }
     /**
     * Gets the justificationText
+    * Justification text provided by the sender of the message when overriding a policy violation.
     *
     * @return string The justificationText
     */
@@ -70,6 +73,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Sets the justificationText
+    * Justification text provided by the sender of the message when overriding a policy violation.
     *
     * @param string $val The value of the justificationText
     *
@@ -83,6 +87,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Gets the policyTip
+    * Information to display to the message sender about why the message was flagged as a violation.
     *
     * @return ChatMessagePolicyViolationPolicyTip The policyTip
     */
@@ -101,6 +106,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Sets the policyTip
+    * Information to display to the message sender about why the message was flagged as a violation.
     *
     * @param ChatMessagePolicyViolationPolicyTip $val The value to assign to the policyTip
     *
@@ -114,6 +120,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Gets the userAction
+    * Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
     *
     * @return ChatMessagePolicyViolationUserActionTypes The userAction
     */
@@ -132,6 +139,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Sets the userAction
+    * Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
     *
     * @param ChatMessagePolicyViolationUserActionTypes $val The value to assign to the userAction
     *
@@ -145,6 +153,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Gets the verdictDetails
+    * Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
     *
     * @return ChatMessagePolicyViolationVerdictDetailsTypes The verdictDetails
     */
@@ -163,6 +172,7 @@ class ChatMessagePolicyViolation extends Entity
 
     /**
     * Sets the verdictDetails
+    * Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
     *
     * @param ChatMessagePolicyViolationVerdictDetailsTypes $val The value to assign to the verdictDetails
     *

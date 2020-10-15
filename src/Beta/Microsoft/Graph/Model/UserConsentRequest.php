@@ -27,15 +27,15 @@ class UserConsentRequest extends Request
     /**
     * Gets the createdBy
     *
-    * @return UserIdentity The createdBy
+    * @return IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -45,7 +45,7 @@ class UserConsentRequest extends Request
     /**
     * Sets the createdBy
     *
-    * @param UserIdentity $val The createdBy
+    * @param IdentitySet $val The createdBy
     *
     * @return UserConsentRequest
     */
@@ -110,6 +110,33 @@ class UserConsentRequest extends Request
     public function setReason($val)
     {
         $this->_propDict["reason"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    *
+    * @return string The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict)) {
+            return $this->_propDict["status"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the status
+    *
+    * @param string $val The status
+    *
+    * @return UserConsentRequest
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
         return $this;
     }
     

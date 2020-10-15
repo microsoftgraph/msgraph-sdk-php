@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AadUserNotificationAudience File
+* UserTeamwork File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
+
 /**
-* AadUserNotificationAudience class
+* UserTeamwork class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,32 +22,36 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AadUserNotificationAudience extends TeamworkNotificationAudience
+class UserTeamwork extends Entity
 {
-    /**
-    * Gets the userId
-    *
-    * @return string The userId
-    */
-    public function getUserId()
+
+     /** 
+     * Gets the installedApps
+    * The apps installed in the personal scope of this user.
+     *
+     * @return array The installedApps
+     */
+    public function getInstalledApps()
     {
-        if (array_key_exists("userId", $this->_propDict)) {
-            return $this->_propDict["userId"];
+        if (array_key_exists("installedApps", $this->_propDict)) {
+           return $this->_propDict["installedApps"];
         } else {
             return null;
         }
     }
-
-    /**
-    * Sets the userId
+    
+    /** 
+    * Sets the installedApps
+    * The apps installed in the personal scope of this user.
     *
-    * @param string $val The value of the userId
+    * @param UserScopeTeamsAppInstallation $val The installedApps
     *
-    * @return AadUserNotificationAudience
+    * @return UserTeamwork
     */
-    public function setUserId($val)
+    public function setInstalledApps($val)
     {
-        $this->_propDict["userId"] = $val;
+		$this->_propDict["installedApps"] = $val;
         return $this;
     }
+    
 }

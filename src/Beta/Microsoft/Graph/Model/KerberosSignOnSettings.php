@@ -24,9 +24,9 @@ namespace Beta\Microsoft\Graph\Model;
 class KerberosSignOnSettings extends Entity
 {
     /**
-    * Gets the KerberosServicePrincipalName
+    * Gets the kerberosServicePrincipalName
     *
-    * @return string The KerberosServicePrincipalName
+    * @return string The kerberosServicePrincipalName
     */
     public function getKerberosServicePrincipalName()
     {
@@ -38,9 +38,9 @@ class KerberosSignOnSettings extends Entity
     }
 
     /**
-    * Sets the KerberosServicePrincipalName
+    * Sets the kerberosServicePrincipalName
     *
-    * @param string $val The value of the KerberosServicePrincipalName
+    * @param string $val The value of the kerberosServicePrincipalName
     *
     * @return KerberosSignOnSettings
     */
@@ -51,9 +51,9 @@ class KerberosSignOnSettings extends Entity
     }
 
     /**
-    * Gets the KerberosSignOnMappingAttributeType
+    * Gets the kerberosSignOnMappingAttributeType
     *
-    * @return KerberosSignOnMappingAttributeType The KerberosSignOnMappingAttributeType
+    * @return KerberosSignOnMappingAttributeType The kerberosSignOnMappingAttributeType
     */
     public function getKerberosSignOnMappingAttributeType()
     {
@@ -69,15 +69,15 @@ class KerberosSignOnSettings extends Entity
     }
 
     /**
-    * Sets the KerberosSignOnMappingAttributeType
+    * Sets the kerberosSignOnMappingAttributeType
     *
-    * @param KerberosSignOnMappingAttributeType $val The value to assign to the KerberosSignOnMappingAttributeType
+    * @param KerberosSignOnMappingAttributeType $val The value to assign to the kerberosSignOnMappingAttributeType
     *
     * @return KerberosSignOnSettings The KerberosSignOnSettings
     */
     public function setKerberosSignOnMappingAttributeType($val)
     {
-        $this->_propDict["KerberosSignOnMappingAttributeType"] = $val;
+        $this->_propDict["kerberosSignOnMappingAttributeType"] = $val;
          return $this;
     }
 }

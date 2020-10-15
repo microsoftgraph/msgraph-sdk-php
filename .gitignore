@@ -4,3 +4,4 @@ composer.lock
 /coverage
 .idea/
 tests/Functional/TestConstants.php
+.phpunit.result.cache

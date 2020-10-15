@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PolicyRoot extends Entity
+class PolicyRoot extends 
 {
     /**
     * Gets the authenticationFlowsPolicy
@@ -254,6 +254,34 @@ class PolicyRoot extends Entity
     public function setPermissionGrantPolicies($val)
     {
 		$this->_propDict["permissionGrantPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the privateLinkResourcePolicies
+     *
+     * @return array The privateLinkResourcePolicies
+     */
+    public function getPrivateLinkResourcePolicies()
+    {
+        if (array_key_exists("privateLinkResourcePolicies", $this->_propDict)) {
+           return $this->_propDict["privateLinkResourcePolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the privateLinkResourcePolicies
+    *
+    * @param PrivateLinkResource $val The privateLinkResourcePolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setPrivateLinkResourcePolicies($val)
+    {
+		$this->_propDict["privateLinkResourcePolicies"] = $val;
         return $this;
     }
     

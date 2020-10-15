@@ -469,7 +469,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the mailNickname
-    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Returned by default. Supports $filter.
+    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
     *
     * @return string The mailNickname
     */
@@ -484,7 +484,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the mailNickname
-    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Returned by default. Supports $filter.
+    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
     *
     * @param string $val The mailNickname
     *
@@ -911,6 +911,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the resourceBehaviorOptions
+    * Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
     *
     * @return string The resourceBehaviorOptions
     */
@@ -925,6 +926,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the resourceBehaviorOptions
+    * Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
     *
     * @param string $val The resourceBehaviorOptions
     *
@@ -938,6 +940,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the resourceProvisioningOptions
+    * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options.
     *
     * @return string The resourceProvisioningOptions
     */
@@ -952,6 +955,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the resourceProvisioningOptions
+    * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options.
     *
     * @param string $val The resourceProvisioningOptions
     *

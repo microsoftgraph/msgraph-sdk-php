@@ -14,7 +14,7 @@ class HttpTest extends TestCase
     public $getRequest;
     public $container;
 
-    public function setUp()
+    public function setUp(): void
     {
         $mock = new MockHandler([
             new Response(200, ['foo' => 'bar']),

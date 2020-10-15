@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TeamworkNotificationAudience File
+* PrinterFeedOrientation File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,11 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* TeamworkNotificationAudience class
+* PrinterFeedOrientation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,11 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TeamworkNotificationAudience extends Entity
+class PrinterFeedOrientation extends Enum
 {
+    /**
+    * The Enum PrinterFeedOrientation
+    */
+    const LONG_EDGE_FIRST = "longEdgeFirst";
+    const SHORT_EDGE_FIRST = "shortEdgeFirst";
 }

@@ -21,115 +21,32 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitiveContentLocation extends Entity
+class SensitiveContentLocation extends SensitiveContentLocationBase
 {
-
     /**
-    * Gets the evidences
+    * Gets the confidence
     *
-    * @return SensitiveContentEvidence The evidences
+    * @return int The confidence
     */
-    public function getEvidences()
+    public function getConfidence()
     {
-        if (array_key_exists("evidences", $this->_propDict)) {
-            if (is_a($this->_propDict["evidences"], "Beta\Microsoft\Graph\Model\SensitiveContentEvidence")) {
-                return $this->_propDict["evidences"];
-            } else {
-                $this->_propDict["evidences"] = new SensitiveContentEvidence($this->_propDict["evidences"]);
-                return $this->_propDict["evidences"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the evidences
-    *
-    * @param SensitiveContentEvidence $val The value to assign to the evidences
-    *
-    * @return SensitiveContentLocation The SensitiveContentLocation
-    */
-    public function setEvidences($val)
-    {
-        $this->_propDict["evidences"] = $val;
-         return $this;
-    }
-    /**
-    * Gets the idMatch
-    *
-    * @return string The idMatch
-    */
-    public function getIdMatch()
-    {
-        if (array_key_exists("idMatch", $this->_propDict)) {
-            return $this->_propDict["idMatch"];
+        if (array_key_exists("confidence", $this->_propDict)) {
+            return $this->_propDict["confidence"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the idMatch
+    * Sets the confidence
     *
-    * @param string $val The value of the idMatch
-    *
-    * @return SensitiveContentLocation
-    */
-    public function setIdMatch($val)
-    {
-        $this->_propDict["idMatch"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the length
-    *
-    * @return int The length
-    */
-    public function getLength()
-    {
-        if (array_key_exists("length", $this->_propDict)) {
-            return $this->_propDict["length"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the length
-    *
-    * @param int $val The value of the length
+    * @param int $val The value of the confidence
     *
     * @return SensitiveContentLocation
     */
-    public function setLength($val)
+    public function setConfidence($val)
     {
-        $this->_propDict["length"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the offset
-    *
-    * @return int The offset
-    */
-    public function getOffset()
-    {
-        if (array_key_exists("offset", $this->_propDict)) {
-            return $this->_propDict["offset"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the offset
-    *
-    * @param int $val The value of the offset
-    *
-    * @return SensitiveContentLocation
-    */
-    public function setOffset($val)
-    {
-        $this->_propDict["offset"] = $val;
+        $this->_propDict["confidence"] = $val;
         return $this;
     }
 }
