@@ -197,4 +197,32 @@ class Chat extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the tabs
+     *
+     * @return array The tabs
+     */
+    public function getTabs()
+    {
+        if (array_key_exists("tabs", $this->_propDict)) {
+           return $this->_propDict["tabs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tabs
+    *
+    * @param TeamsTab $val The tabs
+    *
+    * @return Chat
+    */
+    public function setTabs($val)
+    {
+		$this->_propDict["tabs"] = $val;
+        return $this;
+    }
+    
 }

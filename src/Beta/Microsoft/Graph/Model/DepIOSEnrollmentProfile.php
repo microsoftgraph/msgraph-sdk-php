@@ -378,6 +378,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
+    * Gets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @return bool The passCodeDisabled
+    */
+    public function getPassCodeDisabled()
+    {
+        if (array_key_exists("passCodeDisabled", $this->_propDict)) {
+            return $this->_propDict["passCodeDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @param bool $val The passCodeDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setPassCodeDisabled($val)
+    {
+        $this->_propDict["passCodeDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the preferredLanguageScreenDisabled
     * Indicates if Preferred language screen is disabled
     *
@@ -403,6 +432,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setPreferredLanguageScreenDisabled($val)
     {
         $this->_propDict["preferredLanguageScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the restoreCompletedScreenDisabled
+    * Indicates if Weclome screen is disabled
+    *
+    * @return bool The restoreCompletedScreenDisabled
+    */
+    public function getRestoreCompletedScreenDisabled()
+    {
+        if (array_key_exists("restoreCompletedScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["restoreCompletedScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the restoreCompletedScreenDisabled
+    * Indicates if Weclome screen is disabled
+    *
+    * @param bool $val The restoreCompletedScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setRestoreCompletedScreenDisabled($val)
+    {
+        $this->_propDict["restoreCompletedScreenDisabled"] = boolval($val);
         return $this;
     }
     
@@ -523,6 +581,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
+    * Gets the updateCompleteScreenDisabled
+    * Indicates if Weclome screen is disabled
+    *
+    * @return bool The updateCompleteScreenDisabled
+    */
+    public function getUpdateCompleteScreenDisabled()
+    {
+        if (array_key_exists("updateCompleteScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["updateCompleteScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the updateCompleteScreenDisabled
+    * Indicates if Weclome screen is disabled
+    *
+    * @param bool $val The updateCompleteScreenDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setUpdateCompleteScreenDisabled($val)
+    {
+        $this->_propDict["updateCompleteScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the watchMigrationScreenDisabled
     * Indicates if the watch migration screen is disabled
     *
@@ -577,6 +664,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setWelcomeScreenDisabled($val)
     {
         $this->_propDict["welcomeScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
+    *
+    * @return bool The zoomDisabled
+    */
+    public function getZoomDisabled()
+    {
+        if (array_key_exists("zoomDisabled", $this->_propDict)) {
+            return $this->_propDict["zoomDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
+    *
+    * @param bool $val The zoomDisabled
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setZoomDisabled($val)
+    {
+        $this->_propDict["zoomDisabled"] = boolval($val);
         return $this;
     }
     

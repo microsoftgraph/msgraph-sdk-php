@@ -1186,6 +1186,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the macOSSoftwareUpdateAccountSummaries
+    * The MacOS software update account summaries for this account.
+     *
+     * @return array The macOSSoftwareUpdateAccountSummaries
+     */
+    public function getMacOSSoftwareUpdateAccountSummaries()
+    {
+        if (array_key_exists("macOSSoftwareUpdateAccountSummaries", $this->_propDict)) {
+           return $this->_propDict["macOSSoftwareUpdateAccountSummaries"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the macOSSoftwareUpdateAccountSummaries
+    * The MacOS software update account summaries for this account.
+    *
+    * @param MacOSSoftwareUpdateAccountSummary $val The macOSSoftwareUpdateAccountSummaries
+    *
+    * @return DeviceManagement
+    */
+    public function setMacOSSoftwareUpdateAccountSummaries($val)
+    {
+		$this->_propDict["macOSSoftwareUpdateAccountSummaries"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the managedDeviceEncryptionStates
     * Encryption report for devices in this account
      *
@@ -1853,6 +1883,36 @@ class DeviceManagement extends Entity
     public function setDeviceComplianceScripts($val)
     {
 		$this->_propDict["deviceComplianceScripts"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceCustomAttributeShellScripts
+    * The list of device custom attribute shell scripts associated with the tenant.
+     *
+     * @return array The deviceCustomAttributeShellScripts
+     */
+    public function getDeviceCustomAttributeShellScripts()
+    {
+        if (array_key_exists("deviceCustomAttributeShellScripts", $this->_propDict)) {
+           return $this->_propDict["deviceCustomAttributeShellScripts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceCustomAttributeShellScripts
+    * The list of device custom attribute shell scripts associated with the tenant.
+    *
+    * @param DeviceCustomAttributeShellScript $val The deviceCustomAttributeShellScripts
+    *
+    * @return DeviceManagement
+    */
+    public function setDeviceCustomAttributeShellScripts($val)
+    {
+		$this->_propDict["deviceCustomAttributeShellScripts"] = $val;
         return $this;
     }
     
@@ -2675,6 +2735,36 @@ class DeviceManagement extends Entity
     public function setDerivedCredentials($val)
     {
 		$this->_propDict["derivedCredentials"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the resourceAccessProfiles
+    * Collection of resource access settings associated with account.
+     *
+     * @return array The resourceAccessProfiles
+     */
+    public function getResourceAccessProfiles()
+    {
+        if (array_key_exists("resourceAccessProfiles", $this->_propDict)) {
+           return $this->_propDict["resourceAccessProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the resourceAccessProfiles
+    * Collection of resource access settings associated with account.
+    *
+    * @param DeviceManagementResourceAccessProfileBase $val The resourceAccessProfiles
+    *
+    * @return DeviceManagement
+    */
+    public function setResourceAccessProfiles($val)
+    {
+		$this->_propDict["resourceAccessProfiles"] = $val;
         return $this;
     }
     

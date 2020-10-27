@@ -52,6 +52,37 @@ class TextClassificationRequest extends Entity
     }
     
     /**
+    * Gets the matchTolerancesToInclude
+    *
+    * @return MlClassificationMatchTolerance The matchTolerancesToInclude
+    */
+    public function getMatchTolerancesToInclude()
+    {
+        if (array_key_exists("matchTolerancesToInclude", $this->_propDict)) {
+            if (is_a($this->_propDict["matchTolerancesToInclude"], "Beta\Microsoft\Graph\Model\MlClassificationMatchTolerance")) {
+                return $this->_propDict["matchTolerancesToInclude"];
+            } else {
+                $this->_propDict["matchTolerancesToInclude"] = new MlClassificationMatchTolerance($this->_propDict["matchTolerancesToInclude"]);
+                return $this->_propDict["matchTolerancesToInclude"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the matchTolerancesToInclude
+    *
+    * @param MlClassificationMatchTolerance $val The matchTolerancesToInclude
+    *
+    * @return TextClassificationRequest
+    */
+    public function setMatchTolerancesToInclude($val)
+    {
+        $this->_propDict["matchTolerancesToInclude"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the scopesToRun
     *
     * @return SensitiveTypeScope The scopesToRun

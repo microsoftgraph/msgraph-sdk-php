@@ -172,6 +172,64 @@ class DeviceManagementSettingDefinition extends Entity
     }
     
     /**
+    * Gets the headerSubtitle
+    * subtitle of the setting header for more details about the category/section
+    *
+    * @return string The headerSubtitle
+    */
+    public function getHeaderSubtitle()
+    {
+        if (array_key_exists("headerSubtitle", $this->_propDict)) {
+            return $this->_propDict["headerSubtitle"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the headerSubtitle
+    * subtitle of the setting header for more details about the category/section
+    *
+    * @param string $val The headerSubtitle
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setHeaderSubtitle($val)
+    {
+        $this->_propDict["headerSubtitle"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the headerTitle
+    * title of the setting header represents a category/section of a setting/settings
+    *
+    * @return string The headerTitle
+    */
+    public function getHeaderTitle()
+    {
+        if (array_key_exists("headerTitle", $this->_propDict)) {
+            return $this->_propDict["headerTitle"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the headerTitle
+    * title of the setting header represents a category/section of a setting/settings
+    *
+    * @param string $val The headerTitle
+    *
+    * @return DeviceManagementSettingDefinition
+    */
+    public function setHeaderTitle($val)
+    {
+        $this->_propDict["headerTitle"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isTopLevel
     * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
     *

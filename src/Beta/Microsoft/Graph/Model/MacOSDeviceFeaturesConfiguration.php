@@ -55,8 +55,38 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
 
      /** 
+     * Gets the appAssociatedDomains
+    * Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The appAssociatedDomains
+     */
+    public function getAppAssociatedDomains()
+    {
+        if (array_key_exists("appAssociatedDomains", $this->_propDict)) {
+           return $this->_propDict["appAssociatedDomains"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appAssociatedDomains
+    * Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
+    *
+    * @param MacOSAssociatedDomainsItem $val The appAssociatedDomains
+    *
+    * @return MacOSDeviceFeaturesConfiguration
+    */
+    public function setAppAssociatedDomains($val)
+    {
+		$this->_propDict["appAssociatedDomains"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the associatedDomains
-    * Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+    * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      *
      * @return array The associatedDomains
      */
@@ -71,7 +101,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /** 
     * Sets the associatedDomains
-    * Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+    * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
     *
     * @param KeyValuePair $val The associatedDomains
     *

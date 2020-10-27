@@ -207,6 +207,39 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     }
     
     /**
+    * Gets the enrollmentTokenType
+    * The enrollment token type for an enrollment profile.
+    *
+    * @return AndroidDeviceOwnerEnrollmentTokenType The enrollmentTokenType
+    */
+    public function getEnrollmentTokenType()
+    {
+        if (array_key_exists("enrollmentTokenType", $this->_propDict)) {
+            if (is_a($this->_propDict["enrollmentTokenType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentTokenType")) {
+                return $this->_propDict["enrollmentTokenType"];
+            } else {
+                $this->_propDict["enrollmentTokenType"] = new AndroidDeviceOwnerEnrollmentTokenType($this->_propDict["enrollmentTokenType"]);
+                return $this->_propDict["enrollmentTokenType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the enrollmentTokenType
+    * The enrollment token type for an enrollment profile.
+    *
+    * @param AndroidDeviceOwnerEnrollmentTokenType $val The enrollmentTokenType
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setEnrollmentTokenType($val)
+    {
+        $this->_propDict["enrollmentTokenType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * Date time the enrollment profile was last modified.
     *
