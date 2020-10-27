@@ -291,6 +291,7 @@ class Subscription extends Entity
     
     /**
     * Gets the lifecycleNotificationUrl
+    * The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. Optional. Read more about how Outlook resources use lifecycle notifications.
     *
     * @return string The lifecycleNotificationUrl
     */
@@ -305,6 +306,7 @@ class Subscription extends Entity
     
     /**
     * Sets the lifecycleNotificationUrl
+    * The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. Optional. Read more about how Outlook resources use lifecycle notifications.
     *
     * @param string $val The lifecycleNotificationUrl
     *

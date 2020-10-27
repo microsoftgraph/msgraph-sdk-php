@@ -264,6 +264,33 @@ class Calendar extends Entity
     }
     
     /**
+    * Gets the isDefaultCalendar
+    *
+    * @return bool The isDefaultCalendar
+    */
+    public function getIsDefaultCalendar()
+    {
+        if (array_key_exists("isDefaultCalendar", $this->_propDict)) {
+            return $this->_propDict["isDefaultCalendar"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDefaultCalendar
+    *
+    * @param bool $val The isDefaultCalendar
+    *
+    * @return Calendar
+    */
+    public function setIsDefaultCalendar($val)
+    {
+        $this->_propDict["isDefaultCalendar"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the isRemovable
     * Indicates whether this user calendar can be deleted from the user mailbox.
     *
