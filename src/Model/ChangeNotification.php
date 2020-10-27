@@ -148,6 +148,7 @@ class ChangeNotification extends Entity
 
     /**
     * Gets the lifecycleEvent
+    * The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, removed, reauthorizationRequired.
     *
     * @return LifecycleEventType The lifecycleEvent
     */
@@ -166,6 +167,7 @@ class ChangeNotification extends Entity
 
     /**
     * Sets the lifecycleEvent
+    * The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, removed, reauthorizationRequired.
     *
     * @param LifecycleEventType $val The value to assign to the lifecycleEvent
     *
