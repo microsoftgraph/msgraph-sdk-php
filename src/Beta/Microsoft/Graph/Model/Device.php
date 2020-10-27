@@ -207,7 +207,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceMetadata
-    * For interal use only. Set to null.
+    * For internal use only. Set to null.
     *
     * @return string The deviceMetadata
     */
@@ -222,7 +222,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceMetadata
-    * For interal use only. Set to null.
+    * For internal use only. Set to null.
     *
     * @param string $val The deviceMetadata
     *
@@ -263,7 +263,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceVersion
-    * For interal use only.
+    * For internal use only.
     *
     * @return int The deviceVersion
     */
@@ -278,7 +278,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceVersion
-    * For interal use only.
+    * For internal use only.
     *
     * @param int $val The deviceVersion
     *
@@ -545,7 +545,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -564,7 +564,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -665,7 +665,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the physicalIds
-    * For interal use only. Not nullable.
+    * For internal use only. Not nullable.
     *
     * @return string The physicalIds
     */
@@ -680,7 +680,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the physicalIds
-    * For interal use only. Not nullable.
+    * For internal use only. Not nullable.
     *
     * @param string $val The physicalIds
     *

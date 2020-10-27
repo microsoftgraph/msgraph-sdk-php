@@ -244,6 +244,39 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     }
     
     /**
+    * Gets the appActionIfDeviceLockNotSet
+    * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only)
+    *
+    * @return ManagedAppRemediationAction The appActionIfDeviceLockNotSet
+    */
+    public function getAppActionIfDeviceLockNotSet()
+    {
+        if (array_key_exists("appActionIfDeviceLockNotSet", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfDeviceLockNotSet"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+                return $this->_propDict["appActionIfDeviceLockNotSet"];
+            } else {
+                $this->_propDict["appActionIfDeviceLockNotSet"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDeviceLockNotSet"]);
+                return $this->_propDict["appActionIfDeviceLockNotSet"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appActionIfDeviceLockNotSet
+    * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only)
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfDeviceLockNotSet
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setAppActionIfDeviceLockNotSet($val)
+    {
+        $this->_propDict["appActionIfDeviceLockNotSet"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the appActionIfIosDeviceModelNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
     *
@@ -335,6 +368,35 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     public function setBiometricAuthenticationBlocked($val)
     {
         $this->_propDict["biometricAuthenticationBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the blockAfterCompanyPortalUpdateDeferralInDays
+    * Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
+    *
+    * @return int The blockAfterCompanyPortalUpdateDeferralInDays
+    */
+    public function getBlockAfterCompanyPortalUpdateDeferralInDays()
+    {
+        if (array_key_exists("blockAfterCompanyPortalUpdateDeferralInDays", $this->_propDict)) {
+            return $this->_propDict["blockAfterCompanyPortalUpdateDeferralInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the blockAfterCompanyPortalUpdateDeferralInDays
+    * Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
+    *
+    * @param int $val The blockAfterCompanyPortalUpdateDeferralInDays
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setBlockAfterCompanyPortalUpdateDeferralInDays($val)
+    {
+        $this->_propDict["blockAfterCompanyPortalUpdateDeferralInDays"] = intval($val);
         return $this;
     }
     
@@ -568,6 +630,35 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     public function setDeployedAppCount($val)
     {
         $this->_propDict["deployedAppCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceLockRequired
+    * Defines if any kind of lock must be required on device. (android only)
+    *
+    * @return bool The deviceLockRequired
+    */
+    public function getDeviceLockRequired()
+    {
+        if (array_key_exists("deviceLockRequired", $this->_propDict)) {
+            return $this->_propDict["deviceLockRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceLockRequired
+    * Defines if any kind of lock must be required on device. (android only)
+    *
+    * @param bool $val The deviceLockRequired
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setDeviceLockRequired($val)
+    {
+        $this->_propDict["deviceLockRequired"] = boolval($val);
         return $this;
     }
     
@@ -1191,6 +1282,64 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     public function setThirdPartyKeyboardsBlocked($val)
     {
         $this->_propDict["thirdPartyKeyboardsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the warnAfterCompanyPortalUpdateDeferralInDays
+    * Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
+    *
+    * @return int The warnAfterCompanyPortalUpdateDeferralInDays
+    */
+    public function getWarnAfterCompanyPortalUpdateDeferralInDays()
+    {
+        if (array_key_exists("warnAfterCompanyPortalUpdateDeferralInDays", $this->_propDict)) {
+            return $this->_propDict["warnAfterCompanyPortalUpdateDeferralInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the warnAfterCompanyPortalUpdateDeferralInDays
+    * Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
+    *
+    * @param int $val The warnAfterCompanyPortalUpdateDeferralInDays
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setWarnAfterCompanyPortalUpdateDeferralInDays($val)
+    {
+        $this->_propDict["warnAfterCompanyPortalUpdateDeferralInDays"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the wipeAfterCompanyPortalUpdateDeferralInDays
+    * Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
+    *
+    * @return int The wipeAfterCompanyPortalUpdateDeferralInDays
+    */
+    public function getWipeAfterCompanyPortalUpdateDeferralInDays()
+    {
+        if (array_key_exists("wipeAfterCompanyPortalUpdateDeferralInDays", $this->_propDict)) {
+            return $this->_propDict["wipeAfterCompanyPortalUpdateDeferralInDays"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the wipeAfterCompanyPortalUpdateDeferralInDays
+    * Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
+    *
+    * @param int $val The wipeAfterCompanyPortalUpdateDeferralInDays
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setWipeAfterCompanyPortalUpdateDeferralInDays($val)
+    {
+        $this->_propDict["wipeAfterCompanyPortalUpdateDeferralInDays"] = intval($val);
         return $this;
     }
     

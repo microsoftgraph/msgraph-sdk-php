@@ -171,6 +171,35 @@ class MacOSLobApp extends MobileLobApp
     }
     
     /**
+    * Gets the installAsManaged
+    * A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions).
+    *
+    * @return bool The installAsManaged
+    */
+    public function getInstallAsManaged()
+    {
+        if (array_key_exists("installAsManaged", $this->_propDict)) {
+            return $this->_propDict["installAsManaged"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the installAsManaged
+    * A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions).
+    *
+    * @param bool $val The installAsManaged
+    *
+    * @return MacOSLobApp
+    */
+    public function setInstallAsManaged($val)
+    {
+        $this->_propDict["installAsManaged"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the md5Hash
     * The MD5 hash codes
     *

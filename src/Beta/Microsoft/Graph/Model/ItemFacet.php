@@ -213,15 +213,15 @@ class ItemFacet extends Entity
     /**
     * Gets the source
     *
-    * @return PersonDataSource The source
+    * @return PersonDataSources The source
     */
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "Beta\Microsoft\Graph\Model\PersonDataSource")) {
+            if (is_a($this->_propDict["source"], "Beta\Microsoft\Graph\Model\PersonDataSources")) {
                 return $this->_propDict["source"];
             } else {
-                $this->_propDict["source"] = new PersonDataSource($this->_propDict["source"]);
+                $this->_propDict["source"] = new PersonDataSources($this->_propDict["source"]);
                 return $this->_propDict["source"];
             }
         }
@@ -231,7 +231,7 @@ class ItemFacet extends Entity
     /**
     * Sets the source
     *
-    * @param PersonDataSource $val The source
+    * @param PersonDataSources $val The source
     *
     * @return ItemFacet
     */

@@ -36,4 +36,5 @@ class AndroidVpnConnectionType extends Enum
     const CHECK_POINT_CAPSULE_VPN = "checkPointCapsuleVpn";
     const CITRIX = "citrix";
     const MICROSOFT_TUNNEL = "microsoftTunnel";
+    const NET_MOTION_MOBILITY = "netMotionMobility";
 }

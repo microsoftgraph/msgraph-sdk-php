@@ -293,6 +293,34 @@ class EdiscoveryCase extends Entity
     
 
      /** 
+     * Gets the custodians
+     *
+     * @return array The custodians
+     */
+    public function getCustodians()
+    {
+        if (array_key_exists("custodians", $this->_propDict)) {
+           return $this->_propDict["custodians"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the custodians
+    *
+    * @param Custodian $val The custodians
+    *
+    * @return EdiscoveryCase
+    */
+    public function setCustodians($val)
+    {
+		$this->_propDict["custodians"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the reviewSets
      *
      * @return array The reviewSets
