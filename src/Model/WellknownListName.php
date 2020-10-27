@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MacOSAssociatedDomainsKeyValuePair File
+* WellknownListName File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* MacOSAssociatedDomainsKeyValuePair class
+* WellknownListName class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,13 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MacOSAssociatedDomainsKeyValuePair extends KeyValuePair
+class WellknownListName extends Enum
 {
+    /**
+    * The Enum WellknownListName
+    */
+    const NONE = "none";
+    const DEFAULT_LIST = "defaultList";
+    const FLAGGED_EMAILS = "flaggedEmails";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

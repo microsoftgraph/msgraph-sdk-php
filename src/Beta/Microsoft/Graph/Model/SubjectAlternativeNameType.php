@@ -34,4 +34,5 @@ class SubjectAlternativeNameType extends Enum
     const USER_PRINCIPAL_NAME = "userPrincipalName";
     const CUSTOM_AZURE_AD_ATTRIBUTE = "customAzureADAttribute";
     const DOMAIN_NAME_SERVICE = "domainNameService";
+    const UNIVERSAL_RESOURCE_IDENTIFIER = "universalResourceIdentifier";
 }

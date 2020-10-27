@@ -33,6 +33,34 @@ class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings
     }
 
     /**
+    * Gets the uninstallOnDeviceRemoval
+    * Whether or not to uninstall the app when device is removed from Intune.
+    *
+    * @return bool The uninstallOnDeviceRemoval
+    */
+    public function getUninstallOnDeviceRemoval()
+    {
+        if (array_key_exists("uninstallOnDeviceRemoval", $this->_propDict)) {
+            return $this->_propDict["uninstallOnDeviceRemoval"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the uninstallOnDeviceRemoval
+    * Whether or not to uninstall the app when device is removed from Intune.
+    *
+    * @param bool $val The value of the uninstallOnDeviceRemoval
+    *
+    * @return MacOsVppAppAssignmentSettings
+    */
+    public function setUninstallOnDeviceRemoval($val)
+    {
+        $this->_propDict["uninstallOnDeviceRemoval"] = $val;
+        return $this;
+    }
+    /**
     * Gets the useDeviceLicensing
     * Whether or not to use device licensing.
     *

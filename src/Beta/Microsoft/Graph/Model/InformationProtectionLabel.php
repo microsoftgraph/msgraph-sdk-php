@@ -133,6 +133,37 @@ class InformationProtectionLabel extends Entity
     }
     
     /**
+    * Gets the parent
+    *
+    * @return ParentLabelDetails The parent
+    */
+    public function getParent()
+    {
+        if (array_key_exists("parent", $this->_propDict)) {
+            if (is_a($this->_propDict["parent"], "Beta\Microsoft\Graph\Model\ParentLabelDetails")) {
+                return $this->_propDict["parent"];
+            } else {
+                $this->_propDict["parent"] = new ParentLabelDetails($this->_propDict["parent"]);
+                return $this->_propDict["parent"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the parent
+    *
+    * @param ParentLabelDetails $val The parent
+    *
+    * @return InformationProtectionLabel
+    */
+    public function setParent($val)
+    {
+        $this->_propDict["parent"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the sensitivity
     *
     * @return int The sensitivity

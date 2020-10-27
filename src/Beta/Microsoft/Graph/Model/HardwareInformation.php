@@ -319,6 +319,34 @@ class HardwareInformation extends Entity
         return $this;
     }
     /**
+    * Gets the ipAddressV4
+    * IPAddressV4
+    *
+    * @return string The ipAddressV4
+    */
+    public function getIpAddressV4()
+    {
+        if (array_key_exists("ipAddressV4", $this->_propDict)) {
+            return $this->_propDict["ipAddressV4"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ipAddressV4
+    * IPAddressV4
+    *
+    * @param string $val The value of the ipAddressV4
+    *
+    * @return HardwareInformation
+    */
+    public function setIpAddressV4($val)
+    {
+        $this->_propDict["ipAddressV4"] = $val;
+        return $this;
+    }
+    /**
     * Gets the isEncrypted
     * Encryption status of the device
     *
@@ -686,6 +714,34 @@ class HardwareInformation extends Entity
     {
         $this->_propDict["sharedDeviceCachedUsers"] = $val;
          return $this;
+    }
+    /**
+    * Gets the subnetAddress
+    * SubnetAddress
+    *
+    * @return string The subnetAddress
+    */
+    public function getSubnetAddress()
+    {
+        if (array_key_exists("subnetAddress", $this->_propDict)) {
+            return $this->_propDict["subnetAddress"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subnetAddress
+    * SubnetAddress
+    *
+    * @param string $val The value of the subnetAddress
+    *
+    * @return HardwareInformation
+    */
+    public function setSubnetAddress($val)
+    {
+        $this->_propDict["subnetAddress"] = $val;
+        return $this;
     }
     /**
     * Gets the subscriberCarrier

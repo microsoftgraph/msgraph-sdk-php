@@ -115,6 +115,66 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
         return $this;
     }
     
+
+     /** 
+     * Gets the customData
+    * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
+     *
+     * @return array The customData
+     */
+    public function getCustomData()
+    {
+        if (array_key_exists("customData", $this->_propDict)) {
+           return $this->_propDict["customData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the customData
+    * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
+    *
+    * @param KeyValue $val The customData
+    *
+    * @return AndroidDeviceOwnerVpnConfiguration
+    */
+    public function setCustomData($val)
+    {
+		$this->_propDict["customData"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the customKeyValueData
+    * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
+     *
+     * @return array The customKeyValueData
+     */
+    public function getCustomKeyValueData()
+    {
+        if (array_key_exists("customKeyValueData", $this->_propDict)) {
+           return $this->_propDict["customKeyValueData"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the customKeyValueData
+    * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
+    *
+    * @param KeyValuePair $val The customKeyValueData
+    *
+    * @return AndroidDeviceOwnerVpnConfiguration
+    */
+    public function setCustomKeyValueData($val)
+    {
+		$this->_propDict["customKeyValueData"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.

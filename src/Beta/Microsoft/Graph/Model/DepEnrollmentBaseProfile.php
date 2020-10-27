@@ -286,35 +286,6 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     }
     
     /**
-    * Gets the passCodeDisabled
-    * Indicates if Passcode setup pane is disabled
-    *
-    * @return bool The passCodeDisabled
-    */
-    public function getPassCodeDisabled()
-    {
-        if (array_key_exists("passCodeDisabled", $this->_propDict)) {
-            return $this->_propDict["passCodeDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the passCodeDisabled
-    * Indicates if Passcode setup pane is disabled
-    *
-    * @param bool $val The passCodeDisabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setPassCodeDisabled($val)
-    {
-        $this->_propDict["passCodeDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the privacyPaneDisabled
     * Indicates if privacy screen is disabled
     *
@@ -601,35 +572,6 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     public function setTouchIdDisabled($val)
     {
         $this->_propDict["touchIdDisabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the zoomDisabled
-    * Indicates if zoom setup pane is disabled
-    *
-    * @return bool The zoomDisabled
-    */
-    public function getZoomDisabled()
-    {
-        if (array_key_exists("zoomDisabled", $this->_propDict)) {
-            return $this->_propDict["zoomDisabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the zoomDisabled
-    * Indicates if zoom setup pane is disabled
-    *
-    * @param bool $val The zoomDisabled
-    *
-    * @return DepEnrollmentBaseProfile
-    */
-    public function setZoomDisabled($val)
-    {
-        $this->_propDict["zoomDisabled"] = boolval($val);
         return $this;
     }
     

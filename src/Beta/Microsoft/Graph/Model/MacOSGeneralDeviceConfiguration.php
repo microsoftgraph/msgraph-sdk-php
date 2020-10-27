@@ -1074,6 +1074,35 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the passwordMaximumAttemptCount
+    * The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
+    *
+    * @return int The passwordMaximumAttemptCount
+    */
+    public function getPasswordMaximumAttemptCount()
+    {
+        if (array_key_exists("passwordMaximumAttemptCount", $this->_propDict)) {
+            return $this->_propDict["passwordMaximumAttemptCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMaximumAttemptCount
+    * The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
+    *
+    * @param int $val The passwordMaximumAttemptCount
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setPasswordMaximumAttemptCount($val)
+    {
+        $this->_propDict["passwordMaximumAttemptCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the passwordMinimumCharacterSetCount
     * Number of character sets a password must contain. Valid values 0 to 4
     *
@@ -1186,6 +1215,35 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function setPasswordMinutesOfInactivityBeforeScreenTimeout($val)
     {
         $this->_propDict["passwordMinutesOfInactivityBeforeScreenTimeout"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the passwordMinutesUntilFailedLoginReset
+    * The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
+    *
+    * @return int The passwordMinutesUntilFailedLoginReset
+    */
+    public function getPasswordMinutesUntilFailedLoginReset()
+    {
+        if (array_key_exists("passwordMinutesUntilFailedLoginReset", $this->_propDict)) {
+            return $this->_propDict["passwordMinutesUntilFailedLoginReset"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passwordMinutesUntilFailedLoginReset
+    * The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
+    *
+    * @param int $val The passwordMinutesUntilFailedLoginReset
+    *
+    * @return MacOSGeneralDeviceConfiguration
+    */
+    public function setPasswordMinutesUntilFailedLoginReset($val)
+    {
+        $this->_propDict["passwordMinutesUntilFailedLoginReset"] = intval($val);
         return $this;
     }
     

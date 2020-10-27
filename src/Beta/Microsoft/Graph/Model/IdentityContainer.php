@@ -113,6 +113,34 @@ class IdentityContainer extends
     
 
      /** 
+     * Gets the userFlowAttributes
+     *
+     * @return array The userFlowAttributes
+     */
+    public function getUserFlowAttributes()
+    {
+        if (array_key_exists("userFlowAttributes", $this->_propDict)) {
+           return $this->_propDict["userFlowAttributes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userFlowAttributes
+    *
+    * @param IdentityUserFlowAttribute $val The userFlowAttributes
+    *
+    * @return IdentityContainer
+    */
+    public function setUserFlowAttributes($val)
+    {
+		$this->_propDict["userFlowAttributes"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userFlows
      *
      * @return array The userFlows

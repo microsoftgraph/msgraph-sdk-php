@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
 {
     /**
+    * Gets the accessibilityScreenDisabled
+    * Indicates if Accessibility screen is disabled
+    *
+    * @return bool The accessibilityScreenDisabled
+    */
+    public function getAccessibilityScreenDisabled()
+    {
+        if (array_key_exists("accessibilityScreenDisabled", $this->_propDict)) {
+            return $this->_propDict["accessibilityScreenDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the accessibilityScreenDisabled
+    * Indicates if Accessibility screen is disabled
+    *
+    * @param bool $val The accessibilityScreenDisabled
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setAccessibilityScreenDisabled($val)
+    {
+        $this->_propDict["accessibilityScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the chooseYourLockScreenDisabled
     * Indicates if iCloud Documents and Desktop screen is disabled
     *
@@ -141,6 +170,35 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
+    * Gets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @return bool The passCodeDisabled
+    */
+    public function getPassCodeDisabled()
+    {
+        if (array_key_exists("passCodeDisabled", $this->_propDict)) {
+            return $this->_propDict["passCodeDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passCodeDisabled
+    * Indicates if Passcode setup pane is disabled
+    *
+    * @param bool $val The passCodeDisabled
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setPassCodeDisabled($val)
+    {
+        $this->_propDict["passCodeDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the registrationDisabled
     * Indicates if registration is disabled
     *
@@ -166,6 +224,35 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setRegistrationDisabled($val)
     {
         $this->_propDict["registrationDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
+    *
+    * @return bool The zoomDisabled
+    */
+    public function getZoomDisabled()
+    {
+        if (array_key_exists("zoomDisabled", $this->_propDict)) {
+            return $this->_propDict["zoomDisabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the zoomDisabled
+    * Indicates if zoom setup pane is disabled
+    *
+    * @param bool $val The zoomDisabled
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setZoomDisabled($val)
+    {
+        $this->_propDict["zoomDisabled"] = boolval($val);
         return $this;
     }
     

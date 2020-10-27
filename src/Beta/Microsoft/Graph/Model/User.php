@@ -468,6 +468,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the employeeHireDate
+    * The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter.
     *
     * @return \DateTime The employeeHireDate
     */
@@ -486,6 +487,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the employeeHireDate
+    * The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter.
     *
     * @param \DateTime $val The employeeHireDate
     *
@@ -499,7 +501,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the employeeId
-    * The employee identifier assigned to the user by the organization. Supports $filter.
+    * The employee identifier assigned to the user by the organization. Returned only on $select. Supports $filter.
     *
     * @return string The employeeId
     */
@@ -514,7 +516,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the employeeId
-    * The employee identifier assigned to the user by the organization. Supports $filter.
+    * The employee identifier assigned to the user by the organization. Returned only on $select. Supports $filter.
     *
     * @param string $val The employeeId
     *
@@ -528,6 +530,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the employeeOrgData
+    * Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select.
     *
     * @return EmployeeOrgData The employeeOrgData
     */
@@ -546,6 +549,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the employeeOrgData
+    * Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select.
     *
     * @param EmployeeOrgData $val The employeeOrgData
     *
@@ -559,6 +563,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the employeeType
+    * Captures enterprise worker type: Employee, Contractor, Consultant, Vendor, etc. Returned only on $select. Supports $filter.
     *
     * @return string The employeeType
     */
@@ -573,6 +578,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the employeeType
+    * Captures enterprise worker type: Employee, Contractor, Consultant, Vendor, etc. Returned only on $select. Supports $filter.
     *
     * @param string $val The employeeType
     *
@@ -817,7 +823,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the jobTitle
-    * The user’s job title. Supports $filter.
+    * The user's job title. Supports $filter.
     *
     * @return string The jobTitle
     */
@@ -832,7 +838,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the jobTitle
-    * The user’s job title. Supports $filter.
+    * The user's job title. Supports $filter.
     *
     * @param string $val The jobTitle
     *
@@ -1145,7 +1151,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
+    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
     *
     * @return string The onPremisesImmutableId
     */
@@ -1160,7 +1166,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
+    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
     *
     * @param string $val The onPremisesImmutableId
     *
@@ -1411,7 +1417,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @return PasswordProfile The passwordProfile
     */
@@ -1430,7 +1436,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @param PasswordProfile $val The passwordProfile
     *
@@ -1799,7 +1805,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
     *
     * @return string The userPrincipalName
     */
@@ -1814,7 +1820,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
     *
     * @param string $val The userPrincipalName
     *
@@ -1981,7 +1987,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @return \DateTime The hireDate
     */
@@ -2000,7 +2006,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @param \DateTime $val The hireDate
     *
@@ -2397,7 +2403,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the manager
-    * The user or contact that is this user’s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
     *
     * @return DirectoryObject The manager
     */
@@ -2416,7 +2422,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the manager
-    * The user or contact that is this user’s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
     *
     * @param DirectoryObject $val The manager
     *

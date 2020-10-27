@@ -992,6 +992,34 @@ class ServicePrincipal extends DirectoryObject
     
 
      /** 
+     * Gets the delegatedPermissionClassifications
+     *
+     * @return array The delegatedPermissionClassifications
+     */
+    public function getDelegatedPermissionClassifications()
+    {
+        if (array_key_exists("delegatedPermissionClassifications", $this->_propDict)) {
+           return $this->_propDict["delegatedPermissionClassifications"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the delegatedPermissionClassifications
+    *
+    * @param DelegatedPermissionClassification $val The delegatedPermissionClassifications
+    *
+    * @return ServicePrincipal
+    */
+    public function setDelegatedPermissionClassifications($val)
+    {
+		$this->_propDict["delegatedPermissionClassifications"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the endpoints
     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
      *
