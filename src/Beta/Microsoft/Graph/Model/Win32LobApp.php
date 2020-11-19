@@ -88,6 +88,35 @@ class Win32LobApp extends MobileLobApp
     }
     
     /**
+    * Gets the displayVersion
+    * The version displayed in the UX for this app.
+    *
+    * @return string The displayVersion
+    */
+    public function getDisplayVersion()
+    {
+        if (array_key_exists("displayVersion", $this->_propDict)) {
+            return $this->_propDict["displayVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayVersion
+    * The version displayed in the UX for this app.
+    *
+    * @param string $val The displayVersion
+    *
+    * @return Win32LobApp
+    */
+    public function setDisplayVersion($val)
+    {
+        $this->_propDict["displayVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the installCommandLine
     * The command line to install this app
     *

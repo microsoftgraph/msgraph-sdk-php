@@ -25,60 +25,64 @@ namespace Beta\Microsoft\Graph\Model;
 class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget
 {
     /**
-    * Gets the isNumberMatchingRequired
+    * Gets the authenticationMode
     *
-    * @return bool The isNumberMatchingRequired
+    * @return MicrosoftAuthenticatorAuthenticationMode The authenticationMode
     */
-    public function getIsNumberMatchingRequired()
+    public function getAuthenticationMode()
     {
-        if (array_key_exists("isNumberMatchingRequired", $this->_propDict)) {
-            return $this->_propDict["isNumberMatchingRequired"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the isNumberMatchingRequired
-    *
-    * @param bool $val The isNumberMatchingRequired
-    *
-    * @return MicrosoftAuthenticatorAuthenticationMethodTarget
-    */
-    public function setIsNumberMatchingRequired($val)
-    {
-        $this->_propDict["isNumberMatchingRequired"] = boolval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the shownContext
-    *
-    * @return AuthenticatorAppContextType The shownContext
-    */
-    public function getShownContext()
-    {
-        if (array_key_exists("shownContext", $this->_propDict)) {
-            if (is_a($this->_propDict["shownContext"], "Beta\Microsoft\Graph\Model\AuthenticatorAppContextType")) {
-                return $this->_propDict["shownContext"];
+        if (array_key_exists("authenticationMode", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMode"], "Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode")) {
+                return $this->_propDict["authenticationMode"];
             } else {
-                $this->_propDict["shownContext"] = new AuthenticatorAppContextType($this->_propDict["shownContext"]);
-                return $this->_propDict["shownContext"];
+                $this->_propDict["authenticationMode"] = new MicrosoftAuthenticatorAuthenticationMode($this->_propDict["authenticationMode"]);
+                return $this->_propDict["authenticationMode"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the shownContext
+    * Sets the authenticationMode
     *
-    * @param AuthenticatorAppContextType $val The shownContext
+    * @param MicrosoftAuthenticatorAuthenticationMode $val The authenticationMode
     *
     * @return MicrosoftAuthenticatorAuthenticationMethodTarget
     */
-    public function setShownContext($val)
+    public function setAuthenticationMode($val)
     {
-        $this->_propDict["shownContext"] = $val;
+        $this->_propDict["authenticationMode"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the featureSettings
+    *
+    * @return AuthenticatorAppFeatureSettings The featureSettings
+    */
+    public function getFeatureSettings()
+    {
+        if (array_key_exists("featureSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["featureSettings"], "Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings")) {
+                return $this->_propDict["featureSettings"];
+            } else {
+                $this->_propDict["featureSettings"] = new AuthenticatorAppFeatureSettings($this->_propDict["featureSettings"]);
+                return $this->_propDict["featureSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the featureSettings
+    *
+    * @param AuthenticatorAppFeatureSettings $val The featureSettings
+    *
+    * @return MicrosoftAuthenticatorAuthenticationMethodTarget
+    */
+    public function setFeatureSettings($val)
+    {
+        $this->_propDict["featureSettings"] = $val;
         return $this;
     }
     

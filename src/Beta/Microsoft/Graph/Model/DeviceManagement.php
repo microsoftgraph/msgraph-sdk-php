@@ -538,36 +538,6 @@ class DeviceManagement extends Entity
     
 
      /** 
-     * Gets the auditEvents
-    * The Audit Events
-     *
-     * @return array The auditEvents
-     */
-    public function getAuditEvents()
-    {
-        if (array_key_exists("auditEvents", $this->_propDict)) {
-           return $this->_propDict["auditEvents"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the auditEvents
-    * The Audit Events
-    *
-    * @param AuditEvent $val The auditEvents
-    *
-    * @return DeviceManagement
-    */
-    public function setAuditEvents($val)
-    {
-		$this->_propDict["auditEvents"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the androidDeviceOwnerEnrollmentProfiles
     * Android device owner enrollment profile entities.
      *
@@ -593,6 +563,37 @@ class DeviceManagement extends Entity
     public function setAndroidDeviceOwnerEnrollmentProfiles($val)
     {
 		$this->_propDict["androidDeviceOwnerEnrollmentProfiles"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the virtualEndpoint
+    *
+    * @return VirtualEndpoint The virtualEndpoint
+    */
+    public function getVirtualEndpoint()
+    {
+        if (array_key_exists("virtualEndpoint", $this->_propDict)) {
+            if (is_a($this->_propDict["virtualEndpoint"], "Beta\Microsoft\Graph\Model\VirtualEndpoint")) {
+                return $this->_propDict["virtualEndpoint"];
+            } else {
+                $this->_propDict["virtualEndpoint"] = new VirtualEndpoint($this->_propDict["virtualEndpoint"]);
+                return $this->_propDict["virtualEndpoint"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the virtualEndpoint
+    *
+    * @param VirtualEndpoint $val The virtualEndpoint
+    *
+    * @return DeviceManagement
+    */
+    public function setVirtualEndpoint($val)
+    {
+        $this->_propDict["virtualEndpoint"] = $val;
         return $this;
     }
     
@@ -749,6 +750,36 @@ class DeviceManagement extends Entity
     public function setAndroidManagedStoreAppConfigurationSchemas($val)
     {
 		$this->_propDict["androidManagedStoreAppConfigurationSchemas"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the auditEvents
+    * The Audit Events
+     *
+     * @return array The auditEvents
+     */
+    public function getAuditEvents()
+    {
+        if (array_key_exists("auditEvents", $this->_propDict)) {
+           return $this->_propDict["auditEvents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the auditEvents
+    * The Audit Events
+    *
+    * @param AuditEvent $val The auditEvents
+    *
+    * @return DeviceManagement
+    */
+    public function setAuditEvents($val)
+    {
+		$this->_propDict["auditEvents"] = $val;
         return $this;
     }
     
@@ -1304,6 +1335,96 @@ class DeviceManagement extends Entity
     public function setSoftwareUpdateStatusSummary($val)
     {
         $this->_propDict["softwareUpdateStatusSummary"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the configurationCategories
+    * List of all Configuration Categories
+     *
+     * @return array The configurationCategories
+     */
+    public function getConfigurationCategories()
+    {
+        if (array_key_exists("configurationCategories", $this->_propDict)) {
+           return $this->_propDict["configurationCategories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the configurationCategories
+    * List of all Configuration Categories
+    *
+    * @param DeviceManagementConfigurationCategory $val The configurationCategories
+    *
+    * @return DeviceManagement
+    */
+    public function setConfigurationCategories($val)
+    {
+		$this->_propDict["configurationCategories"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the configurationPolicies
+    * List of all Configuration policies
+     *
+     * @return array The configurationPolicies
+     */
+    public function getConfigurationPolicies()
+    {
+        if (array_key_exists("configurationPolicies", $this->_propDict)) {
+           return $this->_propDict["configurationPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the configurationPolicies
+    * List of all Configuration policies
+    *
+    * @param DeviceManagementConfigurationPolicy $val The configurationPolicies
+    *
+    * @return DeviceManagement
+    */
+    public function setConfigurationPolicies($val)
+    {
+		$this->_propDict["configurationPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the configurationSettings
+    * List of all ConfigurationSettings
+     *
+     * @return array The configurationSettings
+     */
+    public function getConfigurationSettings()
+    {
+        if (array_key_exists("configurationSettings", $this->_propDict)) {
+           return $this->_propDict["configurationSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the configurationSettings
+    * List of all ConfigurationSettings
+    *
+    * @param DeviceManagementConfigurationSettingDefinition $val The configurationSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setConfigurationSettings($val)
+    {
+		$this->_propDict["configurationSettings"] = $val;
         return $this;
     }
     
@@ -3368,6 +3489,36 @@ class DeviceManagement extends Entity
     public function setDomainJoinConnectors($val)
     {
 		$this->_propDict["domainJoinConnectors"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the configManagerCollections
+    * A list of ConfigManagerCollection
+     *
+     * @return array The configManagerCollections
+     */
+    public function getConfigManagerCollections()
+    {
+        if (array_key_exists("configManagerCollections", $this->_propDict)) {
+           return $this->_propDict["configManagerCollections"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the configManagerCollections
+    * A list of ConfigManagerCollection
+    *
+    * @param ConfigManagerCollection $val The configManagerCollections
+    *
+    * @return DeviceManagement
+    */
+    public function setConfigManagerCollections($val)
+    {
+		$this->_propDict["configManagerCollections"] = $val;
         return $this;
     }
     

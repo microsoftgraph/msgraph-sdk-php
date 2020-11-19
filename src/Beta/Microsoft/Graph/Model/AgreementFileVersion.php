@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MicrosoftAuthenticatorAuthenticationMethod File
+* AgreementFileVersion File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* MicrosoftAuthenticatorAuthenticationMethod class
+* AgreementFileVersion class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +22,6 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
+class AgreementFileVersion extends AgreementFileProperties
 {
 }

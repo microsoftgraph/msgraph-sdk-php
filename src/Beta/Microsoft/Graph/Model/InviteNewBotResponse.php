@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AuthenticatorAppContextType File
+* InviteNewBotResponse File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* AuthenticatorAppContextType class
+* InviteNewBotResponse class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,11 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AuthenticatorAppContextType extends Enum
+class InviteNewBotResponse extends ParticipantJoiningResponse
 {
     /**
-    * The Enum AuthenticatorAppContextType
+    * Gets the inviteUri
+    *
+    * @return string The inviteUri
     */
-    const LOCATION = "location";
-    const APP = "app";
+    public function getInviteUri()
+    {
+        if (array_key_exists("inviteUri", $this->_propDict)) {
+            return $this->_propDict["inviteUri"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inviteUri
+    *
+    * @param string $val The value of the inviteUri
+    *
+    * @return InviteNewBotResponse
+    */
+    public function setInviteUri($val)
+    {
+        $this->_propDict["inviteUri"] = $val;
+        return $this;
+    }
 }

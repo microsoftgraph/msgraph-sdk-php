@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SoftwareOathAuthenticationMethod File
+* DeviceManagementConfigurationAzureAdTrustType File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* SoftwareOathAuthenticationMethod class
+* DeviceManagementConfigurationAzureAdTrustType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,13 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SoftwareOathAuthenticationMethod extends AuthenticationMethod
+class DeviceManagementConfigurationAzureAdTrustType extends Enum
 {
+    /**
+    * The Enum DeviceManagementConfigurationAzureAdTrustType
+    */
+    const NONE = "none";
+    const AZURE_AD_JOINED = "azureAdJoined";
+    const ADD_WORK_ACCOUNT = "addWorkAccount";
+    const MDM_ONLY = "mdmOnly";
 }

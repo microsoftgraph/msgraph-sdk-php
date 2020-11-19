@@ -146,6 +146,32 @@ class ParticipantInfo extends Entity
         return $this;
     }
     /**
+    * Gets the platformId
+    *
+    * @return string The platformId
+    */
+    public function getPlatformId()
+    {
+        if (array_key_exists("platformId", $this->_propDict)) {
+            return $this->_propDict["platformId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the platformId
+    *
+    * @param string $val The value of the platformId
+    *
+    * @return ParticipantInfo
+    */
+    public function setPlatformId($val)
+    {
+        $this->_propDict["platformId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the region
     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
     *

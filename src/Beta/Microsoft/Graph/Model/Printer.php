@@ -52,6 +52,33 @@ class Printer extends PrinterBase
     }
     
     /**
+    * Gets the hasPhysicalDevice
+    *
+    * @return bool The hasPhysicalDevice
+    */
+    public function getHasPhysicalDevice()
+    {
+        if (array_key_exists("hasPhysicalDevice", $this->_propDict)) {
+            return $this->_propDict["hasPhysicalDevice"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hasPhysicalDevice
+    *
+    * @param bool $val The hasPhysicalDevice
+    *
+    * @return Printer
+    */
+    public function setHasPhysicalDevice($val)
+    {
+        $this->_propDict["hasPhysicalDevice"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the isShared
     *
     * @return bool The isShared
@@ -106,62 +133,6 @@ class Printer extends PrinterBase
     public function setRegisteredDateTime($val)
     {
         $this->_propDict["registeredDateTime"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the allowedGroups
-     *
-     * @return array The allowedGroups
-     */
-    public function getAllowedGroups()
-    {
-        if (array_key_exists("allowedGroups", $this->_propDict)) {
-           return $this->_propDict["allowedGroups"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the allowedGroups
-    *
-    * @param PrintIdentity $val The allowedGroups
-    *
-    * @return Printer
-    */
-    public function setAllowedGroups($val)
-    {
-		$this->_propDict["allowedGroups"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the allowedUsers
-     *
-     * @return array The allowedUsers
-     */
-    public function getAllowedUsers()
-    {
-        if (array_key_exists("allowedUsers", $this->_propDict)) {
-           return $this->_propDict["allowedUsers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the allowedUsers
-    *
-    * @param PrintUserIdentity $val The allowedUsers
-    *
-    * @return Printer
-    */
-    public function setAllowedUsers($val)
-    {
-		$this->_propDict["allowedUsers"] = $val;
         return $this;
     }
     

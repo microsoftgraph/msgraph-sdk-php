@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SecurityQuestionAuthenticationMethod File
+* DeviceManagementConfigurationSettingValueDefinition File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
 /**
-* SecurityQuestionAuthenticationMethod class
+* DeviceManagementConfigurationSettingValueDefinition class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +21,6 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SecurityQuestionAuthenticationMethod extends AuthenticationMethod
+class DeviceManagementConfigurationSettingValueDefinition extends Entity
 {
 }

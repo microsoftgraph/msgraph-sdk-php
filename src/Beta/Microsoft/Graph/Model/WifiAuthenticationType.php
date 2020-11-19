@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TemporaryAccessPassAuthenticationMethod File
+* WifiAuthenticationType File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* TemporaryAccessPassAuthenticationMethod class
+* WifiAuthenticationType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,14 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
+class WifiAuthenticationType extends Enum
 {
+    /**
+    * The Enum WifiAuthenticationType
+    */
+    const NONE = "none";
+    const USER = "user";
+    const MACHINE = "machine";
+    const MACHINE_OR_USER = "machineOrUser";
+    const GUEST = "guest";
 }

@@ -26,6 +26,7 @@ class TodoTaskList extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the task list.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class TodoTaskList extends Entity
     
     /**
     * Sets the displayName
+    * The name of the task list.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class TodoTaskList extends Entity
     
     /**
     * Gets the isOwner
+    * True if the user is owner of the given task list.
     *
     * @return bool The isOwner
     */
@@ -67,6 +70,7 @@ class TodoTaskList extends Entity
     
     /**
     * Sets the isOwner
+    * True if the user is owner of the given task list.
     *
     * @param bool $val The isOwner
     *
@@ -80,6 +84,7 @@ class TodoTaskList extends Entity
     
     /**
     * Gets the isShared
+    * True if the task list is shared with other users
     *
     * @return bool The isShared
     */
@@ -94,6 +99,7 @@ class TodoTaskList extends Entity
     
     /**
     * Sets the isShared
+    * True if the task list is shared with other users
     *
     * @param bool $val The isShared
     *
@@ -107,6 +113,7 @@ class TodoTaskList extends Entity
     
     /**
     * Gets the wellknownListName
+    * Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
     *
     * @return WellknownListName The wellknownListName
     */
@@ -125,6 +132,7 @@ class TodoTaskList extends Entity
     
     /**
     * Sets the wellknownListName
+    * Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
     *
     * @param WellknownListName $val The wellknownListName
     *
@@ -139,6 +147,7 @@ class TodoTaskList extends Entity
 
      /** 
      * Gets the extensions
+    * The collection of open extensions defined for the task list. Nullable.
      *
      * @return array The extensions
      */
@@ -153,6 +162,7 @@ class TodoTaskList extends Entity
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the task list. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -167,6 +177,7 @@ class TodoTaskList extends Entity
 
      /** 
      * Gets the tasks
+    * The tasks in this task list. Read-only. Nullable.
      *
      * @return array The tasks
      */
@@ -181,6 +192,7 @@ class TodoTaskList extends Entity
     
     /** 
     * Sets the tasks
+    * The tasks in this task list. Read-only. Nullable.
     *
     * @param TodoTask $val The tasks
     *

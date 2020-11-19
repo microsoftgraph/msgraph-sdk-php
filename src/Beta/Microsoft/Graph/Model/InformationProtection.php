@@ -25,33 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class InformationProtection extends Entity
 {
     /**
-    * Gets the policy
+    * Gets the bitlocker
     *
-    * @return InformationProtectionPolicy The policy
+    * @return Bitlocker The bitlocker
     */
-    public function getPolicy()
+    public function getBitlocker()
     {
-        if (array_key_exists("policy", $this->_propDict)) {
-            if (is_a($this->_propDict["policy"], "Beta\Microsoft\Graph\Model\InformationProtectionPolicy")) {
-                return $this->_propDict["policy"];
+        if (array_key_exists("bitlocker", $this->_propDict)) {
+            if (is_a($this->_propDict["bitlocker"], "Beta\Microsoft\Graph\Model\Bitlocker")) {
+                return $this->_propDict["bitlocker"];
             } else {
-                $this->_propDict["policy"] = new InformationProtectionPolicy($this->_propDict["policy"]);
-                return $this->_propDict["policy"];
+                $this->_propDict["bitlocker"] = new Bitlocker($this->_propDict["bitlocker"]);
+                return $this->_propDict["bitlocker"];
             }
         }
         return null;
     }
     
     /**
-    * Sets the policy
+    * Sets the bitlocker
     *
-    * @param InformationProtectionPolicy $val The policy
+    * @param Bitlocker $val The bitlocker
     *
     * @return InformationProtection
     */
-    public function setPolicy($val)
+    public function setBitlocker($val)
     {
-        $this->_propDict["policy"] = $val;
+        $this->_propDict["bitlocker"] = $val;
         return $this;
     }
     
@@ -139,6 +139,37 @@ class InformationProtection extends Entity
     public function setSensitivityPolicySettings($val)
     {
         $this->_propDict["sensitivityPolicySettings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the policy
+    *
+    * @return InformationProtectionPolicy The policy
+    */
+    public function getPolicy()
+    {
+        if (array_key_exists("policy", $this->_propDict)) {
+            if (is_a($this->_propDict["policy"], "Beta\Microsoft\Graph\Model\InformationProtectionPolicy")) {
+                return $this->_propDict["policy"];
+            } else {
+                $this->_propDict["policy"] = new InformationProtectionPolicy($this->_propDict["policy"]);
+                return $this->_propDict["policy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the policy
+    *
+    * @param InformationProtectionPolicy $val The policy
+    *
+    * @return InformationProtection
+    */
+    public function setPolicy($val)
+    {
+        $this->_propDict["policy"] = $val;
         return $this;
     }
     

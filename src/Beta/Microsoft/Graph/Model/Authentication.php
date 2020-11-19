@@ -110,62 +110,6 @@ class Authentication extends Entity
     
 
      /** 
-     * Gets the microsoftAuthenticatorMethods
-     *
-     * @return array The microsoftAuthenticatorMethods
-     */
-    public function getMicrosoftAuthenticatorMethods()
-    {
-        if (array_key_exists("microsoftAuthenticatorMethods", $this->_propDict)) {
-           return $this->_propDict["microsoftAuthenticatorMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the microsoftAuthenticatorMethods
-    *
-    * @param MicrosoftAuthenticatorAuthenticationMethod $val The microsoftAuthenticatorMethods
-    *
-    * @return Authentication
-    */
-    public function setMicrosoftAuthenticatorMethods($val)
-    {
-		$this->_propDict["microsoftAuthenticatorMethods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the oathMethods
-     *
-     * @return array The oathMethods
-     */
-    public function getOathMethods()
-    {
-        if (array_key_exists("oathMethods", $this->_propDict)) {
-           return $this->_propDict["oathMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the oathMethods
-    *
-    * @param SoftwareOathAuthenticationMethod $val The oathMethods
-    *
-    * @return Authentication
-    */
-    public function setOathMethods($val)
-    {
-		$this->_propDict["oathMethods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the operations
      *
      * @return array The operations
@@ -273,62 +217,6 @@ class Authentication extends Entity
     public function setPhoneMethods($val)
     {
 		$this->_propDict["phoneMethods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the securityQuestionMethods
-     *
-     * @return array The securityQuestionMethods
-     */
-    public function getSecurityQuestionMethods()
-    {
-        if (array_key_exists("securityQuestionMethods", $this->_propDict)) {
-           return $this->_propDict["securityQuestionMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the securityQuestionMethods
-    *
-    * @param SecurityQuestionAuthenticationMethod $val The securityQuestionMethods
-    *
-    * @return Authentication
-    */
-    public function setSecurityQuestionMethods($val)
-    {
-		$this->_propDict["securityQuestionMethods"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the temporaryAccessPassMethods
-     *
-     * @return array The temporaryAccessPassMethods
-     */
-    public function getTemporaryAccessPassMethods()
-    {
-        if (array_key_exists("temporaryAccessPassMethods", $this->_propDict)) {
-           return $this->_propDict["temporaryAccessPassMethods"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the temporaryAccessPassMethods
-    *
-    * @param TemporaryAccessPassAuthenticationMethod $val The temporaryAccessPassMethods
-    *
-    * @return Authentication
-    */
-    public function setTemporaryAccessPassMethods($val)
-    {
-		$this->_propDict["temporaryAccessPassMethods"] = $val;
         return $this;
     }
     

@@ -52,6 +52,34 @@ class DeviceEnrollmentPlatformRestriction extends Entity
         return $this;
     }
     /**
+    * Gets the blockedSkus
+    * Collection of blocked Skus.
+    *
+    * @return string The blockedSkus
+    */
+    public function getBlockedSkus()
+    {
+        if (array_key_exists("blockedSkus", $this->_propDict)) {
+            return $this->_propDict["blockedSkus"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the blockedSkus
+    * Collection of blocked Skus.
+    *
+    * @param string $val The value of the blockedSkus
+    *
+    * @return DeviceEnrollmentPlatformRestriction
+    */
+    public function setBlockedSkus($val)
+    {
+        $this->_propDict["blockedSkus"] = $val;
+        return $this;
+    }
+    /**
     * Gets the osMaximumVersion
     * Max OS version supported
     *
