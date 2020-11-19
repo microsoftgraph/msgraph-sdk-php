@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Todo File
+* OnlineMeetingPresenters File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* Todo class
+* OnlineMeetingPresenters class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,36 +24,14 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Todo extends Entity
+class OnlineMeetingPresenters extends Enum
 {
-
-     /** 
-     * Gets the lists
-    * The task lists in the users mailbox.
-     *
-     * @return array The lists
-     */
-    public function getLists()
-    {
-        if (array_key_exists("lists", $this->_propDict)) {
-           return $this->_propDict["lists"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the lists
-    * The task lists in the users mailbox.
-    *
-    * @param TodoTaskList $val The lists
-    *
-    * @return Todo
+    /**
+    * The Enum OnlineMeetingPresenters
     */
-    public function setLists($val)
-    {
-		$this->_propDict["lists"] = $val;
-        return $this;
-    }
-    
+    const EVERYONE = "everyone";
+    const ORGANIZATION = "organization";
+    const ROLE_IS_PRESENTER = "roleIsPresenter";
+    const ORGANIZER = "organizer";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

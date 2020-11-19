@@ -112,6 +112,35 @@ class Channel extends Entity
     }
     
     /**
+    * Gets the isFavoriteByDefault
+    * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
+    *
+    * @return bool The isFavoriteByDefault
+    */
+    public function getIsFavoriteByDefault()
+    {
+        if (array_key_exists("isFavoriteByDefault", $this->_propDict)) {
+            return $this->_propDict["isFavoriteByDefault"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isFavoriteByDefault
+    * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
+    *
+    * @param bool $val The isFavoriteByDefault
+    *
+    * @return Channel
+    */
+    public function setIsFavoriteByDefault($val)
+    {
+        $this->_propDict["isFavoriteByDefault"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the membershipType
     *
     * @return ChannelMembershipType The membershipType

@@ -26,6 +26,7 @@ class TodoTask extends Entity
 {
     /**
     * Gets the body
+    * The task body that typically contains information about the task.
     *
     * @return ItemBody The body
     */
@@ -44,6 +45,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the body
+    * The task body that typically contains information about the task.
     *
     * @param ItemBody $val The body
     *
@@ -57,6 +59,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the bodyLastModifiedDateTime
+    * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     *
     * @return \DateTime The bodyLastModifiedDateTime
     */
@@ -75,6 +78,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the bodyLastModifiedDateTime
+    * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The bodyLastModifiedDateTime
     *
@@ -88,6 +92,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the completedDateTime
+    * The date in the specified time zone that the task was finished.
     *
     * @return DateTimeTimeZone The completedDateTime
     */
@@ -106,6 +111,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the completedDateTime
+    * The date in the specified time zone that the task was finished.
     *
     * @param DateTimeTimeZone $val The completedDateTime
     *
@@ -119,6 +125,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     *
     * @return \DateTime The createdDateTime
     */
@@ -137,6 +144,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -150,6 +158,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the dueDateTime
+    * The date in the specified time zone that the task is to be finished.
     *
     * @return DateTimeTimeZone The dueDateTime
     */
@@ -168,6 +177,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the dueDateTime
+    * The date in the specified time zone that the task is to be finished.
     *
     * @param DateTimeTimeZone $val The dueDateTime
     *
@@ -181,6 +191,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the importance
+    * The importance of the task. Possible values are: low, normal, high.
     *
     * @return Importance The importance
     */
@@ -199,6 +210,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the importance
+    * The importance of the task. Possible values are: low, normal, high.
     *
     * @param Importance $val The importance
     *
@@ -212,6 +224,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the isReminderOn
+    * Set to true if an alert is set to remind the user of the task.
     *
     * @return bool The isReminderOn
     */
@@ -226,6 +239,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the isReminderOn
+    * Set to true if an alert is set to remind the user of the task.
     *
     * @param bool $val The isReminderOn
     *
@@ -239,6 +253,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -257,6 +272,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -270,6 +286,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the recurrence
+    * The recurrence pattern for the task.
     *
     * @return PatternedRecurrence The recurrence
     */
@@ -288,6 +305,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the recurrence
+    * The recurrence pattern for the task.
     *
     * @param PatternedRecurrence $val The recurrence
     *
@@ -301,6 +319,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the reminderDateTime
+    * The date and time for a reminder alert of the task to occur.
     *
     * @return DateTimeTimeZone The reminderDateTime
     */
@@ -319,6 +338,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the reminderDateTime
+    * The date and time for a reminder alert of the task to occur.
     *
     * @param DateTimeTimeZone $val The reminderDateTime
     *
@@ -332,6 +352,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the status
+    * Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
     *
     * @return TaskStatus The status
     */
@@ -350,6 +371,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the status
+    * Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
     *
     * @param TaskStatus $val The status
     *
@@ -363,6 +385,7 @@ class TodoTask extends Entity
     
     /**
     * Gets the title
+    * A brief description of the task.
     *
     * @return string The title
     */
@@ -377,6 +400,7 @@ class TodoTask extends Entity
     
     /**
     * Sets the title
+    * A brief description of the task.
     *
     * @param string $val The title
     *
@@ -391,6 +415,7 @@ class TodoTask extends Entity
 
      /** 
      * Gets the extensions
+    * The collection of open extensions defined for the task. Nullable.
      *
      * @return array The extensions
      */
@@ -405,6 +430,7 @@ class TodoTask extends Entity
     
     /** 
     * Sets the extensions
+    * The collection of open extensions defined for the task. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -419,6 +445,7 @@ class TodoTask extends Entity
 
      /** 
      * Gets the linkedResources
+    * A collection of resources linked to the task.
      *
      * @return array The linkedResources
      */
@@ -433,6 +460,7 @@ class TodoTask extends Entity
     
     /** 
     * Sets the linkedResources
+    * A collection of resources linked to the task.
     *
     * @param LinkedResource $val The linkedResources
     *

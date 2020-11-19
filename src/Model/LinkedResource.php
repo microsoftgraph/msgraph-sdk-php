@@ -26,6 +26,7 @@ class LinkedResource extends Entity
 {
     /**
     * Gets the applicationName
+    * Field indicating the app name of the source that is sending the linkedResource.
     *
     * @return string The applicationName
     */
@@ -40,6 +41,7 @@ class LinkedResource extends Entity
     
     /**
     * Sets the applicationName
+    * Field indicating the app name of the source that is sending the linkedResource.
     *
     * @param string $val The applicationName
     *
@@ -53,6 +55,7 @@ class LinkedResource extends Entity
     
     /**
     * Gets the displayName
+    * Field indicating the title of the linkedResource.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class LinkedResource extends Entity
     
     /**
     * Sets the displayName
+    * Field indicating the title of the linkedResource.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class LinkedResource extends Entity
     
     /**
     * Gets the externalId
+    * Id of the object that is associated with this task on the third-party/partner system.
     *
     * @return string The externalId
     */
@@ -94,6 +99,7 @@ class LinkedResource extends Entity
     
     /**
     * Sets the externalId
+    * Id of the object that is associated with this task on the third-party/partner system.
     *
     * @param string $val The externalId
     *
@@ -107,6 +113,7 @@ class LinkedResource extends Entity
     
     /**
     * Gets the webUrl
+    * Deep link to the linkedResource.
     *
     * @return string The webUrl
     */
@@ -121,6 +128,7 @@ class LinkedResource extends Entity
     
     /**
     * Sets the webUrl
+    * Deep link to the linkedResource.
     *
     * @param string $val The webUrl
     *
