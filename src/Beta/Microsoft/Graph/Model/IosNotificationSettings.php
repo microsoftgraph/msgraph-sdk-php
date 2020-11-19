@@ -168,6 +168,39 @@ class IosNotificationSettings extends Entity
         $this->_propDict["enabled"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the previewVisibility
+    * Overrides the notification preview policy set by the user on an iOS device.
+    *
+    * @return IosNotificationPreviewVisibility The previewVisibility
+    */
+    public function getPreviewVisibility()
+    {
+        if (array_key_exists("previewVisibility", $this->_propDict)) {
+            if (is_a($this->_propDict["previewVisibility"], "Beta\Microsoft\Graph\Model\IosNotificationPreviewVisibility")) {
+                return $this->_propDict["previewVisibility"];
+            } else {
+                $this->_propDict["previewVisibility"] = new IosNotificationPreviewVisibility($this->_propDict["previewVisibility"]);
+                return $this->_propDict["previewVisibility"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the previewVisibility
+    * Overrides the notification preview policy set by the user on an iOS device.
+    *
+    * @param IosNotificationPreviewVisibility $val The value to assign to the previewVisibility
+    *
+    * @return IosNotificationSettings The IosNotificationSettings
+    */
+    public function setPreviewVisibility($val)
+    {
+        $this->_propDict["previewVisibility"] = $val;
+         return $this;
+    }
     /**
     * Gets the publisher
     * Publisher to be associated with the bundleID.

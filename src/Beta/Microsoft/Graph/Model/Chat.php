@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class Chat extends Entity
 {
     /**
+    * Gets the chatType
+    *
+    * @return ChatType The chatType
+    */
+    public function getChatType()
+    {
+        if (array_key_exists("chatType", $this->_propDict)) {
+            if (is_a($this->_propDict["chatType"], "Beta\Microsoft\Graph\Model\ChatType")) {
+                return $this->_propDict["chatType"];
+            } else {
+                $this->_propDict["chatType"] = new ChatType($this->_propDict["chatType"]);
+                return $this->_propDict["chatType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the chatType
+    *
+    * @param ChatType $val The chatType
+    *
+    * @return Chat
+    */
+    public function setChatType($val)
+    {
+        $this->_propDict["chatType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdDateTime
     *
     * @return \DateTime The createdDateTime

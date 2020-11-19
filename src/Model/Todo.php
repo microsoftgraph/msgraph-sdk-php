@@ -27,6 +27,7 @@ class Todo extends Entity
 
      /** 
      * Gets the lists
+    * The task lists in the users mailbox.
      *
      * @return array The lists
      */
@@ -41,6 +42,7 @@ class Todo extends Entity
     
     /** 
     * Sets the lists
+    * The task lists in the users mailbox.
     *
     * @param TodoTaskList $val The lists
     *

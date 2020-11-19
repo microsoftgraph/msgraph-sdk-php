@@ -32,4 +32,6 @@ class DefenderAttackSurfaceType extends Enum
     const USER_DEFINED = "userDefined";
     const BLOCK = "block";
     const AUDIT_MODE = "auditMode";
+    const WARN = "warn";
+    const DISABLE = "disable";
 }

@@ -265,7 +265,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the result
-    * Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
+    * Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
     *
     * @return OperationResult The result
     */
@@ -284,7 +284,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the result
-    * Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
+    * Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
     *
     * @param OperationResult $val The result
     *

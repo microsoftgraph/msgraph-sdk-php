@@ -84,6 +84,34 @@ class Directory extends Entity
     
 
      /** 
+     * Gets the sharedEmailDomains
+     *
+     * @return array The sharedEmailDomains
+     */
+    public function getSharedEmailDomains()
+    {
+        if (array_key_exists("sharedEmailDomains", $this->_propDict)) {
+           return $this->_propDict["sharedEmailDomains"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sharedEmailDomains
+    *
+    * @param SharedEmailDomain $val The sharedEmailDomains
+    *
+    * @return Directory
+    */
+    public function setSharedEmailDomains($val)
+    {
+		$this->_propDict["sharedEmailDomains"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the featureRolloutPolicies
      *
      * @return array The featureRolloutPolicies

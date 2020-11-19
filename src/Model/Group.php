@@ -1291,6 +1291,34 @@ class Group extends DirectoryObject
     
 
      /** 
+     * Gets the permissionGrants
+     *
+     * @return array The permissionGrants
+     */
+    public function getPermissionGrants()
+    {
+        if (array_key_exists("permissionGrants", $this->_propDict)) {
+           return $this->_propDict["permissionGrants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the permissionGrants
+    *
+    * @param ResourceSpecificPermissionGrant $val The permissionGrants
+    *
+    * @return Group
+    */
+    public function setPermissionGrants($val)
+    {
+		$this->_propDict["permissionGrants"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the settings
     * Read-only. Nullable.
      *

@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class AgreementFileProperties extends Entity
 {
     /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return AgreementFileProperties
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the fileData
     *
     * @return AgreementFileData The fileData
@@ -106,6 +137,33 @@ class AgreementFileProperties extends Entity
     public function setIsDefault($val)
     {
         $this->_propDict["isDefault"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the isMajorVersion
+    *
+    * @return bool The isMajorVersion
+    */
+    public function getIsMajorVersion()
+    {
+        if (array_key_exists("isMajorVersion", $this->_propDict)) {
+            return $this->_propDict["isMajorVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isMajorVersion
+    *
+    * @param bool $val The isMajorVersion
+    *
+    * @return AgreementFileProperties
+    */
+    public function setIsMajorVersion($val)
+    {
+        $this->_propDict["isMajorVersion"] = boolval($val);
         return $this;
     }
     

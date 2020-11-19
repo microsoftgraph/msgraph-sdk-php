@@ -40,4 +40,5 @@ class DeviceManagementTemplateType extends Enum
     const DEVICE_COMPLIANCE = "deviceCompliance";
     const DEVICE_CONFIGURATION_FOR_OFFICE365 = "deviceConfigurationForOffice365";
     const CLOUD_PC = "cloudPC";
+    const FIREWALL_SHARED_SETTINGS = "firewallSharedSettings";
 }

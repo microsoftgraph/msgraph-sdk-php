@@ -59,6 +59,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Gets the role
+    * Specifies the participant's role in the meeting.  Possible values are listed in the following table.
     *
     * @return OnlineMeetingRole The role
     */
@@ -77,6 +78,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Sets the role
+    * Specifies the participant's role in the meeting.  Possible values are listed in the following table.
     *
     * @param OnlineMeetingRole $val The value to assign to the role
     *

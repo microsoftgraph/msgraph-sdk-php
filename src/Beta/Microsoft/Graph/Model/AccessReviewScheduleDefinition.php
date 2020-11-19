@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AccessReviewScheduleDefinition extends Entity
 {
+
+     /** 
+     * Gets the backupReviewers
+     *
+     * @return array The backupReviewers
+     */
+    public function getBackupReviewers()
+    {
+        if (array_key_exists("backupReviewers", $this->_propDict)) {
+           return $this->_propDict["backupReviewers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the backupReviewers
+    *
+    * @param AccessReviewReviewerScope $val The backupReviewers
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setBackupReviewers($val)
+    {
+		$this->_propDict["backupReviewers"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the createdBy
     *

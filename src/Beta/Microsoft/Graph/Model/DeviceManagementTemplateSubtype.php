@@ -36,4 +36,7 @@ class DeviceManagementTemplateSubtype extends Enum
     const ENDPOINT_DETECTION_REPONSE = "endpointDetectionReponse";
     const ACCOUNT_PROTECTION = "accountProtection";
     const ANTIVIRUS = "antivirus";
+    const FIREWALL_SHARED_APP_LIST = "firewallSharedAppList";
+    const FIREWALL_SHARED_IP_LIST = "firewallSharedIpList";
+    const FIREWALL_SHARED_PORTLIST = "firewallSharedPortlist";
 }

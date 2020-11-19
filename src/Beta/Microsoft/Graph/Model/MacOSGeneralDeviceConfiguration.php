@@ -1456,35 +1456,6 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
-    * Gets the softwareUpdatesForceDelayed
-    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
-    *
-    * @return bool The softwareUpdatesForceDelayed
-    */
-    public function getSoftwareUpdatesForceDelayed()
-    {
-        if (array_key_exists("softwareUpdatesForceDelayed", $this->_propDict)) {
-            return $this->_propDict["softwareUpdatesForceDelayed"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the softwareUpdatesForceDelayed
-    * Indicates whether or not to delay user visibility of software updates when the device is in supervised mode.
-    *
-    * @param bool $val The softwareUpdatesForceDelayed
-    *
-    * @return MacOSGeneralDeviceConfiguration
-    */
-    public function setSoftwareUpdatesForceDelayed($val)
-    {
-        $this->_propDict["softwareUpdatesForceDelayed"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the spotlightBlockInternetResults
     * Indicates whether or not to block Spotlight from returning any results from an Internet search.
     *

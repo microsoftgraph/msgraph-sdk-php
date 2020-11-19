@@ -57,6 +57,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the allowedPresenters
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @return OnlineMeetingPresenters The allowedPresenters
     */
@@ -75,6 +76,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the allowedPresenters
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @param OnlineMeetingPresenters $val The allowedPresenters
     *
@@ -83,6 +85,68 @@ class OnlineMeeting extends Entity
     public function setAllowedPresenters($val)
     {
         $this->_propDict["allowedPresenters"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the alternativeRecording
+    *
+    * @return \GuzzleHttp\Psr7\Stream The alternativeRecording
+    */
+    public function getAlternativeRecording()
+    {
+        if (array_key_exists("alternativeRecording", $this->_propDict)) {
+            if (is_a($this->_propDict["alternativeRecording"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["alternativeRecording"];
+            } else {
+                $this->_propDict["alternativeRecording"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["alternativeRecording"]);
+                return $this->_propDict["alternativeRecording"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the alternativeRecording
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The alternativeRecording
+    *
+    * @return OnlineMeeting
+    */
+    public function setAlternativeRecording($val)
+    {
+        $this->_propDict["alternativeRecording"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the attendeeReport
+    *
+    * @return \GuzzleHttp\Psr7\Stream The attendeeReport
+    */
+    public function getAttendeeReport()
+    {
+        if (array_key_exists("attendeeReport", $this->_propDict)) {
+            if (is_a($this->_propDict["attendeeReport"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["attendeeReport"];
+            } else {
+                $this->_propDict["attendeeReport"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["attendeeReport"]);
+                return $this->_propDict["attendeeReport"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the attendeeReport
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The attendeeReport
+    *
+    * @return OnlineMeeting
+    */
+    public function setAttendeeReport($val)
+    {
+        $this->_propDict["attendeeReport"] = $val;
         return $this;
     }
     
@@ -116,6 +180,37 @@ class OnlineMeeting extends Entity
     public function setAudioConferencing($val)
     {
         $this->_propDict["audioConferencing"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the broadcastSettings
+    *
+    * @return BroadcastMeetingSettings The broadcastSettings
+    */
+    public function getBroadcastSettings()
+    {
+        if (array_key_exists("broadcastSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["broadcastSettings"], "Beta\Microsoft\Graph\Model\BroadcastMeetingSettings")) {
+                return $this->_propDict["broadcastSettings"];
+            } else {
+                $this->_propDict["broadcastSettings"] = new BroadcastMeetingSettings($this->_propDict["broadcastSettings"]);
+                return $this->_propDict["broadcastSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the broadcastSettings
+    *
+    * @param BroadcastMeetingSettings $val The broadcastSettings
+    *
+    * @return OnlineMeeting
+    */
+    public function setBroadcastSettings($val)
+    {
+        $this->_propDict["broadcastSettings"] = $val;
         return $this;
     }
     
@@ -418,6 +513,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the isEntryExitAnnounced
+    * Whether or not to announce when callers join or leave.
     *
     * @return bool The isEntryExitAnnounced
     */
@@ -432,6 +528,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the isEntryExitAnnounced
+    * Whether or not to announce when callers join or leave.
     *
     * @param bool $val The isEntryExitAnnounced
     *
@@ -505,6 +602,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the lobbyBypassSettings
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @return LobbyBypassSettings The lobbyBypassSettings
     */
@@ -523,6 +621,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the lobbyBypassSettings
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @param LobbyBypassSettings $val The lobbyBypassSettings
     *
@@ -564,6 +663,37 @@ class OnlineMeeting extends Entity
     public function setParticipants($val)
     {
         $this->_propDict["participants"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the recording
+    *
+    * @return \GuzzleHttp\Psr7\Stream The recording
+    */
+    public function getRecording()
+    {
+        if (array_key_exists("recording", $this->_propDict)) {
+            if (is_a($this->_propDict["recording"], "\GuzzleHttp\Psr7\Stream")) {
+                return $this->_propDict["recording"];
+            } else {
+                $this->_propDict["recording"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["recording"]);
+                return $this->_propDict["recording"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the recording
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The recording
+    *
+    * @return OnlineMeeting
+    */
+    public function setRecording($val)
+    {
+        $this->_propDict["recording"] = $val;
         return $this;
     }
     

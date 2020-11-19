@@ -58,6 +58,126 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     }
     
     /**
+    * Gets the authenticationPeriodInSeconds
+    * Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
+    *
+    * @return int The authenticationPeriodInSeconds
+    */
+    public function getAuthenticationPeriodInSeconds()
+    {
+        if (array_key_exists("authenticationPeriodInSeconds", $this->_propDict)) {
+            return $this->_propDict["authenticationPeriodInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the authenticationPeriodInSeconds
+    * Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
+    *
+    * @param int $val The authenticationPeriodInSeconds
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setAuthenticationPeriodInSeconds($val)
+    {
+        $this->_propDict["authenticationPeriodInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the authenticationRetryDelayPeriodInSeconds
+    * Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
+    *
+    * @return int The authenticationRetryDelayPeriodInSeconds
+    */
+    public function getAuthenticationRetryDelayPeriodInSeconds()
+    {
+        if (array_key_exists("authenticationRetryDelayPeriodInSeconds", $this->_propDict)) {
+            return $this->_propDict["authenticationRetryDelayPeriodInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the authenticationRetryDelayPeriodInSeconds
+    * Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
+    *
+    * @param int $val The authenticationRetryDelayPeriodInSeconds
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setAuthenticationRetryDelayPeriodInSeconds($val)
+    {
+        $this->_propDict["authenticationRetryDelayPeriodInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the authenticationType
+    * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you???re using certificate authentication, make sure the certificate type matches the authentication type.
+    *
+    * @return WifiAuthenticationType The authenticationType
+    */
+    public function getAuthenticationType()
+    {
+        if (array_key_exists("authenticationType", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationType"], "Beta\Microsoft\Graph\Model\WifiAuthenticationType")) {
+                return $this->_propDict["authenticationType"];
+            } else {
+                $this->_propDict["authenticationType"] = new WifiAuthenticationType($this->_propDict["authenticationType"]);
+                return $this->_propDict["authenticationType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationType
+    * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you???re using certificate authentication, make sure the certificate type matches the authentication type.
+    *
+    * @param WifiAuthenticationType $val The authenticationType
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setAuthenticationType($val)
+    {
+        $this->_propDict["authenticationType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the cacheCredentials
+    * Specify whether to cache user credentials on the device so that users don???t need to keep entering them each time they connect.
+    *
+    * @return bool The cacheCredentials
+    */
+    public function getCacheCredentials()
+    {
+        if (array_key_exists("cacheCredentials", $this->_propDict)) {
+            return $this->_propDict["cacheCredentials"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cacheCredentials
+    * Specify whether to cache user credentials on the device so that users don???t need to keep entering them each time they connect.
+    *
+    * @param bool $val The cacheCredentials
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setCacheCredentials($val)
+    {
+        $this->_propDict["cacheCredentials"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the disableUserPromptForServerValidation
     * Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
     *
@@ -83,6 +203,35 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function setDisableUserPromptForServerValidation($val)
     {
         $this->_propDict["disableUserPromptForServerValidation"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the eapolStartPeriodInSeconds
+    * Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
+    *
+    * @return int The eapolStartPeriodInSeconds
+    */
+    public function getEapolStartPeriodInSeconds()
+    {
+        if (array_key_exists("eapolStartPeriodInSeconds", $this->_propDict)) {
+            return $this->_propDict["eapolStartPeriodInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the eapolStartPeriodInSeconds
+    * Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
+    *
+    * @param int $val The eapolStartPeriodInSeconds
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setEapolStartPeriodInSeconds($val)
+    {
+        $this->_propDict["eapolStartPeriodInSeconds"] = intval($val);
         return $this;
     }
     
@@ -211,6 +360,35 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     }
     
     /**
+    * Gets the maximumAuthenticationFailures
+    * Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
+    *
+    * @return int The maximumAuthenticationFailures
+    */
+    public function getMaximumAuthenticationFailures()
+    {
+        if (array_key_exists("maximumAuthenticationFailures", $this->_propDict)) {
+            return $this->_propDict["maximumAuthenticationFailures"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumAuthenticationFailures
+    * Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
+    *
+    * @param int $val The maximumAuthenticationFailures
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setMaximumAuthenticationFailures($val)
+    {
+        $this->_propDict["maximumAuthenticationFailures"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the maximumAuthenticationTimeoutInSeconds
     * Specify maximum authentication timeout (in seconds).  Valid range: 1-120
     *
@@ -236,6 +414,35 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function setMaximumAuthenticationTimeoutInSeconds($val)
     {
         $this->_propDict["maximumAuthenticationTimeoutInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the maximumEAPOLStartMessages
+    * Specifiy the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
+    *
+    * @return int The maximumEAPOLStartMessages
+    */
+    public function getMaximumEAPOLStartMessages()
+    {
+        if (array_key_exists("maximumEAPOLStartMessages", $this->_propDict)) {
+            return $this->_propDict["maximumEAPOLStartMessages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumEAPOLStartMessages
+    * Specifiy the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
+    *
+    * @param int $val The maximumEAPOLStartMessages
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setMaximumEAPOLStartMessages($val)
+    {
+        $this->_propDict["maximumEAPOLStartMessages"] = intval($val);
         return $this;
     }
     
@@ -501,6 +708,35 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function setTrustedServerCertificateNames($val)
     {
         $this->_propDict["trustedServerCertificateNames"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userBasedVirtualLan
+    * Specifiy whether to change the virtual LAN used by the device based on the user???s credentials. Cannot be used when NetworkSingleSignOnType is set to ???Disabled.
+    *
+    * @return bool The userBasedVirtualLan
+    */
+    public function getUserBasedVirtualLan()
+    {
+        if (array_key_exists("userBasedVirtualLan", $this->_propDict)) {
+            return $this->_propDict["userBasedVirtualLan"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userBasedVirtualLan
+    * Specifiy whether to change the virtual LAN used by the device based on the user???s credentials. Cannot be used when NetworkSingleSignOnType is set to ???Disabled.
+    *
+    * @param bool $val The userBasedVirtualLan
+    *
+    * @return WindowsWifiEnterpriseEAPConfiguration
+    */
+    public function setUserBasedVirtualLan($val)
+    {
+        $this->_propDict["userBasedVirtualLan"] = boolval($val);
         return $this;
     }
     

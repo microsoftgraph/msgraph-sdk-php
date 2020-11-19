@@ -91,6 +91,39 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     }
     
     /**
+    * Gets the aospRestriction
+    * AOSP restrictions based on platform, platform operating system version, and device ownership
+    *
+    * @return DeviceEnrollmentPlatformRestriction The aospRestriction
+    */
+    public function getAospRestriction()
+    {
+        if (array_key_exists("aospRestriction", $this->_propDict)) {
+            if (is_a($this->_propDict["aospRestriction"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+                return $this->_propDict["aospRestriction"];
+            } else {
+                $this->_propDict["aospRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["aospRestriction"]);
+                return $this->_propDict["aospRestriction"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the aospRestriction
+    * AOSP restrictions based on platform, platform operating system version, and device ownership
+    *
+    * @param DeviceEnrollmentPlatformRestriction $val The aospRestriction
+    *
+    * @return DeviceEnrollmentPlatformRestrictionsConfiguration
+    */
+    public function setAospRestriction($val)
+    {
+        $this->_propDict["aospRestriction"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the iosRestriction
     * Not yet documented
     *
