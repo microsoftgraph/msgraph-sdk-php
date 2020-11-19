@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Todo File
+* SearchQuery File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
-
 /**
-* Todo class
+* SearchQuery class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,36 +21,32 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Todo extends Entity
+class SearchQuery extends Entity
 {
-
-     /** 
-     * Gets the lists
-    * The task lists in the users mailbox.
-     *
-     * @return array The lists
-     */
-    public function getLists()
+    /**
+    * Gets the queryString
+    *
+    * @return string The queryString
+    */
+    public function getQueryString()
     {
-        if (array_key_exists("lists", $this->_propDict)) {
-           return $this->_propDict["lists"];
+        if (array_key_exists("queryString", $this->_propDict)) {
+            return $this->_propDict["queryString"];
         } else {
             return null;
         }
     }
-    
-    /** 
-    * Sets the lists
-    * The task lists in the users mailbox.
+
+    /**
+    * Sets the queryString
     *
-    * @param TodoTaskList $val The lists
+    * @param string $val The value of the queryString
     *
-    * @return Todo
+    * @return SearchQuery
     */
-    public function setLists($val)
+    public function setQueryString($val)
     {
-		$this->_propDict["lists"] = $val;
+        $this->_propDict["queryString"] = $val;
         return $this;
     }
-    
 }

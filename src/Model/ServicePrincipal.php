@@ -813,6 +813,33 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
+    * Gets the signInAudience
+    *
+    * @return string The signInAudience
+    */
+    public function getSignInAudience()
+    {
+        if (array_key_exists("signInAudience", $this->_propDict)) {
+            return $this->_propDict["signInAudience"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the signInAudience
+    *
+    * @param string $val The signInAudience
+    *
+    * @return ServicePrincipal
+    */
+    public function setSignInAudience($val)
+    {
+        $this->_propDict["signInAudience"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the tags
     * Custom strings that can be used to categorize and identify the service principal. Not nullable.
     *

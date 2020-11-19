@@ -25,6 +25,39 @@ namespace Microsoft\Graph\Model;
 class OnlineMeeting extends Entity
 {
     /**
+    * Gets the allowedPresenters
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+    *
+    * @return OnlineMeetingPresenters The allowedPresenters
+    */
+    public function getAllowedPresenters()
+    {
+        if (array_key_exists("allowedPresenters", $this->_propDict)) {
+            if (is_a($this->_propDict["allowedPresenters"], "Microsoft\Graph\Model\OnlineMeetingPresenters")) {
+                return $this->_propDict["allowedPresenters"];
+            } else {
+                $this->_propDict["allowedPresenters"] = new OnlineMeetingPresenters($this->_propDict["allowedPresenters"]);
+                return $this->_propDict["allowedPresenters"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the allowedPresenters
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+    *
+    * @param OnlineMeetingPresenters $val The allowedPresenters
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowedPresenters($val)
+    {
+        $this->_propDict["allowedPresenters"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the audioConferencing
     * The phone access (dial-in) information for an online meeting. Read-only.
     *
@@ -184,6 +217,35 @@ class OnlineMeeting extends Entity
     }
     
     /**
+    * Gets the isEntryExitAnnounced
+    * Whether or not to announce when callers join or leave.
+    *
+    * @return bool The isEntryExitAnnounced
+    */
+    public function getIsEntryExitAnnounced()
+    {
+        if (array_key_exists("isEntryExitAnnounced", $this->_propDict)) {
+            return $this->_propDict["isEntryExitAnnounced"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isEntryExitAnnounced
+    * Whether or not to announce when callers join or leave.
+    *
+    * @param bool $val The isEntryExitAnnounced
+    *
+    * @return OnlineMeeting
+    */
+    public function setIsEntryExitAnnounced($val)
+    {
+        $this->_propDict["isEntryExitAnnounced"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the joinInformation
     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
@@ -242,6 +304,39 @@ class OnlineMeeting extends Entity
     public function setJoinWebUrl($val)
     {
         $this->_propDict["joinWebUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lobbyBypassSettings
+    * Specifies which participants can bypass the meeting   lobby.
+    *
+    * @return LobbyBypassSettings The lobbyBypassSettings
+    */
+    public function getLobbyBypassSettings()
+    {
+        if (array_key_exists("lobbyBypassSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["lobbyBypassSettings"], "Microsoft\Graph\Model\LobbyBypassSettings")) {
+                return $this->_propDict["lobbyBypassSettings"];
+            } else {
+                $this->_propDict["lobbyBypassSettings"] = new LobbyBypassSettings($this->_propDict["lobbyBypassSettings"]);
+                return $this->_propDict["lobbyBypassSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lobbyBypassSettings
+    * Specifies which participants can bypass the meeting   lobby.
+    *
+    * @param LobbyBypassSettings $val The lobbyBypassSettings
+    *
+    * @return OnlineMeeting
+    */
+    public function setLobbyBypassSettings($val)
+    {
+        $this->_propDict["lobbyBypassSettings"] = $val;
         return $this;
     }
     
