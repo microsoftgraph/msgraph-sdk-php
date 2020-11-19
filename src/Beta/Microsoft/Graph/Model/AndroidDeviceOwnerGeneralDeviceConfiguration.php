@@ -533,6 +533,159 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
+    /**
+    * Gets the kioskCustomizationDeviceSettingsBlocked
+    * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+    *
+    * @return bool The kioskCustomizationDeviceSettingsBlocked
+    */
+    public function getKioskCustomizationDeviceSettingsBlocked()
+    {
+        if (array_key_exists("kioskCustomizationDeviceSettingsBlocked", $this->_propDict)) {
+            return $this->_propDict["kioskCustomizationDeviceSettingsBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskCustomizationDeviceSettingsBlocked
+    * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+    *
+    * @param bool $val The kioskCustomizationDeviceSettingsBlocked
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskCustomizationDeviceSettingsBlocked($val)
+    {
+        $this->_propDict["kioskCustomizationDeviceSettingsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskCustomizationPowerButtonActionsBlocked
+    * Whether the power menu is shown when a user long presses the Power button of a device in Kiosk Mode.
+    *
+    * @return bool The kioskCustomizationPowerButtonActionsBlocked
+    */
+    public function getKioskCustomizationPowerButtonActionsBlocked()
+    {
+        if (array_key_exists("kioskCustomizationPowerButtonActionsBlocked", $this->_propDict)) {
+            return $this->_propDict["kioskCustomizationPowerButtonActionsBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskCustomizationPowerButtonActionsBlocked
+    * Whether the power menu is shown when a user long presses the Power button of a device in Kiosk Mode.
+    *
+    * @param bool $val The kioskCustomizationPowerButtonActionsBlocked
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskCustomizationPowerButtonActionsBlocked($val)
+    {
+        $this->_propDict["kioskCustomizationPowerButtonActionsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskCustomizationStatusBar
+    * Indicates whether system info and notifications are disabled in Kiosk Mode.
+    *
+    * @return AndroidDeviceOwnerKioskCustomizationStatusBar The kioskCustomizationStatusBar
+    */
+    public function getKioskCustomizationStatusBar()
+    {
+        if (array_key_exists("kioskCustomizationStatusBar", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskCustomizationStatusBar"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskCustomizationStatusBar")) {
+                return $this->_propDict["kioskCustomizationStatusBar"];
+            } else {
+                $this->_propDict["kioskCustomizationStatusBar"] = new AndroidDeviceOwnerKioskCustomizationStatusBar($this->_propDict["kioskCustomizationStatusBar"]);
+                return $this->_propDict["kioskCustomizationStatusBar"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the kioskCustomizationStatusBar
+    * Indicates whether system info and notifications are disabled in Kiosk Mode.
+    *
+    * @param AndroidDeviceOwnerKioskCustomizationStatusBar $val The kioskCustomizationStatusBar
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskCustomizationStatusBar($val)
+    {
+        $this->_propDict["kioskCustomizationStatusBar"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskCustomizationSystemErrorWarnings
+    * Indicates whether system error dialogs for crashed or unresponsive apps are shown in Kiosk Mode.
+    *
+    * @return bool The kioskCustomizationSystemErrorWarnings
+    */
+    public function getKioskCustomizationSystemErrorWarnings()
+    {
+        if (array_key_exists("kioskCustomizationSystemErrorWarnings", $this->_propDict)) {
+            return $this->_propDict["kioskCustomizationSystemErrorWarnings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskCustomizationSystemErrorWarnings
+    * Indicates whether system error dialogs for crashed or unresponsive apps are shown in Kiosk Mode.
+    *
+    * @param bool $val The kioskCustomizationSystemErrorWarnings
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskCustomizationSystemErrorWarnings($val)
+    {
+        $this->_propDict["kioskCustomizationSystemErrorWarnings"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskCustomizationSystemNavigation
+    * Indicates which navigation features are enabled in Kiosk Mode.
+    *
+    * @return AndroidDeviceOwnerKioskCustomizationSystemNavigation The kioskCustomizationSystemNavigation
+    */
+    public function getKioskCustomizationSystemNavigation()
+    {
+        if (array_key_exists("kioskCustomizationSystemNavigation", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskCustomizationSystemNavigation"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskCustomizationSystemNavigation")) {
+                return $this->_propDict["kioskCustomizationSystemNavigation"];
+            } else {
+                $this->_propDict["kioskCustomizationSystemNavigation"] = new AndroidDeviceOwnerKioskCustomizationSystemNavigation($this->_propDict["kioskCustomizationSystemNavigation"]);
+                return $this->_propDict["kioskCustomizationSystemNavigation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the kioskCustomizationSystemNavigation
+    * Indicates which navigation features are enabled in Kiosk Mode.
+    *
+    * @param AndroidDeviceOwnerKioskCustomizationSystemNavigation $val The kioskCustomizationSystemNavigation
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskCustomizationSystemNavigation($val)
+    {
+        $this->_propDict["kioskCustomizationSystemNavigation"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the kioskModeApps

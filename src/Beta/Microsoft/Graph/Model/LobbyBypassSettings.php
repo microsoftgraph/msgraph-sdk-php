@@ -25,6 +25,7 @@ class LobbyBypassSettings extends Entity
 {
     /**
     * Gets the isDialInBypassEnabled
+    * Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
     *
     * @return bool The isDialInBypassEnabled
     */
@@ -39,6 +40,7 @@ class LobbyBypassSettings extends Entity
 
     /**
     * Sets the isDialInBypassEnabled
+    * Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
     *
     * @param bool $val The value of the isDialInBypassEnabled
     *
@@ -52,6 +54,7 @@ class LobbyBypassSettings extends Entity
 
     /**
     * Gets the scope
+    * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Possible values are listed in the following table. Optional.
     *
     * @return LobbyBypassScope The scope
     */
@@ -70,6 +73,7 @@ class LobbyBypassSettings extends Entity
 
     /**
     * Sets the scope
+    * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Possible values are listed in the following table. Optional.
     *
     * @param LobbyBypassScope $val The value to assign to the scope
     *

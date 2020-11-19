@@ -409,6 +409,34 @@ class Domain extends Entity
     
 
      /** 
+     * Gets the sharedEmailDomainInvitations
+     *
+     * @return array The sharedEmailDomainInvitations
+     */
+    public function getSharedEmailDomainInvitations()
+    {
+        if (array_key_exists("sharedEmailDomainInvitations", $this->_propDict)) {
+           return $this->_propDict["sharedEmailDomainInvitations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the sharedEmailDomainInvitations
+    *
+    * @param SharedEmailDomainInvitation $val The sharedEmailDomainInvitations
+    *
+    * @return Domain
+    */
+    public function setSharedEmailDomainInvitations($val)
+    {
+		$this->_propDict["sharedEmailDomainInvitations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the verificationDnsRecords
     * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD.Read-only, Nullable
      *

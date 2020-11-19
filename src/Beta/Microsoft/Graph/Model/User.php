@@ -175,7 +175,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the businessPhones
-    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property.
+    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory.
     *
     * @return string The businessPhones
     */
@@ -190,7 +190,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the businessPhones
-    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property.
+    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory.
     *
     * @param string $val The businessPhones
     *
@@ -1002,7 +1002,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mobilePhone
-    * The primary cellular telephone number for the user.
+    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.
     *
     * @return string The mobilePhone
     */
@@ -1017,7 +1017,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mobilePhone
-    * The primary cellular telephone number for the user.
+    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.
     *
     * @param string $val The mobilePhone
     *
@@ -1417,7 +1417,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+    * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @return PasswordProfile The passwordProfile
     */
@@ -1436,7 +1436,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+    * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @param PasswordProfile $val The passwordProfile
     *
@@ -3937,6 +3937,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the todo
+    * Represents the To Do services available to a user.
     *
     * @return Todo The todo
     */
@@ -3955,6 +3956,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the todo
+    * Represents the To Do services available to a user.
     *
     * @param Todo $val The todo
     *

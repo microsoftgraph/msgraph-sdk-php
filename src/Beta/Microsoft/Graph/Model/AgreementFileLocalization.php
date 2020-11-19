@@ -24,4 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AgreementFileLocalization extends AgreementFileProperties
 {
+
+     /** 
+     * Gets the versions
+     *
+     * @return array The versions
+     */
+    public function getVersions()
+    {
+        if (array_key_exists("versions", $this->_propDict)) {
+           return $this->_propDict["versions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the versions
+    *
+    * @param AgreementFileVersion $val The versions
+    *
+    * @return AgreementFileLocalization
+    */
+    public function setVersions($val)
+    {
+		$this->_propDict["versions"] = $val;
+        return $this;
+    }
+    
 }

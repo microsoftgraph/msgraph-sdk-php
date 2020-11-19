@@ -174,6 +174,35 @@ class WindowsProtectionState extends Entity
     }
     
     /**
+    * Gets the isVirtualMachine
+    * Indicates whether the device is a virtual machine.
+    *
+    * @return bool The isVirtualMachine
+    */
+    public function getIsVirtualMachine()
+    {
+        if (array_key_exists("isVirtualMachine", $this->_propDict)) {
+            return $this->_propDict["isVirtualMachine"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isVirtualMachine
+    * Indicates whether the device is a virtual machine.
+    *
+    * @param bool $val The isVirtualMachine
+    *
+    * @return WindowsProtectionState
+    */
+    public function setIsVirtualMachine($val)
+    {
+        $this->_propDict["isVirtualMachine"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastFullScanDateTime
     * Last quick scan datetime
     *
@@ -389,6 +418,39 @@ class WindowsProtectionState extends Entity
     }
     
     /**
+    * Gets the productStatus
+    * Product Status of Windows Defender Antivirus
+    *
+    * @return WindowsDefenderProductStatus The productStatus
+    */
+    public function getProductStatus()
+    {
+        if (array_key_exists("productStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["productStatus"], "Beta\Microsoft\Graph\Model\WindowsDefenderProductStatus")) {
+                return $this->_propDict["productStatus"];
+            } else {
+                $this->_propDict["productStatus"] = new WindowsDefenderProductStatus($this->_propDict["productStatus"]);
+                return $this->_propDict["productStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the productStatus
+    * Product Status of Windows Defender Antivirus
+    *
+    * @param WindowsDefenderProductStatus $val The productStatus
+    *
+    * @return WindowsProtectionState
+    */
+    public function setProductStatus($val)
+    {
+        $this->_propDict["productStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the quickScanOverdue
     * Quick scan overdue or not?
     *
@@ -530,6 +592,35 @@ class WindowsProtectionState extends Entity
     public function setSignatureVersion($val)
     {
         $this->_propDict["signatureVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tamperProtectionEnabled
+    * Indicates whether the Windows Defender tamper protection feature is enabled.
+    *
+    * @return bool The tamperProtectionEnabled
+    */
+    public function getTamperProtectionEnabled()
+    {
+        if (array_key_exists("tamperProtectionEnabled", $this->_propDict)) {
+            return $this->_propDict["tamperProtectionEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tamperProtectionEnabled
+    * Indicates whether the Windows Defender tamper protection feature is enabled.
+    *
+    * @param bool $val The tamperProtectionEnabled
+    *
+    * @return WindowsProtectionState
+    */
+    public function setTamperProtectionEnabled($val)
+    {
+        $this->_propDict["tamperProtectionEnabled"] = boolval($val);
         return $this;
     }
     

@@ -24,4 +24,31 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class EmailAuthenticationMethod extends AuthenticationMethod
 {
+    /**
+    * Gets the emailAddress
+    *
+    * @return string The emailAddress
+    */
+    public function getEmailAddress()
+    {
+        if (array_key_exists("emailAddress", $this->_propDict)) {
+            return $this->_propDict["emailAddress"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the emailAddress
+    *
+    * @param string $val The emailAddress
+    *
+    * @return EmailAuthenticationMethod
+    */
+    public function setEmailAddress($val)
+    {
+        $this->_propDict["emailAddress"] = $val;
+        return $this;
+    }
+    
 }

@@ -275,7 +275,7 @@ class PolicyRoot extends
     /** 
     * Sets the privateLinkResourcePolicies
     *
-    * @param PrivateLinkResource $val The privateLinkResourcePolicies
+    * @param PrivateLinkResourcePolicy $val The privateLinkResourcePolicies
     *
     * @return PolicyRoot
     */

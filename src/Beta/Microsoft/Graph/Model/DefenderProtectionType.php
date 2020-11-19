@@ -32,4 +32,6 @@ class DefenderProtectionType extends Enum
     const USER_DEFINED = "userDefined";
     const ENABLE = "enable";
     const AUDIT_MODE = "auditMode";
+    const WARN = "warn";
+    const NOT_CONFIGURED = "notConfigured";
 }

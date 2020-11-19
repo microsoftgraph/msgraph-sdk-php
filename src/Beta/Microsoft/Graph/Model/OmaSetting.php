@@ -80,6 +80,34 @@ class OmaSetting extends Entity
         return $this;
     }
     /**
+    * Gets the isEncrypted
+    * Indicates whether the value field is encrypted.
+    *
+    * @return bool The isEncrypted
+    */
+    public function getIsEncrypted()
+    {
+        if (array_key_exists("isEncrypted", $this->_propDict)) {
+            return $this->_propDict["isEncrypted"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isEncrypted
+    * Indicates whether the value field is encrypted.
+    *
+    * @param bool $val The value of the isEncrypted
+    *
+    * @return OmaSetting
+    */
+    public function setIsEncrypted($val)
+    {
+        $this->_propDict["isEncrypted"] = $val;
+        return $this;
+    }
+    /**
     * Gets the omaUri
     * OMA.
     *

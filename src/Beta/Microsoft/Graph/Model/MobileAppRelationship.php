@@ -54,6 +54,35 @@ class MobileAppRelationship extends Entity
     }
     
     /**
+    * Gets the targetDisplayVersion
+    * The target mobile app's display version.
+    *
+    * @return string The targetDisplayVersion
+    */
+    public function getTargetDisplayVersion()
+    {
+        if (array_key_exists("targetDisplayVersion", $this->_propDict)) {
+            return $this->_propDict["targetDisplayVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetDisplayVersion
+    * The target mobile app's display version.
+    *
+    * @param string $val The targetDisplayVersion
+    *
+    * @return MobileAppRelationship
+    */
+    public function setTargetDisplayVersion($val)
+    {
+        $this->_propDict["targetDisplayVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the targetId
     * The target mobile app's app id.
     *
@@ -79,6 +108,35 @@ class MobileAppRelationship extends Entity
     public function setTargetId($val)
     {
         $this->_propDict["targetId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the targetPublisher
+    * The target mobile app's publisher.
+    *
+    * @return string The targetPublisher
+    */
+    public function getTargetPublisher()
+    {
+        if (array_key_exists("targetPublisher", $this->_propDict)) {
+            return $this->_propDict["targetPublisher"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the targetPublisher
+    * The target mobile app's publisher.
+    *
+    * @param string $val The targetPublisher
+    *
+    * @return MobileAppRelationship
+    */
+    public function setTargetPublisher($val)
+    {
+        $this->_propDict["targetPublisher"] = $val;
         return $this;
     }
     
