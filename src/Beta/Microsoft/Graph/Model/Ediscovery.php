@@ -42,7 +42,7 @@ class Ediscovery extends Entity
     /** 
     * Sets the cases
     *
-    * @param EdiscoveryCase $val The cases
+    * @param GraphCase $val The cases
     *
     * @return Ediscovery
     */

@@ -609,7 +609,7 @@ class SignIn extends Entity
     
     /**
     * Gets the status
-    * Sign-in status. Possible values include Success and Failure.
+    * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
     *
     * @return SignInStatus The status
     */
@@ -628,7 +628,7 @@ class SignIn extends Entity
     
     /**
     * Sets the status
-    * Sign-in status. Possible values include Success and Failure.
+    * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
     *
     * @param SignInStatus $val The status
     *

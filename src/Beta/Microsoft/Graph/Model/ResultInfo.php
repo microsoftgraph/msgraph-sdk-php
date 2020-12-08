@@ -25,6 +25,7 @@ class ResultInfo extends Entity
 {
     /**
     * Gets the code
+    * The result code.
     *
     * @return int The code
     */
@@ -39,6 +40,7 @@ class ResultInfo extends Entity
 
     /**
     * Sets the code
+    * The result code.
     *
     * @param int $val The value of the code
     *
@@ -51,6 +53,7 @@ class ResultInfo extends Entity
     }
     /**
     * Gets the message
+    * The message.
     *
     * @return string The message
     */
@@ -65,6 +68,7 @@ class ResultInfo extends Entity
 
     /**
     * Sets the message
+    * The message.
     *
     * @param string $val The value of the message
     *
@@ -77,6 +81,7 @@ class ResultInfo extends Entity
     }
     /**
     * Gets the subcode
+    * The result sub-code.
     *
     * @return int The subcode
     */
@@ -91,6 +96,7 @@ class ResultInfo extends Entity
 
     /**
     * Sets the subcode
+    * The result sub-code.
     *
     * @param int $val The value of the subcode
     *

@@ -27,6 +27,7 @@ class PermissionGrantPolicy extends PolicyBase
 
      /** 
      * Gets the excludes
+    * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
      *
      * @return array The excludes
      */
@@ -41,6 +42,7 @@ class PermissionGrantPolicy extends PolicyBase
     
     /** 
     * Sets the excludes
+    * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
     *
     * @param PermissionGrantConditionSet $val The excludes
     *
@@ -55,6 +57,7 @@ class PermissionGrantPolicy extends PolicyBase
 
      /** 
      * Gets the includes
+    * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      *
      * @return array The includes
      */
@@ -69,6 +72,7 @@ class PermissionGrantPolicy extends PolicyBase
     
     /** 
     * Sets the includes
+    * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
     *
     * @param PermissionGrantConditionSet $val The includes
     *

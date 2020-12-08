@@ -52,4 +52,32 @@ class B2xIdentityUserFlow extends IdentityUserFlow
         return $this;
     }
     
+
+     /** 
+     * Gets the userAttributeAssignments
+     *
+     * @return array The userAttributeAssignments
+     */
+    public function getUserAttributeAssignments()
+    {
+        if (array_key_exists("userAttributeAssignments", $this->_propDict)) {
+           return $this->_propDict["userAttributeAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userAttributeAssignments
+    *
+    * @param IdentityUserFlowAttributeAssignment $val The userAttributeAssignments
+    *
+    * @return B2xIdentityUserFlow
+    */
+    public function setUserAttributeAssignments($val)
+    {
+		$this->_propDict["userAttributeAssignments"] = $val;
+        return $this;
+    }
+    
 }

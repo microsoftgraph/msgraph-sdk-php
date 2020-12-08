@@ -29,9 +29,9 @@ class CalendarColor extends Enum
     /**
     * The Enum CalendarColor
     */
+    const AUTO = "auto";
     const LIGHT_BLUE = "lightBlue";
     const LIGHT_GREEN = "lightGreen";
-    const AUTO = "auto";
     const LIGHT_ORANGE = "lightOrange";
     const LIGHT_GRAY = "lightGray";
     const LIGHT_YELLOW = "lightYellow";

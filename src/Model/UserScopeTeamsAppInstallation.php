@@ -26,6 +26,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
 {
     /**
     * Gets the chat
+    * The chat between the user and Teams app.
     *
     * @return Chat The chat
     */
@@ -44,6 +45,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
     
     /**
     * Sets the chat
+    * The chat between the user and Teams app.
     *
     * @param Chat $val The chat
     *

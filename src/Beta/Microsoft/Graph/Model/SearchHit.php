@@ -24,6 +24,118 @@ namespace Beta\Microsoft\Graph\Model;
 class SearchHit extends Entity
 {
     /**
+    * Gets the contentSource
+    * The name of the content source which the externalItem is part of .
+    *
+    * @return string The contentSource
+    */
+    public function getContentSource()
+    {
+        if (array_key_exists("contentSource", $this->_propDict)) {
+            return $this->_propDict["contentSource"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the contentSource
+    * The name of the content source which the externalItem is part of .
+    *
+    * @param string $val The value of the contentSource
+    *
+    * @return SearchHit
+    */
+    public function setContentSource($val)
+    {
+        $this->_propDict["contentSource"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the hitId
+    * The internal identifier for the item.
+    *
+    * @return string The hitId
+    */
+    public function getHitId()
+    {
+        if (array_key_exists("hitId", $this->_propDict)) {
+            return $this->_propDict["hitId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hitId
+    * The internal identifier for the item.
+    *
+    * @param string $val The value of the hitId
+    *
+    * @return SearchHit
+    */
+    public function setHitId($val)
+    {
+        $this->_propDict["hitId"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the rank
+    * The rank or the order of the result.
+    *
+    * @return int The rank
+    */
+    public function getRank()
+    {
+        if (array_key_exists("rank", $this->_propDict)) {
+            return $this->_propDict["rank"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the rank
+    * The rank or the order of the result.
+    *
+    * @param int $val The value of the rank
+    *
+    * @return SearchHit
+    */
+    public function setRank($val)
+    {
+        $this->_propDict["rank"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the summary
+    * A summary of the result, if a summary is available.
+    *
+    * @return string The summary
+    */
+    public function getSummary()
+    {
+        if (array_key_exists("summary", $this->_propDict)) {
+            return $this->_propDict["summary"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the summary
+    * A summary of the result, if a summary is available.
+    *
+    * @param string $val The value of the summary
+    *
+    * @return SearchHit
+    */
+    public function setSummary($val)
+    {
+        $this->_propDict["summary"] = $val;
+        return $this;
+    }
+    /**
     * Gets the _id
     *
     * @return string The _id
@@ -101,109 +213,36 @@ class SearchHit extends Entity
         $this->_propDict["_summary"] = $val;
         return $this;
     }
+
     /**
-    * Gets the contentSource
+    * Gets the resource
     *
-    * @return string The contentSource
+    * @return Entity The resource
     */
-    public function getContentSource()
+    public function getResource()
     {
-        if (array_key_exists("contentSource", $this->_propDict)) {
-            return $this->_propDict["contentSource"];
-        } else {
-            return null;
+        if (array_key_exists("resource", $this->_propDict)) {
+            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\Entity")) {
+                return $this->_propDict["resource"];
+            } else {
+                $this->_propDict["resource"] = new Entity($this->_propDict["resource"]);
+                return $this->_propDict["resource"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the contentSource
+    * Sets the resource
     *
-    * @param string $val The value of the contentSource
+    * @param Entity $val The value to assign to the resource
     *
-    * @return SearchHit
+    * @return SearchHit The SearchHit
     */
-    public function setContentSource($val)
+    public function setResource($val)
     {
-        $this->_propDict["contentSource"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the hitId
-    *
-    * @return string The hitId
-    */
-    public function getHitId()
-    {
-        if (array_key_exists("hitId", $this->_propDict)) {
-            return $this->_propDict["hitId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the hitId
-    *
-    * @param string $val The value of the hitId
-    *
-    * @return SearchHit
-    */
-    public function setHitId($val)
-    {
-        $this->_propDict["hitId"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the rank
-    *
-    * @return int The rank
-    */
-    public function getRank()
-    {
-        if (array_key_exists("rank", $this->_propDict)) {
-            return $this->_propDict["rank"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the rank
-    *
-    * @param int $val The value of the rank
-    *
-    * @return SearchHit
-    */
-    public function setRank($val)
-    {
-        $this->_propDict["rank"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the summary
-    *
-    * @return string The summary
-    */
-    public function getSummary()
-    {
-        if (array_key_exists("summary", $this->_propDict)) {
-            return $this->_propDict["summary"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the summary
-    *
-    * @param string $val The value of the summary
-    *
-    * @return SearchHit
-    */
-    public function setSummary($val)
-    {
-        $this->_propDict["summary"] = $val;
-        return $this;
+        $this->_propDict["resource"] = $val;
+         return $this;
     }
 
     /**
@@ -234,37 +273,6 @@ class SearchHit extends Entity
     public function set_source($val)
     {
         $this->_propDict["_source"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the resource
-    *
-    * @return Entity The resource
-    */
-    public function getResource()
-    {
-        if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\Entity")) {
-                return $this->_propDict["resource"];
-            } else {
-                $this->_propDict["resource"] = new Entity($this->_propDict["resource"]);
-                return $this->_propDict["resource"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the resource
-    *
-    * @param Entity $val The value to assign to the resource
-    *
-    * @return SearchHit The SearchHit
-    */
-    public function setResource($val)
-    {
-        $this->_propDict["resource"] = $val;
          return $this;
     }
 }
