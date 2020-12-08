@@ -100,7 +100,7 @@ class PrinterShare extends PrinterBase
     /** 
     * Sets the allowedGroups
     *
-    * @param PrintIdentity $val The allowedGroups
+    * @param Group $val The allowedGroups
     *
     * @return PrinterShare
     */
@@ -128,7 +128,7 @@ class PrinterShare extends PrinterBase
     /** 
     * Sets the allowedUsers
     *
-    * @param PrintUserIdentity $val The allowedUsers
+    * @param User $val The allowedUsers
     *
     * @return PrinterShare
     */

@@ -1360,6 +1360,37 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the membershipRuleProcessingStatus
+    *
+    * @return MembershipRuleProcessingStatus The membershipRuleProcessingStatus
+    */
+    public function getMembershipRuleProcessingStatus()
+    {
+        if (array_key_exists("membershipRuleProcessingStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["membershipRuleProcessingStatus"], "Beta\Microsoft\Graph\Model\MembershipRuleProcessingStatus")) {
+                return $this->_propDict["membershipRuleProcessingStatus"];
+            } else {
+                $this->_propDict["membershipRuleProcessingStatus"] = new MembershipRuleProcessingStatus($this->_propDict["membershipRuleProcessingStatus"]);
+                return $this->_propDict["membershipRuleProcessingStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the membershipRuleProcessingStatus
+    *
+    * @param MembershipRuleProcessingStatus $val The membershipRuleProcessingStatus
+    *
+    * @return Group
+    */
+    public function setMembershipRuleProcessingStatus($val)
+    {
+        $this->_propDict["membershipRuleProcessingStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isArchived
     *
     * @return bool The isArchived

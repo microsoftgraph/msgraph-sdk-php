@@ -53,6 +53,34 @@ class Alert extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the alertDetections
+     *
+     * @return array The alertDetections
+     */
+    public function getAlertDetections()
+    {
+        if (array_key_exists("alertDetections", $this->_propDict)) {
+           return $this->_propDict["alertDetections"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the alertDetections
+    *
+    * @param AlertDetection $val The alertDetections
+    *
+    * @return Alert
+    */
+    public function setAlertDetections($val)
+    {
+		$this->_propDict["alertDetections"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the assignedTo
     * Name of the analyst the alert is assigned to for triage, investigation, or remediation (supports update).
@@ -564,6 +592,65 @@ class Alert extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the investigationSecurityStates
+     *
+     * @return array The investigationSecurityStates
+     */
+    public function getInvestigationSecurityStates()
+    {
+        if (array_key_exists("investigationSecurityStates", $this->_propDict)) {
+           return $this->_propDict["investigationSecurityStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the investigationSecurityStates
+    *
+    * @param InvestigationSecurityState $val The investigationSecurityStates
+    *
+    * @return Alert
+    */
+    public function setInvestigationSecurityStates($val)
+    {
+		$this->_propDict["investigationSecurityStates"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastEventDateTime
+    *
+    * @return \DateTime The lastEventDateTime
+    */
+    public function getLastEventDateTime()
+    {
+        if (array_key_exists("lastEventDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastEventDateTime"], "\DateTime")) {
+                return $this->_propDict["lastEventDateTime"];
+            } else {
+                $this->_propDict["lastEventDateTime"] = new \DateTime($this->_propDict["lastEventDateTime"]);
+                return $this->_propDict["lastEventDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastEventDateTime
+    *
+    * @param \DateTime $val The lastEventDateTime
+    *
+    * @return Alert
+    */
+    public function setLastEventDateTime($val)
+    {
+        $this->_propDict["lastEventDateTime"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the lastModifiedDateTime
     * Time at which the alert entity was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -624,6 +711,34 @@ class Alert extends Entity
     public function setMalwareStates($val)
     {
 		$this->_propDict["malwareStates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the messageSecurityStates
+     *
+     * @return array The messageSecurityStates
+     */
+    public function getMessageSecurityStates()
+    {
+        if (array_key_exists("messageSecurityStates", $this->_propDict)) {
+           return $this->_propDict["messageSecurityStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the messageSecurityStates
+    *
+    * @param MessageSecurityState $val The messageSecurityStates
+    *
+    * @return Alert
+    */
+    public function setMessageSecurityStates($val)
+    {
+		$this->_propDict["messageSecurityStates"] = $val;
         return $this;
     }
     
@@ -956,6 +1071,34 @@ class Alert extends Entity
     public function setTriggers($val)
     {
 		$this->_propDict["triggers"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the uriClickSecurityStates
+     *
+     * @return array The uriClickSecurityStates
+     */
+    public function getUriClickSecurityStates()
+    {
+        if (array_key_exists("uriClickSecurityStates", $this->_propDict)) {
+           return $this->_propDict["uriClickSecurityStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the uriClickSecurityStates
+    *
+    * @param UriClickSecurityState $val The uriClickSecurityStates
+    *
+    * @return Alert
+    */
+    public function setUriClickSecurityStates($val)
+    {
+		$this->_propDict["uriClickSecurityStates"] = $val;
         return $this;
     }
     
