@@ -14,7 +14,8 @@ on:
     branches:
       - "v1.0/pipelinebuild/*"
     paths:
-      - 'src/**/model/**/*.php'
+      - 'src/Model/**/*.php'
+      - 'src/CallRecords/Model/**/*.php'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
