@@ -29,8 +29,8 @@ class OnenoteUserRole extends Enum
     /**
     * The Enum OnenoteUserRole
     */
+    const NONE = "none";
     const OWNER = "owner";
     const CONTRIBUTOR = "contributor";
-    const NONE = "none";
     const READER = "reader";
 }

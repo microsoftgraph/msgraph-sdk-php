@@ -26,6 +26,7 @@ class DelegatedPermissionClassification extends Entity
 {
     /**
     * Gets the classification
+    * The classification value being given. Possible value: low. Does not support $filter.
     *
     * @return PermissionClassificationType The classification
     */
@@ -44,6 +45,7 @@ class DelegatedPermissionClassification extends Entity
     
     /**
     * Sets the classification
+    * The classification value being given. Possible value: low. Does not support $filter.
     *
     * @param PermissionClassificationType $val The classification
     *
@@ -57,6 +59,7 @@ class DelegatedPermissionClassification extends Entity
     
     /**
     * Gets the permissionId
+    * The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
     *
     * @return string The permissionId
     */
@@ -71,6 +74,7 @@ class DelegatedPermissionClassification extends Entity
     
     /**
     * Sets the permissionId
+    * The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
     *
     * @param string $val The permissionId
     *
@@ -84,6 +88,7 @@ class DelegatedPermissionClassification extends Entity
     
     /**
     * Gets the permissionName
+    * The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
     *
     * @return string The permissionName
     */
@@ -98,6 +103,7 @@ class DelegatedPermissionClassification extends Entity
     
     /**
     * Sets the permissionName
+    * The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
     *
     * @param string $val The permissionName
     *

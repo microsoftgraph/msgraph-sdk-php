@@ -26,6 +26,7 @@ class AuthorizationPolicy extends PolicyBase
 {
     /**
     * Gets the allowedToSignUpEmailBasedSubscriptions
+    * Indicates whether users can sign up for email based subscriptions.
     *
     * @return bool The allowedToSignUpEmailBasedSubscriptions
     */
@@ -40,6 +41,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Sets the allowedToSignUpEmailBasedSubscriptions
+    * Indicates whether users can sign up for email based subscriptions.
     *
     * @param bool $val The allowedToSignUpEmailBasedSubscriptions
     *
@@ -53,6 +55,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Gets the allowedToUseSSPR
+    * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
     *
     * @return bool The allowedToUseSSPR
     */
@@ -67,6 +70,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Sets the allowedToUseSSPR
+    * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
     *
     * @param bool $val The allowedToUseSSPR
     *
@@ -80,6 +84,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Gets the allowEmailVerifiedUsersToJoinOrganization
+    * Indicates whether a user can join the tenant by email validation.
     *
     * @return bool The allowEmailVerifiedUsersToJoinOrganization
     */
@@ -94,6 +99,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Sets the allowEmailVerifiedUsersToJoinOrganization
+    * Indicates whether a user can join the tenant by email validation.
     *
     * @param bool $val The allowEmailVerifiedUsersToJoinOrganization
     *
@@ -107,6 +113,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Gets the allowInvitesFrom
+    * Indicates who can invite external users to the organization. Possible values are:none - Prevent everyone, including admins, from inviting external users. Default setting for US Government.adminsAndGuestInviters - Allow members of Global Administrators, User Administrators, and Guest Inviter roles to invite external users.adminsGuestInvitersAndAllMembers - Allow the above admin roles and all other User role members to invite external users.everyone - Allow everyone in the organization, including guest users, to invite external users. Default setting for all cloud environments except US Government.
     *
     * @return AllowInvitesFrom The allowInvitesFrom
     */
@@ -125,6 +132,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Sets the allowInvitesFrom
+    * Indicates who can invite external users to the organization. Possible values are:none - Prevent everyone, including admins, from inviting external users. Default setting for US Government.adminsAndGuestInviters - Allow members of Global Administrators, User Administrators, and Guest Inviter roles to invite external users.adminsGuestInvitersAndAllMembers - Allow the above admin roles and all other User role members to invite external users.everyone - Allow everyone in the organization, including guest users, to invite external users. Default setting for all cloud environments except US Government.
     *
     * @param AllowInvitesFrom $val The allowInvitesFrom
     *
@@ -138,6 +146,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Gets the blockMsolPowerShell
+    * To disable the use of MSOL PowerShell set this property to true. Setting to true will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
     *
     * @return bool The blockMsolPowerShell
     */
@@ -152,6 +161,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Sets the blockMsolPowerShell
+    * To disable the use of MSOL PowerShell set this property to true. Setting to true will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
     *
     * @param bool $val The blockMsolPowerShell
     *
@@ -165,6 +175,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Gets the defaultUserRolePermissions
+    * Specifies certain customizable permissions for default user role.
     *
     * @return DefaultUserRolePermissions The defaultUserRolePermissions
     */
@@ -183,6 +194,7 @@ class AuthorizationPolicy extends PolicyBase
     
     /**
     * Sets the defaultUserRolePermissions
+    * Specifies certain customizable permissions for default user role.
     *
     * @param DefaultUserRolePermissions $val The defaultUserRolePermissions
     *

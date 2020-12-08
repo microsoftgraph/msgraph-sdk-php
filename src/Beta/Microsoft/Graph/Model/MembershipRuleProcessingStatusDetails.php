@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseIndexOperation File
+* MembershipRuleProcessingStatusDetails File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* CaseIndexOperation class
+* MembershipRuleProcessingStatusDetails class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,14 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseIndexOperation extends CaseOperation
+class MembershipRuleProcessingStatusDetails extends Enum
 {
+    /**
+    * The Enum MembershipRuleProcessingStatusDetails
+    */
+    const NOT_STARTED = "notStarted";
+    const RUNNING = "running";
+    const FAILED = "failed";
+    const SUCCEEDED = "succeeded";
+    const UNSUPPORTED_FUTURE_VALUE = "unsupportedFutureValue";
 }

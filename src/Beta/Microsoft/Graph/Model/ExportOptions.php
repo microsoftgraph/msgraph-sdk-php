@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PrintIdentity File
+* ExportOptions File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* PrintIdentity class
+* ExportOptions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,33 +24,15 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PrintIdentity extends Entity
+class ExportOptions extends Enum
 {
     /**
-    * Gets the displayName
-    *
-    * @return string The displayName
+    * The Enum ExportOptions
     */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return PrintIdentity
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
+    const ORIGINAL_FILES = "originalFiles";
+    const TEXT = "text";
+    const PDF_REPLACEMENT = "pdfReplacement";
+    const FILE_INFO = "fileInfo";
+    const TAGS = "tags";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

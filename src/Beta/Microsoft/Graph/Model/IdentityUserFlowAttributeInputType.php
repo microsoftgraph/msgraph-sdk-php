@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseIndexOperation File
+* IdentityUserFlowAttributeInputType File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* CaseIndexOperation class
+* IdentityUserFlowAttributeInputType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,15 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseIndexOperation extends CaseOperation
+class IdentityUserFlowAttributeInputType extends Enum
 {
+    /**
+    * The Enum IdentityUserFlowAttributeInputType
+    */
+    const TEXT_BOX = "textBox";
+    const DATE_TIME_DROPDOWN = "dateTimeDropdown";
+    const RADIO_SINGLE_SELECT = "radioSingleSelect";
+    const DROPDOWN_SINGLE_SELECT = "dropdownSingleSelect";
+    const EMAIL_BOX = "emailBox";
+    const CHECKBOX_MULTI_SELECT = "checkboxMultiSelect";
 }

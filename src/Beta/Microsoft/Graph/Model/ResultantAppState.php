@@ -29,8 +29,8 @@ class ResultantAppState extends Enum
     /**
     * The Enum ResultantAppState
     */
-    const INSTALLED = "installed";
     const NOT_APPLICABLE = "notApplicable";
+    const INSTALLED = "installed";
     const FAILED = "failed";
     const NOT_INSTALLED = "notInstalled";
     const UNINSTALL_FAILED = "uninstallFailed";

@@ -29,10 +29,6 @@ class IosUpdatesInstallStatus extends Enum
     /**
     * The Enum IosUpdatesInstallStatus
     */
-    const SUCCESS = "success";
-    const AVAILABLE = "available";
-    const IDLE = "idle";
-    const UNKNOWN = "unknown";
     const UPDATE_SCAN_FAILED = "updateScanFailed";
     const DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION = "deviceOsHigherThanDesiredOsVersion";
     const UPDATE_ERROR = "updateError";
@@ -51,4 +47,8 @@ class IosUpdatesInstallStatus extends Enum
     const DOWNLOADING = "downloading";
     const TIMEOUT = "timeout";
     const MDM_CLIENT_CRASHED = "mdmClientCrashed";
+    const SUCCESS = "success";
+    const AVAILABLE = "available";
+    const IDLE = "idle";
+    const UNKNOWN = "unknown";
 }

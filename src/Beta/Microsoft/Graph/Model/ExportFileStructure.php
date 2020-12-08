@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseIndexOperation File
+* ExportFileStructure File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* CaseIndexOperation class
+* ExportFileStructure class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,13 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseIndexOperation extends CaseOperation
+class ExportFileStructure extends Enum
 {
+    /**
+    * The Enum ExportFileStructure
+    */
+    const NONE = "none";
+    const DIRECTORY = "directory";
+    const PST = "pst";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
