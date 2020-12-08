@@ -52,6 +52,37 @@ class PolicyRoot extends Entity
         return $this;
     }
     
+    /**
+    * Gets the authorizationPolicy
+    *
+    * @return AuthorizationPolicy The authorizationPolicy
+    */
+    public function getAuthorizationPolicy()
+    {
+        if (array_key_exists("authorizationPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["authorizationPolicy"], "Microsoft\Graph\Model\AuthorizationPolicy")) {
+                return $this->_propDict["authorizationPolicy"];
+            } else {
+                $this->_propDict["authorizationPolicy"] = new AuthorizationPolicy($this->_propDict["authorizationPolicy"]);
+                return $this->_propDict["authorizationPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authorizationPolicy
+    *
+    * @param AuthorizationPolicy $val The authorizationPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setAuthorizationPolicy($val)
+    {
+        $this->_propDict["authorizationPolicy"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the claimsMappingPolicies

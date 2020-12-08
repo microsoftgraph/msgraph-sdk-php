@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EdiscoveryCase File
+* GraphCase File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* EdiscoveryCase class
+* GraphCase class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EdiscoveryCase extends Entity
+class GraphCase extends Entity
 {
     /**
     * Gets the closedBy
@@ -47,7 +47,7 @@ class EdiscoveryCase extends Entity
     *
     * @param IdentitySet $val The closedBy
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setClosedBy($val)
     {
@@ -78,7 +78,7 @@ class EdiscoveryCase extends Entity
     *
     * @param \DateTime $val The closedDateTime
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setClosedDateTime($val)
     {
@@ -109,7 +109,7 @@ class EdiscoveryCase extends Entity
     *
     * @param \DateTime $val The createdDateTime
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setCreatedDateTime($val)
     {
@@ -136,7 +136,7 @@ class EdiscoveryCase extends Entity
     *
     * @param string $val The description
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setDescription($val)
     {
@@ -163,7 +163,7 @@ class EdiscoveryCase extends Entity
     *
     * @param string $val The displayName
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setDisplayName($val)
     {
@@ -190,7 +190,7 @@ class EdiscoveryCase extends Entity
     *
     * @param string $val The externalId
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setExternalId($val)
     {
@@ -221,7 +221,7 @@ class EdiscoveryCase extends Entity
     *
     * @param IdentitySet $val The lastModifiedBy
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setLastModifiedBy($val)
     {
@@ -252,7 +252,7 @@ class EdiscoveryCase extends Entity
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setLastModifiedDateTime($val)
     {
@@ -283,7 +283,7 @@ class EdiscoveryCase extends Entity
     *
     * @param CaseStatus $val The status
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setStatus($val)
     {
@@ -311,11 +311,67 @@ class EdiscoveryCase extends Entity
     *
     * @param Custodian $val The custodians
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setCustodians($val)
     {
 		$this->_propDict["custodians"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the legalholds
+     *
+     * @return array The legalholds
+     */
+    public function getLegalholds()
+    {
+        if (array_key_exists("legalholds", $this->_propDict)) {
+           return $this->_propDict["legalholds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the legalholds
+    *
+    * @param Legalhold $val The legalholds
+    *
+    * @return Case
+    */
+    public function setLegalholds($val)
+    {
+		$this->_propDict["legalholds"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the operations
+     *
+     * @return array The operations
+     */
+    public function getOperations()
+    {
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the operations
+    *
+    * @param CaseOperation $val The operations
+    *
+    * @return Case
+    */
+    public function setOperations($val)
+    {
+		$this->_propDict["operations"] = $val;
         return $this;
     }
     
@@ -339,7 +395,7 @@ class EdiscoveryCase extends Entity
     *
     * @param ReviewSet $val The reviewSets
     *
-    * @return EdiscoveryCase
+    * @return Case
     */
     public function setReviewSets($val)
     {

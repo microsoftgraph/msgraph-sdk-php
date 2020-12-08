@@ -203,6 +203,7 @@ class Chat extends Entity
 
      /** 
      * Gets the messages
+    * A collection of all the messages in the chat. Nullable.
      *
      * @return array The messages
      */
@@ -217,6 +218,7 @@ class Chat extends Entity
     
     /** 
     * Sets the messages
+    * A collection of all the messages in the chat. Nullable.
     *
     * @param ChatMessage $val The messages
     *

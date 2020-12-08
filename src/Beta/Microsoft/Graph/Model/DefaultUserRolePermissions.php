@@ -25,6 +25,7 @@ class DefaultUserRolePermissions extends Entity
 {
     /**
     * Gets the allowedToCreateApps
+    * Indicates whether the default user role can create applications.
     *
     * @return bool The allowedToCreateApps
     */
@@ -39,6 +40,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToCreateApps
+    * Indicates whether the default user role can create applications.
     *
     * @param bool $val The value of the allowedToCreateApps
     *
@@ -51,6 +53,7 @@ class DefaultUserRolePermissions extends Entity
     }
     /**
     * Gets the allowedToCreateSecurityGroups
+    * Indicates whether the default user role can create security groups.
     *
     * @return bool The allowedToCreateSecurityGroups
     */
@@ -65,6 +68,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToCreateSecurityGroups
+    * Indicates whether the default user role can create security groups.
     *
     * @param bool $val The value of the allowedToCreateSecurityGroups
     *
@@ -77,6 +81,7 @@ class DefaultUserRolePermissions extends Entity
     }
     /**
     * Gets the allowedToReadOtherUsers
+    * Indicates whether the default user role can read other users.
     *
     * @return bool The allowedToReadOtherUsers
     */
@@ -91,6 +96,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToReadOtherUsers
+    * Indicates whether the default user role can read other users.
     *
     * @param bool $val The value of the allowedToReadOtherUsers
     *

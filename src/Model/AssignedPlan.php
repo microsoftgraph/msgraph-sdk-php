@@ -58,7 +58,7 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the capabilityStatus
-    * For example, 'Enabled'.
+    * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @return string The capabilityStatus
     */
@@ -73,7 +73,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the capabilityStatus
-    * For example, 'Enabled'.
+    * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
     *
     * @param string $val The value of the capabilityStatus
     *

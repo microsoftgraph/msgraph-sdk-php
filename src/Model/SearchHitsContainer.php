@@ -26,6 +26,7 @@ class SearchHitsContainer extends Entity
 
     /**
     * Gets the hits
+    * A collection of the search results.
     *
     * @return SearchHit The hits
     */
@@ -44,6 +45,7 @@ class SearchHitsContainer extends Entity
 
     /**
     * Sets the hits
+    * A collection of the search results.
     *
     * @param SearchHit $val The value to assign to the hits
     *
@@ -56,6 +58,7 @@ class SearchHitsContainer extends Entity
     }
     /**
     * Gets the moreResultsAvailable
+    * Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
     *
     * @return bool The moreResultsAvailable
     */
@@ -70,6 +73,7 @@ class SearchHitsContainer extends Entity
 
     /**
     * Sets the moreResultsAvailable
+    * Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
     *
     * @param bool $val The value of the moreResultsAvailable
     *
@@ -82,6 +86,7 @@ class SearchHitsContainer extends Entity
     }
     /**
     * Gets the total
+    * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
     *
     * @return int The total
     */
@@ -96,6 +101,7 @@ class SearchHitsContainer extends Entity
 
     /**
     * Sets the total
+    * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
     *
     * @param int $val The value of the total
     *

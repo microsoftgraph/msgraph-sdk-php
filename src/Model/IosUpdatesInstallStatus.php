@@ -29,10 +29,6 @@ class IosUpdatesInstallStatus extends Enum
     /**
     * The Enum IosUpdatesInstallStatus
     */
-    const SUCCESS = "success";
-    const AVAILABLE = "available";
-    const IDLE = "idle";
-    const UNKNOWN = "unknown";
     const DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION = "deviceOsHigherThanDesiredOsVersion";
     const SHARED_DEVICE_USER_LOGGED_IN_ERROR = "sharedDeviceUserLoggedInError";
     const NOT_SUPPORTED_OPERATION = "notSupportedOperation";
@@ -47,4 +43,8 @@ class IosUpdatesInstallStatus extends Enum
     const DOWNLOAD_REQUIRES_COMPUTER = "downloadRequiresComputer";
     const DOWNLOAD_FAILED = "downloadFailed";
     const DOWNLOADING = "downloading";
+    const SUCCESS = "success";
+    const AVAILABLE = "available";
+    const IDLE = "idle";
+    const UNKNOWN = "unknown";
 }

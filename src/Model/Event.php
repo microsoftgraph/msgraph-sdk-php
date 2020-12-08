@@ -208,6 +208,33 @@ class Event extends OutlookItem
     }
     
     /**
+    * Gets the hideAttendees
+    *
+    * @return bool The hideAttendees
+    */
+    public function getHideAttendees()
+    {
+        if (array_key_exists("hideAttendees", $this->_propDict)) {
+            return $this->_propDict["hideAttendees"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hideAttendees
+    *
+    * @param bool $val The hideAttendees
+    *
+    * @return Event
+    */
+    public function setHideAttendees($val)
+    {
+        $this->_propDict["hideAttendees"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the iCalUId
     * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
     *

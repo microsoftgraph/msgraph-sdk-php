@@ -29,9 +29,9 @@ class SecurityNetworkProtocol extends Enum
     /**
     * The Enum SecurityNetworkProtocol
     */
+    const UNKNOWN = "unknown";
     const IP = "ip";
     const ICMP = "icmp";
-    const UNKNOWN = "unknown";
     const IGMP = "igmp";
     const GGP = "ggp";
     const IPV4 = "ipv4";
