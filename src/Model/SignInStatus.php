@@ -53,7 +53,7 @@ class SignInStatus extends Entity
     }
     /**
     * Gets the errorCode
-    * Provides the 5-6digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
+    * Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
     *
     * @return int The errorCode
     */
@@ -68,7 +68,7 @@ class SignInStatus extends Entity
 
     /**
     * Sets the errorCode
-    * Provides the 5-6digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
+    * Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
     *
     * @param int $val The value of the errorCode
     *

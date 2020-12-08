@@ -108,4 +108,32 @@ class CloudCommunications extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the presences
+     *
+     * @return array The presences
+     */
+    public function getPresences()
+    {
+        if (array_key_exists("presences", $this->_propDict)) {
+           return $this->_propDict["presences"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the presences
+    *
+    * @param Presence $val The presences
+    *
+    * @return CloudCommunications
+    */
+    public function setPresences($val)
+    {
+		$this->_propDict["presences"] = $val;
+        return $this;
+    }
+    
 }

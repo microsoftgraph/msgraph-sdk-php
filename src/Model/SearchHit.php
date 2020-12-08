@@ -25,6 +25,7 @@ class SearchHit extends Entity
 {
     /**
     * Gets the contentSource
+    * The name of the content source which the externalItem is part of .
     *
     * @return string The contentSource
     */
@@ -39,6 +40,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the contentSource
+    * The name of the content source which the externalItem is part of .
     *
     * @param string $val The value of the contentSource
     *
@@ -51,6 +53,7 @@ class SearchHit extends Entity
     }
     /**
     * Gets the hitId
+    * The internal identifier for the item.
     *
     * @return string The hitId
     */
@@ -65,6 +68,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the hitId
+    * The internal identifier for the item.
     *
     * @param string $val The value of the hitId
     *
@@ -77,6 +81,7 @@ class SearchHit extends Entity
     }
     /**
     * Gets the rank
+    * The rank or the order of the result.
     *
     * @return int The rank
     */
@@ -91,6 +96,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the rank
+    * The rank or the order of the result.
     *
     * @param int $val The value of the rank
     *
@@ -103,6 +109,7 @@ class SearchHit extends Entity
     }
     /**
     * Gets the summary
+    * A summary of the result, if a summary is available.
     *
     * @return string The summary
     */
@@ -117,6 +124,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the summary
+    * A summary of the result, if a summary is available.
     *
     * @param string $val The value of the summary
     *

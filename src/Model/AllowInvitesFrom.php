@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OnenoteUserRole File
+* AllowInvitesFrom File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OnenoteUserRole class
+* AllowInvitesFrom class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OnenoteUserRole extends Enum
+class AllowInvitesFrom extends Enum
 {
     /**
-    * The Enum OnenoteUserRole
+    * The Enum AllowInvitesFrom
     */
     const NONE = "none";
-    const OWNER = "owner";
-    const CONTRIBUTOR = "contributor";
-    const READER = "reader";
+    const ADMINS_AND_GUEST_INVITERS = "adminsAndGuestInviters";
+    const ADMINS_GUEST_INVITERS_AND_ALL_MEMBERS = "adminsGuestInvitersAndAllMembers";
+    const EVERYONE = "everyone";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -575,7 +575,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the receivedDateTime
-    * The date and time the message was received.
+    * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The receivedDateTime
     */
@@ -594,7 +594,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the receivedDateTime
-    * The date and time the message was received.
+    * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The receivedDateTime
     *
@@ -671,7 +671,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the sentDateTime
-    * The date and time the message was sent.
+    * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The sentDateTime
     */
@@ -690,7 +690,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the sentDateTime
-    * The date and time the message was sent.
+    * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The sentDateTime
     *

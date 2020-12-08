@@ -408,6 +408,39 @@ class User extends DirectoryObject
     }
     
     /**
+    * Gets the employeeHireDate
+    * The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter.
+    *
+    * @return \DateTime The employeeHireDate
+    */
+    public function getEmployeeHireDate()
+    {
+        if (array_key_exists("employeeHireDate", $this->_propDict)) {
+            if (is_a($this->_propDict["employeeHireDate"], "\DateTime")) {
+                return $this->_propDict["employeeHireDate"];
+            } else {
+                $this->_propDict["employeeHireDate"] = new \DateTime($this->_propDict["employeeHireDate"]);
+                return $this->_propDict["employeeHireDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the employeeHireDate
+    * The date and time when the user was hired or will start work in case of a future hire. Returned only on $select. Supports $filter.
+    *
+    * @param \DateTime $val The employeeHireDate
+    *
+    * @return User
+    */
+    public function setEmployeeHireDate($val)
+    {
+        $this->_propDict["employeeHireDate"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the employeeId
     * The employee identifier assigned to the user by the organization. Returned only on $select. Supports $filter.
     *
@@ -433,6 +466,68 @@ class User extends DirectoryObject
     public function setEmployeeId($val)
     {
         $this->_propDict["employeeId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the employeeOrgData
+    * Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select.
+    *
+    * @return EmployeeOrgData The employeeOrgData
+    */
+    public function getEmployeeOrgData()
+    {
+        if (array_key_exists("employeeOrgData", $this->_propDict)) {
+            if (is_a($this->_propDict["employeeOrgData"], "Microsoft\Graph\Model\EmployeeOrgData")) {
+                return $this->_propDict["employeeOrgData"];
+            } else {
+                $this->_propDict["employeeOrgData"] = new EmployeeOrgData($this->_propDict["employeeOrgData"]);
+                return $this->_propDict["employeeOrgData"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the employeeOrgData
+    * Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select.
+    *
+    * @param EmployeeOrgData $val The employeeOrgData
+    *
+    * @return User
+    */
+    public function setEmployeeOrgData($val)
+    {
+        $this->_propDict["employeeOrgData"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the employeeType
+    * Captures enterprise worker type: Employee, Contractor, Consultant, Vendor, etc. Returned only on $select. Supports $filter.
+    *
+    * @return string The employeeType
+    */
+    public function getEmployeeType()
+    {
+        if (array_key_exists("employeeType", $this->_propDict)) {
+            return $this->_propDict["employeeType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the employeeType
+    * Captures enterprise worker type: Employee, Contractor, Consultant, Vendor, etc. Returned only on $select. Supports $filter.
+    *
+    * @param string $val The employeeType
+    *
+    * @return User
+    */
+    public function setEmployeeType($val)
+    {
+        $this->_propDict["employeeType"] = $val;
         return $this;
     }
     
@@ -708,7 +803,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the legalAgeGroupClassification
-    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
+    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.
     *
     * @return string The legalAgeGroupClassification
     */
@@ -723,7 +818,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the legalAgeGroupClassification
-    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
+    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.
     *
     * @param string $val The legalAgeGroupClassification
     *
@@ -3165,6 +3260,37 @@ class User extends DirectoryObject
     public function setOnlineMeetings($val)
     {
 		$this->_propDict["onlineMeetings"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the presence
+    *
+    * @return Presence The presence
+    */
+    public function getPresence()
+    {
+        if (array_key_exists("presence", $this->_propDict)) {
+            if (is_a($this->_propDict["presence"], "Microsoft\Graph\Model\Presence")) {
+                return $this->_propDict["presence"];
+            } else {
+                $this->_propDict["presence"] = new Presence($this->_propDict["presence"]);
+                return $this->_propDict["presence"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the presence
+    *
+    * @param Presence $val The presence
+    *
+    * @return User
+    */
+    public function setPresence($val)
+    {
+        $this->_propDict["presence"] = $val;
         return $this;
     }
     

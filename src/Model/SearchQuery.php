@@ -25,6 +25,7 @@ class SearchQuery extends Entity
 {
     /**
     * Gets the queryString
+    * The search query containing the search terms. Required.
     *
     * @return string The queryString
     */
@@ -39,6 +40,7 @@ class SearchQuery extends Entity
 
     /**
     * Sets the queryString
+    * The search query containing the search terms. Required.
     *
     * @param string $val The value of the queryString
     *
