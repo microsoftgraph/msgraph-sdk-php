@@ -125,6 +125,11 @@ class GraphRequestTest extends TestCase
         $this->assertAttributeEquals('200', 'timeout', $this->requests[0]);
     }
 
+    public function testDefaultTimeout()
+    {
+        $this->assertAttributeEquals('100', 'timeout', $this->requests[0]);
+    }
+
     public function testCreateGuzzleClient()
     {
         $reflectionMethod = new ReflectionMethod('Microsoft\Graph\Http\GraphRequest', 'createGuzzleClient');
