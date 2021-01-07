@@ -88,7 +88,7 @@ class MicrosoftTunnelServer extends Entity
     
     /**
     * Gets the tunnelServerHealthStatus
-    * The MicrosoftTunnelServer's health status
+    * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
     *
     * @return MicrosoftTunnelServerHealthStatus The tunnelServerHealthStatus
     */
@@ -107,7 +107,7 @@ class MicrosoftTunnelServer extends Entity
     
     /**
     * Sets the tunnelServerHealthStatus
-    * The MicrosoftTunnelServer's health status
+    * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
     *
     * @param MicrosoftTunnelServerHealthStatus $val The tunnelServerHealthStatus
     *

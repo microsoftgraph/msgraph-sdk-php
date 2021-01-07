@@ -26,7 +26,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
 {
     /**
     * Gets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @return CertificateStore The certificateStore
     */
@@ -45,7 +45,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @param CertificateStore $val The certificateStore
     *
@@ -89,7 +89,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Gets the hashAlgorithm
-    * SCEP Hash Algorithm
+    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
     *
     * @return HashAlgorithms The hashAlgorithm
     */
@@ -108,7 +108,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the hashAlgorithm
-    * SCEP Hash Algorithm
+    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
     *
     * @param HashAlgorithms $val The hashAlgorithm
     *
@@ -122,7 +122,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Gets the keySize
-    * SCEP Key Size
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @return KeySize The keySize
     */
@@ -141,7 +141,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the keySize
-    * SCEP Key Size
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @param KeySize $val The keySize
     *
@@ -155,7 +155,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Gets the keyUsage
-    * SCEP Key Usage
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @return KeyUsages The keyUsage
     */
@@ -174,7 +174,7 @@ class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the keyUsage
-    * SCEP Key Usage
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @param KeyUsages $val The keyUsage
     *

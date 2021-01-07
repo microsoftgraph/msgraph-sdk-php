@@ -150,7 +150,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Gets the clientAuthenticationType
-    * Type of Client Authentication the VPN client will use.
+    * Type of Client Authentication the VPN client will use. Possible values are: userAuthentication, deviceAuthentication.
     *
     * @return VpnClientAuthenticationType The clientAuthenticationType
     */
@@ -169,7 +169,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Sets the clientAuthenticationType
-    * Type of Client Authentication the VPN client will use.
+    * Type of Client Authentication the VPN client will use. Possible values are: userAuthentication, deviceAuthentication.
     *
     * @param VpnClientAuthenticationType $val The clientAuthenticationType
     *
@@ -183,7 +183,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Gets the deadPeerDetectionRate
-    * Determine how often to check if a peer connection is still active. 
+    * Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
     *
     * @return VpnDeadPeerDetectionRate The deadPeerDetectionRate
     */
@@ -202,7 +202,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Sets the deadPeerDetectionRate
-    * Determine how often to check if a peer connection is still active. 
+    * Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
     *
     * @param VpnDeadPeerDetectionRate $val The deadPeerDetectionRate
     *
@@ -419,7 +419,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Gets the localIdentifier
-    * Method of identifying the client that is trying to connect via VPN. 
+    * Method of identifying the client that is trying to connect via VPN. . Possible values are: deviceFQDN, empty, clientCertificateSubjectName.
     *
     * @return VpnLocalIdentifier The localIdentifier
     */
@@ -438,7 +438,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Sets the localIdentifier
-    * Method of identifying the client that is trying to connect via VPN. 
+    * Method of identifying the client that is trying to connect via VPN. . Possible values are: deviceFQDN, empty, clientCertificateSubjectName.
     *
     * @param VpnLocalIdentifier $val The localIdentifier
     *
@@ -601,7 +601,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Gets the serverCertificateType
-    * The type of certificate the VPN server will present to the VPN client for authentication.
+    * The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
     *
     * @return VpnServerCertificateType The serverCertificateType
     */
@@ -620,7 +620,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Sets the serverCertificateType
-    * The type of certificate the VPN server will present to the VPN client for authentication.
+    * The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
     *
     * @param VpnServerCertificateType $val The serverCertificateType
     *

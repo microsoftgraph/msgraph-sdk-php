@@ -34,6 +34,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
 
     /**
     * Gets the isSingleLineQuestion
+    * Indicates whether the answer will be in single or multiple line format.
     *
     * @return bool The isSingleLineQuestion
     */
@@ -48,6 +49,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
 
     /**
     * Sets the isSingleLineQuestion
+    * Indicates whether the answer will be in single or multiple line format.
     *
     * @param bool $val The value of the isSingleLineQuestion
     *

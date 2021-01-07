@@ -35,7 +35,7 @@ class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizationGroup
 
     /**
     * Gets the groupIdSourceOption
-    * Set this policy to restrict peer selection to a specific source.
+    * Set this policy to restrict peer selection to a specific source. Possible values are: notConfigured, adSite, authenticatedDomainSid, dhcpUserOption, dnsSuffix.
     *
     * @return DeliveryOptimizationGroupIdOptionsType The groupIdSourceOption
     */
@@ -54,7 +54,7 @@ class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizationGroup
 
     /**
     * Sets the groupIdSourceOption
-    * Set this policy to restrict peer selection to a specific source.
+    * Set this policy to restrict peer selection to a specific source. Possible values are: notConfigured, adSite, authenticatedDomainSid, dhcpUserOption, dnsSuffix.
     *
     * @param DeliveryOptimizationGroupIdOptionsType $val The value to assign to the groupIdSourceOption
     *

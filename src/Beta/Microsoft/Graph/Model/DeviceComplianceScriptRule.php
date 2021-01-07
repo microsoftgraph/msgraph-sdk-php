@@ -26,7 +26,7 @@ class DeviceComplianceScriptRule extends Entity
 
     /**
     * Gets the dataType
-    * Data type specified in the rule.
+    * Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
     *
     * @return DataType The dataType
     */
@@ -45,7 +45,7 @@ class DeviceComplianceScriptRule extends Entity
 
     /**
     * Sets the dataType
-    * Data type specified in the rule.
+    * Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
     *
     * @param DataType $val The value to assign to the dataType
     *
@@ -87,7 +87,7 @@ class DeviceComplianceScriptRule extends Entity
 
     /**
     * Gets the operator
-    * Operator specified in the rule.
+    * Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
     *
     * @return Operator The operator
     */
@@ -106,7 +106,7 @@ class DeviceComplianceScriptRule extends Entity
 
     /**
     * Sets the operator
-    * Operator specified in the rule.
+    * Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
     *
     * @param Operator $val The value to assign to the operator
     *

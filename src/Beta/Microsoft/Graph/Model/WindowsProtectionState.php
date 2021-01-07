@@ -55,7 +55,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the deviceState
-    * Computer's state (like clean or pending full scan or pending reboot etc)
+    * Computer's state (like clean or pending full scan or pending reboot etc). Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
     *
     * @return WindowsDeviceHealthState The deviceState
     */
@@ -74,7 +74,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the deviceState
-    * Computer's state (like clean or pending full scan or pending reboot etc)
+    * Computer's state (like clean or pending full scan or pending reboot etc). Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
     *
     * @param WindowsDeviceHealthState $val The deviceState
     *
@@ -419,7 +419,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Gets the productStatus
-    * Product Status of Windows Defender Antivirus
+    * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
     *
     * @return WindowsDefenderProductStatus The productStatus
     */
@@ -438,7 +438,7 @@ class WindowsProtectionState extends Entity
     
     /**
     * Sets the productStatus
-    * Product Status of Windows Defender Antivirus
+    * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
     *
     * @param WindowsDefenderProductStatus $val The productStatus
     *

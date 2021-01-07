@@ -26,6 +26,7 @@ class ConnectedOrganization extends Entity
 {
     /**
     * Gets the createdBy
+    * UPN of the user who created this resource. Read-only.
     *
     * @return string The createdBy
     */
@@ -40,6 +41,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Sets the createdBy
+    * UPN of the user who created this resource. Read-only.
     *
     * @param string $val The createdBy
     *
@@ -53,6 +55,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -71,6 +74,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -84,6 +88,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Gets the description
+    * The description of the connected organization.
     *
     * @return string The description
     */
@@ -98,6 +103,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Sets the description
+    * The description of the connected organization.
     *
     * @param string $val The description
     *
@@ -111,6 +117,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Gets the displayName
+    * The display name of the connected organization.
     *
     * @return string The displayName
     */
@@ -125,6 +132,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the connected organization.
     *
     * @param string $val The displayName
     *
@@ -166,6 +174,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Gets the modifiedBy
+    * UPN of the user who last modified this resource. Read-only.
     *
     * @return string The modifiedBy
     */
@@ -180,6 +189,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Sets the modifiedBy
+    * UPN of the user who last modified this resource. Read-only.
     *
     * @param string $val The modifiedBy
     *
@@ -193,6 +203,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Gets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The modifiedDateTime
     */
@@ -211,6 +222,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Sets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -224,6 +236,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Gets the state
+    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
     *
     * @return ConnectedOrganizationState The state
     */
@@ -242,6 +255,7 @@ class ConnectedOrganization extends Entity
     
     /**
     * Sets the state
+    * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
     *
     * @param ConnectedOrganizationState $val The state
     *
@@ -256,6 +270,7 @@ class ConnectedOrganization extends Entity
 
      /** 
      * Gets the externalSponsors
+    * Nullable.
      *
      * @return array The externalSponsors
      */
@@ -270,6 +285,7 @@ class ConnectedOrganization extends Entity
     
     /** 
     * Sets the externalSponsors
+    * Nullable.
     *
     * @param DirectoryObject $val The externalSponsors
     *
@@ -284,6 +300,7 @@ class ConnectedOrganization extends Entity
 
      /** 
      * Gets the internalSponsors
+    * Nullable.
      *
      * @return array The internalSponsors
      */
@@ -298,6 +315,7 @@ class ConnectedOrganization extends Entity
     
     /** 
     * Sets the internalSponsors
+    * Nullable.
     *
     * @param DirectoryObject $val The internalSponsors
     *

@@ -26,6 +26,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 {
     /**
     * Gets the assignmentState
+    * Required. The state of the assignment. The value can be  Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
     * @return string The assignmentState
     */
@@ -40,6 +41,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the assignmentState
+    * Required. The state of the assignment. The value can be  Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
     * @param string $val The assignmentState
     *
@@ -53,6 +55,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the linkedEligibleRoleAssignmentId
+    * If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
     *
     * @return string The linkedEligibleRoleAssignmentId
     */
@@ -67,6 +70,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the linkedEligibleRoleAssignmentId
+    * If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
     *
     * @param string $val The linkedEligibleRoleAssignmentId
     *
@@ -80,6 +84,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the reason
+    * A message provided by users and administrators when create the request about why it is needed.
     *
     * @return string The reason
     */
@@ -94,6 +99,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the reason
+    * A message provided by users and administrators when create the request about why it is needed.
     *
     * @param string $val The reason
     *
@@ -107,6 +113,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the requestedDateTime
+    * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The requestedDateTime
     */
@@ -125,6 +132,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the requestedDateTime
+    * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The requestedDateTime
     *
@@ -138,6 +146,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the resourceId
+    * Required. The id of the resource which the role assignment request is associated with.
     *
     * @return string The resourceId
     */
@@ -152,6 +161,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the resourceId
+    * Required. The id of the resource which the role assignment request is associated with.
     *
     * @param string $val The resourceId
     *
@@ -165,6 +175,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the roleDefinitionId
+    * Required. The id of the role definition which the role assignment request is associated with.
     *
     * @return string The roleDefinitionId
     */
@@ -179,6 +190,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the roleDefinitionId
+    * Required. The id of the role definition which the role assignment request is associated with.
     *
     * @param string $val The roleDefinitionId
     *
@@ -192,6 +204,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the schedule
+    * The schedule object of the role assignment request.
     *
     * @return GovernanceSchedule The schedule
     */
@@ -210,6 +223,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the schedule
+    * The schedule object of the role assignment request.
     *
     * @param GovernanceSchedule $val The schedule
     *
@@ -223,6 +237,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the status
+    * The status of the role assignment request.
     *
     * @return GovernanceRoleAssignmentRequestStatus The status
     */
@@ -241,6 +256,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the status
+    * The status of the role assignment request.
     *
     * @param GovernanceRoleAssignmentRequestStatus $val The status
     *
@@ -254,6 +270,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the subjectId
+    * Required. The id of the subject which the role assignment request is associated with.
     *
     * @return string The subjectId
     */
@@ -268,6 +285,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the subjectId
+    * Required. The id of the subject which the role assignment request is associated with.
     *
     * @param string $val The subjectId
     *
@@ -281,6 +299,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the type
+    * Required. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
     *
     * @return string The type
     */
@@ -295,6 +314,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the type
+    * Required. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
     *
     * @param string $val The type
     *
@@ -308,6 +328,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the resource
+    * Read-only. The resource that the request aims to.
     *
     * @return GovernanceResource The resource
     */
@@ -326,6 +347,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the resource
+    * Read-only. The resource that the request aims to.
     *
     * @param GovernanceResource $val The resource
     *
@@ -339,6 +361,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the roleDefinition
+    * Read-only. The role definition that the request aims to.
     *
     * @return GovernanceRoleDefinition The roleDefinition
     */
@@ -357,6 +380,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the roleDefinition
+    * Read-only. The role definition that the request aims to.
     *
     * @param GovernanceRoleDefinition $val The roleDefinition
     *
@@ -370,6 +394,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the subject
+    * Read-only. The user/group principal.
     *
     * @return GovernanceSubject The subject
     */
@@ -388,6 +413,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the subject
+    * Read-only. The user/group principal.
     *
     * @param GovernanceSubject $val The subject
     *

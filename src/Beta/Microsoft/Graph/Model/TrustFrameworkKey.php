@@ -25,6 +25,7 @@ class TrustFrameworkKey extends Entity
 {
     /**
     * Gets the d
+    * RSA Key - private exponent. Field cannot be read back.
     *
     * @return string The d
     */
@@ -39,6 +40,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the d
+    * RSA Key - private exponent. Field cannot be read back.
     *
     * @param string $val The value of the d
     *
@@ -51,6 +53,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the dp
+    * RSA Key - first exponent. Field cannot be read back.
     *
     * @return string The dp
     */
@@ -65,6 +68,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the dp
+    * RSA Key - first exponent. Field cannot be read back.
     *
     * @param string $val The value of the dp
     *
@@ -77,6 +81,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the dq
+    * RSA Key - second exponent. Field cannot be read back.
     *
     * @return string The dq
     */
@@ -91,6 +96,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the dq
+    * RSA Key - second exponent. Field cannot be read back.
     *
     * @param string $val The value of the dq
     *
@@ -103,6 +109,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the e
+    * RSA Key - public exponent
     *
     * @return string The e
     */
@@ -117,6 +124,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the e
+    * RSA Key - public exponent
     *
     * @param string $val The value of the e
     *
@@ -129,6 +137,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the exp
+    * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
     *
     * @return int The exp
     */
@@ -143,6 +152,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the exp
+    * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
     *
     * @param int $val The value of the exp
     *
@@ -155,6 +165,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the k
+    * Symmetric Key for oct key type. Field cannot be read back.
     *
     * @return string The k
     */
@@ -169,6 +180,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the k
+    * Symmetric Key for oct key type. Field cannot be read back.
     *
     * @param string $val The value of the k
     *
@@ -181,6 +193,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the kid
+    * The unique identifier for the key.
     *
     * @return string The kid
     */
@@ -195,6 +208,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the kid
+    * The unique identifier for the key.
     *
     * @param string $val The value of the kid
     *
@@ -207,6 +221,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the kty
+    * The 'kty' (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
     *
     * @return string The kty
     */
@@ -221,6 +236,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the kty
+    * The 'kty' (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
     *
     * @param string $val The value of the kty
     *
@@ -233,6 +249,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the n
+    * RSA Key - modulus
     *
     * @return string The n
     */
@@ -247,6 +264,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the n
+    * RSA Key - modulus
     *
     * @param string $val The value of the n
     *
@@ -259,6 +277,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the nbf
+    * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
     *
     * @return int The nbf
     */
@@ -273,6 +292,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the nbf
+    * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
     *
     * @param int $val The value of the nbf
     *
@@ -285,6 +305,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the p
+    * RSA Key - first prime. Field cannot be read back.
     *
     * @return string The p
     */
@@ -299,6 +320,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the p
+    * RSA Key - first prime. Field cannot be read back.
     *
     * @param string $val The value of the p
     *
@@ -311,6 +333,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the q
+    * RSA Key - second prime. Field cannot be read back.
     *
     * @return string The q
     */
@@ -325,6 +348,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the q
+    * RSA Key - second prime. Field cannot be read back.
     *
     * @param string $val The value of the q
     *
@@ -337,6 +361,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the qi
+    * RSA Key - Coefficient. Field cannot be read back.
     *
     * @return string The qi
     */
@@ -351,6 +376,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the qi
+    * RSA Key - Coefficient. Field cannot be read back.
     *
     * @param string $val The value of the qi
     *
@@ -363,6 +389,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the use
+    * The 'use' (public key use) parameter identifies the intended use of the public key.  The 'use' parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are    1. 'sig' (signature)    2.  'enc' (encryption)
     *
     * @return string The use
     */
@@ -377,6 +404,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the use
+    * The 'use' (public key use) parameter identifies the intended use of the public key.  The 'use' parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are    1. 'sig' (signature)    2.  'enc' (encryption)
     *
     * @param string $val The value of the use
     *
@@ -389,6 +417,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the x5c
+    * The 'x5c' (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
     *
     * @return string The x5c
     */
@@ -403,6 +432,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the x5c
+    * The 'x5c' (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
     *
     * @param string $val The value of the x5c
     *
@@ -415,6 +445,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the x5t
+    * The 'x5t' (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
     *
     * @return string The x5t
     */
@@ -429,6 +460,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the x5t
+    * The 'x5t' (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
     *
     * @param string $val The value of the x5t
     *

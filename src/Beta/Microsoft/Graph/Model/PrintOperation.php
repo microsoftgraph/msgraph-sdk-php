@@ -26,6 +26,7 @@ class PrintOperation extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The DateTimeOffset when the operation was created. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -44,6 +45,7 @@ class PrintOperation extends Entity
     
     /**
     * Sets the createdDateTime
+    * The DateTimeOffset when the operation was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class PrintOperation extends Entity
     
     /**
     * Gets the status
+    * The status of the operation. Read-only.
     *
     * @return PrintOperationStatus The status
     */
@@ -75,6 +78,7 @@ class PrintOperation extends Entity
     
     /**
     * Sets the status
+    * The status of the operation. Read-only.
     *
     * @param PrintOperationStatus $val The status
     *

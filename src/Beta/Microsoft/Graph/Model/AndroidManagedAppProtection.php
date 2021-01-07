@@ -84,7 +84,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidDeviceManufacturerNotAllowed
     */
@@ -103,7 +103,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidDeviceManufacturerNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceManufacturerNotAllowed
     *
@@ -150,7 +150,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetAppsVerificationFailed
     */
@@ -169,7 +169,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetAppsVerificationFailed
     *
@@ -183,7 +183,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetDeviceAttestationFailed
     */
@@ -202,7 +202,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetDeviceAttestationFailed
     *
@@ -337,7 +337,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Friendly name of the preferred custom browser to open weblink on Android.
     *
     * @return string The customBrowserDisplayName
     */
@@ -352,7 +352,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Friendly name of the preferred custom browser to open weblink on Android.
     *
     * @param string $val The customBrowserDisplayName
     *
@@ -366,7 +366,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the customBrowserPackageId
-    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Unique identifier of a custom browser to open weblink on Android.
     *
     * @return string The customBrowserPackageId
     */
@@ -381,7 +381,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserPackageId
-    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * Unique identifier of a custom browser to open weblink on Android.
     *
     * @param string $val The customBrowserPackageId
     *
@@ -802,7 +802,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the requiredAndroidSafetyNetAppsVerificationType
-    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
+    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
     *
     * @return AndroidManagedAppSafetyNetAppsVerificationType The requiredAndroidSafetyNetAppsVerificationType
     */
@@ -821,7 +821,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the requiredAndroidSafetyNetAppsVerificationType
-    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
+    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
     *
     * @param AndroidManagedAppSafetyNetAppsVerificationType $val The requiredAndroidSafetyNetAppsVerificationType
     *
@@ -835,7 +835,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the requiredAndroidSafetyNetDeviceAttestationType
-    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
+    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
     *
     * @return AndroidManagedAppSafetyNetDeviceAttestationType The requiredAndroidSafetyNetDeviceAttestationType
     */
@@ -854,7 +854,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the requiredAndroidSafetyNetDeviceAttestationType
-    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
+    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
     *
     * @param AndroidManagedAppSafetyNetDeviceAttestationType $val The requiredAndroidSafetyNetDeviceAttestationType
     *

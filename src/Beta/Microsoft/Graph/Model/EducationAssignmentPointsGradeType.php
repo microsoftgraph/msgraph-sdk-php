@@ -35,6 +35,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
 
     /**
     * Gets the maxPoints
+    * Max points possible for this assignment.
     *
     * @return Single The maxPoints
     */
@@ -53,6 +54,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
 
     /**
     * Sets the maxPoints
+    * Max points possible for this assignment.
     *
     * @param Single $val The value to assign to the maxPoints
     *

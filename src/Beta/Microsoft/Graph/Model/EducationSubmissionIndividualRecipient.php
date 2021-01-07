@@ -34,6 +34,7 @@ class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipien
 
     /**
     * Gets the userId
+    * User ID of the user to whom the submission is assigned.
     *
     * @return string The userId
     */
@@ -48,6 +49,7 @@ class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipien
 
     /**
     * Sets the userId
+    * User ID of the user to whom the submission is assigned.
     *
     * @param string $val The value of the userId
     *

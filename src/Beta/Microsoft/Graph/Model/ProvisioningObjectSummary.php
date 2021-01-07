@@ -26,6 +26,7 @@ class ProvisioningObjectSummary extends Entity
 {
     /**
     * Gets the action
+    * Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Azure AD activity list.
     *
     * @return string The action
     */
@@ -40,6 +41,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the action
+    * Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Azure AD activity list.
     *
     * @param string $val The action
     *
@@ -53,6 +55,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the activityDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The activityDateTime
     */
@@ -71,6 +74,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the activityDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -84,6 +88,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the changeId
+    * Unique ID of this change in this cycle.
     *
     * @return string The changeId
     */
@@ -98,6 +103,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the changeId
+    * Unique ID of this change in this cycle.
     *
     * @param string $val The changeId
     *
@@ -111,6 +117,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the cycleId
+    * Unique ID per job iteration.
     *
     * @return string The cycleId
     */
@@ -125,6 +132,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the cycleId
+    * Unique ID per job iteration.
     *
     * @param string $val The cycleId
     *
@@ -138,6 +146,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the durationInMilliseconds
+    * Indicates how long this provisioning action took to finish. Measured in milliseconds.
     *
     * @return int The durationInMilliseconds
     */
@@ -152,6 +161,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the durationInMilliseconds
+    * Indicates how long this provisioning action took to finish. Measured in milliseconds.
     *
     * @param int $val The durationInMilliseconds
     *
@@ -165,6 +175,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the initiatedBy
+    * Details of who initiated this provisioning.
     *
     * @return Initiator The initiatedBy
     */
@@ -183,6 +194,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the initiatedBy
+    * Details of who initiated this provisioning.
     *
     * @param Initiator $val The initiatedBy
     *
@@ -196,6 +208,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the jobId
+    * The unique ID for the whole provisioning job.
     *
     * @return string The jobId
     */
@@ -210,6 +223,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the jobId
+    * The unique ID for the whole provisioning job.
     *
     * @param string $val The jobId
     *
@@ -224,6 +238,7 @@ class ProvisioningObjectSummary extends Entity
 
      /** 
      * Gets the modifiedProperties
+    * Details of each property that was modified in this provisioning action on this object.
      *
      * @return array The modifiedProperties
      */
@@ -238,6 +253,7 @@ class ProvisioningObjectSummary extends Entity
     
     /** 
     * Sets the modifiedProperties
+    * Details of each property that was modified in this provisioning action on this object.
     *
     * @param ModifiedProperty $val The modifiedProperties
     *
@@ -252,6 +268,7 @@ class ProvisioningObjectSummary extends Entity
 
      /** 
      * Gets the provisioningSteps
+    * Details of each step in provisioning.
      *
      * @return array The provisioningSteps
      */
@@ -266,6 +283,7 @@ class ProvisioningObjectSummary extends Entity
     
     /** 
     * Sets the provisioningSteps
+    * Details of each step in provisioning.
     *
     * @param ProvisioningStep $val The provisioningSteps
     *
@@ -279,6 +297,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the servicePrincipal
+    * Represents the service principal used for provisioning.
     *
     * @return ProvisioningServicePrincipal The servicePrincipal
     */
@@ -297,6 +316,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the servicePrincipal
+    * Represents the service principal used for provisioning.
     *
     * @param ProvisioningServicePrincipal $val The servicePrincipal
     *
@@ -310,6 +330,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the sourceIdentity
+    * Details of source object being provisioned.
     *
     * @return ProvisionedIdentity The sourceIdentity
     */
@@ -328,6 +349,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the sourceIdentity
+    * Details of source object being provisioned.
     *
     * @param ProvisionedIdentity $val The sourceIdentity
     *
@@ -341,6 +363,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the sourceSystem
+    * Details of source system of the object being provisioned.
     *
     * @return ProvisioningSystemDetails The sourceSystem
     */
@@ -359,6 +382,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the sourceSystem
+    * Details of source system of the object being provisioned.
     *
     * @param ProvisioningSystemDetails $val The sourceSystem
     *
@@ -372,6 +396,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the statusInfo
+    * Details of provisioning status.
     *
     * @return StatusBase The statusInfo
     */
@@ -390,6 +415,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the statusInfo
+    * Details of provisioning status.
     *
     * @param StatusBase $val The statusInfo
     *
@@ -403,6 +429,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the targetIdentity
+    * Details of target object being provisioned.
     *
     * @return ProvisionedIdentity The targetIdentity
     */
@@ -421,6 +448,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the targetIdentity
+    * Details of target object being provisioned.
     *
     * @param ProvisionedIdentity $val The targetIdentity
     *
@@ -434,6 +462,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the targetSystem
+    * Details of target system of the object being provisioned.
     *
     * @return ProvisioningSystemDetails The targetSystem
     */
@@ -452,6 +481,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the targetSystem
+    * Details of target system of the object being provisioned.
     *
     * @param ProvisioningSystemDetails $val The targetSystem
     *
@@ -465,6 +495,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the tenantId
+    * Unique Azure AD tenant ID.
     *
     * @return string The tenantId
     */
@@ -479,6 +510,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the tenantId
+    * Unique Azure AD tenant ID.
     *
     * @param string $val The tenantId
     *

@@ -26,6 +26,7 @@ class SiteSource extends DataSource
 {
     /**
     * Gets the site
+    * The SharePoint site associated with the siteSource.
     *
     * @return Site The site
     */
@@ -44,6 +45,7 @@ class SiteSource extends DataSource
     
     /**
     * Sets the site
+    * The SharePoint site associated with the siteSource.
     *
     * @param Site $val The site
     *

@@ -25,6 +25,7 @@ class DisplayNameLocalization extends Entity
 {
     /**
     * Gets the displayName
+    * If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
     *
     * @return string The displayName
     */
@@ -39,6 +40,7 @@ class DisplayNameLocalization extends Entity
 
     /**
     * Sets the displayName
+    * If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class DisplayNameLocalization extends Entity
     }
     /**
     * Gets the languageTag
+    * Provides the language culture-code and friendly name of the language that the displayName field has been provided in.
     *
     * @return string The languageTag
     */
@@ -65,6 +68,7 @@ class DisplayNameLocalization extends Entity
 
     /**
     * Sets the languageTag
+    * Provides the language culture-code and friendly name of the language that the displayName field has been provided in.
     *
     * @param string $val The value of the languageTag
     *

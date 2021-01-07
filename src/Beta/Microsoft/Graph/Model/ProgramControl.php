@@ -26,6 +26,7 @@ class ProgramControl extends Entity
 {
     /**
     * Gets the controlId
+    * The controlId of the control, in particular the identifier of an access review. Required on create.
     *
     * @return string The controlId
     */
@@ -40,6 +41,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the controlId
+    * The controlId of the control, in particular the identifier of an access review. Required on create.
     *
     * @param string $val The controlId
     *
@@ -53,6 +55,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the controlTypeId
+    * The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
     *
     * @return string The controlTypeId
     */
@@ -67,6 +70,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the controlTypeId
+    * The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
     *
     * @param string $val The controlTypeId
     *
@@ -80,6 +84,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the createdDateTime
+    * The creation date and time of the program control.
     *
     * @return \DateTime The createdDateTime
     */
@@ -98,6 +103,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the createdDateTime
+    * The creation date and time of the program control.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -111,6 +117,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the displayName
+    * The name of the control.
     *
     * @return string The displayName
     */
@@ -125,6 +132,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the displayName
+    * The name of the control.
     *
     * @param string $val The displayName
     *
@@ -138,6 +146,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the owner
+    * The user who created the program control.
     *
     * @return UserIdentity The owner
     */
@@ -156,6 +165,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the owner
+    * The user who created the program control.
     *
     * @param UserIdentity $val The owner
     *
@@ -169,6 +179,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the programId
+    * The programId of the program this control is a part of. Required on create.
     *
     * @return string The programId
     */
@@ -183,6 +194,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the programId
+    * The programId of the program this control is a part of. Required on create.
     *
     * @param string $val The programId
     *
@@ -196,6 +208,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the resource
+    * The resource, a group or an app, targeted by this program control's access review.
     *
     * @return ProgramResource The resource
     */
@@ -214,6 +227,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the resource
+    * The resource, a group or an app, targeted by this program control's access review.
     *
     * @param ProgramResource $val The resource
     *
@@ -227,6 +241,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the status
+    * The life cycle status of the control.
     *
     * @return string The status
     */
@@ -241,6 +256,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the status
+    * The life cycle status of the control.
     *
     * @param string $val The status
     *
@@ -254,6 +270,7 @@ class ProgramControl extends Entity
     
     /**
     * Gets the program
+    * The program this control is part of.
     *
     * @return Program The program
     */
@@ -272,6 +289,7 @@ class ProgramControl extends Entity
     
     /**
     * Sets the program
+    * The program this control is part of.
     *
     * @param Program $val The program
     *

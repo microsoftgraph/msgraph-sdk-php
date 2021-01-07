@@ -26,6 +26,7 @@ class PersonCertification extends ItemFacet
 {
     /**
     * Gets the certificationId
+    * The referenceable identifier for the certification.
     *
     * @return string The certificationId
     */
@@ -40,6 +41,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the certificationId
+    * The referenceable identifier for the certification.
     *
     * @param string $val The certificationId
     *
@@ -53,6 +55,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the description
+    * Description of the certification.
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the description
+    * Description of the certification.
     *
     * @param string $val The description
     *
@@ -80,6 +84,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the displayName
+    * Title of the certification.
     *
     * @return string The displayName
     */
@@ -94,6 +99,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the displayName
+    * Title of the certification.
     *
     * @param string $val The displayName
     *
@@ -107,6 +113,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the endDate
+    * The date that the certification expires.
     *
     * @return \DateTime The endDate
     */
@@ -125,6 +132,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the endDate
+    * The date that the certification expires.
     *
     * @param \DateTime $val The endDate
     *
@@ -138,6 +146,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the issuedDate
+    * The date that the certification was issued.
     *
     * @return \DateTime The issuedDate
     */
@@ -156,6 +165,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the issuedDate
+    * The date that the certification was issued.
     *
     * @param \DateTime $val The issuedDate
     *
@@ -169,6 +179,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the issuingAuthority
+    * Authority which granted the certification.
     *
     * @return string The issuingAuthority
     */
@@ -183,6 +194,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the issuingAuthority
+    * Authority which granted the certification.
     *
     * @param string $val The issuingAuthority
     *
@@ -196,6 +208,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the issuingCompany
+    * Company which granted the certification.
     *
     * @return string The issuingCompany
     */
@@ -210,6 +223,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the issuingCompany
+    * Company which granted the certification.
     *
     * @param string $val The issuingCompany
     *
@@ -223,6 +237,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the startDate
+    * The date that the certification became valid.
     *
     * @return \DateTime The startDate
     */
@@ -241,6 +256,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the startDate
+    * The date that the certification became valid.
     *
     * @param \DateTime $val The startDate
     *
@@ -254,6 +270,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the thumbnailUrl
+    * URL referencing a thumbnail of the certification.
     *
     * @return string The thumbnailUrl
     */
@@ -268,6 +285,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the thumbnailUrl
+    * URL referencing a thumbnail of the certification.
     *
     * @param string $val The thumbnailUrl
     *
@@ -281,6 +299,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Gets the webUrl
+    * URL referencing the certification.
     *
     * @return string The webUrl
     */
@@ -295,6 +314,7 @@ class PersonCertification extends ItemFacet
     
     /**
     * Sets the webUrl
+    * URL referencing the certification.
     *
     * @param string $val The webUrl
     *

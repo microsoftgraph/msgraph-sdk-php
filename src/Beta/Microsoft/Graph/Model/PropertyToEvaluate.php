@@ -25,6 +25,7 @@ class PropertyToEvaluate extends Entity
 {
     /**
     * Gets the propertyName
+    * Provides the property name.
     *
     * @return string The propertyName
     */
@@ -39,6 +40,7 @@ class PropertyToEvaluate extends Entity
 
     /**
     * Sets the propertyName
+    * Provides the property name.
     *
     * @param string $val The value of the propertyName
     *
@@ -51,6 +53,7 @@ class PropertyToEvaluate extends Entity
     }
     /**
     * Gets the propertyValue
+    * Provides the property value.
     *
     * @return string The propertyValue
     */
@@ -65,6 +68,7 @@ class PropertyToEvaluate extends Entity
 
     /**
     * Sets the propertyValue
+    * Provides the property value.
     *
     * @param string $val The value of the propertyValue
     *

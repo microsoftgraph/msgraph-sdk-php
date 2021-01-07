@@ -25,6 +25,7 @@ class RubricQualitySelectedColumnModel extends Entity
 {
     /**
     * Gets the columnId
+    * ID of the selected level for this quality.
     *
     * @return string The columnId
     */
@@ -39,6 +40,7 @@ class RubricQualitySelectedColumnModel extends Entity
 
     /**
     * Sets the columnId
+    * ID of the selected level for this quality.
     *
     * @param string $val The value of the columnId
     *
@@ -51,6 +53,7 @@ class RubricQualitySelectedColumnModel extends Entity
     }
     /**
     * Gets the qualityId
+    * ID of the associated quality.
     *
     * @return string The qualityId
     */
@@ -65,6 +68,7 @@ class RubricQualitySelectedColumnModel extends Entity
 
     /**
     * Sets the qualityId
+    * ID of the associated quality.
     *
     * @param string $val The value of the qualityId
     *

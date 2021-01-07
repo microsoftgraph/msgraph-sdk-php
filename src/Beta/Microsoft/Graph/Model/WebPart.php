@@ -26,6 +26,7 @@ class WebPart extends Entity
 
     /**
     * Gets the data
+    * The required properties for the webPart (varies by webPart)
     *
     * @return SitePageData The data
     */
@@ -44,6 +45,7 @@ class WebPart extends Entity
 
     /**
     * Sets the data
+    * The required properties for the webPart (varies by webPart)
     *
     * @param SitePageData $val The value to assign to the data
     *
@@ -56,6 +58,7 @@ class WebPart extends Entity
     }
     /**
     * Gets the type
+    * A unique identifier specifying the webPart type. Read-only.
     *
     * @return string The type
     */
@@ -70,6 +73,7 @@ class WebPart extends Entity
 
     /**
     * Sets the type
+    * A unique identifier specifying the webPart type. Read-only.
     *
     * @param string $val The value of the type
     *

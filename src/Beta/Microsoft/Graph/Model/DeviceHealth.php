@@ -26,6 +26,7 @@ class DeviceHealth extends Entity
 
     /**
     * Gets the lastConnectionTime
+    * The last time the device was connected.
     *
     * @return \DateTime The lastConnectionTime
     */
@@ -44,6 +45,7 @@ class DeviceHealth extends Entity
 
     /**
     * Sets the lastConnectionTime
+    * The last time the device was connected.
     *
     * @param \DateTime $val The value to assign to the lastConnectionTime
     *

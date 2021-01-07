@@ -26,6 +26,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the code
+    * High-level status code of the synchronization job. Possible values are: NotConfigured, NotRun, Active, Paused, Quarantine.
     *
     * @return SynchronizationStatusCode The code
     */
@@ -44,6 +45,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the code
+    * High-level status code of the synchronization job. Possible values are: NotConfigured, NotRun, Active, Paused, Quarantine.
     *
     * @param SynchronizationStatusCode $val The value to assign to the code
     *
@@ -56,6 +58,7 @@ class SynchronizationStatus extends Entity
     }
     /**
     * Gets the countSuccessiveCompleteFailures
+    * Number of consecutive times this job failed.
     *
     * @return int The countSuccessiveCompleteFailures
     */
@@ -70,6 +73,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the countSuccessiveCompleteFailures
+    * Number of consecutive times this job failed.
     *
     * @param int $val The value of the countSuccessiveCompleteFailures
     *
@@ -82,6 +86,7 @@ class SynchronizationStatus extends Entity
     }
     /**
     * Gets the escrowsPruned
+    * true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
     *
     * @return bool The escrowsPruned
     */
@@ -96,6 +101,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the escrowsPruned
+    * true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
     *
     * @param bool $val The value of the escrowsPruned
     *
@@ -109,6 +115,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the lastExecution
+    * Details of the last execution of the job.
     *
     * @return SynchronizationTaskExecution The lastExecution
     */
@@ -127,6 +134,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the lastExecution
+    * Details of the last execution of the job.
     *
     * @param SynchronizationTaskExecution $val The value to assign to the lastExecution
     *
@@ -140,6 +148,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the lastSuccessfulExecution
+    * Details of the last execution of this job, which didn't have any errors.
     *
     * @return SynchronizationTaskExecution The lastSuccessfulExecution
     */
@@ -158,6 +167,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the lastSuccessfulExecution
+    * Details of the last execution of this job, which didn't have any errors.
     *
     * @param SynchronizationTaskExecution $val The value to assign to the lastSuccessfulExecution
     *
@@ -171,6 +181,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the lastSuccessfulExecutionWithExports
+    * Details of the last execution of the job, which exported objects into the target directory.
     *
     * @return SynchronizationTaskExecution The lastSuccessfulExecutionWithExports
     */
@@ -189,6 +200,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the lastSuccessfulExecutionWithExports
+    * Details of the last execution of the job, which exported objects into the target directory.
     *
     * @param SynchronizationTaskExecution $val The value to assign to the lastSuccessfulExecutionWithExports
     *
@@ -202,6 +214,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the progress
+    * Details of the progress of a job toward completion.
     *
     * @return SynchronizationProgress The progress
     */
@@ -220,6 +233,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the progress
+    * Details of the progress of a job toward completion.
     *
     * @param SynchronizationProgress $val The value to assign to the progress
     *
@@ -233,6 +247,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the quarantine
+    * If job is in quarantine, quarantine details.
     *
     * @return SynchronizationQuarantine The quarantine
     */
@@ -251,6 +266,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the quarantine
+    * If job is in quarantine, quarantine details.
     *
     * @param SynchronizationQuarantine $val The value to assign to the quarantine
     *
@@ -264,6 +280,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the steadyStateFirstAchievedTime
+    * The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The steadyStateFirstAchievedTime
     */
@@ -282,6 +299,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the steadyStateFirstAchievedTime
+    * The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the steadyStateFirstAchievedTime
     *
@@ -295,6 +313,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the steadyStateLastAchievedTime
+    * The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The steadyStateLastAchievedTime
     */
@@ -313,6 +332,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the steadyStateLastAchievedTime
+    * The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the steadyStateLastAchievedTime
     *
@@ -326,6 +346,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Gets the synchronizedEntryCountByType
+    * Count of synchronized objects, listed by object type.
     *
     * @return StringKeyLongValuePair The synchronizedEntryCountByType
     */
@@ -344,6 +365,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the synchronizedEntryCountByType
+    * Count of synchronized objects, listed by object type.
     *
     * @param StringKeyLongValuePair $val The value to assign to the synchronizedEntryCountByType
     *
@@ -356,6 +378,7 @@ class SynchronizationStatus extends Entity
     }
     /**
     * Gets the troubleshootingUrl
+    * In the event of an error, the URL with the troubleshooting steps for the issue.
     *
     * @return string The troubleshootingUrl
     */
@@ -370,6 +393,7 @@ class SynchronizationStatus extends Entity
 
     /**
     * Sets the troubleshootingUrl
+    * In the event of an error, the URL with the troubleshooting steps for the issue.
     *
     * @param string $val The value of the troubleshootingUrl
     *

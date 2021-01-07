@@ -154,7 +154,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Gets the state
-    * The state of the profile operation applied to the device.
+    * The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser.
     *
     * @return EmbeddedSIMDeviceStateValue The state
     */
@@ -173,7 +173,7 @@ class EmbeddedSIMDeviceState extends Entity
     
     /**
     * Sets the state
-    * The state of the profile operation applied to the device.
+    * The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser.
     *
     * @param EmbeddedSIMDeviceStateValue $val The state
     *

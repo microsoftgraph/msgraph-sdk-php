@@ -26,6 +26,7 @@ class Mention extends Entity
 {
     /**
     * Gets the application
+    * The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
     *
     * @return string The application
     */
@@ -40,6 +41,7 @@ class Mention extends Entity
     
     /**
     * Sets the application
+    * The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
     *
     * @param string $val The application
     *
@@ -53,6 +55,7 @@ class Mention extends Entity
     
     /**
     * Gets the clientReference
+    * A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
     *
     * @return string The clientReference
     */
@@ -67,6 +70,7 @@ class Mention extends Entity
     
     /**
     * Sets the clientReference
+    * A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
     *
     * @param string $val The clientReference
     *
@@ -80,6 +84,7 @@ class Mention extends Entity
     
     /**
     * Gets the createdBy
+    * The email information of the user who made the mention.
     *
     * @return EmailAddress The createdBy
     */
@@ -98,6 +103,7 @@ class Mention extends Entity
     
     /**
     * Sets the createdBy
+    * The email information of the user who made the mention.
     *
     * @param EmailAddress $val The createdBy
     *
@@ -111,6 +117,7 @@ class Mention extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time that the mention is created on the client.
     *
     * @return \DateTime The createdDateTime
     */
@@ -129,6 +136,7 @@ class Mention extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time that the mention is created on the client.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -142,6 +150,7 @@ class Mention extends Entity
     
     /**
     * Gets the deepLink
+    * A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
     *
     * @return string The deepLink
     */
@@ -156,6 +165,7 @@ class Mention extends Entity
     
     /**
     * Sets the deepLink
+    * A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
     *
     * @param string $val The deepLink
     *
@@ -169,6 +179,7 @@ class Mention extends Entity
     
     /**
     * Gets the mentioned
+    * The email information of the mentioned person. Required.
     *
     * @return EmailAddress The mentioned
     */
@@ -187,6 +198,7 @@ class Mention extends Entity
     
     /**
     * Sets the mentioned
+    * The email information of the mentioned person. Required.
     *
     * @param EmailAddress $val The mentioned
     *
@@ -200,6 +212,7 @@ class Mention extends Entity
     
     /**
     * Gets the mentionText
+    * Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
     *
     * @return string The mentionText
     */
@@ -214,6 +227,7 @@ class Mention extends Entity
     
     /**
     * Sets the mentionText
+    * Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
     *
     * @param string $val The mentionText
     *
@@ -227,6 +241,7 @@ class Mention extends Entity
     
     /**
     * Gets the serverCreatedDateTime
+    * The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
     *
     * @return \DateTime The serverCreatedDateTime
     */
@@ -245,6 +260,7 @@ class Mention extends Entity
     
     /**
     * Sets the serverCreatedDateTime
+    * The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
     *
     * @param \DateTime $val The serverCreatedDateTime
     *

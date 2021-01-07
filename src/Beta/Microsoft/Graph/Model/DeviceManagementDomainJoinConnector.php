@@ -88,7 +88,7 @@ class DeviceManagementDomainJoinConnector extends Entity
     
     /**
     * Gets the state
-    * The connector state.
+    * The connector state. Possible values are: active, error, inactive.
     *
     * @return DeviceManagementDomainJoinConnectorState The state
     */
@@ -107,7 +107,7 @@ class DeviceManagementDomainJoinConnector extends Entity
     
     /**
     * Sets the state
-    * The connector state.
+    * The connector state. Possible values are: active, error, inactive.
     *
     * @param DeviceManagementDomainJoinConnectorState $val The state
     *

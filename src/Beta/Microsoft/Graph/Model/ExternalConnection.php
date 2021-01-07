@@ -26,6 +26,7 @@ class ExternalConnection extends Entity
 {
     /**
     * Gets the configuration
+    * Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
     *
     * @return Configuration The configuration
     */
@@ -44,6 +45,7 @@ class ExternalConnection extends Entity
     
     /**
     * Sets the configuration
+    * Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
     *
     * @param Configuration $val The configuration
     *
@@ -57,6 +59,7 @@ class ExternalConnection extends Entity
     
     /**
     * Gets the description
+    * Description of the connection displayed in the Microsoft 365 admin center. Optional.
     *
     * @return string The description
     */
@@ -71,6 +74,7 @@ class ExternalConnection extends Entity
     
     /**
     * Sets the description
+    * Description of the connection displayed in the Microsoft 365 admin center. Optional.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class ExternalConnection extends Entity
     
     /**
     * Gets the name
+    * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
     *
     * @return string The name
     */
@@ -98,6 +103,7 @@ class ExternalConnection extends Entity
     
     /**
     * Sets the name
+    * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
     *
     * @param string $val The name
     *
@@ -111,6 +117,7 @@ class ExternalConnection extends Entity
     
     /**
     * Gets the state
+    * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
     *
     * @return ConnectionState The state
     */
@@ -129,6 +136,7 @@ class ExternalConnection extends Entity
     
     /**
     * Sets the state
+    * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
     *
     * @param ConnectionState $val The state
     *
@@ -171,6 +179,7 @@ class ExternalConnection extends Entity
 
      /** 
      * Gets the items
+    * Read-only. Nullable.
      *
      * @return array The items
      */
@@ -185,6 +194,7 @@ class ExternalConnection extends Entity
     
     /** 
     * Sets the items
+    * Read-only. Nullable.
     *
     * @param ExternalItem $val The items
     *
@@ -199,6 +209,7 @@ class ExternalConnection extends Entity
 
      /** 
      * Gets the operations
+    * Read-only. Nullable.
      *
      * @return array The operations
      */
@@ -213,6 +224,7 @@ class ExternalConnection extends Entity
     
     /** 
     * Sets the operations
+    * Read-only. Nullable.
     *
     * @param ConnectionOperation $val The operations
     *
@@ -226,6 +238,7 @@ class ExternalConnection extends Entity
     
     /**
     * Gets the schema
+    * Read-only. Nullable.
     *
     * @return Schema The schema
     */
@@ -244,6 +257,7 @@ class ExternalConnection extends Entity
     
     /**
     * Sets the schema
+    * Read-only. Nullable.
     *
     * @param Schema $val The schema
     *

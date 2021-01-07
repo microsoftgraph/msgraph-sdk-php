@@ -26,6 +26,7 @@ class AggregationOption extends Entity
 
     /**
     * Gets the bucketDefinition
+    * Specifies the criteria to compute an aggregation. Optional.
     *
     * @return BucketAggregationDefinition The bucketDefinition
     */
@@ -44,6 +45,7 @@ class AggregationOption extends Entity
 
     /**
     * Sets the bucketDefinition
+    * Specifies the criteria to compute an aggregation. Optional.
     *
     * @param BucketAggregationDefinition $val The value to assign to the bucketDefinition
     *
@@ -56,6 +58,7 @@ class AggregationOption extends Entity
     }
     /**
     * Gets the field
+    * Specifies the field in the schema of the specified entity type that aggregation should be computed on. Required.
     *
     * @return string The field
     */
@@ -70,6 +73,7 @@ class AggregationOption extends Entity
 
     /**
     * Sets the field
+    * Specifies the field in the schema of the specified entity type that aggregation should be computed on. Required.
     *
     * @param string $val The value of the field
     *
@@ -82,6 +86,7 @@ class AggregationOption extends Entity
     }
     /**
     * Gets the size
+    * The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
     *
     * @return int The size
     */
@@ -96,6 +101,7 @@ class AggregationOption extends Entity
 
     /**
     * Sets the size
+    * The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
     *
     * @param int $val The value of the size
     *

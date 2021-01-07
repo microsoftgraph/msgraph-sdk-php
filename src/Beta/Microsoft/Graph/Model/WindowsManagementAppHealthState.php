@@ -84,7 +84,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Gets the healthState
-    * Windows management app health state.
+    * Windows management app health state. Possible values are: unknown, healthy, unhealthy.
     *
     * @return HealthState The healthState
     */
@@ -103,7 +103,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Sets the healthState
-    * Windows management app health state.
+    * Windows management app health state. Possible values are: unknown, healthy, unhealthy.
     *
     * @param HealthState $val The healthState
     *

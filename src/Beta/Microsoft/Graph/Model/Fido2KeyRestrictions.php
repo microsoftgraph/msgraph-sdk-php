@@ -25,6 +25,7 @@ class Fido2KeyRestrictions extends Entity
 {
     /**
     * Gets the aaGuids
+    * A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
     *
     * @return string The aaGuids
     */
@@ -39,6 +40,7 @@ class Fido2KeyRestrictions extends Entity
 
     /**
     * Sets the aaGuids
+    * A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
     *
     * @param string $val The value of the aaGuids
     *
@@ -52,6 +54,7 @@ class Fido2KeyRestrictions extends Entity
 
     /**
     * Gets the enforcementType
+    * Enforcement type. Possible values are: allow, block.
     *
     * @return Fido2RestrictionEnforcementType The enforcementType
     */
@@ -70,6 +73,7 @@ class Fido2KeyRestrictions extends Entity
 
     /**
     * Sets the enforcementType
+    * Enforcement type. Possible values are: allow, block.
     *
     * @param Fido2RestrictionEnforcementType $val The value to assign to the enforcementType
     *
@@ -82,6 +86,7 @@ class Fido2KeyRestrictions extends Entity
     }
     /**
     * Gets the isEnforced
+    * Determines if the configured key enforcement is enabled.
     *
     * @return bool The isEnforced
     */
@@ -96,6 +101,7 @@ class Fido2KeyRestrictions extends Entity
 
     /**
     * Sets the isEnforced
+    * Determines if the configured key enforcement is enabled.
     *
     * @param bool $val The value of the isEnforced
     *

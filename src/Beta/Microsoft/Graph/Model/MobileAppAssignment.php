@@ -92,7 +92,7 @@ class MobileAppAssignment extends Entity
     
     /**
     * Gets the source
-    * The resource type which is the source for the assignment.
+    * The resource type which is the source for the assignment. Possible values are: direct, policySets.
     *
     * @return DeviceAndAppManagementAssignmentSource The source
     */
@@ -111,7 +111,7 @@ class MobileAppAssignment extends Entity
     
     /**
     * Sets the source
-    * The resource type which is the source for the assignment.
+    * The resource type which is the source for the assignment. Possible values are: direct, policySets.
     *
     * @param DeviceAndAppManagementAssignmentSource $val The source
     *

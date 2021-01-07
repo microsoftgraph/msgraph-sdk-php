@@ -26,6 +26,7 @@ class AccessPackageAnswer extends Entity
 
     /**
     * Gets the answeredQuestion
+    * The question the answer is for. Required and Read-only.
     *
     * @return AccessPackageQuestion The answeredQuestion
     */
@@ -44,6 +45,7 @@ class AccessPackageAnswer extends Entity
 
     /**
     * Sets the answeredQuestion
+    * The question the answer is for. Required and Read-only.
     *
     * @param AccessPackageQuestion $val The value to assign to the answeredQuestion
     *
@@ -56,6 +58,7 @@ class AccessPackageAnswer extends Entity
     }
     /**
     * Gets the displayValue
+    * The display value of the answer. Required.
     *
     * @return string The displayValue
     */
@@ -70,6 +73,7 @@ class AccessPackageAnswer extends Entity
 
     /**
     * Sets the displayValue
+    * The display value of the answer. Required.
     *
     * @param string $val The value of the displayValue
     *

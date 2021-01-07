@@ -25,6 +25,7 @@ class AccessPackageLocalizedContent extends Entity
 {
     /**
     * Gets the defaultText
+    * The fallback string, which is used when a requested localization is not available. Required.
     *
     * @return string The defaultText
     */
@@ -39,6 +40,7 @@ class AccessPackageLocalizedContent extends Entity
 
     /**
     * Sets the defaultText
+    * The fallback string, which is used when a requested localization is not available. Required.
     *
     * @param string $val The value of the defaultText
     *
@@ -52,6 +54,7 @@ class AccessPackageLocalizedContent extends Entity
 
     /**
     * Gets the localizedTexts
+    * Content represented in a format for a specific locale.
     *
     * @return AccessPackageLocalizedText The localizedTexts
     */
@@ -70,6 +73,7 @@ class AccessPackageLocalizedContent extends Entity
 
     /**
     * Sets the localizedTexts
+    * Content represented in a format for a specific locale.
     *
     * @param AccessPackageLocalizedText $val The value to assign to the localizedTexts
     *

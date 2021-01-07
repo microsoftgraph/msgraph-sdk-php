@@ -26,7 +26,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
     */
@@ -45,7 +45,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The advancedThreatProtectionRequiredSecurityLevel
     *

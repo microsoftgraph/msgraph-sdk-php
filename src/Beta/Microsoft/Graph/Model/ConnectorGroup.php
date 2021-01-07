@@ -26,6 +26,7 @@ class ConnectorGroup extends Entity
 {
     /**
     * Gets the connectorGroupType
+    * Indicates the type of hybrid agent. This pre-set by the system. Read-only.
     *
     * @return ConnectorGroupType The connectorGroupType
     */
@@ -44,6 +45,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Sets the connectorGroupType
+    * Indicates the type of hybrid agent. This pre-set by the system. Read-only.
     *
     * @param ConnectorGroupType $val The connectorGroupType
     *
@@ -57,6 +59,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Gets the isDefault
+    * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
     *
     * @return bool The isDefault
     */
@@ -71,6 +74,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Sets the isDefault
+    * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
     *
     * @param bool $val The isDefault
     *
@@ -84,6 +88,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Gets the name
+    * The name associated with the connectorGroup.
     *
     * @return string The name
     */
@@ -98,6 +103,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Sets the name
+    * The name associated with the connectorGroup.
     *
     * @param string $val The name
     *
@@ -111,6 +117,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Gets the region
+    * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: nam, eur, aus, asia, ind.
     *
     * @return ConnectorGroupRegion The region
     */
@@ -129,6 +136,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Sets the region
+    * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: nam, eur, aus, asia, ind.
     *
     * @param ConnectorGroupRegion $val The region
     *
@@ -143,6 +151,7 @@ class ConnectorGroup extends Entity
 
      /** 
      * Gets the applications
+    * Read-only. Nullable.
      *
      * @return array The applications
      */
@@ -157,6 +166,7 @@ class ConnectorGroup extends Entity
     
     /** 
     * Sets the applications
+    * Read-only. Nullable.
     *
     * @param Application $val The applications
     *
@@ -171,6 +181,7 @@ class ConnectorGroup extends Entity
 
      /** 
      * Gets the members
+    * Read-only. Nullable.
      *
      * @return array The members
      */
@@ -185,6 +196,7 @@ class ConnectorGroup extends Entity
     
     /** 
     * Sets the members
+    * Read-only. Nullable.
     *
     * @param Connector $val The members
     *

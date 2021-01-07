@@ -35,7 +35,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
 
     /**
     * Gets the detectionType
-    * The detection type for script output
+    * The detection type for script output. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
     *
     * @return Win32LobAppPowerShellScriptDetectionType The detectionType
     */
@@ -54,7 +54,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
 
     /**
     * Sets the detectionType
-    * The detection type for script output
+    * The detection type for script output. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
     *
     * @param Win32LobAppPowerShellScriptDetectionType $val The value to assign to the detectionType
     *
@@ -152,7 +152,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
 
     /**
     * Gets the runAsAccount
-    * Indicates the type of execution context the script runs in.
+    * Indicates the type of execution context the script runs in. Possible values are: system, user.
     *
     * @return RunAsAccountType The runAsAccount
     */
@@ -171,7 +171,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
 
     /**
     * Sets the runAsAccount
-    * Indicates the type of execution context the script runs in.
+    * Indicates the type of execution context the script runs in. Possible values are: system, user.
     *
     * @param RunAsAccountType $val The value to assign to the runAsAccount
     *

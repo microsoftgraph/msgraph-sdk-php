@@ -26,7 +26,7 @@ class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertificateProf
 {
     /**
     * Gets the intendedPurpose
-    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
+    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
     *
     * @return IntendedPurpose The intendedPurpose
     */
@@ -45,7 +45,7 @@ class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertificateProf
     
     /**
     * Sets the intendedPurpose
-    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
+    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
     *
     * @param IntendedPurpose $val The intendedPurpose
     *

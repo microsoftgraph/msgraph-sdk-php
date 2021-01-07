@@ -25,6 +25,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 {
     /**
     * Gets the additionalDetails
+    * Additional details about the health check or the recommended action.
     *
     * @return string The additionalDetails
     */
@@ -39,6 +40,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the additionalDetails
+    * Additional details about the health check or the recommended action.
     *
     * @param string $val The value of the additionalDetails
     *
@@ -51,6 +53,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
     }
     /**
     * Gets the displayName
+    * The display name for this health check item.
     *
     * @return string The displayName
     */
@@ -65,6 +68,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the displayName
+    * The display name for this health check item.
     *
     * @param string $val The value of the displayName
     *
@@ -78,6 +82,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Gets the endDateTime
+    * The end time of the health check item. Read-only.
     *
     * @return \DateTime The endDateTime
     */
@@ -96,6 +101,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the endDateTime
+    * The end time of the health check item. Read-only.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -109,6 +115,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Gets the errorType
+    * The type of error that occurred during this health check. Possible values are: DnsCheckFqdnNotFound, DnsCheckUnknownError, AdJoinCheckFqdnNotFound, AdJoinCheckIncorrectCredentials, AdJoinCheckOrganizationalUnitNotFound, AdJoinCheckOrganizationalUnitIncorrectFormat, AdJoinCheckUnknownError, EndpointConnectivityCheckUrlNotWhitelisted, EndpointConnectivityCheckUnknownError, AadConnectivityCheckUnknownError.
     *
     * @return CloudPcOnPremisesConnectionHealthCheckErrorType The errorType
     */
@@ -127,6 +134,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the errorType
+    * The type of error that occurred during this health check. Possible values are: DnsCheckFqdnNotFound, DnsCheckUnknownError, AdJoinCheckFqdnNotFound, AdJoinCheckIncorrectCredentials, AdJoinCheckOrganizationalUnitNotFound, AdJoinCheckOrganizationalUnitIncorrectFormat, AdJoinCheckUnknownError, EndpointConnectivityCheckUrlNotWhitelisted, EndpointConnectivityCheckUnknownError, AadConnectivityCheckUnknownError.
     *
     * @param CloudPcOnPremisesConnectionHealthCheckErrorType $val The value to assign to the errorType
     *
@@ -139,6 +147,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
     }
     /**
     * Gets the recommendedAction
+    * The recommended action to fix the corresponding error.
     *
     * @return string The recommendedAction
     */
@@ -153,6 +162,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the recommendedAction
+    * The recommended action to fix the corresponding error.
     *
     * @param string $val The value of the recommendedAction
     *
@@ -166,6 +176,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Gets the startDateTime
+    * The start time of the health check item. Read-only.
     *
     * @return \DateTime The startDateTime
     */
@@ -184,6 +195,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the startDateTime
+    * The start time of the health check item. Read-only.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -197,6 +209,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Gets the status
+    * The status of the health check item. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
     *
     * @return CloudPcOnPremisesConnectionStatus The status
     */
@@ -215,6 +228,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the status
+    * The status of the health check item. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
     *
     * @param CloudPcOnPremisesConnectionStatus $val The value to assign to the status
     *

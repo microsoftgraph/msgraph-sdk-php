@@ -353,7 +353,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the applicationGuardEnabledOptions
-    * Enable Windows Defender Application Guard for newer Windows builds
+    * Enable Windows Defender Application Guard for newer Windows builds. Possible values are: notConfigured, enabledForEdge, enabledForOffice, enabledForEdgeAndOffice.
     *
     * @return ApplicationGuardEnabledOptions The applicationGuardEnabledOptions
     */
@@ -372,7 +372,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the applicationGuardEnabledOptions
-    * Enable Windows Defender Application Guard for newer Windows builds
+    * Enable Windows Defender Application Guard for newer Windows builds. Possible values are: notConfigured, enabledForEdge, enabledForOffice, enabledForEdgeAndOffice.
     *
     * @param ApplicationGuardEnabledOptions $val The applicationGuardEnabledOptions
     *
@@ -597,7 +597,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the bitLockerRecoveryPasswordRotation
-    * This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).
+    * This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE). Possible values are: notConfigured, disabled, enabledForAzureAd, enabledForAzureAdAndHybrid.
     *
     * @return BitLockerRecoveryPasswordRotationType The bitLockerRecoveryPasswordRotation
     */
@@ -616,7 +616,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the bitLockerRecoveryPasswordRotation
-    * This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).
+    * This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE). Possible values are: notConfigured, disabled, enabledForAzureAd, enabledForAzureAdAndHybrid.
     *
     * @param BitLockerRecoveryPasswordRotationType $val The bitLockerRecoveryPasswordRotation
     *
@@ -725,7 +725,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderAdobeReaderLaunchChildProcess
-    * Value indicating the behavior of Adobe Reader from creating child processes
+    * Value indicating the behavior of Adobe Reader from creating child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderAdobeReaderLaunchChildProcess
     */
@@ -744,7 +744,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderAdobeReaderLaunchChildProcess
-    * Value indicating the behavior of Adobe Reader from creating child processes
+    * Value indicating the behavior of Adobe Reader from creating child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderAdobeReaderLaunchChildProcess
     *
@@ -758,7 +758,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderAdvancedRansomewareProtectionType
-    * Value indicating use of advanced protection against ransomeware
+    * Value indicating use of advanced protection against ransomeware. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderAdvancedRansomewareProtectionType
     */
@@ -777,7 +777,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderAdvancedRansomewareProtectionType
-    * Value indicating use of advanced protection against ransomeware
+    * Value indicating use of advanced protection against ransomeware. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderAdvancedRansomewareProtectionType
     *
@@ -1197,7 +1197,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderCloudBlockLevel
-    * Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the "Join Microsoft MAPS" setting enabled in order to function.
+    * Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
     *
     * @return DefenderCloudBlockLevelType The defenderCloudBlockLevel
     */
@@ -1216,7 +1216,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderCloudBlockLevel
-    * Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the "Join Microsoft MAPS" setting enabled in order to function.
+    * Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
     *
     * @param DefenderCloudBlockLevelType $val The defenderCloudBlockLevel
     *
@@ -1230,7 +1230,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderCloudExtendedTimeoutInSeconds
-    * Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- "Configure the 'Block at First Sight' feature; "Join Microsoft MAPS"; "Send file samples when further analysis is required". Valid values 0 to 50
+    * Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
     *
     * @return int The defenderCloudExtendedTimeoutInSeconds
     */
@@ -1245,7 +1245,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderCloudExtendedTimeoutInSeconds
-    * Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- "Configure the 'Block at First Sight' feature; "Join Microsoft MAPS"; "Send file samples when further analysis is required". Valid values 0 to 50
+    * Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
     *
     * @param int $val The defenderCloudExtendedTimeoutInSeconds
     *
@@ -1669,7 +1669,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderEmailContentExecution
-    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client)
+    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client). Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderEmailContentExecution
     */
@@ -1688,7 +1688,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderEmailContentExecution
-    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client)
+    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client). Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderEmailContentExecution
     *
@@ -1702,7 +1702,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderEmailContentExecutionType
-    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client)
+    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client). Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderEmailContentExecutionType
     */
@@ -1721,7 +1721,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderEmailContentExecutionType
-    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client)
+    * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client). Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderEmailContentExecutionType
     *
@@ -1971,7 +1971,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderGuardMyFoldersType
-    * Value indicating the behavior of protected folders
+    * Value indicating the behavior of protected folders. Possible values are: userDefined, enable, auditMode, blockDiskModification, auditDiskModification.
     *
     * @return FolderProtectionType The defenderGuardMyFoldersType
     */
@@ -1990,7 +1990,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderGuardMyFoldersType
-    * Value indicating the behavior of protected folders
+    * Value indicating the behavior of protected folders. Possible values are: userDefined, enable, auditMode, blockDiskModification, auditDiskModification.
     *
     * @param FolderProtectionType $val The defenderGuardMyFoldersType
     *
@@ -2004,7 +2004,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderNetworkProtectionType
-    * Value indicating the behavior of NetworkProtection
+    * Value indicating the behavior of NetworkProtection. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderNetworkProtectionType
     */
@@ -2023,7 +2023,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderNetworkProtectionType
-    * Value indicating the behavior of NetworkProtection
+    * Value indicating the behavior of NetworkProtection. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderNetworkProtectionType
     *
@@ -2037,7 +2037,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeAppsExecutableContentCreationOrLaunch
-    * Value indicating the behavior of Office applications/macros creating or launching executable content
+    * Value indicating the behavior of Office applications/macros creating or launching executable content. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderOfficeAppsExecutableContentCreationOrLaunch
     */
@@ -2056,7 +2056,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeAppsExecutableContentCreationOrLaunch
-    * Value indicating the behavior of Office applications/macros creating or launching executable content
+    * Value indicating the behavior of Office applications/macros creating or launching executable content. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderOfficeAppsExecutableContentCreationOrLaunch
     *
@@ -2070,7 +2070,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeAppsExecutableContentCreationOrLaunchType
-    * Value indicating the behavior of Office applications/macros creating or launching executable content
+    * Value indicating the behavior of Office applications/macros creating or launching executable content. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderOfficeAppsExecutableContentCreationOrLaunchType
     */
@@ -2089,7 +2089,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeAppsExecutableContentCreationOrLaunchType
-    * Value indicating the behavior of Office applications/macros creating or launching executable content
+    * Value indicating the behavior of Office applications/macros creating or launching executable content. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderOfficeAppsExecutableContentCreationOrLaunchType
     *
@@ -2103,7 +2103,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeAppsLaunchChildProcess
-    * Value indicating the behavior of Office application launching child processes
+    * Value indicating the behavior of Office application launching child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderOfficeAppsLaunchChildProcess
     */
@@ -2122,7 +2122,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeAppsLaunchChildProcess
-    * Value indicating the behavior of Office application launching child processes
+    * Value indicating the behavior of Office application launching child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderOfficeAppsLaunchChildProcess
     *
@@ -2136,7 +2136,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeAppsLaunchChildProcessType
-    * Value indicating the behavior of Office application launching child processes
+    * Value indicating the behavior of Office application launching child processes. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderOfficeAppsLaunchChildProcessType
     */
@@ -2155,7 +2155,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeAppsLaunchChildProcessType
-    * Value indicating the behavior of Office application launching child processes
+    * Value indicating the behavior of Office application launching child processes. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderOfficeAppsLaunchChildProcessType
     *
@@ -2169,7 +2169,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeAppsOtherProcessInjection
-    * Value indicating the behavior of  Office applications injecting into other processes
+    * Value indicating the behavior of  Office applications injecting into other processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderOfficeAppsOtherProcessInjection
     */
@@ -2188,7 +2188,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeAppsOtherProcessInjection
-    * Value indicating the behavior of  Office applications injecting into other processes
+    * Value indicating the behavior of  Office applications injecting into other processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderOfficeAppsOtherProcessInjection
     *
@@ -2202,7 +2202,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeAppsOtherProcessInjectionType
-    * Value indicating the behavior of Office applications injecting into other processes
+    * Value indicating the behavior of Office applications injecting into other processes. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderOfficeAppsOtherProcessInjectionType
     */
@@ -2221,7 +2221,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeAppsOtherProcessInjectionType
-    * Value indicating the behavior of Office applications injecting into other processes
+    * Value indicating the behavior of Office applications injecting into other processes. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderOfficeAppsOtherProcessInjectionType
     *
@@ -2235,7 +2235,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeCommunicationAppsLaunchChildProcess
-    * Value indicating the behavior of Office communication applications, including Microsoft Outlook, from creating child processes
+    * Value indicating the behavior of Office communication applications, including Microsoft Outlook, from creating child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderOfficeCommunicationAppsLaunchChildProcess
     */
@@ -2254,7 +2254,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeCommunicationAppsLaunchChildProcess
-    * Value indicating the behavior of Office communication applications, including Microsoft Outlook, from creating child processes
+    * Value indicating the behavior of Office communication applications, including Microsoft Outlook, from creating child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderOfficeCommunicationAppsLaunchChildProcess
     *
@@ -2268,7 +2268,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeMacroCodeAllowWin32Imports
-    * Value indicating the behavior of Win32 imports from Macro code in Office
+    * Value indicating the behavior of Win32 imports from Macro code in Office. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderOfficeMacroCodeAllowWin32Imports
     */
@@ -2287,7 +2287,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeMacroCodeAllowWin32Imports
-    * Value indicating the behavior of Win32 imports from Macro code in Office
+    * Value indicating the behavior of Win32 imports from Macro code in Office. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderOfficeMacroCodeAllowWin32Imports
     *
@@ -2301,7 +2301,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderOfficeMacroCodeAllowWin32ImportsType
-    * Value indicating the behavior of Win32 imports from Macro code in Office
+    * Value indicating the behavior of Win32 imports from Macro code in Office. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderOfficeMacroCodeAllowWin32ImportsType
     */
@@ -2320,7 +2320,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderOfficeMacroCodeAllowWin32ImportsType
-    * Value indicating the behavior of Win32 imports from Macro code in Office
+    * Value indicating the behavior of Win32 imports from Macro code in Office. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderOfficeMacroCodeAllowWin32ImportsType
     *
@@ -2334,7 +2334,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderPotentiallyUnwantedAppAction
-    * Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer.
+    * Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderPotentiallyUnwantedAppAction
     */
@@ -2353,7 +2353,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderPotentiallyUnwantedAppAction
-    * Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer.
+    * Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderPotentiallyUnwantedAppAction
     *
@@ -2367,7 +2367,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderPreventCredentialStealingType
-    * Value indicating if credential stealing from the Windows local security authority subsystem is permitted
+    * Value indicating if credential stealing from the Windows local security authority subsystem is permitted. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderPreventCredentialStealingType
     */
@@ -2386,7 +2386,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderPreventCredentialStealingType
-    * Value indicating if credential stealing from the Windows local security authority subsystem is permitted
+    * Value indicating if credential stealing from the Windows local security authority subsystem is permitted. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderPreventCredentialStealingType
     *
@@ -2400,7 +2400,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderProcessCreation
-    * Value indicating response to process creations originating from PSExec and WMI commands
+    * Value indicating response to process creations originating from PSExec and WMI commands. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderProcessCreation
     */
@@ -2419,7 +2419,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderProcessCreation
-    * Value indicating response to process creations originating from PSExec and WMI commands
+    * Value indicating response to process creations originating from PSExec and WMI commands. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderProcessCreation
     *
@@ -2433,7 +2433,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderProcessCreationType
-    * Value indicating response to process creations originating from PSExec and WMI commands
+    * Value indicating response to process creations originating from PSExec and WMI commands. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderProcessCreationType
     */
@@ -2452,7 +2452,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderProcessCreationType
-    * Value indicating response to process creations originating from PSExec and WMI commands
+    * Value indicating response to process creations originating from PSExec and WMI commands. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderProcessCreationType
     *
@@ -2495,7 +2495,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanDirection
-    * Controls which sets of files should be monitored.
+    * Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
     *
     * @return DefenderRealtimeScanDirection The defenderScanDirection
     */
@@ -2514,7 +2514,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanDirection
-    * Controls which sets of files should be monitored.
+    * Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
     *
     * @param DefenderRealtimeScanDirection $val The defenderScanDirection
     *
@@ -2557,7 +2557,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScanType
-    * Selects whether to perform a quick scan or full scan.
+    * Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
     *
     * @return DefenderScanType The defenderScanType
     */
@@ -2576,7 +2576,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScanType
-    * Selects whether to perform a quick scan or full scan.
+    * Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
     *
     * @param DefenderScanType $val The defenderScanType
     *
@@ -2623,7 +2623,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScheduledScanDay
-    * Selects the day that the Windows Defender scan should run.
+    * Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @return WeeklySchedule The defenderScheduledScanDay
     */
@@ -2642,7 +2642,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScheduledScanDay
-    * Selects the day that the Windows Defender scan should run.
+    * Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @param WeeklySchedule $val The defenderScheduledScanDay
     *
@@ -2689,7 +2689,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScriptDownloadedPayloadExecution
-    * Value indicating the behavior of js/vbs executing payload downloaded from Internet
+    * Value indicating the behavior of js/vbs executing payload downloaded from Internet. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderScriptDownloadedPayloadExecution
     */
@@ -2708,7 +2708,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScriptDownloadedPayloadExecution
-    * Value indicating the behavior of js/vbs executing payload downloaded from Internet
+    * Value indicating the behavior of js/vbs executing payload downloaded from Internet. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderScriptDownloadedPayloadExecution
     *
@@ -2722,7 +2722,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScriptDownloadedPayloadExecutionType
-    * Value indicating the behavior of js/vbs executing payload downloaded from Internet
+    * Value indicating the behavior of js/vbs executing payload downloaded from Internet. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderScriptDownloadedPayloadExecutionType
     */
@@ -2741,7 +2741,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScriptDownloadedPayloadExecutionType
-    * Value indicating the behavior of js/vbs executing payload downloaded from Internet
+    * Value indicating the behavior of js/vbs executing payload downloaded from Internet. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderScriptDownloadedPayloadExecutionType
     *
@@ -2755,7 +2755,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScriptObfuscatedMacroCode
-    * Value indicating the behavior of obfuscated js/vbs/ps/macro code
+    * Value indicating the behavior of obfuscated js/vbs/ps/macro code. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderScriptObfuscatedMacroCode
     */
@@ -2774,7 +2774,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScriptObfuscatedMacroCode
-    * Value indicating the behavior of obfuscated js/vbs/ps/macro code
+    * Value indicating the behavior of obfuscated js/vbs/ps/macro code. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderScriptObfuscatedMacroCode
     *
@@ -2788,7 +2788,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderScriptObfuscatedMacroCodeType
-    * Value indicating the behavior of obfuscated js/vbs/ps/macro code
+    * Value indicating the behavior of obfuscated js/vbs/ps/macro code. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderScriptObfuscatedMacroCodeType
     */
@@ -2807,7 +2807,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderScriptObfuscatedMacroCodeType
-    * Value indicating the behavior of obfuscated js/vbs/ps/macro code
+    * Value indicating the behavior of obfuscated js/vbs/ps/macro code. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderScriptObfuscatedMacroCodeType
     *
@@ -3082,7 +3082,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSecurityCenterDisableRansomwareUI
-    * Used to disable the display of the ransomware protection area. 
+    * Used to disable the display of the ransomware protection area.
     *
     * @return bool The defenderSecurityCenterDisableRansomwareUI
     */
@@ -3097,7 +3097,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSecurityCenterDisableRansomwareUI
-    * Used to disable the display of the ransomware protection area. 
+    * Used to disable the display of the ransomware protection area.
     *
     * @param bool $val The defenderSecurityCenterDisableRansomwareUI
     *
@@ -3314,7 +3314,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSecurityCenterITContactDisplay
-    * Configure where to display IT contact information to end users.
+    * Configure where to display IT contact information to end users. Possible values are: notConfigured, displayInAppAndInNotifications, displayOnlyInApp, displayOnlyInNotifications.
     *
     * @return DefenderSecurityCenterITContactDisplayType The defenderSecurityCenterITContactDisplay
     */
@@ -3333,7 +3333,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSecurityCenterITContactDisplay
-    * Configure where to display IT contact information to end users.
+    * Configure where to display IT contact information to end users. Possible values are: notConfigured, displayInAppAndInNotifications, displayOnlyInApp, displayOnlyInNotifications.
     *
     * @param DefenderSecurityCenterITContactDisplayType $val The defenderSecurityCenterITContactDisplay
     *
@@ -3347,7 +3347,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSecurityCenterNotificationsFromApp
-    * Notifications to show from the displayed areas of app
+    * Notifications to show from the displayed areas of app. Possible values are: notConfigured, blockNoncriticalNotifications, blockAllNotifications.
     *
     * @return DefenderSecurityCenterNotificationsFromAppType The defenderSecurityCenterNotificationsFromApp
     */
@@ -3366,7 +3366,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSecurityCenterNotificationsFromApp
-    * Notifications to show from the displayed areas of app
+    * Notifications to show from the displayed areas of app. Possible values are: notConfigured, blockNoncriticalNotifications, blockAllNotifications.
     *
     * @param DefenderSecurityCenterNotificationsFromAppType $val The defenderSecurityCenterNotificationsFromApp
     *
@@ -3438,7 +3438,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSubmitSamplesConsentType
-    * Checks for the user consent level in Windows Defender to send data.
+    * Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
     *
     * @return DefenderSubmitSamplesConsentType The defenderSubmitSamplesConsentType
     */
@@ -3457,7 +3457,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSubmitSamplesConsentType
-    * Checks for the user consent level in Windows Defender to send data.
+    * Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
     *
     * @param DefenderSubmitSamplesConsentType $val The defenderSubmitSamplesConsentType
     *
@@ -3471,7 +3471,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderUntrustedExecutable
-    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria
+    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderUntrustedExecutable
     */
@@ -3490,7 +3490,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderUntrustedExecutable
-    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria
+    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderUntrustedExecutable
     *
@@ -3504,7 +3504,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderUntrustedExecutableType
-    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria
+    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderUntrustedExecutableType
     */
@@ -3523,7 +3523,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderUntrustedExecutableType
-    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria
+    * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderUntrustedExecutableType
     *
@@ -3537,7 +3537,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderUntrustedUSBProcess
-    * Value indicating response to untrusted and unsigned processes that run from USB
+    * Value indicating response to untrusted and unsigned processes that run from USB. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderUntrustedUSBProcess
     */
@@ -3556,7 +3556,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderUntrustedUSBProcess
-    * Value indicating response to untrusted and unsigned processes that run from USB
+    * Value indicating response to untrusted and unsigned processes that run from USB. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderUntrustedUSBProcess
     *
@@ -3570,7 +3570,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderUntrustedUSBProcessType
-    * Value indicating response to untrusted and unsigned processes that run from USB
+    * Value indicating response to untrusted and unsigned processes that run from USB. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @return DefenderAttackSurfaceType The defenderUntrustedUSBProcessType
     */
@@ -3589,7 +3589,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderUntrustedUSBProcessType
-    * Value indicating response to untrusted and unsigned processes that run from USB
+    * Value indicating response to untrusted and unsigned processes that run from USB. Possible values are: userDefined, block, auditMode, warn, disable.
     *
     * @param DefenderAttackSurfaceType $val The defenderUntrustedUSBProcessType
     *
@@ -3661,7 +3661,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deviceGuardLaunchSystemGuard
-    * Allows the IT admin to configure the launch of System Guard.
+    * Allows the IT admin to configure the launch of System Guard. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The deviceGuardLaunchSystemGuard
     */
@@ -3680,7 +3680,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deviceGuardLaunchSystemGuard
-    * Allows the IT admin to configure the launch of System Guard.
+    * Allows the IT admin to configure the launch of System Guard. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The deviceGuardLaunchSystemGuard
     *
@@ -3694,7 +3694,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deviceGuardLocalSystemAuthorityCredentialGuardSettings
-    * Turn on Credential Guard when Platform Security Level with Secure Boot and Virtualization Based Security are both enabled.
+    * Turn on Credential Guard when Platform Security Level with Secure Boot and Virtualization Based Security are both enabled. Possible values are: notConfigured, enableWithUEFILock, enableWithoutUEFILock, disable.
     *
     * @return DeviceGuardLocalSystemAuthorityCredentialGuardType The deviceGuardLocalSystemAuthorityCredentialGuardSettings
     */
@@ -3713,7 +3713,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deviceGuardLocalSystemAuthorityCredentialGuardSettings
-    * Turn on Credential Guard when Platform Security Level with Secure Boot and Virtualization Based Security are both enabled.
+    * Turn on Credential Guard when Platform Security Level with Secure Boot and Virtualization Based Security are both enabled. Possible values are: notConfigured, enableWithUEFILock, enableWithoutUEFILock, disable.
     *
     * @param DeviceGuardLocalSystemAuthorityCredentialGuardType $val The deviceGuardLocalSystemAuthorityCredentialGuardSettings
     *
@@ -3727,7 +3727,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deviceGuardSecureBootWithDMA
-    * Specifies whether Platform Security Level is enabled at next reboot.
+    * Specifies whether Platform Security Level is enabled at next reboot. Possible values are: notConfigured, withoutDMA, withDMA.
     *
     * @return SecureBootWithDMAType The deviceGuardSecureBootWithDMA
     */
@@ -3746,7 +3746,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deviceGuardSecureBootWithDMA
-    * Specifies whether Platform Security Level is enabled at next reboot.
+    * Specifies whether Platform Security Level is enabled at next reboot. Possible values are: notConfigured, withoutDMA, withDMA.
     *
     * @param SecureBootWithDMAType $val The deviceGuardSecureBootWithDMA
     *
@@ -4253,7 +4253,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the lanManagerAuthenticationLevel
-    * This security setting determines which challenge/response authentication protocol is used for network logons.
+    * This security setting determines which challenge/response authentication protocol is used for network logons. Possible values are: lmAndNltm, lmNtlmAndNtlmV2, lmAndNtlmOnly, lmAndNtlmV2, lmNtlmV2AndNotLm, lmNtlmV2AndNotLmOrNtm.
     *
     * @return LanManagerAuthenticationLevel The lanManagerAuthenticationLevel
     */
@@ -4272,7 +4272,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the lanManagerAuthenticationLevel
-    * This security setting determines which challenge/response authentication protocol is used for network logons.
+    * This security setting determines which challenge/response authentication protocol is used for network logons. Possible values are: lmAndNltm, lmNtlmAndNtlmV2, lmAndNtlmOnly, lmAndNtlmV2, lmNtlmV2AndNotLm, lmNtlmV2AndNotLmOrNtm.
     *
     * @param LanManagerAuthenticationLevel $val The lanManagerAuthenticationLevel
     *
@@ -4315,7 +4315,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsAdministratorAccountName
-    * Define a different account name to be associated with the security identifier (SID) for the account ???Administrator???.
+    * Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
     *
     * @return string The localSecurityOptionsAdministratorAccountName
     */
@@ -4330,7 +4330,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsAdministratorAccountName
-    * Define a different account name to be associated with the security identifier (SID) for the account ???Administrator???.
+    * Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
     *
     * @param string $val The localSecurityOptionsAdministratorAccountName
     *
@@ -4344,7 +4344,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsAdministratorElevationPromptBehavior
-    * Define the behavior of the elevation prompt for admins in Admin Approval Mode.
+    * Define the behavior of the elevation prompt for admins in Admin Approval Mode. Possible values are: notConfigured, elevateWithoutPrompting, promptForCredentialsOnTheSecureDesktop, promptForConsentOnTheSecureDesktop, promptForCredentials, promptForConsent, promptForConsentForNonWindowsBinaries.
     *
     * @return LocalSecurityOptionsAdministratorElevationPromptBehaviorType The localSecurityOptionsAdministratorElevationPromptBehavior
     */
@@ -4363,7 +4363,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsAdministratorElevationPromptBehavior
-    * Define the behavior of the elevation prompt for admins in Admin Approval Mode.
+    * Define the behavior of the elevation prompt for admins in Admin Approval Mode. Possible values are: notConfigured, elevateWithoutPrompting, promptForCredentialsOnTheSecureDesktop, promptForConsentOnTheSecureDesktop, promptForCredentials, promptForConsent, promptForConsentForNonWindowsBinaries.
     *
     * @param LocalSecurityOptionsAdministratorElevationPromptBehaviorType $val The localSecurityOptionsAdministratorElevationPromptBehavior
     *
@@ -5044,7 +5044,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
-    * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It???s not stored by default.
+    * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
     *
     * @return bool The localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
     */
@@ -5059,7 +5059,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
-    * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It???s not stored by default.
+    * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
     *
     * @param bool $val The localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange
     *
@@ -5073,7 +5073,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
-    * Define who is allowed to format and eject removable NTFS media.
+    * Define who is allowed to format and eject removable NTFS media. Possible values are: notConfigured, administrators, administratorsAndPowerUsers, administratorsAndInteractiveUsers.
     *
     * @return LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType The localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
     */
@@ -5092,7 +5092,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
-    * Define who is allowed to format and eject removable NTFS media.
+    * Define who is allowed to format and eject removable NTFS media. Possible values are: notConfigured, administrators, administratorsAndPowerUsers, administratorsAndInteractiveUsers.
     *
     * @param LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType $val The localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
     *
@@ -5106,7 +5106,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsGuestAccountName
-    * Define a different account name to be associated with the security identifier (SID) for the account ???Guest???.
+    * Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
     *
     * @return string The localSecurityOptionsGuestAccountName
     */
@@ -5121,7 +5121,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsGuestAccountName
-    * Define a different account name to be associated with the security identifier (SID) for the account ???Guest???.
+    * Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
     *
     * @param string $val The localSecurityOptionsGuestAccountName
     *
@@ -5164,7 +5164,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsHideUsernameAtSignIn
-    * Do not display the username of the person signing in to this device after credentials are entered and before the device???s desktop is shown.
+    * Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
     *
     * @return bool The localSecurityOptionsHideUsernameAtSignIn
     */
@@ -5179,7 +5179,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsHideUsernameAtSignIn
-    * Do not display the username of the person signing in to this device after credentials are entered and before the device???s desktop is shown.
+    * Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
     *
     * @param bool $val The localSecurityOptionsHideUsernameAtSignIn
     *
@@ -5193,7 +5193,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsInformationDisplayedOnLockScreen
-    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown
+    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown. Possible values are: notConfigured, administrators, administratorsAndPowerUsers, administratorsAndInteractiveUsers.
     *
     * @return LocalSecurityOptionsInformationDisplayedOnLockScreenType The localSecurityOptionsInformationDisplayedOnLockScreen
     */
@@ -5212,7 +5212,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsInformationDisplayedOnLockScreen
-    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown
+    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown. Possible values are: notConfigured, administrators, administratorsAndPowerUsers, administratorsAndInteractiveUsers.
     *
     * @param LocalSecurityOptionsInformationDisplayedOnLockScreenType $val The localSecurityOptionsInformationDisplayedOnLockScreen
     *
@@ -5226,7 +5226,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsInformationShownOnLockScreen
-    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown
+    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown. Possible values are: notConfigured, userDisplayNameDomainUser, userDisplayNameOnly, doNotDisplayUser.
     *
     * @return LocalSecurityOptionsInformationShownOnLockScreenType The localSecurityOptionsInformationShownOnLockScreen
     */
@@ -5245,7 +5245,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsInformationShownOnLockScreen
-    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown
+    * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown. Possible values are: notConfigured, userDisplayNameDomainUser, userDisplayNameOnly, doNotDisplayUser.
     *
     * @param LocalSecurityOptionsInformationShownOnLockScreenType $val The localSecurityOptionsInformationShownOnLockScreen
     *
@@ -5317,7 +5317,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsMachineInactivityLimit
-    * Define maximum minutes of inactivity on the interactive desktop???s login screen until the screen saver runs. Valid values 0 to 9999
+    * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
     *
     * @return int The localSecurityOptionsMachineInactivityLimit
     */
@@ -5332,7 +5332,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsMachineInactivityLimit
-    * Define maximum minutes of inactivity on the interactive desktop???s login screen until the screen saver runs. Valid values 0 to 9999
+    * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
     *
     * @param int $val The localSecurityOptionsMachineInactivityLimit
     *
@@ -5346,7 +5346,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsMachineInactivityLimitInMinutes
-    * Define maximum minutes of inactivity on the interactive desktop???s login screen until the screen saver runs. Valid values 0 to 9999
+    * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
     *
     * @return int The localSecurityOptionsMachineInactivityLimitInMinutes
     */
@@ -5361,7 +5361,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsMachineInactivityLimitInMinutes
-    * Define maximum minutes of inactivity on the interactive desktop???s login screen until the screen saver runs. Valid values 0 to 9999
+    * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
     *
     * @param int $val The localSecurityOptionsMachineInactivityLimitInMinutes
     *
@@ -5375,7 +5375,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
-    * This security setting allows a client to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
+    * This security setting allows a client to require the negotiation of 128-bit encryption and/or NTLMv2 session security. Possible values are: none, requireNtmlV2SessionSecurity, require128BitEncryption, ntlmV2And128BitEncryption.
     *
     * @return LocalSecurityOptionsMinimumSessionSecurity The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
     */
@@ -5394,7 +5394,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
-    * This security setting allows a client to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
+    * This security setting allows a client to require the negotiation of 128-bit encryption and/or NTLMv2 session security. Possible values are: none, requireNtmlV2SessionSecurity, require128BitEncryption, ntlmV2And128BitEncryption.
     *
     * @param LocalSecurityOptionsMinimumSessionSecurity $val The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients
     *
@@ -5408,7 +5408,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
-    * This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
+    * This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security. Possible values are: none, requireNtmlV2SessionSecurity, require128BitEncryption, ntlmV2And128BitEncryption.
     *
     * @return LocalSecurityOptionsMinimumSessionSecurity The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
     */
@@ -5427,7 +5427,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
-    * This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
+    * This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security. Possible values are: none, requireNtmlV2SessionSecurity, require128BitEncryption, ntlmV2And128BitEncryption.
     *
     * @param LocalSecurityOptionsMinimumSessionSecurity $val The localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers
     *
@@ -5499,7 +5499,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsSmartCardRemovalBehavior
-    * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader.
+    * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader. Possible values are: lockWorkstation, noAction, forceLogoff, disconnectRemoteDesktopSession.
     *
     * @return LocalSecurityOptionsSmartCardRemovalBehaviorType The localSecurityOptionsSmartCardRemovalBehavior
     */
@@ -5518,7 +5518,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsSmartCardRemovalBehavior
-    * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader.
+    * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader. Possible values are: lockWorkstation, noAction, forceLogoff, disconnectRemoteDesktopSession.
     *
     * @param LocalSecurityOptionsSmartCardRemovalBehaviorType $val The localSecurityOptionsSmartCardRemovalBehavior
     *
@@ -5532,7 +5532,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localSecurityOptionsStandardUserElevationPromptBehavior
-    * Define the behavior of the elevation prompt for standard users.
+    * Define the behavior of the elevation prompt for standard users. Possible values are: notConfigured, automaticallyDenyElevationRequests, promptForCredentialsOnTheSecureDesktop, promptForCredentials.
     *
     * @return LocalSecurityOptionsStandardUserElevationPromptBehaviorType The localSecurityOptionsStandardUserElevationPromptBehavior
     */
@@ -5551,7 +5551,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localSecurityOptionsStandardUserElevationPromptBehavior
-    * Define the behavior of the elevation prompt for standard users.
+    * Define the behavior of the elevation prompt for standard users. Possible values are: notConfigured, automaticallyDenyElevationRequests, promptForCredentialsOnTheSecureDesktop, promptForCredentials.
     *
     * @param LocalSecurityOptionsStandardUserElevationPromptBehaviorType $val The localSecurityOptionsStandardUserElevationPromptBehavior
     *
@@ -5681,7 +5681,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
+    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @return bool The smartScreenBlockOverrideForFiles
     */
@@ -5696,7 +5696,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
+    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @param bool $val The smartScreenBlockOverrideForFiles
     *
@@ -6168,7 +6168,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the userRightsDenyLocalLogOn
-    * This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported 
+    * This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported
     *
     * @return DeviceManagementUserRightsSetting The userRightsDenyLocalLogOn
     */
@@ -6187,7 +6187,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the userRightsDenyLocalLogOn
-    * This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported 
+    * This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported
     *
     * @param DeviceManagementUserRightsSetting $val The userRightsDenyLocalLogOn
     *
@@ -6333,7 +6333,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the userRightsLocalLogOn
-    * This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported 
+    * This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported
     *
     * @return DeviceManagementUserRightsSetting The userRightsLocalLogOn
     */
@@ -6352,7 +6352,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the userRightsLocalLogOn
-    * This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported 
+    * This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported
     *
     * @param DeviceManagementUserRightsSetting $val The userRightsLocalLogOn
     *
@@ -6696,7 +6696,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the windowsDefenderTamperProtection
-    * Configure windows defender TamperProtection settings
+    * Configure windows defender TamperProtection settings. Possible values are: notConfigured, enable, disable.
     *
     * @return WindowsDefenderTamperProtectionOptions The windowsDefenderTamperProtection
     */
@@ -6715,7 +6715,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the windowsDefenderTamperProtection
-    * Configure windows defender TamperProtection settings
+    * Configure windows defender TamperProtection settings. Possible values are: notConfigured, enable, disable.
     *
     * @param WindowsDefenderTamperProtectionOptions $val The windowsDefenderTamperProtection
     *
@@ -6729,7 +6729,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the xboxServicesAccessoryManagementServiceStartupMode
-    * This setting determines whether the Accessory management service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether the Accessory management service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @return ServiceStartType The xboxServicesAccessoryManagementServiceStartupMode
     */
@@ -6748,7 +6748,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the xboxServicesAccessoryManagementServiceStartupMode
-    * This setting determines whether the Accessory management service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether the Accessory management service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @param ServiceStartType $val The xboxServicesAccessoryManagementServiceStartupMode
     *
@@ -6791,7 +6791,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the xboxServicesLiveAuthManagerServiceStartupMode
-    * This setting determines whether Live Auth Manager service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether Live Auth Manager service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @return ServiceStartType The xboxServicesLiveAuthManagerServiceStartupMode
     */
@@ -6810,7 +6810,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the xboxServicesLiveAuthManagerServiceStartupMode
-    * This setting determines whether Live Auth Manager service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether Live Auth Manager service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @param ServiceStartType $val The xboxServicesLiveAuthManagerServiceStartupMode
     *
@@ -6824,7 +6824,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the xboxServicesLiveGameSaveServiceStartupMode
-    * This setting determines whether Live Game save service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether Live Game save service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @return ServiceStartType The xboxServicesLiveGameSaveServiceStartupMode
     */
@@ -6843,7 +6843,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the xboxServicesLiveGameSaveServiceStartupMode
-    * This setting determines whether Live Game save service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether Live Game save service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @param ServiceStartType $val The xboxServicesLiveGameSaveServiceStartupMode
     *
@@ -6857,7 +6857,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the xboxServicesLiveNetworkingServiceStartupMode
-    * This setting determines whether Networking service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether Networking service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @return ServiceStartType The xboxServicesLiveNetworkingServiceStartupMode
     */
@@ -6876,7 +6876,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the xboxServicesLiveNetworkingServiceStartupMode
-    * This setting determines whether Networking service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
+    * This setting determines whether Networking service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
     *
     * @param ServiceStartType $val The xboxServicesLiveNetworkingServiceStartupMode
     *

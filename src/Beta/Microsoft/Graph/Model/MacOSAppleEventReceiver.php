@@ -110,7 +110,7 @@ class MacOSAppleEventReceiver extends Entity
 
     /**
     * Gets the identifierType
-    * Use bundle ID for an app or path for a process or executable that receives the Apple Event.
+    * Use bundle ID for an app or path for a process or executable that receives the Apple Event. Possible values are: bundleID, path.
     *
     * @return MacOSProcessIdentifierType The identifierType
     */
@@ -129,7 +129,7 @@ class MacOSAppleEventReceiver extends Entity
 
     /**
     * Sets the identifierType
-    * Use bundle ID for an app or path for a process or executable that receives the Apple Event.
+    * Use bundle ID for an app or path for a process or executable that receives the Apple Event. Possible values are: bundleID, path.
     *
     * @param MacOSProcessIdentifierType $val The value to assign to the identifierType
     *

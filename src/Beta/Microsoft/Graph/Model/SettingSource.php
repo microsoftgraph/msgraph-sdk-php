@@ -82,6 +82,7 @@ class SettingSource extends Entity
 
     /**
     * Gets the sourceType
+    * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
     *
     * @return SettingSourceType The sourceType
     */
@@ -100,6 +101,7 @@ class SettingSource extends Entity
 
     /**
     * Sets the sourceType
+    * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
     *
     * @param SettingSourceType $val The value to assign to the sourceType
     *

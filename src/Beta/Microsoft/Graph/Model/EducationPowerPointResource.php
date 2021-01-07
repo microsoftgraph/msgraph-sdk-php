@@ -34,6 +34,7 @@ class EducationPowerPointResource extends EducationResource
 
     /**
     * Gets the fileUrl
+    * Location of the file on disk.
     *
     * @return string The fileUrl
     */
@@ -48,6 +49,7 @@ class EducationPowerPointResource extends EducationResource
 
     /**
     * Sets the fileUrl
+    * Location of the file on disk.
     *
     * @param string $val The value of the fileUrl
     *

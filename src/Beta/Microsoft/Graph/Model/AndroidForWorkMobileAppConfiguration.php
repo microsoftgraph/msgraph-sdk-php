@@ -114,7 +114,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
     
     /**
     * Gets the profileApplicability
-    * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)).
+    * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
     *
     * @return AndroidProfileApplicability The profileApplicability
     */
@@ -133,7 +133,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
     
     /**
     * Sets the profileApplicability
-    * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)).
+    * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
     *
     * @param AndroidProfileApplicability $val The profileApplicability
     *

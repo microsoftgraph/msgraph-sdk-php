@@ -88,7 +88,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the discoverySource
-    * Apple device discovery source.
+    * Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram.
     *
     * @return DiscoverySource The discoverySource
     */
@@ -107,7 +107,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the discoverySource
-    * Apple device discovery source.
+    * Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram.
     *
     * @param DiscoverySource $val The discoverySource
     *
@@ -121,7 +121,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the enrollmentState
-    * The state of the device in Intune
+    * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
     * @return EnrollmentState The enrollmentState
     */
@@ -140,7 +140,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the enrollmentState
-    * The state of the device in Intune
+    * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
     * @param EnrollmentState $val The enrollmentState
     *
@@ -183,7 +183,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the isSupervised
-    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/HT202837
     *
     * @return bool The isSupervised
     */
@@ -198,7 +198,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the isSupervised
-    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/HT202837
     *
     * @param bool $val The isSupervised
     *
@@ -245,7 +245,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the platform
-    * The platform of the Device.
+    * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
     *
     * @return Platform The platform
     */
@@ -264,7 +264,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the platform
-    * The platform of the Device.
+    * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
     *
     * @param Platform $val The platform
     *

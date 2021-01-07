@@ -53,6 +53,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the defaultDuration
+    * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
     *
     * @return Duration The defaultDuration
     */
@@ -71,6 +72,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the defaultDuration
+    * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
     *
     * @param Duration $val The defaultDuration
     *
@@ -84,6 +86,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the defaultLocation
+    * The default physical location for the service.
     *
     * @return Location The defaultLocation
     */
@@ -102,6 +105,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the defaultLocation
+    * The default physical location for the service.
     *
     * @param Location $val The defaultLocation
     *
@@ -115,6 +119,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the defaultPrice
+    * The default monetary price for the service.
     *
     * @return float The defaultPrice
     */
@@ -129,6 +134,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the defaultPrice
+    * The default monetary price for the service.
     *
     * @param float $val The defaultPrice
     *
@@ -142,6 +148,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the defaultPriceType
+    * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
     *
     * @return BookingPriceType The defaultPriceType
     */
@@ -160,6 +167,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the defaultPriceType
+    * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
     *
     * @param BookingPriceType $val The defaultPriceType
     *
@@ -203,6 +211,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the description
+    * A text description for the service.
     *
     * @return string The description
     */
@@ -217,6 +226,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the description
+    * A text description for the service.
     *
     * @param string $val The description
     *
@@ -230,6 +240,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the isHiddenFromCustomers
+    * True means this service is not available to customers for booking.
     *
     * @return bool The isHiddenFromCustomers
     */
@@ -244,6 +255,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the isHiddenFromCustomers
+    * True means this service is not available to customers for booking.
     *
     * @param bool $val The isHiddenFromCustomers
     *
@@ -284,6 +296,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the notes
+    * Additional information about this service.
     *
     * @return string The notes
     */
@@ -298,6 +311,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the notes
+    * Additional information about this service.
     *
     * @param string $val The notes
     *
@@ -311,6 +325,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the postBuffer
+    * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
     *
     * @return Duration The postBuffer
     */
@@ -329,6 +344,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the postBuffer
+    * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
     *
     * @param Duration $val The postBuffer
     *
@@ -342,6 +358,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the preBuffer
+    * The time to buffer before an appointment for this service can start.
     *
     * @return Duration The preBuffer
     */
@@ -360,6 +377,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the preBuffer
+    * The time to buffer before an appointment for this service can start.
     *
     * @param Duration $val The preBuffer
     *
@@ -373,6 +391,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the schedulingPolicy
+    * The set of policies that determine how appointments for this type of service should be created and managed.
     *
     * @return BookingSchedulingPolicy The schedulingPolicy
     */
@@ -391,6 +410,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the schedulingPolicy
+    * The set of policies that determine how appointments for this type of service should be created and managed.
     *
     * @param BookingSchedulingPolicy $val The schedulingPolicy
     *
@@ -404,6 +424,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Gets the staffMemberIds
+    * Represents those staff members who provide this service.
     *
     * @return string The staffMemberIds
     */
@@ -418,6 +439,7 @@ class BookingService extends BookingNamedEntity
     
     /**
     * Sets the staffMemberIds
+    * Represents those staff members who provide this service.
     *
     * @param string $val The staffMemberIds
     *

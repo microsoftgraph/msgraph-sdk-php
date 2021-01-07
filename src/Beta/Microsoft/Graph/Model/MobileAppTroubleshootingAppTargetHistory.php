@@ -54,7 +54,7 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
 
     /**
     * Gets the runState
-    * Status of the item.
+    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @return RunState The runState
     */
@@ -73,7 +73,7 @@ class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroubleshootingH
 
     /**
     * Sets the runState
-    * Status of the item.
+    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @param RunState $val The value to assign to the runState
     *

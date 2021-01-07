@@ -24,6 +24,15 @@ namespace Beta\Microsoft\Graph\Model;
 class WorkbookSortField extends Entity
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.workbookSortField");
+    }
+
+    /**
     * Gets the ascending
     * Represents whether the sorting is done in an ascending fashion.
     *
@@ -81,7 +90,7 @@ class WorkbookSortField extends Entity
     }
     /**
     * Gets the dataOption
-    * Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
+    * Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
     *
     * @return string The dataOption
     */
@@ -96,7 +105,7 @@ class WorkbookSortField extends Entity
 
     /**
     * Sets the dataOption
-    * Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
+    * Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
     *
     * @param string $val The value of the dataOption
     *
@@ -170,7 +179,7 @@ class WorkbookSortField extends Entity
     }
     /**
     * Gets the sortOn
-    * Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
+    * Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
     *
     * @return string The sortOn
     */
@@ -185,7 +194,7 @@ class WorkbookSortField extends Entity
 
     /**
     * Sets the sortOn
-    * Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
+    * Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
     *
     * @param string $val The value of the sortOn
     *

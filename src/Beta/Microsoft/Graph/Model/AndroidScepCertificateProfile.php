@@ -26,7 +26,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 {
     /**
     * Gets the hashAlgorithm
-    * SCEP Hash Algorithm
+    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
     *
     * @return HashAlgorithms The hashAlgorithm
     */
@@ -45,7 +45,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     
     /**
     * Sets the hashAlgorithm
-    * SCEP Hash Algorithm
+    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
     *
     * @param HashAlgorithms $val The hashAlgorithm
     *
@@ -59,7 +59,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     
     /**
     * Gets the keySize
-    * SCEP Key Size
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @return KeySize The keySize
     */
@@ -78,7 +78,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     
     /**
     * Sets the keySize
-    * SCEP Key Size
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @param KeySize $val The keySize
     *
@@ -92,7 +92,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     
     /**
     * Gets the keyUsage
-    * SCEP Key Usage
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @return KeyUsages The keyUsage
     */
@@ -111,7 +111,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     
     /**
     * Sets the keyUsage
-    * SCEP Key Usage
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @param KeyUsages $val The keyUsage
     *

@@ -51,6 +51,7 @@ class PrintJobStatus extends Entity
     }
     /**
     * Gets the description
+    * A human-readable description of the print job's current processing state. Read-only.
     *
     * @return string The description
     */
@@ -65,6 +66,7 @@ class PrintJobStatus extends Entity
 
     /**
     * Sets the description
+    * A human-readable description of the print job's current processing state. Read-only.
     *
     * @param string $val The value of the description
     *
@@ -78,6 +80,7 @@ class PrintJobStatus extends Entity
 
     /**
     * Gets the details
+    * Additional details for print job state. Valid values are described in the following table. Read-only.
     *
     * @return PrintJobStateDetail The details
     */
@@ -96,6 +99,7 @@ class PrintJobStatus extends Entity
 
     /**
     * Sets the details
+    * Additional details for print job state. Valid values are described in the following table. Read-only.
     *
     * @param PrintJobStateDetail $val The value to assign to the details
     *
@@ -108,6 +112,7 @@ class PrintJobStatus extends Entity
     }
     /**
     * Gets the isAcquiredByPrinter
+    * True if the job was acknowledged by a printer; false otherwise. Read-only.
     *
     * @return bool The isAcquiredByPrinter
     */
@@ -122,6 +127,7 @@ class PrintJobStatus extends Entity
 
     /**
     * Sets the isAcquiredByPrinter
+    * True if the job was acknowledged by a printer; false otherwise. Read-only.
     *
     * @param bool $val The value of the isAcquiredByPrinter
     *
@@ -192,6 +198,7 @@ class PrintJobStatus extends Entity
 
     /**
     * Gets the state
+    * The print job's current processing state. Valid values are described in the following table. Read-only.
     *
     * @return PrintJobProcessingState The state
     */
@@ -210,6 +217,7 @@ class PrintJobStatus extends Entity
 
     /**
     * Sets the state
+    * The print job's current processing state. Valid values are described in the following table. Read-only.
     *
     * @param PrintJobProcessingState $val The value to assign to the state
     *

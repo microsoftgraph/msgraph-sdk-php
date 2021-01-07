@@ -25,6 +25,7 @@ class ProtectByTemplateAction extends InformationProtectionAction
 {
     /**
     * Gets the templateId
+    * The GUID of the Azure Information Protection template to apply to the information.
     *
     * @return string The templateId
     */
@@ -39,6 +40,7 @@ class ProtectByTemplateAction extends InformationProtectionAction
 
     /**
     * Sets the templateId
+    * The GUID of the Azure Information Protection template to apply to the information.
     *
     * @param string $val The value of the templateId
     *

@@ -26,6 +26,7 @@ class UserPurpose extends Entity
 
     /**
     * Gets the value
+    * Represents the user's recipient or mailbox type in Exchange Online. Possible values are: unknown, user, linked, shared, room, equipment, and others. See the next section for more information.
     *
     * @return MailboxRecipientType The value
     */
@@ -44,6 +45,7 @@ class UserPurpose extends Entity
 
     /**
     * Sets the value
+    * Represents the user's recipient or mailbox type in Exchange Online. Possible values are: unknown, user, linked, shared, room, equipment, and others. See the next section for more information.
     *
     * @param MailboxRecipientType $val The value to assign to the value
     *

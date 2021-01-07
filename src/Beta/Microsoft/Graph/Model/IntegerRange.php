@@ -25,6 +25,7 @@ class IntegerRange extends Entity
 {
     /**
     * Gets the end
+    * The inclusive upper bound of the integer range.
     *
     * @return int The end
     */
@@ -39,6 +40,7 @@ class IntegerRange extends Entity
 
     /**
     * Sets the end
+    * The inclusive upper bound of the integer range.
     *
     * @param int $val The value of the end
     *
@@ -103,6 +105,7 @@ class IntegerRange extends Entity
     }
     /**
     * Gets the start
+    * The inclusive lower bound of the integer range.
     *
     * @return int The start
     */
@@ -117,6 +120,7 @@ class IntegerRange extends Entity
 
     /**
     * Sets the start
+    * The inclusive lower bound of the integer range.
     *
     * @param int $val The value of the start
     *

@@ -92,7 +92,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Gets the syncStatus
-    * Indicates the status of sync with Device data sync (DDS) service.
+    * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
     *
     * @return WindowsAutopilotSyncStatus The syncStatus
     */
@@ -111,7 +111,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Sets the syncStatus
-    * Indicates the status of sync with Device data sync (DDS) service.
+    * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
     *
     * @param WindowsAutopilotSyncStatus $val The syncStatus
     *

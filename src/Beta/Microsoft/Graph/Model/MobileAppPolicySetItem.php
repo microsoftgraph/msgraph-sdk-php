@@ -26,7 +26,7 @@ class MobileAppPolicySetItem extends PolicySetItem
 {
     /**
     * Gets the intent
-    * Install intent of the MobileAppPolicySetItem.
+    * Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @return InstallIntent The intent
     */
@@ -45,7 +45,7 @@ class MobileAppPolicySetItem extends PolicySetItem
     
     /**
     * Sets the intent
-    * Install intent of the MobileAppPolicySetItem.
+    * Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @param InstallIntent $val The intent
     *

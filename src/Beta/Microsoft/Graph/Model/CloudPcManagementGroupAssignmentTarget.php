@@ -34,6 +34,7 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
 
     /**
     * Gets the groupId
+    * The id of the assignment's target group
     *
     * @return string The groupId
     */
@@ -48,6 +49,7 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
 
     /**
     * Sets the groupId
+    * The id of the assignment's target group
     *
     * @param string $val The value of the groupId
     *

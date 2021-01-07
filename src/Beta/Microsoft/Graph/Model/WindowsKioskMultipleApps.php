@@ -143,7 +143,7 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
 
     /**
     * Gets the startMenuLayoutXml
-    * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+    * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
     *
     * @return \GuzzleHttp\Psr7\Stream The startMenuLayoutXml
     */
@@ -162,7 +162,7 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
 
     /**
     * Sets the startMenuLayoutXml
-    * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+    * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the startMenuLayoutXml
     *

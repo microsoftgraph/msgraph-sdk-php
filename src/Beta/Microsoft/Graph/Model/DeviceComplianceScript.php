@@ -299,7 +299,7 @@ class DeviceComplianceScript extends Entity
     
     /**
     * Gets the runAsAccount
-    * Indicates the type of execution context
+    * Indicates the type of execution context. Possible values are: system, user.
     *
     * @return RunAsAccountType The runAsAccount
     */
@@ -318,7 +318,7 @@ class DeviceComplianceScript extends Entity
     
     /**
     * Sets the runAsAccount
-    * Indicates the type of execution context
+    * Indicates the type of execution context. Possible values are: system, user.
     *
     * @param RunAsAccountType $val The runAsAccount
     *

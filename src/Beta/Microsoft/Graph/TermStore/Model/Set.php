@@ -26,6 +26,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdDateTime
+    * Date and time of set creation. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -44,6 +45,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * Date and time of set creation. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * Description giving details on the term usage.
     *
     * @return string The description
     */
@@ -71,6 +74,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * Description giving details on the term usage.
     *
     * @param string $val The description
     *
@@ -85,6 +89,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the localizedNames
+    * Name of the set for each languageTag.
      *
      * @return array The localizedNames
      */
@@ -99,6 +104,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the localizedNames
+    * Name of the set for each languageTag.
     *
     * @param LocalizedName $val The localizedNames
     *
@@ -113,6 +119,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the setProperties
+    * Custom properties for the set.
      *
      * @return array The setProperties
      */
@@ -127,6 +134,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the setProperties
+    * Custom properties for the set.
     *
     * @param Beta\Microsoft\Graph\Model\KeyValue $val The setProperties
     *
@@ -141,6 +149,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the children
+    * Children terms of set in term [store].
      *
      * @return array The children
      */
@@ -155,6 +164,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the children
+    * Children terms of set in term [store].
     *
     * @param Term $val The children
     *
@@ -168,6 +178,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the parentGroup
+    * The parent [group] that contains the set.
     *
     * @return Group The parentGroup
     */
@@ -186,6 +197,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the parentGroup
+    * The parent [group] that contains the set.
     *
     * @param Group $val The parentGroup
     *
@@ -200,6 +212,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the relations
+    * Indicates which terms have been pinned or reused directly under the set.
      *
      * @return array The relations
      */
@@ -214,6 +227,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the relations
+    * Indicates which terms have been pinned or reused directly under the set.
     *
     * @param Relation $val The relations
     *
@@ -228,6 +242,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the terms
+    * All the terms under the set.
      *
      * @return array The terms
      */
@@ -242,6 +257,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the terms
+    * All the terms under the set.
     *
     * @param Term $val The terms
     *

@@ -26,7 +26,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
 {
     /**
     * Gets the bootFromBuiltInNetworkAdapters
-    * Defines whether a user is allowed to boot from built-in network adapters.
+    * Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The bootFromBuiltInNetworkAdapters
     */
@@ -45,7 +45,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Sets the bootFromBuiltInNetworkAdapters
-    * Defines whether a user is allowed to boot from built-in network adapters.
+    * Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The bootFromBuiltInNetworkAdapters
     *
@@ -59,7 +59,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Gets the bootFromExternalMedia
-    * Defines whether a user is allowed to boot from external media.
+    * Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The bootFromExternalMedia
     */
@@ -78,7 +78,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Sets the bootFromExternalMedia
-    * Defines whether a user is allowed to boot from external media.
+    * Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The bootFromExternalMedia
     *
@@ -92,7 +92,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Gets the cameras
-    * Defines whether built-in cameras are enabled.
+    * Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The cameras
     */
@@ -111,7 +111,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Sets the cameras
-    * Defines whether built-in cameras are enabled.
+    * Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The cameras
     *
@@ -125,7 +125,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Gets the changeUefiSettingsPermission
-    * Defines the permission level granted to users to change UEFI settings.
+    * Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none.
     *
     * @return ChangeUefiSettingsPermission The changeUefiSettingsPermission
     */
@@ -144,7 +144,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Sets the changeUefiSettingsPermission
-    * Defines the permission level granted to users to change UEFI settings.
+    * Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none.
     *
     * @param ChangeUefiSettingsPermission $val The changeUefiSettingsPermission
     *
@@ -158,7 +158,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Gets the microphonesAndSpeakers
-    * Defines whether built-in microphones or speakers are enabled.
+    * Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The microphonesAndSpeakers
     */
@@ -177,7 +177,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Sets the microphonesAndSpeakers
-    * Defines whether built-in microphones or speakers are enabled.
+    * Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The microphonesAndSpeakers
     *
@@ -191,7 +191,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Gets the radios
-    * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled.
+    * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The radios
     */
@@ -210,7 +210,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Sets the radios
-    * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled.
+    * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The radios
     *
@@ -224,7 +224,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Gets the virtualizationOfCpuAndIO
-    * Defines whether CPU and IO virtualization is enabled.
+    * Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The virtualizationOfCpuAndIO
     */
@@ -243,7 +243,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     
     /**
     * Sets the virtualizationOfCpuAndIO
-    * Defines whether CPU and IO virtualization is enabled.
+    * Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The virtualizationOfCpuAndIO
     *

@@ -117,7 +117,7 @@ class DeviceManagementReportSchedule extends Entity
     
     /**
     * Gets the format
-    * Format of the scheduled report
+    * Format of the scheduled report. Possible values are: csv, pdf.
     *
     * @return DeviceManagementReportFileFormat The format
     */
@@ -136,7 +136,7 @@ class DeviceManagementReportSchedule extends Entity
     
     /**
     * Sets the format
-    * Format of the scheduled report
+    * Format of the scheduled report. Possible values are: csv, pdf.
     *
     * @param DeviceManagementReportFileFormat $val The format
     *
@@ -179,7 +179,7 @@ class DeviceManagementReportSchedule extends Entity
     
     /**
     * Gets the recurrence
-    * Frequency of scheduled report delivery
+    * Frequency of scheduled report delivery. Possible values are: none, daily, weekly, monthly.
     *
     * @return DeviceManagementScheduledReportRecurrence The recurrence
     */
@@ -198,7 +198,7 @@ class DeviceManagementReportSchedule extends Entity
     
     /**
     * Sets the recurrence
-    * Frequency of scheduled report delivery
+    * Frequency of scheduled report delivery. Possible values are: none, daily, weekly, monthly.
     *
     * @param DeviceManagementScheduledReportRecurrence $val The recurrence
     *

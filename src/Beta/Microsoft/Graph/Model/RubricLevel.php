@@ -26,6 +26,7 @@ class RubricLevel extends Entity
 
     /**
     * Gets the description
+    * The description of this rubric level.
     *
     * @return EducationItemBody The description
     */
@@ -44,6 +45,7 @@ class RubricLevel extends Entity
 
     /**
     * Sets the description
+    * The description of this rubric level.
     *
     * @param EducationItemBody $val The value to assign to the description
     *
@@ -56,6 +58,7 @@ class RubricLevel extends Entity
     }
     /**
     * Gets the displayName
+    * The name of this rubric level.
     *
     * @return string The displayName
     */
@@ -70,6 +73,7 @@ class RubricLevel extends Entity
 
     /**
     * Sets the displayName
+    * The name of this rubric level.
     *
     * @param string $val The value of the displayName
     *
@@ -83,6 +87,7 @@ class RubricLevel extends Entity
 
     /**
     * Gets the grading
+    * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
     *
     * @return EducationAssignmentGradeType The grading
     */
@@ -101,6 +106,7 @@ class RubricLevel extends Entity
 
     /**
     * Sets the grading
+    * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
     *
     * @param EducationAssignmentGradeType $val The value to assign to the grading
     *
@@ -113,6 +119,7 @@ class RubricLevel extends Entity
     }
     /**
     * Gets the levelId
+    * The ID of this resource.
     *
     * @return string The levelId
     */
@@ -127,6 +134,7 @@ class RubricLevel extends Entity
 
     /**
     * Sets the levelId
+    * The ID of this resource.
     *
     * @param string $val The value of the levelId
     *

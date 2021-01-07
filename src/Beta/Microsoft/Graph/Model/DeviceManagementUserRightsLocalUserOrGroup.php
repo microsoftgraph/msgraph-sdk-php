@@ -25,7 +25,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 {
     /**
     * Gets the description
-    * Admin???s description of this local user or group.
+    * Admin’s description of this local user or group.
     *
     * @return string The description
     */
@@ -40,7 +40,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 
     /**
     * Sets the description
-    * Admin???s description of this local user or group.
+    * Admin’s description of this local user or group.
     *
     * @param string $val The value of the description
     *
@@ -81,7 +81,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
     }
     /**
     * Gets the securityIdentifier
-    * The security identifier of this local user or group (e.g. *S-1-5-32-544).
+    * The security identifier of this local user or group (e.g. S-1-5-32-544).
     *
     * @return string The securityIdentifier
     */
@@ -96,7 +96,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
 
     /**
     * Sets the securityIdentifier
-    * The security identifier of this local user or group (e.g. *S-1-5-32-544).
+    * The security identifier of this local user or group (e.g. S-1-5-32-544).
     *
     * @param string $val The value of the securityIdentifier
     *

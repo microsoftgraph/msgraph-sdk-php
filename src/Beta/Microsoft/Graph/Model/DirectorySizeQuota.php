@@ -25,6 +25,7 @@ class DirectorySizeQuota extends Entity
 {
     /**
     * Gets the total
+    * Total amount of the directory quota.
     *
     * @return int The total
     */
@@ -39,6 +40,7 @@ class DirectorySizeQuota extends Entity
 
     /**
     * Sets the total
+    * Total amount of the directory quota.
     *
     * @param int $val The value of the total
     *
@@ -51,6 +53,7 @@ class DirectorySizeQuota extends Entity
     }
     /**
     * Gets the used
+    * Used amount of the directory quota.
     *
     * @return int The used
     */
@@ -65,6 +68,7 @@ class DirectorySizeQuota extends Entity
 
     /**
     * Sets the used
+    * Used amount of the directory quota.
     *
     * @param int $val The value of the used
     *

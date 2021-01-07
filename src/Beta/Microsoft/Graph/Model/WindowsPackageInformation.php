@@ -26,7 +26,7 @@ class WindowsPackageInformation extends Entity
 
     /**
     * Gets the applicableArchitecture
-    * The Windows architecture for which this app can run on.
+    * The Windows architecture for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
     *
     * @return WindowsArchitecture The applicableArchitecture
     */
@@ -45,7 +45,7 @@ class WindowsPackageInformation extends Entity
 
     /**
     * Sets the applicableArchitecture
-    * The Windows architecture for which this app can run on.
+    * The Windows architecture for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
     *
     * @param WindowsArchitecture $val The value to assign to the applicableArchitecture
     *

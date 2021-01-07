@@ -26,7 +26,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
     */
@@ -45,7 +45,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The advancedThreatProtectionRequiredSecurityLevel
     *
@@ -444,7 +444,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the requiredPasswordComplexity
-    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+.
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+. Possible values are: none, low, medium, high.
     *
     * @return AndroidRequiredPasswordComplexity The requiredPasswordComplexity
     */
@@ -463,7 +463,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the requiredPasswordComplexity
-    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+.
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+. Possible values are: none, low, medium, high.
     *
     * @param AndroidRequiredPasswordComplexity $val The requiredPasswordComplexity
     *

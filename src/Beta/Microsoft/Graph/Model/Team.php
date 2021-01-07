@@ -55,6 +55,7 @@ class Team extends Entity
     
     /**
     * Gets the createdDateTime
+    * Read only. Timestamp at which the team was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -73,6 +74,7 @@ class Team extends Entity
     
     /**
     * Sets the createdDateTime
+    * Read only. Timestamp at which the team was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -115,6 +117,7 @@ class Team extends Entity
     
     /**
     * Gets the discoverySettings
+    * Settings to configure team discoverability by others.
     *
     * @return TeamDiscoverySettings The discoverySettings
     */
@@ -133,6 +136,7 @@ class Team extends Entity
     
     /**
     * Sets the discoverySettings
+    * Settings to configure team discoverability by others.
     *
     * @param TeamDiscoverySettings $val The discoverySettings
     *
@@ -299,6 +303,7 @@ class Team extends Entity
     
     /**
     * Gets the isMembershipLimitedToOwners
+    * If set to true, the team is currently in the owner-only team membership state and not accessible by other team members, such as students.
     *
     * @return bool The isMembershipLimitedToOwners
     */
@@ -313,6 +318,7 @@ class Team extends Entity
     
     /**
     * Sets the isMembershipLimitedToOwners
+    * If set to true, the team is currently in the owner-only team membership state and not accessible by other team members, such as students.
     *
     * @param bool $val The isMembershipLimitedToOwners
     *
@@ -672,6 +678,7 @@ class Team extends Entity
 
      /** 
      * Gets the owners
+    * The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.
      *
      * @return array The owners
      */
@@ -686,6 +693,7 @@ class Team extends Entity
     
     /** 
     * Sets the owners
+    * The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.
     *
     * @param User $val The owners
     *
@@ -699,6 +707,7 @@ class Team extends Entity
     
     /**
     * Gets the photo
+    * The team photo.
     *
     * @return ProfilePhoto The photo
     */
@@ -717,6 +726,7 @@ class Team extends Entity
     
     /**
     * Sets the photo
+    * The team photo.
     *
     * @param ProfilePhoto $val The photo
     *

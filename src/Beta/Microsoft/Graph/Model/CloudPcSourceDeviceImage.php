@@ -24,7 +24,17 @@ namespace Beta\Microsoft\Graph\Model;
 class CloudPcSourceDeviceImage extends Entity
 {
     /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    */
+    public function __construct()
+    {
+        $this->setODataType("#microsoft.graph.cloudPcSourceDeviceImage");
+    }
+
+    /**
     * Gets the displayName
+    * The display name for the source image.
     *
     * @return string The displayName
     */
@@ -39,6 +49,7 @@ class CloudPcSourceDeviceImage extends Entity
 
     /**
     * Sets the displayName
+    * The display name for the source image.
     *
     * @param string $val The value of the displayName
     *
