@@ -171,7 +171,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Gets the configurationAccountType
-    * The account type used to by ConfigurationAccount.
+    * The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount.
     *
     * @return SecureAssessmentAccountType The configurationAccountType
     */
@@ -190,7 +190,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     
     /**
     * Sets the configurationAccountType
-    * The account type used to by ConfigurationAccount.
+    * The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount.
     *
     * @param SecureAssessmentAccountType $val The configurationAccountType
     *

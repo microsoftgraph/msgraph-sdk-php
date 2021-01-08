@@ -26,6 +26,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the relationship
+    * The type of relation. Possible values are: pin, reuse.
     *
     * @return RelationType The relationship
     */
@@ -44,6 +45,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the relationship
+    * The type of relation. Possible values are: pin, reuse.
     *
     * @param RelationType $val The relationship
     *
@@ -57,6 +59,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the fromTerm
+    * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
     *
     * @return Term The fromTerm
     */
@@ -75,6 +78,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the fromTerm
+    * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
     *
     * @param Term $val The fromTerm
     *
@@ -88,6 +92,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the set
+    * The [set] in which the relation is relevant.
     *
     * @return Set The set
     */
@@ -106,6 +111,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the set
+    * The [set] in which the relation is relevant.
     *
     * @param Set $val The set
     *
@@ -119,6 +125,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the toTerm
+    * The to [term] of the relation. The term to which the relationship is defined.
     *
     * @return Term The toTerm
     */
@@ -137,6 +144,7 @@ class Relation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the toTerm
+    * The to [term] of the relation. The term to which the relationship is defined.
     *
     * @param Term $val The toTerm
     *

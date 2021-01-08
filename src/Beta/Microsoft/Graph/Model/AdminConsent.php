@@ -26,7 +26,7 @@ class AdminConsent extends Entity
 
     /**
     * Gets the shareAPNSData
-    * The admin consent state of sharing user and device data to Apple.
+    * The admin consent state of sharing user and device data to Apple. Possible values are: notConfigured, granted, notGranted.
     *
     * @return AdminConsentState The shareAPNSData
     */
@@ -45,7 +45,7 @@ class AdminConsent extends Entity
 
     /**
     * Sets the shareAPNSData
-    * The admin consent state of sharing user and device data to Apple.
+    * The admin consent state of sharing user and device data to Apple. Possible values are: notConfigured, granted, notGranted.
     *
     * @param AdminConsentState $val The value to assign to the shareAPNSData
     *
@@ -59,7 +59,7 @@ class AdminConsent extends Entity
 
     /**
     * Gets the shareUserExperienceAnalyticsData
-    * Gets or sets the admin consent for sharing User experience analytics data.
+    * Gets or sets the admin consent for sharing User experience analytics data. Possible values are: notConfigured, granted, notGranted.
     *
     * @return AdminConsentState The shareUserExperienceAnalyticsData
     */
@@ -78,7 +78,7 @@ class AdminConsent extends Entity
 
     /**
     * Sets the shareUserExperienceAnalyticsData
-    * Gets or sets the admin consent for sharing User experience analytics data.
+    * Gets or sets the admin consent for sharing User experience analytics data. Possible values are: notConfigured, granted, notGranted.
     *
     * @param AdminConsentState $val The value to assign to the shareUserExperienceAnalyticsData
     *

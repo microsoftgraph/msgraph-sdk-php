@@ -26,6 +26,7 @@ class ActionResultPart extends Entity
 
     /**
     * Gets the error
+    * The error that occurred, if any, during the course of the bulk operation.
     *
     * @return PublicError The error
     */
@@ -44,6 +45,7 @@ class ActionResultPart extends Entity
 
     /**
     * Sets the error
+    * The error that occurred, if any, during the course of the bulk operation.
     *
     * @param PublicError $val The value to assign to the error
     *

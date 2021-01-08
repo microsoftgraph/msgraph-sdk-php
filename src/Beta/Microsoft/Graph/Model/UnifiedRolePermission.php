@@ -25,6 +25,7 @@ class UnifiedRolePermission extends Entity
 {
     /**
     * Gets the allowedResourceActions
+    * Set of tasks that can be perfomed on a resource.
     *
     * @return string The allowedResourceActions
     */
@@ -39,6 +40,7 @@ class UnifiedRolePermission extends Entity
 
     /**
     * Sets the allowedResourceActions
+    * Set of tasks that can be perfomed on a resource.
     *
     * @param string $val The value of the allowedResourceActions
     *
@@ -51,6 +53,7 @@ class UnifiedRolePermission extends Entity
     }
     /**
     * Gets the condition
+    * Optional constraints that must be met for the permission to be effective.
     *
     * @return string The condition
     */
@@ -65,6 +68,7 @@ class UnifiedRolePermission extends Entity
 
     /**
     * Sets the condition
+    * Optional constraints that must be met for the permission to be effective.
     *
     * @param string $val The value of the condition
     *

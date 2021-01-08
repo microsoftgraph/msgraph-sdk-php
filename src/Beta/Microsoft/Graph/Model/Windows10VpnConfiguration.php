@@ -56,7 +56,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the authenticationMethod
-    * Authentication method.
+    * Authentication method. Possible values are: certificate, usernameAndPassword, customEapXml, derivedCredential.
     *
     * @return Windows10VpnAuthenticationMethod The authenticationMethod
     */
@@ -75,7 +75,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication method.
+    * Authentication method. Possible values are: certificate, usernameAndPassword, customEapXml, derivedCredential.
     *
     * @param Windows10VpnAuthenticationMethod $val The authenticationMethod
     *
@@ -89,7 +89,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type.
+    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect.
     *
     * @return Windows10VpnConnectionType The connectionType
     */
@@ -108,7 +108,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type.
+    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect.
     *
     * @param Windows10VpnConnectionType $val The connectionType
     *
@@ -122,7 +122,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the cryptographySuite
-    * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above 
+    * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
     *
     * @return CryptographySuite The cryptographySuite
     */
@@ -141,7 +141,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the cryptographySuite
-    * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above 
+    * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
     *
     * @param CryptographySuite $val The cryptographySuite
     *
@@ -450,7 +450,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the profileTarget
-    * Profile target type.
+    * Profile target type. Possible values are: user, device, autoPilotDevice.
     *
     * @return Windows10VpnProfileTarget The profileTarget
     */
@@ -469,7 +469,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the profileTarget
-    * Profile target type.
+    * Profile target type. Possible values are: user, device, autoPilotDevice.
     *
     * @param Windows10VpnProfileTarget $val The profileTarget
     *

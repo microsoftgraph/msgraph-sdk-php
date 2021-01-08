@@ -26,7 +26,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
 {
     /**
     * Gets the deploymentStatus
-    * The deployment state of the policy.
+    * The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
     *
     * @return WindowsDefenderApplicationControlSupplementalPolicyStatuses The deploymentStatus
     */
@@ -45,7 +45,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     
     /**
     * Sets the deploymentStatus
-    * The deployment state of the policy.
+    * The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
     *
     * @param WindowsDefenderApplicationControlSupplementalPolicyStatuses $val The deploymentStatus
     *

@@ -84,6 +84,7 @@ class ContactFolder extends Entity
     
     /**
     * Gets the wellKnownName
+    * The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder.
     *
     * @return string The wellKnownName
     */
@@ -98,6 +99,7 @@ class ContactFolder extends Entity
     
     /**
     * Sets the wellKnownName
+    * The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder.
     *
     * @param string $val The wellKnownName
     *

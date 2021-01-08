@@ -25,6 +25,7 @@ class PlannerFavoritePlanReference extends Entity
 {
     /**
     * Gets the orderHint
+    * Hint used to order items of this type in a list view. The format is defined in Using order hints in Planner.
     *
     * @return string The orderHint
     */
@@ -39,6 +40,7 @@ class PlannerFavoritePlanReference extends Entity
 
     /**
     * Sets the orderHint
+    * Hint used to order items of this type in a list view. The format is defined in Using order hints in Planner.
     *
     * @param string $val The value of the orderHint
     *
@@ -51,6 +53,7 @@ class PlannerFavoritePlanReference extends Entity
     }
     /**
     * Gets the planTitle
+    * Title of the plan at the time the user marked it as a favorite.
     *
     * @return string The planTitle
     */
@@ -65,6 +68,7 @@ class PlannerFavoritePlanReference extends Entity
 
     /**
     * Sets the planTitle
+    * Title of the plan at the time the user marked it as a favorite.
     *
     * @param string $val The value of the planTitle
     *

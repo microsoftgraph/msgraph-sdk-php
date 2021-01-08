@@ -82,7 +82,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
@@ -101,7 +101,7 @@ class IosEduCertificateSettings extends Entity
 
     /**
     * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @param CertificateValidityPeriodScale $val The value to assign to the certificateValidityPeriodScale
     *

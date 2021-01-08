@@ -26,6 +26,7 @@ class ObjectMapping extends Entity
 
     /**
     * Gets the attributeMappings
+    * Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
     *
     * @return AttributeMapping The attributeMappings
     */
@@ -44,6 +45,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the attributeMappings
+    * Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
     *
     * @param AttributeMapping $val The value to assign to the attributeMappings
     *
@@ -56,6 +58,7 @@ class ObjectMapping extends Entity
     }
     /**
     * Gets the enabled
+    * When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
     *
     * @return bool The enabled
     */
@@ -70,6 +73,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the enabled
+    * When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
     *
     * @param bool $val The value of the enabled
     *
@@ -83,6 +87,7 @@ class ObjectMapping extends Entity
 
     /**
     * Gets the flowTypes
+    * Which flow types are enabled for this object mapping. Add creates new objects in the target directory, Update modifies existing objects, and Delete deprovisions existing users. The default is Add, Update, Delete.
     *
     * @return ObjectFlowTypes The flowTypes
     */
@@ -101,6 +106,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the flowTypes
+    * Which flow types are enabled for this object mapping. Add creates new objects in the target directory, Update modifies existing objects, and Delete deprovisions existing users. The default is Add, Update, Delete.
     *
     * @param ObjectFlowTypes $val The value to assign to the flowTypes
     *
@@ -114,6 +120,7 @@ class ObjectMapping extends Entity
 
     /**
     * Gets the metadata
+    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
     * @return MetadataEntry The metadata
     */
@@ -132,6 +139,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the metadata
+    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
     * @param MetadataEntry $val The value to assign to the metadata
     *
@@ -144,6 +152,7 @@ class ObjectMapping extends Entity
     }
     /**
     * Gets the name
+    * Human-friendly name of the object mapping.
     *
     * @return string The name
     */
@@ -158,6 +167,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the name
+    * Human-friendly name of the object mapping.
     *
     * @param string $val The value of the name
     *
@@ -171,6 +181,7 @@ class ObjectMapping extends Entity
 
     /**
     * Gets the scope
+    * Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
     *
     * @return Filter The scope
     */
@@ -189,6 +200,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the scope
+    * Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
     *
     * @param Filter $val The value to assign to the scope
     *
@@ -201,6 +213,7 @@ class ObjectMapping extends Entity
     }
     /**
     * Gets the sourceObjectName
+    * Name of the object in the source directory. Must match the object name from the source directory definition.
     *
     * @return string The sourceObjectName
     */
@@ -215,6 +228,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the sourceObjectName
+    * Name of the object in the source directory. Must match the object name from the source directory definition.
     *
     * @param string $val The value of the sourceObjectName
     *
@@ -227,6 +241,7 @@ class ObjectMapping extends Entity
     }
     /**
     * Gets the targetObjectName
+    * Name of the object in target directory. Must match the object name from the target directory definition.
     *
     * @return string The targetObjectName
     */
@@ -241,6 +256,7 @@ class ObjectMapping extends Entity
 
     /**
     * Sets the targetObjectName
+    * Name of the object in target directory. Must match the object name from the target directory definition.
     *
     * @param string $val The value of the targetObjectName
     *

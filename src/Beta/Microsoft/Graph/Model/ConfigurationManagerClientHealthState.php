@@ -87,7 +87,7 @@ class ConfigurationManagerClientHealthState extends Entity
 
     /**
     * Gets the state
-    * Current configuration manager client state.
+    * Current configuration manager client state. Possible values are: unknown, installed, healthy, installFailed, updateFailed, communicationError.
     *
     * @return ConfigurationManagerClientState The state
     */
@@ -106,7 +106,7 @@ class ConfigurationManagerClientHealthState extends Entity
 
     /**
     * Sets the state
-    * Current configuration manager client state.
+    * Current configuration manager client state. Possible values are: unknown, installed, healthy, installFailed, updateFailed, communicationError.
     *
     * @param ConfigurationManagerClientState $val The value to assign to the state
     *

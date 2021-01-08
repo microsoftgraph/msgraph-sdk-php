@@ -26,6 +26,7 @@ class ApplicationSignInSummary extends Entity
 {
     /**
     * Gets the appDisplayName
+    * Name of the application that the user signed in to.
     *
     * @return string The appDisplayName
     */
@@ -40,6 +41,7 @@ class ApplicationSignInSummary extends Entity
     
     /**
     * Sets the appDisplayName
+    * Name of the application that the user signed in to.
     *
     * @param string $val The appDisplayName
     *
@@ -53,6 +55,7 @@ class ApplicationSignInSummary extends Entity
     
     /**
     * Gets the failedSignInCount
+    * Count of failed sign-ins made by the application.
     *
     * @return int The failedSignInCount
     */
@@ -67,6 +70,7 @@ class ApplicationSignInSummary extends Entity
     
     /**
     * Sets the failedSignInCount
+    * Count of failed sign-ins made by the application.
     *
     * @param int $val The failedSignInCount
     *
@@ -80,6 +84,7 @@ class ApplicationSignInSummary extends Entity
     
     /**
     * Gets the successfulSignInCount
+    * Count of successful sign-ins made by the application.
     *
     * @return int The successfulSignInCount
     */
@@ -94,6 +99,7 @@ class ApplicationSignInSummary extends Entity
     
     /**
     * Sets the successfulSignInCount
+    * Count of successful sign-ins made by the application.
     *
     * @param int $val The successfulSignInCount
     *
@@ -107,6 +113,7 @@ class ApplicationSignInSummary extends Entity
     
     /**
     * Gets the successPercentage
+    * Percentage of successful sign-ins made by the application.
     *
     * @return float The successPercentage
     */
@@ -121,6 +128,7 @@ class ApplicationSignInSummary extends Entity
     
     /**
     * Sets the successPercentage
+    * Percentage of successful sign-ins made by the application.
     *
     * @param float $val The successPercentage
     *

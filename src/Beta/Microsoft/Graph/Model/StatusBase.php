@@ -26,6 +26,7 @@ class StatusBase extends Entity
 
     /**
     * Gets the status
+    * Possible values are: success, warning, failure, skipped, unknownFutureValue.
     *
     * @return ProvisioningResult The status
     */
@@ -44,6 +45,7 @@ class StatusBase extends Entity
 
     /**
     * Sets the status
+    * Possible values are: success, warning, failure, skipped, unknownFutureValue.
     *
     * @param ProvisioningResult $val The value to assign to the status
     *

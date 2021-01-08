@@ -26,6 +26,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Gets the expiration
+    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The expiration
     */
@@ -44,6 +45,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Sets the expiration
+    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the expiration
     *
@@ -57,6 +59,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Gets the interval
+    * The interval between synchronization iterations.
     *
     * @return Duration The interval
     */
@@ -75,6 +78,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Sets the interval
+    * The interval between synchronization iterations.
     *
     * @param Duration $val The value to assign to the interval
     *
@@ -88,6 +92,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Gets the state
+    * Possible values are: Active, Disabled.
     *
     * @return SynchronizationScheduleState The state
     */
@@ -106,6 +111,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Sets the state
+    * Possible values are: Active, Disabled.
     *
     * @param SynchronizationScheduleState $val The value to assign to the state
     *

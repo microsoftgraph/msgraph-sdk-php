@@ -26,6 +26,7 @@ class UserCredentialUsageDetails extends Entity
 {
     /**
     * Gets the authMethod
+    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobileCall (supported only in registration).
     *
     * @return UsageAuthMethod The authMethod
     */
@@ -44,6 +45,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the authMethod
+    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobileCall (supported only in registration).
     *
     * @param UsageAuthMethod $val The authMethod
     *
@@ -57,6 +59,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the eventDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The eventDateTime
     */
@@ -75,6 +78,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the eventDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The eventDateTime
     *
@@ -88,6 +92,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the failureReason
+    * Provides the failure reason for the corresponding reset or registration workflow.
     *
     * @return string The failureReason
     */
@@ -102,6 +107,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the failureReason
+    * Provides the failure reason for the corresponding reset or registration workflow.
     *
     * @param string $val The failureReason
     *
@@ -115,6 +121,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the feature
+    * Possible values are: registration and reset.
     *
     * @return FeatureType The feature
     */
@@ -133,6 +140,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the feature
+    * Possible values are: registration and reset.
     *
     * @param FeatureType $val The feature
     *
@@ -146,6 +154,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the isSuccess
+    * Indicates success or failure of the workflow.
     *
     * @return bool The isSuccess
     */
@@ -160,6 +169,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the isSuccess
+    * Indicates success or failure of the workflow.
     *
     * @param bool $val The isSuccess
     *
@@ -173,6 +183,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the userDisplayName
+    * User name of the user performing the reset or registration workflow.
     *
     * @return string The userDisplayName
     */
@@ -187,6 +198,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the userDisplayName
+    * User name of the user performing the reset or registration workflow.
     *
     * @param string $val The userDisplayName
     *
@@ -200,6 +212,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the userPrincipalName
+    * User principal name of the user performing the reset or registration workflow.
     *
     * @return string The userPrincipalName
     */
@@ -214,6 +227,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the userPrincipalName
+    * User principal name of the user performing the reset or registration workflow.
     *
     * @param string $val The userPrincipalName
     *

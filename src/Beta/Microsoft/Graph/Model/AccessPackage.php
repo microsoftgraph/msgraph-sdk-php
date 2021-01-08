@@ -26,6 +26,7 @@ class AccessPackage extends Entity
 {
     /**
     * Gets the catalogId
+    * ID of the access package catalog referencing this access package. Read-only.
     *
     * @return string The catalogId
     */
@@ -40,6 +41,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the catalogId
+    * ID of the access package catalog referencing this access package. Read-only.
     *
     * @param string $val The catalogId
     *
@@ -53,6 +55,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the createdBy
+    * UPN of the user or identity of the subject who created this resource. Read-only.
     *
     * @return string The createdBy
     */
@@ -67,6 +70,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the createdBy
+    * UPN of the user or identity of the subject who created this resource. Read-only.
     *
     * @param string $val The createdBy
     *
@@ -80,6 +84,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -98,6 +103,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -111,6 +117,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the description
+    * The description of the access package.
     *
     * @return string The description
     */
@@ -125,6 +132,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the description
+    * The description of the access package.
     *
     * @param string $val The description
     *
@@ -138,6 +146,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the displayName
+    * The display name of the access package.
     *
     * @return string The displayName
     */
@@ -152,6 +161,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the access package.
     *
     * @param string $val The displayName
     *
@@ -165,6 +175,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the isHidden
+    * Whether the access package is hidden from the requestor.
     *
     * @return bool The isHidden
     */
@@ -179,6 +190,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the isHidden
+    * Whether the access package is hidden from the requestor.
     *
     * @param bool $val The isHidden
     *
@@ -192,6 +204,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the isRoleScopesVisible
+    * Indicates whether role scopes are visible.
     *
     * @return bool The isRoleScopesVisible
     */
@@ -206,6 +219,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the isRoleScopesVisible
+    * Indicates whether role scopes are visible.
     *
     * @param bool $val The isRoleScopesVisible
     *
@@ -219,6 +233,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the modifiedBy
+    * The UPN of the user who last modified this resource. Read-only.
     *
     * @return string The modifiedBy
     */
@@ -233,6 +248,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the modifiedBy
+    * The UPN of the user who last modified this resource. Read-only.
     *
     * @param string $val The modifiedBy
     *
@@ -246,6 +262,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The modifiedDateTime
     */
@@ -264,6 +281,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -278,6 +296,7 @@ class AccessPackage extends Entity
 
      /** 
      * Gets the accessPackageAssignmentPolicies
+    * Read-only. Nullable.
      *
      * @return array The accessPackageAssignmentPolicies
      */
@@ -292,6 +311,7 @@ class AccessPackage extends Entity
     
     /** 
     * Sets the accessPackageAssignmentPolicies
+    * Read-only. Nullable.
     *
     * @param AccessPackageAssignmentPolicy $val The accessPackageAssignmentPolicies
     *
@@ -305,6 +325,7 @@ class AccessPackage extends Entity
     
     /**
     * Gets the accessPackageCatalog
+    * Read-only. Nullable.
     *
     * @return AccessPackageCatalog The accessPackageCatalog
     */
@@ -323,6 +344,7 @@ class AccessPackage extends Entity
     
     /**
     * Sets the accessPackageCatalog
+    * Read-only. Nullable.
     *
     * @param AccessPackageCatalog $val The accessPackageCatalog
     *
@@ -337,6 +359,7 @@ class AccessPackage extends Entity
 
      /** 
      * Gets the accessPackageResourceRoleScopes
+    * Nullable.
      *
      * @return array The accessPackageResourceRoleScopes
      */
@@ -351,6 +374,7 @@ class AccessPackage extends Entity
     
     /** 
     * Sets the accessPackageResourceRoleScopes
+    * Nullable.
     *
     * @param AccessPackageResourceRoleScope $val The accessPackageResourceRoleScopes
     *

@@ -55,6 +55,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the course
+    * Course information for the class
     *
     * @return EducationCourse The course
     */
@@ -73,6 +74,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the course
+    * Course information for the class
     *
     * @param EducationCourse $val The course
     *
@@ -235,7 +237,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalSource
-    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
+    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -254,7 +256,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalSource
-    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
+    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -268,6 +270,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalSourceDetail
+    * The name of the external source this resources was generated from.
     *
     * @return string The externalSourceDetail
     */
@@ -282,6 +285,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalSourceDetail
+    * The name of the external source this resources was generated from.
     *
     * @param string $val The externalSourceDetail
     *
@@ -295,6 +299,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the grade
+    * Grade level of the class.
     *
     * @return string The grade
     */
@@ -309,6 +314,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the grade
+    * Grade level of the class.
     *
     * @param string $val The grade
     *
@@ -351,7 +357,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the term
-    * Term for this class.
+    * Term for the class.
     *
     * @return EducationTerm The term
     */
@@ -370,7 +376,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the term
-    * Term for this class.
+    * Term for the class.
     *
     * @param EducationTerm $val The term
     *
@@ -413,6 +419,7 @@ class EducationClass extends Entity
 
      /** 
      * Gets the assignments
+    * All assignments associated with this class. Nullable.
      *
      * @return array The assignments
      */
@@ -427,6 +434,7 @@ class EducationClass extends Entity
     
     /** 
     * Sets the assignments
+    * All assignments associated with this class. Nullable.
     *
     * @param EducationAssignment $val The assignments
     *

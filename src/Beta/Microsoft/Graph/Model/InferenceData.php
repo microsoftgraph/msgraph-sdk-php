@@ -25,6 +25,7 @@ class InferenceData extends Entity
 {
     /**
     * Gets the confidenceScore
+    * Confidence score reflecting the accuracy of the data inferred about the user.
     *
     * @return float The confidenceScore
     */
@@ -39,6 +40,7 @@ class InferenceData extends Entity
 
     /**
     * Sets the confidenceScore
+    * Confidence score reflecting the accuracy of the data inferred about the user.
     *
     * @param float $val The value of the confidenceScore
     *
@@ -51,6 +53,7 @@ class InferenceData extends Entity
     }
     /**
     * Gets the userHasVerifiedAccuracy
+    * Records if the user has confirmed this inference as being True or False.
     *
     * @return bool The userHasVerifiedAccuracy
     */
@@ -65,6 +68,7 @@ class InferenceData extends Entity
 
     /**
     * Sets the userHasVerifiedAccuracy
+    * Records if the user has confirmed this inference as being True or False.
     *
     * @param bool $val The value of the userHasVerifiedAccuracy
     *

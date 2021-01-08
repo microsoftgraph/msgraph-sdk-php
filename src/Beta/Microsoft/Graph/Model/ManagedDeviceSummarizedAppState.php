@@ -54,7 +54,7 @@ class ManagedDeviceSummarizedAppState extends Entity
 
     /**
     * Gets the summarizedAppState
-    * runState for the object
+    * runState for the object. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @return RunState The summarizedAppState
     */
@@ -73,7 +73,7 @@ class ManagedDeviceSummarizedAppState extends Entity
 
     /**
     * Sets the summarizedAppState
-    * runState for the object
+    * runState for the object. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @param RunState $val The value to assign to the summarizedAppState
     *

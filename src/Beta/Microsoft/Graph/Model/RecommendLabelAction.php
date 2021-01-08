@@ -26,6 +26,7 @@ class RecommendLabelAction extends InformationProtectionAction
 
     /**
     * Gets the actions
+    * Actions to take if the label is accepted by the user.
     *
     * @return InformationProtectionAction The actions
     */
@@ -44,6 +45,7 @@ class RecommendLabelAction extends InformationProtectionAction
 
     /**
     * Sets the actions
+    * Actions to take if the label is accepted by the user.
     *
     * @param InformationProtectionAction $val The value to assign to the actions
     *
@@ -57,6 +59,7 @@ class RecommendLabelAction extends InformationProtectionAction
 
     /**
     * Gets the actionSource
+    * Possible values are: manual, automatic, recommended, default.
     *
     * @return ActionSource The actionSource
     */
@@ -75,6 +78,7 @@ class RecommendLabelAction extends InformationProtectionAction
 
     /**
     * Sets the actionSource
+    * Possible values are: manual, automatic, recommended, default.
     *
     * @param ActionSource $val The value to assign to the actionSource
     *
@@ -88,6 +92,7 @@ class RecommendLabelAction extends InformationProtectionAction
 
     /**
     * Gets the label
+    * The label that is being recommended.
     *
     * @return LabelDetails The label
     */
@@ -106,6 +111,7 @@ class RecommendLabelAction extends InformationProtectionAction
 
     /**
     * Sets the label
+    * The label that is being recommended.
     *
     * @param LabelDetails $val The value to assign to the label
     *
@@ -118,6 +124,7 @@ class RecommendLabelAction extends InformationProtectionAction
     }
     /**
     * Gets the responsibleSensitiveTypeIds
+    * The sensitive information type GUIDs that caused the recommendation to be given.
     *
     * @return string The responsibleSensitiveTypeIds
     */
@@ -132,6 +139,7 @@ class RecommendLabelAction extends InformationProtectionAction
 
     /**
     * Sets the responsibleSensitiveTypeIds
+    * The sensitive information type GUIDs that caused the recommendation to be given.
     *
     * @param string $val The value of the responsibleSensitiveTypeIds
     *

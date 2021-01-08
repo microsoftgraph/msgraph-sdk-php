@@ -26,6 +26,7 @@ class CloudPC extends Entity
 {
     /**
     * Gets the displayName
+    * The cloud PC display name.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the displayName
+    * The cloud PC display name.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the imageDisplayName
+    * Name of the OS image that's on the cloud PC.
     *
     * @return string The imageDisplayName
     */
@@ -67,6 +70,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the imageDisplayName
+    * Name of the OS image that's on the cloud PC.
     *
     * @param string $val The imageDisplayName
     *
@@ -80,6 +84,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -98,6 +103,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -111,6 +117,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the managedDeviceId
+    * The cloud PC’s Intune device ID.
     *
     * @return string The managedDeviceId
     */
@@ -125,6 +132,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the managedDeviceId
+    * The cloud PC’s Intune device ID.
     *
     * @param string $val The managedDeviceId
     *
@@ -138,6 +146,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the managedDeviceName
+    * The cloud PC’s Intune device name.
     *
     * @return string The managedDeviceName
     */
@@ -152,6 +161,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the managedDeviceName
+    * The cloud PC’s Intune device name.
     *
     * @param string $val The managedDeviceName
     *
@@ -165,6 +175,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the provisioningPolicyId
+    * The cloud PC's provisioning policy ID.
     *
     * @return string The provisioningPolicyId
     */
@@ -179,6 +190,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the provisioningPolicyId
+    * The cloud PC's provisioning policy ID.
     *
     * @param string $val The provisioningPolicyId
     *
@@ -192,6 +204,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the servicePlanId
+    * The cloud PC's service plan ID.
     *
     * @return string The servicePlanId
     */
@@ -206,6 +219,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the servicePlanId
+    * The cloud PC's service plan ID.
     *
     * @param string $val The servicePlanId
     *
@@ -219,6 +233,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the servicePlanName
+    * The cloud PC's service plan name.
     *
     * @return string The servicePlanName
     */
@@ -233,6 +248,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the servicePlanName
+    * The cloud PC's service plan name.
     *
     * @param string $val The servicePlanName
     *
@@ -246,6 +262,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the status
+    * Status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
     *
     * @return CloudPcStatus The status
     */
@@ -264,6 +281,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the status
+    * Status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
     *
     * @param CloudPcStatus $val The status
     *
@@ -277,6 +295,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the statusDetails
+    * The details of the cloud PC status.
     *
     * @return CloudPcStatusDetails The statusDetails
     */
@@ -295,6 +314,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the statusDetails
+    * The details of the cloud PC status.
     *
     * @param CloudPcStatusDetails $val The statusDetails
     *
@@ -308,6 +328,7 @@ class CloudPC extends Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) of the user assigned to the cloud PC.
     *
     * @return string The userPrincipalName
     */
@@ -322,6 +343,7 @@ class CloudPC extends Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) of the user assigned to the cloud PC.
     *
     * @param string $val The userPrincipalName
     *

@@ -25,6 +25,7 @@ class Credential extends Entity
 {
     /**
     * Gets the fieldId
+    * The name of the field for this credential. e.g, username or password or phoneNumber. This is defined by the application. Must match what is in the html field on singleSignOnSettings/password object.
     *
     * @return string The fieldId
     */
@@ -39,6 +40,7 @@ class Credential extends Entity
 
     /**
     * Sets the fieldId
+    * The name of the field for this credential. e.g, username or password or phoneNumber. This is defined by the application. Must match what is in the html field on singleSignOnSettings/password object.
     *
     * @param string $val The value of the fieldId
     *
@@ -51,6 +53,7 @@ class Credential extends Entity
     }
     /**
     * Gets the type
+    * The type for this credential. Valid values: username, password, or other.
     *
     * @return string The type
     */
@@ -65,6 +68,7 @@ class Credential extends Entity
 
     /**
     * Sets the type
+    * The type for this credential. Valid values: username, password, or other.
     *
     * @param string $val The value of the type
     *
@@ -77,6 +81,7 @@ class Credential extends Entity
     }
     /**
     * Gets the value
+    * The value for this credential. e.g, mysuperhiddenpassword. Note the value for passwords is write-only, the value can never be read back.
     *
     * @return string The value
     */
@@ -91,6 +96,7 @@ class Credential extends Entity
 
     /**
     * Sets the value
+    * The value for this credential. e.g, mysuperhiddenpassword. Note the value for passwords is write-only, the value can never be read back.
     *
     * @param string $val The value of the value
     *

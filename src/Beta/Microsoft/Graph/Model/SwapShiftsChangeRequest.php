@@ -26,7 +26,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
 {
     /**
     * Gets the recipientShiftId
-    * ShiftId for the recipient user with whom the request is to swap.
+    * Shift ID for the recipient user with whom the request is to swap.
     *
     * @return string The recipientShiftId
     */
@@ -41,7 +41,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
     
     /**
     * Sets the recipientShiftId
-    * ShiftId for the recipient user with whom the request is to swap.
+    * Shift ID for the recipient user with whom the request is to swap.
     *
     * @param string $val The recipientShiftId
     *

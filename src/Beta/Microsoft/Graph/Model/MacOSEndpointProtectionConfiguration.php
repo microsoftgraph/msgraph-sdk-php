@@ -26,7 +26,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the advancedThreatProtectionAutomaticSampleSubmission
-    * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The advancedThreatProtectionAutomaticSampleSubmission
     */
@@ -45,7 +45,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the advancedThreatProtectionAutomaticSampleSubmission
-    * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionAutomaticSampleSubmission
     *
@@ -59,7 +59,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the advancedThreatProtectionCloudDelivered
-    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The advancedThreatProtectionCloudDelivered
     */
@@ -78,7 +78,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the advancedThreatProtectionCloudDelivered
-    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionCloudDelivered
     *
@@ -92,7 +92,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the advancedThreatProtectionDiagnosticDataCollection
-    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The advancedThreatProtectionDiagnosticDataCollection
     */
@@ -111,7 +111,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the advancedThreatProtectionDiagnosticDataCollection
-    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionDiagnosticDataCollection
     *
@@ -241,7 +241,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the advancedThreatProtectionRealTime
-    * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The advancedThreatProtectionRealTime
     */
@@ -260,7 +260,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the advancedThreatProtectionRealTime
-    * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS.
+    * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The advancedThreatProtectionRealTime
     *
@@ -423,7 +423,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the fileVaultInstitutionalRecoveryKeyCertificateFileName
-    * File name of the institutional recovery key certificate to display in UI. (*.der).
+    * File name of the institutional recovery key certificate to display in UI. (.der).
     *
     * @return string The fileVaultInstitutionalRecoveryKeyCertificateFileName
     */
@@ -438,7 +438,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the fileVaultInstitutionalRecoveryKeyCertificateFileName
-    * File name of the institutional recovery key certificate to display in UI. (*.der).
+    * File name of the institutional recovery key certificate to display in UI. (.der).
     *
     * @param string $val The fileVaultInstitutionalRecoveryKeyCertificateFileName
     *
@@ -539,7 +539,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the fileVaultSelectedRecoveryKeyTypes
-    * Required if FileVault is enabled, determines the type(s) of recovery key to use. 
+    * Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
     *
     * @return MacOSFileVaultRecoveryKeyTypes The fileVaultSelectedRecoveryKeyTypes
     */
@@ -558,7 +558,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the fileVaultSelectedRecoveryKeyTypes
-    * Required if FileVault is enabled, determines the type(s) of recovery key to use. 
+    * Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
     *
     * @param MacOSFileVaultRecoveryKeyTypes $val The fileVaultSelectedRecoveryKeyTypes
     *
@@ -602,7 +602,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallBlockAllIncoming
-    * Corresponds to the ???Block all incoming connections??? option.
+    * Corresponds to the 'Block all incoming connections' option.
     *
     * @return bool The firewallBlockAllIncoming
     */
@@ -617,7 +617,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallBlockAllIncoming
-    * Corresponds to the ???Block all incoming connections??? option.
+    * Corresponds to the 'Block all incoming connections' option.
     *
     * @param bool $val The firewallBlockAllIncoming
     *
@@ -660,7 +660,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firewallEnableStealthMode
-    * Corresponds to ???Enable stealth mode.???
+    * Corresponds to 'Enable stealth mode.'
     *
     * @return bool The firewallEnableStealthMode
     */
@@ -675,7 +675,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firewallEnableStealthMode
-    * Corresponds to ???Enable stealth mode.???
+    * Corresponds to 'Enable stealth mode.'
     *
     * @param bool $val The firewallEnableStealthMode
     *
@@ -689,7 +689,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the gatekeeperAllowedAppSource
-    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
     *
     * @return MacOSGatekeeperAppSources The gatekeeperAllowedAppSource
     */
@@ -708,7 +708,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gatekeeperAllowedAppSource
-    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
     *
     * @param MacOSGatekeeperAppSources $val The gatekeeperAllowedAppSource
     *

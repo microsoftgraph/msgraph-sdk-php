@@ -26,6 +26,7 @@ class EducationSynchronizationLicenseAssignment extends Entity
 
     /**
     * Gets the appliesTo
+    * The user role type to assign to license. Possible values are: student, teacher, faculty.
     *
     * @return EducationUserRole The appliesTo
     */
@@ -44,6 +45,7 @@ class EducationSynchronizationLicenseAssignment extends Entity
 
     /**
     * Sets the appliesTo
+    * The user role type to assign to license. Possible values are: student, teacher, faculty.
     *
     * @param EducationUserRole $val The value to assign to the appliesTo
     *
@@ -56,6 +58,7 @@ class EducationSynchronizationLicenseAssignment extends Entity
     }
     /**
     * Gets the skuIds
+    * Represents the SKU identifiers of the licenses to assign.
     *
     * @return string The skuIds
     */
@@ -70,6 +73,7 @@ class EducationSynchronizationLicenseAssignment extends Entity
 
     /**
     * Sets the skuIds
+    * Represents the SKU identifiers of the licenses to assign.
     *
     * @param string $val The value of the skuIds
     *

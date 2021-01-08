@@ -26,6 +26,7 @@ class Chat extends Entity
 {
     /**
     * Gets the chatType
+    * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
     *
     * @return ChatType The chatType
     */
@@ -44,6 +45,7 @@ class Chat extends Entity
     
     /**
     * Sets the chatType
+    * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
     *
     * @param ChatType $val The chatType
     *
@@ -57,6 +59,7 @@ class Chat extends Entity
     
     /**
     * Gets the createdDateTime
+    * Date and time at which the chat was created. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -75,6 +78,7 @@ class Chat extends Entity
     
     /**
     * Sets the createdDateTime
+    * Date and time at which the chat was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class Chat extends Entity
     
     /**
     * Gets the lastUpdatedDateTime
+    * Date and time at which the chat was renamed or list of members were last changed. Read-only.
     *
     * @return \DateTime The lastUpdatedDateTime
     */
@@ -106,6 +111,7 @@ class Chat extends Entity
     
     /**
     * Sets the lastUpdatedDateTime
+    * Date and time at which the chat was renamed or list of members were last changed. Read-only.
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
@@ -119,6 +125,7 @@ class Chat extends Entity
     
     /**
     * Gets the topic
+    * (Optional) Subject or topic for the chat. Only available for group chats.
     *
     * @return string The topic
     */
@@ -133,6 +140,7 @@ class Chat extends Entity
     
     /**
     * Sets the topic
+    * (Optional) Subject or topic for the chat. Only available for group chats.
     *
     * @param string $val The topic
     *
@@ -147,6 +155,7 @@ class Chat extends Entity
 
      /** 
      * Gets the installedApps
+    * A collection of all the apps in the chat. Nullable.
      *
      * @return array The installedApps
      */
@@ -161,6 +170,7 @@ class Chat extends Entity
     
     /** 
     * Sets the installedApps
+    * A collection of all the apps in the chat. Nullable.
     *
     * @param TeamsAppInstallation $val The installedApps
     *
@@ -175,6 +185,7 @@ class Chat extends Entity
 
      /** 
      * Gets the members
+    * A collection of all the members in the chat. Nullable.
      *
      * @return array The members
      */
@@ -189,6 +200,7 @@ class Chat extends Entity
     
     /** 
     * Sets the members
+    * A collection of all the members in the chat. Nullable.
     *
     * @param ConversationMember $val The members
     *

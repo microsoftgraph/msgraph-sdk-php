@@ -26,7 +26,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
 {
     /**
     * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
@@ -45,7 +45,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
     *
@@ -147,7 +147,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name Type.
+    * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
     * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
@@ -166,7 +166,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name Type.
+    * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
     * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
     *
@@ -180,7 +180,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectNameFormat
-    * Certificate Subject Name Format.
+    * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
     *
     * @return SubjectNameFormat The subjectNameFormat
     */
@@ -199,7 +199,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectNameFormat
-    * Certificate Subject Name Format.
+    * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
     *
     * @param SubjectNameFormat $val The subjectNameFormat
     *

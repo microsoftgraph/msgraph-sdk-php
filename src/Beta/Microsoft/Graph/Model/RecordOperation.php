@@ -26,6 +26,7 @@ class RecordOperation extends CommsOperation
 {
     /**
     * Gets the completionReason
+    * Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
     *
     * @return RecordCompletionReason The completionReason
     */
@@ -44,6 +45,7 @@ class RecordOperation extends CommsOperation
     
     /**
     * Sets the completionReason
+    * Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
     *
     * @param RecordCompletionReason $val The completionReason
     *

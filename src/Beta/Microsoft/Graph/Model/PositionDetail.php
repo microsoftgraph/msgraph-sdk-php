@@ -26,6 +26,7 @@ class PositionDetail extends Entity
 
     /**
     * Gets the company
+    * Detail about the company or employer.
     *
     * @return CompanyDetail The company
     */
@@ -44,6 +45,7 @@ class PositionDetail extends Entity
 
     /**
     * Sets the company
+    * Detail about the company or employer.
     *
     * @param CompanyDetail $val The value to assign to the company
     *
@@ -56,6 +58,7 @@ class PositionDetail extends Entity
     }
     /**
     * Gets the description
+    * Description of the position in question.
     *
     * @return string The description
     */
@@ -70,6 +73,7 @@ class PositionDetail extends Entity
 
     /**
     * Sets the description
+    * Description of the position in question.
     *
     * @param string $val The value of the description
     *
@@ -83,6 +87,7 @@ class PositionDetail extends Entity
 
     /**
     * Gets the endMonthYear
+    * When the position ended.
     *
     * @return \DateTime The endMonthYear
     */
@@ -101,6 +106,7 @@ class PositionDetail extends Entity
 
     /**
     * Sets the endMonthYear
+    * When the position ended.
     *
     * @param \DateTime $val The value to assign to the endMonthYear
     *
@@ -113,6 +119,7 @@ class PositionDetail extends Entity
     }
     /**
     * Gets the jobTitle
+    * The title held when in that position.
     *
     * @return string The jobTitle
     */
@@ -127,6 +134,7 @@ class PositionDetail extends Entity
 
     /**
     * Sets the jobTitle
+    * The title held when in that position.
     *
     * @param string $val The value of the jobTitle
     *
@@ -139,6 +147,7 @@ class PositionDetail extends Entity
     }
     /**
     * Gets the role
+    * The role the position entailed.
     *
     * @return string The role
     */
@@ -153,6 +162,7 @@ class PositionDetail extends Entity
 
     /**
     * Sets the role
+    * The role the position entailed.
     *
     * @param string $val The value of the role
     *
@@ -166,6 +176,7 @@ class PositionDetail extends Entity
 
     /**
     * Gets the startMonthYear
+    * The start month and year of the position.
     *
     * @return \DateTime The startMonthYear
     */
@@ -184,6 +195,7 @@ class PositionDetail extends Entity
 
     /**
     * Sets the startMonthYear
+    * The start month and year of the position.
     *
     * @param \DateTime $val The value to assign to the startMonthYear
     *
@@ -196,6 +208,7 @@ class PositionDetail extends Entity
     }
     /**
     * Gets the summary
+    * Short summary of the position.
     *
     * @return string The summary
     */
@@ -210,6 +223,7 @@ class PositionDetail extends Entity
 
     /**
     * Sets the summary
+    * Short summary of the position.
     *
     * @param string $val The value of the summary
     *

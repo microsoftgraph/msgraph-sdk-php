@@ -26,6 +26,7 @@ class CallActivityStatistics extends ActivityStatistics
 {
     /**
     * Gets the afterHours
+    * Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The afterHours
     */
@@ -44,6 +45,7 @@ class CallActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the afterHours
+    * Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The afterHours
     *

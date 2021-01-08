@@ -26,7 +26,7 @@ class BitLockerFixedDrivePolicy extends Entity
 
     /**
     * Gets the encryptionMethod
-    * Select the encryption method for fixed drives.
+    * Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
     *
     * @return BitLockerEncryptionMethod The encryptionMethod
     */
@@ -45,7 +45,7 @@ class BitLockerFixedDrivePolicy extends Entity
 
     /**
     * Sets the encryptionMethod
-    * Select the encryption method for fixed drives.
+    * Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
     *
     * @param BitLockerEncryptionMethod $val The value to assign to the encryptionMethod
     *

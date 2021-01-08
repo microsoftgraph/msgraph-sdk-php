@@ -26,6 +26,7 @@ class OnPremisesAgentGroup extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of the onPremisesAgentGroup.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class OnPremisesAgentGroup extends Entity
     
     /**
     * Sets the displayName
+    * Display name of the onPremisesAgentGroup.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class OnPremisesAgentGroup extends Entity
     
     /**
     * Gets the isDefault
+    * Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
     *
     * @return bool The isDefault
     */
@@ -67,6 +70,7 @@ class OnPremisesAgentGroup extends Entity
     
     /**
     * Sets the isDefault
+    * Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
     *
     * @param bool $val The isDefault
     *
@@ -80,6 +84,7 @@ class OnPremisesAgentGroup extends Entity
     
     /**
     * Gets the publishingType
+    * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
     *
     * @return OnPremisesPublishingType The publishingType
     */
@@ -98,6 +103,7 @@ class OnPremisesAgentGroup extends Entity
     
     /**
     * Sets the publishingType
+    * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
     *
     * @param OnPremisesPublishingType $val The publishingType
     *
@@ -112,6 +118,7 @@ class OnPremisesAgentGroup extends Entity
 
      /** 
      * Gets the agents
+    * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      *
      * @return array The agents
      */
@@ -126,6 +133,7 @@ class OnPremisesAgentGroup extends Entity
     
     /** 
     * Sets the agents
+    * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
     *
     * @param OnPremisesAgent $val The agents
     *
@@ -140,6 +148,7 @@ class OnPremisesAgentGroup extends Entity
 
      /** 
      * Gets the publishedResources
+    * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      *
      * @return array The publishedResources
      */
@@ -154,6 +163,7 @@ class OnPremisesAgentGroup extends Entity
     
     /** 
     * Sets the publishedResources
+    * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
     *
     * @param PublishedResource $val The publishedResources
     *

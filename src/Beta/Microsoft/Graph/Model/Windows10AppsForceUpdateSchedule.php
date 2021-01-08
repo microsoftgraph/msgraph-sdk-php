@@ -26,7 +26,7 @@ class Windows10AppsForceUpdateSchedule extends Entity
 
     /**
     * Gets the recurrence
-    * Recurrence schedule.
+    * Recurrence schedule. Possible values are: none, daily, weekly, monthly.
     *
     * @return Windows10AppsUpdateRecurrence The recurrence
     */
@@ -45,7 +45,7 @@ class Windows10AppsForceUpdateSchedule extends Entity
 
     /**
     * Sets the recurrence
-    * Recurrence schedule.
+    * Recurrence schedule. Possible values are: none, daily, weekly, monthly.
     *
     * @param Windows10AppsUpdateRecurrence $val The value to assign to the recurrence
     *

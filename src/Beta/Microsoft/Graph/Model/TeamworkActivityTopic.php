@@ -26,6 +26,7 @@ class TeamworkActivityTopic extends Entity
 
     /**
     * Gets the source
+    * Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
     *
     * @return TeamworkActivityTopicSource The source
     */
@@ -44,6 +45,7 @@ class TeamworkActivityTopic extends Entity
 
     /**
     * Sets the source
+    * Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
     *
     * @param TeamworkActivityTopicSource $val The value to assign to the source
     *
@@ -56,6 +58,7 @@ class TeamworkActivityTopic extends Entity
     }
     /**
     * Gets the value
+    * The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
     *
     * @return string The value
     */
@@ -70,6 +73,7 @@ class TeamworkActivityTopic extends Entity
 
     /**
     * Sets the value
+    * The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
     *
     * @param string $val The value of the value
     *
@@ -82,6 +86,7 @@ class TeamworkActivityTopic extends Entity
     }
     /**
     * Gets the webUrl
+    * The link the user clicks when they select the notification. Optional when source is entityUrl; required when source is text.
     *
     * @return string The webUrl
     */
@@ -96,6 +101,7 @@ class TeamworkActivityTopic extends Entity
 
     /**
     * Sets the webUrl
+    * The link the user clicks when they select the notification. Optional when source is entityUrl; required when source is text.
     *
     * @param string $val The value of the webUrl
     *

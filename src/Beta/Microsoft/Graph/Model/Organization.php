@@ -56,7 +56,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the businessPhones
-    * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
+    * Telephone number for the organization. Note: Although this is a string collection, only one number can be set for this property.
     *
     * @return string The businessPhones
     */
@@ -71,7 +71,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the businessPhones
-    * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
+    * Telephone number for the organization. Note: Although this is a string collection, only one number can be set for this property.
     *
     * @param string $val The businessPhones
     *
@@ -205,6 +205,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the directorySizeQuota
+    * The directory size quota information of an organization.
     *
     * @return DirectorySizeQuota The directorySizeQuota
     */
@@ -223,6 +224,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the directorySizeQuota
+    * The directory size quota information of an organization.
     *
     * @param DirectorySizeQuota $val The directorySizeQuota
     *
@@ -323,7 +325,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -342,7 +344,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -775,7 +777,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the certificateBasedAuthConfiguration
-    * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+    * Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      *
      * @return array The certificateBasedAuthConfiguration
      */
@@ -790,7 +792,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the certificateBasedAuthConfiguration
-    * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+    * Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
     *
     * @param CertificateBasedAuthConfiguration $val The certificateBasedAuthConfiguration
     *
@@ -805,7 +807,7 @@ class Organization extends DirectoryObject
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the organization. Read-only. Nullable.
+    * The collection of open extensions defined for the organization resource. Nullable.
      *
      * @return array The extensions
      */
@@ -820,7 +822,7 @@ class Organization extends DirectoryObject
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the organization. Read-only. Nullable.
+    * The collection of open extensions defined for the organization resource. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -834,6 +836,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the settings
+    * Retrieve the properties and relationships of organizationSettings object. Nullable.
     *
     * @return OrganizationSettings The settings
     */
@@ -852,6 +855,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the settings
+    * Retrieve the properties and relationships of organizationSettings object. Nullable.
     *
     * @param OrganizationSettings $val The settings
     *

@@ -25,6 +25,7 @@ class RequestorSettings extends Entity
 {
     /**
     * Gets the acceptRequests
+    * Indicates whether new requests are accepted on this policy.
     *
     * @return bool The acceptRequests
     */
@@ -39,6 +40,7 @@ class RequestorSettings extends Entity
 
     /**
     * Sets the acceptRequests
+    * Indicates whether new requests are accepted on this policy.
     *
     * @param bool $val The value of the acceptRequests
     *
@@ -52,6 +54,7 @@ class RequestorSettings extends Entity
 
     /**
     * Gets the allowedRequestors
+    * The users who are allowed to request on this policy, which can be singleUser, groupMembers, and connectedOrganizationMembers.
     *
     * @return UserSet The allowedRequestors
     */
@@ -70,6 +73,7 @@ class RequestorSettings extends Entity
 
     /**
     * Sets the allowedRequestors
+    * The users who are allowed to request on this policy, which can be singleUser, groupMembers, and connectedOrganizationMembers.
     *
     * @param UserSet $val The value to assign to the allowedRequestors
     *
@@ -82,6 +86,7 @@ class RequestorSettings extends Entity
     }
     /**
     * Gets the scopeType
+    * Who can request. One of NoSubjects, SpecificDirectorySubjects, SpecificConnectedOrganizationSubjects, AllConfiguredConnectedOrganizationSubjects, AllExistingConnectedOrganizationSubjects, AllExistingDirectoryMemberUsers, AllExistingDirectorySubjects or AllExternalSubjects.
     *
     * @return string The scopeType
     */
@@ -96,6 +101,7 @@ class RequestorSettings extends Entity
 
     /**
     * Sets the scopeType
+    * Who can request. One of NoSubjects, SpecificDirectorySubjects, SpecificConnectedOrganizationSubjects, AllConfiguredConnectedOrganizationSubjects, AllExistingConnectedOrganizationSubjects, AllExistingDirectoryMemberUsers, AllExistingDirectorySubjects or AllExternalSubjects.
     *
     * @param string $val The value of the scopeType
     *

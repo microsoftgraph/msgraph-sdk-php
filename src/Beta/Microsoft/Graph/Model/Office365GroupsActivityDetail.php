@@ -26,6 +26,7 @@ class Office365GroupsActivityDetail extends Entity
 {
     /**
     * Gets the exchangeMailboxStorageUsedInBytes
+    * The storage used of the group mailbox.
     *
     * @return int The exchangeMailboxStorageUsedInBytes
     */
@@ -40,6 +41,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the exchangeMailboxStorageUsedInBytes
+    * The storage used of the group mailbox.
     *
     * @param int $val The exchangeMailboxStorageUsedInBytes
     *
@@ -53,6 +55,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the exchangeMailboxTotalItemCount
+    * The number of items in the group mailbox.
     *
     * @return int The exchangeMailboxTotalItemCount
     */
@@ -67,6 +70,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the exchangeMailboxTotalItemCount
+    * The number of items in the group mailbox.
     *
     * @param int $val The exchangeMailboxTotalItemCount
     *
@@ -80,6 +84,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the exchangeReceivedEmailCount
+    * The number of email that the group mailbox received.
     *
     * @return int The exchangeReceivedEmailCount
     */
@@ -94,6 +99,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the exchangeReceivedEmailCount
+    * The number of email that the group mailbox received.
     *
     * @param int $val The exchangeReceivedEmailCount
     *
@@ -107,6 +113,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the externalMemberCount
+    * The group external member count.
     *
     * @return int The externalMemberCount
     */
@@ -121,6 +128,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the externalMemberCount
+    * The group external member count.
     *
     * @param int $val The externalMemberCount
     *
@@ -134,6 +142,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the groupDisplayName
+    * The display name of the group.
     *
     * @return string The groupDisplayName
     */
@@ -148,6 +157,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the groupDisplayName
+    * The display name of the group.
     *
     * @param string $val The groupDisplayName
     *
@@ -161,6 +171,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the groupId
+    * The group id.
     *
     * @return string The groupId
     */
@@ -175,6 +186,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the groupId
+    * The group id.
     *
     * @param string $val The groupId
     *
@@ -188,6 +200,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the groupType
+    * The group type. Possible values are: Public or Private.
     *
     * @return string The groupType
     */
@@ -202,6 +215,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the groupType
+    * The group type. Possible values are: Public or Private.
     *
     * @param string $val The groupType
     *
@@ -215,6 +229,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @return bool The isDeleted
     */
@@ -229,6 +244,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @param bool $val The isDeleted
     *
@@ -242,6 +258,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the lastActivityDate
+    * The last activity date for the following scenarios:  group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
     *
     * @return \DateTime The lastActivityDate
     */
@@ -260,6 +277,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the lastActivityDate
+    * The last activity date for the following scenarios:  group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
     *
     * @param \DateTime $val The lastActivityDate
     *
@@ -273,6 +291,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the memberCount
+    * The group member count.
     *
     * @return int The memberCount
     */
@@ -287,6 +306,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the memberCount
+    * The group member count.
     *
     * @param int $val The memberCount
     *
@@ -300,6 +320,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the ownerPrincipalName
+    * The group owner principal name.
     *
     * @return string The ownerPrincipalName
     */
@@ -314,6 +335,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the ownerPrincipalName
+    * The group owner principal name.
     *
     * @param string $val The ownerPrincipalName
     *
@@ -327,6 +349,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -341,6 +364,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -354,6 +378,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -372,6 +397,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -385,6 +411,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the sharePointActiveFileCount
+    * The number of active files in SharePoint Group site.
     *
     * @return int The sharePointActiveFileCount
     */
@@ -399,6 +426,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the sharePointActiveFileCount
+    * The number of active files in SharePoint Group site.
     *
     * @param int $val The sharePointActiveFileCount
     *
@@ -412,6 +440,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the sharePointSiteStorageUsedInBytes
+    * The storage used by SharePoint Group site.
     *
     * @return int The sharePointSiteStorageUsedInBytes
     */
@@ -426,6 +455,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the sharePointSiteStorageUsedInBytes
+    * The storage used by SharePoint Group site.
     *
     * @param int $val The sharePointSiteStorageUsedInBytes
     *
@@ -439,6 +469,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the sharePointTotalFileCount
+    * The total number of files in SharePoint Group site.
     *
     * @return int The sharePointTotalFileCount
     */
@@ -453,6 +484,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the sharePointTotalFileCount
+    * The total number of files in SharePoint Group site.
     *
     * @param int $val The sharePointTotalFileCount
     *
@@ -466,6 +498,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the yammerLikedMessageCount
+    * The number of messages liked in Yammer groups.
     *
     * @return int The yammerLikedMessageCount
     */
@@ -480,6 +513,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the yammerLikedMessageCount
+    * The number of messages liked in Yammer groups.
     *
     * @param int $val The yammerLikedMessageCount
     *
@@ -493,6 +527,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the yammerPostedMessageCount
+    * The number of messages posted to Yammer groups.
     *
     * @return int The yammerPostedMessageCount
     */
@@ -507,6 +542,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the yammerPostedMessageCount
+    * The number of messages posted to Yammer groups.
     *
     * @param int $val The yammerPostedMessageCount
     *
@@ -520,6 +556,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Gets the yammerReadMessageCount
+    * The number of messages read in Yammer groups.
     *
     * @return int The yammerReadMessageCount
     */
@@ -534,6 +571,7 @@ class Office365GroupsActivityDetail extends Entity
     
     /**
     * Sets the yammerReadMessageCount
+    * The number of messages read in Yammer groups.
     *
     * @param int $val The yammerReadMessageCount
     *

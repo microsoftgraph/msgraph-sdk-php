@@ -26,6 +26,7 @@ class CloudPcDeviceImage extends Entity
 {
     /**
     * Gets the displayName
+    * The image's display name.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the displayName
+    * The image's display name.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -71,6 +74,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -84,6 +88,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the operatingSystem
+    * The image's operating system. For example: Windows 10 Enterprise.
     *
     * @return string The operatingSystem
     */
@@ -98,6 +103,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the operatingSystem
+    * The image's operating system. For example: Windows 10 Enterprise.
     *
     * @param string $val The operatingSystem
     *
@@ -111,6 +117,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the osBuildNumber
+    * The image's OS build version. For example: 1909.
     *
     * @return string The osBuildNumber
     */
@@ -125,6 +132,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the osBuildNumber
+    * The image's OS build version. For example: 1909.
     *
     * @param string $val The osBuildNumber
     *
@@ -138,6 +146,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the sourceImageResourceId
+    * The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
     *
     * @return string The sourceImageResourceId
     */
@@ -152,6 +161,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the sourceImageResourceId
+    * The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
     *
     * @param string $val The sourceImageResourceId
     *
@@ -165,6 +175,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the status
+    * The status of the image on cloud PC. Possible status include upload pending, failed to upload, or ready to use. Possible values are: pending, ready, failed.
     *
     * @return CloudPcDeviceImageStatus The status
     */
@@ -183,6 +194,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the status
+    * The status of the image on cloud PC. Possible status include upload pending, failed to upload, or ready to use. Possible values are: pending, ready, failed.
     *
     * @param CloudPcDeviceImageStatus $val The status
     *
@@ -196,6 +208,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the statusDetails
+    * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound.
     *
     * @return CloudPcDeviceImageStatusDetails The statusDetails
     */
@@ -214,6 +227,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the statusDetails
+    * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound.
     *
     * @param CloudPcDeviceImageStatusDetails $val The statusDetails
     *
@@ -227,6 +241,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the version
+    * The image version. For example: 0.0.1, 1.5.13.
     *
     * @return string The version
     */
@@ -241,6 +256,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the version
+    * The image version. For example: 0.0.1, 1.5.13.
     *
     * @param string $val The version
     *

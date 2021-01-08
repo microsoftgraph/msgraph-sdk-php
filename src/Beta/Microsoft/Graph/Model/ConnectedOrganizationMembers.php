@@ -25,6 +25,7 @@ class ConnectedOrganizationMembers extends UserSet
 {
     /**
     * Gets the description
+    * The name of the connected organization. Read only.
     *
     * @return string The description
     */
@@ -39,6 +40,7 @@ class ConnectedOrganizationMembers extends UserSet
 
     /**
     * Sets the description
+    * The name of the connected organization. Read only.
     *
     * @param string $val The value of the description
     *
@@ -51,6 +53,7 @@ class ConnectedOrganizationMembers extends UserSet
     }
     /**
     * Gets the id
+    * The ID of the connected organization in entitlement management.
     *
     * @return string The id
     */
@@ -65,6 +68,7 @@ class ConnectedOrganizationMembers extends UserSet
 
     /**
     * Sets the id
+    * The ID of the connected organization in entitlement management.
     *
     * @param string $val The value of the id
     *

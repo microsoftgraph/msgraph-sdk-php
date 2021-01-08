@@ -53,6 +53,7 @@ class ProgramControlType extends Entity
     
     /**
     * Gets the displayName
+    * The name of the program control type
     *
     * @return string The displayName
     */
@@ -67,6 +68,7 @@ class ProgramControlType extends Entity
     
     /**
     * Sets the displayName
+    * The name of the program control type
     *
     * @param string $val The displayName
     *

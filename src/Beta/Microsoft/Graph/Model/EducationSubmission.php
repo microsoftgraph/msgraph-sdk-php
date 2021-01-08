@@ -26,6 +26,7 @@ class EducationSubmission extends Entity
 {
     /**
     * Gets the recipient
+    * Who this submission is assigned to.
     *
     * @return EducationSubmissionRecipient The recipient
     */
@@ -44,6 +45,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the recipient
+    * Who this submission is assigned to.
     *
     * @param EducationSubmissionRecipient $val The recipient
     *
@@ -57,6 +59,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the releasedBy
+    * User who moved the status of this submission to released.
     *
     * @return IdentitySet The releasedBy
     */
@@ -75,6 +78,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the releasedBy
+    * User who moved the status of this submission to released.
     *
     * @param IdentitySet $val The releasedBy
     *
@@ -88,6 +92,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the releasedDateTime
+    * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The releasedDateTime
     */
@@ -106,6 +111,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the releasedDateTime
+    * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The releasedDateTime
     *
@@ -119,6 +125,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the resourcesFolderUrl
+    * Folder where all file resources for this submission need to be stored.
     *
     * @return string The resourcesFolderUrl
     */
@@ -133,6 +140,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the resourcesFolderUrl
+    * Folder where all file resources for this submission need to be stored.
     *
     * @param string $val The resourcesFolderUrl
     *
@@ -146,6 +154,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the returnedBy
+    * User who moved the status of this submission to returned.
     *
     * @return IdentitySet The returnedBy
     */
@@ -164,6 +173,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the returnedBy
+    * User who moved the status of this submission to returned.
     *
     * @param IdentitySet $val The returnedBy
     *
@@ -177,6 +187,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the returnedDateTime
+    * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The returnedDateTime
     */
@@ -195,6 +206,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the returnedDateTime
+    * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The returnedDateTime
     *
@@ -208,6 +220,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the status
+    * Read-Only. Possible values are: working, submitted, released, returned.
     *
     * @return EducationSubmissionStatus The status
     */
@@ -226,6 +239,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the status
+    * Read-Only. Possible values are: working, submitted, released, returned.
     *
     * @param EducationSubmissionStatus $val The status
     *
@@ -239,6 +253,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the submittedBy
+    * User who moved the resource into the submitted state.
     *
     * @return IdentitySet The submittedBy
     */
@@ -257,6 +272,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the submittedBy
+    * User who moved the resource into the submitted state.
     *
     * @param IdentitySet $val The submittedBy
     *
@@ -270,6 +286,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the submittedDateTime
+    * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The submittedDateTime
     */
@@ -288,6 +305,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the submittedDateTime
+    * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The submittedDateTime
     *
@@ -301,6 +319,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the unsubmittedBy
+    * User who moved the resource from submitted into the working state.
     *
     * @return IdentitySet The unsubmittedBy
     */
@@ -319,6 +338,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the unsubmittedBy
+    * User who moved the resource from submitted into the working state.
     *
     * @param IdentitySet $val The unsubmittedBy
     *
@@ -332,6 +352,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the unsubmittedDateTime
+    * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The unsubmittedDateTime
     */
@@ -350,6 +371,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the unsubmittedDateTime
+    * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The unsubmittedDateTime
     *
@@ -364,6 +386,7 @@ class EducationSubmission extends Entity
 
      /** 
      * Gets the outcomes
+    * Read-Write. Nullable.
      *
      * @return array The outcomes
      */
@@ -378,6 +401,7 @@ class EducationSubmission extends Entity
     
     /** 
     * Sets the outcomes
+    * Read-Write. Nullable.
     *
     * @param EducationOutcome $val The outcomes
     *
@@ -392,6 +416,7 @@ class EducationSubmission extends Entity
 
      /** 
      * Gets the resources
+    * Nullable.
      *
      * @return array The resources
      */
@@ -406,6 +431,7 @@ class EducationSubmission extends Entity
     
     /** 
     * Sets the resources
+    * Nullable.
     *
     * @param EducationSubmissionResource $val The resources
     *
@@ -420,6 +446,7 @@ class EducationSubmission extends Entity
 
      /** 
      * Gets the submittedResources
+    * Read-only. Nullable.
      *
      * @return array The submittedResources
      */
@@ -434,6 +461,7 @@ class EducationSubmission extends Entity
     
     /** 
     * Sets the submittedResources
+    * Read-only. Nullable.
     *
     * @param EducationSubmissionResource $val The submittedResources
     *

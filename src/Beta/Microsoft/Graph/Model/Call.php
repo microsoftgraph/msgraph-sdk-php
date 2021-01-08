@@ -27,6 +27,7 @@ class Call extends Entity
 
      /** 
      * Gets the activeModalities
+    * The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
      *
      * @return array The activeModalities
      */
@@ -41,6 +42,7 @@ class Call extends Entity
     
     /** 
     * Sets the activeModalities
+    * The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
     *
     * @param Modality $val The activeModalities
     *
@@ -54,6 +56,7 @@ class Call extends Entity
     
     /**
     * Gets the answeredBy
+    * The participant that answered the call. Read-only.
     *
     * @return ParticipantInfo The answeredBy
     */
@@ -72,6 +75,7 @@ class Call extends Entity
     
     /**
     * Sets the answeredBy
+    * The participant that answered the call. Read-only.
     *
     * @param ParticipantInfo $val The answeredBy
     *
@@ -204,7 +208,7 @@ class Call extends Entity
     
     /**
     * Gets the chatInfo
-    * The chat information. Required information for joining a meeting.
+    * The chat information. Required information for meeting scenarios.
     *
     * @return ChatInfo The chatInfo
     */
@@ -223,7 +227,7 @@ class Call extends Entity
     
     /**
     * Sets the chatInfo
-    * The chat information. Required information for joining a meeting.
+    * The chat information. Required information for meeting scenarios.
     *
     * @param ChatInfo $val The chatInfo
     *
@@ -270,6 +274,7 @@ class Call extends Entity
     
     /**
     * Gets the incomingContext
+    * The context associated with an incoming call. Read-only. Server generated.
     *
     * @return IncomingContext The incomingContext
     */
@@ -288,6 +293,7 @@ class Call extends Entity
     
     /**
     * Sets the incomingContext
+    * The context associated with an incoming call. Read-only. Server generated.
     *
     * @param IncomingContext $val The incomingContext
     *
@@ -301,7 +307,7 @@ class Call extends Entity
     
     /**
     * Gets the mediaConfig
-    * The media configuration. Required.
+    * The media configuration. Required information for creating peer to peer calls or joining meetings.
     *
     * @return MediaConfig The mediaConfig
     */
@@ -320,7 +326,7 @@ class Call extends Entity
     
     /**
     * Sets the mediaConfig
-    * The media configuration. Required.
+    * The media configuration. Required information for creating peer to peer calls or joining meetings.
     *
     * @param MediaConfig $val The mediaConfig
     *
@@ -367,6 +373,7 @@ class Call extends Entity
     
     /**
     * Gets the meetingCapability
+    * Contains the capabilities of a meeting. Read-only.
     *
     * @return MeetingCapability The meetingCapability
     */
@@ -385,6 +392,7 @@ class Call extends Entity
     
     /**
     * Sets the meetingCapability
+    * Contains the capabilities of a meeting. Read-only.
     *
     * @param MeetingCapability $val The meetingCapability
     *
@@ -398,7 +406,7 @@ class Call extends Entity
     
     /**
     * Gets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @return MeetingInfo The meetingInfo
     */
@@ -417,7 +425,7 @@ class Call extends Entity
     
     /**
     * Sets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @param MeetingInfo $val The meetingInfo
     *
@@ -774,6 +782,7 @@ class Call extends Entity
     
     /**
     * Gets the transcription
+    * The transcription information for the call. Read-only.
     *
     * @return CallTranscriptionInfo The transcription
     */
@@ -792,6 +801,7 @@ class Call extends Entity
     
     /**
     * Sets the transcription
+    * The transcription information for the call. Read-only.
     *
     * @param CallTranscriptionInfo $val The transcription
     *
@@ -806,6 +816,7 @@ class Call extends Entity
 
      /** 
      * Gets the audioRoutingGroups
+    * Read-only. Nullable.
      *
      * @return array The audioRoutingGroups
      */
@@ -820,6 +831,7 @@ class Call extends Entity
     
     /** 
     * Sets the audioRoutingGroups
+    * Read-only. Nullable.
     *
     * @param AudioRoutingGroup $val The audioRoutingGroups
     *

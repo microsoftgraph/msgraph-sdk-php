@@ -26,6 +26,7 @@ class AgreementAcceptance extends Entity
 {
     /**
     * Gets the agreementFileId
+    * ID of the agreement file accepted by the user.
     *
     * @return string The agreementFileId
     */
@@ -40,6 +41,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the agreementFileId
+    * ID of the agreement file accepted by the user.
     *
     * @param string $val The agreementFileId
     *
@@ -53,6 +55,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the agreementId
+    * ID of the agreement.
     *
     * @return string The agreementId
     */
@@ -67,6 +70,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the agreementId
+    * ID of the agreement.
     *
     * @param string $val The agreementId
     *
@@ -80,6 +84,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the deviceDisplayName
+    * The display name of the device used for accepting the agreement.
     *
     * @return string The deviceDisplayName
     */
@@ -94,6 +99,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the deviceDisplayName
+    * The display name of the device used for accepting the agreement.
     *
     * @param string $val The deviceDisplayName
     *
@@ -107,6 +113,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the deviceId
+    * The unique identifier of the device used for accepting the agreement.
     *
     * @return string The deviceId
     */
@@ -121,6 +128,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the deviceId
+    * The unique identifier of the device used for accepting the agreement.
     *
     * @param string $val The deviceId
     *
@@ -134,6 +142,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the deviceOSType
+    * The operating system used for accepting the agreement.
     *
     * @return string The deviceOSType
     */
@@ -148,6 +157,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the deviceOSType
+    * The operating system used for accepting the agreement.
     *
     * @param string $val The deviceOSType
     *
@@ -161,6 +171,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the deviceOSVersion
+    * The operating system version of the device used for accepting the agreement.
     *
     * @return string The deviceOSVersion
     */
@@ -175,6 +186,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the deviceOSVersion
+    * The operating system version of the device used for accepting the agreement.
     *
     * @param string $val The deviceOSVersion
     *
@@ -188,6 +200,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the expirationDateTime
+    * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The expirationDateTime
     */
@@ -206,6 +219,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the expirationDateTime
+    * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -219,6 +233,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the recordedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The recordedDateTime
     */
@@ -237,6 +252,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the recordedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The recordedDateTime
     *
@@ -250,6 +266,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the state
+    * Possible values are: accepted, declined.
     *
     * @return AgreementAcceptanceState The state
     */
@@ -268,6 +285,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the state
+    * Possible values are: accepted, declined.
     *
     * @param AgreementAcceptanceState $val The state
     *
@@ -281,6 +299,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the userDisplayName
+    * Display name of the user when the acceptance was recorded.
     *
     * @return string The userDisplayName
     */
@@ -295,6 +314,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the userDisplayName
+    * Display name of the user when the acceptance was recorded.
     *
     * @param string $val The userDisplayName
     *
@@ -308,6 +328,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the userEmail
+    * Email of the user when the acceptance was recorded.
     *
     * @return string The userEmail
     */
@@ -322,6 +343,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the userEmail
+    * Email of the user when the acceptance was recorded.
     *
     * @param string $val The userEmail
     *
@@ -335,6 +357,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the userId
+    * ID of the user who accepted the agreement.
     *
     * @return string The userId
     */
@@ -349,6 +372,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the userId
+    * ID of the user who accepted the agreement.
     *
     * @param string $val The userId
     *
@@ -362,6 +386,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Gets the userPrincipalName
+    * UPN of the user when the acceptance was recorded.
     *
     * @return string The userPrincipalName
     */
@@ -376,6 +401,7 @@ class AgreementAcceptance extends Entity
     
     /**
     * Sets the userPrincipalName
+    * UPN of the user when the acceptance was recorded.
     *
     * @param string $val The userPrincipalName
     *

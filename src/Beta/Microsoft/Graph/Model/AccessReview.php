@@ -26,6 +26,7 @@ class AccessReview extends Entity
 {
     /**
     * Gets the businessFlowTemplateId
+    * The business flow template identifier. Required on create.  This value is case sensitive.
     *
     * @return string The businessFlowTemplateId
     */
@@ -40,6 +41,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the businessFlowTemplateId
+    * The business flow template identifier. Required on create.  This value is case sensitive.
     *
     * @param string $val The businessFlowTemplateId
     *
@@ -53,6 +55,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the createdBy
+    * The user who created this review.
     *
     * @return UserIdentity The createdBy
     */
@@ -71,6 +74,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the createdBy
+    * The user who created this review.
     *
     * @param UserIdentity $val The createdBy
     *
@@ -84,6 +88,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the description
+    * The description provided by the access review creator, to show to the reviewers.
     *
     * @return string The description
     */
@@ -98,6 +103,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the description
+    * The description provided by the access review creator, to show to the reviewers.
     *
     * @param string $val The description
     *
@@ -111,6 +117,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the displayName
+    * The access review name. Required on create.
     *
     * @return string The displayName
     */
@@ -125,6 +132,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the displayName
+    * The access review name. Required on create.
     *
     * @param string $val The displayName
     *
@@ -138,6 +146,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the endDateTime
+    * The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
     *
     * @return \DateTime The endDateTime
     */
@@ -156,6 +165,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the endDateTime
+    * The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -169,6 +179,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the reviewedEntity
+    * The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
     *
     * @return Identity The reviewedEntity
     */
@@ -187,6 +198,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the reviewedEntity
+    * The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
     *
     * @param Identity $val The reviewedEntity
     *
@@ -200,6 +212,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the reviewerType
+    * The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
     *
     * @return string The reviewerType
     */
@@ -214,6 +227,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the reviewerType
+    * The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
     *
     * @param string $val The reviewerType
     *
@@ -227,6 +241,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the settings
+    * The settings of an accessReview, see type definition below.
     *
     * @return AccessReviewSettings The settings
     */
@@ -245,6 +260,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the settings
+    * The settings of an accessReview, see type definition below.
     *
     * @param AccessReviewSettings $val The settings
     *
@@ -258,6 +274,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the startDateTime
+    * The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
     *
     * @return \DateTime The startDateTime
     */
@@ -276,6 +293,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the startDateTime
+    * The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -289,6 +307,7 @@ class AccessReview extends Entity
     
     /**
     * Gets the status
+    * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
     *
     * @return string The status
     */
@@ -303,6 +322,7 @@ class AccessReview extends Entity
     
     /**
     * Sets the status
+    * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
     *
     * @param string $val The status
     *
@@ -317,6 +337,7 @@ class AccessReview extends Entity
 
      /** 
      * Gets the decisions
+    * The collection of decisions for this access review.
      *
      * @return array The decisions
      */
@@ -331,6 +352,7 @@ class AccessReview extends Entity
     
     /** 
     * Sets the decisions
+    * The collection of decisions for this access review.
     *
     * @param AccessReviewDecision $val The decisions
     *
@@ -345,6 +367,7 @@ class AccessReview extends Entity
 
      /** 
      * Gets the instances
+    * The collection of access reviews instances past, present and future, if this object is a recurring access review.
      *
      * @return array The instances
      */
@@ -359,6 +382,7 @@ class AccessReview extends Entity
     
     /** 
     * Sets the instances
+    * The collection of access reviews instances past, present and future, if this object is a recurring access review.
     *
     * @param AccessReview $val The instances
     *
@@ -373,6 +397,7 @@ class AccessReview extends Entity
 
      /** 
      * Gets the myDecisions
+    * The collection of decisions for the caller, if the caller is a reviewer.
      *
      * @return array The myDecisions
      */
@@ -387,6 +412,7 @@ class AccessReview extends Entity
     
     /** 
     * Sets the myDecisions
+    * The collection of decisions for the caller, if the caller is a reviewer.
     *
     * @param AccessReviewDecision $val The myDecisions
     *
@@ -401,6 +427,7 @@ class AccessReview extends Entity
 
      /** 
      * Gets the reviewers
+    * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
      *
      * @return array The reviewers
      */
@@ -415,6 +442,7 @@ class AccessReview extends Entity
     
     /** 
     * Sets the reviewers
+    * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
     *
     * @param AccessReviewReviewer $val The reviewers
     *

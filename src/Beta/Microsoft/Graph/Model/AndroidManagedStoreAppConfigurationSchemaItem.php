@@ -26,7 +26,7 @@ class AndroidManagedStoreAppConfigurationSchemaItem extends Entity
 
     /**
     * Gets the dataType
-    * The type of value this item describes
+    * The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
     *
     * @return AndroidManagedStoreAppConfigurationSchemaItemDataType The dataType
     */
@@ -45,7 +45,7 @@ class AndroidManagedStoreAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the dataType
-    * The type of value this item describes
+    * The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
     *
     * @param AndroidManagedStoreAppConfigurationSchemaItemDataType $val The value to assign to the dataType
     *

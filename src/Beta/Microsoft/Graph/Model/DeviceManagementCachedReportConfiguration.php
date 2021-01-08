@@ -237,7 +237,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     
     /**
     * Gets the status
-    * Status of the cached report
+    * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @return DeviceManagementReportStatus The status
     */
@@ -256,7 +256,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     
     /**
     * Sets the status
-    * Status of the cached report
+    * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @param DeviceManagementReportStatus $val The status
     *

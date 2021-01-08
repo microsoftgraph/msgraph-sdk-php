@@ -26,6 +26,7 @@ class ErrorDetail extends Entity
 
     /**
     * Gets the details
+    * A collection of inner errors, if any. Read-only, nullable.
     *
     * @return InnerErrorDetail The details
     */
@@ -44,6 +45,7 @@ class ErrorDetail extends Entity
 
     /**
     * Sets the details
+    * A collection of inner errors, if any. Read-only, nullable.
     *
     * @param InnerErrorDetail $val The value to assign to the details
     *
@@ -56,6 +58,7 @@ class ErrorDetail extends Entity
     }
     /**
     * Gets the errorCode
+    * The error code associated with the error, if any. Read-only, nullable.
     *
     * @return string The errorCode
     */
@@ -70,6 +73,7 @@ class ErrorDetail extends Entity
 
     /**
     * Sets the errorCode
+    * The error code associated with the error, if any. Read-only, nullable.
     *
     * @param string $val The value of the errorCode
     *
@@ -82,6 +86,7 @@ class ErrorDetail extends Entity
     }
     /**
     * Gets the message
+    * The human-readable error message. Read-only.
     *
     * @return string The message
     */
@@ -96,6 +101,7 @@ class ErrorDetail extends Entity
 
     /**
     * Sets the message
+    * The human-readable error message. Read-only.
     *
     * @param string $val The value of the message
     *

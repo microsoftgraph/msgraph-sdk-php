@@ -26,6 +26,7 @@ class GovernanceSubject extends Entity
 {
     /**
     * Gets the displayName
+    * The display name of the subject.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class GovernanceSubject extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the subject.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class GovernanceSubject extends Entity
     
     /**
     * Gets the email
+    * The email address of the user subject. If the subject is in other types, it is empty.
     *
     * @return string The email
     */
@@ -67,6 +70,7 @@ class GovernanceSubject extends Entity
     
     /**
     * Sets the email
+    * The email address of the user subject. If the subject is in other types, it is empty.
     *
     * @param string $val The email
     *
@@ -80,6 +84,7 @@ class GovernanceSubject extends Entity
     
     /**
     * Gets the principalName
+    * The principal name of the user subject. If the subject is in other types, it is empty.
     *
     * @return string The principalName
     */
@@ -94,6 +99,7 @@ class GovernanceSubject extends Entity
     
     /**
     * Sets the principalName
+    * The principal name of the user subject. If the subject is in other types, it is empty.
     *
     * @param string $val The principalName
     *
@@ -107,6 +113,7 @@ class GovernanceSubject extends Entity
     
     /**
     * Gets the type
+    * The type of the subject. The value can be User, Group, and ServicePrincipal.
     *
     * @return string The type
     */
@@ -121,6 +128,7 @@ class GovernanceSubject extends Entity
     
     /**
     * Sets the type
+    * The type of the subject. The value can be User, Group, and ServicePrincipal.
     *
     * @param string $val The type
     *

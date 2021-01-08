@@ -25,6 +25,7 @@ class AccessReviewSettings extends Entity
 {
     /**
     * Gets the accessRecommendationsEnabled
+    * Indicates whether showing recommendations to reviewers is enabled.
     *
     * @return bool The accessRecommendationsEnabled
     */
@@ -39,6 +40,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the accessRecommendationsEnabled
+    * Indicates whether showing recommendations to reviewers is enabled.
     *
     * @param bool $val The value of the accessRecommendationsEnabled
     *
@@ -51,6 +53,7 @@ class AccessReviewSettings extends Entity
     }
     /**
     * Gets the activityDurationInDays
+    * The number of days of user activities to show to reviewers.
     *
     * @return int The activityDurationInDays
     */
@@ -65,6 +68,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the activityDurationInDays
+    * The number of days of user activities to show to reviewers.
     *
     * @param int $val The value of the activityDurationInDays
     *
@@ -77,6 +81,7 @@ class AccessReviewSettings extends Entity
     }
     /**
     * Gets the autoApplyReviewResultsEnabled
+    * Indicates whether the auto-apply capability, to automatically change the target object access resource, is enabled.  If not enabled, a user must, after the review completes, apply the access review.
     *
     * @return bool The autoApplyReviewResultsEnabled
     */
@@ -91,6 +96,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the autoApplyReviewResultsEnabled
+    * Indicates whether the auto-apply capability, to automatically change the target object access resource, is enabled.  If not enabled, a user must, after the review completes, apply the access review.
     *
     * @param bool $val The value of the autoApplyReviewResultsEnabled
     *
@@ -103,6 +109,7 @@ class AccessReviewSettings extends Entity
     }
     /**
     * Gets the autoReviewEnabled
+    * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
     *
     * @return bool The autoReviewEnabled
     */
@@ -117,6 +124,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the autoReviewEnabled
+    * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
     *
     * @param bool $val The value of the autoReviewEnabled
     *
@@ -130,6 +138,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Gets the autoReviewSettings
+    * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
     *
     * @return AutoReviewSettings The autoReviewSettings
     */
@@ -148,6 +157,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the autoReviewSettings
+    * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
     *
     * @param AutoReviewSettings $val The value to assign to the autoReviewSettings
     *
@@ -160,6 +170,7 @@ class AccessReviewSettings extends Entity
     }
     /**
     * Gets the justificationRequiredOnApproval
+    * Indicates whether reviewers are required to provide a justification when reviewing access.
     *
     * @return bool The justificationRequiredOnApproval
     */
@@ -174,6 +185,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the justificationRequiredOnApproval
+    * Indicates whether reviewers are required to provide a justification when reviewing access.
     *
     * @param bool $val The value of the justificationRequiredOnApproval
     *
@@ -186,6 +198,7 @@ class AccessReviewSettings extends Entity
     }
     /**
     * Gets the mailNotificationsEnabled
+    * Indicates whether sending mails to reviewers and the review creator is enabled.
     *
     * @return bool The mailNotificationsEnabled
     */
@@ -200,6 +213,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the mailNotificationsEnabled
+    * Indicates whether sending mails to reviewers and the review creator is enabled.
     *
     * @param bool $val The value of the mailNotificationsEnabled
     *
@@ -213,6 +227,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Gets the recurrenceSettings
+    * Detailed settings for recurrence.
     *
     * @return AccessReviewRecurrenceSettings The recurrenceSettings
     */
@@ -231,6 +246,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the recurrenceSettings
+    * Detailed settings for recurrence.
     *
     * @param AccessReviewRecurrenceSettings $val The value to assign to the recurrenceSettings
     *
@@ -243,6 +259,7 @@ class AccessReviewSettings extends Entity
     }
     /**
     * Gets the remindersEnabled
+    * Indicates whether sending reminder emails to reviewers is enabled.
     *
     * @return bool The remindersEnabled
     */
@@ -257,6 +274,7 @@ class AccessReviewSettings extends Entity
 
     /**
     * Sets the remindersEnabled
+    * Indicates whether sending reminder emails to reviewers is enabled.
     *
     * @param bool $val The value of the remindersEnabled
     *

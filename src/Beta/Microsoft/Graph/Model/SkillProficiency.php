@@ -26,6 +26,7 @@ class SkillProficiency extends ItemFacet
 {
     /**
     * Gets the categories
+    * Contains categories a user has associated with the skill (for example, personal, professional, hobby).
     *
     * @return string The categories
     */
@@ -40,6 +41,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Sets the categories
+    * Contains categories a user has associated with the skill (for example, personal, professional, hobby).
     *
     * @param string $val The categories
     *
@@ -53,6 +55,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Gets the collaborationTags
+    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @return string The collaborationTags
     */
@@ -67,6 +70,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Sets the collaborationTags
+    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @param string $val The collaborationTags
     *
@@ -80,6 +84,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Gets the displayName
+    * Contains a friendly name for the skill.
     *
     * @return string The displayName
     */
@@ -94,6 +99,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Sets the displayName
+    * Contains a friendly name for the skill.
     *
     * @param string $val The displayName
     *
@@ -107,6 +113,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Gets the proficiency
+    * Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
     *
     * @return SkillProficiencyLevel The proficiency
     */
@@ -125,6 +132,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Sets the proficiency
+    * Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
     *
     * @param SkillProficiencyLevel $val The proficiency
     *
@@ -138,6 +146,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Gets the webUrl
+    * Contains a link to an information source about the skill.
     *
     * @return string The webUrl
     */
@@ -152,6 +161,7 @@ class SkillProficiency extends ItemFacet
     
     /**
     * Sets the webUrl
+    * Contains a link to an information source about the skill.
     *
     * @param string $val The webUrl
     *

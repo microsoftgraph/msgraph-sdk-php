@@ -26,6 +26,7 @@ class BookingBusiness extends BookingNamedEntity
 {
     /**
     * Gets the address
+    * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
     *
     * @return PhysicalAddress The address
     */
@@ -44,6 +45,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the address
+    * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
     *
     * @param PhysicalAddress $val The address
     *
@@ -58,6 +60,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the businessHours
+    * The hours of operation for the business.
      *
      * @return array The businessHours
      */
@@ -72,6 +75,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the businessHours
+    * The hours of operation for the business.
     *
     * @param BookingWorkHours $val The businessHours
     *
@@ -85,6 +89,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Gets the businessType
+    * The type of business.
     *
     * @return string The businessType
     */
@@ -99,6 +104,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the businessType
+    * The type of business.
     *
     * @param string $val The businessType
     *
@@ -112,6 +118,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Gets the defaultCurrencyIso
+    * The code for the currency that the business operates in on Microsoft Bookings.
     *
     * @return string The defaultCurrencyIso
     */
@@ -126,6 +133,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the defaultCurrencyIso
+    * The code for the currency that the business operates in on Microsoft Bookings.
     *
     * @param string $val The defaultCurrencyIso
     *
@@ -139,6 +147,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Gets the email
+    * The email address for the business.
     *
     * @return string The email
     */
@@ -153,6 +162,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the email
+    * The email address for the business.
     *
     * @param string $val The email
     *
@@ -166,6 +176,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Gets the isPublished
+    * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
     *
     * @return bool The isPublished
     */
@@ -180,6 +191,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the isPublished
+    * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
     *
     * @param bool $val The isPublished
     *
@@ -193,6 +205,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Gets the phone
+    * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
     *
     * @return string The phone
     */
@@ -207,6 +220,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the phone
+    * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
     *
     * @param string $val The phone
     *
@@ -220,6 +234,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Gets the publicUrl
+    * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
     *
     * @return string The publicUrl
     */
@@ -234,6 +249,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the publicUrl
+    * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
     *
     * @param string $val The publicUrl
     *
@@ -247,6 +263,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Gets the schedulingPolicy
+    * Specifies how bookings can be created for this business.
     *
     * @return BookingSchedulingPolicy The schedulingPolicy
     */
@@ -265,6 +282,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /**
     * Sets the schedulingPolicy
+    * Specifies how bookings can be created for this business.
     *
     * @param BookingSchedulingPolicy $val The schedulingPolicy
     *
@@ -308,7 +326,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the appointments
-    * All appointments in this business.
+    * All the appointments of this business. Read-only. Nullable.
      *
      * @return array The appointments
      */
@@ -323,7 +341,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the appointments
-    * All appointments in this business.
+    * All the appointments of this business. Read-only. Nullable.
     *
     * @param BookingAppointment $val The appointments
     *
@@ -338,7 +356,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the calendarView
-    * A calendar view of appointments in this business.
+    * The set of appointments of this business in a specified date range. Read-only. Nullable.
      *
      * @return array The calendarView
      */
@@ -353,7 +371,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the calendarView
-    * A calendar view of appointments in this business.
+    * The set of appointments of this business in a specified date range. Read-only. Nullable.
     *
     * @param BookingAppointment $val The calendarView
     *
@@ -368,7 +386,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the customers
-    * All customers of this business.
+    * All the customers of this business. Read-only. Nullable.
      *
      * @return array The customers
      */
@@ -383,7 +401,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the customers
-    * All customers of this business.
+    * All the customers of this business. Read-only. Nullable.
     *
     * @param BookingCustomer $val The customers
     *
@@ -398,7 +416,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the services
-    * All services offered by this business.
+    * All the services offered by this business. Read-only. Nullable.
      *
      * @return array The services
      */
@@ -413,7 +431,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the services
-    * All services offered by this business.
+    * All the services offered by this business. Read-only. Nullable.
     *
     * @param BookingService $val The services
     *
@@ -428,7 +446,7 @@ class BookingBusiness extends BookingNamedEntity
 
      /** 
      * Gets the staffMembers
-    * All staff members that provides services in this business.
+    * All the staff members that provide services in this business. Read-only. Nullable.
      *
      * @return array The staffMembers
      */
@@ -443,7 +461,7 @@ class BookingBusiness extends BookingNamedEntity
     
     /** 
     * Sets the staffMembers
-    * All staff members that provides services in this business.
+    * All the staff members that provide services in this business. Read-only. Nullable.
     *
     * @param BookingStaffMember $val The staffMembers
     *

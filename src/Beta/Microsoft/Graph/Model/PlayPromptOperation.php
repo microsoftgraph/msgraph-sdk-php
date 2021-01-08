@@ -26,6 +26,7 @@ class PlayPromptOperation extends CommsOperation
 {
     /**
     * Gets the completionReason
+    * Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
     *
     * @return PlayPromptCompletionReason The completionReason
     */
@@ -44,6 +45,7 @@ class PlayPromptOperation extends CommsOperation
     
     /**
     * Sets the completionReason
+    * Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
     *
     * @param PlayPromptCompletionReason $val The completionReason
     *

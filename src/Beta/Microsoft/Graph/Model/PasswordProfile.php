@@ -25,7 +25,7 @@ class PasswordProfile extends Entity
 {
     /**
     * Gets the forceChangePasswordNextSignIn
-    * true if the user must change her password on the next login; otherwise false.
+    * If true, at next sign-in, the user must change their password. After a password change, this property will be automatically reset to false. If not set, default is false.
     *
     * @return bool The forceChangePasswordNextSignIn
     */
@@ -40,7 +40,7 @@ class PasswordProfile extends Entity
 
     /**
     * Sets the forceChangePasswordNextSignIn
-    * true if the user must change her password on the next login; otherwise false.
+    * If true, at next sign-in, the user must change their password. After a password change, this property will be automatically reset to false. If not set, default is false.
     *
     * @param bool $val The value of the forceChangePasswordNextSignIn
     *

@@ -26,6 +26,7 @@ class AccessPackageResourceRole extends Entity
 {
     /**
     * Gets the description
+    * A description for the resource role.
     *
     * @return string The description
     */
@@ -40,6 +41,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Sets the description
+    * A description for the resource role.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Gets the displayName
+    * The display name of the resource role such as the role defined by the application.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the resource role such as the role defined by the application.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Gets the originId
+    * The unique identifier of the resource role in the origin system.
     *
     * @return string The originId
     */
@@ -94,6 +99,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Sets the originId
+    * The unique identifier of the resource role in the origin system.
     *
     * @param string $val The originId
     *
@@ -107,6 +113,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Gets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @return string The originSystem
     */
@@ -121,6 +128,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Sets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @param string $val The originSystem
     *
@@ -134,6 +142,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Gets the accessPackageResource
+    * Read-only. Nullable.
     *
     * @return AccessPackageResource The accessPackageResource
     */
@@ -152,6 +161,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Sets the accessPackageResource
+    * Read-only. Nullable.
     *
     * @param AccessPackageResource $val The accessPackageResource
     *

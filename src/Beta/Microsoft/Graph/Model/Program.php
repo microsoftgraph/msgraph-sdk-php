@@ -26,6 +26,7 @@ class Program extends Entity
 {
     /**
     * Gets the description
+    * The description of the program.
     *
     * @return string The description
     */
@@ -40,6 +41,7 @@ class Program extends Entity
     
     /**
     * Sets the description
+    * The description of the program.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class Program extends Entity
     
     /**
     * Gets the displayName
+    * The name of the program.  Required on create.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class Program extends Entity
     
     /**
     * Sets the displayName
+    * The name of the program.  Required on create.
     *
     * @param string $val The displayName
     *
@@ -81,6 +85,7 @@ class Program extends Entity
 
      /** 
      * Gets the controls
+    * Controls associated with the program.
      *
      * @return array The controls
      */
@@ -95,6 +100,7 @@ class Program extends Entity
     
     /** 
     * Sets the controls
+    * Controls associated with the program.
     *
     * @param ProgramControl $val The controls
     *

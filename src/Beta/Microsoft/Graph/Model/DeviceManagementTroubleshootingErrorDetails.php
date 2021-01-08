@@ -25,6 +25,7 @@ class DeviceManagementTroubleshootingErrorDetails extends Entity
 {
     /**
     * Gets the context
+    * Not yet documented
     *
     * @return string The context
     */
@@ -39,6 +40,7 @@ class DeviceManagementTroubleshootingErrorDetails extends Entity
 
     /**
     * Sets the context
+    * Not yet documented
     *
     * @param string $val The value of the context
     *
@@ -51,6 +53,7 @@ class DeviceManagementTroubleshootingErrorDetails extends Entity
     }
     /**
     * Gets the failure
+    * Not yet documented
     *
     * @return string The failure
     */
@@ -65,6 +68,7 @@ class DeviceManagementTroubleshootingErrorDetails extends Entity
 
     /**
     * Sets the failure
+    * Not yet documented
     *
     * @param string $val The value of the failure
     *

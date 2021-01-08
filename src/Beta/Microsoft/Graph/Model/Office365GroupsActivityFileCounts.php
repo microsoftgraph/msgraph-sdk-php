@@ -26,6 +26,7 @@ class Office365GroupsActivityFileCounts extends Entity
 {
     /**
     * Gets the active
+    * The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
     *
     * @return int The active
     */
@@ -40,6 +41,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Sets the active
+    * The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
     *
     * @param int $val The active
     *
@@ -53,6 +55,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Gets the reportDate
+    * The date on which a number of files were active in the group's SharePoint site.
     *
     * @return \DateTime The reportDate
     */
@@ -71,6 +74,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Sets the reportDate
+    * The date on which a number of files were active in the group's SharePoint site.
     *
     * @param \DateTime $val The reportDate
     *
@@ -84,6 +88,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -98,6 +103,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -111,6 +117,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -129,6 +136,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -142,6 +150,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Gets the total
+    * The total number of files in the group's SharePoint document library.
     *
     * @return int The total
     */
@@ -156,6 +165,7 @@ class Office365GroupsActivityFileCounts extends Entity
     
     /**
     * Sets the total
+    * The total number of files in the group's SharePoint document library.
     *
     * @param int $val The total
     *

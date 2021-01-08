@@ -25,7 +25,7 @@ class HardwareInformation extends Entity
 {
     /**
     * Gets the batteryChargeCycles
-    * The number of charge cycles the device???s current battery has gone through. Valid values 0 to 2147483647
+    * The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
     *
     * @return int The batteryChargeCycles
     */
@@ -40,7 +40,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the batteryChargeCycles
-    * The number of charge cycles the device???s current battery has gone through. Valid values 0 to 2147483647
+    * The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
     *
     * @param int $val The value of the batteryChargeCycles
     *
@@ -53,7 +53,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the batteryHealthPercentage
-    * The device???s current battery???s health percentage. Valid values 0 to 100
+    * The device’s current battery’s health percentage. Valid values 0 to 100
     *
     * @return int The batteryHealthPercentage
     */
@@ -68,7 +68,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the batteryHealthPercentage
-    * The device???s current battery???s health percentage. Valid values 0 to 100
+    * The device’s current battery’s health percentage. Valid values 0 to 100
     *
     * @param int $val The value of the batteryHealthPercentage
     *
@@ -81,7 +81,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the batterySerialNumber
-    * The serial number of the device???s current battery
+    * The serial number of the device’s current battery
     *
     * @return string The batterySerialNumber
     */
@@ -96,7 +96,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the batterySerialNumber
-    * The serial number of the device???s current battery
+    * The serial number of the device’s current battery
     *
     * @param string $val The value of the batterySerialNumber
     *
@@ -137,7 +137,7 @@ class HardwareInformation extends Entity
     }
     /**
     * Gets the deviceFullQualifiedDomainName
-    * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. 
+    * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
     *
     * @return string The deviceFullQualifiedDomainName
     */
@@ -152,7 +152,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceFullQualifiedDomainName
-    * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. 
+    * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
     *
     * @param string $val The value of the deviceFullQualifiedDomainName
     *
@@ -166,7 +166,7 @@ class HardwareInformation extends Entity
 
     /**
     * Gets the deviceGuardLocalSystemAuthorityCredentialGuardState
-    * Local System Authority (LSA) credential guard status. 
+    * Local System Authority (LSA) credential guard status. . Possible values are: running, rebootRequired, notLicensed, notConfigured, virtualizationBasedSecurityNotRunning.
     *
     * @return DeviceGuardLocalSystemAuthorityCredentialGuardState The deviceGuardLocalSystemAuthorityCredentialGuardState
     */
@@ -185,7 +185,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceGuardLocalSystemAuthorityCredentialGuardState
-    * Local System Authority (LSA) credential guard status. 
+    * Local System Authority (LSA) credential guard status. . Possible values are: running, rebootRequired, notLicensed, notConfigured, virtualizationBasedSecurityNotRunning.
     *
     * @param DeviceGuardLocalSystemAuthorityCredentialGuardState $val The value to assign to the deviceGuardLocalSystemAuthorityCredentialGuardState
     *
@@ -199,7 +199,7 @@ class HardwareInformation extends Entity
 
     /**
     * Gets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState
-    * Virtualization-based security hardware requirement status.
+    * Virtualization-based security hardware requirement status. Possible values are: meetHardwareRequirements, secureBootRequired, dmaProtectionRequired, hyperVNotSupportedForGuestVM, hyperVNotAvailable.
     *
     * @return DeviceGuardVirtualizationBasedSecurityHardwareRequirementState The deviceGuardVirtualizationBasedSecurityHardwareRequirementState
     */
@@ -218,7 +218,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState
-    * Virtualization-based security hardware requirement status.
+    * Virtualization-based security hardware requirement status. Possible values are: meetHardwareRequirements, secureBootRequired, dmaProtectionRequired, hyperVNotSupportedForGuestVM, hyperVNotAvailable.
     *
     * @param DeviceGuardVirtualizationBasedSecurityHardwareRequirementState $val The value to assign to the deviceGuardVirtualizationBasedSecurityHardwareRequirementState
     *
@@ -232,7 +232,7 @@ class HardwareInformation extends Entity
 
     /**
     * Gets the deviceGuardVirtualizationBasedSecurityState
-    * Virtualization-based security status. 
+    * Virtualization-based security status. . Possible values are: running, rebootRequired, require64BitArchitecture, notLicensed, notConfigured, doesNotMeetHardwareRequirements, other.
     *
     * @return DeviceGuardVirtualizationBasedSecurityState The deviceGuardVirtualizationBasedSecurityState
     */
@@ -251,7 +251,7 @@ class HardwareInformation extends Entity
 
     /**
     * Sets the deviceGuardVirtualizationBasedSecurityState
-    * Virtualization-based security status. 
+    * Virtualization-based security status. . Possible values are: running, rebootRequired, require64BitArchitecture, notLicensed, notConfigured, doesNotMeetHardwareRequirements, other.
     *
     * @param DeviceGuardVirtualizationBasedSecurityState $val The value to assign to the deviceGuardVirtualizationBasedSecurityState
     *

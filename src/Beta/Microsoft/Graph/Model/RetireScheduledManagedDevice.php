@@ -26,7 +26,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Gets the complianceState
-    * Managed Device ComplianceStatus
+    * Managed Device ComplianceStatus. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @return ComplianceStatus The complianceState
     */
@@ -45,7 +45,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Sets the complianceState
-    * Managed Device ComplianceStatus
+    * Managed Device ComplianceStatus. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @param ComplianceStatus $val The value to assign to the complianceState
     *
@@ -115,7 +115,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Gets the deviceType
-    * Managed Device Device Type
+    * Managed Device Device Type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
     *
     * @return DeviceType The deviceType
     */
@@ -134,7 +134,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Sets the deviceType
-    * Managed Device Device Type
+    * Managed Device Device Type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
     *
     * @param DeviceType $val The value to assign to the deviceType
     *
@@ -232,7 +232,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Gets the managementAgent
-    * Managed Device ManagementAgentType
+    * Managed Device ManagementAgentType. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, windowsManagementCloudApi.
     *
     * @return ManagementAgentType The managementAgent
     */
@@ -251,7 +251,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Sets the managementAgent
-    * Managed Device ManagementAgentType
+    * Managed Device ManagementAgentType. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, windowsManagementCloudApi.
     *
     * @param ManagementAgentType $val The value to assign to the managementAgent
     *
@@ -265,7 +265,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Gets the ownerType
-    * Managed Device ManagedDeviceOwnerType
+    * Managed Device ManagedDeviceOwnerType. Possible values are: unknown, company, personal.
     *
     * @return ManagedDeviceOwnerType The ownerType
     */
@@ -284,7 +284,7 @@ class RetireScheduledManagedDevice extends Entity
 
     /**
     * Sets the ownerType
-    * Managed Device ManagedDeviceOwnerType
+    * Managed Device ManagedDeviceOwnerType. Possible values are: unknown, company, personal.
     *
     * @param ManagedDeviceOwnerType $val The value to assign to the ownerType
     *

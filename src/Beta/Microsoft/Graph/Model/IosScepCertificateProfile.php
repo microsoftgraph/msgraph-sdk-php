@@ -26,7 +26,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 {
     /**
     * Gets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @return CertificateStore The certificateStore
     */
@@ -45,7 +45,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @param CertificateStore $val The certificateStore
     *
@@ -60,7 +60,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 
      /** 
      * Gets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: http://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
      *
      * @return array The customSubjectAlternativeNames
      */
@@ -75,7 +75,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /** 
     * Sets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: http://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
     *
     * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *
@@ -119,7 +119,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the keySize
-    * SCEP Key Size.
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @return KeySize The keySize
     */
@@ -138,7 +138,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the keySize
-    * SCEP Key Size.
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @param KeySize $val The keySize
     *
@@ -152,7 +152,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Gets the keyUsage
-    * SCEP Key Usage.
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @return KeyUsages The keyUsage
     */
@@ -171,7 +171,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /**
     * Sets the keyUsage
-    * SCEP Key Usage.
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @param KeyUsages $val The keyUsage
     *

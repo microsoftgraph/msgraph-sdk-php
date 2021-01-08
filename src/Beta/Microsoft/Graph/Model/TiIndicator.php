@@ -26,6 +26,7 @@ class TiIndicator extends Entity
 {
     /**
     * Gets the action
+    * The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
     *
     * @return TiAction The action
     */
@@ -44,6 +45,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the action
+    * The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
     *
     * @param TiAction $val The action
     *
@@ -57,6 +59,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the activityGroupNames
+    * The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
     *
     * @return string The activityGroupNames
     */
@@ -71,6 +74,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the activityGroupNames
+    * The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
     *
     * @param string $val The activityGroupNames
     *
@@ -84,6 +88,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the additionalInformation
+    * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
     *
     * @return string The additionalInformation
     */
@@ -98,6 +103,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the additionalInformation
+    * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
     *
     * @param string $val The additionalInformation
     *
@@ -111,6 +117,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the azureTenantId
+    * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
     *
     * @return string The azureTenantId
     */
@@ -125,6 +132,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the azureTenantId
+    * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
     *
     * @param string $val The azureTenantId
     *
@@ -138,6 +146,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the confidence
+    * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
     *
     * @return int The confidence
     */
@@ -152,6 +161,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the confidence
+    * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
     *
     * @param int $val The confidence
     *
@@ -165,6 +175,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the description
+    * Brief description (100 characters or less) of the threat represented by the indicator. Required.
     *
     * @return string The description
     */
@@ -179,6 +190,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the description
+    * Brief description (100 characters or less) of the threat represented by the indicator. Required.
     *
     * @param string $val The description
     *
@@ -192,6 +204,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the diamondModel
+    * The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
     *
     * @return DiamondModel The diamondModel
     */
@@ -210,6 +223,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the diamondModel
+    * The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
     *
     * @param DiamondModel $val The diamondModel
     *
@@ -493,6 +507,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the expirationDateTime
+    * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -511,6 +526,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the expirationDateTime
+    * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -524,6 +540,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the externalId
+    * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
     *
     * @return string The externalId
     */
@@ -538,6 +555,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the externalId
+    * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
     *
     * @param string $val The externalId
     *
@@ -833,6 +851,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the ingestedDateTime
+    * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The ingestedDateTime
     */
@@ -851,6 +870,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the ingestedDateTime
+    * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The ingestedDateTime
     *
@@ -864,6 +884,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the isActive
+    * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
     *
     * @return bool The isActive
     */
@@ -878,6 +899,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the isActive
+    * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
     *
     * @param bool $val The isActive
     *
@@ -891,6 +913,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the killChain
+    * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
     *
     * @return string The killChain
     */
@@ -905,6 +928,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the killChain
+    * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
     *
     * @param string $val The killChain
     *
@@ -918,6 +942,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the knownFalsePositives
+    * Scenarios in which the indicator may cause false positives. This should be human-readable text.
     *
     * @return string The knownFalsePositives
     */
@@ -932,6 +957,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the knownFalsePositives
+    * Scenarios in which the indicator may cause false positives. This should be human-readable text.
     *
     * @param string $val The knownFalsePositives
     *
@@ -945,6 +971,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the lastReportedDateTime
+    * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastReportedDateTime
     */
@@ -963,6 +990,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the lastReportedDateTime
+    * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -976,6 +1004,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the malwareFamilyNames
+    * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
     *
     * @return string The malwareFamilyNames
     */
@@ -990,6 +1019,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the malwareFamilyNames
+    * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
     *
     * @param string $val The malwareFamilyNames
     *
@@ -1408,6 +1438,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the passiveOnly
+    * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
     *
     * @return bool The passiveOnly
     */
@@ -1422,6 +1453,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the passiveOnly
+    * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
     *
     * @param bool $val The passiveOnly
     *
@@ -1435,6 +1467,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the severity
+    * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
     *
     * @return int The severity
     */
@@ -1449,6 +1482,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the severity
+    * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
     *
     * @param int $val The severity
     *
@@ -1462,6 +1496,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the tags
+    * A JSON array of strings that stores arbitrary tags/keywords.
     *
     * @return string The tags
     */
@@ -1476,6 +1511,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the tags
+    * A JSON array of strings that stores arbitrary tags/keywords.
     *
     * @param string $val The tags
     *
@@ -1489,6 +1525,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the targetProduct
+    * A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
     *
     * @return string The targetProduct
     */
@@ -1503,6 +1540,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the targetProduct
+    * A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
     *
     * @param string $val The targetProduct
     *
@@ -1516,6 +1554,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the threatType
+    * Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
     *
     * @return string The threatType
     */
@@ -1530,6 +1569,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the threatType
+    * Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
     *
     * @param string $val The threatType
     *
@@ -1543,6 +1583,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the tlpLevel
+    * Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
     *
     * @return TlpLevel The tlpLevel
     */
@@ -1561,6 +1602,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the tlpLevel
+    * Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
     *
     * @param TlpLevel $val The tlpLevel
     *

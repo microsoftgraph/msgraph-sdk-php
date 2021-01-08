@@ -25,6 +25,7 @@ class MfaDetail extends Entity
 {
     /**
     * Gets the authDetail
+    * Indicates the MFA auth detail for the corresponding Sign-in activity when the MFA Required is 'Yes'.
     *
     * @return string The authDetail
     */
@@ -39,6 +40,7 @@ class MfaDetail extends Entity
 
     /**
     * Sets the authDetail
+    * Indicates the MFA auth detail for the corresponding Sign-in activity when the MFA Required is 'Yes'.
     *
     * @param string $val The value of the authDetail
     *
@@ -51,6 +53,7 @@ class MfaDetail extends Entity
     }
     /**
     * Gets the authMethod
+    * Indicates the MFA Auth methods (SMS, Phone, Authenticator App are some of the value) for the corresponding sign-in activity when the MFA Required field is 'Yes'.
     *
     * @return string The authMethod
     */
@@ -65,6 +68,7 @@ class MfaDetail extends Entity
 
     /**
     * Sets the authMethod
+    * Indicates the MFA Auth methods (SMS, Phone, Authenticator App are some of the value) for the corresponding sign-in activity when the MFA Required field is 'Yes'.
     *
     * @param string $val The value of the authMethod
     *

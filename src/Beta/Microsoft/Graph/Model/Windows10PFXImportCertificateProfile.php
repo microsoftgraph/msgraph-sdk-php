@@ -26,6 +26,7 @@ class Windows10PFXImportCertificateProfile extends DeviceConfiguration
 {
     /**
     * Gets the keyStorageProvider
+    * Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
     *
     * @return KeyStorageProviderOption The keyStorageProvider
     */
@@ -44,6 +45,7 @@ class Windows10PFXImportCertificateProfile extends DeviceConfiguration
     
     /**
     * Sets the keyStorageProvider
+    * Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
     *
     * @param KeyStorageProviderOption $val The keyStorageProvider
     *

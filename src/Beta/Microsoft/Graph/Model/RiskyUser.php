@@ -26,7 +26,7 @@ class RiskyUser extends Entity
 {
     /**
     * Gets the isDeleted
-    * Indicates whether the user is deleted. Possible values are: true, false
+    * Indicates whether the user is deleted. Possible values are: true, false.
     *
     * @return bool The isDeleted
     */
@@ -41,7 +41,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the isDeleted
-    * Indicates whether the user is deleted. Possible values are: true, false
+    * Indicates whether the user is deleted. Possible values are: true, false.
     *
     * @param bool $val The isDeleted
     *
@@ -55,7 +55,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the isProcessing
-    * Indicates wehther a user's risky state is being processed by the backend
+    * Indicates whether a user's risky state is being processed by the backend.
     *
     * @return bool The isProcessing
     */
@@ -70,7 +70,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the isProcessing
-    * Indicates wehther a user's risky state is being processed by the backend
+    * Indicates whether a user's risky state is being processed by the backend.
     *
     * @param bool $val The isProcessing
     *
@@ -84,7 +84,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
     *
     * @return RiskDetail The riskDetail
     */
@@ -103,7 +103,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
     *
     * @param RiskDetail $val The riskDetail
     *
@@ -117,7 +117,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskLastUpdatedDateTime
-    * The date and time that the risky user was last updated.
+    * The date and time that the risky user was last updated
     *
     * @return \DateTime The riskLastUpdatedDateTime
     */
@@ -136,7 +136,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskLastUpdatedDateTime
-    * The date and time that the risky user was last updated.
+    * The date and time that the risky user was last updated
     *
     * @param \DateTime $val The riskLastUpdatedDateTime
     *
@@ -150,7 +150,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskLevel
-    * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+    * The possible values are low, medium, high, hidden, none, unknownFutureValue.
     *
     * @return RiskLevel The riskLevel
     */
@@ -169,7 +169,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskLevel
-    * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+    * The possible values are low, medium, high, hidden, none, unknownFutureValue.
     *
     * @param RiskLevel $val The riskLevel
     *
@@ -183,7 +183,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskState
-    * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+    * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
     *
     * @return RiskState The riskState
     */
@@ -202,7 +202,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskState
-    * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+    * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
     *
     * @param RiskState $val The riskState
     *

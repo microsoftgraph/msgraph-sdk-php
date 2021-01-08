@@ -26,6 +26,7 @@ class EducationSubmissionResource extends Entity
 {
     /**
     * Gets the assignmentResourceUrl
+    * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
     *
     * @return string The assignmentResourceUrl
     */
@@ -40,6 +41,7 @@ class EducationSubmissionResource extends Entity
     
     /**
     * Sets the assignmentResourceUrl
+    * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
     *
     * @param string $val The assignmentResourceUrl
     *
@@ -53,6 +55,7 @@ class EducationSubmissionResource extends Entity
     
     /**
     * Gets the resource
+    * Resource object.
     *
     * @return EducationResource The resource
     */
@@ -71,6 +74,7 @@ class EducationSubmissionResource extends Entity
     
     /**
     * Sets the resource
+    * Resource object.
     *
     * @param EducationResource $val The resource
     *

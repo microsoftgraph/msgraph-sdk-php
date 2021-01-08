@@ -306,7 +306,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Gets the wallpaperDisplayLocation
-    * A wallpaper display location specifier.
+    * A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
     *
     * @return IosWallpaperDisplayLocation The wallpaperDisplayLocation
     */
@@ -325,7 +325,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     
     /**
     * Sets the wallpaperDisplayLocation
-    * A wallpaper display location specifier.
+    * A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
     *
     * @param IosWallpaperDisplayLocation $val The wallpaperDisplayLocation
     *

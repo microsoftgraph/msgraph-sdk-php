@@ -26,6 +26,7 @@ class RubricCriterion extends Entity
 
     /**
     * Gets the description
+    * The description of this criterion.
     *
     * @return EducationItemBody The description
     */
@@ -44,6 +45,7 @@ class RubricCriterion extends Entity
 
     /**
     * Sets the description
+    * The description of this criterion.
     *
     * @param EducationItemBody $val The value to assign to the description
     *

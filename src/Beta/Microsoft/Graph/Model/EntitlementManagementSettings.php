@@ -26,6 +26,7 @@ class EntitlementManagementSettings extends Entity
 {
     /**
     * Gets the daysUntilExternalUserDeletedAfterBlocked
+    * If externalUserLifecycleAction is BlockSignInAndDelete, the number of days after an external user is blocked from sign in before their account is deleted.
     *
     * @return int The daysUntilExternalUserDeletedAfterBlocked
     */
@@ -40,6 +41,7 @@ class EntitlementManagementSettings extends Entity
     
     /**
     * Sets the daysUntilExternalUserDeletedAfterBlocked
+    * If externalUserLifecycleAction is BlockSignInAndDelete, the number of days after an external user is blocked from sign in before their account is deleted.
     *
     * @param int $val The daysUntilExternalUserDeletedAfterBlocked
     *
@@ -53,6 +55,7 @@ class EntitlementManagementSettings extends Entity
     
     /**
     * Gets the externalUserLifecycleAction
+    * One of None, BlockSignIn, or BlockSignInAndDelete.
     *
     * @return string The externalUserLifecycleAction
     */
@@ -67,6 +70,7 @@ class EntitlementManagementSettings extends Entity
     
     /**
     * Sets the externalUserLifecycleAction
+    * One of None, BlockSignIn, or BlockSignInAndDelete.
     *
     * @param string $val The externalUserLifecycleAction
     *
