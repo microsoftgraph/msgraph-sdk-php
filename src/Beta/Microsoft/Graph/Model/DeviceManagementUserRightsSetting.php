@@ -59,7 +59,7 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Gets the state
-    * Representing the current state of this user rights setting
+    * Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed.
     *
     * @return StateManagementSetting The state
     */
@@ -78,7 +78,7 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Sets the state
-    * Representing the current state of this user rights setting
+    * Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed.
     *
     * @param StateManagementSetting $val The value to assign to the state
     *

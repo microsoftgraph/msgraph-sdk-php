@@ -25,6 +25,7 @@ class StatusDetails extends StatusBase
 {
     /**
     * Gets the additionalDetails
+    * Additional details in case of error.
     *
     * @return string The additionalDetails
     */
@@ -39,6 +40,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the additionalDetails
+    * Additional details in case of error.
     *
     * @param string $val The value of the additionalDetails
     *
@@ -51,6 +53,7 @@ class StatusDetails extends StatusBase
     }
     /**
     * Gets the errorCategory
+    * Categorizes the error code.
     *
     * @return string The errorCategory
     */
@@ -65,6 +68,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the errorCategory
+    * Categorizes the error code.
     *
     * @param string $val The value of the errorCategory
     *
@@ -77,6 +81,7 @@ class StatusDetails extends StatusBase
     }
     /**
     * Gets the errorCode
+    * Unique error code if any occurred.
     *
     * @return string The errorCode
     */
@@ -91,6 +96,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the errorCode
+    * Unique error code if any occurred.
     *
     * @param string $val The value of the errorCode
     *
@@ -103,6 +109,7 @@ class StatusDetails extends StatusBase
     }
     /**
     * Gets the reason
+    * Summarizes the status and describes why the status happened.
     *
     * @return string The reason
     */
@@ -117,6 +124,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the reason
+    * Summarizes the status and describes why the status happened.
     *
     * @param string $val The value of the reason
     *
@@ -129,6 +137,7 @@ class StatusDetails extends StatusBase
     }
     /**
     * Gets the recommendedAction
+    * Provides the resolution for the corresponding error.
     *
     * @return string The recommendedAction
     */
@@ -143,6 +152,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the recommendedAction
+    * Provides the resolution for the corresponding error.
     *
     * @param string $val The value of the recommendedAction
     *

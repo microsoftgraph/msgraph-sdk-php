@@ -25,6 +25,7 @@ class SelfServiceSignUpAuthenticationFlowConfiguration extends Entity
 {
     /**
     * Gets the isEnabled
+    * Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
     *
     * @return bool The isEnabled
     */
@@ -39,6 +40,7 @@ class SelfServiceSignUpAuthenticationFlowConfiguration extends Entity
 
     /**
     * Sets the isEnabled
+    * Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
     *
     * @param bool $val The value of the isEnabled
     *

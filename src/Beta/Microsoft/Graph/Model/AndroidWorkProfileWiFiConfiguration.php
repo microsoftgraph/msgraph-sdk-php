@@ -142,7 +142,7 @@ class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise.
     *
     * @return AndroidWiFiSecurityType The wiFiSecurityType
     */
@@ -161,7 +161,7 @@ class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise.
     *
     * @param AndroidWiFiSecurityType $val The wiFiSecurityType
     *

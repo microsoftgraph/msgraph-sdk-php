@@ -25,6 +25,7 @@ class EducationOnPremisesInfo extends Entity
 {
     /**
     * Gets the immutableId
+    * Unique identifier for the user object in Active Directory.
     *
     * @return string The immutableId
     */
@@ -39,6 +40,7 @@ class EducationOnPremisesInfo extends Entity
 
     /**
     * Sets the immutableId
+    * Unique identifier for the user object in Active Directory.
     *
     * @param string $val The value of the immutableId
     *

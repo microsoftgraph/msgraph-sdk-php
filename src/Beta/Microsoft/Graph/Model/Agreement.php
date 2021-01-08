@@ -26,6 +26,7 @@ class Agreement extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class Agreement extends Entity
     
     /**
     * Sets the displayName
+    * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class Agreement extends Entity
     
     /**
     * Gets the isPerDeviceAcceptanceRequired
+    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so.
     *
     * @return bool The isPerDeviceAcceptanceRequired
     */
@@ -67,6 +70,7 @@ class Agreement extends Entity
     
     /**
     * Sets the isPerDeviceAcceptanceRequired
+    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so.
     *
     * @param bool $val The isPerDeviceAcceptanceRequired
     *
@@ -80,6 +84,7 @@ class Agreement extends Entity
     
     /**
     * Gets the isViewingBeforeAcceptanceRequired
+    * Indicates whether the user has to expand the agreement before accepting.
     *
     * @return bool The isViewingBeforeAcceptanceRequired
     */
@@ -94,6 +99,7 @@ class Agreement extends Entity
     
     /**
     * Sets the isViewingBeforeAcceptanceRequired
+    * Indicates whether the user has to expand the agreement before accepting.
     *
     * @param bool $val The isViewingBeforeAcceptanceRequired
     *
@@ -107,6 +113,7 @@ class Agreement extends Entity
     
     /**
     * Gets the termsExpiration
+    * Expiration schedule and frequency of agreement for all users.
     *
     * @return TermsExpiration The termsExpiration
     */
@@ -125,6 +132,7 @@ class Agreement extends Entity
     
     /**
     * Sets the termsExpiration
+    * Expiration schedule and frequency of agreement for all users.
     *
     * @param TermsExpiration $val The termsExpiration
     *
@@ -138,6 +146,7 @@ class Agreement extends Entity
     
     /**
     * Gets the userReacceptRequiredFrequency
+    * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The userReacceptRequiredFrequency
     */
@@ -156,6 +165,7 @@ class Agreement extends Entity
     
     /**
     * Sets the userReacceptRequiredFrequency
+    * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The userReacceptRequiredFrequency
     *
@@ -170,6 +180,7 @@ class Agreement extends Entity
 
      /** 
      * Gets the acceptances
+    * Read-only. Information about acceptances of this agreement.
      *
      * @return array The acceptances
      */
@@ -184,6 +195,7 @@ class Agreement extends Entity
     
     /** 
     * Sets the acceptances
+    * Read-only. Information about acceptances of this agreement.
     *
     * @param AgreementAcceptance $val The acceptances
     *
@@ -197,6 +209,7 @@ class Agreement extends Entity
     
     /**
     * Gets the file
+    * Default PDF linked to this agreement.
     *
     * @return AgreementFile The file
     */
@@ -215,6 +228,7 @@ class Agreement extends Entity
     
     /**
     * Sets the file
+    * Default PDF linked to this agreement.
     *
     * @param AgreementFile $val The file
     *
@@ -229,6 +243,7 @@ class Agreement extends Entity
 
      /** 
      * Gets the files
+    * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
      *
      * @return array The files
      */
@@ -243,6 +258,7 @@ class Agreement extends Entity
     
     /** 
     * Sets the files
+    * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
     *
     * @param AgreementFileLocalization $val The files
     *

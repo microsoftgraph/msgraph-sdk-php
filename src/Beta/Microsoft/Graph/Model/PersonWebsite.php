@@ -26,6 +26,7 @@ class PersonWebsite extends ItemFacet
 {
     /**
     * Gets the categories
+    * Contains categories a user has associated with the website (for example, personal, recipes).
     *
     * @return string The categories
     */
@@ -40,6 +41,7 @@ class PersonWebsite extends ItemFacet
     
     /**
     * Sets the categories
+    * Contains categories a user has associated with the website (for example, personal, recipes).
     *
     * @param string $val The categories
     *
@@ -53,6 +55,7 @@ class PersonWebsite extends ItemFacet
     
     /**
     * Gets the description
+    * Contains a description of the website.
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class PersonWebsite extends ItemFacet
     
     /**
     * Sets the description
+    * Contains a description of the website.
     *
     * @param string $val The description
     *
@@ -80,6 +84,7 @@ class PersonWebsite extends ItemFacet
     
     /**
     * Gets the displayName
+    * Contains a friendly name for the website.
     *
     * @return string The displayName
     */
@@ -94,6 +99,7 @@ class PersonWebsite extends ItemFacet
     
     /**
     * Sets the displayName
+    * Contains a friendly name for the website.
     *
     * @param string $val The displayName
     *
@@ -107,6 +113,7 @@ class PersonWebsite extends ItemFacet
     
     /**
     * Gets the webUrl
+    * Contains a link to the website itself.
     *
     * @return string The webUrl
     */
@@ -121,6 +128,7 @@ class PersonWebsite extends ItemFacet
     
     /**
     * Sets the webUrl
+    * Contains a link to the website itself.
     *
     * @param string $val The webUrl
     *

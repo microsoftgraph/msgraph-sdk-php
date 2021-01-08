@@ -25,6 +25,7 @@ class DowngradeJustification extends Entity
 {
     /**
     * Gets the isDowngradeJustified
+    * Indicates whether the downgrade is or is not justified.
     *
     * @return bool The isDowngradeJustified
     */
@@ -39,6 +40,7 @@ class DowngradeJustification extends Entity
 
     /**
     * Sets the isDowngradeJustified
+    * Indicates whether the downgrade is or is not justified.
     *
     * @param bool $val The value of the isDowngradeJustified
     *
@@ -51,6 +53,7 @@ class DowngradeJustification extends Entity
     }
     /**
     * Gets the justificationMessage
+    * Message that indicates why a downgrade is justified. The message will appear in administrative logs.
     *
     * @return string The justificationMessage
     */
@@ -65,6 +68,7 @@ class DowngradeJustification extends Entity
 
     /**
     * Sets the justificationMessage
+    * Message that indicates why a downgrade is justified. The message will appear in administrative logs.
     *
     * @param string $val The value of the justificationMessage
     *

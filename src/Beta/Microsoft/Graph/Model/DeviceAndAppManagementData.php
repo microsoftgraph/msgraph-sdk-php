@@ -26,6 +26,7 @@ class DeviceAndAppManagementData extends Entity
 
     /**
     * Gets the content
+    * Not yet documented
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -44,6 +45,7 @@ class DeviceAndAppManagementData extends Entity
 
     /**
     * Sets the content
+    * Not yet documented
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the content
     *

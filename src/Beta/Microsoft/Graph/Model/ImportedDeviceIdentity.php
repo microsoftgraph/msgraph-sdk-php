@@ -88,7 +88,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the enrollmentState
-    * The state of the device in Intune
+    * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
     * @return EnrollmentState The enrollmentState
     */
@@ -107,7 +107,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the enrollmentState
-    * The state of the device in Intune
+    * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
     * @param EnrollmentState $val The enrollmentState
     *
@@ -150,7 +150,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the importedDeviceIdentityType
-    * Type of Imported Device Identity
+    * Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
     *
     * @return ImportedDeviceIdentityType The importedDeviceIdentityType
     */
@@ -169,7 +169,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the importedDeviceIdentityType
-    * Type of Imported Device Identity
+    * Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
     *
     * @param ImportedDeviceIdentityType $val The importedDeviceIdentityType
     *
@@ -249,7 +249,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Gets the platform
-    * The platform of the Device.
+    * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
     *
     * @return Platform The platform
     */
@@ -268,7 +268,7 @@ class ImportedDeviceIdentity extends Entity
     
     /**
     * Sets the platform
-    * The platform of the Device.
+    * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
     *
     * @param Platform $val The platform
     *

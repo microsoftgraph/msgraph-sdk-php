@@ -25,6 +25,7 @@ class PrinterStatus extends Entity
 {
     /**
     * Gets the description
+    * A human-readable description of the printer's current processing state. Read-only.
     *
     * @return string The description
     */
@@ -39,6 +40,7 @@ class PrinterStatus extends Entity
 
     /**
     * Sets the description
+    * A human-readable description of the printer's current processing state. Read-only.
     *
     * @param string $val The value of the description
     *
@@ -52,6 +54,7 @@ class PrinterStatus extends Entity
 
     /**
     * Gets the details
+    * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
     *
     * @return PrinterProcessingStateDetail The details
     */
@@ -70,6 +73,7 @@ class PrinterStatus extends Entity
 
     /**
     * Sets the details
+    * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
     *
     * @param PrinterProcessingStateDetail $val The value to assign to the details
     *
@@ -171,6 +175,7 @@ class PrinterStatus extends Entity
 
     /**
     * Gets the state
+    * The current processing state. Valid values are described in the following table. Read-only.
     *
     * @return PrinterProcessingState The state
     */
@@ -189,6 +194,7 @@ class PrinterStatus extends Entity
 
     /**
     * Sets the state
+    * The current processing state. Valid values are described in the following table. Read-only.
     *
     * @param PrinterProcessingState $val The value to assign to the state
     *

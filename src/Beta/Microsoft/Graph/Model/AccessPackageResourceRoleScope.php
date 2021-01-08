@@ -26,6 +26,7 @@ class AccessPackageResourceRoleScope extends Entity
 {
     /**
     * Gets the createdBy
+    * Read-only.
     *
     * @return string The createdBy
     */
@@ -40,6 +41,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Sets the createdBy
+    * Read-only.
     *
     * @param string $val The createdBy
     *
@@ -53,6 +55,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -71,6 +74,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -84,6 +88,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Gets the modifiedBy
+    * Read-only.
     *
     * @return string The modifiedBy
     */
@@ -98,6 +103,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Sets the modifiedBy
+    * Read-only.
     *
     * @param string $val The modifiedBy
     *
@@ -111,6 +117,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Gets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The modifiedDateTime
     */
@@ -129,6 +136,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Sets the modifiedDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The modifiedDateTime
     *
@@ -142,6 +150,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Gets the accessPackageResourceRole
+    * Read-only. Nullable.
     *
     * @return AccessPackageResourceRole The accessPackageResourceRole
     */
@@ -160,6 +169,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Sets the accessPackageResourceRole
+    * Read-only. Nullable.
     *
     * @param AccessPackageResourceRole $val The accessPackageResourceRole
     *
@@ -173,6 +183,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Gets the accessPackageResourceScope
+    * Read-only. Nullable.
     *
     * @return AccessPackageResourceScope The accessPackageResourceScope
     */
@@ -191,6 +202,7 @@ class AccessPackageResourceRoleScope extends Entity
     
     /**
     * Sets the accessPackageResourceScope
+    * Read-only. Nullable.
     *
     * @param AccessPackageResourceScope $val The accessPackageResourceScope
     *

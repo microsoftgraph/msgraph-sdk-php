@@ -25,6 +25,7 @@ class EducationSynchronizationCustomization extends Entity
 {
     /**
     * Gets the allowDisplayNameUpdate
+    * Indicates whether the display name of the resource can be overwritten by the sync.
     *
     * @return bool The allowDisplayNameUpdate
     */
@@ -39,6 +40,7 @@ class EducationSynchronizationCustomization extends Entity
 
     /**
     * Sets the allowDisplayNameUpdate
+    * Indicates whether the display name of the resource can be overwritten by the sync.
     *
     * @param bool $val The value of the allowDisplayNameUpdate
     *
@@ -51,6 +53,7 @@ class EducationSynchronizationCustomization extends Entity
     }
     /**
     * Gets the isSyncDeferred
+    * Indicates whether synchronization of the parent entity is deferred to a later date.
     *
     * @return bool The isSyncDeferred
     */
@@ -65,6 +68,7 @@ class EducationSynchronizationCustomization extends Entity
 
     /**
     * Sets the isSyncDeferred
+    * Indicates whether synchronization of the parent entity is deferred to a later date.
     *
     * @param bool $val The value of the isSyncDeferred
     *
@@ -77,6 +81,7 @@ class EducationSynchronizationCustomization extends Entity
     }
     /**
     * Gets the optionalPropertiesToSync
+    * The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters
     *
     * @return string The optionalPropertiesToSync
     */
@@ -91,6 +96,7 @@ class EducationSynchronizationCustomization extends Entity
 
     /**
     * Sets the optionalPropertiesToSync
+    * The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters
     *
     * @param string $val The value of the optionalPropertiesToSync
     *
@@ -104,6 +110,7 @@ class EducationSynchronizationCustomization extends Entity
 
     /**
     * Gets the synchronizationStartDate
+    * The date that the synchronization should start. This value should be set to a future date. If set to null, the resource will be synchronized when the profile setup completes. Only applies to Student Enrollments
     *
     * @return \DateTime The synchronizationStartDate
     */
@@ -122,6 +129,7 @@ class EducationSynchronizationCustomization extends Entity
 
     /**
     * Sets the synchronizationStartDate
+    * The date that the synchronization should start. This value should be set to a future date. If set to null, the resource will be synchronized when the profile setup completes. Only applies to Student Enrollments
     *
     * @param \DateTime $val The value to assign to the synchronizationStartDate
     *

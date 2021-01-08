@@ -146,7 +146,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Gets the runState
-    * State of latest run of the device management script.
+    * State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @return RunState The runState
     */
@@ -165,7 +165,7 @@ class DeviceManagementScriptDeviceState extends Entity
     
     /**
     * Sets the runState
-    * State of latest run of the device management script.
+    * State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @param RunState $val The runState
     *

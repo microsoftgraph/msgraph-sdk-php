@@ -26,7 +26,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Specify the authentication method.
+    * Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
     *
     * @return WiFiAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Specify the authentication method.
+    * Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
     *
     * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
@@ -117,7 +117,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the authenticationType
-    * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you???re using certificate authentication, make sure the certificate type matches the authentication type.
+    * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
     *
     * @return WifiAuthenticationType The authenticationType
     */
@@ -136,7 +136,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the authenticationType
-    * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you???re using certificate authentication, make sure the certificate type matches the authentication type.
+    * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
     *
     * @param WifiAuthenticationType $val The authenticationType
     *
@@ -150,7 +150,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the cacheCredentials
-    * Specify whether to cache user credentials on the device so that users don???t need to keep entering them each time they connect.
+    * Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
     *
     * @return bool The cacheCredentials
     */
@@ -165,7 +165,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the cacheCredentials
-    * Specify whether to cache user credentials on the device so that users don???t need to keep entering them each time they connect.
+    * Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
     *
     * @param bool $val The cacheCredentials
     *
@@ -237,7 +237,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
     *
     * @return EapType The eapType
     */
@@ -256,7 +256,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
     *
     * @param EapType $val The eapType
     *
@@ -328,7 +328,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the innerAuthenticationProtocolForEAPTTLS
-    * Specify inner authentication protocol for EAP TTLS.
+    * Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
     *
     * @return NonEapAuthenticationMethodForEapTtlsType The innerAuthenticationProtocolForEAPTTLS
     */
@@ -347,7 +347,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the innerAuthenticationProtocolForEAPTTLS
-    * Specify inner authentication protocol for EAP TTLS.
+    * Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
     *
     * @param NonEapAuthenticationMethodForEapTtlsType $val The innerAuthenticationProtocolForEAPTTLS
     *
@@ -535,7 +535,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the networkSingleSignOn
-    * Specify the network single sign on type.
+    * Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
     *
     * @return NetworkSingleSignOnType The networkSingleSignOn
     */
@@ -554,7 +554,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the networkSingleSignOn
-    * Specify the network single sign on type.
+    * Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
     *
     * @param NetworkSingleSignOnType $val The networkSingleSignOn
     *
@@ -713,7 +713,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Gets the userBasedVirtualLan
-    * Specifiy whether to change the virtual LAN used by the device based on the user???s credentials. Cannot be used when NetworkSingleSignOnType is set to ???Disabled.
+    * Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
     *
     * @return bool The userBasedVirtualLan
     */
@@ -728,7 +728,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /**
     * Sets the userBasedVirtualLan
-    * Specifiy whether to change the virtual LAN used by the device based on the user???s credentials. Cannot be used when NetworkSingleSignOnType is set to ???Disabled.
+    * Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
     *
     * @param bool $val The userBasedVirtualLan
     *

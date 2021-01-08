@@ -26,6 +26,7 @@ class FilterGroup extends Entity
 
     /**
     * Gets the clauses
+    * Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
     *
     * @return FilterClause The clauses
     */
@@ -44,6 +45,7 @@ class FilterGroup extends Entity
 
     /**
     * Sets the clauses
+    * Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
     *
     * @param FilterClause $val The value to assign to the clauses
     *
@@ -56,6 +58,7 @@ class FilterGroup extends Entity
     }
     /**
     * Gets the name
+    * Human-readable name of the filter group.
     *
     * @return string The name
     */
@@ -70,6 +73,7 @@ class FilterGroup extends Entity
 
     /**
     * Sets the name
+    * Human-readable name of the filter group.
     *
     * @param string $val The value of the name
     *

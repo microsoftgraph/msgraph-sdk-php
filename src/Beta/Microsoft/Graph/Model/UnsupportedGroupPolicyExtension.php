@@ -113,7 +113,7 @@ class UnsupportedGroupPolicyExtension extends Entity
     
     /**
     * Gets the settingScope
-    * Setting Scope of the unsupported extension.
+    * Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
     *
     * @return GroupPolicySettingScope The settingScope
     */
@@ -132,7 +132,7 @@ class UnsupportedGroupPolicyExtension extends Entity
     
     /**
     * Sets the settingScope
-    * Setting Scope of the unsupported extension.
+    * Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
     *
     * @param GroupPolicySettingScope $val The settingScope
     *

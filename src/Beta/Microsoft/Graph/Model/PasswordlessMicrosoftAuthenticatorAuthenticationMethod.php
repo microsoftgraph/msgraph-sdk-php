@@ -57,6 +57,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
     
     /**
     * Gets the creationDateTime
+    * The timestamp when this method was registered to the user.
     *
     * @return \DateTime The creationDateTime
     */
@@ -75,6 +76,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
     
     /**
     * Sets the creationDateTime
+    * The timestamp when this method was registered to the user.
     *
     * @param \DateTime $val The creationDateTime
     *
@@ -88,6 +90,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
     
     /**
     * Gets the displayName
+    * The display name of the mobile device as given by the user.
     *
     * @return string The displayName
     */
@@ -102,6 +105,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
     
     /**
     * Sets the displayName
+    * The display name of the mobile device as given by the user.
     *
     * @param string $val The displayName
     *

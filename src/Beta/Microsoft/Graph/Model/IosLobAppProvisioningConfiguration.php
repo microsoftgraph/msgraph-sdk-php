@@ -216,7 +216,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     
     /**
     * Gets the payloadFileName
-    * Payload file name (*.mobileprovision | *.xml).
+    * Payload file name (.mobileprovision
     *
     * @return string The payloadFileName
     */
@@ -231,7 +231,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     
     /**
     * Sets the payloadFileName
-    * Payload file name (*.mobileprovision | *.xml).
+    * Payload file name (.mobileprovision
     *
     * @param string $val The payloadFileName
     *

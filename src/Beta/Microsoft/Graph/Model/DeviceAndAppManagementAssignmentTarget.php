@@ -54,7 +54,7 @@ class DeviceAndAppManagementAssignmentTarget extends Entity
 
     /**
     * Gets the deviceAndAppManagementAssignmentFilterType
-    * The type of filter of the target assignment i.e. Exclude or Include.
+    * The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include.
     *
     * @return DeviceAndAppManagementAssignmentFilterType The deviceAndAppManagementAssignmentFilterType
     */
@@ -73,7 +73,7 @@ class DeviceAndAppManagementAssignmentTarget extends Entity
 
     /**
     * Sets the deviceAndAppManagementAssignmentFilterType
-    * The type of filter of the target assignment i.e. Exclude or Include.
+    * The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include.
     *
     * @param DeviceAndAppManagementAssignmentFilterType $val The value to assign to the deviceAndAppManagementAssignmentFilterType
     *

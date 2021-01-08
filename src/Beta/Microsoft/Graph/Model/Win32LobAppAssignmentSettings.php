@@ -35,7 +35,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Gets the deliveryOptimizationPriority
-    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
+    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
     *
     * @return Win32LobAppDeliveryOptimizationPriority The deliveryOptimizationPriority
     */
@@ -54,7 +54,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
 
     /**
     * Sets the deliveryOptimizationPriority
-    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
+    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
     *
     * @param Win32LobAppDeliveryOptimizationPriority $val The value to assign to the deliveryOptimizationPriority
     *

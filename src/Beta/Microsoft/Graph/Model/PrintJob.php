@@ -26,6 +26,7 @@ class PrintJob extends Entity
 {
     /**
     * Gets the configuration
+    * A group of settings that a printer should use to print a job.
     *
     * @return PrintJobConfiguration The configuration
     */
@@ -44,6 +45,7 @@ class PrintJob extends Entity
     
     /**
     * Sets the configuration
+    * A group of settings that a printer should use to print a job.
     *
     * @param PrintJobConfiguration $val The configuration
     *
@@ -88,6 +90,7 @@ class PrintJob extends Entity
     
     /**
     * Gets the createdDateTime
+    * The DateTimeOffset when the job was created. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -106,6 +109,7 @@ class PrintJob extends Entity
     
     /**
     * Sets the createdDateTime
+    * The DateTimeOffset when the job was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +123,7 @@ class PrintJob extends Entity
     
     /**
     * Gets the isFetchable
+    * If true, document can be fetched by printer.
     *
     * @return bool The isFetchable
     */
@@ -133,6 +138,7 @@ class PrintJob extends Entity
     
     /**
     * Sets the isFetchable
+    * If true, document can be fetched by printer.
     *
     * @param bool $val The isFetchable
     *
@@ -146,6 +152,7 @@ class PrintJob extends Entity
     
     /**
     * Gets the redirectedFrom
+    * Contains the source job URL, if the job has been redirected from another printer.
     *
     * @return string The redirectedFrom
     */
@@ -160,6 +167,7 @@ class PrintJob extends Entity
     
     /**
     * Sets the redirectedFrom
+    * Contains the source job URL, if the job has been redirected from another printer.
     *
     * @param string $val The redirectedFrom
     *
@@ -173,6 +181,7 @@ class PrintJob extends Entity
     
     /**
     * Gets the redirectedTo
+    * Contains the destination job URL, if the job has been redirected to another printer.
     *
     * @return string The redirectedTo
     */
@@ -187,6 +196,7 @@ class PrintJob extends Entity
     
     /**
     * Sets the redirectedTo
+    * Contains the destination job URL, if the job has been redirected to another printer.
     *
     * @param string $val The redirectedTo
     *
@@ -200,6 +210,7 @@ class PrintJob extends Entity
     
     /**
     * Gets the status
+    * The status of the print job. Read-only.
     *
     * @return PrintJobStatus The status
     */
@@ -218,6 +229,7 @@ class PrintJob extends Entity
     
     /**
     * Sets the status
+    * The status of the print job. Read-only.
     *
     * @param PrintJobStatus $val The status
     *
@@ -232,6 +244,7 @@ class PrintJob extends Entity
 
      /** 
      * Gets the documents
+    * Read-only.
      *
      * @return array The documents
      */
@@ -246,6 +259,7 @@ class PrintJob extends Entity
     
     /** 
     * Sets the documents
+    * Read-only.
     *
     * @param PrintDocument $val The documents
     *
@@ -260,6 +274,7 @@ class PrintJob extends Entity
 
      /** 
      * Gets the tasks
+    * A list of printTasks that were triggered by this print job.
      *
      * @return array The tasks
      */
@@ -274,6 +289,7 @@ class PrintJob extends Entity
     
     /** 
     * Sets the tasks
+    * A list of printTasks that were triggered by this print job.
     *
     * @param PrintTask $val The tasks
     *

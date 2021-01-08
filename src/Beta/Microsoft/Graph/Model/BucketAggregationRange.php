@@ -25,6 +25,7 @@ class BucketAggregationRange extends Entity
 {
     /**
     * Gets the from
+    * Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
     *
     * @return string The from
     */
@@ -39,6 +40,7 @@ class BucketAggregationRange extends Entity
 
     /**
     * Sets the from
+    * Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
     *
     * @param string $val The value of the from
     *
@@ -51,6 +53,7 @@ class BucketAggregationRange extends Entity
     }
     /**
     * Gets the to
+    * Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
     *
     * @return string The to
     */
@@ -65,6 +68,7 @@ class BucketAggregationRange extends Entity
 
     /**
     * Sets the to
+    * Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
     *
     * @param string $val The value of the to
     *

@@ -55,7 +55,7 @@ class DeviceAppManagementTask extends Entity
     
     /**
     * Gets the category
-    * The category.
+    * The category. Possible values are: unknown, advancedThreatProtection.
     *
     * @return DeviceAppManagementTaskCategory The category
     */
@@ -74,7 +74,7 @@ class DeviceAppManagementTask extends Entity
     
     /**
     * Sets the category
-    * The category.
+    * The category. Possible values are: unknown, advancedThreatProtection.
     *
     * @param DeviceAppManagementTaskCategory $val The category
     *
@@ -270,7 +270,7 @@ class DeviceAppManagementTask extends Entity
     
     /**
     * Gets the priority
-    * The priority.
+    * The priority. Possible values are: none, high, low.
     *
     * @return DeviceAppManagementTaskPriority The priority
     */
@@ -289,7 +289,7 @@ class DeviceAppManagementTask extends Entity
     
     /**
     * Sets the priority
-    * The priority.
+    * The priority. Possible values are: none, high, low.
     *
     * @param DeviceAppManagementTaskPriority $val The priority
     *
@@ -303,7 +303,7 @@ class DeviceAppManagementTask extends Entity
     
     /**
     * Gets the status
-    * The status.
+    * The status. Possible values are: unknown, pending, active, completed, rejected.
     *
     * @return DeviceAppManagementTaskStatus The status
     */
@@ -322,7 +322,7 @@ class DeviceAppManagementTask extends Entity
     
     /**
     * Sets the status
-    * The status.
+    * The status. Possible values are: unknown, pending, active, completed, rejected.
     *
     * @param DeviceAppManagementTaskStatus $val The status
     *

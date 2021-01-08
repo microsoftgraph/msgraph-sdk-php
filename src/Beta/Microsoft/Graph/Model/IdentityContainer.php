@@ -57,6 +57,34 @@ class IdentityContainer extends
     
 
      /** 
+     * Gets the apiConnectors
+     *
+     * @return array The apiConnectors
+     */
+    public function getApiConnectors()
+    {
+        if (array_key_exists("apiConnectors", $this->_propDict)) {
+           return $this->_propDict["apiConnectors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the apiConnectors
+    *
+    * @param IdentityApiConnector $val The apiConnectors
+    *
+    * @return IdentityContainer
+    */
+    public function setApiConnectors($val)
+    {
+		$this->_propDict["apiConnectors"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the b2cUserFlows
      *
      * @return array The b2cUserFlows

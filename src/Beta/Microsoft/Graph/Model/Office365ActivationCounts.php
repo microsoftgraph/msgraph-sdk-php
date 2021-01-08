@@ -26,6 +26,7 @@ class Office365ActivationCounts extends Entity
 {
     /**
     * Gets the android
+    * The activation count on an Android device.
     *
     * @return int The android
     */
@@ -40,6 +41,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Sets the android
+    * The activation count on an Android device.
     *
     * @param int $val The android
     *
@@ -53,6 +55,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Gets the ios
+    * The activation count on iOS.
     *
     * @return int The ios
     */
@@ -67,6 +70,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Sets the ios
+    * The activation count on iOS.
     *
     * @param int $val The ios
     *
@@ -80,6 +84,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Gets the mac
+    * The activation count on Mac OS.
     *
     * @return int The mac
     */
@@ -94,6 +99,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Sets the mac
+    * The activation count on Mac OS.
     *
     * @param int $val The mac
     *
@@ -107,6 +113,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Gets the productType
+    * The product type, such as 'Microsoft 365 ProPlus' or 'Project Client'.
     *
     * @return string The productType
     */
@@ -121,6 +128,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Sets the productType
+    * The product type, such as 'Microsoft 365 ProPlus' or 'Project Client'.
     *
     * @param string $val The productType
     *
@@ -134,6 +142,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -152,6 +161,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -165,6 +175,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Gets the windows
+    * The activation count on Windows. This number includes every activation on any Windows computer.
     *
     * @return int The windows
     */
@@ -179,6 +190,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Sets the windows
+    * The activation count on Windows. This number includes every activation on any Windows computer.
     *
     * @param int $val The windows
     *
@@ -192,6 +204,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Gets the windows10Mobile
+    * The activation count on Windows 10 mobile.
     *
     * @return int The windows10Mobile
     */
@@ -206,6 +219,7 @@ class Office365ActivationCounts extends Entity
     
     /**
     * Sets the windows10Mobile
+    * The activation count on Windows 10 mobile.
     *
     * @param int $val The windows10Mobile
     *

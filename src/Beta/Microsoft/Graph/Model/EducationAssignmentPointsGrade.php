@@ -26,6 +26,7 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade
 
     /**
     * Gets the points
+    * Number of points a teacher is giving this submission object.
     *
     * @return Single The points
     */
@@ -44,6 +45,7 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade
 
     /**
     * Sets the points
+    * Number of points a teacher is giving this submission object.
     *
     * @param Single $val The value to assign to the points
     *

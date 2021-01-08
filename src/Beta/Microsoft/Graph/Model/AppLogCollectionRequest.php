@@ -59,7 +59,7 @@ class AppLogCollectionRequest extends Entity
     
     /**
     * Gets the customLogFolders
-    * List of log folders. 
+    * List of log folders.
     *
     * @return string The customLogFolders
     */
@@ -74,7 +74,7 @@ class AppLogCollectionRequest extends Entity
     
     /**
     * Sets the customLogFolders
-    * List of log folders. 
+    * List of log folders.
     *
     * @param string $val The customLogFolders
     *
@@ -117,7 +117,7 @@ class AppLogCollectionRequest extends Entity
     
     /**
     * Gets the status
-    * Log upload status
+    * Log upload status. Possible values are: pending, completed, failed.
     *
     * @return AppLogUploadState The status
     */
@@ -136,7 +136,7 @@ class AppLogCollectionRequest extends Entity
     
     /**
     * Sets the status
-    * Log upload status
+    * Log upload status. Possible values are: pending, completed, failed.
     *
     * @param AppLogUploadState $val The status
     *

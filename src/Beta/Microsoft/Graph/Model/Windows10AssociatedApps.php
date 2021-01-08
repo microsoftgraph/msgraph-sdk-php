@@ -26,7 +26,7 @@ class Windows10AssociatedApps extends Entity
 
     /**
     * Gets the appType
-    * Application type.
+    * Application type. Possible values are: desktop, universal.
     *
     * @return Windows10AppType The appType
     */
@@ -45,7 +45,7 @@ class Windows10AssociatedApps extends Entity
 
     /**
     * Sets the appType
-    * Application type.
+    * Application type. Possible values are: desktop, universal.
     *
     * @param Windows10AppType $val The value to assign to the appType
     *

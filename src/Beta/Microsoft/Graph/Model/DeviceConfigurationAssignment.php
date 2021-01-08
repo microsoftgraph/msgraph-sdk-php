@@ -26,7 +26,7 @@ class DeviceConfigurationAssignment extends Entity
 {
     /**
     * Gets the source
-    * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only.
+    * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
     *
     * @return DeviceAndAppManagementAssignmentSource The source
     */
@@ -45,7 +45,7 @@ class DeviceConfigurationAssignment extends Entity
     
     /**
     * Sets the source
-    * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only.
+    * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
     *
     * @param DeviceAndAppManagementAssignmentSource $val The source
     *

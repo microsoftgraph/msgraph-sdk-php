@@ -26,7 +26,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
 {
     /**
     * Gets the intent
-    * The assignment intent for the resource access profile.
+    * The assignment intent for the resource access profile. Possible values are: apply, remove.
     *
     * @return DeviceManagementResourceAccessProfileIntent The intent
     */
@@ -45,7 +45,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
     
     /**
     * Sets the intent
-    * The assignment intent for the resource access profile.
+    * The assignment intent for the resource access profile. Possible values are: apply, remove.
     *
     * @param DeviceManagementResourceAccessProfileIntent $val The intent
     *

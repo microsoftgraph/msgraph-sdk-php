@@ -55,7 +55,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the targetedAppManagementLevels
-    * The intended app management levels for this policy
+    * The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise.
     *
     * @return AppManagementLevel The targetedAppManagementLevels
     */
@@ -74,7 +74,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the targetedAppManagementLevels
-    * The intended app management levels for this policy
+    * The intended app management levels for this policy. Possible values are: unspecified, unmanaged, mdm, androidEnterprise.
     *
     * @param AppManagementLevel $val The targetedAppManagementLevels
     *

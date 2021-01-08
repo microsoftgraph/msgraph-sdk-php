@@ -26,7 +26,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
 {
     /**
     * Gets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @return CertificateStore The certificateStore
     */
@@ -45,7 +45,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     
     /**
     * Sets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @param CertificateStore $val The certificateStore
     *

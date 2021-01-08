@@ -26,7 +26,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Gets the format
-    * Pre-defined format of the string
+    * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
     *
     * @return DeviceManagementConfigurationStringFormat The format
     */
@@ -45,7 +45,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Sets the format
-    * Pre-defined format of the string
+    * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
     *
     * @param DeviceManagementConfigurationStringFormat $val The value to assign to the format
     *

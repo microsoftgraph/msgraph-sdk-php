@@ -25,7 +25,7 @@ class DeviceManagementConfigurationSettingOccurrence extends Entity
 {
     /**
     * Gets the maxDeviceOccurrence
-    * Maximum times setting can be set on device. 
+    * Maximum times setting can be set on device.
     *
     * @return int The maxDeviceOccurrence
     */
@@ -40,7 +40,7 @@ class DeviceManagementConfigurationSettingOccurrence extends Entity
 
     /**
     * Sets the maxDeviceOccurrence
-    * Maximum times setting can be set on device. 
+    * Maximum times setting can be set on device.
     *
     * @param int $val The value of the maxDeviceOccurrence
     *

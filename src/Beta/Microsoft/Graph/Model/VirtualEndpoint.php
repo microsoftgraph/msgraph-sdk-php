@@ -27,6 +27,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the cloudPCs
+    * Cloud managed virtual desktops.
      *
      * @return array The cloudPCs
      */
@@ -41,6 +42,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the cloudPCs
+    * Cloud managed virtual desktops.
     *
     * @param CloudPC $val The cloudPCs
     *
@@ -55,6 +57,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the deviceImages
+    * The image resource on cloud PC.
      *
      * @return array The deviceImages
      */
@@ -69,6 +72,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the deviceImages
+    * The image resource on cloud PC.
     *
     * @param CloudPcDeviceImage $val The deviceImages
     *
@@ -83,6 +87,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the onPremisesConnections
+    * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for cloud PCs.
      *
      * @return array The onPremisesConnections
      */
@@ -97,6 +102,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the onPremisesConnections
+    * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for cloud PCs.
     *
     * @param CloudPcOnPremisesConnection $val The onPremisesConnections
     *
@@ -111,6 +117,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the provisioningPolicies
+    * cloud PC provisioning policy.
      *
      * @return array The provisioningPolicies
      */
@@ -125,6 +132,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the provisioningPolicies
+    * cloud PC provisioning policy.
     *
     * @param CloudPcProvisioningPolicy $val The provisioningPolicies
     *

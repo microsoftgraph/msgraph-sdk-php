@@ -26,6 +26,7 @@ class EducationResource extends Entity
 
     /**
     * Gets the createdBy
+    * Who created the resource.
     *
     * @return IdentitySet The createdBy
     */
@@ -44,6 +45,7 @@ class EducationResource extends Entity
 
     /**
     * Sets the createdBy
+    * Who created the resource.
     *
     * @param IdentitySet $val The value to assign to the createdBy
     *
@@ -57,6 +59,7 @@ class EducationResource extends Entity
 
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -75,6 +78,7 @@ class EducationResource extends Entity
 
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -87,6 +91,7 @@ class EducationResource extends Entity
     }
     /**
     * Gets the displayName
+    * Display name of resource.
     *
     * @return string The displayName
     */
@@ -101,6 +106,7 @@ class EducationResource extends Entity
 
     /**
     * Sets the displayName
+    * Display name of resource.
     *
     * @param string $val The value of the displayName
     *
@@ -114,6 +120,7 @@ class EducationResource extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Who was the last user to modify the resource.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -132,6 +139,7 @@ class EducationResource extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Who was the last user to modify the resource.
     *
     * @param IdentitySet $val The value to assign to the lastModifiedBy
     *
@@ -145,6 +153,7 @@ class EducationResource extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -163,6 +172,7 @@ class EducationResource extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the lastModifiedDateTime
     *

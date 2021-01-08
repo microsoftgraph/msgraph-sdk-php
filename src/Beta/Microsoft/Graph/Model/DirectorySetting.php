@@ -26,6 +26,7 @@ class DirectorySetting extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of this group of settings, which comes from the associated template. Read-only.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class DirectorySetting extends Entity
     
     /**
     * Sets the displayName
+    * Display name of this group of settings, which comes from the associated template. Read-only.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class DirectorySetting extends Entity
     
     /**
     * Gets the templateId
+    * Unique identifier for the template used to create this group of settings. Read-only.
     *
     * @return string The templateId
     */
@@ -67,6 +70,7 @@ class DirectorySetting extends Entity
     
     /**
     * Sets the templateId
+    * Unique identifier for the template used to create this group of settings. Read-only.
     *
     * @param string $val The templateId
     *
@@ -81,6 +85,7 @@ class DirectorySetting extends Entity
 
      /** 
      * Gets the values
+    * Collection of name value pairs. Must contain and set all the settings defined in the template.
      *
      * @return array The values
      */
@@ -95,6 +100,7 @@ class DirectorySetting extends Entity
     
     /** 
     * Sets the values
+    * Collection of name value pairs. Must contain and set all the settings defined in the template.
     *
     * @param SettingValue $val The values
     *

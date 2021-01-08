@@ -26,6 +26,7 @@ class SearchHitsContainer extends Entity
 
     /**
     * Gets the aggregations
+    * Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
     *
     * @return SearchAggregation The aggregations
     */
@@ -44,6 +45,7 @@ class SearchHitsContainer extends Entity
 
     /**
     * Sets the aggregations
+    * Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
     *
     * @param SearchAggregation $val The value to assign to the aggregations
     *

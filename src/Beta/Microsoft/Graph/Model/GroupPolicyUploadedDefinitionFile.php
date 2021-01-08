@@ -147,7 +147,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     
     /**
     * Gets the status
-    * The upload status of the uploaded ADMX file.
+    * The upload status of the uploaded ADMX file. Possible values are: none, uploadInProgress, available, assigned, removalInProgress, uploadFailed, removalFailed.
     *
     * @return GroupPolicyUploadedDefinitionFileStatus The status
     */
@@ -166,7 +166,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     
     /**
     * Sets the status
-    * The upload status of the uploaded ADMX file.
+    * The upload status of the uploaded ADMX file. Possible values are: none, uploadInProgress, available, assigned, removalInProgress, uploadFailed, removalFailed.
     *
     * @param GroupPolicyUploadedDefinitionFileStatus $val The status
     *

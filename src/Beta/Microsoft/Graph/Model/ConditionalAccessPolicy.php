@@ -92,6 +92,7 @@ class ConditionalAccessPolicy extends Entity
     
     /**
     * Gets the description
+    * Not used.
     *
     * @return string The description
     */
@@ -106,6 +107,7 @@ class ConditionalAccessPolicy extends Entity
     
     /**
     * Sets the description
+    * Not used.
     *
     * @param string $val The description
     *

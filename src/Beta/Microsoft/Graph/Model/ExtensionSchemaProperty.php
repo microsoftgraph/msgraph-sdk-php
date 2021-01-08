@@ -25,7 +25,7 @@ class ExtensionSchemaProperty extends Entity
 {
     /**
     * Gets the name
-    * The name of the strongly-typed property defined as part of a schema extension.
+    * The name of the strongly typed property defined as part of a schema extension.
     *
     * @return string The name
     */
@@ -40,7 +40,7 @@ class ExtensionSchemaProperty extends Entity
 
     /**
     * Sets the name
-    * The name of the strongly-typed property defined as part of a schema extension.
+    * The name of the strongly typed property defined as part of a schema extension.
     *
     * @param string $val The value of the name
     *

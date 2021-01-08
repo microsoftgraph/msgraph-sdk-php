@@ -26,7 +26,7 @@ class RiskDetection extends Entity
 {
     /**
     * Gets the activity
-    * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
+    * Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
     *
     * @return ActivityType The activity
     */
@@ -45,7 +45,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the activity
-    * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
+    * Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
     *
     * @param ActivityType $val The activity
     *
@@ -183,7 +183,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the detectionTimingType
-    * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+    * Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
     *
     * @return RiskDetectionTimingType The detectionTimingType
     */
@@ -202,7 +202,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the detectionTimingType
-    * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+    * Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
     *
     * @param RiskDetectionTimingType $val The detectionTimingType
     *
@@ -340,7 +340,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
     *
     * @return RiskDetail The riskDetail
     */
@@ -359,7 +359,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the riskDetail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
     *
     * @param RiskDetail $val The riskDetail
     *
@@ -373,7 +373,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the riskEventType
-    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic
+    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
     *
     * @return string The riskEventType
     */
@@ -388,7 +388,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the riskEventType
-    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic
+    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
     *
     * @param string $val The riskEventType
     *
@@ -402,7 +402,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the riskLevel
-    * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
     *
     * @return RiskLevel The riskLevel
     */
@@ -421,7 +421,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the riskLevel
-    * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
     *
     * @param RiskLevel $val The riskLevel
     *
@@ -435,7 +435,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the riskState
-    * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+    * The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
     *
     * @return RiskState The riskState
     */
@@ -454,7 +454,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the riskState
-    * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+    * The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
     *
     * @param RiskState $val The riskState
     *
@@ -468,6 +468,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the riskType
+    * List of risk event types.Note: This property is deprecated. Use riskEventTypes instead.
     *
     * @return RiskEventType The riskType
     */
@@ -486,6 +487,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the riskType
+    * List of risk event types.Note: This property is deprecated. Use riskEventTypes instead.
     *
     * @param RiskEventType $val The riskType
     *
@@ -528,7 +530,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the tokenIssuerType
-    * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+    * Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
     *
     * @return TokenIssuerType The tokenIssuerType
     */
@@ -547,7 +549,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the tokenIssuerType
-    * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+    * Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
     *
     * @param TokenIssuerType $val The tokenIssuerType
     *
@@ -561,7 +563,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the userDisplayName
-    * The user principal name (UPN) of the user.
+    * Name of the user.
     *
     * @return string The userDisplayName
     */
@@ -576,7 +578,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the userDisplayName
-    * The user principal name (UPN) of the user.
+    * Name of the user.
     *
     * @param string $val The userDisplayName
     *

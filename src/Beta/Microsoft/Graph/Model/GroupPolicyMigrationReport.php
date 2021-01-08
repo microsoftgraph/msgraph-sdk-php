@@ -216,7 +216,7 @@ class GroupPolicyMigrationReport extends Entity
     
     /**
     * Gets the migrationReadiness
-    * The Intune coverage for the associated Group Policy Object file.
+    * The Intune coverage for the associated Group Policy Object file. Possible values are: none, partial, complete, error, notApplicable.
     *
     * @return GroupPolicyMigrationReadiness The migrationReadiness
     */
@@ -235,7 +235,7 @@ class GroupPolicyMigrationReport extends Entity
     
     /**
     * Sets the migrationReadiness
-    * The Intune coverage for the associated Group Policy Object file.
+    * The Intune coverage for the associated Group Policy Object file. Possible values are: none, partial, complete, error, notApplicable.
     *
     * @param GroupPolicyMigrationReadiness $val The migrationReadiness
     *

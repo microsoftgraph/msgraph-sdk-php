@@ -26,6 +26,7 @@ class AccessReviewDecision extends Entity
 {
     /**
     * Gets the accessRecommendation
+    * The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
     *
     * @return string The accessRecommendation
     */
@@ -40,6 +41,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the accessRecommendation
+    * The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
     *
     * @param string $val The accessRecommendation
     *
@@ -53,6 +55,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Gets the accessReviewId
+    * The feature-generated id of the access review.
     *
     * @return string The accessReviewId
     */
@@ -67,6 +70,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the accessReviewId
+    * The feature-generated id of the access review.
     *
     * @param string $val The accessReviewId
     *
@@ -80,6 +84,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Gets the appliedBy
+    * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
     *
     * @return UserIdentity The appliedBy
     */
@@ -98,6 +103,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the appliedBy
+    * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
     *
     * @param UserIdentity $val The appliedBy
     *
@@ -111,6 +117,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Gets the appliedDateTime
+    * The date and time when the review decision was applied.
     *
     * @return \DateTime The appliedDateTime
     */
@@ -129,6 +136,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the appliedDateTime
+    * The date and time when the review decision was applied.
     *
     * @param \DateTime $val The appliedDateTime
     *
@@ -142,6 +150,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Gets the applyResult
+    * The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
     *
     * @return string The applyResult
     */
@@ -156,6 +165,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the applyResult
+    * The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
     *
     * @param string $val The applyResult
     *
@@ -169,6 +179,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Gets the justification
+    * The reviewer's business justification, if supplied.
     *
     * @return string The justification
     */
@@ -183,6 +194,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the justification
+    * The reviewer's business justification, if supplied.
     *
     * @param string $val The justification
     *
@@ -196,6 +208,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Gets the reviewedBy
+    * The identity of the reviewer. If the recommendation was used as the review, the userPrincipalName is empty.
     *
     * @return UserIdentity The reviewedBy
     */
@@ -214,6 +227,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the reviewedBy
+    * The identity of the reviewer. If the recommendation was used as the review, the userPrincipalName is empty.
     *
     * @param UserIdentity $val The reviewedBy
     *
@@ -258,6 +272,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Gets the reviewResult
+    * The result of the review, one of NotReviewed, Deny, DontKnow or Approve.
     *
     * @return string The reviewResult
     */
@@ -272,6 +287,7 @@ class AccessReviewDecision extends Entity
     
     /**
     * Sets the reviewResult
+    * The result of the review, one of NotReviewed, Deny, DontKnow or Approve.
     *
     * @param string $val The reviewResult
     *

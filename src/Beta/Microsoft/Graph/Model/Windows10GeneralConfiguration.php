@@ -55,7 +55,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the activateAppsWithVoice
-    * Specifies if Windows apps can be activated by voice.
+    * Specifies if Windows apps can be activated by voice. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The activateAppsWithVoice
     */
@@ -74,7 +74,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the activateAppsWithVoice
-    * Specifies if Windows apps can be activated by voice.
+    * Specifies if Windows apps can be activated by voice. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The activateAppsWithVoice
     *
@@ -175,7 +175,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appManagementPackageFamilyNamesToLaunchAfterLogOn
-    * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.???
+    * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
     *
     * @return string The appManagementPackageFamilyNamesToLaunchAfterLogOn
     */
@@ -190,7 +190,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appManagementPackageFamilyNamesToLaunchAfterLogOn
-    * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.???
+    * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
     *
     * @param string $val The appManagementPackageFamilyNamesToLaunchAfterLogOn
     *
@@ -324,7 +324,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the authenticationWebSignIn
-    * Indicates whether or not Web Credential Provider will be enabled.
+    * Indicates whether or not Web Credential Provider will be enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The authenticationWebSignIn
     */
@@ -343,7 +343,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationWebSignIn
-    * Indicates whether or not Web Credential Provider will be enabled.
+    * Indicates whether or not Web Credential Provider will be enabled. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The authenticationWebSignIn
     *
@@ -647,7 +647,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cellularData
-    * Whether or not to allow the cellular data channel on the device. If not configured, the cellular data channel is allowed and the user can turn it off.
+    * Whether or not to allow the cellular data channel on the device. If not configured, the cellular data channel is allowed and the user can turn it off. Possible values are: blocked, required, allowed, notConfigured.
     *
     * @return ConfigurationUsage The cellularData
     */
@@ -666,7 +666,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cellularData
-    * Whether or not to allow the cellular data channel on the device. If not configured, the cellular data channel is allowed and the user can turn it off.
+    * Whether or not to allow the cellular data channel on the device. If not configured, the cellular data channel is allowed and the user can turn it off. Possible values are: blocked, required, allowed, notConfigured.
     *
     * @param ConfigurationUsage $val The cellularData
     *
@@ -1243,7 +1243,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderPotentiallyUnwantedAppAction
-    * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
+    * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
     *
     * @return DefenderPotentiallyUnwantedAppAction The defenderPotentiallyUnwantedAppAction
     */
@@ -1262,7 +1262,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderPotentiallyUnwantedAppAction
-    * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
+    * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
     *
     * @param DefenderPotentiallyUnwantedAppAction $val The defenderPotentiallyUnwantedAppAction
     *
@@ -1276,7 +1276,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderPotentiallyUnwantedAppActionSetting
-    * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
+    * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @return DefenderProtectionType The defenderPotentiallyUnwantedAppActionSetting
     */
@@ -1295,7 +1295,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderPotentiallyUnwantedAppActionSetting
-    * Gets or sets Defender???s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
+    * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
     *
     * @param DefenderProtectionType $val The defenderPotentiallyUnwantedAppActionSetting
     *
@@ -1876,7 +1876,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSubmitSamplesConsentType
-    * Checks for the user consent level in Windows Defender to send data.
+    * Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
     *
     * @return DefenderSubmitSamplesConsentType The defenderSubmitSamplesConsentType
     */
@@ -1895,7 +1895,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSubmitSamplesConsentType
-    * Checks for the user consent level in Windows Defender to send data.
+    * Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
     *
     * @param DefenderSubmitSamplesConsentType $val The defenderSubmitSamplesConsentType
     *
@@ -1909,7 +1909,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSystemScanSchedule
-    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @return WeeklySchedule The defenderSystemScanSchedule
     */
@@ -1928,7 +1928,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSystemScanSchedule
-    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @param WeeklySchedule $val The defenderSystemScanSchedule
     *
@@ -2969,7 +2969,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeFavoritesBarVisibility
-    * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page.
+    * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page. Possible values are: notConfigured, hide, show.
     *
     * @return VisibilitySetting The edgeFavoritesBarVisibility
     */
@@ -2988,7 +2988,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeFavoritesBarVisibility
-    * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page.
+    * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page. Possible values are: notConfigured, hide, show.
     *
     * @param VisibilitySetting $val The edgeFavoritesBarVisibility
     *
@@ -3151,7 +3151,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeKioskModeRestriction
-    * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode.
+    * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode. Possible values are: notConfigured, digitalSignage, normalMode, publicBrowsingSingleApp, publicBrowsingMultiApp.
     *
     * @return EdgeKioskModeRestrictionType The edgeKioskModeRestriction
     */
@@ -3170,7 +3170,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeKioskModeRestriction
-    * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode.
+    * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode. Possible values are: notConfigured, digitalSignage, normalMode, publicBrowsingSingleApp, publicBrowsingMultiApp.
     *
     * @param EdgeKioskModeRestrictionType $val The edgeKioskModeRestriction
     *
@@ -3242,7 +3242,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeOpensWith
-    * Specify what kind of pages are open at start.
+    * Specify what kind of pages are open at start. Possible values are: notConfigured, startPage, newTabPage, previousPages, specificPages.
     *
     * @return EdgeOpenOptions The edgeOpensWith
     */
@@ -3261,7 +3261,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeOpensWith
-    * Specify what kind of pages are open at start.
+    * Specify what kind of pages are open at start. Possible values are: notConfigured, startPage, newTabPage, previousPages, specificPages.
     *
     * @param EdgeOpenOptions $val The edgeOpensWith
     *
@@ -3424,7 +3424,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeShowMessageWhenOpeningInternetExplorerSites
-    * Controls the message displayed by Edge before switching to Internet Explorer.
+    * Controls the message displayed by Edge before switching to Internet Explorer. Possible values are: notConfigured, disabled, enabled, keepGoing.
     *
     * @return InternetExplorerMessageSetting The edgeShowMessageWhenOpeningInternetExplorerSites
     */
@@ -3443,7 +3443,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeShowMessageWhenOpeningInternetExplorerSites
-    * Controls the message displayed by Edge before switching to Internet Explorer.
+    * Controls the message displayed by Edge before switching to Internet Explorer. Possible values are: notConfigured, disabled, enabled, keepGoing.
     *
     * @param InternetExplorerMessageSetting $val The edgeShowMessageWhenOpeningInternetExplorerSites
     *
@@ -3486,7 +3486,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the edgeTelemetryForMicrosoft365Analytics
-    * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics
+    * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics. Possible values are: notConfigured, intranet, internet, intranetAndInternet.
     *
     * @return EdgeTelemetryMode The edgeTelemetryForMicrosoft365Analytics
     */
@@ -3505,7 +3505,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the edgeTelemetryForMicrosoft365Analytics
-    * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics
+    * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics. Possible values are: notConfigured, intranet, internet, intranetAndInternet.
     *
     * @param EdgeTelemetryMode $val The edgeTelemetryForMicrosoft365Analytics
     *
@@ -3867,7 +3867,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the experienceDoNotSyncBrowserSettings
-    * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override.
+    * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override. Possible values are: notConfigured, blockedWithUserOverride, blocked.
     *
     * @return BrowserSyncSetting The experienceDoNotSyncBrowserSettings
     */
@@ -3886,7 +3886,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the experienceDoNotSyncBrowserSettings
-    * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override.
+    * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override. Possible values are: notConfigured, blockedWithUserOverride, blocked.
     *
     * @param BrowserSyncSetting $val The experienceDoNotSyncBrowserSettings
     *
@@ -3900,7 +3900,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the findMyFiles
-    * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access.
+    * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The findMyFiles
     */
@@ -3919,7 +3919,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the findMyFiles
-    * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access.
+    * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The findMyFiles
     *
@@ -3962,7 +3962,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the inkWorkspaceAccess
-    * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
+    * Controls the user access to the ink workspace, from the desktop and from above the lock screen. Possible values are: notConfigured, enabled, disabled.
     *
     * @return InkAccessSetting The inkWorkspaceAccess
     */
@@ -3981,7 +3981,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the inkWorkspaceAccess
-    * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
+    * Controls the user access to the ink workspace, from the desktop and from above the lock screen. Possible values are: notConfigured, enabled, disabled.
     *
     * @param InkAccessSetting $val The inkWorkspaceAccess
     *
@@ -3995,7 +3995,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the inkWorkspaceAccessState
-    * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
+    * Controls the user access to the ink workspace, from the desktop and from above the lock screen. Possible values are: notConfigured, blocked, allowed.
     *
     * @return StateManagementSetting The inkWorkspaceAccessState
     */
@@ -4014,7 +4014,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the inkWorkspaceAccessState
-    * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
+    * Controls the user access to the ink workspace, from the desktop and from above the lock screen. Possible values are: notConfigured, blocked, allowed.
     *
     * @param StateManagementSetting $val The inkWorkspaceAccessState
     *
@@ -4115,7 +4115,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the lockScreenActivateAppsWithVoice
-    * This policy setting specifies whether Windows apps can be activated by voice while the system is locked.
+    * This policy setting specifies whether Windows apps can be activated by voice while the system is locked. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The lockScreenActivateAppsWithVoice
     */
@@ -4134,7 +4134,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the lockScreenActivateAppsWithVoice
-    * This policy setting specifies whether Windows apps can be activated by voice while the system is locked.
+    * This policy setting specifies whether Windows apps can be activated by voice while the system is locked. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The lockScreenActivateAppsWithVoice
     *
@@ -4467,7 +4467,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the microsoftAccountSignInAssistantSettings
-    * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service.
+    * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service. Possible values are: notConfigured, disabled.
     *
     * @return SignInAssistantOptions The microsoftAccountSignInAssistantSettings
     */
@@ -4486,7 +4486,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the microsoftAccountSignInAssistantSettings
-    * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service.
+    * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service. Possible values are: notConfigured, disabled.
     *
     * @param SignInAssistantOptions $val The microsoftAccountSignInAssistantSettings
     *
@@ -5059,7 +5059,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerButtonActionOnBattery
-    * This setting specifies the action that Windows takes when a user presses the Power button while on battery.
+    * This setting specifies the action that Windows takes when a user presses the Power button while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @return PowerActionType The powerButtonActionOnBattery
     */
@@ -5078,7 +5078,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerButtonActionOnBattery
-    * This setting specifies the action that Windows takes when a user presses the Power button while on battery.
+    * This setting specifies the action that Windows takes when a user presses the Power button while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @param PowerActionType $val The powerButtonActionOnBattery
     *
@@ -5092,7 +5092,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerButtonActionPluggedIn
-    * This setting specifies the action that Windows takes when a user presses the Power button while plugged in.
+    * This setting specifies the action that Windows takes when a user presses the Power button while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @return PowerActionType The powerButtonActionPluggedIn
     */
@@ -5111,7 +5111,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerButtonActionPluggedIn
-    * This setting specifies the action that Windows takes when a user presses the Power button while plugged in.
+    * This setting specifies the action that Windows takes when a user presses the Power button while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @param PowerActionType $val The powerButtonActionPluggedIn
     *
@@ -5125,7 +5125,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerHybridSleepOnBattery
-    * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
+    * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The powerHybridSleepOnBattery
     */
@@ -5144,7 +5144,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerHybridSleepOnBattery
-    * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
+    * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The powerHybridSleepOnBattery
     *
@@ -5158,7 +5158,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerHybridSleepPluggedIn
-    * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
+    * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The powerHybridSleepPluggedIn
     */
@@ -5177,7 +5177,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerHybridSleepPluggedIn
-    * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
+    * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The powerHybridSleepPluggedIn
     *
@@ -5191,7 +5191,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerLidCloseActionOnBattery
-    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery.
+    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @return PowerActionType The powerLidCloseActionOnBattery
     */
@@ -5210,7 +5210,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerLidCloseActionOnBattery
-    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery.
+    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @param PowerActionType $val The powerLidCloseActionOnBattery
     *
@@ -5224,7 +5224,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerLidCloseActionPluggedIn
-    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in.
+    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @return PowerActionType The powerLidCloseActionPluggedIn
     */
@@ -5243,7 +5243,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerLidCloseActionPluggedIn
-    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in.
+    * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @param PowerActionType $val The powerLidCloseActionPluggedIn
     *
@@ -5257,7 +5257,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerSleepButtonActionOnBattery
-    * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery.
+    * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @return PowerActionType The powerSleepButtonActionOnBattery
     */
@@ -5276,7 +5276,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerSleepButtonActionOnBattery
-    * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery.
+    * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @param PowerActionType $val The powerSleepButtonActionOnBattery
     *
@@ -5290,7 +5290,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the powerSleepButtonActionPluggedIn
-    * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in.
+    * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @return PowerActionType The powerSleepButtonActionPluggedIn
     */
@@ -5309,7 +5309,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the powerSleepButtonActionPluggedIn
-    * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in.
+    * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
     *
     * @param PowerActionType $val The powerSleepButtonActionPluggedIn
     *
@@ -5559,7 +5559,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the privacyDisableLaunchExperience
-    * This policy prevents the privacy experience from launching during user logon for new and upgraded users.???
+    * This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
     *
     * @return bool The privacyDisableLaunchExperience
     */
@@ -5574,7 +5574,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the privacyDisableLaunchExperience
-    * This policy prevents the privacy experience from launching during user logon for new and upgraded users.???
+    * This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
     *
     * @param bool $val The privacyDisableLaunchExperience
     *
@@ -6578,7 +6578,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenAppInstallControl
-    * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+    * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store. Possible values are: notConfigured, anywhere, storeOnly, recommendations, preferStore.
     *
     * @return AppInstallControlType The smartScreenAppInstallControl
     */
@@ -6597,7 +6597,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenAppInstallControl
-    * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+    * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store. Possible values are: notConfigured, anywhere, storeOnly, recommendations, preferStore.
     *
     * @param AppInstallControlType $val The smartScreenAppInstallControl
     *
@@ -6669,7 +6669,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenEnableAppInstallControl
-    * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+    * This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
     *
     * @return bool The smartScreenEnableAppInstallControl
     */
@@ -6684,7 +6684,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenEnableAppInstallControl
-    * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+    * This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
     *
     * @param bool $val The smartScreenEnableAppInstallControl
     *

@@ -54,7 +54,7 @@ class Win32LobAppRequirement extends Entity
 
     /**
     * Gets the operator
-    * The operator for detection
+    * The operator for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @return Win32LobAppDetectionOperator The operator
     */
@@ -73,7 +73,7 @@ class Win32LobAppRequirement extends Entity
 
     /**
     * Sets the operator
-    * The operator for detection
+    * The operator for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @param Win32LobAppDetectionOperator $val The value to assign to the operator
     *

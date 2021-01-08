@@ -53,6 +53,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the customerEmailAddress
+    * The SMTP address of the bookingCustomer who is booking the appointment.
     *
     * @return string The customerEmailAddress
     */
@@ -67,6 +68,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the customerEmailAddress
+    * The SMTP address of the bookingCustomer who is booking the appointment.
     *
     * @param string $val The customerEmailAddress
     *
@@ -109,6 +111,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the customerLocation
+    * Represents location information for the bookingCustomer who is booking the appointment.
     *
     * @return Location The customerLocation
     */
@@ -127,6 +130,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the customerLocation
+    * Represents location information for the bookingCustomer who is booking the appointment.
     *
     * @param Location $val The customerLocation
     *
@@ -140,6 +144,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the customerName
+    * The customer's name.
     *
     * @return string The customerName
     */
@@ -154,6 +159,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the customerName
+    * The customer's name.
     *
     * @param string $val The customerName
     *
@@ -196,6 +202,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the customerPhone
+    * The customer's phone number.
     *
     * @return string The customerPhone
     */
@@ -210,6 +217,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the customerPhone
+    * The customer's phone number.
     *
     * @param string $val The customerPhone
     *
@@ -223,6 +231,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the duration
+    * The length of the appointment, denoted in ISO8601 format.
     *
     * @return Duration The duration
     */
@@ -241,6 +250,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the duration
+    * The length of the appointment, denoted in ISO8601 format.
     *
     * @param Duration $val The duration
     *
@@ -254,6 +264,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the end
+    * The date, time, and time zone that the appointment ends.
     *
     * @return DateTimeTimeZone The end
     */
@@ -272,6 +283,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the end
+    * The date, time, and time zone that the appointment ends.
     *
     * @param DateTimeTimeZone $val The end
     *
@@ -285,6 +297,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the invoiceAmount
+    * The billed amount on the invoice.
     *
     * @return float The invoiceAmount
     */
@@ -299,6 +312,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the invoiceAmount
+    * The billed amount on the invoice.
     *
     * @param float $val The invoiceAmount
     *
@@ -312,6 +326,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the invoiceDate
+    * The date, time, and time zone of the invoice for this appointment.
     *
     * @return DateTimeTimeZone The invoiceDate
     */
@@ -330,6 +345,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the invoiceDate
+    * The date, time, and time zone of the invoice for this appointment.
     *
     * @param DateTimeTimeZone $val The invoiceDate
     *
@@ -343,6 +359,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the invoiceId
+    * The ID of the invoice.
     *
     * @return string The invoiceId
     */
@@ -357,6 +374,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the invoiceId
+    * The ID of the invoice.
     *
     * @param string $val The invoiceId
     *
@@ -370,6 +388,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the invoiceStatus
+    * The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective.
     *
     * @return BookingInvoiceStatus The invoiceStatus
     */
@@ -388,6 +407,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the invoiceStatus
+    * The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective.
     *
     * @param BookingInvoiceStatus $val The invoiceStatus
     *
@@ -401,6 +421,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the invoiceUrl
+    * The URL of the invoice in Microsoft Bookings.
     *
     * @return string The invoiceUrl
     */
@@ -415,6 +436,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the invoiceUrl
+    * The URL of the invoice in Microsoft Bookings.
     *
     * @param string $val The invoiceUrl
     *
@@ -482,6 +504,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the optOutOfCustomerEmail
+    * True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
     *
     * @return bool The optOutOfCustomerEmail
     */
@@ -496,6 +519,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the optOutOfCustomerEmail
+    * True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
     *
     * @param bool $val The optOutOfCustomerEmail
     *
@@ -509,6 +533,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the postBuffer
+    * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
     *
     * @return Duration The postBuffer
     */
@@ -527,6 +552,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the postBuffer
+    * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
     *
     * @param Duration $val The postBuffer
     *
@@ -540,6 +566,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the preBuffer
+    * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
     *
     * @return Duration The preBuffer
     */
@@ -558,6 +585,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the preBuffer
+    * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
     *
     * @param Duration $val The preBuffer
     *
@@ -571,6 +599,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the price
+    * The regular price for an appointment for the specified bookingService.
     *
     * @return float The price
     */
@@ -585,6 +614,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the price
+    * The regular price for an appointment for the specified bookingService.
     *
     * @param float $val The price
     *
@@ -598,6 +628,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the priceType
+    * A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
     *
     * @return BookingPriceType The priceType
     */
@@ -616,6 +647,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the priceType
+    * A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
     *
     * @param BookingPriceType $val The priceType
     *
@@ -659,6 +691,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the selfServiceAppointmentId
+    * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
     *
     * @return string The selfServiceAppointmentId
     */
@@ -673,6 +706,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the selfServiceAppointmentId
+    * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
     *
     * @param string $val The selfServiceAppointmentId
     *
@@ -686,7 +720,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the serviceId
-    * The id of the booking service associated with this appointment.
+    * The ID of the bookingService associated with this appointment.
     *
     * @return string The serviceId
     */
@@ -701,7 +735,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the serviceId
-    * The id of the booking service associated with this appointment.
+    * The ID of the bookingService associated with this appointment.
     *
     * @param string $val The serviceId
     *
@@ -715,6 +749,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the serviceLocation
+    * The location where the service is delivered.
     *
     * @return Location The serviceLocation
     */
@@ -733,6 +768,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the serviceLocation
+    * The location where the service is delivered.
     *
     * @param Location $val The serviceLocation
     *
@@ -804,6 +840,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the staffMemberIds
+    * The ID of each bookingStaffMember who is scheduled in this appointment.
     *
     * @return string The staffMemberIds
     */
@@ -818,6 +855,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the staffMemberIds
+    * The ID of each bookingStaffMember who is scheduled in this appointment.
     *
     * @param string $val The staffMemberIds
     *
@@ -831,6 +869,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the start
+    * The date, time, and time zone that the appointment begins.
     *
     * @return DateTimeTimeZone The start
     */
@@ -849,6 +888,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the start
+    * The date, time, and time zone that the appointment begins.
     *
     * @param DateTimeTimeZone $val The start
     *

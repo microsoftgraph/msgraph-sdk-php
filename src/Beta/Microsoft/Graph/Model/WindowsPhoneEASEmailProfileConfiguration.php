@@ -84,7 +84,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     
     /**
     * Gets the durationOfEmailToSync
-    * Duration of email to sync.
+    * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
     *
     * @return EmailSyncDuration The durationOfEmailToSync
     */
@@ -103,7 +103,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     
     /**
     * Sets the durationOfEmailToSync
-    * Duration of email to sync.
+    * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
     *
     * @param EmailSyncDuration $val The durationOfEmailToSync
     *
@@ -117,7 +117,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     
     /**
     * Gets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
     *
     * @return UserEmailSource The emailAddressSource
     */
@@ -136,7 +136,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     
     /**
     * Sets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
     *
     * @param UserEmailSource $val The emailAddressSource
     *
@@ -150,7 +150,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     
     /**
     * Gets the emailSyncSchedule
-    * Email sync schedule.
+    * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
     *
     * @return EmailSyncSchedule The emailSyncSchedule
     */
@@ -169,7 +169,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     
     /**
     * Sets the emailSyncSchedule
-    * Email sync schedule.
+    * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
     *
     * @param EmailSyncSchedule $val The emailSyncSchedule
     *

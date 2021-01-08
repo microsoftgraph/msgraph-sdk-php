@@ -142,7 +142,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the meteredConnectionLimit
-    * Specify the metered connection limit type for the wifi connection.
+    * Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
     *
     * @return MeteredConnectionLimitType The meteredConnectionLimit
     */
@@ -161,7 +161,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the meteredConnectionLimit
-    * Specify the metered connection limit type for the wifi connection.
+    * Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
     *
     * @param MeteredConnectionLimitType $val The meteredConnectionLimit
     *
@@ -320,7 +320,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxySetting
-    * Specify the proxy setting for Wi-Fi configuration
+    * Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
     *
     * @return WiFiProxySetting The proxySetting
     */
@@ -339,7 +339,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxySetting
-    * Specify the proxy setting for Wi-Fi configuration
+    * Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
     *
     * @param WiFiProxySetting $val The proxySetting
     *
@@ -382,7 +382,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wifiSecurityType
-    * Specify the Wifi Security Type.
+    * Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
     *
     * @return WiFiSecurityType The wifiSecurityType
     */
@@ -401,7 +401,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wifiSecurityType
-    * Specify the Wifi Security Type.
+    * Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
     *
     * @param WiFiSecurityType $val The wifiSecurityType
     *

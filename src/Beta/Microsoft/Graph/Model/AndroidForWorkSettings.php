@@ -26,7 +26,7 @@ class AndroidForWorkSettings extends Entity
 {
     /**
     * Gets the bindStatus
-    * Bind status of the tenant with the Google EMM API
+    * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
     *
     * @return AndroidForWorkBindStatus The bindStatus
     */
@@ -45,7 +45,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the bindStatus
-    * Bind status of the tenant with the Google EMM API
+    * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
     *
     * @param AndroidForWorkBindStatus $val The bindStatus
     *
@@ -88,7 +88,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the enrollmentTarget
-    * Indicates which users can enroll devices in Android for Work device management
+    * Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
     *
     * @return AndroidForWorkEnrollmentTarget The enrollmentTarget
     */
@@ -107,7 +107,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the enrollmentTarget
-    * Indicates which users can enroll devices in Android for Work device management
+    * Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
     *
     * @param AndroidForWorkEnrollmentTarget $val The enrollmentTarget
     *
@@ -154,7 +154,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Gets the lastAppSyncStatus
-    * Last application sync result
+    * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
     *
     * @return AndroidForWorkSyncStatus The lastAppSyncStatus
     */
@@ -173,7 +173,7 @@ class AndroidForWorkSettings extends Entity
     
     /**
     * Sets the lastAppSyncStatus
-    * Last application sync result
+    * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
     *
     * @param AndroidForWorkSyncStatus $val The lastAppSyncStatus
     *

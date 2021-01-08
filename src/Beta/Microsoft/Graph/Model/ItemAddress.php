@@ -26,6 +26,7 @@ class ItemAddress extends ItemFacet
 {
     /**
     * Gets the detail
+    * Details about the address itself.
     *
     * @return PhysicalAddress The detail
     */
@@ -44,6 +45,7 @@ class ItemAddress extends ItemFacet
     
     /**
     * Sets the detail
+    * Details about the address itself.
     *
     * @param PhysicalAddress $val The detail
     *
@@ -57,6 +59,7 @@ class ItemAddress extends ItemFacet
     
     /**
     * Gets the displayName
+    * Friendly name the user has assigned to this address.
     *
     * @return string The displayName
     */
@@ -71,6 +74,7 @@ class ItemAddress extends ItemFacet
     
     /**
     * Sets the displayName
+    * Friendly name the user has assigned to this address.
     *
     * @param string $val The displayName
     *
@@ -84,6 +88,7 @@ class ItemAddress extends ItemFacet
     
     /**
     * Gets the geoCoordinates
+    * The geocoordinates of the address.
     *
     * @return GeoCoordinates The geoCoordinates
     */
@@ -102,6 +107,7 @@ class ItemAddress extends ItemFacet
     
     /**
     * Sets the geoCoordinates
+    * The geocoordinates of the address.
     *
     * @param GeoCoordinates $val The geoCoordinates
     *

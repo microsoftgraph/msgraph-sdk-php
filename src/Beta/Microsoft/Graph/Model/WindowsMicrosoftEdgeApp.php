@@ -26,7 +26,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp
 {
     /**
     * Gets the channel
-    * The channel to install on target devices.
+    * The channel to install on target devices. Possible values are: dev, beta, stable.
     *
     * @return MicrosoftEdgeChannel The channel
     */
@@ -45,7 +45,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp
     
     /**
     * Sets the channel
-    * The channel to install on target devices.
+    * The channel to install on target devices. Possible values are: dev, beta, stable.
     *
     * @param MicrosoftEdgeChannel $val The channel
     *

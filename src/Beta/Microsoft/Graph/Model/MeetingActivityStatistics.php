@@ -26,6 +26,7 @@ class MeetingActivityStatistics extends ActivityStatistics
 {
     /**
     * Gets the afterHours
+    * Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The afterHours
     */
@@ -44,6 +45,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the afterHours
+    * Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The afterHours
     *
@@ -57,6 +59,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Gets the conflicting
+    * Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The conflicting
     */
@@ -75,6 +78,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the conflicting
+    * Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The conflicting
     *
@@ -88,6 +92,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Gets the long
+    * Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The long
     */
@@ -106,6 +111,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the long
+    * Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The long
     *
@@ -119,6 +125,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Gets the multitasking
+    * Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The multitasking
     */
@@ -137,6 +144,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the multitasking
+    * Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The multitasking
     *
@@ -150,6 +158,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Gets the organized
+    * Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The organized
     */
@@ -168,6 +177,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the organized
+    * Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The organized
     *
@@ -181,6 +191,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Gets the recurring
+    * Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The recurring
     */
@@ -199,6 +210,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the recurring
+    * Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The recurring
     *

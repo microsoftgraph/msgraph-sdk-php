@@ -26,6 +26,7 @@ class EducationFeedbackOutcome extends EducationOutcome
 {
     /**
     * Gets the feedback
+    * Teacher's written feedback to the student.
     *
     * @return EducationFeedback The feedback
     */
@@ -44,6 +45,7 @@ class EducationFeedbackOutcome extends EducationOutcome
     
     /**
     * Sets the feedback
+    * Teacher's written feedback to the student.
     *
     * @param EducationFeedback $val The feedback
     *
@@ -57,6 +59,7 @@ class EducationFeedbackOutcome extends EducationOutcome
     
     /**
     * Gets the publishedFeedback
+    * A copy of the feedback property that is made when the grade is released to the student.
     *
     * @return EducationFeedback The publishedFeedback
     */
@@ -75,6 +78,7 @@ class EducationFeedbackOutcome extends EducationOutcome
     
     /**
     * Sets the publishedFeedback
+    * A copy of the feedback property that is made when the grade is released to the student.
     *
     * @param EducationFeedback $val The publishedFeedback
     *

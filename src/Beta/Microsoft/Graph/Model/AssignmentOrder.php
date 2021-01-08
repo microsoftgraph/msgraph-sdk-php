@@ -25,6 +25,7 @@ class AssignmentOrder extends Entity
 {
     /**
     * Gets the order
+    * A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
     *
     * @return string The order
     */
@@ -39,6 +40,7 @@ class AssignmentOrder extends Entity
 
     /**
     * Sets the order
+    * A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
     *
     * @param string $val The value of the order
     *

@@ -25,6 +25,7 @@ class GovernancePermission extends Entity
 {
     /**
     * Gets the accessLevel
+    * The access level. Valid values: None, UserRead, AdminRead, and AdminReadWrite.
     *
     * @return string The accessLevel
     */
@@ -39,6 +40,7 @@ class GovernancePermission extends Entity
 
     /**
     * Sets the accessLevel
+    * The access level. Valid values: None, UserRead, AdminRead, and AdminReadWrite.
     *
     * @param string $val The value of the accessLevel
     *
@@ -51,6 +53,7 @@ class GovernancePermission extends Entity
     }
     /**
     * Gets the isActive
+    * Indicate if the requestor has any active role assignment for the access level.
     *
     * @return bool The isActive
     */
@@ -65,6 +68,7 @@ class GovernancePermission extends Entity
 
     /**
     * Sets the isActive
+    * Indicate if the requestor has any active role assignment for the access level.
     *
     * @param bool $val The value of the isActive
     *
@@ -77,6 +81,7 @@ class GovernancePermission extends Entity
     }
     /**
     * Gets the isEligible
+    * Indicate if the requestor has any eligible role assignment for the access level.
     *
     * @return bool The isEligible
     */
@@ -91,6 +96,7 @@ class GovernancePermission extends Entity
 
     /**
     * Sets the isEligible
+    * Indicate if the requestor has any eligible role assignment for the access level.
     *
     * @param bool $val The value of the isEligible
     *

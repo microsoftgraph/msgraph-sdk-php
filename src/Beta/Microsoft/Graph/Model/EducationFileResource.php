@@ -34,6 +34,7 @@ class EducationFileResource extends EducationResource
 
     /**
     * Gets the fileUrl
+    * Location on disk of the file resource.
     *
     * @return string The fileUrl
     */
@@ -48,6 +49,7 @@ class EducationFileResource extends EducationResource
 
     /**
     * Sets the fileUrl
+    * Location on disk of the file resource.
     *
     * @param string $val The value of the fileUrl
     *

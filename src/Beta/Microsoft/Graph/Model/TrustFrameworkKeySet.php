@@ -27,6 +27,7 @@ class TrustFrameworkKeySet extends Entity
 
      /** 
      * Gets the keys
+    * A collection of the keys.
      *
      * @return array The keys
      */
@@ -41,6 +42,7 @@ class TrustFrameworkKeySet extends Entity
     
     /** 
     * Sets the keys
+    * A collection of the keys.
     *
     * @param TrustFrameworkKey $val The keys
     *

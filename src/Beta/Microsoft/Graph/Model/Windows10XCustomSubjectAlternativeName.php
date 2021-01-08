@@ -54,7 +54,7 @@ class Windows10XCustomSubjectAlternativeName extends Entity
 
     /**
     * Gets the sanType
-    * Custom SAN Type.
+    * Custom SAN Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
     * @return SubjectAlternativeNameType The sanType
     */
@@ -73,7 +73,7 @@ class Windows10XCustomSubjectAlternativeName extends Entity
 
     /**
     * Sets the sanType
-    * Custom SAN Type.
+    * Custom SAN Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
     * @param SubjectAlternativeNameType $val The value to assign to the sanType
     *

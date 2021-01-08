@@ -35,6 +35,7 @@ class EducationIdentityMatchingConfiguration extends EducationIdentitySynchroniz
 
     /**
     * Gets the matchingOptions
+    * Mapping between the user account and the options to use to uniquely identify the user to update.
     *
     * @return EducationIdentityMatchingOptions The matchingOptions
     */
@@ -53,6 +54,7 @@ class EducationIdentityMatchingConfiguration extends EducationIdentitySynchroniz
 
     /**
     * Sets the matchingOptions
+    * Mapping between the user account and the options to use to uniquely identify the user to update.
     *
     * @param EducationIdentityMatchingOptions $val The value to assign to the matchingOptions
     *

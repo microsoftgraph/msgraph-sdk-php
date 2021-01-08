@@ -26,6 +26,7 @@ class AccessPackageResource extends Entity
 {
     /**
     * Gets the addedBy
+    * Read-only.
     *
     * @return string The addedBy
     */
@@ -40,6 +41,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the addedBy
+    * Read-only.
     *
     * @param string $val The addedBy
     *
@@ -53,6 +55,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the addedOn
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The addedOn
     */
@@ -71,6 +74,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the addedOn
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The addedOn
     *
@@ -112,6 +116,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the description
+    * A description for the resource.
     *
     * @return string The description
     */
@@ -126,6 +131,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the description
+    * A description for the resource.
     *
     * @param string $val The description
     *
@@ -139,6 +145,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the displayName
+    * The display name of the resource, such as the application name, group name or site name.
     *
     * @return string The displayName
     */
@@ -153,6 +160,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the resource, such as the application name, group name or site name.
     *
     * @param string $val The displayName
     *
@@ -166,6 +174,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the isPendingOnboarding
+    * True if the resource is not yet available for assignment.
     *
     * @return bool The isPendingOnboarding
     */
@@ -180,6 +189,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the isPendingOnboarding
+    * True if the resource is not yet available for assignment.
     *
     * @param bool $val The isPendingOnboarding
     *
@@ -193,6 +203,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the originId
+    * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
     *
     * @return string The originId
     */
@@ -207,6 +218,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the originId
+    * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
     *
     * @param string $val The originId
     *
@@ -220,6 +232,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @return string The originSystem
     */
@@ -234,6 +247,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the originSystem
+    * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
     * @param string $val The originSystem
     *
@@ -247,6 +261,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the resourceType
+    * The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
     *
     * @return string The resourceType
     */
@@ -261,6 +276,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the resourceType
+    * The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
     *
     * @param string $val The resourceType
     *
@@ -274,6 +290,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the url
+    * A unique resource locator for the resource, such as the URL for signing a user into an application.
     *
     * @return string The url
     */
@@ -288,6 +305,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the url
+    * A unique resource locator for the resource, such as the URL for signing a user into an application.
     *
     * @param string $val The url
     *
@@ -302,6 +320,7 @@ class AccessPackageResource extends Entity
 
      /** 
      * Gets the accessPackageResourceRoles
+    * Read-only. Nullable.
      *
      * @return array The accessPackageResourceRoles
      */
@@ -316,6 +335,7 @@ class AccessPackageResource extends Entity
     
     /** 
     * Sets the accessPackageResourceRoles
+    * Read-only. Nullable.
     *
     * @param AccessPackageResourceRole $val The accessPackageResourceRoles
     *
@@ -330,6 +350,7 @@ class AccessPackageResource extends Entity
 
      /** 
      * Gets the accessPackageResourceScopes
+    * Read-only. Nullable.
      *
      * @return array The accessPackageResourceScopes
      */
@@ -344,6 +365,7 @@ class AccessPackageResource extends Entity
     
     /** 
     * Sets the accessPackageResourceScopes
+    * Read-only. Nullable.
     *
     * @param AccessPackageResourceScope $val The accessPackageResourceScopes
     *

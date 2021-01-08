@@ -26,6 +26,7 @@ class PrivilegedRoleSettings extends Entity
 {
     /**
     * Gets the approvalOnElevation
+    * true if the approval is required when activate the role. false if the approval is not required when activate the role.
     *
     * @return bool The approvalOnElevation
     */
@@ -40,6 +41,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the approvalOnElevation
+    * true if the approval is required when activate the role. false if the approval is not required when activate the role.
     *
     * @param bool $val The approvalOnElevation
     *
@@ -53,6 +55,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the approverIds
+    * List of Approval ids, if approval is required for activation.
     *
     * @return string The approverIds
     */
@@ -67,6 +70,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the approverIds
+    * List of Approval ids, if approval is required for activation.
     *
     * @param string $val The approverIds
     *
@@ -80,6 +84,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the elevationDuration
+    * The duration when the role is activated.
     *
     * @return Duration The elevationDuration
     */
@@ -98,6 +103,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the elevationDuration
+    * The duration when the role is activated.
     *
     * @param Duration $val The elevationDuration
     *
@@ -111,6 +117,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the isMfaOnElevationConfigurable
+    * true if mfaOnElevation is configurable. false if mfaOnElevation is not configurable.
     *
     * @return bool The isMfaOnElevationConfigurable
     */
@@ -125,6 +132,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the isMfaOnElevationConfigurable
+    * true if mfaOnElevation is configurable. false if mfaOnElevation is not configurable.
     *
     * @param bool $val The isMfaOnElevationConfigurable
     *
@@ -138,6 +146,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the lastGlobalAdmin
+    * Internal used only.
     *
     * @return bool The lastGlobalAdmin
     */
@@ -152,6 +161,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the lastGlobalAdmin
+    * Internal used only.
     *
     * @param bool $val The lastGlobalAdmin
     *
@@ -165,6 +175,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the maxElavationDuration
+    * Maximal duration for the activated role.
     *
     * @return Duration The maxElavationDuration
     */
@@ -183,6 +194,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the maxElavationDuration
+    * Maximal duration for the activated role.
     *
     * @param Duration $val The maxElavationDuration
     *
@@ -196,6 +208,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the mfaOnElevation
+    * true if MFA is required to activate the role. false if MFA is not required to activate the role.
     *
     * @return bool The mfaOnElevation
     */
@@ -210,6 +223,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the mfaOnElevation
+    * true if MFA is required to activate the role. false if MFA is not required to activate the role.
     *
     * @param bool $val The mfaOnElevation
     *
@@ -223,6 +237,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the minElevationDuration
+    * Minimal duration for the activated role.
     *
     * @return Duration The minElevationDuration
     */
@@ -241,6 +256,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the minElevationDuration
+    * Minimal duration for the activated role.
     *
     * @param Duration $val The minElevationDuration
     *
@@ -254,6 +270,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the notificationToUserOnElevation
+    * true if send notification to the end user when the role is activated. false if do not send notification when the role is activated.
     *
     * @return bool The notificationToUserOnElevation
     */
@@ -268,6 +285,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the notificationToUserOnElevation
+    * true if send notification to the end user when the role is activated. false if do not send notification when the role is activated.
     *
     * @param bool $val The notificationToUserOnElevation
     *
@@ -281,6 +299,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Gets the ticketingInfoOnElevation
+    * true if the ticketing information is required when activate the role. false if the ticketing information is not required when activate the role.
     *
     * @return bool The ticketingInfoOnElevation
     */
@@ -295,6 +314,7 @@ class PrivilegedRoleSettings extends Entity
     
     /**
     * Sets the ticketingInfoOnElevation
+    * true if the ticketing information is required when activate the role. false if the ticketing information is not required when activate the role.
     *
     * @param bool $val The ticketingInfoOnElevation
     *

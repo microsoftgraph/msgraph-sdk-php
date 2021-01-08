@@ -26,6 +26,7 @@ class EducationalActivity extends ItemFacet
 {
     /**
     * Gets the completionMonthYear
+    * The month and year the user graduated or completed the activity.
     *
     * @return \DateTime The completionMonthYear
     */
@@ -44,6 +45,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Sets the completionMonthYear
+    * The month and year the user graduated or completed the activity.
     *
     * @param \DateTime $val The completionMonthYear
     *
@@ -57,6 +59,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Gets the endMonthYear
+    * The month and year the user completed the educational activity referenced.
     *
     * @return \DateTime The endMonthYear
     */
@@ -75,6 +78,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Sets the endMonthYear
+    * The month and year the user completed the educational activity referenced.
     *
     * @param \DateTime $val The endMonthYear
     *
@@ -88,6 +92,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Gets the institution
+    * Contains details of the institution studied at.
     *
     * @return InstitutionData The institution
     */
@@ -106,6 +111,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Sets the institution
+    * Contains details of the institution studied at.
     *
     * @param InstitutionData $val The institution
     *
@@ -119,6 +125,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Gets the program
+    * Contains extended information about the program or course.
     *
     * @return EducationalActivityDetail The program
     */
@@ -137,6 +144,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Sets the program
+    * Contains extended information about the program or course.
     *
     * @param EducationalActivityDetail $val The program
     *
@@ -150,6 +158,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Gets the startMonthYear
+    * The month and year the user commenced the activity referenced.
     *
     * @return \DateTime The startMonthYear
     */
@@ -168,6 +177,7 @@ class EducationalActivity extends ItemFacet
     
     /**
     * Sets the startMonthYear
+    * The month and year the user commenced the activity referenced.
     *
     * @param \DateTime $val The startMonthYear
     *

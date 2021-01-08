@@ -26,6 +26,7 @@ class BusinessFlowTemplate extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the business flow template
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class BusinessFlowTemplate extends Entity
     
     /**
     * Sets the displayName
+    * The name of the business flow template
     *
     * @param string $val The displayName
     *

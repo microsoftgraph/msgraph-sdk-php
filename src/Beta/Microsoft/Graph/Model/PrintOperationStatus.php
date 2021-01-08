@@ -25,6 +25,7 @@ class PrintOperationStatus extends Entity
 {
     /**
     * Gets the description
+    * A human-readable description of the printOperation's current processing state. Read-only.
     *
     * @return string The description
     */
@@ -39,6 +40,7 @@ class PrintOperationStatus extends Entity
 
     /**
     * Sets the description
+    * A human-readable description of the printOperation's current processing state. Read-only.
     *
     * @param string $val The value of the description
     *
@@ -52,6 +54,7 @@ class PrintOperationStatus extends Entity
 
     /**
     * Gets the state
+    * The printOperation's current processing state. Valid values are described in the following table. Read-only.
     *
     * @return PrintOperationProcessingState The state
     */
@@ -70,6 +73,7 @@ class PrintOperationStatus extends Entity
 
     /**
     * Sets the state
+    * The printOperation's current processing state. Valid values are described in the following table. Read-only.
     *
     * @param PrintOperationProcessingState $val The value to assign to the state
     *

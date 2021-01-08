@@ -204,7 +204,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
     
     /**
     * Gets the updateCategory
-    * Software update type
+    * Software update type. Possible values are: critical, configurationDataFile, firmware, other.
     *
     * @return MacOSSoftwareUpdateCategory The updateCategory
     */
@@ -223,7 +223,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
     
     /**
     * Sets the updateCategory
-    * Software update type
+    * Software update type. Possible values are: critical, configurationDataFile, firmware, other.
     *
     * @param MacOSSoftwareUpdateCategory $val The updateCategory
     *

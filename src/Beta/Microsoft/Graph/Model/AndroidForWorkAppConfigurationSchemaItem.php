@@ -26,7 +26,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Gets the dataType
-    * The type of value this item describes
+    * The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
     *
     * @return AndroidForWorkAppConfigurationSchemaItemDataType The dataType
     */
@@ -45,7 +45,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
 
     /**
     * Sets the dataType
-    * The type of value this item describes
+    * The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
     *
     * @param AndroidForWorkAppConfigurationSchemaItemDataType $val The value to assign to the dataType
     *

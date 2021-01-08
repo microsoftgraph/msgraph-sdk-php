@@ -86,7 +86,7 @@ class WindowsKioskProfile extends Entity
     }
     /**
     * Gets the profileName
-    * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+    * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
     *
     * @return string The profileName
     */
@@ -101,7 +101,7 @@ class WindowsKioskProfile extends Entity
 
     /**
     * Sets the profileName
-    * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+    * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
     *
     * @param string $val The value of the profileName
     *

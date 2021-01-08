@@ -26,6 +26,7 @@ class PrintConnector extends Entity
 {
     /**
     * Gets the appVersion
+    * The connector's version.
     *
     * @return string The appVersion
     */
@@ -40,6 +41,7 @@ class PrintConnector extends Entity
     
     /**
     * Sets the appVersion
+    * The connector's version.
     *
     * @param string $val The appVersion
     *
@@ -53,6 +55,7 @@ class PrintConnector extends Entity
     
     /**
     * Gets the deviceHealth
+    * The connector's device health.
     *
     * @return DeviceHealth The deviceHealth
     */
@@ -71,6 +74,7 @@ class PrintConnector extends Entity
     
     /**
     * Sets the deviceHealth
+    * The connector's device health.
     *
     * @param DeviceHealth $val The deviceHealth
     *
@@ -84,6 +88,7 @@ class PrintConnector extends Entity
     
     /**
     * Gets the displayName
+    * The name of the connector.
     *
     * @return string The displayName
     */
@@ -98,6 +103,7 @@ class PrintConnector extends Entity
     
     /**
     * Sets the displayName
+    * The name of the connector.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class PrintConnector extends Entity
     
     /**
     * Gets the fullyQualifiedDomainName
+    * The connector machine's hostname.
     *
     * @return string The fullyQualifiedDomainName
     */
@@ -125,6 +132,7 @@ class PrintConnector extends Entity
     
     /**
     * Sets the fullyQualifiedDomainName
+    * The connector machine's hostname.
     *
     * @param string $val The fullyQualifiedDomainName
     *
@@ -138,6 +146,7 @@ class PrintConnector extends Entity
     
     /**
     * Gets the location
+    * The physical and/or organizational location of the connector.
     *
     * @return PrinterLocation The location
     */
@@ -156,6 +165,7 @@ class PrintConnector extends Entity
     
     /**
     * Sets the location
+    * The physical and/or organizational location of the connector.
     *
     * @param PrinterLocation $val The location
     *
@@ -196,6 +206,7 @@ class PrintConnector extends Entity
     
     /**
     * Gets the operatingSystem
+    * The connector machine's operating system version.
     *
     * @return string The operatingSystem
     */
@@ -210,6 +221,7 @@ class PrintConnector extends Entity
     
     /**
     * Sets the operatingSystem
+    * The connector machine's operating system version.
     *
     * @param string $val The operatingSystem
     *
@@ -223,6 +235,7 @@ class PrintConnector extends Entity
     
     /**
     * Gets the registeredDateTime
+    * The DateTimeOffset when the connector was registered.
     *
     * @return \DateTime The registeredDateTime
     */
@@ -241,6 +254,7 @@ class PrintConnector extends Entity
     
     /**
     * Sets the registeredDateTime
+    * The DateTimeOffset when the connector was registered.
     *
     * @param \DateTime $val The registeredDateTime
     *

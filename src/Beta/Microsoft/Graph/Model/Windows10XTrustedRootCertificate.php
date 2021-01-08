@@ -55,7 +55,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
     
     /**
     * Gets the destinationStore
-    * Destination store location for the Trusted Root Certificate.
+    * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
     *
     * @return CertificateDestinationStore The destinationStore
     */
@@ -74,7 +74,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
     
     /**
     * Sets the destinationStore
-    * Destination store location for the Trusted Root Certificate.
+    * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
     *
     * @param CertificateDestinationStore $val The destinationStore
     *
