@@ -26,7 +26,7 @@ class NotificationMessageTemplate extends Entity
 {
     /**
     * Gets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
     *
     * @return NotificationTemplateBrandingOptions The brandingOptions
     */
@@ -45,7 +45,7 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Sets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
     *
     * @param NotificationTemplateBrandingOptions $val The brandingOptions
     *

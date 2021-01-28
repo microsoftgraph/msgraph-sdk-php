@@ -35,5 +35,6 @@ class ConditionalAccessGrantControl extends Enum
     const DOMAIN_JOINED_DEVICE = "domainJoinedDevice";
     const APPROVED_APPLICATION = "approvedApplication";
     const COMPLIANT_APPLICATION = "compliantApplication";
+    const PASSWORD_CHANGE = "passwordChange";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -26,6 +26,7 @@ class EventMessage extends Message
 {
     /**
     * Gets the endDateTime
+    * The end time of the requested meeting.
     *
     * @return DateTimeTimeZone The endDateTime
     */
@@ -44,6 +45,7 @@ class EventMessage extends Message
     
     /**
     * Sets the endDateTime
+    * The end time of the requested meeting.
     *
     * @param DateTimeTimeZone $val The endDateTime
     *

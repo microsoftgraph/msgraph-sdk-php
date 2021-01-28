@@ -117,7 +117,7 @@ class TeamsTab extends Entity
     
     /**
     * Gets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
     * @return TeamsApp The teamsApp
     */
@@ -136,7 +136,7 @@ class TeamsTab extends Entity
     
     /**
     * Sets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
     * @param TeamsApp $val The teamsApp
     *

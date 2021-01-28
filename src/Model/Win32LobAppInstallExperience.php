@@ -59,7 +59,7 @@ class Win32LobAppInstallExperience extends Entity
 
     /**
     * Gets the runAsAccount
-    * Indicates the type of execution context the app runs in.
+    * Indicates the type of execution context the app runs in. Possible values are: system, user.
     *
     * @return RunAsAccountType The runAsAccount
     */
@@ -78,7 +78,7 @@ class Win32LobAppInstallExperience extends Entity
 
     /**
     * Sets the runAsAccount
-    * Indicates the type of execution context the app runs in.
+    * Indicates the type of execution context the app runs in. Possible values are: system, user.
     *
     * @param RunAsAccountType $val The value to assign to the runAsAccount
     *

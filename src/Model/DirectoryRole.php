@@ -144,6 +144,7 @@ class DirectoryRole extends DirectoryObject
 
      /** 
      * Gets the scopedMembers
+    * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      *
      * @return array The scopedMembers
      */
@@ -158,6 +159,7 @@ class DirectoryRole extends DirectoryObject
     
     /** 
     * Sets the scopedMembers
+    * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
     *
     * @param ScopedRoleMembership $val The scopedMembers
     *

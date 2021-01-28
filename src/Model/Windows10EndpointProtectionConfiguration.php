@@ -1056,7 +1056,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
+    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @return bool The smartScreenBlockOverrideForFiles
     */
@@ -1071,7 +1071,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenBlockOverrideForFiles
-    * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
+    * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
     *
     * @param bool $val The smartScreenBlockOverrideForFiles
     *

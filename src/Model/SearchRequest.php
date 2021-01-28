@@ -25,6 +25,7 @@ class SearchRequest extends Entity
 {
     /**
     * Gets the contentSources
+    * Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note : contentSource is only applicable when entityType=externalItem. Optional.
     *
     * @return string The contentSources
     */
@@ -39,6 +40,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the contentSources
+    * Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note : contentSource is only applicable when entityType=externalItem. Optional.
     *
     * @param string $val The value of the contentSources
     *
@@ -51,6 +53,7 @@ class SearchRequest extends Entity
     }
     /**
     * Gets the enableTopResults
+    * This triggers hybrid sort for messages : the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
     *
     * @return bool The enableTopResults
     */
@@ -65,6 +68,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the enableTopResults
+    * This triggers hybrid sort for messages : the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
     *
     * @param bool $val The value of the enableTopResults
     *
@@ -78,6 +82,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the entityTypes
+    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
     *
     * @return EntityType The entityTypes
     */
@@ -96,6 +101,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the entityTypes
+    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
     *
     * @param EntityType $val The value to assign to the entityTypes
     *
@@ -108,6 +114,7 @@ class SearchRequest extends Entity
     }
     /**
     * Gets the fields
+    * Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content ingested by Graph connectors. Optional.
     *
     * @return string The fields
     */
@@ -122,6 +129,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the fields
+    * Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content ingested by Graph connectors. Optional.
     *
     * @param string $val The value of the fields
     *
@@ -134,6 +142,7 @@ class SearchRequest extends Entity
     }
     /**
     * Gets the from
+    * Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
     *
     * @return int The from
     */
@@ -148,6 +157,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the from
+    * Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
     *
     * @param int $val The value of the from
     *
@@ -161,6 +171,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the query
+    * Contains the query terms. Required.
     *
     * @return SearchQuery The query
     */
@@ -179,6 +190,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the query
+    * Contains the query terms. Required.
     *
     * @param SearchQuery $val The value to assign to the query
     *
@@ -191,6 +203,7 @@ class SearchRequest extends Entity
     }
     /**
     * Gets the size
+    * The size of the page to be retrieved. Optional.
     *
     * @return int The size
     */
@@ -205,6 +218,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the size
+    * The size of the page to be retrieved. Optional.
     *
     * @param int $val The value of the size
     *

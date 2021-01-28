@@ -158,7 +158,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the signInRiskLevels
-    * Risk levels included in the policy. Possible values are: low, medium, high, none.
+    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
     *
     * @return RiskLevel The signInRiskLevels
     */
@@ -177,7 +177,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the signInRiskLevels
-    * Risk levels included in the policy. Possible values are: low, medium, high, none.
+    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
     *
     * @param RiskLevel $val The value to assign to the signInRiskLevels
     *
@@ -186,6 +186,39 @@ class ConditionalAccessConditionSet extends Entity
     public function setSignInRiskLevels($val)
     {
         $this->_propDict["signInRiskLevels"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the userRiskLevels
+    * User risk levels included in the policy. Possible values are: low, medium, high, none.
+    *
+    * @return RiskLevel The userRiskLevels
+    */
+    public function getUserRiskLevels()
+    {
+        if (array_key_exists("userRiskLevels", $this->_propDict)) {
+            if (is_a($this->_propDict["userRiskLevels"], "Microsoft\Graph\Model\RiskLevel")) {
+                return $this->_propDict["userRiskLevels"];
+            } else {
+                $this->_propDict["userRiskLevels"] = new RiskLevel($this->_propDict["userRiskLevels"]);
+                return $this->_propDict["userRiskLevels"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userRiskLevels
+    * User risk levels included in the policy. Possible values are: low, medium, high, none.
+    *
+    * @param RiskLevel $val The value to assign to the userRiskLevels
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setUserRiskLevels($val)
+    {
+        $this->_propDict["userRiskLevels"] = $val;
          return $this;
     }
 
