@@ -9,7 +9,6 @@ on:
   pull_request:
     branches: [ master, dev ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   validate-pull-request:
     runs-on: ubuntu-latest
