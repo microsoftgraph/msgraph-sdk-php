@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdDateTime
+    * Date and time of group creation. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -44,6 +45,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * Date and time of group creation. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * Description giving details on the term usage.
     *
     * @return string The description
     */
@@ -71,6 +74,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * Description giving details on the term usage.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * Name of group.
     *
     * @return string The displayName
     */
@@ -98,6 +103,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * Name of group.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the scope
+    * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
     *
     * @return TermGroupScope The scope
     */
@@ -129,6 +136,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the scope
+    * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
     *
     * @param TermGroupScope $val The scope
     *
@@ -143,6 +151,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the sets
+    * All sets under the group in a term [store].
      *
      * @return array The sets
      */
@@ -157,6 +166,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the sets
+    * All sets under the group in a term [store].
     *
     * @param Set $val The sets
     *

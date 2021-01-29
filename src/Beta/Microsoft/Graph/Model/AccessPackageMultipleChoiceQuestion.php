@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -34,6 +34,7 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion
 
     /**
     * Gets the allowsMultipleSelection
+    * Indicates whether requestor can select multiple choices as their answer.
     *
     * @return bool The allowsMultipleSelection
     */
@@ -48,6 +49,7 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion
 
     /**
     * Sets the allowsMultipleSelection
+    * Indicates whether requestor can select multiple choices as their answer.
     *
     * @param bool $val The value of the allowsMultipleSelection
     *
@@ -61,6 +63,7 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion
 
     /**
     * Gets the choices
+    * List of answer choices.
     *
     * @return AccessPackageAnswerChoice The choices
     */
@@ -79,6 +82,7 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion
 
     /**
     * Sets the choices
+    * List of answer choices.
     *
     * @param AccessPackageAnswerChoice $val The value to assign to the choices
     *

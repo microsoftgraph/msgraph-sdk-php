@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Gets the onboardingStatus
-    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
+    * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @return RemoteAssistanceOnboardingStatus The onboardingStatus
     */
@@ -107,7 +107,7 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Sets the onboardingStatus
-    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
+    * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @param RemoteAssistanceOnboardingStatus $val The onboardingStatus
     *

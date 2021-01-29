@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class PlannerPlanContext extends Entity
 {
     /**
     * Gets the associationType
+    * Nullable. An app-defined type of association between the plannerPlan and the app. The app can use this information to track different kinds of relationships to the same plannerPlan.
     *
     * @return string The associationType
     */
@@ -39,6 +40,7 @@ class PlannerPlanContext extends Entity
 
     /**
     * Sets the associationType
+    * Nullable. An app-defined type of association between the plannerPlan and the app. The app can use this information to track different kinds of relationships to the same plannerPlan.
     *
     * @param string $val The value of the associationType
     *
@@ -52,6 +54,7 @@ class PlannerPlanContext extends Entity
 
     /**
     * Gets the createdDateTime
+    * Read-only. The date and time when the plannerPlanContext was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The createdDateTime
     */
@@ -70,6 +73,7 @@ class PlannerPlanContext extends Entity
 
     /**
     * Sets the createdDateTime
+    * Read-only. The date and time when the plannerPlanContext was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -82,6 +86,7 @@ class PlannerPlanContext extends Entity
     }
     /**
     * Gets the displayNameSegments
+    * The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
     *
     * @return string The displayNameSegments
     */
@@ -96,6 +101,7 @@ class PlannerPlanContext extends Entity
 
     /**
     * Sets the displayNameSegments
+    * The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
     *
     * @param string $val The value of the displayNameSegments
     *
@@ -108,6 +114,7 @@ class PlannerPlanContext extends Entity
     }
     /**
     * Gets the ownerAppId
+    * Read-only. ID of the app that created the plannerPlanContext.
     *
     * @return string The ownerAppId
     */
@@ -122,6 +129,7 @@ class PlannerPlanContext extends Entity
 
     /**
     * Sets the ownerAppId
+    * Read-only. ID of the app that created the plannerPlanContext.
     *
     * @param string $val The value of the ownerAppId
     *

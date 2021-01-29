@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class PrintDocumentUploadProperties extends Entity
 {
     /**
     * Gets the contentType
+    * The document's content (MIME) type.
     *
     * @return string The contentType
     */
@@ -39,6 +40,7 @@ class PrintDocumentUploadProperties extends Entity
 
     /**
     * Sets the contentType
+    * The document's content (MIME) type.
     *
     * @param string $val The value of the contentType
     *
@@ -51,6 +53,7 @@ class PrintDocumentUploadProperties extends Entity
     }
     /**
     * Gets the documentName
+    * The document's name.
     *
     * @return string The documentName
     */
@@ -65,6 +68,7 @@ class PrintDocumentUploadProperties extends Entity
 
     /**
     * Sets the documentName
+    * The document's name.
     *
     * @param string $val The value of the documentName
     *
@@ -77,6 +81,7 @@ class PrintDocumentUploadProperties extends Entity
     }
     /**
     * Gets the size
+    * The document's size in bytes.
     *
     * @return int The size
     */
@@ -91,6 +96,7 @@ class PrintDocumentUploadProperties extends Entity
 
     /**
     * Sets the size
+    * The document's size in bytes.
     *
     * @param int $val The value of the size
     *

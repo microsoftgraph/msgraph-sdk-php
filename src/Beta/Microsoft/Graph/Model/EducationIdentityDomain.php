@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationIdentityDomain extends Entity
 
     /**
     * Gets the appliesTo
+    * The user role type to assign to the license. Possible values are: student, teacher, faculty.
     *
     * @return EducationUserRole The appliesTo
     */
@@ -44,6 +45,7 @@ class EducationIdentityDomain extends Entity
 
     /**
     * Sets the appliesTo
+    * The user role type to assign to the license. Possible values are: student, teacher, faculty.
     *
     * @param EducationUserRole $val The value to assign to the appliesTo
     *
@@ -56,6 +58,7 @@ class EducationIdentityDomain extends Entity
     }
     /**
     * Gets the name
+    * Represents the domain for the user account.
     *
     * @return string The name
     */
@@ -70,6 +73,7 @@ class EducationIdentityDomain extends Entity
 
     /**
     * Sets the name
+    * Represents the domain for the user account.
     *
     * @param string $val The value of the name
     *

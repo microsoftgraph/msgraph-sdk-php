@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class EducationTeacher extends Entity
 {
     /**
     * Gets the externalId
-    * ID of the teacher in the source system.
+    * Id of the Teacher in external source system.
     *
     * @return string The externalId
     */
@@ -40,7 +40,7 @@ class EducationTeacher extends Entity
 
     /**
     * Sets the externalId
-    * ID of the teacher in the source system.
+    * Id of the Teacher in external source system.
     *
     * @param string $val The value of the externalId
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -55,7 +55,7 @@ class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
     */
@@ -74,7 +74,7 @@ class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
     *
@@ -320,7 +320,7 @@ class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
-    * Type of characters in password
+    * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @return AndroidRequiredPasswordType The passwordRequiredType
     */
@@ -339,7 +339,7 @@ class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
-    * Type of characters in password
+    * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
     * @param AndroidRequiredPasswordType $val The passwordRequiredType
     *

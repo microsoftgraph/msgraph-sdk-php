@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class PlannerPlanContextDetails extends Entity
 {
     /**
     * Gets the url
+    * URL of the user experience represented by the associated plannerPlanContext.
     *
     * @return string The url
     */
@@ -39,6 +40,7 @@ class PlannerPlanContextDetails extends Entity
 
     /**
     * Sets the url
+    * URL of the user experience represented by the associated plannerPlanContext.
     *
     * @param string $val The value of the url
     *

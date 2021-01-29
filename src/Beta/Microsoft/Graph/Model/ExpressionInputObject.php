@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ExpressionInputObject extends Entity
 
     /**
     * Gets the definition
+    * Definition of the test object.
     *
     * @return ObjectDefinition The definition
     */
@@ -44,6 +45,7 @@ class ExpressionInputObject extends Entity
 
     /**
     * Sets the definition
+    * Definition of the test object.
     *
     * @param ObjectDefinition $val The value to assign to the definition
     *
@@ -57,6 +59,7 @@ class ExpressionInputObject extends Entity
 
     /**
     * Gets the expressionInputObjectProperties
+    * Property values of the test object.
     *
     * @return StringKeyObjectValuePair The expressionInputObjectProperties
     */
@@ -75,6 +78,7 @@ class ExpressionInputObject extends Entity
 
     /**
     * Sets the expressionInputObjectProperties
+    * Property values of the test object.
     *
     * @param StringKeyObjectValuePair $val The value to assign to the properties
     *

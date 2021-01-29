@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class NetworkConnection extends Entity
 {
     /**
     * Gets the applicationName
-    * Name of the application managing the network connection (for example, Facebook or SMTP).
+    * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
     *
     * @return string The applicationName
     */
@@ -40,7 +40,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the applicationName
-    * Name of the application managing the network connection (for example, Facebook or SMTP).
+    * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
     *
     * @param string $val The value of the applicationName
     *

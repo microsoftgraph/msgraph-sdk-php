@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class FilterClause extends Entity
 {
     /**
     * Gets the operatorName
+    * Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
     *
     * @return string The operatorName
     */
@@ -39,6 +40,7 @@ class FilterClause extends Entity
 
     /**
     * Sets the operatorName
+    * Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
     *
     * @param string $val The value of the operatorName
     *
@@ -51,6 +53,7 @@ class FilterClause extends Entity
     }
     /**
     * Gets the sourceOperandName
+    * Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
     *
     * @return string The sourceOperandName
     */
@@ -65,6 +68,7 @@ class FilterClause extends Entity
 
     /**
     * Sets the sourceOperandName
+    * Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
     *
     * @param string $val The value of the sourceOperandName
     *
@@ -78,6 +82,7 @@ class FilterClause extends Entity
 
     /**
     * Gets the targetOperand
+    * Values that the source operand will be tested against.
     *
     * @return FilterOperand The targetOperand
     */
@@ -96,6 +101,7 @@ class FilterClause extends Entity
 
     /**
     * Sets the targetOperand
+    * Values that the source operand will be tested against.
     *
     * @param FilterOperand $val The value to assign to the targetOperand
     *

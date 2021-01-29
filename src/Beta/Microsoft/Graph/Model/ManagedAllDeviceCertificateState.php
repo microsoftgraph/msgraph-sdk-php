@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -179,7 +179,7 @@ class ManagedAllDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateRevokeStatus
-    * Revoke status
+    * Revoke status. Possible values are: none, pending, issued, failed, revoked.
     *
     * @return CertificateRevocationStatus The certificateRevokeStatus
     */
@@ -198,7 +198,7 @@ class ManagedAllDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateRevokeStatus
-    * Revoke status
+    * Revoke status. Possible values are: none, pending, issued, failed, revoked.
     *
     * @param CertificateRevocationStatus $val The certificateRevokeStatus
     *

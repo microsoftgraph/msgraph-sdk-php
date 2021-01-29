@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Gets the state
-    * Representing the current state of this user rights setting
+    * Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed.
     *
     * @return StateManagementSetting The state
     */
@@ -78,7 +78,7 @@ class DeviceManagementUserRightsSetting extends Entity
 
     /**
     * Sets the state
-    * Representing the current state of this user rights setting
+    * Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed.
     *
     * @param StateManagementSetting $val The value to assign to the state
     *

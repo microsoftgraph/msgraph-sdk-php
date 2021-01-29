@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class WorkbookOperation extends Entity
     
     /**
     * Gets the status
-    * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
+    * The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
     *
     * @return WorkbookOperationStatus The status
     */
@@ -107,7 +107,7 @@ class WorkbookOperation extends Entity
     
     /**
     * Sets the status
-    * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
+    * The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
     *
     * @param WorkbookOperationStatus $val The status
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -218,7 +218,7 @@ class FileEncryptionInfo extends Entity
     }
     /**
     * Gets the profileIdentifier
-    * The profile identifier.
+    * The the profile identifier.
     *
     * @return string The profileIdentifier
     */
@@ -233,7 +233,7 @@ class FileEncryptionInfo extends Entity
 
     /**
     * Sets the profileIdentifier
-    * The profile identifier.
+    * The the profile identifier.
     *
     * @param string $val The value of the profileIdentifier
     *

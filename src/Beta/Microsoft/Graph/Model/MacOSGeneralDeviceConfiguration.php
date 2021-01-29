@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -1486,7 +1486,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updateDelayPolicy
-    * Determines whether to delay OS and/or app updates for macOS.
+    * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
     *
     * @return MacOSSoftwareUpdateDelayPolicy The updateDelayPolicy
     */
@@ -1505,7 +1505,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updateDelayPolicy
-    * Determines whether to delay OS and/or app updates for macOS.
+    * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
     *
     * @param MacOSSoftwareUpdateDelayPolicy $val The updateDelayPolicy
     *

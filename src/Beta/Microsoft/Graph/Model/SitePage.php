@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class SitePage extends BaseItem
 {
     /**
     * Gets the contentType
+    * The content type of the page.
     *
     * @return ContentTypeInfo The contentType
     */
@@ -44,6 +45,7 @@ class SitePage extends BaseItem
     
     /**
     * Sets the contentType
+    * The content type of the page.
     *
     * @param ContentTypeInfo $val The contentType
     *

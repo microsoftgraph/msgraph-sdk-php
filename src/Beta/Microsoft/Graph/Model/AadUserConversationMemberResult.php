@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class AadUserConversationMemberResult extends ActionResultPart
 {
     /**
     * Gets the userId
+    * The user object ID of the Azure AD user that was being added as part of the bulk operation.
     *
     * @return string The userId
     */
@@ -39,6 +40,7 @@ class AadUserConversationMemberResult extends ActionResultPart
 
     /**
     * Sets the userId
+    * The user object ID of the Azure AD user that was being added as part of the bulk operation.
     *
     * @param string $val The value of the userId
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class CloudPcProvisioningPolicy extends Entity
 {
     /**
     * Gets the description
+    * The provisioning policy description.
     *
     * @return string The description
     */
@@ -40,6 +41,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the description
+    * The provisioning policy description.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the displayName
+    * The display name for the provisioning policy.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the displayName
+    * The display name for the provisioning policy.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the imageDisplayName
+    * The display name for the OS image you’re provisioning.
     *
     * @return string The imageDisplayName
     */
@@ -94,6 +99,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the imageDisplayName
+    * The display name for the OS image you’re provisioning.
     *
     * @param string $val The imageDisplayName
     *
@@ -107,6 +113,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the imageId
+    * The ID of the OS image you want to provision on cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
     *
     * @return string The imageId
     */
@@ -121,6 +128,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the imageId
+    * The ID of the OS image you want to provision on cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
     *
     * @param string $val The imageId
     *
@@ -134,6 +142,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the imageType
+    * The type of OS image (custom or gallery) you want to provision on cloud PCs. Possible values are: gallery, custom.
     *
     * @return CloudPcProvisioningPolicyImageType The imageType
     */
@@ -152,6 +161,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the imageType
+    * The type of OS image (custom or gallery) you want to provision on cloud PCs. Possible values are: gallery, custom.
     *
     * @param CloudPcProvisioningPolicyImageType $val The imageType
     *
@@ -165,6 +175,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the onPremisesConnectionId
+    * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
     *
     * @return string The onPremisesConnectionId
     */
@@ -179,6 +190,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the onPremisesConnectionId
+    * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
     *
     * @param string $val The onPremisesConnectionId
     *
@@ -193,6 +205,7 @@ class CloudPcProvisioningPolicy extends Entity
 
      /** 
      * Gets the assignments
+    * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
      *
      * @return array The assignments
      */
@@ -207,6 +220,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /** 
     * Sets the assignments
+    * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
     *
     * @param CloudPcProvisioningPolicyAssignment $val The assignments
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -52,7 +52,7 @@ class MediaPrompt extends Prompt
 
     /**
     * Gets the mediaInfo
-    * The media information
+    * The media information.
     *
     * @return MediaInfo The mediaInfo
     */
@@ -71,7 +71,7 @@ class MediaPrompt extends Prompt
 
     /**
     * Sets the mediaInfo
-    * The media information
+    * The media information.
     *
     * @param MediaInfo $val The value to assign to the mediaInfo
     *

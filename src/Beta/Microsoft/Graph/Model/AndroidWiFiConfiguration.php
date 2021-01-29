@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -142,7 +142,7 @@ class AndroidWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise.
     *
     * @return AndroidWiFiSecurityType The wiFiSecurityType
     */
@@ -161,7 +161,7 @@ class AndroidWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise.
     *
     * @param AndroidWiFiSecurityType $val The wiFiSecurityType
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -34,6 +34,7 @@ class EducationLinkResource extends EducationResource
 
     /**
     * Gets the link
+    * URL to the resource.
     *
     * @return string The link
     */
@@ -48,6 +49,7 @@ class EducationLinkResource extends EducationResource
 
     /**
     * Sets the link
+    * URL to the resource.
     *
     * @param string $val The value of the link
     *

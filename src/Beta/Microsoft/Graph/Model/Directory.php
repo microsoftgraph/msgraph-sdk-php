@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -113,6 +113,7 @@ class Directory extends Entity
 
      /** 
      * Gets the featureRolloutPolicies
+    * Nullable.
      *
      * @return array The featureRolloutPolicies
      */
@@ -127,6 +128,7 @@ class Directory extends Entity
     
     /** 
     * Sets the featureRolloutPolicies
+    * Nullable.
     *
     * @param FeatureRolloutPolicy $val The featureRolloutPolicies
     *

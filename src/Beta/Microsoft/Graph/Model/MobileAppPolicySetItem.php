@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class MobileAppPolicySetItem extends PolicySetItem
 {
     /**
     * Gets the intent
-    * Install intent of the MobileAppPolicySetItem.
+    * Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @return InstallIntent The intent
     */
@@ -45,7 +45,7 @@ class MobileAppPolicySetItem extends PolicySetItem
     
     /**
     * Sets the intent
-    * Install intent of the MobileAppPolicySetItem.
+    * Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
     * @param InstallIntent $val The intent
     *

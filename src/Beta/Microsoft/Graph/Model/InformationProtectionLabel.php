@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class InformationProtectionLabel extends Entity
 {
     /**
     * Gets the color
+    * The color that the UI should display for the label, if configured.
     *
     * @return string The color
     */
@@ -40,6 +41,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Sets the color
+    * The color that the UI should display for the label, if configured.
     *
     * @param string $val The color
     *
@@ -53,6 +55,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Gets the description
+    * The admin-defined description for the label.
     *
     * @return string The description
     */
@@ -67,6 +70,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Sets the description
+    * The admin-defined description for the label.
     *
     * @param string $val The description
     *
@@ -80,6 +84,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Gets the isActive
+    * Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
     *
     * @return bool The isActive
     */
@@ -94,6 +99,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Sets the isActive
+    * Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
     *
     * @param bool $val The isActive
     *
@@ -107,6 +113,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Gets the name
+    * The plaintext name of the label.
     *
     * @return string The name
     */
@@ -121,6 +128,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Sets the name
+    * The plaintext name of the label.
     *
     * @param string $val The name
     *
@@ -165,6 +173,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Gets the sensitivity
+    * The sensitivity value of the label, where lower is less sensitive.
     *
     * @return int The sensitivity
     */
@@ -179,6 +188,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Sets the sensitivity
+    * The sensitivity value of the label, where lower is less sensitive.
     *
     * @param int $val The sensitivity
     *
@@ -192,6 +202,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Gets the tooltip
+    * The tooltip that should be displayed for the label in a UI.
     *
     * @return string The tooltip
     */
@@ -206,6 +217,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Sets the tooltip
+    * The tooltip that should be displayed for the label in a UI.
     *
     * @param string $val The tooltip
     *

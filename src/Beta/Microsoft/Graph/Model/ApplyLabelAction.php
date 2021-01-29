@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ApplyLabelAction extends InformationProtectionAction
 
     /**
     * Gets the actions
+    * The collection of specific actions that should be taken by the consuming application to label the document. See  informationProtectionAction for the full list.
     *
     * @return InformationProtectionAction The actions
     */
@@ -44,6 +45,7 @@ class ApplyLabelAction extends InformationProtectionAction
 
     /**
     * Sets the actions
+    * The collection of specific actions that should be taken by the consuming application to label the document. See  informationProtectionAction for the full list.
     *
     * @param InformationProtectionAction $val The value to assign to the actions
     *
@@ -57,6 +59,7 @@ class ApplyLabelAction extends InformationProtectionAction
 
     /**
     * Gets the actionSource
+    * Possible values are: manual, automatic, recommended, default.
     *
     * @return ActionSource The actionSource
     */
@@ -75,6 +78,7 @@ class ApplyLabelAction extends InformationProtectionAction
 
     /**
     * Sets the actionSource
+    * Possible values are: manual, automatic, recommended, default.
     *
     * @param ActionSource $val The value to assign to the actionSource
     *
@@ -88,6 +92,7 @@ class ApplyLabelAction extends InformationProtectionAction
 
     /**
     * Gets the label
+    * Object that describes the details of the label to apply.
     *
     * @return LabelDetails The label
     */
@@ -106,6 +111,7 @@ class ApplyLabelAction extends InformationProtectionAction
 
     /**
     * Sets the label
+    * Object that describes the details of the label to apply.
     *
     * @param LabelDetails $val The value to assign to the label
     *
@@ -118,6 +124,7 @@ class ApplyLabelAction extends InformationProtectionAction
     }
     /**
     * Gets the responsibleSensitiveTypeIds
+    * If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
     *
     * @return string The responsibleSensitiveTypeIds
     */
@@ -132,6 +139,7 @@ class ApplyLabelAction extends InformationProtectionAction
 
     /**
     * Sets the responsibleSensitiveTypeIds
+    * If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
     *
     * @param string $val The value of the responsibleSensitiveTypeIds
     *

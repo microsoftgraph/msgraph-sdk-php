@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -84,7 +84,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type.
+    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility.
     *
     * @return AndroidVpnConnectionType The connectionType
     */
@@ -103,7 +103,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type.
+    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility.
     *
     * @param AndroidVpnConnectionType $val The connectionType
     *

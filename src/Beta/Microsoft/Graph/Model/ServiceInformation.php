@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class ServiceInformation extends Entity
 {
     /**
     * Gets the name
+    * The name of the cloud service (for example, Twitter, Instagram).
     *
     * @return string The name
     */
@@ -39,6 +40,7 @@ class ServiceInformation extends Entity
 
     /**
     * Sets the name
+    * The name of the cloud service (for example, Twitter, Instagram).
     *
     * @param string $val The value of the name
     *
@@ -51,6 +53,7 @@ class ServiceInformation extends Entity
     }
     /**
     * Gets the webUrl
+    * Contains the URL for the service being referenced.
     *
     * @return string The webUrl
     */
@@ -65,6 +68,7 @@ class ServiceInformation extends Entity
 
     /**
     * Sets the webUrl
+    * Contains the URL for the service being referenced.
     *
     * @param string $val The value of the webUrl
     *

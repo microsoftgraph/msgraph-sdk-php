@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -53,6 +53,7 @@ class ProgramControlType extends Entity
     
     /**
     * Gets the displayName
+    * The name of the program control type
     *
     * @return string The displayName
     */
@@ -67,6 +68,7 @@ class ProgramControlType extends Entity
     
     /**
     * Sets the displayName
+    * The name of the program control type
     *
     * @param string $val The displayName
     *

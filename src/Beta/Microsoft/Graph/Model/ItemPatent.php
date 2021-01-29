@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ItemPatent extends ItemFacet
 {
     /**
     * Gets the description
+    * Descpription of the patent or filing.
     *
     * @return string The description
     */
@@ -40,6 +41,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Sets the description
+    * Descpription of the patent or filing.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Gets the displayName
+    * Title of the patent or filing.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Sets the displayName
+    * Title of the patent or filing.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Gets the isPending
+    * Indicates the patent is pending.
     *
     * @return bool The isPending
     */
@@ -94,6 +99,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Sets the isPending
+    * Indicates the patent is pending.
     *
     * @param bool $val The isPending
     *
@@ -107,6 +113,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Gets the issuedDate
+    * The date that the patent was granted.
     *
     * @return \DateTime The issuedDate
     */
@@ -125,6 +132,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Sets the issuedDate
+    * The date that the patent was granted.
     *
     * @param \DateTime $val The issuedDate
     *
@@ -138,6 +146,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Gets the issuingAuthority
+    * Authority which granted the patent.
     *
     * @return string The issuingAuthority
     */
@@ -152,6 +161,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Sets the issuingAuthority
+    * Authority which granted the patent.
     *
     * @param string $val The issuingAuthority
     *
@@ -165,6 +175,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Gets the number
+    * The patent number.
     *
     * @return string The number
     */
@@ -179,6 +190,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Sets the number
+    * The patent number.
     *
     * @param string $val The number
     *
@@ -192,6 +204,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Gets the webUrl
+    * URL referencing the patent or filing.
     *
     * @return string The webUrl
     */
@@ -206,6 +219,7 @@ class ItemPatent extends ItemFacet
     
     /**
     * Sets the webUrl
+    * URL referencing the patent or filing.
     *
     * @param string $val The webUrl
     *

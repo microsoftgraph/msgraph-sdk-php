@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class OnPremisesAgent extends Entity
 {
     /**
     * Gets the externalIp
+    * The external IP address as detected by the service for the agent machine. Read-only
     *
     * @return string The externalIp
     */
@@ -40,6 +41,7 @@ class OnPremisesAgent extends Entity
     
     /**
     * Sets the externalIp
+    * The external IP address as detected by the service for the agent machine. Read-only
     *
     * @param string $val The externalIp
     *
@@ -53,6 +55,7 @@ class OnPremisesAgent extends Entity
     
     /**
     * Gets the machineName
+    * The name of the machine that the aggent is running on. Read-only
     *
     * @return string The machineName
     */
@@ -67,6 +70,7 @@ class OnPremisesAgent extends Entity
     
     /**
     * Sets the machineName
+    * The name of the machine that the aggent is running on. Read-only
     *
     * @param string $val The machineName
     *
@@ -80,6 +84,7 @@ class OnPremisesAgent extends Entity
     
     /**
     * Gets the status
+    * Possible values are: active, inactive.
     *
     * @return AgentStatus The status
     */
@@ -98,6 +103,7 @@ class OnPremisesAgent extends Entity
     
     /**
     * Sets the status
+    * Possible values are: active, inactive.
     *
     * @param AgentStatus $val The status
     *
@@ -140,6 +146,7 @@ class OnPremisesAgent extends Entity
 
      /** 
      * Gets the agentGroups
+    * List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
      *
      * @return array The agentGroups
      */
@@ -154,6 +161,7 @@ class OnPremisesAgent extends Entity
     
     /** 
     * Sets the agentGroups
+    * List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
     *
     * @param OnPremisesAgentGroup $val The agentGroups
     *

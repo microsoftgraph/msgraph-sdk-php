@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class CredentialUserRegistrationCount extends Entity
 {
     /**
     * Gets the totalUserCount
+    * Provides the total user count in the tenant.
     *
     * @return int The totalUserCount
     */
@@ -40,6 +41,7 @@ class CredentialUserRegistrationCount extends Entity
     
     /**
     * Sets the totalUserCount
+    * Provides the total user count in the tenant.
     *
     * @param int $val The totalUserCount
     *
@@ -54,6 +56,7 @@ class CredentialUserRegistrationCount extends Entity
 
      /** 
      * Gets the userRegistrationCounts
+    * A collection of registration count and status information for users in your tenant.
      *
      * @return array The userRegistrationCounts
      */
@@ -68,6 +71,7 @@ class CredentialUserRegistrationCount extends Entity
     
     /** 
     * Sets the userRegistrationCounts
+    * A collection of registration count and status information for users in your tenant.
     *
     * @param UserRegistrationCount $val The userRegistrationCounts
     *

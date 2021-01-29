@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class PrinterCapabilities extends Entity
 {
     /**
     * Gets the bottomMargins
+    * A list of supported bottom margins(in microns) for the printer.
     *
     * @return int The bottomMargins
     */
@@ -39,6 +40,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the bottomMargins
+    * A list of supported bottom margins(in microns) for the printer.
     *
     * @param int $val The value of the bottomMargins
     *
@@ -51,6 +53,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the collation
+    * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
     *
     * @return bool The collation
     */
@@ -65,6 +68,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the collation
+    * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
     *
     * @param bool $val The value of the collation
     *
@@ -78,6 +82,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the colorModes
+    * The color modes supported by the printer. Valid values are described in the following table.
     *
     * @return PrintColorMode The colorModes
     */
@@ -96,6 +101,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the colorModes
+    * The color modes supported by the printer. Valid values are described in the following table.
     *
     * @param PrintColorMode $val The value to assign to the colorModes
     *
@@ -108,6 +114,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the contentTypes
+    * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
     *
     * @return string The contentTypes
     */
@@ -122,6 +129,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the contentTypes
+    * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
     *
     * @param string $val The value of the contentTypes
     *
@@ -135,6 +143,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the copiesPerJob
+    * The range of copies per job supported by the printer.
     *
     * @return IntegerRange The copiesPerJob
     */
@@ -153,6 +162,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the copiesPerJob
+    * The range of copies per job supported by the printer.
     *
     * @param IntegerRange $val The value to assign to the copiesPerJob
     *
@@ -165,6 +175,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the dpis
+    * The list of print resolutions in DPI that are supported by the printer.
     *
     * @return int The dpis
     */
@@ -179,6 +190,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the dpis
+    * The list of print resolutions in DPI that are supported by the printer.
     *
     * @param int $val The value of the dpis
     *
@@ -192,6 +204,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the duplexModes
+    * The list of duplex modes that are supported by the printer. Valid values are described in the following table.
     *
     * @return PrintDuplexMode The duplexModes
     */
@@ -210,6 +223,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the duplexModes
+    * The list of duplex modes that are supported by the printer. Valid values are described in the following table.
     *
     * @param PrintDuplexMode $val The value to assign to the duplexModes
     *
@@ -254,6 +268,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the feedOrientations
+    * The list of feed orientations that are supported by the printer.
     *
     * @return PrinterFeedOrientation The feedOrientations
     */
@@ -272,6 +287,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the feedOrientations
+    * The list of feed orientations that are supported by the printer.
     *
     * @param PrinterFeedOrientation $val The value to assign to the feedOrientations
     *
@@ -285,6 +301,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the finishings
+    * Finishing processes the printer supports for a printed document.
     *
     * @return PrintFinishing The finishings
     */
@@ -303,6 +320,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the finishings
+    * Finishing processes the printer supports for a printed document.
     *
     * @param PrintFinishing $val The value to assign to the finishings
     *
@@ -315,6 +333,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the inputBins
+    * Supported input bins for the printer.
     *
     * @return string The inputBins
     */
@@ -329,6 +348,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the inputBins
+    * Supported input bins for the printer.
     *
     * @param string $val The value of the inputBins
     *
@@ -341,6 +361,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the isColorPrintingSupported
+    * True if color printing is supported by the printer; false otherwise. Read-only.
     *
     * @return bool The isColorPrintingSupported
     */
@@ -355,6 +376,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the isColorPrintingSupported
+    * True if color printing is supported by the printer; false otherwise. Read-only.
     *
     * @param bool $val The value of the isColorPrintingSupported
     *
@@ -367,6 +389,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the isPageRangeSupported
+    * True if the printer supports printing by page ranges; false otherwise.
     *
     * @return bool The isPageRangeSupported
     */
@@ -381,6 +404,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the isPageRangeSupported
+    * True if the printer supports printing by page ranges; false otherwise.
     *
     * @param bool $val The value of the isPageRangeSupported
     *
@@ -393,6 +417,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the leftMargins
+    * A list of supported left margins(in microns) for the printer.
     *
     * @return int The leftMargins
     */
@@ -407,6 +432,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the leftMargins
+    * A list of supported left margins(in microns) for the printer.
     *
     * @param int $val The value of the leftMargins
     *
@@ -419,6 +445,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the mediaColors
+    * The media (i.e., paper) colors supported by the printer.
     *
     * @return string The mediaColors
     */
@@ -433,6 +460,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the mediaColors
+    * The media (i.e., paper) colors supported by the printer.
     *
     * @param string $val The value of the mediaColors
     *
@@ -445,6 +473,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the mediaSizes
+    * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
     *
     * @return string The mediaSizes
     */
@@ -459,6 +488,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the mediaSizes
+    * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
     *
     * @param string $val The value of the mediaSizes
     *
@@ -471,6 +501,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the mediaTypes
+    * The media types supported by the printer. Valid values are described in the following table.
     *
     * @return string The mediaTypes
     */
@@ -485,6 +516,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the mediaTypes
+    * The media types supported by the printer. Valid values are described in the following table.
     *
     * @param string $val The value of the mediaTypes
     *
@@ -498,6 +530,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the multipageLayouts
+    * The presentation directions supported by the printer. Supported values are described in the following table.
     *
     * @return PrintMultipageLayout The multipageLayouts
     */
@@ -516,6 +549,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the multipageLayouts
+    * The presentation directions supported by the printer. Supported values are described in the following table.
     *
     * @param PrintMultipageLayout $val The value to assign to the multipageLayouts
     *
@@ -529,6 +563,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the orientations
+    * The print orientations supported by the printer. Valid values are described in the following table.
     *
     * @return PrintOrientation The orientations
     */
@@ -547,6 +582,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the orientations
+    * The print orientations supported by the printer. Valid values are described in the following table.
     *
     * @param PrintOrientation $val The value to assign to the orientations
     *
@@ -559,6 +595,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the outputBins
+    * The printer's supported output bins (trays).
     *
     * @return string The outputBins
     */
@@ -573,6 +610,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the outputBins
+    * The printer's supported output bins (trays).
     *
     * @param string $val The value of the outputBins
     *
@@ -585,6 +623,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the pagesPerSheet
+    * Supported number of Input Pages to impose upon a single Impression.
     *
     * @return int The pagesPerSheet
     */
@@ -599,6 +638,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the pagesPerSheet
+    * Supported number of Input Pages to impose upon a single Impression.
     *
     * @param int $val The value of the pagesPerSheet
     *
@@ -612,6 +652,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the qualities
+    * The print qualities supported by the printer.
     *
     * @return PrintQuality The qualities
     */
@@ -630,6 +671,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the qualities
+    * The print qualities supported by the printer.
     *
     * @param PrintQuality $val The value to assign to the qualities
     *
@@ -642,6 +684,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the rightMargins
+    * A list of supported right margins(in microns) for the printer.
     *
     * @return int The rightMargins
     */
@@ -656,6 +699,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the rightMargins
+    * A list of supported right margins(in microns) for the printer.
     *
     * @param int $val The value of the rightMargins
     *
@@ -669,6 +713,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Gets the scalings
+    * Supported print scalings.
     *
     * @return PrintScaling The scalings
     */
@@ -687,6 +732,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the scalings
+    * Supported print scalings.
     *
     * @param PrintScaling $val The value to assign to the scalings
     *
@@ -1082,6 +1128,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the supportsFitPdfToPage
+    * True if the printer supports scaling PDF pages to match the print media size; false otherwise.
     *
     * @return bool The supportsFitPdfToPage
     */
@@ -1096,6 +1143,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the supportsFitPdfToPage
+    * True if the printer supports scaling PDF pages to match the print media size; false otherwise.
     *
     * @param bool $val The value of the supportsFitPdfToPage
     *
@@ -1108,6 +1156,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the topMargins
+    * A list of supported top margins(in microns) for the printer.
     *
     * @return int The topMargins
     */
@@ -1122,6 +1171,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the topMargins
+    * A list of supported top margins(in microns) for the printer.
     *
     * @param int $val The value of the topMargins
     *

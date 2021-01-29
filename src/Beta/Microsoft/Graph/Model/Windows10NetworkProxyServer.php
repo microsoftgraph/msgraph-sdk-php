@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class Windows10NetworkProxyServer extends Entity
 {
     /**
     * Gets the address
-    * Address to the proxy server. Specify an address in the format &amp;lt;server&amp;gt;[:&amp;lt;port&amp;gt;]
+    * Address to the proxy server. Specify an address in the format [':']
     *
     * @return string The address
     */
@@ -40,7 +40,7 @@ class Windows10NetworkProxyServer extends Entity
 
     /**
     * Sets the address
-    * Address to the proxy server. Specify an address in the format &amp;lt;server&amp;gt;[:&amp;lt;port&amp;gt;]
+    * Address to the proxy server. Specify an address in the format [':']
     *
     * @param string $val The value of the address
     *

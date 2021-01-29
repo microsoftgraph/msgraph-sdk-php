@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -57,6 +57,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Gets the contributors
+    * For broadcast meeting only.
     *
     * @return MeetingParticipantInfo The contributors
     */
@@ -75,6 +76,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Sets the contributors
+    * For broadcast meeting only.
     *
     * @param MeetingParticipantInfo $val The value to assign to the contributors
     *
@@ -119,6 +121,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Gets the producers
+    * For broadcast meeting only.
     *
     * @return MeetingParticipantInfo The producers
     */
@@ -137,6 +140,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Sets the producers
+    * For broadcast meeting only.
     *
     * @param MeetingParticipantInfo $val The value to assign to the producers
     *

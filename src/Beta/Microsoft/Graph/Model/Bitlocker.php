@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -27,6 +27,7 @@ class Bitlocker extends Entity
 
      /** 
      * Gets the recoveryKeys
+    * The recovery keys associated with the bitlocker entity.
      *
      * @return array The recoveryKeys
      */
@@ -41,6 +42,7 @@ class Bitlocker extends Entity
     
     /** 
     * Sets the recoveryKeys
+    * The recovery keys associated with the bitlocker entity.
     *
     * @param BitlockerRecoveryKey $val The recoveryKeys
     *

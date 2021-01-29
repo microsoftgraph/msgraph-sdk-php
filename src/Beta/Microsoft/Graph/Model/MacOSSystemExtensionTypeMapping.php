@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class MacOSSystemExtensionTypeMapping extends Entity
 
     /**
     * Gets the allowedTypes
-    * Gets or sets the allowed macOS system extension types.
+    * Gets or sets the allowed macOS system extension types. Possible values are: driverExtensionsAllowed, networkExtensionsAllowed, endpointSecurityExtensionsAllowed.
     *
     * @return MacOSSystemExtensionType The allowedTypes
     */
@@ -45,7 +45,7 @@ class MacOSSystemExtensionTypeMapping extends Entity
 
     /**
     * Sets the allowedTypes
-    * Gets or sets the allowed macOS system extension types.
+    * Gets or sets the allowed macOS system extension types. Possible values are: driverExtensionsAllowed, networkExtensionsAllowed, endpointSecurityExtensionsAllowed.
     *
     * @param MacOSSystemExtensionType $val The value to assign to the allowedTypes
     *

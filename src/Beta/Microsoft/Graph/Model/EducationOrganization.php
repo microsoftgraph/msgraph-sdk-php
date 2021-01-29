@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -84,7 +84,7 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the externalSource
-    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
+    * Where this user was created from. Possible values are: sis, lms, or manual.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -103,7 +103,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the externalSource
-    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
+    * Where this user was created from. Possible values are: sis, lms, or manual.
     *
     * @param EducationExternalSource $val The externalSource
     *

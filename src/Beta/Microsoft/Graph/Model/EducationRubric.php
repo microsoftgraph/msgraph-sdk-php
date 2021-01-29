@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationRubric extends Entity
 {
     /**
     * Gets the createdBy
+    * The user who created this resource.
     *
     * @return IdentitySet The createdBy
     */
@@ -44,6 +45,7 @@ class EducationRubric extends Entity
     
     /**
     * Sets the createdBy
+    * The user who created this resource.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -57,6 +59,7 @@ class EducationRubric extends Entity
     
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -75,6 +78,7 @@ class EducationRubric extends Entity
     
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class EducationRubric extends Entity
     
     /**
     * Gets the description
+    * The description of this rubric.
     *
     * @return EducationItemBody The description
     */
@@ -106,6 +111,7 @@ class EducationRubric extends Entity
     
     /**
     * Sets the description
+    * The description of this rubric.
     *
     * @param EducationItemBody $val The description
     *
@@ -119,6 +125,7 @@ class EducationRubric extends Entity
     
     /**
     * Gets the displayName
+    * The name of this rubric.
     *
     * @return string The displayName
     */
@@ -133,6 +140,7 @@ class EducationRubric extends Entity
     
     /**
     * Sets the displayName
+    * The name of this rubric.
     *
     * @param string $val The displayName
     *
@@ -146,6 +154,7 @@ class EducationRubric extends Entity
     
     /**
     * Gets the grading
+    * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
     *
     * @return EducationAssignmentGradeType The grading
     */
@@ -164,6 +173,7 @@ class EducationRubric extends Entity
     
     /**
     * Sets the grading
+    * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
     *
     * @param EducationAssignmentGradeType $val The grading
     *
@@ -177,6 +187,7 @@ class EducationRubric extends Entity
     
     /**
     * Gets the lastModifiedBy
+    * The last user to modify the resource.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -195,6 +206,7 @@ class EducationRubric extends Entity
     
     /**
     * Sets the lastModifiedBy
+    * The last user to modify the resource.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -208,6 +220,7 @@ class EducationRubric extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -226,6 +239,7 @@ class EducationRubric extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -240,6 +254,7 @@ class EducationRubric extends Entity
 
      /** 
      * Gets the levels
+    * The collection of levels making up this rubric.
      *
      * @return array The levels
      */
@@ -254,6 +269,7 @@ class EducationRubric extends Entity
     
     /** 
     * Sets the levels
+    * The collection of levels making up this rubric.
     *
     * @param RubricLevel $val The levels
     *
@@ -268,6 +284,7 @@ class EducationRubric extends Entity
 
      /** 
      * Gets the qualities
+    * The collection of qualities making up this rubric.
      *
      * @return array The qualities
      */
@@ -282,6 +299,7 @@ class EducationRubric extends Entity
     
     /** 
     * Sets the qualities
+    * The collection of qualities making up this rubric.
     *
     * @param RubricQuality $val The qualities
     *

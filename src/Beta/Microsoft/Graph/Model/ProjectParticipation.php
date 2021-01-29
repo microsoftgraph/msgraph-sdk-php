@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ProjectParticipation extends ItemFacet
 {
     /**
     * Gets the categories
+    * Contains categories a user has associated with the project (for example, digital transformation, oil rig).
     *
     * @return string The categories
     */
@@ -40,6 +41,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Sets the categories
+    * Contains categories a user has associated with the project (for example, digital transformation, oil rig).
     *
     * @param string $val The categories
     *
@@ -53,6 +55,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Gets the client
+    * Contains detailed information about the client the project was for.
     *
     * @return CompanyDetail The client
     */
@@ -71,6 +74,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Sets the client
+    * Contains detailed information about the client the project was for.
     *
     * @param CompanyDetail $val The client
     *
@@ -84,6 +88,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Gets the collaborationTags
+    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @return string The collaborationTags
     */
@@ -98,6 +103,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Sets the collaborationTags
+    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @param string $val The collaborationTags
     *
@@ -112,6 +118,7 @@ class ProjectParticipation extends ItemFacet
 
      /** 
      * Gets the colleagues
+    * Lists people that also worked on the project.
      *
      * @return array The colleagues
      */
@@ -126,6 +133,7 @@ class ProjectParticipation extends ItemFacet
     
     /** 
     * Sets the colleagues
+    * Lists people that also worked on the project.
     *
     * @param RelatedPerson $val The colleagues
     *
@@ -139,6 +147,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Gets the detail
+    * Contains detail about the user's role on the project.
     *
     * @return PositionDetail The detail
     */
@@ -157,6 +166,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Sets the detail
+    * Contains detail about the user's role on the project.
     *
     * @param PositionDetail $val The detail
     *
@@ -170,6 +180,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Gets the displayName
+    * Contains a friendly name for the project.
     *
     * @return string The displayName
     */
@@ -184,6 +195,7 @@ class ProjectParticipation extends ItemFacet
     
     /**
     * Sets the displayName
+    * Contains a friendly name for the project.
     *
     * @param string $val The displayName
     *
@@ -198,6 +210,7 @@ class ProjectParticipation extends ItemFacet
 
      /** 
      * Gets the sponsors
+    * The Person or people who sponsored the project.
      *
      * @return array The sponsors
      */
@@ -212,6 +225,7 @@ class ProjectParticipation extends ItemFacet
     
     /** 
     * Sets the sponsors
+    * The Person or people who sponsored the project.
     *
     * @param RelatedPerson $val The sponsors
     *

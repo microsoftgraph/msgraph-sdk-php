@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class UserSet extends Entity
 {
     /**
     * Gets the isBackup
+    * For a user in an approval stage, this property indicates whether the user is a backup fallback approver.
     *
     * @return bool The isBackup
     */
@@ -39,6 +40,7 @@ class UserSet extends Entity
 
     /**
     * Sets the isBackup
+    * For a user in an approval stage, this property indicates whether the user is a backup fallback approver.
     *
     * @param bool $val The value of the isBackup
     *

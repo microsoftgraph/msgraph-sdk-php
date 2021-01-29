@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class MediaInfo extends Entity
 {
     /**
     * Gets the resourceId
-    * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
+    * Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key.
     *
     * @return string The resourceId
     */
@@ -40,7 +40,7 @@ class MediaInfo extends Entity
 
     /**
     * Sets the resourceId
-    * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
+    * Optional, used to uniquely identity the resource. If passed the prompt uri will be cached against this resourceId as key.
     *
     * @param string $val The value of the resourceId
     *
@@ -53,7 +53,7 @@ class MediaInfo extends Entity
     }
     /**
     * Gets the uri
-    * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
+    * Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported.
     *
     * @return string The uri
     */
@@ -68,7 +68,7 @@ class MediaInfo extends Entity
 
     /**
     * Sets the uri
-    * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
+    * Path to the prompt to be played. Currently only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate is only supported.
     *
     * @param string $val The value of the uri
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -250,7 +250,7 @@ class Photo extends Entity
 
     /**
     * Gets the takenDateTime
-    * Represents the date and time the photo was taken. Read-only.
+    * The date and time the photo was taken in UTC time. Read-only.
     *
     * @return \DateTime The takenDateTime
     */
@@ -269,7 +269,7 @@ class Photo extends Entity
 
     /**
     * Sets the takenDateTime
-    * Represents the date and time the photo was taken. Read-only.
+    * The date and time the photo was taken in UTC time. Read-only.
     *
     * @param \DateTime $val The value to assign to the takenDateTime
     *

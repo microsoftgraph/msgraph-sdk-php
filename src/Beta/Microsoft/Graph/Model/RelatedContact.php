@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -166,7 +166,7 @@ class RelatedContact extends Entity
 
     /**
     * Gets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other.
     *
     * @return ContactRelationship The relationship
     */
@@ -185,7 +185,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other.
     *
     * @param ContactRelationship $val The value to assign to the relationship
     *

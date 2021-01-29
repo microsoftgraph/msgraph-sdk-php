@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class KerberosSignOnSettings extends Entity
 {
     /**
     * Gets the kerberosServicePrincipalName
+    * The Internal Application SPN of the application server. This SPN needs to be in the list of services to which the connector can present delegated credentials.
     *
     * @return string The kerberosServicePrincipalName
     */
@@ -39,6 +40,7 @@ class KerberosSignOnSettings extends Entity
 
     /**
     * Sets the kerberosServicePrincipalName
+    * The Internal Application SPN of the application server. This SPN needs to be in the list of services to which the connector can present delegated credentials.
     *
     * @param string $val The value of the kerberosServicePrincipalName
     *
@@ -52,6 +54,7 @@ class KerberosSignOnSettings extends Entity
 
     /**
     * Gets the kerberosSignOnMappingAttributeType
+    * The Delegated Login Identity for the connector to use on behalf of your users. For more information, see Working with different on-premises and cloud identities . Possible values are: userPrincipalName, onPremisesUserPrincipalName, userPrincipalUsername, onPremisesUserPrincipalUsername, onPremisesSAMAccountName.
     *
     * @return KerberosSignOnMappingAttributeType The kerberosSignOnMappingAttributeType
     */
@@ -70,6 +73,7 @@ class KerberosSignOnSettings extends Entity
 
     /**
     * Sets the kerberosSignOnMappingAttributeType
+    * The Delegated Login Identity for the connector to use on behalf of your users. For more information, see Working with different on-premises and cloud identities . Possible values are: userPrincipalName, onPremisesUserPrincipalName, userPrincipalUsername, onPremisesUserPrincipalUsername, onPremisesSAMAccountName.
     *
     * @param KerberosSignOnMappingAttributeType $val The value to assign to the kerberosSignOnMappingAttributeType
     *

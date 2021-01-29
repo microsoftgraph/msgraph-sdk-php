@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -34,6 +34,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
 
     /**
     * Gets the isSingleLineQuestion
+    * Indicates whether the answer will be in single or multiple line format.
     *
     * @return bool The isSingleLineQuestion
     */
@@ -48,6 +49,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
 
     /**
     * Sets the isSingleLineQuestion
+    * Indicates whether the answer will be in single or multiple line format.
     *
     * @param bool $val The value of the isSingleLineQuestion
     *

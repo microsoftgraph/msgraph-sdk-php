@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Gets the actionType
-    * Action type for Intune Application.
+    * Action type for Intune Application. Possible values are: unknown, installCommandSent, installed, uninstalled, userRequestedInstall.
     *
     * @return MobileAppActionType The actionType
     */
@@ -45,7 +45,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Sets the actionType
-    * Action type for Intune Application.
+    * Action type for Intune Application. Possible values are: unknown, installCommandSent, installed, uninstalled, userRequestedInstall.
     *
     * @param MobileAppActionType $val The value to assign to the actionType
     *
@@ -87,7 +87,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Gets the runState
-    * Status of the item.
+    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @return RunState The runState
     */
@@ -106,7 +106,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Sets the runState
-    * Status of the item.
+    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @param RunState $val The value to assign to the runState
     *

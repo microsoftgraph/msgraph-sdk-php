@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
 {
     /**
     * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
@@ -45,7 +45,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period.
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
     *
@@ -117,7 +117,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Gets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name type.
+    * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
     * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
@@ -136,7 +136,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Sets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name type.
+    * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
     * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
     *
@@ -150,7 +150,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Gets the subjectNameFormat
-    * Certificate Subject Name Format.
+    * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
     *
     * @return AppleSubjectNameFormat The subjectNameFormat
     */
@@ -169,7 +169,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Sets the subjectNameFormat
-    * Certificate Subject Name Format.
+    * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
     *
     * @param AppleSubjectNameFormat $val The subjectNameFormat
     *

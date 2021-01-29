@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -113,7 +113,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only)
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only). Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidDeviceManufacturerNotAllowed
     */
@@ -132,7 +132,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidDeviceManufacturerNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only)
+    * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only). Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceManufacturerNotAllowed
     *
@@ -146,7 +146,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidDeviceModelNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only)
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only). Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidDeviceModelNotAllowed
     */
@@ -165,7 +165,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidDeviceModelNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only)
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (Android Only). Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidDeviceModelNotAllowed
     *
@@ -179,7 +179,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetAppsVerificationFailed
     */
@@ -198,7 +198,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetAppsVerificationFailed
     *
@@ -212,7 +212,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetDeviceAttestationFailed
     */
@@ -231,7 +231,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetDeviceAttestationFailed
     *
@@ -245,7 +245,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfDeviceLockNotSet
-    * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only)
+    * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only). Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfDeviceLockNotSet
     */
@@ -264,7 +264,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfDeviceLockNotSet
-    * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only)
+    * Defines a managed app behavior, either warn, block or wipe, if the screen lock is required on device but is not set. (android only). Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfDeviceLockNotSet
     *
@@ -278,7 +278,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfIosDeviceModelNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only). Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfIosDeviceModelNotAllowed
     */
@@ -297,7 +297,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfIosDeviceModelNotAllowed
-    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only)
+    * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. (iOS Only). Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfIosDeviceModelNotAllowed
     *
@@ -1130,7 +1130,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the requiredAndroidSafetyNetAppsVerificationType
-    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
+    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
     *
     * @return AndroidManagedAppSafetyNetAppsVerificationType The requiredAndroidSafetyNetAppsVerificationType
     */
@@ -1149,7 +1149,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the requiredAndroidSafetyNetAppsVerificationType
-    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
+    * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
     *
     * @param AndroidManagedAppSafetyNetAppsVerificationType $val The requiredAndroidSafetyNetAppsVerificationType
     *
@@ -1163,7 +1163,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the requiredAndroidSafetyNetDeviceAttestationType
-    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
+    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
     *
     * @return AndroidManagedAppSafetyNetDeviceAttestationType The requiredAndroidSafetyNetDeviceAttestationType
     */
@@ -1182,7 +1182,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the requiredAndroidSafetyNetDeviceAttestationType
-    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
+    * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
     *
     * @param AndroidManagedAppSafetyNetDeviceAttestationType $val The requiredAndroidSafetyNetDeviceAttestationType
     *
@@ -1196,7 +1196,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the requiredAndroidSafetyNetEvaluationType
-    * Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only)
+    * Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only). Possible values are: basic, hardwareBacked.
     *
     * @return AndroidManagedAppSafetyNetEvaluationType The requiredAndroidSafetyNetEvaluationType
     */
@@ -1215,7 +1215,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the requiredAndroidSafetyNetEvaluationType
-    * Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only)
+    * Defines the Android SafetyNet evaluation type requirement for a managed app to work. (Android Only). Possible values are: basic, hardwareBacked.
     *
     * @param AndroidManagedAppSafetyNetEvaluationType $val The requiredAndroidSafetyNetEvaluationType
     *

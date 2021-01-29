@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -667,6 +667,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the preferredTokenSigningKeyThumbprint
+    * Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
     *
     * @return string The preferredTokenSigningKeyThumbprint
     */
@@ -681,6 +682,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the preferredTokenSigningKeyThumbprint
+    * Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
     *
     * @param string $val The preferredTokenSigningKeyThumbprint
     *
@@ -814,6 +816,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the signInAudience
+    * Specifies what Microsoft accounts are supported for the associated application. Read-only.
     *
     * @return string The signInAudience
     */
@@ -828,6 +831,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the signInAudience
+    * Specifies what Microsoft accounts are supported for the associated application. Read-only.
     *
     * @param string $val The signInAudience
     *
@@ -1020,6 +1024,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the delegatedPermissionClassifications
+    * The permission classifications for delegated permissions exposed by the app that this service principal represents.
      *
      * @return array The delegatedPermissionClassifications
      */
@@ -1034,6 +1039,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the delegatedPermissionClassifications
+    * The permission classifications for delegated permissions exposed by the app that this service principal represents.
     *
     * @param DelegatedPermissionClassification $val The delegatedPermissionClassifications
     *

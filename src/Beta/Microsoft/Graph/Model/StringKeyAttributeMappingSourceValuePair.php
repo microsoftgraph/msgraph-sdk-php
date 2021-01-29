@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class StringKeyAttributeMappingSourceValuePair extends Entity
 {
     /**
     * Gets the key
+    * The name of the parameter.
     *
     * @return string The key
     */
@@ -39,6 +40,7 @@ class StringKeyAttributeMappingSourceValuePair extends Entity
 
     /**
     * Sets the key
+    * The name of the parameter.
     *
     * @param string $val The value of the key
     *
@@ -52,6 +54,7 @@ class StringKeyAttributeMappingSourceValuePair extends Entity
 
     /**
     * Gets the value
+    * The value of the parameter.
     *
     * @return AttributeMappingSource The value
     */
@@ -70,6 +73,7 @@ class StringKeyAttributeMappingSourceValuePair extends Entity
 
     /**
     * Sets the value
+    * The value of the parameter.
     *
     * @param AttributeMappingSource $val The value to assign to the value
     *

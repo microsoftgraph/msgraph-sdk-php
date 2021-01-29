@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -204,7 +204,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalSource
-    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
+    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -223,7 +223,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalSource
-    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
+    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -266,7 +266,7 @@ class EducationClass extends Entity
     
     /**
     * Gets the term
-    * Term for this class.
+    * Term for the class.
     *
     * @return EducationTerm The term
     */
@@ -285,7 +285,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the term
-    * Term for this class.
+    * Term for the class.
     *
     * @param EducationTerm $val The term
     *

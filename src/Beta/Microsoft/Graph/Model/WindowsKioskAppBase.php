@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Gets the appType
-    * The app type
+    * The app type. Possible values are: unknown, store, desktop, aumId.
     *
     * @return WindowsKioskAppType The appType
     */
@@ -45,7 +45,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Sets the appType
-    * The app type
+    * The app type. Possible values are: unknown, store, desktop, aumId.
     *
     * @param WindowsKioskAppType $val The value to assign to the appType
     *
@@ -115,7 +115,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Gets the startLayoutTileSize
-    * The app tile size for the start layout
+    * The app tile size for the start layout. Possible values are: hidden, small, medium, wide, large.
     *
     * @return WindowsAppStartLayoutTileSize The startLayoutTileSize
     */
@@ -134,7 +134,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Sets the startLayoutTileSize
-    * The app tile size for the start layout
+    * The app tile size for the start layout. Possible values are: hidden, small, medium, wide, large.
     *
     * @param WindowsAppStartLayoutTileSize $val The value to assign to the startLayoutTileSize
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -35,6 +35,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
 
     /**
     * Gets the maxPoints
+    * Max points possible for this assignment.
     *
     * @return Single The maxPoints
     */
@@ -53,6 +54,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
 
     /**
     * Sets the maxPoints
+    * Max points possible for this assignment.
     *
     * @param Single $val The value to assign to the maxPoints
     *

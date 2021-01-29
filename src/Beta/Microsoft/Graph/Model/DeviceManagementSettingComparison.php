@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceManagementSettingComparison extends Entity
 
     /**
     * Gets the comparisonResult
-    * Setting comparison result
+    * Setting comparison result. Possible values are: unknown, equal, notEqual, added, removed.
     *
     * @return DeviceManagementComparisonResult The comparisonResult
     */
@@ -45,7 +45,7 @@ class DeviceManagementSettingComparison extends Entity
 
     /**
     * Sets the comparisonResult
-    * Setting comparison result
+    * Setting comparison result. Possible values are: unknown, equal, notEqual, added, removed.
     *
     * @param DeviceManagementComparisonResult $val The value to assign to the comparisonResult
     *

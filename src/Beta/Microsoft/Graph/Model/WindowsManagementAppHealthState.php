@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -84,7 +84,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Gets the healthState
-    * Windows management app health state.
+    * Windows management app health state. Possible values are: unknown, healthy, unhealthy.
     *
     * @return HealthState The healthState
     */
@@ -103,7 +103,7 @@ class WindowsManagementAppHealthState extends Entity
     
     /**
     * Sets the healthState
-    * Windows management app health state.
+    * Windows management app health state. Possible values are: unknown, healthy, unhealthy.
     *
     * @param HealthState $val The healthState
     *

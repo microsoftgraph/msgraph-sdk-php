@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class SearchBucket extends Entity
 {
     /**
     * Gets the aggregationFilterToken
+    * A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
     *
     * @return string The aggregationFilterToken
     */
@@ -39,6 +40,7 @@ class SearchBucket extends Entity
 
     /**
     * Sets the aggregationFilterToken
+    * A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
     *
     * @param string $val The value of the aggregationFilterToken
     *
@@ -51,6 +53,7 @@ class SearchBucket extends Entity
     }
     /**
     * Gets the count
+    * The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
     *
     * @return int The count
     */
@@ -65,6 +68,7 @@ class SearchBucket extends Entity
 
     /**
     * Sets the count
+    * The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
     *
     * @param int $val The value of the count
     *
@@ -77,6 +81,7 @@ class SearchBucket extends Entity
     }
     /**
     * Gets the key
+    * The discrete value of the field that an aggregation was computed on.
     *
     * @return string The key
     */
@@ -91,6 +96,7 @@ class SearchBucket extends Entity
 
     /**
     * Sets the key
+    * The discrete value of the field that an aggregation was computed on.
     *
     * @param string $val The value of the key
     *

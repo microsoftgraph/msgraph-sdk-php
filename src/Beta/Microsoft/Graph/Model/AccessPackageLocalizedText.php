@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class AccessPackageLocalizedText extends Entity
 {
     /**
     * Gets the languageCode
+    * The ISO code for the intended language. Required.
     *
     * @return string The languageCode
     */
@@ -39,6 +40,7 @@ class AccessPackageLocalizedText extends Entity
 
     /**
     * Sets the languageCode
+    * The ISO code for the intended language. Required.
     *
     * @param string $val The value of the languageCode
     *
@@ -51,6 +53,7 @@ class AccessPackageLocalizedText extends Entity
     }
     /**
     * Gets the text
+    * The text in the specific language. Required.
     *
     * @return string The text
     */
@@ -65,6 +68,7 @@ class AccessPackageLocalizedText extends Entity
 
     /**
     * Sets the text
+    * The text in the specific language. Required.
     *
     * @param string $val The value of the text
     *

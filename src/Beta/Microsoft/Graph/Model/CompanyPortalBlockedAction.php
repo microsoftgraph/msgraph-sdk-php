@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Gets the action
-    * Device Action
+    * Device Action. Possible values are: unknown, remove, reset.
     *
     * @return CompanyPortalAction The action
     */
@@ -45,7 +45,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Sets the action
-    * Device Action
+    * Device Action. Possible values are: unknown, remove, reset.
     *
     * @param CompanyPortalAction $val The value to assign to the action
     *
@@ -59,7 +59,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Gets the ownerType
-    * Device ownership type
+    * Device ownership type. Possible values are: unknown, company, personal.
     *
     * @return OwnerType The ownerType
     */
@@ -78,7 +78,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Sets the ownerType
-    * Device ownership type
+    * Device ownership type. Possible values are: unknown, company, personal.
     *
     * @param OwnerType $val The value to assign to the ownerType
     *
@@ -92,7 +92,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Gets the platform
-    * Device OS/Platform
+    * Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
     *
     * @return DevicePlatformType The platform
     */
@@ -111,7 +111,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Sets the platform
-    * Device OS/Platform
+    * Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
     *
     * @param DevicePlatformType $val The value to assign to the platform
     *

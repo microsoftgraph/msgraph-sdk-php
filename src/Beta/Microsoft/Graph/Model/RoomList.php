@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -80,6 +80,34 @@ class RoomList extends Place
     public function setRooms($val)
     {
 		$this->_propDict["rooms"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the spaces
+     *
+     * @return array The spaces
+     */
+    public function getSpaces()
+    {
+        if (array_key_exists("spaces", $this->_propDict)) {
+           return $this->_propDict["spaces"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the spaces
+    *
+    * @param Space $val The spaces
+    *
+    * @return RoomList
+    */
+    public function setSpaces($val)
+    {
+		$this->_propDict["spaces"] = $val;
         return $this;
     }
     

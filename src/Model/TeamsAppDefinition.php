@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -55,7 +55,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the teamsAppId
-    * The ID from the Teams app manifest.
+    * The id from the Teams App manifest.
     *
     * @return string The teamsAppId
     */
@@ -70,7 +70,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the teamsAppId
-    * The ID from the Teams app manifest.
+    * The id from the Teams App manifest.
     *
     * @param string $val The teamsAppId
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -146,7 +146,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the orderIdentifier
-    * Order Id of the Windows autopilot device.
+    * Order Id of the Windows autopilot device. - Deprecate
     *
     * @return string The orderIdentifier
     */
@@ -161,7 +161,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the orderIdentifier
-    * Order Id of the Windows autopilot device.
+    * Order Id of the Windows autopilot device. - Deprecate
     *
     * @param string $val The orderIdentifier
     *

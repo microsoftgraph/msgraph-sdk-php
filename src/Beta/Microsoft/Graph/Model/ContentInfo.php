@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ContentInfo extends Entity
 
     /**
     * Gets the format
+    * Possible values are: default, email.
     *
     * @return ContentFormat The format
     */
@@ -44,6 +45,7 @@ class ContentInfo extends Entity
 
     /**
     * Sets the format
+    * Possible values are: default, email.
     *
     * @param ContentFormat $val The value to assign to the format
     *
@@ -56,6 +58,7 @@ class ContentInfo extends Entity
     }
     /**
     * Gets the identifier
+    * Identifier used for Azure Information Protection Analytics.
     *
     * @return string The identifier
     */
@@ -70,6 +73,7 @@ class ContentInfo extends Entity
 
     /**
     * Sets the identifier
+    * Identifier used for Azure Information Protection Analytics.
     *
     * @param string $val The value of the identifier
     *
@@ -83,6 +87,7 @@ class ContentInfo extends Entity
 
     /**
     * Gets the metadata
+    * Existing Microsoft Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
     *
     * @return KeyValuePair The metadata
     */
@@ -101,6 +106,7 @@ class ContentInfo extends Entity
 
     /**
     * Sets the metadata
+    * Existing Microsoft Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
     *
     * @param KeyValuePair $val The value to assign to the metadata
     *
@@ -114,6 +120,7 @@ class ContentInfo extends Entity
 
     /**
     * Gets the state
+    * Possible values are: rest, motion, use.
     *
     * @return ContentState The state
     */
@@ -132,6 +139,7 @@ class ContentInfo extends Entity
 
     /**
     * Sets the state
+    * Possible values are: rest, motion, use.
     *
     * @param ContentState $val The value to assign to the state
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -81,7 +81,7 @@ class TeamMemberSettings extends Entity
     }
     /**
     * Gets the allowCreateUpdateChannels
-    * If set to true, members can add and update channels.
+    * If set to true, members can add and update any channels.
     *
     * @return bool The allowCreateUpdateChannels
     */
@@ -96,7 +96,7 @@ class TeamMemberSettings extends Entity
 
     /**
     * Sets the allowCreateUpdateChannels
-    * If set to true, members can add and update channels.
+    * If set to true, members can add and update any channels.
     *
     * @param bool $val The value of the allowCreateUpdateChannels
     *

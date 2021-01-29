@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -85,7 +85,7 @@ class WorkbookTableSort extends Entity
     
     /**
     * Gets the method
-    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+    * Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
     *
     * @return string The method
     */
@@ -100,7 +100,7 @@ class WorkbookTableSort extends Entity
     
     /**
     * Sets the method
-    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+    * Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
     *
     * @param string $val The method
     *

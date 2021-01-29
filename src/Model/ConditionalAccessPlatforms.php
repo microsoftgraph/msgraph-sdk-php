@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class ConditionalAccessPlatforms extends Entity
 
     /**
     * Gets the excludePlatforms
-    * Possible values are: android, iOS, windows, windowsPhone, macOS, unknownFutureValue.
+    * Possible values are: android, iOS, windows, windowsPhone, macOS.
     *
     * @return ConditionalAccessDevicePlatform The excludePlatforms
     */
@@ -45,7 +45,7 @@ class ConditionalAccessPlatforms extends Entity
 
     /**
     * Sets the excludePlatforms
-    * Possible values are: android, iOS, windows, windowsPhone, macOS, unknownFutureValue.
+    * Possible values are: android, iOS, windows, windowsPhone, macOS.
     *
     * @param ConditionalAccessDevicePlatform $val The value to assign to the excludePlatforms
     *
@@ -59,7 +59,7 @@ class ConditionalAccessPlatforms extends Entity
 
     /**
     * Gets the includePlatforms
-    * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
+    * Possible values are: android, iOS, windows, windowsPhone, macOS, all.
     *
     * @return ConditionalAccessDevicePlatform The includePlatforms
     */
@@ -78,7 +78,7 @@ class ConditionalAccessPlatforms extends Entity
 
     /**
     * Sets the includePlatforms
-    * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
+    * Possible values are: android, iOS, windows, windowsPhone, macOS, all.
     *
     * @param ConditionalAccessDevicePlatform $val The value to assign to the includePlatforms
     *

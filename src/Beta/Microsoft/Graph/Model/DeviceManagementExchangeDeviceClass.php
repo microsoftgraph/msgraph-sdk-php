@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -54,7 +54,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
 
     /**
     * Gets the type
-    * Type of device which is impacted by this rule e.g. Model, Family
+    * Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model.
     *
     * @return DeviceManagementExchangeAccessRuleType The type
     */
@@ -73,7 +73,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
 
     /**
     * Sets the type
-    * Type of device which is impacted by this rule e.g. Model, Family
+    * Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model.
     *
     * @param DeviceManagementExchangeAccessRuleType $val The value to assign to the type
     *

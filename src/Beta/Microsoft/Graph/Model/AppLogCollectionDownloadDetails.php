@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class AppLogCollectionDownloadDetails extends Entity
 
     /**
     * Gets the appLogDecryptionAlgorithm
-    * DecryptionAlgorithm for Content
+    * DecryptionAlgorithm for Content. Possible values are: aes256.
     *
     * @return AppLogDecryptionAlgorithm The appLogDecryptionAlgorithm
     */
@@ -45,7 +45,7 @@ class AppLogCollectionDownloadDetails extends Entity
 
     /**
     * Sets the appLogDecryptionAlgorithm
-    * DecryptionAlgorithm for Content
+    * DecryptionAlgorithm for Content. Possible values are: aes256.
     *
     * @param AppLogDecryptionAlgorithm $val The value to assign to the appLogDecryptionAlgorithm
     *

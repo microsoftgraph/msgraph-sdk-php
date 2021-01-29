@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class Report extends Entity
 
     /**
     * Gets the content
-    * Not yet documented
+    * Report content; details vary by report type.
     *
     * @return \GuzzleHttp\Psr7\Stream The content
     */
@@ -45,7 +45,7 @@ class Report extends Entity
 
     /**
     * Sets the content
-    * Not yet documented
+    * Report content; details vary by report type.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the content
     *

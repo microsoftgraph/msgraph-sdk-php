@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class BookingCurrency extends Entity
 {
     /**
     * Gets the symbol
+    * The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
     *
     * @return string The symbol
     */
@@ -40,6 +41,7 @@ class BookingCurrency extends Entity
     
     /**
     * Sets the symbol
+    * The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
     *
     * @param string $val The symbol
     *

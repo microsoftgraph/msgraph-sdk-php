@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -171,7 +171,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Gets the previewVisibility
-    * Overrides the notification preview policy set by the user on an iOS device.
+    * Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
     *
     * @return IosNotificationPreviewVisibility The previewVisibility
     */
@@ -190,7 +190,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the previewVisibility
-    * Overrides the notification preview policy set by the user on an iOS device.
+    * Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
     *
     * @param IosNotificationPreviewVisibility $val The value to assign to the previewVisibility
     *

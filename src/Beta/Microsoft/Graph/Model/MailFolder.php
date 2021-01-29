@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -79,6 +79,35 @@ class MailFolder extends Entity
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isHidden
+    * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
+    *
+    * @return bool The isHidden
+    */
+    public function getIsHidden()
+    {
+        if (array_key_exists("isHidden", $this->_propDict)) {
+            return $this->_propDict["isHidden"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isHidden
+    * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
+    *
+    * @param bool $val The isHidden
+    *
+    * @return MailFolder
+    */
+    public function setIsHidden($val)
+    {
+        $this->_propDict["isHidden"] = boolval($val);
         return $this;
     }
     
@@ -171,6 +200,7 @@ class MailFolder extends Entity
     
     /**
     * Gets the wellKnownName
+    * The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null.
     *
     * @return string The wellKnownName
     */
@@ -185,6 +215,7 @@ class MailFolder extends Entity
     
     /**
     * Sets the wellKnownName
+    * The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null.
     *
     * @param string $val The wellKnownName
     *

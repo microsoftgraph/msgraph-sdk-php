@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -91,7 +91,7 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
 
     /**
     * Gets the productVersionOperator
-    * The operator to detect product version.
+    * The operator to detect product version. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @return Win32LobAppDetectionOperator The productVersionOperator
     */
@@ -110,7 +110,7 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
 
     /**
     * Sets the productVersionOperator
-    * The operator to detect product version.
+    * The operator to detect product version. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @param Win32LobAppDetectionOperator $val The value to assign to the productVersionOperator
     *

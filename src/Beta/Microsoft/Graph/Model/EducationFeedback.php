@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationFeedback extends Entity
 
     /**
     * Gets the feedbackBy
+    * User who created the feedback.
     *
     * @return IdentitySet The feedbackBy
     */
@@ -44,6 +45,7 @@ class EducationFeedback extends Entity
 
     /**
     * Sets the feedbackBy
+    * User who created the feedback.
     *
     * @param IdentitySet $val The value to assign to the feedbackBy
     *
@@ -57,6 +59,7 @@ class EducationFeedback extends Entity
 
     /**
     * Gets the feedbackDateTime
+    * Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The feedbackDateTime
     */
@@ -75,6 +78,7 @@ class EducationFeedback extends Entity
 
     /**
     * Sets the feedbackDateTime
+    * Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the feedbackDateTime
     *
@@ -88,6 +92,7 @@ class EducationFeedback extends Entity
 
     /**
     * Gets the text
+    * Feedback.
     *
     * @return EducationItemBody The text
     */
@@ -106,6 +111,7 @@ class EducationFeedback extends Entity
 
     /**
     * Sets the text
+    * Feedback.
     *
     * @param EducationItemBody $val The value to assign to the text
     *

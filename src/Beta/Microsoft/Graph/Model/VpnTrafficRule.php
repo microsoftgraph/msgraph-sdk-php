@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -54,7 +54,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the appType
-    * App type, if this traffic rule is triggered by an app.
+    * App type, if this traffic rule is triggered by an app. Possible values are: none, desktop, universal.
     *
     * @return VpnTrafficRuleAppType The appType
     */
@@ -73,7 +73,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the appType
-    * App type, if this traffic rule is triggered by an app.
+    * App type, if this traffic rule is triggered by an app. Possible values are: none, desktop, universal.
     *
     * @param VpnTrafficRuleAppType $val The value to assign to the appType
     *
@@ -303,7 +303,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Gets the routingPolicyType
-    * When app triggered, indicates whether to enable split tunneling along this route.
+    * When app triggered, indicates whether to enable split tunneling along this route. Possible values are: none, splitTunnel, forceTunnel.
     *
     * @return VpnTrafficRuleRoutingPolicyType The routingPolicyType
     */
@@ -322,7 +322,7 @@ class VpnTrafficRule extends Entity
 
     /**
     * Sets the routingPolicyType
-    * When app triggered, indicates whether to enable split tunneling along this route.
+    * When app triggered, indicates whether to enable split tunneling along this route. Possible values are: none, splitTunnel, forceTunnel.
     *
     * @param VpnTrafficRuleRoutingPolicyType $val The value to assign to the routingPolicyType
     *

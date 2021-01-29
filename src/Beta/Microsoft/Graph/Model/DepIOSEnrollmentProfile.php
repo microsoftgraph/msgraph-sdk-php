@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -287,7 +287,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the iTunesPairingMode
-    * Indicates the iTunes pairing mode
+    * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
     *
     * @return ITunesPairingMode The iTunesPairingMode
     */
@@ -306,7 +306,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the iTunesPairingMode
-    * Indicates the iTunes pairing mode
+    * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
     *
     * @param ITunesPairingMode $val The iTunesPairingMode
     *

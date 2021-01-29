@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class ConfigurationManagerAction extends Entity
 
     /**
     * Gets the action
-    * The action type to trigger on Configuration Manager client
+    * The action type to trigger on Configuration Manager client. Possible values are: refreshMachinePolicy, refreshUserPolicy, wakeUpClient, appEvaluation.
     *
     * @return ConfigurationManagerActionType The action
     */
@@ -45,7 +45,7 @@ class ConfigurationManagerAction extends Entity
 
     /**
     * Sets the action
-    * The action type to trigger on Configuration Manager client
+    * The action type to trigger on Configuration Manager client. Possible values are: refreshMachinePolicy, refreshUserPolicy, wakeUpClient, appEvaluation.
     *
     * @param ConfigurationManagerActionType $val The value to assign to the action
     *

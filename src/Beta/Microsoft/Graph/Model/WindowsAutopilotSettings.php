@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -92,7 +92,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Gets the syncStatus
-    * Indicates the status of sync with Device data sync (DDS) service.
+    * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
     *
     * @return WindowsAutopilotSyncStatus The syncStatus
     */
@@ -111,7 +111,7 @@ class WindowsAutopilotSettings extends Entity
     
     /**
     * Sets the syncStatus
-    * Indicates the status of sync with Device data sync (DDS) service.
+    * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
     *
     * @param WindowsAutopilotSyncStatus $val The syncStatus
     *

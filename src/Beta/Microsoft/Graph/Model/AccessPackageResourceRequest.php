@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class AccessPackageResourceRequest extends Entity
 {
     /**
     * Gets the catalogId
+    * The unique ID of the access package catalog.
     *
     * @return string The catalogId
     */
@@ -40,6 +41,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the catalogId
+    * The unique ID of the access package catalog.
     *
     * @param string $val The catalogId
     *
@@ -80,6 +82,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the expirationDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The expirationDateTime
     */
@@ -98,6 +101,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the expirationDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -111,6 +115,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the isValidationOnly
+    * If set, does not add the resource.
     *
     * @return bool The isValidationOnly
     */
@@ -125,6 +130,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the isValidationOnly
+    * If set, does not add the resource.
     *
     * @param bool $val The isValidationOnly
     *
@@ -138,6 +144,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the justification
+    * The requestor's justification for adding the resource.
     *
     * @return string The justification
     */
@@ -152,6 +159,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the justification
+    * The requestor's justification for adding the resource.
     *
     * @param string $val The justification
     *
@@ -165,6 +173,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the requestState
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added. Read-Only.
     *
     * @return string The requestState
     */
@@ -179,6 +188,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the requestState
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added. Read-Only.
     *
     * @param string $val The requestState
     *
@@ -192,6 +202,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the requestStatus
+    * Read-only.
     *
     * @return string The requestStatus
     */
@@ -206,6 +217,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the requestStatus
+    * Read-only.
     *
     * @param string $val The requestStatus
     *
@@ -219,6 +231,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the requestType
+    * Use AdminAdd to add a resource, if the caller is an administrator or resource owner.
     *
     * @return string The requestType
     */
@@ -233,6 +246,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the requestType
+    * Use AdminAdd to add a resource, if the caller is an administrator or resource owner.
     *
     * @param string $val The requestType
     *
@@ -246,6 +260,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the accessPackageResource
+    * Nullable.
     *
     * @return AccessPackageResource The accessPackageResource
     */
@@ -264,6 +279,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the accessPackageResource
+    * Nullable.
     *
     * @param AccessPackageResource $val The accessPackageResource
     *
@@ -277,6 +293,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the requestor
+    * Read-only. Nullable.
     *
     * @return AccessPackageSubject The requestor
     */
@@ -295,6 +312,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the requestor
+    * Read-only. Nullable.
     *
     * @param AccessPackageSubject $val The requestor
     *

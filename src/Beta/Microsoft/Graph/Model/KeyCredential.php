@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -120,7 +120,7 @@ class KeyCredential extends Entity
 
     /**
     * Gets the key
-    * The certificate's raw data in byte array converted to Base64 string; for example, [System.Convert]::ToBase64String($Cert.GetRawCertData()).
+    * Value for the key credential. Should be a base 64 encoded value.
     *
     * @return \GuzzleHttp\Psr7\Stream The key
     */
@@ -139,7 +139,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the key
-    * The certificate's raw data in byte array converted to Base64 string; for example, [System.Convert]::ToBase64String($Cert.GetRawCertData()).
+    * Value for the key credential. Should be a base 64 encoded value.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
     *

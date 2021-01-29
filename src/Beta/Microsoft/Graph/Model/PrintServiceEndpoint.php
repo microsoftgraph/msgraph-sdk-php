@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PrintServiceEndpoint extends Entity
 {
     /**
     * Gets the displayName
+    * A human-readable display name for the endpoint.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class PrintServiceEndpoint extends Entity
     
     /**
     * Sets the displayName
+    * A human-readable display name for the endpoint.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class PrintServiceEndpoint extends Entity
     
     /**
     * Gets the uri
+    * The URI that can be used to access the service.
     *
     * @return string The uri
     */
@@ -67,6 +70,7 @@ class PrintServiceEndpoint extends Entity
     
     /**
     * Sets the uri
+    * The URI that can be used to access the service.
     *
     * @param string $val The uri
     *

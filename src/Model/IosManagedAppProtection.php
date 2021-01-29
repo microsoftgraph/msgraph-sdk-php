@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * A custom browser protocol to open weblink on iOS.
     *
     * @return string The customBrowserProtocol
     */
@@ -74,7 +74,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * A custom browser protocol to open weblink on iOS.
     *
     * @param string $val The customBrowserProtocol
     *

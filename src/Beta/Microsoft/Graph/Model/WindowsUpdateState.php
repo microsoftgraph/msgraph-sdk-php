@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -208,7 +208,7 @@ class WindowsUpdateState extends Entity
     
     /**
     * Gets the status
-    * Windows udpate status.
+    * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
     *
     * @return WindowsUpdateStatus The status
     */
@@ -227,7 +227,7 @@ class WindowsUpdateState extends Entity
     
     /**
     * Sets the status
-    * Windows udpate status.
+    * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
     *
     * @param WindowsUpdateStatus $val The status
     *

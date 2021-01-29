@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class UserActivationCounts extends Entity
 {
     /**
     * Gets the activatedOnSharedComputer
+    * True if the user used the product on a shared computer before.
     *
     * @return bool The activatedOnSharedComputer
     */
@@ -39,6 +40,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the activatedOnSharedComputer
+    * True if the user used the product on a shared computer before.
     *
     * @param bool $val The value of the activatedOnSharedComputer
     *
@@ -51,6 +53,7 @@ class UserActivationCounts extends Entity
     }
     /**
     * Gets the android
+    * The activation count on an Android device.
     *
     * @return int The android
     */
@@ -65,6 +68,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the android
+    * The activation count on an Android device.
     *
     * @param int $val The value of the android
     *
@@ -77,6 +81,7 @@ class UserActivationCounts extends Entity
     }
     /**
     * Gets the ios
+    * The activation count on iOS.
     *
     * @return int The ios
     */
@@ -91,6 +96,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the ios
+    * The activation count on iOS.
     *
     * @param int $val The value of the ios
     *
@@ -104,6 +110,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Gets the lastActivatedDate
+    * The date of the latest activation.
     *
     * @return \DateTime The lastActivatedDate
     */
@@ -122,6 +129,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the lastActivatedDate
+    * The date of the latest activation.
     *
     * @param \DateTime $val The value to assign to the lastActivatedDate
     *
@@ -134,6 +142,7 @@ class UserActivationCounts extends Entity
     }
     /**
     * Gets the mac
+    * The activation count on Mac OS.
     *
     * @return int The mac
     */
@@ -148,6 +157,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the mac
+    * The activation count on Mac OS.
     *
     * @param int $val The value of the mac
     *
@@ -160,6 +170,7 @@ class UserActivationCounts extends Entity
     }
     /**
     * Gets the productType
+    * The product type, such as 'Microsoft 365 ProPlus'or 'Project Client'.
     *
     * @return string The productType
     */
@@ -174,6 +185,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the productType
+    * The product type, such as 'Microsoft 365 ProPlus'or 'Project Client'.
     *
     * @param string $val The value of the productType
     *
@@ -186,6 +198,7 @@ class UserActivationCounts extends Entity
     }
     /**
     * Gets the windows
+    * The activation count on Windows. This number includes every activation on any Windows computer.
     *
     * @return int The windows
     */
@@ -200,6 +213,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the windows
+    * The activation count on Windows. This number includes every activation on any Windows computer.
     *
     * @param int $val The value of the windows
     *
@@ -212,6 +226,7 @@ class UserActivationCounts extends Entity
     }
     /**
     * Gets the windows10Mobile
+    * The activation count on Windows 10 mobile.
     *
     * @return int The windows10Mobile
     */
@@ -226,6 +241,7 @@ class UserActivationCounts extends Entity
 
     /**
     * Sets the windows10Mobile
+    * The activation count on Windows 10 mobile.
     *
     * @param int $val The value of the windows10Mobile
     *

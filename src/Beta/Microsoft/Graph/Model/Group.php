@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -27,7 +27,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the assignedLabels
-    * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
+    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      *
      * @return array The assignedLabels
      */
@@ -42,7 +42,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the assignedLabels
-    * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
+    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
     *
     * @param AssignedLabel $val The assignedLabels
     *
@@ -115,6 +115,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the createdByAppId
+    * App ID of the app used to create the group. Can be null for some groups. Returned by default. Read-only. Supports $filter.
     *
     * @return string The createdByAppId
     */
@@ -129,6 +130,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the createdByAppId
+    * App ID of the app used to create the group. Can be null for some groups. Returned by default. Read-only. Supports $filter.
     *
     * @param string $val The createdByAppId
     *
@@ -295,7 +297,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the hasMembersWithLicenseErrors
-    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true).
     *
     * @return bool The hasMembersWithLicenseErrors
     */
@@ -310,7 +312,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the hasMembersWithLicenseErrors
-    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+    * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true).
     *
     * @param bool $val The hasMembersWithLicenseErrors
     *
@@ -324,6 +326,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the infoCatalogs
+    * Identifies the info segments assigned to the group. Returned by default.
     *
     * @return string The infoCatalogs
     */
@@ -338,6 +341,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the infoCatalogs
+    * Identifies the info segments assigned to the group. Returned by default.
     *
     * @param string $val The infoCatalogs
     *
@@ -351,6 +355,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the isAssignableToRole
+    * Indicates whether this group can be assigned to an Azure Active Directory role or not.This property can only be set while creating the group and is immutable. Only Global Administrator and Privileged Role Administrator roles can set this property. For more information, see Using a group to manage Azure AD role assignmentsReturned by default.
     *
     * @return bool The isAssignableToRole
     */
@@ -365,6 +370,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the isAssignableToRole
+    * Indicates whether this group can be assigned to an Azure Active Directory role or not.This property can only be set while creating the group and is immutable. Only Global Administrator and Privileged Role Administrator roles can set this property. For more information, see Using a group to manage Azure AD role assignmentsReturned by default.
     *
     * @param bool $val The isAssignableToRole
     *
@@ -378,7 +384,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the licenseProcessingState
-    * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+    * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
     *
     * @return LicenseProcessingState The licenseProcessingState
     */
@@ -397,7 +403,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the licenseProcessingState
-    * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+    * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
     *
     * @param LicenseProcessingState $val The licenseProcessingState
     *
@@ -469,6 +475,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the mailNickname
+    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
     *
     * @return string The mailNickname
     */
@@ -483,6 +490,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the mailNickname
+    * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
     *
     * @param string $val The mailNickname
     *
@@ -581,6 +589,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesDomainName
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
     *
     * @return string The onPremisesDomainName
     */
@@ -595,6 +604,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesDomainName
+    * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
     *
     * @param string $val The onPremisesDomainName
     *
@@ -608,6 +618,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -626,6 +637,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -639,6 +651,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesNetBiosName
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
     *
     * @return string The onPremisesNetBiosName
     */
@@ -653,6 +666,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesNetBiosName
+    * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
     *
     * @param string $val The onPremisesNetBiosName
     *
@@ -667,6 +681,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the onPremisesProvisioningErrors
+    * Errors when using Microsoft synchronization product during provisioning. Returned by default.
      *
      * @return array The onPremisesProvisioningErrors
      */
@@ -681,6 +696,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the onPremisesProvisioningErrors
+    * Errors when using Microsoft synchronization product during provisioning. Returned by default.
     *
     * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
     *
@@ -810,7 +826,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
-    * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
     *
     * @return string The preferredLanguage
     */
@@ -825,7 +841,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
-    * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
     *
     * @param string $val The preferredLanguage
     *
@@ -839,7 +855,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the proxyAddresses
-    * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
+    * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required for filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
     *
     * @return string The proxyAddresses
     */
@@ -854,7 +870,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the proxyAddresses
-    * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
+    * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required for filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
     *
     * @param string $val The proxyAddresses
     *
@@ -1017,7 +1033,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the theme
-    * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+    * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
     *
     * @return string The theme
     */
@@ -1032,7 +1048,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the theme
-    * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+    * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
     *
     * @param string $val The theme
     *
@@ -1164,7 +1180,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the hideFromAddressLists
-    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
     *
     * @return bool The hideFromAddressLists
     */
@@ -1179,7 +1195,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the hideFromAddressLists
-    * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+    * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
     *
     * @param bool $val The hideFromAddressLists
     *
@@ -1193,7 +1209,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the hideFromOutlookClients
-    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
     *
     * @return bool The hideFromOutlookClients
     */
@@ -1208,7 +1224,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the hideFromOutlookClients
-    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
     *
     * @param bool $val The hideFromOutlookClients
     *
@@ -1278,6 +1294,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the unseenConversationsCount
+    * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
     *
     * @return int The unseenConversationsCount
     */
@@ -1292,6 +1309,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the unseenConversationsCount
+    * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
     *
     * @param int $val The unseenConversationsCount
     *
@@ -1305,7 +1323,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the unseenCount
-    * Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select.
+    * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select.
     *
     * @return int The unseenCount
     */
@@ -1320,7 +1338,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the unseenCount
-    * Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select.
+    * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select.
     *
     * @param int $val The unseenCount
     *
@@ -1334,6 +1352,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the unseenMessagesCount
+    * Count of new posts that have been delivered to the group's conversations since the signed-in user's last visit to the group. Returned only on $select.
     *
     * @return int The unseenMessagesCount
     */
@@ -1348,6 +1367,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the unseenMessagesCount
+    * Count of new posts that have been delivered to the group's conversations since the signed-in user's last visit to the group. Returned only on $select.
     *
     * @param int $val The unseenMessagesCount
     *
@@ -1447,7 +1467,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the createdOnBehalfOf
-    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+    * The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.
     *
     * @return DirectoryObject The createdOnBehalfOf
     */
@@ -1466,7 +1486,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the createdOnBehalfOf
-    * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+    * The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.
     *
     * @param DirectoryObject $val The createdOnBehalfOf
     *
@@ -1481,6 +1501,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the endpoints
+    * Endpoints for the group. Read-only. Nullable.
      *
      * @return array The endpoints
      */
@@ -1495,6 +1516,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the endpoints
+    * Endpoints for the group. Read-only. Nullable.
     *
     * @param Endpoint $val The endpoints
     *
@@ -1509,7 +1531,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      *
      * @return array The memberOf
      */
@@ -1524,7 +1546,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
     *
     * @param DirectoryObject $val The memberOf
     *
@@ -1539,7 +1561,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
+    * Users, contacts, and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
      *
      * @return array The members
      */
@@ -1554,7 +1576,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the members
-    * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
+    * Users, contacts, and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
     *
     * @param DirectoryObject $val The members
     *
@@ -1599,7 +1621,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
+    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
      *
      * @return array The owners
      */
@@ -1614,7 +1636,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the owners
-    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
+    * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
     *
     * @param DirectoryObject $val The owners
     *
@@ -1657,7 +1679,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the settings
-    * Read-only. Nullable.
+    * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      *
      * @return array The settings
      */
@@ -1672,7 +1694,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the settings
-    * Read-only. Nullable.
+    * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
     *
     * @param DirectorySetting $val The settings
     *
@@ -1866,7 +1888,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the events
-    * The group's calendar events.
+    * The group's events.
      *
      * @return array The events
      */
@@ -1881,7 +1903,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the events
-    * The group's calendar events.
+    * The group's events.
     *
     * @param Event $val The events
     *
@@ -1895,7 +1917,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the photo
-    * The group's profile photo
+    * The group's profile photo.
     *
     * @return ProfilePhoto The photo
     */
@@ -1914,7 +1936,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the photo
-    * The group's profile photo
+    * The group's profile photo.
     *
     * @param ProfilePhoto $val The photo
     *
@@ -2171,7 +2193,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the planner
-    * Entry-point to Planner resource that might exist for a Unified Group.
+    * Selective Planner services available to the group. Read-only. Nullable.
     *
     * @return PlannerGroup The planner
     */
@@ -2190,7 +2212,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the planner
-    * Entry-point to Planner resource that might exist for a Unified Group.
+    * Selective Planner services available to the group. Read-only. Nullable.
     *
     * @param PlannerGroup $val The planner
     *

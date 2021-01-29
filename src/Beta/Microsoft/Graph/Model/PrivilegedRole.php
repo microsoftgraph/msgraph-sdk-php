@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PrivilegedRole extends Entity
 {
     /**
     * Gets the name
+    * Role name.
     *
     * @return string The name
     */
@@ -40,6 +41,7 @@ class PrivilegedRole extends Entity
     
     /**
     * Sets the name
+    * Role name.
     *
     * @param string $val The name
     *
@@ -54,6 +56,7 @@ class PrivilegedRole extends Entity
 
      /** 
      * Gets the assignments
+    * The assignments for this role. Read-only. Nullable.
      *
      * @return array The assignments
      */
@@ -68,6 +71,7 @@ class PrivilegedRole extends Entity
     
     /** 
     * Sets the assignments
+    * The assignments for this role. Read-only. Nullable.
     *
     * @param PrivilegedRoleAssignment $val The assignments
     *
@@ -81,6 +85,7 @@ class PrivilegedRole extends Entity
     
     /**
     * Gets the settings
+    * The settings for this role. Read-only. Nullable.
     *
     * @return PrivilegedRoleSettings The settings
     */
@@ -99,6 +104,7 @@ class PrivilegedRole extends Entity
     
     /**
     * Sets the settings
+    * The settings for this role. Read-only. Nullable.
     *
     * @param PrivilegedRoleSettings $val The settings
     *
@@ -112,6 +118,7 @@ class PrivilegedRole extends Entity
     
     /**
     * Gets the summary
+    * The summary information for this role. Read-only. Nullable.
     *
     * @return PrivilegedRoleSummary The summary
     */
@@ -130,6 +137,7 @@ class PrivilegedRole extends Entity
     
     /**
     * Sets the summary
+    * The summary information for this role. Read-only. Nullable.
     *
     * @param PrivilegedRoleSummary $val The summary
     *

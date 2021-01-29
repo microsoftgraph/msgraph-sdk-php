@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -255,7 +255,7 @@ class ManagedDeviceMobileAppConfigurationSettingState extends Entity
 
     /**
     * Gets the state
-    * The compliance state of the setting
+    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @return ComplianceStatus The state
     */
@@ -274,7 +274,7 @@ class ManagedDeviceMobileAppConfigurationSettingState extends Entity
 
     /**
     * Sets the state
-    * The compliance state of the setting
+    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
     * @param ComplianceStatus $val The value to assign to the state
     *

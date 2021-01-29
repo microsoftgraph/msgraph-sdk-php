@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -54,7 +54,7 @@ class DeviceAndAppManagementAssignmentTarget extends Entity
 
     /**
     * Gets the deviceAndAppManagementAssignmentFilterType
-    * The type of filter of the target assignment i.e. Exclude or Include.
+    * The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include.
     *
     * @return DeviceAndAppManagementAssignmentFilterType The deviceAndAppManagementAssignmentFilterType
     */
@@ -73,7 +73,7 @@ class DeviceAndAppManagementAssignmentTarget extends Entity
 
     /**
     * Sets the deviceAndAppManagementAssignmentFilterType
-    * The type of filter of the target assignment i.e. Exclude or Include.
+    * The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include.
     *
     * @param DeviceAndAppManagementAssignmentFilterType $val The value to assign to the deviceAndAppManagementAssignmentFilterType
     *

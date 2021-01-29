@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -250,7 +250,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the lastEditedDateTime
-    * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Microsoft Teams UI. If no edits are made the value is null.
+    * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
     *
     * @return \DateTime The lastEditedDateTime
     */
@@ -269,7 +269,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the lastEditedDateTime
-    * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Microsoft Teams UI. If no edits are made the value is null.
+    * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
     *
     * @param \DateTime $val The lastEditedDateTime
     *
@@ -283,7 +283,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Read only. Timestamp when the chat message is created (initial setting) or edited, including when a reaction is added or removed.
+    * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -302,7 +302,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Read only. Timestamp when the chat message is created (initial setting) or edited, including when a reaction is added or removed.
+    * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -442,6 +442,7 @@ class ChatMessage extends Entity
 
      /** 
      * Gets the reactions
+    * Reactions for this chat message (for example, Like).
      *
      * @return array The reactions
      */
@@ -456,6 +457,7 @@ class ChatMessage extends Entity
     
     /** 
     * Sets the reactions
+    * Reactions for this chat message (for example, Like).
     *
     * @param ChatMessageReaction $val The reactions
     *
@@ -469,7 +471,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the replyToId
-    * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels not chats)
+    * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
     *
     * @return string The replyToId
     */
@@ -484,7 +486,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the replyToId
-    * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels not chats)
+    * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
     *
     * @param string $val The replyToId
     *

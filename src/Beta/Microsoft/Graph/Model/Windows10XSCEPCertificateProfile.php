@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
 {
     /**
     * Gets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @return CertificateStore The certificateStore
     */
@@ -45,7 +45,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Sets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @param CertificateStore $val The certificateStore
     *
@@ -59,7 +59,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
@@ -78,7 +78,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period
+    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
     *
@@ -181,7 +181,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Gets the keySize
-    * SCEP Key Size.
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @return KeySize The keySize
     */
@@ -200,7 +200,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Sets the keySize
-    * SCEP Key Size.
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @param KeySize $val The keySize
     *
@@ -214,7 +214,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Gets the keyStorageProvider
-    * Key Storage Provider (KSP)
+    * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
     *
     * @return KeyStorageProviderOption The keyStorageProvider
     */
@@ -233,7 +233,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Sets the keyStorageProvider
-    * Key Storage Provider (KSP)
+    * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
     *
     * @param KeyStorageProviderOption $val The keyStorageProvider
     *
@@ -247,7 +247,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Gets the keyUsage
-    * SCEP Key Usage.
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @return KeyUsages The keyUsage
     */
@@ -266,7 +266,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     
     /**
     * Sets the keyUsage
-    * SCEP Key Usage.
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @param KeyUsages $val The keyUsage
     *

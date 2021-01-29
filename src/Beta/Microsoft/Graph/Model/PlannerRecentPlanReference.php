@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PlannerRecentPlanReference extends Entity
 
     /**
     * Gets the lastAccessedDateTime
+    * The date and time the plan was last viewed by the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The lastAccessedDateTime
     */
@@ -44,6 +45,7 @@ class PlannerRecentPlanReference extends Entity
 
     /**
     * Sets the lastAccessedDateTime
+    * The date and time the plan was last viewed by the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the lastAccessedDateTime
     *
@@ -56,6 +58,7 @@ class PlannerRecentPlanReference extends Entity
     }
     /**
     * Gets the planTitle
+    * The title of the plan at the time the user viewed it.
     *
     * @return string The planTitle
     */
@@ -70,6 +73,7 @@ class PlannerRecentPlanReference extends Entity
 
     /**
     * Sets the planTitle
+    * The title of the plan at the time the user viewed it.
     *
     * @param string $val The value of the planTitle
     *

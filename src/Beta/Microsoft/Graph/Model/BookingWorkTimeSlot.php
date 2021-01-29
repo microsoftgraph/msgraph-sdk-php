@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class BookingWorkTimeSlot extends Entity
 
     /**
     * Gets the end
+    * The time of the day that work starts. For example, 08:00:00.0000000.
     *
     * @return TimeOfDay The end
     */
@@ -44,6 +45,7 @@ class BookingWorkTimeSlot extends Entity
 
     /**
     * Sets the end
+    * The time of the day that work starts. For example, 08:00:00.0000000.
     *
     * @param TimeOfDay $val The value to assign to the end
     *
@@ -57,6 +59,7 @@ class BookingWorkTimeSlot extends Entity
 
     /**
     * Gets the start
+    * The time of the day that work stops. For example, 17:00:00.0000000.
     *
     * @return TimeOfDay The start
     */
@@ -75,6 +78,7 @@ class BookingWorkTimeSlot extends Entity
 
     /**
     * Sets the start
+    * The time of the day that work stops. For example, 17:00:00.0000000.
     *
     * @param TimeOfDay $val The value to assign to the start
     *

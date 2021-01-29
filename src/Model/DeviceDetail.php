@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class DeviceDetail extends Entity
 {
     /**
     * Gets the browser
-    * Indicates the browser information of the used for signing in.
+    * Indicates the browser information of the used for signing-in.
     *
     * @return string The browser
     */
@@ -40,7 +40,7 @@ class DeviceDetail extends Entity
 
     /**
     * Sets the browser
-    * Indicates the browser information of the used for signing in.
+    * Indicates the browser information of the used for signing-in.
     *
     * @param string $val The value of the browser
     *
@@ -53,7 +53,7 @@ class DeviceDetail extends Entity
     }
     /**
     * Gets the deviceId
-    * Refers to the UniqueID of the device used for signing in.
+    * Refers to the UniqueID of the device used for signing-in.
     *
     * @return string The deviceId
     */
@@ -68,7 +68,7 @@ class DeviceDetail extends Entity
 
     /**
     * Sets the deviceId
-    * Refers to the UniqueID of the device used for signing in.
+    * Refers to the UniqueID of the device used for signing-in.
     *
     * @param string $val The value of the deviceId
     *
@@ -81,7 +81,7 @@ class DeviceDetail extends Entity
     }
     /**
     * Gets the displayName
-    * Refers to the name of the device used for signing in.
+    * Refers to the name of the device used for signing-in.
     *
     * @return string The displayName
     */
@@ -96,7 +96,7 @@ class DeviceDetail extends Entity
 
     /**
     * Sets the displayName
-    * Refers to the name of the device used for signing in.
+    * Refers to the name of the device used for signing-in.
     *
     * @param string $val The value of the displayName
     *
@@ -109,7 +109,7 @@ class DeviceDetail extends Entity
     }
     /**
     * Gets the isCompliant
-    * Indicates whether the device is compliant.
+    * Indicates whether the device is compliant or not.
     *
     * @return bool The isCompliant
     */
@@ -124,7 +124,7 @@ class DeviceDetail extends Entity
 
     /**
     * Sets the isCompliant
-    * Indicates whether the device is compliant.
+    * Indicates whether the device is compliant or not.
     *
     * @param bool $val The value of the isCompliant
     *
@@ -137,7 +137,7 @@ class DeviceDetail extends Entity
     }
     /**
     * Gets the isManaged
-    * Indicates whether the device is managed.
+    * Indicates if the device is managed or not.
     *
     * @return bool The isManaged
     */
@@ -152,7 +152,7 @@ class DeviceDetail extends Entity
 
     /**
     * Sets the isManaged
-    * Indicates whether the device is managed.
+    * Indicates if the device is managed or not.
     *
     * @param bool $val The value of the isManaged
     *
@@ -165,7 +165,7 @@ class DeviceDetail extends Entity
     }
     /**
     * Gets the operatingSystem
-    * Indicates the operating system name and version used for signing in.
+    * Indicates the OS name and version used for signing-in.
     *
     * @return string The operatingSystem
     */
@@ -180,7 +180,7 @@ class DeviceDetail extends Entity
 
     /**
     * Sets the operatingSystem
-    * Indicates the operating system name and version used for signing in.
+    * Indicates the OS name and version used for signing-in.
     *
     * @param string $val The value of the operatingSystem
     *
@@ -193,7 +193,7 @@ class DeviceDetail extends Entity
     }
     /**
     * Gets the trustType
-    * Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+    * Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
     *
     * @return string The trustType
     */
@@ -208,7 +208,7 @@ class DeviceDetail extends Entity
 
     /**
     * Sets the trustType
-    * Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
+    * Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
     *
     * @param string $val The value of the trustType
     *

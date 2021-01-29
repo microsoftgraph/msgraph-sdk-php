@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class RecordingInfo extends Entity
 
     /**
     * Gets the initiator
-    * The identities of the recording initiator.
+    * The identities of recording initiator.
     *
     * @return IdentitySet The initiator
     */
@@ -45,7 +45,7 @@ class RecordingInfo extends Entity
 
     /**
     * Sets the initiator
-    * The identities of the recording initiator.
+    * The identities of recording initiator.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

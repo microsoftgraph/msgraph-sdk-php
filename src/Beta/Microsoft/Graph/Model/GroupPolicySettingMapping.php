@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -258,7 +258,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Gets the mdmSupportedState
-    * Indicates if the setting is supported in Mdm or not
+    * Indicates if the setting is supported in Mdm or not. Possible values are: unknown, supported, unsupported, deprecated.
     *
     * @return MdmSupportedState The mdmSupportedState
     */
@@ -277,7 +277,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Sets the mdmSupportedState
-    * Indicates if the setting is supported in Mdm or not
+    * Indicates if the setting is supported in Mdm or not. Possible values are: unknown, supported, unsupported, deprecated.
     *
     * @param MdmSupportedState $val The mdmSupportedState
     *
@@ -465,7 +465,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Gets the settingScope
-    * The scope of the setting
+    * The scope of the setting. Possible values are: unknown, device, user.
     *
     * @return GroupPolicySettingScope The settingScope
     */
@@ -484,7 +484,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Sets the settingScope
-    * The scope of the setting
+    * The scope of the setting. Possible values are: unknown, device, user.
     *
     * @param GroupPolicySettingScope $val The settingScope
     *
@@ -498,7 +498,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Gets the settingType
-    * The setting type (security or admx) of the Group Policy.
+    * The setting type (security or admx) of the Group Policy. Possible values are: unknown, policy, account, securityOptions, userRightsAssignment, auditSetting, windowsFirewallSettings.
     *
     * @return GroupPolicySettingType The settingType
     */
@@ -517,7 +517,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Sets the settingType
-    * The setting type (security or admx) of the Group Policy.
+    * The setting type (security or admx) of the Group Policy. Possible values are: unknown, policy, account, securityOptions, userRightsAssignment, auditSetting, windowsFirewallSettings.
     *
     * @param GroupPolicySettingType $val The settingType
     *

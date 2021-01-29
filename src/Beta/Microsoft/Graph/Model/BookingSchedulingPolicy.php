@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class BookingSchedulingPolicy extends Entity
 {
     /**
     * Gets the allowStaffSelection
-    * Allow customers to choose a specific person for the booking.
+    * True if to allow customers to choose a specific person for the booking.
     *
     * @return bool The allowStaffSelection
     */
@@ -40,7 +40,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the allowStaffSelection
-    * Allow customers to choose a specific person for the booking.
+    * True if to allow customers to choose a specific person for the booking.
     *
     * @param bool $val The value of the allowStaffSelection
     *
@@ -54,7 +54,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the maximumAdvance
-    * Maximum number of days in advance that a booking can be made.
+    * Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
     *
     * @return Duration The maximumAdvance
     */
@@ -73,7 +73,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the maximumAdvance
-    * Maximum number of days in advance that a booking can be made.
+    * Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
     *
     * @param Duration $val The value to assign to the maximumAdvance
     *
@@ -87,7 +87,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the minimumLeadTime
-    * Minimum lead time for bookings and cancellations.
+    * The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
     *
     * @return Duration The minimumLeadTime
     */
@@ -106,7 +106,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the minimumLeadTime
-    * Minimum lead time for bookings and cancellations.
+    * The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
     *
     * @param Duration $val The value to assign to the minimumLeadTime
     *
@@ -119,7 +119,7 @@ class BookingSchedulingPolicy extends Entity
     }
     /**
     * Gets the sendConfirmationsToOwner
-    * Notify the business via email when a booking is created or changed.
+    * True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
     *
     * @return bool The sendConfirmationsToOwner
     */
@@ -134,7 +134,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the sendConfirmationsToOwner
-    * Notify the business via email when a booking is created or changed.
+    * True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
     *
     * @param bool $val The value of the sendConfirmationsToOwner
     *
@@ -148,7 +148,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the timeSlotInterval
-    * Duration of each time slot.
+    * Duration of each time slot, denoted in ISO 8601 format.
     *
     * @return Duration The timeSlotInterval
     */
@@ -167,7 +167,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the timeSlotInterval
-    * Duration of each time slot.
+    * Duration of each time slot, denoted in ISO 8601 format.
     *
     * @param Duration $val The value to assign to the timeSlotInterval
     *

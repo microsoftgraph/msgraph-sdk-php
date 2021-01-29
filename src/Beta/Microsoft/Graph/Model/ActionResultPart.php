@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ActionResultPart extends Entity
 
     /**
     * Gets the error
+    * The error that occurred, if any, during the course of the bulk operation.
     *
     * @return PublicError The error
     */
@@ -44,6 +45,7 @@ class ActionResultPart extends Entity
 
     /**
     * Sets the error
+    * The error that occurred, if any, during the course of the bulk operation.
     *
     * @param PublicError $val The value to assign to the error
     *

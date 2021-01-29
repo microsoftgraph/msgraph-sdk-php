@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -53,7 +53,7 @@ class ResourceAction extends Entity
     }
     /**
     * Gets the notAllowedResourceActions
-    * Not Allowed Actions
+    * Not Allowed Actions.
     *
     * @return string The notAllowedResourceActions
     */
@@ -68,7 +68,7 @@ class ResourceAction extends Entity
 
     /**
     * Sets the notAllowedResourceActions
-    * Not Allowed Actions
+    * Not Allowed Actions.
     *
     * @param string $val The value of the notAllowedResourceActions
     *

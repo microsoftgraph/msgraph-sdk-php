@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class Album extends Entity
 {
     /**
     * Gets the coverImageItemId
+    * Unique identifier of the [driveItem][] that is the cover of the album.
     *
     * @return string The coverImageItemId
     */
@@ -39,6 +40,7 @@ class Album extends Entity
 
     /**
     * Sets the coverImageItemId
+    * Unique identifier of the [driveItem][] that is the cover of the album.
     *
     * @param string $val The value of the coverImageItemId
     *

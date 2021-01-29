@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,14 +18,15 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Store extends 
+class Store extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the defaultLanguageTag
+    * Default language of the term store.
     *
     * @return string The defaultLanguageTag
     */
@@ -40,6 +41,7 @@ class Store extends
     
     /**
     * Sets the defaultLanguageTag
+    * Default language of the term store.
     *
     * @param string $val The defaultLanguageTag
     *
@@ -53,6 +55,7 @@ class Store extends
     
     /**
     * Gets the languageTags
+    * List of languages for the term store.
     *
     * @return string The languageTags
     */
@@ -67,6 +70,7 @@ class Store extends
     
     /**
     * Sets the languageTags
+    * List of languages for the term store.
     *
     * @param string $val The languageTags
     *
@@ -81,6 +85,7 @@ class Store extends
 
      /** 
      * Gets the groups
+    * Collection of all groups available in the term store.
      *
      * @return array The groups
      */
@@ -95,6 +100,7 @@ class Store extends
     
     /** 
     * Sets the groups
+    * Collection of all groups available in the term store.
     *
     * @param Group $val The groups
     *
@@ -109,6 +115,7 @@ class Store extends
 
      /** 
      * Gets the sets
+    * Collection of all sets available in the term store.
      *
      * @return array The sets
      */
@@ -123,6 +130,7 @@ class Store extends
     
     /** 
     * Sets the sets
+    * Collection of all sets available in the term store.
     *
     * @param Set $val The sets
     *

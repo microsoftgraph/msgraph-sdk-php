@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -82,6 +82,7 @@ class SettingSource extends Entity
 
     /**
     * Gets the sourceType
+    * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
     *
     * @return SettingSourceType The sourceType
     */
@@ -100,6 +101,7 @@ class SettingSource extends Entity
 
     /**
     * Sets the sourceType
+    * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
     *
     * @param SettingSourceType $val The value to assign to the sourceType
     *

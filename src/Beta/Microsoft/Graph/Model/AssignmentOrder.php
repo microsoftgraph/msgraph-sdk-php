@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class AssignmentOrder extends Entity
 {
     /**
     * Gets the order
+    * A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
     *
     * @return string The order
     */
@@ -39,6 +40,7 @@ class AssignmentOrder extends Entity
 
     /**
     * Sets the order
+    * A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
     *
     * @param string $val The value of the order
     *

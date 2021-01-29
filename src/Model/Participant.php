@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class Participant extends Entity
 {
     /**
     * Gets the info
-    * The participant of the participant.
+    * Information about the participant.
     *
     * @return ParticipantInfo The info
     */
@@ -45,7 +45,7 @@ class Participant extends Entity
     
     /**
     * Sets the info
-    * The participant of the participant.
+    * Information about the participant.
     *
     * @param ParticipantInfo $val The info
     *
@@ -147,7 +147,7 @@ class Participant extends Entity
     
     /**
     * Gets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Information on whether the participant has recording capability.
     *
     * @return RecordingInfo The recordingInfo
     */
@@ -166,7 +166,7 @@ class Participant extends Entity
     
     /**
     * Sets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Information on whether the participant has recording capability.
     *
     * @param RecordingInfo $val The recordingInfo
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class MetadataEntry extends Entity
 {
     /**
     * Gets the key
+    * Name of the metadata property.
     *
     * @return string The key
     */
@@ -39,6 +40,7 @@ class MetadataEntry extends Entity
 
     /**
     * Sets the key
+    * Name of the metadata property.
     *
     * @param string $val The value of the key
     *
@@ -51,6 +53,7 @@ class MetadataEntry extends Entity
     }
     /**
     * Gets the value
+    * Value of the metadata property.
     *
     * @return string The value
     */
@@ -65,6 +68,7 @@ class MetadataEntry extends Entity
 
     /**
     * Sets the value
+    * Value of the metadata property.
     *
     * @param string $val The value of the value
     *

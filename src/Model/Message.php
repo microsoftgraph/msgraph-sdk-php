@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -89,7 +89,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the bodyPreview
-    * The first 255 characters of the message body. It is in text format.
+    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
     *
     * @return string The bodyPreview
     */
@@ -104,7 +104,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the bodyPreview
-    * The first 255 characters of the message body. It is in text format.
+    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
     *
     * @param string $val The bodyPreview
     *

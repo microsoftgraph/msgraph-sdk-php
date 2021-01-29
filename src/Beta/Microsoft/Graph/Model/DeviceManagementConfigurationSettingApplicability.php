@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -54,7 +54,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the deviceMode
-    * Device Mode that setting can be applied on
+    * Device Mode that setting can be applied on. Possible values are: none, kiosk.
     *
     * @return DeviceManagementConfigurationDeviceMode The deviceMode
     */
@@ -73,7 +73,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the deviceMode
-    * Device Mode that setting can be applied on
+    * Device Mode that setting can be applied on. Possible values are: none, kiosk.
     *
     * @param DeviceManagementConfigurationDeviceMode $val The value to assign to the deviceMode
     *
@@ -87,7 +87,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the platform
-    * Platform setting can be applied on
+    * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
     *
     * @return DeviceManagementConfigurationPlatforms The platform
     */
@@ -106,7 +106,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the platform
-    * Platform setting can be applied on
+    * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
     *
     * @param DeviceManagementConfigurationPlatforms $val The value to assign to the platform
     *
@@ -120,7 +120,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the technologies
-    * Which technology channels this setting can be deployed through
+    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager.
     *
     * @return DeviceManagementConfigurationTechnologies The technologies
     */
@@ -139,7 +139,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the technologies
-    * Which technology channels this setting can be deployed through
+    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager.
     *
     * @param DeviceManagementConfigurationTechnologies $val The value to assign to the technologies
     *

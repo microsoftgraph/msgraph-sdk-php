@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -79,6 +79,39 @@ class ConversationMember extends Entity
     public function setRoles($val)
     {
         $this->_propDict["roles"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the visibleHistoryStartDateTime
+    * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+    *
+    * @return \DateTime The visibleHistoryStartDateTime
+    */
+    public function getVisibleHistoryStartDateTime()
+    {
+        if (array_key_exists("visibleHistoryStartDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["visibleHistoryStartDateTime"], "\DateTime")) {
+                return $this->_propDict["visibleHistoryStartDateTime"];
+            } else {
+                $this->_propDict["visibleHistoryStartDateTime"] = new \DateTime($this->_propDict["visibleHistoryStartDateTime"]);
+                return $this->_propDict["visibleHistoryStartDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the visibleHistoryStartDateTime
+    * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+    *
+    * @param \DateTime $val The visibleHistoryStartDateTime
+    *
+    * @return ConversationMember
+    */
+    public function setVisibleHistoryStartDateTime($val)
+    {
+        $this->_propDict["visibleHistoryStartDateTime"] = $val;
         return $this;
     }
     

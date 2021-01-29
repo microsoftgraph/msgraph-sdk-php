@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -293,7 +293,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Gets the redirectTo
-    * The email addresses to which a message should be redirected.
+    * The email address to which a message should be redirected.
     *
     * @return Recipient The redirectTo
     */
@@ -312,7 +312,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the redirectTo
-    * The email addresses to which a message should be redirected.
+    * The email address to which a message should be redirected.
     *
     * @param Recipient $val The value to assign to the redirectTo
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class SearchAggregation extends Entity
 
     /**
     * Gets the buckets
+    * Defines the actual buckets of the computed aggregation.
     *
     * @return SearchBucket The buckets
     */
@@ -44,6 +45,7 @@ class SearchAggregation extends Entity
 
     /**
     * Sets the buckets
+    * Defines the actual buckets of the computed aggregation.
     *
     * @param SearchBucket $val The value to assign to the buckets
     *
@@ -56,6 +58,7 @@ class SearchAggregation extends Entity
     }
     /**
     * Gets the field
+    * Defines on which field the aggregation was computed on.
     *
     * @return string The field
     */
@@ -70,6 +73,7 @@ class SearchAggregation extends Entity
 
     /**
     * Sets the field
+    * Defines on which field the aggregation was computed on.
     *
     * @param string $val The value of the field
     *

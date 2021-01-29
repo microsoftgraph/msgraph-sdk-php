@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class GroupPolicyDefinitionValue extends Entity
 {
     /**
     * Gets the configurationType
-    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
+    * Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
     *
     * @return GroupPolicyConfigurationType The configurationType
     */
@@ -45,7 +45,7 @@ class GroupPolicyDefinitionValue extends Entity
     
     /**
     * Sets the configurationType
-    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
+    * Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
     *
     * @param GroupPolicyConfigurationType $val The configurationType
     *

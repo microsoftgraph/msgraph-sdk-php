@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -54,7 +54,7 @@ class VppTokenActionResult extends Entity
 
     /**
     * Gets the actionState
-    * State of the action
+    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @return ActionState The actionState
     */
@@ -73,7 +73,7 @@ class VppTokenActionResult extends Entity
 
     /**
     * Sets the actionState
-    * State of the action
+    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @param ActionState $val The value to assign to the actionState
     *

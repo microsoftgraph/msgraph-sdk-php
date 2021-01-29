@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -110,7 +110,7 @@ class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceMan
 
     /**
     * Gets the requiredAzureAdTrustType
-    * Required AzureAD trust type
+    * Required AzureAD trust type. Possible values are: none, azureAdJoined, addWorkAccount, mdmOnly.
     *
     * @return DeviceManagementConfigurationAzureAdTrustType The requiredAzureAdTrustType
     */
@@ -129,7 +129,7 @@ class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceMan
 
     /**
     * Sets the requiredAzureAdTrustType
-    * Required AzureAD trust type
+    * Required AzureAD trust type. Possible values are: none, azureAdJoined, addWorkAccount, mdmOnly.
     *
     * @param DeviceManagementConfigurationAzureAdTrustType $val The value to assign to the requiredAzureAdTrustType
     *

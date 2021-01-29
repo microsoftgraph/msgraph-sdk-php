@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Gets the accessLevel
-    * Access Level for Exchange granted by this rule.
+    * Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine.
     *
     * @return DeviceManagementExchangeAccessLevel The accessLevel
     */
@@ -45,7 +45,7 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Sets the accessLevel
-    * Access Level for Exchange granted by this rule.
+    * Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine.
     *
     * @param DeviceManagementExchangeAccessLevel $val The value to assign to the accessLevel
     *

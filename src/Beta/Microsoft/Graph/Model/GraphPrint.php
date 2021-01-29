@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class GraphPrint extends
 {
     /**
     * Gets the settings
+    * Tenant-wide settings for the Universal Print service.
     *
     * @return PrintSettings The settings
     */
@@ -44,6 +45,7 @@ class GraphPrint extends
     
     /**
     * Sets the settings
+    * Tenant-wide settings for the Universal Print service.
     *
     * @param PrintSettings $val The settings
     *
@@ -58,6 +60,7 @@ class GraphPrint extends
 
      /** 
      * Gets the connectors
+    * The list of available print connectors.
      *
      * @return array The connectors
      */
@@ -72,6 +75,7 @@ class GraphPrint extends
     
     /** 
     * Sets the connectors
+    * The list of available print connectors.
     *
     * @param PrintConnector $val The connectors
     *
@@ -114,6 +118,7 @@ class GraphPrint extends
 
      /** 
      * Gets the printers
+    * The list of printers registered in the tenant.
      *
      * @return array The printers
      */
@@ -128,6 +133,7 @@ class GraphPrint extends
     
     /** 
     * Sets the printers
+    * The list of printers registered in the tenant.
     *
     * @param Printer $val The printers
     *
@@ -198,6 +204,7 @@ class GraphPrint extends
 
      /** 
      * Gets the services
+    * The list of available Universal Print service endpoints.
      *
      * @return array The services
      */
@@ -212,6 +219,7 @@ class GraphPrint extends
     
     /** 
     * Sets the services
+    * The list of available Universal Print service endpoints.
     *
     * @param PrintService $val The services
     *
@@ -226,6 +234,7 @@ class GraphPrint extends
 
      /** 
      * Gets the shares
+    * The list of printer shares registered in the tenant.
      *
      * @return array The shares
      */
@@ -240,6 +249,7 @@ class GraphPrint extends
     
     /** 
     * Sets the shares
+    * The list of printer shares registered in the tenant.
     *
     * @param PrinterShare $val The shares
     *

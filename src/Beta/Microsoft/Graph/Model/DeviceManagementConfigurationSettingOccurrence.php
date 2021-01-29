@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class DeviceManagementConfigurationSettingOccurrence extends Entity
 {
     /**
     * Gets the maxDeviceOccurrence
-    * Maximum times setting can be set on device. 
+    * Maximum times setting can be set on device.
     *
     * @return int The maxDeviceOccurrence
     */
@@ -40,7 +40,7 @@ class DeviceManagementConfigurationSettingOccurrence extends Entity
 
     /**
     * Sets the maxDeviceOccurrence
-    * Maximum times setting can be set on device. 
+    * Maximum times setting can be set on device.
     *
     * @param int $val The value of the maxDeviceOccurrence
     *

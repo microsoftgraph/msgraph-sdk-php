@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
 {
     /**
     * Gets the hashAlgorithm
-    * SCEP Hash Algorithm.
+    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
     *
     * @return HashAlgorithms The hashAlgorithm
     */
@@ -45,7 +45,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the hashAlgorithm
-    * SCEP Hash Algorithm.
+    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
     *
     * @param HashAlgorithms $val The hashAlgorithm
     *
@@ -59,7 +59,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the keySize
-    * SCEP Key Size.
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @return KeySize The keySize
     */
@@ -78,7 +78,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the keySize
-    * SCEP Key Size.
+    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
     * @param KeySize $val The keySize
     *
@@ -92,7 +92,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the keyUsage
-    * SCEP Key Usage.
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @return KeyUsages The keyUsage
     */
@@ -111,7 +111,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the keyUsage
-    * SCEP Key Usage.
+    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
     * @param KeyUsages $val The keyUsage
     *

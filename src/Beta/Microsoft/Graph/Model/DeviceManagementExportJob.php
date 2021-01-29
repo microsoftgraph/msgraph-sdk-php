@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Gets the format
-    * Format of the exported report
+    * Format of the exported report. Possible values are: csv, pdf.
     *
     * @return DeviceManagementReportFileFormat The format
     */
@@ -107,7 +107,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Sets the format
-    * Format of the exported report
+    * Format of the exported report. Possible values are: csv, pdf.
     *
     * @param DeviceManagementReportFileFormat $val The format
     *
@@ -241,7 +241,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Gets the status
-    * Status of the export job
+    * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @return DeviceManagementReportStatus The status
     */
@@ -260,7 +260,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Sets the status
-    * Status of the export job
+    * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @param DeviceManagementReportStatus $val The status
     *

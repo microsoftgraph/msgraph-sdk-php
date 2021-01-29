@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -34,6 +34,7 @@ class AccessPackageAnswerString extends AccessPackageAnswer
 
     /**
     * Gets the value
+    * The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
     *
     * @return string The value
     */
@@ -48,6 +49,7 @@ class AccessPackageAnswerString extends AccessPackageAnswer
 
     /**
     * Sets the value
+    * The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
     *
     * @param string $val The value of the value
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -54,7 +54,7 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
 
     /**
     * Gets the ranges
-    * Collection of Internet protocol address ranges
+    * Collection of ip ranges
     *
     * @return IpRange The ranges
     */
@@ -73,7 +73,7 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
 
     /**
     * Sets the ranges
-    * Collection of Internet protocol address ranges
+    * Collection of ip ranges
     *
     * @param IpRange $val The value to assign to the ranges
     *

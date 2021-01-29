@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class Filter extends Entity
 
     /**
     * Gets the categoryFilterGroups
+    * *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
     *
     * @return FilterGroup The categoryFilterGroups
     */
@@ -44,6 +45,7 @@ class Filter extends Entity
 
     /**
     * Sets the categoryFilterGroups
+    * *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
     *
     * @param FilterGroup $val The value to assign to the categoryFilterGroups
     *
@@ -57,6 +59,7 @@ class Filter extends Entity
 
     /**
     * Gets the groups
+    * Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
     *
     * @return FilterGroup The groups
     */
@@ -75,6 +78,7 @@ class Filter extends Entity
 
     /**
     * Sets the groups
+    * Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
     *
     * @param FilterGroup $val The value to assign to the groups
     *
@@ -88,6 +92,7 @@ class Filter extends Entity
 
     /**
     * Gets the inputFilterGroups
+    * *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
     *
     * @return FilterGroup The inputFilterGroups
     */
@@ -106,6 +111,7 @@ class Filter extends Entity
 
     /**
     * Sets the inputFilterGroups
+    * *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
     *
     * @param FilterGroup $val The value to assign to the inputFilterGroups
     *

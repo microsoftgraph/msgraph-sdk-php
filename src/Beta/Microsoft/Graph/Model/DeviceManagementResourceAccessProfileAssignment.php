@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
 {
     /**
     * Gets the intent
-    * The assignment intent for the resource access profile.
+    * The assignment intent for the resource access profile. Possible values are: apply, remove.
     *
     * @return DeviceManagementResourceAccessProfileIntent The intent
     */
@@ -45,7 +45,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
     
     /**
     * Sets the intent
-    * The assignment intent for the resource access profile.
+    * The assignment intent for the resource access profile. Possible values are: apply, remove.
     *
     * @param DeviceManagementResourceAccessProfileIntent $val The intent
     *

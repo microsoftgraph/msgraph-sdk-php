@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationAssignmentGrade extends Entity
 
     /**
     * Gets the gradedBy
+    * User who did the grading.
     *
     * @return IdentitySet The gradedBy
     */
@@ -44,6 +45,7 @@ class EducationAssignmentGrade extends Entity
 
     /**
     * Sets the gradedBy
+    * User who did the grading.
     *
     * @param IdentitySet $val The value to assign to the gradedBy
     *
@@ -57,6 +59,7 @@ class EducationAssignmentGrade extends Entity
 
     /**
     * Gets the gradedDateTime
+    * Moment in time when the grade was applied to this submission object. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The gradedDateTime
     */
@@ -75,6 +78,7 @@ class EducationAssignmentGrade extends Entity
 
     /**
     * Sets the gradedDateTime
+    * Moment in time when the grade was applied to this submission object. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the gradedDateTime
     *

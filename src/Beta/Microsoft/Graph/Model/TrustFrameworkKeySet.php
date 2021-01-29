@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -27,6 +27,7 @@ class TrustFrameworkKeySet extends Entity
 
      /** 
      * Gets the keys
+    * A collection of the keys.
      *
      * @return array The keys
      */
@@ -41,6 +42,7 @@ class TrustFrameworkKeySet extends Entity
     
     /** 
     * Sets the keys
+    * A collection of the keys.
     *
     * @param TrustFrameworkKey $val The keys
     *

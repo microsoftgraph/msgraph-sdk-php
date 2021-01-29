@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PlannerPlan extends PlannerDelta
 {
     /**
     * Gets the contexts
+    * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
     *
     * @return PlannerPlanContextCollection The contexts
     */
@@ -44,6 +45,7 @@ class PlannerPlan extends PlannerDelta
     
     /**
     * Sets the contexts
+    * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
     *
     * @param PlannerPlanContextCollection $val The contexts
     *

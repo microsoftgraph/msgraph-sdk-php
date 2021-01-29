@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EmailActivityStatistics extends ActivityStatistics
 {
     /**
     * Gets the afterHours
+    * Total hours spent on email outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The afterHours
     */
@@ -44,6 +45,7 @@ class EmailActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the afterHours
+    * Total hours spent on email outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The afterHours
     *
@@ -57,6 +59,7 @@ class EmailActivityStatistics extends ActivityStatistics
     
     /**
     * Gets the readEmail
+    * Total hours spent reading email. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The readEmail
     */
@@ -75,6 +78,7 @@ class EmailActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the readEmail
+    * Total hours spent reading email. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The readEmail
     *
@@ -88,6 +92,7 @@ class EmailActivityStatistics extends ActivityStatistics
     
     /**
     * Gets the sentEmail
+    * Total hours spent writing and sending email. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The sentEmail
     */
@@ -106,6 +111,7 @@ class EmailActivityStatistics extends ActivityStatistics
     
     /**
     * Sets the sentEmail
+    * Total hours spent writing and sending email. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The sentEmail
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class EnrollmentConfigurationAssignment extends Entity
 {
     /**
     * Gets the source
-    * Type of resource used for deployment to a group, direct or policySet
+    * Type of resource used for deployment to a group, direct or policySet. Possible values are: direct, policySets.
     *
     * @return DeviceAndAppManagementAssignmentSource The source
     */
@@ -45,7 +45,7 @@ class EnrollmentConfigurationAssignment extends Entity
     
     /**
     * Sets the source
-    * Type of resource used for deployment to a group, direct or policySet
+    * Type of resource used for deployment to a group, direct or policySet. Possible values are: direct, policySets.
     *
     * @param DeviceAndAppManagementAssignmentSource $val The source
     *
@@ -88,7 +88,7 @@ class EnrollmentConfigurationAssignment extends Entity
     
     /**
     * Gets the target
-    * Not yet documented
+    * Represents an assignment to managed devices in the tenant
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -107,7 +107,7 @@ class EnrollmentConfigurationAssignment extends Entity
     
     /**
     * Sets the target
-    * Not yet documented
+    * Represents an assignment to managed devices in the tenant
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

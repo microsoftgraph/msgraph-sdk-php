@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class Office365ActiveUserDetail extends Entity
 {
     /**
     * Gets the assignedProducts
+    * All the products assigned for the user.
     *
     * @return string The assignedProducts
     */
@@ -40,6 +41,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the assignedProducts
+    * All the products assigned for the user.
     *
     * @param string $val The assignedProducts
     *
@@ -53,6 +55,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the deletedDate
+    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
     * @return \DateTime The deletedDate
     */
@@ -71,6 +74,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the deletedDate
+    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
     * @param \DateTime $val The deletedDate
     *
@@ -84,6 +88,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the displayName
+    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
     *
     * @return string The displayName
     */
@@ -98,6 +103,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the displayName
+    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the exchangeLastActivityDate
+    * The date when user last read or sent email.
     *
     * @return \DateTime The exchangeLastActivityDate
     */
@@ -129,6 +136,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the exchangeLastActivityDate
+    * The date when user last read or sent email.
     *
     * @param \DateTime $val The exchangeLastActivityDate
     *
@@ -142,6 +150,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the exchangeLicenseAssignDate
+    * The last date when the user was assigned an Exchange license.
     *
     * @return \DateTime The exchangeLicenseAssignDate
     */
@@ -160,6 +169,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the exchangeLicenseAssignDate
+    * The last date when the user was assigned an Exchange license.
     *
     * @param \DateTime $val The exchangeLicenseAssignDate
     *
@@ -173,6 +183,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the hasExchangeLicense
+    * Whether the user has been assigned an Exchange license.
     *
     * @return bool The hasExchangeLicense
     */
@@ -187,6 +198,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the hasExchangeLicense
+    * Whether the user has been assigned an Exchange license.
     *
     * @param bool $val The hasExchangeLicense
     *
@@ -200,6 +212,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the hasOneDriveLicense
+    * Whether the user has been assigned a OneDrive license.
     *
     * @return bool The hasOneDriveLicense
     */
@@ -214,6 +227,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the hasOneDriveLicense
+    * Whether the user has been assigned a OneDrive license.
     *
     * @param bool $val The hasOneDriveLicense
     *
@@ -227,6 +241,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the hasSharePointLicense
+    * Whether the user has been assigned a SharePoint license.
     *
     * @return bool The hasSharePointLicense
     */
@@ -241,6 +256,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the hasSharePointLicense
+    * Whether the user has been assigned a SharePoint license.
     *
     * @param bool $val The hasSharePointLicense
     *
@@ -254,6 +270,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the hasSkypeForBusinessLicense
+    * Whether the user has been assigned a Skype For Business license.
     *
     * @return bool The hasSkypeForBusinessLicense
     */
@@ -268,6 +285,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the hasSkypeForBusinessLicense
+    * Whether the user has been assigned a Skype For Business license.
     *
     * @param bool $val The hasSkypeForBusinessLicense
     *
@@ -281,6 +299,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the hasTeamsLicense
+    * Whether the user has been assigned a Teams license.
     *
     * @return bool The hasTeamsLicense
     */
@@ -295,6 +314,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the hasTeamsLicense
+    * Whether the user has been assigned a Teams license.
     *
     * @param bool $val The hasTeamsLicense
     *
@@ -308,6 +328,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the hasYammerLicense
+    * Whether the user has been assigned a Yammer license.
     *
     * @return bool The hasYammerLicense
     */
@@ -322,6 +343,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the hasYammerLicense
+    * Whether the user has been assigned a Yammer license.
     *
     * @param bool $val The hasYammerLicense
     *
@@ -335,6 +357,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @return bool The isDeleted
     */
@@ -349,6 +372,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @param bool $val The isDeleted
     *
@@ -362,6 +386,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the oneDriveLastActivityDate
+    * The date when user last viewed or edited files, shared files internally or externally, or synced files.
     *
     * @return \DateTime The oneDriveLastActivityDate
     */
@@ -380,6 +405,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the oneDriveLastActivityDate
+    * The date when user last viewed or edited files, shared files internally or externally, or synced files.
     *
     * @param \DateTime $val The oneDriveLastActivityDate
     *
@@ -393,6 +419,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the oneDriveLicenseAssignDate
+    * The last date when the user was assigned a OneDrive license.
     *
     * @return \DateTime The oneDriveLicenseAssignDate
     */
@@ -411,6 +438,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the oneDriveLicenseAssignDate
+    * The last date when the user was assigned a OneDrive license.
     *
     * @param \DateTime $val The oneDriveLicenseAssignDate
     *
@@ -424,6 +452,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -442,6 +471,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -455,6 +485,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the sharePointLastActivityDate
+    * The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
     *
     * @return \DateTime The sharePointLastActivityDate
     */
@@ -473,6 +504,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the sharePointLastActivityDate
+    * The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
     *
     * @param \DateTime $val The sharePointLastActivityDate
     *
@@ -486,6 +518,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the sharePointLicenseAssignDate
+    * The last date when the user was assigned a SharePoint license.
     *
     * @return \DateTime The sharePointLicenseAssignDate
     */
@@ -504,6 +537,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the sharePointLicenseAssignDate
+    * The last date when the user was assigned a SharePoint license.
     *
     * @param \DateTime $val The sharePointLicenseAssignDate
     *
@@ -517,6 +551,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the skypeForBusinessLastActivityDate
+    * The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
     *
     * @return \DateTime The skypeForBusinessLastActivityDate
     */
@@ -535,6 +570,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the skypeForBusinessLastActivityDate
+    * The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
     *
     * @param \DateTime $val The skypeForBusinessLastActivityDate
     *
@@ -548,6 +584,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the skypeForBusinessLicenseAssignDate
+    * The last date when the user was assigned a Skype For Business license.
     *
     * @return \DateTime The skypeForBusinessLicenseAssignDate
     */
@@ -566,6 +603,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the skypeForBusinessLicenseAssignDate
+    * The last date when the user was assigned a Skype For Business license.
     *
     * @param \DateTime $val The skypeForBusinessLicenseAssignDate
     *
@@ -579,6 +617,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the teamsLastActivityDate
+    * The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
     *
     * @return \DateTime The teamsLastActivityDate
     */
@@ -597,6 +636,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the teamsLastActivityDate
+    * The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
     *
     * @param \DateTime $val The teamsLastActivityDate
     *
@@ -610,6 +650,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the teamsLicenseAssignDate
+    * The last date when the user was assigned a Teams license.
     *
     * @return \DateTime The teamsLicenseAssignDate
     */
@@ -628,6 +669,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the teamsLicenseAssignDate
+    * The last date when the user was assigned a Teams license.
     *
     * @param \DateTime $val The teamsLicenseAssignDate
     *
@@ -641,6 +683,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
     * @return string The userPrincipalName
     */
@@ -655,6 +698,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
     * @param string $val The userPrincipalName
     *
@@ -668,6 +712,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the yammerLastActivityDate
+    * The date when user last posted, read, or liked message.
     *
     * @return \DateTime The yammerLastActivityDate
     */
@@ -686,6 +731,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the yammerLastActivityDate
+    * The date when user last posted, read, or liked message.
     *
     * @param \DateTime $val The yammerLastActivityDate
     *
@@ -699,6 +745,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Gets the yammerLicenseAssignDate
+    * The last date when the user was assigned a Yammer license.
     *
     * @return \DateTime The yammerLicenseAssignDate
     */
@@ -717,6 +764,7 @@ class Office365ActiveUserDetail extends Entity
     
     /**
     * Sets the yammerLicenseAssignDate
+    * The last date when the user was assigned a Yammer license.
     *
     * @param \DateTime $val The yammerLicenseAssignDate
     *

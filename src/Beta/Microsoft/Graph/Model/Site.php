@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -402,6 +402,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the pages
+    * The collection of pages in the SitePages list in this site.
      *
      * @return array The pages
      */
@@ -416,6 +417,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the pages
+    * The collection of pages in the SitePages list in this site.
     *
     * @param SitePage $val The pages
     *

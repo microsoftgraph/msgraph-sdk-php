@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Authentication method.
+    * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
     *
     * @return VpnAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication method.
+    * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
     *
     * @param VpnAuthenticationMethod $val The authenticationMethod
     *

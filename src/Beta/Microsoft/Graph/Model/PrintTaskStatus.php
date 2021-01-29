@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class PrintTaskStatus extends Entity
 {
     /**
     * Gets the description
+    * A human-readable description of the current processing state of the printTask.
     *
     * @return string The description
     */
@@ -39,6 +40,7 @@ class PrintTaskStatus extends Entity
 
     /**
     * Sets the description
+    * A human-readable description of the current processing state of the printTask.
     *
     * @param string $val The value of the description
     *
@@ -52,6 +54,7 @@ class PrintTaskStatus extends Entity
 
     /**
     * Gets the state
+    * The current processing state of the printTask. Valid values are described in the following table.
     *
     * @return PrintTaskProcessingState The state
     */
@@ -70,6 +73,7 @@ class PrintTaskStatus extends Entity
 
     /**
     * Sets the state
+    * The current processing state of the printTask. Valid values are described in the following table.
     *
     * @param PrintTaskProcessingState $val The value to assign to the state
     *

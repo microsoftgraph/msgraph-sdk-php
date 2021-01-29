@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -92,7 +92,7 @@ class Operation extends Entity
     
     /**
     * Gets the status
-    * The current status of the operation: notStarted, running, completed, failed
+    * Possible values are: notStarted, running, completed, failed. Read-only.
     *
     * @return OperationStatus The status
     */
@@ -111,7 +111,7 @@ class Operation extends Entity
     
     /**
     * Sets the status
-    * The current status of the operation: notStarted, running, completed, failed
+    * Possible values are: notStarted, running, completed, failed. Read-only.
     *
     * @param OperationStatus $val The status
     *

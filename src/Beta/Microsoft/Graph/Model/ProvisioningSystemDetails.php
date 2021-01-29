@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ProvisioningSystemDetails extends Entity
 
     /**
     * Gets the details
+    * Details of the system.
     *
     * @return DetailsInfo The details
     */
@@ -44,6 +45,7 @@ class ProvisioningSystemDetails extends Entity
 
     /**
     * Sets the details
+    * Details of the system.
     *
     * @param DetailsInfo $val The value to assign to the details
     *
@@ -56,6 +58,7 @@ class ProvisioningSystemDetails extends Entity
     }
     /**
     * Gets the displayName
+    * Name of the system that a user was provisioned to or from.
     *
     * @return string The displayName
     */
@@ -70,6 +73,7 @@ class ProvisioningSystemDetails extends Entity
 
     /**
     * Sets the displayName
+    * Name of the system that a user was provisioned to or from.
     *
     * @param string $val The value of the displayName
     *
@@ -82,6 +86,7 @@ class ProvisioningSystemDetails extends Entity
     }
     /**
     * Gets the id
+    * Identifier of the system that a user was provisioned to or from.
     *
     * @return string The id
     */
@@ -96,6 +101,7 @@ class ProvisioningSystemDetails extends Entity
 
     /**
     * Sets the id
+    * Identifier of the system that a user was provisioned to or from.
     *
     * @param string $val The value of the id
     *

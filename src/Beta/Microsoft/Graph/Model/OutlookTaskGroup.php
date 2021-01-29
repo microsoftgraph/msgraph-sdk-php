@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class OutlookTaskGroup extends Entity
 {
     /**
     * Gets the changeKey
+    * The version of the task group.
     *
     * @return string The changeKey
     */
@@ -40,6 +41,7 @@ class OutlookTaskGroup extends Entity
     
     /**
     * Sets the changeKey
+    * The version of the task group.
     *
     * @param string $val The changeKey
     *
@@ -53,6 +55,7 @@ class OutlookTaskGroup extends Entity
     
     /**
     * Gets the groupKey
+    * The unique GUID identifier for the task group.
     *
     * @return string The groupKey
     */
@@ -67,6 +70,7 @@ class OutlookTaskGroup extends Entity
     
     /**
     * Sets the groupKey
+    * The unique GUID identifier for the task group.
     *
     * @param string $val The groupKey
     *
@@ -80,6 +84,7 @@ class OutlookTaskGroup extends Entity
     
     /**
     * Gets the isDefaultGroup
+    * True if the task group is the default task group.
     *
     * @return bool The isDefaultGroup
     */
@@ -94,6 +99,7 @@ class OutlookTaskGroup extends Entity
     
     /**
     * Sets the isDefaultGroup
+    * True if the task group is the default task group.
     *
     * @param bool $val The isDefaultGroup
     *
@@ -107,6 +113,7 @@ class OutlookTaskGroup extends Entity
     
     /**
     * Gets the name
+    * The name of the task group.
     *
     * @return string The name
     */
@@ -121,6 +128,7 @@ class OutlookTaskGroup extends Entity
     
     /**
     * Sets the name
+    * The name of the task group.
     *
     * @param string $val The name
     *
@@ -135,6 +143,7 @@ class OutlookTaskGroup extends Entity
 
      /** 
      * Gets the taskFolders
+    * The collection of task folders in the task group. Read-only. Nullable.
      *
      * @return array The taskFolders
      */
@@ -149,6 +158,7 @@ class OutlookTaskGroup extends Entity
     
     /** 
     * Sets the taskFolders
+    * The collection of task folders in the task group. Read-only. Nullable.
     *
     * @param OutlookTaskFolder $val The taskFolders
     *

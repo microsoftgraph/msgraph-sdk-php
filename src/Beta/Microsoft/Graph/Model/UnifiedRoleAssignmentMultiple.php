@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 {
     /**
     * Gets the appScopeIds
+    * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @return string The appScopeIds
     */
@@ -40,6 +41,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the appScopeIds
+    * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The appScopeIds
     *
@@ -80,6 +82,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the description
+    * Description of the role assignment.
     *
     * @return string The description
     */
@@ -94,6 +97,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the description
+    * Description of the role assignment.
     *
     * @param string $val The description
     *
@@ -107,6 +111,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the directoryScopeIds
+    * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @return string The directoryScopeIds
     */
@@ -121,6 +126,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the directoryScopeIds
+    * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The directoryScopeIds
     *
@@ -134,6 +140,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the displayName
+    * Name of the role assignment. Required.
     *
     * @return string The displayName
     */
@@ -148,6 +155,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the displayName
+    * Name of the role assignment. Required.
     *
     * @param string $val The displayName
     *
@@ -161,6 +169,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the principalIds
+    * Objectids of the principals to which the assignment is granted.
     *
     * @return string The principalIds
     */
@@ -175,6 +184,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the principalIds
+    * Objectids of the principals to which the assignment is granted.
     *
     * @param string $val The principalIds
     *
@@ -188,6 +198,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for.
     *
     * @return string The roleDefinitionId
     */
@@ -202,6 +213,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for.
     *
     * @param string $val The roleDefinitionId
     *

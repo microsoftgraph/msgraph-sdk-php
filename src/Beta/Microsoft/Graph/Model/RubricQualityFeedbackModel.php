@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class RubricQualityFeedbackModel extends Entity
 
     /**
     * Gets the feedback
+    * Specific feedback for one quality of this rubric.
     *
     * @return EducationItemBody The feedback
     */
@@ -44,6 +45,7 @@ class RubricQualityFeedbackModel extends Entity
 
     /**
     * Sets the feedback
+    * Specific feedback for one quality of this rubric.
     *
     * @param EducationItemBody $val The value to assign to the feedback
     *
@@ -56,6 +58,7 @@ class RubricQualityFeedbackModel extends Entity
     }
     /**
     * Gets the qualityId
+    * The ID of the rubricQuality that this feedback is related to.
     *
     * @return string The qualityId
     */
@@ -70,6 +73,7 @@ class RubricQualityFeedbackModel extends Entity
 
     /**
     * Sets the qualityId
+    * The ID of the rubricQuality that this feedback is related to.
     *
     * @param string $val The value of the qualityId
     *

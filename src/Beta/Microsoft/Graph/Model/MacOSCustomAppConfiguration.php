@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     
     /**
     * Gets the fileName
-    * Configuration file name (*.plist | *.xml).
+    * Configuration file name (.plist
     *
     * @return string The fileName
     */
@@ -103,7 +103,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     
     /**
     * Sets the fileName
-    * Configuration file name (*.plist | *.xml).
+    * Configuration file name (.plist
     *
     * @param string $val The fileName
     *

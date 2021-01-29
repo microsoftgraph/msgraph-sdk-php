@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -198,7 +198,7 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the customCantSeePrivacyMessage
-    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+    * The custom privacy message used to explain what the organization can’t see or do on managed devices.
     *
     * @return string The customCantSeePrivacyMessage
     */
@@ -213,7 +213,7 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the customCantSeePrivacyMessage
-    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+    * The custom privacy message used to explain what the organization can’t see or do on managed devices.
     *
     * @param string $val The value of the customCantSeePrivacyMessage
     *
@@ -226,7 +226,7 @@ class IntuneBrand extends Entity
     }
     /**
     * Gets the customPrivacyMessage
-    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+    * The custom privacy message used to explain what the organization can’t see or do on managed devices.
     *
     * @return string The customPrivacyMessage
     */
@@ -241,7 +241,7 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the customPrivacyMessage
-    * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+    * The custom privacy message used to explain what the organization can’t see or do on managed devices.
     *
     * @param string $val The value of the customPrivacyMessage
     *
@@ -344,7 +344,7 @@ class IntuneBrand extends Entity
 
     /**
     * Gets the enrollmentAvailability
-    * Customized device enrollment flow displayed to the end user 
+    * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
     *
     * @return EnrollmentAvailabilityOptions The enrollmentAvailability
     */
@@ -363,7 +363,7 @@ class IntuneBrand extends Entity
 
     /**
     * Sets the enrollmentAvailability
-    * Customized device enrollment flow displayed to the end user 
+    * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
     *
     * @param EnrollmentAvailabilityOptions $val The value to assign to the enrollmentAvailability
     *

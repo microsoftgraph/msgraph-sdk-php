@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -84,6 +84,7 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Gets the expiryTime
+    * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @return \DateTime The expiryTime
     */
@@ -102,6 +103,7 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Sets the expiryTime
+    * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @param \DateTime $val The expiryTime
     *
@@ -202,6 +204,7 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Gets the startTime
+    * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @return \DateTime The startTime
     */
@@ -220,6 +223,7 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Sets the startTime
+    * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @param \DateTime $val The startTime
     *

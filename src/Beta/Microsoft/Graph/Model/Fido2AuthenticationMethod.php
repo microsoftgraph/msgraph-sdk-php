@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
 {
     /**
     * Gets the aaGuid
+    * Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
     *
     * @return string The aaGuid
     */
@@ -40,6 +41,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the aaGuid
+    * Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
     *
     * @param string $val The aaGuid
     *
@@ -53,6 +55,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the attestationCertificates
+    * The attestation certificate(s) attached to this security key.
     *
     * @return string The attestationCertificates
     */
@@ -67,6 +70,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the attestationCertificates
+    * The attestation certificate(s) attached to this security key.
     *
     * @param string $val The attestationCertificates
     *
@@ -80,6 +84,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the attestationLevel
+    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
     *
     * @return AttestationLevel The attestationLevel
     */
@@ -98,6 +103,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the attestationLevel
+    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
     *
     * @param AttestationLevel $val The attestationLevel
     *
@@ -142,6 +148,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the creationDateTime
+    * The timestamp when this key was registered to the user.
     *
     * @return \DateTime The creationDateTime
     */
@@ -160,6 +167,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the creationDateTime
+    * The timestamp when this key was registered to the user.
     *
     * @param \DateTime $val The creationDateTime
     *
@@ -173,6 +181,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the displayName
+    * The display name of the key as given by the user.
     *
     * @return string The displayName
     */
@@ -187,6 +196,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the displayName
+    * The display name of the key as given by the user.
     *
     * @param string $val The displayName
     *
@@ -200,6 +210,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the model
+    * The manufacturer-assigned model of the FIDO2 security key.
     *
     * @return string The model
     */
@@ -214,6 +225,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the model
+    * The manufacturer-assigned model of the FIDO2 security key.
     *
     * @param string $val The model
     *

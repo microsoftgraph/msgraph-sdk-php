@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class EducationFileSynchronizationVerificationMessage extends Entity
 {
     /**
     * Gets the description
+    * Detailed information about the message type.
     *
     * @return string The description
     */
@@ -39,6 +40,7 @@ class EducationFileSynchronizationVerificationMessage extends Entity
 
     /**
     * Sets the description
+    * Detailed information about the message type.
     *
     * @param string $val The value of the description
     *
@@ -77,6 +79,7 @@ class EducationFileSynchronizationVerificationMessage extends Entity
     }
     /**
     * Gets the type
+    * Type of the message. Possible values are: error, warning, information.
     *
     * @return string The type
     */
@@ -91,6 +94,7 @@ class EducationFileSynchronizationVerificationMessage extends Entity
 
     /**
     * Sets the type
+    * Type of the message. Possible values are: error, warning, information.
     *
     * @param string $val The value of the type
     *

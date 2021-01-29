@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class AndroidPermissionAction extends Entity
 
     /**
     * Gets the action
-    * Type of Android permission action.
+    * Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny.
     *
     * @return AndroidPermissionActionType The action
     */
@@ -45,7 +45,7 @@ class AndroidPermissionAction extends Entity
 
     /**
     * Sets the action
-    * Type of Android permission action.
+    * Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny.
     *
     * @param AndroidPermissionActionType $val The value to assign to the action
     *

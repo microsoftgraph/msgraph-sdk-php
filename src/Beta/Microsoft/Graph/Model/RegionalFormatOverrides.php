@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class RegionalFormatOverrides extends Entity
 {
     /**
     * Gets the calendar
+    * The calendar to use, e.g., Gregorian Calendar.Returned by default.
     *
     * @return string The calendar
     */
@@ -39,6 +40,7 @@ class RegionalFormatOverrides extends Entity
 
     /**
     * Sets the calendar
+    * The calendar to use, e.g., Gregorian Calendar.Returned by default.
     *
     * @param string $val The value of the calendar
     *
@@ -51,6 +53,7 @@ class RegionalFormatOverrides extends Entity
     }
     /**
     * Gets the firstDayOfWeek
+    * The first day of the week to use, e.g., Sunday.Returned by default.
     *
     * @return string The firstDayOfWeek
     */
@@ -65,6 +68,7 @@ class RegionalFormatOverrides extends Entity
 
     /**
     * Sets the firstDayOfWeek
+    * The first day of the week to use, e.g., Sunday.Returned by default.
     *
     * @param string $val The value of the firstDayOfWeek
     *
@@ -77,6 +81,7 @@ class RegionalFormatOverrides extends Entity
     }
     /**
     * Gets the longDateFormat
+    * The long date time format to be used for displaying dates.Returned by default.
     *
     * @return string The longDateFormat
     */
@@ -91,6 +96,7 @@ class RegionalFormatOverrides extends Entity
 
     /**
     * Sets the longDateFormat
+    * The long date time format to be used for displaying dates.Returned by default.
     *
     * @param string $val The value of the longDateFormat
     *
@@ -103,6 +109,7 @@ class RegionalFormatOverrides extends Entity
     }
     /**
     * Gets the longTimeFormat
+    * The long time format to be used for displaying time.Returned by default.
     *
     * @return string The longTimeFormat
     */
@@ -117,6 +124,7 @@ class RegionalFormatOverrides extends Entity
 
     /**
     * Sets the longTimeFormat
+    * The long time format to be used for displaying time.Returned by default.
     *
     * @param string $val The value of the longTimeFormat
     *
@@ -129,6 +137,7 @@ class RegionalFormatOverrides extends Entity
     }
     /**
     * Gets the shortDateFormat
+    * The short date time format to be used for displaying dates.Returned by default.
     *
     * @return string The shortDateFormat
     */
@@ -143,6 +152,7 @@ class RegionalFormatOverrides extends Entity
 
     /**
     * Sets the shortDateFormat
+    * The short date time format to be used for displaying dates.Returned by default.
     *
     * @param string $val The value of the shortDateFormat
     *
@@ -155,6 +165,7 @@ class RegionalFormatOverrides extends Entity
     }
     /**
     * Gets the shortTimeFormat
+    * The short time format to be used for displaying time.Returned by default.
     *
     * @return string The shortTimeFormat
     */
@@ -169,6 +180,7 @@ class RegionalFormatOverrides extends Entity
 
     /**
     * Sets the shortTimeFormat
+    * The short time format to be used for displaying time.Returned by default.
     *
     * @param string $val The value of the shortTimeFormat
     *
@@ -181,6 +193,7 @@ class RegionalFormatOverrides extends Entity
     }
     /**
     * Gets the timeZone
+    * The timezone to be used for displaying time.Returned by default.
     *
     * @return string The timeZone
     */
@@ -195,6 +208,7 @@ class RegionalFormatOverrides extends Entity
 
     /**
     * Sets the timeZone
+    * The timezone to be used for displaying time.Returned by default.
     *
     * @param string $val The value of the timeZone
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ExternalItemContent extends Entity
 
     /**
     * Gets the type
+    * The type of content in the value property. Possible values are text and html. Required.
     *
     * @return ExternalItemContentType The type
     */
@@ -44,6 +45,7 @@ class ExternalItemContent extends Entity
 
     /**
     * Sets the type
+    * The type of content in the value property. Possible values are text and html. Required.
     *
     * @param ExternalItemContentType $val The value to assign to the type
     *
@@ -56,6 +58,7 @@ class ExternalItemContent extends Entity
     }
     /**
     * Gets the value
+    * The content for the externalItem. Required.
     *
     * @return string The value
     */
@@ -70,6 +73,7 @@ class ExternalItemContent extends Entity
 
     /**
     * Sets the value
+    * The content for the externalItem. Required.
     *
     * @param string $val The value of the value
     *

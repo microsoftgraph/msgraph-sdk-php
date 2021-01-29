@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -55,7 +55,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @return CertificateStore The certificateStore
     */
@@ -74,7 +74,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @param CertificateStore $val The certificateStore
     *

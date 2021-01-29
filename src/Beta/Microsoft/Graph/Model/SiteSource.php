@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class SiteSource extends DataSource
 {
     /**
     * Gets the site
+    * The SharePoint site associated with the siteSource.
     *
     * @return Site The site
     */
@@ -44,6 +45,7 @@ class SiteSource extends DataSource
     
     /**
     * Sets the site
+    * The SharePoint site associated with the siteSource.
     *
     * @param Site $val The site
     *

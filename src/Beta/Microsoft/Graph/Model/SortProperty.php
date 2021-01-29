@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class SortProperty extends Entity
 {
     /**
     * Gets the isDescending
+    * True if the sort order is descending. Default is false, with the sort order as ascending. Optional.
     *
     * @return bool The isDescending
     */
@@ -39,6 +40,7 @@ class SortProperty extends Entity
 
     /**
     * Sets the isDescending
+    * True if the sort order is descending. Default is false, with the sort order as ascending. Optional.
     *
     * @param bool $val The value of the isDescending
     *
@@ -51,6 +53,7 @@ class SortProperty extends Entity
     }
     /**
     * Gets the name
+    * The name of the property to sort on. Required.
     *
     * @return string The name
     */
@@ -65,6 +68,7 @@ class SortProperty extends Entity
 
     /**
     * Sets the name
+    * The name of the property to sort on. Required.
     *
     * @param string $val The value of the name
     *

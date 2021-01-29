@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -63,7 +63,7 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
 
     /**
     * Gets the detectionType
-    * The registry data detection type
+    * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
     *
     * @return Win32LobAppRegistryDetectionType The detectionType
     */
@@ -82,7 +82,7 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
 
     /**
     * Sets the detectionType
-    * The registry data detection type
+    * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
     *
     * @param Win32LobAppRegistryDetectionType $val The value to assign to the detectionType
     *
@@ -152,7 +152,7 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
 
     /**
     * Gets the operator
-    * The operator for registry data detection
+    * The operator for registry data detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @return Win32LobAppDetectionOperator The operator
     */
@@ -171,7 +171,7 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
 
     /**
     * Sets the operator
-    * The operator for registry data detection
+    * The operator for registry data detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
     * @param Win32LobAppDetectionOperator $val The value to assign to the operator
     *

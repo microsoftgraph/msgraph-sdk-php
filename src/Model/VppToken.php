@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -179,7 +179,7 @@ class VppToken extends Entity
     
     /**
     * Gets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
+    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -198,7 +198,7 @@ class VppToken extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
+    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -274,7 +274,7 @@ class VppToken extends Entity
     
     /**
     * Gets the state
-    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
+    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
     *
     * @return VppTokenState The state
     */
@@ -293,7 +293,7 @@ class VppToken extends Entity
     
     /**
     * Sets the state
-    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
+    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
     *
     * @param VppTokenState $val The state
     *

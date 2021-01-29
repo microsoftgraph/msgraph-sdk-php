@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class BitLockerFixedDrivePolicy extends Entity
 
     /**
     * Gets the encryptionMethod
-    * Select the encryption method for fixed drives.
+    * Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
     *
     * @return BitLockerEncryptionMethod The encryptionMethod
     */
@@ -45,7 +45,7 @@ class BitLockerFixedDrivePolicy extends Entity
 
     /**
     * Sets the encryptionMethod
-    * Select the encryption method for fixed drives.
+    * Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
     *
     * @param BitLockerEncryptionMethod $val The value to assign to the encryptionMethod
     *

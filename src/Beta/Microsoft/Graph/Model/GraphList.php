@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -155,6 +155,7 @@ class GraphList extends BaseItem
 
      /** 
      * Gets the activities
+    * The recent activities that took place within this list.
      *
      * @return array The activities
      */
@@ -169,6 +170,7 @@ class GraphList extends BaseItem
     
     /** 
     * Sets the activities
+    * The recent activities that took place within this list.
     *
     * @param ItemActivityOLD $val The activities
     *

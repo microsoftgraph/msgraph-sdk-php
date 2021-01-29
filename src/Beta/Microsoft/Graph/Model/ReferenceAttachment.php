@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ReferenceAttachment extends Attachment
 {
     /**
     * Gets the isFolder
+    * Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
     *
     * @return bool The isFolder
     */
@@ -40,6 +41,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Sets the isFolder
+    * Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
     *
     * @param bool $val The isFolder
     *
@@ -53,6 +55,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Gets the permission
+    * Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
     *
     * @return ReferenceAttachmentPermission The permission
     */
@@ -71,6 +74,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Sets the permission
+    * Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
     *
     * @param ReferenceAttachmentPermission $val The permission
     *
@@ -84,6 +88,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Gets the previewUrl
+    * Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
     *
     * @return string The previewUrl
     */
@@ -98,6 +103,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Sets the previewUrl
+    * Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
     *
     * @param string $val The previewUrl
     *
@@ -111,6 +117,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Gets the providerType
+    * The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
     *
     * @return ReferenceAttachmentProvider The providerType
     */
@@ -129,6 +136,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Sets the providerType
+    * The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
     *
     * @param ReferenceAttachmentProvider $val The providerType
     *
@@ -142,6 +150,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Gets the sourceUrl
+    * URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
     *
     * @return string The sourceUrl
     */
@@ -156,6 +165,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Sets the sourceUrl
+    * URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
     *
     * @param string $val The sourceUrl
     *
@@ -169,6 +179,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Gets the thumbnailUrl
+    * Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
     *
     * @return string The thumbnailUrl
     */
@@ -183,6 +194,7 @@ class ReferenceAttachment extends Attachment
     
     /**
     * Sets the thumbnailUrl
+    * Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
     *
     * @param string $val The thumbnailUrl
     *

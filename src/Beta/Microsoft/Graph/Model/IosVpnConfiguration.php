@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -113,7 +113,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     
     /**
     * Gets the strictEnforcement
-    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
+    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
     *
     * @return bool The strictEnforcement
     */
@@ -128,7 +128,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     
     /**
     * Sets the strictEnforcement
-    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
+    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
     *
     * @param bool $val The strictEnforcement
     *

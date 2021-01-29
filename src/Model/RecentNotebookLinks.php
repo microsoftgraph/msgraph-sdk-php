@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class RecentNotebookLinks extends Entity
 
     /**
     * Gets the oneNoteClientUrl
-    * Opens the notebook in the OneNote native client if it's installed.
+    * Opens the notebook in the OneNote client, if it's installed.
     *
     * @return ExternalLink The oneNoteClientUrl
     */
@@ -45,7 +45,7 @@ class RecentNotebookLinks extends Entity
 
     /**
     * Sets the oneNoteClientUrl
-    * Opens the notebook in the OneNote native client if it's installed.
+    * Opens the notebook in the OneNote client, if it's installed.
     *
     * @param ExternalLink $val The value to assign to the oneNoteClientUrl
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -82,7 +82,7 @@ class SecurityBaselineContributingPolicy extends Entity
 
     /**
     * Gets the sourceType
-    * Authoring source of the policy
+    * Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent.
     *
     * @return SecurityBaselinePolicySourceType The sourceType
     */
@@ -101,7 +101,7 @@ class SecurityBaselineContributingPolicy extends Entity
 
     /**
     * Sets the sourceType
-    * Authoring source of the policy
+    * Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent.
     *
     * @param SecurityBaselinePolicySourceType $val The value to assign to the sourceType
     *

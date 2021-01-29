@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class ConfigurationManagerActionResult extends DeviceActionResult
 
     /**
     * Gets the actionDeliveryStatus
-    * State of the action being delivered to on-prem server
+    * State of the action being delivered to on-prem server. Possible values are: unknown, pendingDelivery, deliveredToConnectorService, failedToDeliverToConnectorService, deliveredToOnPremisesServer.
     *
     * @return ConfigurationManagerActionDeliveryStatus The actionDeliveryStatus
     */
@@ -45,7 +45,7 @@ class ConfigurationManagerActionResult extends DeviceActionResult
 
     /**
     * Sets the actionDeliveryStatus
-    * State of the action being delivered to on-prem server
+    * State of the action being delivered to on-prem server. Possible values are: unknown, pendingDelivery, deliveredToConnectorService, failedToDeliverToConnectorService, deliveredToOnPremisesServer.
     *
     * @param ConfigurationManagerActionDeliveryStatus $val The value to assign to the actionDeliveryStatus
     *

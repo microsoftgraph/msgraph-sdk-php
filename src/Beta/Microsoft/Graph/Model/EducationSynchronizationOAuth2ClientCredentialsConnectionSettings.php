@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
 {
     /**
     * Gets the scope
+    * The scope of the access request (see RFC6749).
     *
     * @return string The scope
     */
@@ -39,6 +40,7 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
 
     /**
     * Sets the scope
+    * The scope of the access request (see RFC6749).
     *
     * @param string $val The value of the scope
     *
@@ -51,6 +53,7 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
     }
     /**
     * Gets the tokenUrl
+    * The URL to get access tokens for the data provider.
     *
     * @return string The tokenUrl
     */
@@ -65,6 +68,7 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
 
     /**
     * Sets the tokenUrl
+    * The URL to get access tokens for the data provider.
     *
     * @param string $val The value of the tokenUrl
     *

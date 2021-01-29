@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -119,7 +119,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Gets the operationType
-    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
+    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
     *
     * @return Win32LobAppFileSystemOperationType The operationType
     */
@@ -138,7 +138,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Sets the operationType
-    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
+    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
     *
     * @param Win32LobAppFileSystemOperationType $val The value to assign to the operationType
     *

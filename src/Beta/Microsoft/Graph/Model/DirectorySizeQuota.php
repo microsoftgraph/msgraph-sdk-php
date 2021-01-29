@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class DirectorySizeQuota extends Entity
 {
     /**
     * Gets the total
+    * Total amount of the directory quota.
     *
     * @return int The total
     */
@@ -39,6 +40,7 @@ class DirectorySizeQuota extends Entity
 
     /**
     * Sets the total
+    * Total amount of the directory quota.
     *
     * @param int $val The value of the total
     *
@@ -51,6 +53,7 @@ class DirectorySizeQuota extends Entity
     }
     /**
     * Gets the used
+    * Used amount of the directory quota.
     *
     * @return int The used
     */
@@ -65,6 +68,7 @@ class DirectorySizeQuota extends Entity
 
     /**
     * Sets the used
+    * Used amount of the directory quota.
     *
     * @param int $val The value of the used
     *

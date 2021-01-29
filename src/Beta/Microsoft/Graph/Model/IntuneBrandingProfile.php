@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -350,7 +350,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Gets the enrollmentAvailability
-    * Customized device enrollment flow displayed to the end user 
+    * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
     *
     * @return EnrollmentAvailabilityOptions The enrollmentAvailability
     */
@@ -369,7 +369,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Sets the enrollmentAvailability
-    * Customized device enrollment flow displayed to the end user 
+    * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
     *
     * @param EnrollmentAvailabilityOptions $val The enrollmentAvailability
     *
@@ -569,7 +569,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Gets the onlineSupportSiteName
-    * Display name of the company/organization???s IT helpdesk site
+    * Display name of the company/organization’s IT helpdesk site
     *
     * @return string The onlineSupportSiteName
     */
@@ -584,7 +584,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Sets the onlineSupportSiteName
-    * Display name of the company/organization???s IT helpdesk site
+    * Display name of the company/organization’s IT helpdesk site
     *
     * @param string $val The onlineSupportSiteName
     *
@@ -598,7 +598,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Gets the onlineSupportSiteUrl
-    * URL to the company/organization???s IT helpdesk site
+    * URL to the company/organization’s IT helpdesk site
     *
     * @return string The onlineSupportSiteUrl
     */
@@ -613,7 +613,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Sets the onlineSupportSiteUrl
-    * URL to the company/organization???s IT helpdesk site
+    * URL to the company/organization’s IT helpdesk site
     *
     * @param string $val The onlineSupportSiteUrl
     *
@@ -627,7 +627,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Gets the privacyUrl
-    * URL to the company/organization???s privacy policy
+    * URL to the company/organization’s privacy policy
     *
     * @return string The privacyUrl
     */
@@ -642,7 +642,7 @@ class IntuneBrandingProfile extends Entity
     
     /**
     * Sets the privacyUrl
-    * URL to the company/organization???s privacy policy
+    * URL to the company/organization’s privacy policy
     *
     * @param string $val The privacyUrl
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -82,7 +82,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Gets the securityEncryptionAlgorithm
-    * Encryption algorithm
+    * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
     *
     * @return VpnEncryptionAlgorithmType The securityEncryptionAlgorithm
     */
@@ -101,7 +101,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Sets the securityEncryptionAlgorithm
-    * Encryption algorithm
+    * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
     *
     * @param VpnEncryptionAlgorithmType $val The value to assign to the securityEncryptionAlgorithm
     *
@@ -115,7 +115,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Gets the securityIntegrityAlgorithm
-    * Integrity algorithm
+    * Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
     *
     * @return VpnIntegrityAlgorithmType The securityIntegrityAlgorithm
     */
@@ -134,7 +134,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Sets the securityIntegrityAlgorithm
-    * Integrity algorithm
+    * Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
     *
     * @param VpnIntegrityAlgorithmType $val The value to assign to the securityIntegrityAlgorithm
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade
 
     /**
     * Gets the points
+    * Number of points a teacher is giving this submission object.
     *
     * @return Single The points
     */
@@ -44,6 +45,7 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade
 
     /**
     * Sets the points
+    * Number of points a teacher is giving this submission object.
     *
     * @param Single $val The value to assign to the points
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
 {
     /**
     * Gets the accessLevel
-    * This indicates an access level for the privacy data category to which the specified application will be given to.
+    * This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl.
     *
     * @return WindowsPrivacyDataAccessLevel The accessLevel
     */
@@ -45,7 +45,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Sets the accessLevel
-    * This indicates an access level for the privacy data category to which the specified application will be given to.
+    * This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl.
     *
     * @param WindowsPrivacyDataAccessLevel $val The accessLevel
     *
@@ -117,7 +117,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Gets the dataCategory
-    * This indicates a privacy data category to which the specific access control will apply.
+    * This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
     *
     * @return WindowsPrivacyDataCategory The dataCategory
     */
@@ -136,7 +136,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     
     /**
     * Sets the dataCategory
-    * This indicates a privacy data category to which the specific access control will apply.
+    * This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
     *
     * @param WindowsPrivacyDataCategory $val The dataCategory
     *

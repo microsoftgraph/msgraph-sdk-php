@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class PropertyToEvaluate extends Entity
 {
     /**
     * Gets the propertyName
+    * Provides the property name.
     *
     * @return string The propertyName
     */
@@ -39,6 +40,7 @@ class PropertyToEvaluate extends Entity
 
     /**
     * Sets the propertyName
+    * Provides the property name.
     *
     * @param string $val The value of the propertyName
     *
@@ -51,6 +53,7 @@ class PropertyToEvaluate extends Entity
     }
     /**
     * Gets the propertyValue
+    * Provides the property value.
     *
     * @return string The propertyValue
     */
@@ -65,6 +68,7 @@ class PropertyToEvaluate extends Entity
 
     /**
     * Sets the propertyValue
+    * Provides the property value.
     *
     * @param string $val The value of the propertyValue
     *

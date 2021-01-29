@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     
     /**
     * Gets the status
-    * Wipe action status.
+    * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @return ActionState The status
     */
@@ -78,7 +78,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     
     /**
     * Sets the status
-    * Wipe action status.
+    * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
     * @param ActionState $val The status
     *

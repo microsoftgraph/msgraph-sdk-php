@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -171,7 +171,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Gets the underline
-    * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+    * Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
     *
     * @return string The underline
     */
@@ -186,7 +186,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the underline
-    * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+    * Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
     *
     * @param string $val The underline
     *

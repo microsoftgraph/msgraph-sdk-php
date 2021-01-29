@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -87,7 +87,7 @@ class EducationStudent extends Entity
 
     /**
     * Gets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
     * @return EducationGender The gender
     */
@@ -106,7 +106,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
     * @param EducationGender $val The value to assign to the gender
     *

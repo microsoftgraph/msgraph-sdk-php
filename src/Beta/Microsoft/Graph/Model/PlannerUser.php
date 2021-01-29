@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PlannerUser extends PlannerDelta
 {
     /**
     * Gets the favoritePlanReferences
+    * A collection containing the references to the plans that the user has marked as favorites.
     *
     * @return PlannerFavoritePlanReferenceCollection The favoritePlanReferences
     */
@@ -44,6 +45,7 @@ class PlannerUser extends PlannerDelta
     
     /**
     * Sets the favoritePlanReferences
+    * A collection containing the references to the plans that the user has marked as favorites.
     *
     * @param PlannerFavoritePlanReferenceCollection $val The favoritePlanReferences
     *
@@ -57,6 +59,7 @@ class PlannerUser extends PlannerDelta
     
     /**
     * Gets the recentPlanReferences
+    * A collection containing references to the plans that were viewed recently by the user in apps that support recent plans.
     *
     * @return PlannerRecentPlanReferenceCollection The recentPlanReferences
     */
@@ -75,6 +78,7 @@ class PlannerUser extends PlannerDelta
     
     /**
     * Sets the recentPlanReferences
+    * A collection containing references to the plans that were viewed recently by the user in apps that support recent plans.
     *
     * @param PlannerRecentPlanReferenceCollection $val The recentPlanReferences
     *
@@ -117,6 +121,7 @@ class PlannerUser extends PlannerDelta
 
      /** 
      * Gets the favoritePlans
+    * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
      *
      * @return array The favoritePlans
      */
@@ -131,6 +136,7 @@ class PlannerUser extends PlannerDelta
     
     /** 
     * Sets the favoritePlans
+    * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
     *
     * @param PlannerPlan $val The favoritePlans
     *
@@ -175,6 +181,7 @@ class PlannerUser extends PlannerDelta
 
      /** 
      * Gets the recentPlans
+    * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
      *
      * @return array The recentPlans
      */
@@ -189,6 +196,7 @@ class PlannerUser extends PlannerDelta
     
     /** 
     * Sets the recentPlans
+    * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
     *
     * @param PlannerPlan $val The recentPlans
     *
@@ -203,7 +211,7 @@ class PlannerUser extends PlannerDelta
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
      * @return array The tasks
      */
@@ -218,7 +226,7 @@ class PlannerUser extends PlannerDelta
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
     * @param PlannerTask $val The tasks
     *

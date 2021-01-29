@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Gets the operator
-    * The operator used in the evaluation of the binary operation.
+    * The operator used in the evaluation of the binary operation. Possible values are: or, and.
     *
     * @return BinaryManagementConditionExpressionOperatorType The operator
     */
@@ -78,7 +78,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Sets the operator
-    * The operator used in the evaluation of the binary operation.
+    * The operator used in the evaluation of the binary operation. Possible values are: or, and.
     *
     * @param BinaryManagementConditionExpressionOperatorType $val The value to assign to the operator
     *

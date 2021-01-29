@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class SynchronizationJobApplicationParameters extends Entity
 {
     /**
     * Gets the ruleId
+    * The identifier of a the synchronizationRule to be applied.
     *
     * @return string The ruleId
     */
@@ -39,6 +40,7 @@ class SynchronizationJobApplicationParameters extends Entity
 
     /**
     * Sets the ruleId
+    * The identifier of a the synchronizationRule to be applied.
     *
     * @param string $val The value of the ruleId
     *
@@ -52,6 +54,7 @@ class SynchronizationJobApplicationParameters extends Entity
 
     /**
     * Gets the subjects
+    * The identifiers of one or more objects to which a synchronizationJob is to be applied.
     *
     * @return SynchronizationJobSubject The subjects
     */
@@ -70,6 +73,7 @@ class SynchronizationJobApplicationParameters extends Entity
 
     /**
     * Sets the subjects
+    * The identifiers of one or more objects to which a synchronizationJob is to be applied.
     *
     * @param SynchronizationJobSubject $val The value to assign to the subjects
     *

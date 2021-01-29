@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationSubmissionResource extends Entity
 {
     /**
     * Gets the assignmentResourceUrl
+    * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
     *
     * @return string The assignmentResourceUrl
     */
@@ -40,6 +41,7 @@ class EducationSubmissionResource extends Entity
     
     /**
     * Sets the assignmentResourceUrl
+    * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
     *
     * @param string $val The assignmentResourceUrl
     *
@@ -53,6 +55,7 @@ class EducationSubmissionResource extends Entity
     
     /**
     * Gets the resource
+    * Resource object.
     *
     * @return EducationResource The resource
     */
@@ -71,6 +74,7 @@ class EducationSubmissionResource extends Entity
     
     /**
     * Sets the resource
+    * Resource object.
     *
     * @param EducationResource $val The resource
     *

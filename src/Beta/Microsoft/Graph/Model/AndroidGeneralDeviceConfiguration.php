@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -1054,7 +1054,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the requiredPasswordComplexity
-    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
     *
     * @return AndroidRequiredPasswordComplexity The requiredPasswordComplexity
     */
@@ -1073,7 +1073,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the requiredPasswordComplexity
-    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
     *
     * @param AndroidRequiredPasswordComplexity $val The requiredPasswordComplexity
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -55,7 +55,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     
     /**
     * Gets the userDomainNameSource
-    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
+    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
     *
     * @return DomainNameSource The userDomainNameSource
     */
@@ -74,7 +74,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     
     /**
     * Sets the userDomainNameSource
-    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
+    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
     *
     * @param DomainNameSource $val The userDomainNameSource
     *
@@ -88,7 +88,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     
     /**
     * Gets the usernameAADSource
-    * Name of the AAD field, that will be used to retrieve UserName for email profile.
+    * Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
     *
     * @return UsernameSource The usernameAADSource
     */
@@ -107,7 +107,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     
     /**
     * Sets the usernameAADSource
-    * Name of the AAD field, that will be used to retrieve UserName for email profile.
+    * Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
     *
     * @param UsernameSource $val The usernameAADSource
     *
@@ -121,7 +121,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     
     /**
     * Gets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
     *
     * @return UserEmailSource The usernameSource
     */
@@ -140,7 +140,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     
     /**
     * Sets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
     *
     * @param UserEmailSource $val The usernameSource
     *

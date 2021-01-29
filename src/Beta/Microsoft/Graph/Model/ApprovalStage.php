@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class ApprovalStage extends Entity
 {
     /**
     * Gets the approvalStageTimeOutInDays
+    * The number of days that a request can be pending a response before it is automatically denied.
     *
     * @return int The approvalStageTimeOutInDays
     */
@@ -39,6 +40,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the approvalStageTimeOutInDays
+    * The number of days that a request can be pending a response before it is automatically denied.
     *
     * @param int $val The value of the approvalStageTimeOutInDays
     *
@@ -52,6 +54,7 @@ class ApprovalStage extends Entity
 
     /**
     * Gets the escalationApprovers
+    * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
     *
     * @return UserSet The escalationApprovers
     */
@@ -70,6 +73,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the escalationApprovers
+    * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
     *
     * @param UserSet $val The value to assign to the escalationApprovers
     *
@@ -82,6 +86,7 @@ class ApprovalStage extends Entity
     }
     /**
     * Gets the escalationTimeInMinutes
+    * If escalation is required, the time a request can be pending a response from a primary approver.
     *
     * @return int The escalationTimeInMinutes
     */
@@ -96,6 +101,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the escalationTimeInMinutes
+    * If escalation is required, the time a request can be pending a response from a primary approver.
     *
     * @param int $val The value of the escalationTimeInMinutes
     *
@@ -108,6 +114,7 @@ class ApprovalStage extends Entity
     }
     /**
     * Gets the isApproverJustificationRequired
+    * Indicates whether the approver is required to provide a justification for approving a request.
     *
     * @return bool The isApproverJustificationRequired
     */
@@ -122,6 +129,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the isApproverJustificationRequired
+    * Indicates whether the approver is required to provide a justification for approving a request.
     *
     * @param bool $val The value of the isApproverJustificationRequired
     *
@@ -134,6 +142,7 @@ class ApprovalStage extends Entity
     }
     /**
     * Gets the isEscalationEnabled
+    * If true, then one or more escalation approvers are configured in this approval stage.
     *
     * @return bool The isEscalationEnabled
     */
@@ -148,6 +157,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the isEscalationEnabled
+    * If true, then one or more escalation approvers are configured in this approval stage.
     *
     * @param bool $val The value of the isEscalationEnabled
     *
@@ -161,6 +171,7 @@ class ApprovalStage extends Entity
 
     /**
     * Gets the primaryApprovers
+    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
     *
     * @return UserSet The primaryApprovers
     */
@@ -179,6 +190,7 @@ class ApprovalStage extends Entity
 
     /**
     * Sets the primaryApprovers
+    * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
     *
     * @param UserSet $val The value to assign to the primaryApprovers
     *

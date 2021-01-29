@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationPointsOutcome extends EducationOutcome
 {
     /**
     * Gets the points
+    * The numeric grade the teacher has given the student for this assignment.
     *
     * @return EducationAssignmentPointsGrade The points
     */
@@ -44,6 +45,7 @@ class EducationPointsOutcome extends EducationOutcome
     
     /**
     * Sets the points
+    * The numeric grade the teacher has given the student for this assignment.
     *
     * @param EducationAssignmentPointsGrade $val The points
     *
@@ -57,6 +59,7 @@ class EducationPointsOutcome extends EducationOutcome
     
     /**
     * Gets the publishedPoints
+    * A copy of the points property that is made when the grade is released to the student.
     *
     * @return EducationAssignmentPointsGrade The publishedPoints
     */
@@ -75,6 +78,7 @@ class EducationPointsOutcome extends EducationOutcome
     
     /**
     * Sets the publishedPoints
+    * A copy of the points property that is made when the grade is released to the student.
     *
     * @param EducationAssignmentPointsGrade $val The publishedPoints
     *

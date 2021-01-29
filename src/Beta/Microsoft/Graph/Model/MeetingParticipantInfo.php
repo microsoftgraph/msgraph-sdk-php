@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Gets the role
-    * Specifies the participant's role in the meeting.  Possible values are listed in the following table.
+    * Specifies the participant's role in the meeting.  Possible values are attendee, presenter, and unknownFutureValue.
     *
     * @return OnlineMeetingRole The role
     */
@@ -78,7 +78,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Sets the role
-    * Specifies the participant's role in the meeting.  Possible values are listed in the following table.
+    * Specifies the participant's role in the meeting.  Possible values are attendee, presenter, and unknownFutureValue.
     *
     * @param OnlineMeetingRole $val The value to assign to the role
     *

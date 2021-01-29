@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -27,6 +27,7 @@ class GovernanceRoleSetting extends Entity
 
      /** 
      * Gets the adminEligibleSettings
+    * The rule settings that are evaluated when an administrator tries to add an eligible role assignment.
      *
      * @return array The adminEligibleSettings
      */
@@ -41,6 +42,7 @@ class GovernanceRoleSetting extends Entity
     
     /** 
     * Sets the adminEligibleSettings
+    * The rule settings that are evaluated when an administrator tries to add an eligible role assignment.
     *
     * @param GovernanceRuleSetting $val The adminEligibleSettings
     *
@@ -55,6 +57,7 @@ class GovernanceRoleSetting extends Entity
 
      /** 
      * Gets the adminMemberSettings
+    * The rule settings that are evaluated when an administrator tries to add a direct member role assignment.
      *
      * @return array The adminMemberSettings
      */
@@ -69,6 +72,7 @@ class GovernanceRoleSetting extends Entity
     
     /** 
     * Sets the adminMemberSettings
+    * The rule settings that are evaluated when an administrator tries to add a direct member role assignment.
     *
     * @param GovernanceRuleSetting $val The adminMemberSettings
     *
@@ -82,6 +86,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the isDefault
+    * Read-only. Indicate if the roleSetting is a default roleSetting
     *
     * @return bool The isDefault
     */
@@ -96,6 +101,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the isDefault
+    * Read-only. Indicate if the roleSetting is a default roleSetting
     *
     * @param bool $val The isDefault
     *
@@ -109,6 +115,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the lastUpdatedBy
+    * Read-only. The display name of the administrator who last updated the roleSetting.
     *
     * @return string The lastUpdatedBy
     */
@@ -123,6 +130,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the lastUpdatedBy
+    * Read-only. The display name of the administrator who last updated the roleSetting.
     *
     * @param string $val The lastUpdatedBy
     *
@@ -136,6 +144,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the lastUpdatedDateTime
+    * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastUpdatedDateTime
     */
@@ -154,6 +163,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the lastUpdatedDateTime
+    * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
@@ -167,6 +177,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the resourceId
+    * Required. The id of the resource that the role setting is associated with.
     *
     * @return string The resourceId
     */
@@ -181,6 +192,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the resourceId
+    * Required. The id of the resource that the role setting is associated with.
     *
     * @param string $val The resourceId
     *
@@ -194,6 +206,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the roleDefinitionId
+    * Required. The id of the role definition that the role setting is associated with.
     *
     * @return string The roleDefinitionId
     */
@@ -208,6 +221,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the roleDefinitionId
+    * Required. The id of the role definition that the role setting is associated with.
     *
     * @param string $val The roleDefinitionId
     *
@@ -222,6 +236,7 @@ class GovernanceRoleSetting extends Entity
 
      /** 
      * Gets the userEligibleSettings
+    * The rule settings that are evaluated when a user tries to add an eligible role assignment. The setting is not supported for now.
      *
      * @return array The userEligibleSettings
      */
@@ -236,6 +251,7 @@ class GovernanceRoleSetting extends Entity
     
     /** 
     * Sets the userEligibleSettings
+    * The rule settings that are evaluated when a user tries to add an eligible role assignment. The setting is not supported for now.
     *
     * @param GovernanceRuleSetting $val The userEligibleSettings
     *
@@ -250,6 +266,7 @@ class GovernanceRoleSetting extends Entity
 
      /** 
      * Gets the userMemberSettings
+    * The rule settings that are evaluated when a user tries to activate his role assignment.
      *
      * @return array The userMemberSettings
      */
@@ -264,6 +281,7 @@ class GovernanceRoleSetting extends Entity
     
     /** 
     * Sets the userMemberSettings
+    * The rule settings that are evaluated when a user tries to activate his role assignment.
     *
     * @param GovernanceRuleSetting $val The userMemberSettings
     *
@@ -277,6 +295,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the resource
+    * Read-only. The associated resource for this role setting.
     *
     * @return GovernanceResource The resource
     */
@@ -295,6 +314,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the resource
+    * Read-only. The associated resource for this role setting.
     *
     * @param GovernanceResource $val The resource
     *
@@ -308,6 +328,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the roleDefinition
+    * Read-only. The role definition that is enforced with this role setting.
     *
     * @return GovernanceRoleDefinition The roleDefinition
     */
@@ -326,6 +347,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the roleDefinition
+    * Read-only. The role definition that is enforced with this role setting.
     *
     * @param GovernanceRoleDefinition $val The roleDefinition
     *

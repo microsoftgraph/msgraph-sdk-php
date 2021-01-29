@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -92,6 +92,7 @@ class ConditionalAccessPolicy extends Entity
     
     /**
     * Gets the description
+    * Not used.
     *
     * @return string The description
     */
@@ -106,6 +107,7 @@ class ConditionalAccessPolicy extends Entity
     
     /**
     * Sets the description
+    * Not used.
     *
     * @param string $val The description
     *

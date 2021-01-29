@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the intuneAccountId
-    * Intune Account Id for given tenant
+    * Intune Account ID for given tenant
     *
     * @return string The intuneAccountId
     */
@@ -74,7 +74,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the intuneAccountId
-    * Intune Account Id for given tenant
+    * Intune Account ID for given tenant
     *
     * @param string $val The intuneAccountId
     *
@@ -150,7 +150,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the maximumDepTokens
-    * Maximum number of dep tokens allowed per-tenant.
+    * Maximum number of DEP tokens allowed per-tenant.
     *
     * @return int The maximumDepTokens
     */
@@ -165,7 +165,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the maximumDepTokens
-    * Maximum number of dep tokens allowed per-tenant.
+    * Maximum number of DEP tokens allowed per-tenant.
     *
     * @param int $val The maximumDepTokens
     *
@@ -406,7 +406,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the subscriptions
-    * Tenant's Subscription.
+    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
     *
     * @return DeviceManagementSubscriptions The subscriptions
     */
@@ -425,7 +425,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the subscriptions
-    * Tenant's Subscription.
+    * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
     *
     * @param DeviceManagementSubscriptions $val The subscriptions
     *
@@ -439,7 +439,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @return DeviceManagementSubscriptionState The subscriptionState
     */
@@ -458,7 +458,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @param DeviceManagementSubscriptionState $val The subscriptionState
     *

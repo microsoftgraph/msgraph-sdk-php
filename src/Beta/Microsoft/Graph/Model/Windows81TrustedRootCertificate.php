@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -55,7 +55,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Gets the destinationStore
-    * Destination store location for the Trusted Root Certificate.
+    * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
     *
     * @return CertificateDestinationStore The destinationStore
     */
@@ -74,7 +74,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Sets the destinationStore
-    * Destination store location for the Trusted Root Certificate.
+    * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
     *
     * @param CertificateDestinationStore $val The destinationStore
     *

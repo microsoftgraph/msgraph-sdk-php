@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -142,7 +142,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Gets the installState
-    * The install state of the app.
+    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
     * @return ResultantAppState The installState
     */
@@ -161,7 +161,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Sets the installState
-    * The install state of the app.
+    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
     * @param ResultantAppState $val The installState
     *
@@ -175,7 +175,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Gets the installStateDetail
-    * The install state detail of the app.
+    * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
     *
     * @return ResultantAppStateDetail The installStateDetail
     */
@@ -194,7 +194,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Sets the installStateDetail
-    * The install state detail of the app.
+    * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
     *
     * @param ResultantAppStateDetail $val The installStateDetail
     *
@@ -241,7 +241,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Gets the mobileAppInstallStatusValue
-    * The install state of the app.
+    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
     * @return ResultantAppState The mobileAppInstallStatusValue
     */
@@ -260,7 +260,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Sets the mobileAppInstallStatusValue
-    * The install state of the app.
+    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
     * @param ResultantAppState $val The mobileAppInstallStatusValue
     *

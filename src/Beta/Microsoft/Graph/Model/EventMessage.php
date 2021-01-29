@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EventMessage extends Message
 {
     /**
     * Gets the endDateTime
+    * The end time of the requested meeting.
     *
     * @return DateTimeTimeZone The endDateTime
     */
@@ -44,6 +45,7 @@ class EventMessage extends Message
     
     /**
     * Sets the endDateTime
+    * The end time of the requested meeting.
     *
     * @param DateTimeTimeZone $val The endDateTime
     *

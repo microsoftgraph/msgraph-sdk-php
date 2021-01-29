@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity
 {
     /**
     * Gets the target
+    * The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group.
     *
     * @return CloudPcManagementAssignmentTarget The target
     */
@@ -44,6 +45,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity
     
     /**
     * Sets the target
+    * The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group.
     *
     * @param CloudPcManagementAssignmentTarget $val The target
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -58,7 +58,7 @@ class InvitationParticipantInfo extends Entity
     }
     /**
     * Gets the replacesCallId
-    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
     * @return string The replacesCallId
     */
@@ -73,7 +73,7 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the replacesCallId
-    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
     * @param string $val The value of the replacesCallId
     *

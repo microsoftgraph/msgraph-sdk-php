@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class UnaryManagementConditionExpression extends ManagementConditionExpressionMo
 
     /**
     * Gets the operator
-    * The operator used in the evaluation of the unary operation.
+    * The operator used in the evaluation of the unary operation. Possible values are: not.
     *
     * @return UnaryManagementConditionExpressionOperatorType The operator
     */
@@ -78,7 +78,7 @@ class UnaryManagementConditionExpression extends ManagementConditionExpressionMo
 
     /**
     * Sets the operator
-    * The operator used in the evaluation of the unary operation.
+    * The operator used in the evaluation of the unary operation. Possible values are: not.
     *
     * @param UnaryManagementConditionExpressionOperatorType $val The value to assign to the operator
     *

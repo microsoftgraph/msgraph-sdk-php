@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class LanguageProficiency extends ItemFacet
 {
     /**
     * Gets the displayName
+    * Contains the long-form name for the language.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Sets the displayName
+    * Contains the long-form name for the language.
     *
     * @param string $val The displayName
     *
@@ -84,6 +86,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Gets the reading
+    * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
     * @return LanguageProficiencyLevel The reading
     */
@@ -102,6 +105,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Sets the reading
+    * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
     * @param LanguageProficiencyLevel $val The reading
     *
@@ -115,6 +119,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Gets the spoken
+    * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
     * @return LanguageProficiencyLevel The spoken
     */
@@ -133,6 +138,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Sets the spoken
+    * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
     * @param LanguageProficiencyLevel $val The spoken
     *
@@ -146,6 +152,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Gets the tag
+    * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
     *
     * @return string The tag
     */
@@ -160,6 +167,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Sets the tag
+    * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
     *
     * @param string $val The tag
     *
@@ -173,6 +181,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Gets the written
+    * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
     * @return LanguageProficiencyLevel The written
     */
@@ -191,6 +200,7 @@ class LanguageProficiency extends ItemFacet
     
     /**
     * Sets the written
+    * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
     * @param LanguageProficiencyLevel $val The written
     *

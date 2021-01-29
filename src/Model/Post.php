@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -276,7 +276,7 @@ class Post extends OutlookItem
 
      /** 
      * Gets the attachments
-    * Read-only. Nullable.
+    * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable.
      *
      * @return array The attachments
      */
@@ -291,7 +291,7 @@ class Post extends OutlookItem
     
     /** 
     * Sets the attachments
-    * Read-only. Nullable.
+    * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -335,7 +335,7 @@ class Post extends OutlookItem
     
     /**
     * Gets the inReplyTo
-    * Read-only.
+    * The earlier post that this post is replying to in the conversationThread. Read-only.
     *
     * @return Post The inReplyTo
     */
@@ -354,7 +354,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the inReplyTo
-    * Read-only.
+    * The earlier post that this post is replying to in the conversationThread. Read-only.
     *
     * @param Post $val The inReplyTo
     *

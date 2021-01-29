@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -154,7 +154,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the intendedPurpose
-    * Certificate's intended purpose from the point-of-view of deployment.
+    * Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
     *
     * @return UserPfxIntendedPurpose The intendedPurpose
     */
@@ -173,7 +173,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the intendedPurpose
-    * Certificate's intended purpose from the point-of-view of deployment.
+    * Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
     *
     * @param UserPfxIntendedPurpose $val The intendedPurpose
     *
@@ -249,7 +249,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the paddingScheme
-    * Padding scheme used by the provider during encryption/decryption.
+    * Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512.
     *
     * @return UserPfxPaddingScheme The paddingScheme
     */
@@ -268,7 +268,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the paddingScheme
-    * Padding scheme used by the provider during encryption/decryption.
+    * Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512.
     *
     * @param UserPfxPaddingScheme $val The paddingScheme
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class RelyingPartyDetailedSummary extends Entity
 {
     /**
     * Gets the failedSignInCount
+    * Number of failed sign in on Active Directory Federation Service in the period specified.
     *
     * @return int The failedSignInCount
     */
@@ -40,6 +41,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the failedSignInCount
+    * Number of failed sign in on Active Directory Federation Service in the period specified.
     *
     * @param int $val The failedSignInCount
     *
@@ -53,6 +55,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the migrationStatus
+    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired.
     *
     * @return MigrationStatus The migrationStatus
     */
@@ -71,6 +74,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the migrationStatus
+    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired.
     *
     * @param MigrationStatus $val The migrationStatus
     *
@@ -85,6 +89,7 @@ class RelyingPartyDetailedSummary extends Entity
 
      /** 
      * Gets the migrationValidationDetails
+    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. Possible result values are 0, 1, or 2. 0 when the validation check passed, 1 when the validation check failed and 2 when the validation check is a warning.
      *
      * @return array The migrationValidationDetails
      */
@@ -99,6 +104,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /** 
     * Sets the migrationValidationDetails
+    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. Possible result values are 0, 1, or 2. 0 when the validation check passed, 1 when the validation check failed and 2 when the validation check is a warning.
     *
     * @param KeyValuePair $val The migrationValidationDetails
     *
@@ -112,6 +118,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the relyingPartyId
+    * This identifier is used to identify the relying party to this Federation Service. It is used when issuing claims to the relying party.
     *
     * @return string The relyingPartyId
     */
@@ -126,6 +133,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the relyingPartyId
+    * This identifier is used to identify the relying party to this Federation Service. It is used when issuing claims to the relying party.
     *
     * @param string $val The relyingPartyId
     *
@@ -139,6 +147,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the relyingPartyName
+    * Name of application or other entity on the internet that uses an identity provider to authenticate a user who wants to log in.
     *
     * @return string The relyingPartyName
     */
@@ -153,6 +162,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the relyingPartyName
+    * Name of application or other entity on the internet that uses an identity provider to authenticate a user who wants to log in.
     *
     * @param string $val The relyingPartyName
     *
@@ -166,6 +176,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the replyUrls
+    * Specifies where the relying party expects to receive the token.
     *
     * @return string The replyUrls
     */
@@ -180,6 +191,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the replyUrls
+    * Specifies where the relying party expects to receive the token.
     *
     * @param string $val The replyUrls
     *
@@ -193,6 +205,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the serviceId
+    * Uniquely identifies the Active Directory forest.
     *
     * @return string The serviceId
     */
@@ -207,6 +220,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the serviceId
+    * Uniquely identifies the Active Directory forest.
     *
     * @param string $val The serviceId
     *
@@ -220,6 +234,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the signInSuccessRate
+    * Number of successful / (number of successful + number of failed sign ins) on Active Directory Federation Service in the period specified.
     *
     * @return float The signInSuccessRate
     */
@@ -234,6 +249,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the signInSuccessRate
+    * Number of successful / (number of successful + number of failed sign ins) on Active Directory Federation Service in the period specified.
     *
     * @param float $val The signInSuccessRate
     *
@@ -247,6 +263,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the successfulSignInCount
+    * Number of successful sign ins on Active Directory Federation Service.
     *
     * @return int The successfulSignInCount
     */
@@ -261,6 +278,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the successfulSignInCount
+    * Number of successful sign ins on Active Directory Federation Service.
     *
     * @param int $val The successfulSignInCount
     *
@@ -274,6 +292,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the totalSignInCount
+    * Number of successful + failed sign ins failed sign ins on Active Directory Federation Service in the period specified.
     *
     * @return int The totalSignInCount
     */
@@ -288,6 +307,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the totalSignInCount
+    * Number of successful + failed sign ins failed sign ins on Active Directory Federation Service in the period specified.
     *
     * @param int $val The totalSignInCount
     *
@@ -301,6 +321,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the uniqueUserCount
+    * Number of unique users that have signed into the application.
     *
     * @return int The uniqueUserCount
     */
@@ -315,6 +336,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the uniqueUserCount
+    * Number of unique users that have signed into the application.
     *
     * @param int $val The uniqueUserCount
     *

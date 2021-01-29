@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ItemEmail extends ItemFacet
 {
     /**
     * Gets the address
+    * The email address itself.
     *
     * @return string The address
     */
@@ -40,6 +41,7 @@ class ItemEmail extends ItemFacet
     
     /**
     * Sets the address
+    * The email address itself.
     *
     * @param string $val The address
     *
@@ -53,6 +55,7 @@ class ItemEmail extends ItemFacet
     
     /**
     * Gets the displayName
+    * The name or label a user has associated with a particular email address.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class ItemEmail extends ItemFacet
     
     /**
     * Sets the displayName
+    * The name or label a user has associated with a particular email address.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class ItemEmail extends ItemFacet
     
     /**
     * Gets the type
+    * The type of email address. Possible values are: unknown, work, personal, main, other.
     *
     * @return EmailType The type
     */
@@ -98,6 +103,7 @@ class ItemEmail extends ItemFacet
     
     /**
     * Sets the type
+    * The type of email address. Possible values are: unknown, work, personal, main, other.
     *
     * @param EmailType $val The type
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -146,7 +146,7 @@ class GroupPolicyDefinitionFile extends Entity
     
     /**
     * Gets the policyType
-    * Specifies the type of group policy.
+    * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
     *
     * @return GroupPolicyType The policyType
     */
@@ -165,7 +165,7 @@ class GroupPolicyDefinitionFile extends Entity
     
     /**
     * Sets the policyType
-    * Specifies the type of group policy.
+    * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
     *
     * @param GroupPolicyType $val The policyType
     *

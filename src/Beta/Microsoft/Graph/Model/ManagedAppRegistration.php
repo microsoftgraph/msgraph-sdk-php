@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -150,7 +150,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the deviceManufacturer
-    * The device manufacturer for the current app registration 
+    * The device manufacturer for the current app registration
     *
     * @return string The deviceManufacturer
     */
@@ -165,7 +165,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the deviceManufacturer
-    * The device manufacturer for the current app registration 
+    * The device manufacturer for the current app registration
     *
     * @param string $val The deviceManufacturer
     *
@@ -179,7 +179,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Gets the deviceModel
-    * The device model for the current app registration 
+    * The device model for the current app registration
     *
     * @return string The deviceModel
     */
@@ -194,7 +194,7 @@ class ManagedAppRegistration extends Entity
     
     /**
     * Sets the deviceModel
-    * The device model for the current app registration 
+    * The device model for the current app registration
     *
     * @param string $val The deviceModel
     *

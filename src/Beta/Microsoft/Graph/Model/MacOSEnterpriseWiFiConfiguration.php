@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
     *
     * @return WiFiAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
     *
     * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
@@ -59,7 +59,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Gets the eapFastConfiguration
-    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
+    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
     *
     * @return EapFastConfiguration The eapFastConfiguration
     */
@@ -78,7 +78,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the eapFastConfiguration
-    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
+    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
     *
     * @param EapFastConfiguration $val The eapFastConfiguration
     *
@@ -92,7 +92,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
     *
     * @return EapType The eapType
     */
@@ -111,7 +111,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
     *
     * @param EapType $val The eapType
     *
@@ -125,7 +125,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Gets the innerAuthenticationProtocolForEapTtls
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
     *
     * @return NonEapAuthenticationMethodForEapTtlsType The innerAuthenticationProtocolForEapTtls
     */
@@ -144,7 +144,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the innerAuthenticationProtocolForEapTtls
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
     *
     * @param NonEapAuthenticationMethodForEapTtlsType $val The innerAuthenticationProtocolForEapTtls
     *

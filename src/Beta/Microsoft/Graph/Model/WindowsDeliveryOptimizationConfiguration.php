@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -175,7 +175,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     
     /**
     * Gets the deliveryOptimizationMode
-    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios.
+    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @return WindowsDeliveryOptimizationMode The deliveryOptimizationMode
     */
@@ -194,7 +194,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deliveryOptimizationMode
-    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios.
+    * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
     * @param WindowsDeliveryOptimizationMode $val The deliveryOptimizationMode
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class TargetedManagedAppPolicyAssignment extends Entity
 {
     /**
     * Gets the target
-    * Identifier for deployment of a group or app
+    * Identifier for deployment to a group or app
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -45,7 +45,7 @@ class TargetedManagedAppPolicyAssignment extends Entity
     
     /**
     * Sets the target
-    * Identifier for deployment of a group or app
+    * Identifier for deployment to a group or app
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class SecurityAction extends Entity
 {
     /**
     * Gets the actionReason
+    * Reason for invoking this action.
     *
     * @return string The actionReason
     */
@@ -40,6 +41,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the actionReason
+    * Reason for invoking this action.
     *
     * @param string $val The actionReason
     *
@@ -53,6 +55,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the appId
+    * The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
     *
     * @return string The appId
     */
@@ -67,6 +70,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the appId
+    * The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
     *
     * @param string $val The appId
     *
@@ -80,6 +84,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the azureTenantId
+    * Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
     *
     * @return string The azureTenantId
     */
@@ -94,6 +99,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the azureTenantId
+    * Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
     *
     * @param string $val The azureTenantId
     *
@@ -134,6 +140,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the completedDateTime
+    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The completedDateTime
     */
@@ -152,6 +159,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the completedDateTime
+    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -165,6 +173,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the createdDateTime
+    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -183,6 +192,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the createdDateTime
+    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -196,6 +206,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the errorInfo
+    * Error info when the action fails.
     *
     * @return ResultInfo The errorInfo
     */
@@ -214,6 +225,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the errorInfo
+    * Error info when the action fails.
     *
     * @param ResultInfo $val The errorInfo
     *
@@ -227,6 +239,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the lastActionDateTime
+    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastActionDateTime
     */
@@ -245,6 +258,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the lastActionDateTime
+    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastActionDateTime
     *
@@ -258,6 +272,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the name
+    * Action name.
     *
     * @return string The name
     */
@@ -272,6 +287,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the name
+    * Action name.
     *
     * @param string $val The name
     *
@@ -286,6 +302,7 @@ class SecurityAction extends Entity
 
      /** 
      * Gets the parameters
+    * Collection of parameters (key-value pairs) necessary to invoke the action, e.g. URL or fileHash to block, etc.). Required
      *
      * @return array The parameters
      */
@@ -300,6 +317,7 @@ class SecurityAction extends Entity
     
     /** 
     * Sets the parameters
+    * Collection of parameters (key-value pairs) necessary to invoke the action, e.g. URL or fileHash to block, etc.). Required
     *
     * @param KeyValuePair $val The parameters
     *
@@ -314,6 +332,7 @@ class SecurityAction extends Entity
 
      /** 
      * Gets the states
+    * Collection of securityActionState to keep the history of an action.
      *
      * @return array The states
      */
@@ -328,6 +347,7 @@ class SecurityAction extends Entity
     
     /** 
     * Sets the states
+    * Collection of securityActionState to keep the history of an action.
     *
     * @param SecurityActionState $val The states
     *
@@ -341,6 +361,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the status
+    * Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
     *
     * @return OperationStatus The status
     */
@@ -359,6 +380,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the status
+    * Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
     *
     * @param OperationStatus $val The status
     *
@@ -372,6 +394,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the user
+    * The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
     *
     * @return string The user
     */
@@ -386,6 +409,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the user
+    * The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
     *
     * @param string $val The user
     *
@@ -399,6 +423,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the vendorInformation
+    * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (e.g. vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
     *
     * @return SecurityVendorInformation The vendorInformation
     */
@@ -417,6 +442,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the vendorInformation
+    * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (e.g. vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
     *
     * @param SecurityVendorInformation $val The vendorInformation
     *

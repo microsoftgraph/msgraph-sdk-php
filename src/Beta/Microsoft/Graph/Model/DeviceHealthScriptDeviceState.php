@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceHealthScriptDeviceState extends Entity
 {
     /**
     * Gets the detectionState
-    * Detection state from the lastest device health script execution
+    * Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @return RunState The detectionState
     */
@@ -45,7 +45,7 @@ class DeviceHealthScriptDeviceState extends Entity
     
     /**
     * Sets the detectionState
-    * Detection state from the lastest device health script execution
+    * Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @param RunState $val The detectionState
     *
@@ -303,7 +303,7 @@ class DeviceHealthScriptDeviceState extends Entity
     
     /**
     * Gets the remediationState
-    * Remediation state from the lastest device health script execution
+    * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
     *
     * @return RemediationState The remediationState
     */
@@ -322,7 +322,7 @@ class DeviceHealthScriptDeviceState extends Entity
     
     /**
     * Sets the remediationState
-    * Remediation state from the lastest device health script execution
+    * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
     *
     * @param RemediationState $val The remediationState
     *

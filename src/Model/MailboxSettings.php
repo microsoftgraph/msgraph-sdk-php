@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class MailboxSettings extends Entity
 {
     /**
     * Gets the archiveFolder
-    * Folder ID of an archive folder for the user.
+    * Folder ID of an archive folder for the user. Read only.
     *
     * @return string The archiveFolder
     */
@@ -40,7 +40,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
-    * Folder ID of an archive folder for the user.
+    * Folder ID of an archive folder for the user. Read only.
     *
     * @param string $val The value of the archiveFolder
     *
@@ -115,7 +115,7 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
     *
     * @return DelegateMeetingMessageDeliveryOptions The delegateMeetingMessageDeliveryOptions
     */
@@ -134,7 +134,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
     *
     * @param DelegateMeetingMessageDeliveryOptions $val The value to assign to the delegateMeetingMessageDeliveryOptions
     *

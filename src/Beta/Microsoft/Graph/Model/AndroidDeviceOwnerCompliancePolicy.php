@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
     * Gets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
     */
@@ -45,7 +45,7 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the advancedThreatProtectionRequiredSecurityLevel
-    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The advancedThreatProtectionRequiredSecurityLevel
     *
@@ -88,7 +88,7 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
     */
@@ -107,7 +107,7 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Mobile Threat Protection minimum risk level to report noncompliance.
+    * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
     * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
     *
@@ -527,7 +527,7 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the passwordRequiredType
-    * Type of characters in password
+    * Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
     *
     * @return AndroidDeviceOwnerRequiredPasswordType The passwordRequiredType
     */
@@ -546,7 +546,7 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the passwordRequiredType
-    * Type of characters in password
+    * Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
     *
     * @param AndroidDeviceOwnerRequiredPasswordType $val The passwordRequiredType
     *

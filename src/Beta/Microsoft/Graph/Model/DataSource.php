@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class DataSource extends Entity
 {
     /**
     * Gets the createdBy
+    * The user who created the dataSource.
     *
     * @return IdentitySet The createdBy
     */
@@ -44,6 +45,7 @@ class DataSource extends Entity
     
     /**
     * Sets the createdBy
+    * The user who created the dataSource.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -57,6 +59,7 @@ class DataSource extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time the dataSource was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -75,6 +78,7 @@ class DataSource extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time the dataSource was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class DataSource extends Entity
     
     /**
     * Gets the displayName
+    * The display name of the dataSource. This will be the name of the SharePoint site.
     *
     * @return string The displayName
     */
@@ -102,6 +107,7 @@ class DataSource extends Entity
     
     /**
     * Sets the displayName
+    * The display name of the dataSource. This will be the name of the SharePoint site.
     *
     * @param string $val The displayName
     *

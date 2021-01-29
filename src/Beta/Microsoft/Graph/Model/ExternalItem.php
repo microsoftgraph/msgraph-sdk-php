@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -27,6 +27,7 @@ class ExternalItem extends Entity
 
      /** 
      * Gets the acl
+    * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
      *
      * @return array The acl
      */
@@ -41,6 +42,7 @@ class ExternalItem extends Entity
     
     /** 
     * Sets the acl
+    * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
     *
     * @param Acl $val The acl
     *
@@ -54,6 +56,7 @@ class ExternalItem extends Entity
     
     /**
     * Gets the content
+    * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
     *
     * @return ExternalItemContent The content
     */
@@ -72,6 +75,7 @@ class ExternalItem extends Entity
     
     /**
     * Sets the content
+    * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
     *
     * @param ExternalItemContent $val The content
     *
@@ -85,6 +89,7 @@ class ExternalItem extends Entity
     
     /**
     * Gets the externalItemProperties
+    * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
     *
     * @return Properties The externalItemProperties
     */
@@ -103,6 +108,7 @@ class ExternalItem extends Entity
     
     /**
     * Sets the externalItemProperties
+    * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
     *
     * @param Properties $val The externalItemProperties
     *

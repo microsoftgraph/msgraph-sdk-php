@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -209,6 +209,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the hideAttendees
+    * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
     *
     * @return bool The hideAttendees
     */
@@ -223,6 +224,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the hideAttendees
+    * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
     *
     * @param bool $val The hideAttendees
     *
@@ -356,6 +358,7 @@ class Event extends OutlookItem
     
     /**
     * Gets the isDraft
+    * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
     *
     * @return bool The isDraft
     */
@@ -370,6 +373,7 @@ class Event extends OutlookItem
     
     /**
     * Sets the isDraft
+    * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
     *
     * @param bool $val The isDraft
     *
@@ -1125,7 +1129,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      *
      * @return array The attachments
      */
@@ -1140,7 +1144,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -1188,7 +1192,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Nullable.
      *
      * @return array The extensions
      */
@@ -1203,7 +1207,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -1218,7 +1222,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
+    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      *
      * @return array The instances
      */
@@ -1233,7 +1237,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
+    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
     *
     * @param Event $val The instances
     *

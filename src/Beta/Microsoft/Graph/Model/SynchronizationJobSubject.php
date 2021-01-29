@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class SynchronizationJobSubject extends Entity
 {
     /**
     * Gets the objectId
+    * The identifier of an object to which a synchronizationJob  is to be applied.
     *
     * @return string The objectId
     */
@@ -39,6 +40,7 @@ class SynchronizationJobSubject extends Entity
 
     /**
     * Sets the objectId
+    * The identifier of an object to which a synchronizationJob  is to be applied.
     *
     * @param string $val The value of the objectId
     *
@@ -51,6 +53,7 @@ class SynchronizationJobSubject extends Entity
     }
     /**
     * Gets the objectTypeName
+    * The type of the object to which a synchronizationJob  is to be applied.
     *
     * @return string The objectTypeName
     */
@@ -65,6 +68,7 @@ class SynchronizationJobSubject extends Entity
 
     /**
     * Sets the objectTypeName
+    * The type of the object to which a synchronizationJob  is to be applied.
     *
     * @param string $val The value of the objectTypeName
     *

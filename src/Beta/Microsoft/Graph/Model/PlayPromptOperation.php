@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PlayPromptOperation extends CommsOperation
 {
     /**
     * Gets the completionReason
+    * Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
     *
     * @return PlayPromptCompletionReason The completionReason
     */
@@ -44,6 +45,7 @@ class PlayPromptOperation extends CommsOperation
     
     /**
     * Sets the completionReason
+    * Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
     *
     * @param PlayPromptCompletionReason $val The completionReason
     *

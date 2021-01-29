@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -145,7 +145,7 @@ class Call extends Entity
     
     /**
     * Gets the chatInfo
-    * The chat information. Required information for joining a meeting.
+    * The chat information. Required information for meeting scenarios.
     *
     * @return ChatInfo The chatInfo
     */
@@ -164,7 +164,7 @@ class Call extends Entity
     
     /**
     * Sets the chatInfo
-    * The chat information. Required information for joining a meeting.
+    * The chat information. Required information for meeting scenarios.
     *
     * @param ChatInfo $val The chatInfo
     *
@@ -211,6 +211,7 @@ class Call extends Entity
     
     /**
     * Gets the incomingContext
+    * The context associated with an incoming call. Read-only. Server generated.
     *
     * @return IncomingContext The incomingContext
     */
@@ -229,6 +230,7 @@ class Call extends Entity
     
     /**
     * Sets the incomingContext
+    * The context associated with an incoming call. Read-only. Server generated.
     *
     * @param IncomingContext $val The incomingContext
     *
@@ -242,7 +244,7 @@ class Call extends Entity
     
     /**
     * Gets the mediaConfig
-    * The media configuration. Required.
+    * The media configuration. Required information for creating peer to peer calls or joining meetings.
     *
     * @return MediaConfig The mediaConfig
     */
@@ -261,7 +263,7 @@ class Call extends Entity
     
     /**
     * Sets the mediaConfig
-    * The media configuration. Required.
+    * The media configuration. Required information for creating peer to peer calls or joining meetings.
     *
     * @param MediaConfig $val The mediaConfig
     *
@@ -308,7 +310,7 @@ class Call extends Entity
     
     /**
     * Gets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @return MeetingInfo The meetingInfo
     */
@@ -327,7 +329,7 @@ class Call extends Entity
     
     /**
     * Sets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @param MeetingInfo $val The meetingInfo
     *
@@ -602,6 +604,7 @@ class Call extends Entity
     
     /**
     * Gets the transcription
+    * The transcription information for the call. Read-only.
     *
     * @return CallTranscriptionInfo The transcription
     */
@@ -620,6 +623,7 @@ class Call extends Entity
     
     /**
     * Sets the transcription
+    * The transcription information for the call. Read-only.
     *
     * @param CallTranscriptionInfo $val The transcription
     *

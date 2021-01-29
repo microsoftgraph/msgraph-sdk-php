@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Gets the builtInControls
-    * List of values of built-in controls required by the policy. Possible values: Block, Mfa, CompliantDevice, DomainJoinedDevice, ApprovedApplication, CompliantApplication
+    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange.
     *
     * @return ConditionalAccessGrantControl The builtInControls
     */
@@ -45,7 +45,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Sets the builtInControls
-    * List of values of built-in controls required by the policy. Possible values: Block, Mfa, CompliantDevice, DomainJoinedDevice, ApprovedApplication, CompliantApplication
+    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange.
     *
     * @param ConditionalAccessGrantControl $val The value to assign to the builtInControls
     *
@@ -58,7 +58,7 @@ class ConditionalAccessGrantControls extends Entity
     }
     /**
     * Gets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. Learn more about custom controls here: https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview
     *
     * @return string The customAuthenticationFactors
     */
@@ -73,7 +73,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Sets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. Learn more about custom controls here: https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview
     *
     * @param string $val The value of the customAuthenticationFactors
     *

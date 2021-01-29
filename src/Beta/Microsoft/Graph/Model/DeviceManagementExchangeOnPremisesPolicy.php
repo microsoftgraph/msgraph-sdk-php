@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -56,7 +56,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Gets the defaultAccessLevel
-    * Default access state in Exchange. This rule applies globally to the entire Exchange organization
+    * Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
     *
     * @return DeviceManagementExchangeAccessLevel The defaultAccessLevel
     */
@@ -75,7 +75,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Sets the defaultAccessLevel
-    * Default access state in Exchange. This rule applies globally to the entire Exchange organization
+    * Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
     *
     * @param DeviceManagementExchangeAccessLevel $val The defaultAccessLevel
     *

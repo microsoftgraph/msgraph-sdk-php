@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the accessibility
-    * Allow the app or process to control the Mac via the Accessibility subsystem.
+    * Allow the app or process to control the Mac via the Accessibility subsystem. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The accessibility
     */
@@ -45,7 +45,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the accessibility
-    * Allow the app or process to control the Mac via the Accessibility subsystem.
+    * Allow the app or process to control the Mac via the Accessibility subsystem. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the accessibility
     *
@@ -59,7 +59,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the addressBook
-    * Allow or block access to contact information managed by Contacts.
+    * Allow or block access to contact information managed by Contacts. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The addressBook
     */
@@ -78,7 +78,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the addressBook
-    * Allow or block access to contact information managed by Contacts.
+    * Allow or block access to contact information managed by Contacts. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the addressBook
     *
@@ -237,7 +237,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the calendar
-    * Allow or block access to event information managed by Calendar.
+    * Allow or block access to event information managed by Calendar. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The calendar
     */
@@ -256,7 +256,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the calendar
-    * Allow or block access to event information managed by Calendar.
+    * Allow or block access to event information managed by Calendar. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the calendar
     *
@@ -269,7 +269,7 @@ class MacOSPrivacyAccessControlItem extends Entity
     }
     /**
     * Gets the codeRequirement
-    * Enter the code requirement, which can be obtained with the command 'codesign ???display -r ???' in the Terminal app. Include everything after '=&amp;gt;'.
+    * Enter the code requirement, which can be obtained with the command 'codesign –display -r –' in the Terminal app. Include everything after '=&amp;gt;'.
     *
     * @return string The codeRequirement
     */
@@ -284,7 +284,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the codeRequirement
-    * Enter the code requirement, which can be obtained with the command 'codesign ???display -r ???' in the Terminal app. Include everything after '=&amp;gt;'.
+    * Enter the code requirement, which can be obtained with the command 'codesign –display -r –' in the Terminal app. Include everything after '=&amp;gt;'.
     *
     * @param string $val The value of the codeRequirement
     *
@@ -326,7 +326,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the fileProviderPresence
-    * Allow the app or process to access files managed by another app???s file provider extension. Requires macOS 10.15 or later. 
+    * Allow the app or process to access files managed by another app’s file provider extension. Requires macOS 10.15 or later. . Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The fileProviderPresence
     */
@@ -345,7 +345,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the fileProviderPresence
-    * Allow the app or process to access files managed by another app???s file provider extension. Requires macOS 10.15 or later. 
+    * Allow the app or process to access files managed by another app’s file provider extension. Requires macOS 10.15 or later. . Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the fileProviderPresence
     *
@@ -387,7 +387,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the identifierType
-    * A bundle ID is used to identify an app. A path is used to identify a process or executable.
+    * A bundle ID is used to identify an app. A path is used to identify a process or executable. Possible values are: bundleID, path.
     *
     * @return MacOSProcessIdentifierType The identifierType
     */
@@ -406,7 +406,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the identifierType
-    * A bundle ID is used to identify an app. A path is used to identify a process or executable.
+    * A bundle ID is used to identify an app. A path is used to identify a process or executable. Possible values are: bundleID, path.
     *
     * @param MacOSProcessIdentifierType $val The value to assign to the identifierType
     *
@@ -420,7 +420,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the mediaLibrary
-    * Allow or block access to music and the media library.
+    * Allow or block access to music and the media library. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The mediaLibrary
     */
@@ -439,7 +439,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the mediaLibrary
-    * Allow or block access to music and the media library.
+    * Allow or block access to music and the media library. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the mediaLibrary
     *
@@ -453,7 +453,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the photos
-    * Allow or block access to images managed by Photos.
+    * Allow or block access to images managed by Photos. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The photos
     */
@@ -472,7 +472,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the photos
-    * Allow or block access to images managed by Photos.
+    * Allow or block access to images managed by Photos. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the photos
     *
@@ -486,7 +486,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the postEvent
-    * Control access to CoreGraphics APIs, which are used to send CGEvents to the system event stream.
+    * Control access to CoreGraphics APIs, which are used to send CGEvents to the system event stream. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The postEvent
     */
@@ -505,7 +505,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the postEvent
-    * Control access to CoreGraphics APIs, which are used to send CGEvents to the system event stream.
+    * Control access to CoreGraphics APIs, which are used to send CGEvents to the system event stream. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the postEvent
     *
@@ -519,7 +519,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the reminders
-    * Allow or block access to information managed by Reminders.
+    * Allow or block access to information managed by Reminders. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The reminders
     */
@@ -538,7 +538,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the reminders
-    * Allow or block access to information managed by Reminders.
+    * Allow or block access to information managed by Reminders. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the reminders
     *
@@ -552,7 +552,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the speechRecognition
-    * Allow or block access to system speech recognition facility.
+    * Allow or block access to system speech recognition facility. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The speechRecognition
     */
@@ -571,7 +571,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the speechRecognition
-    * Allow or block access to system speech recognition facility.
+    * Allow or block access to system speech recognition facility. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the speechRecognition
     *
@@ -613,7 +613,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the systemPolicyAllFiles
-    * Control access to all protected files on a device. Files might be in locations such as emails, messages, apps, and administrative settings. Apply this setting with caution.
+    * Control access to all protected files on a device. Files might be in locations such as emails, messages, apps, and administrative settings. Apply this setting with caution. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The systemPolicyAllFiles
     */
@@ -632,7 +632,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the systemPolicyAllFiles
-    * Control access to all protected files on a device. Files might be in locations such as emails, messages, apps, and administrative settings. Apply this setting with caution.
+    * Control access to all protected files on a device. Files might be in locations such as emails, messages, apps, and administrative settings. Apply this setting with caution. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the systemPolicyAllFiles
     *
@@ -646,7 +646,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the systemPolicyDesktopFolder
-    * Allow or block access to Desktop folder.
+    * Allow or block access to Desktop folder. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The systemPolicyDesktopFolder
     */
@@ -665,7 +665,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the systemPolicyDesktopFolder
-    * Allow or block access to Desktop folder.
+    * Allow or block access to Desktop folder. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the systemPolicyDesktopFolder
     *
@@ -679,7 +679,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the systemPolicyDocumentsFolder
-    * Allow or block access to Documents folder.
+    * Allow or block access to Documents folder. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The systemPolicyDocumentsFolder
     */
@@ -698,7 +698,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the systemPolicyDocumentsFolder
-    * Allow or block access to Documents folder.
+    * Allow or block access to Documents folder. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the systemPolicyDocumentsFolder
     *
@@ -712,7 +712,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the systemPolicyDownloadsFolder
-    * Allow or block access to Downloads folder.
+    * Allow or block access to Downloads folder. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The systemPolicyDownloadsFolder
     */
@@ -731,7 +731,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the systemPolicyDownloadsFolder
-    * Allow or block access to Downloads folder.
+    * Allow or block access to Downloads folder. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the systemPolicyDownloadsFolder
     *
@@ -745,7 +745,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the systemPolicyNetworkVolumes
-    * Allow or block access to network volumes. Requires macOS 10.15 or later.
+    * Allow or block access to network volumes. Requires macOS 10.15 or later. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The systemPolicyNetworkVolumes
     */
@@ -764,7 +764,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the systemPolicyNetworkVolumes
-    * Allow or block access to network volumes. Requires macOS 10.15 or later.
+    * Allow or block access to network volumes. Requires macOS 10.15 or later. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the systemPolicyNetworkVolumes
     *
@@ -778,7 +778,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the systemPolicyRemovableVolumes
-    * Control access to removable  volumes on the device, such as an external hard drive. Requires macOS 10.15 or later.
+    * Control access to removable  volumes on the device, such as an external hard drive. Requires macOS 10.15 or later. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The systemPolicyRemovableVolumes
     */
@@ -797,7 +797,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the systemPolicyRemovableVolumes
-    * Control access to removable  volumes on the device, such as an external hard drive. Requires macOS 10.15 or later.
+    * Control access to removable  volumes on the device, such as an external hard drive. Requires macOS 10.15 or later. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the systemPolicyRemovableVolumes
     *
@@ -811,7 +811,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Gets the systemPolicySystemAdminFiles
-    * Allow app or process to access files used in system administration.
+    * Allow app or process to access files used in system administration. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The systemPolicySystemAdminFiles
     */
@@ -830,7 +830,7 @@ class MacOSPrivacyAccessControlItem extends Entity
 
     /**
     * Sets the systemPolicySystemAdminFiles
-    * Allow app or process to access files used in system administration.
+    * Allow app or process to access files used in system administration. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The value to assign to the systemPolicySystemAdminFiles
     *

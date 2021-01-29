@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class DeviceManagementDomainJoinConnector extends Entity
     
     /**
     * Gets the state
-    * The connector state.
+    * The connector state. Possible values are: active, error, inactive.
     *
     * @return DeviceManagementDomainJoinConnectorState The state
     */
@@ -107,7 +107,7 @@ class DeviceManagementDomainJoinConnector extends Entity
     
     /**
     * Sets the state
-    * The connector state.
+    * The connector state. Possible values are: active, error, inactive.
     *
     * @param DeviceManagementDomainJoinConnectorState $val The state
     *

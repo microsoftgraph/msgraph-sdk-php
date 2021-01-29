@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PersonAward extends ItemFacet
 {
     /**
     * Gets the description
+    * Descpription of the award or honor.
     *
     * @return string The description
     */
@@ -40,6 +41,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Sets the description
+    * Descpription of the award or honor.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Gets the displayName
+    * Name of the award or honor.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Sets the displayName
+    * Name of the award or honor.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Gets the issuedDate
+    * The date that the award or honor was granted.
     *
     * @return \DateTime The issuedDate
     */
@@ -98,6 +103,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Sets the issuedDate
+    * The date that the award or honor was granted.
     *
     * @param \DateTime $val The issuedDate
     *
@@ -111,6 +117,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Gets the issuingAuthority
+    * Authority which granted the award or honor.
     *
     * @return string The issuingAuthority
     */
@@ -125,6 +132,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Sets the issuingAuthority
+    * Authority which granted the award or honor.
     *
     * @param string $val The issuingAuthority
     *
@@ -138,6 +146,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Gets the thumbnailUrl
+    * URL referencing a thumbnail of the award or honor.
     *
     * @return string The thumbnailUrl
     */
@@ -152,6 +161,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Sets the thumbnailUrl
+    * URL referencing a thumbnail of the award or honor.
     *
     * @param string $val The thumbnailUrl
     *
@@ -165,6 +175,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Gets the webUrl
+    * URL referencing the award or honor.
     *
     * @return string The webUrl
     */
@@ -179,6 +190,7 @@ class PersonAward extends ItemFacet
     
     /**
     * Sets the webUrl
+    * URL referencing the award or honor.
     *
     * @param string $val The webUrl
     *

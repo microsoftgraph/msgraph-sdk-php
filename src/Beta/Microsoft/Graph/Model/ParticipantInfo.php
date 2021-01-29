@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -147,6 +147,7 @@ class ParticipantInfo extends Entity
     }
     /**
     * Gets the platformId
+    * The client platform ID of the participant. Read-only.
     *
     * @return string The platformId
     */
@@ -161,6 +162,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Sets the platformId
+    * The client platform ID of the participant. Read-only.
     *
     * @param string $val The value of the platformId
     *
@@ -173,7 +175,7 @@ class ParticipantInfo extends Entity
     }
     /**
     * Gets the region
-    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
     *
     * @return string The region
     */
@@ -188,7 +190,7 @@ class ParticipantInfo extends Entity
 
     /**
     * Sets the region
-    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+    * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
     *
     * @param string $val The value of the region
     *

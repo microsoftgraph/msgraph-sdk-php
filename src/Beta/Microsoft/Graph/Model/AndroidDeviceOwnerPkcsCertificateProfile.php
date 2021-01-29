@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
 {
     /**
     * Gets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @return CertificateStore The certificateStore
     */
@@ -45,7 +45,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the certificateStore
-    * Target store certificate
+    * Target store certificate. Possible values are: user, machine.
     *
     * @param CertificateStore $val The certificateStore
     *
@@ -146,7 +146,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Gets the certificationAuthorityType
-    * Certification authority type
+    * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
     *
     * @return DeviceManagementCertificationAuthority The certificationAuthorityType
     */
@@ -165,7 +165,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the certificationAuthorityType
-    * Certification authority type
+    * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
     *
     * @param DeviceManagementCertificationAuthority $val The certificationAuthorityType
     *

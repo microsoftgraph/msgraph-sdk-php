@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class CloudPcOnPremisesConnection extends Entity
 {
     /**
     * Gets the adDomainName
+    * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
     *
     * @return string The adDomainName
     */
@@ -40,6 +41,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the adDomainName
+    * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
     *
     * @param string $val The adDomainName
     *
@@ -53,6 +55,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the adDomainPassword
+    * The password associated with adDomainUsername.
     *
     * @return string The adDomainPassword
     */
@@ -67,6 +70,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the adDomainPassword
+    * The password associated with adDomainUsername.
     *
     * @param string $val The adDomainPassword
     *
@@ -80,6 +84,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the adDomainUsername
+    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: contoso@microsoft.com.
     *
     * @return string The adDomainUsername
     */
@@ -94,6 +99,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the adDomainUsername
+    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: contoso@microsoft.com.
     *
     * @param string $val The adDomainUsername
     *
@@ -107,6 +113,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the displayName
+    * The display name for the on-premises connection.
     *
     * @return string The displayName
     */
@@ -121,6 +128,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the displayName
+    * The display name for the on-premises connection.
     *
     * @param string $val The displayName
     *
@@ -134,6 +142,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the healthCheckStatus
+    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
     *
     * @return CloudPcOnPremisesConnectionStatus The healthCheckStatus
     */
@@ -152,6 +161,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the healthCheckStatus
+    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
     *
     * @param CloudPcOnPremisesConnectionStatus $val The healthCheckStatus
     *
@@ -165,6 +175,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the healthCheckStatusDetails
+    * The details of the connection's health checks and the corresponding results. Returned only on $select. See an example of getting the healthCheckStatusDetails property.Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatusDetails The healthCheckStatusDetails
     */
@@ -183,6 +194,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the healthCheckStatusDetails
+    * The details of the connection's health checks and the corresponding results. Returned only on $select. See an example of getting the healthCheckStatusDetails property.Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatusDetails $val The healthCheckStatusDetails
     *
@@ -196,6 +208,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the inUse
+    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Read-only.
     *
     * @return bool The inUse
     */
@@ -210,6 +223,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the inUse
+    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Read-only.
     *
     * @param bool $val The inUse
     *
@@ -223,6 +237,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the organizationalUnit
+    * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
     *
     * @return string The organizationalUnit
     */
@@ -237,6 +252,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the organizationalUnit
+    * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
     *
     * @param string $val The organizationalUnit
     *
@@ -250,6 +266,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the resourceGroupId
+    * The ID of the target resource group. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'.
     *
     * @return string The resourceGroupId
     */
@@ -264,6 +281,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the resourceGroupId
+    * The ID of the target resource group. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'.
     *
     * @param string $val The resourceGroupId
     *
@@ -277,6 +295,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the subnetId
+    * The ID of the target subnet. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'.
     *
     * @return string The subnetId
     */
@@ -291,6 +310,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the subnetId
+    * The ID of the target subnet. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'.
     *
     * @param string $val The subnetId
     *
@@ -304,6 +324,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the subscriptionId
+    * The ID of the target Azure subscription that’s associated with your tenant.
     *
     * @return string The subscriptionId
     */
@@ -318,6 +339,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the subscriptionId
+    * The ID of the target Azure subscription that’s associated with your tenant.
     *
     * @param string $val The subscriptionId
     *
@@ -331,6 +353,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the subscriptionName
+    * The name of the target Azure subscription. Read-only.
     *
     * @return string The subscriptionName
     */
@@ -345,6 +368,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the subscriptionName
+    * The name of the target Azure subscription. Read-only.
     *
     * @param string $val The subscriptionName
     *
@@ -358,6 +382,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the virtualNetworkId
+    * The ID of the target virtual network. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'.
     *
     * @return string The virtualNetworkId
     */
@@ -372,6 +397,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the virtualNetworkId
+    * The ID of the target virtual network. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'.
     *
     * @param string $val The virtualNetworkId
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class UserAnalytics extends Entity
 {
     /**
     * Gets the settings
+    * The current settings for a user to use the analytics API.
     *
     * @return Settings The settings
     */
@@ -44,6 +45,7 @@ class UserAnalytics extends Entity
     
     /**
     * Sets the settings
+    * The current settings for a user to use the analytics API.
     *
     * @param Settings $val The settings
     *
@@ -58,6 +60,7 @@ class UserAnalytics extends Entity
 
      /** 
      * Gets the activityStatistics
+    * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
      *
      * @return array The activityStatistics
      */
@@ -72,6 +75,7 @@ class UserAnalytics extends Entity
     
     /** 
     * Sets the activityStatistics
+    * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
     *
     * @param ActivityStatistics $val The activityStatistics
     *

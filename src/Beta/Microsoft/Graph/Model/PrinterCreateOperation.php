@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PrinterCreateOperation extends PrintOperation
 {
     /**
     * Gets the certificate
+    * The signed certificate created during the registration process. Read-only.
     *
     * @return string The certificate
     */
@@ -40,6 +41,7 @@ class PrinterCreateOperation extends PrintOperation
     
     /**
     * Sets the certificate
+    * The signed certificate created during the registration process. Read-only.
     *
     * @param string $val The certificate
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class MobileAppDependency extends MobileAppRelationship
 {
     /**
     * Gets the dependencyType
-    * The type of dependency relationship between the parent and child apps.
+    * The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
     *
     * @return MobileAppDependencyType The dependencyType
     */
@@ -45,7 +45,7 @@ class MobileAppDependency extends MobileAppRelationship
     
     /**
     * Sets the dependencyType
-    * The type of dependency relationship between the parent and child apps.
+    * The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
     *
     * @param MobileAppDependencyType $val The dependencyType
     *

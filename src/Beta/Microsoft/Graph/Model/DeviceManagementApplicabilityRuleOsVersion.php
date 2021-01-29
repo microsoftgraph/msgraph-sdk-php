@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -110,7 +110,7 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
 
     /**
     * Gets the ruleType
-    * Applicability Rule type.
+    * Applicability Rule type. Possible values are: include, exclude.
     *
     * @return DeviceManagementApplicabilityRuleType The ruleType
     */
@@ -129,7 +129,7 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
 
     /**
     * Sets the ruleType
-    * Applicability Rule type.
+    * Applicability Rule type. Possible values are: include, exclude.
     *
     * @param DeviceManagementApplicabilityRuleType $val The value to assign to the ruleType
     *

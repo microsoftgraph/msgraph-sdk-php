@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class MicrosoftTunnelServer extends Entity
     
     /**
     * Gets the tunnelServerHealthStatus
-    * The MicrosoftTunnelServer's health status
+    * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
     *
     * @return MicrosoftTunnelServerHealthStatus The tunnelServerHealthStatus
     */
@@ -107,7 +107,7 @@ class MicrosoftTunnelServer extends Entity
     
     /**
     * Sets the tunnelServerHealthStatus
-    * The MicrosoftTunnelServer's health status
+    * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
     *
     * @param MicrosoftTunnelServerHealthStatus $val The tunnelServerHealthStatus
     *

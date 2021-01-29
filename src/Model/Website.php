@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -82,7 +82,7 @@ class Website extends Entity
 
     /**
     * Gets the type
-    * The possible values are: other, home, work, blog, profile.
+    * Possible values are: other, home, work, blog, profile.
     *
     * @return WebsiteType The type
     */
@@ -101,7 +101,7 @@ class Website extends Entity
 
     /**
     * Sets the type
-    * The possible values are: other, home, work, blog, profile.
+    * Possible values are: other, home, work, blog, profile.
     *
     * @param WebsiteType $val The value to assign to the type
     *

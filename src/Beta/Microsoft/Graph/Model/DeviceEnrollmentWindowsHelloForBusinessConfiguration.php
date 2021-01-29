@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
 {
     /**
     * Gets the enhancedBiometricsState
-    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
+    * Controls the ability to use the anti-spoofing features for facial recognition on devices which support it. If set to disabled, anti-spoofing features are not allowed. If set to Not Configured, the user can choose whether they want to use anti-spoofing. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The enhancedBiometricsState
     */
@@ -45,7 +45,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the enhancedBiometricsState
-    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
+    * Controls the ability to use the anti-spoofing features for facial recognition on devices which support it. If set to disabled, anti-spoofing features are not allowed. If set to Not Configured, the user can choose whether they want to use anti-spoofing. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The enhancedBiometricsState
     *
@@ -59,7 +59,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinExpirationInDays
-    * Not yet documented
+    * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
     *
     * @return int The pinExpirationInDays
     */
@@ -74,7 +74,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinExpirationInDays
-    * Not yet documented
+    * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
     *
     * @param int $val The pinExpirationInDays
     *
@@ -88,7 +88,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinLowercaseCharactersUsage
-    * Not yet documented. Possible values are: allowed, required, disallowed.
+    * Controls the ability to use lowercase letters in the Windows Hello for Business PIN.  Allowed permits the use of lowercase letter(s), whereas Required ensures they are present. If set to Not Allowed, lowercase letters will not be permitted. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinLowercaseCharactersUsage
     */
@@ -107,7 +107,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinLowercaseCharactersUsage
-    * Not yet documented. Possible values are: allowed, required, disallowed.
+    * Controls the ability to use lowercase letters in the Windows Hello for Business PIN.  Allowed permits the use of lowercase letter(s), whereas Required ensures they are present. If set to Not Allowed, lowercase letters will not be permitted. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinLowercaseCharactersUsage
     *
@@ -121,7 +121,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinMaximumLength
-    * Not yet documented
+    * Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
     *
     * @return int The pinMaximumLength
     */
@@ -136,7 +136,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinMaximumLength
-    * Not yet documented
+    * Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
     *
     * @param int $val The pinMaximumLength
     *
@@ -150,7 +150,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinMinimumLength
-    * Not yet documented
+    * Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
     *
     * @return int The pinMinimumLength
     */
@@ -165,7 +165,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinMinimumLength
-    * Not yet documented
+    * Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
     *
     * @param int $val The pinMinimumLength
     *
@@ -179,7 +179,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinPreviousBlockCount
-    * Not yet documented
+    * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
     *
     * @return int The pinPreviousBlockCount
     */
@@ -194,7 +194,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinPreviousBlockCount
-    * Not yet documented
+    * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
     *
     * @param int $val The pinPreviousBlockCount
     *
@@ -208,7 +208,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinSpecialCharactersUsage
-    * Not yet documented. Possible values are: allowed, required, disallowed.
+    * Controls the ability to use special characters in the Windows Hello for Business PIN.  Allowed permits the use of special character(s), whereas Required ensures they are present. If set to Not Allowed, special character(s) will not be permitted. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinSpecialCharactersUsage
     */
@@ -227,7 +227,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinSpecialCharactersUsage
-    * Not yet documented. Possible values are: allowed, required, disallowed.
+    * Controls the ability to use special characters in the Windows Hello for Business PIN.  Allowed permits the use of special character(s), whereas Required ensures they are present. If set to Not Allowed, special character(s) will not be permitted. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinSpecialCharactersUsage
     *
@@ -241,7 +241,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinUppercaseCharactersUsage
-    * Not yet documented. Possible values are: allowed, required, disallowed.
+    * Controls the ability to use uppercase letters in the Windows Hello for Business PIN.  Allowed permits the use of uppercase letter(s), whereas Required ensures they are present. If set to Not Allowed, uppercase letters will not be permitted. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinUppercaseCharactersUsage
     */
@@ -260,7 +260,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinUppercaseCharactersUsage
-    * Not yet documented. Possible values are: allowed, required, disallowed.
+    * Controls the ability to use uppercase letters in the Windows Hello for Business PIN.  Allowed permits the use of uppercase letter(s), whereas Required ensures they are present. If set to Not Allowed, uppercase letters will not be permitted. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinUppercaseCharactersUsage
     *
@@ -274,7 +274,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the remotePassportEnabled
-    * Not yet documented
+    * Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
     *
     * @return bool The remotePassportEnabled
     */
@@ -289,7 +289,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the remotePassportEnabled
-    * Not yet documented
+    * Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
     *
     * @param bool $val The remotePassportEnabled
     *
@@ -303,7 +303,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the securityDeviceRequired
-    * Not yet documented
+    * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
     *
     * @return bool The securityDeviceRequired
     */
@@ -318,7 +318,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the securityDeviceRequired
-    * Not yet documented
+    * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
     *
     * @param bool $val The securityDeviceRequired
     *
@@ -332,7 +332,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the securityKeyForSignIn
-    * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet.
+    * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The securityKeyForSignIn
     */
@@ -351,7 +351,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the securityKeyForSignIn
-    * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet.
+    * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The securityKeyForSignIn
     *
@@ -365,7 +365,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the state
-    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
+    * Controls whether to allow the device to be configured for Windows Hello for Business. If set to disabled, the user cannot provision Windows Hello for Business except on Azure Active Directory joined mobile phones if otherwise required. If set to Not Configured, Intune will not override client defaults. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The state
     */
@@ -384,7 +384,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the state
-    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
+    * Controls whether to allow the device to be configured for Windows Hello for Business. If set to disabled, the user cannot provision Windows Hello for Business except on Azure Active Directory joined mobile phones if otherwise required. If set to Not Configured, Intune will not override client defaults. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The state
     *
@@ -398,7 +398,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the unlockWithBiometricsEnabled
-    * Not yet documented
+    * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
     *
     * @return bool The unlockWithBiometricsEnabled
     */
@@ -413,7 +413,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the unlockWithBiometricsEnabled
-    * Not yet documented
+    * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
     *
     * @param bool $val The unlockWithBiometricsEnabled
     *

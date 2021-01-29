@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -57,6 +57,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Gets the approvalState
+    * Possible values are: pending, approved, denied, aborted, canceled.
     *
     * @return ApprovalState The approvalState
     */
@@ -75,6 +76,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Sets the approvalState
+    * Possible values are: pending, approved, denied, aborted, canceled.
     *
     * @param ApprovalState $val The approvalState
     *
@@ -142,6 +144,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Gets the endDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The endDateTime
     */
@@ -160,6 +163,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Sets the endDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The endDateTime
     *
@@ -227,6 +231,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Gets the startDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The startDateTime
     */
@@ -245,6 +250,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Sets the startDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The startDateTime
     *
@@ -285,6 +291,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Gets the request
+    * Read-only. The role assignment request for this approval object
     *
     * @return PrivilegedRoleAssignmentRequest The request
     */
@@ -303,6 +310,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Sets the request
+    * Read-only. The role assignment request for this approval object
     *
     * @param PrivilegedRoleAssignmentRequest $val The request
     *
@@ -316,6 +324,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Gets the roleInfo
+    * Read-only. Nullable.
     *
     * @return PrivilegedRole The roleInfo
     */
@@ -334,6 +343,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Sets the roleInfo
+    * Read-only. Nullable.
     *
     * @param PrivilegedRole $val The roleInfo
     *

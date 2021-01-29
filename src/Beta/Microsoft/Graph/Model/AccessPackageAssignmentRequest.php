@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -27,6 +27,7 @@ class AccessPackageAssignmentRequest extends Entity
 
      /** 
      * Gets the answers
+    * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
      *
      * @return array The answers
      */
@@ -41,6 +42,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /** 
     * Sets the answers
+    * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
     *
     * @param AccessPackageAnswer $val The answers
     *
@@ -54,6 +56,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the completedDate
+    * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The completedDate
     */
@@ -72,6 +75,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the completedDate
+    * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The completedDate
     *
@@ -85,6 +89,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -103,6 +108,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the createdDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -147,6 +153,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the isValidationOnly
+    * True if the request is not to be processed for assignment.
     *
     * @return bool The isValidationOnly
     */
@@ -161,6 +168,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the isValidationOnly
+    * True if the request is not to be processed for assignment.
     *
     * @param bool $val The isValidationOnly
     *
@@ -174,6 +182,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the justification
+    * The requestor's supplied justification.
     *
     * @return string The justification
     */
@@ -188,6 +197,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the justification
+    * The requestor's supplied justification.
     *
     * @param string $val The justification
     *
@@ -201,6 +211,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the requestState
+    * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
     *
     * @return string The requestState
     */
@@ -215,6 +226,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the requestState
+    * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
     *
     * @param string $val The requestState
     *
@@ -228,6 +240,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the requestStatus
+    * More information on the request processing status. Read-only.
     *
     * @return string The requestStatus
     */
@@ -242,6 +255,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the requestStatus
+    * More information on the request processing status. Read-only.
     *
     * @param string $val The requestStatus
     *
@@ -255,6 +269,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the requestType
+    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
     *
     * @return string The requestType
     */
@@ -269,6 +284,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the requestType
+    * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
     *
     * @param string $val The requestType
     *
@@ -282,6 +298,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the schedule
+    * The range of dates that access is to be assigned to the requestor. Read-only.
     *
     * @return RequestSchedule The schedule
     */
@@ -300,6 +317,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the schedule
+    * The range of dates that access is to be assigned to the requestor. Read-only.
     *
     * @param RequestSchedule $val The schedule
     *
@@ -375,6 +393,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the requestor
+    * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.
     *
     * @return AccessPackageSubject The requestor
     */
@@ -393,6 +412,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the requestor
+    * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.
     *
     * @param AccessPackageSubject $val The requestor
     *

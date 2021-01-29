@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -237,7 +237,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     
     /**
     * Gets the status
-    * Status of the cached report
+    * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @return DeviceManagementReportStatus The status
     */
@@ -256,7 +256,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     
     /**
     * Sets the status
-    * Status of the cached report
+    * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
     * @param DeviceManagementReportStatus $val The status
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class AuthenticationFlowsPolicy extends Entity
 {
     /**
     * Gets the description
+    * Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
     *
     * @return string The description
     */
@@ -40,6 +41,7 @@ class AuthenticationFlowsPolicy extends Entity
     
     /**
     * Sets the description
+    * Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class AuthenticationFlowsPolicy extends Entity
     
     /**
     * Gets the displayName
+    * Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class AuthenticationFlowsPolicy extends Entity
     
     /**
     * Sets the displayName
+    * Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class AuthenticationFlowsPolicy extends Entity
     
     /**
     * Gets the selfServiceSignUp
+    * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
     *
     * @return SelfServiceSignUpAuthenticationFlowConfiguration The selfServiceSignUp
     */
@@ -98,6 +103,7 @@ class AuthenticationFlowsPolicy extends Entity
     
     /**
     * Sets the selfServiceSignUp
+    * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
     *
     * @param SelfServiceSignUpAuthenticationFlowConfiguration $val The selfServiceSignUp
     *

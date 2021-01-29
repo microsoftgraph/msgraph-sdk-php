@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient
 {
     /**
     * Gets the userId
+    * Azure AD user identifier. Use the List users method to get this ID.
     *
     * @return string The userId
     */
@@ -39,6 +40,7 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient
 
     /**
     * Sets the userId
+    * Azure AD user identifier. Use the List users method to get this ID.
     *
     * @param string $val The value of the userId
     *

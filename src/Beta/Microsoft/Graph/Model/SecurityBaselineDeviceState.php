@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -117,7 +117,7 @@ class SecurityBaselineDeviceState extends Entity
     
     /**
     * Gets the state
-    * Security baseline compliance state
+    * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
     *
     * @return SecurityBaselineComplianceState The state
     */
@@ -136,7 +136,7 @@ class SecurityBaselineDeviceState extends Entity
     
     /**
     * Sets the state
-    * Security baseline compliance state
+    * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
     *
     * @param SecurityBaselineComplianceState $val The state
     *

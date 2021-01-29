@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -647,7 +647,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the minimumAutoInstallClassification
-    * The minimum update classification to install automatically.
+    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
     *
     * @return UpdateClassification The minimumAutoInstallClassification
     */
@@ -666,7 +666,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the minimumAutoInstallClassification
-    * The minimum update classification to install automatically.
+    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
     *
     * @param UpdateClassification $val The minimumAutoInstallClassification
     *
@@ -945,7 +945,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updatesMinimumAutoInstallClassification
-    * The minimum update classification to install automatically.
+    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
     *
     * @return UpdateClassification The updatesMinimumAutoInstallClassification
     */
@@ -964,7 +964,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updatesMinimumAutoInstallClassification
-    * The minimum update classification to install automatically.
+    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
     *
     * @param UpdateClassification $val The updatesMinimumAutoInstallClassification
     *

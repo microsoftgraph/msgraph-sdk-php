@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payloadFileName
-    * Payload file name (*.xml).
+    * Payload file name (.xml).
     *
     * @return string The payloadFileName
     */
@@ -74,7 +74,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadFileName
-    * Payload file name (*.xml).
+    * Payload file name (.xml).
     *
     * @param string $val The payloadFileName
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -63,7 +63,7 @@ class Win32LobAppRegistryRequirement extends Win32LobAppRequirement
 
     /**
     * Gets the detectionType
-    * The registry data detection type
+    * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
     *
     * @return Win32LobAppRegistryDetectionType The detectionType
     */
@@ -82,7 +82,7 @@ class Win32LobAppRegistryRequirement extends Win32LobAppRequirement
 
     /**
     * Sets the detectionType
-    * The registry data detection type
+    * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
     *
     * @param Win32LobAppRegistryDetectionType $val The value to assign to the detectionType
     *

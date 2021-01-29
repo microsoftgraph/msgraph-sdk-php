@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -53,6 +53,7 @@ class PreAuthorizedApplication extends Entity
     }
     /**
     * Gets the permissionIds
+    * The unique identifier for the oauth2PermissionScopes the application requires.
     *
     * @return string The permissionIds
     */
@@ -67,6 +68,7 @@ class PreAuthorizedApplication extends Entity
 
     /**
     * Sets the permissionIds
+    * The unique identifier for the oauth2PermissionScopes the application requires.
     *
     * @param string $val The value of the permissionIds
     *

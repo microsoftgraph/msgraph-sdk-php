@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class FeatureRolloutPolicy extends Entity
 {
     /**
     * Gets the description
+    * A description for this feature rollout policy.
     *
     * @return string The description
     */
@@ -40,6 +41,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Sets the description
+    * A description for this feature rollout policy.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Gets the displayName
+    * The display name for this  feature rollout policy.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Sets the displayName
+    * The display name for this  feature rollout policy.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Gets the feature
+    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
     *
     * @return StagedFeatureName The feature
     */
@@ -98,6 +103,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Sets the feature
+    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
     *
     * @param StagedFeatureName $val The feature
     *
@@ -111,6 +117,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Gets the isAppliedToOrganization
+    * Indicates whether this feature rollout policy should be applied to the entire organization.
     *
     * @return bool The isAppliedToOrganization
     */
@@ -125,6 +132,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Sets the isAppliedToOrganization
+    * Indicates whether this feature rollout policy should be applied to the entire organization.
     *
     * @param bool $val The isAppliedToOrganization
     *
@@ -138,6 +146,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Gets the isEnabled
+    * Indicates whether the feature rollout is enabled.
     *
     * @return bool The isEnabled
     */
@@ -152,6 +161,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Sets the isEnabled
+    * Indicates whether the feature rollout is enabled.
     *
     * @param bool $val The isEnabled
     *
@@ -166,6 +176,7 @@ class FeatureRolloutPolicy extends Entity
 
      /** 
      * Gets the appliesTo
+    * Nullable. Specifies a list of directoryObjects that feature is enabled for.
      *
      * @return array The appliesTo
      */
@@ -180,6 +191,7 @@ class FeatureRolloutPolicy extends Entity
     
     /** 
     * Sets the appliesTo
+    * Nullable. Specifies a list of directoryObjects that feature is enabled for.
     *
     * @param DirectoryObject $val The appliesTo
     *

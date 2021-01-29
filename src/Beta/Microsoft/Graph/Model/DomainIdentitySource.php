@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -34,6 +34,7 @@ class DomainIdentitySource extends IdentitySource
 
     /**
     * Gets the displayName
+    * The name of the identity source, typically also the domain name. Read only.
     *
     * @return string The displayName
     */
@@ -48,6 +49,7 @@ class DomainIdentitySource extends IdentitySource
 
     /**
     * Sets the displayName
+    * The name of the identity source, typically also the domain name. Read only.
     *
     * @param string $val The value of the displayName
     *
@@ -60,6 +62,7 @@ class DomainIdentitySource extends IdentitySource
     }
     /**
     * Gets the domainName
+    * The domain name. Read only.
     *
     * @return string The domainName
     */
@@ -74,6 +77,7 @@ class DomainIdentitySource extends IdentitySource
 
     /**
     * Sets the domainName
+    * The domain name. Read only.
     *
     * @param string $val The value of the domainName
     *

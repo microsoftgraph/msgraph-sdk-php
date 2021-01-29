@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -20,7 +20,7 @@ use Microsoft\Graph\Core\Enum;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -35,8 +35,5 @@ class CloudPcStatus extends Enum
     const UPGRADING = "upgrading";
     const IN_GRACE_PERIOD = "inGracePeriod";
     const DEPROVISIONING = "deprovisioning";
-    const UPGRADE_FAILED = "upgradeFailed";
-    const PROVISION_FAILED = "provisionFailed";
-    const DEPROVISION_FAILED = "deprovisionFailed";
-    const REPROVISION_FAILED = "reprovisionFailed";
+    const FAILED = "failed";
 }

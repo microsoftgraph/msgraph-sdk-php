@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class Office365ActivationsUserCounts extends Entity
 {
     /**
     * Gets the activated
+    * The number of users who have activated the product.
     *
     * @return int The activated
     */
@@ -40,6 +41,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Sets the activated
+    * The number of users who have activated the product.
     *
     * @param int $val The activated
     *
@@ -53,6 +55,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Gets the assigned
+    * The number of users have been assigned for the product license.
     *
     * @return int The assigned
     */
@@ -67,6 +70,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Sets the assigned
+    * The number of users have been assigned for the product license.
     *
     * @param int $val The assigned
     *
@@ -80,6 +84,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Gets the productType
+    * The product type such as 'Microsoft 365 ProPlus' or 'Project Client'.
     *
     * @return string The productType
     */
@@ -94,6 +99,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Sets the productType
+    * The product type such as 'Microsoft 365 ProPlus' or 'Project Client'.
     *
     * @param string $val The productType
     *
@@ -107,6 +113,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -125,6 +132,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -138,6 +146,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Gets the sharedComputerActivation
+    * The number of users who have used the product on a shared computer.
     *
     * @return int The sharedComputerActivation
     */
@@ -152,6 +161,7 @@ class Office365ActivationsUserCounts extends Entity
     
     /**
     * Sets the sharedComputerActivation
+    * The number of users who have used the product on a shared computer.
     *
     * @param int $val The sharedComputerActivation
     *

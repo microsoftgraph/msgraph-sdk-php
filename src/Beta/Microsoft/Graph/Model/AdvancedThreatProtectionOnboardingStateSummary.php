@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -259,6 +259,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
 
      /** 
      * Gets the advancedThreatProtectionOnboardingDeviceSettingStates
+    * Not yet documented
      *
      * @return array The advancedThreatProtectionOnboardingDeviceSettingStates
      */
@@ -273,6 +274,7 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /** 
     * Sets the advancedThreatProtectionOnboardingDeviceSettingStates
+    * Not yet documented
     *
     * @param AdvancedThreatProtectionOnboardingDeviceSettingState $val The advancedThreatProtectionOnboardingDeviceSettingStates
     *

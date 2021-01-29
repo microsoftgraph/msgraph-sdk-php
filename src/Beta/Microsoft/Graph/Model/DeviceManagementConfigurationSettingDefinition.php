@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 {
     /**
     * Gets the accessTypes
-    * Read/write access mode of the setting
+    * Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
     *
     * @return DeviceManagementConfigurationSettingAccessTypes The accessTypes
     */
@@ -45,7 +45,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Sets the accessTypes
-    * Read/write access mode of the setting
+    * Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
     *
     * @param DeviceManagementConfigurationSettingAccessTypes $val The accessTypes
     *
@@ -415,7 +415,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Gets the settingUsage
-    * Setting type, for example, configuration and compliance
+    * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
     *
     * @return DeviceManagementConfigurationSettingUsage The settingUsage
     */
@@ -434,7 +434,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Sets the settingUsage
-    * Setting type, for example, configuration and compliance
+    * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
     *
     * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
     *

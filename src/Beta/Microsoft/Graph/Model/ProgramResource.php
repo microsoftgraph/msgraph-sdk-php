@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class ProgramResource extends Identity
 {
     /**
     * Gets the type
+    * Type of the resource, indicating whether it is a group or an app.
     *
     * @return string The type
     */
@@ -39,6 +40,7 @@ class ProgramResource extends Identity
 
     /**
     * Sets the type
+    * Type of the resource, indicating whether it is a group or an app.
     *
     * @param string $val The value of the type
     *

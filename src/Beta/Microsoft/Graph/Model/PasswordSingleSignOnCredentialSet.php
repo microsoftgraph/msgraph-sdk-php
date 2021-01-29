@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PasswordSingleSignOnCredentialSet extends Entity
 
     /**
     * Gets the credentials
+    * A list of credential objects that define the complete sign in flow.
     *
     * @return Credential The credentials
     */
@@ -44,6 +45,7 @@ class PasswordSingleSignOnCredentialSet extends Entity
 
     /**
     * Sets the credentials
+    * A list of credential objects that define the complete sign in flow.
     *
     * @param Credential $val The value to assign to the credentials
     *
@@ -56,6 +58,7 @@ class PasswordSingleSignOnCredentialSet extends Entity
     }
     /**
     * Gets the id
+    * The ID of the user or group this credential set belongs to.
     *
     * @return string The id
     */
@@ -70,6 +73,7 @@ class PasswordSingleSignOnCredentialSet extends Entity
 
     /**
     * Sets the id
+    * The ID of the user or group this credential set belongs to.
     *
     * @param string $val The value of the id
     *

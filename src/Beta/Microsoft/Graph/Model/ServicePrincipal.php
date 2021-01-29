@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ServicePrincipal extends DirectoryObject
 {
     /**
     * Gets the passwordSingleSignOnSettings
+    * The collection for settings related to password single sign-on. Use $select=passwordSingleSignOnSettings to read the property. Read-only for applicationTemplates except for custom applicationTemplates.
     *
     * @return PasswordSingleSignOnSettings The passwordSingleSignOnSettings
     */
@@ -44,6 +45,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the passwordSingleSignOnSettings
+    * The collection for settings related to password single sign-on. Use $select=passwordSingleSignOnSettings to read the property. Read-only for applicationTemplates except for custom applicationTemplates.
     *
     * @param PasswordSingleSignOnSettings $val The passwordSingleSignOnSettings
     *
@@ -403,6 +405,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the errorUrl
+    * Deprecated. Don't use.
     *
     * @return string The errorUrl
     */
@@ -417,6 +420,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the errorUrl
+    * Deprecated. Don't use.
     *
     * @param string $val The errorUrl
     *
@@ -695,6 +699,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the preferredTokenSigningKeyEndDateTime
+    * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.
     *
     * @return \DateTime The preferredTokenSigningKeyEndDateTime
     */
@@ -713,6 +718,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the preferredTokenSigningKeyEndDateTime
+    * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.
     *
     * @param \DateTime $val The preferredTokenSigningKeyEndDateTime
     *
@@ -726,6 +732,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the preferredTokenSigningKeyThumbprint
+    * Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
     *
     * @return string The preferredTokenSigningKeyThumbprint
     */
@@ -740,6 +747,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the preferredTokenSigningKeyThumbprint
+    * Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
     *
     * @param string $val The preferredTokenSigningKeyThumbprint
     *
@@ -754,6 +762,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the publishedPermissionScopes
+    * The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
      *
      * @return array The publishedPermissionScopes
      */
@@ -768,6 +777,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the publishedPermissionScopes
+    * The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
     *
     * @param PermissionScope $val The publishedPermissionScopes
     *
@@ -837,6 +847,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the samlMetadataUrl
+    * The url where the service exposes SAML metadata for federation.
     *
     * @return string The samlMetadataUrl
     */
@@ -851,6 +862,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the samlMetadataUrl
+    * The url where the service exposes SAML metadata for federation.
     *
     * @param string $val The samlMetadataUrl
     *
@@ -955,6 +967,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the signInAudience
+    * Specifies what Microsoft accounts are supported for the associated application. Read-only.
     *
     * @return string The signInAudience
     */
@@ -969,6 +982,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the signInAudience
+    * Specifies what Microsoft accounts are supported for the associated application. Read-only.
     *
     * @param string $val The signInAudience
     *
@@ -1161,6 +1175,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the delegatedPermissionClassifications
+    * The permission classifications for delegated permissions exposed by the app that this service principal represents.
      *
      * @return array The delegatedPermissionClassifications
      */
@@ -1175,6 +1190,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the delegatedPermissionClassifications
+    * The permission classifications for delegated permissions exposed by the app that this service principal represents.
     *
     * @param DelegatedPermissionClassification $val The delegatedPermissionClassifications
     *

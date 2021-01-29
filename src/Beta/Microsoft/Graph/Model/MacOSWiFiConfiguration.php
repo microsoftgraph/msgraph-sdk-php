@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -229,7 +229,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxySettings
-    * Proxy Type for this Wi-Fi connection
+    * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
     *
     * @return WiFiProxySetting The proxySettings
     */
@@ -248,7 +248,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxySettings
-    * Proxy Type for this Wi-Fi connection
+    * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
     *
     * @param WiFiProxySetting $val The proxySettings
     *
@@ -291,7 +291,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
     *
     * @return WiFiSecurityType The wiFiSecurityType
     */
@@ -310,7 +310,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
     *
     * @param WiFiSecurityType $val The wiFiSecurityType
     *

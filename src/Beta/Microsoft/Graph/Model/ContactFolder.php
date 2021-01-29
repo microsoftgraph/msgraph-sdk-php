@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -84,6 +84,7 @@ class ContactFolder extends Entity
     
     /**
     * Gets the wellKnownName
+    * The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder.
     *
     * @return string The wellKnownName
     */
@@ -98,6 +99,7 @@ class ContactFolder extends Entity
     
     /**
     * Sets the wellKnownName
+    * The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder.
     *
     * @param string $val The wellKnownName
     *

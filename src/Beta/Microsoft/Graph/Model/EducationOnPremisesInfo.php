@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class EducationOnPremisesInfo extends Entity
 {
     /**
     * Gets the immutableId
+    * Unique identifier for the user object in Active Directory.
     *
     * @return string The immutableId
     */
@@ -39,6 +40,7 @@ class EducationOnPremisesInfo extends Entity
 
     /**
     * Sets the immutableId
+    * Unique identifier for the user object in Active Directory.
     *
     * @param string $val The value of the immutableId
     *

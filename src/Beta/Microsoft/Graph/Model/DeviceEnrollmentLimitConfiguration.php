@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration
 {
     /**
     * Gets the limit
-    * Not yet documented
+    * The maximum number of devices that a user can enroll
     *
     * @return int The limit
     */
@@ -41,7 +41,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration
     
     /**
     * Sets the limit
-    * Not yet documented
+    * The maximum number of devices that a user can enroll
     *
     * @param int $val The limit
     *

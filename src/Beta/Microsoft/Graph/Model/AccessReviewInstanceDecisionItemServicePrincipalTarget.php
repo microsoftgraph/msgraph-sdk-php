@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -34,6 +34,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
 
     /**
     * Gets the appId
+    * The appId for the service principal entity being reviewed.
     *
     * @return string The appId
     */
@@ -48,6 +49,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
 
     /**
     * Sets the appId
+    * The appId for the service principal entity being reviewed.
     *
     * @param string $val The value of the appId
     *
@@ -60,6 +62,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
     }
     /**
     * Gets the servicePrincipalDisplayName
+    * The display name of the service principal whose access is being reviewed.
     *
     * @return string The servicePrincipalDisplayName
     */
@@ -74,6 +77,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
 
     /**
     * Sets the servicePrincipalDisplayName
+    * The display name of the service principal whose access is being reviewed.
     *
     * @param string $val The value of the servicePrincipalDisplayName
     *

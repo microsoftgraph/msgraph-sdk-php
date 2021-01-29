@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class AccessReviewInstanceDecisionItem extends Entity
 {
     /**
     * Gets the accessReviewId
+    * The identifier of the accessReviewInstance parent.
     *
     * @return string The accessReviewId
     */
@@ -40,6 +41,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the accessReviewId
+    * The identifier of the accessReviewInstance parent.
     *
     * @param string $val The accessReviewId
     *
@@ -53,6 +55,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the appliedBy
+    * The identifier of the user who applied the decision.
     *
     * @return UserIdentity The appliedBy
     */
@@ -71,6 +74,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the appliedBy
+    * The identifier of the user who applied the decision.
     *
     * @param UserIdentity $val The appliedBy
     *
@@ -84,6 +88,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the appliedDateTime
+    * The DateTime when the approval decision was applied.
     *
     * @return \DateTime The appliedDateTime
     */
@@ -102,6 +107,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the appliedDateTime
+    * The DateTime when the approval decision was applied.
     *
     * @param \DateTime $val The appliedDateTime
     *
@@ -115,6 +121,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the applyResult
+    * The result of applying the decision. Possible values: NotApplied, Success, Failed, NotFound, or NotSupported.
     *
     * @return string The applyResult
     */
@@ -129,6 +136,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the applyResult
+    * The result of applying the decision. Possible values: NotApplied, Success, Failed, NotFound, or NotSupported.
     *
     * @param string $val The applyResult
     *
@@ -142,6 +150,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the decision
+    * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow.
     *
     * @return string The decision
     */
@@ -156,6 +165,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the decision
+    * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow.
     *
     * @param string $val The decision
     *
@@ -169,6 +179,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the justification
+    * The review decision justification.
     *
     * @return string The justification
     */
@@ -183,6 +194,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the justification
+    * The review decision justification.
     *
     * @param string $val The justification
     *
@@ -196,6 +208,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the recommendation
+    * A system-generated recommendation for the approval decision. Possible values: Approve, Deny, or NotAvailable.
     *
     * @return string The recommendation
     */
@@ -210,6 +223,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the recommendation
+    * A system-generated recommendation for the approval decision. Possible values: Approve, Deny, or NotAvailable.
     *
     * @param string $val The recommendation
     *
@@ -223,6 +237,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the reviewedBy
+    * The identifier of the reviewer.
     *
     * @return UserIdentity The reviewedBy
     */
@@ -241,6 +256,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the reviewedBy
+    * The identifier of the reviewer.
     *
     * @param UserIdentity $val The reviewedBy
     *
@@ -254,6 +270,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the reviewedDateTime
+    * The DateTime when the review occurred.
     *
     * @return \DateTime The reviewedDateTime
     */
@@ -272,6 +289,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the reviewedDateTime
+    * The DateTime when the review occurred.
     *
     * @param \DateTime $val The reviewedDateTime
     *
@@ -285,6 +303,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the target
+    * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget.
     *
     * @return AccessReviewInstanceDecisionItemTarget The target
     */
@@ -303,6 +322,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the target
+    * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget.
     *
     * @param AccessReviewInstanceDecisionItemTarget $val The target
     *

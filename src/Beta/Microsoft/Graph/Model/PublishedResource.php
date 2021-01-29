@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PublishedResource extends Entity
 {
     /**
     * Gets the displayName
+    * Display Name of the publishedResource.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class PublishedResource extends Entity
     
     /**
     * Sets the displayName
+    * Display Name of the publishedResource.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class PublishedResource extends Entity
     
     /**
     * Gets the publishingType
+    * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
     *
     * @return OnPremisesPublishingType The publishingType
     */
@@ -71,6 +74,7 @@ class PublishedResource extends Entity
     
     /**
     * Sets the publishingType
+    * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
     *
     * @param OnPremisesPublishingType $val The publishingType
     *
@@ -84,6 +88,7 @@ class PublishedResource extends Entity
     
     /**
     * Gets the resourceName
+    * Name of the publishedResource.
     *
     * @return string The resourceName
     */
@@ -98,6 +103,7 @@ class PublishedResource extends Entity
     
     /**
     * Sets the resourceName
+    * Name of the publishedResource.
     *
     * @param string $val The resourceName
     *
@@ -112,6 +118,7 @@ class PublishedResource extends Entity
 
      /** 
      * Gets the agentGroups
+    * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
      *
      * @return array The agentGroups
      */
@@ -126,6 +133,7 @@ class PublishedResource extends Entity
     
     /** 
     * Sets the agentGroups
+    * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
     *
     * @param OnPremisesAgentGroup $val The agentGroups
     *

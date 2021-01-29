@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class ApprovalSettings extends Entity
 {
     /**
     * Gets the approvalMode
+    * One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false.
     *
     * @return string The approvalMode
     */
@@ -39,6 +40,7 @@ class ApprovalSettings extends Entity
 
     /**
     * Sets the approvalMode
+    * One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false.
     *
     * @param string $val The value of the approvalMode
     *
@@ -52,6 +54,7 @@ class ApprovalSettings extends Entity
 
     /**
     * Gets the approvalStages
+    * If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
     *
     * @return ApprovalStage The approvalStages
     */
@@ -70,6 +73,7 @@ class ApprovalSettings extends Entity
 
     /**
     * Sets the approvalStages
+    * If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
     *
     * @param ApprovalStage $val The value to assign to the approvalStages
     *
@@ -82,6 +86,7 @@ class ApprovalSettings extends Entity
     }
     /**
     * Gets the isApprovalRequired
+    * If false, then approval is not required for requests in this policy.
     *
     * @return bool The isApprovalRequired
     */
@@ -96,6 +101,7 @@ class ApprovalSettings extends Entity
 
     /**
     * Sets the isApprovalRequired
+    * If false, then approval is not required for requests in this policy.
     *
     * @param bool $val The value of the isApprovalRequired
     *
@@ -108,6 +114,7 @@ class ApprovalSettings extends Entity
     }
     /**
     * Gets the isApprovalRequiredForExtension
+    * If false, then approval is not required for a user who already has an assignment to extend their assignment.
     *
     * @return bool The isApprovalRequiredForExtension
     */
@@ -122,6 +129,7 @@ class ApprovalSettings extends Entity
 
     /**
     * Sets the isApprovalRequiredForExtension
+    * If false, then approval is not required for a user who already has an assignment to extend their assignment.
     *
     * @param bool $val The value of the isApprovalRequiredForExtension
     *
@@ -134,6 +142,7 @@ class ApprovalSettings extends Entity
     }
     /**
     * Gets the isRequestorJustificationRequired
+    * Indicates whether the requestor is required to supply a justification in their request.
     *
     * @return bool The isRequestorJustificationRequired
     */
@@ -148,6 +157,7 @@ class ApprovalSettings extends Entity
 
     /**
     * Sets the isRequestorJustificationRequired
+    * Indicates whether the requestor is required to supply a justification in their request.
     *
     * @param bool $val The value of the isRequestorJustificationRequired
     *

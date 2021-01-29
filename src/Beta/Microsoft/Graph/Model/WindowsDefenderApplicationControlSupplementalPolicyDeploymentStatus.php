@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
 {
     /**
     * Gets the deploymentStatus
-    * The deployment state of the policy.
+    * The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
     *
     * @return WindowsDefenderApplicationControlSupplementalPolicyStatuses The deploymentStatus
     */
@@ -45,7 +45,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     
     /**
     * Sets the deploymentStatus
-    * The deployment state of the policy.
+    * The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
     *
     * @param WindowsDefenderApplicationControlSupplementalPolicyStatuses $val The deploymentStatus
     *

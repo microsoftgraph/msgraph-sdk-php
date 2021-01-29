@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -318,7 +318,7 @@ class DeviceManagementSettingDefinition extends Entity
     
     /**
     * Gets the valueType
-    * The data type of the value
+    * The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
     *
     * @return DeviceManangementIntentValueType The valueType
     */
@@ -337,7 +337,7 @@ class DeviceManagementSettingDefinition extends Entity
     
     /**
     * Sets the valueType
-    * The data type of the value
+    * The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
     *
     * @param DeviceManangementIntentValueType $val The valueType
     *

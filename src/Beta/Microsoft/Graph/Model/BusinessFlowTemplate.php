@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class BusinessFlowTemplate extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the business flow template
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class BusinessFlowTemplate extends Entity
     
     /**
     * Sets the displayName
+    * The name of the business flow template
     *
     * @param string $val The displayName
     *

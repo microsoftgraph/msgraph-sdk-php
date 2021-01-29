@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -86,7 +86,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
 
      /** 
      * Gets the associatedDomains
-    * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+    * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      *
      * @return array The associatedDomains
      */
@@ -101,7 +101,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /** 
     * Sets the associatedDomains
-    * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+    * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
     *
     * @param KeyValuePair $val The associatedDomains
     *
@@ -407,7 +407,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Gets the contentCachingClientPolicy
-    * Determines the method in which content caching servers will listen for clients.
+    * Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
     *
     * @return MacOSContentCachingClientPolicy The contentCachingClientPolicy
     */
@@ -426,7 +426,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Sets the contentCachingClientPolicy
-    * Determines the method in which content caching servers will listen for clients.
+    * Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
     *
     * @param MacOSContentCachingClientPolicy $val The contentCachingClientPolicy
     *
@@ -614,7 +614,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Gets the contentCachingMaxSizeBytes
-    * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space. 
+    * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
     *
     * @return int The contentCachingMaxSizeBytes
     */
@@ -629,7 +629,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Sets the contentCachingMaxSizeBytes
-    * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space. 
+    * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
     *
     * @param int $val The contentCachingMaxSizeBytes
     *
@@ -672,7 +672,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Gets the contentCachingParentSelectionPolicy
-    * Determines the method in which content caching servers will select parents if multiple are present.
+    * Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
     *
     * @return MacOSContentCachingParentSelectionPolicy The contentCachingParentSelectionPolicy
     */
@@ -691,7 +691,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Sets the contentCachingParentSelectionPolicy
-    * Determines the method in which content caching servers will select parents if multiple are present.
+    * Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
     *
     * @param MacOSContentCachingParentSelectionPolicy $val The contentCachingParentSelectionPolicy
     *
@@ -765,7 +765,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Gets the contentCachingPeerPolicy
-    * Determines the method in which content caches peer with other caches.
+    * Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
     *
     * @return MacOSContentCachingPeerPolicy The contentCachingPeerPolicy
     */
@@ -784,7 +784,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Sets the contentCachingPeerPolicy
-    * Determines the method in which content caches peer with other caches.
+    * Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
     *
     * @param MacOSContentCachingPeerPolicy $val The contentCachingPeerPolicy
     *
@@ -886,7 +886,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Gets the contentCachingType
-    * Determines what type of content is allowed to be cached by Apple's content caching service.
+    * Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
     *
     * @return MacOSContentCachingType The contentCachingType
     */
@@ -905,7 +905,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Sets the contentCachingType
-    * Determines what type of content is allowed to be cached by Apple's content caching service.
+    * Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
     *
     * @param MacOSContentCachingType $val The contentCachingType
     *

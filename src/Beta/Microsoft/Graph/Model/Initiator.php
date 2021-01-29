@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class Initiator extends Entity
 {
     /**
     * Gets the displayName
+    * Name of the person or service that initiated the provisioning event.
     *
     * @return string The displayName
     */
@@ -39,6 +40,7 @@ class Initiator extends Entity
 
     /**
     * Sets the displayName
+    * Name of the person or service that initiated the provisioning event.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class Initiator extends Entity
     }
     /**
     * Gets the id
+    * Uniquely identifies the person or service that initiated the provisioning event.
     *
     * @return string The id
     */
@@ -65,6 +68,7 @@ class Initiator extends Entity
 
     /**
     * Sets the id
+    * Uniquely identifies the person or service that initiated the provisioning event.
     *
     * @param string $val The value of the id
     *
@@ -78,6 +82,7 @@ class Initiator extends Entity
 
     /**
     * Gets the initiatorType
+    * Type of initiator. Possible values are: user, app, system, unknownFutureValue.
     *
     * @return InitiatorType The initiatorType
     */
@@ -96,6 +101,7 @@ class Initiator extends Entity
 
     /**
     * Sets the initiatorType
+    * Type of initiator. Possible values are: user, app, system, unknownFutureValue.
     *
     * @param InitiatorType $val The value to assign to the initiatorType
     *

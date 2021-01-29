@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -117,7 +117,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Gets the state
-    * State of the software update
+    * State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
     *
     * @return MacOSSoftwareUpdateState The state
     */
@@ -136,7 +136,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Sets the state
-    * State of the software update
+    * State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
     *
     * @param MacOSSoftwareUpdateState $val The state
     *
@@ -150,7 +150,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Gets the updateCategory
-    * Software update category
+    * Software update category. Possible values are: critical, configurationDataFile, firmware, other.
     *
     * @return MacOSSoftwareUpdateCategory The updateCategory
     */
@@ -169,7 +169,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Sets the updateCategory
-    * Software update category
+    * Software update category. Possible values are: critical, configurationDataFile, firmware, other.
     *
     * @param MacOSSoftwareUpdateCategory $val The updateCategory
     *

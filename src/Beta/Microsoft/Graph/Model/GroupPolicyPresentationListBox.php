@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -55,6 +55,7 @@ class GroupPolicyPresentationListBox extends GroupPolicyPresentation
     
     /**
     * Gets the valuePrefix
+    * Not yet documented
     *
     * @return string The valuePrefix
     */
@@ -69,6 +70,7 @@ class GroupPolicyPresentationListBox extends GroupPolicyPresentation
     
     /**
     * Sets the valuePrefix
+    * Not yet documented
     *
     * @param string $val The valuePrefix
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required.
+    * true if the account is enabled; otherwise, false. default is true.
     *
     * @return bool The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required.
+    * true if the account is enabled; otherwise, false. default is true.
     *
     * @param bool $val The accountEnabled
     *
@@ -445,7 +445,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * The version of the operating system on the device. Required.
+    * Operating system version of the device. Required.
     *
     * @return string The operatingSystemVersion
     */
@@ -460,7 +460,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * The version of the operating system on the device. Required.
+    * Operating system version of the device. Required.
     *
     * @param string $val The operatingSystemVersion
     *

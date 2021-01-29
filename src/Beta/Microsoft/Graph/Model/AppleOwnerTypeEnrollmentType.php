@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Gets the enrollmentType
-    * The enrollment type.
+    * The enrollment type. Possible values are: unknown, device, user.
     *
     * @return AppleUserInitiatedEnrollmentType The enrollmentType
     */
@@ -45,7 +45,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Sets the enrollmentType
-    * The enrollment type.
+    * The enrollment type. Possible values are: unknown, device, user.
     *
     * @param AppleUserInitiatedEnrollmentType $val The value to assign to the enrollmentType
     *
@@ -59,7 +59,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Gets the ownerType
-    * The owner type.
+    * The owner type. Possible values are: unknown, company, personal.
     *
     * @return ManagedDeviceOwnerType The ownerType
     */
@@ -78,7 +78,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Sets the ownerType
-    * The owner type.
+    * The owner type. Possible values are: unknown, company, personal.
     *
     * @param ManagedDeviceOwnerType $val The value to assign to the ownerType
     *

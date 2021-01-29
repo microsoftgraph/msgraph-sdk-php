@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Gets the endDay
-    * End day of the time window
+    * End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @return DayOfWeek The endDay
     */
@@ -45,7 +45,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Sets the endDay
-    * End day of the time window
+    * End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @param DayOfWeek $val The value to assign to the endDay
     *
@@ -92,7 +92,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Gets the startDay
-    * Start day of the time window
+    * Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @return DayOfWeek The startDay
     */
@@ -111,7 +111,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Sets the startDay
-    * Start day of the time window
+    * Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
     * @param DayOfWeek $val The value to assign to the startDay
     *

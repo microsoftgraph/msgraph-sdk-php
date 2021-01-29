@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
 {
     /**
     * Gets the authenticationMethod
-    * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
+    * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
     *
     * @return WiFiAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     
     /**
     * Sets the authenticationMethod
-    * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
+    * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
     *
     * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
@@ -59,7 +59,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     
     /**
     * Gets the eapType
-    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
     *
     * @return AndroidEapType The eapType
     */
@@ -78,7 +78,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     
     /**
     * Sets the eapType
-    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+    * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
     *
     * @param AndroidEapType $val The eapType
     *
@@ -92,7 +92,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     
     /**
     * Gets the innerAuthenticationProtocolForEapTtls
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
     *
     * @return NonEapAuthenticationMethodForEapTtlsType The innerAuthenticationProtocolForEapTtls
     */
@@ -111,7 +111,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     
     /**
     * Sets the innerAuthenticationProtocolForEapTtls
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
     *
     * @param NonEapAuthenticationMethodForEapTtlsType $val The innerAuthenticationProtocolForEapTtls
     *
@@ -125,7 +125,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     
     /**
     * Gets the innerAuthenticationProtocolForPeap
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
     *
     * @return NonEapAuthenticationMethodForPeap The innerAuthenticationProtocolForPeap
     */
@@ -144,7 +144,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     
     /**
     * Sets the innerAuthenticationProtocolForPeap
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
     *
     * @param NonEapAuthenticationMethodForPeap $val The innerAuthenticationProtocolForPeap
     *

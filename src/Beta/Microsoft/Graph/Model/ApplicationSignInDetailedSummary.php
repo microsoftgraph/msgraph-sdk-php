@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ApplicationSignInDetailedSummary extends Entity
 {
     /**
     * Gets the aggregatedEventDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The aggregatedEventDateTime
     */
@@ -44,6 +45,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Sets the aggregatedEventDateTime
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The aggregatedEventDateTime
     *
@@ -57,6 +59,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Gets the appDisplayName
+    * Name of the application that the user signed in to.
     *
     * @return string The appDisplayName
     */
@@ -71,6 +74,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Sets the appDisplayName
+    * Name of the application that the user signed in to.
     *
     * @param string $val The appDisplayName
     *
@@ -84,6 +88,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Gets the appId
+    * ID of the application that the user signed in to.
     *
     * @return string The appId
     */
@@ -98,6 +103,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Sets the appId
+    * ID of the application that the user signed in to.
     *
     * @param string $val The appId
     *
@@ -111,6 +117,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Gets the signInCount
+    * Count of sign-ins made by the application.
     *
     * @return int The signInCount
     */
@@ -125,6 +132,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Sets the signInCount
+    * Count of sign-ins made by the application.
     *
     * @param int $val The signInCount
     *
@@ -138,6 +146,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Gets the status
+    * Details of the sign-in status.
     *
     * @return SignInStatus The status
     */
@@ -156,6 +165,7 @@ class ApplicationSignInDetailedSummary extends Entity
     
     /**
     * Sets the status
+    * Details of the sign-in status.
     *
     * @param SignInStatus $val The status
     *

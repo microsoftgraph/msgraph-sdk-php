@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -27,6 +27,7 @@ class AttributeMappingFunctionSchema extends Entity
 
      /** 
      * Gets the parameters
+    * Collection of function parameters.
      *
      * @return array The parameters
      */
@@ -41,6 +42,7 @@ class AttributeMappingFunctionSchema extends Entity
     
     /** 
     * Sets the parameters
+    * Collection of function parameters.
     *
     * @param AttributeMappingParameterSchema $val The parameters
     *

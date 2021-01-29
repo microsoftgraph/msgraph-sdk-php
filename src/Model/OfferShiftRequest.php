@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Gets the recipientUserId
-    * User ID of the recipient of the offer shift request.
+    * User id of the recipient of the offer shift request.
     *
     * @return string The recipientUserId
     */
@@ -103,7 +103,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Sets the recipientUserId
-    * User ID of the recipient of the offer shift request.
+    * User id of the recipient of the offer shift request.
     *
     * @param string $val The recipientUserId
     *
@@ -117,7 +117,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Gets the senderShiftId
-    * User ID of the sender of the offer shift request.
+    * User id of the sender of the offer shift request.
     *
     * @return string The senderShiftId
     */
@@ -132,7 +132,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Sets the senderShiftId
-    * User ID of the sender of the offer shift request.
+    * User id of the sender of the offer shift request.
     *
     * @param string $val The senderShiftId
     *

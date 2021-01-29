@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -88,7 +88,7 @@ class NdesConnector extends Entity
     
     /**
     * Gets the state
-    * Ndes Connector Status
+    * Ndes Connector Status. Possible values are: none, active, inactive.
     *
     * @return NdesConnectorState The state
     */
@@ -107,7 +107,7 @@ class NdesConnector extends Entity
     
     /**
     * Sets the state
-    * Ndes Connector Status
+    * Ndes Connector Status. Possible values are: none, active, inactive.
     *
     * @param NdesConnectorState $val The state
     *

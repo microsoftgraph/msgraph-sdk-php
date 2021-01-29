@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class CloudPcSourceDeviceImage extends Entity
 {
     /**
     * Gets the displayName
+    * The display name for the source image.
     *
     * @return string The displayName
     */
@@ -39,6 +40,7 @@ class CloudPcSourceDeviceImage extends Entity
 
     /**
     * Sets the displayName
+    * The display name for the source image.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class CloudPcSourceDeviceImage extends Entity
     }
     /**
     * Gets the id
+    * The ID of the source image.
     *
     * @return string The id
     */
@@ -65,6 +68,7 @@ class CloudPcSourceDeviceImage extends Entity
 
     /**
     * Sets the id
+    * The ID of the source image.
     *
     * @param string $val The value of the id
     *

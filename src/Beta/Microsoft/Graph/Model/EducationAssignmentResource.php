@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class EducationAssignmentResource extends Entity
 {
     /**
     * Gets the distributeForStudentWork
+    * Indicates whether this resource should be copied to each student submission for modification and submission.
     *
     * @return bool The distributeForStudentWork
     */
@@ -40,6 +41,7 @@ class EducationAssignmentResource extends Entity
     
     /**
     * Sets the distributeForStudentWork
+    * Indicates whether this resource should be copied to each student submission for modification and submission.
     *
     * @param bool $val The distributeForStudentWork
     *
@@ -53,6 +55,7 @@ class EducationAssignmentResource extends Entity
     
     /**
     * Gets the resource
+    * Resource object that has been associated with this assignment.
     *
     * @return EducationResource The resource
     */
@@ -71,6 +74,7 @@ class EducationAssignmentResource extends Entity
     
     /**
     * Sets the resource
+    * Resource object that has been associated with this assignment.
     *
     * @param EducationResource $val The resource
     *

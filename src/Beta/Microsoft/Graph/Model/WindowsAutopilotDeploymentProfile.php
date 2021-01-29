@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -117,7 +117,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the deviceType
-    * The AutoPilot device type that this profile is applicable to.
+    * The AutoPilot device type that this profile is applicable to. Possible values are: windowsPc, surfaceHub2.
     *
     * @return WindowsAutopilotDeviceType The deviceType
     */
@@ -136,7 +136,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the deviceType
-    * The AutoPilot device type that this profile is applicable to.
+    * The AutoPilot device type that this profile is applicable to. Possible values are: windowsPc, surfaceHub2.
     *
     * @param WindowsAutopilotDeviceType $val The deviceType
     *

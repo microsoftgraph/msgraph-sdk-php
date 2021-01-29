@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class Office365ServicesUserCounts extends Entity
 {
     /**
     * Gets the exchangeActive
+    * The number of active users on Exchange. Any user who can read and send email is considered an active user.
     *
     * @return int The exchangeActive
     */
@@ -40,6 +41,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the exchangeActive
+    * The number of active users on Exchange. Any user who can read and send email is considered an active user.
     *
     * @param int $val The exchangeActive
     *
@@ -53,6 +55,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the exchangeInactive
+    * The number of inactive users on Exchange.
     *
     * @return int The exchangeInactive
     */
@@ -67,6 +70,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the exchangeInactive
+    * The number of inactive users on Exchange.
     *
     * @param int $val The exchangeInactive
     *
@@ -80,6 +84,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the office365Active
+    * The number of active users on Microsoft 365.
     *
     * @return int The office365Active
     */
@@ -94,6 +99,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the office365Active
+    * The number of active users on Microsoft 365.
     *
     * @param int $val The office365Active
     *
@@ -107,6 +113,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the office365Inactive
+    * The number of inactive users on Microsoft 365.
     *
     * @return int The office365Inactive
     */
@@ -121,6 +128,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the office365Inactive
+    * The number of inactive users on Microsoft 365.
     *
     * @param int $val The office365Inactive
     *
@@ -134,6 +142,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the oneDriveActive
+    * The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
     *
     * @return int The oneDriveActive
     */
@@ -148,6 +157,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the oneDriveActive
+    * The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
     *
     * @param int $val The oneDriveActive
     *
@@ -161,6 +171,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the oneDriveInactive
+    * The number of inactive users on OneDrive.
     *
     * @return int The oneDriveInactive
     */
@@ -175,6 +186,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the oneDriveInactive
+    * The number of inactive users on OneDrive.
     *
     * @param int $val The oneDriveInactive
     *
@@ -188,6 +200,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -202,6 +215,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -215,6 +229,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -233,6 +248,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -246,6 +262,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the sharePointActive
+    * The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
     *
     * @return int The sharePointActive
     */
@@ -260,6 +277,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the sharePointActive
+    * The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
     *
     * @param int $val The sharePointActive
     *
@@ -273,6 +291,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the sharePointInactive
+    * The number of inactive users on SharePoint.
     *
     * @return int The sharePointInactive
     */
@@ -287,6 +306,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the sharePointInactive
+    * The number of inactive users on SharePoint.
     *
     * @param int $val The sharePointInactive
     *
@@ -300,6 +320,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the skypeForBusinessActive
+    * The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
     *
     * @return int The skypeForBusinessActive
     */
@@ -314,6 +335,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the skypeForBusinessActive
+    * The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
     *
     * @param int $val The skypeForBusinessActive
     *
@@ -327,6 +349,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the skypeForBusinessInactive
+    * The number of inactive users on Skype For Business.
     *
     * @return int The skypeForBusinessInactive
     */
@@ -341,6 +364,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the skypeForBusinessInactive
+    * The number of inactive users on Skype For Business.
     *
     * @param int $val The skypeForBusinessInactive
     *
@@ -354,6 +378,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the teamsActive
+    * The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
     *
     * @return int The teamsActive
     */
@@ -368,6 +393,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the teamsActive
+    * The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
     *
     * @param int $val The teamsActive
     *
@@ -381,6 +407,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the teamsInactive
+    * The number of inactive users on Microsoft Teams.
     *
     * @return int The teamsInactive
     */
@@ -395,6 +422,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the teamsInactive
+    * The number of inactive users on Microsoft Teams.
     *
     * @param int $val The teamsInactive
     *
@@ -408,6 +436,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the yammerActive
+    * The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
     *
     * @return int The yammerActive
     */
@@ -422,6 +451,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the yammerActive
+    * The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
     *
     * @param int $val The yammerActive
     *
@@ -435,6 +465,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Gets the yammerInactive
+    * The number of inactive users on Yammer.
     *
     * @return int The yammerInactive
     */
@@ -449,6 +480,7 @@ class Office365ServicesUserCounts extends Entity
     
     /**
     * Sets the yammerInactive
+    * The number of inactive users on Yammer.
     *
     * @param int $val The yammerInactive
     *

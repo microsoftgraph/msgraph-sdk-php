@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -52,6 +52,34 @@ class IdentityContainer extends
     public function setConditionalAccess($val)
     {
         $this->_propDict["conditionalAccess"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the apiConnectors
+     *
+     * @return array The apiConnectors
+     */
+    public function getApiConnectors()
+    {
+        if (array_key_exists("apiConnectors", $this->_propDict)) {
+           return $this->_propDict["apiConnectors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the apiConnectors
+    *
+    * @param IdentityApiConnector $val The apiConnectors
+    *
+    * @return IdentityContainer
+    */
+    public function setApiConnectors($val)
+    {
+		$this->_propDict["apiConnectors"] = $val;
         return $this;
     }
     

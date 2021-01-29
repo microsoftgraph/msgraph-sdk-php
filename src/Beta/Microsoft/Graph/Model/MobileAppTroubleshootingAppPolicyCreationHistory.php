@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -54,7 +54,7 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
 
     /**
     * Gets the runState
-    * Status of the item.
+    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @return RunState The runState
     */
@@ -73,7 +73,7 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
 
     /**
     * Sets the runState
-    * Status of the item.
+    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @param RunState $val The value to assign to the runState
     *

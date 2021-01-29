@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -109,6 +109,7 @@ class PhysicalAddress extends Entity
     }
     /**
     * Gets the postOfficeBox
+    * The post office box number.
     *
     * @return string The postOfficeBox
     */
@@ -123,6 +124,7 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the postOfficeBox
+    * The post office box number.
     *
     * @param string $val The value of the postOfficeBox
     *
@@ -192,6 +194,7 @@ class PhysicalAddress extends Entity
 
     /**
     * Gets the type
+    * The type of address. Possible values are: unknown, home, business, other.
     *
     * @return PhysicalAddressType The type
     */
@@ -210,6 +213,7 @@ class PhysicalAddress extends Entity
 
     /**
     * Sets the type
+    * The type of address. Possible values are: unknown, home, business, other.
     *
     * @param PhysicalAddressType $val The value to assign to the type
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class RolePermission extends Entity
 
     /**
     * Gets the resourceActions
-    * Actions
+    * Resource Actions each containing a set of allowed and not allowed permissions.
     *
     * @return ResourceAction The resourceActions
     */
@@ -45,7 +45,7 @@ class RolePermission extends Entity
 
     /**
     * Sets the resourceActions
-    * Actions
+    * Resource Actions each containing a set of allowed and not allowed permissions.
     *
     * @param ResourceAction $val The value to assign to the resourceActions
     *

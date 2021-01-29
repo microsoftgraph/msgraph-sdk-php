@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -113,7 +113,7 @@ class UnsupportedGroupPolicyExtension extends Entity
     
     /**
     * Gets the settingScope
-    * Setting Scope of the unsupported extension.
+    * Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
     *
     * @return GroupPolicySettingScope The settingScope
     */
@@ -132,7 +132,7 @@ class UnsupportedGroupPolicyExtension extends Entity
     
     /**
     * Sets the settingScope
-    * Setting Scope of the unsupported extension.
+    * Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
     *
     * @param GroupPolicySettingScope $val The settingScope
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -508,6 +508,7 @@ class Alert extends Entity
 
      /** 
      * Gets the historyStates
+    * A collection of alertHistoryStates comprising an audit log of all updates made to an alert.
      *
      * @return array The historyStates
      */
@@ -522,6 +523,7 @@ class Alert extends Entity
     
     /** 
     * Sets the historyStates
+    * A collection of alertHistoryStates comprising an audit log of all updates made to an alert.
     *
     * @param AlertHistoryState $val The historyStates
     *

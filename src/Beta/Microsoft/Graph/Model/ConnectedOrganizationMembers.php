@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class ConnectedOrganizationMembers extends UserSet
 {
     /**
     * Gets the description
+    * The name of the connected organization. Read only.
     *
     * @return string The description
     */
@@ -39,6 +40,7 @@ class ConnectedOrganizationMembers extends UserSet
 
     /**
     * Sets the description
+    * The name of the connected organization. Read only.
     *
     * @param string $val The value of the description
     *
@@ -51,6 +53,7 @@ class ConnectedOrganizationMembers extends UserSet
     }
     /**
     * Gets the id
+    * The ID of the connected organization in entitlement management.
     *
     * @return string The id
     */
@@ -65,6 +68,7 @@ class ConnectedOrganizationMembers extends UserSet
 
     /**
     * Sets the id
+    * The ID of the connected organization in entitlement management.
     *
     * @param string $val The value of the id
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class PersonInterest extends ItemFacet
 {
     /**
     * Gets the categories
+    * Contains categories a user has associated with the interest (for example, personal, recipies).
     *
     * @return string The categories
     */
@@ -40,6 +41,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Sets the categories
+    * Contains categories a user has associated with the interest (for example, personal, recipies).
     *
     * @param string $val The categories
     *
@@ -53,6 +55,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Gets the collaborationTags
+    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @return string The collaborationTags
     */
@@ -67,6 +70,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Sets the collaborationTags
+    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @param string $val The collaborationTags
     *
@@ -80,6 +84,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Gets the description
+    * Contains a description of the interest.
     *
     * @return string The description
     */
@@ -94,6 +99,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Sets the description
+    * Contains a description of the interest.
     *
     * @param string $val The description
     *
@@ -107,6 +113,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Gets the displayName
+    * Contains a friendly name for the interest.
     *
     * @return string The displayName
     */
@@ -121,6 +128,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Sets the displayName
+    * Contains a friendly name for the interest.
     *
     * @param string $val The displayName
     *
@@ -134,6 +142,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Gets the webUrl
+    * Contains a link to a web page or resource about the interest.
     *
     * @return string The webUrl
     */
@@ -148,6 +157,7 @@ class PersonInterest extends ItemFacet
     
     /**
     * Sets the webUrl
+    * Contains a link to a web page or resource about the interest.
     *
     * @param string $val The webUrl
     *

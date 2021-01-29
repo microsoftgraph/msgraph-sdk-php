@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -57,7 +57,7 @@ class PlannerUser extends Entity
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
      * @return array The tasks
      */
@@ -72,7 +72,7 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
     * @param PlannerTask $val The tasks
     *

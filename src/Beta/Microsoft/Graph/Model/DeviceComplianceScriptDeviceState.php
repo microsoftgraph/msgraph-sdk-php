@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceComplianceScriptDeviceState extends Entity
 {
     /**
     * Gets the detectionState
-    * Detection state from the lastest device compliance script execution
+    * Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @return RunState The detectionState
     */
@@ -45,7 +45,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     
     /**
     * Sets the detectionState
-    * Detection state from the lastest device compliance script execution
+    * Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
     * @param RunState $val The detectionState
     *

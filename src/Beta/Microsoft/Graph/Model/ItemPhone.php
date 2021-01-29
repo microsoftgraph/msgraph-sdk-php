@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class ItemPhone extends ItemFacet
 {
     /**
     * Gets the displayName
+    * Friendly name the user has assigned this phone number.
     *
     * @return string The displayName
     */
@@ -40,6 +41,7 @@ class ItemPhone extends ItemFacet
     
     /**
     * Sets the displayName
+    * Friendly name the user has assigned this phone number.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class ItemPhone extends ItemFacet
     
     /**
     * Gets the number
+    * Phone number provided by the user.
     *
     * @return string The number
     */
@@ -67,6 +70,7 @@ class ItemPhone extends ItemFacet
     
     /**
     * Sets the number
+    * Phone number provided by the user.
     *
     * @param string $val The number
     *
@@ -80,6 +84,7 @@ class ItemPhone extends ItemFacet
     
     /**
     * Gets the type
+    * The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
     * @return PhoneType The type
     */
@@ -98,6 +103,7 @@ class ItemPhone extends ItemFacet
     
     /**
     * Sets the type
+    * The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
     * @param PhoneType $val The type
     *

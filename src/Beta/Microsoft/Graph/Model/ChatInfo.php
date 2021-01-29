@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,7 +25,7 @@ class ChatInfo extends Entity
 {
     /**
     * Gets the messageId
-    * The unique identifier of a message in a Microsoft Teams channel.
+    * The unique identifier for a message in a Microsoft Teams channel.
     *
     * @return string The messageId
     */
@@ -40,7 +40,7 @@ class ChatInfo extends Entity
 
     /**
     * Sets the messageId
-    * The unique identifier of a message in a Microsoft Teams channel.
+    * The unique identifier for a message in a Microsoft Teams channel.
     *
     * @param string $val The value of the messageId
     *

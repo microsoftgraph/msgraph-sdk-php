@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class UpdateWindow extends Entity
 
     /**
     * Gets the updateWindowEndTime
+    * End of a time window during which agents can receive updates
     *
     * @return TimeOfDay The updateWindowEndTime
     */
@@ -44,6 +45,7 @@ class UpdateWindow extends Entity
 
     /**
     * Sets the updateWindowEndTime
+    * End of a time window during which agents can receive updates
     *
     * @param TimeOfDay $val The value to assign to the updateWindowEndTime
     *
@@ -57,6 +59,7 @@ class UpdateWindow extends Entity
 
     /**
     * Gets the updateWindowStartTime
+    * Start of a time window during which agents can receive updates
     *
     * @return TimeOfDay The updateWindowStartTime
     */
@@ -75,6 +78,7 @@ class UpdateWindow extends Entity
 
     /**
     * Sets the updateWindowStartTime
+    * Start of a time window during which agents can receive updates
     *
     * @param TimeOfDay $val The value to assign to the updateWindowStartTime
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -59,7 +59,7 @@ class Win32LobAppInstallExperience extends Entity
 
     /**
     * Gets the runAsAccount
-    * Indicates the type of execution context the app runs in.
+    * Indicates the type of execution context the app runs in. Possible values are: system, user.
     *
     * @return RunAsAccountType The runAsAccount
     */
@@ -78,7 +78,7 @@ class Win32LobAppInstallExperience extends Entity
 
     /**
     * Sets the runAsAccount
-    * Indicates the type of execution context the app runs in.
+    * Indicates the type of execution context the app runs in. Possible values are: system, user.
     *
     * @param RunAsAccountType $val The value to assign to the runAsAccount
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class RubricQuality extends Entity
 
     /**
     * Gets the criteria
+    * The collection of criteria for this rubric quality.
     *
     * @return RubricCriterion The criteria
     */
@@ -44,6 +45,7 @@ class RubricQuality extends Entity
 
     /**
     * Sets the criteria
+    * The collection of criteria for this rubric quality.
     *
     * @param RubricCriterion $val The value to assign to the criteria
     *
@@ -57,6 +59,7 @@ class RubricQuality extends Entity
 
     /**
     * Gets the description
+    * The description of this rubric quality.
     *
     * @return EducationItemBody The description
     */
@@ -75,6 +78,7 @@ class RubricQuality extends Entity
 
     /**
     * Sets the description
+    * The description of this rubric quality.
     *
     * @param EducationItemBody $val The value to assign to the description
     *
@@ -87,6 +91,7 @@ class RubricQuality extends Entity
     }
     /**
     * Gets the displayName
+    * The name of this rubric quality.
     *
     * @return string The displayName
     */
@@ -101,6 +106,7 @@ class RubricQuality extends Entity
 
     /**
     * Sets the displayName
+    * The name of this rubric quality.
     *
     * @param string $val The value of the displayName
     *
@@ -113,6 +119,7 @@ class RubricQuality extends Entity
     }
     /**
     * Gets the qualityId
+    * The ID of this resource.
     *
     * @return string The qualityId
     */
@@ -127,6 +134,7 @@ class RubricQuality extends Entity
 
     /**
     * Sets the qualityId
+    * The ID of this resource.
     *
     * @param string $val The value of the qualityId
     *
@@ -140,6 +148,7 @@ class RubricQuality extends Entity
 
     /**
     * Gets the weight
+    * If present, a numerical weight for this quality.  Weights must add up to 100.
     *
     * @return Single The weight
     */
@@ -158,6 +167,7 @@ class RubricQuality extends Entity
 
     /**
     * Sets the weight
+    * If present, a numerical weight for this quality.  Weights must add up to 100.
     *
     * @param Single $val The value to assign to the weight
     *

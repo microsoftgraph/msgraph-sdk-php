@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class BookingStaffMember extends BookingPerson
 {
     /**
     * Gets the availabilityIsAffectedByPersonalCalendar
+    * True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
     *
     * @return bool The availabilityIsAffectedByPersonalCalendar
     */
@@ -40,6 +41,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Sets the availabilityIsAffectedByPersonalCalendar
+    * True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
     *
     * @param bool $val The availabilityIsAffectedByPersonalCalendar
     *
@@ -53,6 +55,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Gets the colorIndex
+    * Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
     *
     * @return int The colorIndex
     */
@@ -67,6 +70,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Sets the colorIndex
+    * Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
     *
     * @param int $val The colorIndex
     *
@@ -80,6 +84,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Gets the role
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest. Required.
     *
     * @return BookingStaffRole The role
     */
@@ -98,6 +103,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Sets the role
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest. Required.
     *
     * @param BookingStaffRole $val The role
     *
@@ -111,6 +117,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Gets the useBusinessHours
+    * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
     *
     * @return bool The useBusinessHours
     */
@@ -125,6 +132,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Sets the useBusinessHours
+    * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
     *
     * @param bool $val The useBusinessHours
     *
@@ -139,6 +147,7 @@ class BookingStaffMember extends BookingPerson
 
      /** 
      * Gets the workingHours
+    * The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
      *
      * @return array The workingHours
      */
@@ -153,6 +162,7 @@ class BookingStaffMember extends BookingPerson
     
     /** 
     * Sets the workingHours
+    * The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
     *
     * @param BookingWorkHours $val The workingHours
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class LabelingOptions extends Entity
 
     /**
     * Gets the assignmentMethod
+    * Possible values are: standard, privileged, auto.
     *
     * @return AssignmentMethod The assignmentMethod
     */
@@ -44,6 +45,7 @@ class LabelingOptions extends Entity
 
     /**
     * Sets the assignmentMethod
+    * Possible values are: standard, privileged, auto.
     *
     * @param AssignmentMethod $val The value to assign to the assignmentMethod
     *
@@ -57,6 +59,7 @@ class LabelingOptions extends Entity
 
     /**
     * Gets the downgradeJustification
+    * The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
     *
     * @return DowngradeJustification The downgradeJustification
     */
@@ -75,6 +78,7 @@ class LabelingOptions extends Entity
 
     /**
     * Sets the downgradeJustification
+    * The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
     *
     * @param DowngradeJustification $val The value to assign to the downgradeJustification
     *
@@ -88,6 +92,7 @@ class LabelingOptions extends Entity
 
     /**
     * Gets the extendedProperties
+    * Extended properties will be parsed and returned in the standard MIP labeled metadata format as part of the label information.
     *
     * @return KeyValuePair The extendedProperties
     */
@@ -106,6 +111,7 @@ class LabelingOptions extends Entity
 
     /**
     * Sets the extendedProperties
+    * Extended properties will be parsed and returned in the standard MIP labeled metadata format as part of the label information.
     *
     * @param KeyValuePair $val The value to assign to the extendedProperties
     *
@@ -118,6 +124,7 @@ class LabelingOptions extends Entity
     }
     /**
     * Gets the labelId
+    * The GUID of the label that should be applied to the information.
     *
     * @return string The labelId
     */
@@ -132,6 +139,7 @@ class LabelingOptions extends Entity
 
     /**
     * Sets the labelId
+    * The GUID of the label that should be applied to the information.
     *
     * @param string $val The value of the labelId
     *

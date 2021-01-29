@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Gets the deviceMode
-    * Applicability rule for device mode.
+    * Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration.
     *
     * @return Windows10DeviceModeType The deviceMode
     */
@@ -45,7 +45,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Sets the deviceMode
-    * Applicability rule for device mode.
+    * Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration.
     *
     * @param Windows10DeviceModeType $val The value to assign to the deviceMode
     *
@@ -87,7 +87,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Gets the ruleType
-    * Applicability Rule type.
+    * Applicability Rule type. Possible values are: include, exclude.
     *
     * @return DeviceManagementApplicabilityRuleType The ruleType
     */
@@ -106,7 +106,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Sets the ruleType
-    * Applicability Rule type.
+    * Applicability Rule type. Possible values are: include, exclude.
     *
     * @param DeviceManagementApplicabilityRuleType $val The value to assign to the ruleType
     *

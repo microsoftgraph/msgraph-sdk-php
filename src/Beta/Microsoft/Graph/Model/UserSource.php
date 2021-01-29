@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class UserSource extends DataSource
 {
     /**
     * Gets the email
+    * Email address of the user's mailbox.
     *
     * @return string The email
     */
@@ -40,6 +41,7 @@ class UserSource extends DataSource
     
     /**
     * Sets the email
+    * Email address of the user's mailbox.
     *
     * @param string $val The email
     *
@@ -53,6 +55,7 @@ class UserSource extends DataSource
     
     /**
     * Gets the includedSources
+    * Specifies which sources are included in this group. Possible values are: mailbox, site.
     *
     * @return SourceType The includedSources
     */
@@ -71,6 +74,7 @@ class UserSource extends DataSource
     
     /**
     * Sets the includedSources
+    * Specifies which sources are included in this group. Possible values are: mailbox, site.
     *
     * @param SourceType $val The includedSources
     *

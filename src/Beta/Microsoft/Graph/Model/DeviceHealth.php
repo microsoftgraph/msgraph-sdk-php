@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class DeviceHealth extends Entity
 
     /**
     * Gets the lastConnectionTime
+    * The last time the device was connected.
     *
     * @return \DateTime The lastConnectionTime
     */
@@ -44,6 +45,7 @@ class DeviceHealth extends Entity
 
     /**
     * Sets the lastConnectionTime
+    * The last time the device was connected.
     *
     * @param \DateTime $val The value to assign to the lastConnectionTime
     *

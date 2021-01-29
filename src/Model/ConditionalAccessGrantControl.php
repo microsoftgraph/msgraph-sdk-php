@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -20,7 +20,7 @@ use Microsoft\Graph\Core\Enum;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -35,5 +35,6 @@ class ConditionalAccessGrantControl extends Enum
     const DOMAIN_JOINED_DEVICE = "domainJoinedDevice";
     const APPROVED_APPLICATION = "approvedApplication";
     const COMPLIANT_APPLICATION = "compliantApplication";
+    const PASSWORD_CHANGE = "passwordChange";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

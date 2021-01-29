@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -316,7 +316,7 @@ class Person extends Entity
     
     /**
     * Gets the personType
-    * The type of person.
+    * The type of person, for example distribution list.
     *
     * @return PersonType The personType
     */
@@ -335,7 +335,7 @@ class Person extends Entity
     
     /**
     * Sets the personType
-    * The type of person.
+    * The type of person, for example distribution list.
     *
     * @param PersonType $val The personType
     *

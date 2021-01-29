@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -55,7 +55,7 @@ class MobileAppSupersedence extends MobileAppRelationship
     
     /**
     * Gets the supersedenceType
-    * The supersedence relationship type between the parent and child apps.
+    * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
     *
     * @return MobileAppSupersedenceType The supersedenceType
     */
@@ -74,7 +74,7 @@ class MobileAppSupersedence extends MobileAppRelationship
     
     /**
     * Sets the supersedenceType
-    * The supersedence relationship type between the parent and child apps.
+    * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
     *
     * @param MobileAppSupersedenceType $val The supersedenceType
     *

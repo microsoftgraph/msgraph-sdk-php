@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class TypedEmailAddress extends EmailAddress
 {
     /**
     * Gets the otherLabel
+    * To specify a custom type of email address, set type to other, and assign otherLabel to a custom string. For example, you may use a specific email address for your volunteer activities. Set type to other, and set otherLabel to a custom string such as Volunteer work.
     *
     * @return string The otherLabel
     */
@@ -39,6 +40,7 @@ class TypedEmailAddress extends EmailAddress
 
     /**
     * Sets the otherLabel
+    * To specify a custom type of email address, set type to other, and assign otherLabel to a custom string. For example, you may use a specific email address for your volunteer activities. Set type to other, and set otherLabel to a custom string such as Volunteer work.
     *
     * @param string $val The value of the otherLabel
     *
@@ -52,6 +54,7 @@ class TypedEmailAddress extends EmailAddress
 
     /**
     * Gets the type
+    * The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
     *
     * @return EmailType The type
     */
@@ -70,6 +73,7 @@ class TypedEmailAddress extends EmailAddress
 
     /**
     * Sets the type
+    * The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
     *
     * @param EmailType $val The value to assign to the type
     *

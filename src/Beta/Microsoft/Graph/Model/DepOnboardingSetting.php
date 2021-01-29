@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -361,7 +361,7 @@ class DepOnboardingSetting extends Entity
     
     /**
     * Gets the tokenType
-    * Gets or sets the Dep Token Type.
+    * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
     *
     * @return DepTokenType The tokenType
     */
@@ -380,7 +380,7 @@ class DepOnboardingSetting extends Entity
     
     /**
     * Sets the tokenType
-    * Gets or sets the Dep Token Type.
+    * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
     *
     * @param DepTokenType $val The tokenType
     *

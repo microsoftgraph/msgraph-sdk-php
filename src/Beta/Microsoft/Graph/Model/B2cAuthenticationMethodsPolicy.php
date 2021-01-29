@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
 {
     /**
     * Gets the isEmailPasswordAuthenticationEnabled
+    * The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
     *
     * @return bool The isEmailPasswordAuthenticationEnabled
     */
@@ -40,6 +41,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the isEmailPasswordAuthenticationEnabled
+    * The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
     *
     * @param bool $val The isEmailPasswordAuthenticationEnabled
     *
@@ -80,6 +82,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
     
     /**
     * Gets the isUserNameAuthenticationEnabled
+    * The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
     *
     * @return bool The isUserNameAuthenticationEnabled
     */
@@ -94,6 +97,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the isUserNameAuthenticationEnabled
+    * The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
     *
     * @param bool $val The isUserNameAuthenticationEnabled
     *

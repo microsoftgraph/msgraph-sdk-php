@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class ConditionalAccessDeviceStates extends Entity
 {
     /**
     * Gets the excludeStates
+    * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
     *
     * @return string The excludeStates
     */
@@ -39,6 +40,7 @@ class ConditionalAccessDeviceStates extends Entity
 
     /**
     * Sets the excludeStates
+    * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
     *
     * @param string $val The value of the excludeStates
     *
@@ -51,6 +53,7 @@ class ConditionalAccessDeviceStates extends Entity
     }
     /**
     * Gets the includeStates
+    * States in the scope of the policy. All is the only allowed value.
     *
     * @return string The includeStates
     */
@@ -65,6 +68,7 @@ class ConditionalAccessDeviceStates extends Entity
 
     /**
     * Sets the includeStates
+    * States in the scope of the policy. All is the only allowed value.
     *
     * @param string $val The value of the includeStates
     *

@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -239,7 +239,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updateScheduleType
-    * Update schedule type
+    * Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
     *
     * @return IosSoftwareUpdateScheduleType The updateScheduleType
     */
@@ -258,7 +258,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updateScheduleType
-    * Update schedule type
+    * Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
     *
     * @param IosSoftwareUpdateScheduleType $val The updateScheduleType
     *

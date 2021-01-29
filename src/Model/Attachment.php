@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -117,7 +117,7 @@ class Attachment extends Entity
     
     /**
     * Gets the name
-    * The attachment's file name.
+    * The display name of the attachment. This does not need to be the actual file name.
     *
     * @return string The name
     */
@@ -132,7 +132,7 @@ class Attachment extends Entity
     
     /**
     * Sets the name
-    * The attachment's file name.
+    * The display name of the attachment. This does not need to be the actual file name.
     *
     * @param string $val The name
     *

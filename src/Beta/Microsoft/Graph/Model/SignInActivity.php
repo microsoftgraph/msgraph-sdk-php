@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class SignInActivity extends Entity
 
     /**
     * Gets the lastSignInDateTime
+    * The last sign-in date for a specific user. You can use this field to calculate the last time a user signed in to the directory. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
     *
     * @return \DateTime The lastSignInDateTime
     */
@@ -44,6 +45,7 @@ class SignInActivity extends Entity
 
     /**
     * Sets the lastSignInDateTime
+    * The last sign-in date for a specific user. You can use this field to calculate the last time a user signed in to the directory. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
     *
     * @param \DateTime $val The value to assign to the lastSignInDateTime
     *
@@ -56,6 +58,7 @@ class SignInActivity extends Entity
     }
     /**
     * Gets the lastSignInRequestId
+    * Request ID of the last sign-in performed by this user.
     *
     * @return string The lastSignInRequestId
     */
@@ -70,6 +73,7 @@ class SignInActivity extends Entity
 
     /**
     * Sets the lastSignInRequestId
+    * Request ID of the last sign-in performed by this user.
     *
     * @param string $val The value of the lastSignInRequestId
     *

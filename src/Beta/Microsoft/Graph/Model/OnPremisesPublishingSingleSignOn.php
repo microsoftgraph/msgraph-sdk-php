@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,6 +26,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
 
     /**
     * Gets the kerberosSignOnSettings
+    * The Kerberos Constrained Delegation settings for applications that use Integrated Window Authentication.
     *
     * @return KerberosSignOnSettings The kerberosSignOnSettings
     */
@@ -44,6 +45,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
 
     /**
     * Sets the kerberosSignOnSettings
+    * The Kerberos Constrained Delegation settings for applications that use Integrated Window Authentication.
     *
     * @param KerberosSignOnSettings $val The value to assign to the kerberosSignOnSettings
     *
@@ -57,6 +59,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
 
     /**
     * Gets the singleSignOnMode
+    * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, headerBased.
     *
     * @return SingleSignOnMode The singleSignOnMode
     */
@@ -75,6 +78,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
 
     /**
     * Sets the singleSignOnMode
+    * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, headerBased.
     *
     * @param SingleSignOnMode $val The value to assign to the singleSignOnMode
     *

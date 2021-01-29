@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -117,7 +117,7 @@ class TeamsTab extends Entity
     
     /**
     * Gets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
     * @return TeamsApp The teamsApp
     */
@@ -136,7 +136,7 @@ class TeamsTab extends Entity
     
     /**
     * Sets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
     * @param TeamsApp $val The teamsApp
     *

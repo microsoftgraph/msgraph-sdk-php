@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -110,7 +110,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Gets the installState
-    * The install state of the app.
+    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
     * @return ResultantAppState The installState
     */
@@ -129,7 +129,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Sets the installState
-    * The install state of the app.
+    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
     * @param ResultantAppState $val The value to assign to the installState
     *
@@ -143,7 +143,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Gets the mobileAppIntent
-    * Mobile App Intent.
+    * Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
     *
     * @return MobileAppIntent The mobileAppIntent
     */
@@ -162,7 +162,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Sets the mobileAppIntent
-    * Mobile App Intent.
+    * Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
     *
     * @param MobileAppIntent $val The value to assign to the mobileAppIntent
     *

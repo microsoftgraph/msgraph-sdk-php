@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -17,7 +17,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -25,6 +25,7 @@ class ReferencedObject extends Entity
 {
     /**
     * Gets the referencedObjectName
+    * Name of the referenced object. Must match one of the objects in the directory definition.
     *
     * @return string The referencedObjectName
     */
@@ -39,6 +40,7 @@ class ReferencedObject extends Entity
 
     /**
     * Sets the referencedObjectName
+    * Name of the referenced object. Must match one of the objects in the directory definition.
     *
     * @param string $val The value of the referencedObjectName
     *
@@ -51,6 +53,7 @@ class ReferencedObject extends Entity
     }
     /**
     * Gets the referencedProperty
+    * Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
     *
     * @return string The referencedProperty
     */
@@ -65,6 +68,7 @@ class ReferencedObject extends Entity
 
     /**
     * Sets the referencedProperty
+    * Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
     *
     * @param string $val The value of the referencedProperty
     *

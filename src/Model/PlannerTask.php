@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -518,7 +518,7 @@ class PlannerTask extends Entity
     
     /**
     * Gets the previewType
-    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @return PlannerPreviewType The previewType
     */
@@ -537,7 +537,7 @@ class PlannerTask extends Entity
     
     /**
     * Sets the previewType
-    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @param PlannerPreviewType $val The previewType
     *

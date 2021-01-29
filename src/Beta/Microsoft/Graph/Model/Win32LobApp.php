@@ -7,7 +7,7 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -18,7 +18,7 @@ namespace Beta\Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
@@ -26,7 +26,7 @@ class Win32LobApp extends MobileLobApp
 {
     /**
     * Gets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
     *
     * @return WindowsArchitecture The applicableArchitectures
     */
@@ -45,7 +45,7 @@ class Win32LobApp extends MobileLobApp
     
     /**
     * Sets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
     *
     * @param WindowsArchitecture $val The applicableArchitectures
     *
