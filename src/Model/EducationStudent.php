@@ -87,7 +87,7 @@ class EducationStudent extends Entity
 
     /**
     * Gets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
     * @return EducationGender The gender
     */
@@ -106,7 +106,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
     * @param EducationGender $val The value to assign to the gender
     *

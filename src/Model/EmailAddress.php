@@ -25,7 +25,7 @@ class EmailAddress extends Entity
 {
     /**
     * Gets the address
-    * The email address of the person or entity.
+    * The email address of an entity instance.
     *
     * @return string The address
     */
@@ -40,7 +40,7 @@ class EmailAddress extends Entity
 
     /**
     * Sets the address
-    * The email address of the person or entity.
+    * The email address of an entity instance.
     *
     * @param string $val The value of the address
     *
@@ -53,7 +53,7 @@ class EmailAddress extends Entity
     }
     /**
     * Gets the name
-    * The display name of the person or entity.
+    * The display name of an entity instance.
     *
     * @return string The name
     */
@@ -68,7 +68,7 @@ class EmailAddress extends Entity
 
     /**
     * Sets the name
-    * The display name of the person or entity.
+    * The display name of an entity instance.
     *
     * @param string $val The value of the name
     *

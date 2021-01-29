@@ -26,7 +26,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
 {
     /**
     * Gets the androidRestriction
-    * Not yet documented
+    * Android restrictions based on platform, platform operating system version, and device ownership
     *
     * @return DeviceEnrollmentPlatformRestriction The androidRestriction
     */
@@ -45,7 +45,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the androidRestriction
-    * Not yet documented
+    * Android restrictions based on platform, platform operating system version, and device ownership
     *
     * @param DeviceEnrollmentPlatformRestriction $val The androidRestriction
     *
@@ -59,7 +59,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the iosRestriction
-    * Not yet documented
+    * Ios restrictions based on platform, platform operating system version, and device ownership
     *
     * @return DeviceEnrollmentPlatformRestriction The iosRestriction
     */
@@ -78,7 +78,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the iosRestriction
-    * Not yet documented
+    * Ios restrictions based on platform, platform operating system version, and device ownership
     *
     * @param DeviceEnrollmentPlatformRestriction $val The iosRestriction
     *
@@ -92,7 +92,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the macOSRestriction
-    * Not yet documented
+    * Mac restrictions based on platform, platform operating system version, and device ownership
     *
     * @return DeviceEnrollmentPlatformRestriction The macOSRestriction
     */
@@ -111,7 +111,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the macOSRestriction
-    * Not yet documented
+    * Mac restrictions based on platform, platform operating system version, and device ownership
     *
     * @param DeviceEnrollmentPlatformRestriction $val The macOSRestriction
     *
@@ -125,7 +125,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the windowsMobileRestriction
-    * Not yet documented
+    * Windows mobile restrictions based on platform, platform operating system version, and device ownership
     *
     * @return DeviceEnrollmentPlatformRestriction The windowsMobileRestriction
     */
@@ -144,7 +144,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the windowsMobileRestriction
-    * Not yet documented
+    * Windows mobile restrictions based on platform, platform operating system version, and device ownership
     *
     * @param DeviceEnrollmentPlatformRestriction $val The windowsMobileRestriction
     *
@@ -158,7 +158,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Gets the windowsRestriction
-    * Not yet documented
+    * Windows restrictions based on platform, platform operating system version, and device ownership
     *
     * @return DeviceEnrollmentPlatformRestriction The windowsRestriction
     */
@@ -177,7 +177,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     
     /**
     * Sets the windowsRestriction
-    * Not yet documented
+    * Windows restrictions based on platform, platform operating system version, and device ownership
     *
     * @param DeviceEnrollmentPlatformRestriction $val The windowsRestriction
     *
