@@ -26,7 +26,6 @@ class PrintTask extends Entity
 {
     /**
     * Gets the parentUrl
-    * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
     *
     * @return string The parentUrl
     */
@@ -41,7 +40,6 @@ class PrintTask extends Entity
     
     /**
     * Sets the parentUrl
-    * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
     *
     * @param string $val The parentUrl
     *
@@ -55,7 +53,6 @@ class PrintTask extends Entity
     
     /**
     * Gets the status
-    * The current execution status of this printTask. The calling application is responsible for updating this status when processing is finished, unless the related printJob has been redirected to another printer. Failure to report completion will result in the related print job being blocked from printing and eventually deleted.
     *
     * @return PrintTaskStatus The status
     */
@@ -74,7 +71,6 @@ class PrintTask extends Entity
     
     /**
     * Sets the status
-    * The current execution status of this printTask. The calling application is responsible for updating this status when processing is finished, unless the related printJob has been redirected to another printer. Failure to report completion will result in the related print job being blocked from printing and eventually deleted.
     *
     * @param PrintTaskStatus $val The status
     *
@@ -88,7 +84,6 @@ class PrintTask extends Entity
     
     /**
     * Gets the definition
-    * The printTaskDefinition that was used to create this task. Read-only.
     *
     * @return PrintTaskDefinition The definition
     */
@@ -107,7 +102,6 @@ class PrintTask extends Entity
     
     /**
     * Sets the definition
-    * The printTaskDefinition that was used to create this task. Read-only.
     *
     * @param PrintTaskDefinition $val The definition
     *
@@ -121,7 +115,6 @@ class PrintTask extends Entity
     
     /**
     * Gets the trigger
-    * The printTaskTrigger that triggered this task's execution. Read-only.
     *
     * @return PrintTaskTrigger The trigger
     */
@@ -140,7 +133,6 @@ class PrintTask extends Entity
     
     /**
     * Sets the trigger
-    * The printTaskTrigger that triggered this task's execution. Read-only.
     *
     * @param PrintTaskTrigger $val The trigger
     *

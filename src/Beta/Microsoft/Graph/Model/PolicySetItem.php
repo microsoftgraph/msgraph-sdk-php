@@ -88,7 +88,7 @@ class PolicySetItem extends Entity
     
     /**
     * Gets the errorCode
-    * Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
+    * Error code if any occured.
     *
     * @return ErrorCode The errorCode
     */
@@ -107,7 +107,7 @@ class PolicySetItem extends Entity
     
     /**
     * Sets the errorCode
-    * Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
+    * Error code if any occured.
     *
     * @param ErrorCode $val The errorCode
     *
@@ -241,7 +241,7 @@ class PolicySetItem extends Entity
     
     /**
     * Gets the status
-    * Status of the PolicySetItem. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
+    * Status of the PolicySetItem.
     *
     * @return PolicySetStatus The status
     */
@@ -260,7 +260,7 @@ class PolicySetItem extends Entity
     
     /**
     * Sets the status
-    * Status of the PolicySetItem. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
+    * Status of the PolicySetItem.
     *
     * @param PolicySetStatus $val The status
     *

@@ -26,7 +26,6 @@ class ParseExpressionResponse extends Entity
 
     /**
     * Gets the error
-    * Error details, if expression evaluation resulted in an error.
     *
     * @return PublicError The error
     */
@@ -45,7 +44,6 @@ class ParseExpressionResponse extends Entity
 
     /**
     * Sets the error
-    * Error details, if expression evaluation resulted in an error.
     *
     * @param PublicError $val The value to assign to the error
     *
@@ -58,7 +56,6 @@ class ParseExpressionResponse extends Entity
     }
     /**
     * Gets the evaluationResult
-    * A collection of values produced by the evaluation of the expression.
     *
     * @return string The evaluationResult
     */
@@ -73,7 +70,6 @@ class ParseExpressionResponse extends Entity
 
     /**
     * Sets the evaluationResult
-    * A collection of values produced by the evaluation of the expression.
     *
     * @param string $val The value of the evaluationResult
     *
@@ -86,7 +82,6 @@ class ParseExpressionResponse extends Entity
     }
     /**
     * Gets the evaluationSucceeded
-    * true if the evaluation was successful.
     *
     * @return bool The evaluationSucceeded
     */
@@ -101,7 +96,6 @@ class ParseExpressionResponse extends Entity
 
     /**
     * Sets the evaluationSucceeded
-    * true if the evaluation was successful.
     *
     * @param bool $val The value of the evaluationSucceeded
     *
@@ -115,7 +109,6 @@ class ParseExpressionResponse extends Entity
 
     /**
     * Gets the parsedExpression
-    * An attributeMappingSource object representing the parsed expression.
     *
     * @return AttributeMappingSource The parsedExpression
     */
@@ -134,7 +127,6 @@ class ParseExpressionResponse extends Entity
 
     /**
     * Sets the parsedExpression
-    * An attributeMappingSource object representing the parsed expression.
     *
     * @param AttributeMappingSource $val The value to assign to the parsedExpression
     *
@@ -147,7 +139,6 @@ class ParseExpressionResponse extends Entity
     }
     /**
     * Gets the parsingSucceeded
-    * true if the expression was parsed successfully.
     *
     * @return bool The parsingSucceeded
     */
@@ -162,7 +153,6 @@ class ParseExpressionResponse extends Entity
 
     /**
     * Sets the parsingSucceeded
-    * true if the expression was parsed successfully.
     *
     * @param bool $val The value of the parsingSucceeded
     *

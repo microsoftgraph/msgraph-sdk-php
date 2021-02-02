@@ -155,7 +155,6 @@ class GraphList extends BaseItem
 
      /** 
      * Gets the activities
-    * The recent activities that took place within this list.
      *
      * @return array The activities
      */
@@ -170,7 +169,6 @@ class GraphList extends BaseItem
     
     /** 
     * Sets the activities
-    * The recent activities that took place within this list.
     *
     * @param ItemActivityOLD $val The activities
     *

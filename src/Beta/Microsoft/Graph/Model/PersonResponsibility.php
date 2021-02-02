@@ -26,7 +26,6 @@ class PersonResponsibility extends ItemFacet
 {
     /**
     * Gets the collaborationTags
-    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @return string The collaborationTags
     */
@@ -41,7 +40,6 @@ class PersonResponsibility extends ItemFacet
     
     /**
     * Sets the collaborationTags
-    * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
     * @param string $val The collaborationTags
     *
@@ -55,7 +53,6 @@ class PersonResponsibility extends ItemFacet
     
     /**
     * Gets the description
-    * Description of the responsibility.
     *
     * @return string The description
     */
@@ -70,7 +67,6 @@ class PersonResponsibility extends ItemFacet
     
     /**
     * Sets the description
-    * Description of the responsibility.
     *
     * @param string $val The description
     *
@@ -84,7 +80,6 @@ class PersonResponsibility extends ItemFacet
     
     /**
     * Gets the displayName
-    * Contains a friendly name for the responsibility.
     *
     * @return string The displayName
     */
@@ -99,7 +94,6 @@ class PersonResponsibility extends ItemFacet
     
     /**
     * Sets the displayName
-    * Contains a friendly name for the responsibility.
     *
     * @param string $val The displayName
     *
@@ -113,7 +107,6 @@ class PersonResponsibility extends ItemFacet
     
     /**
     * Gets the webUrl
-    * Contains a link to a web page or resource about the responsibility.
     *
     * @return string The webUrl
     */
@@ -128,7 +121,6 @@ class PersonResponsibility extends ItemFacet
     
     /**
     * Sets the webUrl
-    * Contains a link to a web page or resource about the responsibility.
     *
     * @param string $val The webUrl
     *

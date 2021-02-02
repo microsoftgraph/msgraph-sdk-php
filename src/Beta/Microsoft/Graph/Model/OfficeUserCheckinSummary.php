@@ -25,7 +25,6 @@ class OfficeUserCheckinSummary extends Entity
 {
     /**
     * Gets the failedUserCount
-    * Total failed user check ins for the last 3 months.
     *
     * @return int The failedUserCount
     */
@@ -40,7 +39,6 @@ class OfficeUserCheckinSummary extends Entity
 
     /**
     * Sets the failedUserCount
-    * Total failed user check ins for the last 3 months.
     *
     * @param int $val The value of the failedUserCount
     *
@@ -53,7 +51,6 @@ class OfficeUserCheckinSummary extends Entity
     }
     /**
     * Gets the succeededUserCount
-    * Total successful user check ins for the last 3 months.
     *
     * @return int The succeededUserCount
     */
@@ -68,7 +65,6 @@ class OfficeUserCheckinSummary extends Entity
 
     /**
     * Sets the succeededUserCount
-    * Total successful user check ins for the last 3 months.
     *
     * @param int $val The value of the succeededUserCount
     *

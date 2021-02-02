@@ -25,7 +25,6 @@ class InnerErrorDetail extends Entity
 {
     /**
     * Gets the message
-    * The human-readable error message. Read-only.
     *
     * @return string The message
     */
@@ -40,7 +39,6 @@ class InnerErrorDetail extends Entity
 
     /**
     * Sets the message
-    * The human-readable error message. Read-only.
     *
     * @param string $val The value of the message
     *
@@ -53,7 +51,6 @@ class InnerErrorDetail extends Entity
     }
     /**
     * Gets the source
-    * The source of the error. Read-only.
     *
     * @return string The source
     */
@@ -68,7 +65,6 @@ class InnerErrorDetail extends Entity
 
     /**
     * Sets the source
-    * The source of the error. Read-only.
     *
     * @param string $val The value of the source
     *

@@ -113,7 +113,6 @@ class Directory extends Entity
 
      /** 
      * Gets the featureRolloutPolicies
-    * Nullable.
      *
      * @return array The featureRolloutPolicies
      */
@@ -128,7 +127,6 @@ class Directory extends Entity
     
     /** 
     * Sets the featureRolloutPolicies
-    * Nullable.
     *
     * @param FeatureRolloutPolicy $val The featureRolloutPolicies
     *

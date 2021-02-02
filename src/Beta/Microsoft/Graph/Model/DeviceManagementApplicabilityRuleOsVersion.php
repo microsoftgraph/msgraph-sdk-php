@@ -110,7 +110,7 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
 
     /**
     * Gets the ruleType
-    * Applicability Rule type. Possible values are: include, exclude.
+    * Applicability Rule type.
     *
     * @return DeviceManagementApplicabilityRuleType The ruleType
     */
@@ -129,7 +129,7 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
 
     /**
     * Sets the ruleType
-    * Applicability Rule type. Possible values are: include, exclude.
+    * Applicability Rule type.
     *
     * @param DeviceManagementApplicabilityRuleType $val The value to assign to the ruleType
     *

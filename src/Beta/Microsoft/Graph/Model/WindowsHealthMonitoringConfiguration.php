@@ -26,7 +26,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the allowDeviceHealthMonitoring
-    * Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled.
+    * Enables device health monitoring on the device
     *
     * @return Enablement The allowDeviceHealthMonitoring
     */
@@ -45,7 +45,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowDeviceHealthMonitoring
-    * Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled.
+    * Enables device health monitoring on the device
     *
     * @param Enablement $val The allowDeviceHealthMonitoring
     *
@@ -88,7 +88,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     
     /**
     * Gets the configDeviceHealthMonitoringScope
-    * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
+    * Specifies set of events collected from the device where health monitoring is enabled
     *
     * @return WindowsHealthMonitoringScope The configDeviceHealthMonitoringScope
     */
@@ -107,7 +107,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     
     /**
     * Sets the configDeviceHealthMonitoringScope
-    * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
+    * Specifies set of events collected from the device where health monitoring is enabled
     *
     * @param WindowsHealthMonitoringScope $val The configDeviceHealthMonitoringScope
     *

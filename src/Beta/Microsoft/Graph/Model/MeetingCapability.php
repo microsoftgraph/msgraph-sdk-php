@@ -25,7 +25,6 @@ class MeetingCapability extends Entity
 {
     /**
     * Gets the allowAnonymousUsersToDialOut
-    * Indicates whether anonymous users dialout is allowed in a meeting.
     *
     * @return bool The allowAnonymousUsersToDialOut
     */
@@ -40,7 +39,6 @@ class MeetingCapability extends Entity
 
     /**
     * Sets the allowAnonymousUsersToDialOut
-    * Indicates whether anonymous users dialout is allowed in a meeting.
     *
     * @param bool $val The value of the allowAnonymousUsersToDialOut
     *
@@ -53,7 +51,6 @@ class MeetingCapability extends Entity
     }
     /**
     * Gets the allowAnonymousUsersToStartMeeting
-    * Indicates whether anonymous users are allowed to start a meeting.
     *
     * @return bool The allowAnonymousUsersToStartMeeting
     */
@@ -68,7 +65,6 @@ class MeetingCapability extends Entity
 
     /**
     * Sets the allowAnonymousUsersToStartMeeting
-    * Indicates whether anonymous users are allowed to start a meeting.
     *
     * @param bool $val The value of the allowAnonymousUsersToStartMeeting
     *
@@ -82,7 +78,6 @@ class MeetingCapability extends Entity
 
     /**
     * Gets the autoAdmittedUsers
-    * Possible values are: everyoneInCompany, everyone.
     *
     * @return AutoAdmittedUsersType The autoAdmittedUsers
     */
@@ -101,7 +96,6 @@ class MeetingCapability extends Entity
 
     /**
     * Sets the autoAdmittedUsers
-    * Possible values are: everyoneInCompany, everyone.
     *
     * @param AutoAdmittedUsersType $val The value to assign to the autoAdmittedUsers
     *

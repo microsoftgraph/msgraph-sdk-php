@@ -25,7 +25,6 @@ class UserAttributeValuesItem extends Entity
 {
     /**
     * Gets the isDefault
-    * Used to set the value as the default.
     *
     * @return bool The isDefault
     */
@@ -40,7 +39,6 @@ class UserAttributeValuesItem extends Entity
 
     /**
     * Sets the isDefault
-    * Used to set the value as the default.
     *
     * @param bool $val The value of the isDefault
     *
@@ -53,7 +51,6 @@ class UserAttributeValuesItem extends Entity
     }
     /**
     * Gets the name
-    * The display name of the property displayed to the end user in the user flow.
     *
     * @return string The name
     */
@@ -68,7 +65,6 @@ class UserAttributeValuesItem extends Entity
 
     /**
     * Sets the name
-    * The display name of the property displayed to the end user in the user flow.
     *
     * @param string $val The value of the name
     *
@@ -81,7 +77,6 @@ class UserAttributeValuesItem extends Entity
     }
     /**
     * Gets the value
-    * The value that is set when this item is selected.
     *
     * @return string The value
     */
@@ -96,7 +91,6 @@ class UserAttributeValuesItem extends Entity
 
     /**
     * Sets the value
-    * The value that is set when this item is selected.
     *
     * @param string $val The value of the value
     *

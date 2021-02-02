@@ -26,7 +26,6 @@ class PlannerPlan extends PlannerDelta
 {
     /**
     * Gets the contexts
-    * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
     *
     * @return PlannerPlanContextCollection The contexts
     */
@@ -45,7 +44,6 @@ class PlannerPlan extends PlannerDelta
     
     /**
     * Sets the contexts
-    * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
     *
     * @param PlannerPlanContextCollection $val The contexts
     *

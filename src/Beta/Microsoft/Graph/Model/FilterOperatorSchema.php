@@ -26,7 +26,6 @@ class FilterOperatorSchema extends Entity
 {
     /**
     * Gets the arity
-    * Arity of the operator. Possible values are: Binary, Unary. The default is Binary.
     *
     * @return ScopeOperatorType The arity
     */
@@ -45,7 +44,6 @@ class FilterOperatorSchema extends Entity
     
     /**
     * Sets the arity
-    * Arity of the operator. Possible values are: Binary, Unary. The default is Binary.
     *
     * @param ScopeOperatorType $val The arity
     *
@@ -59,7 +57,6 @@ class FilterOperatorSchema extends Entity
     
     /**
     * Gets the multivaluedComparisonType
-    * Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All.
     *
     * @return ScopeOperatorMultiValuedComparisonType The multivaluedComparisonType
     */
@@ -78,7 +75,6 @@ class FilterOperatorSchema extends Entity
     
     /**
     * Sets the multivaluedComparisonType
-    * Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All.
     *
     * @param ScopeOperatorMultiValuedComparisonType $val The multivaluedComparisonType
     *
@@ -93,7 +89,6 @@ class FilterOperatorSchema extends Entity
 
      /** 
      * Gets the supportedAttributeTypes
-    * Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      *
      * @return array The supportedAttributeTypes
      */
@@ -108,7 +103,6 @@ class FilterOperatorSchema extends Entity
     
     /** 
     * Sets the supportedAttributeTypes
-    * Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
     *
     * @param AttributeType $val The supportedAttributeTypes
     *

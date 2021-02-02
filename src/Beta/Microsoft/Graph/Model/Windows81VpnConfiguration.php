@@ -55,7 +55,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
+    * Connection type.
     *
     * @return WindowsVpnConnectionType The connectionType
     */
@@ -74,7 +74,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
+    * Connection type.
     *
     * @param WindowsVpnConnectionType $val The connectionType
     *

@@ -150,7 +150,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Gets the microsoftStoreForBusinessPortalSelection
-    * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']. Possible values are: none, companyPortal, privateStore.
+    * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']
     *
     * @return MicrosoftStoreForBusinessPortalSelectionOptions The microsoftStoreForBusinessPortalSelection
     */
@@ -169,7 +169,7 @@ class DeviceAppManagement extends Entity
     
     /**
     * Sets the microsoftStoreForBusinessPortalSelection
-    * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']. Possible values are: none, companyPortal, privateStore.
+    * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']
     *
     * @param MicrosoftStoreForBusinessPortalSelectionOptions $val The microsoftStoreForBusinessPortalSelection
     *

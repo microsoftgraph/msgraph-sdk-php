@@ -59,7 +59,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     
     /**
     * Gets the status
-    * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * Wipe action status.
     *
     * @return ActionState The status
     */
@@ -78,7 +78,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     
     /**
     * Sets the status
-    * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * Wipe action status.
     *
     * @param ActionState $val The status
     *

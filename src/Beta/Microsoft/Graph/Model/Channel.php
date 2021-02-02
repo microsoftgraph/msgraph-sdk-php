@@ -175,7 +175,7 @@ class Channel extends Entity
     
     /**
     * Gets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
     *
     * @return ChannelMembershipType The membershipType
     */
@@ -194,7 +194,7 @@ class Channel extends Entity
     
     /**
     * Sets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
     *
     * @param ChannelMembershipType $val The membershipType
     *
@@ -208,7 +208,6 @@ class Channel extends Entity
     
     /**
     * Gets the moderationSettings
-    * Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
     *
     * @return ChannelModerationSettings The moderationSettings
     */
@@ -227,7 +226,6 @@ class Channel extends Entity
     
     /**
     * Sets the moderationSettings
-    * Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
     *
     * @param ChannelModerationSettings $val The moderationSettings
     *

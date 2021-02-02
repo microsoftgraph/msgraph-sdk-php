@@ -26,7 +26,6 @@ class RecordingInfo extends Entity
 
     /**
     * Gets the initiatedBy
-    * The participant who initiated the recording.
     *
     * @return ParticipantInfo The initiatedBy
     */
@@ -45,7 +44,6 @@ class RecordingInfo extends Entity
 
     /**
     * Sets the initiatedBy
-    * The participant who initiated the recording.
     *
     * @param ParticipantInfo $val The value to assign to the initiatedBy
     *
@@ -59,7 +57,7 @@ class RecordingInfo extends Entity
 
     /**
     * Gets the initiator
-    * The identities of recording initiator.
+    * The identities of the recording initiator.
     *
     * @return IdentitySet The initiator
     */
@@ -78,7 +76,7 @@ class RecordingInfo extends Entity
 
     /**
     * Sets the initiator
-    * The identities of recording initiator.
+    * The identities of the recording initiator.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

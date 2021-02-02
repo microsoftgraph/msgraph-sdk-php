@@ -26,7 +26,6 @@ class WorkPosition extends ItemFacet
 {
     /**
     * Gets the categories
-    * Categories that the user has associated with this position.
     *
     * @return string The categories
     */
@@ -41,7 +40,6 @@ class WorkPosition extends ItemFacet
     
     /**
     * Sets the categories
-    * Categories that the user has associated with this position.
     *
     * @param string $val The categories
     *
@@ -56,7 +54,6 @@ class WorkPosition extends ItemFacet
 
      /** 
      * Gets the colleagues
-    * Colleagues that are associated with this position.
      *
      * @return array The colleagues
      */
@@ -71,7 +68,6 @@ class WorkPosition extends ItemFacet
     
     /** 
     * Sets the colleagues
-    * Colleagues that are associated with this position.
     *
     * @param RelatedPerson $val The colleagues
     *
@@ -85,7 +81,6 @@ class WorkPosition extends ItemFacet
     
     /**
     * Gets the detail
-    * Contains detailed information about the position.
     *
     * @return PositionDetail The detail
     */
@@ -104,7 +99,6 @@ class WorkPosition extends ItemFacet
     
     /**
     * Sets the detail
-    * Contains detailed information about the position.
     *
     * @param PositionDetail $val The detail
     *
@@ -118,7 +112,6 @@ class WorkPosition extends ItemFacet
     
     /**
     * Gets the isCurrent
-    * Denotes whether or not the position is current.
     *
     * @return bool The isCurrent
     */
@@ -133,7 +126,6 @@ class WorkPosition extends ItemFacet
     
     /**
     * Sets the isCurrent
-    * Denotes whether or not the position is current.
     *
     * @param bool $val The isCurrent
     *
@@ -147,7 +139,6 @@ class WorkPosition extends ItemFacet
     
     /**
     * Gets the manager
-    * Contains detail of the user's manager in this position.
     *
     * @return RelatedPerson The manager
     */
@@ -166,7 +157,6 @@ class WorkPosition extends ItemFacet
     
     /**
     * Sets the manager
-    * Contains detail of the user's manager in this position.
     *
     * @param RelatedPerson $val The manager
     *

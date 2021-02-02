@@ -55,7 +55,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Gets the certificateStore
-    * Target store certificate. Possible values are: user, machine.
+    * Target store certificate
     *
     * @return CertificateStore The certificateStore
     */
@@ -74,7 +74,7 @@ class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the certificateStore
-    * Target store certificate. Possible values are: user, machine.
+    * Target store certificate
     *
     * @param CertificateStore $val The certificateStore
     *

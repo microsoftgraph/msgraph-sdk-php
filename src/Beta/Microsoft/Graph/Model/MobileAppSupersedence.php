@@ -55,7 +55,7 @@ class MobileAppSupersedence extends MobileAppRelationship
     
     /**
     * Gets the supersedenceType
-    * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
+    * The supersedence relationship type between the parent and child apps.
     *
     * @return MobileAppSupersedenceType The supersedenceType
     */
@@ -74,7 +74,7 @@ class MobileAppSupersedence extends MobileAppRelationship
     
     /**
     * Sets the supersedenceType
-    * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
+    * The supersedence relationship type between the parent and child apps.
     *
     * @param MobileAppSupersedenceType $val The supersedenceType
     *

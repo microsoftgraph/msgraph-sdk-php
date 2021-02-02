@@ -25,7 +25,6 @@ class ClassificationResult extends Entity
 {
     /**
     * Gets the confidenceLevel
-    * The confidence level, 0 to 100, of the result.
     *
     * @return int The confidenceLevel
     */
@@ -40,7 +39,6 @@ class ClassificationResult extends Entity
 
     /**
     * Sets the confidenceLevel
-    * The confidence level, 0 to 100, of the result.
     *
     * @param int $val The value of the confidenceLevel
     *
@@ -53,7 +51,6 @@ class ClassificationResult extends Entity
     }
     /**
     * Gets the count
-    * The number of instances of the specific information type in the input.
     *
     * @return int The count
     */
@@ -68,7 +65,6 @@ class ClassificationResult extends Entity
 
     /**
     * Sets the count
-    * The number of instances of the specific information type in the input.
     *
     * @param int $val The value of the count
     *
@@ -81,7 +77,6 @@ class ClassificationResult extends Entity
     }
     /**
     * Gets the sensitiveTypeId
-    * The GUID of the discovered sensitive information type.
     *
     * @return string The sensitiveTypeId
     */
@@ -96,7 +91,6 @@ class ClassificationResult extends Entity
 
     /**
     * Sets the sensitiveTypeId
-    * The GUID of the discovered sensitive information type.
     *
     * @param string $val The value of the sensitiveTypeId
     *

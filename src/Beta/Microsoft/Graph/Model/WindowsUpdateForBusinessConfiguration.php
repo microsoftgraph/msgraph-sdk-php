@@ -26,7 +26,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @return AutomaticUpdateMode The automaticUpdateMode
     */
@@ -45,7 +45,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @param AutomaticUpdateMode $val The automaticUpdateMode
     *
@@ -59,7 +59,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the autoRestartNotificationDismissal
-    * Specify the method by which the auto-restart required notification is dismissed. Possible values are: notConfigured, automatic, user.
+    * Specify the method by which the auto-restart required notification is dismissed
     *
     * @return AutoRestartNotificationDismissalMethod The autoRestartNotificationDismissal
     */
@@ -78,7 +78,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the autoRestartNotificationDismissal
-    * Specify the method by which the auto-restart required notification is dismissed. Possible values are: notConfigured, automatic, user.
+    * Specify the method by which the auto-restart required notification is dismissed
     *
     * @param AutoRestartNotificationDismissalMethod $val The autoRestartNotificationDismissal
     *
@@ -944,7 +944,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the skipChecksBeforeRestart
-    * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.
+    * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. 
     *
     * @return bool The skipChecksBeforeRestart
     */
@@ -959,7 +959,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the skipChecksBeforeRestart
-    * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.
+    * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. 
     *
     * @param bool $val The skipChecksBeforeRestart
     *
@@ -973,7 +973,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updateNotificationLevel
-    * Specifies what Windows Update notifications users see. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications.
+    * Specifies what Windows Update notifications users see.
     *
     * @return WindowsUpdateNotificationDisplayOption The updateNotificationLevel
     */
@@ -992,7 +992,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updateNotificationLevel
-    * Specifies what Windows Update notifications users see. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications.
+    * Specifies what Windows Update notifications users see.
     *
     * @param WindowsUpdateNotificationDisplayOption $val The updateNotificationLevel
     *
@@ -1006,7 +1006,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updateWeeks
-    * Scheduled the update installation on the weeks of the month. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek.
+    * Scheduled the update installation on the weeks of the month
     *
     * @return WindowsUpdateForBusinessUpdateWeeks The updateWeeks
     */
@@ -1025,7 +1025,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updateWeeks
-    * Scheduled the update installation on the weeks of the month. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek.
+    * Scheduled the update installation on the weeks of the month
     *
     * @param WindowsUpdateForBusinessUpdateWeeks $val The updateWeeks
     *
@@ -1039,7 +1039,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the userPauseAccess
-    * Specifies whether to enable end user’s access to pause software updates. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether to enable end user???s access to pause software updates.
     *
     * @return Enablement The userPauseAccess
     */
@@ -1058,7 +1058,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the userPauseAccess
-    * Specifies whether to enable end user’s access to pause software updates. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether to enable end user???s access to pause software updates.
     *
     * @param Enablement $val The userPauseAccess
     *
@@ -1072,7 +1072,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Gets the userWindowsUpdateScanAccess
-    * Specifies whether to disable user’s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether to disable user???s access to scan Windows Update.
     *
     * @return Enablement The userWindowsUpdateScanAccess
     */
@@ -1091,7 +1091,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the userWindowsUpdateScanAccess
-    * Specifies whether to disable user’s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether to disable user???s access to scan Windows Update.
     *
     * @param Enablement $val The userWindowsUpdateScanAccess
     *

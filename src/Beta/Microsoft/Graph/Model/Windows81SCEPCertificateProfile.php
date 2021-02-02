@@ -26,7 +26,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
 {
     /**
     * Gets the certificateStore
-    * Target store certificate. Possible values are: user, machine.
+    * Target store certificate
     *
     * @return CertificateStore The certificateStore
     */
@@ -45,7 +45,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     
     /**
     * Sets the certificateStore
-    * Target store certificate. Possible values are: user, machine.
+    * Target store certificate
     *
     * @param CertificateStore $val The certificateStore
     *
@@ -59,7 +59,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     
     /**
     * Gets the hashAlgorithm
-    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
+    * SCEP Hash Algorithm.
     *
     * @return HashAlgorithms The hashAlgorithm
     */
@@ -78,7 +78,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     
     /**
     * Sets the hashAlgorithm
-    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
+    * SCEP Hash Algorithm.
     *
     * @param HashAlgorithms $val The hashAlgorithm
     *
@@ -92,7 +92,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     
     /**
     * Gets the keySize
-    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+    * SCEP Key Size.
     *
     * @return KeySize The keySize
     */
@@ -111,7 +111,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     
     /**
     * Sets the keySize
-    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+    * SCEP Key Size.
     *
     * @param KeySize $val The keySize
     *
@@ -125,7 +125,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     
     /**
     * Gets the keyUsage
-    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+    * SCEP Key Usage.
     *
     * @return KeyUsages The keyUsage
     */
@@ -144,7 +144,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     
     /**
     * Sets the keyUsage
-    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+    * SCEP Key Usage.
     *
     * @param KeyUsages $val The keyUsage
     *

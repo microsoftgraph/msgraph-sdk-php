@@ -26,7 +26,6 @@ class Office365GroupsActivityGroupCounts extends Entity
 {
     /**
     * Gets the active
-    * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
     *
     * @return int The active
     */
@@ -41,7 +40,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Sets the active
-    * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
     *
     * @param int $val The active
     *
@@ -55,7 +53,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Gets the reportDate
-    * The date on which a number of groups were active.
     *
     * @return \DateTime The reportDate
     */
@@ -74,7 +71,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Sets the reportDate
-    * The date on which a number of groups were active.
     *
     * @param \DateTime $val The reportDate
     *
@@ -88,7 +84,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Gets the reportPeriod
-    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -103,7 +98,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Sets the reportPeriod
-    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -117,7 +111,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
-    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -136,7 +129,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
-    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -150,7 +142,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Gets the total
-    * The total number of groups.
     *
     * @return int The total
     */
@@ -165,7 +156,6 @@ class Office365GroupsActivityGroupCounts extends Entity
     
     /**
     * Sets the total
-    * The total number of groups.
     *
     * @param int $val The total
     *

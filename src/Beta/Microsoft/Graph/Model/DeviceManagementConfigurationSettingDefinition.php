@@ -26,7 +26,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 {
     /**
     * Gets the accessTypes
-    * Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
+    * Read/write access mode of the setting
     *
     * @return DeviceManagementConfigurationSettingAccessTypes The accessTypes
     */
@@ -45,7 +45,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Sets the accessTypes
-    * Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
+    * Read/write access mode of the setting
     *
     * @param DeviceManagementConfigurationSettingAccessTypes $val The accessTypes
     *
@@ -415,7 +415,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Gets the settingUsage
-    * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
+    * Setting type, for example, configuration and compliance
     *
     * @return DeviceManagementConfigurationSettingUsage The settingUsage
     */
@@ -434,7 +434,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Sets the settingUsage
-    * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
+    * Setting type, for example, configuration and compliance
     *
     * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
     *

@@ -22,11 +22,10 @@ namespace Beta\Microsoft\Graph\TermStore\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Store extends \Beta\Microsoft\Graph\Model\Entity
+class Store extends 
 {
     /**
     * Gets the defaultLanguageTag
-    * Default language of the term store.
     *
     * @return string The defaultLanguageTag
     */
@@ -41,7 +40,6 @@ class Store extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the defaultLanguageTag
-    * Default language of the term store.
     *
     * @param string $val The defaultLanguageTag
     *
@@ -55,7 +53,6 @@ class Store extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the languageTags
-    * List of languages for the term store.
     *
     * @return string The languageTags
     */
@@ -70,7 +67,6 @@ class Store extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the languageTags
-    * List of languages for the term store.
     *
     * @param string $val The languageTags
     *
@@ -85,7 +81,6 @@ class Store extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the groups
-    * Collection of all groups available in the term store.
      *
      * @return array The groups
      */
@@ -100,7 +95,6 @@ class Store extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the groups
-    * Collection of all groups available in the term store.
     *
     * @param Group $val The groups
     *
@@ -115,7 +109,6 @@ class Store extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the sets
-    * Collection of all sets available in the term store.
      *
      * @return array The sets
      */
@@ -130,7 +123,6 @@ class Store extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the sets
-    * Collection of all sets available in the term store.
     *
     * @param Set $val The sets
     *

@@ -25,7 +25,6 @@ class ExpressionEvaluationDetails extends Entity
 {
     /**
     * Gets the expression
-    * Represents expression which has been evaluated.
     *
     * @return string The expression
     */
@@ -40,7 +39,6 @@ class ExpressionEvaluationDetails extends Entity
 
     /**
     * Sets the expression
-    * Represents expression which has been evaluated.
     *
     * @param string $val The value of the expression
     *
@@ -54,7 +52,6 @@ class ExpressionEvaluationDetails extends Entity
 
     /**
     * Gets the expressionEvaluationDetails
-    * Represents the details of the evaluation of the expression.
     *
     * @return ExpressionEvaluationDetails The expressionEvaluationDetails
     */
@@ -73,7 +70,6 @@ class ExpressionEvaluationDetails extends Entity
 
     /**
     * Sets the expressionEvaluationDetails
-    * Represents the details of the evaluation of the expression.
     *
     * @param ExpressionEvaluationDetails $val The value to assign to the expressionEvaluationDetails
     *
@@ -86,7 +82,6 @@ class ExpressionEvaluationDetails extends Entity
     }
     /**
     * Gets the expressionResult
-    * Represents the value of the result of the current expression.
     *
     * @return bool The expressionResult
     */
@@ -101,7 +96,6 @@ class ExpressionEvaluationDetails extends Entity
 
     /**
     * Sets the expressionResult
-    * Represents the value of the result of the current expression.
     *
     * @param bool $val The value of the expressionResult
     *
@@ -115,7 +109,6 @@ class ExpressionEvaluationDetails extends Entity
 
     /**
     * Gets the propertyToEvaluate
-    * Defines the name of the property and the value of that property.
     *
     * @return PropertyToEvaluate The propertyToEvaluate
     */
@@ -134,7 +127,6 @@ class ExpressionEvaluationDetails extends Entity
 
     /**
     * Sets the propertyToEvaluate
-    * Defines the name of the property and the value of that property.
     *
     * @param PropertyToEvaluate $val The value to assign to the propertyToEvaluate
     *

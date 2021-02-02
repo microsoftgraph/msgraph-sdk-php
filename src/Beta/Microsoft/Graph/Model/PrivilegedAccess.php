@@ -26,7 +26,6 @@ class PrivilegedAccess extends Entity
 {
     /**
     * Gets the displayName
-    * The display name of the provider managed by PIM.
     *
     * @return string The displayName
     */
@@ -41,7 +40,6 @@ class PrivilegedAccess extends Entity
     
     /**
     * Sets the displayName
-    * The display name of the provider managed by PIM.
     *
     * @param string $val The displayName
     *
@@ -56,7 +54,6 @@ class PrivilegedAccess extends Entity
 
      /** 
      * Gets the resources
-    * A collection of resources for the provider.
      *
      * @return array The resources
      */
@@ -71,7 +68,6 @@ class PrivilegedAccess extends Entity
     
     /** 
     * Sets the resources
-    * A collection of resources for the provider.
     *
     * @param GovernanceResource $val The resources
     *
@@ -86,7 +82,6 @@ class PrivilegedAccess extends Entity
 
      /** 
      * Gets the roleAssignmentRequests
-    * A collection of role assignment requests for the provider.
      *
      * @return array The roleAssignmentRequests
      */
@@ -101,7 +96,6 @@ class PrivilegedAccess extends Entity
     
     /** 
     * Sets the roleAssignmentRequests
-    * A collection of role assignment requests for the provider.
     *
     * @param GovernanceRoleAssignmentRequest $val The roleAssignmentRequests
     *
@@ -116,7 +110,6 @@ class PrivilegedAccess extends Entity
 
      /** 
      * Gets the roleAssignments
-    * A collection of role assignments for the provider.
      *
      * @return array The roleAssignments
      */
@@ -131,7 +124,6 @@ class PrivilegedAccess extends Entity
     
     /** 
     * Sets the roleAssignments
-    * A collection of role assignments for the provider.
     *
     * @param GovernanceRoleAssignment $val The roleAssignments
     *
@@ -146,7 +138,6 @@ class PrivilegedAccess extends Entity
 
      /** 
      * Gets the roleDefinitions
-    * A collection of role defintions for the provider.
      *
      * @return array The roleDefinitions
      */
@@ -161,7 +152,6 @@ class PrivilegedAccess extends Entity
     
     /** 
     * Sets the roleDefinitions
-    * A collection of role defintions for the provider.
     *
     * @param GovernanceRoleDefinition $val The roleDefinitions
     *
@@ -176,7 +166,6 @@ class PrivilegedAccess extends Entity
 
      /** 
      * Gets the roleSettings
-    * A collection of role settings for the provider.
      *
      * @return array The roleSettings
      */
@@ -191,7 +180,6 @@ class PrivilegedAccess extends Entity
     
     /** 
     * Sets the roleSettings
-    * A collection of role settings for the provider.
     *
     * @param GovernanceRoleSetting $val The roleSettings
     *

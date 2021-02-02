@@ -26,7 +26,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Gets the alignment
-    * Possible values are: left, right, center.
     *
     * @return ContentAlignment The alignment
     */
@@ -45,7 +44,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the alignment
-    * Possible values are: left, right, center.
     *
     * @param ContentAlignment $val The value to assign to the alignment
     *
@@ -58,7 +56,6 @@ class AddContentHeaderAction extends InformationProtectionAction
     }
     /**
     * Gets the fontColor
-    * Color of the font to use for the header.
     *
     * @return string The fontColor
     */
@@ -73,7 +70,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the fontColor
-    * Color of the font to use for the header.
     *
     * @param string $val The value of the fontColor
     *
@@ -86,7 +82,6 @@ class AddContentHeaderAction extends InformationProtectionAction
     }
     /**
     * Gets the fontName
-    * Name of the font to use for the header.
     *
     * @return string The fontName
     */
@@ -101,7 +96,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the fontName
-    * Name of the font to use for the header.
     *
     * @param string $val The value of the fontName
     *
@@ -114,7 +108,6 @@ class AddContentHeaderAction extends InformationProtectionAction
     }
     /**
     * Gets the fontSize
-    * Font size to use for the header.
     *
     * @return int The fontSize
     */
@@ -129,7 +122,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the fontSize
-    * Font size to use for the header.
     *
     * @param int $val The value of the fontSize
     *
@@ -142,7 +134,6 @@ class AddContentHeaderAction extends InformationProtectionAction
     }
     /**
     * Gets the margin
-    * The margin of the header from the top of the document.
     *
     * @return int The margin
     */
@@ -157,7 +148,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the margin
-    * The margin of the header from the top of the document.
     *
     * @param int $val The value of the margin
     *
@@ -170,7 +160,6 @@ class AddContentHeaderAction extends InformationProtectionAction
     }
     /**
     * Gets the text
-    * The contents of the header itself.
     *
     * @return string The text
     */
@@ -185,7 +174,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the text
-    * The contents of the header itself.
     *
     * @param string $val The value of the text
     *
@@ -198,7 +186,6 @@ class AddContentHeaderAction extends InformationProtectionAction
     }
     /**
     * Gets the uiElementName
-    * The name of the UI element where the header should be placed.
     *
     * @return string The uiElementName
     */
@@ -213,7 +200,6 @@ class AddContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the uiElementName
-    * The name of the UI element where the header should be placed.
     *
     * @param string $val The value of the uiElementName
     *

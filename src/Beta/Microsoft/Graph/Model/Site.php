@@ -402,7 +402,6 @@ class Site extends BaseItem
 
      /** 
      * Gets the pages
-    * The collection of pages in the SitePages list in this site.
      *
      * @return array The pages
      */
@@ -417,7 +416,6 @@ class Site extends BaseItem
     
     /** 
     * Sets the pages
-    * The collection of pages in the SitePages list in this site.
     *
     * @param SitePage $val The pages
     *

@@ -25,41 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationAssignment extends Entity
 {
     /**
-    * Gets the addedStudentAction
-    * Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen.
-    *
-    * @return EducationAddedStudentAction The addedStudentAction
-    */
-    public function getAddedStudentAction()
-    {
-        if (array_key_exists("addedStudentAction", $this->_propDict)) {
-            if (is_a($this->_propDict["addedStudentAction"], "Beta\Microsoft\Graph\Model\EducationAddedStudentAction")) {
-                return $this->_propDict["addedStudentAction"];
-            } else {
-                $this->_propDict["addedStudentAction"] = new EducationAddedStudentAction($this->_propDict["addedStudentAction"]);
-                return $this->_propDict["addedStudentAction"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the addedStudentAction
-    * Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen.
-    *
-    * @param EducationAddedStudentAction $val The addedStudentAction
-    *
-    * @return EducationAssignment
-    */
-    public function setAddedStudentAction($val)
-    {
-        $this->_propDict["addedStudentAction"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the allowLateSubmissions
-    * Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
     *
     * @return bool The allowLateSubmissions
     */
@@ -74,7 +40,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the allowLateSubmissions
-    * Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
     *
     * @param bool $val The allowLateSubmissions
     *
@@ -88,7 +53,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the allowStudentsToAddResourcesToSubmission
-    * Identifies whether students can add their own resources to a submission or if they can only modify resources added by the teacher.
     *
     * @return bool The allowStudentsToAddResourcesToSubmission
     */
@@ -103,7 +67,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the allowStudentsToAddResourcesToSubmission
-    * Identifies whether students can add their own resources to a submission or if they can only modify resources added by the teacher.
     *
     * @param bool $val The allowStudentsToAddResourcesToSubmission
     *
@@ -117,7 +80,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the assignDateTime
-    * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The assignDateTime
     */
@@ -136,7 +98,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the assignDateTime
-    * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The assignDateTime
     *
@@ -150,7 +111,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the assignedDateTime
-    * The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The assignedDateTime
     */
@@ -169,7 +129,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the assignedDateTime
-    * The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The assignedDateTime
     *
@@ -183,7 +142,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the assignTo
-    * Which users, or whole class should receive a submission object once the assignment is published.
     *
     * @return EducationAssignmentRecipient The assignTo
     */
@@ -202,7 +160,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the assignTo
-    * Which users, or whole class should receive a submission object once the assignment is published.
     *
     * @param EducationAssignmentRecipient $val The assignTo
     *
@@ -216,7 +173,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the classId
-    * Class which this assignment belongs.
     *
     * @return string The classId
     */
@@ -231,7 +187,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the classId
-    * Class which this assignment belongs.
     *
     * @param string $val The classId
     *
@@ -245,7 +200,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the closeDateTime
-    * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The closeDateTime
     */
@@ -264,7 +218,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the closeDateTime
-    * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The closeDateTime
     *
@@ -278,7 +231,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the createdBy
-    * Who created the assignment.
     *
     * @return IdentitySet The createdBy
     */
@@ -297,7 +249,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the createdBy
-    * Who created the assignment.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -311,7 +262,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the createdDateTime
-    * Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -330,7 +280,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the createdDateTime
-    * Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -344,7 +293,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the displayName
-    * Name of the assignment.
     *
     * @return string The displayName
     */
@@ -359,7 +307,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the displayName
-    * Name of the assignment.
     *
     * @param string $val The displayName
     *
@@ -373,7 +320,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the dueDateTime
-    * Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The dueDateTime
     */
@@ -392,7 +338,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the dueDateTime
-    * Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The dueDateTime
     *
@@ -406,7 +351,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the grading
-    * How the assignment will be graded.
     *
     * @return EducationAssignmentGradeType The grading
     */
@@ -425,7 +369,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the grading
-    * How the assignment will be graded.
     *
     * @param EducationAssignmentGradeType $val The grading
     *
@@ -439,7 +382,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the instructions
-    * Instructions for the assignment.  This along with the display name tell the student what to do.
     *
     * @return EducationItemBody The instructions
     */
@@ -458,7 +400,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the instructions
-    * Instructions for the assignment.  This along with the display name tell the student what to do.
     *
     * @param EducationItemBody $val The instructions
     *
@@ -472,7 +413,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the lastModifiedBy
-    * Who last modified the assignment.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -491,7 +431,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the lastModifiedBy
-    * Who last modified the assignment.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -505,7 +444,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -524,7 +462,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -537,37 +474,7 @@ class EducationAssignment extends Entity
     }
     
     /**
-    * Gets the notificationChannelUrl
-    * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
-    *
-    * @return string The notificationChannelUrl
-    */
-    public function getNotificationChannelUrl()
-    {
-        if (array_key_exists("notificationChannelUrl", $this->_propDict)) {
-            return $this->_propDict["notificationChannelUrl"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the notificationChannelUrl
-    * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
-    *
-    * @param string $val The notificationChannelUrl
-    *
-    * @return EducationAssignment
-    */
-    public function setNotificationChannelUrl($val)
-    {
-        $this->_propDict["notificationChannelUrl"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the status
-    * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
     *
     * @return EducationAssignmentStatus The status
     */
@@ -586,7 +493,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the status
-    * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
     *
     * @param EducationAssignmentStatus $val The status
     *
@@ -601,7 +507,6 @@ class EducationAssignment extends Entity
 
      /** 
      * Gets the categories
-    * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      *
      * @return array The categories
      */
@@ -616,7 +521,6 @@ class EducationAssignment extends Entity
     
     /** 
     * Sets the categories
-    * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
     *
     * @param EducationCategory $val The categories
     *
@@ -631,7 +535,6 @@ class EducationAssignment extends Entity
 
      /** 
      * Gets the resources
-    * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
      *
      * @return array The resources
      */
@@ -646,7 +549,6 @@ class EducationAssignment extends Entity
     
     /** 
     * Sets the resources
-    * Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
     *
     * @param EducationAssignmentResource $val The resources
     *
@@ -660,7 +562,6 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the rubric
-    * When set, the grading rubric attached to this assignment.
     *
     * @return EducationRubric The rubric
     */
@@ -679,7 +580,6 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the rubric
-    * When set, the grading rubric attached to this assignment.
     *
     * @param EducationRubric $val The rubric
     *
@@ -694,7 +594,6 @@ class EducationAssignment extends Entity
 
      /** 
      * Gets the submissions
-    * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
      *
      * @return array The submissions
      */
@@ -709,7 +608,6 @@ class EducationAssignment extends Entity
     
     /** 
     * Sets the submissions
-    * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
     *
     * @param EducationSubmission $val The submissions
     *

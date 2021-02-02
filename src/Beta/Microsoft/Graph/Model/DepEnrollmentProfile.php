@@ -229,7 +229,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the iTunesPairingMode
-    * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+    * Indicates the iTunes pairing mode
     *
     * @return ITunesPairingMode The iTunesPairingMode
     */
@@ -248,7 +248,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the iTunesPairingMode
-    * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+    * Indicates the iTunes pairing mode
     *
     * @param ITunesPairingMode $val The iTunesPairingMode
     *
@@ -553,7 +553,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Gets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @return bool The supervisedModeEnabled
     */
@@ -568,7 +568,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     
     /**
     * Sets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+    * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @param bool $val The supervisedModeEnabled
     *

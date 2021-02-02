@@ -26,7 +26,6 @@ class TeamsAppDefinition extends Entity
 {
     /**
     * Gets the azureADAppId
-    * The WebApplicationInfo.id from the Teams App manifest.
     *
     * @return string The azureADAppId
     */
@@ -41,7 +40,6 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the azureADAppId
-    * The WebApplicationInfo.id from the Teams App manifest.
     *
     * @param string $val The azureADAppId
     *
@@ -233,7 +231,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @return string The teamsAppId
     */
@@ -248,7 +246,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @param string $val The teamsAppId
     *
@@ -286,39 +284,6 @@ class TeamsAppDefinition extends Entity
     public function setVersion($val)
     {
         $this->_propDict["version"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the bot
-    * The details of the bot specified in the Teams App manifest.
-    *
-    * @return TeamworkBot The bot
-    */
-    public function getBot()
-    {
-        if (array_key_exists("bot", $this->_propDict)) {
-            if (is_a($this->_propDict["bot"], "Beta\Microsoft\Graph\Model\TeamworkBot")) {
-                return $this->_propDict["bot"];
-            } else {
-                $this->_propDict["bot"] = new TeamworkBot($this->_propDict["bot"]);
-                return $this->_propDict["bot"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the bot
-    * The details of the bot specified in the Teams App manifest.
-    *
-    * @param TeamworkBot $val The bot
-    *
-    * @return TeamsAppDefinition
-    */
-    public function setBot($val)
-    {
-        $this->_propDict["bot"] = $val;
         return $this;
     }
     

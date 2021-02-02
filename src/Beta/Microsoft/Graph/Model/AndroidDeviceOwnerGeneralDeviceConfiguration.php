@@ -84,7 +84,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appsAutoUpdatePolicy
-    * Indicates the value of the app auto update policy. Possible values are: notConfigured, userChoice, never, wiFiOnly, always.
+    * Indicates the value of the app auto update policy.
     *
     * @return AndroidDeviceOwnerAppAutoUpdatePolicyType The appsAutoUpdatePolicy
     */
@@ -103,7 +103,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appsAutoUpdatePolicy
-    * Indicates the value of the app auto update policy. Possible values are: notConfigured, userChoice, never, wiFiOnly, always.
+    * Indicates the value of the app auto update policy.
     *
     * @param AndroidDeviceOwnerAppAutoUpdatePolicyType $val The appsAutoUpdatePolicy
     *
@@ -117,7 +117,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appsDefaultPermissionPolicy
-    * Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+    * Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically.
     *
     * @return AndroidDeviceOwnerDefaultAppPermissionPolicyType The appsDefaultPermissionPolicy
     */
@@ -136,7 +136,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appsDefaultPermissionPolicy
-    * Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+    * Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically.
     *
     * @param AndroidDeviceOwnerDefaultAppPermissionPolicyType $val The appsDefaultPermissionPolicy
     *
@@ -382,7 +382,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enrollmentProfile
-    * Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
+    * Indicates which enrollment profile you want to configure.
     *
     * @return AndroidDeviceOwnerEnrollmentProfileType The enrollmentProfile
     */
@@ -401,7 +401,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enrollmentProfile
-    * Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
+    * Indicates which enrollment profile you want to configure.
     *
     * @param AndroidDeviceOwnerEnrollmentProfileType $val The enrollmentProfile
     *
@@ -535,7 +535,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskCustomizationDeviceSettingsBlocked
-    * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+    * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
     *
     * @return bool The kioskCustomizationDeviceSettingsBlocked
     */
@@ -550,7 +550,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskCustomizationDeviceSettingsBlocked
-    * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+    * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
     *
     * @param bool $val The kioskCustomizationDeviceSettingsBlocked
     *
@@ -593,7 +593,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskCustomizationStatusBar
-    * Indicates whether system info and notifications are disabled in Kiosk Mode. Possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
+    * Indicates whether system info and notifications are disabled in Kiosk Mode.
     *
     * @return AndroidDeviceOwnerKioskCustomizationStatusBar The kioskCustomizationStatusBar
     */
@@ -612,7 +612,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskCustomizationStatusBar
-    * Indicates whether system info and notifications are disabled in Kiosk Mode. Possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
+    * Indicates whether system info and notifications are disabled in Kiosk Mode.
     *
     * @param AndroidDeviceOwnerKioskCustomizationStatusBar $val The kioskCustomizationStatusBar
     *
@@ -655,7 +655,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskCustomizationSystemNavigation
-    * Indicates which navigation features are enabled in Kiosk Mode. Possible values are: notConfigured, navigationEnabled, homeButtonOnly.
+    * Indicates which navigation features are enabled in Kiosk Mode.
     *
     * @return AndroidDeviceOwnerKioskCustomizationSystemNavigation The kioskCustomizationSystemNavigation
     */
@@ -674,7 +674,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskCustomizationSystemNavigation
-    * Indicates which navigation features are enabled in Kiosk Mode. Possible values are: notConfigured, navigationEnabled, homeButtonOnly.
+    * Indicates which navigation features are enabled in Kiosk Mode.
     *
     * @param AndroidDeviceOwnerKioskCustomizationSystemNavigation $val The kioskCustomizationSystemNavigation
     *
@@ -834,7 +834,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeFolderIcon
-    * Folder icon configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
+    * Folder icon configuration for managed home screen in Kiosk Mode.
     *
     * @return AndroidDeviceOwnerKioskModeFolderIcon The kioskModeFolderIcon
     */
@@ -853,7 +853,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeFolderIcon
-    * Folder icon configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
+    * Folder icon configuration for managed home screen in Kiosk Mode.
     *
     * @param AndroidDeviceOwnerKioskModeFolderIcon $val The kioskModeFolderIcon
     *
@@ -867,7 +867,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeIconSize
-    * Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
+    * Icon size configuration for managed home screen in Kiosk Mode.
     *
     * @return AndroidDeviceOwnerKioskModeIconSize The kioskModeIconSize
     */
@@ -886,7 +886,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeIconSize
-    * Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
+    * Icon size configuration for managed home screen in Kiosk Mode.
     *
     * @param AndroidDeviceOwnerKioskModeIconSize $val The kioskModeIconSize
     *
@@ -958,7 +958,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeScreenOrientation
-    * Screen orientation configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, portrait, landscape, autoRotate.
+    * Screen orientation configuration for managed home screen in Kiosk Mode.
     *
     * @return AndroidDeviceOwnerKioskModeScreenOrientation The kioskModeScreenOrientation
     */
@@ -977,7 +977,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeScreenOrientation
-    * Screen orientation configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, portrait, landscape, autoRotate.
+    * Screen orientation configuration for managed home screen in Kiosk Mode.
     *
     * @param AndroidDeviceOwnerKioskModeScreenOrientation $val The kioskModeScreenOrientation
     *
@@ -1223,7 +1223,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeVirtualHomeButtonType
-    * Indicates whether the virtual home button is a swipe up home button or a floating home button. Possible values are: notConfigured, swipeUp, floating.
+    * Indicates whether the virtual home button is a swipe up home button or a floating home button.
     *
     * @return AndroidDeviceOwnerVirtualHomeButtonType The kioskModeVirtualHomeButtonType
     */
@@ -1242,7 +1242,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeVirtualHomeButtonType
-    * Indicates whether the virtual home button is a swipe up home button or a floating home button. Possible values are: notConfigured, swipeUp, floating.
+    * Indicates whether the virtual home button is a swipe up home button or a floating home button.
     *
     * @param AndroidDeviceOwnerVirtualHomeButtonType $val The kioskModeVirtualHomeButtonType
     *
@@ -1517,7 +1517,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the microsoftLauncherDockPresenceConfiguration
-    * Indicates whether or not you want to configure the device dock. Possible values are: notConfigured, show, hide, disabled.
+    * Indicates whether or not you want to configure the device dock.
     *
     * @return MicrosoftLauncherDockPresence The microsoftLauncherDockPresenceConfiguration
     */
@@ -1536,7 +1536,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the microsoftLauncherDockPresenceConfiguration
-    * Indicates whether or not you want to configure the device dock. Possible values are: notConfigured, show, hide, disabled.
+    * Indicates whether or not you want to configure the device dock.
     *
     * @param MicrosoftLauncherDockPresence $val The microsoftLauncherDockPresenceConfiguration
     *
@@ -1608,7 +1608,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the microsoftLauncherSearchBarPlacementConfiguration
-    * Indicates the search bar placement configuration on the device. Possible values are: notConfigured, top, bottom, hide.
+    * Indicates the search bar placement configuration on the device.
     *
     * @return MicrosoftLauncherSearchBarPlacement The microsoftLauncherSearchBarPlacementConfiguration
     */
@@ -1627,7 +1627,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the microsoftLauncherSearchBarPlacementConfiguration
-    * Indicates the search bar placement configuration on the device. Possible values are: notConfigured, top, bottom, hide.
+    * Indicates the search bar placement configuration on the device.
     *
     * @param MicrosoftLauncherSearchBarPlacement $val The microsoftLauncherSearchBarPlacementConfiguration
     *
@@ -2048,7 +2048,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
-    * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+    * Indicates the minimum password quality required on the device.
     *
     * @return AndroidDeviceOwnerRequiredPasswordType The passwordRequiredType
     */
@@ -2067,7 +2067,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
-    * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+    * Indicates the minimum password quality required on the device.
     *
     * @param AndroidDeviceOwnerRequiredPasswordType $val The passwordRequiredType
     *
@@ -2197,7 +2197,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the playStoreMode
-    * Indicates the Play Store mode of the device. Possible values are: notConfigured, allowList, blockList.
+    * Indicates the Play Store mode of the device.
     *
     * @return AndroidDeviceOwnerPlayStoreMode The playStoreMode
     */
@@ -2216,7 +2216,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the playStoreMode
-    * Indicates the Play Store mode of the device. Possible values are: notConfigured, allowList, blockList.
+    * Indicates the Play Store mode of the device.
     *
     * @param AndroidDeviceOwnerPlayStoreMode $val The playStoreMode
     *
@@ -2492,7 +2492,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the systemUpdateInstallType
-    * The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.
+    * The type of system update configuration.
     *
     * @return AndroidDeviceOwnerSystemUpdateInstallType The systemUpdateInstallType
     */
@@ -2511,7 +2511,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the systemUpdateInstallType
-    * The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.
+    * The type of system update configuration.
     *
     * @param AndroidDeviceOwnerSystemUpdateInstallType $val The systemUpdateInstallType
     *
@@ -3076,7 +3076,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordRequiredType
-    * Indicates the minimum password quality required on the work profile password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+    * Indicates the minimum password quality required on the work profile password.
     *
     * @return AndroidDeviceOwnerRequiredPasswordType The workProfilePasswordRequiredType
     */
@@ -3095,7 +3095,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordRequiredType
-    * Indicates the minimum password quality required on the work profile password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+    * Indicates the minimum password quality required on the work profile password.
     *
     * @param AndroidDeviceOwnerRequiredPasswordType $val The workProfilePasswordRequiredType
     *

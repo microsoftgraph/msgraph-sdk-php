@@ -258,7 +258,6 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceCompliancePolicyScript
-    * Not yet documented
     *
     * @return DeviceCompliancePolicyScript The deviceCompliancePolicyScript
     */
@@ -277,7 +276,6 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceCompliancePolicyScript
-    * Not yet documented
     *
     * @param DeviceCompliancePolicyScript $val The deviceCompliancePolicyScript
     *
@@ -320,7 +318,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Device Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+    * Require Device Threat Protection minimum risk level to report noncompliance.
     *
     * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
     */
@@ -339,7 +337,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the deviceThreatProtectionRequiredSecurityLevel
-    * Require Device Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+    * Require Device Threat Protection minimum risk level to report noncompliance.
     *
     * @param DeviceThreatProtectionLevel $val The deviceThreatProtectionRequiredSecurityLevel
     *

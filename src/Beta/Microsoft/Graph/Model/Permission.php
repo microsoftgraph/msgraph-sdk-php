@@ -279,7 +279,7 @@ class Permission extends Entity
     
     /**
     * Gets the shareId
-    * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+    * A unique token that can be used to access this shared item via the **shares** API. Read-only.
     *
     * @return string The shareId
     */
@@ -294,7 +294,7 @@ class Permission extends Entity
     
     /**
     * Sets the shareId
-    * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+    * A unique token that can be used to access this shared item via the **shares** API. Read-only.
     *
     * @param string $val The shareId
     *

@@ -55,7 +55,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
     
     /**
     * Gets the durationOfEmailToSync
-    * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of email to sync.
     *
     * @return EmailSyncDuration The durationOfEmailToSync
     */
@@ -74,7 +74,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
     
     /**
     * Sets the durationOfEmailToSync
-    * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of email to sync.
     *
     * @param EmailSyncDuration $val The durationOfEmailToSync
     *
@@ -88,7 +88,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
     
     /**
     * Gets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return UserEmailSource The emailAddressSource
     */
@@ -107,7 +107,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
     
     /**
     * Sets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param UserEmailSource $val The emailAddressSource
     *
@@ -121,7 +121,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
     
     /**
     * Gets the emailSyncSchedule
-    * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+    * Email sync schedule.
     *
     * @return EmailSyncSchedule The emailSyncSchedule
     */
@@ -140,7 +140,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
     
     /**
     * Sets the emailSyncSchedule
-    * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+    * Email sync schedule.
     *
     * @param EmailSyncSchedule $val The emailSyncSchedule
     *

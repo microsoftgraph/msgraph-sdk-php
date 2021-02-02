@@ -213,7 +213,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
 
     /**
     * Gets the runAsAccount
-    * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
+    * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context.
     *
     * @return RunAsAccountType The runAsAccount
     */
@@ -232,7 +232,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
 
     /**
     * Sets the runAsAccount
-    * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
+    * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context.
     *
     * @param RunAsAccountType $val The value to assign to the runAsAccount
     *

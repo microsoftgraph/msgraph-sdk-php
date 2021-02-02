@@ -175,7 +175,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Gets the gatekeeperAllowedAppSource
-    * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
     *
     * @return MacOSGatekeeperAppSources The gatekeeperAllowedAppSource
     */
@@ -194,7 +194,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     
     /**
     * Sets the gatekeeperAllowedAppSource
-    * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
+    * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
     *
     * @param MacOSGatekeeperAppSources $val The gatekeeperAllowedAppSource
     *

@@ -26,7 +26,6 @@ class Office365GroupsActivityCounts extends Entity
 {
     /**
     * Gets the exchangeEmailsReceived
-    * The number of emails received by Group mailboxes.
     *
     * @return int The exchangeEmailsReceived
     */
@@ -41,7 +40,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Sets the exchangeEmailsReceived
-    * The number of emails received by Group mailboxes.
     *
     * @param int $val The exchangeEmailsReceived
     *
@@ -55,7 +53,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Gets the reportDate
-    * The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
     *
     * @return \DateTime The reportDate
     */
@@ -74,7 +71,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Sets the reportDate
-    * The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
     *
     * @param \DateTime $val The reportDate
     *
@@ -88,7 +84,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Gets the reportPeriod
-    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -103,7 +98,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Sets the reportPeriod
-    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -117,7 +111,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
-    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -136,7 +129,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
-    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -150,7 +142,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Gets the yammerMessagesLiked
-    * The number of messages liked in Yammer groups.
     *
     * @return int The yammerMessagesLiked
     */
@@ -165,7 +156,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Sets the yammerMessagesLiked
-    * The number of messages liked in Yammer groups.
     *
     * @param int $val The yammerMessagesLiked
     *
@@ -179,7 +169,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Gets the yammerMessagesPosted
-    * The number of messages posted to Yammer groups.
     *
     * @return int The yammerMessagesPosted
     */
@@ -194,7 +183,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Sets the yammerMessagesPosted
-    * The number of messages posted to Yammer groups.
     *
     * @param int $val The yammerMessagesPosted
     *
@@ -208,7 +196,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Gets the yammerMessagesRead
-    * The number of messages read in Yammer groups.
     *
     * @return int The yammerMessagesRead
     */
@@ -223,7 +210,6 @@ class Office365GroupsActivityCounts extends Entity
     
     /**
     * Sets the yammerMessagesRead
-    * The number of messages read in Yammer groups.
     *
     * @param int $val The yammerMessagesRead
     *

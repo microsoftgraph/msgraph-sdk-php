@@ -25,7 +25,6 @@ class PasswordSingleSignOnField extends Entity
 {
     /**
     * Gets the customizedLabel
-    * Title/label override for customization.
     *
     * @return string The customizedLabel
     */
@@ -40,7 +39,6 @@ class PasswordSingleSignOnField extends Entity
 
     /**
     * Sets the customizedLabel
-    * Title/label override for customization.
     *
     * @param string $val The value of the customizedLabel
     *
@@ -53,7 +51,6 @@ class PasswordSingleSignOnField extends Entity
     }
     /**
     * Gets the defaultLabel
-    * Label that would be used if no customizedLabel is provided. Read only.
     *
     * @return string The defaultLabel
     */
@@ -68,7 +65,6 @@ class PasswordSingleSignOnField extends Entity
 
     /**
     * Sets the defaultLabel
-    * Label that would be used if no customizedLabel is provided. Read only.
     *
     * @param string $val The value of the defaultLabel
     *
@@ -81,7 +77,6 @@ class PasswordSingleSignOnField extends Entity
     }
     /**
     * Gets the fieldId
-    * Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
     *
     * @return string The fieldId
     */
@@ -96,7 +91,6 @@ class PasswordSingleSignOnField extends Entity
 
     /**
     * Sets the fieldId
-    * Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
     *
     * @param string $val The value of the fieldId
     *
@@ -109,7 +103,6 @@ class PasswordSingleSignOnField extends Entity
     }
     /**
     * Gets the type
-    * Type of the credential. The values can be text, password.
     *
     * @return string The type
     */
@@ -124,7 +117,6 @@ class PasswordSingleSignOnField extends Entity
 
     /**
     * Sets the type
-    * Type of the credential. The values can be text, password.
     *
     * @param string $val The value of the type
     *

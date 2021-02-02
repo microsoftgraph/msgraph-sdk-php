@@ -88,7 +88,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Gets the format
-    * Format of the exported report. Possible values are: csv, pdf.
+    * Format of the exported report
     *
     * @return DeviceManagementReportFileFormat The format
     */
@@ -107,7 +107,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Sets the format
-    * Format of the exported report. Possible values are: csv, pdf.
+    * Format of the exported report
     *
     * @param DeviceManagementReportFileFormat $val The format
     *
@@ -241,7 +241,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Gets the status
-    * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+    * Status of the export job
     *
     * @return DeviceManagementReportStatus The status
     */
@@ -260,7 +260,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Sets the status
-    * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+    * Status of the export job
     *
     * @param DeviceManagementReportStatus $val The status
     *

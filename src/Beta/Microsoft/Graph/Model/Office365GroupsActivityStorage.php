@@ -26,7 +26,6 @@ class Office365GroupsActivityStorage extends Entity
 {
     /**
     * Gets the mailboxStorageUsedInBytes
-    * The storage used in group mailbox.
     *
     * @return int The mailboxStorageUsedInBytes
     */
@@ -41,7 +40,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Sets the mailboxStorageUsedInBytes
-    * The storage used in group mailbox.
     *
     * @param int $val The mailboxStorageUsedInBytes
     *
@@ -55,7 +53,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Gets the reportDate
-    * The snapshot date for Exchange and SharePoint used storage.
     *
     * @return \DateTime The reportDate
     */
@@ -74,7 +71,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Sets the reportDate
-    * The snapshot date for Exchange and SharePoint used storage.
     *
     * @param \DateTime $val The reportDate
     *
@@ -88,7 +84,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Gets the reportPeriod
-    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -103,7 +98,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Sets the reportPeriod
-    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -117,7 +111,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Gets the reportRefreshDate
-    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -136,7 +129,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Sets the reportRefreshDate
-    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -150,7 +142,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Gets the siteStorageUsedInBytes
-    * The storage used in SharePoint document library.
     *
     * @return int The siteStorageUsedInBytes
     */
@@ -165,7 +156,6 @@ class Office365GroupsActivityStorage extends Entity
     
     /**
     * Sets the siteStorageUsedInBytes
-    * The storage used in SharePoint document library.
     *
     * @param int $val The siteStorageUsedInBytes
     *

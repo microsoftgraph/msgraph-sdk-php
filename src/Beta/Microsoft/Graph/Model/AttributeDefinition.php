@@ -25,7 +25,6 @@ class AttributeDefinition extends Entity
 {
     /**
     * Gets the anchor
-    * true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
     *
     * @return bool The anchor
     */
@@ -40,7 +39,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the anchor
-    * true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
     *
     * @param bool $val The value of the anchor
     *
@@ -84,7 +82,6 @@ class AttributeDefinition extends Entity
     }
     /**
     * Gets the caseExact
-    * true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
     *
     * @return bool The caseExact
     */
@@ -99,7 +96,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the caseExact
-    * true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
     *
     * @param bool $val The value of the caseExact
     *
@@ -138,7 +134,6 @@ class AttributeDefinition extends Entity
     }
     /**
     * Gets the flowNullValues
-    * 'true' to allow null values for attributes.
     *
     * @return bool The flowNullValues
     */
@@ -153,7 +148,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the flowNullValues
-    * 'true' to allow null values for attributes.
     *
     * @param bool $val The value of the flowNullValues
     *
@@ -167,7 +161,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Gets the metadata
-    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
     * @return MetadataEntry The metadata
     */
@@ -186,7 +179,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the metadata
-    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
     * @param MetadataEntry $val The value to assign to the metadata
     *
@@ -199,7 +191,6 @@ class AttributeDefinition extends Entity
     }
     /**
     * Gets the multivalued
-    * true if an attribute can have multiple values. Default is false.
     *
     * @return bool The multivalued
     */
@@ -214,7 +205,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the multivalued
-    * true if an attribute can have multiple values. Default is false.
     *
     * @param bool $val The value of the multivalued
     *
@@ -228,7 +218,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Gets the mutability
-    * An attribute's mutability. Possible values are:  ReadWrite, ReadOnly, Immutable, WriteOnly. Default is ReadWrite.
     *
     * @return Mutability The mutability
     */
@@ -247,7 +236,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the mutability
-    * An attribute's mutability. Possible values are:  ReadWrite, ReadOnly, Immutable, WriteOnly. Default is ReadWrite.
     *
     * @param Mutability $val The value to assign to the mutability
     *
@@ -260,7 +248,6 @@ class AttributeDefinition extends Entity
     }
     /**
     * Gets the name
-    * Name of the attribute. Must be unique within the object definition. Not nullable.
     *
     * @return string The name
     */
@@ -275,7 +262,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the name
-    * Name of the attribute. Must be unique within the object definition. Not nullable.
     *
     * @param string $val The value of the name
     *
@@ -289,7 +275,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Gets the referencedObjects
-    * For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
     *
     * @return ReferencedObject The referencedObjects
     */
@@ -308,7 +293,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the referencedObjects
-    * For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
     *
     * @param ReferencedObject $val The value to assign to the referencedObjects
     *
@@ -321,7 +305,6 @@ class AttributeDefinition extends Entity
     }
     /**
     * Gets the required
-    * true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
     *
     * @return bool The required
     */
@@ -336,7 +319,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the required
-    * true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
     *
     * @param bool $val The value of the required
     *
@@ -350,7 +332,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Gets the type
-    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean. Default is String.
     *
     * @return AttributeType The type
     */
@@ -369,7 +350,6 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the type
-    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean. Default is String.
     *
     * @param AttributeType $val The value to assign to the type
     *

@@ -25,7 +25,6 @@ class UserSet extends Entity
 {
     /**
     * Gets the isBackup
-    * For a user in an approval stage, this property indicates whether the user is a backup fallback approver.
     *
     * @return bool The isBackup
     */
@@ -40,7 +39,6 @@ class UserSet extends Entity
 
     /**
     * Sets the isBackup
-    * For a user in an approval stage, this property indicates whether the user is a backup fallback approver.
     *
     * @param bool $val The value of the isBackup
     *

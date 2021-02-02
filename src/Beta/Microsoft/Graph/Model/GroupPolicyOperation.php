@@ -59,7 +59,7 @@ class GroupPolicyOperation extends Entity
     
     /**
     * Gets the operationStatus
-    * The group policy operation status. Possible values are: unknown, inProgress, success, failed.
+    * The group policy operation status.
     *
     * @return GroupPolicyOperationStatus The operationStatus
     */
@@ -78,7 +78,7 @@ class GroupPolicyOperation extends Entity
     
     /**
     * Sets the operationStatus
-    * The group policy operation status. Possible values are: unknown, inProgress, success, failed.
+    * The group policy operation status.
     *
     * @param GroupPolicyOperationStatus $val The operationStatus
     *
@@ -92,7 +92,7 @@ class GroupPolicyOperation extends Entity
     
     /**
     * Gets the operationType
-    * The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
+    * The type of group policy operation.
     *
     * @return GroupPolicyOperationType The operationType
     */
@@ -111,7 +111,7 @@ class GroupPolicyOperation extends Entity
     
     /**
     * Sets the operationType
-    * The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
+    * The type of group policy operation.
     *
     * @param GroupPolicyOperationType $val The operationType
     *

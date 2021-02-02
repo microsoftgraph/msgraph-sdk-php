@@ -25,7 +25,6 @@ class ChannelModerationSettings extends Entity
 {
     /**
     * Gets the allowNewMessageFromBots
-    * Indicates whether bots are allowed to post messages.
     *
     * @return bool The allowNewMessageFromBots
     */
@@ -40,7 +39,6 @@ class ChannelModerationSettings extends Entity
 
     /**
     * Sets the allowNewMessageFromBots
-    * Indicates whether bots are allowed to post messages.
     *
     * @param bool $val The value of the allowNewMessageFromBots
     *
@@ -53,7 +51,6 @@ class ChannelModerationSettings extends Entity
     }
     /**
     * Gets the allowNewMessageFromConnectors
-    * Indicates whether connectors are allowed to post messages.
     *
     * @return bool The allowNewMessageFromConnectors
     */
@@ -68,7 +65,6 @@ class ChannelModerationSettings extends Entity
 
     /**
     * Sets the allowNewMessageFromConnectors
-    * Indicates whether connectors are allowed to post messages.
     *
     * @param bool $val The value of the allowNewMessageFromConnectors
     *
@@ -82,7 +78,6 @@ class ChannelModerationSettings extends Entity
 
     /**
     * Gets the replyRestriction
-    * Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.
     *
     * @return ReplyRestriction The replyRestriction
     */
@@ -101,7 +96,6 @@ class ChannelModerationSettings extends Entity
 
     /**
     * Sets the replyRestriction
-    * Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.
     *
     * @param ReplyRestriction $val The value to assign to the replyRestriction
     *
@@ -115,7 +109,6 @@ class ChannelModerationSettings extends Entity
 
     /**
     * Gets the userNewMessageRestriction
-    * Indicates who is allowed to post messages to teams channel. Possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
     *
     * @return UserNewMessageRestriction The userNewMessageRestriction
     */
@@ -134,7 +127,6 @@ class ChannelModerationSettings extends Entity
 
     /**
     * Sets the userNewMessageRestriction
-    * Indicates who is allowed to post messages to teams channel. Possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
     *
     * @param UserNewMessageRestriction $val The value to assign to the userNewMessageRestriction
     *

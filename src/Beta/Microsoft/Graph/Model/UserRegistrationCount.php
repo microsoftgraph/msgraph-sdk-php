@@ -25,7 +25,6 @@ class UserRegistrationCount extends Entity
 {
     /**
     * Gets the registrationCount
-    * Provides the registration count for your tenant.
     *
     * @return int The registrationCount
     */
@@ -40,7 +39,6 @@ class UserRegistrationCount extends Entity
 
     /**
     * Sets the registrationCount
-    * Provides the registration count for your tenant.
     *
     * @param int $val The value of the registrationCount
     *
@@ -54,7 +52,6 @@ class UserRegistrationCount extends Entity
 
     /**
     * Gets the registrationStatus
-    * Represents the status of user registration. Possible values are: registered, enabled, capable, and mfaRegistered.
     *
     * @return RegistrationStatusType The registrationStatus
     */
@@ -73,7 +70,6 @@ class UserRegistrationCount extends Entity
 
     /**
     * Sets the registrationStatus
-    * Represents the status of user registration. Possible values are: registered, enabled, capable, and mfaRegistered.
     *
     * @param RegistrationStatusType $val The value to assign to the registrationStatus
     *

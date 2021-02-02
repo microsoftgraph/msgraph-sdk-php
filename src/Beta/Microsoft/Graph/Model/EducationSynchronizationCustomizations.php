@@ -26,7 +26,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Gets the school
-    * Customizations for School entities.
     *
     * @return EducationSynchronizationCustomization The school
     */
@@ -45,7 +44,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Sets the school
-    * Customizations for School entities.
     *
     * @param EducationSynchronizationCustomization $val The value to assign to the school
     *
@@ -59,7 +57,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Gets the section
-    * Customizations for Section entities.
     *
     * @return EducationSynchronizationCustomization The section
     */
@@ -78,7 +75,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Sets the section
-    * Customizations for Section entities.
     *
     * @param EducationSynchronizationCustomization $val The value to assign to the section
     *
@@ -92,7 +88,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Gets the student
-    * Customizations for Student entities.
     *
     * @return EducationSynchronizationCustomization The student
     */
@@ -111,7 +106,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Sets the student
-    * Customizations for Student entities.
     *
     * @param EducationSynchronizationCustomization $val The value to assign to the student
     *
@@ -125,7 +119,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Gets the studentEnrollment
-    * Customizations for Student Enrollments.
     *
     * @return EducationSynchronizationCustomization The studentEnrollment
     */
@@ -144,7 +137,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Sets the studentEnrollment
-    * Customizations for Student Enrollments.
     *
     * @param EducationSynchronizationCustomization $val The value to assign to the studentEnrollment
     *
@@ -158,7 +150,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Gets the teacher
-    * Customizations for Teacher entities.
     *
     * @return EducationSynchronizationCustomization The teacher
     */
@@ -177,7 +168,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Sets the teacher
-    * Customizations for Teacher entities.
     *
     * @param EducationSynchronizationCustomization $val The value to assign to the teacher
     *
@@ -191,7 +181,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Gets the teacherRoster
-    * Customizations for Teacher Rosters.
     *
     * @return EducationSynchronizationCustomization The teacherRoster
     */
@@ -210,7 +199,6 @@ class EducationSynchronizationCustomizations extends EducationSynchronizationCus
 
     /**
     * Sets the teacherRoster
-    * Customizations for Teacher Rosters.
     *
     * @param EducationSynchronizationCustomization $val The value to assign to the teacherRoster
     *

@@ -26,7 +26,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Gets the currentBegan
-    * Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The currentBegan
     */
@@ -45,7 +44,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Sets the currentBegan
-    * Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the currentBegan
     *
@@ -59,7 +57,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Gets the error
-    * Describes the error(s) that occurred when putting the synchronization job into quarantine.
     *
     * @return SynchronizationError The error
     */
@@ -78,7 +75,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Sets the error
-    * Describes the error(s) that occurred when putting the synchronization job into quarantine.
     *
     * @param SynchronizationError $val The value to assign to the error
     *
@@ -92,7 +88,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Gets the nextAttempt
-    * Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The nextAttempt
     */
@@ -111,7 +106,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Sets the nextAttempt
-    * Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the nextAttempt
     *
@@ -125,7 +119,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Gets the reason
-    * A code that signifies why the quarantine was imposed. Possible values are: EncounteredBaseEscrowThreshold, EncounteredTotalEscrowThreshold, EncounteredEscrowProportionThreshold, EncounteredQuarantineException, QuarantinedOnDemand, TooManyDeletes, Unknown.
     *
     * @return QuarantineReason The reason
     */
@@ -144,7 +137,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Sets the reason
-    * A code that signifies why the quarantine was imposed. Possible values are: EncounteredBaseEscrowThreshold, EncounteredTotalEscrowThreshold, EncounteredEscrowProportionThreshold, EncounteredQuarantineException, QuarantinedOnDemand, TooManyDeletes, Unknown.
     *
     * @param QuarantineReason $val The value to assign to the reason
     *
@@ -158,7 +150,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Gets the seriesBegan
-    * Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The seriesBegan
     */
@@ -177,7 +168,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Sets the seriesBegan
-    * Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the seriesBegan
     *
@@ -190,7 +180,6 @@ class SynchronizationQuarantine extends Entity
     }
     /**
     * Gets the seriesCount
-    * Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
     *
     * @return int The seriesCount
     */
@@ -205,7 +194,6 @@ class SynchronizationQuarantine extends Entity
 
     /**
     * Sets the seriesCount
-    * Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
     *
     * @param int $val The value of the seriesCount
     *

@@ -26,7 +26,6 @@ class SynchronizationJob extends Entity
 {
     /**
     * Gets the schedule
-    * Schedule used to run the job. Read-only.
     *
     * @return SynchronizationSchedule The schedule
     */
@@ -45,7 +44,6 @@ class SynchronizationJob extends Entity
     
     /**
     * Sets the schedule
-    * Schedule used to run the job. Read-only.
     *
     * @param SynchronizationSchedule $val The schedule
     *
@@ -59,7 +57,6 @@ class SynchronizationJob extends Entity
     
     /**
     * Gets the status
-    * Status of the job, which includes when the job was last run, current job state, and errors.
     *
     * @return SynchronizationStatus The status
     */
@@ -78,7 +75,6 @@ class SynchronizationJob extends Entity
     
     /**
     * Sets the status
-    * Status of the job, which includes when the job was last run, current job state, and errors.
     *
     * @param SynchronizationStatus $val The status
     *
@@ -93,7 +89,6 @@ class SynchronizationJob extends Entity
 
      /** 
      * Gets the synchronizationJobSettings
-    * Settings associated with the job. Some settings are inherited from the template.
      *
      * @return array The synchronizationJobSettings
      */
@@ -108,7 +103,6 @@ class SynchronizationJob extends Entity
     
     /** 
     * Sets the synchronizationJobSettings
-    * Settings associated with the job. Some settings are inherited from the template.
     *
     * @param KeyValuePair $val The synchronizationJobSettings
     *
@@ -122,7 +116,6 @@ class SynchronizationJob extends Entity
     
     /**
     * Gets the templateId
-    * Identifier of the synchronization template this job is based on.
     *
     * @return string The templateId
     */
@@ -137,7 +130,6 @@ class SynchronizationJob extends Entity
     
     /**
     * Sets the templateId
-    * Identifier of the synchronization template this job is based on.
     *
     * @param string $val The templateId
     *
@@ -151,7 +143,6 @@ class SynchronizationJob extends Entity
     
     /**
     * Gets the schema
-    * The synchronization schema configured for the job.
     *
     * @return SynchronizationSchema The schema
     */
@@ -170,7 +161,6 @@ class SynchronizationJob extends Entity
     
     /**
     * Sets the schema
-    * The synchronization schema configured for the job.
     *
     * @param SynchronizationSchema $val The schema
     *

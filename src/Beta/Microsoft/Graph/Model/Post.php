@@ -179,7 +179,6 @@ class Post extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of a group post: low, normal, high.
     *
     * @return Importance The importance
     */
@@ -198,7 +197,6 @@ class Post extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of a group post: low, normal, high.
     *
     * @param Importance $val The importance
     *
@@ -309,7 +307,7 @@ class Post extends OutlookItem
 
      /** 
      * Gets the attachments
-    * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable.
+    * Read-only. Nullable.
      *
      * @return array The attachments
      */
@@ -324,7 +322,7 @@ class Post extends OutlookItem
     
     /** 
     * Sets the attachments
-    * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable.
+    * Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -368,7 +366,7 @@ class Post extends OutlookItem
     
     /**
     * Gets the inReplyTo
-    * The earlier post that this post is replying to in the conversationThread. Read-only.
+    * Read-only.
     *
     * @return Post The inReplyTo
     */
@@ -387,7 +385,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the inReplyTo
-    * The earlier post that this post is replying to in the conversationThread. Read-only.
+    * Read-only.
     *
     * @param Post $val The inReplyTo
     *

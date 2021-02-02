@@ -26,7 +26,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Gets the endDay
-    * End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * End day of the time window
     *
     * @return DayOfWeek The endDay
     */
@@ -45,7 +45,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Sets the endDay
-    * End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * End day of the time window
     *
     * @param DayOfWeek $val The value to assign to the endDay
     *
@@ -92,7 +92,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Gets the startDay
-    * Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Start day of the time window
     *
     * @return DayOfWeek The startDay
     */
@@ -111,7 +111,7 @@ class CustomUpdateTimeWindow extends Entity
 
     /**
     * Sets the startDay
-    * Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Start day of the time window
     *
     * @param DayOfWeek $val The value to assign to the startDay
     *

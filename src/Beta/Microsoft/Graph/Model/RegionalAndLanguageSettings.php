@@ -27,7 +27,6 @@ class RegionalAndLanguageSettings extends Entity
 
      /** 
      * Gets the authoringLanguages
-    * Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
      *
      * @return array The authoringLanguages
      */
@@ -42,7 +41,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /** 
     * Sets the authoringLanguages
-    * Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
     *
     * @param LocaleInfo $val The authoringLanguages
     *
@@ -56,7 +54,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Gets the defaultDisplayLanguage
-    * The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
     *
     * @return LocaleInfo The defaultDisplayLanguage
     */
@@ -75,7 +72,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Sets the defaultDisplayLanguage
-    * The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
     *
     * @param LocaleInfo $val The defaultDisplayLanguage
     *
@@ -89,7 +85,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Gets the defaultRegionalFormat
-    * The locale that drives the default date, time, and calendar formatting.Returned by default.
     *
     * @return LocaleInfo The defaultRegionalFormat
     */
@@ -108,7 +103,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Sets the defaultRegionalFormat
-    * The locale that drives the default date, time, and calendar formatting.Returned by default.
     *
     * @param LocaleInfo $val The defaultRegionalFormat
     *
@@ -122,7 +116,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Gets the defaultSpeechInputLanguage
-    * The language a user expected to use as input for text to speech scenarios.Returned by default.
     *
     * @return LocaleInfo The defaultSpeechInputLanguage
     */
@@ -141,7 +134,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Sets the defaultSpeechInputLanguage
-    * The language a user expected to use as input for text to speech scenarios.Returned by default.
     *
     * @param LocaleInfo $val The defaultSpeechInputLanguage
     *
@@ -155,7 +147,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Gets the defaultTranslationLanguage
-    * The language a user expects to have documents, emails, and messages translated into.Returned by default.
     *
     * @return LocaleInfo The defaultTranslationLanguage
     */
@@ -174,7 +165,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Sets the defaultTranslationLanguage
-    * The language a user expects to have documents, emails, and messages translated into.Returned by default.
     *
     * @param LocaleInfo $val The defaultTranslationLanguage
     *
@@ -188,7 +178,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Gets the regionalFormatOverrides
-    * Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
     *
     * @return RegionalFormatOverrides The regionalFormatOverrides
     */
@@ -207,7 +196,6 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Sets the regionalFormatOverrides
-    * Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
     *
     * @param RegionalFormatOverrides $val The regionalFormatOverrides
     *

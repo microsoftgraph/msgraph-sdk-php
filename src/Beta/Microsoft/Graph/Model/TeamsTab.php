@@ -115,7 +115,6 @@ class TeamsTab extends Entity
     
     /**
     * Gets the sortOrderIndex
-    * Index of the order used for sorting tabs.
     *
     * @return string The sortOrderIndex
     */
@@ -130,7 +129,6 @@ class TeamsTab extends Entity
     
     /**
     * Sets the sortOrderIndex
-    * Index of the order used for sorting tabs.
     *
     * @param string $val The sortOrderIndex
     *
@@ -200,7 +198,7 @@ class TeamsTab extends Entity
     
     /**
     * Gets the teamsApp
-    * The application that is linked to the tab.
+    * The application that is linked to the tab. This cannot be changed after tab creation.
     *
     * @return TeamsApp The teamsApp
     */
@@ -219,7 +217,7 @@ class TeamsTab extends Entity
     
     /**
     * Sets the teamsApp
-    * The application that is linked to the tab.
+    * The application that is linked to the tab. This cannot be changed after tab creation.
     *
     * @param TeamsApp $val The teamsApp
     *

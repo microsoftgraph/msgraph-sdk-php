@@ -88,7 +88,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     
     /**
     * Gets the fileName
-    * Configuration file name (.plist
+    * Configuration file name (*.plist | *.xml).
     *
     * @return string The fileName
     */
@@ -103,7 +103,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     
     /**
     * Sets the fileName
-    * Configuration file name (.plist
+    * Configuration file name (*.plist | *.xml).
     *
     * @param string $val The fileName
     *

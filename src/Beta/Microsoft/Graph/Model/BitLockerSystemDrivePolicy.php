@@ -26,7 +26,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Gets the encryptionMethod
-    * Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+    * Select the encryption method for operating system drives.
     *
     * @return BitLockerEncryptionMethod The encryptionMethod
     */
@@ -45,7 +45,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Sets the encryptionMethod
-    * Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+    * Select the encryption method for operating system drives.
     *
     * @param BitLockerEncryptionMethod $val The value to assign to the encryptionMethod
     *
@@ -260,7 +260,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Gets the startupAuthenticationTpmKeyUsage
-    * Indicates if TPM startup key is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup key is allowed/required/disallowed.
     *
     * @return ConfigurationUsage The startupAuthenticationTpmKeyUsage
     */
@@ -279,7 +279,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Sets the startupAuthenticationTpmKeyUsage
-    * Indicates if TPM startup key is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup key is allowed/required/disallowed.
     *
     * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmKeyUsage
     *
@@ -293,7 +293,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Gets the startupAuthenticationTpmPinAndKeyUsage
-    * Indicates if TPM startup pin key and key are allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup pin key and key are allowed/required/disallowed.
     *
     * @return ConfigurationUsage The startupAuthenticationTpmPinAndKeyUsage
     */
@@ -312,7 +312,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Sets the startupAuthenticationTpmPinAndKeyUsage
-    * Indicates if TPM startup pin key and key are allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup pin key and key are allowed/required/disallowed.
     *
     * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmPinAndKeyUsage
     *
@@ -326,7 +326,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Gets the startupAuthenticationTpmPinUsage
-    * Indicates if TPM startup pin is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup pin is allowed/required/disallowed.
     *
     * @return ConfigurationUsage The startupAuthenticationTpmPinUsage
     */
@@ -345,7 +345,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Sets the startupAuthenticationTpmPinUsage
-    * Indicates if TPM startup pin is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup pin is allowed/required/disallowed.
     *
     * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmPinUsage
     *
@@ -359,7 +359,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Gets the startupAuthenticationTpmUsage
-    * Indicates if TPM startup is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup is allowed/required/disallowed.
     *
     * @return ConfigurationUsage The startupAuthenticationTpmUsage
     */
@@ -378,7 +378,7 @@ class BitLockerSystemDrivePolicy extends Entity
 
     /**
     * Sets the startupAuthenticationTpmUsage
-    * Indicates if TPM startup is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates if TPM startup is allowed/required/disallowed.
     *
     * @param ConfigurationUsage $val The value to assign to the startupAuthenticationTpmUsage
     *

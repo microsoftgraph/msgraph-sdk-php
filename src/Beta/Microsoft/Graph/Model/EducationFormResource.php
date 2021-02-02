@@ -34,7 +34,6 @@ class EducationFormResource extends EducationResource
 
     /**
     * Gets the editUrl
-    * Teacher URL for the Form.
     *
     * @return string The editUrl
     */
@@ -49,7 +48,6 @@ class EducationFormResource extends EducationResource
 
     /**
     * Sets the editUrl
-    * Teacher URL for the Form.
     *
     * @param string $val The value of the editUrl
     *
@@ -62,7 +60,6 @@ class EducationFormResource extends EducationResource
     }
     /**
     * Gets the formId
-    * Id of the Form.
     *
     * @return string The formId
     */
@@ -77,7 +74,6 @@ class EducationFormResource extends EducationResource
 
     /**
     * Sets the formId
-    * Id of the Form.
     *
     * @param string $val The value of the formId
     *
@@ -90,7 +86,6 @@ class EducationFormResource extends EducationResource
     }
     /**
     * Gets the isGroupForm
-    * Whether the Form belongs to a class group.
     *
     * @return bool The isGroupForm
     */
@@ -105,7 +100,6 @@ class EducationFormResource extends EducationResource
 
     /**
     * Sets the isGroupForm
-    * Whether the Form belongs to a class group.
     *
     * @param bool $val The value of the isGroupForm
     *
@@ -118,7 +112,6 @@ class EducationFormResource extends EducationResource
     }
     /**
     * Gets the originalFormId
-    * Original id of the Form.
     *
     * @return string The originalFormId
     */
@@ -133,7 +126,6 @@ class EducationFormResource extends EducationResource
 
     /**
     * Sets the originalFormId
-    * Original id of the Form.
     *
     * @param string $val The value of the originalFormId
     *
@@ -146,7 +138,6 @@ class EducationFormResource extends EducationResource
     }
     /**
     * Gets the viewUrl
-    * Student URL for the Form.
     *
     * @return string The viewUrl
     */
@@ -161,7 +152,6 @@ class EducationFormResource extends EducationResource
 
     /**
     * Sets the viewUrl
-    * Student URL for the Form.
     *
     * @param string $val The value of the viewUrl
     *

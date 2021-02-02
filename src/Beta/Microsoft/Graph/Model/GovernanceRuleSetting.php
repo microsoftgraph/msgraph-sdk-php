@@ -25,7 +25,6 @@ class GovernanceRuleSetting extends Entity
 {
     /**
     * Gets the ruleIdentifier
-    * The id of the rule. For example, ExpirationRule and MfaRule.
     *
     * @return string The ruleIdentifier
     */
@@ -40,7 +39,6 @@ class GovernanceRuleSetting extends Entity
 
     /**
     * Sets the ruleIdentifier
-    * The id of the rule. For example, ExpirationRule and MfaRule.
     *
     * @param string $val The value of the ruleIdentifier
     *
@@ -53,7 +51,6 @@ class GovernanceRuleSetting extends Entity
     }
     /**
     * Gets the setting
-    * The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
     *
     * @return string The setting
     */
@@ -68,7 +65,6 @@ class GovernanceRuleSetting extends Entity
 
     /**
     * Sets the setting
-    * The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
     *
     * @param string $val The value of the setting
     *

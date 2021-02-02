@@ -25,7 +25,6 @@ class ArchivedPrintJob extends Entity
 {
     /**
     * Gets the acquiredByPrinter
-    * True if the job was acquired by a printer; false otherwise. Read-only.
     *
     * @return bool The acquiredByPrinter
     */
@@ -40,7 +39,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the acquiredByPrinter
-    * True if the job was acquired by a printer; false otherwise. Read-only.
     *
     * @param bool $val The value of the acquiredByPrinter
     *
@@ -54,7 +52,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Gets the acquiredDateTime
-    * The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
     *
     * @return \DateTime The acquiredDateTime
     */
@@ -73,7 +70,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the acquiredDateTime
-    * The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
     *
     * @param \DateTime $val The value to assign to the acquiredDateTime
     *
@@ -86,7 +82,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the blackAndWhitePageCount
-    * The number of black and white pages that were printed. Read-only.
     *
     * @return int The blackAndWhitePageCount
     */
@@ -101,7 +96,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the blackAndWhitePageCount
-    * The number of black and white pages that were printed. Read-only.
     *
     * @param int $val The value of the blackAndWhitePageCount
     *
@@ -114,7 +108,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the colorPageCount
-    * The number of color pages that were printed. Read-only.
     *
     * @return int The colorPageCount
     */
@@ -129,7 +122,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the colorPageCount
-    * The number of color pages that were printed. Read-only.
     *
     * @param int $val The value of the colorPageCount
     *
@@ -143,7 +135,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Gets the completionDateTime
-    * The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
     *
     * @return \DateTime The completionDateTime
     */
@@ -162,7 +153,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the completionDateTime
-    * The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
     *
     * @param \DateTime $val The value to assign to the completionDateTime
     *
@@ -175,7 +165,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the copiesPrinted
-    * The number of copies that were printed. Read-only.
     *
     * @return int The copiesPrinted
     */
@@ -190,7 +179,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the copiesPrinted
-    * The number of copies that were printed. Read-only.
     *
     * @param int $val The value of the copiesPrinted
     *
@@ -204,7 +192,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Gets the createdBy
-    * The user who created the print job. Read-only.
     *
     * @return UserIdentity The createdBy
     */
@@ -223,7 +210,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the createdBy
-    * The user who created the print job. Read-only.
     *
     * @param UserIdentity $val The value to assign to the createdBy
     *
@@ -237,7 +223,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Gets the createdDateTime
-    * The dateTimeOffset when the job was created. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -256,7 +241,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the createdDateTime
-    * The dateTimeOffset when the job was created. Read-only.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -269,7 +253,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the duplexPageCount
-    * The number of duplex (double-sided) pages that were printed. Read-only.
     *
     * @return int The duplexPageCount
     */
@@ -284,7 +267,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the duplexPageCount
-    * The number of duplex (double-sided) pages that were printed. Read-only.
     *
     * @param int $val The value of the duplexPageCount
     *
@@ -297,7 +279,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the id
-    * The archived print job's GUID. Read-only.
     *
     * @return string The id
     */
@@ -312,7 +293,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the id
-    * The archived print job's GUID. Read-only.
     *
     * @param string $val The value of the id
     *
@@ -325,7 +305,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the pageCount
-    * The total number of pages that were printed. Read-only.
     *
     * @return int The pageCount
     */
@@ -340,7 +319,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the pageCount
-    * The total number of pages that were printed. Read-only.
     *
     * @param int $val The value of the pageCount
     *
@@ -353,7 +331,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the printerId
-    * The printer ID that the job was queued for. Read-only.
     *
     * @return string The printerId
     */
@@ -368,7 +345,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the printerId
-    * The printer ID that the job was queued for. Read-only.
     *
     * @param string $val The value of the printerId
     *
@@ -382,7 +358,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Gets the processingState
-    * The print job's final processing state. Read-only.
     *
     * @return PrintJobProcessingState The processingState
     */
@@ -401,7 +376,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the processingState
-    * The print job's final processing state. Read-only.
     *
     * @param PrintJobProcessingState $val The value to assign to the processingState
     *
@@ -414,7 +388,6 @@ class ArchivedPrintJob extends Entity
     }
     /**
     * Gets the simplexPageCount
-    * The number of simplex (single-sided) pages that were printed. Read-only.
     *
     * @return int The simplexPageCount
     */
@@ -429,7 +402,6 @@ class ArchivedPrintJob extends Entity
 
     /**
     * Sets the simplexPageCount
-    * The number of simplex (single-sided) pages that were printed. Read-only.
     *
     * @param int $val The value of the simplexPageCount
     *

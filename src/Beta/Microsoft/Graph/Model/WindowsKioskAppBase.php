@@ -26,7 +26,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Gets the appType
-    * The app type. Possible values are: unknown, store, desktop, aumId.
+    * The app type
     *
     * @return WindowsKioskAppType The appType
     */
@@ -45,7 +45,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Sets the appType
-    * The app type. Possible values are: unknown, store, desktop, aumId.
+    * The app type
     *
     * @param WindowsKioskAppType $val The value to assign to the appType
     *
@@ -115,7 +115,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Gets the startLayoutTileSize
-    * The app tile size for the start layout. Possible values are: hidden, small, medium, wide, large.
+    * The app tile size for the start layout
     *
     * @return WindowsAppStartLayoutTileSize The startLayoutTileSize
     */
@@ -134,7 +134,7 @@ class WindowsKioskAppBase extends Entity
 
     /**
     * Sets the startLayoutTileSize
-    * The app tile size for the start layout. Possible values are: hidden, small, medium, wide, large.
+    * The app tile size for the start layout
     *
     * @param WindowsAppStartLayoutTileSize $val The value to assign to the startLayoutTileSize
     *

@@ -26,7 +26,7 @@ class OutOfBoxExperienceSettings extends Entity
 
     /**
     * Gets the deviceUsageType
-    * AAD join authentication type. Possible values are: singleUser, shared.
+    * AAD join authentication type
     *
     * @return WindowsDeviceUsageType The deviceUsageType
     */
@@ -45,7 +45,7 @@ class OutOfBoxExperienceSettings extends Entity
 
     /**
     * Sets the deviceUsageType
-    * AAD join authentication type. Possible values are: singleUser, shared.
+    * AAD join authentication type
     *
     * @param WindowsDeviceUsageType $val The value to assign to the deviceUsageType
     *
@@ -171,7 +171,7 @@ class OutOfBoxExperienceSettings extends Entity
 
     /**
     * Gets the userType
-    * Type of user. Possible values are: administrator, standard.
+    * Type of user
     *
     * @return WindowsUserType The userType
     */
@@ -190,7 +190,7 @@ class OutOfBoxExperienceSettings extends Entity
 
     /**
     * Sets the userType
-    * Type of user. Possible values are: administrator, standard.
+    * Type of user
     *
     * @param WindowsUserType $val The value to assign to the userType
     *

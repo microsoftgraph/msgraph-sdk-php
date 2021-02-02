@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @return bool The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @param bool $val The accountEnabled
     *
@@ -636,7 +636,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @return string The operatingSystemVersion
     */
@@ -651,7 +651,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @param string $val The operatingSystemVersion
     *
@@ -1127,7 +1127,6 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the commands
-    * Set of commands sent to this device
      *
      * @return array The commands
      */
@@ -1142,7 +1141,6 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the commands
-    * Set of commands sent to this device
     *
     * @param Command $val The commands
     *

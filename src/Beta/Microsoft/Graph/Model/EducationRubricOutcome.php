@@ -27,7 +27,6 @@ class EducationRubricOutcome extends EducationOutcome
 
      /** 
      * Gets the publishedRubricQualityFeedback
-    * A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
      *
      * @return array The publishedRubricQualityFeedback
      */
@@ -42,7 +41,6 @@ class EducationRubricOutcome extends EducationOutcome
     
     /** 
     * Sets the publishedRubricQualityFeedback
-    * A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
     *
     * @param RubricQualityFeedbackModel $val The publishedRubricQualityFeedback
     *
@@ -57,7 +55,6 @@ class EducationRubricOutcome extends EducationOutcome
 
      /** 
      * Gets the publishedRubricQualitySelectedLevels
-    * A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
      *
      * @return array The publishedRubricQualitySelectedLevels
      */
@@ -72,7 +69,6 @@ class EducationRubricOutcome extends EducationOutcome
     
     /** 
     * Sets the publishedRubricQualitySelectedLevels
-    * A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
     *
     * @param RubricQualitySelectedColumnModel $val The publishedRubricQualitySelectedLevels
     *
@@ -87,7 +83,6 @@ class EducationRubricOutcome extends EducationOutcome
 
      /** 
      * Gets the rubricQualityFeedback
-    * A collection of specific feedback for each quality of this rubric.
      *
      * @return array The rubricQualityFeedback
      */
@@ -102,7 +97,6 @@ class EducationRubricOutcome extends EducationOutcome
     
     /** 
     * Sets the rubricQualityFeedback
-    * A collection of specific feedback for each quality of this rubric.
     *
     * @param RubricQualityFeedbackModel $val The rubricQualityFeedback
     *
@@ -117,7 +111,6 @@ class EducationRubricOutcome extends EducationOutcome
 
      /** 
      * Gets the rubricQualitySelectedLevels
-    * The level that the teacher has selected for each quality while grading this assignment.
      *
      * @return array The rubricQualitySelectedLevels
      */
@@ -132,7 +125,6 @@ class EducationRubricOutcome extends EducationOutcome
     
     /** 
     * Sets the rubricQualitySelectedLevels
-    * The level that the teacher has selected for each quality while grading this assignment.
     *
     * @param RubricQualitySelectedColumnModel $val The rubricQualitySelectedLevels
     *

@@ -63,7 +63,7 @@ class Win32LobAppRegistryRequirement extends Win32LobAppRequirement
 
     /**
     * Gets the detectionType
-    * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
+    * The registry data detection type
     *
     * @return Win32LobAppRegistryDetectionType The detectionType
     */
@@ -82,7 +82,7 @@ class Win32LobAppRegistryRequirement extends Win32LobAppRequirement
 
     /**
     * Sets the detectionType
-    * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
+    * The registry data detection type
     *
     * @param Win32LobAppRegistryDetectionType $val The value to assign to the detectionType
     *

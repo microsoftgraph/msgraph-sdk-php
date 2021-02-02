@@ -491,7 +491,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appStoreBlocked
-    * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using the App Store.
     *
     * @return bool The appStoreBlocked
     */
@@ -506,7 +506,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appStoreBlocked
-    * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using the App Store.
     *
     * @param bool $val The appStoreBlocked
     *
@@ -757,7 +757,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cameraBlocked
-    * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing the camera of the device.
     *
     * @return bool The cameraBlocked
     */
@@ -772,7 +772,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cameraBlocked
-    * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing the camera of the device.
     *
     * @param bool $val The cameraBlocked
     *
@@ -1342,7 +1342,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the dateAndTimeForceSetAutomatically
-    * Indicates whether or not the Date and Time 'Set Automatically' feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
+    * Indicates whether or not the Date and Time "Set Automatically" feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
     *
     * @return bool The dateAndTimeForceSetAutomatically
     */
@@ -1357,7 +1357,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the dateAndTimeForceSetAutomatically
-    * Indicates whether or not the Date and Time 'Set Automatically' feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
+    * Indicates whether or not the Date and Time "Set Automatically" feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
     *
     * @param bool $val The dateAndTimeForceSetAutomatically
     *
@@ -1661,7 +1661,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseAppBlockTrustModification
-    * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+    * Indicates whether or not to block the user from modifying the enterprise app trust settings.
     *
     * @return bool The enterpriseAppBlockTrustModification
     */
@@ -1676,7 +1676,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseAppBlockTrustModification
-    * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+    * Indicates whether or not to block the user from modifying the enterprise app trust settings.
     *
     * @param bool $val The enterpriseAppBlockTrustModification
     *
@@ -1777,7 +1777,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the faceTimeBlocked
-    * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using FaceTime.
     *
     * @return bool The faceTimeBlocked
     */
@@ -1792,7 +1792,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the faceTimeBlocked
-    * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using FaceTime.
     *
     * @param bool $val The faceTimeBlocked
     *
@@ -1893,7 +1893,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the findMyFriendsBlocked
-    * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
+    * Indicates whether or not to block Find My Friends when the device is in supervised mode.
     *
     * @return bool The findMyFriendsBlocked
     */
@@ -1908,7 +1908,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the findMyFriendsBlocked
-    * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
+    * Indicates whether or not to block Find My Friends when the device is in supervised mode.
     *
     * @param bool $val The findMyFriendsBlocked
     *
@@ -1980,7 +1980,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the gamingBlockGameCenterFriends
-    * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from having friends in Game Center.
     *
     * @return bool The gamingBlockGameCenterFriends
     */
@@ -1995,7 +1995,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gamingBlockGameCenterFriends
-    * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from having friends in Game Center.
     *
     * @param bool $val The gamingBlockGameCenterFriends
     *
@@ -2009,7 +2009,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the gamingBlockMultiplayer
-    * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using multiplayer gaming.
     *
     * @return bool The gamingBlockMultiplayer
     */
@@ -2024,7 +2024,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gamingBlockMultiplayer
-    * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using multiplayer gaming.
     *
     * @param bool $val The gamingBlockMultiplayer
     *
@@ -2154,7 +2154,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockBackup
-    * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud backup.
     *
     * @return bool The iCloudBlockBackup
     */
@@ -2169,7 +2169,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockBackup
-    * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud backup.
     *
     * @param bool $val The iCloudBlockBackup
     *
@@ -2183,7 +2183,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockDocumentSync
-    * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud document sync.
     *
     * @return bool The iCloudBlockDocumentSync
     */
@@ -2198,7 +2198,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockDocumentSync
-    * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud document sync.
     *
     * @param bool $val The iCloudBlockDocumentSync
     *
@@ -2386,7 +2386,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iTunesBlockExplicitContent
-    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store.
     *
     * @return bool The iTunesBlockExplicitContent
     */
@@ -2401,7 +2401,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iTunesBlockExplicitContent
-    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store.
     *
     * @param bool $val The iTunesBlockExplicitContent
     *
@@ -2705,7 +2705,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowAutoLock
-    * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+    * Indicates whether or not to allow device auto lock while in kiosk mode.
     *
     * @return bool The kioskModeAllowAutoLock
     */
@@ -2720,7 +2720,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowAutoLock
-    * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+    * Indicates whether or not to allow device auto lock while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowAutoLock
     *
@@ -2763,7 +2763,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowRingerSwitch
-    * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+    * Indicates whether or not to allow use of the ringer switch while in kiosk mode.
     *
     * @return bool The kioskModeAllowRingerSwitch
     */
@@ -2778,7 +2778,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowRingerSwitch
-    * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+    * Indicates whether or not to allow use of the ringer switch while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowRingerSwitch
     *
@@ -2792,7 +2792,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowScreenRotation
-    * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+    * Indicates whether or not to allow screen rotation while in kiosk mode.
     *
     * @return bool The kioskModeAllowScreenRotation
     */
@@ -2807,7 +2807,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowScreenRotation
-    * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+    * Indicates whether or not to allow screen rotation while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowScreenRotation
     *
@@ -2821,7 +2821,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowSleepButton
-    * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+    * Indicates whether or not to allow use of the sleep button while in kiosk mode.
     *
     * @return bool The kioskModeAllowSleepButton
     */
@@ -2836,7 +2836,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowSleepButton
-    * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+    * Indicates whether or not to allow use of the sleep button while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowSleepButton
     *
@@ -2850,7 +2850,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowTouchscreen
-    * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+    * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
     *
     * @return bool The kioskModeAllowTouchscreen
     */
@@ -2865,7 +2865,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowTouchscreen
-    * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+    * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowTouchscreen
     *
@@ -2937,7 +2937,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowVolumeButtons
-    * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+    * Indicates whether or not to allow use of the volume buttons while in kiosk mode.
     *
     * @return bool The kioskModeAllowVolumeButtons
     */
@@ -2952,7 +2952,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowVolumeButtons
-    * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+    * Indicates whether or not to allow use of the volume buttons while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowVolumeButtons
     *
@@ -3024,7 +3024,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAppType
-    * Type of app to run in kiosk mode. Possible values are: notConfigured, appStoreApp, managedApp, builtInApp.
+    * Type of app to run in kiosk mode.
     *
     * @return IosKioskModeAppType The kioskModeAppType
     */
@@ -3043,7 +3043,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAppType
-    * Type of app to run in kiosk mode. Possible values are: notConfigured, appStoreApp, managedApp, builtInApp.
+    * Type of app to run in kiosk mode.
     *
     * @param IosKioskModeAppType $val The kioskModeAppType
     *
@@ -4349,7 +4349,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passcodeSignInFailureCountBeforeWipe
-    * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
+    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
     *
     * @return int The passcodeSignInFailureCountBeforeWipe
     */
@@ -4364,7 +4364,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passcodeSignInFailureCountBeforeWipe
-    * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
+    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
     *
     * @param int $val The passcodeSignInFailureCountBeforeWipe
     *
@@ -4581,7 +4581,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the safariBlockAutofill
-    * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Auto fill in Safari.
     *
     * @return bool The safariBlockAutofill
     */
@@ -4596,7 +4596,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the safariBlockAutofill
-    * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Auto fill in Safari.
     *
     * @param bool $val The safariBlockAutofill
     *
@@ -4610,7 +4610,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the safariBlocked
-    * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Safari.
     *
     * @return bool The safariBlocked
     */
@@ -4625,7 +4625,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the safariBlocked
-    * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Safari.
     *
     * @param bool $val The safariBlocked
     *

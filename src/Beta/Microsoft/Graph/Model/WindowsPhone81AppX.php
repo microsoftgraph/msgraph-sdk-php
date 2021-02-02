@@ -26,7 +26,7 @@ class WindowsPhone81AppX extends MobileLobApp
 {
     /**
     * Gets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The Windows architecture(s) for which this app can run on.
     *
     * @return WindowsArchitecture The applicableArchitectures
     */
@@ -45,7 +45,7 @@ class WindowsPhone81AppX extends MobileLobApp
     
     /**
     * Sets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The Windows architecture(s) for which this app can run on.
     *
     * @param WindowsArchitecture $val The applicableArchitectures
     *

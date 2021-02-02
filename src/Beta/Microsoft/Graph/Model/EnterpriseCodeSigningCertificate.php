@@ -150,7 +150,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Gets the status
-    * The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+    * The Certificate Status Provisioned or not Provisioned.
     *
     * @return CertificateStatus The status
     */
@@ -169,7 +169,7 @@ class EnterpriseCodeSigningCertificate extends Entity
     
     /**
     * Sets the status
-    * The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+    * The Certificate Status Provisioned or not Provisioned.
     *
     * @param CertificateStatus $val The status
     *

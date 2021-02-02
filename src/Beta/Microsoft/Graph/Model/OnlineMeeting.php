@@ -57,7 +57,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the allowedPresenters
-    * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @return OnlineMeetingPresenters The allowedPresenters
     */
@@ -76,7 +76,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the allowedPresenters
-    * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @param OnlineMeetingPresenters $val The allowedPresenters
     *
@@ -248,7 +248,6 @@ class OnlineMeeting extends Entity
 
      /** 
      * Gets the capabilities
-    * The list of meeting capabilities. Possible values are: questionAndAnswer.
      *
      * @return array The capabilities
      */
@@ -263,7 +262,6 @@ class OnlineMeeting extends Entity
     
     /** 
     * Sets the capabilities
-    * The list of meeting capabilities. Possible values are: questionAndAnswer.
     *
     * @param MeetingCapabilities $val The capabilities
     *
@@ -434,7 +432,6 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the externalId
-    * The external ID. A custom ID. Optional.
     *
     * @return string The externalId
     */
@@ -449,7 +446,6 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the externalId
-    * The external ID. A custom ID. Optional.
     *
     * @param string $val The externalId
     *
@@ -546,7 +542,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @return ItemBody The joinInformation
     */
@@ -565,7 +561,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @param ItemBody $val The joinInformation
     *
@@ -606,7 +602,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @return LobbyBypassSettings The lobbyBypassSettings
     */
@@ -625,7 +621,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @param LobbyBypassSettings $val The lobbyBypassSettings
     *

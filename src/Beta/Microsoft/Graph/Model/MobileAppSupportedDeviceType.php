@@ -82,7 +82,7 @@ class MobileAppSupportedDeviceType extends Entity
 
     /**
     * Gets the type
-    * Device type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+    * Device type
     *
     * @return DeviceType The type
     */
@@ -101,7 +101,7 @@ class MobileAppSupportedDeviceType extends Entity
 
     /**
     * Sets the type
-    * Device type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+    * Device type
     *
     * @param DeviceType $val The value to assign to the type
     *

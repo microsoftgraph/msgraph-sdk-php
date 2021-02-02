@@ -25,7 +25,6 @@ class AccessPackageQuestion extends Entity
 {
     /**
     * Gets the id
-    * ID of the question.
     *
     * @return string The id
     */
@@ -40,7 +39,6 @@ class AccessPackageQuestion extends Entity
 
     /**
     * Sets the id
-    * ID of the question.
     *
     * @param string $val The value of the id
     *
@@ -53,7 +51,6 @@ class AccessPackageQuestion extends Entity
     }
     /**
     * Gets the isRequired
-    * Whether the requestor is required to supply an answer or not.
     *
     * @return bool The isRequired
     */
@@ -68,7 +65,6 @@ class AccessPackageQuestion extends Entity
 
     /**
     * Sets the isRequired
-    * Whether the requestor is required to supply an answer or not.
     *
     * @param bool $val The value of the isRequired
     *
@@ -81,7 +77,6 @@ class AccessPackageQuestion extends Entity
     }
     /**
     * Gets the sequence
-    * Relative position of this question when displaying a list of questions to the requestor.
     *
     * @return int The sequence
     */
@@ -96,7 +91,6 @@ class AccessPackageQuestion extends Entity
 
     /**
     * Sets the sequence
-    * Relative position of this question when displaying a list of questions to the requestor.
     *
     * @param int $val The value of the sequence
     *
@@ -110,7 +104,6 @@ class AccessPackageQuestion extends Entity
 
     /**
     * Gets the text
-    * The text of the question to show to the requestor.
     *
     * @return AccessPackageLocalizedContent The text
     */
@@ -129,7 +122,6 @@ class AccessPackageQuestion extends Entity
 
     /**
     * Sets the text
-    * The text of the question to show to the requestor.
     *
     * @param AccessPackageLocalizedContent $val The value to assign to the text
     *

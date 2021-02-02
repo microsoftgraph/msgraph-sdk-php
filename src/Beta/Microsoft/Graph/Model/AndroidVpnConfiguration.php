@@ -26,7 +26,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+    * Authentication method.
     *
     * @return VpnAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+    * Authentication method.
     *
     * @param VpnAuthenticationMethod $val The authenticationMethod
     *
@@ -88,7 +88,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility.
+    * Connection type.
     *
     * @return AndroidVpnConnectionType The connectionType
     */
@@ -107,7 +107,7 @@ class AndroidVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility.
+    * Connection type.
     *
     * @param AndroidVpnConnectionType $val The connectionType
     *

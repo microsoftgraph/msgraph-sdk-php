@@ -27,7 +27,6 @@ class CredentialUserRegistrationDetails extends Entity
 
      /** 
      * Gets the authMethods
-    * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobilePhone (supported only in registration).
      *
      * @return array The authMethods
      */
@@ -42,7 +41,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /** 
     * Sets the authMethods
-    * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobilePhone (supported only in registration).
     *
     * @param RegistrationAuthMethod $val The authMethods
     *
@@ -56,7 +54,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the isCapable
-    * Indicates whether the user is ready to perform self-service password reset or MFA.
     *
     * @return bool The isCapable
     */
@@ -71,7 +68,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the isCapable
-    * Indicates whether the user is ready to perform self-service password reset or MFA.
     *
     * @param bool $val The isCapable
     *
@@ -85,7 +81,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the isEnabled
-    * Indiciates whether the user enabled to perform self-service password reset.
     *
     * @return bool The isEnabled
     */
@@ -100,7 +95,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the isEnabled
-    * Indiciates whether the user enabled to perform self-service password reset.
     *
     * @param bool $val The isEnabled
     *
@@ -114,7 +108,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the isMfaRegistered
-    * Indiciates whether the user is registered for MFA.
     *
     * @return bool The isMfaRegistered
     */
@@ -129,7 +122,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the isMfaRegistered
-    * Indiciates whether the user is registered for MFA.
     *
     * @param bool $val The isMfaRegistered
     *
@@ -143,7 +135,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the isRegistered
-    * Indicates whether the user has registered any authentication methods for self-service password reset.
     *
     * @return bool The isRegistered
     */
@@ -158,7 +149,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the isRegistered
-    * Indicates whether the user has registered any authentication methods for self-service password reset.
     *
     * @param bool $val The isRegistered
     *
@@ -172,7 +162,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the userDisplayName
-    * Provides the user name of the corresponding user.
     *
     * @return string The userDisplayName
     */
@@ -187,7 +176,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the userDisplayName
-    * Provides the user name of the corresponding user.
     *
     * @param string $val The userDisplayName
     *
@@ -201,7 +189,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the userPrincipalName
-    * Provides the user principal name of the corresponding user.
     *
     * @return string The userPrincipalName
     */
@@ -216,7 +203,6 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the userPrincipalName
-    * Provides the user principal name of the corresponding user.
     *
     * @param string $val The userPrincipalName
     *

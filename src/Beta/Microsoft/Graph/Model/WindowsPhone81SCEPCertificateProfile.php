@@ -26,7 +26,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
 {
     /**
     * Gets the hashAlgorithm
-    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
+    * SCEP Hash Algorithm.
     *
     * @return HashAlgorithms The hashAlgorithm
     */
@@ -45,7 +45,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the hashAlgorithm
-    * SCEP Hash Algorithm. Possible values are: sha1, sha2.
+    * SCEP Hash Algorithm.
     *
     * @param HashAlgorithms $val The hashAlgorithm
     *
@@ -59,7 +59,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the keySize
-    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+    * SCEP Key Size.
     *
     * @return KeySize The keySize
     */
@@ -78,7 +78,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the keySize
-    * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+    * SCEP Key Size.
     *
     * @param KeySize $val The keySize
     *
@@ -92,7 +92,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Gets the keyUsage
-    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+    * SCEP Key Usage.
     *
     * @return KeyUsages The keyUsage
     */
@@ -111,7 +111,7 @@ class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProf
     
     /**
     * Sets the keyUsage
-    * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+    * SCEP Key Usage.
     *
     * @param KeyUsages $val The keyUsage
     *

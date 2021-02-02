@@ -26,7 +26,6 @@ class BitlockerRecoveryKey extends Entity
 {
     /**
     * Gets the createdDateTime
-    * The date and time when the key was originally backed up to Azure Active Directory.
     *
     * @return \DateTime The createdDateTime
     */
@@ -45,7 +44,6 @@ class BitlockerRecoveryKey extends Entity
     
     /**
     * Sets the createdDateTime
-    * The date and time when the key was originally backed up to Azure Active Directory.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,7 +57,6 @@ class BitlockerRecoveryKey extends Entity
     
     /**
     * Gets the deviceId
-    * ID of the device the BitLocker key is originally backed up from.
     *
     * @return string The deviceId
     */
@@ -74,7 +71,6 @@ class BitlockerRecoveryKey extends Entity
     
     /**
     * Sets the deviceId
-    * ID of the device the BitLocker key is originally backed up from.
     *
     * @param string $val The deviceId
     *
@@ -88,7 +84,6 @@ class BitlockerRecoveryKey extends Entity
     
     /**
     * Gets the key
-    * The BitLocker recovery key.
     *
     * @return string The key
     */
@@ -103,7 +98,6 @@ class BitlockerRecoveryKey extends Entity
     
     /**
     * Sets the key
-    * The BitLocker recovery key.
     *
     * @param string $val The key
     *
@@ -117,7 +111,6 @@ class BitlockerRecoveryKey extends Entity
     
     /**
     * Gets the volumeType
-    * Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
     *
     * @return VolumeType The volumeType
     */
@@ -136,7 +129,6 @@ class BitlockerRecoveryKey extends Entity
     
     /**
     * Sets the volumeType
-    * Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
     *
     * @param VolumeType $val The volumeType
     *

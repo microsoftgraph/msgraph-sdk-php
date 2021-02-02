@@ -26,7 +26,6 @@ class AccessPackageAssignmentResourceRole extends Entity
 {
     /**
     * Gets the originId
-    * A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
     *
     * @return string The originId
     */
@@ -41,7 +40,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Sets the originId
-    * A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
     *
     * @param string $val The originId
     *
@@ -55,7 +53,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Gets the originSystem
-    * The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
     *
     * @return string The originSystem
     */
@@ -70,7 +67,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Sets the originSystem
-    * The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
     *
     * @param string $val The originSystem
     *
@@ -84,7 +80,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Gets the status
-    * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
     *
     * @return string The status
     */
@@ -99,7 +94,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Sets the status
-    * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
     *
     * @param string $val The status
     *
@@ -114,7 +108,6 @@ class AccessPackageAssignmentResourceRole extends Entity
 
      /** 
      * Gets the accessPackageAssignments
-    * The access package assignments resulting in this role assignment. Read-only. Nullable.
      *
      * @return array The accessPackageAssignments
      */
@@ -129,7 +122,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /** 
     * Sets the accessPackageAssignments
-    * The access package assignments resulting in this role assignment. Read-only. Nullable.
     *
     * @param AccessPackageAssignment $val The accessPackageAssignments
     *
@@ -143,7 +135,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Gets the accessPackageResourceRole
-    * Read-only. Nullable.
     *
     * @return AccessPackageResourceRole The accessPackageResourceRole
     */
@@ -162,7 +153,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Sets the accessPackageResourceRole
-    * Read-only. Nullable.
     *
     * @param AccessPackageResourceRole $val The accessPackageResourceRole
     *
@@ -176,7 +166,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Gets the accessPackageResourceScope
-    * Read-only. Nullable.
     *
     * @return AccessPackageResourceScope The accessPackageResourceScope
     */
@@ -195,7 +184,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Sets the accessPackageResourceScope
-    * Read-only. Nullable.
     *
     * @param AccessPackageResourceScope $val The accessPackageResourceScope
     *
@@ -209,7 +197,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Gets the accessPackageSubject
-    * Read-only. Nullable.
     *
     * @return AccessPackageSubject The accessPackageSubject
     */
@@ -228,7 +215,6 @@ class AccessPackageAssignmentResourceRole extends Entity
     
     /**
     * Sets the accessPackageSubject
-    * Read-only. Nullable.
     *
     * @param AccessPackageSubject $val The accessPackageSubject
     *

@@ -26,7 +26,6 @@ class PersonAnnotation extends ItemFacet
 {
     /**
     * Gets the detail
-    * Contains the detail of the note itself.
     *
     * @return ItemBody The detail
     */
@@ -45,7 +44,6 @@ class PersonAnnotation extends ItemFacet
     
     /**
     * Sets the detail
-    * Contains the detail of the note itself.
     *
     * @param ItemBody $val The detail
     *
@@ -59,7 +57,6 @@ class PersonAnnotation extends ItemFacet
     
     /**
     * Gets the displayName
-    * Contains a friendly name for the note.
     *
     * @return string The displayName
     */
@@ -74,7 +71,6 @@ class PersonAnnotation extends ItemFacet
     
     /**
     * Sets the displayName
-    * Contains a friendly name for the note.
     *
     * @param string $val The displayName
     *

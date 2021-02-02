@@ -25,7 +25,6 @@ class FilterOperand extends Entity
 {
     /**
     * Gets the values
-    * Collection of values.
     *
     * @return string The values
     */
@@ -40,7 +39,6 @@ class FilterOperand extends Entity
 
     /**
     * Sets the values
-    * Collection of values.
     *
     * @param string $val The value of the values
     *

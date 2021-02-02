@@ -110,7 +110,7 @@ class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceMan
 
     /**
     * Gets the requiredAzureAdTrustType
-    * Required AzureAD trust type. Possible values are: none, azureAdJoined, addWorkAccount, mdmOnly.
+    * Required AzureAD trust type
     *
     * @return DeviceManagementConfigurationAzureAdTrustType The requiredAzureAdTrustType
     */
@@ -129,7 +129,7 @@ class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceMan
 
     /**
     * Sets the requiredAzureAdTrustType
-    * Required AzureAD trust type. Possible values are: none, azureAdJoined, addWorkAccount, mdmOnly.
+    * Required AzureAD trust type
     *
     * @param DeviceManagementConfigurationAzureAdTrustType $val The value to assign to the requiredAzureAdTrustType
     *

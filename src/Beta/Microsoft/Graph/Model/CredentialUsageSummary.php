@@ -26,7 +26,6 @@ class CredentialUsageSummary extends Entity
 {
     /**
     * Gets the authMethod
-    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and  alternateMobileCall (only supported for registration).
     *
     * @return UsageAuthMethod The authMethod
     */
@@ -45,7 +44,6 @@ class CredentialUsageSummary extends Entity
     
     /**
     * Sets the authMethod
-    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and  alternateMobileCall (only supported for registration).
     *
     * @param UsageAuthMethod $val The authMethod
     *
@@ -59,7 +57,6 @@ class CredentialUsageSummary extends Entity
     
     /**
     * Gets the failureActivityCount
-    * Provides the count of failed resets or registration data.
     *
     * @return int The failureActivityCount
     */
@@ -74,7 +71,6 @@ class CredentialUsageSummary extends Entity
     
     /**
     * Sets the failureActivityCount
-    * Provides the count of failed resets or registration data.
     *
     * @param int $val The failureActivityCount
     *
@@ -88,7 +84,6 @@ class CredentialUsageSummary extends Entity
     
     /**
     * Gets the feature
-    * Defines the feature to report. Possible values are: registration and reset.
     *
     * @return FeatureType The feature
     */
@@ -107,7 +102,6 @@ class CredentialUsageSummary extends Entity
     
     /**
     * Sets the feature
-    * Defines the feature to report. Possible values are: registration and reset.
     *
     * @param FeatureType $val The feature
     *
@@ -121,7 +115,6 @@ class CredentialUsageSummary extends Entity
     
     /**
     * Gets the successfulActivityCount
-    * Provides the count of successful registrations or resets.
     *
     * @return int The successfulActivityCount
     */
@@ -136,7 +129,6 @@ class CredentialUsageSummary extends Entity
     
     /**
     * Sets the successfulActivityCount
-    * Provides the count of successful registrations or resets.
     *
     * @param int $val The successfulActivityCount
     *

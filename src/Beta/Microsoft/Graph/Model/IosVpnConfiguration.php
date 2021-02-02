@@ -113,7 +113,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     
     /**
     * Gets the strictEnforcement
-    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
+    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
     *
     * @return bool The strictEnforcement
     */
@@ -128,7 +128,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     
     /**
     * Sets the strictEnforcement
-    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
+    * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
     *
     * @param bool $val The strictEnforcement
     *

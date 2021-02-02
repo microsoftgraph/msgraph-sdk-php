@@ -26,7 +26,7 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Gets the accessLevel
-    * Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine.
+    * Access Level for Exchange granted by this rule.
     *
     * @return DeviceManagementExchangeAccessLevel The accessLevel
     */
@@ -45,7 +45,7 @@ class DeviceManagementExchangeAccessRule extends Entity
 
     /**
     * Sets the accessLevel
-    * Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine.
+    * Access Level for Exchange granted by this rule.
     *
     * @param DeviceManagementExchangeAccessLevel $val The value to assign to the accessLevel
     *

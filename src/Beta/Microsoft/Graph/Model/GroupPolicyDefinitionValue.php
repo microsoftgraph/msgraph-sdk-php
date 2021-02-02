@@ -26,7 +26,7 @@ class GroupPolicyDefinitionValue extends Entity
 {
     /**
     * Gets the configurationType
-    * Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
+    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
     *
     * @return GroupPolicyConfigurationType The configurationType
     */
@@ -45,7 +45,7 @@ class GroupPolicyDefinitionValue extends Entity
     
     /**
     * Sets the configurationType
-    * Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
+    * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
     *
     * @param GroupPolicyConfigurationType $val The configurationType
     *

@@ -238,7 +238,7 @@ class MacOsVppApp extends MobileApp
     
     /**
     * Gets the vppTokenAccountType
-    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: `business`, `education`.
     *
     * @return VppTokenAccountType The vppTokenAccountType
     */
@@ -257,7 +257,7 @@ class MacOsVppApp extends MobileApp
     
     /**
     * Sets the vppTokenAccountType
-    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+    * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: `business`, `education`.
     *
     * @param VppTokenAccountType $val The vppTokenAccountType
     *

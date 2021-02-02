@@ -35,5 +35,8 @@ class CloudPcStatus extends Enum
     const UPGRADING = "upgrading";
     const IN_GRACE_PERIOD = "inGracePeriod";
     const DEPROVISIONING = "deprovisioning";
-    const FAILED = "failed";
+    const UPGRADE_FAILED = "upgradeFailed";
+    const PROVISION_FAILED = "provisionFailed";
+    const DEPROVISION_FAILED = "deprovisionFailed";
+    const REPROVISION_FAILED = "reprovisionFailed";
 }

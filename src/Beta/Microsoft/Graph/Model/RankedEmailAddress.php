@@ -25,7 +25,6 @@ class RankedEmailAddress extends Entity
 {
     /**
     * Gets the address
-    * The email address.
     *
     * @return string The address
     */
@@ -40,7 +39,6 @@ class RankedEmailAddress extends Entity
 
     /**
     * Sets the address
-    * The email address.
     *
     * @param string $val The value of the address
     *
@@ -53,7 +51,6 @@ class RankedEmailAddress extends Entity
     }
     /**
     * Gets the rank
-    * The rank of the email address. A rank is used as a sort key, in relation to the other returned results. A higher rank value corresponds to a more relevant result. Relevance is determined by communication, collaboration, and business relationship signals.
     *
     * @return float The rank
     */
@@ -68,7 +65,6 @@ class RankedEmailAddress extends Entity
 
     /**
     * Sets the rank
-    * The rank of the email address. A rank is used as a sort key, in relation to the other returned results. A higher rank value corresponds to a more relevant result. Relevance is determined by communication, collaboration, and business relationship signals.
     *
     * @param float $val The value of the rank
     *

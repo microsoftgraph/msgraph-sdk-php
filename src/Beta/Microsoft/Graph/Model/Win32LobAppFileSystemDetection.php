@@ -63,7 +63,7 @@ class Win32LobAppFileSystemDetection extends Win32LobAppDetection
 
     /**
     * Gets the detectionType
-    * The file system detection type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
+    * The file system detection type
     *
     * @return Win32LobAppFileSystemDetectionType The detectionType
     */
@@ -82,7 +82,7 @@ class Win32LobAppFileSystemDetection extends Win32LobAppDetection
 
     /**
     * Sets the detectionType
-    * The file system detection type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
+    * The file system detection type
     *
     * @param Win32LobAppFileSystemDetectionType $val The value to assign to the detectionType
     *
@@ -152,7 +152,7 @@ class Win32LobAppFileSystemDetection extends Win32LobAppDetection
 
     /**
     * Gets the operator
-    * The operator for file or folder detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+    * The operator for file or folder detection
     *
     * @return Win32LobAppDetectionOperator The operator
     */
@@ -171,7 +171,7 @@ class Win32LobAppFileSystemDetection extends Win32LobAppDetection
 
     /**
     * Sets the operator
-    * The operator for file or folder detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+    * The operator for file or folder detection
     *
     * @param Win32LobAppDetectionOperator $val The value to assign to the operator
     *

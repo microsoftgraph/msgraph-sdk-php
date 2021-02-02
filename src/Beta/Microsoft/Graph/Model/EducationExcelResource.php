@@ -34,7 +34,6 @@ class EducationExcelResource extends EducationResource
 
     /**
     * Gets the fileUrl
-    * Pointer to the Excel file object.
     *
     * @return string The fileUrl
     */
@@ -49,7 +48,6 @@ class EducationExcelResource extends EducationResource
 
     /**
     * Sets the fileUrl
-    * Pointer to the Excel file object.
     *
     * @param string $val The value of the fileUrl
     *

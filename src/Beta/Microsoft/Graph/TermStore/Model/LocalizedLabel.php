@@ -25,7 +25,6 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the isDefault
-    * Indicates whether the label is the default label.
     *
     * @return bool The isDefault
     */
@@ -40,7 +39,6 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isDefault
-    * Indicates whether the label is the default label.
     *
     * @param bool $val The value of the isDefault
     *
@@ -53,7 +51,6 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the languageTag
-    * The anguage tag for the label.
     *
     * @return string The languageTag
     */
@@ -68,7 +65,6 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the languageTag
-    * The anguage tag for the label.
     *
     * @param string $val The value of the languageTag
     *
@@ -81,7 +77,6 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the name
-    * The name of the label.
     *
     * @return string The name
     */
@@ -96,7 +91,6 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
-    * The name of the label.
     *
     * @param string $val The value of the name
     *

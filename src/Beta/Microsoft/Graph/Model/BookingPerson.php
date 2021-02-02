@@ -26,7 +26,7 @@ class BookingPerson extends BookingNamedEntity
 {
     /**
     * Gets the emailAddress
-    * The email address of the person.
+    * The e-mail address of this person.
     *
     * @return string The emailAddress
     */
@@ -41,7 +41,7 @@ class BookingPerson extends BookingNamedEntity
     
     /**
     * Sets the emailAddress
-    * The email address of the person.
+    * The e-mail address of this person.
     *
     * @param string $val The emailAddress
     *

@@ -26,7 +26,7 @@ class AppLogCollectionDownloadDetails extends Entity
 
     /**
     * Gets the appLogDecryptionAlgorithm
-    * DecryptionAlgorithm for Content. Possible values are: aes256.
+    * DecryptionAlgorithm for Content
     *
     * @return AppLogDecryptionAlgorithm The appLogDecryptionAlgorithm
     */
@@ -45,7 +45,7 @@ class AppLogCollectionDownloadDetails extends Entity
 
     /**
     * Sets the appLogDecryptionAlgorithm
-    * DecryptionAlgorithm for Content. Possible values are: aes256.
+    * DecryptionAlgorithm for Content
     *
     * @param AppLogDecryptionAlgorithm $val The value to assign to the appLogDecryptionAlgorithm
     *

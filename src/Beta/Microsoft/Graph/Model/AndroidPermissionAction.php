@@ -26,7 +26,7 @@ class AndroidPermissionAction extends Entity
 
     /**
     * Gets the action
-    * Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny.
+    * Type of Android permission action.
     *
     * @return AndroidPermissionActionType The action
     */
@@ -45,7 +45,7 @@ class AndroidPermissionAction extends Entity
 
     /**
     * Sets the action
-    * Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny.
+    * Type of Android permission action.
     *
     * @param AndroidPermissionActionType $val The value to assign to the action
     *

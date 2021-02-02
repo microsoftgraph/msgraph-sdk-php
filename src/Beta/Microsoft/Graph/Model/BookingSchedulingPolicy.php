@@ -25,7 +25,7 @@ class BookingSchedulingPolicy extends Entity
 {
     /**
     * Gets the allowStaffSelection
-    * True if to allow customers to choose a specific person for the booking.
+    * Allow customers to choose a specific person for the booking.
     *
     * @return bool The allowStaffSelection
     */
@@ -40,7 +40,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the allowStaffSelection
-    * True if to allow customers to choose a specific person for the booking.
+    * Allow customers to choose a specific person for the booking.
     *
     * @param bool $val The value of the allowStaffSelection
     *
@@ -54,7 +54,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the maximumAdvance
-    * Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
+    * Maximum number of days in advance that a booking can be made.
     *
     * @return Duration The maximumAdvance
     */
@@ -73,7 +73,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the maximumAdvance
-    * Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
+    * Maximum number of days in advance that a booking can be made.
     *
     * @param Duration $val The value to assign to the maximumAdvance
     *
@@ -87,7 +87,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the minimumLeadTime
-    * The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
+    * Minimum lead time for bookings and cancellations.
     *
     * @return Duration The minimumLeadTime
     */
@@ -106,7 +106,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the minimumLeadTime
-    * The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
+    * Minimum lead time for bookings and cancellations.
     *
     * @param Duration $val The value to assign to the minimumLeadTime
     *
@@ -119,7 +119,7 @@ class BookingSchedulingPolicy extends Entity
     }
     /**
     * Gets the sendConfirmationsToOwner
-    * True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
+    * Notify the business via email when a booking is created or changed.
     *
     * @return bool The sendConfirmationsToOwner
     */
@@ -134,7 +134,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the sendConfirmationsToOwner
-    * True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
+    * Notify the business via email when a booking is created or changed.
     *
     * @param bool $val The value of the sendConfirmationsToOwner
     *
@@ -148,7 +148,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Gets the timeSlotInterval
-    * Duration of each time slot, denoted in ISO 8601 format.
+    * Duration of each time slot.
     *
     * @return Duration The timeSlotInterval
     */
@@ -167,7 +167,7 @@ class BookingSchedulingPolicy extends Entity
 
     /**
     * Sets the timeSlotInterval
-    * Duration of each time slot, denoted in ISO 8601 format.
+    * Duration of each time slot.
     *
     * @param Duration $val The value to assign to the timeSlotInterval
     *

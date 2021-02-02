@@ -54,7 +54,7 @@ class WindowsKioskForceUpdateSchedule extends Entity
 
     /**
     * Gets the dayofWeek
-    * Day of week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Day of week.
     *
     * @return DayOfWeek The dayofWeek
     */
@@ -73,7 +73,7 @@ class WindowsKioskForceUpdateSchedule extends Entity
 
     /**
     * Sets the dayofWeek
-    * Day of week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Day of week.
     *
     * @param DayOfWeek $val The value to assign to the dayofWeek
     *
@@ -87,7 +87,7 @@ class WindowsKioskForceUpdateSchedule extends Entity
 
     /**
     * Gets the recurrence
-    * Recurrence schedule. Possible values are: none, daily, weekly, monthly.
+    * Recurrence schedule.
     *
     * @return Windows10AppsUpdateRecurrence The recurrence
     */
@@ -106,7 +106,7 @@ class WindowsKioskForceUpdateSchedule extends Entity
 
     /**
     * Sets the recurrence
-    * Recurrence schedule. Possible values are: none, daily, weekly, monthly.
+    * Recurrence schedule.
     *
     * @param Windows10AppsUpdateRecurrence $val The value to assign to the recurrence
     *

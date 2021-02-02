@@ -26,7 +26,6 @@ class EducationSynchronizationProfile extends Entity
 {
     /**
     * Gets the dataProvider
-    * The data provider used for the profile.
     *
     * @return EducationSynchronizationDataProvider The dataProvider
     */
@@ -45,7 +44,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Sets the dataProvider
-    * The data provider used for the profile.
     *
     * @param EducationSynchronizationDataProvider $val The dataProvider
     *
@@ -59,7 +57,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Gets the displayName
-    * Name of the configuration profile for syncing identities.
     *
     * @return string The displayName
     */
@@ -74,7 +71,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Sets the displayName
-    * Name of the configuration profile for syncing identities.
     *
     * @param string $val The displayName
     *
@@ -88,7 +84,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Gets the expirationDate
-    * The date the profile should be considered expired and cease syncing. When null. the profile will never expire. (optional)
     *
     * @return \DateTime The expirationDate
     */
@@ -107,7 +102,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Sets the expirationDate
-    * The date the profile should be considered expired and cease syncing. When null. the profile will never expire. (optional)
     *
     * @param \DateTime $val The expirationDate
     *
@@ -121,7 +115,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Gets the handleSpecialCharacterConstraint
-    * Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
     *
     * @return bool The handleSpecialCharacterConstraint
     */
@@ -136,7 +129,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Sets the handleSpecialCharacterConstraint
-    * Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
     *
     * @param bool $val The handleSpecialCharacterConstraint
     *
@@ -150,7 +142,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Gets the identitySynchronizationConfiguration
-    * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] AAD Users.
     *
     * @return EducationIdentitySynchronizationConfiguration The identitySynchronizationConfiguration
     */
@@ -169,7 +160,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Sets the identitySynchronizationConfiguration
-    * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] AAD Users.
     *
     * @param EducationIdentitySynchronizationConfiguration $val The identitySynchronizationConfiguration
     *
@@ -184,7 +174,6 @@ class EducationSynchronizationProfile extends Entity
 
      /** 
      * Gets the licensesToAssign
-    * License setup configuration.
      *
      * @return array The licensesToAssign
      */
@@ -199,7 +188,6 @@ class EducationSynchronizationProfile extends Entity
     
     /** 
     * Sets the licensesToAssign
-    * License setup configuration.
     *
     * @param EducationSynchronizationLicenseAssignment $val The licensesToAssign
     *
@@ -213,7 +201,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Gets the state
-    * The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
     *
     * @return EducationSynchronizationProfileState The state
     */
@@ -232,7 +219,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Sets the state
-    * The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
     *
     * @param EducationSynchronizationProfileState $val The state
     *
@@ -247,7 +233,6 @@ class EducationSynchronizationProfile extends Entity
 
      /** 
      * Gets the errors
-    * All errors associated with this synchronization profile.
      *
      * @return array The errors
      */
@@ -262,7 +247,6 @@ class EducationSynchronizationProfile extends Entity
     
     /** 
     * Sets the errors
-    * All errors associated with this synchronization profile.
     *
     * @param EducationSynchronizationError $val The errors
     *
@@ -276,7 +260,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Gets the profileStatus
-    * The synchronization status.
     *
     * @return EducationSynchronizationProfileStatus The profileStatus
     */
@@ -295,7 +278,6 @@ class EducationSynchronizationProfile extends Entity
     
     /**
     * Sets the profileStatus
-    * The synchronization status.
     *
     * @param EducationSynchronizationProfileStatus $val The profileStatus
     *

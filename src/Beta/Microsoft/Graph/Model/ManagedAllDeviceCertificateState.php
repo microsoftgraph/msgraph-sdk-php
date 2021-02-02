@@ -179,7 +179,7 @@ class ManagedAllDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateRevokeStatus
-    * Revoke status. Possible values are: none, pending, issued, failed, revoked.
+    * Revoke status
     *
     * @return CertificateRevocationStatus The certificateRevokeStatus
     */
@@ -198,7 +198,7 @@ class ManagedAllDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateRevokeStatus
-    * Revoke status. Possible values are: none, pending, issued, failed, revoked.
+    * Revoke status
     *
     * @param CertificateRevocationStatus $val The certificateRevokeStatus
     *

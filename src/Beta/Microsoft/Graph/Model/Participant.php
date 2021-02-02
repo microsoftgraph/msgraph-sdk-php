@@ -147,7 +147,6 @@ class Participant extends Entity
     
     /**
     * Gets the metadata
-    * A blob of data provided by the participant in the roster.
     *
     * @return string The metadata
     */
@@ -162,7 +161,6 @@ class Participant extends Entity
     
     /**
     * Sets the metadata
-    * A blob of data provided by the participant in the roster.
     *
     * @param string $val The metadata
     *
@@ -176,7 +174,7 @@ class Participant extends Entity
     
     /**
     * Gets the recordingInfo
-    * Information on whether the participant has recording capability.
+    * Information about whether the participant has recording capability.
     *
     * @return RecordingInfo The recordingInfo
     */
@@ -195,7 +193,7 @@ class Participant extends Entity
     
     /**
     * Sets the recordingInfo
-    * Information on whether the participant has recording capability.
+    * Information about whether the participant has recording capability.
     *
     * @param RecordingInfo $val The recordingInfo
     *

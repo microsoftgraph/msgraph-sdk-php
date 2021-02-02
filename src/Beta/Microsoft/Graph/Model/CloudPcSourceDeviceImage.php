@@ -25,7 +25,6 @@ class CloudPcSourceDeviceImage extends Entity
 {
     /**
     * Gets the displayName
-    * The display name for the source image.
     *
     * @return string The displayName
     */
@@ -40,7 +39,6 @@ class CloudPcSourceDeviceImage extends Entity
 
     /**
     * Sets the displayName
-    * The display name for the source image.
     *
     * @param string $val The value of the displayName
     *
@@ -53,7 +51,6 @@ class CloudPcSourceDeviceImage extends Entity
     }
     /**
     * Gets the id
-    * The ID of the source image.
     *
     * @return string The id
     */
@@ -68,7 +65,6 @@ class CloudPcSourceDeviceImage extends Entity
 
     /**
     * Sets the id
-    * The ID of the source image.
     *
     * @param string $val The value of the id
     *

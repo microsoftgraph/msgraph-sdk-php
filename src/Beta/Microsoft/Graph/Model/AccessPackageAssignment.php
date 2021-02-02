@@ -26,7 +26,6 @@ class AccessPackageAssignment extends Entity
 {
     /**
     * Gets the accessPackageId
-    * The identifier of the access package. Read-only.
     *
     * @return string The accessPackageId
     */
@@ -41,7 +40,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the accessPackageId
-    * The identifier of the access package. Read-only.
     *
     * @param string $val The accessPackageId
     *
@@ -55,7 +53,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the assignmentPolicyId
-    * The identifier of the access package assignment policy. Read-only.
     *
     * @return string The assignmentPolicyId
     */
@@ -70,7 +67,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the assignmentPolicyId
-    * The identifier of the access package assignment policy. Read-only.
     *
     * @param string $val The assignmentPolicyId
     *
@@ -84,7 +80,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the assignmentState
-    * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only.
     *
     * @return string The assignmentState
     */
@@ -99,7 +94,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the assignmentState
-    * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only.
     *
     * @param string $val The assignmentState
     *
@@ -113,7 +107,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the assignmentStatus
-    * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
     *
     * @return string The assignmentStatus
     */
@@ -128,7 +121,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the assignmentStatus
-    * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
     *
     * @param string $val The assignmentStatus
     *
@@ -142,7 +134,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the catalogId
-    * The identifier of the catalog containing the access package. Read-only.
     *
     * @return string The catalogId
     */
@@ -157,7 +148,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the catalogId
-    * The identifier of the catalog containing the access package. Read-only.
     *
     * @param string $val The catalogId
     *
@@ -171,7 +161,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the expiredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The expiredDateTime
     */
@@ -190,7 +179,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the expiredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The expiredDateTime
     *
@@ -204,7 +192,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the isExtended
-    * Indicates whether the access package assignment is extended. Read-only.
     *
     * @return bool The isExtended
     */
@@ -219,7 +206,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the isExtended
-    * Indicates whether the access package assignment is extended. Read-only.
     *
     * @param bool $val The isExtended
     *
@@ -233,7 +219,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the schedule
-    * When the access assignment is to be in place. Read-only.
     *
     * @return RequestSchedule The schedule
     */
@@ -252,7 +237,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the schedule
-    * When the access assignment is to be in place. Read-only.
     *
     * @param RequestSchedule $val The schedule
     *
@@ -266,7 +250,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the targetId
-    * The ID of the subject with the assignment. Read-only.
     *
     * @return string The targetId
     */
@@ -281,7 +264,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the targetId
-    * The ID of the subject with the assignment. Read-only.
     *
     * @param string $val The targetId
     *
@@ -295,7 +277,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the accessPackage
-    * Read-only. Nullable.
     *
     * @return AccessPackage The accessPackage
     */
@@ -314,7 +295,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the accessPackage
-    * Read-only. Nullable.
     *
     * @param AccessPackage $val The accessPackage
     *
@@ -328,7 +308,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the accessPackageAssignmentPolicy
-    * Read-only. Nullable.
     *
     * @return AccessPackageAssignmentPolicy The accessPackageAssignmentPolicy
     */
@@ -347,7 +326,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the accessPackageAssignmentPolicy
-    * Read-only. Nullable.
     *
     * @param AccessPackageAssignmentPolicy $val The accessPackageAssignmentPolicy
     *
@@ -390,7 +368,6 @@ class AccessPackageAssignment extends Entity
 
      /** 
      * Gets the accessPackageAssignmentResourceRoles
-    * The resource roles delivered to the target user for this assignment. Read-only. Nullable.
      *
      * @return array The accessPackageAssignmentResourceRoles
      */
@@ -405,7 +382,6 @@ class AccessPackageAssignment extends Entity
     
     /** 
     * Sets the accessPackageAssignmentResourceRoles
-    * The resource roles delivered to the target user for this assignment. Read-only. Nullable.
     *
     * @param AccessPackageAssignmentResourceRole $val The accessPackageAssignmentResourceRoles
     *
@@ -419,7 +395,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the target
-    * The subject of the access package assignment. Read-only. Nullable.
     *
     * @return AccessPackageSubject The target
     */
@@ -438,7 +413,6 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the target
-    * The subject of the access package assignment. Read-only. Nullable.
     *
     * @param AccessPackageSubject $val The target
     *

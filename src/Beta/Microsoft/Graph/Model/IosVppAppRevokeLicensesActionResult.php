@@ -26,7 +26,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Gets the actionFailureReason
-    * The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+    * The reason for the revoke licenses action failure.
     *
     * @return VppTokenActionFailureReason The actionFailureReason
     */
@@ -45,7 +45,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the actionFailureReason
-    * The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+    * The reason for the revoke licenses action failure.
     *
     * @param VppTokenActionFailureReason $val The value to assign to the actionFailureReason
     *
@@ -87,7 +87,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Gets the actionState
-    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * State of the action
     *
     * @return ActionState The actionState
     */
@@ -106,7 +106,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
 
     /**
     * Sets the actionState
-    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * State of the action
     *
     * @param ActionState $val The value to assign to the actionState
     *

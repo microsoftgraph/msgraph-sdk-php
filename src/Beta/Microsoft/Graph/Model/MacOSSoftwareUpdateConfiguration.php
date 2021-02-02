@@ -26,7 +26,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the allOtherUpdateBehavior
-    * Update behavior for all other updates. Possible values are: notConfigured, default.
+    * Update behavior for all other updates.
     *
     * @return MacOSSoftwareUpdateBehavior The allOtherUpdateBehavior
     */
@@ -45,7 +45,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allOtherUpdateBehavior
-    * Update behavior for all other updates. Possible values are: notConfigured, default.
+    * Update behavior for all other updates.
     *
     * @param MacOSSoftwareUpdateBehavior $val The allOtherUpdateBehavior
     *
@@ -59,7 +59,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the configDataUpdateBehavior
-    * Update behavior for configuration data file updates. Possible values are: notConfigured, default.
+    * Update behavior for configuration data file updates.
     *
     * @return MacOSSoftwareUpdateBehavior The configDataUpdateBehavior
     */
@@ -78,7 +78,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the configDataUpdateBehavior
-    * Update behavior for configuration data file updates. Possible values are: notConfigured, default.
+    * Update behavior for configuration data file updates.
     *
     * @param MacOSSoftwareUpdateBehavior $val The configDataUpdateBehavior
     *
@@ -92,7 +92,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the criticalUpdateBehavior
-    * Update behavior for critical updates. Possible values are: notConfigured, default.
+    * Update behavior for critical updates.
     *
     * @return MacOSSoftwareUpdateBehavior The criticalUpdateBehavior
     */
@@ -111,7 +111,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the criticalUpdateBehavior
-    * Update behavior for critical updates. Possible values are: notConfigured, default.
+    * Update behavior for critical updates.
     *
     * @param MacOSSoftwareUpdateBehavior $val The criticalUpdateBehavior
     *
@@ -155,7 +155,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the firmwareUpdateBehavior
-    * Update behavior for firmware updates. Possible values are: notConfigured, default.
+    * Update behavior for firmware updates.
     *
     * @return MacOSSoftwareUpdateBehavior The firmwareUpdateBehavior
     */
@@ -174,7 +174,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the firmwareUpdateBehavior
-    * Update behavior for firmware updates. Possible values are: notConfigured, default.
+    * Update behavior for firmware updates.
     *
     * @param MacOSSoftwareUpdateBehavior $val The firmwareUpdateBehavior
     *
@@ -188,7 +188,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updateScheduleType
-    * Update schedule type. Possible values are: alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+    * Update schedule type
     *
     * @return MacOSSoftwareUpdateScheduleType The updateScheduleType
     */
@@ -207,7 +207,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updateScheduleType
-    * Update schedule type. Possible values are: alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+    * Update schedule type
     *
     * @param MacOSSoftwareUpdateScheduleType $val The updateScheduleType
     *

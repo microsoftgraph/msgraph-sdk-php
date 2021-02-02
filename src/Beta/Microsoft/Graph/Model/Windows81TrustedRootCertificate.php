@@ -55,7 +55,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Gets the destinationStore
-    * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
+    * Destination store location for the Trusted Root Certificate.
     *
     * @return CertificateDestinationStore The destinationStore
     */
@@ -74,7 +74,7 @@ class Windows81TrustedRootCertificate extends DeviceConfiguration
     
     /**
     * Sets the destinationStore
-    * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
+    * Destination store location for the Trusted Root Certificate.
     *
     * @param CertificateDestinationStore $val The destinationStore
     *

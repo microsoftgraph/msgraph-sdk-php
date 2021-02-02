@@ -26,7 +26,6 @@ class PrinterCreateOperation extends PrintOperation
 {
     /**
     * Gets the certificate
-    * The signed certificate created during the registration process. Read-only.
     *
     * @return string The certificate
     */
@@ -41,7 +40,6 @@ class PrinterCreateOperation extends PrintOperation
     
     /**
     * Sets the certificate
-    * The signed certificate created during the registration process. Read-only.
     *
     * @param string $val The certificate
     *

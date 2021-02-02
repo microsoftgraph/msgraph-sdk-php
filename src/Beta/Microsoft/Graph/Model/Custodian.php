@@ -26,7 +26,6 @@ class Custodian extends Entity
 {
     /**
     * Gets the acknowledgedDateTime
-    * Date and time the custodian acknowledged a hold notification.
     *
     * @return \DateTime The acknowledgedDateTime
     */
@@ -45,7 +44,6 @@ class Custodian extends Entity
     
     /**
     * Sets the acknowledgedDateTime
-    * Date and time the custodian acknowledged a hold notification.
     *
     * @param \DateTime $val The acknowledgedDateTime
     *
@@ -59,7 +57,6 @@ class Custodian extends Entity
     
     /**
     * Gets the applyHoldToSources
-    * Identifies whether a custodian's sources were placed on hold during creation.
     *
     * @return bool The applyHoldToSources
     */
@@ -74,7 +71,6 @@ class Custodian extends Entity
     
     /**
     * Sets the applyHoldToSources
-    * Identifies whether a custodian's sources were placed on hold during creation.
     *
     * @param bool $val The applyHoldToSources
     *
@@ -88,7 +84,6 @@ class Custodian extends Entity
     
     /**
     * Gets the createdDateTime
-    * Date and time when the custodian was added to the case.
     *
     * @return \DateTime The createdDateTime
     */
@@ -107,7 +102,6 @@ class Custodian extends Entity
     
     /**
     * Sets the createdDateTime
-    * Date and time when the custodian was added to the case.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -121,7 +115,6 @@ class Custodian extends Entity
     
     /**
     * Gets the displayName
-    * Display name of the custodian.
     *
     * @return string The displayName
     */
@@ -136,7 +129,6 @@ class Custodian extends Entity
     
     /**
     * Sets the displayName
-    * Display name of the custodian.
     *
     * @param string $val The displayName
     *
@@ -150,7 +142,6 @@ class Custodian extends Entity
     
     /**
     * Gets the email
-    * Email address of the custodian.
     *
     * @return string The email
     */
@@ -165,7 +156,6 @@ class Custodian extends Entity
     
     /**
     * Sets the email
-    * Email address of the custodian.
     *
     * @param string $val The email
     *
@@ -179,7 +169,6 @@ class Custodian extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Date and time the custodian object was last modified
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -198,7 +187,6 @@ class Custodian extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Date and time the custodian object was last modified
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -212,7 +200,6 @@ class Custodian extends Entity
     
     /**
     * Gets the releasedDateTime
-    * Date and time the custodian was released from the case.
     *
     * @return \DateTime The releasedDateTime
     */
@@ -231,7 +218,6 @@ class Custodian extends Entity
     
     /**
     * Sets the releasedDateTime
-    * Date and time the custodian was released from the case.
     *
     * @param \DateTime $val The releasedDateTime
     *
@@ -245,7 +231,6 @@ class Custodian extends Entity
     
     /**
     * Gets the status
-    * Status of the custodian. Possible values are: active, released.
     *
     * @return CustodianStatus The status
     */
@@ -264,7 +249,6 @@ class Custodian extends Entity
     
     /**
     * Sets the status
-    * Status of the custodian. Possible values are: active, released.
     *
     * @param CustodianStatus $val The status
     *
@@ -310,7 +294,6 @@ class Custodian extends Entity
 
      /** 
      * Gets the siteSources
-    * Data source entity for SharePoint sites associated with the custodian.
      *
      * @return array The siteSources
      */
@@ -325,7 +308,6 @@ class Custodian extends Entity
     
     /** 
     * Sets the siteSources
-    * Data source entity for SharePoint sites associated with the custodian.
     *
     * @param SiteSource $val The siteSources
     *
@@ -340,7 +322,6 @@ class Custodian extends Entity
 
      /** 
      * Gets the unifiedGroupSources
-    * Data source entity for groups associated with the custodian.
      *
      * @return array The unifiedGroupSources
      */
@@ -355,7 +336,6 @@ class Custodian extends Entity
     
     /** 
     * Sets the unifiedGroupSources
-    * Data source entity for groups associated with the custodian.
     *
     * @param UnifiedGroupSource $val The unifiedGroupSources
     *
@@ -370,7 +350,6 @@ class Custodian extends Entity
 
      /** 
      * Gets the userSources
-    * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      *
      * @return array The userSources
      */
@@ -385,7 +364,6 @@ class Custodian extends Entity
     
     /** 
     * Sets the userSources
-    * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
     *
     * @param UserSource $val The userSources
     *

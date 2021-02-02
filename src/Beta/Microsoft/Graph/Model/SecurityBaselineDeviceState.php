@@ -117,7 +117,7 @@ class SecurityBaselineDeviceState extends Entity
     
     /**
     * Gets the state
-    * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
+    * Security baseline compliance state
     *
     * @return SecurityBaselineComplianceState The state
     */
@@ -136,7 +136,7 @@ class SecurityBaselineDeviceState extends Entity
     
     /**
     * Sets the state
-    * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
+    * Security baseline compliance state
     *
     * @param SecurityBaselineComplianceState $val The state
     *

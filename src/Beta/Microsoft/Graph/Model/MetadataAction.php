@@ -26,7 +26,6 @@ class MetadataAction extends InformationProtectionAction
 
     /**
     * Gets the metadataToAdd
-    * A collection of key value pairs that should be added to the file.
     *
     * @return KeyValuePair The metadataToAdd
     */
@@ -45,7 +44,6 @@ class MetadataAction extends InformationProtectionAction
 
     /**
     * Sets the metadataToAdd
-    * A collection of key value pairs that should be added to the file.
     *
     * @param KeyValuePair $val The value to assign to the metadataToAdd
     *
@@ -58,7 +56,6 @@ class MetadataAction extends InformationProtectionAction
     }
     /**
     * Gets the metadataToRemove
-    * A collection of strings that indicate which keys to remove from the file metadata.
     *
     * @return string The metadataToRemove
     */
@@ -73,7 +70,6 @@ class MetadataAction extends InformationProtectionAction
 
     /**
     * Sets the metadataToRemove
-    * A collection of strings that indicate which keys to remove from the file metadata.
     *
     * @param string $val The value of the metadataToRemove
     *

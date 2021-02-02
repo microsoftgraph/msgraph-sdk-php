@@ -26,7 +26,6 @@ class CompanyDetail extends Entity
 
     /**
     * Gets the address
-    * Address of the company.
     *
     * @return PhysicalAddress The address
     */
@@ -45,7 +44,6 @@ class CompanyDetail extends Entity
 
     /**
     * Sets the address
-    * Address of the company.
     *
     * @param PhysicalAddress $val The value to assign to the address
     *
@@ -58,7 +56,6 @@ class CompanyDetail extends Entity
     }
     /**
     * Gets the department
-    * Department Name within a company.
     *
     * @return string The department
     */
@@ -73,7 +70,6 @@ class CompanyDetail extends Entity
 
     /**
     * Sets the department
-    * Department Name within a company.
     *
     * @param string $val The value of the department
     *
@@ -86,7 +82,6 @@ class CompanyDetail extends Entity
     }
     /**
     * Gets the displayName
-    * Company name.
     *
     * @return string The displayName
     */
@@ -101,7 +96,6 @@ class CompanyDetail extends Entity
 
     /**
     * Sets the displayName
-    * Company name.
     *
     * @param string $val The value of the displayName
     *
@@ -114,7 +108,6 @@ class CompanyDetail extends Entity
     }
     /**
     * Gets the officeLocation
-    * Office Location of the person referred to.
     *
     * @return string The officeLocation
     */
@@ -129,7 +122,6 @@ class CompanyDetail extends Entity
 
     /**
     * Sets the officeLocation
-    * Office Location of the person referred to.
     *
     * @param string $val The value of the officeLocation
     *
@@ -142,7 +134,6 @@ class CompanyDetail extends Entity
     }
     /**
     * Gets the pronunciation
-    * Pronunciation guide for the company name.
     *
     * @return string The pronunciation
     */
@@ -157,7 +148,6 @@ class CompanyDetail extends Entity
 
     /**
     * Sets the pronunciation
-    * Pronunciation guide for the company name.
     *
     * @param string $val The value of the pronunciation
     *
@@ -170,7 +160,6 @@ class CompanyDetail extends Entity
     }
     /**
     * Gets the webUrl
-    * Link to the company home page.
     *
     * @return string The webUrl
     */
@@ -185,7 +174,6 @@ class CompanyDetail extends Entity
 
     /**
     * Sets the webUrl
-    * Link to the company home page.
     *
     * @param string $val The value of the webUrl
     *

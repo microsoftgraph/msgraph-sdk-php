@@ -26,7 +26,7 @@ class ManagedDeviceEncryptionState extends Entity
 {
     /**
     * Gets the advancedBitLockerStates
-    * Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeEncryptionMethodMismatch, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeUnprotected, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
+    * Advanced BitLocker State
     *
     * @return AdvancedBitLockerState The advancedBitLockerStates
     */
@@ -45,7 +45,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Sets the advancedBitLockerStates
-    * Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeEncryptionMethodMismatch, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeUnprotected, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
+    * Advanced BitLocker State
     *
     * @param AdvancedBitLockerState $val The advancedBitLockerStates
     *
@@ -88,7 +88,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Gets the deviceType
-    * Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
+    * Platform of the device.
     *
     * @return DeviceTypes The deviceType
     */
@@ -107,7 +107,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Sets the deviceType
-    * Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
+    * Platform of the device.
     *
     * @param DeviceTypes $val The deviceType
     *
@@ -121,7 +121,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Gets the encryptionPolicySettingState
-    * Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    * Encryption policy setting state
     *
     * @return ComplianceStatus The encryptionPolicySettingState
     */
@@ -140,7 +140,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Sets the encryptionPolicySettingState
-    * Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    * Encryption policy setting state
     *
     * @param ComplianceStatus $val The encryptionPolicySettingState
     *
@@ -154,7 +154,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Gets the encryptionReadinessState
-    * Encryption readiness state. Possible values are: notReady, ready.
+    * Encryption readiness state
     *
     * @return EncryptionReadinessState The encryptionReadinessState
     */
@@ -173,7 +173,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Sets the encryptionReadinessState
-    * Encryption readiness state. Possible values are: notReady, ready.
+    * Encryption readiness state
     *
     * @param EncryptionReadinessState $val The encryptionReadinessState
     *
@@ -187,7 +187,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Gets the encryptionState
-    * Device encryption state. Possible values are: notEncrypted, encrypted.
+    * Device encryption state
     *
     * @return EncryptionState The encryptionState
     */
@@ -206,7 +206,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Sets the encryptionState
-    * Device encryption state. Possible values are: notEncrypted, encrypted.
+    * Device encryption state
     *
     * @param EncryptionState $val The encryptionState
     *
@@ -220,7 +220,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Gets the fileVaultStates
-    * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
+    * FileVault State
     *
     * @return FileVaultState The fileVaultStates
     */
@@ -239,7 +239,7 @@ class ManagedDeviceEncryptionState extends Entity
     
     /**
     * Sets the fileVaultStates
-    * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
+    * FileVault State
     *
     * @param FileVaultState $val The fileVaultStates
     *

@@ -26,7 +26,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
     * @return WiFiAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+    * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
     *
     * @param WiFiAuthenticationMethod $val The authenticationMethod
     *
@@ -59,7 +59,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Gets the eapFastConfiguration
-    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
     *
     * @return EapFastConfiguration The eapFastConfiguration
     */
@@ -78,7 +78,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the eapFastConfiguration
-    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+    * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
     *
     * @param EapFastConfiguration $val The eapFastConfiguration
     *
@@ -92,7 +92,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Gets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
     * @return EapType The eapType
     */
@@ -111,7 +111,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the eapType
-    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+    * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
     *
     * @param EapType $val The eapType
     *
@@ -125,7 +125,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Gets the innerAuthenticationProtocolForEapTtls
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
     *
     * @return NonEapAuthenticationMethodForEapTtlsType The innerAuthenticationProtocolForEapTtls
     */
@@ -144,7 +144,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /**
     * Sets the innerAuthenticationProtocolForEapTtls
-    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+    * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
     *
     * @param NonEapAuthenticationMethodForEapTtlsType $val The innerAuthenticationProtocolForEapTtls
     *

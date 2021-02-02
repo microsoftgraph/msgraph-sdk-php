@@ -26,7 +26,6 @@ class UnifiedRoleDefinition extends Entity
 {
     /**
     * Gets the description
-    * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
     * @return string The description
     */
@@ -41,7 +40,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the description
-    * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
     * @param string $val The description
     *
@@ -55,7 +53,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the displayName
-    * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
     *
     * @return string The displayName
     */
@@ -70,7 +67,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the displayName
-    * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
     *
     * @param string $val The displayName
     *
@@ -84,7 +80,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the isBuiltIn
-    * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
     *
     * @return bool The isBuiltIn
     */
@@ -99,7 +94,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the isBuiltIn
-    * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
     *
     * @param bool $val The isBuiltIn
     *
@@ -113,7 +107,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the isEnabled
-    * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
     *
     * @return bool The isEnabled
     */
@@ -128,7 +121,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the isEnabled
-    * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
     *
     * @param bool $val The isEnabled
     *
@@ -142,7 +134,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the resourceScopes
-    * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
     *
     * @return string The resourceScopes
     */
@@ -157,7 +148,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the resourceScopes
-    * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
     *
     * @param string $val The resourceScopes
     *
@@ -172,7 +162,6 @@ class UnifiedRoleDefinition extends Entity
 
      /** 
      * Gets the rolePermissions
-    * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      *
      * @return array The rolePermissions
      */
@@ -187,7 +176,6 @@ class UnifiedRoleDefinition extends Entity
     
     /** 
     * Sets the rolePermissions
-    * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
     *
     * @param UnifiedRolePermission $val The rolePermissions
     *
@@ -201,7 +189,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the templateId
-    * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
     *
     * @return string The templateId
     */
@@ -216,7 +203,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the templateId
-    * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
     *
     * @param string $val The templateId
     *
@@ -230,7 +216,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the version
-    * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
     * @return string The version
     */
@@ -245,7 +230,6 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the version
-    * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
     * @param string $val The version
     *

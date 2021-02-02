@@ -26,7 +26,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Gets the action
-    * Device Action. Possible values are: unknown, remove, reset.
+    * Device Action
     *
     * @return CompanyPortalAction The action
     */
@@ -45,7 +45,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Sets the action
-    * Device Action. Possible values are: unknown, remove, reset.
+    * Device Action
     *
     * @param CompanyPortalAction $val The value to assign to the action
     *
@@ -59,7 +59,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Gets the ownerType
-    * Device ownership type. Possible values are: unknown, company, personal.
+    * Device ownership type
     *
     * @return OwnerType The ownerType
     */
@@ -78,7 +78,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Sets the ownerType
-    * Device ownership type. Possible values are: unknown, company, personal.
+    * Device ownership type
     *
     * @param OwnerType $val The value to assign to the ownerType
     *
@@ -92,7 +92,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Gets the platform
-    * Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * Device OS/Platform
     *
     * @return DevicePlatformType The platform
     */
@@ -111,7 +111,7 @@ class CompanyPortalBlockedAction extends Entity
 
     /**
     * Sets the platform
-    * Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * Device OS/Platform
     *
     * @param DevicePlatformType $val The value to assign to the platform
     *

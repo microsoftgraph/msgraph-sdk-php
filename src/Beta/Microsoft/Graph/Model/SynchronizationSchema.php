@@ -27,7 +27,6 @@ class SynchronizationSchema extends Entity
 
      /** 
      * Gets the synchronizationRules
-    * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      *
      * @return array The synchronizationRules
      */
@@ -42,7 +41,6 @@ class SynchronizationSchema extends Entity
     
     /** 
     * Sets the synchronizationRules
-    * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
     *
     * @param SynchronizationRule $val The synchronizationRules
     *
@@ -56,7 +54,6 @@ class SynchronizationSchema extends Entity
     
     /**
     * Gets the version
-    * The version of the schema, updated automatically with every schema change.
     *
     * @return string The version
     */
@@ -71,7 +68,6 @@ class SynchronizationSchema extends Entity
     
     /**
     * Sets the version
-    * The version of the schema, updated automatically with every schema change.
     *
     * @param string $val The version
     *
@@ -86,7 +82,6 @@ class SynchronizationSchema extends Entity
 
      /** 
      * Gets the directories
-    * Contains the collection of directories and all of their objects.
      *
      * @return array The directories
      */
@@ -101,7 +96,6 @@ class SynchronizationSchema extends Entity
     
     /** 
     * Sets the directories
-    * Contains the collection of directories and all of their objects.
     *
     * @param DirectoryDefinition $val The directories
     *

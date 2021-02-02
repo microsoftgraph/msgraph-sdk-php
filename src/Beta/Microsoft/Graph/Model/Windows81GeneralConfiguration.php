@@ -647,7 +647,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the minimumAutoInstallClassification
-    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
+    * The minimum update classification to install automatically.
     *
     * @return UpdateClassification The minimumAutoInstallClassification
     */
@@ -666,7 +666,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the minimumAutoInstallClassification
-    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
+    * The minimum update classification to install automatically.
     *
     * @param UpdateClassification $val The minimumAutoInstallClassification
     *
@@ -945,7 +945,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updatesMinimumAutoInstallClassification
-    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
+    * The minimum update classification to install automatically.
     *
     * @return UpdateClassification The updatesMinimumAutoInstallClassification
     */
@@ -964,7 +964,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updatesMinimumAutoInstallClassification
-    * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
+    * The minimum update classification to install automatically.
     *
     * @param UpdateClassification $val The updatesMinimumAutoInstallClassification
     *

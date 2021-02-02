@@ -25,7 +25,6 @@ class AddWatermarkAction extends InformationProtectionAction
 {
     /**
     * Gets the fontColor
-    * Color of the font to use for the watermark.
     *
     * @return string The fontColor
     */
@@ -40,7 +39,6 @@ class AddWatermarkAction extends InformationProtectionAction
 
     /**
     * Sets the fontColor
-    * Color of the font to use for the watermark.
     *
     * @param string $val The value of the fontColor
     *
@@ -53,7 +51,6 @@ class AddWatermarkAction extends InformationProtectionAction
     }
     /**
     * Gets the fontName
-    * Name of the font to use for the watermark.
     *
     * @return string The fontName
     */
@@ -68,7 +65,6 @@ class AddWatermarkAction extends InformationProtectionAction
 
     /**
     * Sets the fontName
-    * Name of the font to use for the watermark.
     *
     * @param string $val The value of the fontName
     *
@@ -81,7 +77,6 @@ class AddWatermarkAction extends InformationProtectionAction
     }
     /**
     * Gets the fontSize
-    * Font size to use for the watermark.
     *
     * @return int The fontSize
     */
@@ -96,7 +91,6 @@ class AddWatermarkAction extends InformationProtectionAction
 
     /**
     * Sets the fontSize
-    * Font size to use for the watermark.
     *
     * @param int $val The value of the fontSize
     *
@@ -110,7 +104,6 @@ class AddWatermarkAction extends InformationProtectionAction
 
     /**
     * Gets the layout
-    * Possible values are: horizontal, diagonal.
     *
     * @return WatermarkLayout The layout
     */
@@ -129,7 +122,6 @@ class AddWatermarkAction extends InformationProtectionAction
 
     /**
     * Sets the layout
-    * Possible values are: horizontal, diagonal.
     *
     * @param WatermarkLayout $val The value to assign to the layout
     *
@@ -142,7 +134,6 @@ class AddWatermarkAction extends InformationProtectionAction
     }
     /**
     * Gets the text
-    * The contents of the watermark itself.
     *
     * @return string The text
     */
@@ -157,7 +148,6 @@ class AddWatermarkAction extends InformationProtectionAction
 
     /**
     * Sets the text
-    * The contents of the watermark itself.
     *
     * @param string $val The value of the text
     *
@@ -170,7 +160,6 @@ class AddWatermarkAction extends InformationProtectionAction
     }
     /**
     * Gets the uiElementName
-    * The name of the UI element where the watermark should be placed.
     *
     * @return string The uiElementName
     */
@@ -185,7 +174,6 @@ class AddWatermarkAction extends InformationProtectionAction
 
     /**
     * Sets the uiElementName
-    * The name of the UI element where the watermark should be placed.
     *
     * @param string $val The value of the uiElementName
     *

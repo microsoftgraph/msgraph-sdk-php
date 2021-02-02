@@ -26,7 +26,6 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Gets the endpointType
-    * The type of endpoint. Possible values are: default, voicemail.
     *
     * @return EndpointType The endpointType
     */
@@ -45,7 +44,6 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the endpointType
-    * The type of endpoint. Possible values are: default, voicemail.
     *
     * @param EndpointType $val The value to assign to the endpointType
     *
@@ -91,7 +89,7 @@ class InvitationParticipantInfo extends Entity
     }
     /**
     * Gets the replacesCallId
-    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
     *
     * @return string The replacesCallId
     */
@@ -106,7 +104,7 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the replacesCallId
-    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
     *
     * @param string $val The value of the replacesCallId
     *

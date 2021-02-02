@@ -25,7 +25,6 @@ class SynchronizationTaskExecution extends Entity
 {
     /**
     * Gets the activityIdentifier
-    * Identifier of the job run.
     *
     * @return string The activityIdentifier
     */
@@ -40,7 +39,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the activityIdentifier
-    * Identifier of the job run.
     *
     * @param string $val The value of the activityIdentifier
     *
@@ -53,7 +51,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countEntitled
-    * Count of processed entries that were assigned for this application.
     *
     * @return int The countEntitled
     */
@@ -68,7 +65,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countEntitled
-    * Count of processed entries that were assigned for this application.
     *
     * @param int $val The value of the countEntitled
     *
@@ -81,7 +77,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countEntitledForProvisioning
-    * Count of processed entries that were assigned for provisioning.
     *
     * @return int The countEntitledForProvisioning
     */
@@ -96,7 +91,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countEntitledForProvisioning
-    * Count of processed entries that were assigned for provisioning.
     *
     * @param int $val The value of the countEntitledForProvisioning
     *
@@ -109,7 +103,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countEscrowed
-    * Count of entries that were escrowed (errors).
     *
     * @return int The countEscrowed
     */
@@ -124,7 +117,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countEscrowed
-    * Count of entries that were escrowed (errors).
     *
     * @param int $val The value of the countEscrowed
     *
@@ -137,7 +129,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countEscrowedRaw
-    * Count of entries that were escrowed, including system-generated escrows.
     *
     * @return int The countEscrowedRaw
     */
@@ -152,7 +143,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countEscrowedRaw
-    * Count of entries that were escrowed, including system-generated escrows.
     *
     * @param int $val The value of the countEscrowedRaw
     *
@@ -165,7 +155,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countExported
-    * Count of exported entries.
     *
     * @return int The countExported
     */
@@ -180,7 +169,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countExported
-    * Count of exported entries.
     *
     * @param int $val The value of the countExported
     *
@@ -193,7 +181,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countExports
-    * Count of entries that were expected to be exported.
     *
     * @return int The countExports
     */
@@ -208,7 +195,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countExports
-    * Count of entries that were expected to be exported.
     *
     * @param int $val The value of the countExports
     *
@@ -221,7 +207,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countImported
-    * Count of imported entries.
     *
     * @return int The countImported
     */
@@ -236,7 +221,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countImported
-    * Count of imported entries.
     *
     * @param int $val The value of the countImported
     *
@@ -249,7 +233,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countImportedDeltas
-    * Count of imported delta-changes.
     *
     * @return int The countImportedDeltas
     */
@@ -264,7 +247,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countImportedDeltas
-    * Count of imported delta-changes.
     *
     * @param int $val The value of the countImportedDeltas
     *
@@ -277,7 +259,6 @@ class SynchronizationTaskExecution extends Entity
     }
     /**
     * Gets the countImportedReferenceDeltas
-    * Count of imported delta-changes pertaining to reference changes.
     *
     * @return int The countImportedReferenceDeltas
     */
@@ -292,7 +273,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the countImportedReferenceDeltas
-    * Count of imported delta-changes pertaining to reference changes.
     *
     * @param int $val The value of the countImportedReferenceDeltas
     *
@@ -306,7 +286,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Gets the error
-    * If an error was encountered, contains a synchronizationError object with details.
     *
     * @return SynchronizationError The error
     */
@@ -325,7 +304,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the error
-    * If an error was encountered, contains a synchronizationError object with details.
     *
     * @param SynchronizationError $val The value to assign to the error
     *
@@ -339,7 +317,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Gets the state
-    * Code summarizing the result of this run. Possible values are: Succeeded, Failed, EntryLevelErrors.
     *
     * @return SynchronizationTaskExecutionResult The state
     */
@@ -358,7 +335,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the state
-    * Code summarizing the result of this run. Possible values are: Succeeded, Failed, EntryLevelErrors.
     *
     * @param SynchronizationTaskExecutionResult $val The value to assign to the state
     *
@@ -372,7 +348,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Gets the timeBegan
-    * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The timeBegan
     */
@@ -391,7 +366,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the timeBegan
-    * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the timeBegan
     *
@@ -405,7 +379,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Gets the timeEnded
-    * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The timeEnded
     */
@@ -424,7 +397,6 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the timeEnded
-    * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the timeEnded
     *

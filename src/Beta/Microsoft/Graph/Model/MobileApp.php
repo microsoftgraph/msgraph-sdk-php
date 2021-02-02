@@ -564,7 +564,7 @@ class MobileApp extends Entity
     
     /**
     * Gets the uploadState
-    * The upload state.
+    * The upload state. Possible values are: 0 - `Not Ready`, 1 - `Ready`, 2 - `Processing`.
     *
     * @return int The uploadState
     */
@@ -579,7 +579,7 @@ class MobileApp extends Entity
     
     /**
     * Sets the uploadState
-    * The upload state.
+    * The upload state. Possible values are: 0 - `Not Ready`, 1 - `Ready`, 2 - `Processing`.
     *
     * @param int $val The uploadState
     *
@@ -717,7 +717,7 @@ class MobileApp extends Entity
 
      /** 
      * Gets the relationships
-    * List of relationships for this mobile app.
+    * The set of direct relationships for this app.
      *
      * @return array The relationships
      */
@@ -732,7 +732,7 @@ class MobileApp extends Entity
     
     /** 
     * Sets the relationships
-    * List of relationships for this mobile app.
+    * The set of direct relationships for this app.
     *
     * @param MobileAppRelationship $val The relationships
     *

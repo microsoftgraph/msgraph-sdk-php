@@ -84,7 +84,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the pinLowercaseCharactersUsage
-    * This value configures the use of lowercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+    * This value configures the use of lowercase characters in the Windows Hello for Business PIN.
     *
     * @return ConfigurationUsage The pinLowercaseCharactersUsage
     */
@@ -103,7 +103,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the pinLowercaseCharactersUsage
-    * This value configures the use of lowercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+    * This value configures the use of lowercase characters in the Windows Hello for Business PIN.
     *
     * @param ConfigurationUsage $val The pinLowercaseCharactersUsage
     *
@@ -233,7 +233,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the pinSpecialCharactersUsage
-    * Controls the ability to use special characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+    * Controls the ability to use special characters in the Windows Hello for Business PIN.
     *
     * @return ConfigurationUsage The pinSpecialCharactersUsage
     */
@@ -252,7 +252,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the pinSpecialCharactersUsage
-    * Controls the ability to use special characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+    * Controls the ability to use special characters in the Windows Hello for Business PIN.
     *
     * @param ConfigurationUsage $val The pinSpecialCharactersUsage
     *
@@ -266,7 +266,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Gets the pinUppercaseCharactersUsage
-    * This value configures the use of uppercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+    * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
     *
     * @return ConfigurationUsage The pinUppercaseCharactersUsage
     */
@@ -285,7 +285,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     
     /**
     * Sets the pinUppercaseCharactersUsage
-    * This value configures the use of uppercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+    * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
     *
     * @param ConfigurationUsage $val The pinUppercaseCharactersUsage
     *

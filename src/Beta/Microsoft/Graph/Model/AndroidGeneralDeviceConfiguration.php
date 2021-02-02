@@ -1054,7 +1054,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the requiredPasswordComplexity
-    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
     *
     * @return AndroidRequiredPasswordComplexity The requiredPasswordComplexity
     */
@@ -1073,7 +1073,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the requiredPasswordComplexity
-    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
+    * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
     *
     * @param AndroidRequiredPasswordComplexity $val The requiredPasswordComplexity
     *

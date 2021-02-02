@@ -26,7 +26,7 @@ class BookingWorkHours extends Entity
 
     /**
     * Gets the day
-    * The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * The day of the week represented by this instance.
     *
     * @return DayOfWeek The day
     */
@@ -45,7 +45,7 @@ class BookingWorkHours extends Entity
 
     /**
     * Sets the day
-    * The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * The day of the week represented by this instance.
     *
     * @param DayOfWeek $val The value to assign to the day
     *

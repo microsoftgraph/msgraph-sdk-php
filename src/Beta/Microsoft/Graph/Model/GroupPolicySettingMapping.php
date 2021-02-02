@@ -258,7 +258,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Gets the mdmSupportedState
-    * Indicates if the setting is supported in Mdm or not. Possible values are: unknown, supported, unsupported, deprecated.
+    * Indicates if the setting is supported in Mdm or not
     *
     * @return MdmSupportedState The mdmSupportedState
     */
@@ -277,7 +277,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Sets the mdmSupportedState
-    * Indicates if the setting is supported in Mdm or not. Possible values are: unknown, supported, unsupported, deprecated.
+    * Indicates if the setting is supported in Mdm or not
     *
     * @param MdmSupportedState $val The mdmSupportedState
     *
@@ -465,7 +465,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Gets the settingScope
-    * The scope of the setting. Possible values are: unknown, device, user.
+    * The scope of the setting
     *
     * @return GroupPolicySettingScope The settingScope
     */
@@ -484,7 +484,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Sets the settingScope
-    * The scope of the setting. Possible values are: unknown, device, user.
+    * The scope of the setting
     *
     * @param GroupPolicySettingScope $val The settingScope
     *
@@ -498,7 +498,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Gets the settingType
-    * The setting type (security or admx) of the Group Policy. Possible values are: unknown, policy, account, securityOptions, userRightsAssignment, auditSetting, windowsFirewallSettings.
+    * The setting type (security or admx) of the Group Policy.
     *
     * @return GroupPolicySettingType The settingType
     */
@@ -517,7 +517,7 @@ class GroupPolicySettingMapping extends Entity
     
     /**
     * Sets the settingType
-    * The setting type (security or admx) of the Group Policy. Possible values are: unknown, policy, account, securityOptions, userRightsAssignment, auditSetting, windowsFirewallSettings.
+    * The setting type (security or admx) of the Group Policy.
     *
     * @param GroupPolicySettingType $val The settingType
     *

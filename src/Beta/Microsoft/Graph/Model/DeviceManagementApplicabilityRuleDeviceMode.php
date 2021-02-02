@@ -26,7 +26,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Gets the deviceMode
-    * Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration.
+    * Applicability rule for device mode.
     *
     * @return Windows10DeviceModeType The deviceMode
     */
@@ -45,7 +45,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Sets the deviceMode
-    * Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration.
+    * Applicability rule for device mode.
     *
     * @param Windows10DeviceModeType $val The value to assign to the deviceMode
     *
@@ -87,7 +87,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Gets the ruleType
-    * Applicability Rule type. Possible values are: include, exclude.
+    * Applicability Rule type.
     *
     * @return DeviceManagementApplicabilityRuleType The ruleType
     */
@@ -106,7 +106,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
 
     /**
     * Sets the ruleType
-    * Applicability Rule type. Possible values are: include, exclude.
+    * Applicability Rule type.
     *
     * @param DeviceManagementApplicabilityRuleType $val The value to assign to the ruleType
     *

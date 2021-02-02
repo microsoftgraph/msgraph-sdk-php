@@ -25,7 +25,6 @@ class AttributeMappingParameterSchema extends Entity
 {
     /**
     * Gets the allowMultipleOccurrences
-    * The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
     *
     * @return bool The allowMultipleOccurrences
     */
@@ -40,7 +39,6 @@ class AttributeMappingParameterSchema extends Entity
 
     /**
     * Sets the allowMultipleOccurrences
-    * The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
     *
     * @param bool $val The value of the allowMultipleOccurrences
     *
@@ -53,7 +51,6 @@ class AttributeMappingParameterSchema extends Entity
     }
     /**
     * Gets the name
-    * Parameter name.
     *
     * @return string The name
     */
@@ -68,7 +65,6 @@ class AttributeMappingParameterSchema extends Entity
 
     /**
     * Sets the name
-    * Parameter name.
     *
     * @param string $val The value of the name
     *
@@ -81,7 +77,6 @@ class AttributeMappingParameterSchema extends Entity
     }
     /**
     * Gets the required
-    * true if the parameter is required; otherwise false.
     *
     * @return bool The required
     */
@@ -96,7 +91,6 @@ class AttributeMappingParameterSchema extends Entity
 
     /**
     * Sets the required
-    * true if the parameter is required; otherwise false.
     *
     * @param bool $val The value of the required
     *
@@ -110,7 +104,6 @@ class AttributeMappingParameterSchema extends Entity
 
     /**
     * Gets the type
-    * Possible values are: Boolean, Binary, Reference, Integer, String. Default is String.
     *
     * @return AttributeType The type
     */
@@ -129,7 +122,6 @@ class AttributeMappingParameterSchema extends Entity
 
     /**
     * Sets the type
-    * Possible values are: Boolean, Binary, Reference, Integer, String. Default is String.
     *
     * @param AttributeType $val The value to assign to the type
     *

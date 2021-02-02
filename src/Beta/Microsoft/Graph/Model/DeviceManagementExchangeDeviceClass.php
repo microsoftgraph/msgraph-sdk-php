@@ -54,7 +54,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
 
     /**
     * Gets the type
-    * Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model.
+    * Type of device which is impacted by this rule e.g. Model, Family
     *
     * @return DeviceManagementExchangeAccessRuleType The type
     */
@@ -73,7 +73,7 @@ class DeviceManagementExchangeDeviceClass extends Entity
 
     /**
     * Sets the type
-    * Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model.
+    * Type of device which is impacted by this rule e.g. Model, Family
     *
     * @param DeviceManagementExchangeAccessRuleType $val The value to assign to the type
     *

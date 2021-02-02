@@ -34,7 +34,6 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
 
     /**
     * Gets the appId
-    * The appId for the service principal entity being reviewed.
     *
     * @return string The appId
     */
@@ -49,7 +48,6 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
 
     /**
     * Sets the appId
-    * The appId for the service principal entity being reviewed.
     *
     * @param string $val The value of the appId
     *
@@ -62,7 +60,6 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
     }
     /**
     * Gets the servicePrincipalDisplayName
-    * The display name of the service principal whose access is being reviewed.
     *
     * @return string The servicePrincipalDisplayName
     */
@@ -77,7 +74,6 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
 
     /**
     * Sets the servicePrincipalDisplayName
-    * The display name of the service principal whose access is being reviewed.
     *
     * @param string $val The value of the servicePrincipalDisplayName
     *

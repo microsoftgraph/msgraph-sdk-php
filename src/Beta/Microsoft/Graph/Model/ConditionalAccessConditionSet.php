@@ -123,7 +123,6 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the devices
-    * Devices in the policy.
     *
     * @return ConditionalAccessDevices The devices
     */
@@ -142,7 +141,6 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the devices
-    * Devices in the policy.
     *
     * @param ConditionalAccessDevices $val The value to assign to the devices
     *
@@ -156,7 +154,6 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the deviceStates
-    * Device states in the policy.
     *
     * @return ConditionalAccessDeviceStates The deviceStates
     */
@@ -175,7 +172,6 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the deviceStates
-    * Device states in the policy.
     *
     * @param ConditionalAccessDeviceStates $val The value to assign to the deviceStates
     *
@@ -255,7 +251,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the signInRiskLevels
-    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
+    * Risk levels included in the policy. Possible values are: low, medium, high, none.
     *
     * @return RiskLevel The signInRiskLevels
     */
@@ -274,7 +270,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the signInRiskLevels
-    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
+    * Risk levels included in the policy. Possible values are: low, medium, high, none.
     *
     * @param RiskLevel $val The value to assign to the signInRiskLevels
     *
@@ -288,7 +284,6 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the userRiskLevels
-    * User risk levels included in the policy. Possible values are: low, medium, high, none.
     *
     * @return RiskLevel The userRiskLevels
     */
@@ -307,7 +302,6 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the userRiskLevels
-    * User risk levels included in the policy. Possible values are: low, medium, high, none.
     *
     * @param RiskLevel $val The value to assign to the userRiskLevels
     *

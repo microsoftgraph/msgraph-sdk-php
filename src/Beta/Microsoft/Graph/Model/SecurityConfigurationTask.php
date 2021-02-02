@@ -26,7 +26,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
 {
     /**
     * Gets the applicablePlatform
-    * The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer.
+    * The applicable platform.
     *
     * @return EndpointSecurityConfigurationApplicablePlatform The applicablePlatform
     */
@@ -45,7 +45,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     
     /**
     * Sets the applicablePlatform
-    * The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer.
+    * The applicable platform.
     *
     * @param EndpointSecurityConfigurationApplicablePlatform $val The applicablePlatform
     *
@@ -59,7 +59,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     
     /**
     * Gets the endpointSecurityPolicy
-    * The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
+    * The endpoint security policy type.
     *
     * @return EndpointSecurityConfigurationType The endpointSecurityPolicy
     */
@@ -78,7 +78,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     
     /**
     * Sets the endpointSecurityPolicy
-    * The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
+    * The endpoint security policy type.
     *
     * @param EndpointSecurityConfigurationType $val The endpointSecurityPolicy
     *
@@ -92,7 +92,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     
     /**
     * Gets the endpointSecurityPolicyProfile
-    * The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
+    * The endpoint security policy profile.
     *
     * @return EndpointSecurityConfigurationProfileType The endpointSecurityPolicyProfile
     */
@@ -111,7 +111,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     
     /**
     * Sets the endpointSecurityPolicyProfile
-    * The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
+    * The endpoint security policy profile.
     *
     * @param EndpointSecurityConfigurationProfileType $val The endpointSecurityPolicyProfile
     *

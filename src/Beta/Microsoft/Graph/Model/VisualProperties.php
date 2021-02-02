@@ -25,7 +25,6 @@ class VisualProperties extends Entity
 {
     /**
     * Gets the body
-    * The body of a visual user notification. Body is optional.
     *
     * @return string The body
     */
@@ -40,7 +39,6 @@ class VisualProperties extends Entity
 
     /**
     * Sets the body
-    * The body of a visual user notification. Body is optional.
     *
     * @param string $val The value of the body
     *
@@ -53,7 +51,6 @@ class VisualProperties extends Entity
     }
     /**
     * Gets the title
-    * The title of a visual user notification. This field is required for visual notification payloads.
     *
     * @return string The title
     */
@@ -68,7 +65,6 @@ class VisualProperties extends Entity
 
     /**
     * Sets the title
-    * The title of a visual user notification. This field is required for visual notification payloads.
     *
     * @param string $val The value of the title
     *

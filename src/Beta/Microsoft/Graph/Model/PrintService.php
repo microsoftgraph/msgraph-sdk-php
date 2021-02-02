@@ -27,7 +27,6 @@ class PrintService extends Entity
 
      /** 
      * Gets the endpoints
-    * Endpoints that can be used to access the service. Read-only. Nullable.
      *
      * @return array The endpoints
      */
@@ -42,7 +41,6 @@ class PrintService extends Entity
     
     /** 
     * Sets the endpoints
-    * Endpoints that can be used to access the service. Read-only. Nullable.
     *
     * @param PrintServiceEndpoint $val The endpoints
     *

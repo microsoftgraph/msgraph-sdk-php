@@ -26,7 +26,6 @@ class WebAccount extends ItemFacet
 {
     /**
     * Gets the description
-    * Contains the description the user has provided for the account on the service being referenced.
     *
     * @return string The description
     */
@@ -41,7 +40,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Sets the description
-    * Contains the description the user has provided for the account on the service being referenced.
     *
     * @param string $val The description
     *
@@ -55,7 +53,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Gets the service
-    * Contains basic detail about the service that is being associated.
     *
     * @return ServiceInformation The service
     */
@@ -74,7 +71,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Sets the service
-    * Contains basic detail about the service that is being associated.
     *
     * @param ServiceInformation $val The service
     *
@@ -88,7 +84,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Gets the statusMessage
-    * Contains a status message from the cloud service if provided or synchronized.
     *
     * @return string The statusMessage
     */
@@ -103,7 +98,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Sets the statusMessage
-    * Contains a status message from the cloud service if provided or synchronized.
     *
     * @param string $val The statusMessage
     *
@@ -117,7 +111,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Gets the userId
-    * The user name  displayed for the webaccount.
     *
     * @return string The userId
     */
@@ -132,7 +125,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Sets the userId
-    * The user name  displayed for the webaccount.
     *
     * @param string $val The userId
     *
@@ -146,7 +138,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Gets the webUrl
-    * Contains a link to the user's profile on the cloud service if one exists.
     *
     * @return string The webUrl
     */
@@ -161,7 +152,6 @@ class WebAccount extends ItemFacet
     
     /**
     * Sets the webUrl
-    * Contains a link to the user's profile on the cloud service if one exists.
     *
     * @param string $val The webUrl
     *

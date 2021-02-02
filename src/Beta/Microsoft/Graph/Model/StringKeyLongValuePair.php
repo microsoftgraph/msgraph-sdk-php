@@ -25,7 +25,6 @@ class StringKeyLongValuePair extends Entity
 {
     /**
     * Gets the key
-    * Key.
     *
     * @return string The key
     */
@@ -40,7 +39,6 @@ class StringKeyLongValuePair extends Entity
 
     /**
     * Sets the key
-    * Key.
     *
     * @param string $val The value of the key
     *
@@ -53,7 +51,6 @@ class StringKeyLongValuePair extends Entity
     }
     /**
     * Gets the value
-    * Value.
     *
     * @return int The value
     */
@@ -68,7 +65,6 @@ class StringKeyLongValuePair extends Entity
 
     /**
     * Sets the value
-    * Value.
     *
     * @param int $val The value of the value
     *

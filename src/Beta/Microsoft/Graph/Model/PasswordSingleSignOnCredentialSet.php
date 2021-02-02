@@ -26,7 +26,6 @@ class PasswordSingleSignOnCredentialSet extends Entity
 
     /**
     * Gets the credentials
-    * A list of credential objects that define the complete sign in flow.
     *
     * @return Credential The credentials
     */
@@ -45,7 +44,6 @@ class PasswordSingleSignOnCredentialSet extends Entity
 
     /**
     * Sets the credentials
-    * A list of credential objects that define the complete sign in flow.
     *
     * @param Credential $val The value to assign to the credentials
     *
@@ -58,7 +56,6 @@ class PasswordSingleSignOnCredentialSet extends Entity
     }
     /**
     * Gets the id
-    * The ID of the user or group this credential set belongs to.
     *
     * @return string The id
     */
@@ -73,7 +70,6 @@ class PasswordSingleSignOnCredentialSet extends Entity
 
     /**
     * Sets the id
-    * The ID of the user or group this credential set belongs to.
     *
     * @param string $val The value of the id
     *

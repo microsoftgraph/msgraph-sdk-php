@@ -26,7 +26,6 @@ class ItemFacet extends Entity
 {
     /**
     * Gets the allowedAudiences
-    * The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
     *
     * @return AllowedAudiences The allowedAudiences
     */
@@ -45,7 +44,6 @@ class ItemFacet extends Entity
     
     /**
     * Sets the allowedAudiences
-    * The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
     *
     * @param AllowedAudiences $val The allowedAudiences
     *
@@ -59,7 +57,6 @@ class ItemFacet extends Entity
     
     /**
     * Gets the createdBy
-    * Provides the identifier of the user and/or application that created the entity.
     *
     * @return IdentitySet The createdBy
     */
@@ -78,7 +75,6 @@ class ItemFacet extends Entity
     
     /**
     * Sets the createdBy
-    * Provides the identifier of the user and/or application that created the entity.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -92,7 +88,6 @@ class ItemFacet extends Entity
     
     /**
     * Gets the createdDateTime
-    * Provides the dateTimeOffset for when the entity was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -111,7 +106,6 @@ class ItemFacet extends Entity
     
     /**
     * Sets the createdDateTime
-    * Provides the dateTimeOffset for when the entity was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -125,7 +119,6 @@ class ItemFacet extends Entity
     
     /**
     * Gets the inference
-    * Contains inference detail if the entity is inferred by the creating or modifying application.
     *
     * @return InferenceData The inference
     */
@@ -144,7 +137,6 @@ class ItemFacet extends Entity
     
     /**
     * Sets the inference
-    * Contains inference detail if the entity is inferred by the creating or modifying application.
     *
     * @param InferenceData $val The inference
     *
@@ -158,7 +150,6 @@ class ItemFacet extends Entity
     
     /**
     * Gets the lastModifiedBy
-    * Provides the identifier of the user and/or application that last modified the entity.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -177,7 +168,6 @@ class ItemFacet extends Entity
     
     /**
     * Sets the lastModifiedBy
-    * Provides the identifier of the user and/or application that last modified the entity.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -191,7 +181,6 @@ class ItemFacet extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Provides the dateTimeOffset for when the entity was created.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -210,7 +199,6 @@ class ItemFacet extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Provides the dateTimeOffset for when the entity was created.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -224,7 +212,6 @@ class ItemFacet extends Entity
     
     /**
     * Gets the source
-    * Where the values within an entity originated if synced from another service.
     *
     * @return PersonDataSources The source
     */
@@ -243,7 +230,6 @@ class ItemFacet extends Entity
     
     /**
     * Sets the source
-    * Where the values within an entity originated if synced from another service.
     *
     * @param PersonDataSources $val The source
     *

@@ -26,7 +26,6 @@ class ApplicationTemplate extends Entity
 {
     /**
     * Gets the categories
-    * The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer,Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
     *
     * @return string The categories
     */
@@ -41,7 +40,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the categories
-    * The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer,Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
     *
     * @param string $val The categories
     *
@@ -55,7 +53,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the description
-    * A description of the application.
     *
     * @return string The description
     */
@@ -70,7 +67,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the description
-    * A description of the application.
     *
     * @param string $val The description
     *
@@ -84,7 +80,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the displayName
-    * The name of the application.
     *
     * @return string The displayName
     */
@@ -99,7 +94,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the displayName
-    * The name of the application.
     *
     * @param string $val The displayName
     *
@@ -113,7 +107,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the homePageUrl
-    * The home page URL of the application.
     *
     * @return string The homePageUrl
     */
@@ -128,7 +121,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the homePageUrl
-    * The home page URL of the application.
     *
     * @param string $val The homePageUrl
     *
@@ -142,7 +134,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the logoUrl
-    * The URL to get the logo for this application.
     *
     * @return string The logoUrl
     */
@@ -157,7 +148,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the logoUrl
-    * The URL to get the logo for this application.
     *
     * @param string $val The logoUrl
     *
@@ -171,7 +161,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the publisher
-    * The name of the publisher for this application.
     *
     * @return string The publisher
     */
@@ -186,7 +175,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the publisher
-    * The name of the publisher for this application.
     *
     * @param string $val The publisher
     *
@@ -200,7 +188,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the supportedProvisioningTypes
-    * The list of provisioning modes supported by this application. The only valid value is sync.
     *
     * @return string The supportedProvisioningTypes
     */
@@ -215,7 +202,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the supportedProvisioningTypes
-    * The list of provisioning modes supported by this application. The only valid value is sync.
     *
     * @param string $val The supportedProvisioningTypes
     *
@@ -229,7 +215,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the supportedSingleSignOnModes
-    * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
     *
     * @return string The supportedSingleSignOnModes
     */
@@ -244,7 +229,6 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the supportedSingleSignOnModes
-    * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
     *
     * @param string $val The supportedSingleSignOnModes
     *

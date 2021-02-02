@@ -55,7 +55,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Gets the authenticationMethod
-    * Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
+    * Authentication method for this Email profile.
     *
     * @return EasAuthenticationMethod The authenticationMethod
     */
@@ -74,7 +74,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Sets the authenticationMethod
-    * Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
+    * Authentication method for this Email profile.
     *
     * @param EasAuthenticationMethod $val The authenticationMethod
     *
@@ -175,7 +175,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Gets the durationOfEmailToSync
-    * Duration of time email should be synced back to. . Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of time email should be synced back to. 
     *
     * @return EmailSyncDuration The durationOfEmailToSync
     */
@@ -194,7 +194,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Sets the durationOfEmailToSync
-    * Duration of time email should be synced back to. . Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of time email should be synced back to. 
     *
     * @param EmailSyncDuration $val The durationOfEmailToSync
     *
@@ -208,7 +208,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Gets the easServices
-    * Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
+    * Exchange data to sync.
     *
     * @return EasServices The easServices
     */
@@ -227,7 +227,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Sets the easServices
-    * Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
+    * Exchange data to sync.
     *
     * @param EasServices $val The easServices
     *
@@ -270,7 +270,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Gets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return UserEmailSource The emailAddressSource
     */
@@ -289,7 +289,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Sets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param UserEmailSource $val The emailAddressSource
     *
@@ -303,7 +303,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Gets the encryptionCertificateType
-    * Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+    * Encryption Certificate type for this Email profile.
     *
     * @return EmailCertificateType The encryptionCertificateType
     */
@@ -322,7 +322,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Sets the encryptionCertificateType
-    * Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+    * Encryption Certificate type for this Email profile.
     *
     * @param EmailCertificateType $val The encryptionCertificateType
     *
@@ -452,7 +452,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Gets the signingCertificateType
-    * Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+    * Signing Certificate type for this Email profile.
     *
     * @return EmailCertificateType The signingCertificateType
     */
@@ -471,7 +471,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Sets the signingCertificateType
-    * Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+    * Signing Certificate type for this Email profile.
     *
     * @param EmailCertificateType $val The signingCertificateType
     *
@@ -572,7 +572,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Gets the smimeEncryptionCertificateUserOverrideEnabled
-    * If set to true the user can select the S/MIME encryption identity.
+    * If set to true the user can select the S/MIME encryption identity. 
     *
     * @return bool The smimeEncryptionCertificateUserOverrideEnabled
     */
@@ -587,7 +587,7 @@ class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase
     
     /**
     * Sets the smimeEncryptionCertificateUserOverrideEnabled
-    * If set to true the user can select the S/MIME encryption identity.
+    * If set to true the user can select the S/MIME encryption identity. 
     *
     * @param bool $val The smimeEncryptionCertificateUserOverrideEnabled
     *

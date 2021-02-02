@@ -26,7 +26,7 @@ class VpnConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+    * Authentication method.
     *
     * @return VpnAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class VpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+    * Authentication method.
     *
     * @param VpnAuthenticationMethod $val The authenticationMethod
     *

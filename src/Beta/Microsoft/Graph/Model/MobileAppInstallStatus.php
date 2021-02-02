@@ -142,7 +142,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Gets the installState
-    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+    * The install state of the app.
     *
     * @return ResultantAppState The installState
     */
@@ -161,7 +161,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Sets the installState
-    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+    * The install state of the app.
     *
     * @param ResultantAppState $val The installState
     *
@@ -175,7 +175,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Gets the installStateDetail
-    * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
+    * The install state detail of the app.
     *
     * @return ResultantAppStateDetail The installStateDetail
     */
@@ -194,7 +194,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Sets the installStateDetail
-    * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
+    * The install state detail of the app.
     *
     * @param ResultantAppStateDetail $val The installStateDetail
     *
@@ -241,7 +241,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Gets the mobileAppInstallStatusValue
-    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+    * The install state of the app.
     *
     * @return ResultantAppState The mobileAppInstallStatusValue
     */
@@ -260,7 +260,7 @@ class MobileAppInstallStatus extends Entity
     
     /**
     * Sets the mobileAppInstallStatusValue
-    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+    * The install state of the app.
     *
     * @param ResultantAppState $val The mobileAppInstallStatusValue
     *

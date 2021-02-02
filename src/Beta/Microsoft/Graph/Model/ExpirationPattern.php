@@ -26,7 +26,6 @@ class ExpirationPattern extends Entity
 
     /**
     * Gets the duration
-    * The requestor's desired duration of access. If specified in a request, endDateTime should not be present.
     *
     * @return Duration The duration
     */
@@ -45,7 +44,6 @@ class ExpirationPattern extends Entity
 
     /**
     * Sets the duration
-    * The requestor's desired duration of access. If specified in a request, endDateTime should not be present.
     *
     * @param Duration $val The value to assign to the duration
     *
@@ -59,7 +57,6 @@ class ExpirationPattern extends Entity
 
     /**
     * Gets the endDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The endDateTime
     */
@@ -78,7 +75,6 @@ class ExpirationPattern extends Entity
 
     /**
     * Sets the endDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -92,7 +88,6 @@ class ExpirationPattern extends Entity
 
     /**
     * Gets the type
-    * The requestor's desired expiration pattern type.
     *
     * @return ExpirationPatternType The type
     */
@@ -111,7 +106,6 @@ class ExpirationPattern extends Entity
 
     /**
     * Sets the type
-    * The requestor's desired expiration pattern type.
     *
     * @param ExpirationPatternType $val The value to assign to the type
     *

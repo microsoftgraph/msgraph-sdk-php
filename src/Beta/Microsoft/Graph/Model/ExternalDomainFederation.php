@@ -34,7 +34,6 @@ class ExternalDomainFederation extends IdentitySource
 
     /**
     * Gets the displayName
-    * The name of the identity source, typically also the domain name. Read only.
     *
     * @return string The displayName
     */
@@ -49,7 +48,6 @@ class ExternalDomainFederation extends IdentitySource
 
     /**
     * Sets the displayName
-    * The name of the identity source, typically also the domain name. Read only.
     *
     * @param string $val The value of the displayName
     *
@@ -62,7 +60,6 @@ class ExternalDomainFederation extends IdentitySource
     }
     /**
     * Gets the domainName
-    * The domain name. Read only.
     *
     * @return string The domainName
     */
@@ -77,7 +74,6 @@ class ExternalDomainFederation extends IdentitySource
 
     /**
     * Sets the domainName
-    * The domain name. Read only.
     *
     * @param string $val The value of the domainName
     *
@@ -90,7 +86,6 @@ class ExternalDomainFederation extends IdentitySource
     }
     /**
     * Gets the issuerUri
-    * The issuerURI of the incoming federation. Read only.
     *
     * @return string The issuerUri
     */
@@ -105,7 +100,6 @@ class ExternalDomainFederation extends IdentitySource
 
     /**
     * Sets the issuerUri
-    * The issuerURI of the incoming federation. Read only.
     *
     * @param string $val The value of the issuerUri
     *

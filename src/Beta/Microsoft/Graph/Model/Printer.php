@@ -53,7 +53,6 @@ class Printer extends PrinterBase
     
     /**
     * Gets the hasPhysicalDevice
-    * True if the printer has a physical device for printing. Read-only.
     *
     * @return bool The hasPhysicalDevice
     */
@@ -68,7 +67,6 @@ class Printer extends PrinterBase
     
     /**
     * Sets the hasPhysicalDevice
-    * True if the printer has a physical device for printing. Read-only.
     *
     * @param bool $val The hasPhysicalDevice
     *
@@ -82,7 +80,6 @@ class Printer extends PrinterBase
     
     /**
     * Gets the isShared
-    * True if the printer is shared; false otherwise. Read-only.
     *
     * @return bool The isShared
     */
@@ -97,7 +94,6 @@ class Printer extends PrinterBase
     
     /**
     * Sets the isShared
-    * True if the printer is shared; false otherwise. Read-only.
     *
     * @param bool $val The isShared
     *
@@ -111,7 +107,6 @@ class Printer extends PrinterBase
     
     /**
     * Gets the registeredDateTime
-    * The DateTimeOffset when the printer was registered. Read-only.
     *
     * @return \DateTime The registeredDateTime
     */
@@ -130,7 +125,6 @@ class Printer extends PrinterBase
     
     /**
     * Sets the registeredDateTime
-    * The DateTimeOffset when the printer was registered. Read-only.
     *
     * @param \DateTime $val The registeredDateTime
     *
@@ -145,7 +139,6 @@ class Printer extends PrinterBase
 
      /** 
      * Gets the connectors
-    * The connectors that are associated with the printer.
      *
      * @return array The connectors
      */
@@ -160,7 +153,6 @@ class Printer extends PrinterBase
     
     /** 
     * Sets the connectors
-    * The connectors that are associated with the printer.
     *
     * @param PrintConnector $val The connectors
     *
@@ -206,7 +198,6 @@ class Printer extends PrinterBase
 
      /** 
      * Gets the shares
-    * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      *
      * @return array The shares
      */
@@ -221,7 +212,6 @@ class Printer extends PrinterBase
     
     /** 
     * Sets the shares
-    * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
     *
     * @param PrinterShare $val The shares
     *
@@ -236,7 +226,6 @@ class Printer extends PrinterBase
 
      /** 
      * Gets the taskTriggers
-    * A list of task triggers that are associated with the printer.
      *
      * @return array The taskTriggers
      */
@@ -251,7 +240,6 @@ class Printer extends PrinterBase
     
     /** 
     * Sets the taskTriggers
-    * A list of task triggers that are associated with the printer.
     *
     * @param PrintTaskTrigger $val The taskTriggers
     *

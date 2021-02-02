@@ -258,7 +258,7 @@ class IosWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the proxySettings
-    * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+    * Proxy Type for this Wi-Fi connection
     *
     * @return WiFiProxySetting The proxySettings
     */
@@ -277,7 +277,7 @@ class IosWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the proxySettings
-    * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+    * Proxy Type for this Wi-Fi connection
     *
     * @param WiFiProxySetting $val The proxySettings
     *
@@ -320,7 +320,7 @@ class IosWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
     *
     * @return WiFiSecurityType The wiFiSecurityType
     */
@@ -339,7 +339,7 @@ class IosWiFiConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiSecurityType
-    * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+    * Indicates whether Wi-Fi endpoint uses an EAP based security type.
     *
     * @param WiFiSecurityType $val The wiFiSecurityType
     *

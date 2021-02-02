@@ -146,7 +146,7 @@ class GroupPolicyDefinitionFile extends Entity
     
     /**
     * Gets the policyType
-    * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+    * Specifies the type of group policy.
     *
     * @return GroupPolicyType The policyType
     */
@@ -165,7 +165,7 @@ class GroupPolicyDefinitionFile extends Entity
     
     /**
     * Sets the policyType
-    * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+    * Specifies the type of group policy.
     *
     * @param GroupPolicyType $val The policyType
     *

@@ -25,7 +25,6 @@ class ClaimsMapping extends Entity
 {
     /**
     * Gets the displayName
-    * The claim that provides the display name or full name for the user. It is a required propoerty.
     *
     * @return string The displayName
     */
@@ -40,7 +39,6 @@ class ClaimsMapping extends Entity
 
     /**
     * Sets the displayName
-    * The claim that provides the display name or full name for the user. It is a required propoerty.
     *
     * @param string $val The value of the displayName
     *
@@ -53,7 +51,6 @@ class ClaimsMapping extends Entity
     }
     /**
     * Gets the email
-    * The claim that provides the email address of the user.
     *
     * @return string The email
     */
@@ -68,7 +65,6 @@ class ClaimsMapping extends Entity
 
     /**
     * Sets the email
-    * The claim that provides the email address of the user.
     *
     * @param string $val The value of the email
     *
@@ -81,7 +77,6 @@ class ClaimsMapping extends Entity
     }
     /**
     * Gets the givenName
-    * The claim that provides the first name of the user.
     *
     * @return string The givenName
     */
@@ -96,7 +91,6 @@ class ClaimsMapping extends Entity
 
     /**
     * Sets the givenName
-    * The claim that provides the first name of the user.
     *
     * @param string $val The value of the givenName
     *
@@ -109,7 +103,6 @@ class ClaimsMapping extends Entity
     }
     /**
     * Gets the surname
-    * The claim that provides the last name of the user.
     *
     * @return string The surname
     */
@@ -124,7 +117,6 @@ class ClaimsMapping extends Entity
 
     /**
     * Sets the surname
-    * The claim that provides the last name of the user.
     *
     * @param string $val The value of the surname
     *
@@ -137,7 +129,6 @@ class ClaimsMapping extends Entity
     }
     /**
     * Gets the userId
-    * The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
     *
     * @return string The userId
     */
@@ -152,7 +143,6 @@ class ClaimsMapping extends Entity
 
     /**
     * Sets the userId
-    * The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
     *
     * @param string $val The value of the userId
     *

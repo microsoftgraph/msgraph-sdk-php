@@ -26,7 +26,7 @@ class ConfigurationManagerActionResult extends DeviceActionResult
 
     /**
     * Gets the actionDeliveryStatus
-    * State of the action being delivered to on-prem server. Possible values are: unknown, pendingDelivery, deliveredToConnectorService, failedToDeliverToConnectorService, deliveredToOnPremisesServer.
+    * State of the action being delivered to on-prem server
     *
     * @return ConfigurationManagerActionDeliveryStatus The actionDeliveryStatus
     */
@@ -45,7 +45,7 @@ class ConfigurationManagerActionResult extends DeviceActionResult
 
     /**
     * Sets the actionDeliveryStatus
-    * State of the action being delivered to on-prem server. Possible values are: unknown, pendingDelivery, deliveredToConnectorService, failedToDeliverToConnectorService, deliveredToOnPremisesServer.
+    * State of the action being delivered to on-prem server
     *
     * @param ConfigurationManagerActionDeliveryStatus $val The value to assign to the actionDeliveryStatus
     *

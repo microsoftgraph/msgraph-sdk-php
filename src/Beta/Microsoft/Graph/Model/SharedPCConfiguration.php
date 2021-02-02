@@ -59,7 +59,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the allowedAccounts
-    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
     *
     * @return SharedPCAllowedAccountType The allowedAccounts
     */
@@ -78,7 +78,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the allowedAccounts
-    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+    * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
     *
     * @param SharedPCAllowedAccountType $val The allowedAccounts
     *
@@ -266,7 +266,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the fastFirstSignIn
-    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
     *
     * @return Enablement The fastFirstSignIn
     */
@@ -285,7 +285,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the fastFirstSignIn
-    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
     *
     * @param Enablement $val The fastFirstSignIn
     *
@@ -386,7 +386,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the localStorage
-    * Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether local storage is allowed on a shared PC.
     *
     * @return Enablement The localStorage
     */
@@ -405,7 +405,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the localStorage
-    * Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether local storage is allowed on a shared PC.
     *
     * @param Enablement $val The localStorage
     *
@@ -452,7 +452,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the setAccountManager
-    * Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled.
+    * Disables the account manager for shared PC mode.
     *
     * @return Enablement The setAccountManager
     */
@@ -471,7 +471,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the setAccountManager
-    * Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled.
+    * Disables the account manager for shared PC mode.
     *
     * @param Enablement $val The setAccountManager
     *
@@ -485,7 +485,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the setEduPolicies
-    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @return Enablement The setEduPolicies
     */
@@ -504,7 +504,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the setEduPolicies
-    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
     *
     * @param Enablement $val The setEduPolicies
     *
@@ -518,7 +518,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the setPowerPolicies
-    * Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether the default shared PC power policies should be enabled/disabled.
     *
     * @return Enablement The setPowerPolicies
     */
@@ -537,7 +537,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the setPowerPolicies
-    * Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled.
+    * Specifies whether the default shared PC power policies should be enabled/disabled.
     *
     * @param Enablement $val The setPowerPolicies
     *
@@ -551,7 +551,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Gets the signInOnResume
-    * Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled.
+    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @return Enablement The signInOnResume
     */
@@ -570,7 +570,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     
     /**
     * Sets the signInOnResume
-    * Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled.
+    * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
     *
     * @param Enablement $val The signInOnResume
     *

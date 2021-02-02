@@ -318,7 +318,7 @@ class DeviceManagementSettingDefinition extends Entity
     
     /**
     * Gets the valueType
-    * The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
+    * The data type of the value
     *
     * @return DeviceManangementIntentValueType The valueType
     */
@@ -337,7 +337,7 @@ class DeviceManagementSettingDefinition extends Entity
     
     /**
     * Sets the valueType
-    * The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
+    * The data type of the value
     *
     * @param DeviceManangementIntentValueType $val The valueType
     *

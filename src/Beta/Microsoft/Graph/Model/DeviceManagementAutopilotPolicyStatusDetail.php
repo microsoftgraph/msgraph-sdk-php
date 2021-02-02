@@ -26,7 +26,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
 {
     /**
     * Gets the complianceStatus
-    * The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error.
+    * The policy compliance status.
     *
     * @return DeviceManagementAutopilotPolicyComplianceStatus The complianceStatus
     */
@@ -45,7 +45,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     
     /**
     * Sets the complianceStatus
-    * The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error.
+    * The policy compliance status.
     *
     * @param DeviceManagementAutopilotPolicyComplianceStatus $val The complianceStatus
     *
@@ -121,7 +121,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     
     /**
     * Gets the policyType
-    * The type of policy. Possible values are: unknown, application, appModel, configurationPolicy.
+    * The type of policy.
     *
     * @return DeviceManagementAutopilotPolicyType The policyType
     */
@@ -140,7 +140,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     
     /**
     * Sets the policyType
-    * The type of policy. Possible values are: unknown, application, appModel, configurationPolicy.
+    * The type of policy.
     *
     * @param DeviceManagementAutopilotPolicyType $val The policyType
     *

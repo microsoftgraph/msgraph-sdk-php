@@ -56,7 +56,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Gets the defaultAccessLevel
-    * Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
+    * Default access state in Exchange. This rule applies globally to the entire Exchange organization
     *
     * @return DeviceManagementExchangeAccessLevel The defaultAccessLevel
     */
@@ -75,7 +75,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     
     /**
     * Sets the defaultAccessLevel
-    * Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
+    * Default access state in Exchange. This rule applies globally to the entire Exchange organization
     *
     * @param DeviceManagementExchangeAccessLevel $val The defaultAccessLevel
     *

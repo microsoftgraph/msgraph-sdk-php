@@ -26,7 +26,6 @@ class ReviewSetQuery extends Entity
 {
     /**
     * Gets the createdBy
-    * The user who created the query.
     *
     * @return IdentitySet The createdBy
     */
@@ -45,7 +44,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Sets the createdBy
-    * The user who created the query.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -59,7 +57,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Gets the createdDateTime
-    * The time and date when the query was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -78,7 +75,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Sets the createdDateTime
-    * The time and date when the query was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -92,7 +88,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Gets the displayName
-    * The name of the query
     *
     * @return string The displayName
     */
@@ -107,7 +102,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Sets the displayName
-    * The name of the query
     *
     * @param string $val The displayName
     *
@@ -121,7 +115,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Gets the lastModifiedBy
-    * The user who last modified the query.
     *
     * @return IdentitySet The lastModifiedBy
     */
@@ -140,7 +133,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Sets the lastModifiedBy
-    * The user who last modified the query.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -154,7 +146,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * The date and time the query was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -173,7 +164,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * The date and time the query was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -187,7 +177,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Gets the query
-    * The query string in KQL (Keyword Query Language) query. For details, see Document metadata fields in Advanced eDiscovery.  This field maps directly to the keywords condition.  You can refine searches by using fields listed in the searchable field name paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
     *
     * @return string The query
     */
@@ -202,7 +191,6 @@ class ReviewSetQuery extends Entity
     
     /**
     * Sets the query
-    * The query string in KQL (Keyword Query Language) query. For details, see Document metadata fields in Advanced eDiscovery.  This field maps directly to the keywords condition.  You can refine searches by using fields listed in the searchable field name paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
     *
     * @param string $val The query
     *

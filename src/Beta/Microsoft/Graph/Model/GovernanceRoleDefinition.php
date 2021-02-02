@@ -26,7 +26,6 @@ class GovernanceRoleDefinition extends Entity
 {
     /**
     * Gets the displayName
-    * The display name of the role definition.
     *
     * @return string The displayName
     */
@@ -41,7 +40,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Sets the displayName
-    * The display name of the role definition.
     *
     * @param string $val The displayName
     *
@@ -55,7 +53,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Gets the externalId
-    * The external id of the role definition.
     *
     * @return string The externalId
     */
@@ -70,7 +67,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Sets the externalId
-    * The external id of the role definition.
     *
     * @param string $val The externalId
     *
@@ -84,7 +80,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Gets the resourceId
-    * Required. The id of the resource associated with the role definition.
     *
     * @return string The resourceId
     */
@@ -99,7 +94,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Sets the resourceId
-    * Required. The id of the resource associated with the role definition.
     *
     * @param string $val The resourceId
     *
@@ -140,7 +134,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Gets the resource
-    * Read-only. The associated resource for the role definition.
     *
     * @return GovernanceResource The resource
     */
@@ -159,7 +152,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Sets the resource
-    * Read-only. The associated resource for the role definition.
     *
     * @param GovernanceResource $val The resource
     *
@@ -173,7 +165,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Gets the roleSetting
-    * The associated role setting for the role definition.
     *
     * @return GovernanceRoleSetting The roleSetting
     */
@@ -192,7 +183,6 @@ class GovernanceRoleDefinition extends Entity
     
     /**
     * Sets the roleSetting
-    * The associated role setting for the role definition.
     *
     * @param GovernanceRoleSetting $val The roleSetting
     *

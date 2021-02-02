@@ -26,7 +26,7 @@ class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileBase
 {
     /**
     * Gets the intendedPurpose
-    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
     *
     * @return IntendedPurpose The intendedPurpose
     */
@@ -45,7 +45,7 @@ class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileBase
     
     /**
     * Sets the intendedPurpose
-    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+    * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
     *
     * @param IntendedPurpose $val The intendedPurpose
     *

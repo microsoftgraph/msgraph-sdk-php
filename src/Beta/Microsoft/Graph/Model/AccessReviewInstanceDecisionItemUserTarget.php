@@ -34,7 +34,6 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
 
     /**
     * Gets the userDisplayName
-    * The name of user.
     *
     * @return string The userDisplayName
     */
@@ -49,7 +48,6 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
 
     /**
     * Sets the userDisplayName
-    * The name of user.
     *
     * @param string $val The value of the userDisplayName
     *
@@ -62,7 +60,6 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
     }
     /**
     * Gets the userId
-    * The identifier of user.
     *
     * @return string The userId
     */
@@ -77,7 +74,6 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
 
     /**
     * Sets the userId
-    * The identifier of user.
     *
     * @param string $val The value of the userId
     *
@@ -90,7 +86,6 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
     }
     /**
     * Gets the userPrincipalName
-    * The user principal name.
     *
     * @return string The userPrincipalName
     */
@@ -105,7 +100,6 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
 
     /**
     * Sets the userPrincipalName
-    * The user principal name.
     *
     * @param string $val The value of the userPrincipalName
     *

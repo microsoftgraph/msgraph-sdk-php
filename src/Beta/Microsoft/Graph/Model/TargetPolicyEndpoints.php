@@ -25,7 +25,6 @@ class TargetPolicyEndpoints extends Entity
 {
     /**
     * Gets the platformTypes
-    * Use to filter the notification distribution to a specific platform or platforms. Valid values are Windows, iOS, Android and WebPush. By default, all push endpoint types (Windows, iOS, Android and WebPush) are enabled.
     *
     * @return string The platformTypes
     */
@@ -40,7 +39,6 @@ class TargetPolicyEndpoints extends Entity
 
     /**
     * Sets the platformTypes
-    * Use to filter the notification distribution to a specific platform or platforms. Valid values are Windows, iOS, Android and WebPush. By default, all push endpoint types (Windows, iOS, Android and WebPush) are enabled.
     *
     * @param string $val The value of the platformTypes
     *

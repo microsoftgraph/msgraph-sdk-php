@@ -26,7 +26,6 @@ class PersonName extends ItemFacet
 {
     /**
     * Gets the displayName
-    * Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
     *
     * @return string The displayName
     */
@@ -41,7 +40,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the displayName
-    * Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
     *
     * @param string $val The displayName
     *
@@ -55,7 +53,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the first
-    * First name of the user.
     *
     * @return string The first
     */
@@ -70,7 +67,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the first
-    * First name of the user.
     *
     * @param string $val The first
     *
@@ -84,7 +80,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the initials
-    * Initials of the user.
     *
     * @return string The initials
     */
@@ -99,7 +94,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the initials
-    * Initials of the user.
     *
     * @param string $val The initials
     *
@@ -113,7 +107,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the languageTag
-    * Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
     *
     * @return string The languageTag
     */
@@ -128,7 +121,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the languageTag
-    * Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
     *
     * @param string $val The languageTag
     *
@@ -142,7 +134,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the last
-    * Last name of the user.
     *
     * @return string The last
     */
@@ -157,7 +148,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the last
-    * Last name of the user.
     *
     * @param string $val The last
     *
@@ -171,7 +161,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the maiden
-    * Maiden name of the user.
     *
     * @return string The maiden
     */
@@ -186,7 +175,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the maiden
-    * Maiden name of the user.
     *
     * @param string $val The maiden
     *
@@ -200,7 +188,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the middle
-    * Middle name of the user.
     *
     * @return string The middle
     */
@@ -215,7 +202,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the middle
-    * Middle name of the user.
     *
     * @param string $val The middle
     *
@@ -229,7 +215,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the nickname
-    * Nickname of the user.
     *
     * @return string The nickname
     */
@@ -244,7 +229,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the nickname
-    * Nickname of the user.
     *
     * @param string $val The nickname
     *
@@ -258,7 +242,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the pronunciation
-    * Guidance on how to pronounce the users name.
     *
     * @return YomiPersonName The pronunciation
     */
@@ -277,7 +260,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the pronunciation
-    * Guidance on how to pronounce the users name.
     *
     * @param YomiPersonName $val The pronunciation
     *
@@ -291,7 +273,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the suffix
-    * Designators used after the users name (eg: PhD.)
     *
     * @return string The suffix
     */
@@ -306,7 +287,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the suffix
-    * Designators used after the users name (eg: PhD.)
     *
     * @param string $val The suffix
     *
@@ -320,7 +300,6 @@ class PersonName extends ItemFacet
     
     /**
     * Gets the title
-    * Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
     *
     * @return string The title
     */
@@ -335,7 +314,6 @@ class PersonName extends ItemFacet
     
     /**
     * Sets the title
-    * Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
     *
     * @param string $val The title
     *

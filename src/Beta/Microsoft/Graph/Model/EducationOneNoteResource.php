@@ -34,7 +34,6 @@ class EducationOneNoteResource extends EducationResource
 
     /**
     * Gets the pageUrl
-    * The Microsoft Graph URL to the page in OneNote.
     *
     * @return string The pageUrl
     */
@@ -49,7 +48,6 @@ class EducationOneNoteResource extends EducationResource
 
     /**
     * Sets the pageUrl
-    * The Microsoft Graph URL to the page in OneNote.
     *
     * @param string $val The value of the pageUrl
     *
@@ -62,7 +60,6 @@ class EducationOneNoteResource extends EducationResource
     }
     /**
     * Gets the sectionName
-    * Section name that distributions should be copied into or were copied into.
     *
     * @return string The sectionName
     */
@@ -77,7 +74,6 @@ class EducationOneNoteResource extends EducationResource
 
     /**
     * Sets the sectionName
-    * Section name that distributions should be copied into or were copied into.
     *
     * @param string $val The value of the sectionName
     *

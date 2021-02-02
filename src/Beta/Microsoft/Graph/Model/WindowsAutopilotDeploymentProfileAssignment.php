@@ -26,7 +26,7 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
 {
     /**
     * Gets the source
-    * Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
+    * Type of resource used for deployment to a group, direct or parcel/policySet
     *
     * @return DeviceAndAppManagementAssignmentSource The source
     */
@@ -45,7 +45,7 @@ class WindowsAutopilotDeploymentProfileAssignment extends Entity
     
     /**
     * Sets the source
-    * Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
+    * Type of resource used for deployment to a group, direct or parcel/policySet
     *
     * @param DeviceAndAppManagementAssignmentSource $val The source
     *

@@ -26,7 +26,6 @@ class Connector extends Entity
 {
     /**
     * Gets the externalIp
-    * The external IP address as detected by the the connector server. Read-only.
     *
     * @return string The externalIp
     */
@@ -41,7 +40,6 @@ class Connector extends Entity
     
     /**
     * Sets the externalIp
-    * The external IP address as detected by the the connector server. Read-only.
     *
     * @param string $val The externalIp
     *
@@ -55,7 +53,6 @@ class Connector extends Entity
     
     /**
     * Gets the machineName
-    * The machine name the connector is installed and running on.
     *
     * @return string The machineName
     */
@@ -70,7 +67,6 @@ class Connector extends Entity
     
     /**
     * Sets the machineName
-    * The machine name the connector is installed and running on.
     *
     * @param string $val The machineName
     *
@@ -84,7 +80,6 @@ class Connector extends Entity
     
     /**
     * Gets the status
-    * Indicates the status of the connector. Possible values are: active, inactive. Read-only.
     *
     * @return ConnectorStatus The status
     */
@@ -103,7 +98,6 @@ class Connector extends Entity
     
     /**
     * Sets the status
-    * Indicates the status of the connector. Possible values are: active, inactive. Read-only.
     *
     * @param ConnectorStatus $val The status
     *
@@ -118,7 +112,6 @@ class Connector extends Entity
 
      /** 
      * Gets the memberOf
-    * The connectorGroup that the connector is a member of. Read-only.
      *
      * @return array The memberOf
      */
@@ -133,7 +126,6 @@ class Connector extends Entity
     
     /** 
     * Sets the memberOf
-    * The connectorGroup that the connector is a member of. Read-only.
     *
     * @param ConnectorGroup $val The memberOf
     *

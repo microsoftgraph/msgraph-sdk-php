@@ -154,7 +154,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the intendedPurpose
-    * Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+    * Certificate's intended purpose from the point-of-view of deployment.
     *
     * @return UserPfxIntendedPurpose The intendedPurpose
     */
@@ -173,7 +173,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the intendedPurpose
-    * Certificate's intended purpose from the point-of-view of deployment. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+    * Certificate's intended purpose from the point-of-view of deployment.
     *
     * @param UserPfxIntendedPurpose $val The intendedPurpose
     *
@@ -249,7 +249,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Gets the paddingScheme
-    * Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512.
+    * Padding scheme used by the provider during encryption/decryption.
     *
     * @return UserPfxPaddingScheme The paddingScheme
     */
@@ -268,7 +268,7 @@ class UserPFXCertificate extends Entity
     
     /**
     * Sets the paddingScheme
-    * Padding scheme used by the provider during encryption/decryption. Possible values are: none, pkcs1, oaepSha1, oaepSha256, oaepSha384, oaepSha512.
+    * Padding scheme used by the provider during encryption/decryption.
     *
     * @param UserPfxPaddingScheme $val The paddingScheme
     *

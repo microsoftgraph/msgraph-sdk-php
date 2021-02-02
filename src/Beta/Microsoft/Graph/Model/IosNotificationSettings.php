@@ -171,7 +171,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Gets the previewVisibility
-    * Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
+    * Overrides the notification preview policy set by the user on an iOS device.
     *
     * @return IosNotificationPreviewVisibility The previewVisibility
     */
@@ -190,7 +190,7 @@ class IosNotificationSettings extends Entity
 
     /**
     * Sets the previewVisibility
-    * Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
+    * Overrides the notification preview policy set by the user on an iOS device.
     *
     * @param IosNotificationPreviewVisibility $val The value to assign to the previewVisibility
     *

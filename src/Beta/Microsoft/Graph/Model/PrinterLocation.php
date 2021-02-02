@@ -25,7 +25,6 @@ class PrinterLocation extends Entity
 {
     /**
     * Gets the altitudeInMeters
-    * The altitude, in meters, that the printer is located at.
     *
     * @return int The altitudeInMeters
     */
@@ -40,7 +39,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the altitudeInMeters
-    * The altitude, in meters, that the printer is located at.
     *
     * @param int $val The value of the altitudeInMeters
     *
@@ -53,7 +51,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the building
-    * The building that the printer is located in.
     *
     * @return string The building
     */
@@ -68,7 +65,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the building
-    * The building that the printer is located in.
     *
     * @param string $val The value of the building
     *
@@ -81,7 +77,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the city
-    * The city that the printer is located in.
     *
     * @return string The city
     */
@@ -96,7 +91,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the city
-    * The city that the printer is located in.
     *
     * @param string $val The value of the city
     *
@@ -109,7 +103,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the countryOrRegion
-    * The country or region that the printer is located in.
     *
     * @return string The countryOrRegion
     */
@@ -124,7 +117,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the countryOrRegion
-    * The country or region that the printer is located in.
     *
     * @param string $val The value of the countryOrRegion
     *
@@ -136,36 +128,7 @@ class PrinterLocation extends Entity
         return $this;
     }
     /**
-    * Gets the floor
-    * The floor that the printer is located on. Only numerical values are supported right now.
-    *
-    * @return string The floor
-    */
-    public function getFloor()
-    {
-        if (array_key_exists("floor", $this->_propDict)) {
-            return $this->_propDict["floor"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the floor
-    * The floor that the printer is located on. Only numerical values are supported right now.
-    *
-    * @param string $val The value of the floor
-    *
-    * @return PrinterLocation
-    */
-    public function setFloor($val)
-    {
-        $this->_propDict["floor"] = $val;
-        return $this;
-    }
-    /**
     * Gets the floorDescription
-    * The description of the floor that the printer is located on.
     *
     * @return string The floorDescription
     */
@@ -180,7 +143,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the floorDescription
-    * The description of the floor that the printer is located on.
     *
     * @param string $val The value of the floorDescription
     *
@@ -220,7 +182,6 @@ class PrinterLocation extends Entity
 
     /**
     * Gets the latitude
-    * The latitude that the printer is located at.
     *
     * @return Single The latitude
     */
@@ -239,7 +200,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the latitude
-    * The latitude that the printer is located at.
     *
     * @param Single $val The value to assign to the latitude
     *
@@ -253,7 +213,6 @@ class PrinterLocation extends Entity
 
     /**
     * Gets the longitude
-    * The longitude that the printer is located at.
     *
     * @return Single The longitude
     */
@@ -272,7 +231,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the longitude
-    * The longitude that the printer is located at.
     *
     * @param Single $val The value to assign to the longitude
     *
@@ -285,7 +243,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the organization
-    * The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
     *
     * @return string The organization
     */
@@ -300,7 +257,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the organization
-    * The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
     *
     * @param string $val The value of the organization
     *
@@ -313,7 +269,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the postalCode
-    * The postal code that the printer is located in.
     *
     * @return string The postalCode
     */
@@ -328,7 +283,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the postalCode
-    * The postal code that the printer is located in.
     *
     * @param string $val The value of the postalCode
     *
@@ -341,7 +295,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the roomDescription
-    * The description of the room that the printer is located in.
     *
     * @return string The roomDescription
     */
@@ -356,7 +309,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the roomDescription
-    * The description of the room that the printer is located in.
     *
     * @param string $val The value of the roomDescription
     *
@@ -365,34 +317,6 @@ class PrinterLocation extends Entity
     public function setRoomDescription($val)
     {
         $this->_propDict["roomDescription"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the roomName
-    * The room that the printer is located in. Only numerical values are supported right now.
-    *
-    * @return string The roomName
-    */
-    public function getRoomName()
-    {
-        if (array_key_exists("roomName", $this->_propDict)) {
-            return $this->_propDict["roomName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the roomName
-    * The room that the printer is located in. Only numerical values are supported right now.
-    *
-    * @param string $val The value of the roomName
-    *
-    * @return PrinterLocation
-    */
-    public function setRoomName($val)
-    {
-        $this->_propDict["roomName"] = $val;
         return $this;
     }
     /**
@@ -423,7 +347,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the site
-    * The site that the printer is located in.
     *
     * @return string The site
     */
@@ -438,7 +361,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the site
-    * The site that the printer is located in.
     *
     * @param string $val The value of the site
     *
@@ -451,7 +373,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the stateOrProvince
-    * The state or province that the printer is located in.
     *
     * @return string The stateOrProvince
     */
@@ -466,7 +387,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the stateOrProvince
-    * The state or province that the printer is located in.
     *
     * @param string $val The value of the stateOrProvince
     *
@@ -479,7 +399,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the streetAddress
-    * The street address where the printer is located.
     *
     * @return string The streetAddress
     */
@@ -494,7 +413,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the streetAddress
-    * The street address where the printer is located.
     *
     * @param string $val The value of the streetAddress
     *
@@ -507,7 +425,6 @@ class PrinterLocation extends Entity
     }
     /**
     * Gets the subdivision
-    * The subdivision that the printer is located in. The elements should be in hierarchical order.
     *
     * @return string The subdivision
     */
@@ -522,7 +439,6 @@ class PrinterLocation extends Entity
 
     /**
     * Sets the subdivision
-    * The subdivision that the printer is located in. The elements should be in hierarchical order.
     *
     * @param string $val The value of the subdivision
     *

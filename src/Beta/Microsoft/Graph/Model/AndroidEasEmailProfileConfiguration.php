@@ -55,7 +55,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the authenticationMethod
-    * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+    * Authentication method for Exchange ActiveSync.
     *
     * @return EasAuthenticationMethod The authenticationMethod
     */
@@ -74,7 +74,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+    * Authentication method for Exchange ActiveSync.
     *
     * @param EasAuthenticationMethod $val The authenticationMethod
     *
@@ -117,7 +117,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the durationOfEmailToSync
-    * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of time email should be synced to.
     *
     * @return EmailSyncDuration The durationOfEmailToSync
     */
@@ -136,7 +136,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the durationOfEmailToSync
-    * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of time email should be synced to.
     *
     * @param EmailSyncDuration $val The durationOfEmailToSync
     *
@@ -150,7 +150,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return UserEmailSource The emailAddressSource
     */
@@ -169,7 +169,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param UserEmailSource $val The emailAddressSource
     *
@@ -183,7 +183,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the emailSyncSchedule
-    * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+    * Email sync schedule.
     *
     * @return EmailSyncSchedule The emailSyncSchedule
     */
@@ -202,7 +202,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the emailSyncSchedule
-    * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+    * Email sync schedule.
     *
     * @param EmailSyncSchedule $val The emailSyncSchedule
     *
@@ -419,7 +419,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the userDomainNameSource
-    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
+    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return DomainNameSource The userDomainNameSource
     */
@@ -438,7 +438,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the userDomainNameSource
-    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
+    * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param DomainNameSource $val The userDomainNameSource
     *
@@ -452,7 +452,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Gets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return AndroidUsernameSource The usernameSource
     */
@@ -471,7 +471,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
     
     /**
     * Sets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param AndroidUsernameSource $val The usernameSource
     *

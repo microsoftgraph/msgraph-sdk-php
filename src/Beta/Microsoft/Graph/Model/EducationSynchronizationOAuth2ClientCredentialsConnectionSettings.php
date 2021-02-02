@@ -25,7 +25,6 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
 {
     /**
     * Gets the scope
-    * The scope of the access request (see RFC6749).
     *
     * @return string The scope
     */
@@ -40,7 +39,6 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
 
     /**
     * Sets the scope
-    * The scope of the access request (see RFC6749).
     *
     * @param string $val The value of the scope
     *
@@ -53,7 +51,6 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
     }
     /**
     * Gets the tokenUrl
-    * The URL to get access tokens for the data provider.
     *
     * @return string The tokenUrl
     */
@@ -68,7 +65,6 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
 
     /**
     * Sets the tokenUrl
-    * The URL to get access tokens for the data provider.
     *
     * @param string $val The value of the tokenUrl
     *

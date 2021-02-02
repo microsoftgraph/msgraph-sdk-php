@@ -25,7 +25,6 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient
 {
     /**
     * Gets the userId
-    * Azure AD user identifier. Use the List users method to get this ID.
     *
     * @return string The userId
     */
@@ -40,7 +39,6 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient
 
     /**
     * Sets the userId
-    * Azure AD user identifier. Use the List users method to get this ID.
     *
     * @param string $val The value of the userId
     *

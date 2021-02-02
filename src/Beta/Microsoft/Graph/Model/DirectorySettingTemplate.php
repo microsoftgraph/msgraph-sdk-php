@@ -26,7 +26,6 @@ class DirectorySettingTemplate extends DirectoryObject
 {
     /**
     * Gets the description
-    * Description of the template. Read-only.
     *
     * @return string The description
     */
@@ -41,7 +40,6 @@ class DirectorySettingTemplate extends DirectoryObject
     
     /**
     * Sets the description
-    * Description of the template. Read-only.
     *
     * @param string $val The description
     *
@@ -55,7 +53,6 @@ class DirectorySettingTemplate extends DirectoryObject
     
     /**
     * Gets the displayName
-    * Display name of the template. Read-only.
     *
     * @return string The displayName
     */
@@ -70,7 +67,6 @@ class DirectorySettingTemplate extends DirectoryObject
     
     /**
     * Sets the displayName
-    * Display name of the template. Read-only.
     *
     * @param string $val The displayName
     *
@@ -85,7 +81,6 @@ class DirectorySettingTemplate extends DirectoryObject
 
      /** 
      * Gets the values
-    * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
      *
      * @return array The values
      */
@@ -100,7 +95,6 @@ class DirectorySettingTemplate extends DirectoryObject
     
     /** 
     * Sets the values
-    * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
     *
     * @param SettingTemplateValue $val The values
     *

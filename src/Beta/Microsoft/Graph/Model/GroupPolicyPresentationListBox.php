@@ -55,7 +55,6 @@ class GroupPolicyPresentationListBox extends GroupPolicyPresentation
     
     /**
     * Gets the valuePrefix
-    * Not yet documented
     *
     * @return string The valuePrefix
     */
@@ -70,7 +69,6 @@ class GroupPolicyPresentationListBox extends GroupPolicyPresentation
     
     /**
     * Sets the valuePrefix
-    * Not yet documented
     *
     * @param string $val The valuePrefix
     *

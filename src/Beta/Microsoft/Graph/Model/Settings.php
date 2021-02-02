@@ -25,7 +25,6 @@ class Settings extends Entity
 {
     /**
     * Gets the hasGraphMailbox
-    * Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
     *
     * @return bool The hasGraphMailbox
     */
@@ -40,7 +39,6 @@ class Settings extends Entity
 
     /**
     * Sets the hasGraphMailbox
-    * Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
     *
     * @param bool $val The value of the hasGraphMailbox
     *
@@ -53,7 +51,6 @@ class Settings extends Entity
     }
     /**
     * Gets the hasLicense
-    * Specifies if the user has a MyAnalytics license assigned.
     *
     * @return bool The hasLicense
     */
@@ -68,7 +65,6 @@ class Settings extends Entity
 
     /**
     * Sets the hasLicense
-    * Specifies if the user has a MyAnalytics license assigned.
     *
     * @param bool $val The value of the hasLicense
     *
@@ -81,7 +77,6 @@ class Settings extends Entity
     }
     /**
     * Gets the hasOptedOut
-    * Specifies if the user opted out of MyAnalytics.
     *
     * @return bool The hasOptedOut
     */
@@ -96,7 +91,6 @@ class Settings extends Entity
 
     /**
     * Sets the hasOptedOut
-    * Specifies if the user opted out of MyAnalytics.
     *
     * @param bool $val The value of the hasOptedOut
     *

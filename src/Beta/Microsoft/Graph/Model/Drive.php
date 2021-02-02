@@ -186,7 +186,6 @@ class Drive extends BaseItem
 
      /** 
      * Gets the activities
-    * The list of recent activities that took place under this drive.
      *
      * @return array The activities
      */
@@ -201,7 +200,6 @@ class Drive extends BaseItem
     
     /** 
     * Sets the activities
-    * The list of recent activities that took place under this drive.
     *
     * @param ItemActivityOLD $val The activities
     *
@@ -216,7 +214,6 @@ class Drive extends BaseItem
 
      /** 
      * Gets the bundles
-    * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      *
      * @return array The bundles
      */
@@ -231,7 +228,6 @@ class Drive extends BaseItem
     
     /** 
     * Sets the bundles
-    * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
     *
     * @param DriveItem $val The bundles
     *

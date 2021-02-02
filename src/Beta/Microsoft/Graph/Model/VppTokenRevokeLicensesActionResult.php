@@ -26,7 +26,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 
     /**
     * Gets the actionFailureReason
-    * The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+    * The reason for the revoke licenses action failure.
     *
     * @return VppTokenActionFailureReason The actionFailureReason
     */
@@ -45,7 +45,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
 
     /**
     * Sets the actionFailureReason
-    * The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+    * The reason for the revoke licenses action failure.
     *
     * @param VppTokenActionFailureReason $val The value to assign to the actionFailureReason
     *

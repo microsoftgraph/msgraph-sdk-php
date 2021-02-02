@@ -26,7 +26,6 @@ class OnPremisesPublishingProfile extends Entity
 {
     /**
     * Gets the hybridAgentUpdaterConfiguration
-    * Represents a hybridAgentUpdaterConfiguration object.
     *
     * @return HybridAgentUpdaterConfiguration The hybridAgentUpdaterConfiguration
     */
@@ -45,7 +44,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /**
     * Sets the hybridAgentUpdaterConfiguration
-    * Represents a hybridAgentUpdaterConfiguration object.
     *
     * @param HybridAgentUpdaterConfiguration $val The hybridAgentUpdaterConfiguration
     *
@@ -59,7 +57,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /**
     * Gets the isEnabled
-    * Represents if Azure AD Application Proxy is enabled for the tenant.
     *
     * @return bool The isEnabled
     */
@@ -74,7 +71,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /**
     * Sets the isEnabled
-    * Represents if Azure AD Application Proxy is enabled for the tenant.
     *
     * @param bool $val The isEnabled
     *
@@ -89,7 +85,6 @@ class OnPremisesPublishingProfile extends Entity
 
      /** 
      * Gets the agentGroups
-    * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
      *
      * @return array The agentGroups
      */
@@ -104,7 +99,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /** 
     * Sets the agentGroups
-    * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
     *
     * @param OnPremisesAgentGroup $val The agentGroups
     *
@@ -119,7 +113,6 @@ class OnPremisesPublishingProfile extends Entity
 
      /** 
      * Gets the agents
-    * List of existing onPremisesAgent objects. Read-only. Nullable.
      *
      * @return array The agents
      */
@@ -134,7 +127,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /** 
     * Sets the agents
-    * List of existing onPremisesAgent objects. Read-only. Nullable.
     *
     * @param OnPremisesAgent $val The agents
     *
@@ -149,7 +141,6 @@ class OnPremisesPublishingProfile extends Entity
 
      /** 
      * Gets the connectorGroups
-    * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      *
      * @return array The connectorGroups
      */
@@ -164,7 +155,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /** 
     * Sets the connectorGroups
-    * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
     *
     * @param ConnectorGroup $val The connectorGroups
     *
@@ -179,7 +169,6 @@ class OnPremisesPublishingProfile extends Entity
 
      /** 
      * Gets the connectors
-    * List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
      *
      * @return array The connectors
      */
@@ -194,7 +183,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /** 
     * Sets the connectors
-    * List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
     *
     * @param Connector $val The connectors
     *
@@ -209,7 +197,6 @@ class OnPremisesPublishingProfile extends Entity
 
      /** 
      * Gets the publishedResources
-    * List of existing publishedResource objects. Read-only. Nullable.
      *
      * @return array The publishedResources
      */
@@ -224,7 +211,6 @@ class OnPremisesPublishingProfile extends Entity
     
     /** 
     * Sets the publishedResources
-    * List of existing publishedResource objects. Read-only. Nullable.
     *
     * @param PublishedResource $val The publishedResources
     *

@@ -26,7 +26,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Gets the actionType
-    * Action type for Intune Application. Possible values are: unknown, installCommandSent, installed, uninstalled, userRequestedInstall.
+    * Action type for Intune Application.
     *
     * @return MobileAppActionType The actionType
     */
@@ -45,7 +45,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Sets the actionType
-    * Action type for Intune Application. Possible values are: unknown, installCommandSent, installed, uninstalled, userRequestedInstall.
+    * Action type for Intune Application.
     *
     * @param MobileAppActionType $val The value to assign to the actionType
     *
@@ -87,7 +87,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Gets the runState
-    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+    * Status of the item.
     *
     * @return RunState The runState
     */
@@ -106,7 +106,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
 
     /**
     * Sets the runState
-    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+    * Status of the item.
     *
     * @param RunState $val The value to assign to the runState
     *

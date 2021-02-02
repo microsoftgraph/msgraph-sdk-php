@@ -26,7 +26,6 @@ class EmailAuthenticationMethod extends AuthenticationMethod
 {
     /**
     * Gets the emailAddress
-    * The email address registered to this user.
     *
     * @return string The emailAddress
     */
@@ -41,7 +40,6 @@ class EmailAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the emailAddress
-    * The email address registered to this user.
     *
     * @param string $val The emailAddress
     *

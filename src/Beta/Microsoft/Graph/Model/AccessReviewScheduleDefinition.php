@@ -27,7 +27,6 @@ class AccessReviewScheduleDefinition extends Entity
 
      /** 
      * Gets the backupReviewers
-    * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope.
      *
      * @return array The backupReviewers
      */
@@ -42,7 +41,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /** 
     * Sets the backupReviewers
-    * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope.
     *
     * @param AccessReviewReviewerScope $val The backupReviewers
     *
@@ -56,7 +54,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the createdBy
-    * User who created this review.
     *
     * @return UserIdentity The createdBy
     */
@@ -75,7 +72,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the createdBy
-    * User who created this review.
     *
     * @param UserIdentity $val The createdBy
     *
@@ -89,7 +85,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the createdDateTime
-    * DateTime when review series was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -108,7 +103,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the createdDateTime
-    * DateTime when review series was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -122,7 +116,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the descriptionForAdmins
-    * Description provided by review creators to provide more context of the review to admins.
     *
     * @return string The descriptionForAdmins
     */
@@ -137,7 +130,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the descriptionForAdmins
-    * Description provided by review creators to provide more context of the review to admins.
     *
     * @param string $val The descriptionForAdmins
     *
@@ -151,7 +143,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the descriptionForReviewers
-    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
     *
     * @return string The descriptionForReviewers
     */
@@ -166,7 +157,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the descriptionForReviewers
-    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
     *
     * @param string $val The descriptionForReviewers
     *
@@ -180,7 +170,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the displayName
-    * Name of access review series. Required on create.
     *
     * @return string The displayName
     */
@@ -195,7 +184,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the displayName
-    * Name of access review series. Required on create.
     *
     * @param string $val The displayName
     *
@@ -209,7 +197,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the instanceEnumerationScope
-    * In the case of an all groups review, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
     *
     * @return AccessReviewScope The instanceEnumerationScope
     */
@@ -228,7 +215,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the instanceEnumerationScope
-    * In the case of an all groups review, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
     *
     * @param AccessReviewScope $val The instanceEnumerationScope
     *
@@ -242,7 +228,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * DateTime when review series was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -261,7 +246,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * DateTime when review series was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -276,7 +260,6 @@ class AccessReviewScheduleDefinition extends Entity
 
      /** 
      * Gets the reviewers
-    * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
      *
      * @return array The reviewers
      */
@@ -291,7 +274,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /** 
     * Sets the reviewers
-    * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
     *
     * @param AccessReviewReviewerScope $val The reviewers
     *
@@ -305,7 +287,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the scope
-    * Defines scope of users reviewed in a group. For supported scopes, see accessReviewScope. Required on create.
     *
     * @return AccessReviewScope The scope
     */
@@ -324,7 +305,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the scope
-    * Defines scope of users reviewed in a group. For supported scopes, see accessReviewScope. Required on create.
     *
     * @param AccessReviewScope $val The scope
     *
@@ -338,7 +318,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the settings
-    * The settings for an access review series, see type definition below.
     *
     * @return AccessReviewScheduleSettings The settings
     */
@@ -357,7 +336,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the settings
-    * The settings for an access review series, see type definition below.
     *
     * @param AccessReviewScheduleSettings $val The settings
     *
@@ -371,7 +349,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the status
-    * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
     *
     * @return string The status
     */
@@ -386,7 +363,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the status
-    * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
     *
     * @param string $val The status
     *
@@ -401,7 +377,6 @@ class AccessReviewScheduleDefinition extends Entity
 
      /** 
      * Gets the instances
-    * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
      *
      * @return array The instances
      */
@@ -416,7 +391,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /** 
     * Sets the instances
-    * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
     *
     * @param AccessReviewInstance $val The instances
     *

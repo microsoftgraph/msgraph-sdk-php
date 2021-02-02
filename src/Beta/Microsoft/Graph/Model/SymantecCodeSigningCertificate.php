@@ -179,7 +179,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Gets the status
-    * The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+    * The Cert Status Provisioned or not Provisioned.
     *
     * @return CertificateStatus The status
     */
@@ -198,7 +198,7 @@ class SymantecCodeSigningCertificate extends Entity
     
     /**
     * Sets the status
-    * The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+    * The Cert Status Provisioned or not Provisioned.
     *
     * @param CertificateStatus $val The status
     *

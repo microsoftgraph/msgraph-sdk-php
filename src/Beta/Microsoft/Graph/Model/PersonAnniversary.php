@@ -26,7 +26,6 @@ class PersonAnniversary extends ItemFacet
 {
     /**
     * Gets the date
-    * Contains the date associated with the anniversary type.
     *
     * @return \DateTime The date
     */
@@ -45,7 +44,6 @@ class PersonAnniversary extends ItemFacet
     
     /**
     * Sets the date
-    * Contains the date associated with the anniversary type.
     *
     * @param \DateTime $val The date
     *
@@ -59,7 +57,6 @@ class PersonAnniversary extends ItemFacet
     
     /**
     * Gets the type
-    * The type of anniversary the date represents. Possible values are: birthday, wedding, unknownFutureValue.
     *
     * @return AnniversaryType The type
     */
@@ -78,7 +75,6 @@ class PersonAnniversary extends ItemFacet
     
     /**
     * Sets the type
-    * The type of anniversary the date represents. Possible values are: birthday, wedding, unknownFutureValue.
     *
     * @param AnniversaryType $val The type
     *

@@ -25,7 +25,6 @@ class ProgramResource extends Identity
 {
     /**
     * Gets the type
-    * Type of the resource, indicating whether it is a group or an app.
     *
     * @return string The type
     */
@@ -40,7 +39,6 @@ class ProgramResource extends Identity
 
     /**
     * Sets the type
-    * Type of the resource, indicating whether it is a group or an app.
     *
     * @param string $val The value of the type
     *

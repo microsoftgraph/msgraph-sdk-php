@@ -287,7 +287,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Gets the iTunesPairingMode
-    * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+    * Indicates the iTunes pairing mode
     *
     * @return ITunesPairingMode The iTunesPairingMode
     */
@@ -306,7 +306,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     
     /**
     * Sets the iTunesPairingMode
-    * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+    * Indicates the iTunes pairing mode
     *
     * @param ITunesPairingMode $val The iTunesPairingMode
     *

@@ -150,7 +150,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateIssuanceState
-    * Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
+    * Issuance State
     *
     * @return CertificateIssuanceStates The certificateIssuanceState
     */
@@ -169,7 +169,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateIssuanceState
-    * Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
+    * Issuance State
     *
     * @param CertificateIssuanceStates $val The certificateIssuanceState
     *
@@ -241,7 +241,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateKeyStorageProvider
-    * Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+    * Key Storage Provider
     *
     * @return KeyStorageProviderOption The certificateKeyStorageProvider
     */
@@ -260,7 +260,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateKeyStorageProvider
-    * Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+    * Key Storage Provider
     *
     * @param KeyStorageProviderOption $val The certificateKeyStorageProvider
     *
@@ -274,7 +274,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateKeyUsage
-    * Key usage. Possible values are: keyEncipherment, digitalSignature.
+    * Key usage
     *
     * @return KeyUsages The certificateKeyUsage
     */
@@ -293,7 +293,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateKeyUsage
-    * Key usage. Possible values are: keyEncipherment, digitalSignature.
+    * Key usage
     *
     * @param KeyUsages $val The certificateKeyUsage
     *
@@ -369,7 +369,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateRevokeStatus
-    * Revoke status. Possible values are: none, pending, issued, failed, revoked.
+    * Revoke status
     *
     * @return CertificateRevocationStatus The certificateRevokeStatus
     */
@@ -388,7 +388,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateRevokeStatus
-    * Revoke status. Possible values are: none, pending, issued, failed, revoked.
+    * Revoke status
     *
     * @param CertificateRevocationStatus $val The certificateRevokeStatus
     *
@@ -431,7 +431,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateSubjectAlternativeNameFormat
-    * Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+    * Subject alternative name format
     *
     * @return SubjectAlternativeNameType The certificateSubjectAlternativeNameFormat
     */
@@ -450,7 +450,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateSubjectAlternativeNameFormat
-    * Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+    * Subject alternative name format
     *
     * @param SubjectAlternativeNameType $val The certificateSubjectAlternativeNameFormat
     *
@@ -493,7 +493,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateSubjectNameFormat
-    * Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+    * Subject name format
     *
     * @return SubjectNameFormat The certificateSubjectNameFormat
     */
@@ -512,7 +512,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateSubjectNameFormat
-    * Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+    * Subject name format
     *
     * @param SubjectNameFormat $val The certificateSubjectNameFormat
     *
@@ -613,7 +613,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the certificateValidityPeriodUnits
-    * Validity period units. Possible values are: days, months, years.
+    * Validity period units
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodUnits
     */
@@ -632,7 +632,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the certificateValidityPeriodUnits
-    * Validity period units. Possible values are: days, months, years.
+    * Validity period units
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodUnits
     *
@@ -675,7 +675,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Gets the devicePlatform
-    * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * Device platform
     *
     * @return DevicePlatformType The devicePlatform
     */
@@ -694,7 +694,7 @@ class ManagedDeviceCertificateState extends Entity
     
     /**
     * Sets the devicePlatform
-    * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * Device platform
     *
     * @param DevicePlatformType $val The devicePlatform
     *

@@ -25,7 +25,6 @@ class NetworkInterface extends Entity
 {
     /**
     * Gets the description
-    * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection &amp;lt;#&amp;gt;, etc.).
     *
     * @return string The description
     */
@@ -40,7 +39,6 @@ class NetworkInterface extends Entity
 
     /**
     * Sets the description
-    * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection &amp;lt;#&amp;gt;, etc.).
     *
     * @param string $val The value of the description
     *
@@ -53,7 +51,6 @@ class NetworkInterface extends Entity
     }
     /**
     * Gets the ipV4Address
-    * Last IPv4 address associated with this NIC.
     *
     * @return string The ipV4Address
     */
@@ -68,7 +65,6 @@ class NetworkInterface extends Entity
 
     /**
     * Sets the ipV4Address
-    * Last IPv4 address associated with this NIC.
     *
     * @param string $val The value of the ipV4Address
     *
@@ -81,7 +77,6 @@ class NetworkInterface extends Entity
     }
     /**
     * Gets the ipV6Address
-    * Last Public (aka global) IPv6 address associated with this NIC.
     *
     * @return string The ipV6Address
     */
@@ -96,7 +91,6 @@ class NetworkInterface extends Entity
 
     /**
     * Sets the ipV6Address
-    * Last Public (aka global) IPv6 address associated with this NIC.
     *
     * @param string $val The value of the ipV6Address
     *
@@ -109,7 +103,6 @@ class NetworkInterface extends Entity
     }
     /**
     * Gets the localIpV6Address
-    * Last local (link-local or site-local) IPv6 address associated with this NIC.
     *
     * @return string The localIpV6Address
     */
@@ -124,7 +117,6 @@ class NetworkInterface extends Entity
 
     /**
     * Sets the localIpV6Address
-    * Last local (link-local or site-local) IPv6 address associated with this NIC.
     *
     * @param string $val The value of the localIpV6Address
     *
@@ -137,7 +129,6 @@ class NetworkInterface extends Entity
     }
     /**
     * Gets the macAddress
-    * MAC address of the NIC on this host.
     *
     * @return string The macAddress
     */
@@ -152,7 +143,6 @@ class NetworkInterface extends Entity
 
     /**
     * Sets the macAddress
-    * MAC address of the NIC on this host.
     *
     * @param string $val The value of the macAddress
     *

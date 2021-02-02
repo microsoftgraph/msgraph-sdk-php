@@ -258,7 +258,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
-    * Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+    * Type of password that is required.
     *
     * @return AndroidForWorkRequiredPasswordType The passwordRequiredType
     */
@@ -277,7 +277,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
-    * Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+    * Type of password that is required.
     *
     * @param AndroidForWorkRequiredPasswordType $val The passwordRequiredType
     *
@@ -697,7 +697,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileDataSharingType
-    * Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
+    * Type of data sharing that is allowed.
     *
     * @return AndroidForWorkCrossProfileDataSharingType The workProfileDataSharingType
     */
@@ -716,7 +716,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileDataSharingType
-    * Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
+    * Type of data sharing that is allowed.
     *
     * @param AndroidForWorkCrossProfileDataSharingType $val The workProfileDataSharingType
     *
@@ -730,7 +730,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfileDefaultAppPermissionPolicy
-    * Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+    * Type of password that is required.
     *
     * @return AndroidForWorkDefaultAppPermissionPolicyType The workProfileDefaultAppPermissionPolicy
     */
@@ -749,7 +749,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfileDefaultAppPermissionPolicy
-    * Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+    * Type of password that is required.
     *
     * @param AndroidForWorkDefaultAppPermissionPolicyType $val The workProfileDefaultAppPermissionPolicy
     *
@@ -1169,7 +1169,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the workProfilePasswordRequiredType
-    * Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+    * Type of work profile password that is required.
     *
     * @return AndroidForWorkRequiredPasswordType The workProfilePasswordRequiredType
     */
@@ -1188,7 +1188,7 @@ class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the workProfilePasswordRequiredType
-    * Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+    * Type of work profile password that is required.
     *
     * @param AndroidForWorkRequiredPasswordType $val The workProfilePasswordRequiredType
     *

@@ -54,7 +54,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the deviceMode
-    * Device Mode that setting can be applied on. Possible values are: none, kiosk.
+    * Device Mode that setting can be applied on
     *
     * @return DeviceManagementConfigurationDeviceMode The deviceMode
     */
@@ -73,7 +73,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the deviceMode
-    * Device Mode that setting can be applied on. Possible values are: none, kiosk.
+    * Device Mode that setting can be applied on
     *
     * @param DeviceManagementConfigurationDeviceMode $val The value to assign to the deviceMode
     *
@@ -87,7 +87,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the platform
-    * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
+    * Platform setting can be applied on
     *
     * @return DeviceManagementConfigurationPlatforms The platform
     */
@@ -106,7 +106,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the platform
-    * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
+    * Platform setting can be applied on
     *
     * @param DeviceManagementConfigurationPlatforms $val The value to assign to the platform
     *
@@ -120,7 +120,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the technologies
-    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Which technology channels this setting can be deployed through
     *
     * @return DeviceManagementConfigurationTechnologies The technologies
     */
@@ -139,7 +139,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the technologies
-    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Which technology channels this setting can be deployed through
     *
     * @param DeviceManagementConfigurationTechnologies $val The value to assign to the technologies
     *

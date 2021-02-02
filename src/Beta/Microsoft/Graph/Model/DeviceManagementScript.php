@@ -266,7 +266,7 @@ class DeviceManagementScript extends Entity
     
     /**
     * Gets the runAsAccount
-    * Indicates the type of execution context. Possible values are: system, user.
+    * Indicates the type of execution context.
     *
     * @return RunAsAccountType The runAsAccount
     */
@@ -285,7 +285,7 @@ class DeviceManagementScript extends Entity
     
     /**
     * Sets the runAsAccount
-    * Indicates the type of execution context. Possible values are: system, user.
+    * Indicates the type of execution context.
     *
     * @param RunAsAccountType $val The runAsAccount
     *

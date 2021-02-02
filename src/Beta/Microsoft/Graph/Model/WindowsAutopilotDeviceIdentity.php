@@ -117,7 +117,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the deploymentProfileAssignmentDetailedStatus
-    * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported.
+    * Profile assignment detailed status of the Windows autopilot device.
     *
     * @return WindowsAutopilotProfileAssignmentDetailedStatus The deploymentProfileAssignmentDetailedStatus
     */
@@ -136,7 +136,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the deploymentProfileAssignmentDetailedStatus
-    * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported.
+    * Profile assignment detailed status of the Windows autopilot device.
     *
     * @param WindowsAutopilotProfileAssignmentDetailedStatus $val The deploymentProfileAssignmentDetailedStatus
     *
@@ -150,7 +150,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the deploymentProfileAssignmentStatus
-    * Profile assignment status of the Windows autopilot device. Possible values are: unknown, assignedInSync, assignedOutOfSync, assignedUnkownSyncState, notAssigned, pending, failed.
+    * Profile assignment status of the Windows autopilot device.
     *
     * @return WindowsAutopilotProfileAssignmentStatus The deploymentProfileAssignmentStatus
     */
@@ -169,7 +169,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the deploymentProfileAssignmentStatus
-    * Profile assignment status of the Windows autopilot device. Possible values are: unknown, assignedInSync, assignedOutOfSync, assignedUnkownSyncState, notAssigned, pending, failed.
+    * Profile assignment status of the Windows autopilot device.
     *
     * @param WindowsAutopilotProfileAssignmentStatus $val The deploymentProfileAssignmentStatus
     *
@@ -212,7 +212,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the enrollmentState
-    * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+    * Intune enrollment state of the Windows autopilot device.
     *
     * @return EnrollmentState The enrollmentState
     */
@@ -231,7 +231,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the enrollmentState
-    * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+    * Intune enrollment state of the Windows autopilot device.
     *
     * @param EnrollmentState $val The enrollmentState
     *

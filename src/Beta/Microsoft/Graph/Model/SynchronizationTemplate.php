@@ -26,7 +26,6 @@ class SynchronizationTemplate extends Entity
 {
     /**
     * Gets the applicationId
-    * Identifier of the application this template belongs to.
     *
     * @return string The applicationId
     */
@@ -41,7 +40,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Sets the applicationId
-    * Identifier of the application this template belongs to.
     *
     * @param string $val The applicationId
     *
@@ -55,7 +53,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Gets the default
-    * true if this template is recommended to be the default for the application.
     *
     * @return bool The default
     */
@@ -70,7 +67,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Sets the default
-    * true if this template is recommended to be the default for the application.
     *
     * @param bool $val The default
     *
@@ -84,7 +80,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Gets the description
-    * Description of the template.
     *
     * @return string The description
     */
@@ -99,7 +94,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Sets the description
-    * Description of the template.
     *
     * @param string $val The description
     *
@@ -113,7 +107,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Gets the discoverable
-    * true if this template should appear in the collection of templates available for the application instance (service principal).
     *
     * @return bool The discoverable
     */
@@ -128,7 +121,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Sets the discoverable
-    * true if this template should appear in the collection of templates available for the application instance (service principal).
     *
     * @param bool $val The discoverable
     *
@@ -142,7 +134,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Gets the factoryTag
-    * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
     *
     * @return string The factoryTag
     */
@@ -157,7 +148,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Sets the factoryTag
-    * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
     *
     * @param string $val The factoryTag
     *
@@ -172,7 +162,6 @@ class SynchronizationTemplate extends Entity
 
      /** 
      * Gets the metadata
-    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      *
      * @return array The metadata
      */
@@ -187,7 +176,6 @@ class SynchronizationTemplate extends Entity
     
     /** 
     * Sets the metadata
-    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
     * @param MetadataEntry $val The metadata
     *
@@ -201,7 +189,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Gets the schema
-    * Default synchronization schema for the jobs based on this template.
     *
     * @return SynchronizationSchema The schema
     */
@@ -220,7 +207,6 @@ class SynchronizationTemplate extends Entity
     
     /**
     * Sets the schema
-    * Default synchronization schema for the jobs based on this template.
     *
     * @param SynchronizationSchema $val The schema
     *

@@ -54,7 +54,7 @@ class DeviceLogCollectionRequest extends Entity
 
     /**
     * Gets the templateType
-    * The template type that is sent with the collection request. Possible values are: predefined.
+    * The template type that is sent with the collection request
     *
     * @return DeviceLogCollectionTemplateType The templateType
     */
@@ -73,7 +73,7 @@ class DeviceLogCollectionRequest extends Entity
 
     /**
     * Sets the templateType
-    * The template type that is sent with the collection request. Possible values are: predefined.
+    * The template type that is sent with the collection request
     *
     * @param DeviceLogCollectionTemplateType $val The value to assign to the templateType
     *

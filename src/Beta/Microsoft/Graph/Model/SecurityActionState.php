@@ -25,7 +25,6 @@ class SecurityActionState extends Entity
 {
     /**
     * Gets the appId
-    * The Application ID of the calling application that submitted an update (PATCH) to the action. The appId should be extracted from the auth token and not entered manually by the calling application.
     *
     * @return string The appId
     */
@@ -40,7 +39,6 @@ class SecurityActionState extends Entity
 
     /**
     * Sets the appId
-    * The Application ID of the calling application that submitted an update (PATCH) to the action. The appId should be extracted from the auth token and not entered manually by the calling application.
     *
     * @param string $val The value of the appId
     *
@@ -54,7 +52,6 @@ class SecurityActionState extends Entity
 
     /**
     * Gets the status
-    * Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
     *
     * @return OperationStatus The status
     */
@@ -73,7 +70,6 @@ class SecurityActionState extends Entity
 
     /**
     * Sets the status
-    * Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
     *
     * @param OperationStatus $val The value to assign to the status
     *
@@ -87,7 +83,6 @@ class SecurityActionState extends Entity
 
     /**
     * Gets the updatedDateTime
-    * Timestamp when the actionState was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The updatedDateTime
     */
@@ -106,7 +101,6 @@ class SecurityActionState extends Entity
 
     /**
     * Sets the updatedDateTime
-    * Timestamp when the actionState was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the updatedDateTime
     *
@@ -119,7 +113,6 @@ class SecurityActionState extends Entity
     }
     /**
     * Gets the user
-    * The user principal name of the signed-in user that submitted an update (PATCH) to the action. The user should be extracted from the auth token and not entered manually by the calling application.
     *
     * @return string The user
     */
@@ -134,7 +127,6 @@ class SecurityActionState extends Entity
 
     /**
     * Sets the user
-    * The user principal name of the signed-in user that submitted an update (PATCH) to the action. The user should be extracted from the auth token and not entered manually by the calling application.
     *
     * @param string $val The value of the user
     *

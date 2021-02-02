@@ -25,7 +25,6 @@ class RemoveContentHeaderAction extends InformationProtectionAction
 {
     /**
     * Gets the uiElementNames
-    * The name of the UI element of the header to be removed.
     *
     * @return string The uiElementNames
     */
@@ -40,7 +39,6 @@ class RemoveContentHeaderAction extends InformationProtectionAction
 
     /**
     * Sets the uiElementNames
-    * The name of the UI element of the header to be removed.
     *
     * @param string $val The value of the uiElementNames
     *

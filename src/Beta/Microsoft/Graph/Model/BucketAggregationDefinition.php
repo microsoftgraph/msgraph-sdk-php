@@ -25,7 +25,6 @@ class BucketAggregationDefinition extends Entity
 {
     /**
     * Gets the isDescending
-    * True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
     *
     * @return bool The isDescending
     */
@@ -40,7 +39,6 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Sets the isDescending
-    * True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
     *
     * @param bool $val The value of the isDescending
     *
@@ -53,7 +51,6 @@ class BucketAggregationDefinition extends Entity
     }
     /**
     * Gets the minimumCount
-    * The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
     *
     * @return int The minimumCount
     */
@@ -68,7 +65,6 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Sets the minimumCount
-    * The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
     *
     * @param int $val The value of the minimumCount
     *
@@ -81,7 +77,6 @@ class BucketAggregationDefinition extends Entity
     }
     /**
     * Gets the prefixFilter
-    * A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
     *
     * @return string The prefixFilter
     */
@@ -96,7 +91,6 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Sets the prefixFilter
-    * A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
     *
     * @param string $val The value of the prefixFilter
     *
@@ -110,7 +104,6 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Gets the ranges
-    * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
     *
     * @return BucketAggregationRange The ranges
     */
@@ -129,7 +122,6 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Sets the ranges
-    * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
     *
     * @param BucketAggregationRange $val The value to assign to the ranges
     *
@@ -143,7 +135,6 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Gets the sortBy
-    * The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
     *
     * @return BucketAggregationSortProperty The sortBy
     */
@@ -162,7 +153,6 @@ class BucketAggregationDefinition extends Entity
 
     /**
     * Sets the sortBy
-    * The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
     *
     * @param BucketAggregationSortProperty $val The value to assign to the sortBy
     *

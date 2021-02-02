@@ -80,7 +80,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the displayName
-    * The display name of the subject.
     *
     * @return string The displayName
     */
@@ -95,7 +94,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the displayName
-    * The display name of the subject.
     *
     * @param string $val The displayName
     *
@@ -109,7 +107,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the email
-    * The email address of the subject.
     *
     * @return string The email
     */
@@ -124,7 +121,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the email
-    * The email address of the subject.
     *
     * @param string $val The email
     *
@@ -138,7 +134,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the objectId
-    * The object ID of the subject.
     *
     * @return string The objectId
     */
@@ -153,7 +148,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the objectId
-    * The object ID of the subject.
     *
     * @param string $val The objectId
     *
@@ -194,7 +188,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the principalName
-    * The principal name, if known, of the subject.
     *
     * @return string The principalName
     */
@@ -209,7 +202,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the principalName
-    * The principal name, if known, of the subject.
     *
     * @param string $val The principalName
     *
@@ -223,7 +215,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the type
-    * The resource type of the subject.
     *
     * @return string The type
     */
@@ -238,7 +229,6 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the type
-    * The resource type of the subject.
     *
     * @param string $val The type
     *

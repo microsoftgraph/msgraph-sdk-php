@@ -55,7 +55,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     
     /**
     * Gets the bindStatus
-    * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
+    * Bind status of the tenant with the Google EMM API
     *
     * @return AndroidManagedStoreAccountBindStatus The bindStatus
     */
@@ -74,7 +74,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     
     /**
     * Sets the bindStatus
-    * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
+    * Bind status of the tenant with the Google EMM API
     *
     * @param AndroidManagedStoreAccountBindStatus $val The bindStatus
     *
@@ -147,7 +147,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     
     /**
     * Gets the enrollmentTarget
-    * Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
+    * Indicates which users can enroll devices in Android Enterprise device management
     *
     * @return AndroidManagedStoreAccountEnrollmentTarget The enrollmentTarget
     */
@@ -166,7 +166,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     
     /**
     * Sets the enrollmentTarget
-    * Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
+    * Indicates which users can enroll devices in Android Enterprise device management
     *
     * @param AndroidManagedStoreAccountEnrollmentTarget $val The enrollmentTarget
     *
@@ -213,7 +213,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     
     /**
     * Gets the lastAppSyncStatus
-    * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
+    * Last application sync result
     *
     * @return AndroidManagedStoreAccountAppSyncStatus The lastAppSyncStatus
     */
@@ -232,7 +232,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     
     /**
     * Sets the lastAppSyncStatus
-    * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
+    * Last application sync result
     *
     * @param AndroidManagedStoreAccountAppSyncStatus $val The lastAppSyncStatus
     *

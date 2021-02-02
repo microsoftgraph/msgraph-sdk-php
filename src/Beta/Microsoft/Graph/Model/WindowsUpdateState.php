@@ -208,7 +208,7 @@ class WindowsUpdateState extends Entity
     
     /**
     * Gets the status
-    * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
+    * Windows udpate status.
     *
     * @return WindowsUpdateStatus The status
     */
@@ -227,7 +227,7 @@ class WindowsUpdateState extends Entity
     
     /**
     * Sets the status
-    * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
+    * Windows udpate status.
     *
     * @param WindowsUpdateStatus $val The status
     *

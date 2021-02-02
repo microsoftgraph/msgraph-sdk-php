@@ -263,7 +263,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the flag
-    * The flag value that indicates the status, start date, due date, or completion date for the contact.
     *
     * @return FollowupFlag The flag
     */
@@ -282,7 +281,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the flag
-    * The flag value that indicates the status, start date, due date, or completion date for the contact.
     *
     * @param FollowupFlag $val The flag
     *
@@ -296,7 +294,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the gender
-    * The contact's gender.
     *
     * @return string The gender
     */
@@ -311,7 +308,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the gender
-    * The contact's gender.
     *
     * @param string $val The gender
     *
@@ -990,7 +986,7 @@ class Contact extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the contact. Nullable.
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -1005,7 +1001,7 @@ class Contact extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the contact. Nullable.
+    * The collection of open extensions defined for the contact. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *

@@ -88,7 +88,7 @@ class DeviceManagementIntentUserState extends Entity
     
     /**
     * Gets the state
-    * User state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    * User state for an intent
     *
     * @return ComplianceStatus The state
     */
@@ -107,7 +107,7 @@ class DeviceManagementIntentUserState extends Entity
     
     /**
     * Sets the state
-    * User state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    * User state for an intent
     *
     * @param ComplianceStatus $val The state
     *

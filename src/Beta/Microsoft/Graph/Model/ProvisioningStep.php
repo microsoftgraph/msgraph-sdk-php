@@ -25,7 +25,6 @@ class ProvisioningStep extends Entity
 {
     /**
     * Gets the description
-    * Summary of what occurred during the step.
     *
     * @return string The description
     */
@@ -40,7 +39,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Sets the description
-    * Summary of what occurred during the step.
     *
     * @param string $val The value of the description
     *
@@ -54,7 +52,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Gets the details
-    * Details of what occurred during the step.
     *
     * @return DetailsInfo The details
     */
@@ -73,7 +70,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Sets the details
-    * Details of what occurred during the step.
     *
     * @param DetailsInfo $val The value to assign to the details
     *
@@ -86,7 +82,6 @@ class ProvisioningStep extends Entity
     }
     /**
     * Gets the name
-    * Name of the step.
     *
     * @return string The name
     */
@@ -101,7 +96,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Sets the name
-    * Name of the step.
     *
     * @param string $val The value of the name
     *
@@ -115,7 +109,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Gets the provisioningStepType
-    * Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
     *
     * @return ProvisioningStepType The provisioningStepType
     */
@@ -134,7 +127,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Sets the provisioningStepType
-    * Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
     *
     * @param ProvisioningStepType $val The value to assign to the provisioningStepType
     *
@@ -148,7 +140,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Gets the status
-    * Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
     *
     * @return ProvisioningResult The status
     */
@@ -167,7 +158,6 @@ class ProvisioningStep extends Entity
 
     /**
     * Sets the status
-    * Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
     *
     * @param ProvisioningResult $val The value to assign to the status
     *

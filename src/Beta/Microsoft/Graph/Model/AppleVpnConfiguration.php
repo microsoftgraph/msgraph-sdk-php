@@ -26,7 +26,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+    * Authentication method for this VPN connection.
     *
     * @return VpnAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+    * Authentication method for this VPN connection.
     *
     * @param VpnAuthenticationMethod $val The authenticationMethod
     *
@@ -88,7 +88,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility.
+    * Connection type.
     *
     * @return AppleVpnConnectionType The connectionType
     */
@@ -107,7 +107,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility.
+    * Connection type.
     *
     * @param AppleVpnConnectionType $val The connectionType
     *
@@ -414,7 +414,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the providerType
-    * Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
+    * Provider type for per-app VPN.
     *
     * @return VpnProviderType The providerType
     */
@@ -433,7 +433,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the providerType
-    * Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
+    * Provider type for per-app VPN.
     *
     * @param VpnProviderType $val The providerType
     *

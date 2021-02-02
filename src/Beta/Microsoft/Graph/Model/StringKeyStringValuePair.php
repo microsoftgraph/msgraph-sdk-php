@@ -25,7 +25,6 @@ class StringKeyStringValuePair extends Entity
 {
     /**
     * Gets the key
-    * Key.
     *
     * @return string The key
     */
@@ -40,7 +39,6 @@ class StringKeyStringValuePair extends Entity
 
     /**
     * Sets the key
-    * Key.
     *
     * @param string $val The value of the key
     *
@@ -53,7 +51,6 @@ class StringKeyStringValuePair extends Entity
     }
     /**
     * Gets the value
-    * Value.
     *
     * @return string The value
     */
@@ -68,7 +65,6 @@ class StringKeyStringValuePair extends Entity
 
     /**
     * Sets the value
-    * Value.
     *
     * @param string $val The value of the value
     *

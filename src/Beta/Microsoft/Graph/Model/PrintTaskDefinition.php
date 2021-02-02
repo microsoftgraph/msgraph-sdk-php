@@ -26,7 +26,6 @@ class PrintTaskDefinition extends Entity
 {
     /**
     * Gets the createdBy
-    * The application that created the printTaskDefinition. Read-only.
     *
     * @return AppIdentity The createdBy
     */
@@ -45,7 +44,6 @@ class PrintTaskDefinition extends Entity
     
     /**
     * Sets the createdBy
-    * The application that created the printTaskDefinition. Read-only.
     *
     * @param AppIdentity $val The createdBy
     *
@@ -59,7 +57,6 @@ class PrintTaskDefinition extends Entity
     
     /**
     * Gets the displayName
-    * The name of the printTaskDefinition.
     *
     * @return string The displayName
     */
@@ -74,7 +71,6 @@ class PrintTaskDefinition extends Entity
     
     /**
     * Sets the displayName
-    * The name of the printTaskDefinition.
     *
     * @param string $val The displayName
     *
@@ -89,7 +85,6 @@ class PrintTaskDefinition extends Entity
 
      /** 
      * Gets the tasks
-    * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      *
      * @return array The tasks
      */
@@ -104,7 +99,6 @@ class PrintTaskDefinition extends Entity
     
     /** 
     * Sets the tasks
-    * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
     *
     * @param PrintTask $val The tasks
     *

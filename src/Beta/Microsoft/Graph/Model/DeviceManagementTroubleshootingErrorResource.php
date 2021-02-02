@@ -53,7 +53,6 @@ class DeviceManagementTroubleshootingErrorResource extends Entity
     }
     /**
     * Gets the text
-    * Not yet documented
     *
     * @return string The text
     */
@@ -68,7 +67,6 @@ class DeviceManagementTroubleshootingErrorResource extends Entity
 
     /**
     * Sets the text
-    * Not yet documented
     *
     * @param string $val The value of the text
     *

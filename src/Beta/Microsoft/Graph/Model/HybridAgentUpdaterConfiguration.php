@@ -25,7 +25,6 @@ class HybridAgentUpdaterConfiguration extends Entity
 {
     /**
     * Gets the allowUpdateConfigurationOverride
-    * Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
     *
     * @return bool The allowUpdateConfigurationOverride
     */
@@ -40,7 +39,6 @@ class HybridAgentUpdaterConfiguration extends Entity
 
     /**
     * Sets the allowUpdateConfigurationOverride
-    * Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
     *
     * @param bool $val The value of the allowUpdateConfigurationOverride
     *
@@ -54,7 +52,6 @@ class HybridAgentUpdaterConfiguration extends Entity
 
     /**
     * Gets the deferUpdateDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The deferUpdateDateTime
     */
@@ -73,7 +70,6 @@ class HybridAgentUpdaterConfiguration extends Entity
 
     /**
     * Sets the deferUpdateDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the deferUpdateDateTime
     *

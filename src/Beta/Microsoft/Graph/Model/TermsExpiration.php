@@ -26,7 +26,6 @@ class TermsExpiration extends Entity
 
     /**
     * Gets the frequency
-    * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
     *
     * @return Duration The frequency
     */
@@ -45,7 +44,6 @@ class TermsExpiration extends Entity
 
     /**
     * Sets the frequency
-    * Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.
     *
     * @param Duration $val The value to assign to the frequency
     *
@@ -59,7 +57,6 @@ class TermsExpiration extends Entity
 
     /**
     * Gets the startDateTime
-    * The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The startDateTime
     */
@@ -78,7 +75,6 @@ class TermsExpiration extends Entity
 
     /**
     * Sets the startDateTime
-    * The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

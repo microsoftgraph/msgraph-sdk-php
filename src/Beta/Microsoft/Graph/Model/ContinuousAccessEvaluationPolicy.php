@@ -26,7 +26,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
 {
     /**
     * Gets the description
-    * Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
     *
     * @return string The description
     */
@@ -41,7 +40,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Sets the description
-    * Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
     *
     * @param string $val The description
     *
@@ -55,7 +53,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Gets the displayName
-    * The value is always 'Continuous Access Evaluation'. Read-only.
     *
     * @return string The displayName
     */
@@ -70,7 +67,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Sets the displayName
-    * The value is always 'Continuous Access Evaluation'. Read-only.
     *
     * @param string $val The displayName
     *
@@ -84,7 +80,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Gets the groups
-    * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty.
     *
     * @return string The groups
     */
@@ -99,7 +94,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Sets the groups
-    * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty.
     *
     * @param string $val The groups
     *
@@ -113,7 +107,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Gets the isEnabled
-    * true to indicate whether continuous access evaluation should be performed; otherwise false.
     *
     * @return bool The isEnabled
     */
@@ -128,7 +121,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Sets the isEnabled
-    * true to indicate whether continuous access evaluation should be performed; otherwise false.
     *
     * @param bool $val The isEnabled
     *
@@ -142,7 +134,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Gets the users
-    * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty.
     *
     * @return string The users
     */
@@ -157,7 +148,6 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Sets the users
-    * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty.
     *
     * @param string $val The users
     *

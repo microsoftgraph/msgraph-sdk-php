@@ -142,7 +142,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Gets the platforms
-    * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
+    * Platforms types, which settings in the category have.
     *
     * @return DeviceManagementConfigurationPlatforms The platforms
     */
@@ -161,7 +161,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Sets the platforms
-    * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
+    * Platforms types, which settings in the category have.
     *
     * @param DeviceManagementConfigurationPlatforms $val The platforms
     *
@@ -175,7 +175,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Gets the technologies
-    * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Technologies types, which settings in the category have.
     *
     * @return DeviceManagementConfigurationTechnologies The technologies
     */
@@ -194,7 +194,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Sets the technologies
-    * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Technologies types, which settings in the category have.
     *
     * @param DeviceManagementConfigurationTechnologies $val The technologies
     *

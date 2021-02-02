@@ -208,7 +208,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     
     /**
     * Gets the platforms
-    * Platforms for this policy. Possible values are: none, macOS, windows10X, windows10.
+    * Platforms for this policy
     *
     * @return DeviceManagementConfigurationPlatforms The platforms
     */
@@ -227,7 +227,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     
     /**
     * Sets the platforms
-    * Platforms for this policy. Possible values are: none, macOS, windows10X, windows10.
+    * Platforms for this policy
     *
     * @param DeviceManagementConfigurationPlatforms $val The platforms
     *
@@ -299,7 +299,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     
     /**
     * Gets the technologies
-    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Technologies for this policy
     *
     * @return DeviceManagementConfigurationTechnologies The technologies
     */
@@ -318,7 +318,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     
     /**
     * Sets the technologies
-    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Technologies for this policy
     *
     * @param DeviceManagementConfigurationTechnologies $val The technologies
     *

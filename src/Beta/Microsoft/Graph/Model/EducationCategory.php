@@ -26,7 +26,6 @@ class EducationCategory extends Entity
 {
     /**
     * Gets the displayName
-    * Unique identifier for the category.
     *
     * @return string The displayName
     */
@@ -41,7 +40,6 @@ class EducationCategory extends Entity
     
     /**
     * Sets the displayName
-    * Unique identifier for the category.
     *
     * @param string $val The displayName
     *

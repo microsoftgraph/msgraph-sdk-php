@@ -88,7 +88,7 @@ class NdesConnector extends Entity
     
     /**
     * Gets the state
-    * Ndes Connector Status. Possible values are: none, active, inactive.
+    * Ndes Connector Status
     *
     * @return NdesConnectorState The state
     */
@@ -107,7 +107,7 @@ class NdesConnector extends Entity
     
     /**
     * Sets the state
-    * Ndes Connector Status. Possible values are: none, active, inactive.
+    * Ndes Connector Status
     *
     * @param NdesConnectorState $val The state
     *

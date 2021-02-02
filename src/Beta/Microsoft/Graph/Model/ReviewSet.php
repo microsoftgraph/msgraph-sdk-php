@@ -26,7 +26,6 @@ class ReviewSet extends Entity
 {
     /**
     * Gets the createdBy
-    * The user who created the review set. Read-only.
     *
     * @return IdentitySet The createdBy
     */
@@ -45,7 +44,6 @@ class ReviewSet extends Entity
     
     /**
     * Sets the createdBy
-    * The user who created the review set. Read-only.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -59,7 +57,6 @@ class ReviewSet extends Entity
     
     /**
     * Gets the createdDateTime
-    * The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -78,7 +75,6 @@ class ReviewSet extends Entity
     
     /**
     * Sets the createdDateTime
-    * The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -92,7 +88,6 @@ class ReviewSet extends Entity
     
     /**
     * Gets the displayName
-    * The review set name. Name is unique with a maximum limit of 64 characters.
     *
     * @return string The displayName
     */
@@ -107,7 +102,6 @@ class ReviewSet extends Entity
     
     /**
     * Sets the displayName
-    * The review set name. Name is unique with a maximum limit of 64 characters.
     *
     * @param string $val The displayName
     *

@@ -25,7 +25,6 @@ class OnPremisesPublishing extends Entity
 {
     /**
     * Gets the alternateUrl
-    * If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
     *
     * @return string The alternateUrl
     */
@@ -40,7 +39,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the alternateUrl
-    * If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
     *
     * @param string $val The value of the alternateUrl
     *
@@ -53,7 +51,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the applicationServerTimeout
-    * The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
     *
     * @return string The applicationServerTimeout
     */
@@ -68,7 +65,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the applicationServerTimeout
-    * The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
     *
     * @param string $val The value of the applicationServerTimeout
     *
@@ -81,7 +77,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the applicationType
-    * Indicates if this application is an Application Proxy configured application. This is pre-set by the system. Read-only.
     *
     * @return string The applicationType
     */
@@ -96,7 +91,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the applicationType
-    * Indicates if this application is an Application Proxy configured application. This is pre-set by the system. Read-only.
     *
     * @param string $val The value of the applicationType
     *
@@ -110,7 +104,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the externalAuthenticationType
-    * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
     *
     * @return ExternalAuthenticationType The externalAuthenticationType
     */
@@ -129,7 +122,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the externalAuthenticationType
-    * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
     *
     * @param ExternalAuthenticationType $val The value to assign to the externalAuthenticationType
     *
@@ -142,7 +134,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the externalUrl
-    * The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.
     *
     * @return string The externalUrl
     */
@@ -157,7 +148,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the externalUrl
-    * The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.
     *
     * @param string $val The value of the externalUrl
     *
@@ -170,7 +160,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the internalUrl
-    * The internal url of the application. For example, https://intranet/.
     *
     * @return string The internalUrl
     */
@@ -185,7 +174,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the internalUrl
-    * The internal url of the application. For example, https://intranet/.
     *
     * @param string $val The value of the internalUrl
     *
@@ -198,7 +186,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isHttpOnlyCookieEnabled
-    * Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
     *
     * @return bool The isHttpOnlyCookieEnabled
     */
@@ -213,7 +200,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isHttpOnlyCookieEnabled
-    * Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
     *
     * @param bool $val The value of the isHttpOnlyCookieEnabled
     *
@@ -226,7 +212,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isOnPremPublishingEnabled
-    * Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
     *
     * @return bool The isOnPremPublishingEnabled
     */
@@ -241,7 +226,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isOnPremPublishingEnabled
-    * Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
     *
     * @param bool $val The value of the isOnPremPublishingEnabled
     *
@@ -254,7 +238,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isPersistentCookieEnabled
-    * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
     *
     * @return bool The isPersistentCookieEnabled
     */
@@ -269,7 +252,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isPersistentCookieEnabled
-    * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
     *
     * @param bool $val The value of the isPersistentCookieEnabled
     *
@@ -282,7 +264,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isSecureCookieEnabled
-    * Indicates if the Secure cookie flag should be set in the HTTP response headers. Set this value to true to transmit cookies over a secure channel such as an encrypted HTTPS request. Default value is true.
     *
     * @return bool The isSecureCookieEnabled
     */
@@ -297,7 +278,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isSecureCookieEnabled
-    * Indicates if the Secure cookie flag should be set in the HTTP response headers. Set this value to true to transmit cookies over a secure channel such as an encrypted HTTPS request. Default value is true.
     *
     * @param bool $val The value of the isSecureCookieEnabled
     *
@@ -310,7 +290,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isTranslateHostHeaderEnabled
-    * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
     *
     * @return bool The isTranslateHostHeaderEnabled
     */
@@ -325,7 +304,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isTranslateHostHeaderEnabled
-    * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
     *
     * @param bool $val The value of the isTranslateHostHeaderEnabled
     *
@@ -338,7 +316,6 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isTranslateLinksInBodyEnabled
-    * Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don't use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
     *
     * @return bool The isTranslateLinksInBodyEnabled
     */
@@ -353,7 +330,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isTranslateLinksInBodyEnabled
-    * Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don't use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
     *
     * @param bool $val The value of the isTranslateLinksInBodyEnabled
     *
@@ -367,7 +343,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the singleSignOnSettings
-    * Represents the single sign-on configuration for the on-premises application.
     *
     * @return OnPremisesPublishingSingleSignOn The singleSignOnSettings
     */
@@ -386,7 +361,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the singleSignOnSettings
-    * Represents the single sign-on configuration for the on-premises application.
     *
     * @param OnPremisesPublishingSingleSignOn $val The value to assign to the singleSignOnSettings
     *
@@ -426,7 +400,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the verifiedCustomDomainCertificatesMetadata
-    * Details of the certificate associated with the application when a custom domain is in use. null when using the default domain. Read-only.
     *
     * @return VerifiedCustomDomainCertificatesMetadata The verifiedCustomDomainCertificatesMetadata
     */
@@ -445,7 +418,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the verifiedCustomDomainCertificatesMetadata
-    * Details of the certificate associated with the application when a custom domain is in use. null when using the default domain. Read-only.
     *
     * @param VerifiedCustomDomainCertificatesMetadata $val The value to assign to the verifiedCustomDomainCertificatesMetadata
     *
@@ -459,7 +431,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the verifiedCustomDomainKeyCredential
-    * The associated key credential for the custom domain used.
     *
     * @return KeyCredential The verifiedCustomDomainKeyCredential
     */
@@ -478,7 +449,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the verifiedCustomDomainKeyCredential
-    * The associated key credential for the custom domain used.
     *
     * @param KeyCredential $val The value to assign to the verifiedCustomDomainKeyCredential
     *
@@ -492,7 +462,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the verifiedCustomDomainPasswordCredential
-    * The associated password credential for the custom domain used.
     *
     * @return PasswordCredential The verifiedCustomDomainPasswordCredential
     */
@@ -511,7 +480,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the verifiedCustomDomainPasswordCredential
-    * The associated password credential for the custom domain used.
     *
     * @param PasswordCredential $val The value to assign to the verifiedCustomDomainPasswordCredential
     *

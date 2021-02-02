@@ -26,7 +26,7 @@ class RemoteActionAudit extends Entity
 {
     /**
     * Gets the action
-    * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName.
+    * The action name.
     *
     * @return RemoteAction The action
     */
@@ -45,7 +45,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the action
-    * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName.
+    * The action name.
     *
     * @param RemoteAction $val The action
     *
@@ -59,7 +59,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Gets the actionState
-    * Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * Action state.
     *
     * @return ActionState The actionState
     */
@@ -78,7 +78,7 @@ class RemoteActionAudit extends Entity
     
     /**
     * Sets the actionState
-    * Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * Action state.
     *
     * @param ActionState $val The actionState
     *

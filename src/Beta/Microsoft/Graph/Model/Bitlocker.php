@@ -27,7 +27,6 @@ class Bitlocker extends Entity
 
      /** 
      * Gets the recoveryKeys
-    * The recovery keys associated with the bitlocker entity.
      *
      * @return array The recoveryKeys
      */
@@ -42,7 +41,6 @@ class Bitlocker extends Entity
     
     /** 
     * Sets the recoveryKeys
-    * The recovery keys associated with the bitlocker entity.
     *
     * @param BitlockerRecoveryKey $val The recoveryKeys
     *

@@ -25,7 +25,6 @@ class YomiPersonName extends Entity
 {
     /**
     * Gets the displayName
-    * Composite of first and last name pronunciation guides.
     *
     * @return string The displayName
     */
@@ -40,7 +39,6 @@ class YomiPersonName extends Entity
 
     /**
     * Sets the displayName
-    * Composite of first and last name pronunciation guides.
     *
     * @param string $val The value of the displayName
     *
@@ -53,7 +51,6 @@ class YomiPersonName extends Entity
     }
     /**
     * Gets the first
-    * Pronunciation guide for the first name of the user.
     *
     * @return string The first
     */
@@ -68,7 +65,6 @@ class YomiPersonName extends Entity
 
     /**
     * Sets the first
-    * Pronunciation guide for the first name of the user.
     *
     * @param string $val The value of the first
     *
@@ -81,7 +77,6 @@ class YomiPersonName extends Entity
     }
     /**
     * Gets the last
-    * Pronunciation guide for the last name of the user.
     *
     * @return string The last
     */
@@ -96,7 +91,6 @@ class YomiPersonName extends Entity
 
     /**
     * Sets the last
-    * Pronunciation guide for the last name of the user.
     *
     * @param string $val The value of the last
     *
@@ -109,7 +103,6 @@ class YomiPersonName extends Entity
     }
     /**
     * Gets the maiden
-    * Pronunciation guide for the maiden name of the user.
     *
     * @return string The maiden
     */
@@ -124,7 +117,6 @@ class YomiPersonName extends Entity
 
     /**
     * Sets the maiden
-    * Pronunciation guide for the maiden name of the user.
     *
     * @param string $val The value of the maiden
     *
@@ -137,7 +129,6 @@ class YomiPersonName extends Entity
     }
     /**
     * Gets the middle
-    * Pronunciation guide for the middle name of the user.
     *
     * @return string The middle
     */
@@ -152,7 +143,6 @@ class YomiPersonName extends Entity
 
     /**
     * Sets the middle
-    * Pronunciation guide for the middle name of the user.
     *
     * @param string $val The value of the middle
     *

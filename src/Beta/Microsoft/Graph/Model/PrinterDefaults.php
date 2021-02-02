@@ -26,7 +26,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Gets the colorMode
-    * The default color mode to use when printing the document. Valid values are described in the following table.
     *
     * @return PrintColorMode The colorMode
     */
@@ -45,7 +44,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the colorMode
-    * The default color mode to use when printing the document. Valid values are described in the following table.
     *
     * @param PrintColorMode $val The value to assign to the colorMode
     *
@@ -58,7 +56,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the contentType
-    * The default content (MIME) type to use when processing documents.
     *
     * @return string The contentType
     */
@@ -73,7 +70,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the contentType
-    * The default content (MIME) type to use when processing documents.
     *
     * @param string $val The value of the contentType
     *
@@ -86,7 +82,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the copiesPerJob
-    * The default number of copies printed per job.
     *
     * @return int The copiesPerJob
     */
@@ -101,7 +96,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the copiesPerJob
-    * The default number of copies printed per job.
     *
     * @param int $val The value of the copiesPerJob
     *
@@ -140,7 +134,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the dpi
-    * The default resolution in DPI to use when printing the job.
     *
     * @return int The dpi
     */
@@ -155,7 +148,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the dpi
-    * The default resolution in DPI to use when printing the job.
     *
     * @param int $val The value of the dpi
     *
@@ -200,7 +192,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Gets the duplexMode
-    * The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
     *
     * @return PrintDuplexMode The duplexMode
     */
@@ -219,7 +210,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the duplexMode
-    * The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
     *
     * @param PrintDuplexMode $val The value to assign to the duplexMode
     *
@@ -233,7 +223,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Gets the finishings
-    * The default set of finishings to apply to print jobs. Valid values are described in the following table.
     *
     * @return PrintFinishing The finishings
     */
@@ -252,7 +241,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the finishings
-    * The default set of finishings to apply to print jobs. Valid values are described in the following table.
     *
     * @param PrintFinishing $val The value to assign to the finishings
     *
@@ -265,7 +253,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the fitPdfToPage
-    * The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
     *
     * @return bool The fitPdfToPage
     */
@@ -280,7 +267,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the fitPdfToPage
-    * The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
     *
     * @param bool $val The value of the fitPdfToPage
     *
@@ -293,7 +279,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the mediaColor
-    * The default media (such as paper) color to print the document on.
     *
     * @return string The mediaColor
     */
@@ -308,7 +293,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the mediaColor
-    * The default media (such as paper) color to print the document on.
     *
     * @param string $val The value of the mediaColor
     *
@@ -321,7 +305,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the mediaSize
-    * The default media size to use. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
     *
     * @return string The mediaSize
     */
@@ -336,7 +319,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the mediaSize
-    * The default media size to use. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
     *
     * @param string $val The value of the mediaSize
     *
@@ -349,7 +331,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
     *
     * @return string The mediaType
     */
@@ -364,7 +345,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
     *
     * @param string $val The value of the mediaType
     *
@@ -378,7 +358,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Gets the multipageLayout
-    * The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
     *
     * @return PrintMultipageLayout The multipageLayout
     */
@@ -397,7 +376,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the multipageLayout
-    * The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
     *
     * @param PrintMultipageLayout $val The value to assign to the multipageLayout
     *
@@ -411,7 +389,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Gets the orientation
-    * The default orientation to use when printing the document. Valid values are described in the following table.
     *
     * @return PrintOrientation The orientation
     */
@@ -430,7 +407,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the orientation
-    * The default orientation to use when printing the document. Valid values are described in the following table.
     *
     * @param PrintOrientation $val The value to assign to the orientation
     *
@@ -443,7 +419,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the outputBin
-    * The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
     *
     * @return string The outputBin
     */
@@ -458,7 +433,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the outputBin
-    * The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
     *
     * @param string $val The value of the outputBin
     *
@@ -471,7 +445,6 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the pagesPerSheet
-    * The default number of document pages to print on each sheet.
     *
     * @return int The pagesPerSheet
     */
@@ -486,7 +459,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the pagesPerSheet
-    * The default number of document pages to print on each sheet.
     *
     * @param int $val The value of the pagesPerSheet
     *
@@ -619,7 +591,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Gets the quality
-    * The default quality to use when printing the document. Valid values are described in the following table.
     *
     * @return PrintQuality The quality
     */
@@ -638,7 +609,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the quality
-    * The default quality to use when printing the document. Valid values are described in the following table.
     *
     * @param PrintQuality $val The value to assign to the quality
     *
@@ -652,7 +622,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Gets the scaling
-    * Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
     *
     * @return PrintScaling The scaling
     */
@@ -671,7 +640,6 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the scaling
-    * Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
     *
     * @param PrintScaling $val The value to assign to the scaling
     *

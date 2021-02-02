@@ -25,7 +25,6 @@ class LogonUser extends Entity
 {
     /**
     * Gets the accountDomain
-    * Domain of user account used to logon.
     *
     * @return string The accountDomain
     */
@@ -40,7 +39,6 @@ class LogonUser extends Entity
 
     /**
     * Sets the accountDomain
-    * Domain of user account used to logon.
     *
     * @param string $val The value of the accountDomain
     *
@@ -53,7 +51,6 @@ class LogonUser extends Entity
     }
     /**
     * Gets the accountName
-    * Account name of user account used to logon.
     *
     * @return string The accountName
     */
@@ -68,7 +65,6 @@ class LogonUser extends Entity
 
     /**
     * Sets the accountName
-    * Account name of user account used to logon.
     *
     * @param string $val The value of the accountName
     *
@@ -82,7 +78,6 @@ class LogonUser extends Entity
 
     /**
     * Gets the accountType
-    * User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
     *
     * @return UserAccountSecurityType The accountType
     */
@@ -101,7 +96,6 @@ class LogonUser extends Entity
 
     /**
     * Sets the accountType
-    * User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
     *
     * @param UserAccountSecurityType $val The value to assign to the accountType
     *
@@ -115,7 +109,6 @@ class LogonUser extends Entity
 
     /**
     * Gets the firstSeenDateTime
-    * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The firstSeenDateTime
     */
@@ -134,7 +127,6 @@ class LogonUser extends Entity
 
     /**
     * Sets the firstSeenDateTime
-    * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the firstSeenDateTime
     *
@@ -148,7 +140,6 @@ class LogonUser extends Entity
 
     /**
     * Gets the lastSeenDateTime
-    * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The lastSeenDateTime
     */
@@ -167,7 +158,6 @@ class LogonUser extends Entity
 
     /**
     * Sets the lastSeenDateTime
-    * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the lastSeenDateTime
     *
@@ -180,7 +170,6 @@ class LogonUser extends Entity
     }
     /**
     * Gets the logonId
-    * User logon ID.
     *
     * @return string The logonId
     */
@@ -195,7 +184,6 @@ class LogonUser extends Entity
 
     /**
     * Sets the logonId
-    * User logon ID.
     *
     * @param string $val The value of the logonId
     *
@@ -209,7 +197,6 @@ class LogonUser extends Entity
 
     /**
     * Gets the logonTypes
-    * Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
     *
     * @return LogonType The logonTypes
     */
@@ -228,7 +215,6 @@ class LogonUser extends Entity
 
     /**
     * Sets the logonTypes
-    * Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
     *
     * @param LogonType $val The value to assign to the logonTypes
     *

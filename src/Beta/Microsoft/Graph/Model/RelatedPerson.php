@@ -25,7 +25,6 @@ class RelatedPerson extends Entity
 {
     /**
     * Gets the displayName
-    * Name of the person.
     *
     * @return string The displayName
     */
@@ -40,7 +39,6 @@ class RelatedPerson extends Entity
 
     /**
     * Sets the displayName
-    * Name of the person.
     *
     * @param string $val The value of the displayName
     *
@@ -54,7 +52,6 @@ class RelatedPerson extends Entity
 
     /**
     * Gets the relationship
-    * Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
     *
     * @return PersonRelationship The relationship
     */
@@ -73,7 +70,6 @@ class RelatedPerson extends Entity
 
     /**
     * Sets the relationship
-    * Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
     *
     * @param PersonRelationship $val The value to assign to the relationship
     *
@@ -86,7 +82,6 @@ class RelatedPerson extends Entity
     }
     /**
     * Gets the userPrincipalName
-    * Email address or reference to person within organization.
     *
     * @return string The userPrincipalName
     */
@@ -101,7 +96,6 @@ class RelatedPerson extends Entity
 
     /**
     * Sets the userPrincipalName
-    * Email address or reference to person within organization.
     *
     * @param string $val The value of the userPrincipalName
     *

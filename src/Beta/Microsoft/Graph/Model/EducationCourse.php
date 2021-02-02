@@ -25,7 +25,6 @@ class EducationCourse extends Entity
 {
     /**
     * Gets the courseNumber
-    * Unique identifier for the course.
     *
     * @return string The courseNumber
     */
@@ -40,7 +39,6 @@ class EducationCourse extends Entity
 
     /**
     * Sets the courseNumber
-    * Unique identifier for the course.
     *
     * @param string $val The value of the courseNumber
     *
@@ -53,7 +51,6 @@ class EducationCourse extends Entity
     }
     /**
     * Gets the description
-    * Description of the course.
     *
     * @return string The description
     */
@@ -68,7 +65,6 @@ class EducationCourse extends Entity
 
     /**
     * Sets the description
-    * Description of the course.
     *
     * @param string $val The value of the description
     *
@@ -81,7 +77,6 @@ class EducationCourse extends Entity
     }
     /**
     * Gets the displayName
-    * Name of the course.
     *
     * @return string The displayName
     */
@@ -96,7 +91,6 @@ class EducationCourse extends Entity
 
     /**
     * Sets the displayName
-    * Name of the course.
     *
     * @param string $val The value of the displayName
     *
@@ -109,7 +103,6 @@ class EducationCourse extends Entity
     }
     /**
     * Gets the externalId
-    * ID of the course from the syncing system.
     *
     * @return string The externalId
     */
@@ -124,7 +117,6 @@ class EducationCourse extends Entity
 
     /**
     * Sets the externalId
-    * ID of the course from the syncing system.
     *
     * @param string $val The value of the externalId
     *
@@ -137,7 +129,6 @@ class EducationCourse extends Entity
     }
     /**
     * Gets the subject
-    * Subject of the course.
     *
     * @return string The subject
     */
@@ -152,7 +143,6 @@ class EducationCourse extends Entity
 
     /**
     * Sets the subject
-    * Subject of the course.
     *
     * @param string $val The value of the subject
     *

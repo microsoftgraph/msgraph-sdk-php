@@ -54,7 +54,7 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
 
     /**
     * Gets the runState
-    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+    * Status of the item.
     *
     * @return RunState The runState
     */
@@ -73,7 +73,7 @@ class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppTroubles
 
     /**
     * Sets the runState
-    * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+    * Status of the item.
     *
     * @param RunState $val The value to assign to the runState
     *

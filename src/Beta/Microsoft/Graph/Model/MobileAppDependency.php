@@ -26,7 +26,7 @@ class MobileAppDependency extends MobileAppRelationship
 {
     /**
     * Gets the dependencyType
-    * The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
+    * The type of dependency relationship between the parent and child apps.
     *
     * @return MobileAppDependencyType The dependencyType
     */
@@ -45,7 +45,7 @@ class MobileAppDependency extends MobileAppRelationship
     
     /**
     * Sets the dependencyType
-    * The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
+    * The type of dependency relationship between the parent and child apps.
     *
     * @param MobileAppDependencyType $val The dependencyType
     *

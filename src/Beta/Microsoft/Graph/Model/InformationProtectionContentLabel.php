@@ -26,7 +26,6 @@ class InformationProtectionContentLabel extends Entity
 
     /**
     * Gets the assignmentMethod
-    * Possible values are: standard, privileged, auto.
     *
     * @return AssignmentMethod The assignmentMethod
     */
@@ -45,7 +44,6 @@ class InformationProtectionContentLabel extends Entity
 
     /**
     * Sets the assignmentMethod
-    * Possible values are: standard, privileged, auto.
     *
     * @param AssignmentMethod $val The value to assign to the assignmentMethod
     *
@@ -59,7 +57,6 @@ class InformationProtectionContentLabel extends Entity
 
     /**
     * Gets the creationDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The creationDateTime
     */
@@ -78,7 +75,6 @@ class InformationProtectionContentLabel extends Entity
 
     /**
     * Sets the creationDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the creationDateTime
     *
@@ -92,7 +88,6 @@ class InformationProtectionContentLabel extends Entity
 
     /**
     * Gets the label
-    * Details on the label that is currently applied to the file.
     *
     * @return LabelDetails The label
     */
@@ -111,7 +106,6 @@ class InformationProtectionContentLabel extends Entity
 
     /**
     * Sets the label
-    * Details on the label that is currently applied to the file.
     *
     * @param LabelDetails $val The value to assign to the label
     *

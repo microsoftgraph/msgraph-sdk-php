@@ -26,7 +26,6 @@ class IdentityUserFlowAttribute extends Entity
 {
     /**
     * Gets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are:string - denotes that the dataType for the identityUserFlowAttribute is a string. boolean - denotes that the dataType for the identityUserFlowAttribute is a Boolean.int64 - denotes that the dataType for the identityUserFlowAttribute is an integer.
     *
     * @return IdentityUserFlowAttributeDataType The dataType
     */
@@ -45,7 +44,6 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are:string - denotes that the dataType for the identityUserFlowAttribute is a string. boolean - denotes that the dataType for the identityUserFlowAttribute is a Boolean.int64 - denotes that the dataType for the identityUserFlowAttribute is an integer.
     *
     * @param IdentityUserFlowAttributeDataType $val The dataType
     *
@@ -59,7 +57,6 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Gets the description
-    * The description of the user flow attribute that's shown to the user at the time of sign-up.
     *
     * @return string The description
     */
@@ -74,7 +71,6 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the description
-    * The description of the user flow attribute that's shown to the user at the time of sign-up.
     *
     * @param string $val The description
     *
@@ -88,7 +84,6 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Gets the displayName
-    * The display name of the user flow attribute.
     *
     * @return string The displayName
     */
@@ -103,7 +98,6 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the displayName
-    * The display name of the user flow attribute.
     *
     * @param string $val The displayName
     *
@@ -117,7 +111,6 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Gets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
     *
     * @return IdentityUserFlowAttributeType The userFlowAttributeType
     */
@@ -136,7 +129,6 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
     *
     * @param IdentityUserFlowAttributeType $val The userFlowAttributeType
     *

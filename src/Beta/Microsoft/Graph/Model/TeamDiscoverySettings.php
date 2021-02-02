@@ -25,7 +25,6 @@ class TeamDiscoverySettings extends Entity
 {
     /**
     * Gets the showInTeamsSearchAndSuggestions
-    * If set to true, the team is visible via search and suggestions from the Teams client.
     *
     * @return bool The showInTeamsSearchAndSuggestions
     */
@@ -40,7 +39,6 @@ class TeamDiscoverySettings extends Entity
 
     /**
     * Sets the showInTeamsSearchAndSuggestions
-    * If set to true, the team is visible via search and suggestions from the Teams client.
     *
     * @param bool $val The value of the showInTeamsSearchAndSuggestions
     *

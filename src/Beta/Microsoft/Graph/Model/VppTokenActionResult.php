@@ -54,7 +54,7 @@ class VppTokenActionResult extends Entity
 
     /**
     * Gets the actionState
-    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * State of the action
     *
     * @return ActionState The actionState
     */
@@ -73,7 +73,7 @@ class VppTokenActionResult extends Entity
 
     /**
     * Sets the actionState
-    * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+    * State of the action
     *
     * @param ActionState $val The value to assign to the actionState
     *

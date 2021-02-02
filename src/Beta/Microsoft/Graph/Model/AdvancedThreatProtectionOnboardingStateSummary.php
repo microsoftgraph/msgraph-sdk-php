@@ -259,7 +259,6 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
 
      /** 
      * Gets the advancedThreatProtectionOnboardingDeviceSettingStates
-    * Not yet documented
      *
      * @return array The advancedThreatProtectionOnboardingDeviceSettingStates
      */
@@ -274,7 +273,6 @@ class AdvancedThreatProtectionOnboardingStateSummary extends Entity
     
     /** 
     * Sets the advancedThreatProtectionOnboardingDeviceSettingStates
-    * Not yet documented
     *
     * @param AdvancedThreatProtectionOnboardingDeviceSettingState $val The advancedThreatProtectionOnboardingDeviceSettingStates
     *

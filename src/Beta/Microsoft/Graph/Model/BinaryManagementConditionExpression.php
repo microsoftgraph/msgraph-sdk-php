@@ -59,7 +59,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Gets the operator
-    * The operator used in the evaluation of the binary operation. Possible values are: or, and.
+    * The operator used in the evaluation of the binary operation.
     *
     * @return BinaryManagementConditionExpressionOperatorType The operator
     */
@@ -78,7 +78,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
 
     /**
     * Sets the operator
-    * The operator used in the evaluation of the binary operation. Possible values are: or, and.
+    * The operator used in the evaluation of the binary operation.
     *
     * @param BinaryManagementConditionExpressionOperatorType $val The value to assign to the operator
     *

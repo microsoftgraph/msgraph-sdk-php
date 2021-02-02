@@ -26,7 +26,6 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
 {
     /**
     * Gets the phoneNumber
-    * The phone number to text or call for authentication. Phone numbers use the format '+&amp;lt;country code&amp;gt; &amp;lt;number&amp;gt;x&amp;lt;extension&amp;gt;', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
     *
     * @return string The phoneNumber
     */
@@ -41,7 +40,6 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the phoneNumber
-    * The phone number to text or call for authentication. Phone numbers use the format '+&amp;lt;country code&amp;gt; &amp;lt;number&amp;gt;x&amp;lt;extension&amp;gt;', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
     *
     * @param string $val The phoneNumber
     *
@@ -55,7 +53,6 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the phoneType
-    * The type of this phone. Possible values are: mobile, alternateMobile, or office.
     *
     * @return AuthenticationPhoneType The phoneType
     */
@@ -74,7 +71,6 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the phoneType
-    * The type of this phone. Possible values are: mobile, alternateMobile, or office.
     *
     * @param AuthenticationPhoneType $val The phoneType
     *
@@ -88,7 +84,6 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the smsSignInState
-    * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured.
     *
     * @return AuthenticationMethodSignInState The smsSignInState
     */
@@ -107,7 +102,6 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the smsSignInState
-    * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured.
     *
     * @param AuthenticationMethodSignInState $val The smsSignInState
     *

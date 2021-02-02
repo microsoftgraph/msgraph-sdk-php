@@ -25,7 +25,6 @@ class ServiceInformation extends Entity
 {
     /**
     * Gets the name
-    * The name of the cloud service (for example, Twitter, Instagram).
     *
     * @return string The name
     */
@@ -40,7 +39,6 @@ class ServiceInformation extends Entity
 
     /**
     * Sets the name
-    * The name of the cloud service (for example, Twitter, Instagram).
     *
     * @param string $val The value of the name
     *
@@ -53,7 +51,6 @@ class ServiceInformation extends Entity
     }
     /**
     * Gets the webUrl
-    * Contains the URL for the service being referenced.
     *
     * @return string The webUrl
     */
@@ -68,7 +65,6 @@ class ServiceInformation extends Entity
 
     /**
     * Sets the webUrl
-    * Contains the URL for the service being referenced.
     *
     * @param string $val The value of the webUrl
     *

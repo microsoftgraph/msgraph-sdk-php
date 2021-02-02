@@ -26,7 +26,6 @@ class OutlookTask extends OutlookItem
 {
     /**
     * Gets the assignedTo
-    * The name of the person who has been assigned the task in Outlook. Read-only.
     *
     * @return string The assignedTo
     */
@@ -41,7 +40,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Sets the assignedTo
-    * The name of the person who has been assigned the task in Outlook. Read-only.
     *
     * @param string $val The assignedTo
     *
@@ -55,7 +53,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Gets the body
-    * The task body that typically contains information about the task. Note that only HTML type is supported.
     *
     * @return ItemBody The body
     */
@@ -74,7 +71,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Sets the body
-    * The task body that typically contains information about the task. Note that only HTML type is supported.
     *
     * @param ItemBody $val The body
     *
@@ -88,7 +84,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Gets the completedDateTime
-    * The date in the specified time zone that the task was finished.
     *
     * @return DateTimeTimeZone The completedDateTime
     */
@@ -107,7 +102,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Sets the completedDateTime
-    * The date in the specified time zone that the task was finished.
     *
     * @param DateTimeTimeZone $val The completedDateTime
     *
@@ -121,7 +115,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Gets the dueDateTime
-    * The date in the specified time zone that the task is to be finished.
     *
     * @return DateTimeTimeZone The dueDateTime
     */
@@ -140,7 +133,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Sets the dueDateTime
-    * The date in the specified time zone that the task is to be finished.
     *
     * @param DateTimeTimeZone $val The dueDateTime
     *
@@ -154,7 +146,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Gets the hasAttachments
-    * Set to true if the task has attachments.
     *
     * @return bool The hasAttachments
     */
@@ -169,7 +160,6 @@ class OutlookTask extends OutlookItem
     
     /**
     * Sets the hasAttachments
-    * Set to true if the task has attachments.
     *
     * @param bool $val The hasAttachments
     *
@@ -478,7 +468,6 @@ class OutlookTask extends OutlookItem
 
      /** 
      * Gets the attachments
-    * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
      *
      * @return array The attachments
      */
@@ -493,7 +482,6 @@ class OutlookTask extends OutlookItem
     
     /** 
     * Sets the attachments
-    * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -508,7 +496,6 @@ class OutlookTask extends OutlookItem
 
      /** 
      * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the task. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -523,7 +510,6 @@ class OutlookTask extends OutlookItem
     
     /** 
     * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the task. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
@@ -538,7 +524,6 @@ class OutlookTask extends OutlookItem
 
      /** 
      * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the task. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -553,7 +538,6 @@ class OutlookTask extends OutlookItem
     
     /** 
     * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the task. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *

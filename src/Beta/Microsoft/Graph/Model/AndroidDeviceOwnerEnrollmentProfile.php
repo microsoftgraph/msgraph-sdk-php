@@ -175,7 +175,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Gets the enrollmentMode
-    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice.
+    * The enrollment mode of devices that use this enrollment profile.
     *
     * @return AndroidDeviceOwnerEnrollmentMode The enrollmentMode
     */
@@ -194,7 +194,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Sets the enrollmentMode
-    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice.
+    * The enrollment mode of devices that use this enrollment profile.
     *
     * @param AndroidDeviceOwnerEnrollmentMode $val The enrollmentMode
     *
@@ -208,7 +208,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Gets the enrollmentTokenType
-    * The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.
+    * The enrollment token type for an enrollment profile.
     *
     * @return AndroidDeviceOwnerEnrollmentTokenType The enrollmentTokenType
     */
@@ -227,7 +227,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Sets the enrollmentTokenType
-    * The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.
+    * The enrollment token type for an enrollment profile.
     *
     * @param AndroidDeviceOwnerEnrollmentTokenType $val The enrollmentTokenType
     *

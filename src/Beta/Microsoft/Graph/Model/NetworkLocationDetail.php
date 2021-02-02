@@ -25,7 +25,6 @@ class NetworkLocationDetail extends Entity
 {
     /**
     * Gets the networkNames
-    * Provides the name of the network used when signing in.
     *
     * @return string The networkNames
     */
@@ -40,7 +39,6 @@ class NetworkLocationDetail extends Entity
 
     /**
     * Sets the networkNames
-    * Provides the name of the network used when signing in.
     *
     * @param string $val The value of the networkNames
     *
@@ -54,7 +52,6 @@ class NetworkLocationDetail extends Entity
 
     /**
     * Gets the networkType
-    * Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
     *
     * @return NetworkType The networkType
     */
@@ -73,7 +70,6 @@ class NetworkLocationDetail extends Entity
 
     /**
     * Sets the networkType
-    * Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
     *
     * @param NetworkType $val The value to assign to the networkType
     *

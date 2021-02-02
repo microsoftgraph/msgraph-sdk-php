@@ -26,7 +26,6 @@ class ConnectionOperation extends Entity
 {
     /**
     * Gets the error
-    * If status is failed, provides more information about the error that caused the failure.
     *
     * @return ErrorDetail The error
     */
@@ -45,7 +44,6 @@ class ConnectionOperation extends Entity
     
     /**
     * Sets the error
-    * If status is failed, provides more information about the error that caused the failure.
     *
     * @param ErrorDetail $val The error
     *
@@ -59,7 +57,6 @@ class ConnectionOperation extends Entity
     
     /**
     * Gets the status
-    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
     *
     * @return ConnectionOperationStatus The status
     */
@@ -78,7 +75,6 @@ class ConnectionOperation extends Entity
     
     /**
     * Sets the status
-    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
     *
     * @param ConnectionOperationStatus $val The status
     *

@@ -26,7 +26,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
 {
     /**
     * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
+    * Scale for the Certificate Validity Period.
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
@@ -45,7 +45,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
+    * Scale for the Certificate Validity Period.
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
     *
@@ -117,7 +117,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Gets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+    * Certificate Subject Alternative Name type.
     *
     * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
@@ -136,7 +136,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Sets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+    * Certificate Subject Alternative Name type.
     *
     * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
     *
@@ -150,7 +150,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Gets the subjectNameFormat
-    * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
+    * Certificate Subject Name Format.
     *
     * @return AppleSubjectNameFormat The subjectNameFormat
     */
@@ -169,7 +169,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     
     /**
     * Sets the subjectNameFormat
-    * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
+    * Certificate Subject Name Format.
     *
     * @param AppleSubjectNameFormat $val The subjectNameFormat
     *

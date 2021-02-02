@@ -82,7 +82,7 @@ class SecurityBaselineContributingPolicy extends Entity
 
     /**
     * Gets the sourceType
-    * Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent.
+    * Authoring source of the policy
     *
     * @return SecurityBaselinePolicySourceType The sourceType
     */
@@ -101,7 +101,7 @@ class SecurityBaselineContributingPolicy extends Entity
 
     /**
     * Sets the sourceType
-    * Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent.
+    * Authoring source of the policy
     *
     * @param SecurityBaselinePolicySourceType $val The value to assign to the sourceType
     *

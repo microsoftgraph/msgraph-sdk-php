@@ -25,7 +25,6 @@ class AuthenticationDetail extends Entity
 {
     /**
     * Gets the authenticationMethod
-    * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token.
     *
     * @return string The authenticationMethod
     */
@@ -40,7 +39,6 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationMethod
-    * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token.
     *
     * @param string $val The value of the authenticationMethod
     *
@@ -53,7 +51,6 @@ class AuthenticationDetail extends Entity
     }
     /**
     * Gets the authenticationMethodDetail
-    * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
     *
     * @return string The authenticationMethodDetail
     */
@@ -68,7 +65,6 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationMethodDetail
-    * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
     *
     * @param string $val The value of the authenticationMethodDetail
     *
@@ -82,7 +78,6 @@ class AuthenticationDetail extends Entity
 
     /**
     * Gets the authenticationStepDateTime
-    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The authenticationStepDateTime
     */
@@ -101,7 +96,6 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationStepDateTime
-    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the authenticationStepDateTime
     *
@@ -114,7 +108,6 @@ class AuthenticationDetail extends Entity
     }
     /**
     * Gets the authenticationStepRequirement
-    * The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
     *
     * @return string The authenticationStepRequirement
     */
@@ -129,7 +122,6 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationStepRequirement
-    * The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
     *
     * @param string $val The value of the authenticationStepRequirement
     *
@@ -142,7 +134,6 @@ class AuthenticationDetail extends Entity
     }
     /**
     * Gets the authenticationStepResultDetail
-    * Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token.
     *
     * @return string The authenticationStepResultDetail
     */
@@ -157,7 +148,6 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationStepResultDetail
-    * Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token.
     *
     * @param string $val The value of the authenticationStepResultDetail
     *
@@ -170,7 +160,6 @@ class AuthenticationDetail extends Entity
     }
     /**
     * Gets the succeeded
-    * Indicates the status of the authentication step. Possible values: succeeded, failed.
     *
     * @return bool The succeeded
     */
@@ -185,7 +174,6 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the succeeded
-    * Indicates the status of the authentication step. Possible values: succeeded, failed.
     *
     * @param bool $val The value of the succeeded
     *

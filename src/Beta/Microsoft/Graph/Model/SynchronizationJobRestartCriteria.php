@@ -26,7 +26,6 @@ class SynchronizationJobRestartCriteria extends Entity
 
     /**
     * Gets the resetScope
-    * Comma-separated combination of the following values: Full, QuarantineState, Watermark, Escrows, ConnectorDataStore. Use Full if you want all of the options.
     *
     * @return SynchronizationJobRestartScope The resetScope
     */
@@ -45,7 +44,6 @@ class SynchronizationJobRestartCriteria extends Entity
 
     /**
     * Sets the resetScope
-    * Comma-separated combination of the following values: Full, QuarantineState, Watermark, Escrows, ConnectorDataStore. Use Full if you want all of the options.
     *
     * @param SynchronizationJobRestartScope $val The value to assign to the resetScope
     *

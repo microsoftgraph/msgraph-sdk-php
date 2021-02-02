@@ -138,7 +138,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Gets the recoveryInformationToStore
-    * Configure what pieces of BitLocker recovery information are stored to AD DS. Possible values are: passwordAndKey, passwordOnly.
+    * Configure what pieces of BitLocker recovery information are stored to AD DS.
     *
     * @return BitLockerRecoveryInformationType The recoveryInformationToStore
     */
@@ -157,7 +157,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the recoveryInformationToStore
-    * Configure what pieces of BitLocker recovery information are stored to AD DS. Possible values are: passwordAndKey, passwordOnly.
+    * Configure what pieces of BitLocker recovery information are stored to AD DS.
     *
     * @param BitLockerRecoveryInformationType $val The value to assign to the recoveryInformationToStore
     *
@@ -171,7 +171,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Gets the recoveryKeyUsage
-    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
     *
     * @return ConfigurationUsage The recoveryKeyUsage
     */
@@ -190,7 +190,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the recoveryKeyUsage
-    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
     *
     * @param ConfigurationUsage $val The value to assign to the recoveryKeyUsage
     *
@@ -204,7 +204,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Gets the recoveryPasswordUsage
-    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
     *
     * @return ConfigurationUsage The recoveryPasswordUsage
     */
@@ -223,7 +223,7 @@ class BitLockerRecoveryOptions extends Entity
 
     /**
     * Sets the recoveryPasswordUsage
-    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
+    * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
     *
     * @param ConfigurationUsage $val The value to assign to the recoveryPasswordUsage
     *

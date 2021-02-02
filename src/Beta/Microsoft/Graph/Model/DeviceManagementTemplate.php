@@ -142,7 +142,7 @@ class DeviceManagementTemplate extends Entity
     
     /**
     * Gets the platformType
-    * The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+    * The template's platform.
     *
     * @return PolicyPlatformType The platformType
     */
@@ -161,7 +161,7 @@ class DeviceManagementTemplate extends Entity
     
     /**
     * Sets the platformType
-    * The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+    * The template's platform.
     *
     * @param PolicyPlatformType $val The platformType
     *
@@ -208,7 +208,7 @@ class DeviceManagementTemplate extends Entity
     
     /**
     * Gets the templateSubtype
-    * The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
+    * The template's subtype.
     *
     * @return DeviceManagementTemplateSubtype The templateSubtype
     */
@@ -227,7 +227,7 @@ class DeviceManagementTemplate extends Entity
     
     /**
     * Sets the templateSubtype
-    * The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
+    * The template's subtype.
     *
     * @param DeviceManagementTemplateSubtype $val The templateSubtype
     *
@@ -241,7 +241,7 @@ class DeviceManagementTemplate extends Entity
     
     /**
     * Gets the templateType
-    * The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
+    * The template's type.
     *
     * @return DeviceManagementTemplateType The templateType
     */
@@ -260,7 +260,7 @@ class DeviceManagementTemplate extends Entity
     
     /**
     * Sets the templateType
-    * The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
+    * The template's type.
     *
     * @param DeviceManagementTemplateType $val The templateType
     *

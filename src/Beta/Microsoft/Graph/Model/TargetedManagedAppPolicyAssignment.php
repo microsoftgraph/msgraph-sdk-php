@@ -26,7 +26,7 @@ class TargetedManagedAppPolicyAssignment extends Entity
 {
     /**
     * Gets the source
-    * Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
+    * Type of resource used for deployment to a group, direct or parcel/policySet
     *
     * @return DeviceAndAppManagementAssignmentSource The source
     */
@@ -45,7 +45,7 @@ class TargetedManagedAppPolicyAssignment extends Entity
     
     /**
     * Sets the source
-    * Type of resource used for deployment to a group, direct or parcel/policySet. Possible values are: direct, policySets.
+    * Type of resource used for deployment to a group, direct or parcel/policySet
     *
     * @param DeviceAndAppManagementAssignmentSource $val The source
     *
@@ -88,7 +88,7 @@ class TargetedManagedAppPolicyAssignment extends Entity
     
     /**
     * Gets the target
-    * Identifier for deployment to a group or app
+    * Identifier for deployment of a group or app
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -107,7 +107,7 @@ class TargetedManagedAppPolicyAssignment extends Entity
     
     /**
     * Sets the target
-    * Identifier for deployment to a group or app
+    * Identifier for deployment of a group or app
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

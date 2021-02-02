@@ -25,7 +25,6 @@ class ProfileCardAnnotation extends Entity
 {
     /**
     * Gets the displayName
-    * If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
     *
     * @return string The displayName
     */
@@ -40,7 +39,6 @@ class ProfileCardAnnotation extends Entity
 
     /**
     * Sets the displayName
-    * If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
     *
     * @param string $val The value of the displayName
     *
@@ -54,7 +52,6 @@ class ProfileCardAnnotation extends Entity
 
     /**
     * Gets the localizations
-    * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
     *
     * @return DisplayNameLocalization The localizations
     */
@@ -73,7 +70,6 @@ class ProfileCardAnnotation extends Entity
 
     /**
     * Sets the localizations
-    * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
     *
     * @param DisplayNameLocalization $val The value to assign to the localizations
     *

@@ -84,7 +84,7 @@ class AdministrativeUnit extends DirectoryObject
     
     /**
     * Gets the visibility
-    * Controls whether the adminstrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the adminstrative unit.
+    * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the adminstrative unit.
     *
     * @return string The visibility
     */
@@ -99,7 +99,7 @@ class AdministrativeUnit extends DirectoryObject
     
     /**
     * Sets the visibility
-    * Controls whether the adminstrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the adminstrative unit.
+    * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the adminstrative unit.
     *
     * @param string $val The visibility
     *
@@ -174,7 +174,6 @@ class AdministrativeUnit extends DirectoryObject
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for this Administrative Unit. Nullable.
      *
      * @return array The extensions
      */
@@ -189,7 +188,6 @@ class AdministrativeUnit extends DirectoryObject
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for this Administrative Unit. Nullable.
     *
     * @param Extension $val The extensions
     *

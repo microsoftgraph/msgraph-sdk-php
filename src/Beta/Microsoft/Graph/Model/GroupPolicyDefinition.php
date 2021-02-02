@@ -55,7 +55,7 @@ class GroupPolicyDefinition extends Entity
     
     /**
     * Gets the classType
-    * Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
+    * Identifies the type of groups the policy can be applied to.
     *
     * @return GroupPolicyDefinitionClassType The classType
     */
@@ -74,7 +74,7 @@ class GroupPolicyDefinition extends Entity
     
     /**
     * Sets the classType
-    * Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
+    * Identifies the type of groups the policy can be applied to.
     *
     * @param GroupPolicyDefinitionClassType $val The classType
     *
@@ -208,7 +208,7 @@ class GroupPolicyDefinition extends Entity
     
     /**
     * Gets the policyType
-    * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+    * Specifies the type of group policy.
     *
     * @return GroupPolicyType The policyType
     */
@@ -227,7 +227,7 @@ class GroupPolicyDefinition extends Entity
     
     /**
     * Sets the policyType
-    * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
+    * Specifies the type of group policy.
     *
     * @param GroupPolicyType $val The policyType
     *

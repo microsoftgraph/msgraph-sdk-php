@@ -26,7 +26,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the authenticationTransformConstants
-    * Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
+    * Authentication Transform Constants
     *
     * @return AuthenticationTransformConstant The authenticationTransformConstants
     */
@@ -45,7 +45,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the authenticationTransformConstants
-    * Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
+    * Authentication Transform Constants
     *
     * @param AuthenticationTransformConstant $val The value to assign to the authenticationTransformConstants
     *
@@ -59,7 +59,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the cipherTransformConstants
-    * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Cipher Transform Constants
     *
     * @return VpnEncryptionAlgorithmType The cipherTransformConstants
     */
@@ -78,7 +78,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the cipherTransformConstants
-    * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Cipher Transform Constants
     *
     * @param VpnEncryptionAlgorithmType $val The value to assign to the cipherTransformConstants
     *
@@ -92,7 +92,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the dhGroup
-    * Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
+    * Diffie Hellman Group
     *
     * @return DiffieHellmanGroup The dhGroup
     */
@@ -111,7 +111,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the dhGroup
-    * Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
+    * Diffie Hellman Group
     *
     * @param DiffieHellmanGroup $val The value to assign to the dhGroup
     *
@@ -125,7 +125,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the encryptionMethod
-    * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Encryption Method
     *
     * @return VpnEncryptionAlgorithmType The encryptionMethod
     */
@@ -144,7 +144,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the encryptionMethod
-    * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Encryption Method
     *
     * @param VpnEncryptionAlgorithmType $val The value to assign to the encryptionMethod
     *
@@ -158,7 +158,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the integrityCheckMethod
-    * Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+    * Integrity Check Method
     *
     * @return VpnIntegrityAlgorithmType The integrityCheckMethod
     */
@@ -177,7 +177,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the integrityCheckMethod
-    * Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
+    * Integrity Check Method
     *
     * @param VpnIntegrityAlgorithmType $val The value to assign to the integrityCheckMethod
     *
@@ -191,7 +191,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the pfsGroup
-    * Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
+    * Perfect Forward Secrecy Group
     *
     * @return PerfectForwardSecrecyGroup The pfsGroup
     */
@@ -210,7 +210,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the pfsGroup
-    * Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
+    * Perfect Forward Secrecy Group
     *
     * @param PerfectForwardSecrecyGroup $val The value to assign to the pfsGroup
     *

@@ -117,7 +117,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Gets the deviceType
-    * The AutoPilot device type that this profile is applicable to. Possible values are: windowsPc, surfaceHub2.
+    * The AutoPilot device type that this profile is applicable to.
     *
     * @return WindowsAutopilotDeviceType The deviceType
     */
@@ -136,7 +136,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     
     /**
     * Sets the deviceType
-    * The AutoPilot device type that this profile is applicable to. Possible values are: windowsPc, surfaceHub2.
+    * The AutoPilot device type that this profile is applicable to.
     *
     * @param WindowsAutopilotDeviceType $val The deviceType
     *

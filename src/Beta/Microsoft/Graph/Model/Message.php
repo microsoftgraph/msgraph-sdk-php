@@ -89,7 +89,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the bodyPreview
-    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+    * The first 255 characters of the message body. It is in text format.
     *
     * @return string The bodyPreview
     */
@@ -104,7 +104,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the bodyPreview
-    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+    * The first 255 characters of the message body. It is in text format.
     *
     * @param string $val The bodyPreview
     *
@@ -971,7 +971,6 @@ class Message extends OutlookItem
 
      /** 
      * Gets the mentions
-    * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
      *
      * @return array The mentions
      */
@@ -986,7 +985,6 @@ class Message extends OutlookItem
     
     /** 
     * Sets the mentions
-    * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
     *
     * @param Mention $val The mentions
     *

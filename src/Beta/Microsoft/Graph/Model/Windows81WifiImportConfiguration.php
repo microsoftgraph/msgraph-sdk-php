@@ -59,7 +59,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payloadFileName
-    * Payload file name (.xml).
+    * Payload file name (*.xml).
     *
     * @return string The payloadFileName
     */
@@ -74,7 +74,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadFileName
-    * Payload file name (.xml).
+    * Payload file name (*.xml).
     *
     * @param string $val The payloadFileName
     *

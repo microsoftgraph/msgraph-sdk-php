@@ -25,7 +25,6 @@ class AssignmentReviewSettings extends Entity
 {
     /**
     * Gets the durationInDays
-    * The number of days to allow input from reviewers.
     *
     * @return int The durationInDays
     */
@@ -40,7 +39,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the durationInDays
-    * The number of days to allow input from reviewers.
     *
     * @param int $val The value of the durationInDays
     *
@@ -53,7 +51,6 @@ class AssignmentReviewSettings extends Entity
     }
     /**
     * Gets the isEnabled
-    * If true, access reviews are required for assignments from this policy.
     *
     * @return bool The isEnabled
     */
@@ -68,7 +65,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the isEnabled
-    * If true, access reviews are required for assignments from this policy.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -81,7 +77,6 @@ class AssignmentReviewSettings extends Entity
     }
     /**
     * Gets the recurrenceType
-    * The interval for recurrence, such as monthly or quarterly.
     *
     * @return string The recurrenceType
     */
@@ -96,7 +91,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the recurrenceType
-    * The interval for recurrence, such as monthly or quarterly.
     *
     * @param string $val The value of the recurrenceType
     *
@@ -110,7 +104,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Gets the reviewers
-    * If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
     *
     * @return UserSet The reviewers
     */
@@ -129,7 +122,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the reviewers
-    * If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
     *
     * @param UserSet $val The value to assign to the reviewers
     *
@@ -142,7 +134,6 @@ class AssignmentReviewSettings extends Entity
     }
     /**
     * Gets the reviewerType
-    * Who should be asked to do the review, either Self or Reviewers.
     *
     * @return string The reviewerType
     */
@@ -157,7 +148,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the reviewerType
-    * Who should be asked to do the review, either Self or Reviewers.
     *
     * @param string $val The value of the reviewerType
     *
@@ -171,7 +161,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Gets the startDateTime
-    * When the first review should start.
     *
     * @return \DateTime The startDateTime
     */
@@ -190,7 +179,6 @@ class AssignmentReviewSettings extends Entity
 
     /**
     * Sets the startDateTime
-    * When the first review should start.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

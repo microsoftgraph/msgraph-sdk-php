@@ -25,7 +25,6 @@ class PrintMargin extends Entity
 {
     /**
     * Gets the bottom
-    * The margin in microns from the bottom edge.
     *
     * @return int The bottom
     */
@@ -40,7 +39,6 @@ class PrintMargin extends Entity
 
     /**
     * Sets the bottom
-    * The margin in microns from the bottom edge.
     *
     * @param int $val The value of the bottom
     *
@@ -53,7 +51,6 @@ class PrintMargin extends Entity
     }
     /**
     * Gets the left
-    * The margin in microns from the left edge.
     *
     * @return int The left
     */
@@ -68,7 +65,6 @@ class PrintMargin extends Entity
 
     /**
     * Sets the left
-    * The margin in microns from the left edge.
     *
     * @param int $val The value of the left
     *
@@ -81,7 +77,6 @@ class PrintMargin extends Entity
     }
     /**
     * Gets the right
-    * The margin in microns from the right edge.
     *
     * @return int The right
     */
@@ -96,7 +91,6 @@ class PrintMargin extends Entity
 
     /**
     * Sets the right
-    * The margin in microns from the right edge.
     *
     * @param int $val The value of the right
     *
@@ -109,7 +103,6 @@ class PrintMargin extends Entity
     }
     /**
     * Gets the top
-    * The margin in microns from the top edge.
     *
     * @return int The top
     */
@@ -124,7 +117,6 @@ class PrintMargin extends Entity
 
     /**
     * Sets the top
-    * The margin in microns from the top edge.
     *
     * @param int $val The value of the top
     *

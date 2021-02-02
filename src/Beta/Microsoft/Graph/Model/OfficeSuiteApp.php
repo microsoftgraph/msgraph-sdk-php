@@ -88,7 +88,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Gets the installProgressDisplayLevel
-    * To specify the level of display for the Installation Progress Setup UI on the Device. Possible values are: none, full.
+    * To specify the level of display for the Installation Progress Setup UI on the Device.
     *
     * @return OfficeSuiteInstallProgressDisplayLevel The installProgressDisplayLevel
     */
@@ -107,7 +107,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Sets the installProgressDisplayLevel
-    * To specify the level of display for the Installation Progress Setup UI on the Device. Possible values are: none, full.
+    * To specify the level of display for the Installation Progress Setup UI on the Device.
     *
     * @param OfficeSuiteInstallProgressDisplayLevel $val The installProgressDisplayLevel
     *
@@ -121,7 +121,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Gets the localesToInstall
-    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/library/cc179219(v=office.16).aspx
+    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
     *
     * @return string The localesToInstall
     */
@@ -136,7 +136,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Sets the localesToInstall
-    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/library/cc179219(v=office.16).aspx
+    * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
     *
     * @param string $val The localesToInstall
     *
@@ -183,7 +183,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Gets the officePlatformArchitecture
-    * The property to represent the Office365 app suite version. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The property to represent the Office365 app suite version.
     *
     * @return WindowsArchitecture The officePlatformArchitecture
     */
@@ -202,7 +202,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Sets the officePlatformArchitecture
-    * The property to represent the Office365 app suite version. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The property to represent the Office365 app suite version.
     *
     * @param WindowsArchitecture $val The officePlatformArchitecture
     *
@@ -304,7 +304,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Gets the updateChannel
-    * The property to represent the Office365 Update Channel. Possible values are: none, current, deferred, firstReleaseCurrent, firstReleaseDeferred, monthlyEnterprise.
+    * The property to represent the Office365 Update Channel.
     *
     * @return OfficeUpdateChannel The updateChannel
     */
@@ -323,7 +323,7 @@ class OfficeSuiteApp extends MobileApp
     
     /**
     * Sets the updateChannel
-    * The property to represent the Office365 Update Channel. Possible values are: none, current, deferred, firstReleaseCurrent, firstReleaseDeferred, monthlyEnterprise.
+    * The property to represent the Office365 Update Channel.
     *
     * @param OfficeUpdateChannel $val The updateChannel
     *

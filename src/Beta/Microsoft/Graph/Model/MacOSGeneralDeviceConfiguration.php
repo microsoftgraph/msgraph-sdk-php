@@ -1486,7 +1486,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updateDelayPolicy
-    * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
+    * Determines whether to delay OS and/or app updates for macOS.
     *
     * @return MacOSSoftwareUpdateDelayPolicy The updateDelayPolicy
     */
@@ -1505,7 +1505,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updateDelayPolicy
-    * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
+    * Determines whether to delay OS and/or app updates for macOS.
     *
     * @param MacOSSoftwareUpdateDelayPolicy $val The updateDelayPolicy
     *

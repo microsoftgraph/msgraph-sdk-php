@@ -117,7 +117,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Gets the state
-    * State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
+    * State of the software update
     *
     * @return MacOSSoftwareUpdateState The state
     */
@@ -136,7 +136,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Sets the state
-    * State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
+    * State of the software update
     *
     * @param MacOSSoftwareUpdateState $val The state
     *
@@ -150,7 +150,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Gets the updateCategory
-    * Software update category. Possible values are: critical, configurationDataFile, firmware, other.
+    * Software update category
     *
     * @return MacOSSoftwareUpdateCategory The updateCategory
     */
@@ -169,7 +169,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     
     /**
     * Sets the updateCategory
-    * Software update category. Possible values are: critical, configurationDataFile, firmware, other.
+    * Software update category
     *
     * @param MacOSSoftwareUpdateCategory $val The updateCategory
     *

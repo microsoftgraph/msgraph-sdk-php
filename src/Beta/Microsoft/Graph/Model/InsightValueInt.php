@@ -25,7 +25,6 @@ class InsightValueInt extends UserExperienceAnalyticsInsightValue
 {
     /**
     * Gets the value
-    * Not yet documented
     *
     * @return int The value
     */
@@ -40,7 +39,6 @@ class InsightValueInt extends UserExperienceAnalyticsInsightValue
 
     /**
     * Sets the value
-    * Not yet documented
     *
     * @param int $val The value of the value
     *

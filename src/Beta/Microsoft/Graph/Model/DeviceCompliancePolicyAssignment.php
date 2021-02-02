@@ -26,7 +26,7 @@ class DeviceCompliancePolicyAssignment extends Entity
 {
     /**
     * Gets the source
-    * The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets.
+    * The assignment source for the device compliance policy, direct or parcel/policySet.
     *
     * @return DeviceAndAppManagementAssignmentSource The source
     */
@@ -45,7 +45,7 @@ class DeviceCompliancePolicyAssignment extends Entity
     
     /**
     * Sets the source
-    * The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets.
+    * The assignment source for the device compliance policy, direct or parcel/policySet.
     *
     * @param DeviceAndAppManagementAssignmentSource $val The source
     *

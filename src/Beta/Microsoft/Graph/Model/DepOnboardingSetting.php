@@ -361,7 +361,7 @@ class DepOnboardingSetting extends Entity
     
     /**
     * Gets the tokenType
-    * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
+    * Gets or sets the Dep Token Type.
     *
     * @return DepTokenType The tokenType
     */
@@ -380,7 +380,7 @@ class DepOnboardingSetting extends Entity
     
     /**
     * Sets the tokenType
-    * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
+    * Gets or sets the Dep Token Type.
     *
     * @param DepTokenType $val The tokenType
     *

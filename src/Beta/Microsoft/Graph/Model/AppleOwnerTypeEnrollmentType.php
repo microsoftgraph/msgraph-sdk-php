@@ -26,7 +26,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Gets the enrollmentType
-    * The enrollment type. Possible values are: unknown, device, user.
+    * The enrollment type.
     *
     * @return AppleUserInitiatedEnrollmentType The enrollmentType
     */
@@ -45,7 +45,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Sets the enrollmentType
-    * The enrollment type. Possible values are: unknown, device, user.
+    * The enrollment type.
     *
     * @param AppleUserInitiatedEnrollmentType $val The value to assign to the enrollmentType
     *
@@ -59,7 +59,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Gets the ownerType
-    * The owner type. Possible values are: unknown, company, personal.
+    * The owner type.
     *
     * @return ManagedDeviceOwnerType The ownerType
     */
@@ -78,7 +78,7 @@ class AppleOwnerTypeEnrollmentType extends Entity
 
     /**
     * Sets the ownerType
-    * The owner type. Possible values are: unknown, company, personal.
+    * The owner type.
     *
     * @param ManagedDeviceOwnerType $val The value to assign to the ownerType
     *

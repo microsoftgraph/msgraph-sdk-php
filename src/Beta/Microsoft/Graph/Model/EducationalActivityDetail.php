@@ -25,7 +25,6 @@ class EducationalActivityDetail extends Entity
 {
     /**
     * Gets the abbreviation
-    * Shortened name of the degree or program (example: PhD, MBA)
     *
     * @return string The abbreviation
     */
@@ -40,7 +39,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the abbreviation
-    * Shortened name of the degree or program (example: PhD, MBA)
     *
     * @param string $val The value of the abbreviation
     *
@@ -53,7 +51,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the activities
-    * Extracurricular activities undertaken alongside the program.
     *
     * @return string The activities
     */
@@ -68,7 +65,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the activities
-    * Extracurricular activities undertaken alongside the program.
     *
     * @param string $val The value of the activities
     *
@@ -81,7 +77,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the awards
-    * Any awards or honors associated with the program.
     *
     * @return string The awards
     */
@@ -96,7 +91,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the awards
-    * Any awards or honors associated with the program.
     *
     * @param string $val The value of the awards
     *
@@ -109,7 +103,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the description
-    * Short description of the program provided by the user.
     *
     * @return string The description
     */
@@ -124,7 +117,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the description
-    * Short description of the program provided by the user.
     *
     * @param string $val The value of the description
     *
@@ -137,7 +129,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the displayName
-    * Long-form name of the program that the user has provided.
     *
     * @return string The displayName
     */
@@ -152,7 +143,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the displayName
-    * Long-form name of the program that the user has provided.
     *
     * @param string $val The value of the displayName
     *
@@ -165,7 +155,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the fieldsOfStudy
-    * Majors and minors associated with the program. (if applicable)
     *
     * @return string The fieldsOfStudy
     */
@@ -180,7 +169,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the fieldsOfStudy
-    * Majors and minors associated with the program. (if applicable)
     *
     * @param string $val The value of the fieldsOfStudy
     *
@@ -193,7 +181,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the grade
-    * The final grade, class, GPA or score.
     *
     * @return string The grade
     */
@@ -208,7 +195,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the grade
-    * The final grade, class, GPA or score.
     *
     * @param string $val The value of the grade
     *
@@ -221,7 +207,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the notes
-    * Additional notes the user has provided.
     *
     * @return string The notes
     */
@@ -236,7 +221,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the notes
-    * Additional notes the user has provided.
     *
     * @param string $val The value of the notes
     *
@@ -249,7 +233,6 @@ class EducationalActivityDetail extends Entity
     }
     /**
     * Gets the webUrl
-    * Link to the degree or program page.
     *
     * @return string The webUrl
     */
@@ -264,7 +247,6 @@ class EducationalActivityDetail extends Entity
 
     /**
     * Sets the webUrl
-    * Link to the degree or program page.
     *
     * @param string $val The value of the webUrl
     *

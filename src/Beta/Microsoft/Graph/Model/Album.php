@@ -25,7 +25,6 @@ class Album extends Entity
 {
     /**
     * Gets the coverImageItemId
-    * Unique identifier of the [driveItem][] that is the cover of the album.
     *
     * @return string The coverImageItemId
     */
@@ -40,7 +39,6 @@ class Album extends Entity
 
     /**
     * Sets the coverImageItemId
-    * Unique identifier of the [driveItem][] that is the cover of the album.
     *
     * @param string $val The value of the coverImageItemId
     *

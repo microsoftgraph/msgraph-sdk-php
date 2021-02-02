@@ -91,7 +91,7 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
 
     /**
     * Gets the productVersionOperator
-    * The operator to detect product version. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+    * The operator to detect product version.
     *
     * @return Win32LobAppDetectionOperator The productVersionOperator
     */
@@ -110,7 +110,7 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
 
     /**
     * Sets the productVersionOperator
-    * The operator to detect product version. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+    * The operator to detect product version.
     *
     * @param Win32LobAppDetectionOperator $val The value to assign to the productVersionOperator
     *

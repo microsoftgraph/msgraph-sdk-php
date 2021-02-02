@@ -26,7 +26,6 @@ class PrintTaskTrigger extends Entity
 {
     /**
     * Gets the event
-    * The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
     *
     * @return PrintEvent The event
     */
@@ -45,7 +44,6 @@ class PrintTaskTrigger extends Entity
     
     /**
     * Sets the event
-    * The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
     *
     * @param PrintEvent $val The event
     *
@@ -59,7 +57,6 @@ class PrintTaskTrigger extends Entity
     
     /**
     * Gets the definition
-    * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
     *
     * @return PrintTaskDefinition The definition
     */
@@ -78,7 +75,6 @@ class PrintTaskTrigger extends Entity
     
     /**
     * Sets the definition
-    * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
     *
     * @param PrintTaskDefinition $val The definition
     *

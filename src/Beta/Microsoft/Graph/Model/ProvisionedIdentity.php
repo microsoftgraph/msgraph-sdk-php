@@ -26,7 +26,6 @@ class ProvisionedIdentity extends Entity
 
     /**
     * Gets the details
-    * Details of the identity.
     *
     * @return DetailsInfo The details
     */
@@ -45,7 +44,6 @@ class ProvisionedIdentity extends Entity
 
     /**
     * Sets the details
-    * Details of the identity.
     *
     * @param DetailsInfo $val The value to assign to the details
     *
@@ -58,7 +56,6 @@ class ProvisionedIdentity extends Entity
     }
     /**
     * Gets the displayName
-    * Display name of the identity.
     *
     * @return string The displayName
     */
@@ -73,7 +70,6 @@ class ProvisionedIdentity extends Entity
 
     /**
     * Sets the displayName
-    * Display name of the identity.
     *
     * @param string $val The value of the displayName
     *
@@ -86,7 +82,6 @@ class ProvisionedIdentity extends Entity
     }
     /**
     * Gets the id
-    * Uniquely identifies the identity.
     *
     * @return string The id
     */
@@ -101,7 +96,6 @@ class ProvisionedIdentity extends Entity
 
     /**
     * Sets the id
-    * Uniquely identifies the identity.
     *
     * @param string $val The value of the id
     *
@@ -114,7 +108,6 @@ class ProvisionedIdentity extends Entity
     }
     /**
     * Gets the identityType
-    * Type of identity that has been provisioned, such as 'user' or 'group'.
     *
     * @return string The identityType
     */
@@ -129,7 +122,6 @@ class ProvisionedIdentity extends Entity
 
     /**
     * Sets the identityType
-    * Type of identity that has been provisioned, such as 'user' or 'group'.
     *
     * @param string $val The value of the identityType
     *

@@ -26,7 +26,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
 {
     /**
     * Gets the authenticationMethod
-    * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+    * Authentication method for Exchange ActiveSync.
     *
     * @return EasAuthenticationMethod The authenticationMethod
     */
@@ -45,7 +45,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
     
     /**
     * Sets the authenticationMethod
-    * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+    * Authentication method for Exchange ActiveSync.
     *
     * @param EasAuthenticationMethod $val The authenticationMethod
     *
@@ -59,7 +59,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
     
     /**
     * Gets the durationOfEmailToSync
-    * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of time email should be synced to.
     *
     * @return EmailSyncDuration The durationOfEmailToSync
     */
@@ -78,7 +78,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
     
     /**
     * Sets the durationOfEmailToSync
-    * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+    * Duration of time email should be synced to.
     *
     * @param EmailSyncDuration $val The durationOfEmailToSync
     *
@@ -92,7 +92,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
     
     /**
     * Gets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return UserEmailSource The emailAddressSource
     */
@@ -111,7 +111,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
     
     /**
     * Sets the emailAddressSource
-    * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+    * Email attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param UserEmailSource $val The emailAddressSource
     *
@@ -183,7 +183,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
     
     /**
     * Gets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @return AndroidUsernameSource The usernameSource
     */
@@ -202,7 +202,7 @@ class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration
     
     /**
     * Sets the usernameSource
-    * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+    * Username attribute that is picked from AAD and injected into this profile before installing on the device.
     *
     * @param AndroidUsernameSource $val The usernameSource
     *

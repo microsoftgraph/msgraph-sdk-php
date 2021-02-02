@@ -54,37 +54,8 @@ class AadUserConversationMember extends ConversationMember
     }
     
     /**
-    * Gets the tenantId
-    * TenantId which the Azure AD user belongs to.
-    *
-    * @return string The tenantId
-    */
-    public function getTenantId()
-    {
-        if (array_key_exists("tenantId", $this->_propDict)) {
-            return $this->_propDict["tenantId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the tenantId
-    * TenantId which the Azure AD user belongs to.
-    *
-    * @param string $val The tenantId
-    *
-    * @return AadUserConversationMember
-    */
-    public function setTenantId($val)
-    {
-        $this->_propDict["tenantId"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the userId
-    * The GUID of the user.
+    * The guid of the user.
     *
     * @return string The userId
     */
@@ -99,7 +70,7 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Sets the userId
-    * The GUID of the user.
+    * The guid of the user.
     *
     * @param string $val The userId
     *

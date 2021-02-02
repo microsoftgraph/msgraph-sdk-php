@@ -25,7 +25,6 @@ class Property extends Entity
 {
     /**
     * Gets the aliases
-    * A set of aliases or a friendly names for the property. Maximum 32 characters. Each string must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `
     *
     * @return string The aliases
     */
@@ -40,7 +39,6 @@ class Property extends Entity
 
     /**
     * Sets the aliases
-    * A set of aliases or a friendly names for the property. Maximum 32 characters. Each string must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `
     *
     * @param string $val The value of the aliases
     *
@@ -79,7 +77,6 @@ class Property extends Entity
     }
     /**
     * Gets the isQueryable
-    * Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
     *
     * @return bool The isQueryable
     */
@@ -94,7 +91,6 @@ class Property extends Entity
 
     /**
     * Sets the isQueryable
-    * Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
     *
     * @param bool $val The value of the isQueryable
     *
@@ -107,7 +103,6 @@ class Property extends Entity
     }
     /**
     * Gets the isRefinable
-    * Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
     *
     * @return bool The isRefinable
     */
@@ -122,7 +117,6 @@ class Property extends Entity
 
     /**
     * Sets the isRefinable
-    * Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
     *
     * @param bool $val The value of the isRefinable
     *
@@ -135,7 +129,6 @@ class Property extends Entity
     }
     /**
     * Gets the isRetrievable
-    * Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
     *
     * @return bool The isRetrievable
     */
@@ -150,7 +143,6 @@ class Property extends Entity
 
     /**
     * Sets the isRetrievable
-    * Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
     *
     * @param bool $val The value of the isRetrievable
     *
@@ -163,7 +155,6 @@ class Property extends Entity
     }
     /**
     * Gets the isSearchable
-    * Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
     *
     * @return bool The isSearchable
     */
@@ -178,7 +169,6 @@ class Property extends Entity
 
     /**
     * Sets the isSearchable
-    * Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
     *
     * @param bool $val The value of the isSearchable
     *
@@ -192,7 +182,6 @@ class Property extends Entity
 
     /**
     * Gets the labels
-    * Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Supported labels: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName and fileExtension. Optional.
     *
     * @return Label The labels
     */
@@ -211,7 +200,6 @@ class Property extends Entity
 
     /**
     * Sets the labels
-    * Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Supported labels: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName and fileExtension. Optional.
     *
     * @param Label $val The value to assign to the labels
     *
@@ -224,7 +212,6 @@ class Property extends Entity
     }
     /**
     * Gets the name
-    * The name of the property. Maximum 32 characters. Must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `
     *
     * @return string The name
     */
@@ -239,7 +226,6 @@ class Property extends Entity
 
     /**
     * Sets the name
-    * The name of the property. Maximum 32 characters. Must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `
     *
     * @param string $val The value of the name
     *
@@ -253,7 +239,6 @@ class Property extends Entity
 
     /**
     * Gets the type
-    * The data type of the property. Possible values are: String, Int64, Double, DateTime, Boolean, StringCollection, Int64Collection, DoubleCollection, DateTimeCollection. Required.
     *
     * @return PropertyType The type
     */
@@ -272,7 +257,6 @@ class Property extends Entity
 
     /**
     * Sets the type
-    * The data type of the property. Possible values are: String, Int64, Double, DateTime, Boolean, StringCollection, Int64Collection, DoubleCollection, DateTimeCollection. Required.
     *
     * @param PropertyType $val The value to assign to the type
     *

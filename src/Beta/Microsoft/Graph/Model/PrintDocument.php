@@ -57,7 +57,6 @@ class PrintDocument extends Entity
     
     /**
     * Gets the contentType
-    * The document's content (MIME) type. Read-only.
     *
     * @return string The contentType
     */
@@ -72,7 +71,6 @@ class PrintDocument extends Entity
     
     /**
     * Sets the contentType
-    * The document's content (MIME) type. Read-only.
     *
     * @param string $val The contentType
     *
@@ -86,7 +84,6 @@ class PrintDocument extends Entity
     
     /**
     * Gets the displayName
-    * The document's name. Read-only.
     *
     * @return string The displayName
     */
@@ -101,7 +98,6 @@ class PrintDocument extends Entity
     
     /**
     * Sets the displayName
-    * The document's name. Read-only.
     *
     * @param string $val The displayName
     *
@@ -115,7 +111,6 @@ class PrintDocument extends Entity
     
     /**
     * Gets the size
-    * The document's size in bytes. Read-only.
     *
     * @return int The size
     */
@@ -130,7 +125,6 @@ class PrintDocument extends Entity
     
     /**
     * Sets the size
-    * The document's size in bytes. Read-only.
     *
     * @param int $val The size
     *

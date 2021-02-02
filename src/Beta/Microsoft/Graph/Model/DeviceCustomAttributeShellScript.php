@@ -88,7 +88,7 @@ class DeviceCustomAttributeShellScript extends Entity
     
     /**
     * Gets the customAttributeType
-    * The expected type of the custom attribute's value. Possible values are: integer, string, dateTime.
+    * The expected type of the custom attribute's value.
     *
     * @return DeviceCustomAttributeValueType The customAttributeType
     */
@@ -107,7 +107,7 @@ class DeviceCustomAttributeShellScript extends Entity
     
     /**
     * Sets the customAttributeType
-    * The expected type of the custom attribute's value. Possible values are: integer, string, dateTime.
+    * The expected type of the custom attribute's value.
     *
     * @param DeviceCustomAttributeValueType $val The customAttributeType
     *
@@ -270,7 +270,7 @@ class DeviceCustomAttributeShellScript extends Entity
     
     /**
     * Gets the runAsAccount
-    * Indicates the type of execution context. Possible values are: system, user.
+    * Indicates the type of execution context.
     *
     * @return RunAsAccountType The runAsAccount
     */
@@ -289,7 +289,7 @@ class DeviceCustomAttributeShellScript extends Entity
     
     /**
     * Sets the runAsAccount
-    * Indicates the type of execution context. Possible values are: system, user.
+    * Indicates the type of execution context.
     *
     * @param RunAsAccountType $val The runAsAccount
     *

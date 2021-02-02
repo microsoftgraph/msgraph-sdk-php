@@ -25,7 +25,6 @@ class PayloadTypes extends Entity
 {
     /**
     * Gets the rawContent
-    * The notification content of a raw user notification that will be delivered to and consumed by the app client on all supported platforms (Windows, iOS, Android or WebPush) receiving this notification. At least one of Payload.RawContent or Payload.VisualContent needs to be valid for a POST Notification request.
     *
     * @return string The rawContent
     */
@@ -40,7 +39,6 @@ class PayloadTypes extends Entity
 
     /**
     * Sets the rawContent
-    * The notification content of a raw user notification that will be delivered to and consumed by the app client on all supported platforms (Windows, iOS, Android or WebPush) receiving this notification. At least one of Payload.RawContent or Payload.VisualContent needs to be valid for a POST Notification request.
     *
     * @param string $val The value of the rawContent
     *
@@ -54,7 +52,6 @@ class PayloadTypes extends Entity
 
     /**
     * Gets the visualContent
-    * The visual content of a visual user notification, which will be consumed by the notification platform on each supported platform (Windows, iOS and Android only) and rendered for the user. At least one of Payload.RawContent or Payload.VisualContent needs to be valid for a POST Notification request.
     *
     * @return VisualProperties The visualContent
     */
@@ -73,7 +70,6 @@ class PayloadTypes extends Entity
 
     /**
     * Sets the visualContent
-    * The visual content of a visual user notification, which will be consumed by the notification platform on each supported platform (Windows, iOS and Android only) and rendered for the user. At least one of Payload.RawContent or Payload.VisualContent needs to be valid for a POST Notification request.
     *
     * @param VisualProperties $val The value to assign to the visualContent
     *

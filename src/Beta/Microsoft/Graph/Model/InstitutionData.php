@@ -25,7 +25,6 @@ class InstitutionData extends Entity
 {
     /**
     * Gets the description
-    * Short description of the institution the user studied at.
     *
     * @return string The description
     */
@@ -40,7 +39,6 @@ class InstitutionData extends Entity
 
     /**
     * Sets the description
-    * Short description of the institution the user studied at.
     *
     * @param string $val The value of the description
     *
@@ -53,7 +51,6 @@ class InstitutionData extends Entity
     }
     /**
     * Gets the displayName
-    * Name of the institution the user studied at.
     *
     * @return string The displayName
     */
@@ -68,7 +65,6 @@ class InstitutionData extends Entity
 
     /**
     * Sets the displayName
-    * Name of the institution the user studied at.
     *
     * @param string $val The value of the displayName
     *
@@ -82,7 +78,6 @@ class InstitutionData extends Entity
 
     /**
     * Gets the location
-    * Address or location of the institute.
     *
     * @return PhysicalAddress The location
     */
@@ -101,7 +96,6 @@ class InstitutionData extends Entity
 
     /**
     * Sets the location
-    * Address or location of the institute.
     *
     * @param PhysicalAddress $val The value to assign to the location
     *
@@ -114,7 +108,6 @@ class InstitutionData extends Entity
     }
     /**
     * Gets the webUrl
-    * Link to the institution or department homepage.
     *
     * @return string The webUrl
     */
@@ -129,7 +122,6 @@ class InstitutionData extends Entity
 
     /**
     * Sets the webUrl
-    * Link to the institution or department homepage.
     *
     * @param string $val The value of the webUrl
     *

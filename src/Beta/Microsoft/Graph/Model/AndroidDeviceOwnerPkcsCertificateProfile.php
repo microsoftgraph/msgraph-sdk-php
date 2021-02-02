@@ -26,7 +26,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
 {
     /**
     * Gets the certificateStore
-    * Target store certificate. Possible values are: user, machine.
+    * Target store certificate
     *
     * @return CertificateStore The certificateStore
     */
@@ -45,7 +45,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the certificateStore
-    * Target store certificate. Possible values are: user, machine.
+    * Target store certificate
     *
     * @param CertificateStore $val The certificateStore
     *
@@ -146,7 +146,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Gets the certificationAuthorityType
-    * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
+    * Certification authority type
     *
     * @return DeviceManagementCertificationAuthority The certificationAuthorityType
     */
@@ -165,7 +165,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     
     /**
     * Sets the certificationAuthorityType
-    * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
+    * Certification authority type
     *
     * @param DeviceManagementCertificationAuthority $val The certificationAuthorityType
     *

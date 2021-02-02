@@ -26,7 +26,6 @@ class ItemPublication extends ItemFacet
 {
     /**
     * Gets the description
-    * Description of the publication.
     *
     * @return string The description
     */
@@ -41,7 +40,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Sets the description
-    * Description of the publication.
     *
     * @param string $val The description
     *
@@ -55,7 +53,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Gets the displayName
-    * Title of the publication.
     *
     * @return string The displayName
     */
@@ -70,7 +67,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Sets the displayName
-    * Title of the publication.
     *
     * @param string $val The displayName
     *
@@ -84,7 +80,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Gets the publishedDate
-    * The date that the publication was published.
     *
     * @return \DateTime The publishedDate
     */
@@ -103,7 +98,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Sets the publishedDate
-    * The date that the publication was published.
     *
     * @param \DateTime $val The publishedDate
     *
@@ -117,7 +111,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Gets the publisher
-    * Publication or publisher for the publication.
     *
     * @return string The publisher
     */
@@ -132,7 +125,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Sets the publisher
-    * Publication or publisher for the publication.
     *
     * @param string $val The publisher
     *
@@ -146,7 +138,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Gets the thumbnailUrl
-    * URL referencing a thumbnail of the publication.
     *
     * @return string The thumbnailUrl
     */
@@ -161,7 +152,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Sets the thumbnailUrl
-    * URL referencing a thumbnail of the publication.
     *
     * @param string $val The thumbnailUrl
     *
@@ -175,7 +165,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Gets the webUrl
-    * URL referencing the publication.
     *
     * @return string The webUrl
     */
@@ -190,7 +179,6 @@ class ItemPublication extends ItemFacet
     
     /**
     * Sets the webUrl
-    * URL referencing the publication.
     *
     * @param string $val The webUrl
     *

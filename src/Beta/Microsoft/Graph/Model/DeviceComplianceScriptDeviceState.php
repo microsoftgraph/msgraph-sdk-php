@@ -26,7 +26,7 @@ class DeviceComplianceScriptDeviceState extends Entity
 {
     /**
     * Gets the detectionState
-    * Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+    * Detection state from the lastest device compliance script execution
     *
     * @return RunState The detectionState
     */
@@ -45,7 +45,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     
     /**
     * Sets the detectionState
-    * Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+    * Detection state from the lastest device compliance script execution
     *
     * @param RunState $val The detectionState
     *

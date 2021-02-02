@@ -26,7 +26,6 @@ class SitePage extends BaseItem
 {
     /**
     * Gets the contentType
-    * The content type of the page.
     *
     * @return ContentTypeInfo The contentType
     */
@@ -45,7 +44,6 @@ class SitePage extends BaseItem
     
     /**
     * Sets the contentType
-    * The content type of the page.
     *
     * @param ContentTypeInfo $val The contentType
     *

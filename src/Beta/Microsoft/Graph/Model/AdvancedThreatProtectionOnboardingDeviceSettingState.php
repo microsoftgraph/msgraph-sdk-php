@@ -146,7 +146,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the platformType
-    * Device platform type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+    * Device platform type
     *
     * @return DeviceType The platformType
     */
@@ -165,7 +165,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the platformType
-    * Device platform type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+    * Device platform type
     *
     * @param DeviceType $val The platformType
     *
@@ -237,7 +237,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Gets the state
-    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    * The compliance state of the setting
     *
     * @return ComplianceStatus The state
     */
@@ -256,7 +256,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     
     /**
     * Sets the state
-    * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+    * The compliance state of the setting
     *
     * @param ComplianceStatus $val The state
     *

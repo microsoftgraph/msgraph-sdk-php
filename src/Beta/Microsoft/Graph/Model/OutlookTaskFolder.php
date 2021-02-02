@@ -26,7 +26,6 @@ class OutlookTaskFolder extends Entity
 {
     /**
     * Gets the changeKey
-    * The version of the task folder.
     *
     * @return string The changeKey
     */
@@ -41,7 +40,6 @@ class OutlookTaskFolder extends Entity
     
     /**
     * Sets the changeKey
-    * The version of the task folder.
     *
     * @param string $val The changeKey
     *
@@ -55,7 +53,6 @@ class OutlookTaskFolder extends Entity
     
     /**
     * Gets the isDefaultFolder
-    * True if the folder is the default task folder.
     *
     * @return bool The isDefaultFolder
     */
@@ -70,7 +67,6 @@ class OutlookTaskFolder extends Entity
     
     /**
     * Sets the isDefaultFolder
-    * True if the folder is the default task folder.
     *
     * @param bool $val The isDefaultFolder
     *
@@ -84,7 +80,6 @@ class OutlookTaskFolder extends Entity
     
     /**
     * Gets the name
-    * The name of the task folder.
     *
     * @return string The name
     */
@@ -99,7 +94,6 @@ class OutlookTaskFolder extends Entity
     
     /**
     * Sets the name
-    * The name of the task folder.
     *
     * @param string $val The name
     *
@@ -113,7 +107,6 @@ class OutlookTaskFolder extends Entity
     
     /**
     * Gets the parentGroupKey
-    * The unique GUID identifier for the task folder's parent group.
     *
     * @return string The parentGroupKey
     */
@@ -128,7 +121,6 @@ class OutlookTaskFolder extends Entity
     
     /**
     * Sets the parentGroupKey
-    * The unique GUID identifier for the task folder's parent group.
     *
     * @param string $val The parentGroupKey
     *
@@ -143,7 +135,6 @@ class OutlookTaskFolder extends Entity
 
      /** 
      * Gets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
      *
      * @return array The multiValueExtendedProperties
      */
@@ -158,7 +149,6 @@ class OutlookTaskFolder extends Entity
     
     /** 
     * Sets the multiValueExtendedProperties
-    * The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
     *
@@ -173,7 +163,6 @@ class OutlookTaskFolder extends Entity
 
      /** 
      * Gets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
      *
      * @return array The singleValueExtendedProperties
      */
@@ -188,7 +177,6 @@ class OutlookTaskFolder extends Entity
     
     /** 
     * Sets the singleValueExtendedProperties
-    * The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
     *
@@ -203,7 +191,6 @@ class OutlookTaskFolder extends Entity
 
      /** 
      * Gets the tasks
-    * The tasks in this task folder. Read-only. Nullable.
      *
      * @return array The tasks
      */
@@ -218,7 +205,6 @@ class OutlookTaskFolder extends Entity
     
     /** 
     * Sets the tasks
-    * The tasks in this task folder. Read-only. Nullable.
     *
     * @param OutlookTask $val The tasks
     *

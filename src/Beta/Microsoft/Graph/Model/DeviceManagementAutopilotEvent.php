@@ -158,7 +158,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Gets the deploymentState
-    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout.
+    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout.
     *
     * @return WindowsAutopilotDeploymentState The deploymentState
     */
@@ -177,7 +177,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Sets the deploymentState
-    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout.
+    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout.
     *
     * @param WindowsAutopilotDeploymentState $val The deploymentState
     *
@@ -443,7 +443,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Gets the enrollmentState
-    * Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+    * Enrollment state like Enrolled, Failed.
     *
     * @return EnrollmentState The enrollmentState
     */
@@ -462,7 +462,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Sets the enrollmentState
-    * Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+    * Enrollment state like Enrolled, Failed.
     *
     * @param EnrollmentState $val The enrollmentState
     *
@@ -476,7 +476,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Gets the enrollmentType
-    * Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
+    * Enrollment type.
     *
     * @return WindowsAutopilotEnrollmentType The enrollmentType
     */
@@ -495,7 +495,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Sets the enrollmentType
-    * Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
+    * Enrollment type.
     *
     * @param WindowsAutopilotEnrollmentType $val The enrollmentType
     *

@@ -110,7 +110,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Gets the installState
-    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+    * The install state of the app.
     *
     * @return ResultantAppState The installState
     */
@@ -129,7 +129,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Sets the installState
-    * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+    * The install state of the app.
     *
     * @param ResultantAppState $val The value to assign to the installState
     *
@@ -143,7 +143,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Gets the mobileAppIntent
-    * Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
+    * Mobile App Intent.
     *
     * @return MobileAppIntent The mobileAppIntent
     */
@@ -162,7 +162,7 @@ class MobileAppIntentAndStateDetail extends Entity
 
     /**
     * Sets the mobileAppIntent
-    * Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
+    * Mobile App Intent.
     *
     * @param MobileAppIntent $val The value to assign to the mobileAppIntent
     *

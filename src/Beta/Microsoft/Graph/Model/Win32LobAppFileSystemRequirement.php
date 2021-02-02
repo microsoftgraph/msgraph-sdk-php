@@ -63,7 +63,7 @@ class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement
 
     /**
     * Gets the detectionType
-    * The file system detection type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
+    * The file system detection type
     *
     * @return Win32LobAppFileSystemDetectionType The detectionType
     */
@@ -82,7 +82,7 @@ class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement
 
     /**
     * Sets the detectionType
-    * The file system detection type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
+    * The file system detection type
     *
     * @param Win32LobAppFileSystemDetectionType $val The value to assign to the detectionType
     *

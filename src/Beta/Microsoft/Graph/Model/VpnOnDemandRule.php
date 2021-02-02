@@ -26,7 +26,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Gets the action
-    * Action. Possible values are: connect, evaluateConnection, ignore, disconnect.
+    * Action.
     *
     * @return VpnOnDemandRuleConnectionAction The action
     */
@@ -45,7 +45,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the action
-    * Action. Possible values are: connect, evaluateConnection, ignore, disconnect.
+    * Action.
     *
     * @param VpnOnDemandRuleConnectionAction $val The value to assign to the action
     *
@@ -87,7 +87,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Gets the domainAction
-    * Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect.
+    * Domain Action (Only applicable when Action is evaluate connection).
     *
     * @return VpnOnDemandRuleConnectionDomainAction The domainAction
     */
@@ -106,7 +106,7 @@ class VpnOnDemandRule extends Entity
 
     /**
     * Sets the domainAction
-    * Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect.
+    * Domain Action (Only applicable when Action is evaluate connection).
     *
     * @param VpnOnDemandRuleConnectionDomainAction $val The value to assign to the domainAction
     *

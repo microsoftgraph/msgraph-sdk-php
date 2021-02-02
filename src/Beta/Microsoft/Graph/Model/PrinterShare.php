@@ -26,7 +26,6 @@ class PrinterShare extends PrinterBase
 {
     /**
     * Gets the allowAllUsers
-    * If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
     *
     * @return bool The allowAllUsers
     */
@@ -41,7 +40,6 @@ class PrinterShare extends PrinterBase
     
     /**
     * Sets the allowAllUsers
-    * If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
     *
     * @param bool $val The allowAllUsers
     *
@@ -55,7 +53,6 @@ class PrinterShare extends PrinterBase
     
     /**
     * Gets the createdDateTime
-    * The DateTimeOffset when the printer share was created. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -74,7 +71,6 @@ class PrinterShare extends PrinterBase
     
     /**
     * Sets the createdDateTime
-    * The DateTimeOffset when the printer share was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -89,7 +85,6 @@ class PrinterShare extends PrinterBase
 
      /** 
      * Gets the allowedGroups
-    * The groups whose users have access to print using the printer.
      *
      * @return array The allowedGroups
      */
@@ -104,7 +99,6 @@ class PrinterShare extends PrinterBase
     
     /** 
     * Sets the allowedGroups
-    * The groups whose users have access to print using the printer.
     *
     * @param Group $val The allowedGroups
     *
@@ -119,7 +113,6 @@ class PrinterShare extends PrinterBase
 
      /** 
      * Gets the allowedUsers
-    * The users who have access to print using the printer.
      *
      * @return array The allowedUsers
      */
@@ -134,7 +127,6 @@ class PrinterShare extends PrinterBase
     
     /** 
     * Sets the allowedUsers
-    * The users who have access to print using the printer.
     *
     * @param User $val The allowedUsers
     *
@@ -148,7 +140,6 @@ class PrinterShare extends PrinterBase
     
     /**
     * Gets the printer
-    * The printer that this printer share is related to.
     *
     * @return Printer The printer
     */
@@ -167,7 +158,6 @@ class PrinterShare extends PrinterBase
     
     /**
     * Sets the printer
-    * The printer that this printer share is related to.
     *
     * @param Printer $val The printer
     *

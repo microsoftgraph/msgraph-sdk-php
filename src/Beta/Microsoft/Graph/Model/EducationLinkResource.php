@@ -34,7 +34,6 @@ class EducationLinkResource extends EducationResource
 
     /**
     * Gets the link
-    * URL to the resource.
     *
     * @return string The link
     */
@@ -49,7 +48,6 @@ class EducationLinkResource extends EducationResource
 
     /**
     * Sets the link
-    * URL to the resource.
     *
     * @param string $val The value of the link
     *

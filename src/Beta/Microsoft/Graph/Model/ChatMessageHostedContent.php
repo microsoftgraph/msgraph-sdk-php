@@ -26,7 +26,6 @@ class ChatMessageHostedContent extends Entity
 {
     /**
     * Gets the contentBytes
-    * Write-only. When posting new chat message hosted content, represents the bytes of the payload. These are represented as a base64Encoded string.
     *
     * @return \GuzzleHttp\Psr7\Stream The contentBytes
     */
@@ -45,7 +44,6 @@ class ChatMessageHostedContent extends Entity
     
     /**
     * Sets the contentBytes
-    * Write-only. When posting new chat message hosted content, represents the bytes of the payload. These are represented as a base64Encoded string.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The contentBytes
     *
@@ -59,7 +57,6 @@ class ChatMessageHostedContent extends Entity
     
     /**
     * Gets the contentType
-    * Write-only. When posting new chat message hosted content, represents the type of content, such as image/png.
     *
     * @return string The contentType
     */
@@ -74,7 +71,6 @@ class ChatMessageHostedContent extends Entity
     
     /**
     * Sets the contentType
-    * Write-only. When posting new chat message hosted content, represents the type of content, such as image/png.
     *
     * @param string $val The contentType
     *

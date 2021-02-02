@@ -214,7 +214,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the appActionIfDeviceComplianceRequired
-    * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true.
     *
     * @return ManagedAppRemediationAction The appActionIfDeviceComplianceRequired
     */
@@ -233,7 +233,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the appActionIfDeviceComplianceRequired
-    * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true.
     *
     * @param ManagedAppRemediationAction $val The appActionIfDeviceComplianceRequired
     *
@@ -247,7 +247,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the appActionIfMaximumPinRetriesExceeded
-    * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts.
     *
     * @return ManagedAppRemediationAction The appActionIfMaximumPinRetriesExceeded
     */
@@ -266,7 +266,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the appActionIfMaximumPinRetriesExceeded
-    * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts.
     *
     * @param ManagedAppRemediationAction $val The appActionIfMaximumPinRetriesExceeded
     *
@@ -280,7 +280,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the appActionIfUnableToAuthenticateUser
-    * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn.
+    * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD.
     *
     * @return ManagedAppRemediationAction The appActionIfUnableToAuthenticateUser
     */
@@ -299,7 +299,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the appActionIfUnableToAuthenticateUser
-    * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn.
+    * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD.
     *
     * @param ManagedAppRemediationAction $val The appActionIfUnableToAuthenticateUser
     *
@@ -429,7 +429,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the dialerRestrictionLevel
-    * The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked.
+    * The classes of dialer apps that are allowed to click-to-open a phone number.
     *
     * @return ManagedAppPhoneNumberRedirectLevel The dialerRestrictionLevel
     */
@@ -448,7 +448,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the dialerRestrictionLevel
-    * The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked.
+    * The classes of dialer apps that are allowed to click-to-open a phone number.
     *
     * @param ManagedAppPhoneNumberRedirectLevel $val The dialerRestrictionLevel
     *
@@ -582,7 +582,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the maximumAllowedDeviceThreatLevel
-    * Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high.
+    * Maximum allowed device threat level, as reported by the MTD app
     *
     * @return ManagedAppDeviceThreatLevel The maximumAllowedDeviceThreatLevel
     */
@@ -601,7 +601,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the maximumAllowedDeviceThreatLevel
-    * Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high.
+    * Maximum allowed device threat level, as reported by the MTD app
     *
     * @param ManagedAppDeviceThreatLevel $val The maximumAllowedDeviceThreatLevel
     *
@@ -847,7 +847,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the mobileThreatDefenseRemediationAction
-    * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
+    * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property
     *
     * @return ManagedAppRemediationAction The mobileThreatDefenseRemediationAction
     */
@@ -866,7 +866,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the mobileThreatDefenseRemediationAction
-    * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
+    * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property
     *
     * @param ManagedAppRemediationAction $val The mobileThreatDefenseRemediationAction
     *
@@ -880,7 +880,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Gets the notificationRestriction
-    * Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block.
+    * Specify app notification restriction
     *
     * @return ManagedAppNotificationRestriction The notificationRestriction
     */
@@ -899,7 +899,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     
     /**
     * Sets the notificationRestriction
-    * Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block.
+    * Specify app notification restriction
     *
     * @param ManagedAppNotificationRestriction $val The notificationRestriction
     *

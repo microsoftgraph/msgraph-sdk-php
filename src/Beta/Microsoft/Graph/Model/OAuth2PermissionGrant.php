@@ -84,7 +84,6 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Gets the expiryTime
-    * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @return \DateTime The expiryTime
     */
@@ -103,7 +102,6 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Sets the expiryTime
-    * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @param \DateTime $val The expiryTime
     *
@@ -204,7 +202,6 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Gets the startTime
-    * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @return \DateTime The startTime
     */
@@ -223,7 +220,6 @@ class OAuth2PermissionGrant extends Entity
     
     /**
     * Sets the startTime
-    * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
     *
     * @param \DateTime $val The startTime
     *

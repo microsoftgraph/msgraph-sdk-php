@@ -25,7 +25,6 @@ class PersonDataSource extends Entity
 {
     /**
     * Gets the type
-    * The type of data source.
     *
     * @return string The type
     */
@@ -40,7 +39,6 @@ class PersonDataSource extends Entity
 
     /**
     * Sets the type
-    * The type of data source.
     *
     * @param string $val The value of the type
     *

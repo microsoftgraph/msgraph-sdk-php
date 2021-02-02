@@ -26,7 +26,7 @@ class ComanagementEligibleDevice extends Entity
 {
     /**
     * Gets the clientRegistrationStatus
-    * ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+    * ClientRegistrationStatus
     *
     * @return DeviceRegistrationState The clientRegistrationStatus
     */
@@ -45,7 +45,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Sets the clientRegistrationStatus
-    * ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+    * ClientRegistrationStatus
     *
     * @param DeviceRegistrationState $val The clientRegistrationStatus
     *
@@ -88,7 +88,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Gets the deviceType
-    * DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, blackberry, palm, unknown, cloudPC.
+    * DeviceType
     *
     * @return DeviceType The deviceType
     */
@@ -107,7 +107,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Sets the deviceType
-    * DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, blackberry, palm, unknown, cloudPC.
+    * DeviceType
     *
     * @param DeviceType $val The deviceType
     *
@@ -150,7 +150,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Gets the managementAgents
-    * ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm.
+    * ManagementAgents
     *
     * @return ManagementAgentType The managementAgents
     */
@@ -169,7 +169,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Sets the managementAgents
-    * ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm.
+    * ManagementAgents
     *
     * @param ManagementAgentType $val The managementAgents
     *
@@ -183,7 +183,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Gets the managementState
-    * ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+    * ManagementState
     *
     * @return ManagementState The managementState
     */
@@ -202,7 +202,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Sets the managementState
-    * ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+    * ManagementState
     *
     * @param ManagementState $val The managementState
     *
@@ -361,7 +361,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Gets the ownerType
-    * OwnerType. Possible values are: unknown, company, personal.
+    * OwnerType
     *
     * @return OwnerType The ownerType
     */
@@ -380,7 +380,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Sets the ownerType
-    * OwnerType. Possible values are: unknown, company, personal.
+    * OwnerType
     *
     * @param OwnerType $val The ownerType
     *
@@ -452,7 +452,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Gets the status
-    * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
+    * ComanagementEligibleStatus
     *
     * @return ComanagementEligibleType The status
     */
@@ -471,7 +471,7 @@ class ComanagementEligibleDevice extends Entity
     
     /**
     * Sets the status
-    * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
+    * ComanagementEligibleStatus
     *
     * @param ComanagementEligibleType $val The status
     *

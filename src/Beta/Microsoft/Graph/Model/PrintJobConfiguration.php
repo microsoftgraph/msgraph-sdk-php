@@ -25,7 +25,6 @@ class PrintJobConfiguration extends Entity
 {
     /**
     * Gets the collate
-    * Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
     *
     * @return bool The collate
     */
@@ -40,7 +39,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the collate
-    * Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
     *
     * @param bool $val The value of the collate
     *
@@ -54,7 +52,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the colorMode
-    * The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
     *
     * @return PrintColorMode The colorMode
     */
@@ -73,7 +70,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the colorMode
-    * The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
     *
     * @param PrintColorMode $val The value to assign to the colorMode
     *
@@ -86,7 +82,6 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the copies
-    * The number of copies that should be printed. Read-only.
     *
     * @return int The copies
     */
@@ -101,7 +96,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the copies
-    * The number of copies that should be printed. Read-only.
     *
     * @param int $val The value of the copies
     *
@@ -114,7 +108,6 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the dpi
-    * The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
     *
     * @return int The dpi
     */
@@ -129,7 +122,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the dpi
-    * The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
     *
     * @param int $val The value of the dpi
     *
@@ -143,7 +135,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the duplexMode
-    * The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
     *
     * @return PrintDuplexMode The duplexMode
     */
@@ -162,7 +153,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the duplexMode
-    * The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
     *
     * @param PrintDuplexMode $val The value to assign to the duplexMode
     *
@@ -176,7 +166,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the feedOrientation
-    * The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
     *
     * @return PrinterFeedOrientation The feedOrientation
     */
@@ -195,7 +184,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the feedOrientation
-    * The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
     *
     * @param PrinterFeedOrientation $val The value to assign to the feedOrientation
     *
@@ -209,7 +197,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the finishings
-    * Finishing processes to use when printing.
     *
     * @return PrintFinishing The finishings
     */
@@ -228,7 +215,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the finishings
-    * Finishing processes to use when printing.
     *
     * @param PrintFinishing $val The value to assign to the finishings
     *
@@ -267,7 +253,6 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the inputBin
-    * The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
     *
     * @return string The inputBin
     */
@@ -282,7 +267,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the inputBin
-    * The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
     *
     * @param string $val The value of the inputBin
     *
@@ -296,7 +280,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the margin
-    * The margin settings to use when printing.
     *
     * @return PrintMargin The margin
     */
@@ -315,7 +298,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the margin
-    * The margin settings to use when printing.
     *
     * @param PrintMargin $val The value to assign to the margin
     *
@@ -328,7 +310,6 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the mediaSize
-    * The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
     *
     * @return string The mediaSize
     */
@@ -343,7 +324,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the mediaSize
-    * The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
     *
     * @param string $val The value of the mediaSize
     *
@@ -356,7 +336,6 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
     *
     * @return string The mediaType
     */
@@ -371,7 +350,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
     *
     * @param string $val The value of the mediaType
     *
@@ -385,7 +363,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the multipageLayout
-    * The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
     *
     * @return PrintMultipageLayout The multipageLayout
     */
@@ -404,7 +381,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the multipageLayout
-    * The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
     *
     * @param PrintMultipageLayout $val The value to assign to the multipageLayout
     *
@@ -418,7 +394,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the orientation
-    * The orientation setting the printer should use when printing the job. Valid values are described in the following table.
     *
     * @return PrintOrientation The orientation
     */
@@ -437,7 +412,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the orientation
-    * The orientation setting the printer should use when printing the job. Valid values are described in the following table.
     *
     * @param PrintOrientation $val The value to assign to the orientation
     *
@@ -450,7 +424,6 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the outputBin
-    * The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
     *
     * @return string The outputBin
     */
@@ -465,7 +438,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the outputBin
-    * The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
     *
     * @param string $val The value of the outputBin
     *
@@ -479,7 +451,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the pageRanges
-    * The page ranges to print. Read-only.
     *
     * @return IntegerRange The pageRanges
     */
@@ -498,7 +469,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the pageRanges
-    * The page ranges to print. Read-only.
     *
     * @param IntegerRange $val The value to assign to the pageRanges
     *
@@ -511,7 +481,6 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the pagesPerSheet
-    * The number of document pages to print on each sheet.
     *
     * @return int The pagesPerSheet
     */
@@ -526,7 +495,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the pagesPerSheet
-    * The number of document pages to print on each sheet.
     *
     * @param int $val The value of the pagesPerSheet
     *
@@ -540,7 +508,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the quality
-    * The print quality to use when printing the job. Valid values are described in the table below. Read-only.
     *
     * @return PrintQuality The quality
     */
@@ -559,7 +526,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the quality
-    * The print quality to use when printing the job. Valid values are described in the table below. Read-only.
     *
     * @param PrintQuality $val The value to assign to the quality
     *
@@ -573,7 +539,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Gets the scaling
-    * Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
     *
     * @return PrintScaling The scaling
     */
@@ -592,7 +557,6 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the scaling
-    * Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
     *
     * @param PrintScaling $val The value to assign to the scaling
     *

@@ -26,7 +26,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdDateTime
-    * Date and time of term creation. Read-only
     *
     * @return \DateTime The createdDateTime
     */
@@ -45,7 +44,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
-    * Date and time of term creation. Read-only
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -60,7 +58,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the descriptions
-    * Description about term that is dependent on the languageTag
      *
      * @return array The descriptions
      */
@@ -75,7 +72,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the descriptions
-    * Description about term that is dependent on the languageTag
     *
     * @param LocalizedDescription $val The descriptions
     *
@@ -117,7 +113,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Last date and time of term modification. Read-only
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -136,7 +131,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Last date and time of term modification. Read-only
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -151,7 +145,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the termProperties
-    * Collection of properties on the term
      *
      * @return array The termProperties
      */
@@ -166,7 +159,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the termProperties
-    * Collection of properties on the term
     *
     * @param Beta\Microsoft\Graph\Model\KeyValue $val The termProperties
     *
@@ -181,7 +173,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the children
-    * Children of current term
      *
      * @return array The children
      */
@@ -196,7 +187,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the children
-    * Children of current term
     *
     * @param Term $val The children
     *
@@ -211,7 +201,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the relations
-    * To indicate which terms are related to the current term as either pinned or reused
      *
      * @return array The relations
      */
@@ -226,7 +215,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the relations
-    * To indicate which terms are related to the current term as either pinned or reused
     *
     * @param Relation $val The relations
     *
@@ -240,7 +228,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the set
-    * The [set] in which the term is created
     *
     * @return Set The set
     */
@@ -259,7 +246,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the set
-    * The [set] in which the term is created
     *
     * @param Set $val The set
     *

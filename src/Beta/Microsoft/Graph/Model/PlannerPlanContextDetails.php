@@ -25,7 +25,6 @@ class PlannerPlanContextDetails extends Entity
 {
     /**
     * Gets the url
-    * URL of the user experience represented by the associated plannerPlanContext.
     *
     * @return string The url
     */
@@ -40,7 +39,6 @@ class PlannerPlanContextDetails extends Entity
 
     /**
     * Sets the url
-    * URL of the user experience represented by the associated plannerPlanContext.
     *
     * @param string $val The value of the url
     *

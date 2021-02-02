@@ -26,7 +26,6 @@ class ActivityStatistics extends Entity
 {
     /**
     * Gets the activity
-    * The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
     *
     * @return AnalyticsActivityType The activity
     */
@@ -45,7 +44,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Sets the activity
-    * The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
     *
     * @param AnalyticsActivityType $val The activity
     *
@@ -59,7 +57,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Gets the duration
-    * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
     *
     * @return Duration The duration
     */
@@ -78,7 +75,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Sets the duration
-    * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
     *
     * @param Duration $val The duration
     *
@@ -92,7 +88,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Gets the endDate
-    * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
     *
     * @return \DateTime The endDate
     */
@@ -111,7 +106,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Sets the endDate
-    * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
     *
     * @param \DateTime $val The endDate
     *
@@ -125,7 +119,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Gets the startDate
-    * Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
     *
     * @return \DateTime The startDate
     */
@@ -144,7 +137,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Sets the startDate
-    * Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
     *
     * @param \DateTime $val The startDate
     *
@@ -158,7 +150,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Gets the timeZoneUsed
-    * The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
     *
     * @return string The timeZoneUsed
     */
@@ -173,7 +164,6 @@ class ActivityStatistics extends Entity
     
     /**
     * Sets the timeZoneUsed
-    * The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
     *
     * @param string $val The timeZoneUsed
     *

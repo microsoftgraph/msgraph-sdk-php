@@ -59,7 +59,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
     *
     * @return string The appId
     */
@@ -74,7 +74,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
     *
     * @param string $val The appId
     *
@@ -89,7 +89,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the appRoles
-    * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+    * The collection of roles the application declares. With app role assignments, these roles can be assigned to users, groups, or other applications' service principals. Not nullable.
      *
      * @return array The appRoles
      */
@@ -104,7 +104,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the appRoles
-    * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
+    * The collection of roles the application declares. With app role assignments, these roles can be assigned to users, groups, or other applications' service principals. Not nullable.
     *
     * @param AppRole $val The appRoles
     *
@@ -146,33 +146,6 @@ class Application extends DirectoryObject
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the defaultRedirectUri
-    *
-    * @return string The defaultRedirectUri
-    */
-    public function getDefaultRedirectUri()
-    {
-        if (array_key_exists("defaultRedirectUri", $this->_propDict)) {
-            return $this->_propDict["defaultRedirectUri"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the defaultRedirectUri
-    *
-    * @param string $val The defaultRedirectUri
-    *
-    * @return Application
-    */
-    public function setDefaultRedirectUri($val)
-    {
-        $this->_propDict["defaultRedirectUri"] = $val;
         return $this;
     }
     
@@ -234,7 +207,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of
     *
     * @return string The groupMembershipClaims
     */
@@ -249,7 +222,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of
     *
     * @param string $val The groupMembershipClaims
     *
@@ -263,7 +236,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
     * @return string The identifierUris
     */
@@ -278,7 +251,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
     * @param string $val The identifierUris
     *
@@ -292,7 +265,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the info
-    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
     * @return InformationalUrl The info
     */
@@ -311,7 +284,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the info
-    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
     * @param InformationalUrl $val The info
     *
@@ -352,7 +325,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
     *
     * @return bool The isFallbackPublicClient
     */
@@ -367,7 +340,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
     *
     * @param bool $val The isFallbackPublicClient
     *
@@ -382,7 +355,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the keyCredentials
-    * The collection of key credentials associated with the application. Not nullable.
+    * The collection of key credentials associated with the application Not nullable.
      *
      * @return array The keyCredentials
      */
@@ -397,7 +370,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the keyCredentials
-    * The collection of key credentials associated with the application. Not nullable.
+    * The collection of key credentials associated with the application Not nullable.
     *
     * @param KeyCredential $val The keyCredentials
     *
@@ -471,7 +444,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the optionalClaims
-    * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+    * Application developers can configure optional claims in their Azure AD apps to specify which claims they want in tokens sent to their application by the Microsoft security token service. See provide optional claims to your Azure AD app for more information.
     *
     * @return OptionalClaims The optionalClaims
     */
@@ -490,7 +463,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the optionalClaims
-    * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+    * Application developers can configure optional claims in their Azure AD apps to specify which claims they want in tokens sent to their application by the Microsoft security token service. See provide optional claims to your Azure AD app for more information.
     *
     * @param OptionalClaims $val The optionalClaims
     *
@@ -630,7 +603,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the requiredResourceAccess
-    * Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable.
+    * Specifies resources that this application requires access to and the set of OAuth permission scopes and application roles that it needs under each of those resources. This pre-configuration of required resource access drives the consent experience. Not nullable.
      *
      * @return array The requiredResourceAccess
      */
@@ -645,7 +618,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the requiredResourceAccess
-    * Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable.
+    * Specifies resources that this application requires access to and the set of OAuth permission scopes and application roles that it needs under each of those resources. This pre-configuration of required resource access drives the consent experience. Not nullable.
     *
     * @param RequiredResourceAccess $val The requiredResourceAccess
     *
@@ -659,7 +632,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single tenant)AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.For authenticating users with Azure AD B2C user flows, use AzureADandPersonalMicrosoftAccount. This value allows for the widest set of user identities including local accounts and user identities from Microsoft, Facebook, Google, Twitter, or any OpenID Connect provider.
     *
     * @return string The signInAudience
     */
@@ -674,7 +647,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single tenant)AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.For authenticating users with Azure AD B2C user flows, use AzureADandPersonalMicrosoftAccount. This value allows for the widest set of user identities including local accounts and user identities from Microsoft, Facebook, Google, Twitter, or any OpenID Connect provider.
     *
     * @param string $val The signInAudience
     *
@@ -688,7 +661,6 @@ class Application extends DirectoryObject
     
     /**
     * Gets the spa
-    * Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
     *
     * @return SpaApplication The spa
     */
@@ -707,7 +679,6 @@ class Application extends DirectoryObject
     
     /**
     * Sets the spa
-    * Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
     *
     * @param SpaApplication $val The spa
     *
@@ -839,7 +810,6 @@ class Application extends DirectoryObject
     
     /**
     * Gets the onPremisesPublishing
-    * Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
     *
     * @return OnPremisesPublishing The onPremisesPublishing
     */
@@ -858,7 +828,6 @@ class Application extends DirectoryObject
     
     /**
     * Sets the onPremisesPublishing
-    * Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
     *
     * @param OnPremisesPublishing $val The onPremisesPublishing
     *
@@ -1022,7 +991,6 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the tokenLifetimePolicies
-    * The tokenLifetimePolicies assigned to this application.
      *
      * @return array The tokenLifetimePolicies
      */
@@ -1037,7 +1005,6 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the tokenLifetimePolicies
-    * The tokenLifetimePolicies assigned to this application.
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
     *
@@ -1051,7 +1018,6 @@ class Application extends DirectoryObject
     
     /**
     * Gets the connectorGroup
-    * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
     *
     * @return ConnectorGroup The connectorGroup
     */
@@ -1070,7 +1036,6 @@ class Application extends DirectoryObject
     
     /**
     * Sets the connectorGroup
-    * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
     *
     * @param ConnectorGroup $val The connectorGroup
     *

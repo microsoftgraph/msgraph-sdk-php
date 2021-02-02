@@ -239,7 +239,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Gets the updateScheduleType
-    * Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+    * Update schedule type
     *
     * @return IosSoftwareUpdateScheduleType The updateScheduleType
     */
@@ -258,7 +258,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     
     /**
     * Sets the updateScheduleType
-    * Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
+    * Update schedule type
     *
     * @param IosSoftwareUpdateScheduleType $val The updateScheduleType
     *

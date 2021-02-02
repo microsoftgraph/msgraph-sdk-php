@@ -89,7 +89,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     
     /**
     * Gets the defaultEnrollmentType
-    * The default profile enrollment type. Possible values are: unknown, device, user.
+    * The default profile enrollment type.
     *
     * @return AppleUserInitiatedEnrollmentType The defaultEnrollmentType
     */
@@ -108,7 +108,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     
     /**
     * Sets the defaultEnrollmentType
-    * The default profile enrollment type. Possible values are: unknown, device, user.
+    * The default profile enrollment type.
     *
     * @param AppleUserInitiatedEnrollmentType $val The defaultEnrollmentType
     *
@@ -213,7 +213,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     
     /**
     * Gets the platform
-    * The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * The platform of the Device.
     *
     * @return DevicePlatformType The platform
     */
@@ -232,7 +232,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     
     /**
     * Sets the platform
-    * The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * The platform of the Device.
     *
     * @param DevicePlatformType $val The platform
     *

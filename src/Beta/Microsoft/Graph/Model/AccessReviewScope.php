@@ -25,7 +25,6 @@ class AccessReviewScope extends Entity
 {
     /**
     * Gets the query
-    * The query specifying what will be reviewed. See table for examples.
     *
     * @return string The query
     */
@@ -40,7 +39,6 @@ class AccessReviewScope extends Entity
 
     /**
     * Sets the query
-    * The query specifying what will be reviewed. See table for examples.
     *
     * @param string $val The value of the query
     *
@@ -53,7 +51,6 @@ class AccessReviewScope extends Entity
     }
     /**
     * Gets the queryType
-    * The type of query. Examples include MicrosoftGraph and ARM.
     *
     * @return string The queryType
     */
@@ -68,7 +65,6 @@ class AccessReviewScope extends Entity
 
     /**
     * Sets the queryType
-    * The type of query. Examples include MicrosoftGraph and ARM.
     *
     * @param string $val The value of the queryType
     *

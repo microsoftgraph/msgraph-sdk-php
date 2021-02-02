@@ -26,7 +26,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Gets the airPrintExceptionAction
-    * Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+    * Determine whether AirPrint service will be exempt from the always-on VPN connection
     *
     * @return VpnServiceExceptionAction The airPrintExceptionAction
     */
@@ -45,7 +45,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Sets the airPrintExceptionAction
-    * Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+    * Determine whether AirPrint service will be exempt from the always-on VPN connection
     *
     * @param VpnServiceExceptionAction $val The value to assign to the airPrintExceptionAction
     *
@@ -148,7 +148,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Gets the cellularExceptionAction
-    * Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+    * Determine whether Cellular service will be exempt from the always-on VPN connection
     *
     * @return VpnServiceExceptionAction The cellularExceptionAction
     */
@@ -167,7 +167,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Sets the cellularExceptionAction
-    * Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+    * Determine whether Cellular service will be exempt from the always-on VPN connection
     *
     * @param VpnServiceExceptionAction $val The value to assign to the cellularExceptionAction
     *
@@ -237,7 +237,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Gets the tunnelConfiguration
-    * Determines what connections the specific tunnel configuration applies to. Possible values are: wifiAndCellular, cellular, wifi.
+    * Determines what connections the specific tunnel configuration applies to
     *
     * @return VpnTunnelConfigurationType The tunnelConfiguration
     */
@@ -256,7 +256,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Sets the tunnelConfiguration
-    * Determines what connections the specific tunnel configuration applies to. Possible values are: wifiAndCellular, cellular, wifi.
+    * Determines what connections the specific tunnel configuration applies to
     *
     * @param VpnTunnelConfigurationType $val The value to assign to the tunnelConfiguration
     *
@@ -298,7 +298,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Gets the voicemailExceptionAction
-    * Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+    * Determine whether voicemail service will be exempt from the always-on VPN connection
     *
     * @return VpnServiceExceptionAction The voicemailExceptionAction
     */
@@ -317,7 +317,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
 
     /**
     * Sets the voicemailExceptionAction
-    * Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+    * Determine whether voicemail service will be exempt from the always-on VPN connection
     *
     * @param VpnServiceExceptionAction $val The value to assign to the voicemailExceptionAction
     *

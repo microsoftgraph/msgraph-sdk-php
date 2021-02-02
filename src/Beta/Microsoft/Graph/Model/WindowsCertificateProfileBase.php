@@ -26,7 +26,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
 {
     /**
     * Gets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
+    * Scale for the Certificate Validity Period
     *
     * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
@@ -45,7 +45,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the certificateValidityPeriodScale
-    * Scale for the Certificate Validity Period. Possible values are: days, months, years.
+    * Scale for the Certificate Validity Period
     *
     * @param CertificateValidityPeriodScale $val The certificateValidityPeriodScale
     *
@@ -88,7 +88,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the keyStorageProvider
-    * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+    * Key Storage Provider (KSP)
     *
     * @return KeyStorageProviderOption The keyStorageProvider
     */
@@ -107,7 +107,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the keyStorageProvider
-    * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+    * Key Storage Provider (KSP)
     *
     * @param KeyStorageProviderOption $val The keyStorageProvider
     *
@@ -150,7 +150,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+    * Certificate Subject Alternative Name Type
     *
     * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
@@ -169,7 +169,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectAlternativeNameType
-    * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+    * Certificate Subject Alternative Name Type
     *
     * @param SubjectAlternativeNameType $val The subjectAlternativeNameType
     *
@@ -183,7 +183,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Gets the subjectNameFormat
-    * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+    * Certificate Subject Name Format
     *
     * @return SubjectNameFormat The subjectNameFormat
     */
@@ -202,7 +202,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
     
     /**
     * Sets the subjectNameFormat
-    * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+    * Certificate Subject Name Format
     *
     * @param SubjectNameFormat $val The subjectNameFormat
     *

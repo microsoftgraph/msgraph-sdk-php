@@ -26,7 +26,6 @@ class EducationSynchronizationError extends Entity
 {
     /**
     * Gets the entryType
-    * Represents the sync entity (school, section, student, teacher).
     *
     * @return string The entryType
     */
@@ -41,7 +40,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Sets the entryType
-    * Represents the sync entity (school, section, student, teacher).
     *
     * @param string $val The entryType
     *
@@ -55,7 +53,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Gets the errorCode
-    * Represents the error code for this error.
     *
     * @return string The errorCode
     */
@@ -70,7 +67,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Sets the errorCode
-    * Represents the error code for this error.
     *
     * @param string $val The errorCode
     *
@@ -84,7 +80,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Gets the errorMessage
-    * Contains a description of the error.
     *
     * @return string The errorMessage
     */
@@ -99,7 +94,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Sets the errorMessage
-    * Contains a description of the error.
     *
     * @param string $val The errorMessage
     *
@@ -113,7 +107,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Gets the joiningValue
-    * The unique identifier for the entry.
     *
     * @return string The joiningValue
     */
@@ -128,7 +121,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Sets the joiningValue
-    * The unique identifier for the entry.
     *
     * @param string $val The joiningValue
     *
@@ -142,7 +134,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Gets the recordedDateTime
-    * The time of occurrence of this error.
     *
     * @return \DateTime The recordedDateTime
     */
@@ -161,7 +152,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Sets the recordedDateTime
-    * The time of occurrence of this error.
     *
     * @param \DateTime $val The recordedDateTime
     *
@@ -175,7 +165,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Gets the reportableIdentifier
-    * The identifier of this error entry.
     *
     * @return string The reportableIdentifier
     */
@@ -190,7 +179,6 @@ class EducationSynchronizationError extends Entity
     
     /**
     * Sets the reportableIdentifier
-    * The identifier of this error entry.
     *
     * @param string $val The reportableIdentifier
     *

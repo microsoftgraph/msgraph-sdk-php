@@ -143,7 +143,6 @@ class Person extends Entity
 
      /** 
      * Gets the emailAddresses
-    * The person's email addresses.
      *
      * @return array The emailAddresses
      */
@@ -158,7 +157,6 @@ class Person extends Entity
     
     /** 
     * Sets the emailAddresses
-    * The person's email addresses.
     *
     * @param RankedEmailAddress $val The emailAddresses
     *
@@ -230,7 +228,6 @@ class Person extends Entity
     
     /**
     * Gets the mailboxType
-    * The type of mailbox that is represented by the person's email address.
     *
     * @return string The mailboxType
     */
@@ -245,7 +242,6 @@ class Person extends Entity
     
     /**
     * Sets the mailboxType
-    * The type of mailbox that is represented by the person's email address.
     *
     * @param string $val The mailboxType
     *
@@ -317,7 +313,7 @@ class Person extends Entity
     
     /**
     * Gets the personType
-    * The type of person, for example distribution list.
+    * The type of person.
     *
     * @return string The personType
     */
@@ -332,7 +328,7 @@ class Person extends Entity
     
     /**
     * Sets the personType
-    * The type of person, for example distribution list.
+    * The type of person.
     *
     * @param string $val The personType
     *
@@ -436,7 +432,6 @@ class Person extends Entity
 
      /** 
      * Gets the sources
-    * The sources the user data comes from, for example Directory or Outlook Contacts.
      *
      * @return array The sources
      */
@@ -451,7 +446,6 @@ class Person extends Entity
     
     /** 
     * Sets the sources
-    * The sources the user data comes from, for example Directory or Outlook Contacts.
     *
     * @param PersonDataSource $val The sources
     *
@@ -494,7 +488,6 @@ class Person extends Entity
     
     /**
     * Gets the title
-    * The person's title.
     *
     * @return string The title
     */
@@ -509,7 +502,6 @@ class Person extends Entity
     
     /**
     * Sets the title
-    * The person's title.
     *
     * @param string $val The title
     *

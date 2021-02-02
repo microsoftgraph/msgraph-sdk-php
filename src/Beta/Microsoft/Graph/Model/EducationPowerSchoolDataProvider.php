@@ -34,7 +34,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Gets the allowTeachersInMultipleSchools
-    * Indicates whether the source has multiple identifiers for a single student or teacher.
     *
     * @return bool The allowTeachersInMultipleSchools
     */
@@ -49,7 +48,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Sets the allowTeachersInMultipleSchools
-    * Indicates whether the source has multiple identifiers for a single student or teacher.
     *
     * @param bool $val The value of the allowTeachersInMultipleSchools
     *
@@ -62,7 +60,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     }
     /**
     * Gets the clientId
-    * The client ID used to connect to PowerSchool.
     *
     * @return string The clientId
     */
@@ -77,7 +74,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Sets the clientId
-    * The client ID used to connect to PowerSchool.
     *
     * @param string $val The value of the clientId
     *
@@ -90,7 +86,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     }
     /**
     * Gets the clientSecret
-    * The client secret to authenticate the connection to the PowerSchool instance.
     *
     * @return string The clientSecret
     */
@@ -105,7 +100,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Sets the clientSecret
-    * The client secret to authenticate the connection to the PowerSchool instance.
     *
     * @param string $val The value of the clientSecret
     *
@@ -118,7 +112,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     }
     /**
     * Gets the connectionUrl
-    * The connection URL to the PowerSchool instance.
     *
     * @return string The connectionUrl
     */
@@ -133,7 +126,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Sets the connectionUrl
-    * The connection URL to the PowerSchool instance.
     *
     * @param string $val The value of the connectionUrl
     *
@@ -147,7 +139,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Gets the customizations
-    * Optional customization to be applied to the synchronization profile.
     *
     * @return EducationSynchronizationCustomizations The customizations
     */
@@ -166,7 +157,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Sets the customizations
-    * Optional customization to be applied to the synchronization profile.
     *
     * @param EducationSynchronizationCustomizations $val The value to assign to the customizations
     *
@@ -179,7 +169,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     }
     /**
     * Gets the schoolsIds
-    * The list of schools to sync.
     *
     * @return string The schoolsIds
     */
@@ -194,7 +183,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Sets the schoolsIds
-    * The list of schools to sync.
     *
     * @param string $val The value of the schoolsIds
     *
@@ -207,7 +195,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     }
     /**
     * Gets the schoolYear
-    * The school year to sync.
     *
     * @return string The schoolYear
     */
@@ -222,7 +209,6 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
 
     /**
     * Sets the schoolYear
-    * The school year to sync.
     *
     * @param string $val The value of the schoolYear
     *
