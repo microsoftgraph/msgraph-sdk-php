@@ -84,7 +84,7 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the externalSource
-    * Where this user was created from. Possible values are: sis, lms, or manual.
+    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
     *
     * @return EducationExternalSource The externalSource
     */
@@ -103,7 +103,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the externalSource
-    * Where this user was created from. Possible values are: sis, lms, or manual.
+    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
     *
     * @param EducationExternalSource $val The externalSource
     *

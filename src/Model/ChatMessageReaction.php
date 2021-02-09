@@ -26,7 +26,6 @@ class ChatMessageReaction extends Entity
 
     /**
     * Gets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -45,7 +44,6 @@ class ChatMessageReaction extends Entity
 
     /**
     * Sets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -58,7 +56,6 @@ class ChatMessageReaction extends Entity
     }
     /**
     * Gets the reactionType
-    * Supported values are like, angry, sad, laugh, heart, surprised.
     *
     * @return string The reactionType
     */
@@ -73,7 +70,6 @@ class ChatMessageReaction extends Entity
 
     /**
     * Sets the reactionType
-    * Supported values are like, angry, sad, laugh, heart, surprised.
     *
     * @param string $val The value of the reactionType
     *
@@ -87,7 +83,6 @@ class ChatMessageReaction extends Entity
 
     /**
     * Gets the user
-    * The user who reacted to the message.
     *
     * @return IdentitySet The user
     */
@@ -106,7 +101,6 @@ class ChatMessageReaction extends Entity
 
     /**
     * Sets the user
-    * The user who reacted to the message.
     *
     * @param IdentitySet $val The value to assign to the user
     *

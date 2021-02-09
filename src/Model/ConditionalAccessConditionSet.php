@@ -191,7 +191,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the userRiskLevels
-    * User risk levels included in the policy. Possible values are: low, medium, high, none.
+    * User risk levels included in the policy. Possible values are: low, medium, high.
     *
     * @return RiskLevel The userRiskLevels
     */
@@ -210,7 +210,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the userRiskLevels
-    * User risk levels included in the policy. Possible values are: low, medium, high, none.
+    * User risk levels included in the policy. Possible values are: low, medium, high.
     *
     * @param RiskLevel $val The value to assign to the userRiskLevels
     *

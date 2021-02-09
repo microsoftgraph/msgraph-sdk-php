@@ -25,7 +25,6 @@ class PublicError extends Entity
 {
     /**
     * Gets the code
-    * Represents the error code.
     *
     * @return string The code
     */
@@ -40,7 +39,6 @@ class PublicError extends Entity
 
     /**
     * Sets the code
-    * Represents the error code.
     *
     * @param string $val The value of the code
     *
@@ -54,7 +52,6 @@ class PublicError extends Entity
 
     /**
     * Gets the details
-    * Details of the error.
     *
     * @return PublicErrorDetail The details
     */
@@ -73,7 +70,6 @@ class PublicError extends Entity
 
     /**
     * Sets the details
-    * Details of the error.
     *
     * @param PublicErrorDetail $val The value to assign to the details
     *
@@ -87,7 +83,6 @@ class PublicError extends Entity
 
     /**
     * Gets the innerError
-    * Details of the inner error.
     *
     * @return PublicInnerError The innerError
     */
@@ -106,7 +101,6 @@ class PublicError extends Entity
 
     /**
     * Sets the innerError
-    * Details of the inner error.
     *
     * @param PublicInnerError $val The value to assign to the innerError
     *
@@ -119,7 +113,6 @@ class PublicError extends Entity
     }
     /**
     * Gets the message
-    * A non-localized message for the developer.
     *
     * @return string The message
     */
@@ -134,7 +127,6 @@ class PublicError extends Entity
 
     /**
     * Sets the message
-    * A non-localized message for the developer.
     *
     * @param string $val The value of the message
     *
@@ -147,7 +139,6 @@ class PublicError extends Entity
     }
     /**
     * Gets the target
-    * The target of the error.
     *
     * @return string The target
     */
@@ -162,7 +153,6 @@ class PublicError extends Entity
 
     /**
     * Sets the target
-    * The target of the error.
     *
     * @param string $val The value of the target
     *

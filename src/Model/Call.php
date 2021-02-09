@@ -145,7 +145,7 @@ class Call extends Entity
     
     /**
     * Gets the chatInfo
-    * The chat information. Required information for meeting scenarios.
+    * The chat information. Required information for joining a meeting.
     *
     * @return ChatInfo The chatInfo
     */
@@ -164,7 +164,7 @@ class Call extends Entity
     
     /**
     * Sets the chatInfo
-    * The chat information. Required information for meeting scenarios.
+    * The chat information. Required information for joining a meeting.
     *
     * @param ChatInfo $val The chatInfo
     *
@@ -211,7 +211,6 @@ class Call extends Entity
     
     /**
     * Gets the incomingContext
-    * The context associated with an incoming call. Read-only. Server generated.
     *
     * @return IncomingContext The incomingContext
     */
@@ -230,7 +229,6 @@ class Call extends Entity
     
     /**
     * Sets the incomingContext
-    * The context associated with an incoming call. Read-only. Server generated.
     *
     * @param IncomingContext $val The incomingContext
     *
@@ -244,7 +242,7 @@ class Call extends Entity
     
     /**
     * Gets the mediaConfig
-    * The media configuration. Required information for creating peer to peer calls or joining meetings.
+    * The media configuration. Required.
     *
     * @return MediaConfig The mediaConfig
     */
@@ -263,7 +261,7 @@ class Call extends Entity
     
     /**
     * Sets the mediaConfig
-    * The media configuration. Required information for creating peer to peer calls or joining meetings.
+    * The media configuration. Required.
     *
     * @param MediaConfig $val The mediaConfig
     *
@@ -310,7 +308,7 @@ class Call extends Entity
     
     /**
     * Gets the meetingInfo
-    * The meeting information. Required information for meeting scenarios.
+    * The meeting information that's required for joining a meeting.
     *
     * @return MeetingInfo The meetingInfo
     */
@@ -329,7 +327,7 @@ class Call extends Entity
     
     /**
     * Sets the meetingInfo
-    * The meeting information. Required information for meeting scenarios.
+    * The meeting information that's required for joining a meeting.
     *
     * @param MeetingInfo $val The meetingInfo
     *
@@ -604,7 +602,6 @@ class Call extends Entity
     
     /**
     * Gets the transcription
-    * The transcription information for the call. Read-only.
     *
     * @return CallTranscriptionInfo The transcription
     */
@@ -623,7 +620,6 @@ class Call extends Entity
     
     /**
     * Sets the transcription
-    * The transcription information for the call. Read-only.
     *
     * @param CallTranscriptionInfo $val The transcription
     *

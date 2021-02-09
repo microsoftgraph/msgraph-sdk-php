@@ -280,7 +280,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     
     /**
     * Gets the version
-    * Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+    * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
     *
     * @return int The version
     */
@@ -295,7 +295,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     
     /**
     * Sets the version
-    * Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+    * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
     *
     * @param int $val The version
     *
