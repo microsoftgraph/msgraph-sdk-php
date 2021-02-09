@@ -219,4 +219,35 @@ class RegionalAndLanguageSettings extends Entity
         return $this;
     }
     
+    /**
+    * Gets the translationPreferences
+    *
+    * @return TranslationPreferences The translationPreferences
+    */
+    public function getTranslationPreferences()
+    {
+        if (array_key_exists("translationPreferences", $this->_propDict)) {
+            if (is_a($this->_propDict["translationPreferences"], "Beta\Microsoft\Graph\Model\TranslationPreferences")) {
+                return $this->_propDict["translationPreferences"];
+            } else {
+                $this->_propDict["translationPreferences"] = new TranslationPreferences($this->_propDict["translationPreferences"]);
+                return $this->_propDict["translationPreferences"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the translationPreferences
+    *
+    * @param TranslationPreferences $val The translationPreferences
+    *
+    * @return RegionalAndLanguageSettings
+    */
+    public function setTranslationPreferences($val)
+    {
+        $this->_propDict["translationPreferences"] = $val;
+        return $this;
+    }
+    
 }

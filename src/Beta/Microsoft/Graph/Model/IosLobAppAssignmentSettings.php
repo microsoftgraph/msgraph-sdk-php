@@ -33,6 +33,34 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings
     }
 
     /**
+    * Gets the isRemovable
+    * Whether or not the app can be removed by the user.
+    *
+    * @return bool The isRemovable
+    */
+    public function getIsRemovable()
+    {
+        if (array_key_exists("isRemovable", $this->_propDict)) {
+            return $this->_propDict["isRemovable"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isRemovable
+    * Whether or not the app can be removed by the user.
+    *
+    * @param bool $val The value of the isRemovable
+    *
+    * @return IosLobAppAssignmentSettings
+    */
+    public function setIsRemovable($val)
+    {
+        $this->_propDict["isRemovable"] = $val;
+        return $this;
+    }
+    /**
     * Gets the uninstallOnDeviceRemoval
     * Whether or not to uninstall the app when device is removed from Intune.
     *

@@ -59,7 +59,7 @@ class MobileAppDependency extends MobileAppRelationship
     
     /**
     * Gets the dependentAppCount
-    * The total number of dependencies the child app has.
+    * The total number of apps that directly or indirectly depend on the parent app.
     *
     * @return int The dependentAppCount
     */
@@ -74,7 +74,7 @@ class MobileAppDependency extends MobileAppRelationship
     
     /**
     * Sets the dependentAppCount
-    * The total number of dependencies the child app has.
+    * The total number of apps that directly or indirectly depend on the parent app.
     *
     * @param int $val The dependentAppCount
     *
@@ -83,6 +83,35 @@ class MobileAppDependency extends MobileAppRelationship
     public function setDependentAppCount($val)
     {
         $this->_propDict["dependentAppCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the dependsOnAppCount
+    * The total number of apps the child app directly or indirectly depends on.
+    *
+    * @return int The dependsOnAppCount
+    */
+    public function getDependsOnAppCount()
+    {
+        if (array_key_exists("dependsOnAppCount", $this->_propDict)) {
+            return $this->_propDict["dependsOnAppCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the dependsOnAppCount
+    * The total number of apps the child app directly or indirectly depends on.
+    *
+    * @param int $val The dependsOnAppCount
+    *
+    * @return MobileAppDependency
+    */
+    public function setDependsOnAppCount($val)
+    {
+        $this->_propDict["dependsOnAppCount"] = intval($val);
         return $this;
     }
     

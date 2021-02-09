@@ -948,7 +948,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
     *
     * @return string The mail
     */
@@ -963,7 +963,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
     *
     * @param string $val The mail
     *
@@ -1811,7 +1811,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
     *
     * @return string The userPrincipalName
     */
@@ -1826,7 +1826,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
     *
     * @param string $val The userPrincipalName
     *
@@ -2255,6 +2255,34 @@ class User extends DirectoryObject
     public function setAnalytics($val)
     {
         $this->_propDict["analytics"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the usageRights
+     *
+     * @return array The usageRights
+     */
+    public function getUsageRights()
+    {
+        if (array_key_exists("usageRights", $this->_propDict)) {
+           return $this->_propDict["usageRights"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the usageRights
+    *
+    * @param UsageRight $val The usageRights
+    *
+    * @return User
+    */
+    public function setUsageRights($val)
+    {
+		$this->_propDict["usageRights"] = $val;
         return $this;
     }
     

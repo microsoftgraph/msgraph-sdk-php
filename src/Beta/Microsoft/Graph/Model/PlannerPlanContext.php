@@ -113,6 +113,32 @@ class PlannerPlanContext extends Entity
         return $this;
     }
     /**
+    * Gets the isCreationContext
+    *
+    * @return bool The isCreationContext
+    */
+    public function getIsCreationContext()
+    {
+        if (array_key_exists("isCreationContext", $this->_propDict)) {
+            return $this->_propDict["isCreationContext"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isCreationContext
+    *
+    * @param bool $val The value of the isCreationContext
+    *
+    * @return PlannerPlanContext
+    */
+    public function setIsCreationContext($val)
+    {
+        $this->_propDict["isCreationContext"] = $val;
+        return $this;
+    }
+    /**
     * Gets the ownerAppId
     * Read-only. ID of the app that created the plannerPlanContext.
     *

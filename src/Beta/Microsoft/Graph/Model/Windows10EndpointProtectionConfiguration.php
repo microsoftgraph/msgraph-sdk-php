@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the applicationGuardAllowCameraMicrophoneRedirection
+    * Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+    *
+    * @return bool The applicationGuardAllowCameraMicrophoneRedirection
+    */
+    public function getApplicationGuardAllowCameraMicrophoneRedirection()
+    {
+        if (array_key_exists("applicationGuardAllowCameraMicrophoneRedirection", $this->_propDict)) {
+            return $this->_propDict["applicationGuardAllowCameraMicrophoneRedirection"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardAllowCameraMicrophoneRedirection
+    * Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+    *
+    * @param bool $val The applicationGuardAllowCameraMicrophoneRedirection
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardAllowCameraMicrophoneRedirection($val)
+    {
+        $this->_propDict["applicationGuardAllowCameraMicrophoneRedirection"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the applicationGuardAllowFileSaveOnHost
     * Allow users to download files from Edge in the application guard container and save them on the host file system
     *
@@ -319,6 +348,35 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setApplicationGuardBlockNonEnterpriseContent($val)
     {
         $this->_propDict["applicationGuardBlockNonEnterpriseContent"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the applicationGuardCertificateThumbprints
+    * Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
+    *
+    * @return string The applicationGuardCertificateThumbprints
+    */
+    public function getApplicationGuardCertificateThumbprints()
+    {
+        if (array_key_exists("applicationGuardCertificateThumbprints", $this->_propDict)) {
+            return $this->_propDict["applicationGuardCertificateThumbprints"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applicationGuardCertificateThumbprints
+    * Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
+    *
+    * @param string $val The applicationGuardCertificateThumbprints
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setApplicationGuardCertificateThumbprints($val)
+    {
+        $this->_propDict["applicationGuardCertificateThumbprints"] = $val;
         return $this;
     }
     
@@ -1163,6 +1221,39 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     public function setDefenderBlockEndUserAccess($val)
     {
         $this->_propDict["defenderBlockEndUserAccess"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the defenderBlockPersistenceThroughWmiType
+    * Value indicating the behavior of Block persistence through WMI event subscription. Possible values are: userDefined, block, auditMode, warn, disable.
+    *
+    * @return DefenderAttackSurfaceType The defenderBlockPersistenceThroughWmiType
+    */
+    public function getDefenderBlockPersistenceThroughWmiType()
+    {
+        if (array_key_exists("defenderBlockPersistenceThroughWmiType", $this->_propDict)) {
+            if (is_a($this->_propDict["defenderBlockPersistenceThroughWmiType"], "Beta\Microsoft\Graph\Model\DefenderAttackSurfaceType")) {
+                return $this->_propDict["defenderBlockPersistenceThroughWmiType"];
+            } else {
+                $this->_propDict["defenderBlockPersistenceThroughWmiType"] = new DefenderAttackSurfaceType($this->_propDict["defenderBlockPersistenceThroughWmiType"]);
+                return $this->_propDict["defenderBlockPersistenceThroughWmiType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defenderBlockPersistenceThroughWmiType
+    * Value indicating the behavior of Block persistence through WMI event subscription. Possible values are: userDefined, block, auditMode, warn, disable.
+    *
+    * @param DefenderAttackSurfaceType $val The defenderBlockPersistenceThroughWmiType
+    *
+    * @return Windows10EndpointProtectionConfiguration
+    */
+    public function setDefenderBlockPersistenceThroughWmiType($val)
+    {
+        $this->_propDict["defenderBlockPersistenceThroughWmiType"] = $val;
         return $this;
     }
     

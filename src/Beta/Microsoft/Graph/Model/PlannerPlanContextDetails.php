@@ -24,6 +24,63 @@ namespace Beta\Microsoft\Graph\Model;
 class PlannerPlanContextDetails extends Entity
 {
     /**
+    * Gets the customLinkText
+    *
+    * @return string The customLinkText
+    */
+    public function getCustomLinkText()
+    {
+        if (array_key_exists("customLinkText", $this->_propDict)) {
+            return $this->_propDict["customLinkText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customLinkText
+    *
+    * @param string $val The value of the customLinkText
+    *
+    * @return PlannerPlanContextDetails
+    */
+    public function setCustomLinkText($val)
+    {
+        $this->_propDict["customLinkText"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the displayLinkType
+    *
+    * @return PlannerPlanContextType The displayLinkType
+    */
+    public function getDisplayLinkType()
+    {
+        if (array_key_exists("displayLinkType", $this->_propDict)) {
+            if (is_a($this->_propDict["displayLinkType"], "Beta\Microsoft\Graph\Model\PlannerPlanContextType")) {
+                return $this->_propDict["displayLinkType"];
+            } else {
+                $this->_propDict["displayLinkType"] = new PlannerPlanContextType($this->_propDict["displayLinkType"]);
+                return $this->_propDict["displayLinkType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the displayLinkType
+    *
+    * @param PlannerPlanContextType $val The value to assign to the displayLinkType
+    *
+    * @return PlannerPlanContextDetails The PlannerPlanContextDetails
+    */
+    public function setDisplayLinkType($val)
+    {
+        $this->_propDict["displayLinkType"] = $val;
+         return $this;
+    }
+    /**
     * Gets the url
     * URL of the user experience represented by the associated plannerPlanContext.
     *

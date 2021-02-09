@@ -40,6 +40,11 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const ENDPOINT_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "endpointConnectivityCheckUnknownError";
     const AAD_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "aadConnectivityCheckUnknownError";
     const RESOURCE_AVAILABILITY_CHECK_NO_SUBNET_IP = "resourceAvailabilityCheckNoSubnetIP";
+    const RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_DISABLED = "resourceAvailabilityCheckSubscriptionDisabled";
     const RESOURCE_AVAILABILITY_CHECK_UNKNOWN_ERROR = "resourceAvailabilityCheckUnknownError";
+    const PERMISSION_CHECK_NO_SUBSCRIPTION_READER_ROLE = "permissionCheckNoSubscriptionReaderRole";
+    const PERMISSION_CHECK_NO_RESOURCE_GROUP_OWNER_ROLE = "permissionCheckNoResourceGroupOwnerRole";
+    const PERMISSION_CHECK_NO_V_NET_CONTRIBUTOR_ROLE = "permissionCheckNoVNetContributorRole";
+    const PERMISSION_CHECK_UNKNOWN_ERROR = "permissionCheckUnknownError";
     const INTERNAL_SERVER_UNKNOWN_ERROR = "internalServerUnknownError";
 }

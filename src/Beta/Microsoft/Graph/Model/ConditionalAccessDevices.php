@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class ConditionalAccessDevices extends Entity
 {
     /**
+    * Gets the excludeDevices
+    *
+    * @return string The excludeDevices
+    */
+    public function getExcludeDevices()
+    {
+        if (array_key_exists("excludeDevices", $this->_propDict)) {
+            return $this->_propDict["excludeDevices"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the excludeDevices
+    *
+    * @param string $val The value of the excludeDevices
+    *
+    * @return ConditionalAccessDevices
+    */
+    public function setExcludeDevices($val)
+    {
+        $this->_propDict["excludeDevices"] = $val;
+        return $this;
+    }
+    /**
     * Gets the excludeDeviceStates
     * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
     *
@@ -49,6 +75,32 @@ class ConditionalAccessDevices extends Entity
     public function setExcludeDeviceStates($val)
     {
         $this->_propDict["excludeDeviceStates"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the includeDevices
+    *
+    * @return string The includeDevices
+    */
+    public function getIncludeDevices()
+    {
+        if (array_key_exists("includeDevices", $this->_propDict)) {
+            return $this->_propDict["includeDevices"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeDevices
+    *
+    * @param string $val The value of the includeDevices
+    *
+    * @return ConditionalAccessDevices
+    */
+    public function setIncludeDevices($val)
+    {
+        $this->_propDict["includeDevices"] = $val;
         return $this;
     }
     /**

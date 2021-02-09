@@ -86,6 +86,34 @@ class Planner extends Entity
     
 
      /** 
+     * Gets the rosters
+     *
+     * @return array The rosters
+     */
+    public function getRosters()
+    {
+        if (array_key_exists("rosters", $this->_propDict)) {
+           return $this->_propDict["rosters"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rosters
+    *
+    * @param PlannerRoster $val The rosters
+    *
+    * @return Planner
+    */
+    public function setRosters($val)
+    {
+		$this->_propDict["rosters"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
      *

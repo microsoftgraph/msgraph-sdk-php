@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class PlannerPlan extends PlannerDelta
 {
     /**
+    * Gets the container
+    * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+    *
+    * @return PlannerPlanContainer The container
+    */
+    public function getContainer()
+    {
+        if (array_key_exists("container", $this->_propDict)) {
+            if (is_a($this->_propDict["container"], "Beta\Microsoft\Graph\Model\PlannerPlanContainer")) {
+                return $this->_propDict["container"];
+            } else {
+                $this->_propDict["container"] = new PlannerPlanContainer($this->_propDict["container"]);
+                return $this->_propDict["container"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the container
+    * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+    *
+    * @param PlannerPlanContainer $val The container
+    *
+    * @return PlannerPlan
+    */
+    public function setContainer($val)
+    {
+        $this->_propDict["container"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the contexts
     * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
     *
@@ -184,7 +217,7 @@ class PlannerPlan extends PlannerDelta
 
      /** 
      * Gets the buckets
-    * Read-only. Nullable. Collection of buckets in the plan.
+    * Collection of buckets in the plan. Read-only. Nullable.
      *
      * @return array The buckets
      */
@@ -199,7 +232,7 @@ class PlannerPlan extends PlannerDelta
     
     /** 
     * Sets the buckets
-    * Read-only. Nullable. Collection of buckets in the plan.
+    * Collection of buckets in the plan. Read-only. Nullable.
     *
     * @param PlannerBucket $val The buckets
     *
@@ -213,7 +246,7 @@ class PlannerPlan extends PlannerDelta
     
     /**
     * Gets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Additional details about the plan. Read-only. Nullable.
     *
     * @return PlannerPlanDetails The details
     */
@@ -232,7 +265,7 @@ class PlannerPlan extends PlannerDelta
     
     /**
     * Sets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Additional details about the plan. Read-only. Nullable.
     *
     * @param PlannerPlanDetails $val The details
     *
@@ -247,7 +280,7 @@ class PlannerPlan extends PlannerDelta
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
+    * Collection of tasks in the plan. Read-only. Nullable.
      *
      * @return array The tasks
      */
@@ -262,7 +295,7 @@ class PlannerPlan extends PlannerDelta
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
+    * Collection of tasks in the plan. Read-only. Nullable.
     *
     * @param PlannerTask $val The tasks
     *

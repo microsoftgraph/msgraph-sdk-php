@@ -432,6 +432,33 @@ class Device extends DirectoryObject
     }
     
     /**
+    * Gets the hostnames
+    *
+    * @return string The hostnames
+    */
+    public function getHostnames()
+    {
+        if (array_key_exists("hostnames", $this->_propDict)) {
+            return $this->_propDict["hostnames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hostnames
+    *
+    * @param string $val The hostnames
+    *
+    * @return Device
+    */
+    public function setHostnames($val)
+    {
+        $this->_propDict["hostnames"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the isCompliant
     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
     *
@@ -973,6 +1000,34 @@ class Device extends DirectoryObject
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the usageRights
+     *
+     * @return array The usageRights
+     */
+    public function getUsageRights()
+    {
+        if (array_key_exists("usageRights", $this->_propDict)) {
+           return $this->_propDict["usageRights"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the usageRights
+    *
+    * @param UsageRight $val The usageRights
+    *
+    * @return Device
+    */
+    public function setUsageRights($val)
+    {
+		$this->_propDict["usageRights"] = $val;
         return $this;
     }
     

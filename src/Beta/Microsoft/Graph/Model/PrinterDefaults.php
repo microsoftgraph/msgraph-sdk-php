@@ -292,6 +292,32 @@ class PrinterDefaults extends Entity
         return $this;
     }
     /**
+    * Gets the inputBin
+    *
+    * @return string The inputBin
+    */
+    public function getInputBin()
+    {
+        if (array_key_exists("inputBin", $this->_propDict)) {
+            return $this->_propDict["inputBin"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the inputBin
+    *
+    * @param string $val The value of the inputBin
+    *
+    * @return PrinterDefaults
+    */
+    public function setInputBin($val)
+    {
+        $this->_propDict["inputBin"] = $val;
+        return $this;
+    }
+    /**
     * Gets the mediaColor
     * The default media (such as paper) color to print the document on.
     *

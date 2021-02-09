@@ -37,4 +37,5 @@ class UserExperienceAnalyticsOperatingSystemRestartCategory extends Enum
     const SHUTDOWN_WITHOUT_UPDATE = "shutdownWithoutUpdate";
     const LONG_POWER_BUTTON_PRESS = "longPowerButtonPress";
     const BOOT_ERROR = "bootError";
+    const UPDATE = "update";
 }

@@ -452,7 +452,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Gets the mtuSizeInBytes
-    * Maximum transmission unit. Valid values 1 to 65536
+    * Maximum transmission unit. Valid values 1280 to 1400
     *
     * @return int The mtuSizeInBytes
     */
@@ -467,7 +467,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     
     /**
     * Sets the mtuSizeInBytes
-    * Maximum transmission unit. Valid values 1 to 65536
+    * Maximum transmission unit. Valid values 1280 to 1400
     *
     * @param int $val The mtuSizeInBytes
     *

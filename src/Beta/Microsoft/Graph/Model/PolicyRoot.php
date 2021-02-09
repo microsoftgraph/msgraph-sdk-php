@@ -86,37 +86,6 @@ class PolicyRoot extends
         return $this;
     }
     
-    /**
-    * Gets the deviceRegistrationPolicy
-    *
-    * @return DeviceRegistrationPolicy The deviceRegistrationPolicy
-    */
-    public function getDeviceRegistrationPolicy()
-    {
-        if (array_key_exists("deviceRegistrationPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceRegistrationPolicy"], "Beta\Microsoft\Graph\Model\DeviceRegistrationPolicy")) {
-                return $this->_propDict["deviceRegistrationPolicy"];
-            } else {
-                $this->_propDict["deviceRegistrationPolicy"] = new DeviceRegistrationPolicy($this->_propDict["deviceRegistrationPolicy"]);
-                return $this->_propDict["deviceRegistrationPolicy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deviceRegistrationPolicy
-    *
-    * @param DeviceRegistrationPolicy $val The deviceRegistrationPolicy
-    *
-    * @return PolicyRoot
-    */
-    public function setDeviceRegistrationPolicy($val)
-    {
-        $this->_propDict["deviceRegistrationPolicy"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the activityBasedTimeoutPolicies

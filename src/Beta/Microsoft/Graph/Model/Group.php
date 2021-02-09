@@ -1381,6 +1381,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the membershipRuleProcessingStatus
+    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supports $filter. Read-only.
     *
     * @return MembershipRuleProcessingStatus The membershipRuleProcessingStatus
     */
@@ -1399,6 +1400,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the membershipRuleProcessingStatus
+    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supports $filter. Read-only.
     *
     * @param MembershipRuleProcessingStatus $val The membershipRuleProcessingStatus
     *

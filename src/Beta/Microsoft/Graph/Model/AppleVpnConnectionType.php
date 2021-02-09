@@ -47,4 +47,5 @@ class AppleVpnConnectionType extends Enum
     const ALWAYS_ON = "alwaysOn";
     const MICROSOFT_TUNNEL = "microsoftTunnel";
     const NET_MOTION_MOBILITY = "netMotionMobility";
+    const MICROSOFT_PROTECT = "microsoftProtect";
 }

@@ -52,6 +52,37 @@ class ReportRoot extends Entity
         return $this;
     }
     
+    /**
+    * Gets the authenticationMethods
+    *
+    * @return AuthenticationMethodsRoot The authenticationMethods
+    */
+    public function getAuthenticationMethods()
+    {
+        if (array_key_exists("authenticationMethods", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethods"], "Beta\Microsoft\Graph\Model\AuthenticationMethodsRoot")) {
+                return $this->_propDict["authenticationMethods"];
+            } else {
+                $this->_propDict["authenticationMethods"] = new AuthenticationMethodsRoot($this->_propDict["authenticationMethods"]);
+                return $this->_propDict["authenticationMethods"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationMethods
+    *
+    * @param AuthenticationMethodsRoot $val The authenticationMethods
+    *
+    * @return ReportRoot
+    */
+    public function setAuthenticationMethods($val)
+    {
+        $this->_propDict["authenticationMethods"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the credentialUserRegistrationDetails
