@@ -3300,6 +3300,37 @@ class User extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the authentication
+    *
+    * @return Authentication The authentication
+    */
+    public function getAuthentication()
+    {
+        if (array_key_exists("authentication", $this->_propDict)) {
+            if (is_a($this->_propDict["authentication"], "Microsoft\Graph\Model\Authentication")) {
+                return $this->_propDict["authentication"];
+            } else {
+                $this->_propDict["authentication"] = new Authentication($this->_propDict["authentication"]);
+                return $this->_propDict["authentication"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authentication
+    *
+    * @param Authentication $val The authentication
+    *
+    * @return User
+    */
+    public function setAuthentication($val)
+    {
+        $this->_propDict["authentication"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the joinedTeams
