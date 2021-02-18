@@ -24,6 +24,62 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidMinimumOperatingSystem extends Entity
 {
     /**
+    * Gets the v10_0
+    * Version 10.0 or later.
+    *
+    * @return bool The v10_0
+    */
+    public function getV10_0()
+    {
+        if (array_key_exists("v100", $this->_propDict)) {
+            return $this->_propDict["v100"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_0
+    * Version 10.0 or later.
+    *
+    * @param bool $val The value of the v10_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV10_0($val)
+    {
+        $this->_propDict["v100"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v11_0
+    * Version 11.0 or later.
+    *
+    * @return bool The v11_0
+    */
+    public function getV11_0()
+    {
+        if (array_key_exists("v110", $this->_propDict)) {
+            return $this->_propDict["v110"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v11_0
+    * Version 11.0 or later.
+    *
+    * @param bool $val The value of the v11_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV11_0($val)
+    {
+        $this->_propDict["v110"] = $val;
+        return $this;
+    }
+    /**
     * Gets the v4_0
     * Version 4.0 or later.
     *

@@ -34,7 +34,7 @@ class IosHomeScreenApp extends IosHomeScreenItem
 
     /**
     * Gets the bundleID
-    * BundleID of app
+    * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
     *
     * @return string The bundleID
     */
@@ -49,7 +49,7 @@ class IosHomeScreenApp extends IosHomeScreenItem
 
     /**
     * Sets the bundleID
-    * BundleID of app
+    * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
     *
     * @param string $val The value of the bundleID
     *
@@ -58,6 +58,34 @@ class IosHomeScreenApp extends IosHomeScreenItem
     public function setBundleID($val)
     {
         $this->_propDict["bundleID"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isWebClip
+    * When true, the bundle ID will be handled as a URL for a web clip.
+    *
+    * @return bool The isWebClip
+    */
+    public function getIsWebClip()
+    {
+        if (array_key_exists("isWebClip", $this->_propDict)) {
+            return $this->_propDict["isWebClip"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isWebClip
+    * When true, the bundle ID will be handled as a URL for a web clip.
+    *
+    * @param bool $val The value of the isWebClip
+    *
+    * @return IosHomeScreenApp
+    */
+    public function setIsWebClip($val)
+    {
+        $this->_propDict["isWebClip"] = $val;
         return $this;
     }
 }

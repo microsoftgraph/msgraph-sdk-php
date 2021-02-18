@@ -146,7 +146,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility.
+    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
     *
     * @return AndroidWorkProfileVpnConnectionType The connectionType
     */
@@ -165,7 +165,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility.
+    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
     *
     * @param AndroidWorkProfileVpnConnectionType $val The connectionType
     *

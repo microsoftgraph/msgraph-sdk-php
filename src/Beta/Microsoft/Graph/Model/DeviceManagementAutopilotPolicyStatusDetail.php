@@ -87,6 +87,35 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     }
     
     /**
+    * Gets the errorCode
+    * The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
+    *
+    * @return int The errorCode
+    */
+    public function getErrorCode()
+    {
+        if (array_key_exists("errorCode", $this->_propDict)) {
+            return $this->_propDict["errorCode"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the errorCode
+    * The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
+    *
+    * @param int $val The errorCode
+    *
+    * @return DeviceManagementAutopilotPolicyStatusDetail
+    */
+    public function setErrorCode($val)
+    {
+        $this->_propDict["errorCode"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastReportedDateTime
     * Timestamp of the reported policy status
     *

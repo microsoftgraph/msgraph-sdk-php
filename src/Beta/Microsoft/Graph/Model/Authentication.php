@@ -110,6 +110,34 @@ class Authentication extends Entity
     
 
      /** 
+     * Gets the microsoftAuthenticatorMethods
+     *
+     * @return array The microsoftAuthenticatorMethods
+     */
+    public function getMicrosoftAuthenticatorMethods()
+    {
+        if (array_key_exists("microsoftAuthenticatorMethods", $this->_propDict)) {
+           return $this->_propDict["microsoftAuthenticatorMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the microsoftAuthenticatorMethods
+    *
+    * @param MicrosoftAuthenticatorAuthenticationMethod $val The microsoftAuthenticatorMethods
+    *
+    * @return Authentication
+    */
+    public function setMicrosoftAuthenticatorMethods($val)
+    {
+		$this->_propDict["microsoftAuthenticatorMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the operations
      *
      * @return array The operations
@@ -217,6 +245,34 @@ class Authentication extends Entity
     public function setPhoneMethods($val)
     {
 		$this->_propDict["phoneMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the windowsHelloForBusinessMethods
+     *
+     * @return array The windowsHelloForBusinessMethods
+     */
+    public function getWindowsHelloForBusinessMethods()
+    {
+        if (array_key_exists("windowsHelloForBusinessMethods", $this->_propDict)) {
+           return $this->_propDict["windowsHelloForBusinessMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsHelloForBusinessMethods
+    *
+    * @param WindowsHelloForBusinessAuthenticationMethod $val The windowsHelloForBusinessMethods
+    *
+    * @return Authentication
+    */
+    public function setWindowsHelloForBusinessMethods($val)
+    {
+		$this->_propDict["windowsHelloForBusinessMethods"] = $val;
         return $this;
     }
     

@@ -26,7 +26,7 @@ class PlannerPlanDetails extends PlannerDelta
 {
     /**
     * Gets the categoryDescriptions
-    * An object that specifies the descriptions of the six categories that can be associated with tasks in the plan
+    * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan
     *
     * @return PlannerCategoryDescriptions The categoryDescriptions
     */
@@ -45,7 +45,7 @@ class PlannerPlanDetails extends PlannerDelta
     
     /**
     * Sets the categoryDescriptions
-    * An object that specifies the descriptions of the six categories that can be associated with tasks in the plan
+    * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan
     *
     * @param PlannerCategoryDescriptions $val The categoryDescriptions
     *

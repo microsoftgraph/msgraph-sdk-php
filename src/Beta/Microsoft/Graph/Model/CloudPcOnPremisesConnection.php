@@ -84,7 +84,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the adDomainUsername
-    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: contoso@microsoft.com.
+    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
     *
     * @return string The adDomainUsername
     */
@@ -99,7 +99,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the adDomainUsername
-    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: contoso@microsoft.com.
+    * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
     *
     * @param string $val The adDomainUsername
     *
@@ -142,7 +142,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the healthCheckStatus
-    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatus The healthCheckStatus
     */
@@ -161,7 +161,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the healthCheckStatus
-    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+    * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatus $val The healthCheckStatus
     *
@@ -175,7 +175,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the healthCheckStatusDetails
-    * The details of the connection's health checks and the corresponding results. Returned only on $select. See an example of getting the healthCheckStatusDetails property.Read-only.
+    * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatusDetails The healthCheckStatusDetails
     */
@@ -194,7 +194,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the healthCheckStatusDetails
-    * The details of the connection's health checks and the corresponding results. Returned only on $select. See an example of getting the healthCheckStatusDetails property.Read-only.
+    * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatusDetails $val The healthCheckStatusDetails
     *
@@ -208,7 +208,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Gets the inUse
-    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Read-only.
+    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
     *
     * @return bool The inUse
     */
@@ -223,7 +223,7 @@ class CloudPcOnPremisesConnection extends Entity
     
     /**
     * Sets the inUse
-    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Read-only.
+    * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
     *
     * @param bool $val The inUse
     *

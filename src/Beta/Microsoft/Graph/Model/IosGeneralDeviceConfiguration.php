@@ -344,6 +344,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the applePersonalizedAdsBlocked
+    * Limits Apple personalized advertising when true. Available in iOS 14 and later.
+    *
+    * @return bool The applePersonalizedAdsBlocked
+    */
+    public function getApplePersonalizedAdsBlocked()
+    {
+        if (array_key_exists("applePersonalizedAdsBlocked", $this->_propDict)) {
+            return $this->_propDict["applePersonalizedAdsBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the applePersonalizedAdsBlocked
+    * Limits Apple personalized advertising when true. Available in iOS 14 and later.
+    *
+    * @param bool $val The applePersonalizedAdsBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setApplePersonalizedAdsBlocked($val)
+    {
+        $this->_propDict["applePersonalizedAdsBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the appleWatchBlockPairing
     * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
     *

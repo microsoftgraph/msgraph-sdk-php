@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementConfigurationCategory extends Entity
 {
     /**
+    * Gets the childCategoryIds
+    * List of child ids of the category.
+    *
+    * @return string The childCategoryIds
+    */
+    public function getChildCategoryIds()
+    {
+        if (array_key_exists("childCategoryIds", $this->_propDict)) {
+            return $this->_propDict["childCategoryIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the childCategoryIds
+    * List of child ids of the category.
+    *
+    * @param string $val The childCategoryIds
+    *
+    * @return DeviceManagementConfigurationCategory
+    */
+    public function setChildCategoryIds($val)
+    {
+        $this->_propDict["childCategoryIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * Description of the item
     *
@@ -141,6 +170,35 @@ class DeviceManagementConfigurationCategory extends Entity
     }
     
     /**
+    * Gets the parentCategoryId
+    * Parent id of the category.
+    *
+    * @return string The parentCategoryId
+    */
+    public function getParentCategoryId()
+    {
+        if (array_key_exists("parentCategoryId", $this->_propDict)) {
+            return $this->_propDict["parentCategoryId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the parentCategoryId
+    * Parent id of the category.
+    *
+    * @param string $val The parentCategoryId
+    *
+    * @return DeviceManagementConfigurationCategory
+    */
+    public function setParentCategoryId($val)
+    {
+        $this->_propDict["parentCategoryId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the platforms
     * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
     *
@@ -170,6 +228,68 @@ class DeviceManagementConfigurationCategory extends Entity
     public function setPlatforms($val)
     {
         $this->_propDict["platforms"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the rootCategoryId
+    * Root id of the category.
+    *
+    * @return string The rootCategoryId
+    */
+    public function getRootCategoryId()
+    {
+        if (array_key_exists("rootCategoryId", $this->_propDict)) {
+            return $this->_propDict["rootCategoryId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the rootCategoryId
+    * Root id of the category.
+    *
+    * @param string $val The rootCategoryId
+    *
+    * @return DeviceManagementConfigurationCategory
+    */
+    public function setRootCategoryId($val)
+    {
+        $this->_propDict["rootCategoryId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settingUsage
+    * Indicates that the category contains settings that are used for Compliance or Configuration.
+    *
+    * @return DeviceManagementConfigurationSettingUsage The settingUsage
+    */
+    public function getSettingUsage()
+    {
+        if (array_key_exists("settingUsage", $this->_propDict)) {
+            if (is_a($this->_propDict["settingUsage"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingUsage")) {
+                return $this->_propDict["settingUsage"];
+            } else {
+                $this->_propDict["settingUsage"] = new DeviceManagementConfigurationSettingUsage($this->_propDict["settingUsage"]);
+                return $this->_propDict["settingUsage"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the settingUsage
+    * Indicates that the category contains settings that are used for Compliance or Configuration.
+    *
+    * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
+    *
+    * @return DeviceManagementConfigurationCategory
+    */
+    public function setSettingUsage($val)
+    {
+        $this->_propDict["settingUsage"] = $val;
         return $this;
     }
     

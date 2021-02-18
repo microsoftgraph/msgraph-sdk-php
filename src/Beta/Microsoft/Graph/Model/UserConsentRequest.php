@@ -25,68 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class UserConsentRequest extends Request
 {
     /**
-    * Gets the createdBy
-    *
-    * @return IdentitySet The createdBy
-    */
-    public function getCreatedBy()
-    {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
-                return $this->_propDict["createdBy"];
-            } else {
-                $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
-                return $this->_propDict["createdBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdBy
-    *
-    * @param IdentitySet $val The createdBy
-    *
-    * @return UserConsentRequest
-    */
-    public function setCreatedBy($val)
-    {
-        $this->_propDict["createdBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the createdDateTime
-    *
-    * @return \DateTime The createdDateTime
-    */
-    public function getCreatedDateTime()
-    {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
-                return $this->_propDict["createdDateTime"];
-            } else {
-                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
-                return $this->_propDict["createdDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the createdDateTime
-    *
-    * @param \DateTime $val The createdDateTime
-    *
-    * @return UserConsentRequest
-    */
-    public function setCreatedDateTime($val)
-    {
-        $this->_propDict["createdDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the reason
     *
     * @return string The reason
@@ -114,29 +52,33 @@ class UserConsentRequest extends Request
     }
     
     /**
-    * Gets the status
+    * Gets the approval
     *
-    * @return string The status
+    * @return Approval The approval
     */
-    public function getStatus()
+    public function getApproval()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            return $this->_propDict["status"];
-        } else {
-            return null;
+        if (array_key_exists("approval", $this->_propDict)) {
+            if (is_a($this->_propDict["approval"], "Beta\Microsoft\Graph\Model\Approval")) {
+                return $this->_propDict["approval"];
+            } else {
+                $this->_propDict["approval"] = new Approval($this->_propDict["approval"]);
+                return $this->_propDict["approval"];
+            }
         }
+        return null;
     }
     
     /**
-    * Sets the status
+    * Sets the approval
     *
-    * @param string $val The status
+    * @param Approval $val The approval
     *
     * @return UserConsentRequest
     */
-    public function setStatus($val)
+    public function setApproval($val)
     {
-        $this->_propDict["status"] = $val;
+        $this->_propDict["approval"] = $val;
         return $this;
     }
     

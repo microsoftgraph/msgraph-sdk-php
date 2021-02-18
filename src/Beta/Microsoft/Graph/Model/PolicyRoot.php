@@ -86,37 +86,6 @@ class PolicyRoot extends
         return $this;
     }
     
-    /**
-    * Gets the deviceRegistrationPolicy
-    *
-    * @return DeviceRegistrationPolicy The deviceRegistrationPolicy
-    */
-    public function getDeviceRegistrationPolicy()
-    {
-        if (array_key_exists("deviceRegistrationPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceRegistrationPolicy"], "Beta\Microsoft\Graph\Model\DeviceRegistrationPolicy")) {
-                return $this->_propDict["deviceRegistrationPolicy"];
-            } else {
-                $this->_propDict["deviceRegistrationPolicy"] = new DeviceRegistrationPolicy($this->_propDict["deviceRegistrationPolicy"]);
-                return $this->_propDict["deviceRegistrationPolicy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the deviceRegistrationPolicy
-    *
-    * @param DeviceRegistrationPolicy $val The deviceRegistrationPolicy
-    *
-    * @return PolicyRoot
-    */
-    public function setDeviceRegistrationPolicy($val)
-    {
-        $this->_propDict["deviceRegistrationPolicy"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the activityBasedTimeoutPolicies
@@ -459,6 +428,62 @@ class PolicyRoot extends
     public function setIdentitySecurityDefaultsEnforcementPolicy($val)
     {
         $this->_propDict["identitySecurityDefaultsEnforcementPolicy"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the roleManagementPolicies
+     *
+     * @return array The roleManagementPolicies
+     */
+    public function getRoleManagementPolicies()
+    {
+        if (array_key_exists("roleManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["roleManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the roleManagementPolicies
+    *
+    * @param UnifiedRoleManagementPolicy $val The roleManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setRoleManagementPolicies($val)
+    {
+		$this->_propDict["roleManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the roleManagementPolicyAssignments
+     *
+     * @return array The roleManagementPolicyAssignments
+     */
+    public function getRoleManagementPolicyAssignments()
+    {
+        if (array_key_exists("roleManagementPolicyAssignments", $this->_propDict)) {
+           return $this->_propDict["roleManagementPolicyAssignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the roleManagementPolicyAssignments
+    *
+    * @param UnifiedRoleManagementPolicyAssignment $val The roleManagementPolicyAssignments
+    *
+    * @return PolicyRoot
+    */
+    public function setRoleManagementPolicyAssignments($val)
+    {
+		$this->_propDict["roleManagementPolicyAssignments"] = $val;
         return $this;
     }
     
