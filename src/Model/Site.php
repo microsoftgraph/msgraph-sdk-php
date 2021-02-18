@@ -401,6 +401,36 @@ class Site extends BaseItem
     
 
      /** 
+     * Gets the permissions
+    * The permissions associated with the site. Nullable.
+     *
+     * @return array The permissions
+     */
+    public function getPermissions()
+    {
+        if (array_key_exists("permissions", $this->_propDict)) {
+           return $this->_propDict["permissions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the permissions
+    * The permissions associated with the site. Nullable.
+    *
+    * @param Permission $val The permissions
+    *
+    * @return Site
+    */
+    public function setPermissions($val)
+    {
+		$this->_propDict["permissions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the sites
     * The collection of the sub-sites under this site.
      *

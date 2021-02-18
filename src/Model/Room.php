@@ -262,6 +262,7 @@ class Room extends Place
     
     /**
     * Gets the isWheelChairAccessible
+    * Specifies whether the room is wheelchair accessible.
     *
     * @return bool The isWheelChairAccessible
     */
@@ -276,6 +277,7 @@ class Room extends Place
     
     /**
     * Sets the isWheelChairAccessible
+    * Specifies whether the room is wheelchair accessible.
     *
     * @param bool $val The isWheelChairAccessible
     *
