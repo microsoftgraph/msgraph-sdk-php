@@ -368,6 +368,39 @@ class PlannerTask extends PlannerDelta
     }
     
     /**
+    * Gets the creationSource
+    * Contains information about the origin of the task.
+    *
+    * @return PlannerTaskCreation The creationSource
+    */
+    public function getCreationSource()
+    {
+        if (array_key_exists("creationSource", $this->_propDict)) {
+            if (is_a($this->_propDict["creationSource"], "Beta\Microsoft\Graph\Model\PlannerTaskCreation")) {
+                return $this->_propDict["creationSource"];
+            } else {
+                $this->_propDict["creationSource"] = new PlannerTaskCreation($this->_propDict["creationSource"]);
+                return $this->_propDict["creationSource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the creationSource
+    * Contains information about the origin of the task.
+    *
+    * @param PlannerTaskCreation $val The creationSource
+    *
+    * @return PlannerTask
+    */
+    public function setCreationSource($val)
+    {
+        $this->_propDict["creationSource"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the dueDateTime
     * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *

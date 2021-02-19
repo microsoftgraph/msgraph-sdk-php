@@ -52,6 +52,87 @@ class SharePointSiteUsageDetail extends Entity
     }
     
     /**
+    * Gets the anonymousLinkCount
+    *
+    * @return int The anonymousLinkCount
+    */
+    public function getAnonymousLinkCount()
+    {
+        if (array_key_exists("anonymousLinkCount", $this->_propDict)) {
+            return $this->_propDict["anonymousLinkCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the anonymousLinkCount
+    *
+    * @param int $val The anonymousLinkCount
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setAnonymousLinkCount($val)
+    {
+        $this->_propDict["anonymousLinkCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the companyLinkCount
+    *
+    * @return int The companyLinkCount
+    */
+    public function getCompanyLinkCount()
+    {
+        if (array_key_exists("companyLinkCount", $this->_propDict)) {
+            return $this->_propDict["companyLinkCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the companyLinkCount
+    *
+    * @param int $val The companyLinkCount
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setCompanyLinkCount($val)
+    {
+        $this->_propDict["companyLinkCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the externalSharing
+    *
+    * @return bool The externalSharing
+    */
+    public function getExternalSharing()
+    {
+        if (array_key_exists("externalSharing", $this->_propDict)) {
+            return $this->_propDict["externalSharing"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalSharing
+    *
+    * @param bool $val The externalSharing
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setExternalSharing($val)
+    {
+        $this->_propDict["externalSharing"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the fileCount
     *
     * @return int The fileCount
@@ -75,6 +156,33 @@ class SharePointSiteUsageDetail extends Entity
     public function setFileCount($val)
     {
         $this->_propDict["fileCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the geolocation
+    *
+    * @return string The geolocation
+    */
+    public function getGeolocation()
+    {
+        if (array_key_exists("geolocation", $this->_propDict)) {
+            return $this->_propDict["geolocation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the geolocation
+    *
+    * @param string $val The geolocation
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setGeolocation($val)
+    {
+        $this->_propDict["geolocation"] = $val;
         return $this;
     }
     
@@ -303,6 +411,60 @@ class SharePointSiteUsageDetail extends Entity
     }
     
     /**
+    * Gets the secureLinkForGuestCount
+    *
+    * @return int The secureLinkForGuestCount
+    */
+    public function getSecureLinkForGuestCount()
+    {
+        if (array_key_exists("secureLinkForGuestCount", $this->_propDict)) {
+            return $this->_propDict["secureLinkForGuestCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the secureLinkForGuestCount
+    *
+    * @param int $val The secureLinkForGuestCount
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setSecureLinkForGuestCount($val)
+    {
+        $this->_propDict["secureLinkForGuestCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the secureLinkForMemberCount
+    *
+    * @return int The secureLinkForMemberCount
+    */
+    public function getSecureLinkForMemberCount()
+    {
+        if (array_key_exists("secureLinkForMemberCount", $this->_propDict)) {
+            return $this->_propDict["secureLinkForMemberCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the secureLinkForMemberCount
+    *
+    * @param int $val The secureLinkForMemberCount
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setSecureLinkForMemberCount($val)
+    {
+        $this->_propDict["secureLinkForMemberCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the siteId
     *
     * @return string The siteId
@@ -326,6 +488,33 @@ class SharePointSiteUsageDetail extends Entity
     public function setSiteId($val)
     {
         $this->_propDict["siteId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the siteSensitivityLabelId
+    *
+    * @return string The siteSensitivityLabelId
+    */
+    public function getSiteSensitivityLabelId()
+    {
+        if (array_key_exists("siteSensitivityLabelId", $this->_propDict)) {
+            return $this->_propDict["siteSensitivityLabelId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the siteSensitivityLabelId
+    *
+    * @param string $val The siteSensitivityLabelId
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setSiteSensitivityLabelId($val)
+    {
+        $this->_propDict["siteSensitivityLabelId"] = $val;
         return $this;
     }
     
@@ -407,6 +596,33 @@ class SharePointSiteUsageDetail extends Entity
     public function setStorageUsedInBytes($val)
     {
         $this->_propDict["storageUsedInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the unmanagedDevicePolicy
+    *
+    * @return string The unmanagedDevicePolicy
+    */
+    public function getUnmanagedDevicePolicy()
+    {
+        if (array_key_exists("unmanagedDevicePolicy", $this->_propDict)) {
+            return $this->_propDict["unmanagedDevicePolicy"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the unmanagedDevicePolicy
+    *
+    * @param string $val The unmanagedDevicePolicy
+    *
+    * @return SharePointSiteUsageDetail
+    */
+    public function setUnmanagedDevicePolicy($val)
+    {
+        $this->_propDict["unmanagedDevicePolicy"] = $val;
         return $this;
     }
     

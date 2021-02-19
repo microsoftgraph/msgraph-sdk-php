@@ -317,6 +317,39 @@ class AccessPackageResource extends Entity
         return $this;
     }
     
+    /**
+    * Gets the accessPackageResourceEnvironment
+    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.
+    *
+    * @return AccessPackageResourceEnvironment The accessPackageResourceEnvironment
+    */
+    public function getAccessPackageResourceEnvironment()
+    {
+        if (array_key_exists("accessPackageResourceEnvironment", $this->_propDict)) {
+            if (is_a($this->_propDict["accessPackageResourceEnvironment"], "Beta\Microsoft\Graph\Model\AccessPackageResourceEnvironment")) {
+                return $this->_propDict["accessPackageResourceEnvironment"];
+            } else {
+                $this->_propDict["accessPackageResourceEnvironment"] = new AccessPackageResourceEnvironment($this->_propDict["accessPackageResourceEnvironment"]);
+                return $this->_propDict["accessPackageResourceEnvironment"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the accessPackageResourceEnvironment
+    * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.
+    *
+    * @param AccessPackageResourceEnvironment $val The accessPackageResourceEnvironment
+    *
+    * @return AccessPackageResource
+    */
+    public function setAccessPackageResourceEnvironment($val)
+    {
+        $this->_propDict["accessPackageResourceEnvironment"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the accessPackageResourceRoles

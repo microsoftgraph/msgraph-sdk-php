@@ -210,6 +210,36 @@ class PlannerUser extends PlannerDelta
     
 
      /** 
+     * Gets the rosterPlans
+    * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+     *
+     * @return array The rosterPlans
+     */
+    public function getRosterPlans()
+    {
+        if (array_key_exists("rosterPlans", $this->_propDict)) {
+           return $this->_propDict["rosterPlans"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rosterPlans
+    * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
+    *
+    * @param PlannerPlan $val The rosterPlans
+    *
+    * @return PlannerUser
+    */
+    public function setRosterPlans($val)
+    {
+		$this->_propDict["rosterPlans"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the tasks
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *

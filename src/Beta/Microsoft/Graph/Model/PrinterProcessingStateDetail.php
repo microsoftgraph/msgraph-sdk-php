@@ -30,24 +30,38 @@ class PrinterProcessingStateDetail extends Enum
     * The Enum PrinterProcessingStateDetail
     */
     const PAUSED = "paused";
-    const DISCONNECTED = "disconnected";
     const MEDIA_JAM = "mediaJam";
     const MEDIA_NEEDED = "mediaNeeded";
     const MEDIA_LOW = "mediaLow";
     const MEDIA_EMPTY = "mediaEmpty";
     const COVER_OPEN = "coverOpen";
     const INTERLOCK_OPEN = "interlockOpen";
-    const QUEUE_FULL = "queueFull";
     const OUTPUT_TRAY_MISSING = "outputTrayMissing";
     const OUTPUT_AREA_FULL = "outputAreaFull";
     const MARKER_SUPPLY_LOW = "markerSupplyLow";
     const MARKER_SUPPLY_EMPTY = "markerSupplyEmpty";
     const INPUT_TRAY_MISSING = "inputTrayMissing";
-    const OUTPUT_ALMOST_FULL = "outputAlmostFull";
+    const OUTPUT_AREA_ALMOST_FULL = "outputAreaAlmostFull";
     const MARKER_WASTE_ALMOST_FULL = "markerWasteAlmostFull";
     const MARKER_WASTE_FULL = "markerWasteFull";
     const FUSER_OVER_TEMP = "fuserOverTemp";
     const FUSER_UNDER_TEMP = "fuserUnderTemp";
     const OTHER = "other";
+    const NONE = "none";
+    const MOVING_TO_PAUSED = "movingToPaused";
+    const SHUTDOWN = "shutdown";
+    const CONNECTING_TO_DEVICE = "connectingToDevice";
+    const TIMED_OUT = "timedOut";
+    const STOPPING = "stopping";
+    const STOPPED_PARTIALLY = "stoppedPartially";
+    const TONER_LOW = "tonerLow";
+    const TONER_EMPTY = "tonerEmpty";
+    const SPOOL_AREA_FULL = "spoolAreaFull";
+    const DOOR_OPEN = "doorOpen";
+    const OPTICAL_PHOTO_CONDUCTOR_NEAR_END_OF_LIFE = "opticalPhotoConductorNearEndOfLife";
+    const OPTICAL_PHOTO_CONDUCTOR_LIFE_OVER = "opticalPhotoConductorLifeOver";
+    const DEVELOPER_LOW = "developerLow";
+    const DEVELOPER_EMPTY = "developerEmpty";
+    const INTERPRETER_RESOURCE_UNAVAILABLE = "interpreterResourceUnavailable";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

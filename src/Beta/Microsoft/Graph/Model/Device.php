@@ -151,6 +151,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceCategory
+    * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
     *
     * @return string The deviceCategory
     */
@@ -165,6 +166,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceCategory
+    * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
     *
     * @param string $val The deviceCategory
     *
@@ -236,6 +238,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceOwnership
+    * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
     *
     * @return string The deviceOwnership
     */
@@ -250,6 +253,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceOwnership
+    * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
     *
     * @param string $val The deviceOwnership
     *
@@ -321,6 +325,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the domainName
+    * The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
     *
     * @return string The domainName
     */
@@ -335,6 +340,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the domainName
+    * The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
     *
     * @param string $val The domainName
     *
@@ -348,6 +354,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the enrollmentProfileName
+    * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
     *
     * @return string The enrollmentProfileName
     */
@@ -362,6 +369,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the enrollmentProfileName
+    * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
     *
     * @param string $val The enrollmentProfileName
     *
@@ -375,6 +383,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the enrollmentType
+    * Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
     *
     * @return string The enrollmentType
     */
@@ -389,6 +398,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the enrollmentType
+    * Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
     *
     * @param string $val The enrollmentType
     *
@@ -428,6 +438,33 @@ class Device extends DirectoryObject
     public function setExtensionAttributes($val)
     {
         $this->_propDict["extensionAttributes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the hostnames
+    *
+    * @return string The hostnames
+    */
+    public function getHostnames()
+    {
+        if (array_key_exists("hostnames", $this->_propDict)) {
+            return $this->_propDict["hostnames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hostnames
+    *
+    * @param string $val The hostnames
+    *
+    * @return Device
+    */
+    public function setHostnames($val)
+    {
+        $this->_propDict["hostnames"] = $val;
         return $this;
     }
     
@@ -491,6 +528,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the isRooted
+    * true if device is rooted; false if device is jail-broken. This can only be updated by Intune.
     *
     * @return bool The isRooted
     */
@@ -505,6 +543,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the isRooted
+    * true if device is rooted; false if device is jail-broken. This can only be updated by Intune.
     *
     * @param bool $val The isRooted
     *
@@ -518,6 +557,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the managementType
+    * Management channel of the device.  This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
     *
     * @return string The managementType
     */
@@ -532,6 +572,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the managementType
+    * Management channel of the device.  This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
     *
     * @param string $val The managementType
     *
@@ -723,6 +764,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the registrationDateTime
+    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @return \DateTime The registrationDateTime
     */
@@ -741,6 +783,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the registrationDateTime
+    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     *
     * @param \DateTime $val The registrationDateTime
     *
@@ -973,6 +1016,34 @@ class Device extends DirectoryObject
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the usageRights
+     *
+     * @return array The usageRights
+     */
+    public function getUsageRights()
+    {
+        if (array_key_exists("usageRights", $this->_propDict)) {
+           return $this->_propDict["usageRights"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the usageRights
+    *
+    * @param UsageRight $val The usageRights
+    *
+    * @return Device
+    */
+    public function setUsageRights($val)
+    {
+		$this->_propDict["usageRights"] = $val;
         return $this;
     }
     

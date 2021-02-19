@@ -59,7 +59,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
 
     /**
     * Gets the singleSignOnMode
-    * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, headerBased.
+    * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased.
     *
     * @return SingleSignOnMode The singleSignOnMode
     */
@@ -78,7 +78,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
 
     /**
     * Sets the singleSignOnMode
-    * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, headerBased.
+    * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased.
     *
     * @param SingleSignOnMode $val The value to assign to the singleSignOnMode
     *

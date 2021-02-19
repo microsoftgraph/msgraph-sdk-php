@@ -31,13 +31,13 @@ class AdvancedBitLockerState extends Enum
     */
     const SUCCESS = "success";
     const NO_USER_CONSENT = "noUserConsent";
-    const OS_VOLUME_ENCRYPTION_METHOD_MISMATCH = "osVolumeEncryptionMethodMismatch";
+    const OS_VOLUME_UNPROTECTED = "osVolumeUnprotected";
     const OS_VOLUME_TPM_REQUIRED = "osVolumeTpmRequired";
     const OS_VOLUME_TPM_ONLY_REQUIRED = "osVolumeTpmOnlyRequired";
     const OS_VOLUME_TPM_PIN_REQUIRED = "osVolumeTpmPinRequired";
     const OS_VOLUME_TPM_STARTUP_KEY_REQUIRED = "osVolumeTpmStartupKeyRequired";
     const OS_VOLUME_TPM_PIN_STARTUP_KEY_REQUIRED = "osVolumeTpmPinStartupKeyRequired";
-    const OS_VOLUME_UNPROTECTED = "osVolumeUnprotected";
+    const OS_VOLUME_ENCRYPTION_METHOD_MISMATCH = "osVolumeEncryptionMethodMismatch";
     const RECOVERY_KEY_BACKUP_FAILED = "recoveryKeyBackupFailed";
     const FIXED_DRIVE_NOT_ENCRYPTED = "fixedDriveNotEncrypted";
     const FIXED_DRIVE_ENCRYPTION_METHOD_MISMATCH = "fixedDriveEncryptionMethodMismatch";

@@ -192,8 +192,36 @@ class DeviceOperatingSystemSummary extends Entity
         return $this;
     }
     /**
+    * Gets the aospUserAssociatedCount
+    * Number of AOSP user-associated Android devices. Valid values 0 to 2147483647
+    *
+    * @return int The aospUserAssociatedCount
+    */
+    public function getAospUserAssociatedCount()
+    {
+        if (array_key_exists("aospUserAssociatedCount", $this->_propDict)) {
+            return $this->_propDict["aospUserAssociatedCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the aospUserAssociatedCount
+    * Number of AOSP user-associated Android devices. Valid values 0 to 2147483647
+    *
+    * @param int $val The value of the aospUserAssociatedCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setAospUserAssociatedCount($val)
+    {
+        $this->_propDict["aospUserAssociatedCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the aospUserlessCount
-    * Number of AOSP dedicated Android devices. Valid values 0 to 2147483647
+    * Number of AOSP userless Android devices. Valid values 0 to 2147483647
     *
     * @return int The aospUserlessCount
     */
@@ -208,7 +236,7 @@ class DeviceOperatingSystemSummary extends Entity
 
     /**
     * Sets the aospUserlessCount
-    * Number of AOSP dedicated Android devices. Valid values 0 to 2147483647
+    * Number of AOSP userless Android devices. Valid values 0 to 2147483647
     *
     * @param int $val The value of the aospUserlessCount
     *

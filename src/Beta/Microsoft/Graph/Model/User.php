@@ -856,7 +856,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
     *
     * @return \DateTime The lastPasswordChangeDateTime
     */
@@ -875,7 +875,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
     *
     * @param \DateTime $val The lastPasswordChangeDateTime
     *
@@ -948,7 +948,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
     *
     * @return string The mail
     */
@@ -963,7 +963,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
     *
     * @param string $val The mail
     *
@@ -1184,7 +1184,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -1203,7 +1203,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -1811,7 +1811,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
     *
     * @return string The userPrincipalName
     */
@@ -1826,7 +1826,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter and $orderby.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
     *
     * @param string $val The userPrincipalName
     *
@@ -1960,7 +1960,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
     *
     * @return \DateTime The birthday
     */
@@ -1979,7 +1979,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
     *
     * @param \DateTime $val The birthday
     *
@@ -1993,7 +1993,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @return \DateTime The hireDate
     */
@@ -2012,7 +2012,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @param \DateTime $val The hireDate
     *
@@ -2255,6 +2255,34 @@ class User extends DirectoryObject
     public function setAnalytics($val)
     {
         $this->_propDict["analytics"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the usageRights
+     *
+     * @return array The usageRights
+     */
+    public function getUsageRights()
+    {
+        if (array_key_exists("usageRights", $this->_propDict)) {
+           return $this->_propDict["usageRights"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the usageRights
+    *
+    * @param UsageRight $val The usageRights
+    *
+    * @return User
+    */
+    public function setUsageRights($val)
+    {
+		$this->_propDict["usageRights"] = $val;
         return $this;
     }
     

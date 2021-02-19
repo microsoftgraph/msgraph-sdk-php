@@ -175,7 +175,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Gets the enrollmentMode
-    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice.
+    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.
     *
     * @return AndroidDeviceOwnerEnrollmentMode The enrollmentMode
     */
@@ -194,7 +194,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Sets the enrollmentMode
-    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice.
+    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.
     *
     * @param AndroidDeviceOwnerEnrollmentMode $val The enrollmentMode
     *

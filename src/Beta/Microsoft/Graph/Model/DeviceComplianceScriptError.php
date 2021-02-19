@@ -56,6 +56,39 @@ class DeviceComplianceScriptError extends Entity
         $this->_propDict["code"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the deviceComplianceScriptRulesValidationError
+    * Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
+    *
+    * @return DeviceComplianceScriptRulesValidationError The deviceComplianceScriptRulesValidationError
+    */
+    public function getDeviceComplianceScriptRulesValidationError()
+    {
+        if (array_key_exists("deviceComplianceScriptRulesValidationError", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceComplianceScriptRulesValidationError"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRulesValidationError")) {
+                return $this->_propDict["deviceComplianceScriptRulesValidationError"];
+            } else {
+                $this->_propDict["deviceComplianceScriptRulesValidationError"] = new DeviceComplianceScriptRulesValidationError($this->_propDict["deviceComplianceScriptRulesValidationError"]);
+                return $this->_propDict["deviceComplianceScriptRulesValidationError"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceComplianceScriptRulesValidationError
+    * Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
+    *
+    * @param DeviceComplianceScriptRulesValidationError $val The value to assign to the deviceComplianceScriptRulesValidationError
+    *
+    * @return DeviceComplianceScriptError The DeviceComplianceScriptError
+    */
+    public function setDeviceComplianceScriptRulesValidationError($val)
+    {
+        $this->_propDict["deviceComplianceScriptRulesValidationError"] = $val;
+         return $this;
+    }
     /**
     * Gets the message
     * Error message.

@@ -113,6 +113,34 @@ class PlannerPlanContext extends Entity
         return $this;
     }
     /**
+    * Gets the isCreationContext
+    * Read-only. Indicates whether the plan is created from the specified context. Auto-generated based on whether the context is specified as part of plan creation.
+    *
+    * @return bool The isCreationContext
+    */
+    public function getIsCreationContext()
+    {
+        if (array_key_exists("isCreationContext", $this->_propDict)) {
+            return $this->_propDict["isCreationContext"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isCreationContext
+    * Read-only. Indicates whether the plan is created from the specified context. Auto-generated based on whether the context is specified as part of plan creation.
+    *
+    * @param bool $val The value of the isCreationContext
+    *
+    * @return PlannerPlanContext
+    */
+    public function setIsCreationContext($val)
+    {
+        $this->_propDict["isCreationContext"] = $val;
+        return $this;
+    }
+    /**
     * Gets the ownerAppId
     * Read-only. ID of the app that created the plannerPlanContext.
     *

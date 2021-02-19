@@ -217,71 +217,61 @@ class PrinterLocation extends Entity
         $this->_propDict["floorNumber"] = $val;
         return $this;
     }
-
     /**
     * Gets the latitude
     * The latitude that the printer is located at.
     *
-    * @return Single The latitude
+    * @return float The latitude
     */
     public function getLatitude()
     {
         if (array_key_exists("latitude", $this->_propDict)) {
-            if (is_a($this->_propDict["latitude"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["latitude"];
-            } else {
-                $this->_propDict["latitude"] = new Single($this->_propDict["latitude"]);
-                return $this->_propDict["latitude"];
-            }
+            return $this->_propDict["latitude"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
     * Sets the latitude
     * The latitude that the printer is located at.
     *
-    * @param Single $val The value to assign to the latitude
+    * @param float $val The value of the latitude
     *
-    * @return PrinterLocation The PrinterLocation
+    * @return PrinterLocation
     */
     public function setLatitude($val)
     {
         $this->_propDict["latitude"] = $val;
-         return $this;
+        return $this;
     }
-
     /**
     * Gets the longitude
     * The longitude that the printer is located at.
     *
-    * @return Single The longitude
+    * @return float The longitude
     */
     public function getLongitude()
     {
         if (array_key_exists("longitude", $this->_propDict)) {
-            if (is_a($this->_propDict["longitude"], "Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["longitude"];
-            } else {
-                $this->_propDict["longitude"] = new Single($this->_propDict["longitude"]);
-                return $this->_propDict["longitude"];
-            }
+            return $this->_propDict["longitude"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
     * Sets the longitude
     * The longitude that the printer is located at.
     *
-    * @param Single $val The value to assign to the longitude
+    * @param float $val The value of the longitude
     *
-    * @return PrinterLocation The PrinterLocation
+    * @return PrinterLocation
     */
     public function setLongitude($val)
     {
         $this->_propDict["longitude"] = $val;
-         return $this;
+        return $this;
     }
     /**
     * Gets the organization

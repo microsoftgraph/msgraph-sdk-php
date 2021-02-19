@@ -614,7 +614,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceType
-    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, blackberry, palm, unknown, cloudPC.
+    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
     *
     * @return DeviceType The deviceType
     */
@@ -633,7 +633,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceType
-    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, blackberry, palm, unknown, cloudPC.
+    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
     *
     * @param DeviceType $val The deviceType
     *
@@ -2348,36 +2348,6 @@ class ManagedDevice extends Entity
     
 
      /** 
-     * Gets the securityBaselineStates
-    * Security baseline states for this device.
-     *
-     * @return array The securityBaselineStates
-     */
-    public function getSecurityBaselineStates()
-    {
-        if (array_key_exists("securityBaselineStates", $this->_propDict)) {
-           return $this->_propDict["securityBaselineStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the securityBaselineStates
-    * Security baseline states for this device.
-    *
-    * @param SecurityBaselineState $val The securityBaselineStates
-    *
-    * @return ManagedDevice
-    */
-    public function setSecurityBaselineStates($val)
-    {
-		$this->_propDict["securityBaselineStates"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the deviceCompliancePolicyStates
     * Device compliance policy states for this device.
      *
@@ -2403,6 +2373,36 @@ class ManagedDevice extends Entity
     public function setDeviceCompliancePolicyStates($val)
     {
 		$this->_propDict["deviceCompliancePolicyStates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the assignmentFilterEvaluationStatusDetails
+    * Managed device mobile app configuration states for this device.
+     *
+     * @return array The assignmentFilterEvaluationStatusDetails
+     */
+    public function getAssignmentFilterEvaluationStatusDetails()
+    {
+        if (array_key_exists("assignmentFilterEvaluationStatusDetails", $this->_propDict)) {
+           return $this->_propDict["assignmentFilterEvaluationStatusDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignmentFilterEvaluationStatusDetails
+    * Managed device mobile app configuration states for this device.
+    *
+    * @param AssignmentFilterEvaluationStatusDetails $val The assignmentFilterEvaluationStatusDetails
+    *
+    * @return ManagedDevice
+    */
+    public function setAssignmentFilterEvaluationStatusDetails($val)
+    {
+		$this->_propDict["assignmentFilterEvaluationStatusDetails"] = $val;
         return $this;
     }
     
@@ -2463,6 +2463,36 @@ class ManagedDevice extends Entity
     public function setManagedDeviceMobileAppConfigurationStates($val)
     {
 		$this->_propDict["managedDeviceMobileAppConfigurationStates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the securityBaselineStates
+    * Security baseline states for this device.
+     *
+     * @return array The securityBaselineStates
+     */
+    public function getSecurityBaselineStates()
+    {
+        if (array_key_exists("securityBaselineStates", $this->_propDict)) {
+           return $this->_propDict["securityBaselineStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the securityBaselineStates
+    * Security baseline states for this device.
+    *
+    * @param SecurityBaselineState $val The securityBaselineStates
+    *
+    * @return ManagedDevice
+    */
+    public function setSecurityBaselineStates($val)
+    {
+		$this->_propDict["securityBaselineStates"] = $val;
         return $this;
     }
     

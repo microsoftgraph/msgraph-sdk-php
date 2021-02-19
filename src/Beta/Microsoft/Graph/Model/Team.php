@@ -771,6 +771,34 @@ class Team extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the tags
+     *
+     * @return array The tags
+     */
+    public function getTags()
+    {
+        if (array_key_exists("tags", $this->_propDict)) {
+           return $this->_propDict["tags"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tags
+    *
+    * @param TeamworkTag $val The tags
+    *
+    * @return Team
+    */
+    public function setTags($val)
+    {
+		$this->_propDict["tags"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the template
     * The template this team was created from. See available templates.

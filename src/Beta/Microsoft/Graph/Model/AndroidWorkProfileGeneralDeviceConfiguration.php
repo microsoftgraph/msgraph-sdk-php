@@ -406,6 +406,35 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the workProfileAllowAppInstallsFromUnknownSources
+    * Indicates whether to allow installation of apps from unknown sources.
+    *
+    * @return bool The workProfileAllowAppInstallsFromUnknownSources
+    */
+    public function getWorkProfileAllowAppInstallsFromUnknownSources()
+    {
+        if (array_key_exists("workProfileAllowAppInstallsFromUnknownSources", $this->_propDict)) {
+            return $this->_propDict["workProfileAllowAppInstallsFromUnknownSources"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workProfileAllowAppInstallsFromUnknownSources
+    * Indicates whether to allow installation of apps from unknown sources.
+    *
+    * @param bool $val The workProfileAllowAppInstallsFromUnknownSources
+    *
+    * @return AndroidWorkProfileGeneralDeviceConfiguration
+    */
+    public function setWorkProfileAllowAppInstallsFromUnknownSources($val)
+    {
+        $this->_propDict["workProfileAllowAppInstallsFromUnknownSources"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the workProfileAllowWidgets
     * Allow widgets from work profile apps.
     *

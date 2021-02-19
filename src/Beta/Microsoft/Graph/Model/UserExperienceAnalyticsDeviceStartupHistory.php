@@ -316,7 +316,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     
     /**
     * Gets the restartCategory
-    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError.
+    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
     *
     * @return UserExperienceAnalyticsOperatingSystemRestartCategory The restartCategory
     */
@@ -335,7 +335,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     
     /**
     * Sets the restartCategory
-    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError.
+    * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
     *
     * @param UserExperienceAnalyticsOperatingSystemRestartCategory $val The restartCategory
     *

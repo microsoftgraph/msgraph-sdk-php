@@ -117,7 +117,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
-    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.???
+    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
     *
     * @return int The cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
     */
@@ -132,7 +132,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
-    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.???
+    * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
     *
     * @param int $val The cacheServerForegroundDownloadFallbackToHttpDelayInSeconds
     *

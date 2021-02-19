@@ -38,4 +38,5 @@ class AndroidWorkProfileVpnConnectionType extends Enum
     const PALO_ALTO_GLOBAL_PROTECT = "paloAltoGlobalProtect";
     const MICROSOFT_TUNNEL = "microsoftTunnel";
     const NET_MOTION_MOBILITY = "netMotionMobility";
+    const MICROSOFT_PROTECT = "microsoftProtect";
 }
