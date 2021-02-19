@@ -770,7 +770,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
     *
     * @return \DateTime The lastPasswordChangeDateTime
     */
@@ -789,7 +789,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
     *
     * @param \DateTime $val The lastPasswordChangeDateTime
     *
@@ -1098,7 +1098,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -1117,7 +1117,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -1812,7 +1812,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
     *
     * @return \DateTime The birthday
     */
@@ -1831,7 +1831,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
     *
     * @param \DateTime $val The birthday
     *
@@ -1845,7 +1845,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @return \DateTime The hireDate
     */
@@ -1864,7 +1864,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @param \DateTime $val The hireDate
     *
@@ -3297,6 +3297,37 @@ class User extends DirectoryObject
     public function setPresence($val)
     {
         $this->_propDict["presence"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the authentication
+    *
+    * @return Authentication The authentication
+    */
+    public function getAuthentication()
+    {
+        if (array_key_exists("authentication", $this->_propDict)) {
+            if (is_a($this->_propDict["authentication"], "Microsoft\Graph\Model\Authentication")) {
+                return $this->_propDict["authentication"];
+            } else {
+                $this->_propDict["authentication"] = new Authentication($this->_propDict["authentication"]);
+                return $this->_propDict["authentication"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authentication
+    *
+    * @param Authentication $val The authentication
+    *
+    * @return User
+    */
+    public function setAuthentication($val)
+    {
+        $this->_propDict["authentication"] = $val;
         return $this;
     }
     
