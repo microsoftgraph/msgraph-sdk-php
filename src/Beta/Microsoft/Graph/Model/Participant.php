@@ -26,7 +26,7 @@ class Participant extends Entity
 {
     /**
     * Gets the info
-    * The participant of the participant.
+    * Information about the participant.
     *
     * @return ParticipantInfo The info
     */
@@ -45,7 +45,7 @@ class Participant extends Entity
     
     /**
     * Sets the info
-    * The participant of the participant.
+    * Information about the participant.
     *
     * @param ParticipantInfo $val The info
     *

@@ -2675,6 +2675,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the userExperienceAnalyticsDevicesWithoutCloudIdentity
+    * User experience analytics devices without cloud identity.
+     *
+     * @return array The userExperienceAnalyticsDevicesWithoutCloudIdentity
+     */
+    public function getUserExperienceAnalyticsDevicesWithoutCloudIdentity()
+    {
+        if (array_key_exists("userExperienceAnalyticsDevicesWithoutCloudIdentity", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDevicesWithoutCloudIdentity"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsDevicesWithoutCloudIdentity
+    * User experience analytics devices without cloud identity.
+    *
+    * @param UserExperienceAnalyticsDeviceWithoutCloudIdentity $val The userExperienceAnalyticsDevicesWithoutCloudIdentity
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDevicesWithoutCloudIdentity($val)
+    {
+		$this->_propDict["userExperienceAnalyticsDevicesWithoutCloudIdentity"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userExperienceAnalyticsMetricHistory
     * User experience analytics metric history
      *
@@ -2766,6 +2796,36 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsRegressionSummary($val)
     {
         $this->_propDict["userExperienceAnalyticsRegressionSummary"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsResourcePerformance
+    * User experience analytics resource performance
+     *
+     * @return array The userExperienceAnalyticsResourcePerformance
+     */
+    public function getUserExperienceAnalyticsResourcePerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsResourcePerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsResourcePerformance"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsResourcePerformance
+    * User experience analytics resource performance
+    *
+    * @param UserExperienceAnalyticsResourcePerformance $val The userExperienceAnalyticsResourcePerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsResourcePerformance($val)
+    {
+		$this->_propDict["userExperienceAnalyticsResourcePerformance"] = $val;
         return $this;
     }
     
@@ -3404,6 +3464,66 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the microsoftTunnelHealthThresholds
+    * Collection of MicrosoftTunnelHealthThreshold settings associated with account.
+     *
+     * @return array The microsoftTunnelHealthThresholds
+     */
+    public function getMicrosoftTunnelHealthThresholds()
+    {
+        if (array_key_exists("microsoftTunnelHealthThresholds", $this->_propDict)) {
+           return $this->_propDict["microsoftTunnelHealthThresholds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the microsoftTunnelHealthThresholds
+    * Collection of MicrosoftTunnelHealthThreshold settings associated with account.
+    *
+    * @param MicrosoftTunnelHealthThreshold $val The microsoftTunnelHealthThresholds
+    *
+    * @return DeviceManagement
+    */
+    public function setMicrosoftTunnelHealthThresholds($val)
+    {
+		$this->_propDict["microsoftTunnelHealthThresholds"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the microsoftTunnelServerLogCollectionResponses
+    * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
+     *
+     * @return array The microsoftTunnelServerLogCollectionResponses
+     */
+    public function getMicrosoftTunnelServerLogCollectionResponses()
+    {
+        if (array_key_exists("microsoftTunnelServerLogCollectionResponses", $this->_propDict)) {
+           return $this->_propDict["microsoftTunnelServerLogCollectionResponses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the microsoftTunnelServerLogCollectionResponses
+    * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
+    *
+    * @param MicrosoftTunnelServerLogCollectionResponse $val The microsoftTunnelServerLogCollectionResponses
+    *
+    * @return DeviceManagement
+    */
+    public function setMicrosoftTunnelServerLogCollectionResponses($val)
+    {
+		$this->_propDict["microsoftTunnelServerLogCollectionResponses"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the microsoftTunnelSites
     * Collection of MicrosoftTunnelSite settings associated with account.
      *
@@ -3852,6 +3972,66 @@ class DeviceManagement extends Entity
     public function setWindowsFeatureUpdateProfiles($val)
     {
 		$this->_propDict["windowsFeatureUpdateProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the windowsQualityUpdateProfiles
+    * A collection of windows quality update profiles
+     *
+     * @return array The windowsQualityUpdateProfiles
+     */
+    public function getWindowsQualityUpdateProfiles()
+    {
+        if (array_key_exists("windowsQualityUpdateProfiles", $this->_propDict)) {
+           return $this->_propDict["windowsQualityUpdateProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsQualityUpdateProfiles
+    * A collection of windows quality update profiles
+    *
+    * @param WindowsQualityUpdateProfile $val The windowsQualityUpdateProfiles
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsQualityUpdateProfiles($val)
+    {
+		$this->_propDict["windowsQualityUpdateProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the windowsUpdateCatalogItems
+    * A collection of windows update catalog items (fetaure updates item , quality updates item)
+     *
+     * @return array The windowsUpdateCatalogItems
+     */
+    public function getWindowsUpdateCatalogItems()
+    {
+        if (array_key_exists("windowsUpdateCatalogItems", $this->_propDict)) {
+           return $this->_propDict["windowsUpdateCatalogItems"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsUpdateCatalogItems
+    * A collection of windows update catalog items (fetaure updates item , quality updates item)
+    *
+    * @param WindowsUpdateCatalogItem $val The windowsUpdateCatalogItems
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsUpdateCatalogItems($val)
+    {
+		$this->_propDict["windowsUpdateCatalogItems"] = $val;
         return $this;
     }
     

@@ -670,7 +670,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the preferredSingleSignOnMode
-    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
+    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
     *
     * @return string The preferredSingleSignOnMode
     */
@@ -685,7 +685,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the preferredSingleSignOnMode
-    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
+    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
     *
     * @param string $val The preferredSingleSignOnMode
     *
@@ -1055,7 +1055,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignedTo
-    * Principals (users, groups, and service principals) that are assigned to this service principal. Read-only.
+    * App role assignments for this app or service, granted to users, groups, and other service principals.
      *
      * @return array The appRoleAssignedTo
      */
@@ -1070,7 +1070,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignedTo
-    * Principals (users, groups, and service principals) that are assigned to this service principal. Read-only.
+    * App role assignments for this app or service, granted to users, groups, and other service principals.
     *
     * @param AppRoleAssignment $val The appRoleAssignedTo
     *
@@ -1085,7 +1085,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignments
-    * Applications that this service principal is assigned to. Read-only. Nullable.
+    * App role assignment for another app or service, granted to this service principal.
      *
      * @return array The appRoleAssignments
      */
@@ -1100,7 +1100,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignments
-    * Applications that this service principal is assigned to. Read-only. Nullable.
+    * App role assignment for another app or service, granted to this service principal.
     *
     * @param AppRoleAssignment $val The appRoleAssignments
     *

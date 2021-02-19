@@ -232,33 +232,6 @@ class Subscription extends Entity
     }
     
     /**
-    * Gets the includeProperties
-    *
-    * @return bool The includeProperties
-    */
-    public function getIncludeProperties()
-    {
-        if (array_key_exists("includeProperties", $this->_propDict)) {
-            return $this->_propDict["includeProperties"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the includeProperties
-    *
-    * @param bool $val The includeProperties
-    *
-    * @return Subscription
-    */
-    public function setIncludeProperties($val)
-    {
-        $this->_propDict["includeProperties"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the includeResourceData
     * When set to true, change notifications include resource data (such as content of a chat message). Optional.
     *
@@ -342,6 +315,33 @@ class Subscription extends Entity
     public function setLifecycleNotificationUrl($val)
     {
         $this->_propDict["lifecycleNotificationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the notificationContentType
+    *
+    * @return string The notificationContentType
+    */
+    public function getNotificationContentType()
+    {
+        if (array_key_exists("notificationContentType", $this->_propDict)) {
+            return $this->_propDict["notificationContentType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notificationContentType
+    *
+    * @param string $val The notificationContentType
+    *
+    * @return Subscription
+    */
+    public function setNotificationContentType($val)
+    {
+        $this->_propDict["notificationContentType"] = $val;
         return $this;
     }
     

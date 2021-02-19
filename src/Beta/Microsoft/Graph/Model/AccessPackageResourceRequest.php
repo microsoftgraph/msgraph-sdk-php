@@ -144,7 +144,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the justification
-    * The requestor's justification for adding the resource.
+    * The requestor's justification for adding or removing the resource.
     *
     * @return string The justification
     */
@@ -159,7 +159,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the justification
-    * The requestor's justification for adding the resource.
+    * The requestor's justification for adding or removing the resource.
     *
     * @param string $val The justification
     *
@@ -173,7 +173,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the requestState
-    * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added. Read-Only.
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
     *
     * @return string The requestState
     */
@@ -188,7 +188,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the requestState
-    * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added. Read-Only.
+    * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
     *
     * @param string $val The requestState
     *
@@ -231,7 +231,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the requestType
-    * Use AdminAdd to add a resource, if the caller is an administrator or resource owner.
+    * Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
     *
     * @return string The requestType
     */
@@ -246,7 +246,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the requestType
-    * Use AdminAdd to add a resource, if the caller is an administrator or resource owner.
+    * Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
     *
     * @param string $val The requestType
     *

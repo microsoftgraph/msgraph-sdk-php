@@ -53,7 +53,7 @@ class StatusDetails extends StatusBase
     }
     /**
     * Gets the errorCategory
-    * Categorizes the error code.
+    * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
     *
     * @return string The errorCategory
     */
@@ -68,7 +68,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the errorCategory
-    * Categorizes the error code.
+    * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
     *
     * @param string $val The value of the errorCategory
     *
@@ -81,7 +81,7 @@ class StatusDetails extends StatusBase
     }
     /**
     * Gets the errorCode
-    * Unique error code if any occurred.
+    * Unique error code if any occurred. Learn more
     *
     * @return string The errorCode
     */
@@ -96,7 +96,7 @@ class StatusDetails extends StatusBase
 
     /**
     * Sets the errorCode
-    * Unique error code if any occurred.
+    * Unique error code if any occurred. Learn more
     *
     * @param string $val The value of the errorCode
     *

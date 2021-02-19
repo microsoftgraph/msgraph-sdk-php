@@ -250,34 +250,6 @@ class DataClassificationService extends Entity
     
 
      /** 
-     * Gets the labelsAndPoliciesEvaluationJobs
-     *
-     * @return array The labelsAndPoliciesEvaluationJobs
-     */
-    public function getLabelsAndPoliciesEvaluationJobs()
-    {
-        if (array_key_exists("labelsAndPoliciesEvaluationJobs", $this->_propDict)) {
-           return $this->_propDict["labelsAndPoliciesEvaluationJobs"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the labelsAndPoliciesEvaluationJobs
-    *
-    * @param JobResponseBase $val The labelsAndPoliciesEvaluationJobs
-    *
-    * @return DataClassificationService
-    */
-    public function setLabelsAndPoliciesEvaluationJobs($val)
-    {
-		$this->_propDict["labelsAndPoliciesEvaluationJobs"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the sensitiveTypes
      *
      * @return array The sensitiveTypes

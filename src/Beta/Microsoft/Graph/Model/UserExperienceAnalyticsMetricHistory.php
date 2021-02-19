@@ -58,6 +58,35 @@ class UserExperienceAnalyticsMetricHistory extends Entity
     }
     
     /**
+    * Gets the metricType
+    * The user experience analytics metric type.
+    *
+    * @return string The metricType
+    */
+    public function getMetricType()
+    {
+        if (array_key_exists("metricType", $this->_propDict)) {
+            return $this->_propDict["metricType"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the metricType
+    * The user experience analytics metric type.
+    *
+    * @param string $val The metricType
+    *
+    * @return UserExperienceAnalyticsMetricHistory
+    */
+    public function setMetricType($val)
+    {
+        $this->_propDict["metricType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the userExperienceAnalyticsMetric
     * User experience analytics metric.
     *

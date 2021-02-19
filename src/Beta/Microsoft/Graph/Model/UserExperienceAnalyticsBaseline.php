@@ -116,6 +116,39 @@ class UserExperienceAnalyticsBaseline extends Entity
     }
     
     /**
+    * Gets the appHealthMetrics
+    * The user experience analytics app health metrics.
+    *
+    * @return UserExperienceAnalyticsCategory The appHealthMetrics
+    */
+    public function getAppHealthMetrics()
+    {
+        if (array_key_exists("appHealthMetrics", $this->_propDict)) {
+            if (is_a($this->_propDict["appHealthMetrics"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
+                return $this->_propDict["appHealthMetrics"];
+            } else {
+                $this->_propDict["appHealthMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["appHealthMetrics"]);
+                return $this->_propDict["appHealthMetrics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appHealthMetrics
+    * The user experience analytics app health metrics.
+    *
+    * @param UserExperienceAnalyticsCategory $val The appHealthMetrics
+    *
+    * @return UserExperienceAnalyticsBaseline
+    */
+    public function setAppHealthMetrics($val)
+    {
+        $this->_propDict["appHealthMetrics"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the bestPracticesMetrics
     * The user experience analytics best practices metrics.
     *
@@ -211,6 +244,39 @@ class UserExperienceAnalyticsBaseline extends Entity
     public function setRebootAnalyticsMetrics($val)
     {
         $this->_propDict["rebootAnalyticsMetrics"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourcePerformanceMetrics
+    * The user experience analytics resource performance metrics.
+    *
+    * @return UserExperienceAnalyticsCategory The resourcePerformanceMetrics
+    */
+    public function getResourcePerformanceMetrics()
+    {
+        if (array_key_exists("resourcePerformanceMetrics", $this->_propDict)) {
+            if (is_a($this->_propDict["resourcePerformanceMetrics"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
+                return $this->_propDict["resourcePerformanceMetrics"];
+            } else {
+                $this->_propDict["resourcePerformanceMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["resourcePerformanceMetrics"]);
+                return $this->_propDict["resourcePerformanceMetrics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the resourcePerformanceMetrics
+    * The user experience analytics resource performance metrics.
+    *
+    * @param UserExperienceAnalyticsCategory $val The resourcePerformanceMetrics
+    *
+    * @return UserExperienceAnalyticsBaseline
+    */
+    public function setResourcePerformanceMetrics($val)
+    {
+        $this->_propDict["resourcePerformanceMetrics"] = $val;
         return $this;
     }
     

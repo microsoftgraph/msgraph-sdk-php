@@ -447,6 +447,39 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     }
     
     /**
+    * Gets the uxBehavior
+    * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
+    *
+    * @return DeviceManagementConfigurationControlType The uxBehavior
+    */
+    public function getUxBehavior()
+    {
+        if (array_key_exists("uxBehavior", $this->_propDict)) {
+            if (is_a($this->_propDict["uxBehavior"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationControlType")) {
+                return $this->_propDict["uxBehavior"];
+            } else {
+                $this->_propDict["uxBehavior"] = new DeviceManagementConfigurationControlType($this->_propDict["uxBehavior"]);
+                return $this->_propDict["uxBehavior"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the uxBehavior
+    * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
+    *
+    * @param DeviceManagementConfigurationControlType $val The uxBehavior
+    *
+    * @return DeviceManagementConfigurationSettingDefinition
+    */
+    public function setUxBehavior($val)
+    {
+        $this->_propDict["uxBehavior"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the version
     * Item Version
     *

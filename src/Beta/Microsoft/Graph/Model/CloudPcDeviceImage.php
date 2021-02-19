@@ -175,7 +175,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Gets the status
-    * The status of the image on cloud PC. Possible status include upload pending, failed to upload, or ready to use. Possible values are: pending, ready, failed.
+    * The status of the image on cloud PC. Possible values are: pending, ready, failed.
     *
     * @return CloudPcDeviceImageStatus The status
     */
@@ -194,7 +194,7 @@ class CloudPcDeviceImage extends Entity
     
     /**
     * Sets the status
-    * The status of the image on cloud PC. Possible status include upload pending, failed to upload, or ready to use. Possible values are: pending, ready, failed.
+    * The status of the image on cloud PC. Possible values are: pending, ready, failed.
     *
     * @param CloudPcDeviceImageStatus $val The status
     *

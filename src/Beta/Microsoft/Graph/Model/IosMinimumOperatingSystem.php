@@ -136,6 +136,34 @@ class IosMinimumOperatingSystem extends Entity
         return $this;
     }
     /**
+    * Gets the v14_0
+    * Version 14.0 or later.
+    *
+    * @return bool The v14_0
+    */
+    public function getV14_0()
+    {
+        if (array_key_exists("v140", $this->_propDict)) {
+            return $this->_propDict["v140"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v14_0
+    * Version 14.0 or later.
+    *
+    * @param bool $val The value of the v14_0
+    *
+    * @return IosMinimumOperatingSystem
+    */
+    public function setV14_0($val)
+    {
+        $this->_propDict["v140"] = $val;
+        return $this;
+    }
+    /**
     * Gets the v8_0
     * Version 8.0 or later.
     *

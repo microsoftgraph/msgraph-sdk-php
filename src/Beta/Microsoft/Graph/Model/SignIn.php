@@ -445,6 +445,60 @@ class SignIn extends Entity
     }
     
     /**
+    * Gets the flaggedForReview
+    *
+    * @return bool The flaggedForReview
+    */
+    public function getFlaggedForReview()
+    {
+        if (array_key_exists("flaggedForReview", $this->_propDict)) {
+            return $this->_propDict["flaggedForReview"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the flaggedForReview
+    *
+    * @param bool $val The flaggedForReview
+    *
+    * @return SignIn
+    */
+    public function setFlaggedForReview($val)
+    {
+        $this->_propDict["flaggedForReview"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the homeTenantId
+    *
+    * @return string The homeTenantId
+    */
+    public function getHomeTenantId()
+    {
+        if (array_key_exists("homeTenantId", $this->_propDict)) {
+            return $this->_propDict["homeTenantId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the homeTenantId
+    *
+    * @param string $val The homeTenantId
+    *
+    * @return SignIn
+    */
+    public function setHomeTenantId($val)
+    {
+        $this->_propDict["homeTenantId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ipAddress
     * The IP address of the client from where the sign-in occurred.
     *
@@ -470,6 +524,33 @@ class SignIn extends Entity
     public function setIpAddress($val)
     {
         $this->_propDict["ipAddress"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the ipAddressFromResourceProvider
+    *
+    * @return string The ipAddressFromResourceProvider
+    */
+    public function getIpAddressFromResourceProvider()
+    {
+        if (array_key_exists("ipAddressFromResourceProvider", $this->_propDict)) {
+            return $this->_propDict["ipAddressFromResourceProvider"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ipAddressFromResourceProvider
+    *
+    * @param string $val The ipAddressFromResourceProvider
+    *
+    * @return SignIn
+    */
+    public function setIpAddressFromResourceProvider($val)
+    {
+        $this->_propDict["ipAddressFromResourceProvider"] = $val;
         return $this;
     }
     
@@ -1016,6 +1097,64 @@ class SignIn extends Entity
     }
     
     /**
+    * Gets the signInIdentifier
+    *
+    * @return string The signInIdentifier
+    */
+    public function getSignInIdentifier()
+    {
+        if (array_key_exists("signInIdentifier", $this->_propDict)) {
+            return $this->_propDict["signInIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the signInIdentifier
+    *
+    * @param string $val The signInIdentifier
+    *
+    * @return SignIn
+    */
+    public function setSignInIdentifier($val)
+    {
+        $this->_propDict["signInIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the signInIdentifierType
+    *
+    * @return SignInIdentifierType The signInIdentifierType
+    */
+    public function getSignInIdentifierType()
+    {
+        if (array_key_exists("signInIdentifierType", $this->_propDict)) {
+            if (is_a($this->_propDict["signInIdentifierType"], "Beta\Microsoft\Graph\Model\SignInIdentifierType")) {
+                return $this->_propDict["signInIdentifierType"];
+            } else {
+                $this->_propDict["signInIdentifierType"] = new SignInIdentifierType($this->_propDict["signInIdentifierType"]);
+                return $this->_propDict["signInIdentifierType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the signInIdentifierType
+    *
+    * @param SignInIdentifierType $val The signInIdentifierType
+    *
+    * @return SignIn
+    */
+    public function setSignInIdentifierType($val)
+    {
+        $this->_propDict["signInIdentifierType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
     *
@@ -1223,6 +1362,37 @@ class SignIn extends Entity
     public function setUserPrincipalName($val)
     {
         $this->_propDict["userPrincipalName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userType
+    *
+    * @return SignInUserType The userType
+    */
+    public function getUserType()
+    {
+        if (array_key_exists("userType", $this->_propDict)) {
+            if (is_a($this->_propDict["userType"], "Beta\Microsoft\Graph\Model\SignInUserType")) {
+                return $this->_propDict["userType"];
+            } else {
+                $this->_propDict["userType"] = new SignInUserType($this->_propDict["userType"]);
+                return $this->_propDict["userType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userType
+    *
+    * @param SignInUserType $val The userType
+    *
+    * @return SignIn
+    */
+    public function setUserType($val)
+    {
+        $this->_propDict["userType"] = $val;
         return $this;
     }
     

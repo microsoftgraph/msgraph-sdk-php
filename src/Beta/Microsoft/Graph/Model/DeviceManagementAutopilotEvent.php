@@ -58,6 +58,39 @@ class DeviceManagementAutopilotEvent extends Entity
     }
     
     /**
+    * Gets the accountSetupStatus
+    * Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+    *
+    * @return WindowsAutopilotDeploymentState The accountSetupStatus
+    */
+    public function getAccountSetupStatus()
+    {
+        if (array_key_exists("accountSetupStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["accountSetupStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState")) {
+                return $this->_propDict["accountSetupStatus"];
+            } else {
+                $this->_propDict["accountSetupStatus"] = new WindowsAutopilotDeploymentState($this->_propDict["accountSetupStatus"]);
+                return $this->_propDict["accountSetupStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the accountSetupStatus
+    * Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+    *
+    * @param WindowsAutopilotDeploymentState $val The accountSetupStatus
+    *
+    * @return DeviceManagementAutopilotEvent
+    */
+    public function setAccountSetupStatus($val)
+    {
+        $this->_propDict["accountSetupStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deploymentDuration
     * Autopilot deployment duration including enrollment.
     *
@@ -158,7 +191,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Gets the deploymentState
-    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout.
+    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
     *
     * @return WindowsAutopilotDeploymentState The deploymentState
     */
@@ -177,7 +210,7 @@ class DeviceManagementAutopilotEvent extends Entity
     
     /**
     * Sets the deploymentState
-    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout.
+    * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
     *
     * @param WindowsAutopilotDeploymentState $val The deploymentState
     *
@@ -376,6 +409,39 @@ class DeviceManagementAutopilotEvent extends Entity
     public function setDeviceSetupDuration($val)
     {
         $this->_propDict["deviceSetupDuration"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the deviceSetupStatus
+    * Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+    *
+    * @return WindowsAutopilotDeploymentState The deviceSetupStatus
+    */
+    public function getDeviceSetupStatus()
+    {
+        if (array_key_exists("deviceSetupStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceSetupStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState")) {
+                return $this->_propDict["deviceSetupStatus"];
+            } else {
+                $this->_propDict["deviceSetupStatus"] = new WindowsAutopilotDeploymentState($this->_propDict["deviceSetupStatus"]);
+                return $this->_propDict["deviceSetupStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the deviceSetupStatus
+    * Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+    *
+    * @param WindowsAutopilotDeploymentState $val The deviceSetupStatus
+    *
+    * @return DeviceManagementAutopilotEvent
+    */
+    public function setDeviceSetupStatus($val)
+    {
+        $this->_propDict["deviceSetupStatus"] = $val;
         return $this;
     }
     
@@ -711,6 +777,35 @@ class DeviceManagementAutopilotEvent extends Entity
     public function setWindows10EnrollmentCompletionPageConfigurationDisplayName($val)
     {
         $this->_propDict["windows10EnrollmentCompletionPageConfigurationDisplayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windows10EnrollmentCompletionPageConfigurationId
+    * Enrollment Status Page profile ID
+    *
+    * @return string The windows10EnrollmentCompletionPageConfigurationId
+    */
+    public function getWindows10EnrollmentCompletionPageConfigurationId()
+    {
+        if (array_key_exists("windows10EnrollmentCompletionPageConfigurationId", $this->_propDict)) {
+            return $this->_propDict["windows10EnrollmentCompletionPageConfigurationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windows10EnrollmentCompletionPageConfigurationId
+    * Enrollment Status Page profile ID
+    *
+    * @param string $val The windows10EnrollmentCompletionPageConfigurationId
+    *
+    * @return DeviceManagementAutopilotEvent
+    */
+    public function setWindows10EnrollmentCompletionPageConfigurationId($val)
+    {
+        $this->_propDict["windows10EnrollmentCompletionPageConfigurationId"] = $val;
         return $this;
     }
     

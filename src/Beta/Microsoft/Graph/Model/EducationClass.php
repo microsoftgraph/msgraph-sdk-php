@@ -447,6 +447,37 @@ class EducationClass extends Entity
     }
     
     /**
+    * Gets the assignmentSettings
+    *
+    * @return EducationAssignmentSettings The assignmentSettings
+    */
+    public function getAssignmentSettings()
+    {
+        if (array_key_exists("assignmentSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["assignmentSettings"], "Beta\Microsoft\Graph\Model\EducationAssignmentSettings")) {
+                return $this->_propDict["assignmentSettings"];
+            } else {
+                $this->_propDict["assignmentSettings"] = new EducationAssignmentSettings($this->_propDict["assignmentSettings"]);
+                return $this->_propDict["assignmentSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the assignmentSettings
+    *
+    * @param EducationAssignmentSettings $val The assignmentSettings
+    *
+    * @return EducationClass
+    */
+    public function setAssignmentSettings($val)
+    {
+        $this->_propDict["assignmentSettings"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the group
     * The directory group corresponding to this class.
     *

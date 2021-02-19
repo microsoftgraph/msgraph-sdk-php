@@ -56,6 +56,72 @@ class DeviceComplianceScriptRule extends Entity
         $this->_propDict["dataType"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the deviceComplianceScriptRuleDataType
+    * Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
+    *
+    * @return DeviceComplianceScriptRuleDataType The deviceComplianceScriptRuleDataType
+    */
+    public function getDeviceComplianceScriptRuleDataType()
+    {
+        if (array_key_exists("deviceComplianceScriptRuleDataType", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceComplianceScriptRuleDataType"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRuleDataType")) {
+                return $this->_propDict["deviceComplianceScriptRuleDataType"];
+            } else {
+                $this->_propDict["deviceComplianceScriptRuleDataType"] = new DeviceComplianceScriptRuleDataType($this->_propDict["deviceComplianceScriptRuleDataType"]);
+                return $this->_propDict["deviceComplianceScriptRuleDataType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceComplianceScriptRuleDataType
+    * Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
+    *
+    * @param DeviceComplianceScriptRuleDataType $val The value to assign to the deviceComplianceScriptRuleDataType
+    *
+    * @return DeviceComplianceScriptRule The DeviceComplianceScriptRule
+    */
+    public function setDeviceComplianceScriptRuleDataType($val)
+    {
+        $this->_propDict["deviceComplianceScriptRuleDataType"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the deviceComplianceScriptRulOperator
+    * Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
+    *
+    * @return DeviceComplianceScriptRulOperator The deviceComplianceScriptRulOperator
+    */
+    public function getDeviceComplianceScriptRulOperator()
+    {
+        if (array_key_exists("deviceComplianceScriptRulOperator", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceComplianceScriptRulOperator"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRulOperator")) {
+                return $this->_propDict["deviceComplianceScriptRulOperator"];
+            } else {
+                $this->_propDict["deviceComplianceScriptRulOperator"] = new DeviceComplianceScriptRulOperator($this->_propDict["deviceComplianceScriptRulOperator"]);
+                return $this->_propDict["deviceComplianceScriptRulOperator"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceComplianceScriptRulOperator
+    * Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
+    *
+    * @param DeviceComplianceScriptRulOperator $val The value to assign to the deviceComplianceScriptRulOperator
+    *
+    * @return DeviceComplianceScriptRule The DeviceComplianceScriptRule
+    */
+    public function setDeviceComplianceScriptRulOperator($val)
+    {
+        $this->_propDict["deviceComplianceScriptRulOperator"] = $val;
+         return $this;
+    }
     /**
     * Gets the operand
     * Operand specified in the rule.

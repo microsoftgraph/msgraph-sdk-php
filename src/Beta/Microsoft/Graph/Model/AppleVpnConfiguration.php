@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class AppleVpnConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the associatedDomains
+    * Associated Domains
+    *
+    * @return string The associatedDomains
+    */
+    public function getAssociatedDomains()
+    {
+        if (array_key_exists("associatedDomains", $this->_propDict)) {
+            return $this->_propDict["associatedDomains"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the associatedDomains
+    * Associated Domains
+    *
+    * @param string $val The associatedDomains
+    *
+    * @return AppleVpnConfiguration
+    */
+    public function setAssociatedDomains($val)
+    {
+        $this->_propDict["associatedDomains"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the authenticationMethod
     * Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
     *
@@ -88,7 +117,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility.
+    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility, microsoftProtect.
     *
     * @return AppleVpnConnectionType The connectionType
     */
@@ -107,7 +136,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility.
+    * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility, microsoftProtect.
     *
     * @param AppleVpnConnectionType $val The connectionType
     *

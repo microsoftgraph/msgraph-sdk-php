@@ -90,6 +90,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the alternativeRecording
+    * The content stream of the alternative recording of a live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream The alternativeRecording
     */
@@ -108,6 +109,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the alternativeRecording
+    * The content stream of the alternative recording of a live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The alternativeRecording
     *
@@ -121,6 +123,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the attendeeReport
+    * The content stream of the attendee report of a live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream The attendeeReport
     */
@@ -139,6 +142,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the attendeeReport
+    * The content stream of the attendee report of a live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The attendeeReport
     *
@@ -185,6 +189,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the broadcastSettings
+    * Settings related to a live event
     *
     * @return BroadcastMeetingSettings The broadcastSettings
     */
@@ -203,6 +208,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the broadcastSettings
+    * Settings related to a live event
     *
     * @param BroadcastMeetingSettings $val The broadcastSettings
     *
@@ -463,6 +469,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the isBroadcast
+    * Indicates if this is a live event.
     *
     * @return bool The isBroadcast
     */
@@ -477,6 +484,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the isBroadcast
+    * Indicates if this is a live event.
     *
     * @param bool $val The isBroadcast
     *
@@ -672,6 +680,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the recording
+    * The content stream of the recording of a live event. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream The recording
     */
@@ -690,6 +699,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the recording
+    * The content stream of the recording of a live event. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The recording
     *

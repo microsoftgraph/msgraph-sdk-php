@@ -166,6 +166,34 @@ class EntitlementManagement extends Entity
     
 
      /** 
+     * Gets the accessPackageResourceEnvironments
+     *
+     * @return array The accessPackageResourceEnvironments
+     */
+    public function getAccessPackageResourceEnvironments()
+    {
+        if (array_key_exists("accessPackageResourceEnvironments", $this->_propDict)) {
+           return $this->_propDict["accessPackageResourceEnvironments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageResourceEnvironments
+    *
+    * @param AccessPackageResourceEnvironment $val The accessPackageResourceEnvironments
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackageResourceEnvironments($val)
+    {
+		$this->_propDict["accessPackageResourceEnvironments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the accessPackageResourceRequests
      *
      * @return array The accessPackageResourceRequests

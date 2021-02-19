@@ -643,6 +643,93 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
+    * Gets the maximumRequiredOsVersion
+    * Versions bigger than the specified version will block the managed app from accessing company data.
+    *
+    * @return string The maximumRequiredOsVersion
+    */
+    public function getMaximumRequiredOsVersion()
+    {
+        if (array_key_exists("maximumRequiredOsVersion", $this->_propDict)) {
+            return $this->_propDict["maximumRequiredOsVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumRequiredOsVersion
+    * Versions bigger than the specified version will block the managed app from accessing company data.
+    *
+    * @param string $val The maximumRequiredOsVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMaximumRequiredOsVersion($val)
+    {
+        $this->_propDict["maximumRequiredOsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the maximumWarningOsVersion
+    * Versions bigger than the specified version will block the managed app from accessing company data.
+    *
+    * @return string The maximumWarningOsVersion
+    */
+    public function getMaximumWarningOsVersion()
+    {
+        if (array_key_exists("maximumWarningOsVersion", $this->_propDict)) {
+            return $this->_propDict["maximumWarningOsVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumWarningOsVersion
+    * Versions bigger than the specified version will block the managed app from accessing company data.
+    *
+    * @param string $val The maximumWarningOsVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMaximumWarningOsVersion($val)
+    {
+        $this->_propDict["maximumWarningOsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the maximumWipeOsVersion
+    * Versions bigger than the specified version will block the managed app from accessing company data.
+    *
+    * @return string The maximumWipeOsVersion
+    */
+    public function getMaximumWipeOsVersion()
+    {
+        if (array_key_exists("maximumWipeOsVersion", $this->_propDict)) {
+            return $this->_propDict["maximumWipeOsVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the maximumWipeOsVersion
+    * Versions bigger than the specified version will block the managed app from accessing company data.
+    *
+    * @param string $val The maximumWipeOsVersion
+    *
+    * @return ManagedAppProtection
+    */
+    public function setMaximumWipeOsVersion($val)
+    {
+        $this->_propDict["maximumWipeOsVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the minimumPinLength
     * Minimum pin length required for an app-level pin if PinRequired is set to True
     *

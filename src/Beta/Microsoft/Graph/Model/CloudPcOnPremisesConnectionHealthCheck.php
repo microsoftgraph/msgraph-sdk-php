@@ -115,7 +115,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Gets the errorType
-    * The type of error that occurred during this health check. Possible values are: DnsCheckFqdnNotFound, DnsCheckUnknownError, AdJoinCheckFqdnNotFound, AdJoinCheckIncorrectCredentials, AdJoinCheckOrganizationalUnitNotFound, AdJoinCheckOrganizationalUnitIncorrectFormat, AdJoinCheckUnknownError, EndpointConnectivityCheckUrlNotWhitelisted, EndpointConnectivityCheckUnknownError, AadConnectivityCheckUnknownError.
+    * The type of error that occurred during this health check.
     *
     * @return CloudPcOnPremisesConnectionHealthCheckErrorType The errorType
     */
@@ -134,7 +134,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the errorType
-    * The type of error that occurred during this health check. Possible values are: DnsCheckFqdnNotFound, DnsCheckUnknownError, AdJoinCheckFqdnNotFound, AdJoinCheckIncorrectCredentials, AdJoinCheckOrganizationalUnitNotFound, AdJoinCheckOrganizationalUnitIncorrectFormat, AdJoinCheckUnknownError, EndpointConnectivityCheckUrlNotWhitelisted, EndpointConnectivityCheckUnknownError, AadConnectivityCheckUnknownError.
+    * The type of error that occurred during this health check.
     *
     * @param CloudPcOnPremisesConnectionHealthCheckErrorType $val The value to assign to the errorType
     *
@@ -209,7 +209,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Gets the status
-    * The status of the health check item. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+    * The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
     *
     * @return CloudPcOnPremisesConnectionStatus The status
     */
@@ -228,7 +228,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
 
     /**
     * Sets the status
-    * The status of the health check item. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+    * The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
     *
     * @param CloudPcOnPremisesConnectionStatus $val The value to assign to the status
     *

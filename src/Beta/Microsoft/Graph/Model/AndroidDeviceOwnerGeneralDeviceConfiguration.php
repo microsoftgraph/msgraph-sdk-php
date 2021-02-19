@@ -686,6 +686,65 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
         return $this;
     }
     
+    /**
+    * Gets the kioskModeAppOrderEnabled
+    * Whether or not to enable app ordering in Kiosk Mode.
+    *
+    * @return bool The kioskModeAppOrderEnabled
+    */
+    public function getKioskModeAppOrderEnabled()
+    {
+        if (array_key_exists("kioskModeAppOrderEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeAppOrderEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeAppOrderEnabled
+    * Whether or not to enable app ordering in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeAppOrderEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeAppOrderEnabled($val)
+    {
+        $this->_propDict["kioskModeAppOrderEnabled"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the kioskModeAppPositions
+    * The ordering of items on Kiosk Mode Managed Home Screen. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The kioskModeAppPositions
+     */
+    public function getKioskModeAppPositions()
+    {
+        if (array_key_exists("kioskModeAppPositions", $this->_propDict)) {
+           return $this->_propDict["kioskModeAppPositions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the kioskModeAppPositions
+    * The ordering of items on Kiosk Mode Managed Home Screen. This collection can contain a maximum of 500 elements.
+    *
+    * @param AndroidDeviceOwnerKioskModeAppPositionItem $val The kioskModeAppPositions
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeAppPositions($val)
+    {
+		$this->_propDict["kioskModeAppPositions"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the kioskModeApps
@@ -713,6 +772,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setKioskModeApps($val)
     {
 		$this->_propDict["kioskModeApps"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeAppsInFolderOrderedByName
+    * Whether or not to alphabetize applications within a folder in Kiosk Mode.
+    *
+    * @return bool The kioskModeAppsInFolderOrderedByName
+    */
+    public function getKioskModeAppsInFolderOrderedByName()
+    {
+        if (array_key_exists("kioskModeAppsInFolderOrderedByName", $this->_propDict)) {
+            return $this->_propDict["kioskModeAppsInFolderOrderedByName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeAppsInFolderOrderedByName
+    * Whether or not to alphabetize applications within a folder in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeAppsInFolderOrderedByName
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeAppsInFolderOrderedByName($val)
+    {
+        $this->_propDict["kioskModeAppsInFolderOrderedByName"] = boolval($val);
         return $this;
     }
     
@@ -866,6 +954,64 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeGridHeight
+    * Number of rows for Managed Home Screen grid with app ordering enabled in Kiosk Mode. Valid values 1 to 9999999
+    *
+    * @return int The kioskModeGridHeight
+    */
+    public function getKioskModeGridHeight()
+    {
+        if (array_key_exists("kioskModeGridHeight", $this->_propDict)) {
+            return $this->_propDict["kioskModeGridHeight"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeGridHeight
+    * Number of rows for Managed Home Screen grid with app ordering enabled in Kiosk Mode. Valid values 1 to 9999999
+    *
+    * @param int $val The kioskModeGridHeight
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeGridHeight($val)
+    {
+        $this->_propDict["kioskModeGridHeight"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeGridWidth
+    * Number of columns for Managed Home Screen grid with app ordering enabled in Kiosk Mode. Valid values 1 to 9999999
+    *
+    * @return int The kioskModeGridWidth
+    */
+    public function getKioskModeGridWidth()
+    {
+        if (array_key_exists("kioskModeGridWidth", $this->_propDict)) {
+            return $this->_propDict["kioskModeGridWidth"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeGridWidth
+    * Number of columns for Managed Home Screen grid with app ordering enabled in Kiosk Mode. Valid values 1 to 9999999
+    *
+    * @param int $val The kioskModeGridWidth
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeGridWidth($val)
+    {
+        $this->_propDict["kioskModeGridWidth"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeIconSize
     * Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
     *
@@ -895,6 +1041,65 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function setKioskModeIconSize($val)
     {
         $this->_propDict["kioskModeIconSize"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeLockHomeScreen
+    * Whether or not to lock home screen to the end user in Kiosk Mode.
+    *
+    * @return bool The kioskModeLockHomeScreen
+    */
+    public function getKioskModeLockHomeScreen()
+    {
+        if (array_key_exists("kioskModeLockHomeScreen", $this->_propDict)) {
+            return $this->_propDict["kioskModeLockHomeScreen"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeLockHomeScreen
+    * Whether or not to lock home screen to the end user in Kiosk Mode.
+    *
+    * @param bool $val The kioskModeLockHomeScreen
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeLockHomeScreen($val)
+    {
+        $this->_propDict["kioskModeLockHomeScreen"] = boolval($val);
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the kioskModeManagedFolders
+    * A list of managed folders for a device in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     *
+     * @return array The kioskModeManagedFolders
+     */
+    public function getKioskModeManagedFolders()
+    {
+        if (array_key_exists("kioskModeManagedFolders", $this->_propDict)) {
+           return $this->_propDict["kioskModeManagedFolders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the kioskModeManagedFolders
+    * A list of managed folders for a device in Kiosk Mode. This collection can contain a maximum of 500 elements.
+    *
+    * @param AndroidDeviceOwnerKioskModeManagedFolder $val The kioskModeManagedFolders
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedFolders($val)
+    {
+		$this->_propDict["kioskModeManagedFolders"] = $val;
         return $this;
     }
     
