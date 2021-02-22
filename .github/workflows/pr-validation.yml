@@ -14,7 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run composer validate
+    - name: composer validate
       shell: bash
       run: |
         composer validate
+    - name: composer install
+      shell: bash
+      run: |
+        composer install
+    - name: run tests
+      shell: bash
+      run : |
+        vendor/bin/phpunit --exclude-group functional
