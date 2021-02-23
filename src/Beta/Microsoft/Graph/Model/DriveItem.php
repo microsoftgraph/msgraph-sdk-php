@@ -383,7 +383,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the pendingOperations
-    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @return PendingOperations The pendingOperations
     */
@@ -402,7 +402,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the pendingOperations
-    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @param PendingOperations $val The pendingOperations
     *

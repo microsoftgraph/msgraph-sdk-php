@@ -166,7 +166,7 @@ class RelatedContact extends Entity
 
     /**
     * Gets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other.
+    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
     *
     * @return ContactRelationship The relationship
     */
@@ -185,7 +185,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other.
+    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
     *
     * @param ContactRelationship $val The value to assign to the relationship
     *

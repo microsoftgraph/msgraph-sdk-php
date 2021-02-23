@@ -146,7 +146,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the orderIdentifier
-    * Order Id of the Windows autopilot device. - Deprecate
+    * Order Id of the Windows autopilot device.
     *
     * @return string The orderIdentifier
     */
@@ -161,7 +161,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the orderIdentifier
-    * Order Id of the Windows autopilot device. - Deprecate
+    * Order Id of the Windows autopilot device.
     *
     * @param string $val The orderIdentifier
     *

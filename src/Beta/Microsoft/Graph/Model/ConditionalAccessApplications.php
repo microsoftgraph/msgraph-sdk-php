@@ -81,7 +81,7 @@ class ConditionalAccessApplications extends Entity
     }
     /**
     * Gets the includeUserActions
-    * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
+    * User actions to include. For example, urn:user:registersecurityinfo
     *
     * @return string The includeUserActions
     */
@@ -96,7 +96,7 @@ class ConditionalAccessApplications extends Entity
 
     /**
     * Sets the includeUserActions
-    * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
+    * User actions to include. For example, urn:user:registersecurityinfo
     *
     * @param string $val The value of the includeUserActions
     *
