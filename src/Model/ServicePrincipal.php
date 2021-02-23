@@ -638,7 +638,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the preferredSingleSignOnMode
-    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
+    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
     *
     * @return string The preferredSingleSignOnMode
     */
@@ -653,7 +653,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the preferredSingleSignOnMode
-    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
+    * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
     *
     * @param string $val The preferredSingleSignOnMode
     *
