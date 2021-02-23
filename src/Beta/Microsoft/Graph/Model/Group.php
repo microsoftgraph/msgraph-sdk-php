@@ -1442,6 +1442,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignments
+    * Represents the app roles a group has been granted for an application.
      *
      * @return array The appRoleAssignments
      */
@@ -1456,6 +1457,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignments
+    * Represents the app roles a group has been granted for an application.
     *
     * @param AppRoleAssignment $val The appRoleAssignments
     *

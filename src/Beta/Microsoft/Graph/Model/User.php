@@ -2320,6 +2320,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignments
+    * Represents the app roles a user has been granted for an application.
      *
      * @return array The appRoleAssignments
      */
@@ -2334,6 +2335,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignments
+    * Represents the app roles a user has been granted for an application.
     *
     * @param AppRoleAssignment $val The appRoleAssignments
     *
