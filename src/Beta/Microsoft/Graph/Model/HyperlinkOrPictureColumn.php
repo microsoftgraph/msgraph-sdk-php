@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcDeviceImageStatusDetails File
+* HyperlinkOrPictureColumn File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* CloudPcDeviceImageStatusDetails class
+* HyperlinkOrPictureColumn class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcDeviceImageStatusDetails extends Enum
+class HyperlinkOrPictureColumn extends Entity
 {
     /**
-    * The Enum CloudPcDeviceImageStatusDetails
+    * Gets the isPicture
+    *
+    * @return bool The isPicture
     */
-    const INTERNAL_SERVER_ERROR = "internalServerError";
-    const SOURCE_IMAGE_NOT_FOUND = "sourceImageNotFound";
-    const OS_VERSION_NOT_SUPPORTED = "osVersionNotSupported";
-    const SOURCE_IMAGE_INVALID = "sourceImageInvalid";
+    public function getIsPicture()
+    {
+        if (array_key_exists("isPicture", $this->_propDict)) {
+            return $this->_propDict["isPicture"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isPicture
+    *
+    * @param bool $val The value of the isPicture
+    *
+    * @return HyperlinkOrPictureColumn
+    */
+    public function setIsPicture($val)
+    {
+        $this->_propDict["isPicture"] = $val;
+        return $this;
+    }
 }

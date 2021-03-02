@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class PolicyRoot extends 
 {
     /**
+    * Gets the authenticationMethodsPolicy
+    *
+    * @return AuthenticationMethodsPolicy The authenticationMethodsPolicy
+    */
+    public function getAuthenticationMethodsPolicy()
+    {
+        if (array_key_exists("authenticationMethodsPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethodsPolicy"], "Beta\Microsoft\Graph\Model\AuthenticationMethodsPolicy")) {
+                return $this->_propDict["authenticationMethodsPolicy"];
+            } else {
+                $this->_propDict["authenticationMethodsPolicy"] = new AuthenticationMethodsPolicy($this->_propDict["authenticationMethodsPolicy"]);
+                return $this->_propDict["authenticationMethodsPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationMethodsPolicy
+    *
+    * @param AuthenticationMethodsPolicy $val The authenticationMethodsPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setAuthenticationMethodsPolicy($val)
+    {
+        $this->_propDict["authenticationMethodsPolicy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the authenticationFlowsPolicy
     *
     * @return AuthenticationFlowsPolicy The authenticationFlowsPolicy

@@ -209,7 +209,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the instanceEnumerationScope
-    * In the case of an all groups review, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
+    * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
     *
     * @return AccessReviewScope The instanceEnumerationScope
     */
@@ -228,7 +228,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the instanceEnumerationScope
-    * In the case of an all groups review, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
+    * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
     *
     * @param AccessReviewScope $val The instanceEnumerationScope
     *
@@ -305,7 +305,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the scope
-    * Defines scope of users reviewed in a group. For supported scopes, see accessReviewScope. Required on create.
+    * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
     *
     * @return AccessReviewScope The scope
     */
@@ -324,7 +324,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the scope
-    * Defines scope of users reviewed in a group. For supported scopes, see accessReviewScope. Required on create.
+    * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
     *
     * @param AccessReviewScope $val The scope
     *

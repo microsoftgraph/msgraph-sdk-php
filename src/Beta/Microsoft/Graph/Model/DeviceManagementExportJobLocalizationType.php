@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcDeviceImageStatusDetails File
+* DeviceManagementExportJobLocalizationType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CloudPcDeviceImageStatusDetails class
+* DeviceManagementExportJobLocalizationType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,11 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcDeviceImageStatusDetails extends Enum
+class DeviceManagementExportJobLocalizationType extends Enum
 {
     /**
-    * The Enum CloudPcDeviceImageStatusDetails
+    * The Enum DeviceManagementExportJobLocalizationType
     */
-    const INTERNAL_SERVER_ERROR = "internalServerError";
-    const SOURCE_IMAGE_NOT_FOUND = "sourceImageNotFound";
-    const OS_VERSION_NOT_SUPPORTED = "osVersionNotSupported";
-    const SOURCE_IMAGE_INVALID = "sourceImageInvalid";
+    const LOCALIZED_VALUES_AS_ADDITIONAL_COLUMN = "localizedValuesAsAdditionalColumn";
+    const REPLACE_LOCALIZABLE_VALUES = "replaceLocalizableValues";
 }

@@ -102,7 +102,7 @@ class Profile extends Entity
     * Sets the anniversaries
     * Represents the details of meaningful dates associated with a person.
     *
-    * @param PersonAnniversary $val The anniversaries
+    * @param PersonAnnualEvent $val The anniversaries
     *
     * @return Profile
     */

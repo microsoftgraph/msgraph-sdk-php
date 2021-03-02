@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Approval File
+* SmsAuthenticationMethodConfiguration File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* Approval class
+* SmsAuthenticationMethodConfiguration class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,33 +22,35 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Approval extends Entity
+class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration
 {
 
      /** 
-     * Gets the steps
+     * Gets the includeTargets
+    * A collection of users or groups who are enabled to use the authentication method.
      *
-     * @return array The steps
+     * @return array The includeTargets
      */
-    public function getSteps()
+    public function getIncludeTargets()
     {
-        if (array_key_exists("steps", $this->_propDict)) {
-           return $this->_propDict["steps"];
+        if (array_key_exists("includeTargets", $this->_propDict)) {
+           return $this->_propDict["includeTargets"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the steps
+    * Sets the includeTargets
+    * A collection of users or groups who are enabled to use the authentication method.
     *
-    * @param ApprovalStep $val The steps
+    * @param SmsAuthenticationMethodTarget $val The includeTargets
     *
-    * @return Approval
+    * @return SmsAuthenticationMethodConfiguration
     */
-    public function setSteps($val)
+    public function setIncludeTargets($val)
     {
-		$this->_propDict["steps"] = $val;
+		$this->_propDict["includeTargets"] = $val;
         return $this;
     }
     

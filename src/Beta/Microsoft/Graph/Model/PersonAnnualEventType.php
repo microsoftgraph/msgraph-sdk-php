@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcDeviceImageStatusDetails File
+* PersonAnnualEventType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CloudPcDeviceImageStatusDetails class
+* PersonAnnualEventType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcDeviceImageStatusDetails extends Enum
+class PersonAnnualEventType extends Enum
 {
     /**
-    * The Enum CloudPcDeviceImageStatusDetails
+    * The Enum PersonAnnualEventType
     */
-    const INTERNAL_SERVER_ERROR = "internalServerError";
-    const SOURCE_IMAGE_NOT_FOUND = "sourceImageNotFound";
-    const OS_VERSION_NOT_SUPPORTED = "osVersionNotSupported";
-    const SOURCE_IMAGE_INVALID = "sourceImageInvalid";
+    const BIRTHDAY = "birthday";
+    const WEDDING = "wedding";
+    const WORK = "work";
+    const OTHER = "other";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

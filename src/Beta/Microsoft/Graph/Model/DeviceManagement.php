@@ -2555,6 +2555,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the userExperienceAnalyticsDeviceMetricHistory
+    * User experience analytics device metric history
+     *
+     * @return array The userExperienceAnalyticsDeviceMetricHistory
+     */
+    public function getUserExperienceAnalyticsDeviceMetricHistory()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceMetricHistory", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceMetricHistory"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsDeviceMetricHistory
+    * User experience analytics device metric history
+    *
+    * @param UserExperienceAnalyticsMetricHistory $val The userExperienceAnalyticsDeviceMetricHistory
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceMetricHistory($val)
+    {
+		$this->_propDict["userExperienceAnalyticsDeviceMetricHistory"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userExperienceAnalyticsDevicePerformance
     * User experience analytics device performance
      *
@@ -2705,6 +2735,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the userExperienceAnalyticsImpactingProcess
+    * User experience analytics impacting process
+     *
+     * @return array The userExperienceAnalyticsImpactingProcess
+     */
+    public function getUserExperienceAnalyticsImpactingProcess()
+    {
+        if (array_key_exists("userExperienceAnalyticsImpactingProcess", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsImpactingProcess"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsImpactingProcess
+    * User experience analytics impacting process
+    *
+    * @param UserExperienceAnalyticsImpactingProcess $val The userExperienceAnalyticsImpactingProcess
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsImpactingProcess($val)
+    {
+		$this->_propDict["userExperienceAnalyticsImpactingProcess"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userExperienceAnalyticsMetricHistory
     * User experience analytics metric history
      *
@@ -2796,6 +2856,36 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsRegressionSummary($val)
     {
         $this->_propDict["userExperienceAnalyticsRegressionSummary"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsRemoteConnection
+    * User experience analytics remote connection
+     *
+     * @return array The userExperienceAnalyticsRemoteConnection
+     */
+    public function getUserExperienceAnalyticsRemoteConnection()
+    {
+        if (array_key_exists("userExperienceAnalyticsRemoteConnection", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsRemoteConnection"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsRemoteConnection
+    * User experience analytics remote connection
+    *
+    * @param UserExperienceAnalyticsRemoteConnection $val The userExperienceAnalyticsRemoteConnection
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsRemoteConnection($val)
+    {
+		$this->_propDict["userExperienceAnalyticsRemoteConnection"] = $val;
         return $this;
     }
     

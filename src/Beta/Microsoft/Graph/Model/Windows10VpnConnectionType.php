@@ -39,4 +39,5 @@ class Windows10VpnConnectionType extends Enum
     const PPTP = "pptp";
     const CITRIX = "citrix";
     const PALO_ALTO_GLOBAL_PROTECT = "paloAltoGlobalProtect";
+    const CISCO_ANY_CONNECT = "ciscoAnyConnect";
 }
