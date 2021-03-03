@@ -260,15 +260,15 @@ class PersonName extends ItemFacet
     * Gets the pronunciation
     * Guidance on how to pronounce the users name.
     *
-    * @return YomiPersonName The pronunciation
+    * @return PersonNamePronounciation The pronunciation
     */
     public function getPronunciation()
     {
         if (array_key_exists("pronunciation", $this->_propDict)) {
-            if (is_a($this->_propDict["pronunciation"], "Beta\Microsoft\Graph\Model\YomiPersonName")) {
+            if (is_a($this->_propDict["pronunciation"], "Beta\Microsoft\Graph\Model\PersonNamePronounciation")) {
                 return $this->_propDict["pronunciation"];
             } else {
-                $this->_propDict["pronunciation"] = new YomiPersonName($this->_propDict["pronunciation"]);
+                $this->_propDict["pronunciation"] = new PersonNamePronounciation($this->_propDict["pronunciation"]);
                 return $this->_propDict["pronunciation"];
             }
         }
@@ -279,7 +279,7 @@ class PersonName extends ItemFacet
     * Sets the pronunciation
     * Guidance on how to pronounce the users name.
     *
-    * @param YomiPersonName $val The pronunciation
+    * @param PersonNamePronounciation $val The pronunciation
     *
     * @return PersonName
     */

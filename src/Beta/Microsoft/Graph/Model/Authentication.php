@@ -250,6 +250,34 @@ class Authentication extends Entity
     
 
      /** 
+     * Gets the temporaryAccessPassMethods
+     *
+     * @return array The temporaryAccessPassMethods
+     */
+    public function getTemporaryAccessPassMethods()
+    {
+        if (array_key_exists("temporaryAccessPassMethods", $this->_propDict)) {
+           return $this->_propDict["temporaryAccessPassMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the temporaryAccessPassMethods
+    *
+    * @param TemporaryAccessPassAuthenticationMethod $val The temporaryAccessPassMethods
+    *
+    * @return Authentication
+    */
+    public function setTemporaryAccessPassMethods($val)
+    {
+		$this->_propDict["temporaryAccessPassMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the windowsHelloForBusinessMethods
      *
      * @return array The windowsHelloForBusinessMethods

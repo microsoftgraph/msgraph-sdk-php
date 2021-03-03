@@ -120,6 +120,39 @@ class DeviceManagementExportJob extends Entity
     }
     
     /**
+    * Gets the localizationType
+    * Configures how the requested export job is localized
+    *
+    * @return DeviceManagementExportJobLocalizationType The localizationType
+    */
+    public function getLocalizationType()
+    {
+        if (array_key_exists("localizationType", $this->_propDict)) {
+            if (is_a($this->_propDict["localizationType"], "Beta\Microsoft\Graph\Model\DeviceManagementExportJobLocalizationType")) {
+                return $this->_propDict["localizationType"];
+            } else {
+                $this->_propDict["localizationType"] = new DeviceManagementExportJobLocalizationType($this->_propDict["localizationType"]);
+                return $this->_propDict["localizationType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the localizationType
+    * Configures how the requested export job is localized
+    *
+    * @param DeviceManagementExportJobLocalizationType $val The localizationType
+    *
+    * @return DeviceManagementExportJob
+    */
+    public function setLocalizationType($val)
+    {
+        $this->_propDict["localizationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the reportName
     * Name of the report
     *

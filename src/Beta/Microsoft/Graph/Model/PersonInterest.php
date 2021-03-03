@@ -141,6 +141,33 @@ class PersonInterest extends ItemFacet
     }
     
     /**
+    * Gets the thumbnailUrl
+    *
+    * @return string The thumbnailUrl
+    */
+    public function getThumbnailUrl()
+    {
+        if (array_key_exists("thumbnailUrl", $this->_propDict)) {
+            return $this->_propDict["thumbnailUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the thumbnailUrl
+    *
+    * @param string $val The thumbnailUrl
+    *
+    * @return PersonInterest
+    */
+    public function setThumbnailUrl($val)
+    {
+        $this->_propDict["thumbnailUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the webUrl
     * Contains a link to a web page or resource about the interest.
     *

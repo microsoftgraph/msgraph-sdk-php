@@ -293,6 +293,7 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the inputBin
+    * The default input bin that serves as the paper source.
     *
     * @return string The inputBin
     */
@@ -307,6 +308,7 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the inputBin
+    * The default input bin that serves as the paper source.
     *
     * @param string $val The value of the inputBin
     *

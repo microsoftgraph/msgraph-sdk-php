@@ -416,6 +416,37 @@ class EducationClass extends Entity
         return $this;
     }
     
+    /**
+    * Gets the assignmentDefaults
+    *
+    * @return EducationAssignmentDefaults The assignmentDefaults
+    */
+    public function getAssignmentDefaults()
+    {
+        if (array_key_exists("assignmentDefaults", $this->_propDict)) {
+            if (is_a($this->_propDict["assignmentDefaults"], "Beta\Microsoft\Graph\Model\EducationAssignmentDefaults")) {
+                return $this->_propDict["assignmentDefaults"];
+            } else {
+                $this->_propDict["assignmentDefaults"] = new EducationAssignmentDefaults($this->_propDict["assignmentDefaults"]);
+                return $this->_propDict["assignmentDefaults"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the assignmentDefaults
+    *
+    * @param EducationAssignmentDefaults $val The assignmentDefaults
+    *
+    * @return EducationClass
+    */
+    public function setAssignmentDefaults($val)
+    {
+        $this->_propDict["assignmentDefaults"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the assignments

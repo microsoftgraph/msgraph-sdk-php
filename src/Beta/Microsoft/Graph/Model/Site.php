@@ -341,6 +341,34 @@ class Site extends BaseItem
     
 
      /** 
+     * Gets the externalColumns
+     *
+     * @return array The externalColumns
+     */
+    public function getExternalColumns()
+    {
+        if (array_key_exists("externalColumns", $this->_propDict)) {
+           return $this->_propDict["externalColumns"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the externalColumns
+    *
+    * @param ColumnDefinition $val The externalColumns
+    *
+    * @return Site
+    */
+    public function setExternalColumns($val)
+    {
+		$this->_propDict["externalColumns"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the items
     * Used to address any item contained in this site. This collection cannot be enumerated.
      *

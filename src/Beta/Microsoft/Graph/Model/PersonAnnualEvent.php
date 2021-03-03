@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PersonAnniversary File
+* PersonAnnualEvent File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* PersonAnniversary class
+* PersonAnnualEvent class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PersonAnniversary extends ItemFacet
+class PersonAnnualEvent extends ItemFacet
 {
     /**
     * Gets the date
-    * Contains the date associated with the anniversary type.
     *
     * @return \DateTime The date
     */
@@ -45,11 +44,10 @@ class PersonAnniversary extends ItemFacet
     
     /**
     * Sets the date
-    * Contains the date associated with the anniversary type.
     *
     * @param \DateTime $val The date
     *
-    * @return PersonAnniversary
+    * @return PersonAnnualEvent
     */
     public function setDate($val)
     {
@@ -58,18 +56,44 @@ class PersonAnniversary extends ItemFacet
     }
     
     /**
-    * Gets the type
-    * The type of anniversary the date represents. Possible values are: birthday, wedding, unknownFutureValue.
+    * Gets the displayName
     *
-    * @return AnniversaryType The type
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return PersonAnnualEvent
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the type
+    *
+    * @return PersonAnnualEventType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\AnniversaryType")) {
+            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\PersonAnnualEventType")) {
                 return $this->_propDict["type"];
             } else {
-                $this->_propDict["type"] = new AnniversaryType($this->_propDict["type"]);
+                $this->_propDict["type"] = new PersonAnnualEventType($this->_propDict["type"]);
                 return $this->_propDict["type"];
             }
         }
@@ -78,11 +102,10 @@ class PersonAnniversary extends ItemFacet
     
     /**
     * Sets the type
-    * The type of anniversary the date represents. Possible values are: birthday, wedding, unknownFutureValue.
     *
-    * @param AnniversaryType $val The type
+    * @param PersonAnnualEventType $val The type
     *
-    * @return PersonAnniversary
+    * @return PersonAnnualEvent
     */
     public function setType($val)
     {

@@ -26,6 +26,34 @@ class EntitlementManagement extends Entity
 {
 
      /** 
+     * Gets the accessPackageAssignmentApprovals
+     *
+     * @return array The accessPackageAssignmentApprovals
+     */
+    public function getAccessPackageAssignmentApprovals()
+    {
+        if (array_key_exists("accessPackageAssignmentApprovals", $this->_propDict)) {
+           return $this->_propDict["accessPackageAssignmentApprovals"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackageAssignmentApprovals
+    *
+    * @param Approval $val The accessPackageAssignmentApprovals
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackageAssignmentApprovals($val)
+    {
+		$this->_propDict["accessPackageAssignmentApprovals"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the accessPackageAssignmentPolicies
      *
      * @return array The accessPackageAssignmentPolicies

@@ -304,6 +304,34 @@ class DeviceOperatingSystemSummary extends Entity
         return $this;
     }
     /**
+    * Gets the linuxCount
+    * Number of Linux OS devices. Valid values 0 to 2147483647
+    *
+    * @return int The linuxCount
+    */
+    public function getLinuxCount()
+    {
+        if (array_key_exists("linuxCount", $this->_propDict)) {
+            return $this->_propDict["linuxCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the linuxCount
+    * Number of Linux OS devices. Valid values 0 to 2147483647
+    *
+    * @param int $val The value of the linuxCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setLinuxCount($val)
+    {
+        $this->_propDict["linuxCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the macOSCount
     * Number of Mac OS X device count.
     *

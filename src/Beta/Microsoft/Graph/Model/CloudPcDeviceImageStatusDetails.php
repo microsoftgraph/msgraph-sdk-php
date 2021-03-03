@@ -31,4 +31,6 @@ class CloudPcDeviceImageStatusDetails extends Enum
     */
     const INTERNAL_SERVER_ERROR = "internalServerError";
     const SOURCE_IMAGE_NOT_FOUND = "sourceImageNotFound";
+    const OS_VERSION_NOT_SUPPORTED = "osVersionNotSupported";
+    const SOURCE_IMAGE_INVALID = "sourceImageInvalid";
 }

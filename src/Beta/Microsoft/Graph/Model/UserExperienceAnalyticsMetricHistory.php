@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsMetricHistory extends Entity
 {
     /**
+    * Gets the deviceId
+    * The user experience analytics device id.
+    *
+    * @return string The deviceId
+    */
+    public function getDeviceId()
+    {
+        if (array_key_exists("deviceId", $this->_propDict)) {
+            return $this->_propDict["deviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceId
+    * The user experience analytics device id.
+    *
+    * @param string $val The deviceId
+    *
+    * @return UserExperienceAnalyticsMetricHistory
+    */
+    public function setDeviceId($val)
+    {
+        $this->_propDict["deviceId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the metricDateTime
     * The user experience analytics metric date time.
     *
