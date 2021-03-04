@@ -42,7 +42,7 @@ class UserExperienceAnalyticsScoreHistory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startupDateTime
     * The user experience analytics device startup date time.
@@ -56,5 +56,5 @@ class UserExperienceAnalyticsScoreHistory extends Entity
         $this->_propDict["startupDateTime"] = $val;
         return $this;
     }
-    
+
 }

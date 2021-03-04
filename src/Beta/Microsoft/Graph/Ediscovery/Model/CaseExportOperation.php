@@ -37,7 +37,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the azureBlobContainer
     *
@@ -50,7 +50,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["azureBlobContainer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureBlobToken
     *
@@ -64,7 +64,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the azureBlobToken
     *
@@ -77,7 +77,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["azureBlobToken"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -91,7 +91,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -104,7 +104,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the exportOptions
     *
@@ -122,7 +122,7 @@ class CaseExportOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the exportOptions
     *
@@ -135,7 +135,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["exportOptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the exportStructure
     *
@@ -153,7 +153,7 @@ class CaseExportOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the exportStructure
     *
@@ -166,7 +166,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["exportStructure"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outputFolderId
     *
@@ -180,7 +180,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the outputFolderId
     *
@@ -193,7 +193,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["outputFolderId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outputName
     *
@@ -207,7 +207,7 @@ class CaseExportOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the outputName
     *
@@ -220,7 +220,7 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["outputName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewSet
     *
@@ -238,7 +238,7 @@ class CaseExportOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewSet
     *
@@ -251,5 +251,5 @@ class CaseExportOperation extends CaseOperation
         $this->_propDict["reviewSet"] = $val;
         return $this;
     }
-    
+
 }

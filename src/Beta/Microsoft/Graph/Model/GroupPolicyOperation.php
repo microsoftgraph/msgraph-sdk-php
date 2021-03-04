@@ -42,7 +42,7 @@ class GroupPolicyOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -56,7 +56,7 @@ class GroupPolicyOperation extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the operationStatus
     * The group policy operation status. Possible values are: unknown, inProgress, success, failed.
@@ -75,7 +75,7 @@ class GroupPolicyOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the operationStatus
     * The group policy operation status. Possible values are: unknown, inProgress, success, failed.
@@ -89,7 +89,7 @@ class GroupPolicyOperation extends Entity
         $this->_propDict["operationStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the operationType
     * The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
@@ -108,7 +108,7 @@ class GroupPolicyOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the operationType
     * The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
@@ -122,7 +122,7 @@ class GroupPolicyOperation extends Entity
         $this->_propDict["operationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the statusDetails
     * The group policy operation status detail.
@@ -137,7 +137,7 @@ class GroupPolicyOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the statusDetails
     * The group policy operation status detail.
@@ -151,5 +151,5 @@ class GroupPolicyOperation extends Entity
         $this->_propDict["statusDetails"] = $val;
         return $this;
     }
-    
+
 }

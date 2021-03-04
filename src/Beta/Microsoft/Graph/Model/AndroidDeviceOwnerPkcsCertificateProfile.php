@@ -42,7 +42,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateStore
     * Target store certificate. Possible values are: user, machine.
@@ -56,7 +56,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         $this->_propDict["certificateStore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateTemplateName
     * PKCS Certificate Template Name
@@ -71,7 +71,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateTemplateName
     * PKCS Certificate Template Name
@@ -85,7 +85,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         $this->_propDict["certificateTemplateName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificationAuthority
     * PKCS Certification Authority
@@ -100,7 +100,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
             return null;
         }
     }
-    
+
     /**
     * Sets the certificationAuthority
     * PKCS Certification Authority
@@ -114,7 +114,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         $this->_propDict["certificationAuthority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificationAuthorityName
     * PKCS Certification Authority Name
@@ -129,7 +129,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
             return null;
         }
     }
-    
+
     /**
     * Sets the certificationAuthorityName
     * PKCS Certification Authority Name
@@ -143,7 +143,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         $this->_propDict["certificationAuthorityName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificationAuthorityType
     * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
@@ -162,7 +162,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         }
         return null;
     }
-    
+
     /**
     * Sets the certificationAuthorityType
     * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
@@ -176,9 +176,9 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         $this->_propDict["certificationAuthorityType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
@@ -192,8 +192,8 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
@@ -203,10 +203,10 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     */
     public function setCustomSubjectAlternativeNames($val)
     {
-		$this->_propDict["customSubjectAlternativeNames"] = $val;
+        $this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -221,7 +221,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -235,7 +235,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -250,7 +250,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -264,9 +264,9 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
         $this->_propDict["subjectNameFormatString"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
@@ -280,8 +280,8 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices
     *
@@ -291,8 +291,8 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     */
     public function setManagedDeviceCertificateStates($val)
     {
-		$this->_propDict["managedDeviceCertificateStates"] = $val;
+        $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
 }

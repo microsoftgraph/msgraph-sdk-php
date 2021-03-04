@@ -37,7 +37,7 @@ class AccessReviewReviewer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -50,7 +50,7 @@ class AccessReviewReviewer extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -64,7 +64,7 @@ class AccessReviewReviewer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -77,5 +77,5 @@ class AccessReviewReviewer extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

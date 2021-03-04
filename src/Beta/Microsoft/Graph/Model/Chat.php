@@ -42,7 +42,7 @@ class Chat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the chatType
     * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
@@ -56,7 +56,7 @@ class Chat extends Entity
         $this->_propDict["chatType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Date and time at which the chat was created. Read-only.
@@ -75,7 +75,7 @@ class Chat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date and time at which the chat was created. Read-only.
@@ -89,7 +89,7 @@ class Chat extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdatedDateTime
     * Date and time at which the chat was renamed or list of members were last changed. Read-only.
@@ -108,7 +108,7 @@ class Chat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUpdatedDateTime
     * Date and time at which the chat was renamed or list of members were last changed. Read-only.
@@ -122,7 +122,7 @@ class Chat extends Entity
         $this->_propDict["lastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the topic
     * (Optional) Subject or topic for the chat. Only available for group chats.
@@ -137,7 +137,7 @@ class Chat extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the topic
     * (Optional) Subject or topic for the chat. Only available for group chats.
@@ -151,9 +151,9 @@ class Chat extends Entity
         $this->_propDict["topic"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the installedApps
     * A collection of all the apps in the chat. Nullable.
      *
@@ -167,8 +167,8 @@ class Chat extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the installedApps
     * A collection of all the apps in the chat. Nullable.
     *
@@ -178,12 +178,12 @@ class Chat extends Entity
     */
     public function setInstalledApps($val)
     {
-		$this->_propDict["installedApps"] = $val;
+        $this->_propDict["installedApps"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the members
     * A collection of all the members in the chat. Nullable.
      *
@@ -197,8 +197,8 @@ class Chat extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the members
     * A collection of all the members in the chat. Nullable.
     *
@@ -208,12 +208,12 @@ class Chat extends Entity
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the messages
     * A collection of all the messages in the chat. Nullable.
      *
@@ -227,8 +227,8 @@ class Chat extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the messages
     * A collection of all the messages in the chat. Nullable.
     *
@@ -238,12 +238,12 @@ class Chat extends Entity
     */
     public function setMessages($val)
     {
-		$this->_propDict["messages"] = $val;
+        $this->_propDict["messages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tabs
      *
      * @return array The tabs
@@ -256,8 +256,8 @@ class Chat extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tabs
     *
     * @param TeamsTab $val The tabs
@@ -266,8 +266,8 @@ class Chat extends Entity
     */
     public function setTabs($val)
     {
-		$this->_propDict["tabs"] = $val;
+        $this->_propDict["tabs"] = $val;
         return $this;
     }
-    
+
 }

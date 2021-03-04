@@ -38,7 +38,7 @@ class AssignmentFilterEvaluationStatusDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadId
     * PayloadId on which filter has been applied.
@@ -52,5 +52,5 @@ class AssignmentFilterEvaluationStatusDetails extends Entity
         $this->_propDict["payloadId"] = $val;
         return $this;
     }
-    
+
 }

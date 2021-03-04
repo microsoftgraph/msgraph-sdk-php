@@ -38,7 +38,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceMacAddress
     * Device Mac address.
@@ -52,7 +52,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
         $this->_propDict["deviceMacAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device name.
@@ -67,7 +67,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device name.
@@ -81,7 +81,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceRegistrationId
     * Device identifier for this device registration record.
@@ -96,7 +96,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceRegistrationId
     * Device identifier for this device registration record.
@@ -110,7 +110,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
         $this->_propDict["deviceRegistrationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceType
     * Device type, for example, Windows laptop VS Windows phone.
@@ -125,7 +125,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceType
     * Device type, for example, Windows laptop VS Windows phone.
@@ -139,7 +139,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
         $this->_propDict["deviceType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastCheckInDateTime
     * Last checkin time of the device.
@@ -158,7 +158,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastCheckInDateTime
     * Last checkin time of the device.
@@ -172,7 +172,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
         $this->_propDict["lastCheckInDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * UserId associated with this device registration record.
@@ -187,7 +187,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * UserId associated with this device registration record.
@@ -201,5 +201,5 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     * Indicates whether the user is deleted. Possible values are: true, false.
@@ -52,7 +52,7 @@ class RiskyUser extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isProcessing
     * Indicates whether a user's risky state is being processed by the backend.
@@ -67,7 +67,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isProcessing
     * Indicates whether a user's risky state is being processed by the backend.
@@ -81,7 +81,7 @@ class RiskyUser extends Entity
         $this->_propDict["isProcessing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the riskDetail
     * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
@@ -100,7 +100,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskDetail
     * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
@@ -114,7 +114,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskDetail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskLastUpdatedDateTime
     * The date and time that the risky user was last updated
@@ -133,7 +133,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskLastUpdatedDateTime
     * The date and time that the risky user was last updated
@@ -147,7 +147,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskLastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskLevel
     * The possible values are low, medium, high, hidden, none, unknownFutureValue.
@@ -166,7 +166,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskLevel
     * The possible values are low, medium, high, hidden, none, unknownFutureValue.
@@ -180,7 +180,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskState
     * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
@@ -199,7 +199,7 @@ class RiskyUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskState
     * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
@@ -213,7 +213,7 @@ class RiskyUser extends Entity
         $this->_propDict["riskState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userDisplayName
     * Risky user display name.
@@ -228,7 +228,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userDisplayName
     * Risky user display name.
@@ -242,7 +242,7 @@ class RiskyUser extends Entity
         $this->_propDict["userDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * Risky user principal name.
@@ -257,7 +257,7 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * Risky user principal name.
@@ -271,9 +271,9 @@ class RiskyUser extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the history
     * The activity related to user risk level change
      *
@@ -287,8 +287,8 @@ class RiskyUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the history
     * The activity related to user risk level change
     *
@@ -298,8 +298,8 @@ class RiskyUser extends Entity
     */
     public function setHistory($val)
     {
-		$this->_propDict["history"] = $val;
+        $this->_propDict["history"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountId
     * Tenant GUID the enrollment profile belongs to.
@@ -52,7 +52,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["accountId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Date time the enrollment profile was created.
@@ -71,7 +71,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date time the enrollment profile was created.
@@ -85,7 +85,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description for the enrollment profile.
@@ -100,7 +100,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description for the enrollment profile.
@@ -114,7 +114,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name for the enrollment profile.
@@ -129,7 +129,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name for the enrollment profile.
@@ -143,7 +143,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrolledDeviceCount
     * Total number of Android devices that have enrolled using this enrollment profile.
@@ -158,7 +158,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enrolledDeviceCount
     * Total number of Android devices that have enrolled using this enrollment profile.
@@ -172,7 +172,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["enrolledDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentMode
     * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.
@@ -191,7 +191,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentMode
     * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.
@@ -205,7 +205,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["enrollmentMode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentTokenType
     * The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.
@@ -224,7 +224,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentTokenType
     * The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.
@@ -238,7 +238,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["enrollmentTokenType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Date time the enrollment profile was last modified.
@@ -257,7 +257,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Date time the enrollment profile was last modified.
@@ -271,7 +271,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the qrCodeContent
     * String used to generate a QR code for the token.
@@ -286,7 +286,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the qrCodeContent
     * String used to generate a QR code for the token.
@@ -300,7 +300,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["qrCodeContent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the qrCodeImage
     * String used to generate a QR code for the token.
@@ -319,7 +319,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the qrCodeImage
     * String used to generate a QR code for the token.
@@ -333,7 +333,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["qrCodeImage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -348,7 +348,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -362,7 +362,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tokenCreationDateTime
     * Date time the most recently created token was created.
@@ -381,7 +381,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tokenCreationDateTime
     * Date time the most recently created token was created.
@@ -395,7 +395,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["tokenCreationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tokenExpirationDateTime
     * Date time the most recently created token will expire.
@@ -414,7 +414,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tokenExpirationDateTime
     * Date time the most recently created token will expire.
@@ -428,7 +428,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["tokenExpirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tokenValue
     * Value of the most recently created token for this enrollment profile.
@@ -443,7 +443,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tokenValue
     * Value of the most recently created token for this enrollment profile.
@@ -457,5 +457,5 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
         $this->_propDict["tokenValue"] = $val;
         return $this;
     }
-    
+
 }

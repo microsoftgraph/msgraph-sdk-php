@@ -38,7 +38,7 @@ class WorkbookTableColumn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the index
     * Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
@@ -52,7 +52,7 @@ class WorkbookTableColumn extends Entity
         $this->_propDict["index"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the name
     * Returns the name of the table column.
@@ -67,7 +67,7 @@ class WorkbookTableColumn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Returns the name of the table column.
@@ -81,7 +81,7 @@ class WorkbookTableColumn extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the values
     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -96,7 +96,7 @@ class WorkbookTableColumn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the values
     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -110,7 +110,7 @@ class WorkbookTableColumn extends Entity
         $this->_propDict["values"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the filter
     * Retrieve the filter applied to the column. Read-only.
@@ -129,7 +129,7 @@ class WorkbookTableColumn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the filter
     * Retrieve the filter applied to the column. Read-only.
@@ -143,5 +143,5 @@ class WorkbookTableColumn extends Entity
         $this->_propDict["filter"] = $val;
         return $this;
     }
-    
+
 }

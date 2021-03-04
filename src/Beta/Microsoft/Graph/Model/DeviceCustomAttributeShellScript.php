@@ -42,7 +42,7 @@ class DeviceCustomAttributeShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the device management script was created. This property is read-only.
@@ -56,7 +56,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customAttributeName
     * The name of the custom attribute.
@@ -71,7 +71,7 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customAttributeName
     * The name of the custom attribute.
@@ -85,7 +85,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["customAttributeName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customAttributeType
     * The expected type of the custom attribute's value. Possible values are: integer, string, dateTime.
@@ -104,7 +104,7 @@ class DeviceCustomAttributeShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the customAttributeType
     * The expected type of the custom attribute's value. Possible values are: integer, string, dateTime.
@@ -118,7 +118,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["customAttributeType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Optional description for the device management script.
@@ -133,7 +133,7 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Optional description for the device management script.
@@ -147,7 +147,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the device management script.
@@ -162,7 +162,7 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the device management script.
@@ -176,7 +176,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     * Script file name.
@@ -191,7 +191,7 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     * Script file name.
@@ -205,7 +205,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the device management script was last modified. This property is read-only.
@@ -224,7 +224,7 @@ class DeviceCustomAttributeShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the device management script was last modified. This property is read-only.
@@ -238,7 +238,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for this PowerShellScript instance.
@@ -253,7 +253,7 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tag IDs for this PowerShellScript instance.
@@ -267,7 +267,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
@@ -286,7 +286,7 @@ class DeviceCustomAttributeShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
@@ -300,7 +300,7 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["runAsAccount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scriptContent
     * The script content.
@@ -319,7 +319,7 @@ class DeviceCustomAttributeShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scriptContent
     * The script content.
@@ -333,9 +333,9 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["scriptContent"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments for the device management script.
      *
@@ -349,8 +349,8 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments for the device management script.
     *
@@ -360,12 +360,12 @@ class DeviceCustomAttributeShellScript extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceRunStates
     * List of run states for this script across all devices.
      *
@@ -379,8 +379,8 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceRunStates
     * List of run states for this script across all devices.
     *
@@ -390,12 +390,12 @@ class DeviceCustomAttributeShellScript extends Entity
     */
     public function setDeviceRunStates($val)
     {
-		$this->_propDict["deviceRunStates"] = $val;
+        $this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groupAssignments
     * The list of group assignments for the device management script.
      *
@@ -409,8 +409,8 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groupAssignments
     * The list of group assignments for the device management script.
     *
@@ -420,10 +420,10 @@ class DeviceCustomAttributeShellScript extends Entity
     */
     public function setGroupAssignments($val)
     {
-		$this->_propDict["groupAssignments"] = $val;
+        $this->_propDict["groupAssignments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the runSummary
     * Run summary for device management script.
@@ -442,7 +442,7 @@ class DeviceCustomAttributeShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runSummary
     * Run summary for device management script.
@@ -456,9 +456,9 @@ class DeviceCustomAttributeShellScript extends Entity
         $this->_propDict["runSummary"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userRunStates
     * List of run states for this script across all users.
      *
@@ -472,8 +472,8 @@ class DeviceCustomAttributeShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userRunStates
     * List of run states for this script across all users.
     *
@@ -483,8 +483,8 @@ class DeviceCustomAttributeShellScript extends Entity
     */
     public function setUserRunStates($val)
     {
-		$this->_propDict["userRunStates"] = $val;
+        $this->_propDict["userRunStates"] = $val;
         return $this;
     }
-    
+
 }

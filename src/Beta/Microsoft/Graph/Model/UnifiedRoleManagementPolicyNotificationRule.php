@@ -37,7 +37,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationLevel
     *
@@ -50,7 +50,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["notificationLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationRecipients
     *
@@ -64,7 +64,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationRecipients
     *
@@ -77,7 +77,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["notificationRecipients"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationType
     *
@@ -91,7 +91,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationType
     *
@@ -104,7 +104,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["notificationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recipientType
     *
@@ -118,7 +118,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
             return null;
         }
     }
-    
+
     /**
     * Sets the recipientType
     *
@@ -131,5 +131,5 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
         $this->_propDict["recipientType"] = $val;
         return $this;
     }
-    
+
 }

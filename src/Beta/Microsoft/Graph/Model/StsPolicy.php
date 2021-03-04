@@ -38,7 +38,7 @@ class StsPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the definition
     * A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
@@ -52,7 +52,7 @@ class StsPolicy extends PolicyBase
         $this->_propDict["definition"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isOrganizationDefault
     * If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
@@ -67,7 +67,7 @@ class StsPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the isOrganizationDefault
     * If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
@@ -81,9 +81,9 @@ class StsPolicy extends PolicyBase
         $this->_propDict["isOrganizationDefault"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appliesTo
      *
      * @return array The appliesTo
@@ -96,8 +96,8 @@ class StsPolicy extends PolicyBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appliesTo
     *
     * @param DirectoryObject $val The appliesTo
@@ -106,8 +106,8 @@ class StsPolicy extends PolicyBase
     */
     public function setAppliesTo($val)
     {
-		$this->_propDict["appliesTo"] = $val;
+        $this->_propDict["appliesTo"] = $val;
         return $this;
     }
-    
+
 }

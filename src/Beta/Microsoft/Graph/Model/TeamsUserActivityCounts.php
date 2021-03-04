@@ -37,7 +37,7 @@ class TeamsUserActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the calls
     *
@@ -50,7 +50,7 @@ class TeamsUserActivityCounts extends Entity
         $this->_propDict["calls"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the meetings
     *
@@ -64,7 +64,7 @@ class TeamsUserActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the meetings
     *
@@ -77,7 +77,7 @@ class TeamsUserActivityCounts extends Entity
         $this->_propDict["meetings"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the privateChatMessages
     *
@@ -91,7 +91,7 @@ class TeamsUserActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the privateChatMessages
     *
@@ -104,7 +104,7 @@ class TeamsUserActivityCounts extends Entity
         $this->_propDict["privateChatMessages"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -122,7 +122,7 @@ class TeamsUserActivityCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -135,7 +135,7 @@ class TeamsUserActivityCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -149,7 +149,7 @@ class TeamsUserActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -162,7 +162,7 @@ class TeamsUserActivityCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -180,7 +180,7 @@ class TeamsUserActivityCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -193,7 +193,7 @@ class TeamsUserActivityCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamChatMessages
     *
@@ -207,7 +207,7 @@ class TeamsUserActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the teamChatMessages
     *
@@ -220,5 +220,5 @@ class TeamsUserActivityCounts extends Entity
         $this->_propDict["teamChatMessages"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethod
     * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
@@ -56,7 +56,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eapType
     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
@@ -75,7 +75,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         }
         return null;
     }
-    
+
     /**
     * Sets the eapType
     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
@@ -89,7 +89,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         $this->_propDict["eapType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the innerAuthenticationProtocolForEapTtls
     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
@@ -108,7 +108,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         }
         return null;
     }
-    
+
     /**
     * Sets the innerAuthenticationProtocolForEapTtls
     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
@@ -122,7 +122,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         $this->_propDict["innerAuthenticationProtocolForEapTtls"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the innerAuthenticationProtocolForPeap
     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
@@ -141,7 +141,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         }
         return null;
     }
-    
+
     /**
     * Sets the innerAuthenticationProtocolForPeap
     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
@@ -155,7 +155,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         $this->_propDict["innerAuthenticationProtocolForPeap"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outerIdentityPrivacyTemporaryValue
     * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network.
@@ -170,7 +170,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
             return null;
         }
     }
-    
+
     /**
     * Sets the outerIdentityPrivacyTemporaryValue
     * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network.
@@ -184,7 +184,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         $this->_propDict["outerIdentityPrivacyTemporaryValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityCertificateForClientAuthentication
     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
@@ -203,7 +203,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         }
         return null;
     }
-    
+
     /**
     * Sets the identityCertificateForClientAuthentication
     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
@@ -217,7 +217,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         $this->_propDict["identityCertificateForClientAuthentication"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rootCertificateForServerValidation
     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
@@ -236,7 +236,7 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         }
         return null;
     }
-    
+
     /**
     * Sets the rootCertificateForServerValidation
     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
@@ -250,5 +250,5 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
         $this->_propDict["rootCertificateForServerValidation"] = $val;
         return $this;
     }
-    
+
 }

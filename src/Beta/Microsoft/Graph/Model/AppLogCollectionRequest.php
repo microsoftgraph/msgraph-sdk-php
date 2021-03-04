@@ -42,7 +42,7 @@ class AppLogCollectionRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     * Time at which the upload log request reached a terminal state
@@ -56,7 +56,7 @@ class AppLogCollectionRequest extends Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customLogFolders
     * List of log folders.
@@ -71,7 +71,7 @@ class AppLogCollectionRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customLogFolders
     * List of log folders.
@@ -85,7 +85,7 @@ class AppLogCollectionRequest extends Entity
         $this->_propDict["customLogFolders"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorMessage
     * Error message if any during the upload process
@@ -100,7 +100,7 @@ class AppLogCollectionRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorMessage
     * Error message if any during the upload process
@@ -114,7 +114,7 @@ class AppLogCollectionRequest extends Entity
         $this->_propDict["errorMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Log upload status. Possible values are: pending, completed, failed.
@@ -133,7 +133,7 @@ class AppLogCollectionRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Log upload status. Possible values are: pending, completed, failed.
@@ -147,5 +147,5 @@ class AppLogCollectionRequest extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

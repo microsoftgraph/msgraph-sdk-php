@@ -38,7 +38,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the accountName
     * Account name.
@@ -52,7 +52,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["accountName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the durationOfEmailToSync
     * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
@@ -71,7 +71,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the durationOfEmailToSync
     * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
@@ -85,7 +85,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["durationOfEmailToSync"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailAddressSource
     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
@@ -104,7 +104,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the emailAddressSource
     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
@@ -118,7 +118,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["emailAddressSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailSyncSchedule
     * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
@@ -137,7 +137,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the emailSyncSchedule
     * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
@@ -151,7 +151,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["emailSyncSchedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hostName
     * Exchange location that (URL) that the native mail app connects to.
@@ -166,7 +166,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the hostName
     * Exchange location that (URL) that the native mail app connects to.
@@ -180,7 +180,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["hostName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requireSsl
     * Indicates whether or not to use SSL.
@@ -195,7 +195,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the requireSsl
     * Indicates whether or not to use SSL.
@@ -209,7 +209,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["requireSsl"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncCalendar
     * Whether or not to sync the calendar.
@@ -224,7 +224,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the syncCalendar
     * Whether or not to sync the calendar.
@@ -238,7 +238,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["syncCalendar"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncContacts
     * Whether or not to sync contacts.
@@ -253,7 +253,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the syncContacts
     * Whether or not to sync contacts.
@@ -267,7 +267,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["syncContacts"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncTasks
     * Whether or not to sync tasks.
@@ -282,7 +282,7 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the syncTasks
     * Whether or not to sync tasks.
@@ -296,5 +296,5 @@ class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfiguration
         $this->_propDict["syncTasks"] = boolval($val);
         return $this;
     }
-    
+
 }

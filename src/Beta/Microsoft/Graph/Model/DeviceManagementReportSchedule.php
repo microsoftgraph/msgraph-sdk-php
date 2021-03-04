@@ -38,7 +38,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emails
     * Emails to which the scheduled reports are delivered
@@ -52,7 +52,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["emails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     * Time that the delivery of the scheduled reports ends
@@ -71,7 +71,7 @@ class DeviceManagementReportSchedule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * Time that the delivery of the scheduled reports ends
@@ -85,7 +85,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the filter
     * Filters applied on the report
@@ -100,7 +100,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the filter
     * Filters applied on the report
@@ -114,7 +114,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["filter"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Format of the scheduled report. Possible values are: csv, pdf.
@@ -133,7 +133,7 @@ class DeviceManagementReportSchedule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Format of the scheduled report. Possible values are: csv, pdf.
@@ -147,7 +147,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the orderBy
     * Ordering of columns in the report
@@ -162,7 +162,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the orderBy
     * Ordering of columns in the report
@@ -176,7 +176,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["orderBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recurrence
     * Frequency of scheduled report delivery. Possible values are: none, daily, weekly, monthly.
@@ -195,7 +195,7 @@ class DeviceManagementReportSchedule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the recurrence
     * Frequency of scheduled report delivery. Possible values are: none, daily, weekly, monthly.
@@ -209,7 +209,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["recurrence"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportName
     * Name of the report
@@ -224,7 +224,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportName
     * Name of the report
@@ -238,7 +238,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["reportName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportScheduleName
     * Name of the schedule
@@ -253,7 +253,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportScheduleName
     * Name of the schedule
@@ -267,7 +267,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["reportScheduleName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the select
     * Columns selected from the report
@@ -282,7 +282,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the select
     * Columns selected from the report
@@ -296,7 +296,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["select"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * Time that the delivery of the scheduled reports starts
@@ -315,7 +315,7 @@ class DeviceManagementReportSchedule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * Time that the delivery of the scheduled reports starts
@@ -329,7 +329,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     * Subject of the scheduled reports that are delivered
@@ -344,7 +344,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     * Subject of the scheduled reports that are delivered
@@ -358,7 +358,7 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The Id of the User who created the report
@@ -373,7 +373,7 @@ class DeviceManagementReportSchedule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The Id of the User who created the report
@@ -387,5 +387,5 @@ class DeviceManagementReportSchedule extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
 }

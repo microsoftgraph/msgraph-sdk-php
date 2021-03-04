@@ -42,7 +42,7 @@ class ChatMessageHostedContent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the contentBytes
     * Write-only. When posting new chat message hosted content, represents the bytes of the payload. These are represented as a base64Encoded string.
@@ -56,7 +56,7 @@ class ChatMessageHostedContent extends Entity
         $this->_propDict["contentBytes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentType
     * Write-only. When posting new chat message hosted content, represents the type of content, such as image/png.
@@ -71,7 +71,7 @@ class ChatMessageHostedContent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentType
     * Write-only. When posting new chat message hosted content, represents the type of content, such as image/png.
@@ -85,5 +85,5 @@ class ChatMessageHostedContent extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
+
 }

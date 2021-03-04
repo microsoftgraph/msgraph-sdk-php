@@ -37,7 +37,7 @@ class UserSource extends DataSource
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     *
@@ -50,7 +50,7 @@ class UserSource extends DataSource
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the includedSources
     *
@@ -68,7 +68,7 @@ class UserSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the includedSources
     *
@@ -81,5 +81,5 @@ class UserSource extends DataSource
         $this->_propDict["includedSources"] = $val;
         return $this;
     }
-    
+
 }

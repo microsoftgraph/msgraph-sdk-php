@@ -41,7 +41,7 @@ class Custodian extends DataSourceContainer
         }
         return null;
     }
-    
+
     /**
     * Sets the acknowledgedDateTime
     *
@@ -54,7 +54,7 @@ class Custodian extends DataSourceContainer
         $this->_propDict["acknowledgedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applyHoldToSources
     *
@@ -68,7 +68,7 @@ class Custodian extends DataSourceContainer
             return null;
         }
     }
-    
+
     /**
     * Sets the applyHoldToSources
     *
@@ -81,7 +81,7 @@ class Custodian extends DataSourceContainer
         $this->_propDict["applyHoldToSources"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the email
     *
@@ -95,7 +95,7 @@ class Custodian extends DataSourceContainer
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     *
@@ -108,9 +108,9 @@ class Custodian extends DataSourceContainer
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the siteSources
      *
      * @return array The siteSources
@@ -123,8 +123,8 @@ class Custodian extends DataSourceContainer
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the siteSources
     *
     * @param SiteSource $val The siteSources
@@ -133,12 +133,12 @@ class Custodian extends DataSourceContainer
     */
     public function setSiteSources($val)
     {
-		$this->_propDict["siteSources"] = $val;
+        $this->_propDict["siteSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the unifiedGroupSources
      *
      * @return array The unifiedGroupSources
@@ -151,8 +151,8 @@ class Custodian extends DataSourceContainer
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the unifiedGroupSources
     *
     * @param UnifiedGroupSource $val The unifiedGroupSources
@@ -161,12 +161,12 @@ class Custodian extends DataSourceContainer
     */
     public function setUnifiedGroupSources($val)
     {
-		$this->_propDict["unifiedGroupSources"] = $val;
+        $this->_propDict["unifiedGroupSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userSources
      *
      * @return array The userSources
@@ -179,8 +179,8 @@ class Custodian extends DataSourceContainer
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userSources
     *
     * @param UserSource $val The userSources
@@ -189,8 +189,8 @@ class Custodian extends DataSourceContainer
     */
     public function setUserSources($val)
     {
-		$this->_propDict["userSources"] = $val;
+        $this->_propDict["userSources"] = $val;
         return $this;
     }
-    
+
 }

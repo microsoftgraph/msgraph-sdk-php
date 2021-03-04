@@ -38,7 +38,7 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedTo
     * The name of the person who has been assigned the task in Outlook. Read-only.
@@ -52,7 +52,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["assignedTo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the body
     * The task body that typically contains information about the task. Note that only HTML type is supported.
@@ -71,7 +71,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     * The task body that typically contains information about the task. Note that only HTML type is supported.
@@ -85,7 +85,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the completedDateTime
     * The date in the specified time zone that the task was finished.
@@ -104,7 +104,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     * The date in the specified time zone that the task was finished.
@@ -118,7 +118,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dueDateTime
     * The date in the specified time zone that the task is to be finished.
@@ -137,7 +137,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the dueDateTime
     * The date in the specified time zone that the task is to be finished.
@@ -151,7 +151,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["dueDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasAttachments
     * Set to true if the task has attachments.
@@ -166,7 +166,7 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the hasAttachments
     * Set to true if the task has attachments.
@@ -180,7 +180,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the importance
     *
@@ -198,7 +198,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the importance
     *
@@ -211,7 +211,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["importance"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isReminderOn
     *
@@ -225,7 +225,7 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isReminderOn
     *
@@ -238,7 +238,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["isReminderOn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the owner
     *
@@ -252,7 +252,7 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the owner
     *
@@ -265,7 +265,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["owner"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentFolderId
     *
@@ -279,7 +279,7 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the parentFolderId
     *
@@ -292,7 +292,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["parentFolderId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recurrence
     *
@@ -310,7 +310,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the recurrence
     *
@@ -323,7 +323,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["recurrence"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reminderDateTime
     *
@@ -341,7 +341,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the reminderDateTime
     *
@@ -354,7 +354,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["reminderDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sensitivity
     *
@@ -372,7 +372,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the sensitivity
     *
@@ -385,7 +385,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["sensitivity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     *
@@ -403,7 +403,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     *
@@ -416,7 +416,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -434,7 +434,7 @@ class OutlookTask extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -447,7 +447,7 @@ class OutlookTask extends OutlookItem
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     *
@@ -461,7 +461,7 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     *
@@ -474,9 +474,9 @@ class OutlookTask extends OutlookItem
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the attachments
     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
      *
@@ -490,8 +490,8 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attachments
     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
     *
@@ -501,12 +501,12 @@ class OutlookTask extends OutlookItem
     */
     public function setAttachments($val)
     {
-		$this->_propDict["attachments"] = $val;
+        $this->_propDict["attachments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the task. Read-only. Nullable.
      *
@@ -520,8 +520,8 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the task. Read-only. Nullable.
     *
@@ -531,12 +531,12 @@ class OutlookTask extends OutlookItem
     */
     public function setMultiValueExtendedProperties($val)
     {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
+        $this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the task. Read-only. Nullable.
      *
@@ -550,8 +550,8 @@ class OutlookTask extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the task. Read-only. Nullable.
     *
@@ -561,8 +561,8 @@ class OutlookTask extends OutlookItem
     */
     public function setSingleValueExtendedProperties($val)
     {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
+        $this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-    
+
 }

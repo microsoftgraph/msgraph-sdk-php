@@ -38,7 +38,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the allowDeviceResetOnInstallFailure
     * Allow or block device reset on installation failure
@@ -52,7 +52,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["allowDeviceResetOnInstallFailure"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the allowDeviceUseOnInstallFailure
     * Allow the user to continue using the device on installation failure
@@ -67,7 +67,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the allowDeviceUseOnInstallFailure
     * Allow the user to continue using the device on installation failure
@@ -81,7 +81,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["allowDeviceUseOnInstallFailure"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the allowLogCollectionOnInstallFailure
     * Allow or block log collection on installation failure
@@ -96,7 +96,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the allowLogCollectionOnInstallFailure
     * Allow or block log collection on installation failure
@@ -110,7 +110,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["allowLogCollectionOnInstallFailure"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the blockDeviceSetupRetryByUser
     * Allow the user to retry the setup on installation failure
@@ -125,7 +125,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the blockDeviceSetupRetryByUser
     * Allow the user to retry the setup on installation failure
@@ -139,7 +139,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["blockDeviceSetupRetryByUser"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the customErrorMessage
     * Set custom error message to show upon installation failure
@@ -154,7 +154,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the customErrorMessage
     * Set custom error message to show upon installation failure
@@ -168,7 +168,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["customErrorMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the disableUserStatusTrackingAfterFirstUser
     * Only show installation progress for first user post enrollment
@@ -183,7 +183,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the disableUserStatusTrackingAfterFirstUser
     * Only show installation progress for first user post enrollment
@@ -197,7 +197,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["disableUserStatusTrackingAfterFirstUser"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the installProgressTimeoutInMinutes
     * Set installation progress timeout in minutes
@@ -212,7 +212,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the installProgressTimeoutInMinutes
     * Set installation progress timeout in minutes
@@ -226,7 +226,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["installProgressTimeoutInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the selectedMobileAppIds
     * Selected applications to track the installation status
@@ -241,7 +241,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the selectedMobileAppIds
     * Selected applications to track the installation status
@@ -255,7 +255,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["selectedMobileAppIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the showInstallationProgress
     * Show or hide installation progress to user
@@ -270,7 +270,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the showInstallationProgress
     * Show or hide installation progress to user
@@ -284,7 +284,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["showInstallationProgress"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the trackInstallProgressForAutopilotOnly
     * Only show installation progress for Autopilot enrollment scenarios
@@ -299,7 +299,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
             return null;
         }
     }
-    
+
     /**
     * Sets the trackInstallProgressForAutopilotOnly
     * Only show installation progress for Autopilot enrollment scenarios
@@ -313,5 +313,5 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
         $this->_propDict["trackInstallProgressForAutopilotOnly"] = boolval($val);
         return $this;
     }
-    
+
 }

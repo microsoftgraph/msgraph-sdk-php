@@ -42,7 +42,7 @@ class NamedLocation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents creation date and time of the location using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -56,7 +56,7 @@ class NamedLocation extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Human-readable name of the location.
@@ -71,7 +71,7 @@ class NamedLocation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Human-readable name of the location.
@@ -85,7 +85,7 @@ class NamedLocation extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The Timestamp type represents last modified date and time of the location using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -104,7 +104,7 @@ class NamedLocation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The Timestamp type represents last modified date and time of the location using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -118,5 +118,5 @@ class NamedLocation extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

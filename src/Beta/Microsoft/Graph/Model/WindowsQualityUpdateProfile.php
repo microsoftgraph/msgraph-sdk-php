@@ -42,7 +42,7 @@ class WindowsQualityUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date time that the profile was created.
@@ -56,7 +56,7 @@ class WindowsQualityUpdateProfile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the profile which is specified by the user.
@@ -71,7 +71,7 @@ class WindowsQualityUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the profile which is specified by the user.
@@ -85,7 +85,7 @@ class WindowsQualityUpdateProfile extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the profile.
@@ -100,7 +100,7 @@ class WindowsQualityUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the profile.
@@ -114,7 +114,7 @@ class WindowsQualityUpdateProfile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expeditedUpdateSettings
     * Expedited update settings.
@@ -133,7 +133,7 @@ class WindowsQualityUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expeditedUpdateSettings
     * Expedited update settings.
@@ -147,7 +147,7 @@ class WindowsQualityUpdateProfile extends Entity
         $this->_propDict["expeditedUpdateSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -166,7 +166,7 @@ class WindowsQualityUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -180,7 +180,7 @@ class WindowsQualityUpdateProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Quality Update entity.
@@ -195,7 +195,7 @@ class WindowsQualityUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Quality Update entity.
@@ -209,9 +209,9 @@ class WindowsQualityUpdateProfile extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments of the profile.
      *
@@ -225,8 +225,8 @@ class WindowsQualityUpdateProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments of the profile.
     *
@@ -236,8 +236,8 @@ class WindowsQualityUpdateProfile extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

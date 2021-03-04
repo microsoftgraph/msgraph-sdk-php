@@ -38,7 +38,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
             return null;
         }
     }
-    
+
     /**
     * Sets the dnsSuffixList
     * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
@@ -52,7 +52,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
         $this->_propDict["dnsSuffixList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ipV4DHCPServer
     * The IPv4 address of the DHCP server for the adapter.
@@ -67,7 +67,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
             return null;
         }
     }
-    
+
     /**
     * Sets the ipV4DHCPServer
     * The IPv4 address of the DHCP server for the adapter.
@@ -81,7 +81,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
         $this->_propDict["ipV4DHCPServer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ipV4DNSServerList
     * The IPv4 DNS servers configured for the adapter.
@@ -96,7 +96,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
             return null;
         }
     }
-    
+
     /**
     * Sets the ipV4DNSServerList
     * The IPv4 DNS servers configured for the adapter.
@@ -110,7 +110,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
         $this->_propDict["ipV4DNSServerList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ipV4Gateway
     * The IPv4 gateway address. e.g. 10.0.0.0
@@ -125,7 +125,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
             return null;
         }
     }
-    
+
     /**
     * Sets the ipV4Gateway
     * The IPv4 gateway address. e.g. 10.0.0.0
@@ -139,7 +139,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
         $this->_propDict["ipV4Gateway"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ipV4Prefix
     * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
@@ -154,7 +154,7 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
             return null;
         }
     }
-    
+
     /**
     * Sets the ipV4Prefix
     * The IPv4 subnet to be connected to. e.g. 10.0.0.0/8
@@ -168,5 +168,5 @@ class NetworkIPv4ConfigurationManagementCondition extends NetworkManagementCondi
         $this->_propDict["ipV4Prefix"] = $val;
         return $this;
     }
-    
+
 }

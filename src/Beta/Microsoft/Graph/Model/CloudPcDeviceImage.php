@@ -38,7 +38,7 @@ class CloudPcDeviceImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The image's display name.
@@ -52,7 +52,7 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
@@ -71,7 +71,7 @@ class CloudPcDeviceImage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
@@ -85,7 +85,7 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the operatingSystem
     * The image's operating system. For example: Windows 10 Enterprise.
@@ -100,7 +100,7 @@ class CloudPcDeviceImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the operatingSystem
     * The image's operating system. For example: Windows 10 Enterprise.
@@ -114,7 +114,7 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["operatingSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osBuildNumber
     * The image's OS build version. For example: 1909.
@@ -129,7 +129,7 @@ class CloudPcDeviceImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osBuildNumber
     * The image's OS build version. For example: 1909.
@@ -143,7 +143,7 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["osBuildNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceImageResourceId
     * The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
@@ -158,7 +158,7 @@ class CloudPcDeviceImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceImageResourceId
     * The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
@@ -172,7 +172,7 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["sourceImageResourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the image on cloud PC. Possible values are: pending, ready, failed.
@@ -191,7 +191,7 @@ class CloudPcDeviceImage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of the image on cloud PC. Possible values are: pending, ready, failed.
@@ -205,7 +205,7 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the statusDetails
     * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound.
@@ -224,7 +224,7 @@ class CloudPcDeviceImage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the statusDetails
     * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound.
@@ -238,7 +238,7 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["statusDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The image version. For example: 0.0.1, 1.5.13.
@@ -253,7 +253,7 @@ class CloudPcDeviceImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The image version. For example: 0.0.1, 1.5.13.
@@ -267,5 +267,5 @@ class CloudPcDeviceImage extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

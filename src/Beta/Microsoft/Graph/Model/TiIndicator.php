@@ -42,7 +42,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the action
     * The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
@@ -56,7 +56,7 @@ class TiIndicator extends Entity
         $this->_propDict["action"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityGroupNames
     * The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
@@ -71,7 +71,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activityGroupNames
     * The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
@@ -85,7 +85,7 @@ class TiIndicator extends Entity
         $this->_propDict["activityGroupNames"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the additionalInformation
     * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
@@ -100,7 +100,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the additionalInformation
     * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
@@ -114,7 +114,7 @@ class TiIndicator extends Entity
         $this->_propDict["additionalInformation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
@@ -129,7 +129,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
@@ -143,7 +143,7 @@ class TiIndicator extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the confidence
     * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
@@ -158,7 +158,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the confidence
     * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
@@ -172,7 +172,7 @@ class TiIndicator extends Entity
         $this->_propDict["confidence"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Brief description (100 characters or less) of the threat represented by the indicator. Required.
@@ -187,7 +187,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Brief description (100 characters or less) of the threat represented by the indicator. Required.
@@ -201,7 +201,7 @@ class TiIndicator extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the diamondModel
     * The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
@@ -220,7 +220,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the diamondModel
     * The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
@@ -234,7 +234,7 @@ class TiIndicator extends Entity
         $this->_propDict["diamondModel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the domainName
     *
@@ -248,7 +248,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the domainName
     *
@@ -261,7 +261,7 @@ class TiIndicator extends Entity
         $this->_propDict["domainName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailEncoding
     *
@@ -275,7 +275,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailEncoding
     *
@@ -288,7 +288,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailEncoding"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailLanguage
     *
@@ -302,7 +302,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailLanguage
     *
@@ -315,7 +315,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailRecipient
     *
@@ -329,7 +329,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailRecipient
     *
@@ -342,7 +342,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailRecipient"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailSenderAddress
     *
@@ -356,7 +356,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailSenderAddress
     *
@@ -369,7 +369,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailSenderAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailSenderName
     *
@@ -383,7 +383,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailSenderName
     *
@@ -396,7 +396,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailSenderName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailSourceDomain
     *
@@ -410,7 +410,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailSourceDomain
     *
@@ -423,7 +423,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailSourceDomain"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailSourceIpAddress
     *
@@ -437,7 +437,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailSourceIpAddress
     *
@@ -450,7 +450,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailSourceIpAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailSubject
     *
@@ -464,7 +464,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailSubject
     *
@@ -477,7 +477,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailSubject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailXMailer
     *
@@ -491,7 +491,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailXMailer
     *
@@ -504,7 +504,7 @@ class TiIndicator extends Entity
         $this->_propDict["emailXMailer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
@@ -523,7 +523,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
@@ -537,7 +537,7 @@ class TiIndicator extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
@@ -552,7 +552,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
@@ -566,7 +566,7 @@ class TiIndicator extends Entity
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileCompileDateTime
     *
@@ -584,7 +584,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fileCompileDateTime
     *
@@ -597,7 +597,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileCompileDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileCreatedDateTime
     *
@@ -615,7 +615,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fileCreatedDateTime
     *
@@ -628,7 +628,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileCreatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileHashType
     *
@@ -646,7 +646,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fileHashType
     *
@@ -659,7 +659,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileHashType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileHashValue
     *
@@ -673,7 +673,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileHashValue
     *
@@ -686,7 +686,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileHashValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileMutexName
     *
@@ -700,7 +700,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileMutexName
     *
@@ -713,7 +713,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileMutexName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     *
@@ -727,7 +727,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     *
@@ -740,7 +740,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the filePacker
     *
@@ -754,7 +754,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the filePacker
     *
@@ -767,7 +767,7 @@ class TiIndicator extends Entity
         $this->_propDict["filePacker"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the filePath
     *
@@ -781,7 +781,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the filePath
     *
@@ -794,7 +794,7 @@ class TiIndicator extends Entity
         $this->_propDict["filePath"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileSize
     *
@@ -808,7 +808,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileSize
     *
@@ -821,7 +821,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileSize"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileType
     *
@@ -835,7 +835,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileType
     *
@@ -848,7 +848,7 @@ class TiIndicator extends Entity
         $this->_propDict["fileType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ingestedDateTime
     * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -867,7 +867,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the ingestedDateTime
     * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -881,7 +881,7 @@ class TiIndicator extends Entity
         $this->_propDict["ingestedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isActive
     * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
@@ -896,7 +896,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isActive
     * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
@@ -910,7 +910,7 @@ class TiIndicator extends Entity
         $this->_propDict["isActive"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the killChain
     * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
@@ -925,7 +925,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the killChain
     * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
@@ -939,7 +939,7 @@ class TiIndicator extends Entity
         $this->_propDict["killChain"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the knownFalsePositives
     * Scenarios in which the indicator may cause false positives. This should be human-readable text.
@@ -954,7 +954,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the knownFalsePositives
     * Scenarios in which the indicator may cause false positives. This should be human-readable text.
@@ -968,7 +968,7 @@ class TiIndicator extends Entity
         $this->_propDict["knownFalsePositives"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -987,7 +987,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -1001,7 +1001,7 @@ class TiIndicator extends Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the malwareFamilyNames
     * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
@@ -1016,7 +1016,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the malwareFamilyNames
     * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
@@ -1030,7 +1030,7 @@ class TiIndicator extends Entity
         $this->_propDict["malwareFamilyNames"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkCidrBlock
     *
@@ -1044,7 +1044,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkCidrBlock
     *
@@ -1057,7 +1057,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkCidrBlock"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkDestinationAsn
     *
@@ -1071,7 +1071,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkDestinationAsn
     *
@@ -1084,7 +1084,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkDestinationAsn"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the networkDestinationCidrBlock
     *
@@ -1098,7 +1098,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkDestinationCidrBlock
     *
@@ -1111,7 +1111,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkDestinationCidrBlock"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkDestinationIPv4
     *
@@ -1125,7 +1125,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkDestinationIPv4
     *
@@ -1138,7 +1138,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkDestinationIPv4"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkDestinationIPv6
     *
@@ -1152,7 +1152,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkDestinationIPv6
     *
@@ -1165,7 +1165,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkDestinationIPv6"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkDestinationPort
     *
@@ -1179,7 +1179,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkDestinationPort
     *
@@ -1192,7 +1192,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkDestinationPort"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the networkIPv4
     *
@@ -1206,7 +1206,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkIPv4
     *
@@ -1219,7 +1219,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkIPv4"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkIPv6
     *
@@ -1233,7 +1233,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkIPv6
     *
@@ -1246,7 +1246,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkIPv6"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkPort
     *
@@ -1260,7 +1260,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkPort
     *
@@ -1273,7 +1273,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkPort"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the networkProtocol
     *
@@ -1287,7 +1287,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkProtocol
     *
@@ -1300,7 +1300,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkProtocol"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the networkSourceAsn
     *
@@ -1314,7 +1314,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkSourceAsn
     *
@@ -1327,7 +1327,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkSourceAsn"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the networkSourceCidrBlock
     *
@@ -1341,7 +1341,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkSourceCidrBlock
     *
@@ -1354,7 +1354,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkSourceCidrBlock"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkSourceIPv4
     *
@@ -1368,7 +1368,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkSourceIPv4
     *
@@ -1381,7 +1381,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkSourceIPv4"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkSourceIPv6
     *
@@ -1395,7 +1395,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkSourceIPv6
     *
@@ -1408,7 +1408,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkSourceIPv6"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkSourcePort
     *
@@ -1422,7 +1422,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkSourcePort
     *
@@ -1435,7 +1435,7 @@ class TiIndicator extends Entity
         $this->_propDict["networkSourcePort"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passiveOnly
     * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
@@ -1450,7 +1450,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the passiveOnly
     * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
@@ -1464,7 +1464,7 @@ class TiIndicator extends Entity
         $this->_propDict["passiveOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the severity
     * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
@@ -1479,7 +1479,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the severity
     * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
@@ -1493,7 +1493,7 @@ class TiIndicator extends Entity
         $this->_propDict["severity"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tags
     * A JSON array of strings that stores arbitrary tags/keywords.
@@ -1508,7 +1508,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tags
     * A JSON array of strings that stores arbitrary tags/keywords.
@@ -1522,7 +1522,7 @@ class TiIndicator extends Entity
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetProduct
     * A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
@@ -1537,7 +1537,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetProduct
     * A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
@@ -1551,7 +1551,7 @@ class TiIndicator extends Entity
         $this->_propDict["targetProduct"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the threatType
     * Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
@@ -1566,7 +1566,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the threatType
     * Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
@@ -1580,7 +1580,7 @@ class TiIndicator extends Entity
         $this->_propDict["threatType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tlpLevel
     * Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
@@ -1599,7 +1599,7 @@ class TiIndicator extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tlpLevel
     * Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
@@ -1613,7 +1613,7 @@ class TiIndicator extends Entity
         $this->_propDict["tlpLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the url
     *
@@ -1627,7 +1627,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the url
     *
@@ -1640,7 +1640,7 @@ class TiIndicator extends Entity
         $this->_propDict["url"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userAgent
     *
@@ -1654,7 +1654,7 @@ class TiIndicator extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userAgent
     *
@@ -1667,5 +1667,5 @@ class TiIndicator extends Entity
         $this->_propDict["userAgent"] = $val;
         return $this;
     }
-    
+
 }

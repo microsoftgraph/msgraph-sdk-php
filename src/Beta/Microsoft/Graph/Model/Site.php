@@ -41,7 +41,7 @@ class Site extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the deleted
     *
@@ -54,7 +54,7 @@ class Site extends BaseItem
         $this->_propDict["deleted"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The full title for the site. Read-only.
@@ -69,7 +69,7 @@ class Site extends BaseItem
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The full title for the site. Read-only.
@@ -83,7 +83,7 @@ class Site extends BaseItem
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the root
     * If present, indicates that this is the root site in the site collection. Read-only.
@@ -102,7 +102,7 @@ class Site extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the root
     * If present, indicates that this is the root site in the site collection. Read-only.
@@ -116,7 +116,7 @@ class Site extends BaseItem
         $this->_propDict["root"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -135,7 +135,7 @@ class Site extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -149,7 +149,7 @@ class Site extends BaseItem
         $this->_propDict["sharepointIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the siteCollection
     * Provides details about the site's site collection. Available only on the root site. Read-only.
@@ -168,7 +168,7 @@ class Site extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the siteCollection
     * Provides details about the site's site collection. Available only on the root site. Read-only.
@@ -182,7 +182,7 @@ class Site extends BaseItem
         $this->_propDict["siteCollection"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the analytics
     * Analytics about the view activities that took place in this site.
@@ -201,7 +201,7 @@ class Site extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the analytics
     * Analytics about the view activities that took place in this site.
@@ -215,9 +215,9 @@ class Site extends BaseItem
         $this->_propDict["analytics"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the columns
     * The collection of column definitions reusable across lists under this site.
      *
@@ -231,8 +231,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the columns
     * The collection of column definitions reusable across lists under this site.
     *
@@ -242,12 +242,12 @@ class Site extends BaseItem
     */
     public function setColumns($val)
     {
-		$this->_propDict["columns"] = $val;
+        $this->_propDict["columns"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the contentTypes
     * The collection of content types defined for this site.
      *
@@ -261,8 +261,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the contentTypes
     * The collection of content types defined for this site.
     *
@@ -272,10 +272,10 @@ class Site extends BaseItem
     */
     public function setContentTypes($val)
     {
-		$this->_propDict["contentTypes"] = $val;
+        $this->_propDict["contentTypes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the drive
     * The default drive (document library) for this site.
@@ -294,7 +294,7 @@ class Site extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the drive
     * The default drive (document library) for this site.
@@ -308,9 +308,9 @@ class Site extends BaseItem
         $this->_propDict["drive"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the drives
     * The collection of drives (document libraries) under this site.
      *
@@ -324,8 +324,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the drives
     * The collection of drives (document libraries) under this site.
     *
@@ -335,12 +335,12 @@ class Site extends BaseItem
     */
     public function setDrives($val)
     {
-		$this->_propDict["drives"] = $val;
+        $this->_propDict["drives"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the externalColumns
      *
      * @return array The externalColumns
@@ -353,8 +353,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the externalColumns
     *
     * @param ColumnDefinition $val The externalColumns
@@ -363,12 +363,12 @@ class Site extends BaseItem
     */
     public function setExternalColumns($val)
     {
-		$this->_propDict["externalColumns"] = $val;
+        $this->_propDict["externalColumns"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the items
     * Used to address any item contained in this site. This collection cannot be enumerated.
      *
@@ -382,8 +382,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the items
     * Used to address any item contained in this site. This collection cannot be enumerated.
     *
@@ -393,12 +393,12 @@ class Site extends BaseItem
     */
     public function setItems($val)
     {
-		$this->_propDict["items"] = $val;
+        $this->_propDict["items"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the lists
     * The collection of lists under this site.
      *
@@ -412,8 +412,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the lists
     * The collection of lists under this site.
     *
@@ -423,12 +423,12 @@ class Site extends BaseItem
     */
     public function setLists($val)
     {
-		$this->_propDict["lists"] = $val;
+        $this->_propDict["lists"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the pages
     * The collection of pages in the SitePages list in this site.
      *
@@ -442,8 +442,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the pages
     * The collection of pages in the SitePages list in this site.
     *
@@ -453,12 +453,12 @@ class Site extends BaseItem
     */
     public function setPages($val)
     {
-		$this->_propDict["pages"] = $val;
+        $this->_propDict["pages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the permissions
     * The permissions associated with the site. Nullable.
      *
@@ -472,8 +472,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the permissions
     * The permissions associated with the site. Nullable.
     *
@@ -483,12 +483,12 @@ class Site extends BaseItem
     */
     public function setPermissions($val)
     {
-		$this->_propDict["permissions"] = $val;
+        $this->_propDict["permissions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sites
     * The collection of the sub-sites under this site.
      *
@@ -502,8 +502,8 @@ class Site extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sites
     * The collection of the sub-sites under this site.
     *
@@ -513,10 +513,10 @@ class Site extends BaseItem
     */
     public function setSites($val)
     {
-		$this->_propDict["sites"] = $val;
+        $this->_propDict["sites"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onenote
     * Calls the OneNote service for notebook related operations.
@@ -535,7 +535,7 @@ class Site extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the onenote
     * Calls the OneNote service for notebook related operations.
@@ -549,5 +549,5 @@ class Site extends BaseItem
         $this->_propDict["onenote"] = $val;
         return $this;
     }
-    
+
 }

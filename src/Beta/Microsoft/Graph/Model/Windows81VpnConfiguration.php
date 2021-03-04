@@ -38,7 +38,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the applyOnlyToWindows81
     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
@@ -52,7 +52,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
         $this->_propDict["applyOnlyToWindows81"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the connectionType
     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
@@ -71,7 +71,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the connectionType
     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
@@ -85,7 +85,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
         $this->_propDict["connectionType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enableSplitTunneling
     * Enable split tunneling for the VPN.
@@ -100,7 +100,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the enableSplitTunneling
     * Enable split tunneling for the VPN.
@@ -114,7 +114,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
         $this->_propDict["enableSplitTunneling"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the loginGroupOrDomain
     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
@@ -129,7 +129,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the loginGroupOrDomain
     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
@@ -143,7 +143,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
         $this->_propDict["loginGroupOrDomain"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyServer
     * Proxy Server.
@@ -162,7 +162,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the proxyServer
     * Proxy Server.
@@ -176,5 +176,5 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
         $this->_propDict["proxyServer"] = $val;
         return $this;
     }
-    
+
 }

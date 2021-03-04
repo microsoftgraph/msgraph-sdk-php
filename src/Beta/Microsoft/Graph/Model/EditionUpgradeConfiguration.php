@@ -38,7 +38,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the license
     * Edition Upgrade License File Content.
@@ -52,7 +52,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         $this->_propDict["license"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the licenseType
     * Edition Upgrade License Type. Possible values are: productKey, licenseFile, notConfigured.
@@ -71,7 +71,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the licenseType
     * Edition Upgrade License Type. Possible values are: productKey, licenseFile, notConfigured.
@@ -85,7 +85,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         $this->_propDict["licenseType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the productKey
     * Edition Upgrade Product Key.
@@ -100,7 +100,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the productKey
     * Edition Upgrade Product Key.
@@ -114,7 +114,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         $this->_propDict["productKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetEdition
     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN, notConfigured, windows10Home, windows10HomeChina, windows10HomeN, windows10HomeSingleLanguage, windows10Mobile, windows10IoTCore, windows10IoTCoreCommercial.
@@ -133,7 +133,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the targetEdition
     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN, notConfigured, windows10Home, windows10HomeChina, windows10HomeN, windows10HomeSingleLanguage, windows10Mobile, windows10IoTCore, windows10IoTCoreCommercial.
@@ -147,7 +147,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         $this->_propDict["targetEdition"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windowsSMode
     * S mode configuration. Possible values are: noRestriction, block, unlock.
@@ -166,7 +166,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the windowsSMode
     * S mode configuration. Possible values are: noRestriction, block, unlock.
@@ -180,5 +180,5 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
         $this->_propDict["windowsSMode"] = $val;
         return $this;
     }
-    
+
 }

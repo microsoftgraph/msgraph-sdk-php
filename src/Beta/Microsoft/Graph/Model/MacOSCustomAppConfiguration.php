@@ -38,7 +38,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the bundleId
     * Bundle id for targeting.
@@ -52,7 +52,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         $this->_propDict["bundleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the configurationXml
     * Configuration xml. (UTF8 encoded byte array)
@@ -71,7 +71,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the configurationXml
     * Configuration xml. (UTF8 encoded byte array)
@@ -85,7 +85,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         $this->_propDict["configurationXml"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     * Configuration file name (.plist
@@ -100,7 +100,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     * Configuration file name (.plist
@@ -114,5 +114,5 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
 }

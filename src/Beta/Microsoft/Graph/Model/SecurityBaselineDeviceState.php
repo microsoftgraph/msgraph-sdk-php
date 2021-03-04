@@ -38,7 +38,7 @@ class SecurityBaselineDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * Display name of the device
@@ -52,7 +52,7 @@ class SecurityBaselineDeviceState extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report
@@ -71,7 +71,7 @@ class SecurityBaselineDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * Last modified date time of the policy report
@@ -85,7 +85,7 @@ class SecurityBaselineDeviceState extends Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * Intune device id
@@ -100,7 +100,7 @@ class SecurityBaselineDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * Intune device id
@@ -114,7 +114,7 @@ class SecurityBaselineDeviceState extends Entity
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
@@ -133,7 +133,7 @@ class SecurityBaselineDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
@@ -147,7 +147,7 @@ class SecurityBaselineDeviceState extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User Principal Name
@@ -162,7 +162,7 @@ class SecurityBaselineDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User Principal Name
@@ -176,5 +176,5 @@ class SecurityBaselineDeviceState extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

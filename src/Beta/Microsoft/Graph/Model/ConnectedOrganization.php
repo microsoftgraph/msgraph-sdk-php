@@ -38,7 +38,7 @@ class ConnectedOrganization extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the createdBy
     * UPN of the user who created this resource. Read-only.
@@ -52,7 +52,7 @@ class ConnectedOrganization extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -71,7 +71,7 @@ class ConnectedOrganization extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -85,7 +85,7 @@ class ConnectedOrganization extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the connected organization.
@@ -100,7 +100,7 @@ class ConnectedOrganization extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the connected organization.
@@ -114,7 +114,7 @@ class ConnectedOrganization extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the connected organization.
@@ -129,7 +129,7 @@ class ConnectedOrganization extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the connected organization.
@@ -143,9 +143,9 @@ class ConnectedOrganization extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the identitySources
      *
      * @return array The identitySources
@@ -158,8 +158,8 @@ class ConnectedOrganization extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the identitySources
     *
     * @param IdentitySource $val The identitySources
@@ -168,10 +168,10 @@ class ConnectedOrganization extends Entity
     */
     public function setIdentitySources($val)
     {
-		$this->_propDict["identitySources"] = $val;
+        $this->_propDict["identitySources"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedBy
     * UPN of the user who last modified this resource. Read-only.
@@ -186,7 +186,7 @@ class ConnectedOrganization extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the modifiedBy
     * UPN of the user who last modified this resource. Read-only.
@@ -200,7 +200,7 @@ class ConnectedOrganization extends Entity
         $this->_propDict["modifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -219,7 +219,7 @@ class ConnectedOrganization extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -233,7 +233,7 @@ class ConnectedOrganization extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
@@ -252,7 +252,7 @@ class ConnectedOrganization extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
@@ -266,9 +266,9 @@ class ConnectedOrganization extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the externalSponsors
     * Nullable.
      *
@@ -282,8 +282,8 @@ class ConnectedOrganization extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the externalSponsors
     * Nullable.
     *
@@ -293,12 +293,12 @@ class ConnectedOrganization extends Entity
     */
     public function setExternalSponsors($val)
     {
-		$this->_propDict["externalSponsors"] = $val;
+        $this->_propDict["externalSponsors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the internalSponsors
     * Nullable.
      *
@@ -312,8 +312,8 @@ class ConnectedOrganization extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the internalSponsors
     * Nullable.
     *
@@ -323,8 +323,8 @@ class ConnectedOrganization extends Entity
     */
     public function setInternalSponsors($val)
     {
-		$this->_propDict["internalSponsors"] = $val;
+        $this->_propDict["internalSponsors"] = $val;
         return $this;
     }
-    
+
 }

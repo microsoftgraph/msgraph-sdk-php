@@ -37,7 +37,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedProducts
     *
@@ -50,7 +50,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deletedDate
     *
@@ -68,7 +68,7 @@ class EmailActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     *
@@ -81,7 +81,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -95,7 +95,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -108,7 +108,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -122,7 +122,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -135,7 +135,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -153,7 +153,7 @@ class EmailActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -166,7 +166,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the readCount
     *
@@ -180,7 +180,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the readCount
     *
@@ -193,7 +193,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["readCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the receiveCount
     *
@@ -207,7 +207,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the receiveCount
     *
@@ -220,7 +220,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["receiveCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -234,7 +234,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -247,7 +247,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -265,7 +265,7 @@ class EmailActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -278,7 +278,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sendCount
     *
@@ -292,7 +292,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sendCount
     *
@@ -305,7 +305,7 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["sendCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -319,7 +319,7 @@ class EmailActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -332,5 +332,5 @@ class EmailActivityUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     *
@@ -54,7 +54,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the memberType
     *
@@ -68,7 +68,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
             return null;
         }
     }
-    
+
     /**
     * Sets the memberType
     *
@@ -81,7 +81,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["memberType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleEligibilityScheduleId
     *
@@ -95,7 +95,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
             return null;
         }
     }
-    
+
     /**
     * Sets the roleEligibilityScheduleId
     *
@@ -108,7 +108,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["roleEligibilityScheduleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     *
@@ -126,7 +126,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     *
@@ -139,5 +139,5 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
 }

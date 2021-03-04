@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentityGovernance extends 
+class IdentityGovernance implements \JsonSerializable
 {
     /**
     * Gets the accessReviews
@@ -41,7 +41,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the accessReviews
     *
@@ -54,7 +54,7 @@ class IdentityGovernance extends
         $this->_propDict["accessReviews"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appConsent
     *
@@ -72,7 +72,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the appConsent
     *
@@ -85,7 +85,7 @@ class IdentityGovernance extends
         $this->_propDict["appConsent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the termsOfUse
     *
@@ -103,7 +103,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the termsOfUse
     *
@@ -116,7 +116,7 @@ class IdentityGovernance extends
         $this->_propDict["termsOfUse"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the entitlementManagement
     *
@@ -134,7 +134,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the entitlementManagement
     *
@@ -147,5 +147,5 @@ class IdentityGovernance extends
         $this->_propDict["entitlementManagement"] = $val;
         return $this;
     }
-    
+
 }

@@ -22,10 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class External extends 
+class External implements \JsonSerializable
 {
 
-     /** 
+     /**
      * Gets the connections
      *
      * @return array The connections
@@ -38,8 +38,8 @@ class External extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connections
     *
     * @param ExternalConnection $val The connections
@@ -48,8 +48,8 @@ class External extends
     */
     public function setConnections($val)
     {
-		$this->_propDict["connections"] = $val;
+        $this->_propDict["connections"] = $val;
         return $this;
     }
-    
+
 }

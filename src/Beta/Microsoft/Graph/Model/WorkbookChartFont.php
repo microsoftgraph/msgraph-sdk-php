@@ -38,7 +38,7 @@ class WorkbookChartFont extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the bold
     * Represents the bold status of font.
@@ -52,7 +52,7 @@ class WorkbookChartFont extends Entity
         $this->_propDict["bold"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the color
     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
@@ -67,7 +67,7 @@ class WorkbookChartFont extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the color
     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
@@ -81,7 +81,7 @@ class WorkbookChartFont extends Entity
         $this->_propDict["color"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the italic
     * Represents the italic status of the font.
@@ -96,7 +96,7 @@ class WorkbookChartFont extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the italic
     * Represents the italic status of the font.
@@ -110,7 +110,7 @@ class WorkbookChartFont extends Entity
         $this->_propDict["italic"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the name
     * Font name (e.g. 'Calibri')
@@ -125,7 +125,7 @@ class WorkbookChartFont extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Font name (e.g. 'Calibri')
@@ -139,7 +139,7 @@ class WorkbookChartFont extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the size
     * Size of the font (e.g. 11)
@@ -154,7 +154,7 @@ class WorkbookChartFont extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the size
     * Size of the font (e.g. 11)
@@ -168,7 +168,7 @@ class WorkbookChartFont extends Entity
         $this->_propDict["size"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the underline
     * Type of underline applied to the font. The possible values are: None, Single.
@@ -183,7 +183,7 @@ class WorkbookChartFont extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the underline
     * Type of underline applied to the font. The possible values are: None, Single.
@@ -197,5 +197,5 @@ class WorkbookChartFont extends Entity
         $this->_propDict["underline"] = $val;
         return $this;
     }
-    
+
 }

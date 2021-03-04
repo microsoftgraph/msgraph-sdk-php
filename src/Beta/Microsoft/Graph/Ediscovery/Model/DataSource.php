@@ -41,7 +41,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -54,7 +54,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -72,7 +72,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -85,7 +85,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -99,7 +99,7 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -112,5 +112,5 @@ class DataSource extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

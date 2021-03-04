@@ -42,7 +42,7 @@ class PrintTaskDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The application that created the printTaskDefinition. Read-only.
@@ -56,7 +56,7 @@ class PrintTaskDefinition extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the printTaskDefinition.
@@ -71,7 +71,7 @@ class PrintTaskDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the printTaskDefinition.
@@ -85,9 +85,9 @@ class PrintTaskDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      *
@@ -101,8 +101,8 @@ class PrintTaskDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
     *
@@ -112,8 +112,8 @@ class PrintTaskDefinition extends Entity
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class Currency extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the amountDecimalPlaces
     *
@@ -50,7 +50,7 @@ class Currency extends Entity
         $this->_propDict["amountDecimalPlaces"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the amountRoundingPrecision
     *
@@ -68,7 +68,7 @@ class Currency extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the amountRoundingPrecision
     *
@@ -81,7 +81,7 @@ class Currency extends Entity
         $this->_propDict["amountRoundingPrecision"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the code
     *
@@ -95,7 +95,7 @@ class Currency extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the code
     *
@@ -108,7 +108,7 @@ class Currency extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -122,7 +122,7 @@ class Currency extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -135,7 +135,7 @@ class Currency extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -153,7 +153,7 @@ class Currency extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -166,7 +166,7 @@ class Currency extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the symbol
     *
@@ -180,7 +180,7 @@ class Currency extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the symbol
     *
@@ -193,5 +193,5 @@ class Currency extends Entity
         $this->_propDict["symbol"] = $val;
         return $this;
     }
-    
+
 }

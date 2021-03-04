@@ -42,7 +42,7 @@ class ListItemVersion extends BaseItemVersion
         }
         return null;
     }
-    
+
     /**
     * Sets the fields
     * A collection of the fields and values for this version of the list item.
@@ -56,5 +56,5 @@ class ListItemVersion extends BaseItemVersion
         $this->_propDict["fields"] = $val;
         return $this;
     }
-    
+
 }

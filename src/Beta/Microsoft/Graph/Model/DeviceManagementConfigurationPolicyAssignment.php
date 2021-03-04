@@ -42,7 +42,7 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the DeviceManagementConfigurationPolicy.
@@ -56,5 +56,5 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

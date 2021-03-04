@@ -22,10 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AppCatalogs extends 
+class AppCatalogs implements \JsonSerializable
 {
 
-     /** 
+     /**
      * Gets the teamsApps
      *
      * @return array The teamsApps
@@ -38,8 +38,8 @@ class AppCatalogs extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the teamsApps
     *
     * @param TeamsApp $val The teamsApps
@@ -48,8 +48,8 @@ class AppCatalogs extends
     */
     public function setTeamsApps($val)
     {
-		$this->_propDict["teamsApps"] = $val;
+        $this->_propDict["teamsApps"] = $val;
         return $this;
     }
-    
+
 }

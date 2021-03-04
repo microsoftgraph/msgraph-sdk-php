@@ -38,7 +38,7 @@ class DeviceManagementPartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Partner display name
@@ -52,9 +52,9 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groupsRequiringPartnerEnrollment
     * User groups that specifies whether enrollment is through partner.
      *
@@ -68,8 +68,8 @@ class DeviceManagementPartner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groupsRequiringPartnerEnrollment
     * User groups that specifies whether enrollment is through partner.
     *
@@ -79,10 +79,10 @@ class DeviceManagementPartner extends Entity
     */
     public function setGroupsRequiringPartnerEnrollment($val)
     {
-		$this->_propDict["groupsRequiringPartnerEnrollment"] = $val;
+        $this->_propDict["groupsRequiringPartnerEnrollment"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isConfigured
     * Whether device management partner is configured or not
@@ -97,7 +97,7 @@ class DeviceManagementPartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isConfigured
     * Whether device management partner is configured or not
@@ -111,7 +111,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["isConfigured"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastHeartbeatDateTime
     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
@@ -130,7 +130,7 @@ class DeviceManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastHeartbeatDateTime
     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
@@ -144,7 +144,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["lastHeartbeatDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the partnerAppType
     * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
@@ -163,7 +163,7 @@ class DeviceManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the partnerAppType
     * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
@@ -177,7 +177,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["partnerAppType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the partnerState
     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
@@ -196,7 +196,7 @@ class DeviceManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the partnerState
     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
@@ -210,7 +210,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["partnerState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the singleTenantAppId
     * Partner Single tenant App id
@@ -225,7 +225,7 @@ class DeviceManagementPartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the singleTenantAppId
     * Partner Single tenant App id
@@ -239,7 +239,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["singleTenantAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliant
     * DateTime in UTC when PartnerDevices will be marked as NonCompliant. This will become obselete soon.
@@ -258,7 +258,7 @@ class DeviceManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the whenPartnerDevicesWillBeMarkedAsNonCompliant
     * DateTime in UTC when PartnerDevices will be marked as NonCompliant. This will become obselete soon.
@@ -272,7 +272,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliant"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     * DateTime in UTC when PartnerDevices will be marked as NonCompliant
@@ -291,7 +291,7 @@ class DeviceManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     * DateTime in UTC when PartnerDevices will be marked as NonCompliant
@@ -305,7 +305,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the whenPartnerDevicesWillBeRemoved
     * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
@@ -324,7 +324,7 @@ class DeviceManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the whenPartnerDevicesWillBeRemoved
     * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
@@ -338,7 +338,7 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["whenPartnerDevicesWillBeRemoved"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the whenPartnerDevicesWillBeRemovedDateTime
     * DateTime in UTC when PartnerDevices will be removed
@@ -357,7 +357,7 @@ class DeviceManagementPartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the whenPartnerDevicesWillBeRemovedDateTime
     * DateTime in UTC when PartnerDevices will be removed
@@ -371,5 +371,5 @@ class DeviceManagementPartner extends Entity
         $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"] = $val;
         return $this;
     }
-    
+
 }

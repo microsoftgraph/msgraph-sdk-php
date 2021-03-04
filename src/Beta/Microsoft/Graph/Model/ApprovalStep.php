@@ -37,7 +37,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -50,7 +50,7 @@ class ApprovalStep extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the justification
     *
@@ -64,7 +64,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     *
@@ -77,7 +77,7 @@ class ApprovalStep extends Entity
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedBy
     *
@@ -95,7 +95,7 @@ class ApprovalStep extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedBy
     *
@@ -108,7 +108,7 @@ class ApprovalStep extends Entity
         $this->_propDict["reviewedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedDateTime
     *
@@ -126,7 +126,7 @@ class ApprovalStep extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedDateTime
     *
@@ -139,7 +139,7 @@ class ApprovalStep extends Entity
         $this->_propDict["reviewedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewResult
     *
@@ -153,7 +153,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reviewResult
     *
@@ -166,5 +166,5 @@ class ApprovalStep extends Entity
         $this->_propDict["reviewResult"] = $val;
         return $this;
     }
-    
+
 }

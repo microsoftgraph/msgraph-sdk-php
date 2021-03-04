@@ -42,7 +42,7 @@ class AccessReviewInstance extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * DateTime when review instance is scheduled to end.
@@ -56,7 +56,7 @@ class AccessReviewInstance extends Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scope
     * Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. In the case of a single-group review, the scope defined at the accessReviewScheduleDefinition level applies to all instances. In the case of all groups review, scope may be different for each group. Read-only.
@@ -75,7 +75,7 @@ class AccessReviewInstance extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scope
     * Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. In the case of a single-group review, the scope defined at the accessReviewScheduleDefinition level applies to all instances. In the case of all groups review, scope may be different for each group. Read-only.
@@ -89,7 +89,7 @@ class AccessReviewInstance extends Entity
         $this->_propDict["scope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * DateTime when review instance is scheduled to start. May be in the future.
@@ -108,7 +108,7 @@ class AccessReviewInstance extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * DateTime when review instance is scheduled to start. May be in the future.
@@ -122,7 +122,7 @@ class AccessReviewInstance extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Read-only.
@@ -137,7 +137,7 @@ class AccessReviewInstance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * Specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Read-only.
@@ -151,9 +151,9 @@ class AccessReviewInstance extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the decisions
     * Each user reviewed in an accessReviewInstance has a decision item representing if their access was approved, denied, or not yet reviewed.
      *
@@ -167,8 +167,8 @@ class AccessReviewInstance extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the decisions
     * Each user reviewed in an accessReviewInstance has a decision item representing if their access was approved, denied, or not yet reviewed.
     *
@@ -178,10 +178,10 @@ class AccessReviewInstance extends Entity
     */
     public function setDecisions($val)
     {
-		$this->_propDict["decisions"] = $val;
+        $this->_propDict["decisions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the definition
     * There is exactly one accessReviewScheduleDefinition associated with each instance. It is the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
@@ -200,7 +200,7 @@ class AccessReviewInstance extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the definition
     * There is exactly one accessReviewScheduleDefinition associated with each instance. It is the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
@@ -214,5 +214,5 @@ class AccessReviewInstance extends Entity
         $this->_propDict["definition"] = $val;
         return $this;
     }
-    
+
 }

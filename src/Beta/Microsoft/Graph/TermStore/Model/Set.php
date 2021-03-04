@@ -42,7 +42,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date and time of set creation. Read-only.
@@ -56,7 +56,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description giving details on the term usage.
@@ -71,7 +71,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description giving details on the term usage.
@@ -85,9 +85,9 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the localizedNames
     * Name of the set for each languageTag.
      *
@@ -101,8 +101,8 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the localizedNames
     * Name of the set for each languageTag.
     *
@@ -112,12 +112,12 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setLocalizedNames($val)
     {
-		$this->_propDict["localizedNames"] = $val;
+        $this->_propDict["localizedNames"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the setProperties
     * Custom properties for the set.
      *
@@ -131,8 +131,8 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the setProperties
     * Custom properties for the set.
     *
@@ -142,12 +142,12 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setSetProperties($val)
     {
-		$this->_propDict["properties"] = $val;
+        $this->_propDict["properties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the children
     * Children terms of set in term [store].
      *
@@ -161,8 +161,8 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the children
     * Children terms of set in term [store].
     *
@@ -172,10 +172,10 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setChildren($val)
     {
-		$this->_propDict["children"] = $val;
+        $this->_propDict["children"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentGroup
     * The parent [group] that contains the set.
@@ -194,7 +194,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the parentGroup
     * The parent [group] that contains the set.
@@ -208,9 +208,9 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["parentGroup"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the relations
     * Indicates which terms have been pinned or reused directly under the set.
      *
@@ -224,8 +224,8 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the relations
     * Indicates which terms have been pinned or reused directly under the set.
     *
@@ -235,12 +235,12 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setRelations($val)
     {
-		$this->_propDict["relations"] = $val;
+        $this->_propDict["relations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the terms
     * All the terms under the set.
      *
@@ -254,8 +254,8 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the terms
     * All the terms under the set.
     *
@@ -265,8 +265,8 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setTerms($val)
     {
-		$this->_propDict["terms"] = $val;
+        $this->_propDict["terms"] = $val;
         return $this;
     }
-    
+
 }

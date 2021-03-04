@@ -38,7 +38,7 @@ class WorkbookChartAxisTitle extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the text
     * Represents the axis title.
@@ -52,7 +52,7 @@ class WorkbookChartAxisTitle extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the visible
     * A boolean that specifies the visibility of an axis title.
@@ -67,7 +67,7 @@ class WorkbookChartAxisTitle extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the visible
     * A boolean that specifies the visibility of an axis title.
@@ -81,7 +81,7 @@ class WorkbookChartAxisTitle extends Entity
         $this->_propDict["visible"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Represents the formatting of chart axis title. Read-only.
@@ -100,7 +100,7 @@ class WorkbookChartAxisTitle extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Represents the formatting of chart axis title. Read-only.
@@ -114,5 +114,5 @@ class WorkbookChartAxisTitle extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
 }

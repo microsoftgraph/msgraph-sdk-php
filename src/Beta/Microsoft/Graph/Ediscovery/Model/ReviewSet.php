@@ -41,7 +41,7 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -54,7 +54,7 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -72,7 +72,7 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -85,7 +85,7 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -99,7 +99,7 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -112,9 +112,9 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the queries
      *
      * @return array The queries
@@ -127,8 +127,8 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the queries
     *
     * @param ReviewSetQuery $val The queries
@@ -137,8 +137,8 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setQueries($val)
     {
-		$this->_propDict["queries"] = $val;
+        $this->_propDict["queries"] = $val;
         return $this;
     }
-    
+
 }

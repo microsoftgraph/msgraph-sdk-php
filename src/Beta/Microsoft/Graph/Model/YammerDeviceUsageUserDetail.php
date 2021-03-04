@@ -37,7 +37,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -50,7 +50,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -68,7 +68,7 @@ class YammerDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -81,7 +81,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -95,7 +95,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -108,7 +108,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -126,7 +126,7 @@ class YammerDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -139,7 +139,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the stateChangeDate
     *
@@ -157,7 +157,7 @@ class YammerDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the stateChangeDate
     *
@@ -170,7 +170,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["stateChangeDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usedAndroidPhone
     *
@@ -184,7 +184,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedAndroidPhone
     *
@@ -197,7 +197,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["usedAndroidPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usediPad
     *
@@ -211,7 +211,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usediPad
     *
@@ -224,7 +224,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["usediPad"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usediPhone
     *
@@ -238,7 +238,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usediPhone
     *
@@ -251,7 +251,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["usediPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedOthers
     *
@@ -265,7 +265,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedOthers
     *
@@ -278,7 +278,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["usedOthers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedWeb
     *
@@ -292,7 +292,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedWeb
     *
@@ -305,7 +305,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["usedWeb"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedWindowsPhone
     *
@@ -319,7 +319,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedWindowsPhone
     *
@@ -332,7 +332,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["usedWindowsPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -346,7 +346,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -359,7 +359,7 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userState
     *
@@ -373,7 +373,7 @@ class YammerDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userState
     *
@@ -386,5 +386,5 @@ class YammerDeviceUsageUserDetail extends Entity
         $this->_propDict["userState"] = $val;
         return $this;
     }
-    
+
 }

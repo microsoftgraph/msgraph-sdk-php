@@ -37,7 +37,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the action
     *
@@ -50,7 +50,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["action"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appScopeId
     *
@@ -64,7 +64,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the appScopeId
     *
@@ -77,7 +77,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["appScopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryScopeId
     *
@@ -91,7 +91,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the directoryScopeId
     *
@@ -104,7 +104,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["directoryScopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isValidationOnly
     *
@@ -118,7 +118,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the isValidationOnly
     *
@@ -131,7 +131,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["isValidationOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the justification
     *
@@ -145,7 +145,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     *
@@ -158,7 +158,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalId
     *
@@ -172,7 +172,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the principalId
     *
@@ -185,7 +185,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["principalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinitionId
     *
@@ -199,7 +199,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the roleDefinitionId
     *
@@ -212,7 +212,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scheduleInfo
     *
@@ -230,7 +230,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the scheduleInfo
     *
@@ -243,7 +243,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["scheduleInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetScheduleId
     *
@@ -257,7 +257,7 @@ class UnifiedRoleAssignmentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the targetScheduleId
     *
@@ -270,7 +270,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["targetScheduleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ticketInfo
     *
@@ -288,7 +288,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the ticketInfo
     *
@@ -301,7 +301,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["ticketInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activatedUsing
     *
@@ -319,7 +319,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the activatedUsing
     *
@@ -332,7 +332,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["activatedUsing"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appScope
     *
@@ -350,7 +350,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the appScope
     *
@@ -363,7 +363,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["appScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryScope
     *
@@ -381,7 +381,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the directoryScope
     *
@@ -394,7 +394,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["directoryScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principal
     *
@@ -412,7 +412,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the principal
     *
@@ -425,7 +425,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["principal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinition
     *
@@ -443,7 +443,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the roleDefinition
     *
@@ -456,7 +456,7 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetSchedule
     *
@@ -474,7 +474,7 @@ class UnifiedRoleAssignmentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the targetSchedule
     *
@@ -487,5 +487,5 @@ class UnifiedRoleAssignmentRequest extends Request
         $this->_propDict["targetSchedule"] = $val;
         return $this;
     }
-    
+
 }

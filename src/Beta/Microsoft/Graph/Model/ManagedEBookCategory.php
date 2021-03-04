@@ -38,7 +38,7 @@ class ManagedEBookCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the eBook category.
@@ -52,7 +52,7 @@ class ManagedEBookCategory extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the ManagedEBookCategory was last modified.
@@ -71,7 +71,7 @@ class ManagedEBookCategory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the ManagedEBookCategory was last modified.
@@ -85,5 +85,5 @@ class ManagedEBookCategory extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

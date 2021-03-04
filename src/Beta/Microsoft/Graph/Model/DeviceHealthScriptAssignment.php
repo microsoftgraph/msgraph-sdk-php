@@ -38,7 +38,7 @@ class DeviceHealthScriptAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the runRemediationScript
     * Determine whether we want to run detection script only or run both detection script and remediation script
@@ -52,7 +52,7 @@ class DeviceHealthScriptAssignment extends Entity
         $this->_propDict["runRemediationScript"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the runSchedule
     * Script run schedule for the target group
@@ -71,7 +71,7 @@ class DeviceHealthScriptAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runSchedule
     * Script run schedule for the target group
@@ -85,7 +85,7 @@ class DeviceHealthScriptAssignment extends Entity
         $this->_propDict["runSchedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The Azure Active Directory group we are targeting the script to
@@ -104,7 +104,7 @@ class DeviceHealthScriptAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The Azure Active Directory group we are targeting the script to
@@ -118,5 +118,5 @@ class DeviceHealthScriptAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

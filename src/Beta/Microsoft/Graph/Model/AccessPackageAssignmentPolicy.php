@@ -38,7 +38,7 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accessPackageId
     * ID of the access package.
@@ -52,7 +52,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["accessPackageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessReviewSettings
     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
@@ -71,7 +71,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessReviewSettings
     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
@@ -85,7 +85,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["accessReviewSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the canExtend
     * Indicates whether a user can extend the access package assignment duration after approval.
@@ -100,7 +100,7 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the canExtend
     * Indicates whether a user can extend the access package assignment duration after approval.
@@ -114,7 +114,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["canExtend"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * Read-only.
@@ -129,7 +129,7 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the createdBy
     * Read-only.
@@ -143,7 +143,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -162,7 +162,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -176,7 +176,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the policy.
@@ -191,7 +191,7 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the policy.
@@ -205,7 +205,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the policy.
@@ -220,7 +220,7 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the policy.
@@ -234,7 +234,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the durationInDays
     * The number of days in which assignments from this policy last until they are expired.
@@ -249,7 +249,7 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the durationInDays
     * The number of days in which assignments from this policy last until they are expired.
@@ -263,7 +263,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["durationInDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -282,7 +282,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -296,7 +296,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedBy
     * Read-only.
@@ -311,7 +311,7 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the modifiedBy
     * Read-only.
@@ -325,7 +325,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["modifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -344,7 +344,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -358,9 +358,9 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the questions
     * Questions that are posed to the  requestor.
      *
@@ -374,8 +374,8 @@ class AccessPackageAssignmentPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the questions
     * Questions that are posed to the  requestor.
     *
@@ -385,10 +385,10 @@ class AccessPackageAssignmentPolicy extends Entity
     */
     public function setQuestions($val)
     {
-		$this->_propDict["questions"] = $val;
+        $this->_propDict["questions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestApprovalSettings
     * Who must approve requests for access package in this policy.
@@ -407,7 +407,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestApprovalSettings
     * Who must approve requests for access package in this policy.
@@ -421,7 +421,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["requestApprovalSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestorSettings
     * Who can request this access package from this policy.
@@ -440,7 +440,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestorSettings
     * Who can request this access package from this policy.
@@ -454,7 +454,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["requestorSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackage
     * The access package with this policy. Read-only. Nullable.
@@ -473,7 +473,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackage
     * The access package with this policy. Read-only. Nullable.
@@ -487,7 +487,7 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["accessPackage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackageCatalog
     *
@@ -505,7 +505,7 @@ class AccessPackageAssignmentPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackageCatalog
     *
@@ -518,5 +518,5 @@ class AccessPackageAssignmentPolicy extends Entity
         $this->_propDict["accessPackageCatalog"] = $val;
         return $this;
     }
-    
+
 }

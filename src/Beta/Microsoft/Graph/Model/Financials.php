@@ -22,10 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Financials extends 
+class Financials implements \JsonSerializable
 {
 
-     /** 
+     /**
      * Gets the companies
      *
      * @return array The companies
@@ -38,8 +38,8 @@ class Financials extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the companies
     *
     * @param Company $val The companies
@@ -48,8 +48,8 @@ class Financials extends
     */
     public function setCompanies($val)
     {
-		$this->_propDict["companies"] = $val;
+        $this->_propDict["companies"] = $val;
         return $this;
     }
-    
+
 }

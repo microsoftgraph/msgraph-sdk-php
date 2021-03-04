@@ -37,7 +37,7 @@ class GeneralLedgerEntry extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountId
     *
@@ -50,7 +50,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["accountId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accountNumber
     *
@@ -64,7 +64,7 @@ class GeneralLedgerEntry extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountNumber
     *
@@ -77,7 +77,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["accountNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creditAmount
     *
@@ -95,7 +95,7 @@ class GeneralLedgerEntry extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the creditAmount
     *
@@ -108,7 +108,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["creditAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the debitAmount
     *
@@ -126,7 +126,7 @@ class GeneralLedgerEntry extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the debitAmount
     *
@@ -139,7 +139,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["debitAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -153,7 +153,7 @@ class GeneralLedgerEntry extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -166,7 +166,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the documentNumber
     *
@@ -180,7 +180,7 @@ class GeneralLedgerEntry extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the documentNumber
     *
@@ -193,7 +193,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["documentNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the documentType
     *
@@ -207,7 +207,7 @@ class GeneralLedgerEntry extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the documentType
     *
@@ -220,7 +220,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["documentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -238,7 +238,7 @@ class GeneralLedgerEntry extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -251,7 +251,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the postingDate
     *
@@ -269,7 +269,7 @@ class GeneralLedgerEntry extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the postingDate
     *
@@ -282,7 +282,7 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["postingDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the account
     *
@@ -300,7 +300,7 @@ class GeneralLedgerEntry extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the account
     *
@@ -313,5 +313,5 @@ class GeneralLedgerEntry extends Entity
         $this->_propDict["account"] = $val;
         return $this;
     }
-    
+
 }

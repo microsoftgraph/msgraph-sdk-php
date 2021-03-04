@@ -42,7 +42,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessLevel
     * This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl.
@@ -56,7 +56,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
         $this->_propDict["accessLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appDisplayName
     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
@@ -71,7 +71,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
@@ -85,7 +85,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appPackageFamilyName
     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
@@ -100,7 +100,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appPackageFamilyName
     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
@@ -114,7 +114,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
         $this->_propDict["appPackageFamilyName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataCategory
     * This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
@@ -133,7 +133,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dataCategory
     * This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
@@ -147,5 +147,5 @@ class WindowsPrivacyDataAccessControlItem extends Entity
         $this->_propDict["dataCategory"] = $val;
         return $this;
     }
-    
+
 }

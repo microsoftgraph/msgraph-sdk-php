@@ -42,7 +42,7 @@ class ManagedDeviceEncryptionState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the advancedBitLockerStates
     * Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
@@ -56,7 +56,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["advancedBitLockerStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device name
@@ -71,7 +71,7 @@ class ManagedDeviceEncryptionState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device name
@@ -85,7 +85,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceType
     * Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
@@ -104,7 +104,7 @@ class ManagedDeviceEncryptionState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceType
     * Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
@@ -118,7 +118,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["deviceType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the encryptionPolicySettingState
     * Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -137,7 +137,7 @@ class ManagedDeviceEncryptionState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the encryptionPolicySettingState
     * Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -151,7 +151,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["encryptionPolicySettingState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the encryptionReadinessState
     * Encryption readiness state. Possible values are: notReady, ready.
@@ -170,7 +170,7 @@ class ManagedDeviceEncryptionState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the encryptionReadinessState
     * Encryption readiness state. Possible values are: notReady, ready.
@@ -184,7 +184,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["encryptionReadinessState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the encryptionState
     * Device encryption state. Possible values are: notEncrypted, encrypted.
@@ -203,7 +203,7 @@ class ManagedDeviceEncryptionState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the encryptionState
     * Device encryption state. Possible values are: notEncrypted, encrypted.
@@ -217,7 +217,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["encryptionState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultStates
     * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
@@ -236,7 +236,7 @@ class ManagedDeviceEncryptionState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fileVaultStates
     * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
@@ -250,7 +250,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["fileVaultStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * Operating system version of the device
@@ -265,7 +265,7 @@ class ManagedDeviceEncryptionState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * Operating system version of the device
@@ -279,9 +279,9 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the policyDetails
     * Policy Details
      *
@@ -295,8 +295,8 @@ class ManagedDeviceEncryptionState extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the policyDetails
     * Policy Details
     *
@@ -306,10 +306,10 @@ class ManagedDeviceEncryptionState extends Entity
     */
     public function setPolicyDetails($val)
     {
-		$this->_propDict["policyDetails"] = $val;
+        $this->_propDict["policyDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tpmSpecificationVersion
     * Device TPM Version
@@ -324,7 +324,7 @@ class ManagedDeviceEncryptionState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tpmSpecificationVersion
     * Device TPM Version
@@ -338,7 +338,7 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["tpmSpecificationVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User name
@@ -353,7 +353,7 @@ class ManagedDeviceEncryptionState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User name
@@ -367,5 +367,5 @@ class ManagedDeviceEncryptionState extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

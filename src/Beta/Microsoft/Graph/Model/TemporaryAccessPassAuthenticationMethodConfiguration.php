@@ -37,7 +37,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultLength
     *
@@ -50,7 +50,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["defaultLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the defaultLifetimeInMinutes
     *
@@ -64,7 +64,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultLifetimeInMinutes
     *
@@ -77,7 +77,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["defaultLifetimeInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isUsableOnce
     *
@@ -91,7 +91,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-    
+
     /**
     * Sets the isUsableOnce
     *
@@ -104,7 +104,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["isUsableOnce"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the maximumLifetimeInMinutes
     *
@@ -118,7 +118,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-    
+
     /**
     * Sets the maximumLifetimeInMinutes
     *
@@ -131,7 +131,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["maximumLifetimeInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the minimumLifetimeInMinutes
     *
@@ -145,7 +145,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumLifetimeInMinutes
     *
@@ -158,9 +158,9 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["minimumLifetimeInMinutes"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the includeTargets
      *
      * @return array The includeTargets
@@ -173,8 +173,8 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the includeTargets
     *
     * @param AuthenticationMethodTarget $val The includeTargets
@@ -183,8 +183,8 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     */
     public function setIncludeTargets($val)
     {
-		$this->_propDict["includeTargets"] = $val;
+        $this->_propDict["includeTargets"] = $val;
         return $this;
     }
-    
+
 }

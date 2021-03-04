@@ -38,7 +38,7 @@ class BookingNamedEntity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name is suitable for human-readable interfaces.
@@ -52,5 +52,5 @@ class BookingNamedEntity extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

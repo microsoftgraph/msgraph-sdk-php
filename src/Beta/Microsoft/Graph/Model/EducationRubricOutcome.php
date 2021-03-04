@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationRubricOutcome extends EducationOutcome
 {
 
-     /** 
+     /**
      * Gets the publishedRubricQualityFeedback
     * A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
      *
@@ -39,8 +39,8 @@ class EducationRubricOutcome extends EducationOutcome
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the publishedRubricQualityFeedback
     * A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
     *
@@ -50,12 +50,12 @@ class EducationRubricOutcome extends EducationOutcome
     */
     public function setPublishedRubricQualityFeedback($val)
     {
-		$this->_propDict["publishedRubricQualityFeedback"] = $val;
+        $this->_propDict["publishedRubricQualityFeedback"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the publishedRubricQualitySelectedLevels
     * A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
      *
@@ -69,8 +69,8 @@ class EducationRubricOutcome extends EducationOutcome
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the publishedRubricQualitySelectedLevels
     * A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
     *
@@ -80,12 +80,12 @@ class EducationRubricOutcome extends EducationOutcome
     */
     public function setPublishedRubricQualitySelectedLevels($val)
     {
-		$this->_propDict["publishedRubricQualitySelectedLevels"] = $val;
+        $this->_propDict["publishedRubricQualitySelectedLevels"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rubricQualityFeedback
     * A collection of specific feedback for each quality of this rubric.
      *
@@ -99,8 +99,8 @@ class EducationRubricOutcome extends EducationOutcome
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rubricQualityFeedback
     * A collection of specific feedback for each quality of this rubric.
     *
@@ -110,12 +110,12 @@ class EducationRubricOutcome extends EducationOutcome
     */
     public function setRubricQualityFeedback($val)
     {
-		$this->_propDict["rubricQualityFeedback"] = $val;
+        $this->_propDict["rubricQualityFeedback"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rubricQualitySelectedLevels
     * The level that the teacher has selected for each quality while grading this assignment.
      *
@@ -129,8 +129,8 @@ class EducationRubricOutcome extends EducationOutcome
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rubricQualitySelectedLevels
     * The level that the teacher has selected for each quality while grading this assignment.
     *
@@ -140,8 +140,8 @@ class EducationRubricOutcome extends EducationOutcome
     */
     public function setRubricQualitySelectedLevels($val)
     {
-		$this->_propDict["rubricQualitySelectedLevels"] = $val;
+        $this->_propDict["rubricQualitySelectedLevels"] = $val;
         return $this;
     }
-    
+
 }

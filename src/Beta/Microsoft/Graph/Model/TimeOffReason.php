@@ -38,7 +38,7 @@ class TimeOffReason extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the timeOffReason. Required.
@@ -52,7 +52,7 @@ class TimeOffReason extends ChangeTrackedEntity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the iconType
     * Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
@@ -71,7 +71,7 @@ class TimeOffReason extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the iconType
     * Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
@@ -85,7 +85,7 @@ class TimeOffReason extends ChangeTrackedEntity
         $this->_propDict["iconType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isActive
     * Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
@@ -100,7 +100,7 @@ class TimeOffReason extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the isActive
     * Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
@@ -114,5 +114,5 @@ class TimeOffReason extends ChangeTrackedEntity
         $this->_propDict["isActive"] = boolval($val);
         return $this;
     }
-    
+
 }

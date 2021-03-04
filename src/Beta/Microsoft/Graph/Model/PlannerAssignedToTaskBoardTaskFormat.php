@@ -42,7 +42,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the orderHintsByAssignee
     * Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
@@ -56,7 +56,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta
         $this->_propDict["orderHintsByAssignee"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unassignedOrderHint
     * Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
@@ -71,7 +71,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta
             return null;
         }
     }
-    
+
     /**
     * Sets the unassignedOrderHint
     * Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
@@ -85,5 +85,5 @@ class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta
         $this->_propDict["unassignedOrderHint"] = $val;
         return $this;
     }
-    
+
 }

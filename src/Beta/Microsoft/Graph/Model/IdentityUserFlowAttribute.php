@@ -42,7 +42,7 @@ class IdentityUserFlowAttribute extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dataType
     * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are:string - denotes that the dataType for the identityUserFlowAttribute is a string. boolean - denotes that the dataType for the identityUserFlowAttribute is a Boolean.int64 - denotes that the dataType for the identityUserFlowAttribute is an integer.
@@ -56,7 +56,7 @@ class IdentityUserFlowAttribute extends Entity
         $this->_propDict["dataType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the user flow attribute that's shown to the user at the time of sign-up.
@@ -71,7 +71,7 @@ class IdentityUserFlowAttribute extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the user flow attribute that's shown to the user at the time of sign-up.
@@ -85,7 +85,7 @@ class IdentityUserFlowAttribute extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the user flow attribute.
@@ -100,7 +100,7 @@ class IdentityUserFlowAttribute extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the user flow attribute.
@@ -114,7 +114,7 @@ class IdentityUserFlowAttribute extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userFlowAttributeType
     * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
@@ -133,7 +133,7 @@ class IdentityUserFlowAttribute extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userFlowAttributeType
     * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
@@ -147,5 +147,5 @@ class IdentityUserFlowAttribute extends Entity
         $this->_propDict["userFlowAttributeType"] = $val;
         return $this;
     }
-    
+
 }

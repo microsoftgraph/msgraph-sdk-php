@@ -42,7 +42,7 @@ class WindowsFeatureUpdateProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target that the feature update profile is assigned to.
@@ -56,5 +56,5 @@ class WindowsFeatureUpdateProfileAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

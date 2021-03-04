@@ -38,7 +38,7 @@ class DeviceManagementConfigurationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the childCategoryIds
     * List of child ids of the category.
@@ -52,7 +52,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["childCategoryIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the item
@@ -67,7 +67,7 @@ class DeviceManagementConfigurationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the item
@@ -81,7 +81,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the item
@@ -96,7 +96,7 @@ class DeviceManagementConfigurationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the item
@@ -110,7 +110,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the helpText
     * Help text of the item
@@ -125,7 +125,7 @@ class DeviceManagementConfigurationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the helpText
     * Help text of the item
@@ -139,7 +139,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["helpText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * Name of the item
@@ -154,7 +154,7 @@ class DeviceManagementConfigurationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Name of the item
@@ -168,7 +168,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentCategoryId
     * Parent id of the category.
@@ -183,7 +183,7 @@ class DeviceManagementConfigurationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the parentCategoryId
     * Parent id of the category.
@@ -197,7 +197,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["parentCategoryId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platforms
     * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
@@ -216,7 +216,7 @@ class DeviceManagementConfigurationCategory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platforms
     * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
@@ -230,7 +230,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["platforms"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rootCategoryId
     * Root id of the category.
@@ -245,7 +245,7 @@ class DeviceManagementConfigurationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rootCategoryId
     * Root id of the category.
@@ -259,7 +259,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["rootCategoryId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingUsage
     * Indicates that the category contains settings that are used for Compliance or Configuration.
@@ -278,7 +278,7 @@ class DeviceManagementConfigurationCategory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settingUsage
     * Indicates that the category contains settings that are used for Compliance or Configuration.
@@ -292,7 +292,7 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["settingUsage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the technologies
     * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
@@ -311,7 +311,7 @@ class DeviceManagementConfigurationCategory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the technologies
     * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
@@ -325,5 +325,5 @@ class DeviceManagementConfigurationCategory extends Entity
         $this->_propDict["technologies"] = $val;
         return $this;
     }
-    
+
 }

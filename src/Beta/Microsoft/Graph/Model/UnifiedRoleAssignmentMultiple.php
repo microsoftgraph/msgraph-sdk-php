@@ -38,7 +38,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appScopeIds
     * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
@@ -52,7 +52,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["appScopeIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the condition
     *
@@ -66,7 +66,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the condition
     *
@@ -79,7 +79,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["condition"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the role assignment.
@@ -94,7 +94,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the role assignment.
@@ -108,7 +108,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryScopeIds
     * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
@@ -123,7 +123,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the directoryScopeIds
     * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
@@ -137,7 +137,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["directoryScopeIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the role assignment. Required.
@@ -152,7 +152,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the role assignment. Required.
@@ -166,7 +166,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalIds
     * Objectids of the principals to which the assignment is granted.
@@ -181,7 +181,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the principalIds
     * Objectids of the principals to which the assignment is granted.
@@ -195,7 +195,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["principalIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinitionId
     * ID of the unifiedRoleDefinition the assignment is for.
@@ -210,7 +210,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleDefinitionId
     * ID of the unifiedRoleDefinition the assignment is for.
@@ -224,9 +224,9 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appScopes
      *
      * @return array The appScopes
@@ -239,8 +239,8 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appScopes
     *
     * @param AppScope $val The appScopes
@@ -249,12 +249,12 @@ class UnifiedRoleAssignmentMultiple extends Entity
     */
     public function setAppScopes($val)
     {
-		$this->_propDict["appScopes"] = $val;
+        $this->_propDict["appScopes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the directoryScopes
      *
      * @return array The directoryScopes
@@ -267,8 +267,8 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the directoryScopes
     *
     * @param DirectoryObject $val The directoryScopes
@@ -277,12 +277,12 @@ class UnifiedRoleAssignmentMultiple extends Entity
     */
     public function setDirectoryScopes($val)
     {
-		$this->_propDict["directoryScopes"] = $val;
+        $this->_propDict["directoryScopes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the principals
      *
      * @return array The principals
@@ -295,8 +295,8 @@ class UnifiedRoleAssignmentMultiple extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the principals
     *
     * @param DirectoryObject $val The principals
@@ -305,10 +305,10 @@ class UnifiedRoleAssignmentMultiple extends Entity
     */
     public function setPrincipals($val)
     {
-		$this->_propDict["principals"] = $val;
+        $this->_propDict["principals"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinition
     *
@@ -326,7 +326,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleDefinition
     *
@@ -339,5 +339,5 @@ class UnifiedRoleAssignmentMultiple extends Entity
         $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
-    
+
 }

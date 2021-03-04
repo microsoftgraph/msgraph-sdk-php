@@ -38,7 +38,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Human readable name of the software update
@@ -52,7 +52,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdatedDateTime
     * Last date time the report for this device and product key was updated.
@@ -71,7 +71,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUpdatedDateTime
     * Last date time the report for this device and product key was updated.
@@ -85,7 +85,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         $this->_propDict["lastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the productKey
     * Product key of the software update.
@@ -100,7 +100,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the productKey
     * Product key of the software update.
@@ -114,7 +114,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         $this->_propDict["productKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
@@ -133,7 +133,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
@@ -147,7 +147,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the updateCategory
     * Software update category. Possible values are: critical, configurationDataFile, firmware, other.
@@ -166,7 +166,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the updateCategory
     * Software update category. Possible values are: critical, configurationDataFile, firmware, other.
@@ -180,7 +180,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         $this->_propDict["updateCategory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the updateVersion
     * Version of the software update
@@ -195,7 +195,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the updateVersion
     * Version of the software update
@@ -209,5 +209,5 @@ class MacOSSoftwareUpdateStateSummary extends Entity
         $this->_propDict["updateVersion"] = $val;
         return $this;
     }
-    
+
 }

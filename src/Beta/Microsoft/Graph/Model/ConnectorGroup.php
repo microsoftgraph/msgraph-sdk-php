@@ -42,7 +42,7 @@ class ConnectorGroup extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the connectorGroupType
     * Indicates the type of hybrid agent. This pre-set by the system. Read-only.
@@ -56,7 +56,7 @@ class ConnectorGroup extends Entity
         $this->_propDict["connectorGroupType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDefault
     * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
@@ -71,7 +71,7 @@ class ConnectorGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
@@ -85,7 +85,7 @@ class ConnectorGroup extends Entity
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The name associated with the connectorGroup.
@@ -100,7 +100,7 @@ class ConnectorGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The name associated with the connectorGroup.
@@ -114,7 +114,7 @@ class ConnectorGroup extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the region
     * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: nam, eur, aus, asia, ind.
@@ -133,7 +133,7 @@ class ConnectorGroup extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the region
     * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: nam, eur, aus, asia, ind.
@@ -147,9 +147,9 @@ class ConnectorGroup extends Entity
         $this->_propDict["region"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the applications
     * Read-only. Nullable.
      *
@@ -163,8 +163,8 @@ class ConnectorGroup extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the applications
     * Read-only. Nullable.
     *
@@ -174,12 +174,12 @@ class ConnectorGroup extends Entity
     */
     public function setApplications($val)
     {
-		$this->_propDict["applications"] = $val;
+        $this->_propDict["applications"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the members
     * Read-only. Nullable.
      *
@@ -193,8 +193,8 @@ class ConnectorGroup extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the members
     * Read-only. Nullable.
     *
@@ -204,8 +204,8 @@ class ConnectorGroup extends Entity
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
-    
+
 }

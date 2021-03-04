@@ -38,7 +38,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The user experience analytics device id.
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the metricDateTime
     * The user experience analytics metric date time.
@@ -71,7 +71,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the metricDateTime
     * The user experience analytics metric date time.
@@ -85,7 +85,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["metricDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the metricType
     * The user experience analytics metric type.
@@ -100,7 +100,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the metricType
     * The user experience analytics metric type.
@@ -114,7 +114,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["metricType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userExperienceAnalyticsMetric
     * User experience analytics metric.
@@ -133,7 +133,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userExperienceAnalyticsMetric
     * User experience analytics metric.
@@ -147,5 +147,5 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["userExperienceAnalyticsMetric"] = $val;
         return $this;
     }
-    
+
 }

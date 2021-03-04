@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class GroupPolicyPresentationValueList extends GroupPolicyPresentationValue
 {
 
-     /** 
+     /**
      * Gets the values
     * A list of pairs for the associated presentation.
      *
@@ -39,8 +39,8 @@ class GroupPolicyPresentationValueList extends GroupPolicyPresentationValue
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the values
     * A list of pairs for the associated presentation.
     *
@@ -50,8 +50,8 @@ class GroupPolicyPresentationValueList extends GroupPolicyPresentationValue
     */
     public function setValues($val)
     {
-		$this->_propDict["values"] = $val;
+        $this->_propDict["values"] = $val;
         return $this;
     }
-    
+
 }

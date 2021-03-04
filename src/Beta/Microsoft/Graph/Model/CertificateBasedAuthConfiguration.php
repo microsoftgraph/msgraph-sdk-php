@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class CertificateBasedAuthConfiguration extends Entity
 {
 
-     /** 
+     /**
      * Gets the certificateAuthorities
     * Collection of certificate authorities which creates a trusted certificate chain.
      *
@@ -39,8 +39,8 @@ class CertificateBasedAuthConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the certificateAuthorities
     * Collection of certificate authorities which creates a trusted certificate chain.
     *
@@ -50,8 +50,8 @@ class CertificateBasedAuthConfiguration extends Entity
     */
     public function setCertificateAuthorities($val)
     {
-		$this->_propDict["certificateAuthorities"] = $val;
+        $this->_propDict["certificateAuthorities"] = $val;
         return $this;
     }
-    
+
 }

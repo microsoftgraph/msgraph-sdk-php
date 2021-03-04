@@ -37,7 +37,7 @@ class SkypeForBusinessActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organized
     *
@@ -50,7 +50,7 @@ class SkypeForBusinessActivityCounts extends Entity
         $this->_propDict["organized"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the participated
     *
@@ -64,7 +64,7 @@ class SkypeForBusinessActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participated
     *
@@ -77,7 +77,7 @@ class SkypeForBusinessActivityCounts extends Entity
         $this->_propDict["participated"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeer
     *
@@ -91,7 +91,7 @@ class SkypeForBusinessActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeer
     *
@@ -104,7 +104,7 @@ class SkypeForBusinessActivityCounts extends Entity
         $this->_propDict["peerToPeer"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -122,7 +122,7 @@ class SkypeForBusinessActivityCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -135,7 +135,7 @@ class SkypeForBusinessActivityCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -149,7 +149,7 @@ class SkypeForBusinessActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -162,7 +162,7 @@ class SkypeForBusinessActivityCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -180,7 +180,7 @@ class SkypeForBusinessActivityCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -193,5 +193,5 @@ class SkypeForBusinessActivityCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class BusinessFlow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customData
     *
@@ -50,7 +50,7 @@ class BusinessFlow extends Entity
         $this->_propDict["customData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deDuplicationId
     *
@@ -64,7 +64,7 @@ class BusinessFlow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deDuplicationId
     *
@@ -77,7 +77,7 @@ class BusinessFlow extends Entity
         $this->_propDict["deDuplicationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -91,7 +91,7 @@ class BusinessFlow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -104,7 +104,7 @@ class BusinessFlow extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -118,7 +118,7 @@ class BusinessFlow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -131,7 +131,7 @@ class BusinessFlow extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policy
     *
@@ -149,7 +149,7 @@ class BusinessFlow extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policy
     *
@@ -162,7 +162,7 @@ class BusinessFlow extends Entity
         $this->_propDict["policy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyTemplateId
     *
@@ -176,7 +176,7 @@ class BusinessFlow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the policyTemplateId
     *
@@ -189,7 +189,7 @@ class BusinessFlow extends Entity
         $this->_propDict["policyTemplateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recordVersion
     *
@@ -203,7 +203,7 @@ class BusinessFlow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the recordVersion
     *
@@ -216,7 +216,7 @@ class BusinessFlow extends Entity
         $this->_propDict["recordVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schemaId
     *
@@ -230,7 +230,7 @@ class BusinessFlow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the schemaId
     *
@@ -243,7 +243,7 @@ class BusinessFlow extends Entity
         $this->_propDict["schemaId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     *
@@ -261,7 +261,7 @@ class BusinessFlow extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     *
@@ -274,5 +274,5 @@ class BusinessFlow extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

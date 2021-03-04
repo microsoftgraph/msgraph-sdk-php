@@ -41,7 +41,7 @@ class Trending extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -54,7 +54,7 @@ class Trending extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceReference
     * Reference properties of the trending document, such as the url and type of the document.
@@ -73,7 +73,7 @@ class Trending extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourceReference
     * Reference properties of the trending document, such as the url and type of the document.
@@ -87,7 +87,7 @@ class Trending extends Entity
         $this->_propDict["resourceReference"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceVisualization
     * Properties that you can use to visualize the document in your experience.
@@ -106,7 +106,7 @@ class Trending extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourceVisualization
     * Properties that you can use to visualize the document in your experience.
@@ -120,7 +120,7 @@ class Trending extends Entity
         $this->_propDict["resourceVisualization"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the weight
     * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
@@ -135,7 +135,7 @@ class Trending extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the weight
     * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
@@ -149,7 +149,7 @@ class Trending extends Entity
         $this->_propDict["weight"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Used for navigating to the trending document.
@@ -168,7 +168,7 @@ class Trending extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Used for navigating to the trending document.
@@ -182,5 +182,5 @@ class Trending extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
 }

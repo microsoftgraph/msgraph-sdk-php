@@ -37,7 +37,7 @@ class DocumentComment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the content
     *
@@ -50,9 +50,9 @@ class DocumentComment extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the replies
      *
      * @return array The replies
@@ -65,8 +65,8 @@ class DocumentComment extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the replies
     *
     * @param DocumentCommentReply $val The replies
@@ -75,8 +75,8 @@ class DocumentComment extends Entity
     */
     public function setReplies($val)
     {
-		$this->_propDict["replies"] = $val;
+        $this->_propDict["replies"] = $val;
         return $this;
     }
-    
+
 }

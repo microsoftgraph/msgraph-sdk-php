@@ -42,7 +42,7 @@ class RemoteActionAudit extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the action
     * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName.
@@ -56,7 +56,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["action"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the actionState
     * Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
@@ -75,7 +75,7 @@ class RemoteActionAudit extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the actionState
     * Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
@@ -89,7 +89,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["actionState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDisplayName
     * Intune device name.
@@ -104,7 +104,7 @@ class RemoteActionAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * Intune device name.
@@ -118,7 +118,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceIMEI
     * IMEI of the device.
@@ -133,7 +133,7 @@ class RemoteActionAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceIMEI
     * IMEI of the device.
@@ -147,7 +147,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["deviceIMEI"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceOwnerUserPrincipalName
     * Upn of the device owner.
@@ -162,7 +162,7 @@ class RemoteActionAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceOwnerUserPrincipalName
     * Upn of the device owner.
@@ -176,7 +176,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["deviceOwnerUserPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the initiatedByUserPrincipalName
     * User who initiated the device action, format is UPN.
@@ -191,7 +191,7 @@ class RemoteActionAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the initiatedByUserPrincipalName
     * User who initiated the device action, format is UPN.
@@ -205,7 +205,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["initiatedByUserPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * Action target.
@@ -220,7 +220,7 @@ class RemoteActionAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * Action target.
@@ -234,7 +234,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestDateTime
     * Time when the action was issued, given in UTC.
@@ -253,7 +253,7 @@ class RemoteActionAudit extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestDateTime
     * Time when the action was issued, given in UTC.
@@ -267,7 +267,7 @@ class RemoteActionAudit extends Entity
         $this->_propDict["requestDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * [deprecated] Please use InitiatedByUserPrincipalName instead.
@@ -282,7 +282,7 @@ class RemoteActionAudit extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * [deprecated] Please use InitiatedByUserPrincipalName instead.
@@ -296,5 +296,5 @@ class RemoteActionAudit extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
 }

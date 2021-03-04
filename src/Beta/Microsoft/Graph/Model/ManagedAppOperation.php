@@ -38,7 +38,7 @@ class ManagedAppOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The operation name.
@@ -52,7 +52,7 @@ class ManagedAppOperation extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The last time the app operation was modified.
@@ -71,7 +71,7 @@ class ManagedAppOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The last time the app operation was modified.
@@ -85,7 +85,7 @@ class ManagedAppOperation extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * The current state of the operation
@@ -100,7 +100,7 @@ class ManagedAppOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the state
     * The current state of the operation
@@ -114,7 +114,7 @@ class ManagedAppOperation extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the entity.
@@ -129,7 +129,7 @@ class ManagedAppOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the entity.
@@ -143,5 +143,5 @@ class ManagedAppOperation extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

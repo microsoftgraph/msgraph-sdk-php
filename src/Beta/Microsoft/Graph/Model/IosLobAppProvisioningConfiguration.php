@@ -42,7 +42,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime the object was created.
@@ -56,7 +56,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Admin provided description of the Device Configuration.
@@ -71,7 +71,7 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Admin provided description of the Device Configuration.
@@ -85,7 +85,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Admin provided name of the device configuration.
@@ -100,7 +100,7 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Admin provided name of the device configuration.
@@ -114,7 +114,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * Optional profile expiration date and time.
@@ -133,7 +133,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * Optional profile expiration date and time.
@@ -147,7 +147,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -166,7 +166,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -180,7 +180,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payload
     * Payload. (UTF8 encoded byte array)
@@ -199,7 +199,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the payload
     * Payload. (UTF8 encoded byte array)
@@ -213,7 +213,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["payload"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payloadFileName
     * Payload file name (.mobileprovision
@@ -228,7 +228,7 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the payloadFileName
     * Payload file name (.mobileprovision
@@ -242,7 +242,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["payloadFileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this iOS LOB app provisioning configuration entity.
@@ -257,7 +257,7 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this iOS LOB app provisioning configuration entity.
@@ -271,7 +271,7 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the device configuration.
@@ -286,7 +286,7 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the device configuration.
@@ -300,9 +300,9 @@ class IosLobAppProvisioningConfiguration extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The associated group assignments for IosLobAppProvisioningConfiguration.
      *
@@ -316,8 +316,8 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The associated group assignments for IosLobAppProvisioningConfiguration.
     *
@@ -327,12 +327,12 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceStatuses
     * The list of device installation states for this mobile app configuration.
      *
@@ -346,8 +346,8 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceStatuses
     * The list of device installation states for this mobile app configuration.
     *
@@ -357,12 +357,12 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setDeviceStatuses($val)
     {
-		$this->_propDict["deviceStatuses"] = $val;
+        $this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groupAssignments
     * The associated group assignments.
      *
@@ -376,8 +376,8 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groupAssignments
     * The associated group assignments.
     *
@@ -387,12 +387,12 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setGroupAssignments($val)
     {
-		$this->_propDict["groupAssignments"] = $val;
+        $this->_propDict["groupAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userStatuses
     * The list of user installation states for this mobile app configuration.
      *
@@ -406,8 +406,8 @@ class IosLobAppProvisioningConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userStatuses
     * The list of user installation states for this mobile app configuration.
     *
@@ -417,8 +417,8 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setUserStatuses($val)
     {
-		$this->_propDict["userStatuses"] = $val;
+        $this->_propDict["userStatuses"] = $val;
         return $this;
     }
-    
+
 }

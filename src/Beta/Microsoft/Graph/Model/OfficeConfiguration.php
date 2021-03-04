@@ -22,10 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OfficeConfiguration extends 
+class OfficeConfiguration implements \JsonSerializable
 {
 
-     /** 
+     /**
      * Gets the tenantCheckinStatuses
     * List of office Client check-in status.
      *
@@ -39,8 +39,8 @@ class OfficeConfiguration extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tenantCheckinStatuses
     * List of office Client check-in status.
     *
@@ -50,10 +50,10 @@ class OfficeConfiguration extends
     */
     public function setTenantCheckinStatuses($val)
     {
-		$this->_propDict["tenantCheckinStatuses"] = $val;
+        $this->_propDict["tenantCheckinStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantUserCheckinSummary
     * Entity that describes tenant check-in statues
@@ -72,7 +72,7 @@ class OfficeConfiguration extends
         }
         return null;
     }
-    
+
     /**
     * Sets the tenantUserCheckinSummary
     * Entity that describes tenant check-in statues
@@ -86,9 +86,9 @@ class OfficeConfiguration extends
         $this->_propDict["tenantUserCheckinSummary"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the clientConfigurations
     * List of office Client configuration.
      *
@@ -102,8 +102,8 @@ class OfficeConfiguration extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the clientConfigurations
     * List of office Client configuration.
     *
@@ -113,8 +113,8 @@ class OfficeConfiguration extends
     */
     public function setClientConfigurations($val)
     {
-		$this->_propDict["clientConfigurations"] = $val;
+        $this->_propDict["clientConfigurations"] = $val;
         return $this;
     }
-    
+
 }

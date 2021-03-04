@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class RegionalAndLanguageSettings extends Entity
 {
 
-     /** 
+     /**
      * Gets the authoringLanguages
     * Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
      *
@@ -39,8 +39,8 @@ class RegionalAndLanguageSettings extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the authoringLanguages
     * Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
     *
@@ -50,10 +50,10 @@ class RegionalAndLanguageSettings extends Entity
     */
     public function setAuthoringLanguages($val)
     {
-		$this->_propDict["authoringLanguages"] = $val;
+        $this->_propDict["authoringLanguages"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultDisplayLanguage
     * The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
@@ -72,7 +72,7 @@ class RegionalAndLanguageSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultDisplayLanguage
     * The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
@@ -86,7 +86,7 @@ class RegionalAndLanguageSettings extends Entity
         $this->_propDict["defaultDisplayLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultRegionalFormat
     * The locale that drives the default date, time, and calendar formatting.Returned by default.
@@ -105,7 +105,7 @@ class RegionalAndLanguageSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultRegionalFormat
     * The locale that drives the default date, time, and calendar formatting.Returned by default.
@@ -119,7 +119,7 @@ class RegionalAndLanguageSettings extends Entity
         $this->_propDict["defaultRegionalFormat"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultSpeechInputLanguage
     * The language a user expected to use as input for text to speech scenarios.Returned by default.
@@ -138,7 +138,7 @@ class RegionalAndLanguageSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultSpeechInputLanguage
     * The language a user expected to use as input for text to speech scenarios.Returned by default.
@@ -152,7 +152,7 @@ class RegionalAndLanguageSettings extends Entity
         $this->_propDict["defaultSpeechInputLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultTranslationLanguage
     * The language a user expects to have documents, emails, and messages translated into.Returned by default.
@@ -171,7 +171,7 @@ class RegionalAndLanguageSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultTranslationLanguage
     * The language a user expects to have documents, emails, and messages translated into.Returned by default.
@@ -185,7 +185,7 @@ class RegionalAndLanguageSettings extends Entity
         $this->_propDict["defaultTranslationLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the regionalFormatOverrides
     * Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
@@ -204,7 +204,7 @@ class RegionalAndLanguageSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the regionalFormatOverrides
     * Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
@@ -218,7 +218,7 @@ class RegionalAndLanguageSettings extends Entity
         $this->_propDict["regionalFormatOverrides"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the translationPreferences
     *
@@ -236,7 +236,7 @@ class RegionalAndLanguageSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the translationPreferences
     *
@@ -249,5 +249,5 @@ class RegionalAndLanguageSettings extends Entity
         $this->_propDict["translationPreferences"] = $val;
         return $this;
     }
-    
+
 }

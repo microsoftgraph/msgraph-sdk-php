@@ -37,7 +37,7 @@ class UnifiedRbacResourceAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the actionVerb
     *
@@ -50,7 +50,7 @@ class UnifiedRbacResourceAction extends Entity
         $this->_propDict["actionVerb"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -64,7 +64,7 @@ class UnifiedRbacResourceAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -77,7 +77,7 @@ class UnifiedRbacResourceAction extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     *
@@ -91,7 +91,7 @@ class UnifiedRbacResourceAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -104,7 +104,7 @@ class UnifiedRbacResourceAction extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceScopeId
     *
@@ -118,7 +118,7 @@ class UnifiedRbacResourceAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceScopeId
     *
@@ -131,7 +131,7 @@ class UnifiedRbacResourceAction extends Entity
         $this->_propDict["resourceScopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceScope
     *
@@ -149,7 +149,7 @@ class UnifiedRbacResourceAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourceScope
     *
@@ -162,5 +162,5 @@ class UnifiedRbacResourceAction extends Entity
         $this->_propDict["resourceScope"] = $val;
         return $this;
     }
-    
+
 }

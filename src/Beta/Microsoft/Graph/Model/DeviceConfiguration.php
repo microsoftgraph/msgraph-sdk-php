@@ -42,7 +42,7 @@ class DeviceConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime the object was created.
@@ -56,7 +56,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Admin provided description of the Device Configuration.
@@ -71,7 +71,7 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Admin provided description of the Device Configuration.
@@ -85,7 +85,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceManagementApplicabilityRuleDeviceMode
     * The device mode applicability rule for this Policy.
@@ -104,7 +104,7 @@ class DeviceConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceManagementApplicabilityRuleDeviceMode
     * The device mode applicability rule for this Policy.
@@ -118,7 +118,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceManagementApplicabilityRuleOsEdition
     * The OS edition applicability for this Policy.
@@ -137,7 +137,7 @@ class DeviceConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceManagementApplicabilityRuleOsEdition
     * The OS edition applicability for this Policy.
@@ -151,7 +151,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["deviceManagementApplicabilityRuleOsEdition"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceManagementApplicabilityRuleOsVersion
     * The OS version applicability rule for this Policy.
@@ -170,7 +170,7 @@ class DeviceConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceManagementApplicabilityRuleOsVersion
     * The OS version applicability rule for this Policy.
@@ -184,7 +184,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["deviceManagementApplicabilityRuleOsVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Admin provided name of the device configuration.
@@ -199,7 +199,7 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Admin provided name of the device configuration.
@@ -213,7 +213,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -232,7 +232,7 @@ class DeviceConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -246,7 +246,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -261,7 +261,7 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -275,7 +275,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supportsScopeTags
     * Indicates whether or not the underlying Device Configuration supports the assignment of scope tags. Assigning to the ScopeTags property is not allowed when this value is false and entities will not be visible to scoped users. This occurs for Legacy policies created in Silverlight and can be resolved by deleting and recreating the policy in the Azure Portal. This property is read-only.
@@ -290,7 +290,7 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the supportsScopeTags
     * Indicates whether or not the underlying Device Configuration supports the assignment of scope tags. Assigning to the ScopeTags property is not allowed when this value is false and entities will not be visible to scoped users. This occurs for Legacy policies created in Silverlight and can be resolved by deleting and recreating the policy in the Azure Portal. This property is read-only.
@@ -304,7 +304,7 @@ class DeviceConfiguration extends Entity
         $this->_propDict["supportsScopeTags"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the device configuration.
@@ -319,7 +319,7 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the device configuration.
@@ -333,9 +333,9 @@ class DeviceConfiguration extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of assignments for the device configuration profile.
      *
@@ -349,8 +349,8 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of assignments for the device configuration profile.
     *
@@ -360,12 +360,12 @@ class DeviceConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceSettingStateSummaries
     * Device Configuration Setting State Device Summary
      *
@@ -379,8 +379,8 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceSettingStateSummaries
     * Device Configuration Setting State Device Summary
     *
@@ -390,12 +390,12 @@ class DeviceConfiguration extends Entity
     */
     public function setDeviceSettingStateSummaries($val)
     {
-		$this->_propDict["deviceSettingStateSummaries"] = $val;
+        $this->_propDict["deviceSettingStateSummaries"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceStatuses
     * Device configuration installation status by device.
      *
@@ -409,8 +409,8 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceStatuses
     * Device configuration installation status by device.
     *
@@ -420,10 +420,10 @@ class DeviceConfiguration extends Entity
     */
     public function setDeviceStatuses($val)
     {
-		$this->_propDict["deviceStatuses"] = $val;
+        $this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceStatusOverview
     * Device Configuration devices status overview
@@ -442,7 +442,7 @@ class DeviceConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceStatusOverview
     * Device Configuration devices status overview
@@ -456,9 +456,9 @@ class DeviceConfiguration extends Entity
         $this->_propDict["deviceStatusOverview"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groupAssignments
     * The list of group assignments for the device configuration profile.
      *
@@ -472,8 +472,8 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groupAssignments
     * The list of group assignments for the device configuration profile.
     *
@@ -483,12 +483,12 @@ class DeviceConfiguration extends Entity
     */
     public function setGroupAssignments($val)
     {
-		$this->_propDict["groupAssignments"] = $val;
+        $this->_propDict["groupAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userStatuses
     * Device configuration installation status by user.
      *
@@ -502,8 +502,8 @@ class DeviceConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userStatuses
     * Device configuration installation status by user.
     *
@@ -513,10 +513,10 @@ class DeviceConfiguration extends Entity
     */
     public function setUserStatuses($val)
     {
-		$this->_propDict["userStatuses"] = $val;
+        $this->_propDict["userStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userStatusOverview
     * Device Configuration users status overview
@@ -535,7 +535,7 @@ class DeviceConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userStatusOverview
     * Device Configuration users status overview
@@ -549,5 +549,5 @@ class DeviceConfiguration extends Entity
         $this->_propDict["userStatusOverview"] = $val;
         return $this;
     }
-    
+
 }

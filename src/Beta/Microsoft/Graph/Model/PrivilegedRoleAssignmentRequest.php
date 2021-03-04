@@ -38,7 +38,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignmentState
     * The state of the assignment. The value can be Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
@@ -52,7 +52,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["assignmentState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the duration
     * The duration of a role assignment.
@@ -67,7 +67,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the duration
     * The duration of a role assignment.
@@ -81,7 +81,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["duration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reason
     * The reason for the role assignment.
@@ -96,7 +96,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reason
     * The reason for the role assignment.
@@ -110,7 +110,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["reason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestedDateTime
     * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -129,7 +129,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestedDateTime
     * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -143,7 +143,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["requestedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleId
     * The id of the role.
@@ -158,7 +158,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleId
     * The id of the role.
@@ -172,7 +172,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["roleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schedule
     * The schedule object of the role assignment request.
@@ -191,7 +191,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schedule
     * The schedule object of the role assignment request.
@@ -205,7 +205,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["schedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Read-only.The status of the role assignment request. The value can be NotStarted,Completed,RequestedApproval,Scheduled,Approved,ApprovalDenied,ApprovalAborted,Cancelling,Cancelled,Revoked,RequestExpired.
@@ -220,7 +220,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * Read-only.The status of the role assignment request. The value can be NotStarted,Completed,RequestedApproval,Scheduled,Approved,ApprovalDenied,ApprovalAborted,Cancelling,Cancelled,Revoked,RequestExpired.
@@ -234,7 +234,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ticketNumber
     * The ticketNumber for the role assignment.
@@ -249,7 +249,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ticketNumber
     * The ticketNumber for the role assignment.
@@ -263,7 +263,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["ticketNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ticketSystem
     * The ticketSystem for the role assignment.
@@ -278,7 +278,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ticketSystem
     * The ticketSystem for the role assignment.
@@ -292,7 +292,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["ticketSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
@@ -307,7 +307,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
@@ -321,7 +321,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The id of the user.
@@ -336,7 +336,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The id of the user.
@@ -350,7 +350,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleInfo
     * The roleInfo object of the role assignment request.
@@ -369,7 +369,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleInfo
     * The roleInfo object of the role assignment request.
@@ -383,5 +383,5 @@ class PrivilegedRoleAssignmentRequest extends Entity
         $this->_propDict["roleInfo"] = $val;
         return $this;
     }
-    
+
 }

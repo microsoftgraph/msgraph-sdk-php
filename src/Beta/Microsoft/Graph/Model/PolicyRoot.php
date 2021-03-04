@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PolicyRoot extends 
+class PolicyRoot implements \JsonSerializable
 {
     /**
     * Gets the authenticationMethodsPolicy
@@ -41,7 +41,7 @@ class PolicyRoot extends
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethodsPolicy
     *
@@ -54,7 +54,7 @@ class PolicyRoot extends
         $this->_propDict["authenticationMethodsPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authenticationFlowsPolicy
     *
@@ -72,7 +72,7 @@ class PolicyRoot extends
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationFlowsPolicy
     *
@@ -85,7 +85,7 @@ class PolicyRoot extends
         $this->_propDict["authenticationFlowsPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the b2cAuthenticationMethodsPolicy
     *
@@ -103,7 +103,7 @@ class PolicyRoot extends
         }
         return null;
     }
-    
+
     /**
     * Sets the b2cAuthenticationMethodsPolicy
     *
@@ -116,9 +116,9 @@ class PolicyRoot extends
         $this->_propDict["b2cAuthenticationMethodsPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the activityBasedTimeoutPolicies
      *
      * @return array The activityBasedTimeoutPolicies
@@ -131,8 +131,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the activityBasedTimeoutPolicies
     *
     * @param ActivityBasedTimeoutPolicy $val The activityBasedTimeoutPolicies
@@ -141,12 +141,12 @@ class PolicyRoot extends
     */
     public function setActivityBasedTimeoutPolicies($val)
     {
-		$this->_propDict["activityBasedTimeoutPolicies"] = $val;
+        $this->_propDict["activityBasedTimeoutPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the authorizationPolicy
      *
      * @return array The authorizationPolicy
@@ -159,8 +159,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the authorizationPolicy
     *
     * @param AuthorizationPolicy $val The authorizationPolicy
@@ -169,12 +169,12 @@ class PolicyRoot extends
     */
     public function setAuthorizationPolicy($val)
     {
-		$this->_propDict["authorizationPolicy"] = $val;
+        $this->_propDict["authorizationPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the claimsMappingPolicies
      *
      * @return array The claimsMappingPolicies
@@ -187,8 +187,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the claimsMappingPolicies
     *
     * @param ClaimsMappingPolicy $val The claimsMappingPolicies
@@ -197,12 +197,12 @@ class PolicyRoot extends
     */
     public function setClaimsMappingPolicies($val)
     {
-		$this->_propDict["claimsMappingPolicies"] = $val;
+        $this->_propDict["claimsMappingPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the homeRealmDiscoveryPolicies
      *
      * @return array The homeRealmDiscoveryPolicies
@@ -215,8 +215,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the homeRealmDiscoveryPolicies
     *
     * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
@@ -225,12 +225,12 @@ class PolicyRoot extends
     */
     public function setHomeRealmDiscoveryPolicies($val)
     {
-		$this->_propDict["homeRealmDiscoveryPolicies"] = $val;
+        $this->_propDict["homeRealmDiscoveryPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the permissionGrantPolicies
      *
      * @return array The permissionGrantPolicies
@@ -243,8 +243,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the permissionGrantPolicies
     *
     * @param PermissionGrantPolicy $val The permissionGrantPolicies
@@ -253,12 +253,12 @@ class PolicyRoot extends
     */
     public function setPermissionGrantPolicies($val)
     {
-		$this->_propDict["permissionGrantPolicies"] = $val;
+        $this->_propDict["permissionGrantPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the privateLinkResourcePolicies
      *
      * @return array The privateLinkResourcePolicies
@@ -271,8 +271,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the privateLinkResourcePolicies
     *
     * @param PrivateLinkResourcePolicy $val The privateLinkResourcePolicies
@@ -281,12 +281,12 @@ class PolicyRoot extends
     */
     public function setPrivateLinkResourcePolicies($val)
     {
-		$this->_propDict["privateLinkResourcePolicies"] = $val;
+        $this->_propDict["privateLinkResourcePolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tokenIssuancePolicies
      *
      * @return array The tokenIssuancePolicies
@@ -299,8 +299,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tokenIssuancePolicies
     *
     * @param TokenIssuancePolicy $val The tokenIssuancePolicies
@@ -309,12 +309,12 @@ class PolicyRoot extends
     */
     public function setTokenIssuancePolicies($val)
     {
-		$this->_propDict["tokenIssuancePolicies"] = $val;
+        $this->_propDict["tokenIssuancePolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tokenLifetimePolicies
      *
      * @return array The tokenLifetimePolicies
@@ -327,8 +327,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tokenLifetimePolicies
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
@@ -337,10 +337,10 @@ class PolicyRoot extends
     */
     public function setTokenLifetimePolicies($val)
     {
-		$this->_propDict["tokenLifetimePolicies"] = $val;
+        $this->_propDict["tokenLifetimePolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the adminConsentRequestPolicy
     *
@@ -358,7 +358,7 @@ class PolicyRoot extends
         }
         return null;
     }
-    
+
     /**
     * Sets the adminConsentRequestPolicy
     *
@@ -371,7 +371,7 @@ class PolicyRoot extends
         $this->_propDict["adminConsentRequestPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryRoleAccessReviewPolicy
     *
@@ -389,7 +389,7 @@ class PolicyRoot extends
         }
         return null;
     }
-    
+
     /**
     * Sets the directoryRoleAccessReviewPolicy
     *
@@ -402,9 +402,9 @@ class PolicyRoot extends
         $this->_propDict["directoryRoleAccessReviewPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the conditionalAccessPolicies
      *
      * @return array The conditionalAccessPolicies
@@ -417,8 +417,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the conditionalAccessPolicies
     *
     * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
@@ -427,10 +427,10 @@ class PolicyRoot extends
     */
     public function setConditionalAccessPolicies($val)
     {
-		$this->_propDict["conditionalAccessPolicies"] = $val;
+        $this->_propDict["conditionalAccessPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identitySecurityDefaultsEnforcementPolicy
     *
@@ -448,7 +448,7 @@ class PolicyRoot extends
         }
         return null;
     }
-    
+
     /**
     * Sets the identitySecurityDefaultsEnforcementPolicy
     *
@@ -461,9 +461,9 @@ class PolicyRoot extends
         $this->_propDict["identitySecurityDefaultsEnforcementPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleManagementPolicies
      *
      * @return array The roleManagementPolicies
@@ -476,8 +476,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleManagementPolicies
     *
     * @param UnifiedRoleManagementPolicy $val The roleManagementPolicies
@@ -486,12 +486,12 @@ class PolicyRoot extends
     */
     public function setRoleManagementPolicies($val)
     {
-		$this->_propDict["roleManagementPolicies"] = $val;
+        $this->_propDict["roleManagementPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleManagementPolicyAssignments
      *
      * @return array The roleManagementPolicyAssignments
@@ -504,8 +504,8 @@ class PolicyRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleManagementPolicyAssignments
     *
     * @param UnifiedRoleManagementPolicyAssignment $val The roleManagementPolicyAssignments
@@ -514,8 +514,8 @@ class PolicyRoot extends
     */
     public function setRoleManagementPolicyAssignments($val)
     {
-		$this->_propDict["roleManagementPolicyAssignments"] = $val;
+        $this->_propDict["roleManagementPolicyAssignments"] = $val;
         return $this;
     }
-    
+
 }

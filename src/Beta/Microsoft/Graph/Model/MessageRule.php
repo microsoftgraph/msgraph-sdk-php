@@ -42,7 +42,7 @@ class MessageRule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the actions
     * Actions to be taken on a message when the corresponding conditions are fulfilled.
@@ -56,7 +56,7 @@ class MessageRule extends Entity
         $this->_propDict["actions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the conditions
     * Conditions that when fulfilled, will trigger the corresponding actions for that rule.
@@ -75,7 +75,7 @@ class MessageRule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the conditions
     * Conditions that when fulfilled, will trigger the corresponding actions for that rule.
@@ -89,7 +89,7 @@ class MessageRule extends Entity
         $this->_propDict["conditions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the rule.
@@ -104,7 +104,7 @@ class MessageRule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the rule.
@@ -118,7 +118,7 @@ class MessageRule extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the exceptions
     * Exception conditions for the rule.
@@ -137,7 +137,7 @@ class MessageRule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the exceptions
     * Exception conditions for the rule.
@@ -151,7 +151,7 @@ class MessageRule extends Entity
         $this->_propDict["exceptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasError
     * Indicates whether the rule is in an error condition. Read-only.
@@ -166,7 +166,7 @@ class MessageRule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasError
     * Indicates whether the rule is in an error condition. Read-only.
@@ -180,7 +180,7 @@ class MessageRule extends Entity
         $this->_propDict["hasError"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Indicates whether the rule is enabled to be applied to messages.
@@ -195,7 +195,7 @@ class MessageRule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Indicates whether the rule is enabled to be applied to messages.
@@ -209,7 +209,7 @@ class MessageRule extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isReadOnly
     * Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
@@ -224,7 +224,7 @@ class MessageRule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isReadOnly
     * Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
@@ -238,7 +238,7 @@ class MessageRule extends Entity
         $this->_propDict["isReadOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sequence
     * Indicates the order in which the rule is executed, among other rules.
@@ -253,7 +253,7 @@ class MessageRule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sequence
     * Indicates the order in which the rule is executed, among other rules.
@@ -267,5 +267,5 @@ class MessageRule extends Entity
         $this->_propDict["sequence"] = intval($val);
         return $this;
     }
-    
+
 }

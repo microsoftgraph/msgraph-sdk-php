@@ -42,7 +42,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
@@ -56,7 +56,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["certificateValidityPeriodScale"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period
@@ -71,7 +71,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period
@@ -85,7 +85,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["certificateValidityPeriodValue"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keyStorageProvider
     * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
@@ -104,7 +104,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the keyStorageProvider
     * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
@@ -118,7 +118,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["keyStorageProvider"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage. Valid values 1 to 99
@@ -133,7 +133,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the renewalThresholdPercentage
     * Certificate renewal threshold percentage. Valid values 1 to 99
@@ -147,7 +147,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["renewalThresholdPercentage"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameType
     * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -166,7 +166,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the subjectAlternativeNameType
     * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -180,7 +180,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["subjectAlternativeNameType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
@@ -199,7 +199,7 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
@@ -213,5 +213,5 @@ class WindowsCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["subjectNameFormat"] = $val;
         return $this;
     }
-    
+
 }

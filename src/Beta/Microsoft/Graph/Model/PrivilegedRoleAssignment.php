@@ -42,7 +42,7 @@ class PrivilegedRoleAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * The UTC DateTime when the temporary privileged role assignment will be expired. For permanent role assignment, the value is null.
@@ -56,7 +56,7 @@ class PrivilegedRoleAssignment extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isElevated
     * true if the role assignment is activated. false if the role assignment is deactivated.
@@ -71,7 +71,7 @@ class PrivilegedRoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isElevated
     * true if the role assignment is activated. false if the role assignment is deactivated.
@@ -85,7 +85,7 @@ class PrivilegedRoleAssignment extends Entity
         $this->_propDict["isElevated"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the resultMessage
     * Result message set by the service.
@@ -100,7 +100,7 @@ class PrivilegedRoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resultMessage
     * Result message set by the service.
@@ -114,7 +114,7 @@ class PrivilegedRoleAssignment extends Entity
         $this->_propDict["resultMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleId
     * Role identifier. In GUID string format.
@@ -129,7 +129,7 @@ class PrivilegedRoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleId
     * Role identifier. In GUID string format.
@@ -143,7 +143,7 @@ class PrivilegedRoleAssignment extends Entity
         $this->_propDict["roleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * User identifier. In GUID string format.
@@ -158,7 +158,7 @@ class PrivilegedRoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * User identifier. In GUID string format.
@@ -172,7 +172,7 @@ class PrivilegedRoleAssignment extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleInfo
     * Read-only. Nullable. The associated role information.
@@ -191,7 +191,7 @@ class PrivilegedRoleAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleInfo
     * Read-only. Nullable. The associated role information.
@@ -205,5 +205,5 @@ class PrivilegedRoleAssignment extends Entity
         $this->_propDict["roleInfo"] = $val;
         return $this;
     }
-    
+
 }

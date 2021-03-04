@@ -42,7 +42,7 @@ class EmailActivityStatistics extends ActivityStatistics
         }
         return null;
     }
-    
+
     /**
     * Sets the afterHours
     * Total hours spent on email outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
@@ -56,7 +56,7 @@ class EmailActivityStatistics extends ActivityStatistics
         $this->_propDict["afterHours"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the readEmail
     * Total hours spent reading email. The value is represented in ISO 8601 format for durations.
@@ -75,7 +75,7 @@ class EmailActivityStatistics extends ActivityStatistics
         }
         return null;
     }
-    
+
     /**
     * Sets the readEmail
     * Total hours spent reading email. The value is represented in ISO 8601 format for durations.
@@ -89,7 +89,7 @@ class EmailActivityStatistics extends ActivityStatistics
         $this->_propDict["readEmail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sentEmail
     * Total hours spent writing and sending email. The value is represented in ISO 8601 format for durations.
@@ -108,7 +108,7 @@ class EmailActivityStatistics extends ActivityStatistics
         }
         return null;
     }
-    
+
     /**
     * Sets the sentEmail
     * Total hours spent writing and sending email. The value is represented in ISO 8601 format for durations.
@@ -122,5 +122,5 @@ class EmailActivityStatistics extends ActivityStatistics
         $this->_propDict["sentEmail"] = $val;
         return $this;
     }
-    
+
 }

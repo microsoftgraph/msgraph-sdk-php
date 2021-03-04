@@ -37,7 +37,7 @@ class UnitOfMeasure extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the code
     *
@@ -50,7 +50,7 @@ class UnitOfMeasure extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class UnitOfMeasure extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class UnitOfMeasure extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the internationalStandardCode
     *
@@ -91,7 +91,7 @@ class UnitOfMeasure extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the internationalStandardCode
     *
@@ -104,7 +104,7 @@ class UnitOfMeasure extends Entity
         $this->_propDict["internationalStandardCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -122,7 +122,7 @@ class UnitOfMeasure extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -135,5 +135,5 @@ class UnitOfMeasure extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

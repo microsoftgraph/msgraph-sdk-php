@@ -37,7 +37,7 @@ class EstimateStatisticsOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the indexedItemCount
     *
@@ -50,7 +50,7 @@ class EstimateStatisticsOperation extends CaseOperation
         $this->_propDict["indexedItemCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the indexedItemsSize
     *
@@ -64,7 +64,7 @@ class EstimateStatisticsOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the indexedItemsSize
     *
@@ -77,7 +77,7 @@ class EstimateStatisticsOperation extends CaseOperation
         $this->_propDict["indexedItemsSize"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mailboxCount
     *
@@ -91,7 +91,7 @@ class EstimateStatisticsOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the mailboxCount
     *
@@ -104,7 +104,7 @@ class EstimateStatisticsOperation extends CaseOperation
         $this->_propDict["mailboxCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the siteCount
     *
@@ -118,7 +118,7 @@ class EstimateStatisticsOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the siteCount
     *
@@ -131,7 +131,7 @@ class EstimateStatisticsOperation extends CaseOperation
         $this->_propDict["siteCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unindexedItemCount
     *
@@ -145,7 +145,7 @@ class EstimateStatisticsOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the unindexedItemCount
     *
@@ -158,7 +158,7 @@ class EstimateStatisticsOperation extends CaseOperation
         $this->_propDict["unindexedItemCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unindexedItemsSize
     *
@@ -172,7 +172,7 @@ class EstimateStatisticsOperation extends CaseOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the unindexedItemsSize
     *
@@ -185,7 +185,7 @@ class EstimateStatisticsOperation extends CaseOperation
         $this->_propDict["unindexedItemsSize"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sourceCollection
     *
@@ -203,7 +203,7 @@ class EstimateStatisticsOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the sourceCollection
     *
@@ -216,5 +216,5 @@ class EstimateStatisticsOperation extends CaseOperation
         $this->_propDict["sourceCollection"] = $val;
         return $this;
     }
-    
+
 }

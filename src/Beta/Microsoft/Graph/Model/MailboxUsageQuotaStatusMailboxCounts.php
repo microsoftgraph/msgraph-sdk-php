@@ -37,7 +37,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the indeterminate
     *
@@ -50,7 +50,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["indeterminate"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -68,7 +68,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -81,7 +81,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -95,7 +95,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -108,7 +108,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -126,7 +126,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -139,7 +139,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sendProhibited
     *
@@ -153,7 +153,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sendProhibited
     *
@@ -166,7 +166,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["sendProhibited"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sendReceiveProhibited
     *
@@ -180,7 +180,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sendReceiveProhibited
     *
@@ -193,7 +193,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["sendReceiveProhibited"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the underLimit
     *
@@ -207,7 +207,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the underLimit
     *
@@ -220,7 +220,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["underLimit"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the warningIssued
     *
@@ -234,7 +234,7 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the warningIssued
     *
@@ -247,5 +247,5 @@ class MailboxUsageQuotaStatusMailboxCounts extends Entity
         $this->_propDict["warningIssued"] = intval($val);
         return $this;
     }
-    
+
 }

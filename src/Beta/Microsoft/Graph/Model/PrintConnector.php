@@ -38,7 +38,7 @@ class PrintConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appVersion
     * The connector's version.
@@ -52,7 +52,7 @@ class PrintConnector extends Entity
         $this->_propDict["appVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceHealth
     * The connector's device health.
@@ -71,7 +71,7 @@ class PrintConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceHealth
     * The connector's device health.
@@ -85,7 +85,7 @@ class PrintConnector extends Entity
         $this->_propDict["deviceHealth"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the connector.
@@ -100,7 +100,7 @@ class PrintConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the connector.
@@ -114,7 +114,7 @@ class PrintConnector extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fullyQualifiedDomainName
     * The connector machine's hostname.
@@ -129,7 +129,7 @@ class PrintConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fullyQualifiedDomainName
     * The connector machine's hostname.
@@ -143,7 +143,7 @@ class PrintConnector extends Entity
         $this->_propDict["fullyQualifiedDomainName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the location
     * The physical and/or organizational location of the connector.
@@ -162,7 +162,7 @@ class PrintConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the location
     * The physical and/or organizational location of the connector.
@@ -176,7 +176,7 @@ class PrintConnector extends Entity
         $this->_propDict["location"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     *
@@ -190,7 +190,7 @@ class PrintConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -203,7 +203,7 @@ class PrintConnector extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the operatingSystem
     * The connector machine's operating system version.
@@ -218,7 +218,7 @@ class PrintConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the operatingSystem
     * The connector machine's operating system version.
@@ -232,7 +232,7 @@ class PrintConnector extends Entity
         $this->_propDict["operatingSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the registeredDateTime
     * The DateTimeOffset when the connector was registered.
@@ -251,7 +251,7 @@ class PrintConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the registeredDateTime
     * The DateTimeOffset when the connector was registered.
@@ -265,5 +265,5 @@ class PrintConnector extends Entity
         $this->_propDict["registeredDateTime"] = $val;
         return $this;
     }
-    
+
 }

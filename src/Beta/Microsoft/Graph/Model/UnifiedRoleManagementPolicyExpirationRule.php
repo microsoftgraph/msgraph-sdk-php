@@ -37,7 +37,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
             return null;
         }
     }
-    
+
     /**
     * Sets the isExpirationRequired
     *
@@ -50,7 +50,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
         $this->_propDict["isExpirationRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the maximumDuration
     *
@@ -68,7 +68,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
         }
         return null;
     }
-    
+
     /**
     * Sets the maximumDuration
     *
@@ -81,5 +81,5 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
         $this->_propDict["maximumDuration"] = $val;
         return $this;
     }
-    
+
 }

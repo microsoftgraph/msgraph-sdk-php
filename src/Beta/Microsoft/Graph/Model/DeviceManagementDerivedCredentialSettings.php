@@ -38,7 +38,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the profile.
@@ -52,7 +52,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the helpUrl
     * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
@@ -67,7 +67,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the helpUrl
     * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
@@ -81,7 +81,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
         $this->_propDict["helpUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuer
     * The derived credential provider to use.
@@ -100,7 +100,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the issuer
     * The derived credential provider to use.
@@ -114,7 +114,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
         $this->_propDict["issuer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationType
     * The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device.
@@ -133,7 +133,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the notificationType
     * The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device.
@@ -147,5 +147,5 @@ class DeviceManagementDerivedCredentialSettings extends Entity
         $this->_propDict["notificationType"] = $val;
         return $this;
     }
-    
+
 }

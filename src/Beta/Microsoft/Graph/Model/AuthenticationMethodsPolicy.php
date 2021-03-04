@@ -37,7 +37,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -50,7 +50,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -95,7 +95,7 @@ class AuthenticationMethodsPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -108,7 +108,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyVersion
     *
@@ -122,7 +122,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the policyVersion
     *
@@ -135,7 +135,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["policyVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reconfirmationInDays
     *
@@ -149,7 +149,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reconfirmationInDays
     *
@@ -162,9 +162,9 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["reconfirmationInDays"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the authenticationMethodConfigurations
      *
      * @return array The authenticationMethodConfigurations
@@ -177,8 +177,8 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the authenticationMethodConfigurations
     *
     * @param AuthenticationMethodConfiguration $val The authenticationMethodConfigurations
@@ -187,8 +187,8 @@ class AuthenticationMethodsPolicy extends Entity
     */
     public function setAuthenticationMethodConfigurations($val)
     {
-		$this->_propDict["authenticationMethodConfigurations"] = $val;
+        $this->_propDict["authenticationMethodConfigurations"] = $val;
         return $this;
     }
-    
+
 }

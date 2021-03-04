@@ -38,7 +38,7 @@ class DetectedApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceCount
     * The number of devices that have installed this application
@@ -52,7 +52,7 @@ class DetectedApp extends Entity
         $this->_propDict["deviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the discovered application. Read-only
@@ -67,7 +67,7 @@ class DetectedApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the discovered application. Read-only
@@ -81,7 +81,7 @@ class DetectedApp extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sizeInByte
     * Discovered application size in bytes. Read-only
@@ -96,7 +96,7 @@ class DetectedApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sizeInByte
     * Discovered application size in bytes. Read-only
@@ -110,7 +110,7 @@ class DetectedApp extends Entity
         $this->_propDict["sizeInByte"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the discovered application. Read-only
@@ -125,7 +125,7 @@ class DetectedApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the discovered application. Read-only
@@ -139,9 +139,9 @@ class DetectedApp extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDevices
     * The devices that have the discovered application installed
      *
@@ -155,8 +155,8 @@ class DetectedApp extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDevices
     * The devices that have the discovered application installed
     *
@@ -166,8 +166,8 @@ class DetectedApp extends Entity
     */
     public function setManagedDevices($val)
     {
-		$this->_propDict["managedDevices"] = $val;
+        $this->_propDict["managedDevices"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the baseUnitOfMeasureId
     *
@@ -50,7 +50,7 @@ class Item extends Entity
         $this->_propDict["baseUnitOfMeasureId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the blocked
     *
@@ -64,7 +64,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the blocked
     *
@@ -77,7 +77,7 @@ class Item extends Entity
         $this->_propDict["blocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -91,7 +91,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -104,7 +104,7 @@ class Item extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the gtin
     *
@@ -118,7 +118,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the gtin
     *
@@ -131,7 +131,7 @@ class Item extends Entity
         $this->_propDict["gtin"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the inventory
     *
@@ -149,7 +149,7 @@ class Item extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the inventory
     *
@@ -162,7 +162,7 @@ class Item extends Entity
         $this->_propDict["inventory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the itemCategoryCode
     *
@@ -176,7 +176,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the itemCategoryCode
     *
@@ -189,7 +189,7 @@ class Item extends Entity
         $this->_propDict["itemCategoryCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the itemCategoryId
     *
@@ -203,7 +203,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the itemCategoryId
     *
@@ -216,7 +216,7 @@ class Item extends Entity
         $this->_propDict["itemCategoryId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -234,7 +234,7 @@ class Item extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -247,7 +247,7 @@ class Item extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     *
@@ -261,7 +261,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     *
@@ -274,7 +274,7 @@ class Item extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the priceIncludesTax
     *
@@ -288,7 +288,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the priceIncludesTax
     *
@@ -301,7 +301,7 @@ class Item extends Entity
         $this->_propDict["priceIncludesTax"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the taxGroupCode
     *
@@ -315,7 +315,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxGroupCode
     *
@@ -328,7 +328,7 @@ class Item extends Entity
         $this->_propDict["taxGroupCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxGroupId
     *
@@ -342,7 +342,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxGroupId
     *
@@ -355,7 +355,7 @@ class Item extends Entity
         $this->_propDict["taxGroupId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     *
@@ -369,7 +369,7 @@ class Item extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     *
@@ -382,7 +382,7 @@ class Item extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unitCost
     *
@@ -400,7 +400,7 @@ class Item extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the unitCost
     *
@@ -413,7 +413,7 @@ class Item extends Entity
         $this->_propDict["unitCost"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unitPrice
     *
@@ -431,7 +431,7 @@ class Item extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the unitPrice
     *
@@ -444,7 +444,7 @@ class Item extends Entity
         $this->_propDict["unitPrice"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the itemCategory
     *
@@ -462,7 +462,7 @@ class Item extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the itemCategory
     *
@@ -475,9 +475,9 @@ class Item extends Entity
         $this->_propDict["itemCategory"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the picture
      *
      * @return array The picture
@@ -490,8 +490,8 @@ class Item extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the picture
     *
     * @param Picture $val The picture
@@ -500,8 +500,8 @@ class Item extends Entity
     */
     public function setPicture($val)
     {
-		$this->_propDict["picture"] = $val;
+        $this->_propDict["picture"] = $val;
         return $this;
     }
-    
+
 }

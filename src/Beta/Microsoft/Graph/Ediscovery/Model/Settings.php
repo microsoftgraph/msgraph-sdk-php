@@ -41,7 +41,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the ocr
     *
@@ -54,7 +54,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["ocr"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the redundancyDetection
     *
@@ -72,7 +72,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the redundancyDetection
     *
@@ -85,7 +85,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["redundancyDetection"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the topicModeling
     *
@@ -103,7 +103,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the topicModeling
     *
@@ -116,5 +116,5 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["topicModeling"] = $val;
         return $this;
     }
-    
+
 }

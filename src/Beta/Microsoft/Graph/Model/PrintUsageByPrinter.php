@@ -37,7 +37,7 @@ class PrintUsageByPrinter extends PrintUsage
             return null;
         }
     }
-    
+
     /**
     * Sets the printerId
     *
@@ -50,5 +50,5 @@ class PrintUsageByPrinter extends PrintUsage
         $this->_propDict["printerId"] = $val;
         return $this;
     }
-    
+
 }

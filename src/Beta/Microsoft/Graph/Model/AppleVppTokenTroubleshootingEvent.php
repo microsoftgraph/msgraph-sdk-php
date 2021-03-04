@@ -38,7 +38,7 @@ class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroubleshootingE
             return null;
         }
     }
-    
+
     /**
     * Sets the tokenId
     * Apple Volume Purchase Program Token Identifier.
@@ -52,5 +52,5 @@ class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroubleshootingE
         $this->_propDict["tokenId"] = $val;
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMode
     *
@@ -54,7 +54,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         $this->_propDict["authenticationMode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the featureSettings
     *
@@ -72,7 +72,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-    
+
     /**
     * Sets the featureSettings
     *
@@ -85,5 +85,5 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         $this->_propDict["featureSettings"] = $val;
         return $this;
     }
-    
+
 }

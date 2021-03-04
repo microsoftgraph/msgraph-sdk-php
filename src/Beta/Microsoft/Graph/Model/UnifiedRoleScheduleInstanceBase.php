@@ -37,7 +37,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appScopeId
     *
@@ -50,7 +50,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["appScopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryScopeId
     *
@@ -64,7 +64,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the directoryScopeId
     *
@@ -77,7 +77,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["directoryScopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalId
     *
@@ -91,7 +91,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the principalId
     *
@@ -104,7 +104,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["principalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinitionId
     *
@@ -118,7 +118,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleDefinitionId
     *
@@ -131,7 +131,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appScope
     *
@@ -149,7 +149,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appScope
     *
@@ -162,7 +162,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["appScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryScope
     *
@@ -180,7 +180,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the directoryScope
     *
@@ -193,7 +193,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["directoryScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principal
     *
@@ -211,7 +211,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the principal
     *
@@ -224,7 +224,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["principal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinition
     *
@@ -242,7 +242,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleDefinition
     *
@@ -255,5 +255,5 @@ class UnifiedRoleScheduleInstanceBase extends Entity
         $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
-    
+
 }

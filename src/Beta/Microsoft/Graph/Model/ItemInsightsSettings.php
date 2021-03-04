@@ -38,7 +38,7 @@ class ItemInsightsSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the disabledForGroup
     * The ID of an Azure AD group, of which the members' item insights are disabled. Default is empty. Optional.
@@ -52,7 +52,7 @@ class ItemInsightsSettings extends Entity
         $this->_propDict["disabledForGroup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabledInOrganization
     * true if organization item insights are enabled; false if organization item insights are disabled for all users without exceptions. Default is true. Optional.
@@ -67,7 +67,7 @@ class ItemInsightsSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabledInOrganization
     * true if organization item insights are enabled; false if organization item insights are disabled for all users without exceptions. Default is true. Optional.
@@ -81,5 +81,5 @@ class ItemInsightsSettings extends Entity
         $this->_propDict["isEnabledInOrganization"] = boolval($val);
         return $this;
     }
-    
+
 }

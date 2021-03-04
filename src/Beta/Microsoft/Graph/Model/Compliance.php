@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Compliance extends 
+class Compliance implements \JsonSerializable
 {
     /**
     * Gets the ediscovery
@@ -41,7 +41,7 @@ class Compliance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the ediscovery
     *
@@ -54,5 +54,5 @@ class Compliance extends
         $this->_propDict["ediscovery"] = $val;
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the childSelectability
     *
@@ -54,7 +54,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["childSelectability"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     *
@@ -72,7 +72,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -85,7 +85,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -99,7 +99,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -112,7 +112,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -126,7 +126,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -139,7 +139,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -157,7 +157,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -170,9 +170,9 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the childTags
      *
      * @return array The childTags
@@ -185,8 +185,8 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the childTags
     *
     * @param Tag $val The childTags
@@ -195,10 +195,10 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setChildTags($val)
     {
-		$this->_propDict["childTags"] = $val;
+        $this->_propDict["childTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parent
     *
@@ -216,7 +216,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the parent
     *
@@ -229,5 +229,5 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["parent"] = $val;
         return $this;
     }
-    
+
 }

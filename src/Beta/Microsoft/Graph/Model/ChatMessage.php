@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class ChatMessage extends Entity
 {
 
-     /** 
+     /**
      * Gets the attachments
     * Attached files. Attachments are currently read-only – sending attachments is not supported.
      *
@@ -39,8 +39,8 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attachments
     * Attached files. Attachments are currently read-only – sending attachments is not supported.
     *
@@ -50,10 +50,10 @@ class ChatMessage extends Entity
     */
     public function setAttachments($val)
     {
-		$this->_propDict["attachments"] = $val;
+        $this->_propDict["attachments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the body
     * Plaintext/HTML representation of the content of the chat message. Representation is specified by the contentType inside the body. The content is always in HTML if the chat message contains a chatMessageMention.
@@ -72,7 +72,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     * Plaintext/HTML representation of the content of the chat message. Representation is specified by the contentType inside the body. The content is always in HTML if the chat message contains a chatMessageMention.
@@ -86,7 +86,7 @@ class ChatMessage extends Entity
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the channelIdentity
     *
@@ -104,7 +104,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the channelIdentity
     *
@@ -117,7 +117,7 @@ class ChatMessage extends Entity
         $this->_propDict["channelIdentity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the chatId
     *
@@ -131,7 +131,7 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the chatId
     *
@@ -144,7 +144,7 @@ class ChatMessage extends Entity
         $this->_propDict["chatId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Read only. Timestamp of when the chat message was created.
@@ -163,7 +163,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Read only. Timestamp of when the chat message was created.
@@ -177,7 +177,7 @@ class ChatMessage extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deletedDateTime
     * Read only. Timestamp at which the chat message was deleted, or null if not deleted.
@@ -196,7 +196,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDateTime
     * Read only. Timestamp at which the chat message was deleted, or null if not deleted.
@@ -210,7 +210,7 @@ class ChatMessage extends Entity
         $this->_propDict["deletedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the etag
     * Read-only. Version number of the chat message.
@@ -225,7 +225,7 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the etag
     * Read-only. Version number of the chat message.
@@ -239,7 +239,7 @@ class ChatMessage extends Entity
         $this->_propDict["etag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the from
     * Read only. Details of the sender of the chat message.
@@ -258,7 +258,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the from
     * Read only. Details of the sender of the chat message.
@@ -272,7 +272,7 @@ class ChatMessage extends Entity
         $this->_propDict["from"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the importance
     * The importance of the chat message. The possible values are: normal, high, urgent.
@@ -291,7 +291,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the importance
     * The importance of the chat message. The possible values are: normal, high, urgent.
@@ -305,7 +305,7 @@ class ChatMessage extends Entity
         $this->_propDict["importance"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastEditedDateTime
     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
@@ -324,7 +324,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastEditedDateTime
     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
@@ -338,7 +338,7 @@ class ChatMessage extends Entity
         $this->_propDict["lastEditedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
@@ -357,7 +357,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
@@ -371,7 +371,7 @@ class ChatMessage extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the locale
     * Locale of the chat message set by the client.
@@ -386,7 +386,7 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the locale
     * Locale of the chat message set by the client.
@@ -400,9 +400,9 @@ class ChatMessage extends Entity
         $this->_propDict["locale"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the mentions
     * List of entities mentioned in the chat message. Currently supports user, bot, team, channel.
      *
@@ -416,8 +416,8 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the mentions
     * List of entities mentioned in the chat message. Currently supports user, bot, team, channel.
     *
@@ -427,10 +427,10 @@ class ChatMessage extends Entity
     */
     public function setMentions($val)
     {
-		$this->_propDict["mentions"] = $val;
+        $this->_propDict["mentions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the messageType
     * The type of chat message. The possible values are: message.
@@ -449,7 +449,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the messageType
     * The type of chat message. The possible values are: message.
@@ -463,7 +463,7 @@ class ChatMessage extends Entity
         $this->_propDict["messageType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyViolation
     * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
@@ -482,7 +482,7 @@ class ChatMessage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policyViolation
     * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
@@ -496,9 +496,9 @@ class ChatMessage extends Entity
         $this->_propDict["policyViolation"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reactions
     * Reactions for this chat message (for example, Like).
      *
@@ -512,8 +512,8 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the reactions
     * Reactions for this chat message (for example, Like).
     *
@@ -523,10 +523,10 @@ class ChatMessage extends Entity
     */
     public function setReactions($val)
     {
-		$this->_propDict["reactions"] = $val;
+        $this->_propDict["reactions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the replyToId
     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
@@ -541,7 +541,7 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the replyToId
     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
@@ -555,7 +555,7 @@ class ChatMessage extends Entity
         $this->_propDict["replyToId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     * The subject of the chat message, in plaintext.
@@ -570,7 +570,7 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     * The subject of the chat message, in plaintext.
@@ -584,7 +584,7 @@ class ChatMessage extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the summary
     * Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
@@ -599,7 +599,7 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the summary
     * Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
@@ -613,7 +613,7 @@ class ChatMessage extends Entity
         $this->_propDict["summary"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     *
@@ -627,7 +627,7 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     *
@@ -640,9 +640,9 @@ class ChatMessage extends Entity
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the hostedContents
      *
      * @return array The hostedContents
@@ -655,8 +655,8 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the hostedContents
     *
     * @param ChatMessageHostedContent $val The hostedContents
@@ -665,12 +665,12 @@ class ChatMessage extends Entity
     */
     public function setHostedContents($val)
     {
-		$this->_propDict["hostedContents"] = $val;
+        $this->_propDict["hostedContents"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the replies
      *
      * @return array The replies
@@ -683,8 +683,8 @@ class ChatMessage extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the replies
     *
     * @param ChatMessage $val The replies
@@ -693,8 +693,8 @@ class ChatMessage extends Entity
     */
     public function setReplies($val)
     {
-		$this->_propDict["replies"] = $val;
+        $this->_propDict["replies"] = $val;
         return $this;
     }
-    
+
 }

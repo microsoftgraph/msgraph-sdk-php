@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class TimeCard extends ChangeTrackedEntity
 {
 
-     /** 
+     /**
      * Gets the breaks
      *
      * @return array The breaks
@@ -38,8 +38,8 @@ class TimeCard extends ChangeTrackedEntity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the breaks
     *
     * @param TimeCardBreak $val The breaks
@@ -48,10 +48,10 @@ class TimeCard extends ChangeTrackedEntity
     */
     public function setBreaks($val)
     {
-		$this->_propDict["breaks"] = $val;
+        $this->_propDict["breaks"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the clockInEvent
     *
@@ -69,7 +69,7 @@ class TimeCard extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the clockInEvent
     *
@@ -82,7 +82,7 @@ class TimeCard extends ChangeTrackedEntity
         $this->_propDict["clockInEvent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the clockOutEvent
     *
@@ -100,7 +100,7 @@ class TimeCard extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the clockOutEvent
     *
@@ -113,7 +113,7 @@ class TimeCard extends ChangeTrackedEntity
         $this->_propDict["clockOutEvent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the confirmedBy
     *
@@ -131,7 +131,7 @@ class TimeCard extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the confirmedBy
     *
@@ -144,7 +144,7 @@ class TimeCard extends ChangeTrackedEntity
         $this->_propDict["confirmedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notes
     *
@@ -162,7 +162,7 @@ class TimeCard extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the notes
     *
@@ -175,7 +175,7 @@ class TimeCard extends ChangeTrackedEntity
         $this->_propDict["notes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the originalEntry
     *
@@ -193,7 +193,7 @@ class TimeCard extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the originalEntry
     *
@@ -206,7 +206,7 @@ class TimeCard extends ChangeTrackedEntity
         $this->_propDict["originalEntry"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -224,7 +224,7 @@ class TimeCard extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -237,7 +237,7 @@ class TimeCard extends ChangeTrackedEntity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     *
@@ -251,7 +251,7 @@ class TimeCard extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     *
@@ -264,5 +264,5 @@ class TimeCard extends ChangeTrackedEntity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
 }

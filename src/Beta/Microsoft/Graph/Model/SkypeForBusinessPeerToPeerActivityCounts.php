@@ -37,7 +37,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appSharing
     *
@@ -50,7 +50,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["appSharing"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the audio
     *
@@ -64,7 +64,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the audio
     *
@@ -77,7 +77,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["audio"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileTransfer
     *
@@ -91,7 +91,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileTransfer
     *
@@ -104,7 +104,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["fileTransfer"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the im
     *
@@ -118,7 +118,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the im
     *
@@ -131,7 +131,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["im"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -149,7 +149,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -162,7 +162,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -176,7 +176,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -189,7 +189,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -207,7 +207,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -220,7 +220,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the video
     *
@@ -234,7 +234,7 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the video
     *
@@ -247,5 +247,5 @@ class SkypeForBusinessPeerToPeerActivityCounts extends Entity
         $this->_propDict["video"] = intval($val);
         return $this;
     }
-    
+
 }

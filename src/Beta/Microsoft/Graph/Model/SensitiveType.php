@@ -41,7 +41,7 @@ class SensitiveType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the classificationMethod
     *
@@ -54,7 +54,7 @@ class SensitiveType extends Entity
         $this->_propDict["classificationMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -68,7 +68,7 @@ class SensitiveType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -81,7 +81,7 @@ class SensitiveType extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     *
@@ -95,7 +95,7 @@ class SensitiveType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -108,7 +108,7 @@ class SensitiveType extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisherName
     *
@@ -122,7 +122,7 @@ class SensitiveType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publisherName
     *
@@ -135,7 +135,7 @@ class SensitiveType extends Entity
         $this->_propDict["publisherName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rulePackageId
     *
@@ -149,7 +149,7 @@ class SensitiveType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rulePackageId
     *
@@ -162,7 +162,7 @@ class SensitiveType extends Entity
         $this->_propDict["rulePackageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rulePackageType
     *
@@ -176,7 +176,7 @@ class SensitiveType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rulePackageType
     *
@@ -189,7 +189,7 @@ class SensitiveType extends Entity
         $this->_propDict["rulePackageType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scope
     *
@@ -207,7 +207,7 @@ class SensitiveType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scope
     *
@@ -220,7 +220,7 @@ class SensitiveType extends Entity
         $this->_propDict["scope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sensitiveTypeSource
     *
@@ -238,7 +238,7 @@ class SensitiveType extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sensitiveTypeSource
     *
@@ -251,7 +251,7 @@ class SensitiveType extends Entity
         $this->_propDict["sensitiveTypeSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -265,7 +265,7 @@ class SensitiveType extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the state
     *
@@ -278,5 +278,5 @@ class SensitiveType extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
 }

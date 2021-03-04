@@ -37,7 +37,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlook2007
     *
@@ -50,7 +50,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["outlook2007"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlook2010
     *
@@ -64,7 +64,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlook2010
     *
@@ -77,7 +77,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["outlook2010"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlook2013
     *
@@ -91,7 +91,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlook2013
     *
@@ -104,7 +104,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["outlook2013"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlook2016
     *
@@ -118,7 +118,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlook2016
     *
@@ -131,7 +131,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["outlook2016"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlook2019
     *
@@ -145,7 +145,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlook2019
     *
@@ -158,7 +158,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["outlook2019"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlookM365
     *
@@ -172,7 +172,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookM365
     *
@@ -185,7 +185,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["outlookM365"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -199,7 +199,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -212,7 +212,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -230,7 +230,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -243,7 +243,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the undetermined
     *
@@ -257,7 +257,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the undetermined
     *
@@ -270,5 +270,5 @@ class EmailAppUsageVersionsUserCounts extends Entity
         $this->_propDict["undetermined"] = intval($val);
         return $this;
     }
-    
+
 }

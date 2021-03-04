@@ -42,7 +42,7 @@ class BaseItemVersion extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     * Identity of the user which last modified the version. Read-only.
@@ -56,7 +56,7 @@ class BaseItemVersion extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Date and time the version was last modified. Read-only.
@@ -75,7 +75,7 @@ class BaseItemVersion extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Date and time the version was last modified. Read-only.
@@ -89,7 +89,7 @@ class BaseItemVersion extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publication
     * Indicates the publication status of this particular version. Read-only.
@@ -108,7 +108,7 @@ class BaseItemVersion extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the publication
     * Indicates the publication status of this particular version. Read-only.
@@ -122,5 +122,5 @@ class BaseItemVersion extends Entity
         $this->_propDict["publication"] = $val;
         return $this;
     }
-    
+
 }

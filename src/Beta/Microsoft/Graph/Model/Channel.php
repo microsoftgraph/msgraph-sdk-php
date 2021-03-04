@@ -42,7 +42,7 @@ class Channel extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Read only. Timestamp at which the channel was created.
@@ -56,7 +56,7 @@ class Channel extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Optional textual description for the channel.
@@ -71,7 +71,7 @@ class Channel extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Optional textual description for the channel.
@@ -85,7 +85,7 @@ class Channel extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Channel name as it will appear to the user in Microsoft Teams.
@@ -100,7 +100,7 @@ class Channel extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Channel name as it will appear to the user in Microsoft Teams.
@@ -114,7 +114,7 @@ class Channel extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     * The email address for sending messages to the channel. Read-only.
@@ -129,7 +129,7 @@ class Channel extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * The email address for sending messages to the channel. Read-only.
@@ -143,7 +143,7 @@ class Channel extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isFavoriteByDefault
     * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
@@ -158,7 +158,7 @@ class Channel extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isFavoriteByDefault
     * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
@@ -172,7 +172,7 @@ class Channel extends Entity
         $this->_propDict["isFavoriteByDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the membershipType
     * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
@@ -191,7 +191,7 @@ class Channel extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the membershipType
     * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
@@ -205,7 +205,7 @@ class Channel extends Entity
         $this->_propDict["membershipType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the moderationSettings
     * Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
@@ -224,7 +224,7 @@ class Channel extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the moderationSettings
     * Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
@@ -238,7 +238,7 @@ class Channel extends Entity
         $this->_propDict["moderationSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -253,7 +253,7 @@ class Channel extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -267,7 +267,7 @@ class Channel extends Entity
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the filesFolder
     * Metadata for the location where the channel's files are stored.
@@ -286,7 +286,7 @@ class Channel extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the filesFolder
     * Metadata for the location where the channel's files are stored.
@@ -300,9 +300,9 @@ class Channel extends Entity
         $this->_propDict["filesFolder"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the members
     * A collection of membership records associated with the channel.
      *
@@ -316,8 +316,8 @@ class Channel extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the members
     * A collection of membership records associated with the channel.
     *
@@ -327,12 +327,12 @@ class Channel extends Entity
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the messages
     * A collection of all the messages in the channel. A navigation property. Nullable.
      *
@@ -346,8 +346,8 @@ class Channel extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the messages
     * A collection of all the messages in the channel. A navigation property. Nullable.
     *
@@ -357,12 +357,12 @@ class Channel extends Entity
     */
     public function setMessages($val)
     {
-		$this->_propDict["messages"] = $val;
+        $this->_propDict["messages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tabs
     * A collection of all the tabs in the channel. A navigation property.
      *
@@ -376,8 +376,8 @@ class Channel extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tabs
     * A collection of all the tabs in the channel. A navigation property.
     *
@@ -387,8 +387,8 @@ class Channel extends Entity
     */
     public function setTabs($val)
     {
-		$this->_propDict["tabs"] = $val;
+        $this->_propDict["tabs"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class Office365GroupsActivityFileCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the active
     * The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
@@ -52,7 +52,7 @@ class Office365GroupsActivityFileCounts extends Entity
         $this->_propDict["active"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     * The date on which a number of files were active in the group's SharePoint site.
@@ -71,7 +71,7 @@ class Office365GroupsActivityFileCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     * The date on which a number of files were active in the group's SharePoint site.
@@ -85,7 +85,7 @@ class Office365GroupsActivityFileCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     * The number of days the report covers.
@@ -100,7 +100,7 @@ class Office365GroupsActivityFileCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     * The number of days the report covers.
@@ -114,7 +114,7 @@ class Office365GroupsActivityFileCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     * The latest date of the content.
@@ -133,7 +133,7 @@ class Office365GroupsActivityFileCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     * The latest date of the content.
@@ -147,7 +147,7 @@ class Office365GroupsActivityFileCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the total
     * The total number of files in the group's SharePoint document library.
@@ -162,7 +162,7 @@ class Office365GroupsActivityFileCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the total
     * The total number of files in the group's SharePoint document library.
@@ -176,5 +176,5 @@ class Office365GroupsActivityFileCounts extends Entity
         $this->_propDict["total"] = intval($val);
         return $this;
     }
-    
+
 }

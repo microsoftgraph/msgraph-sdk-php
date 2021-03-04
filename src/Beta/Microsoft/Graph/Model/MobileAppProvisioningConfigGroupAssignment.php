@@ -38,7 +38,7 @@ class MobileAppProvisioningConfigGroupAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetGroupId
     * The ID of the AAD group in which the app provisioning configuration is being targeted.
@@ -52,5 +52,5 @@ class MobileAppProvisioningConfigGroupAssignment extends Entity
         $this->_propDict["targetGroupId"] = $val;
         return $this;
     }
-    
+
 }

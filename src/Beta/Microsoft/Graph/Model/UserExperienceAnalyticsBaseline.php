@@ -42,7 +42,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date the custom baseline was created.
@@ -56,7 +56,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the user experience analytics baseline.
@@ -71,7 +71,7 @@ class UserExperienceAnalyticsBaseline extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the user experience analytics baseline.
@@ -85,7 +85,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isBuiltIn
     * Signifies if the current baseline is the commercial median baseline or a custom baseline.
@@ -100,7 +100,7 @@ class UserExperienceAnalyticsBaseline extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isBuiltIn
     * Signifies if the current baseline is the commercial median baseline or a custom baseline.
@@ -114,7 +114,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["isBuiltIn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appHealthMetrics
     * The user experience analytics app health metrics.
@@ -133,7 +133,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appHealthMetrics
     * The user experience analytics app health metrics.
@@ -147,7 +147,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["appHealthMetrics"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bestPracticesMetrics
     * The user experience analytics best practices metrics.
@@ -166,7 +166,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bestPracticesMetrics
     * The user experience analytics best practices metrics.
@@ -180,7 +180,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["bestPracticesMetrics"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceBootPerformanceMetrics
     * The user experience analytics device boot performance metrics.
@@ -199,7 +199,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceBootPerformanceMetrics
     * The user experience analytics device boot performance metrics.
@@ -213,7 +213,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["deviceBootPerformanceMetrics"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rebootAnalyticsMetrics
     * The user experience analytics reboot analytics metrics.
@@ -232,7 +232,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the rebootAnalyticsMetrics
     * The user experience analytics reboot analytics metrics.
@@ -246,7 +246,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["rebootAnalyticsMetrics"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourcePerformanceMetrics
     * The user experience analytics resource performance metrics.
@@ -265,7 +265,7 @@ class UserExperienceAnalyticsBaseline extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourcePerformanceMetrics
     * The user experience analytics resource performance metrics.
@@ -279,5 +279,5 @@ class UserExperienceAnalyticsBaseline extends Entity
         $this->_propDict["resourcePerformanceMetrics"] = $val;
         return $this;
     }
-    
+
 }

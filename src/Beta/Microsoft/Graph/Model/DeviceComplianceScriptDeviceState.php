@@ -42,7 +42,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the detectionState
     * Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
@@ -56,7 +56,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         $this->_propDict["detectionState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expectedStateUpdateDateTime
     * The next timestamp of when the device compliance script is expected to execute
@@ -75,7 +75,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expectedStateUpdateDateTime
     * The next timestamp of when the device compliance script is expected to execute
@@ -89,7 +89,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         $this->_propDict["expectedStateUpdateDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastStateUpdateDateTime
     * The last timestamp of when the device compliance script executed
@@ -108,7 +108,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastStateUpdateDateTime
     * The last timestamp of when the device compliance script executed
@@ -122,7 +122,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         $this->_propDict["lastStateUpdateDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * The last time that Intune Management Extension synced with Intune
@@ -141,7 +141,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * The last time that Intune Management Extension synced with Intune
@@ -155,7 +155,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scriptError
     * Error from the detection script
@@ -170,7 +170,7 @@ class DeviceComplianceScriptDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scriptError
     * Error from the detection script
@@ -184,7 +184,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         $this->_propDict["scriptError"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scriptOutput
     * Output of the detection script
@@ -199,7 +199,7 @@ class DeviceComplianceScriptDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scriptOutput
     * Output of the detection script
@@ -213,7 +213,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         $this->_propDict["scriptOutput"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDevice
     * The managed device on which the device compliance script executed
@@ -232,7 +232,7 @@ class DeviceComplianceScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the managedDevice
     * The managed device on which the device compliance script executed
@@ -246,5 +246,5 @@ class DeviceComplianceScriptDeviceState extends Entity
         $this->_propDict["managedDevice"] = $val;
         return $this;
     }
-    
+
 }

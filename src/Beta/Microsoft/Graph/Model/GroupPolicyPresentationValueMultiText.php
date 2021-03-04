@@ -38,7 +38,7 @@ class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentationValue
             return null;
         }
     }
-    
+
     /**
     * Sets the values
     * A collection of non-empty strings for the associated presentation.
@@ -52,5 +52,5 @@ class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentationValue
         $this->_propDict["values"] = $val;
         return $this;
     }
-    
+
 }

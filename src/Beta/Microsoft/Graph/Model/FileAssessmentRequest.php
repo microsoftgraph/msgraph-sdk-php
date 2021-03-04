@@ -38,7 +38,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the contentData
     * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
@@ -52,7 +52,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["contentData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     * The file name.
@@ -67,7 +67,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     * The file name.
@@ -81,5 +81,5 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
 }

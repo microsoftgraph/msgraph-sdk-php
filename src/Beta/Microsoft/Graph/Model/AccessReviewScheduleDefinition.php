@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessReviewScheduleDefinition extends Entity
 {
 
-     /** 
+     /**
      * Gets the backupReviewers
     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope.
      *
@@ -39,8 +39,8 @@ class AccessReviewScheduleDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the backupReviewers
     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope.
     *
@@ -50,10 +50,10 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function setBackupReviewers($val)
     {
-		$this->_propDict["backupReviewers"] = $val;
+        $this->_propDict["backupReviewers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * User who created this review.
@@ -72,7 +72,7 @@ class AccessReviewScheduleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * User who created this review.
@@ -86,7 +86,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * DateTime when review series was created.
@@ -105,7 +105,7 @@ class AccessReviewScheduleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime when review series was created.
@@ -119,7 +119,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the descriptionForAdmins
     * Description provided by review creators to provide more context of the review to admins.
@@ -134,7 +134,7 @@ class AccessReviewScheduleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the descriptionForAdmins
     * Description provided by review creators to provide more context of the review to admins.
@@ -148,7 +148,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["descriptionForAdmins"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the descriptionForReviewers
     * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
@@ -163,7 +163,7 @@ class AccessReviewScheduleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the descriptionForReviewers
     * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
@@ -177,7 +177,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["descriptionForReviewers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of access review series. Required on create.
@@ -192,7 +192,7 @@ class AccessReviewScheduleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of access review series. Required on create.
@@ -206,7 +206,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the instanceEnumerationScope
     * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
@@ -225,7 +225,7 @@ class AccessReviewScheduleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the instanceEnumerationScope
     * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
@@ -239,7 +239,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["instanceEnumerationScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime when review series was last modified.
@@ -258,7 +258,7 @@ class AccessReviewScheduleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime when review series was last modified.
@@ -272,9 +272,9 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reviewers
     * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
      *
@@ -288,8 +288,8 @@ class AccessReviewScheduleDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the reviewers
     * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
     *
@@ -299,10 +299,10 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function setReviewers($val)
     {
-		$this->_propDict["reviewers"] = $val;
+        $this->_propDict["reviewers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scope
     * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
@@ -321,7 +321,7 @@ class AccessReviewScheduleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scope
     * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
@@ -335,7 +335,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["scope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     * The settings for an access review series, see type definition below.
@@ -354,7 +354,7 @@ class AccessReviewScheduleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * The settings for an access review series, see type definition below.
@@ -368,7 +368,7 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
@@ -383,7 +383,7 @@ class AccessReviewScheduleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
@@ -397,9 +397,9 @@ class AccessReviewScheduleDefinition extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the instances
     * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
      *
@@ -413,8 +413,8 @@ class AccessReviewScheduleDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the instances
     * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
     *
@@ -424,8 +424,8 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function setInstances($val)
     {
-		$this->_propDict["instances"] = $val;
+        $this->_propDict["instances"] = $val;
         return $this;
     }
-    
+
 }

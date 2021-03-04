@@ -42,7 +42,7 @@ class MobileAppPolicySetItem extends PolicySetItem
         }
         return null;
     }
-    
+
     /**
     * Sets the intent
     * Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
@@ -56,7 +56,7 @@ class MobileAppPolicySetItem extends PolicySetItem
         $this->_propDict["intent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     * Settings of the MobileAppPolicySetItem.
@@ -75,7 +75,7 @@ class MobileAppPolicySetItem extends PolicySetItem
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * Settings of the MobileAppPolicySetItem.
@@ -89,5 +89,5 @@ class MobileAppPolicySetItem extends PolicySetItem
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

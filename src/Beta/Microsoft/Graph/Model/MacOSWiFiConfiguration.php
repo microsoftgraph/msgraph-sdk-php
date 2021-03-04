@@ -38,7 +38,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectAutomatically
     * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
@@ -52,7 +52,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["connectAutomatically"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the connectWhenNetworkNameIsHidden
     * Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
@@ -67,7 +67,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectWhenNetworkNameIsHidden
     * Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
@@ -81,7 +81,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["connectWhenNetworkNameIsHidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the networkName
     * Network Name
@@ -96,7 +96,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the networkName
     * Network Name
@@ -110,7 +110,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["networkName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preSharedKey
     * This is the pre-shared key for WPA Personal Wi-Fi network.
@@ -125,7 +125,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the preSharedKey
     * This is the pre-shared key for WPA Personal Wi-Fi network.
@@ -139,7 +139,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["preSharedKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyAutomaticConfigurationUrl
     * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
@@ -154,7 +154,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyAutomaticConfigurationUrl
     * URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
@@ -168,7 +168,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["proxyAutomaticConfigurationUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyManualAddress
     * IP Address or DNS hostname of the proxy server when manual configuration is selected.
@@ -183,7 +183,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyManualAddress
     * IP Address or DNS hostname of the proxy server when manual configuration is selected.
@@ -197,7 +197,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["proxyManualAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyManualPort
     * Port of the proxy server when manual configuration is selected.
@@ -212,7 +212,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyManualPort
     * Port of the proxy server when manual configuration is selected.
@@ -226,7 +226,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["proxyManualPort"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the proxySettings
     * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
@@ -245,7 +245,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the proxySettings
     * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
@@ -259,7 +259,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["proxySettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ssid
     * This is the name of the Wi-Fi network that is broadcast to all devices.
@@ -274,7 +274,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the ssid
     * This is the name of the Wi-Fi network that is broadcast to all devices.
@@ -288,7 +288,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["ssid"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the wiFiSecurityType
     * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
@@ -307,7 +307,7 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the wiFiSecurityType
     * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
@@ -321,5 +321,5 @@ class MacOSWiFiConfiguration extends DeviceConfiguration
         $this->_propDict["wiFiSecurityType"] = $val;
         return $this;
     }
-    
+
 }

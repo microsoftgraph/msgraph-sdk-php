@@ -37,7 +37,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedProducts
     *
@@ -50,7 +50,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deletedDate
     *
@@ -68,7 +68,7 @@ class OneDriveActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     *
@@ -81,7 +81,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -95,7 +95,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -108,7 +108,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -126,7 +126,7 @@ class OneDriveActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -139,7 +139,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -153,7 +153,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -166,7 +166,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -184,7 +184,7 @@ class OneDriveActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -197,7 +197,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharedExternallyFileCount
     *
@@ -211,7 +211,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sharedExternallyFileCount
     *
@@ -224,7 +224,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["sharedExternallyFileCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sharedInternallyFileCount
     *
@@ -238,7 +238,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sharedInternallyFileCount
     *
@@ -251,7 +251,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["sharedInternallyFileCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncedFileCount
     *
@@ -265,7 +265,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the syncedFileCount
     *
@@ -278,7 +278,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["syncedFileCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -292,7 +292,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -305,7 +305,7 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the viewedOrEditedFileCount
     *
@@ -319,7 +319,7 @@ class OneDriveActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the viewedOrEditedFileCount
     *
@@ -332,5 +332,5 @@ class OneDriveActivityUserDetail extends Entity
         $this->_propDict["viewedOrEditedFileCount"] = intval($val);
         return $this;
     }
-    
+
 }

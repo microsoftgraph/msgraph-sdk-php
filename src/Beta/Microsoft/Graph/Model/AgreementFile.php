@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AgreementFile extends AgreementFileProperties
 {
 
-     /** 
+     /**
      * Gets the localizations
      *
      * @return array The localizations
@@ -38,8 +38,8 @@ class AgreementFile extends AgreementFileProperties
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the localizations
     *
     * @param AgreementFileLocalization $val The localizations
@@ -48,8 +48,8 @@ class AgreementFile extends AgreementFileProperties
     */
     public function setLocalizations($val)
     {
-		$this->_propDict["localizations"] = $val;
+        $this->_propDict["localizations"] = $val;
         return $this;
     }
-    
+
 }

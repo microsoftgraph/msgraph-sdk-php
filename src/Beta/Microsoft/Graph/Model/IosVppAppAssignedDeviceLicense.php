@@ -38,7 +38,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * The device name.
@@ -52,7 +52,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * The managed device ID.
@@ -67,7 +67,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * The managed device ID.
@@ -81,5 +81,5 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
 }

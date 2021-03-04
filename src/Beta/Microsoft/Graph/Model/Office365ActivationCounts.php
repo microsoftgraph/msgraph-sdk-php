@@ -38,7 +38,7 @@ class Office365ActivationCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the android
     * The activation count on an Android device.
@@ -52,7 +52,7 @@ class Office365ActivationCounts extends Entity
         $this->_propDict["android"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the ios
     * The activation count on iOS.
@@ -67,7 +67,7 @@ class Office365ActivationCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ios
     * The activation count on iOS.
@@ -81,7 +81,7 @@ class Office365ActivationCounts extends Entity
         $this->_propDict["ios"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mac
     * The activation count on Mac OS.
@@ -96,7 +96,7 @@ class Office365ActivationCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mac
     * The activation count on Mac OS.
@@ -110,7 +110,7 @@ class Office365ActivationCounts extends Entity
         $this->_propDict["mac"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the productType
     * The product type, such as 'Microsoft 365 ProPlus' or 'Project Client'.
@@ -125,7 +125,7 @@ class Office365ActivationCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the productType
     * The product type, such as 'Microsoft 365 ProPlus' or 'Project Client'.
@@ -139,7 +139,7 @@ class Office365ActivationCounts extends Entity
         $this->_propDict["productType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     * The latest date of the content.
@@ -158,7 +158,7 @@ class Office365ActivationCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     * The latest date of the content.
@@ -172,7 +172,7 @@ class Office365ActivationCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windows
     * The activation count on Windows. This number includes every activation on any Windows computer.
@@ -187,7 +187,7 @@ class Office365ActivationCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windows
     * The activation count on Windows. This number includes every activation on any Windows computer.
@@ -201,7 +201,7 @@ class Office365ActivationCounts extends Entity
         $this->_propDict["windows"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the windows10Mobile
     * The activation count on Windows 10 mobile.
@@ -216,7 +216,7 @@ class Office365ActivationCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windows10Mobile
     * The activation count on Windows 10 mobile.
@@ -230,5 +230,5 @@ class Office365ActivationCounts extends Entity
         $this->_propDict["windows10Mobile"] = intval($val);
         return $this;
     }
-    
+
 }

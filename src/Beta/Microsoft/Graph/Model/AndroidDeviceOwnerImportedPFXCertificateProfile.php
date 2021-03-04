@@ -42,7 +42,7 @@ class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDeviceOwner
         }
         return null;
     }
-    
+
     /**
     * Sets the intendedPurpose
     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
@@ -56,9 +56,9 @@ class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDeviceOwner
         $this->_propDict["intendedPurpose"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
@@ -72,8 +72,8 @@ class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDeviceOwner
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices
     *
@@ -83,8 +83,8 @@ class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDeviceOwner
     */
     public function setManagedDeviceCertificateStates($val)
     {
-		$this->_propDict["managedDeviceCertificateStates"] = $val;
+        $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
 }

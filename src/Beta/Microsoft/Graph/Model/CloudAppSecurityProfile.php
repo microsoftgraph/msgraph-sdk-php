@@ -37,7 +37,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureSubscriptionId
     *
@@ -50,7 +50,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["azureSubscriptionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     *
@@ -64,7 +64,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     *
@@ -77,7 +77,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -95,7 +95,7 @@ class CloudAppSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -108,7 +108,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentPackageUrl
     *
@@ -122,7 +122,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deploymentPackageUrl
     *
@@ -135,7 +135,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["deploymentPackageUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the destinationServiceName
     *
@@ -149,7 +149,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the destinationServiceName
     *
@@ -162,7 +162,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["destinationServiceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isSigned
     *
@@ -176,7 +176,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isSigned
     *
@@ -189,7 +189,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["isSigned"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -207,7 +207,7 @@ class CloudAppSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -220,7 +220,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manifest
     *
@@ -234,7 +234,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manifest
     *
@@ -247,7 +247,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["manifest"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     *
@@ -261,7 +261,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -274,7 +274,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the permissionsRequired
     *
@@ -292,7 +292,7 @@ class CloudAppSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the permissionsRequired
     *
@@ -305,7 +305,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["permissionsRequired"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platform
     *
@@ -319,7 +319,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the platform
     *
@@ -332,7 +332,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["platform"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyName
     *
@@ -346,7 +346,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the policyName
     *
@@ -359,7 +359,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["policyName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisher
     *
@@ -373,7 +373,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publisher
     *
@@ -386,7 +386,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["publisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskScore
     *
@@ -400,7 +400,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the riskScore
     *
@@ -413,7 +413,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["riskScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tags
     *
@@ -427,7 +427,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tags
     *
@@ -440,7 +440,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     *
@@ -454,7 +454,7 @@ class CloudAppSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     *
@@ -467,7 +467,7 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInformation
     *
@@ -485,7 +485,7 @@ class CloudAppSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendorInformation
     *
@@ -498,5 +498,5 @@ class CloudAppSecurityProfile extends Entity
         $this->_propDict["vendorInformation"] = $val;
         return $this;
     }
-    
+
 }

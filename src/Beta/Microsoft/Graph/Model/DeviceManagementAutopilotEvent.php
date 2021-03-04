@@ -42,7 +42,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accountSetupDuration
     * Time spent in user ESP.
@@ -56,7 +56,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["accountSetupDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accountSetupStatus
     * Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
@@ -75,7 +75,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accountSetupStatus
     * Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
@@ -89,7 +89,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["accountSetupStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentDuration
     * Autopilot deployment duration including enrollment.
@@ -108,7 +108,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentDuration
     * Autopilot deployment duration including enrollment.
@@ -122,7 +122,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deploymentDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentEndDateTime
     * Deployment end time.
@@ -141,7 +141,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentEndDateTime
     * Deployment end time.
@@ -155,7 +155,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deploymentEndDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentStartDateTime
     * Deployment start time.
@@ -174,7 +174,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentStartDateTime
     * Deployment start time.
@@ -188,7 +188,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deploymentStartDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentState
     * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
@@ -207,7 +207,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentState
     * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
@@ -221,7 +221,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deploymentState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentTotalDuration
     * Total deployment duration from enrollment to Desktop screen.
@@ -240,7 +240,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentTotalDuration
     * Total deployment duration from enrollment to Desktop screen.
@@ -254,7 +254,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deploymentTotalDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * Device id associated with the object
@@ -269,7 +269,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * Device id associated with the object
@@ -283,7 +283,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the devicePreparationDuration
     * Time spent in device enrollment.
@@ -302,7 +302,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the devicePreparationDuration
     * Time spent in device enrollment.
@@ -316,7 +316,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["devicePreparationDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceRegisteredDateTime
     * Device registration date.
@@ -335,7 +335,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceRegisteredDateTime
     * Device registration date.
@@ -349,7 +349,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deviceRegisteredDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceSerialNumber
     * Device serial number.
@@ -364,7 +364,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceSerialNumber
     * Device serial number.
@@ -378,7 +378,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deviceSerialNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceSetupDuration
     * Time spent in device ESP.
@@ -397,7 +397,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceSetupDuration
     * Time spent in device ESP.
@@ -411,7 +411,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deviceSetupDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceSetupStatus
     * Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
@@ -430,7 +430,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceSetupStatus
     * Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
@@ -444,7 +444,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["deviceSetupStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentFailureDetails
     * Enrollment failure details.
@@ -459,7 +459,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enrollmentFailureDetails
     * Enrollment failure details.
@@ -473,7 +473,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["enrollmentFailureDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentStartDateTime
     * Device enrollment start date.
@@ -492,7 +492,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentStartDateTime
     * Device enrollment start date.
@@ -506,7 +506,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["enrollmentStartDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentState
     * Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
@@ -525,7 +525,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentState
     * Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
@@ -539,7 +539,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["enrollmentState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentType
     * Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
@@ -558,7 +558,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentType
     * Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
@@ -572,7 +572,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["enrollmentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eventDateTime
     * Time when the event occurred .
@@ -591,7 +591,7 @@ class DeviceManagementAutopilotEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the eventDateTime
     * Time when the event occurred .
@@ -605,7 +605,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["eventDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceName
     * Managed device name.
@@ -620,7 +620,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceName
     * Managed device name.
@@ -634,7 +634,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["managedDeviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * Device operating system version.
@@ -649,7 +649,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * Device operating system version.
@@ -663,7 +663,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetedAppCount
     * Count of applications targeted.
@@ -678,7 +678,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedAppCount
     * Count of applications targeted.
@@ -692,7 +692,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["targetedAppCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the targetedPolicyCount
     * Count of policies targeted.
@@ -707,7 +707,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedPolicyCount
     * Count of policies targeted.
@@ -721,7 +721,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["targetedPolicyCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User principal name used to enroll the device.
@@ -736,7 +736,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User principal name used to enroll the device.
@@ -750,7 +750,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windows10EnrollmentCompletionPageConfigurationDisplayName
     * Enrollment Status Page profile name
@@ -765,7 +765,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windows10EnrollmentCompletionPageConfigurationDisplayName
     * Enrollment Status Page profile name
@@ -779,7 +779,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["windows10EnrollmentCompletionPageConfigurationDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windows10EnrollmentCompletionPageConfigurationId
     * Enrollment Status Page profile ID
@@ -794,7 +794,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windows10EnrollmentCompletionPageConfigurationId
     * Enrollment Status Page profile ID
@@ -808,7 +808,7 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["windows10EnrollmentCompletionPageConfigurationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windowsAutopilotDeploymentProfileDisplayName
     * Autopilot profile name.
@@ -823,7 +823,7 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windowsAutopilotDeploymentProfileDisplayName
     * Autopilot profile name.
@@ -837,9 +837,9 @@ class DeviceManagementAutopilotEvent extends Entity
         $this->_propDict["windowsAutopilotDeploymentProfileDisplayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the policyStatusDetails
     * Policy and application status details for this device.
      *
@@ -853,8 +853,8 @@ class DeviceManagementAutopilotEvent extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the policyStatusDetails
     * Policy and application status details for this device.
     *
@@ -864,8 +864,8 @@ class DeviceManagementAutopilotEvent extends Entity
     */
     public function setPolicyStatusDetails($val)
     {
-		$this->_propDict["policyStatusDetails"] = $val;
+        $this->_propDict["policyStatusDetails"] = $val;
         return $this;
     }
-    
+
 }

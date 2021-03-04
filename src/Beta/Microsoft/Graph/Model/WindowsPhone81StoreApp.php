@@ -38,7 +38,7 @@ class WindowsPhone81StoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Windows Phone 8.1 app store URL.
@@ -52,5 +52,5 @@ class WindowsPhone81StoreApp extends MobileApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
+
 }

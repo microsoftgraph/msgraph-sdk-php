@@ -37,7 +37,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imap4App
     *
@@ -50,7 +50,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["imap4App"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mailForMac
     *
@@ -64,7 +64,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mailForMac
     *
@@ -77,7 +77,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["mailForMac"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the otherForMobile
     *
@@ -91,7 +91,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the otherForMobile
     *
@@ -104,7 +104,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["otherForMobile"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlookForMac
     *
@@ -118,7 +118,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForMac
     *
@@ -131,7 +131,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["outlookForMac"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlookForMobile
     *
@@ -145,7 +145,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForMobile
     *
@@ -158,7 +158,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["outlookForMobile"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlookForWeb
     *
@@ -172,7 +172,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForWeb
     *
@@ -185,7 +185,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["outlookForWeb"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the outlookForWindows
     *
@@ -199,7 +199,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForWindows
     *
@@ -212,7 +212,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["outlookForWindows"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the pop3App
     *
@@ -226,7 +226,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the pop3App
     *
@@ -239,7 +239,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["pop3App"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -257,7 +257,7 @@ class EmailAppUsageUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -270,7 +270,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -284,7 +284,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -297,7 +297,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -315,7 +315,7 @@ class EmailAppUsageUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -328,7 +328,7 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the smtpApp
     *
@@ -342,7 +342,7 @@ class EmailAppUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the smtpApp
     *
@@ -355,5 +355,5 @@ class EmailAppUsageUserCounts extends Entity
         $this->_propDict["smtpApp"] = intval($val);
         return $this;
     }
-    
+
 }

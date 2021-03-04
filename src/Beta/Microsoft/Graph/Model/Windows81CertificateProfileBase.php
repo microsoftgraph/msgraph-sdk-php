@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
 {
 
-     /** 
+     /**
      * Gets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
@@ -39,8 +39,8 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
@@ -50,12 +50,12 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
     */
     public function setCustomSubjectAlternativeNames($val)
     {
-		$this->_propDict["customSubjectAlternativeNames"] = $val;
+        $this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extendedKeyUsages
     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
@@ -69,8 +69,8 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extendedKeyUsages
     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
     *
@@ -80,8 +80,8 @@ class Windows81CertificateProfileBase extends WindowsCertificateProfileBase
     */
     public function setExtendedKeyUsages($val)
     {
-		$this->_propDict["extendedKeyUsages"] = $val;
+        $this->_propDict["extendedKeyUsages"] = $val;
         return $this;
     }
-    
+
 }

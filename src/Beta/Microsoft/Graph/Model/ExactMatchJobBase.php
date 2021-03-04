@@ -41,7 +41,7 @@ class ExactMatchJobBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completionDateTime
     *
@@ -54,7 +54,7 @@ class ExactMatchJobBase extends Entity
         $this->_propDict["completionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creationDateTime
     *
@@ -72,7 +72,7 @@ class ExactMatchJobBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the creationDateTime
     *
@@ -85,7 +85,7 @@ class ExactMatchJobBase extends Entity
         $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the error
     *
@@ -103,7 +103,7 @@ class ExactMatchJobBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     *
@@ -116,7 +116,7 @@ class ExactMatchJobBase extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdatedDateTime
     *
@@ -134,7 +134,7 @@ class ExactMatchJobBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUpdatedDateTime
     *
@@ -147,7 +147,7 @@ class ExactMatchJobBase extends Entity
         $this->_propDict["lastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     *
@@ -165,7 +165,7 @@ class ExactMatchJobBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     *
@@ -178,5 +178,5 @@ class ExactMatchJobBase extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
 }

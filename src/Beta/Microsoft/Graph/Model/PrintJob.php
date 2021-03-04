@@ -42,7 +42,7 @@ class PrintJob extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the configuration
     * A group of settings that a printer should use to print a job.
@@ -56,7 +56,7 @@ class PrintJob extends Entity
         $this->_propDict["configuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     *
@@ -74,7 +74,7 @@ class PrintJob extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -87,7 +87,7 @@ class PrintJob extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The DateTimeOffset when the job was created. Read-only.
@@ -106,7 +106,7 @@ class PrintJob extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The DateTimeOffset when the job was created. Read-only.
@@ -120,7 +120,7 @@ class PrintJob extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isFetchable
     * If true, document can be fetched by printer.
@@ -135,7 +135,7 @@ class PrintJob extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isFetchable
     * If true, document can be fetched by printer.
@@ -149,7 +149,7 @@ class PrintJob extends Entity
         $this->_propDict["isFetchable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the redirectedFrom
     * Contains the source job URL, if the job has been redirected from another printer.
@@ -164,7 +164,7 @@ class PrintJob extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the redirectedFrom
     * Contains the source job URL, if the job has been redirected from another printer.
@@ -178,7 +178,7 @@ class PrintJob extends Entity
         $this->_propDict["redirectedFrom"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the redirectedTo
     * Contains the destination job URL, if the job has been redirected to another printer.
@@ -193,7 +193,7 @@ class PrintJob extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the redirectedTo
     * Contains the destination job URL, if the job has been redirected to another printer.
@@ -207,7 +207,7 @@ class PrintJob extends Entity
         $this->_propDict["redirectedTo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the print job. Read-only.
@@ -226,7 +226,7 @@ class PrintJob extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of the print job. Read-only.
@@ -240,9 +240,9 @@ class PrintJob extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the documents
     * Read-only.
      *
@@ -256,8 +256,8 @@ class PrintJob extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the documents
     * Read-only.
     *
@@ -267,12 +267,12 @@ class PrintJob extends Entity
     */
     public function setDocuments($val)
     {
-		$this->_propDict["documents"] = $val;
+        $this->_propDict["documents"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * A list of printTasks that were triggered by this print job.
      *
@@ -286,8 +286,8 @@ class PrintJob extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * A list of printTasks that were triggered by this print job.
     *
@@ -297,8 +297,8 @@ class PrintJob extends Entity
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

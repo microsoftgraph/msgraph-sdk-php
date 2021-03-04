@@ -42,7 +42,7 @@ class OnPremisesPublishingProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the hybridAgentUpdaterConfiguration
     * Represents a hybridAgentUpdaterConfiguration object.
@@ -56,7 +56,7 @@ class OnPremisesPublishingProfile extends Entity
         $this->_propDict["hybridAgentUpdaterConfiguration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Represents if Azure AD Application Proxy is enabled for the tenant.
@@ -71,7 +71,7 @@ class OnPremisesPublishingProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Represents if Azure AD Application Proxy is enabled for the tenant.
@@ -85,9 +85,9 @@ class OnPremisesPublishingProfile extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the agentGroups
     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
      *
@@ -101,8 +101,8 @@ class OnPremisesPublishingProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the agentGroups
     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
     *
@@ -112,12 +112,12 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setAgentGroups($val)
     {
-		$this->_propDict["agentGroups"] = $val;
+        $this->_propDict["agentGroups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the agents
     * List of existing onPremisesAgent objects. Read-only. Nullable.
      *
@@ -131,8 +131,8 @@ class OnPremisesPublishingProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the agents
     * List of existing onPremisesAgent objects. Read-only. Nullable.
     *
@@ -142,12 +142,12 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setAgents($val)
     {
-		$this->_propDict["agents"] = $val;
+        $this->_propDict["agents"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connectorGroups
     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      *
@@ -161,8 +161,8 @@ class OnPremisesPublishingProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connectorGroups
     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
     *
@@ -172,12 +172,12 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setConnectorGroups($val)
     {
-		$this->_propDict["connectorGroups"] = $val;
+        $this->_propDict["connectorGroups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connectors
     * List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
      *
@@ -191,8 +191,8 @@ class OnPremisesPublishingProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connectors
     * List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
     *
@@ -202,12 +202,12 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setConnectors($val)
     {
-		$this->_propDict["connectors"] = $val;
+        $this->_propDict["connectors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the publishedResources
     * List of existing publishedResource objects. Read-only. Nullable.
      *
@@ -221,8 +221,8 @@ class OnPremisesPublishingProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the publishedResources
     * List of existing publishedResource objects. Read-only. Nullable.
     *
@@ -232,8 +232,8 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setPublishedResources($val)
     {
-		$this->_propDict["publishedResources"] = $val;
+        $this->_propDict["publishedResources"] = $val;
         return $this;
     }
-    
+
 }

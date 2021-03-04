@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class GraphPrint extends 
+class Print implements \JsonSerializable
 {
     /**
     * Gets the settings
@@ -42,7 +42,7 @@ class GraphPrint extends
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * Tenant-wide settings for the Universal Print service.
@@ -56,9 +56,9 @@ class GraphPrint extends
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connectors
     * The list of available print connectors.
      *
@@ -72,8 +72,8 @@ class GraphPrint extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connectors
     * The list of available print connectors.
     *
@@ -83,12 +83,12 @@ class GraphPrint extends
     */
     public function setConnectors($val)
     {
-		$this->_propDict["connectors"] = $val;
+        $this->_propDict["connectors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
      *
      * @return array The operations
@@ -101,8 +101,8 @@ class GraphPrint extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     *
     * @param PrintOperation $val The operations
@@ -111,12 +111,12 @@ class GraphPrint extends
     */
     public function setOperations($val)
     {
-		$this->_propDict["operations"] = $val;
+        $this->_propDict["operations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the printers
     * The list of printers registered in the tenant.
      *
@@ -130,8 +130,8 @@ class GraphPrint extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the printers
     * The list of printers registered in the tenant.
     *
@@ -141,12 +141,12 @@ class GraphPrint extends
     */
     public function setPrinters($val)
     {
-		$this->_propDict["printers"] = $val;
+        $this->_propDict["printers"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the printerShares
      *
      * @return array The printerShares
@@ -159,8 +159,8 @@ class GraphPrint extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the printerShares
     *
     * @param PrinterShare $val The printerShares
@@ -169,10 +169,10 @@ class GraphPrint extends
     */
     public function setPrinterShares($val)
     {
-		$this->_propDict["printerShares"] = $val;
+        $this->_propDict["printerShares"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reports
     *
@@ -190,7 +190,7 @@ class GraphPrint extends
         }
         return null;
     }
-    
+
     /**
     * Sets the reports
     *
@@ -203,9 +203,9 @@ class GraphPrint extends
         $this->_propDict["reports"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the services
     * The list of available Universal Print service endpoints.
      *
@@ -219,8 +219,8 @@ class GraphPrint extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the services
     * The list of available Universal Print service endpoints.
     *
@@ -230,12 +230,12 @@ class GraphPrint extends
     */
     public function setServices($val)
     {
-		$this->_propDict["services"] = $val;
+        $this->_propDict["services"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the shares
     * The list of printer shares registered in the tenant.
      *
@@ -249,8 +249,8 @@ class GraphPrint extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the shares
     * The list of printer shares registered in the tenant.
     *
@@ -260,12 +260,12 @@ class GraphPrint extends
     */
     public function setShares($val)
     {
-		$this->_propDict["shares"] = $val;
+        $this->_propDict["shares"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taskDefinitions
      *
      * @return array The taskDefinitions
@@ -278,8 +278,8 @@ class GraphPrint extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the taskDefinitions
     *
     * @param PrintTaskDefinition $val The taskDefinitions
@@ -288,8 +288,8 @@ class GraphPrint extends
     */
     public function setTaskDefinitions($val)
     {
-		$this->_propDict["taskDefinitions"] = $val;
+        $this->_propDict["taskDefinitions"] = $val;
         return $this;
     }
-    
+
 }

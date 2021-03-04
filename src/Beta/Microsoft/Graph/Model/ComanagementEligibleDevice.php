@@ -42,7 +42,7 @@ class ComanagementEligibleDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the clientRegistrationStatus
     * ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
@@ -56,7 +56,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["clientRegistrationStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * DeviceName
@@ -71,7 +71,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * DeviceName
@@ -85,7 +85,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceType
     * DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
@@ -104,7 +104,7 @@ class ComanagementEligibleDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceType
     * DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
@@ -118,7 +118,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["deviceType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the entitySource
     * EntitySource
@@ -133,7 +133,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the entitySource
     * EntitySource
@@ -147,7 +147,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["entitySource"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the managementAgents
     * ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm.
@@ -166,7 +166,7 @@ class ComanagementEligibleDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the managementAgents
     * ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm.
@@ -180,7 +180,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["managementAgents"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managementState
     * ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
@@ -199,7 +199,7 @@ class ComanagementEligibleDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the managementState
     * ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
@@ -213,7 +213,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["managementState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * Manufacturer
@@ -228,7 +228,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * Manufacturer
@@ -242,7 +242,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mdmStatus
     * MDMStatus
@@ -257,7 +257,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mdmStatus
     * MDMStatus
@@ -271,7 +271,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["mdmStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * Model
@@ -286,7 +286,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * Model
@@ -300,7 +300,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osDescription
     * OSDescription
@@ -315,7 +315,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osDescription
     * OSDescription
@@ -329,7 +329,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["osDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * OSVersion
@@ -344,7 +344,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * OSVersion
@@ -358,7 +358,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ownerType
     * OwnerType. Possible values are: unknown, company, personal.
@@ -377,7 +377,7 @@ class ComanagementEligibleDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the ownerType
     * OwnerType. Possible values are: unknown, company, personal.
@@ -391,7 +391,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["ownerType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the referenceId
     * ReferenceId
@@ -406,7 +406,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the referenceId
     * ReferenceId
@@ -420,7 +420,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["referenceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serialNumber
     * SerialNumber
@@ -435,7 +435,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serialNumber
     * SerialNumber
@@ -449,7 +449,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["serialNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
@@ -468,7 +468,7 @@ class ComanagementEligibleDevice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
@@ -482,7 +482,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the upn
     * UPN
@@ -497,7 +497,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the upn
     * UPN
@@ -511,7 +511,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["upn"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userEmail
     * UserEmail
@@ -526,7 +526,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userEmail
     * UserEmail
@@ -540,7 +540,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["userEmail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * UserId
@@ -555,7 +555,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * UserId
@@ -569,7 +569,7 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * UserName
@@ -584,7 +584,7 @@ class ComanagementEligibleDevice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * UserName
@@ -598,5 +598,5 @@ class ComanagementEligibleDevice extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
 }

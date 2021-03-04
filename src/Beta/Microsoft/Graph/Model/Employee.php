@@ -41,7 +41,7 @@ class Employee extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the address
     *
@@ -54,7 +54,7 @@ class Employee extends Entity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the birthDate
     *
@@ -72,7 +72,7 @@ class Employee extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the birthDate
     *
@@ -85,7 +85,7 @@ class Employee extends Entity
         $this->_propDict["birthDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -99,7 +99,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -112,7 +112,7 @@ class Employee extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     *
@@ -126,7 +126,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     *
@@ -139,7 +139,7 @@ class Employee extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the employmentDate
     *
@@ -157,7 +157,7 @@ class Employee extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the employmentDate
     *
@@ -170,7 +170,7 @@ class Employee extends Entity
         $this->_propDict["employmentDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the givenName
     *
@@ -184,7 +184,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the givenName
     *
@@ -197,7 +197,7 @@ class Employee extends Entity
         $this->_propDict["givenName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the jobTitle
     *
@@ -211,7 +211,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the jobTitle
     *
@@ -224,7 +224,7 @@ class Employee extends Entity
         $this->_propDict["jobTitle"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -242,7 +242,7 @@ class Employee extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -255,7 +255,7 @@ class Employee extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the middleName
     *
@@ -269,7 +269,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the middleName
     *
@@ -282,7 +282,7 @@ class Employee extends Entity
         $this->_propDict["middleName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mobilePhone
     *
@@ -296,7 +296,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mobilePhone
     *
@@ -309,7 +309,7 @@ class Employee extends Entity
         $this->_propDict["mobilePhone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     *
@@ -323,7 +323,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     *
@@ -336,7 +336,7 @@ class Employee extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the personalEmail
     *
@@ -350,7 +350,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the personalEmail
     *
@@ -363,7 +363,7 @@ class Employee extends Entity
         $this->_propDict["personalEmail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phoneNumber
     *
@@ -377,7 +377,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneNumber
     *
@@ -390,7 +390,7 @@ class Employee extends Entity
         $this->_propDict["phoneNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the statisticsGroupCode
     *
@@ -404,7 +404,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the statisticsGroupCode
     *
@@ -417,7 +417,7 @@ class Employee extends Entity
         $this->_propDict["statisticsGroupCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -431,7 +431,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -444,7 +444,7 @@ class Employee extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the surname
     *
@@ -458,7 +458,7 @@ class Employee extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the surname
     *
@@ -471,7 +471,7 @@ class Employee extends Entity
         $this->_propDict["surname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the terminationDate
     *
@@ -489,7 +489,7 @@ class Employee extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the terminationDate
     *
@@ -502,9 +502,9 @@ class Employee extends Entity
         $this->_propDict["terminationDate"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the picture
      *
      * @return array The picture
@@ -517,8 +517,8 @@ class Employee extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the picture
     *
     * @param Picture $val The picture
@@ -527,8 +527,8 @@ class Employee extends Entity
     */
     public function setPicture($val)
     {
-		$this->_propDict["picture"] = $val;
+        $this->_propDict["picture"] = $val;
         return $this;
     }
-    
+
 }

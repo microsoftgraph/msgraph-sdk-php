@@ -38,7 +38,7 @@ class RoleScopeTag extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the Role Scope Tag.
@@ -52,7 +52,7 @@ class RoleScopeTag extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display or friendly name of the Role Scope Tag.
@@ -67,7 +67,7 @@ class RoleScopeTag extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display or friendly name of the Role Scope Tag.
@@ -81,7 +81,7 @@ class RoleScopeTag extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isBuiltIn
     * Description of the Role Scope Tag.
@@ -96,7 +96,7 @@ class RoleScopeTag extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isBuiltIn
     * Description of the Role Scope Tag.
@@ -110,9 +110,9 @@ class RoleScopeTag extends Entity
         $this->_propDict["isBuiltIn"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of assignments for this Role Scope Tag.
      *
@@ -126,8 +126,8 @@ class RoleScopeTag extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of assignments for this Role Scope Tag.
     *
@@ -137,8 +137,8 @@ class RoleScopeTag extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

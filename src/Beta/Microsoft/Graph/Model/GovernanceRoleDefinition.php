@@ -38,7 +38,7 @@ class GovernanceRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the role definition.
@@ -52,7 +52,7 @@ class GovernanceRoleDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     * The external id of the role definition.
@@ -67,7 +67,7 @@ class GovernanceRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     * The external id of the role definition.
@@ -81,7 +81,7 @@ class GovernanceRoleDefinition extends Entity
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceId
     * Required. The id of the resource associated with the role definition.
@@ -96,7 +96,7 @@ class GovernanceRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceId
     * Required. The id of the resource associated with the role definition.
@@ -110,7 +110,7 @@ class GovernanceRoleDefinition extends Entity
         $this->_propDict["resourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateId
     *
@@ -124,7 +124,7 @@ class GovernanceRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the templateId
     *
@@ -137,7 +137,7 @@ class GovernanceRoleDefinition extends Entity
         $this->_propDict["templateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Read-only. The associated resource for the role definition.
@@ -156,7 +156,7 @@ class GovernanceRoleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Read-only. The associated resource for the role definition.
@@ -170,7 +170,7 @@ class GovernanceRoleDefinition extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleSetting
     * The associated role setting for the role definition.
@@ -189,7 +189,7 @@ class GovernanceRoleDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleSetting
     * The associated role setting for the role definition.
@@ -203,5 +203,5 @@ class GovernanceRoleDefinition extends Entity
         $this->_propDict["roleSetting"] = $val;
         return $this;
     }
-    
+
 }

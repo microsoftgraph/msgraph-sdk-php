@@ -42,7 +42,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateStore
     * Target store certificate. Possible values are: user, machine.
@@ -56,7 +56,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
         $this->_propDict["certificateStore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateTemplateName
     * PKCS Certificate Template Name
@@ -71,7 +71,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateTemplateName
     * PKCS Certificate Template Name
@@ -85,7 +85,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
         $this->_propDict["certificateTemplateName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificationAuthority
     * PKCS Certification Authority
@@ -100,7 +100,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the certificationAuthority
     * PKCS Certification Authority
@@ -114,7 +114,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
         $this->_propDict["certificationAuthority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificationAuthorityName
     * PKCS Certification Authority Name
@@ -129,7 +129,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the certificationAuthorityName
     * PKCS Certification Authority Name
@@ -143,9 +143,9 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
         $this->_propDict["certificationAuthorityName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
@@ -159,8 +159,8 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
     *
@@ -170,12 +170,12 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     */
     public function setCustomSubjectAlternativeNames($val)
     {
-		$this->_propDict["customSubjectAlternativeNames"] = $val;
+        $this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extendedKeyUsages
     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
@@ -189,8 +189,8 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extendedKeyUsages
     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
     *
@@ -200,10 +200,10 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     */
     public function setExtendedKeyUsages($val)
     {
-		$this->_propDict["extendedKeyUsages"] = $val;
+        $this->_propDict["extendedKeyUsages"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -218,7 +218,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -232,7 +232,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -247,7 +247,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -261,9 +261,9 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
         $this->_propDict["subjectNameFormatString"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
@@ -277,8 +277,8 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices
     *
@@ -288,8 +288,8 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     */
     public function setManagedDeviceCertificateStates($val)
     {
-		$this->_propDict["managedDeviceCertificateStates"] = $val;
+        $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
 }

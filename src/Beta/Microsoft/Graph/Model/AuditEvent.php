@@ -38,7 +38,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activity
     * Friendly name of the activity.
@@ -52,7 +52,7 @@ class AuditEvent extends Entity
         $this->_propDict["activity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityDateTime
     * The date time in UTC when the activity was performed.
@@ -71,7 +71,7 @@ class AuditEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activityDateTime
     * The date time in UTC when the activity was performed.
@@ -85,7 +85,7 @@ class AuditEvent extends Entity
         $this->_propDict["activityDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityOperationType
     * The HTTP operation type of the activity.
@@ -100,7 +100,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activityOperationType
     * The HTTP operation type of the activity.
@@ -114,7 +114,7 @@ class AuditEvent extends Entity
         $this->_propDict["activityOperationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityResult
     * The result of the activity.
@@ -129,7 +129,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activityResult
     * The result of the activity.
@@ -143,7 +143,7 @@ class AuditEvent extends Entity
         $this->_propDict["activityResult"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityType
     * The type of activity that was being performed.
@@ -158,7 +158,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activityType
     * The type of activity that was being performed.
@@ -172,7 +172,7 @@ class AuditEvent extends Entity
         $this->_propDict["activityType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the actor
     * AAD user and application that are associated with the audit event.
@@ -191,7 +191,7 @@ class AuditEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the actor
     * AAD user and application that are associated with the audit event.
@@ -205,7 +205,7 @@ class AuditEvent extends Entity
         $this->_propDict["actor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the category
     * Audit category.
@@ -220,7 +220,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the category
     * Audit category.
@@ -234,7 +234,7 @@ class AuditEvent extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the componentName
     * Component name.
@@ -249,7 +249,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the componentName
     * Component name.
@@ -263,7 +263,7 @@ class AuditEvent extends Entity
         $this->_propDict["componentName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the correlationId
     * The client request Id that is used to correlate activity within the system.
@@ -278,7 +278,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the correlationId
     * The client request Id that is used to correlate activity within the system.
@@ -292,7 +292,7 @@ class AuditEvent extends Entity
         $this->_propDict["correlationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Event display name.
@@ -307,7 +307,7 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Event display name.
@@ -321,9 +321,9 @@ class AuditEvent extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the resources
     * Resources being modified.
      *
@@ -337,8 +337,8 @@ class AuditEvent extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the resources
     * Resources being modified.
     *
@@ -348,8 +348,8 @@ class AuditEvent extends Entity
     */
     public function setResources($val)
     {
-		$this->_propDict["resources"] = $val;
+        $this->_propDict["resources"] = $val;
         return $this;
     }
-    
+
 }

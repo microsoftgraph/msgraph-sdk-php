@@ -38,7 +38,7 @@ class DeviceManagementAbstractComplexSettingDefinition extends DeviceManagementS
             return null;
         }
     }
-    
+
     /**
     * Sets the implementations
     * List of definition IDs for all possible implementations of this abstract complex setting
@@ -52,5 +52,5 @@ class DeviceManagementAbstractComplexSettingDefinition extends DeviceManagementS
         $this->_propDict["implementations"] = $val;
         return $this;
     }
-    
+
 }

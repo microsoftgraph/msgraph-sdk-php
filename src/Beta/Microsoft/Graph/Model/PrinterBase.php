@@ -41,7 +41,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the capabilities
     *
@@ -54,7 +54,7 @@ class PrinterBase extends Entity
         $this->_propDict["capabilities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaults
     *
@@ -72,7 +72,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaults
     *
@@ -85,7 +85,7 @@ class PrinterBase extends Entity
         $this->_propDict["defaults"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -99,7 +99,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -112,7 +112,7 @@ class PrinterBase extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAcceptingJobs
     *
@@ -126,7 +126,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isAcceptingJobs
     *
@@ -139,7 +139,7 @@ class PrinterBase extends Entity
         $this->_propDict["isAcceptingJobs"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the location
     *
@@ -157,7 +157,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the location
     *
@@ -170,7 +170,7 @@ class PrinterBase extends Entity
         $this->_propDict["location"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     *
@@ -184,7 +184,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     *
@@ -197,7 +197,7 @@ class PrinterBase extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     *
@@ -211,7 +211,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     *
@@ -224,7 +224,7 @@ class PrinterBase extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     *
@@ -238,7 +238,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -251,7 +251,7 @@ class PrinterBase extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -269,7 +269,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -282,9 +282,9 @@ class PrinterBase extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the jobs
      *
      * @return array The jobs
@@ -297,8 +297,8 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the jobs
     *
     * @param PrintJob $val The jobs
@@ -307,8 +307,8 @@ class PrinterBase extends Entity
     */
     public function setJobs($val)
     {
-		$this->_propDict["jobs"] = $val;
+        $this->_propDict["jobs"] = $val;
         return $this;
     }
-    
+
 }

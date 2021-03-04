@@ -38,7 +38,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the conflictCount
     * Number of devices in conflict
@@ -52,7 +52,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
         $this->_propDict["conflictCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorCount
     * Number of error devices
@@ -67,7 +67,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCount
     * Number of error devices
@@ -81,7 +81,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
         $this->_propDict["errorCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the failedCount
     * Number of failed devices
@@ -96,7 +96,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the failedCount
     * Number of failed devices
@@ -110,7 +110,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
         $this->_propDict["failedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notApplicableCount
     * Number of not applicable devices
@@ -125,7 +125,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicableCount
     * Number of not applicable devices
@@ -139,7 +139,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
         $this->_propDict["notApplicableCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notApplicablePlatformCount
     * Number of not applicable devices due to mismatch platform and policy
@@ -154,7 +154,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicablePlatformCount
     * Number of not applicable devices due to mismatch platform and policy
@@ -168,7 +168,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
         $this->_propDict["notApplicablePlatformCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the successCount
     * Number of succeeded devices
@@ -183,7 +183,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successCount
     * Number of succeeded devices
@@ -197,5 +197,5 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
         $this->_propDict["successCount"] = intval($val);
         return $this;
     }
-    
+
 }

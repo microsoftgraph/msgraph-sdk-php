@@ -38,7 +38,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the accountName
     * Exchange ActiveSync account name, displayed to users as name of EAS (this) profile.
@@ -52,7 +52,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["accountName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authenticationMethod
     * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
@@ -71,7 +71,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethod
     * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
@@ -85,7 +85,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customDomainName
     * Custom domain name value used while generating an email profile before installing on the device.
@@ -100,7 +100,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the customDomainName
     * Custom domain name value used while generating an email profile before installing on the device.
@@ -114,7 +114,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["customDomainName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the durationOfEmailToSync
     * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
@@ -133,7 +133,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the durationOfEmailToSync
     * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
@@ -147,7 +147,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["durationOfEmailToSync"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailAddressSource
     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
@@ -166,7 +166,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the emailAddressSource
     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
@@ -180,7 +180,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["emailAddressSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailSyncSchedule
     * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
@@ -199,7 +199,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the emailSyncSchedule
     * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
@@ -213,7 +213,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["emailSyncSchedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hostName
     * Exchange location (URL) that the native mail app connects to.
@@ -228,7 +228,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the hostName
     * Exchange location (URL) that the native mail app connects to.
@@ -242,7 +242,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["hostName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requireSmime
     * Indicates whether or not to use S/MIME certificate.
@@ -257,7 +257,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the requireSmime
     * Indicates whether or not to use S/MIME certificate.
@@ -271,7 +271,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["requireSmime"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the requireSsl
     * Indicates whether or not to use SSL.
@@ -286,7 +286,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the requireSsl
     * Indicates whether or not to use SSL.
@@ -300,7 +300,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["requireSsl"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncCalendar
     * Toggles syncing the calendar. If set to false calendar is turned off on the device.
@@ -315,7 +315,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the syncCalendar
     * Toggles syncing the calendar. If set to false calendar is turned off on the device.
@@ -329,7 +329,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["syncCalendar"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncContacts
     * Toggles syncing contacts. If set to false contacts are turned off on the device.
@@ -344,7 +344,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the syncContacts
     * Toggles syncing contacts. If set to false contacts are turned off on the device.
@@ -358,7 +358,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["syncContacts"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncNotes
     * Toggles syncing notes. If set to false notes are turned off on the device.
@@ -373,7 +373,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the syncNotes
     * Toggles syncing notes. If set to false notes are turned off on the device.
@@ -387,7 +387,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["syncNotes"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncTasks
     * Toggles syncing tasks. If set to false tasks are turned off on the device.
@@ -402,7 +402,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the syncTasks
     * Toggles syncing tasks. If set to false tasks are turned off on the device.
@@ -416,7 +416,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["syncTasks"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userDomainNameSource
     * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
@@ -435,7 +435,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the userDomainNameSource
     * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
@@ -449,7 +449,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["userDomainNameSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usernameSource
     * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
@@ -468,7 +468,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the usernameSource
     * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
@@ -482,7 +482,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["usernameSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityCertificate
     * Identity certificate.
@@ -501,7 +501,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the identityCertificate
     * Identity certificate.
@@ -515,7 +515,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["identityCertificate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the smimeSigningCertificate
     * S/MIME signing certificate.
@@ -534,7 +534,7 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the smimeSigningCertificate
     * S/MIME signing certificate.
@@ -548,5 +548,5 @@ class AndroidEasEmailProfileConfiguration extends DeviceConfiguration
         $this->_propDict["smimeSigningCertificate"] = $val;
         return $this;
     }
-    
+
 }

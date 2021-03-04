@@ -41,7 +41,7 @@ class CompanyInformation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the address
     *
@@ -54,7 +54,7 @@ class CompanyInformation extends Entity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyCode
     *
@@ -68,7 +68,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyCode
     *
@@ -81,7 +81,7 @@ class CompanyInformation extends Entity
         $this->_propDict["currencyCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currentFiscalYearStartDate
     *
@@ -99,7 +99,7 @@ class CompanyInformation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currentFiscalYearStartDate
     *
@@ -112,7 +112,7 @@ class CompanyInformation extends Entity
         $this->_propDict["currentFiscalYearStartDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -126,7 +126,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -139,7 +139,7 @@ class CompanyInformation extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     *
@@ -153,7 +153,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     *
@@ -166,7 +166,7 @@ class CompanyInformation extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the faxNumber
     *
@@ -180,7 +180,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the faxNumber
     *
@@ -193,7 +193,7 @@ class CompanyInformation extends Entity
         $this->_propDict["faxNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the industry
     *
@@ -207,7 +207,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the industry
     *
@@ -220,7 +220,7 @@ class CompanyInformation extends Entity
         $this->_propDict["industry"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -238,7 +238,7 @@ class CompanyInformation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -251,7 +251,7 @@ class CompanyInformation extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phoneNumber
     *
@@ -265,7 +265,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the phoneNumber
     *
@@ -278,7 +278,7 @@ class CompanyInformation extends Entity
         $this->_propDict["phoneNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the picture
     *
@@ -296,7 +296,7 @@ class CompanyInformation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the picture
     *
@@ -309,7 +309,7 @@ class CompanyInformation extends Entity
         $this->_propDict["picture"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxRegistrationNumber
     *
@@ -323,7 +323,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxRegistrationNumber
     *
@@ -336,7 +336,7 @@ class CompanyInformation extends Entity
         $this->_propDict["taxRegistrationNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the website
     *
@@ -350,7 +350,7 @@ class CompanyInformation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the website
     *
@@ -363,5 +363,5 @@ class CompanyInformation extends Entity
         $this->_propDict["website"] = $val;
         return $this;
     }
-    
+
 }

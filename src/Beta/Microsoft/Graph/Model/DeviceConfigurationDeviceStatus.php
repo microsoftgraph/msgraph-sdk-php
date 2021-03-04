@@ -42,7 +42,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the complianceGracePeriodExpirationDateTime
     * The DateTime when device compliance grace period expires
@@ -56,7 +56,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["complianceGracePeriodExpirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDisplayName
     * Device name of the DevicePolicyStatus.
@@ -71,7 +71,7 @@ class DeviceConfigurationDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * Device name of the DevicePolicyStatus.
@@ -85,7 +85,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceModel
     * The device model that is being reported
@@ -100,7 +100,7 @@ class DeviceConfigurationDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceModel
     * The device model that is being reported
@@ -114,7 +114,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["deviceModel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report.
@@ -133,7 +133,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * Last modified date time of the policy report.
@@ -147,7 +147,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platform
     * Platform of the device that is being reported
@@ -162,7 +162,7 @@ class DeviceConfigurationDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the platform
     * Platform of the device that is being reported
@@ -176,7 +176,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["platform"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -195,7 +195,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -209,7 +209,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * The User Name that is being reported
@@ -224,7 +224,7 @@ class DeviceConfigurationDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * The User Name that is being reported
@@ -238,7 +238,7 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * UserPrincipalName.
@@ -253,7 +253,7 @@ class DeviceConfigurationDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * UserPrincipalName.
@@ -267,5 +267,5 @@ class DeviceConfigurationDeviceStatus extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

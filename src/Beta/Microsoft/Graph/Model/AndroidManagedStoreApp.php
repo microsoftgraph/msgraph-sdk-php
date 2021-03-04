@@ -38,7 +38,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appIdentifier
     * The Identity Name.
@@ -52,7 +52,7 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["appIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appStoreUrl
     * The Play for Work Store app URL.
@@ -67,7 +67,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Play for Work Store app URL.
@@ -81,9 +81,9 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appTracks
     * The tracks that are visible to this enterprise.
      *
@@ -97,8 +97,8 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appTracks
     * The tracks that are visible to this enterprise.
     *
@@ -108,10 +108,10 @@ class AndroidManagedStoreApp extends MobileApp
     */
     public function setAppTracks($val)
     {
-		$this->_propDict["appTracks"] = $val;
+        $this->_propDict["appTracks"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isPrivate
     * Indicates whether the app is only available to a given enterprise's users.
@@ -126,7 +126,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the isPrivate
     * Indicates whether the app is only available to a given enterprise's users.
@@ -140,7 +140,7 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["isPrivate"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isSystemApp
     * Indicates whether the app is a preinstalled system app.
@@ -155,7 +155,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the isSystemApp
     * Indicates whether the app is a preinstalled system app.
@@ -169,7 +169,7 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["isSystemApp"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the packageId
     * The package identifier.
@@ -184,7 +184,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the packageId
     * The package identifier.
@@ -198,7 +198,7 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["packageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supportsOemConfig
     * Whether this app supports OEMConfig policy.
@@ -213,7 +213,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the supportsOemConfig
     * Whether this app supports OEMConfig policy.
@@ -227,7 +227,7 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["supportsOemConfig"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalLicenseCount
     * The total number of VPP licenses.
@@ -242,7 +242,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the totalLicenseCount
     * The total number of VPP licenses.
@@ -256,7 +256,7 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["totalLicenseCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedLicenseCount
     * The number of VPP licenses in use.
@@ -271,7 +271,7 @@ class AndroidManagedStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the usedLicenseCount
     * The number of VPP licenses in use.
@@ -285,5 +285,5 @@ class AndroidManagedStoreApp extends MobileApp
         $this->_propDict["usedLicenseCount"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -22,10 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CommsApplication extends 
+class CommsApplication implements \JsonSerializable
 {
 
-     /** 
+     /**
      * Gets the calls
      *
      * @return array The calls
@@ -38,8 +38,8 @@ class CommsApplication extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the calls
     *
     * @param Call $val The calls
@@ -48,12 +48,12 @@ class CommsApplication extends
     */
     public function setCalls($val)
     {
-		$this->_propDict["calls"] = $val;
+        $this->_propDict["calls"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onlineMeetings
      *
      * @return array The onlineMeetings
@@ -66,8 +66,8 @@ class CommsApplication extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onlineMeetings
     *
     * @param OnlineMeeting $val The onlineMeetings
@@ -76,8 +76,8 @@ class CommsApplication extends
     */
     public function setOnlineMeetings($val)
     {
-		$this->_propDict["onlineMeetings"] = $val;
+        $this->_propDict["onlineMeetings"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The friendly name
@@ -52,7 +52,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the file
     * File as a byte array
@@ -71,7 +71,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the file
     * File as a byte array
@@ -85,7 +85,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
         $this->_propDict["file"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileHash
     * SHA256 hash of the file
@@ -100,7 +100,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileHash
     * SHA256 hash of the file
@@ -114,7 +114,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
         $this->_propDict["fileHash"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the entity.
@@ -129,7 +129,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the entity.
@@ -143,5 +143,5 @@ class WindowsInformationProtectionAppLockerFile extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

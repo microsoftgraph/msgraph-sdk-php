@@ -38,7 +38,7 @@ class PlannerProgressTaskBoardTaskFormat extends PlannerDelta
             return null;
         }
     }
-    
+
     /**
     * Sets the orderHint
     * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
@@ -52,5 +52,5 @@ class PlannerProgressTaskBoardTaskFormat extends PlannerDelta
         $this->_propDict["orderHint"] = $val;
         return $this;
     }
-    
+
 }

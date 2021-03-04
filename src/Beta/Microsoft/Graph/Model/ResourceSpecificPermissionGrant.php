@@ -37,7 +37,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the clientAppId
     *
@@ -50,7 +50,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
         $this->_propDict["clientAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the clientId
     *
@@ -64,7 +64,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the clientId
     *
@@ -77,7 +77,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
         $this->_propDict["clientId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the permission
     *
@@ -91,7 +91,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the permission
     *
@@ -104,7 +104,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
         $this->_propDict["permission"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the permissionType
     *
@@ -118,7 +118,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the permissionType
     *
@@ -131,7 +131,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
         $this->_propDict["permissionType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceAppId
     *
@@ -145,7 +145,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceAppId
     *
@@ -158,5 +158,5 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
         $this->_propDict["resourceAppId"] = $val;
         return $this;
     }
-    
+
 }

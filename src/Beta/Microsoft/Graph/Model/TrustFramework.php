@@ -22,10 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TrustFramework extends 
+class TrustFramework implements \JsonSerializable
 {
 
-     /** 
+     /**
      * Gets the keySets
      *
      * @return array The keySets
@@ -38,8 +38,8 @@ class TrustFramework extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the keySets
     *
     * @param TrustFrameworkKeySet $val The keySets
@@ -48,12 +48,12 @@ class TrustFramework extends
     */
     public function setKeySets($val)
     {
-		$this->_propDict["keySets"] = $val;
+        $this->_propDict["keySets"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the policies
      *
      * @return array The policies
@@ -66,8 +66,8 @@ class TrustFramework extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the policies
     *
     * @param TrustFrameworkPolicy $val The policies
@@ -76,8 +76,8 @@ class TrustFramework extends
     */
     public function setPolicies($val)
     {
-		$this->_propDict["policies"] = $val;
+        $this->_propDict["policies"] = $val;
         return $this;
     }
-    
+
 }

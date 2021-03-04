@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class InformationProtectionPolicy extends Entity
 {
 
-     /** 
+     /**
      * Gets the labels
      *
      * @return array The labels
@@ -38,8 +38,8 @@ class InformationProtectionPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the labels
     *
     * @param InformationProtectionLabel $val The labels
@@ -48,8 +48,8 @@ class InformationProtectionPolicy extends Entity
     */
     public function setLabels($val)
     {
-		$this->_propDict["labels"] = $val;
+        $this->_propDict["labels"] = $val;
         return $this;
     }
-    
+
 }

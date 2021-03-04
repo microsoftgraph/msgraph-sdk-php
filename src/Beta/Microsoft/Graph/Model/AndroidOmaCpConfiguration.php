@@ -42,7 +42,7 @@ class AndroidOmaCpConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the configurationXml
     * Configuration XML that will be applied to the device. When it is read, it only provides a placeholder string since the original data is encrypted and stored.
@@ -56,5 +56,5 @@ class AndroidOmaCpConfiguration extends DeviceConfiguration
         $this->_propDict["configurationXml"] = $val;
         return $this;
     }
-    
+
 }

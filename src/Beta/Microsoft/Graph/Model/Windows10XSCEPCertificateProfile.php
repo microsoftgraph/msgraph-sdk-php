@@ -42,7 +42,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateStore
     * Target store certificate. Possible values are: user, machine.
@@ -56,7 +56,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["certificateStore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
@@ -75,7 +75,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
@@ -89,7 +89,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["certificateValidityPeriodScale"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period
@@ -104,7 +104,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period
@@ -118,9 +118,9 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["certificateValidityPeriodValue"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extendedKeyUsages
     * Extended Key Usage (EKU) settings.
      *
@@ -134,8 +134,8 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extendedKeyUsages
     * Extended Key Usage (EKU) settings.
     *
@@ -145,12 +145,12 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     */
     public function setExtendedKeyUsages($val)
     {
-		$this->_propDict["extendedKeyUsages"] = $val;
+        $this->_propDict["extendedKeyUsages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the hashAlgorithm
     * SCEP Hash Algorithm.
      *
@@ -164,8 +164,8 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the hashAlgorithm
     * SCEP Hash Algorithm.
     *
@@ -175,10 +175,10 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     */
     public function setHashAlgorithm($val)
     {
-		$this->_propDict["hashAlgorithm"] = $val;
+        $this->_propDict["hashAlgorithm"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
@@ -197,7 +197,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
@@ -211,7 +211,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["keySize"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keyStorageProvider
     * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
@@ -230,7 +230,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the keyStorageProvider
     * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
@@ -244,7 +244,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["keyStorageProvider"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
@@ -263,7 +263,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
@@ -277,7 +277,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["keyUsage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage
@@ -292,7 +292,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the renewalThresholdPercentage
     * Certificate renewal threshold percentage
@@ -306,7 +306,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["renewalThresholdPercentage"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the rootCertificateId
     * Trusted Root Certificate ID
@@ -321,7 +321,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the rootCertificateId
     * Trusted Root Certificate ID
@@ -335,7 +335,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["rootCertificateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scepServerUrls
     * SCEP Server Url(s).
@@ -350,7 +350,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the scepServerUrls
     * SCEP Server Url(s).
@@ -364,9 +364,9 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["scepServerUrls"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the subjectAlternativeNameFormats
     * Custom AAD Attributes.
      *
@@ -380,8 +380,8 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the subjectAlternativeNameFormats
     * Custom AAD Attributes.
     *
@@ -391,10 +391,10 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     */
     public function setSubjectAlternativeNameFormats($val)
     {
-		$this->_propDict["subjectAlternativeNameFormats"] = $val;
+        $this->_propDict["subjectAlternativeNameFormats"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -409,7 +409,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -423,5 +423,5 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
         $this->_propDict["subjectNameFormatString"] = $val;
         return $this;
     }
-    
+
 }

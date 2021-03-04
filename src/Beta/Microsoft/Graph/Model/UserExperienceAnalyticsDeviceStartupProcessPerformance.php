@@ -38,7 +38,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceCount
     * User experience analytics device startup process summarized count.
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
         $this->_propDict["deviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the medianImpactInMs
     * User experience analytics device startup process median impact in milliseconds.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the medianImpactInMs
     * User experience analytics device startup process median impact in milliseconds.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
         $this->_propDict["medianImpactInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processName
     * User experience analytics device startup process name.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the processName
     * User experience analytics device startup process name.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
         $this->_propDict["processName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the productName
     * The user experience analytics device startup process product name.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the productName
     * The user experience analytics device startup process product name.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
         $this->_propDict["productName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisher
     * The User experience analytics device startup process publisher.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publisher
     * The User experience analytics device startup process publisher.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
         $this->_propDict["publisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalImpactInMs
     * User experience analytics device startup process total impact in milliseconds.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalImpactInMs
     * User experience analytics device startup process total impact in milliseconds.
@@ -197,5 +197,5 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
         $this->_propDict["totalImpactInMs"] = intval($val);
         return $this;
     }
-    
+
 }

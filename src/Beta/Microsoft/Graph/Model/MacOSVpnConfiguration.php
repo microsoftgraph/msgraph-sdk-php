@@ -42,7 +42,7 @@ class MacOSVpnConfiguration extends AppleVpnConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
@@ -56,5 +56,5 @@ class MacOSVpnConfiguration extends AppleVpnConfiguration
         $this->_propDict["identityCertificate"] = $val;
         return $this;
     }
-    
+
 }

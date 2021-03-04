@@ -37,7 +37,7 @@ class ParticipantLeftNotification extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participantId
     *
@@ -50,7 +50,7 @@ class ParticipantLeftNotification extends Entity
         $this->_propDict["participantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the call
     *
@@ -68,7 +68,7 @@ class ParticipantLeftNotification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the call
     *
@@ -81,5 +81,5 @@ class ParticipantLeftNotification extends Entity
         $this->_propDict["call"] = $val;
         return $this;
     }
-    
+
 }

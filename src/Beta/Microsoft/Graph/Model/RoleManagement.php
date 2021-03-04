@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RoleManagement extends 
+class RoleManagement implements \JsonSerializable
 {
     /**
     * Gets the directory
@@ -41,7 +41,7 @@ class RoleManagement extends
         }
         return null;
     }
-    
+
     /**
     * Sets the directory
     *
@@ -54,7 +54,7 @@ class RoleManagement extends
         $this->_propDict["directory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the entitlementManagement
     * The RbacApplication for Entitlement Management
@@ -73,7 +73,7 @@ class RoleManagement extends
         }
         return null;
     }
-    
+
     /**
     * Sets the entitlementManagement
     * The RbacApplication for Entitlement Management
@@ -87,7 +87,7 @@ class RoleManagement extends
         $this->_propDict["entitlementManagement"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceManagement
     * The RbacApplication for Device Management
@@ -106,7 +106,7 @@ class RoleManagement extends
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceManagement
     * The RbacApplication for Device Management
@@ -120,5 +120,5 @@ class RoleManagement extends
         $this->_propDict["deviceManagement"] = $val;
         return $this;
     }
-    
+
 }

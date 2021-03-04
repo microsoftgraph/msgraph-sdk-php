@@ -38,7 +38,7 @@ class UsageRight extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the catalogId
     * Product id corresponding to the usage right.
@@ -52,7 +52,7 @@ class UsageRight extends Entity
         $this->_propDict["catalogId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serviceIdentifier
     * Identifier of the service corresponding to the usage right.
@@ -67,7 +67,7 @@ class UsageRight extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serviceIdentifier
     * Identifier of the service corresponding to the usage right.
@@ -81,7 +81,7 @@ class UsageRight extends Entity
         $this->_propDict["serviceIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * The state of the usage right. Possible values are: active, inactive, warning, suspended.
@@ -100,7 +100,7 @@ class UsageRight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * The state of the usage right. Possible values are: active, inactive, warning, suspended.
@@ -114,5 +114,5 @@ class UsageRight extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class PersonResponsibility extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the collaborationTags
     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
@@ -52,7 +52,7 @@ class PersonResponsibility extends ItemFacet
         $this->_propDict["collaborationTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the responsibility.
@@ -67,7 +67,7 @@ class PersonResponsibility extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the responsibility.
@@ -81,7 +81,7 @@ class PersonResponsibility extends ItemFacet
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Contains a friendly name for the responsibility.
@@ -96,7 +96,7 @@ class PersonResponsibility extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Contains a friendly name for the responsibility.
@@ -110,7 +110,7 @@ class PersonResponsibility extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnailUrl
     *
@@ -124,7 +124,7 @@ class PersonResponsibility extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the thumbnailUrl
     *
@@ -137,7 +137,7 @@ class PersonResponsibility extends ItemFacet
         $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * Contains a link to a web page or resource about the responsibility.
@@ -152,7 +152,7 @@ class PersonResponsibility extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * Contains a link to a web page or resource about the responsibility.
@@ -166,5 +166,5 @@ class PersonResponsibility extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     *
@@ -54,7 +54,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -68,7 +68,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -81,7 +81,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -99,7 +99,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -112,7 +112,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -126,7 +126,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -139,7 +139,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -157,7 +157,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -170,7 +170,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usedAndroidPhone
     *
@@ -184,7 +184,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedAndroidPhone
     *
@@ -197,7 +197,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["usedAndroidPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usediOS
     *
@@ -211,7 +211,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usediOS
     *
@@ -224,7 +224,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["usediOS"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedMac
     *
@@ -238,7 +238,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedMac
     *
@@ -251,7 +251,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["usedMac"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedWeb
     *
@@ -265,7 +265,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedWeb
     *
@@ -278,7 +278,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["usedWeb"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedWindows
     *
@@ -292,7 +292,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedWindows
     *
@@ -305,7 +305,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["usedWindows"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedWindowsPhone
     *
@@ -319,7 +319,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usedWindowsPhone
     *
@@ -332,7 +332,7 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["usedWindowsPhone"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -346,7 +346,7 @@ class TeamsDeviceUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -359,5 +359,5 @@ class TeamsDeviceUsageUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

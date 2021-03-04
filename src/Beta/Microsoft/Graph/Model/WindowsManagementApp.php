@@ -38,7 +38,7 @@ class WindowsManagementApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the availableVersion
     * Windows management app available version.
@@ -52,9 +52,9 @@ class WindowsManagementApp extends Entity
         $this->_propDict["availableVersion"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the healthStates
     * The list of health states for installed Windows management app.
      *
@@ -68,8 +68,8 @@ class WindowsManagementApp extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the healthStates
     * The list of health states for installed Windows management app.
     *
@@ -79,8 +79,8 @@ class WindowsManagementApp extends Entity
     */
     public function setHealthStates($val)
     {
-		$this->_propDict["healthStates"] = $val;
+        $this->_propDict["healthStates"] = $val;
         return $this;
     }
-    
+
 }

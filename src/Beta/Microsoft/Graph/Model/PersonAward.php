@@ -38,7 +38,7 @@ class PersonAward extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Descpription of the award or honor.
@@ -52,7 +52,7 @@ class PersonAward extends ItemFacet
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the award or honor.
@@ -67,7 +67,7 @@ class PersonAward extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the award or honor.
@@ -81,7 +81,7 @@ class PersonAward extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuedDate
     * The date that the award or honor was granted.
@@ -100,7 +100,7 @@ class PersonAward extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the issuedDate
     * The date that the award or honor was granted.
@@ -114,7 +114,7 @@ class PersonAward extends ItemFacet
         $this->_propDict["issuedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuingAuthority
     * Authority which granted the award or honor.
@@ -129,7 +129,7 @@ class PersonAward extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the issuingAuthority
     * Authority which granted the award or honor.
@@ -143,7 +143,7 @@ class PersonAward extends ItemFacet
         $this->_propDict["issuingAuthority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnailUrl
     * URL referencing a thumbnail of the award or honor.
@@ -158,7 +158,7 @@ class PersonAward extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the thumbnailUrl
     * URL referencing a thumbnail of the award or honor.
@@ -172,7 +172,7 @@ class PersonAward extends ItemFacet
         $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * URL referencing the award or honor.
@@ -187,7 +187,7 @@ class PersonAward extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * URL referencing the award or honor.
@@ -201,5 +201,5 @@ class PersonAward extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

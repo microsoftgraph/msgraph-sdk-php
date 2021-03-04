@@ -38,7 +38,7 @@ class MicrosoftTunnelServer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The MicrosoftTunnelServer's display name
@@ -52,7 +52,7 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastCheckinDateTime
     * When the MicrosoftTunnelServer last checked in
@@ -71,7 +71,7 @@ class MicrosoftTunnelServer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastCheckinDateTime
     * When the MicrosoftTunnelServer last checked in
@@ -85,7 +85,7 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["lastCheckinDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tunnelServerHealthStatus
     * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
@@ -104,7 +104,7 @@ class MicrosoftTunnelServer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tunnelServerHealthStatus
     * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
@@ -118,5 +118,5 @@ class MicrosoftTunnelServer extends Entity
         $this->_propDict["tunnelServerHealthStatus"] = $val;
         return $this;
     }
-    
+
 }

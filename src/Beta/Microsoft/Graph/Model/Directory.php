@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class Directory extends Entity
 {
 
-     /** 
+     /**
      * Gets the administrativeUnits
      *
      * @return array The administrativeUnits
@@ -38,8 +38,8 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the administrativeUnits
     *
     * @param AdministrativeUnit $val The administrativeUnits
@@ -48,12 +48,12 @@ class Directory extends Entity
     */
     public function setAdministrativeUnits($val)
     {
-		$this->_propDict["administrativeUnits"] = $val;
+        $this->_propDict["administrativeUnits"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *
@@ -67,8 +67,8 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deletedItems
     * Recently deleted items. Read-only. Nullable.
     *
@@ -78,12 +78,12 @@ class Directory extends Entity
     */
     public function setDeletedItems($val)
     {
-		$this->_propDict["deletedItems"] = $val;
+        $this->_propDict["deletedItems"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sharedEmailDomains
      *
      * @return array The sharedEmailDomains
@@ -96,8 +96,8 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sharedEmailDomains
     *
     * @param SharedEmailDomain $val The sharedEmailDomains
@@ -106,12 +106,12 @@ class Directory extends Entity
     */
     public function setSharedEmailDomains($val)
     {
-		$this->_propDict["sharedEmailDomains"] = $val;
+        $this->_propDict["sharedEmailDomains"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the featureRolloutPolicies
     * Nullable.
      *
@@ -125,8 +125,8 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the featureRolloutPolicies
     * Nullable.
     *
@@ -136,8 +136,8 @@ class Directory extends Entity
     */
     public function setFeatureRolloutPolicies($val)
     {
-		$this->_propDict["featureRolloutPolicies"] = $val;
+        $this->_propDict["featureRolloutPolicies"] = $val;
         return $this;
     }
-    
+
 }

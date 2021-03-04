@@ -38,7 +38,7 @@ class GroupPolicyDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the categoryPath
     * The localized full category path for the policy.
@@ -52,7 +52,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["categoryPath"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the classType
     * Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
@@ -71,7 +71,7 @@ class GroupPolicyDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the classType
     * Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
@@ -85,7 +85,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["classType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The localized policy name.
@@ -100,7 +100,7 @@ class GroupPolicyDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The localized policy name.
@@ -114,7 +114,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the explainText
     * The localized explanation or help text associated with the policy. The default value is empty.
@@ -129,7 +129,7 @@ class GroupPolicyDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the explainText
     * The localized explanation or help text associated with the policy. The default value is empty.
@@ -143,7 +143,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["explainText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyCategoryId
     * The category id of the parent category
@@ -158,7 +158,7 @@ class GroupPolicyDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupPolicyCategoryId
     * The category id of the parent category
@@ -172,7 +172,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["groupPolicyCategoryId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -191,7 +191,7 @@ class GroupPolicyDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -205,7 +205,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyType
     * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
@@ -224,7 +224,7 @@ class GroupPolicyDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policyType
     * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
@@ -238,7 +238,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["policyType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supportedOn
     * Localized string used to specify what operating system or application version is affected by the policy.
@@ -253,7 +253,7 @@ class GroupPolicyDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the supportedOn
     * Localized string used to specify what operating system or application version is affected by the policy.
@@ -267,7 +267,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["supportedOn"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the category
     * The group policy category associated with the definition.
@@ -286,7 +286,7 @@ class GroupPolicyDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * The group policy category associated with the definition.
@@ -300,7 +300,7 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the definitionFile
     * The group policy file associated with the definition.
@@ -319,7 +319,7 @@ class GroupPolicyDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the definitionFile
     * The group policy file associated with the definition.
@@ -333,9 +333,9 @@ class GroupPolicyDefinition extends Entity
         $this->_propDict["definitionFile"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the presentations
     * The group policy presentations associated with the definition.
      *
@@ -349,8 +349,8 @@ class GroupPolicyDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the presentations
     * The group policy presentations associated with the definition.
     *
@@ -360,8 +360,8 @@ class GroupPolicyDefinition extends Entity
     */
     public function setPresentations($val)
     {
-		$this->_propDict["presentations"] = $val;
+        $this->_propDict["presentations"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class EducationSchool extends EducationOrganization
         }
         return null;
     }
-    
+
     /**
     * Sets the address
     * Address of the school.
@@ -56,7 +56,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * Entity who created the school.
@@ -75,7 +75,7 @@ class EducationSchool extends EducationOrganization
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * Entity who created the school.
@@ -89,7 +89,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     * ID of school in syncing system.
@@ -104,7 +104,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     * ID of school in syncing system.
@@ -118,7 +118,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalPrincipalId
     * ID of principal in syncing system.
@@ -133,7 +133,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the externalPrincipalId
     * ID of principal in syncing system.
@@ -147,7 +147,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["externalPrincipalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fax
     *
@@ -161,7 +161,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the fax
     *
@@ -174,7 +174,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["fax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the highestGrade
     * Highest grade taught.
@@ -189,7 +189,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the highestGrade
     * Highest grade taught.
@@ -203,7 +203,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["highestGrade"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lowestGrade
     * Lowest grade taught.
@@ -218,7 +218,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the lowestGrade
     * Lowest grade taught.
@@ -232,7 +232,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["lowestGrade"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the phone
     * Phone number of school.
@@ -247,7 +247,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the phone
     * Phone number of school.
@@ -261,7 +261,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["phone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalEmail
     * Email address of the principal.
@@ -276,7 +276,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the principalEmail
     * Email address of the principal.
@@ -290,7 +290,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["principalEmail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalName
     * Name of the principal.
@@ -305,7 +305,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the principalName
     * Name of the principal.
@@ -319,7 +319,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["principalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schoolNumber
     * School Number.
@@ -334,7 +334,7 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
+
     /**
     * Sets the schoolNumber
     * School Number.
@@ -348,7 +348,7 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["schoolNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the administrativeUnit
     *
@@ -366,7 +366,7 @@ class EducationSchool extends EducationOrganization
         }
         return null;
     }
-    
+
     /**
     * Sets the administrativeUnit
     *
@@ -379,9 +379,9 @@ class EducationSchool extends EducationOrganization
         $this->_propDict["administrativeUnit"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the classes
     * Classes taught at the school. Nullable.
      *
@@ -395,8 +395,8 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the classes
     * Classes taught at the school. Nullable.
     *
@@ -406,12 +406,12 @@ class EducationSchool extends EducationOrganization
     */
     public function setClasses($val)
     {
-		$this->_propDict["classes"] = $val;
+        $this->_propDict["classes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the users
     * Users in the school. Nullable.
      *
@@ -425,8 +425,8 @@ class EducationSchool extends EducationOrganization
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the users
     * Users in the school. Nullable.
     *
@@ -436,8 +436,8 @@ class EducationSchool extends EducationOrganization
     */
     public function setUsers($val)
     {
-		$this->_propDict["users"] = $val;
+        $this->_propDict["users"] = $val;
         return $this;
     }
-    
+
 }

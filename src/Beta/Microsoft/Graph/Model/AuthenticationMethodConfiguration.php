@@ -42,7 +42,7 @@ class AuthenticationMethodConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * The state of the policy. Possible values are: enabled, disabled.
@@ -56,5 +56,5 @@ class AuthenticationMethodConfiguration extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
 }

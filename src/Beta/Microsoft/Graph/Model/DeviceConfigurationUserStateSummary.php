@@ -38,7 +38,7 @@ class DeviceConfigurationUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the compliantUserCount
     * Number of compliant users
@@ -52,7 +52,7 @@ class DeviceConfigurationUserStateSummary extends Entity
         $this->_propDict["compliantUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the conflictUserCount
     * Number of conflict users
@@ -67,7 +67,7 @@ class DeviceConfigurationUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the conflictUserCount
     * Number of conflict users
@@ -81,7 +81,7 @@ class DeviceConfigurationUserStateSummary extends Entity
         $this->_propDict["conflictUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorUserCount
     * Number of error users
@@ -96,7 +96,7 @@ class DeviceConfigurationUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorUserCount
     * Number of error users
@@ -110,7 +110,7 @@ class DeviceConfigurationUserStateSummary extends Entity
         $this->_propDict["errorUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the nonCompliantUserCount
     * Number of NonCompliant users
@@ -125,7 +125,7 @@ class DeviceConfigurationUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the nonCompliantUserCount
     * Number of NonCompliant users
@@ -139,7 +139,7 @@ class DeviceConfigurationUserStateSummary extends Entity
         $this->_propDict["nonCompliantUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notApplicableUserCount
     * Number of not applicable users
@@ -154,7 +154,7 @@ class DeviceConfigurationUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicableUserCount
     * Number of not applicable users
@@ -168,7 +168,7 @@ class DeviceConfigurationUserStateSummary extends Entity
         $this->_propDict["notApplicableUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remediatedUserCount
     * Number of remediated users
@@ -183,7 +183,7 @@ class DeviceConfigurationUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediatedUserCount
     * Number of remediated users
@@ -197,7 +197,7 @@ class DeviceConfigurationUserStateSummary extends Entity
         $this->_propDict["remediatedUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unknownUserCount
     * Number of unknown users
@@ -212,7 +212,7 @@ class DeviceConfigurationUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the unknownUserCount
     * Number of unknown users
@@ -226,5 +226,5 @@ class DeviceConfigurationUserStateSummary extends Entity
         $this->_propDict["unknownUserCount"] = intval($val);
         return $this;
     }
-    
+
 }

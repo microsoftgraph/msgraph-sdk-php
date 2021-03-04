@@ -42,7 +42,7 @@ class EducationRubric extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The user who created this resource.
@@ -56,7 +56,7 @@ class EducationRubric extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -75,7 +75,7 @@ class EducationRubric extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -89,7 +89,7 @@ class EducationRubric extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of this rubric.
@@ -108,7 +108,7 @@ class EducationRubric extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the description
     * The description of this rubric.
@@ -122,7 +122,7 @@ class EducationRubric extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of this rubric.
@@ -137,7 +137,7 @@ class EducationRubric extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of this rubric.
@@ -151,7 +151,7 @@ class EducationRubric extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the grading
     * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
@@ -170,7 +170,7 @@ class EducationRubric extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the grading
     * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
@@ -184,7 +184,7 @@ class EducationRubric extends Entity
         $this->_propDict["grading"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     * The last user to modify the resource.
@@ -203,7 +203,7 @@ class EducationRubric extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     * The last user to modify the resource.
@@ -217,7 +217,7 @@ class EducationRubric extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -236,7 +236,7 @@ class EducationRubric extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -250,9 +250,9 @@ class EducationRubric extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the levels
     * The collection of levels making up this rubric.
      *
@@ -266,8 +266,8 @@ class EducationRubric extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the levels
     * The collection of levels making up this rubric.
     *
@@ -277,12 +277,12 @@ class EducationRubric extends Entity
     */
     public function setLevels($val)
     {
-		$this->_propDict["levels"] = $val;
+        $this->_propDict["levels"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the qualities
     * The collection of qualities making up this rubric.
      *
@@ -296,8 +296,8 @@ class EducationRubric extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the qualities
     * The collection of qualities making up this rubric.
     *
@@ -307,8 +307,8 @@ class EducationRubric extends Entity
     */
     public function setQualities($val)
     {
-		$this->_propDict["qualities"] = $val;
+        $this->_propDict["qualities"] = $val;
         return $this;
     }
-    
+
 }

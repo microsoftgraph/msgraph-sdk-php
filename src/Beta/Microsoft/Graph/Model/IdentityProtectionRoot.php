@@ -22,10 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentityProtectionRoot extends 
+class IdentityProtectionRoot implements \JsonSerializable
 {
 
-     /** 
+     /**
      * Gets the riskDetections
      *
      * @return array The riskDetections
@@ -38,8 +38,8 @@ class IdentityProtectionRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the riskDetections
     *
     * @param RiskDetection $val The riskDetections
@@ -48,12 +48,12 @@ class IdentityProtectionRoot extends
     */
     public function setRiskDetections($val)
     {
-		$this->_propDict["riskDetections"] = $val;
+        $this->_propDict["riskDetections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the riskyUsers
      *
      * @return array The riskyUsers
@@ -66,8 +66,8 @@ class IdentityProtectionRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the riskyUsers
     *
     * @param RiskyUser $val The riskyUsers
@@ -76,8 +76,8 @@ class IdentityProtectionRoot extends
     */
     public function setRiskyUsers($val)
     {
-		$this->_propDict["riskyUsers"] = $val;
+        $this->_propDict["riskyUsers"] = $val;
         return $this;
     }
-    
+
 }

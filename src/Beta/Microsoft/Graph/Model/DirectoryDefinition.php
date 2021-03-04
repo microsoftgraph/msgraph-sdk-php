@@ -42,7 +42,7 @@ class DirectoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discoverabilities
     * Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue.
@@ -56,7 +56,7 @@ class DirectoryDefinition extends Entity
         $this->_propDict["discoverabilities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discoveryDateTime
     * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -75,7 +75,7 @@ class DirectoryDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discoveryDateTime
     * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -89,7 +89,7 @@ class DirectoryDefinition extends Entity
         $this->_propDict["discoveryDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * Name of the directory. Must be unique within the synchronization schema. Not nullable.
@@ -104,7 +104,7 @@ class DirectoryDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Name of the directory. Must be unique within the synchronization schema. Not nullable.
@@ -118,9 +118,9 @@ class DirectoryDefinition extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the objects
     * Collection of objects supported by the directory.
      *
@@ -134,8 +134,8 @@ class DirectoryDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the objects
     * Collection of objects supported by the directory.
     *
@@ -145,10 +145,10 @@ class DirectoryDefinition extends Entity
     */
     public function setObjects($val)
     {
-		$this->_propDict["objects"] = $val;
+        $this->_propDict["objects"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the readOnly
     *
@@ -162,7 +162,7 @@ class DirectoryDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the readOnly
     *
@@ -175,7 +175,7 @@ class DirectoryDefinition extends Entity
         $this->_propDict["readOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Read only value that indicates version discovered. Null if discovery has not yet occurred.
@@ -190,7 +190,7 @@ class DirectoryDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Read only value that indicates version discovered. Null if discovery has not yet occurred.
@@ -204,5 +204,5 @@ class DirectoryDefinition extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

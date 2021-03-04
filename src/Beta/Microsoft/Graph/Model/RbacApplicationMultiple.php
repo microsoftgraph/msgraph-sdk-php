@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class RbacApplicationMultiple extends Entity
 {
 
-     /** 
+     /**
      * Gets the resourceNamespaces
      *
      * @return array The resourceNamespaces
@@ -38,8 +38,8 @@ class RbacApplicationMultiple extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the resourceNamespaces
     *
     * @param UnifiedRbacResourceNamespace $val The resourceNamespaces
@@ -48,12 +48,12 @@ class RbacApplicationMultiple extends Entity
     */
     public function setResourceNamespaces($val)
     {
-		$this->_propDict["resourceNamespaces"] = $val;
+        $this->_propDict["resourceNamespaces"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignments
      *
      * @return array The roleAssignments
@@ -66,8 +66,8 @@ class RbacApplicationMultiple extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignments
     *
     * @param UnifiedRoleAssignmentMultiple $val The roleAssignments
@@ -76,12 +76,12 @@ class RbacApplicationMultiple extends Entity
     */
     public function setRoleAssignments($val)
     {
-		$this->_propDict["roleAssignments"] = $val;
+        $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleDefinitions
      *
      * @return array The roleDefinitions
@@ -94,8 +94,8 @@ class RbacApplicationMultiple extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleDefinitions
     *
     * @param UnifiedRoleDefinition $val The roleDefinitions
@@ -104,8 +104,8 @@ class RbacApplicationMultiple extends Entity
     */
     public function setRoleDefinitions($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+        $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
-    
+
 }

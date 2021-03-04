@@ -38,7 +38,7 @@ class DeviceManagementScriptDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCode
     * Error code corresponding to erroneous execution of the device management script.
@@ -52,7 +52,7 @@ class DeviceManagementScriptDeviceState extends Entity
         $this->_propDict["errorCode"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorDescription
     * Error description corresponding to erroneous execution of the device management script.
@@ -67,7 +67,7 @@ class DeviceManagementScriptDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorDescription
     * Error description corresponding to erroneous execution of the device management script.
@@ -81,7 +81,7 @@ class DeviceManagementScriptDeviceState extends Entity
         $this->_propDict["errorDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastStateUpdateDateTime
     * Latest time the device management script executes.
@@ -100,7 +100,7 @@ class DeviceManagementScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastStateUpdateDateTime
     * Latest time the device management script executes.
@@ -114,7 +114,7 @@ class DeviceManagementScriptDeviceState extends Entity
         $this->_propDict["lastStateUpdateDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resultMessage
     * Details of execution output.
@@ -129,7 +129,7 @@ class DeviceManagementScriptDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resultMessage
     * Details of execution output.
@@ -143,7 +143,7 @@ class DeviceManagementScriptDeviceState extends Entity
         $this->_propDict["resultMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the runState
     * State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
@@ -162,7 +162,7 @@ class DeviceManagementScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runState
     * State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
@@ -176,7 +176,7 @@ class DeviceManagementScriptDeviceState extends Entity
         $this->_propDict["runState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDevice
     * The managed devices that executes the device management script.
@@ -195,7 +195,7 @@ class DeviceManagementScriptDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the managedDevice
     * The managed devices that executes the device management script.
@@ -209,5 +209,5 @@ class DeviceManagementScriptDeviceState extends Entity
         $this->_propDict["managedDevice"] = $val;
         return $this;
     }
-    
+
 }

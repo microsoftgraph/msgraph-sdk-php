@@ -37,7 +37,7 @@ class AppConsentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     *
@@ -50,7 +50,7 @@ class AppConsentRequest extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appId
     *
@@ -64,7 +64,7 @@ class AppConsentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appId
     *
@@ -77,7 +77,7 @@ class AppConsentRequest extends Entity
         $this->_propDict["appId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the consentType
     *
@@ -91,7 +91,7 @@ class AppConsentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the consentType
     *
@@ -104,9 +104,9 @@ class AppConsentRequest extends Entity
         $this->_propDict["consentType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the pendingScopes
      *
      * @return array The pendingScopes
@@ -119,8 +119,8 @@ class AppConsentRequest extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the pendingScopes
     *
     * @param AppConsentRequestScope $val The pendingScopes
@@ -129,12 +129,12 @@ class AppConsentRequest extends Entity
     */
     public function setPendingScopes($val)
     {
-		$this->_propDict["pendingScopes"] = $val;
+        $this->_propDict["pendingScopes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userConsentRequests
      *
      * @return array The userConsentRequests
@@ -147,8 +147,8 @@ class AppConsentRequest extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userConsentRequests
     *
     * @param UserConsentRequest $val The userConsentRequests
@@ -157,8 +157,8 @@ class AppConsentRequest extends Entity
     */
     public function setUserConsentRequests($val)
     {
-		$this->_propDict["userConsentRequests"] = $val;
+        $this->_propDict["userConsentRequests"] = $val;
         return $this;
     }
-    
+
 }

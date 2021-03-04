@@ -42,7 +42,7 @@ class RecordOperation extends CommsOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the completionReason
     * Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
@@ -56,7 +56,7 @@ class RecordOperation extends CommsOperation
         $this->_propDict["completionReason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recordingAccessToken
     * The access token required to retrieve the recording.
@@ -71,7 +71,7 @@ class RecordOperation extends CommsOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the recordingAccessToken
     * The access token required to retrieve the recording.
@@ -85,7 +85,7 @@ class RecordOperation extends CommsOperation
         $this->_propDict["recordingAccessToken"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recordingLocation
     * The location where the recording is located.
@@ -100,7 +100,7 @@ class RecordOperation extends CommsOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the recordingLocation
     * The location where the recording is located.
@@ -114,5 +114,5 @@ class RecordOperation extends CommsOperation
         $this->_propDict["recordingLocation"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class RestrictedAppsViolation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceConfigurationId
     * Device configuration profile unique identifier, must be Guid
@@ -52,7 +52,7 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["deviceConfigurationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceConfigurationName
     * Device configuration profile name
@@ -67,7 +67,7 @@ class RestrictedAppsViolation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceConfigurationName
     * Device configuration profile name
@@ -81,7 +81,7 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["deviceConfigurationName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device name
@@ -96,7 +96,7 @@ class RestrictedAppsViolation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device name
@@ -110,7 +110,7 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * Managed device unique identifier, must be Guid
@@ -125,7 +125,7 @@ class RestrictedAppsViolation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * Managed device unique identifier, must be Guid
@@ -139,7 +139,7 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platformType
     * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
@@ -158,7 +158,7 @@ class RestrictedAppsViolation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platformType
     * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
@@ -172,9 +172,9 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["platformType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the restrictedApps
     * List of violated restricted apps
      *
@@ -188,8 +188,8 @@ class RestrictedAppsViolation extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the restrictedApps
     * List of violated restricted apps
     *
@@ -199,10 +199,10 @@ class RestrictedAppsViolation extends Entity
     */
     public function setRestrictedApps($val)
     {
-		$this->_propDict["restrictedApps"] = $val;
+        $this->_propDict["restrictedApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the restrictedAppsState
     * Restricted apps state. Possible values are: prohibitedApps, notApprovedApps.
@@ -221,7 +221,7 @@ class RestrictedAppsViolation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the restrictedAppsState
     * Restricted apps state. Possible values are: prohibitedApps, notApprovedApps.
@@ -235,7 +235,7 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["restrictedAppsState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * User unique identifier, must be Guid
@@ -250,7 +250,7 @@ class RestrictedAppsViolation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * User unique identifier, must be Guid
@@ -264,7 +264,7 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * User name
@@ -279,7 +279,7 @@ class RestrictedAppsViolation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * User name
@@ -293,5 +293,5 @@ class RestrictedAppsViolation extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
 }

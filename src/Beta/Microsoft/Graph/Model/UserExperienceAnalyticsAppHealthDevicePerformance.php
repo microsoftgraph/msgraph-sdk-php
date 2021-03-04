@@ -38,7 +38,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appCrashCount
     * The number of app crashes for the device. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["appCrashCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appHangCount
     * The number of app hangs for the device. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appHangCount
     * The number of app hangs for the device. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["appHangCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the crashedAppCount
     * The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the crashedAppCount
     * The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["crashedAppCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceAppHealthScore
     * The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceAppHealthScore
     * The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["deviceAppHealthScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceAppHealthStatus
     * The overall app health status of the device.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceAppHealthStatus
     * The overall app health status of the device.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["deviceAppHealthStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDisplayName
     * The name of the device.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * The name of the device.
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The id of the device.
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The id of the device.
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceManufacturer
     * The manufacturer name of the device.
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceManufacturer
     * The manufacturer name of the device.
@@ -255,7 +255,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["deviceManufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceModel
     * The model name of the device.
@@ -270,7 +270,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceModel
     * The model name of the device.
@@ -284,7 +284,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["deviceModel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
@@ -299,7 +299,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the meanTimeToFailureInMinutes
     * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
@@ -313,5 +313,5 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         $this->_propDict["meanTimeToFailureInMinutes"] = intval($val);
         return $this;
     }
-    
+
 }

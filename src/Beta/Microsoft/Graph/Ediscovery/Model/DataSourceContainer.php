@@ -41,7 +41,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -54,7 +54,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -68,7 +68,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -81,7 +81,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -99,7 +99,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -112,7 +112,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the releasedDateTime
     *
@@ -130,7 +130,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the releasedDateTime
     *
@@ -143,7 +143,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["releasedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -161,7 +161,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -174,7 +174,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastIndexOperation
     *
@@ -192,7 +192,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastIndexOperation
     *
@@ -205,5 +205,5 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastIndexOperation"] = $val;
         return $this;
     }
-    
+
 }

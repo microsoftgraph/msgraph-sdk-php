@@ -37,7 +37,7 @@ class AuthenticationContextClassReference extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -50,7 +50,7 @@ class AuthenticationContextClassReference extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class AuthenticationContextClassReference extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class AuthenticationContextClassReference extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAvailable
     *
@@ -91,7 +91,7 @@ class AuthenticationContextClassReference extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isAvailable
     *
@@ -104,5 +104,5 @@ class AuthenticationContextClassReference extends Entity
         $this->_propDict["isAvailable"] = boolval($val);
         return $this;
     }
-    
+
 }
