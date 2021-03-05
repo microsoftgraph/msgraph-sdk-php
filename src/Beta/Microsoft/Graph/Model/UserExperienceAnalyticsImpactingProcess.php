@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * UserExperienceAnalyticsImpactingProcess File
 * PHP version 7
 *
@@ -38,7 +38,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
             return null;
         }
     }
-
     /**
     * Sets the category
     * The category of impacting process.
@@ -52,7 +51,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-
     /**
     * Gets the description
     * The description of process.
@@ -67,7 +65,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
             return null;
         }
     }
-
     /**
     * Sets the description
     * The description of process.
@@ -81,7 +78,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-
     /**
     * Gets the deviceId
     * The unique identifier of the impacted device.
@@ -96,7 +92,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
             return null;
         }
     }
-
     /**
     * Sets the deviceId
     * The unique identifier of the impacted device.
@@ -110,7 +105,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-
     /**
     * Gets the impactValue
     * The impact value of the process. Valid values 0 to 1.79769313486232E+308
@@ -125,7 +119,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
             return null;
         }
     }
-
     /**
     * Sets the impactValue
     * The impact value of the process. Valid values 0 to 1.79769313486232E+308
@@ -139,7 +132,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
         $this->_propDict["impactValue"] = $val;
         return $this;
     }
-
     /**
     * Gets the processName
     * The process name.
@@ -154,7 +146,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
             return null;
         }
     }
-
     /**
     * Sets the processName
     * The process name.
@@ -168,7 +159,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
         $this->_propDict["processName"] = $val;
         return $this;
     }
-
     /**
     * Gets the publisher
     * The publisher of the process.
@@ -183,7 +173,6 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
             return null;
         }
     }
-
     /**
     * Sets the publisher
     * The publisher of the process.

@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * MicrosoftAuthenticatorAuthenticationMethodTarget File
 * PHP version 7
 *
@@ -41,7 +41,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-
     /**
     * Sets the authenticationMode
     *
@@ -54,7 +53,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         $this->_propDict["authenticationMode"] = $val;
         return $this;
     }
-
     /**
     * Gets the featureSettings
     *
@@ -72,7 +70,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-
     /**
     * Sets the featureSettings
     *

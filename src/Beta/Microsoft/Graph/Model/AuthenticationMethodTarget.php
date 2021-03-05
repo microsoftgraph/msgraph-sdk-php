@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * AuthenticationMethodTarget File
 * PHP version 7
 *
@@ -38,7 +38,6 @@ class AuthenticationMethodTarget extends Entity
             return null;
         }
     }
-
     /**
     * Sets the isRegistrationRequired
     * Determines if the user is enforced to register the authentication method.
@@ -52,7 +51,6 @@ class AuthenticationMethodTarget extends Entity
         $this->_propDict["isRegistrationRequired"] = boolval($val);
         return $this;
     }
-
     /**
     * Gets the targetType
     * Possible values are: user, group.
@@ -71,7 +69,6 @@ class AuthenticationMethodTarget extends Entity
         }
         return null;
     }
-
     /**
     * Sets the targetType
     * Possible values are: user, group.

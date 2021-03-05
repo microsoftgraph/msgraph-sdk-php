@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * ContentType File
 * PHP version 7
 *
@@ -37,7 +37,6 @@ class ContentType extends Entity
             return null;
         }
     }
-
     /**
     * Sets the associatedHubsUrls
     *
@@ -50,7 +49,6 @@ class ContentType extends Entity
         $this->_propDict["associatedHubsUrls"] = $val;
         return $this;
     }
-
     /**
     * Gets the description
     * The descriptive text for the item.
@@ -77,6 +75,68 @@ class ContentType extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the documentSet
+    *
+    * @return DocumentSet The documentSet
+    */
+    public function getDocumentSet()
+    {
+        if (array_key_exists("documentSet", $this->_propDict)) {
+            if (is_a($this->_propDict["documentSet"], "Beta\Microsoft\Graph\Model\DocumentSet")) {
+                return $this->_propDict["documentSet"];
+            } else {
+                $this->_propDict["documentSet"] = new DocumentSet($this->_propDict["documentSet"]);
+                return $this->_propDict["documentSet"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the documentSet
+    *
+    * @param DocumentSet $val The documentSet
+    *
+    * @return ContentType
+    */
+    public function setDocumentSet($val)
+    {
+        $this->_propDict["documentSet"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the documentTemplate
+    *
+    * @return DocumentSetContent The documentTemplate
+    */
+    public function getDocumentTemplate()
+    {
+        if (array_key_exists("documentTemplate", $this->_propDict)) {
+            if (is_a($this->_propDict["documentTemplate"], "Beta\Microsoft\Graph\Model\DocumentSetContent")) {
+                return $this->_propDict["documentTemplate"];
+            } else {
+                $this->_propDict["documentTemplate"] = new DocumentSetContent($this->_propDict["documentTemplate"]);
+                return $this->_propDict["documentTemplate"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the documentTemplate
+    *
+    * @param DocumentSetContent $val The documentTemplate
+    *
+    * @return ContentType
+    */
+    public function setDocumentTemplate($val)
+    {
+        $this->_propDict["documentTemplate"] = $val;
         return $this;
     }
 
@@ -261,6 +321,33 @@ class ContentType extends Entity
     }
 
     /**
+    * Gets the isBuiltIn
+    *
+    * @return bool The isBuiltIn
+    */
+    public function getIsBuiltIn()
+    {
+        if (array_key_exists("isBuiltIn", $this->_propDict)) {
+            return $this->_propDict["isBuiltIn"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isBuiltIn
+    *
+    * @param bool $val The isBuiltIn
+    *
+    * @return ContentType
+    */
+    public function setIsBuiltIn($val)
+    {
+        $this->_propDict["isBuiltIn"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the name
     * The name of the content type.
     *
@@ -348,6 +435,33 @@ class ContentType extends Entity
     public function setParentId($val)
     {
         $this->_propDict["parentId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the propagateChanges
+    *
+    * @return bool The propagateChanges
+    */
+    public function getPropagateChanges()
+    {
+        if (array_key_exists("propagateChanges", $this->_propDict)) {
+            return $this->_propDict["propagateChanges"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the propagateChanges
+    *
+    * @param bool $val The propagateChanges
+    *
+    * @return ContentType
+    */
+    public function setPropagateChanges($val)
+    {
+        $this->_propDict["propagateChanges"] = boolval($val);
         return $this;
     }
 

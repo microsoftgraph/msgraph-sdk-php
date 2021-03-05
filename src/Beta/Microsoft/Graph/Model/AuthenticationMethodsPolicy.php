@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * AuthenticationMethodsPolicy File
 * PHP version 7
 *
@@ -37,7 +37,6 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-
     /**
     * Sets the description
     *
@@ -50,7 +49,6 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-
     /**
     * Gets the displayName
     *
@@ -64,7 +62,6 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-
     /**
     * Sets the displayName
     *
@@ -77,7 +74,6 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
     /**
     * Gets the lastModifiedDateTime
     *
@@ -95,7 +91,6 @@ class AuthenticationMethodsPolicy extends Entity
         }
         return null;
     }
-
     /**
     * Sets the lastModifiedDateTime
     *
@@ -108,7 +103,6 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-
     /**
     * Gets the policyVersion
     *
@@ -122,7 +116,6 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-
     /**
     * Sets the policyVersion
     *
@@ -135,7 +128,6 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["policyVersion"] = $val;
         return $this;
     }
-
     /**
     * Gets the reconfirmationInDays
     *
@@ -149,7 +141,6 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-
     /**
     * Sets the reconfirmationInDays
     *

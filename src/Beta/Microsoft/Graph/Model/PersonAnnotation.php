@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * PersonAnnotation File
 * PHP version 7
 *
@@ -85,7 +85,6 @@ class PersonAnnotation extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-
     /**
     * Gets the thumbnailUrl
     *
@@ -99,7 +98,6 @@ class PersonAnnotation extends ItemFacet
             return null;
         }
     }
-
     /**
     * Sets the thumbnailUrl
     *

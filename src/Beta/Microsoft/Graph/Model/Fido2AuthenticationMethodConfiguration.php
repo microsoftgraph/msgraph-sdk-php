@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * Fido2AuthenticationMethodConfiguration File
 * PHP version 7
 *
@@ -38,7 +38,6 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
             return null;
         }
     }
-
     /**
     * Sets the isAttestationEnforced
     * Determines whether attestation must be enforced for FIDO2 security key registration.
@@ -52,7 +51,6 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         $this->_propDict["isAttestationEnforced"] = boolval($val);
         return $this;
     }
-
     /**
     * Gets the isSelfServiceRegistrationAllowed
     * Determines if users can register new FIDO2 security keys.
@@ -67,7 +65,6 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
             return null;
         }
     }
-
     /**
     * Sets the isSelfServiceRegistrationAllowed
     * Determines if users can register new FIDO2 security keys.
@@ -81,7 +78,6 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         $this->_propDict["isSelfServiceRegistrationAllowed"] = boolval($val);
         return $this;
     }
-
     /**
     * Gets the keyRestrictions
     * Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
@@ -100,7 +96,6 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         }
         return null;
     }
-
     /**
     * Sets the keyRestrictions
     * Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.

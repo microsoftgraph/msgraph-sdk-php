@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * SmsAuthenticationMethodTarget File
 * PHP version 7
 *
@@ -38,7 +38,6 @@ class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget
             return null;
         }
     }
-
     /**
     * Sets the isUsableForSignIn
     * Determines if the users or groups can use this authentication method to sign in to Azure AD. The value is always true.

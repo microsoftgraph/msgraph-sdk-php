@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * PolicyRoot File
 * PHP version 7
 *
@@ -69,7 +69,6 @@ class PolicyRoot implements \JsonSerializable
         }
         return null;
     }
-
     /**
     * Sets the authenticationMethodsPolicy
     *
@@ -82,7 +81,11 @@ class PolicyRoot implements \JsonSerializable
         $this->_propDict["authenticationMethodsPolicy"] = $val;
         return $this;
     }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> dev
     /**
     * Gets the authenticationFlowsPolicy
     *

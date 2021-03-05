@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * TemporaryAccessPassAuthenticationMethodConfiguration File
 * PHP version 7
 *
@@ -37,7 +37,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-
     /**
     * Sets the defaultLength
     *
@@ -50,7 +49,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["defaultLength"] = intval($val);
         return $this;
     }
-
     /**
     * Gets the defaultLifetimeInMinutes
     *
@@ -64,7 +62,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-
     /**
     * Sets the defaultLifetimeInMinutes
     *
@@ -77,7 +74,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["defaultLifetimeInMinutes"] = intval($val);
         return $this;
     }
-
     /**
     * Gets the isUsableOnce
     *
@@ -91,7 +87,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-
     /**
     * Sets the isUsableOnce
     *
@@ -104,7 +99,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["isUsableOnce"] = boolval($val);
         return $this;
     }
-
     /**
     * Gets the maximumLifetimeInMinutes
     *
@@ -118,7 +112,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-
     /**
     * Sets the maximumLifetimeInMinutes
     *
@@ -131,7 +124,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
         $this->_propDict["maximumLifetimeInMinutes"] = intval($val);
         return $this;
     }
-
     /**
     * Gets the minimumLifetimeInMinutes
     *
@@ -145,7 +137,6 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
             return null;
         }
     }
-
     /**
     * Sets the minimumLifetimeInMinutes
     *

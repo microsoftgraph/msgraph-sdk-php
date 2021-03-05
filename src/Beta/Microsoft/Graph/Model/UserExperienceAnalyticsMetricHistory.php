@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * UserExperienceAnalyticsMetricHistory File
 * PHP version 7
 *
@@ -38,7 +38,6 @@ class UserExperienceAnalyticsMetricHistory extends Entity
             return null;
         }
     }
-
     /**
     * Sets the deviceId
     * The user experience analytics device id.
@@ -52,7 +51,6 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-
     /**
     * Gets the metricDateTime
     * The user experience analytics metric date time.

@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * EmailAuthenticationMethodConfiguration File
 * PHP version 7
 *
@@ -42,7 +42,6 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         }
         return null;
     }
-
     /**
     * Sets the allowExternalIdToUseEmailOtp
     * Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who did not use public preview will automatically have email OTP enabled beginning in March 2021.

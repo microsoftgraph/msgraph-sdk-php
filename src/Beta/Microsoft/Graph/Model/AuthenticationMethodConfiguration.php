@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * AuthenticationMethodConfiguration File
 * PHP version 7
 *
@@ -42,7 +42,6 @@ class AuthenticationMethodConfiguration extends Entity
         }
         return null;
     }
-
     /**
     * Sets the state
     * The state of the policy. Possible values are: enabled, disabled.

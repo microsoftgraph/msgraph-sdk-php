@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * ColumnDefinition File
 * PHP version 7
 *
@@ -149,6 +149,37 @@ class ColumnDefinition extends Entity
     public function setColumnGroup($val)
     {
         $this->_propDict["columnGroup"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the contentApprovalStatus
+    *
+    * @return ContentApprovalStatusColumn The contentApprovalStatus
+    */
+    public function getContentApprovalStatus()
+    {
+        if (array_key_exists("contentApprovalStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["contentApprovalStatus"], "Beta\Microsoft\Graph\Model\ContentApprovalStatusColumn")) {
+                return $this->_propDict["contentApprovalStatus"];
+            } else {
+                $this->_propDict["contentApprovalStatus"] = new ContentApprovalStatusColumn($this->_propDict["contentApprovalStatus"]);
+                return $this->_propDict["contentApprovalStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the contentApprovalStatus
+    *
+    * @param ContentApprovalStatusColumn $val The contentApprovalStatus
+    *
+    * @return ColumnDefinition
+    */
+    public function setContentApprovalStatus($val)
+    {
+        $this->_propDict["contentApprovalStatus"] = $val;
         return $this;
     }
 
@@ -463,6 +494,37 @@ class ColumnDefinition extends Entity
     }
 
     /**
+    * Gets the hyperlinkOrPicture
+    *
+    * @return HyperlinkOrPictureColumn The hyperlinkOrPicture
+    */
+    public function getHyperlinkOrPicture()
+    {
+        if (array_key_exists("hyperlinkOrPicture", $this->_propDict)) {
+            if (is_a($this->_propDict["hyperlinkOrPicture"], "Beta\Microsoft\Graph\Model\HyperlinkOrPictureColumn")) {
+                return $this->_propDict["hyperlinkOrPicture"];
+            } else {
+                $this->_propDict["hyperlinkOrPicture"] = new HyperlinkOrPictureColumn($this->_propDict["hyperlinkOrPicture"]);
+                return $this->_propDict["hyperlinkOrPicture"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the hyperlinkOrPicture
+    *
+    * @param HyperlinkOrPictureColumn $val The hyperlinkOrPicture
+    *
+    * @return ColumnDefinition
+    */
+    public function setHyperlinkOrPicture($val)
+    {
+        $this->_propDict["hyperlinkOrPicture"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the indexed
     * Specifies whether the column values can used for sorting and searching.
     *
@@ -488,6 +550,87 @@ class ColumnDefinition extends Entity
     public function setIndexed($val)
     {
         $this->_propDict["indexed"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the isDeletable
+    *
+    * @return bool The isDeletable
+    */
+    public function getIsDeletable()
+    {
+        if (array_key_exists("isDeletable", $this->_propDict)) {
+            return $this->_propDict["isDeletable"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isDeletable
+    *
+    * @param bool $val The isDeletable
+    *
+    * @return ColumnDefinition
+    */
+    public function setIsDeletable($val)
+    {
+        $this->_propDict["isDeletable"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the isReorderable
+    *
+    * @return bool The isReorderable
+    */
+    public function getIsReorderable()
+    {
+        if (array_key_exists("isReorderable", $this->_propDict)) {
+            return $this->_propDict["isReorderable"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isReorderable
+    *
+    * @param bool $val The isReorderable
+    *
+    * @return ColumnDefinition
+    */
+    public function setIsReorderable($val)
+    {
+        $this->_propDict["isReorderable"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the isSealed
+    *
+    * @return bool The isSealed
+    */
+    public function getIsSealed()
+    {
+        if (array_key_exists("isSealed", $this->_propDict)) {
+            return $this->_propDict["isSealed"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isSealed
+    *
+    * @param bool $val The isSealed
+    *
+    * @return ColumnDefinition
+    */
+    public function setIsSealed($val)
+    {
+        $this->_propDict["isSealed"] = boolval($val);
         return $this;
     }
 
@@ -728,6 +871,33 @@ class ColumnDefinition extends Entity
     }
 
     /**
+    * Gets the propagateChanges
+    *
+    * @return bool The propagateChanges
+    */
+    public function getPropagateChanges()
+    {
+        if (array_key_exists("propagateChanges", $this->_propDict)) {
+            return $this->_propDict["propagateChanges"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the propagateChanges
+    *
+    * @param bool $val The propagateChanges
+    *
+    * @return ColumnDefinition
+    */
+    public function setPropagateChanges($val)
+    {
+        $this->_propDict["propagateChanges"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the readOnly
     * Specifies whether the column values can be modified.
     *
@@ -817,6 +987,37 @@ class ColumnDefinition extends Entity
     }
 
     /**
+    * Gets the term
+    *
+    * @return TermColumn The term
+    */
+    public function getTerm()
+    {
+        if (array_key_exists("term", $this->_propDict)) {
+            if (is_a($this->_propDict["term"], "Beta\Microsoft\Graph\Model\TermColumn")) {
+                return $this->_propDict["term"];
+            } else {
+                $this->_propDict["term"] = new TermColumn($this->_propDict["term"]);
+                return $this->_propDict["term"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the term
+    *
+    * @param TermColumn $val The term
+    *
+    * @return ColumnDefinition
+    */
+    public function setTerm($val)
+    {
+        $this->_propDict["term"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the text
     * This column stores text values.
     *
@@ -848,7 +1049,6 @@ class ColumnDefinition extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-
     /**
     * Gets the thumbnail
     *
@@ -866,7 +1066,6 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-
     /**
     * Sets the thumbnail
     *
@@ -879,7 +1078,6 @@ class ColumnDefinition extends Entity
         $this->_propDict["thumbnail"] = $val;
         return $this;
     }
-
     /**
     * Gets the type
     *
@@ -897,7 +1095,6 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-
     /**
     * Sets the type
     *
@@ -910,7 +1107,6 @@ class ColumnDefinition extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-
     /**
     * Gets the validation
     *
@@ -928,7 +1124,6 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-
     /**
     * Sets the validation
     *
@@ -941,7 +1136,6 @@ class ColumnDefinition extends Entity
         $this->_propDict["validation"] = $val;
         return $this;
     }
-
     /**
     * Gets the sourceColumn
     *
@@ -959,7 +1153,6 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-
     /**
     * Sets the sourceColumn
     *

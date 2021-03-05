@@ -141,6 +141,37 @@ class Printer extends PrinterBase
     }
 
     /**
+    * Gets the lastSeenDateTime
+    *
+    * @return \DateTime The lastSeenDateTime
+    */
+    public function getLastSeenDateTime()
+    {
+        if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
+                return $this->_propDict["lastSeenDateTime"];
+            } else {
+                $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
+                return $this->_propDict["lastSeenDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastSeenDateTime
+    *
+    * @param \DateTime $val The lastSeenDateTime
+    *
+    * @return Printer
+    */
+    public function setLastSeenDateTime($val)
+    {
+        $this->_propDict["lastSeenDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the registeredDateTime
     * The DateTimeOffset when the printer was registered. Read-only.
     *

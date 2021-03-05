@@ -184,6 +184,33 @@ class ItemFacet extends Entity
     }
 
     /**
+    * Gets the isSearchable
+    *
+    * @return bool The isSearchable
+    */
+    public function getIsSearchable()
+    {
+        if (array_key_exists("isSearchable", $this->_propDict)) {
+            return $this->_propDict["isSearchable"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isSearchable
+    *
+    * @param bool $val The isSearchable
+    *
+    * @return ItemFacet
+    */
+    public function setIsSearchable($val)
+    {
+        $this->_propDict["isSearchable"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedBy
     * Provides the identifier of the user and/or application that last modified the entity.
     *

@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * Group File
 * PHP version 7
 *
@@ -2258,6 +2258,69 @@ class Group extends DirectoryObject
     public function setPhotos($val)
     {
         $this->_propDict["photos"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the photo
+    * The group's profile photo.
+    *
+    * @return ProfilePhoto The photo
+    */
+    public function getPhoto()
+    {
+        if (array_key_exists("photo", $this->_propDict)) {
+            if (is_a($this->_propDict["photo"], "Beta\Microsoft\Graph\Model\ProfilePhoto")) {
+                return $this->_propDict["photo"];
+            } else {
+                $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
+                return $this->_propDict["photo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the photo
+    * The group's profile photo.
+    *
+    * @param ProfilePhoto $val The photo
+    *
+    * @return Group
+    */
+    public function setPhoto($val)
+    {
+        $this->_propDict["photo"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+     *
+     * @return array The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+    *
+    * @param ProfilePhoto $val The photos
+    *
+    * @return Group
+    */
+    public function setPhotos($val)
+    {
+		$this->_propDict["photos"] = $val;
         return $this;
     }
 
