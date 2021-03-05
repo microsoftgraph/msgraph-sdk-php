@@ -38,7 +38,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the alwaysOn
     * Whether or not to enable always-on VPN connection.
@@ -52,7 +52,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["alwaysOn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the alwaysOnLockdown
     * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
@@ -67,7 +67,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the alwaysOnLockdown
     * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
@@ -81,7 +81,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["alwaysOnLockdown"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the authenticationMethod
     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
@@ -100,7 +100,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethod
     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
@@ -114,7 +114,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["authenticationMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the connectionName
     * Connection name displayed to the user.
@@ -129,7 +129,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectionName
     * Connection name displayed to the user.
@@ -143,7 +143,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["connectionName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the connectionType
     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
@@ -162,7 +162,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the connectionType
     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
@@ -176,9 +176,9 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["connectionType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customData
     * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      *
@@ -192,8 +192,8 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customData
     * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
     *
@@ -203,12 +203,12 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setCustomData($val)
     {
-		$this->_propDict["customData"] = $val;
+        $this->_propDict["customData"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customKeyValueData
     * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      *
@@ -222,8 +222,8 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customKeyValueData
     * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
     *
@@ -233,10 +233,10 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setCustomKeyValueData($val)
     {
-		$this->_propDict["customKeyValueData"] = $val;
+        $this->_propDict["customKeyValueData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fingerprint
     * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
@@ -251,7 +251,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fingerprint
     * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
@@ -265,7 +265,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["fingerprint"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.
@@ -280,7 +280,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.
@@ -294,7 +294,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["microsoftTunnelSiteId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyServer
     * Proxy server.
@@ -313,7 +313,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the proxyServer
     * Proxy server.
@@ -327,7 +327,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["proxyServer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the realm
     * Realm when connection type is set to Pulse Secure.
@@ -342,7 +342,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the realm
     * Realm when connection type is set to Pulse Secure.
@@ -356,7 +356,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["realm"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the role
     * Role when connection type is set to Pulse Secure.
@@ -371,7 +371,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the role
     * Role when connection type is set to Pulse Secure.
@@ -385,9 +385,9 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["role"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
@@ -401,8 +401,8 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
     *
@@ -412,12 +412,12 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setServers($val)
     {
-		$this->_propDict["servers"] = $val;
+        $this->_propDict["servers"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the targetedMobileApps
     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      *
@@ -431,8 +431,8 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the targetedMobileApps
     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
     *
@@ -442,10 +442,10 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setTargetedMobileApps($val)
     {
-		$this->_propDict["targetedMobileApps"] = $val;
+        $this->_propDict["targetedMobileApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetedPackageIds
     * Targeted App package IDs.
@@ -460,7 +460,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedPackageIds
     * Targeted App package IDs.
@@ -474,7 +474,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["targetedPackageIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
@@ -493,7 +493,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
@@ -507,5 +507,5 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
         $this->_propDict["identityCertificate"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the airDropBlocked
     * Indicates whether or not to allow AirDrop.
@@ -52,7 +52,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["airDropBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the airPrintBlocked
     * Indicates whether or not AirPrint is blocked (macOS 10.12 and later).
@@ -67,7 +67,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the airPrintBlocked
     * Indicates whether or not AirPrint is blocked (macOS 10.12 and later).
@@ -81,7 +81,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["airPrintBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the airPrintBlockiBeaconDiscovery
     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (macOS 10.3 and later).
@@ -96,7 +96,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the airPrintBlockiBeaconDiscovery
     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (macOS 10.3 and later).
@@ -110,7 +110,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["airPrintBlockiBeaconDiscovery"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the airPrintForceTrustedTLS
     * Indicates if trusted certificates are required for TLS printing communication (macOS 10.13 and later).
@@ -125,7 +125,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the airPrintForceTrustedTLS
     * Indicates if trusted certificates are required for TLS printing communication (macOS 10.13 and later).
@@ -139,7 +139,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["airPrintForceTrustedTLS"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appleWatchBlockAutoUnlock
     * Indicates whether or to block users from unlocking their Mac with Apple Watch.
@@ -154,7 +154,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appleWatchBlockAutoUnlock
     * Indicates whether or to block users from unlocking their Mac with Apple Watch.
@@ -168,7 +168,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appleWatchBlockAutoUnlock"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cameraBlocked
     * Indicates whether or not to block the user from accessing the camera of the device.
@@ -183,7 +183,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cameraBlocked
     * Indicates whether or not to block the user from accessing the camera of the device.
@@ -197,7 +197,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cameraBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the classroomAppBlockRemoteScreenObservation
     * Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -212,7 +212,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the classroomAppBlockRemoteScreenObservation
     * Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -226,7 +226,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["classroomAppBlockRemoteScreenObservation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the classroomAppForceUnpromptedScreenObservation
     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -241,7 +241,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the classroomAppForceUnpromptedScreenObservation
     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -255,7 +255,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["classroomAppForceUnpromptedScreenObservation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the classroomForceAutomaticallyJoinClasses
     * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -270,7 +270,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the classroomForceAutomaticallyJoinClasses
     * Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -284,7 +284,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["classroomForceAutomaticallyJoinClasses"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the classroomForceRequestPermissionToLeaveClasses
     * Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -299,7 +299,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the classroomForceRequestPermissionToLeaveClasses
     * Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -313,7 +313,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["classroomForceRequestPermissionToLeaveClasses"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the classroomForceUnpromptedAppAndDeviceLock
     * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -328,7 +328,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the classroomForceUnpromptedAppAndDeviceLock
     * Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
@@ -342,7 +342,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["classroomForceUnpromptedAppAndDeviceLock"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the compliantAppListType
     * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -361,7 +361,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the compliantAppListType
     * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -375,9 +375,9 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["compliantAppListType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
@@ -391,8 +391,8 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
@@ -402,10 +402,10 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function setCompliantAppsList($val)
     {
-		$this->_propDict["compliantAppsList"] = $val;
+        $this->_propDict["compliantAppsList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingBlocked
     * Indicates whether or not to allow content caching.
@@ -420,7 +420,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingBlocked
     * Indicates whether or not to allow content caching.
@@ -434,7 +434,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["contentCachingBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the definitionLookupBlocked
     * Indicates whether or not to block definition lookup.
@@ -449,7 +449,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the definitionLookupBlocked
     * Indicates whether or not to block definition lookup.
@@ -463,7 +463,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["definitionLookupBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the emailInDomainSuffixes
     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
@@ -478,7 +478,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the emailInDomainSuffixes
     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
@@ -492,7 +492,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["emailInDomainSuffixes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockActivityContinuation
     * Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
@@ -507,7 +507,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockActivityContinuation
     * Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
@@ -521,7 +521,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockActivityContinuation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockAddressBook
     * Indicates whether or not to block iCloud from syncing contacts.
@@ -536,7 +536,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockAddressBook
     * Indicates whether or not to block iCloud from syncing contacts.
@@ -550,7 +550,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockAddressBook"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockBookmarks
     * Indicates whether or not to block iCloud from syncing bookmarks.
@@ -565,7 +565,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockBookmarks
     * Indicates whether or not to block iCloud from syncing bookmarks.
@@ -579,7 +579,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockBookmarks"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockCalendar
     * Indicates whether or not to block iCloud from syncing calendars.
@@ -594,7 +594,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockCalendar
     * Indicates whether or not to block iCloud from syncing calendars.
@@ -608,7 +608,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockCalendar"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockDocumentSync
     * Indicates whether or not to block iCloud document sync.
@@ -623,7 +623,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockDocumentSync
     * Indicates whether or not to block iCloud document sync.
@@ -637,7 +637,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockDocumentSync"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockMail
     * Indicates whether or not to block iCloud from syncing mail.
@@ -652,7 +652,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockMail
     * Indicates whether or not to block iCloud from syncing mail.
@@ -666,7 +666,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockMail"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockNotes
     * Indicates whether or not to block iCloud from syncing notes.
@@ -681,7 +681,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockNotes
     * Indicates whether or not to block iCloud from syncing notes.
@@ -695,7 +695,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockNotes"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockPhotoLibrary
     * Indicates whether or not to block iCloud Photo Library.
@@ -710,7 +710,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockPhotoLibrary
     * Indicates whether or not to block iCloud Photo Library.
@@ -724,7 +724,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockPhotoLibrary"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockReminders
     * Indicates whether or not to block iCloud from syncing reminders.
@@ -739,7 +739,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockReminders
     * Indicates whether or not to block iCloud from syncing reminders.
@@ -753,7 +753,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockReminders"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iTunesBlockFileSharing
     * Indicates whether or not to block files from being transferred using iTunes.
@@ -768,7 +768,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iTunesBlockFileSharing
     * Indicates whether or not to block files from being transferred using iTunes.
@@ -782,7 +782,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iTunesBlockFileSharing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iTunesBlockMusicService
     * Indicates whether or not to block Music service and revert Music app to classic mode.
@@ -797,7 +797,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iTunesBlockMusicService
     * Indicates whether or not to block Music service and revert Music app to classic mode.
@@ -811,7 +811,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iTunesBlockMusicService"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keyboardBlockDictation
     * Indicates whether or not to block the user from using dictation input.
@@ -826,7 +826,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the keyboardBlockDictation
     * Indicates whether or not to block the user from using dictation input.
@@ -840,7 +840,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["keyboardBlockDictation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keychainBlockCloudSync
     * Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
@@ -855,7 +855,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the keychainBlockCloudSync
     * Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
@@ -869,7 +869,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["keychainBlockCloudSync"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockAirDropSharing
     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
@@ -884,7 +884,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockAirDropSharing
     * Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
@@ -898,7 +898,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockAirDropSharing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockAutoFill
     * Indicates whether or not to block the AutoFill Passwords feature.
@@ -913,7 +913,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockAutoFill
     * Indicates whether or not to block the AutoFill Passwords feature.
@@ -927,7 +927,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockAutoFill"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockFingerprintUnlock
     * Indicates whether or not to block fingerprint unlock.
@@ -942,7 +942,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockFingerprintUnlock
     * Indicates whether or not to block fingerprint unlock.
@@ -956,7 +956,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockFingerprintUnlock"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockModification
     * Indicates whether or not to allow passcode modification.
@@ -971,7 +971,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockModification
     * Indicates whether or not to allow passcode modification.
@@ -985,7 +985,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockProximityRequests
     * Indicates whether or not to block requesting passwords from nearby devices.
@@ -1000,7 +1000,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockProximityRequests
     * Indicates whether or not to block requesting passwords from nearby devices.
@@ -1014,7 +1014,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockProximityRequests"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockSimple
     * Block simple passwords.
@@ -1029,7 +1029,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockSimple
     * Block simple passwords.
@@ -1043,7 +1043,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockSimple"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordExpirationDays
     * Number of days before the password expires.
@@ -1058,7 +1058,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordExpirationDays
     * Number of days before the password expires.
@@ -1072,7 +1072,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordExpirationDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMaximumAttemptCount
     * The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
@@ -1087,7 +1087,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMaximumAttemptCount
     * The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
@@ -1101,7 +1101,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMaximumAttemptCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumCharacterSetCount
     * Number of character sets a password must contain. Valid values 0 to 4
@@ -1116,7 +1116,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumCharacterSetCount
     * Number of character sets a password must contain. Valid values 0 to 4
@@ -1130,7 +1130,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumLength
     * Minimum length of passwords.
@@ -1145,7 +1145,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumLength
     * Minimum length of passwords.
@@ -1159,7 +1159,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinimumLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity required before a password is required.
@@ -1174,7 +1174,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity required before a password is required.
@@ -1188,7 +1188,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinutesOfInactivityBeforeLock"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity required before the screen times out.
@@ -1203,7 +1203,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity required before the screen times out.
@@ -1217,7 +1217,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinutesOfInactivityBeforeScreenTimeout"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinutesUntilFailedLoginReset
     * The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
@@ -1232,7 +1232,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinutesUntilFailedLoginReset
     * The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
@@ -1246,7 +1246,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinutesUntilFailedLoginReset"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block.
@@ -1261,7 +1261,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block.
@@ -1275,7 +1275,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequired
     * Whether or not to require a password.
@@ -1290,7 +1290,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordRequired
     * Whether or not to require a password.
@@ -1304,7 +1304,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequiredType
     * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -1323,7 +1323,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the passwordRequiredType
     * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -1337,9 +1337,9 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordRequiredType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the privacyAccessControls
     * List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
      *
@@ -1353,8 +1353,8 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the privacyAccessControls
     * List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
     *
@@ -1364,10 +1364,10 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function setPrivacyAccessControls($val)
     {
-		$this->_propDict["privacyAccessControls"] = $val;
+        $this->_propDict["privacyAccessControls"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the safariBlockAutofill
     * Indicates whether or not to block the user from using Auto fill in Safari.
@@ -1382,7 +1382,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariBlockAutofill
     * Indicates whether or not to block the user from using Auto fill in Safari.
@@ -1396,7 +1396,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariBlockAutofill"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the screenCaptureBlocked
     * Indicates whether or not to block the user from taking Screenshots.
@@ -1411,7 +1411,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the screenCaptureBlocked
     * Indicates whether or not to block the user from taking Screenshots.
@@ -1425,7 +1425,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["screenCaptureBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the softwareUpdatesEnforcedDelayInDays
     * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
@@ -1440,7 +1440,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the softwareUpdatesEnforcedDelayInDays
     * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
@@ -1454,7 +1454,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["softwareUpdatesEnforcedDelayInDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the spotlightBlockInternetResults
     * Indicates whether or not to block Spotlight from returning any results from an Internet search.
@@ -1469,7 +1469,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the spotlightBlockInternetResults
     * Indicates whether or not to block Spotlight from returning any results from an Internet search.
@@ -1483,7 +1483,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["spotlightBlockInternetResults"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the updateDelayPolicy
     * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
@@ -1502,7 +1502,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the updateDelayPolicy
     * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
@@ -1516,5 +1516,5 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["updateDelayPolicy"] = $val;
         return $this;
     }
-    
+
 }

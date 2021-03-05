@@ -37,7 +37,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase
             return null;
         }
     }
-    
+
     /**
     * Sets the memberType
     *
@@ -50,7 +50,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase
         $this->_propDict["memberType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scheduleInfo
     *
@@ -68,7 +68,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase
         }
         return null;
     }
-    
+
     /**
     * Sets the scheduleInfo
     *
@@ -81,5 +81,5 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase
         $this->_propDict["scheduleInfo"] = $val;
         return $this;
     }
-    
+
 }

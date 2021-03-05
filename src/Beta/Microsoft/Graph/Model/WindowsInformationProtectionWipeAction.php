@@ -42,7 +42,7 @@ class WindowsInformationProtectionWipeAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastCheckInDateTime
     * Last checkin time of the device that was targeted by this wipe action.
@@ -56,7 +56,7 @@ class WindowsInformationProtectionWipeAction extends Entity
         $this->_propDict["lastCheckInDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
@@ -75,7 +75,7 @@ class WindowsInformationProtectionWipeAction extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
@@ -89,7 +89,7 @@ class WindowsInformationProtectionWipeAction extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetedDeviceMacAddress
     * Targeted device Mac address.
@@ -104,7 +104,7 @@ class WindowsInformationProtectionWipeAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedDeviceMacAddress
     * Targeted device Mac address.
@@ -118,7 +118,7 @@ class WindowsInformationProtectionWipeAction extends Entity
         $this->_propDict["targetedDeviceMacAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetedDeviceName
     * Targeted device name.
@@ -133,7 +133,7 @@ class WindowsInformationProtectionWipeAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedDeviceName
     * Targeted device name.
@@ -147,7 +147,7 @@ class WindowsInformationProtectionWipeAction extends Entity
         $this->_propDict["targetedDeviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetedDeviceRegistrationId
     * The DeviceRegistrationId being targeted by this wipe action.
@@ -162,7 +162,7 @@ class WindowsInformationProtectionWipeAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedDeviceRegistrationId
     * The DeviceRegistrationId being targeted by this wipe action.
@@ -176,7 +176,7 @@ class WindowsInformationProtectionWipeAction extends Entity
         $this->_propDict["targetedDeviceRegistrationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetedUserId
     * The UserId being targeted by this wipe action.
@@ -191,7 +191,7 @@ class WindowsInformationProtectionWipeAction extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedUserId
     * The UserId being targeted by this wipe action.
@@ -205,5 +205,5 @@ class WindowsInformationProtectionWipeAction extends Entity
         $this->_propDict["targetedUserId"] = $val;
         return $this;
     }
-    
+
 }

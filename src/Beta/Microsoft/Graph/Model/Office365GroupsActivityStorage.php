@@ -38,7 +38,7 @@ class Office365GroupsActivityStorage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mailboxStorageUsedInBytes
     * The storage used in group mailbox.
@@ -52,7 +52,7 @@ class Office365GroupsActivityStorage extends Entity
         $this->_propDict["mailboxStorageUsedInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     * The snapshot date for Exchange and SharePoint used storage.
@@ -71,7 +71,7 @@ class Office365GroupsActivityStorage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     * The snapshot date for Exchange and SharePoint used storage.
@@ -85,7 +85,7 @@ class Office365GroupsActivityStorage extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     * The number of days the report covers.
@@ -100,7 +100,7 @@ class Office365GroupsActivityStorage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     * The number of days the report covers.
@@ -114,7 +114,7 @@ class Office365GroupsActivityStorage extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     * The latest date of the content.
@@ -133,7 +133,7 @@ class Office365GroupsActivityStorage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     * The latest date of the content.
@@ -147,7 +147,7 @@ class Office365GroupsActivityStorage extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the siteStorageUsedInBytes
     * The storage used in SharePoint document library.
@@ -162,7 +162,7 @@ class Office365GroupsActivityStorage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the siteStorageUsedInBytes
     * The storage used in SharePoint document library.
@@ -176,5 +176,5 @@ class Office365GroupsActivityStorage extends Entity
         $this->_propDict["siteStorageUsedInBytes"] = intval($val);
         return $this;
     }
-    
+
 }

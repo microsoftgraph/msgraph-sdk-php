@@ -38,7 +38,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedProducts
     * All the products assigned for the user.
@@ -52,7 +52,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deletedDate
     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
@@ -71,7 +71,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
@@ -85,7 +85,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
@@ -100,7 +100,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
@@ -114,7 +114,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the exchangeLastActivityDate
     * The date when user last read or sent email.
@@ -133,7 +133,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the exchangeLastActivityDate
     * The date when user last read or sent email.
@@ -147,7 +147,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["exchangeLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the exchangeLicenseAssignDate
     * The last date when the user was assigned an Exchange license.
@@ -166,7 +166,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the exchangeLicenseAssignDate
     * The last date when the user was assigned an Exchange license.
@@ -180,7 +180,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["exchangeLicenseAssignDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasExchangeLicense
     * Whether the user has been assigned an Exchange license.
@@ -195,7 +195,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasExchangeLicense
     * Whether the user has been assigned an Exchange license.
@@ -209,7 +209,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["hasExchangeLicense"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hasOneDriveLicense
     * Whether the user has been assigned a OneDrive license.
@@ -224,7 +224,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasOneDriveLicense
     * Whether the user has been assigned a OneDrive license.
@@ -238,7 +238,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["hasOneDriveLicense"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hasSharePointLicense
     * Whether the user has been assigned a SharePoint license.
@@ -253,7 +253,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasSharePointLicense
     * Whether the user has been assigned a SharePoint license.
@@ -267,7 +267,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["hasSharePointLicense"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hasSkypeForBusinessLicense
     * Whether the user has been assigned a Skype For Business license.
@@ -282,7 +282,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasSkypeForBusinessLicense
     * Whether the user has been assigned a Skype For Business license.
@@ -296,7 +296,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["hasSkypeForBusinessLicense"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hasTeamsLicense
     * Whether the user has been assigned a Teams license.
@@ -311,7 +311,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasTeamsLicense
     * Whether the user has been assigned a Teams license.
@@ -325,7 +325,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["hasTeamsLicense"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hasYammerLicense
     * Whether the user has been assigned a Yammer license.
@@ -340,7 +340,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasYammerLicense
     * Whether the user has been assigned a Yammer license.
@@ -354,7 +354,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["hasYammerLicense"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     * Whether this user has been deleted or soft deleted.
@@ -369,7 +369,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     * Whether this user has been deleted or soft deleted.
@@ -383,7 +383,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the oneDriveLastActivityDate
     * The date when user last viewed or edited files, shared files internally or externally, or synced files.
@@ -402,7 +402,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the oneDriveLastActivityDate
     * The date when user last viewed or edited files, shared files internally or externally, or synced files.
@@ -416,7 +416,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["oneDriveLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the oneDriveLicenseAssignDate
     * The last date when the user was assigned a OneDrive license.
@@ -435,7 +435,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the oneDriveLicenseAssignDate
     * The last date when the user was assigned a OneDrive license.
@@ -449,7 +449,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["oneDriveLicenseAssignDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     * The latest date of the content.
@@ -468,7 +468,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     * The latest date of the content.
@@ -482,7 +482,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharePointLastActivityDate
     * The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
@@ -501,7 +501,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sharePointLastActivityDate
     * The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
@@ -515,7 +515,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["sharePointLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharePointLicenseAssignDate
     * The last date when the user was assigned a SharePoint license.
@@ -534,7 +534,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sharePointLicenseAssignDate
     * The last date when the user was assigned a SharePoint license.
@@ -548,7 +548,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["sharePointLicenseAssignDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the skypeForBusinessLastActivityDate
     * The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
@@ -567,7 +567,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the skypeForBusinessLastActivityDate
     * The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
@@ -581,7 +581,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["skypeForBusinessLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the skypeForBusinessLicenseAssignDate
     * The last date when the user was assigned a Skype For Business license.
@@ -600,7 +600,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the skypeForBusinessLicenseAssignDate
     * The last date when the user was assigned a Skype For Business license.
@@ -614,7 +614,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["skypeForBusinessLicenseAssignDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamsLastActivityDate
     * The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
@@ -633,7 +633,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the teamsLastActivityDate
     * The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
@@ -647,7 +647,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["teamsLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamsLicenseAssignDate
     * The last date when the user was assigned a Teams license.
@@ -666,7 +666,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the teamsLicenseAssignDate
     * The last date when the user was assigned a Teams license.
@@ -680,7 +680,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["teamsLicenseAssignDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
@@ -695,7 +695,7 @@ class Office365ActiveUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
@@ -709,7 +709,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the yammerLastActivityDate
     * The date when user last posted, read, or liked message.
@@ -728,7 +728,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the yammerLastActivityDate
     * The date when user last posted, read, or liked message.
@@ -742,7 +742,7 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["yammerLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the yammerLicenseAssignDate
     * The last date when the user was assigned a Yammer license.
@@ -761,7 +761,7 @@ class Office365ActiveUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the yammerLicenseAssignDate
     * The last date when the user was assigned a Yammer license.
@@ -775,5 +775,5 @@ class Office365ActiveUserDetail extends Entity
         $this->_propDict["yammerLicenseAssignDate"] = $val;
         return $this;
     }
-    
+
 }

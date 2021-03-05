@@ -37,7 +37,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeFileCount
     *
@@ -50,7 +50,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["activeFileCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileCount
     *
@@ -64,7 +64,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileCount
     *
@@ -77,7 +77,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["fileCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -91,7 +91,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -104,7 +104,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -122,7 +122,7 @@ class OneDriveUsageAccountDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -135,7 +135,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ownerDisplayName
     *
@@ -149,7 +149,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownerDisplayName
     *
@@ -162,7 +162,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["ownerDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ownerPrincipalName
     *
@@ -176,7 +176,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownerPrincipalName
     *
@@ -189,7 +189,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["ownerPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -203,7 +203,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -216,7 +216,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -234,7 +234,7 @@ class OneDriveUsageAccountDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -247,7 +247,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the siteUrl
     *
@@ -261,7 +261,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the siteUrl
     *
@@ -274,7 +274,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["siteUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the storageAllocatedInBytes
     *
@@ -288,7 +288,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the storageAllocatedInBytes
     *
@@ -301,7 +301,7 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["storageAllocatedInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageUsedInBytes
     *
@@ -315,7 +315,7 @@ class OneDriveUsageAccountDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the storageUsedInBytes
     *
@@ -328,5 +328,5 @@ class OneDriveUsageAccountDetail extends Entity
         $this->_propDict["storageUsedInBytes"] = intval($val);
         return $this;
     }
-    
+
 }

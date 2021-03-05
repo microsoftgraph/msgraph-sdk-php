@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementReports extends Entity
 {
 
-     /** 
+     /**
      * Gets the cachedReportConfigurations
     * Entity representing the configuration of a cached report
      *
@@ -39,8 +39,8 @@ class DeviceManagementReports extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the cachedReportConfigurations
     * Entity representing the configuration of a cached report
     *
@@ -50,12 +50,12 @@ class DeviceManagementReports extends Entity
     */
     public function setCachedReportConfigurations($val)
     {
-		$this->_propDict["cachedReportConfigurations"] = $val;
+        $this->_propDict["cachedReportConfigurations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the exportJobs
     * Entity representing a job to export a report
      *
@@ -69,8 +69,8 @@ class DeviceManagementReports extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the exportJobs
     * Entity representing a job to export a report
     *
@@ -80,12 +80,12 @@ class DeviceManagementReports extends Entity
     */
     public function setExportJobs($val)
     {
-		$this->_propDict["exportJobs"] = $val;
+        $this->_propDict["exportJobs"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reportSchedules
     * Entity representing a schedule for which reports are delivered
      *
@@ -99,8 +99,8 @@ class DeviceManagementReports extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the reportSchedules
     * Entity representing a schedule for which reports are delivered
     *
@@ -110,8 +110,8 @@ class DeviceManagementReports extends Entity
     */
     public function setReportSchedules($val)
     {
-		$this->_propDict["reportSchedules"] = $val;
+        $this->_propDict["reportSchedules"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class VirtualEndpoint extends Entity
 {
 
-     /** 
+     /**
      * Gets the cloudPCs
     * Cloud managed virtual desktops.
      *
@@ -39,8 +39,8 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the cloudPCs
     * Cloud managed virtual desktops.
     *
@@ -50,12 +50,12 @@ class VirtualEndpoint extends Entity
     */
     public function setCloudPCs($val)
     {
-		$this->_propDict["cloudPCs"] = $val;
+        $this->_propDict["cloudPCs"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceImages
     * The image resource on cloud PC.
      *
@@ -69,8 +69,8 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceImages
     * The image resource on cloud PC.
     *
@@ -80,12 +80,12 @@ class VirtualEndpoint extends Entity
     */
     public function setDeviceImages($val)
     {
-		$this->_propDict["deviceImages"] = $val;
+        $this->_propDict["deviceImages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onPremisesConnections
     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for cloud PCs.
      *
@@ -99,8 +99,8 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onPremisesConnections
     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for cloud PCs.
     *
@@ -110,12 +110,12 @@ class VirtualEndpoint extends Entity
     */
     public function setOnPremisesConnections($val)
     {
-		$this->_propDict["onPremisesConnections"] = $val;
+        $this->_propDict["onPremisesConnections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the provisioningPolicies
     * cloud PC provisioning policy.
      *
@@ -129,8 +129,8 @@ class VirtualEndpoint extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the provisioningPolicies
     * cloud PC provisioning policy.
     *
@@ -140,8 +140,8 @@ class VirtualEndpoint extends Entity
     */
     public function setProvisioningPolicies($val)
     {
-		$this->_propDict["provisioningPolicies"] = $val;
+        $this->_propDict["provisioningPolicies"] = $val;
         return $this;
     }
-    
+
 }

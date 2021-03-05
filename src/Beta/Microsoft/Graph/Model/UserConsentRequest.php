@@ -37,7 +37,7 @@ class UserConsentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the reason
     *
@@ -50,7 +50,7 @@ class UserConsentRequest extends Request
         $this->_propDict["reason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the approval
     *
@@ -68,7 +68,7 @@ class UserConsentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the approval
     *
@@ -81,5 +81,5 @@ class UserConsentRequest extends Request
         $this->_propDict["approval"] = $val;
         return $this;
     }
-    
+
 }

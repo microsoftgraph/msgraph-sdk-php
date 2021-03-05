@@ -38,7 +38,7 @@ class ItemPatent extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Descpription of the patent or filing.
@@ -52,7 +52,7 @@ class ItemPatent extends ItemFacet
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Title of the patent or filing.
@@ -67,7 +67,7 @@ class ItemPatent extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Title of the patent or filing.
@@ -81,7 +81,7 @@ class ItemPatent extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isPending
     * Indicates the patent is pending.
@@ -96,7 +96,7 @@ class ItemPatent extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the isPending
     * Indicates the patent is pending.
@@ -110,7 +110,7 @@ class ItemPatent extends ItemFacet
         $this->_propDict["isPending"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the issuedDate
     * The date that the patent was granted.
@@ -129,7 +129,7 @@ class ItemPatent extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the issuedDate
     * The date that the patent was granted.
@@ -143,7 +143,7 @@ class ItemPatent extends ItemFacet
         $this->_propDict["issuedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuingAuthority
     * Authority which granted the patent.
@@ -158,7 +158,7 @@ class ItemPatent extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the issuingAuthority
     * Authority which granted the patent.
@@ -172,7 +172,7 @@ class ItemPatent extends ItemFacet
         $this->_propDict["issuingAuthority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     * The patent number.
@@ -187,7 +187,7 @@ class ItemPatent extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     * The patent number.
@@ -201,7 +201,7 @@ class ItemPatent extends ItemFacet
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * URL referencing the patent or filing.
@@ -216,7 +216,7 @@ class ItemPatent extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * URL referencing the patent or filing.
@@ -230,5 +230,5 @@ class ItemPatent extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

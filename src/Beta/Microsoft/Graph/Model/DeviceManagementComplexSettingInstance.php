@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementComplexSettingInstance extends DeviceManagementSettingInstance
 {
 
-     /** 
+     /**
      * Gets the value
     * The values that make up the complex setting
      *
@@ -39,8 +39,8 @@ class DeviceManagementComplexSettingInstance extends DeviceManagementSettingInst
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the value
     * The values that make up the complex setting
     *
@@ -50,8 +50,8 @@ class DeviceManagementComplexSettingInstance extends DeviceManagementSettingInst
     */
     public function setValue($val)
     {
-		$this->_propDict["value"] = $val;
+        $this->_propDict["value"] = $val;
         return $this;
     }
-    
+
 }

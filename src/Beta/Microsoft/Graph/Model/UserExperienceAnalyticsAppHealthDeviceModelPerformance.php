@@ -38,7 +38,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDeviceCount
     * The number of active devices for the model. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
         $this->_propDict["activeDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceManufacturer
     * The manufacturer name of the device.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceManufacturer
     * The manufacturer name of the device.
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
         $this->_propDict["deviceManufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceModel
     * The model name of the device.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceModel
     * The model name of the device.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
         $this->_propDict["deviceModel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the meanTimeToFailureInMinutes
     * The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
         $this->_propDict["meanTimeToFailureInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the modelAppHealthScore
     * The app health score of the device model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the modelAppHealthScore
     * The app health score of the device model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
         $this->_propDict["modelAppHealthScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modelAppHealthStatus
     * The overall app health status of the device model.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the modelAppHealthStatus
     * The overall app health status of the device model.
@@ -197,5 +197,5 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
         $this->_propDict["modelAppHealthStatus"] = $val;
         return $this;
     }
-    
+
 }

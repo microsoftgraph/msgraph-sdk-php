@@ -38,7 +38,7 @@ class ConfigManagerCollection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the collectionIdentifier
     * The collection identifier in SCCM.
@@ -52,7 +52,7 @@ class ConfigManagerCollection extends Entity
         $this->_propDict["collectionIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The created date.
@@ -71,7 +71,7 @@ class ConfigManagerCollection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The created date.
@@ -85,7 +85,7 @@ class ConfigManagerCollection extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The DisplayName.
@@ -100,7 +100,7 @@ class ConfigManagerCollection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The DisplayName.
@@ -114,7 +114,7 @@ class ConfigManagerCollection extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hierarchyIdentifier
     * The Hierarchy Identifier.
@@ -129,7 +129,7 @@ class ConfigManagerCollection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hierarchyIdentifier
     * The Hierarchy Identifier.
@@ -143,7 +143,7 @@ class ConfigManagerCollection extends Entity
         $this->_propDict["hierarchyIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hierarchyName
     * The HierarchyName.
@@ -158,7 +158,7 @@ class ConfigManagerCollection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hierarchyName
     * The HierarchyName.
@@ -172,7 +172,7 @@ class ConfigManagerCollection extends Entity
         $this->_propDict["hierarchyName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The last modified date.
@@ -191,7 +191,7 @@ class ConfigManagerCollection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The last modified date.
@@ -205,5 +205,5 @@ class ConfigManagerCollection extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class OutlookUser extends Entity
 {
 
-     /** 
+     /**
      * Gets the masterCategories
     * A list of categories defined for the user.
      *
@@ -39,8 +39,8 @@ class OutlookUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the masterCategories
     * A list of categories defined for the user.
     *
@@ -50,12 +50,12 @@ class OutlookUser extends Entity
     */
     public function setMasterCategories($val)
     {
-		$this->_propDict["masterCategories"] = $val;
+        $this->_propDict["masterCategories"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taskFolders
      *
      * @return array The taskFolders
@@ -68,8 +68,8 @@ class OutlookUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the taskFolders
     *
     * @param OutlookTaskFolder $val The taskFolders
@@ -78,12 +78,12 @@ class OutlookUser extends Entity
     */
     public function setTaskFolders($val)
     {
-		$this->_propDict["taskFolders"] = $val;
+        $this->_propDict["taskFolders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taskGroups
      *
      * @return array The taskGroups
@@ -96,8 +96,8 @@ class OutlookUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the taskGroups
     *
     * @param OutlookTaskGroup $val The taskGroups
@@ -106,12 +106,12 @@ class OutlookUser extends Entity
     */
     public function setTaskGroups($val)
     {
-		$this->_propDict["taskGroups"] = $val;
+        $this->_propDict["taskGroups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
      *
      * @return array The tasks
@@ -124,8 +124,8 @@ class OutlookUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     *
     * @param OutlookTask $val The tasks
@@ -134,8 +134,8 @@ class OutlookUser extends Entity
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

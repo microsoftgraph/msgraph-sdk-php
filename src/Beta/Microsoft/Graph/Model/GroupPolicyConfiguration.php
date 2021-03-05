@@ -42,7 +42,7 @@ class GroupPolicyConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the object was created.
@@ -56,7 +56,7 @@ class GroupPolicyConfiguration extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * User provided description for the resource object.
@@ -71,7 +71,7 @@ class GroupPolicyConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * User provided description for the resource object.
@@ -85,7 +85,7 @@ class GroupPolicyConfiguration extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * User provided name for the resource object.
@@ -100,7 +100,7 @@ class GroupPolicyConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * User provided name for the resource object.
@@ -114,7 +114,7 @@ class GroupPolicyConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -133,7 +133,7 @@ class GroupPolicyConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -147,7 +147,7 @@ class GroupPolicyConfiguration extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * The list of scope tags for the configuration.
@@ -162,7 +162,7 @@ class GroupPolicyConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * The list of scope tags for the configuration.
@@ -176,9 +176,9 @@ class GroupPolicyConfiguration extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments for the configuration.
      *
@@ -192,8 +192,8 @@ class GroupPolicyConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments for the configuration.
     *
@@ -203,12 +203,12 @@ class GroupPolicyConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the definitionValues
     * The list of enabled or disabled group policy definition values for the configuration.
      *
@@ -222,8 +222,8 @@ class GroupPolicyConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the definitionValues
     * The list of enabled or disabled group policy definition values for the configuration.
     *
@@ -233,8 +233,8 @@ class GroupPolicyConfiguration extends Entity
     */
     public function setDefinitionValues($val)
     {
-		$this->_propDict["definitionValues"] = $val;
+        $this->_propDict["definitionValues"] = $val;
         return $this;
     }
-    
+
 }

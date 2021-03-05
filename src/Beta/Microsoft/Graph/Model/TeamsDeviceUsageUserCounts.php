@@ -37,7 +37,7 @@ class TeamsDeviceUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the androidPhone
     *
@@ -50,7 +50,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["androidPhone"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the ios
     *
@@ -64,7 +64,7 @@ class TeamsDeviceUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ios
     *
@@ -77,7 +77,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["ios"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mac
     *
@@ -91,7 +91,7 @@ class TeamsDeviceUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mac
     *
@@ -104,7 +104,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["mac"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -122,7 +122,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -135,7 +135,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -149,7 +149,7 @@ class TeamsDeviceUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -162,7 +162,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -180,7 +180,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -193,7 +193,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the web
     *
@@ -207,7 +207,7 @@ class TeamsDeviceUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the web
     *
@@ -220,7 +220,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["web"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the windows
     *
@@ -234,7 +234,7 @@ class TeamsDeviceUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windows
     *
@@ -247,7 +247,7 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["windows"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the windowsPhone
     *
@@ -261,7 +261,7 @@ class TeamsDeviceUsageUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windowsPhone
     *
@@ -274,5 +274,5 @@ class TeamsDeviceUsageUserCounts extends Entity
         $this->_propDict["windowsPhone"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class EmailAppUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     *
@@ -54,7 +54,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -68,7 +68,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -81,7 +81,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imap4App
     *
@@ -95,7 +95,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imap4App
     *
@@ -108,7 +108,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["imap4App"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -122,7 +122,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -135,7 +135,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -153,7 +153,7 @@ class EmailAppUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -166,7 +166,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mailForMac
     *
@@ -180,7 +180,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mailForMac
     *
@@ -193,7 +193,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["mailForMac"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the otherForMobile
     *
@@ -207,7 +207,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the otherForMobile
     *
@@ -220,7 +220,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["otherForMobile"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outlookForMac
     *
@@ -234,7 +234,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForMac
     *
@@ -247,7 +247,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["outlookForMac"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outlookForMobile
     *
@@ -261,7 +261,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForMobile
     *
@@ -274,7 +274,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["outlookForMobile"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outlookForWeb
     *
@@ -288,7 +288,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForWeb
     *
@@ -301,7 +301,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["outlookForWeb"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the outlookForWindows
     *
@@ -315,7 +315,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the outlookForWindows
     *
@@ -328,7 +328,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["outlookForWindows"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pop3App
     *
@@ -342,7 +342,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the pop3App
     *
@@ -355,7 +355,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["pop3App"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -369,7 +369,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -382,7 +382,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -400,7 +400,7 @@ class EmailAppUsageUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -413,7 +413,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the smtpApp
     *
@@ -427,7 +427,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the smtpApp
     *
@@ -440,7 +440,7 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["smtpApp"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -454,7 +454,7 @@ class EmailAppUsageUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -467,5 +467,5 @@ class EmailAppUsageUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

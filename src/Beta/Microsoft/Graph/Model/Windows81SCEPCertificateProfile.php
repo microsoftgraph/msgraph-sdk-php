@@ -42,7 +42,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateStore
     * Target store certificate. Possible values are: user, machine.
@@ -56,7 +56,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["certificateStore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hashAlgorithm
     * SCEP Hash Algorithm. Possible values are: sha1, sha2.
@@ -75,7 +75,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the hashAlgorithm
     * SCEP Hash Algorithm. Possible values are: sha1, sha2.
@@ -89,7 +89,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["hashAlgorithm"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
@@ -108,7 +108,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
@@ -122,7 +122,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["keySize"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
@@ -141,7 +141,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
@@ -155,7 +155,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["keyUsage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scepServerUrls
     * SCEP Server Url(s).
@@ -170,7 +170,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the scepServerUrls
     * SCEP Server Url(s).
@@ -184,7 +184,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["scepServerUrls"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -199,7 +199,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
@@ -213,7 +213,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["subjectAlternativeNameFormatString"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -228,7 +228,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -242,9 +242,9 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["subjectNameFormatString"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
@@ -258,8 +258,8 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices
     *
@@ -269,10 +269,10 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
     */
     public function setManagedDeviceCertificateStates($val)
     {
-		$this->_propDict["managedDeviceCertificateStates"] = $val;
+        $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rootCertificate
     * Trusted Root Certificate
@@ -291,7 +291,7 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         }
         return null;
     }
-    
+
     /**
     * Sets the rootCertificate
     * Trusted Root Certificate
@@ -305,5 +305,5 @@ class Windows81SCEPCertificateProfile extends Windows81CertificateProfileBase
         $this->_propDict["rootCertificate"] = $val;
         return $this;
     }
-    
+
 }

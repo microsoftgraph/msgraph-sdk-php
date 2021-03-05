@@ -42,7 +42,7 @@ class IosImportedPFXCertificateProfile extends IosCertificateProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the intendedPurpose
     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
@@ -56,9 +56,9 @@ class IosImportedPFXCertificateProfile extends IosCertificateProfile
         $this->_propDict["intendedPurpose"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
@@ -72,8 +72,8 @@ class IosImportedPFXCertificateProfile extends IosCertificateProfile
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDeviceCertificateStates
     * Certificate state for devices
     *
@@ -83,8 +83,8 @@ class IosImportedPFXCertificateProfile extends IosCertificateProfile
     */
     public function setManagedDeviceCertificateStates($val)
     {
-		$this->_propDict["managedDeviceCertificateStates"] = $val;
+        $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
-    
+
 }

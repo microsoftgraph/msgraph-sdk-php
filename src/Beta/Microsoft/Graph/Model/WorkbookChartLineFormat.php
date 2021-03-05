@@ -38,7 +38,7 @@ class WorkbookChartLineFormat extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the color
     * HTML color code representing the color of lines in the chart.
@@ -52,5 +52,5 @@ class WorkbookChartLineFormat extends Entity
         $this->_propDict["color"] = $val;
         return $this;
     }
-    
+
 }

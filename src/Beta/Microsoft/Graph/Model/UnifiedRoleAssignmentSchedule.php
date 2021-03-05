@@ -37,7 +37,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
             return null;
         }
     }
-    
+
     /**
     * Sets the assignmentType
     *
@@ -50,7 +50,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["assignmentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the memberType
     *
@@ -64,7 +64,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
             return null;
         }
     }
-    
+
     /**
     * Sets the memberType
     *
@@ -77,7 +77,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["memberType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scheduleInfo
     *
@@ -95,7 +95,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         }
         return null;
     }
-    
+
     /**
     * Sets the scheduleInfo
     *
@@ -108,7 +108,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["scheduleInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activatedUsing
     *
@@ -126,7 +126,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         }
         return null;
     }
-    
+
     /**
     * Sets the activatedUsing
     *
@@ -139,5 +139,5 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["activatedUsing"] = $val;
         return $this;
     }
-    
+
 }

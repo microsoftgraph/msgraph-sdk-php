@@ -38,7 +38,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the appleIdDisabled
     * Indicates if Apple id setup pane is disabled
@@ -52,7 +52,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["appleIdDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the applePayDisabled
     * Indicates if Apple pay setup pane is disabled
@@ -67,7 +67,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the applePayDisabled
     * Indicates if Apple pay setup pane is disabled
@@ -81,7 +81,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["applePayDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the awaitDeviceConfiguredConfirmation
     * Indicates if the device will need to wait for configured confirmation
@@ -96,7 +96,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the awaitDeviceConfiguredConfirmation
     * Indicates if the device will need to wait for configured confirmation
@@ -110,7 +110,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["awaitDeviceConfiguredConfirmation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the diagnosticsDisabled
     * Indicates if diagnostics setup pane is disabled
@@ -125,7 +125,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the diagnosticsDisabled
     * Indicates if diagnostics setup pane is disabled
@@ -139,7 +139,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["diagnosticsDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enableSharedIPad
     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
@@ -154,7 +154,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the enableSharedIPad
     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
@@ -168,7 +168,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["enableSharedIPad"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDefault
     * Indicates if this is the default profile
@@ -183,7 +183,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     * Indicates if this is the default profile
@@ -197,7 +197,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isMandatory
     * Indicates if the profile is mandatory
@@ -212,7 +212,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the isMandatory
     * Indicates if the profile is mandatory
@@ -226,7 +226,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["isMandatory"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iTunesPairingMode
     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
@@ -245,7 +245,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         }
         return null;
     }
-    
+
     /**
     * Sets the iTunesPairingMode
     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
@@ -259,7 +259,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["iTunesPairingMode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the locationDisabled
     * Indicates if Location service setup pane is disabled
@@ -274,7 +274,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the locationDisabled
     * Indicates if Location service setup pane is disabled
@@ -288,7 +288,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["locationDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the macOSFileVaultDisabled
     * Indicates if Mac OS file vault is disabled
@@ -303,7 +303,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the macOSFileVaultDisabled
     * Indicates if Mac OS file vault is disabled
@@ -317,7 +317,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["macOSFileVaultDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the macOSRegistrationDisabled
     * Indicates if Mac OS registration is disabled
@@ -332,7 +332,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the macOSRegistrationDisabled
     * Indicates if Mac OS registration is disabled
@@ -346,9 +346,9 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["macOSRegistrationDisabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managementCertificates
     * Management certificates for Apple Configurator
      *
@@ -362,8 +362,8 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managementCertificates
     * Management certificates for Apple Configurator
     *
@@ -373,10 +373,10 @@ class DepEnrollmentProfile extends EnrollmentProfile
     */
     public function setManagementCertificates($val)
     {
-		$this->_propDict["managementCertificates"] = $val;
+        $this->_propDict["managementCertificates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passCodeDisabled
     * Indicates if Passcode setup pane is disabled
@@ -391,7 +391,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the passCodeDisabled
     * Indicates if Passcode setup pane is disabled
@@ -405,7 +405,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["passCodeDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the profileRemovalDisabled
     * Indicates if the profile removal option is disabled
@@ -420,7 +420,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the profileRemovalDisabled
     * Indicates if the profile removal option is disabled
@@ -434,7 +434,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["profileRemovalDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restoreBlocked
     * Indicates if Restore setup pane is blocked
@@ -449,7 +449,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the restoreBlocked
     * Indicates if Restore setup pane is blocked
@@ -463,7 +463,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["restoreBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restoreFromAndroidDisabled
     * Indicates if Restore from Android is disabled
@@ -478,7 +478,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the restoreFromAndroidDisabled
     * Indicates if Restore from Android is disabled
@@ -492,7 +492,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["restoreFromAndroidDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sharedIPadMaximumUserCount
     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
@@ -507,7 +507,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the sharedIPadMaximumUserCount
     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
@@ -521,7 +521,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["sharedIPadMaximumUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the siriDisabled
     * Indicates if siri setup pane is disabled
@@ -536,7 +536,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the siriDisabled
     * Indicates if siri setup pane is disabled
@@ -550,7 +550,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["siriDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the supervisedModeEnabled
     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
@@ -565,7 +565,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the supervisedModeEnabled
     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
@@ -579,7 +579,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["supervisedModeEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the supportDepartment
     * Support department information
@@ -594,7 +594,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the supportDepartment
     * Support department information
@@ -608,7 +608,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["supportDepartment"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supportPhoneNumber
     * Support phone number
@@ -623,7 +623,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the supportPhoneNumber
     * Support phone number
@@ -637,7 +637,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["supportPhoneNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the termsAndConditionsDisabled
     * Indicates if 'Terms and Conditions' setup pane is disabled
@@ -652,7 +652,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the termsAndConditionsDisabled
     * Indicates if 'Terms and Conditions' setup pane is disabled
@@ -666,7 +666,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["termsAndConditionsDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the touchIdDisabled
     * Indicates if touch id setup pane is disabled
@@ -681,7 +681,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the touchIdDisabled
     * Indicates if touch id setup pane is disabled
@@ -695,7 +695,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["touchIdDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the zoomDisabled
     * Indicates if zoom setup pane is disabled
@@ -710,7 +710,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
             return null;
         }
     }
-    
+
     /**
     * Sets the zoomDisabled
     * Indicates if zoom setup pane is disabled
@@ -724,5 +724,5 @@ class DepEnrollmentProfile extends EnrollmentProfile
         $this->_propDict["zoomDisabled"] = boolval($val);
         return $this;
     }
-    
+
 }

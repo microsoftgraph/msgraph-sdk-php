@@ -42,7 +42,7 @@ class ExternalConnection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the configuration
     * Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
@@ -56,7 +56,7 @@ class ExternalConnection extends Entity
         $this->_propDict["configuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the connection displayed in the Microsoft 365 admin center. Optional.
@@ -71,7 +71,7 @@ class ExternalConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the connection displayed in the Microsoft 365 admin center. Optional.
@@ -85,7 +85,7 @@ class ExternalConnection extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
@@ -100,7 +100,7 @@ class ExternalConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
@@ -114,7 +114,7 @@ class ExternalConnection extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
@@ -133,7 +133,7 @@ class ExternalConnection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
@@ -147,9 +147,9 @@ class ExternalConnection extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groups
      *
      * @return array The groups
@@ -162,8 +162,8 @@ class ExternalConnection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groups
     *
     * @param ExternalGroup $val The groups
@@ -172,12 +172,12 @@ class ExternalConnection extends Entity
     */
     public function setGroups($val)
     {
-		$this->_propDict["groups"] = $val;
+        $this->_propDict["groups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the items
     * Read-only. Nullable.
      *
@@ -191,8 +191,8 @@ class ExternalConnection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the items
     * Read-only. Nullable.
     *
@@ -202,12 +202,12 @@ class ExternalConnection extends Entity
     */
     public function setItems($val)
     {
-		$this->_propDict["items"] = $val;
+        $this->_propDict["items"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
     * Read-only. Nullable.
      *
@@ -221,8 +221,8 @@ class ExternalConnection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     * Read-only. Nullable.
     *
@@ -232,10 +232,10 @@ class ExternalConnection extends Entity
     */
     public function setOperations($val)
     {
-		$this->_propDict["operations"] = $val;
+        $this->_propDict["operations"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schema
     * Read-only. Nullable.
@@ -254,7 +254,7 @@ class ExternalConnection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schema
     * Read-only. Nullable.
@@ -268,5 +268,5 @@ class ExternalConnection extends Entity
         $this->_propDict["schema"] = $val;
         return $this;
     }
-    
+
 }

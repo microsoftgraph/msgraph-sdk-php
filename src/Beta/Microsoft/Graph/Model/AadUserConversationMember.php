@@ -38,7 +38,7 @@ class AadUserConversationMember extends ConversationMember
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * The email address of the user.
@@ -52,7 +52,7 @@ class AadUserConversationMember extends ConversationMember
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     * TenantId which the Azure AD user belongs to.
@@ -67,7 +67,7 @@ class AadUserConversationMember extends ConversationMember
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     * TenantId which the Azure AD user belongs to.
@@ -81,7 +81,7 @@ class AadUserConversationMember extends ConversationMember
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The GUID of the user.
@@ -96,7 +96,7 @@ class AadUserConversationMember extends ConversationMember
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The GUID of the user.
@@ -110,7 +110,7 @@ class AadUserConversationMember extends ConversationMember
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the user
     *
@@ -128,7 +128,7 @@ class AadUserConversationMember extends ConversationMember
         }
         return null;
     }
-    
+
     /**
     * Sets the user
     *
@@ -141,5 +141,5 @@ class AadUserConversationMember extends ConversationMember
         $this->_propDict["user"] = $val;
         return $this;
     }
-    
+
 }

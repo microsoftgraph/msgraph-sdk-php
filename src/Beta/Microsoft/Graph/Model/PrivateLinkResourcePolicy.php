@@ -37,7 +37,7 @@ class PrivateLinkResourcePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalPrivateLinkId
     *
@@ -50,9 +50,9 @@ class PrivateLinkResourcePolicy extends Entity
         $this->_propDict["externalPrivateLinkId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tenantApprovals
      *
      * @return array The tenantApprovals
@@ -65,8 +65,8 @@ class PrivateLinkResourcePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tenantApprovals
     *
     * @param TenantApprovals $val The tenantApprovals
@@ -75,8 +75,8 @@ class PrivateLinkResourcePolicy extends Entity
     */
     public function setTenantApprovals($val)
     {
-		$this->_propDict["tenantApprovals"] = $val;
+        $this->_propDict["tenantApprovals"] = $val;
         return $this;
     }
-    
+
 }

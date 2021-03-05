@@ -37,7 +37,7 @@ class Command extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appServiceName
     *
@@ -50,7 +50,7 @@ class Command extends Entity
         $this->_propDict["appServiceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the error
     *
@@ -64,7 +64,7 @@ class Command extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the error
     *
@@ -77,7 +77,7 @@ class Command extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the packageFamilyName
     *
@@ -91,7 +91,7 @@ class Command extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the packageFamilyName
     *
@@ -104,7 +104,7 @@ class Command extends Entity
         $this->_propDict["packageFamilyName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payload
     *
@@ -122,7 +122,7 @@ class Command extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the payload
     *
@@ -135,7 +135,7 @@ class Command extends Entity
         $this->_propDict["payload"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the permissionTicket
     *
@@ -149,7 +149,7 @@ class Command extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the permissionTicket
     *
@@ -162,7 +162,7 @@ class Command extends Entity
         $this->_propDict["permissionTicket"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the postBackUri
     *
@@ -176,7 +176,7 @@ class Command extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the postBackUri
     *
@@ -189,7 +189,7 @@ class Command extends Entity
         $this->_propDict["postBackUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -203,7 +203,7 @@ class Command extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -216,7 +216,7 @@ class Command extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     *
@@ -230,7 +230,7 @@ class Command extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     *
@@ -243,7 +243,7 @@ class Command extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the responsepayload
     *
@@ -261,7 +261,7 @@ class Command extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the responsepayload
     *
@@ -274,5 +274,5 @@ class Command extends Entity
         $this->_propDict["responsepayload"] = $val;
         return $this;
     }
-    
+
 }

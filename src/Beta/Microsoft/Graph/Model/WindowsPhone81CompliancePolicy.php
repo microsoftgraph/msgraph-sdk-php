@@ -38,7 +38,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the osMaximumVersion
     * Maximum Windows Phone version.
@@ -52,7 +52,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["osMaximumVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osMinimumVersion
     * Minimum Windows Phone version.
@@ -67,7 +67,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the osMinimumVersion
     * Minimum Windows Phone version.
@@ -81,7 +81,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["osMinimumVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockSimple
     * Whether or not to block syncing the calendar.
@@ -96,7 +96,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockSimple
     * Whether or not to block syncing the calendar.
@@ -110,7 +110,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordBlockSimple"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordExpirationDays
     * Number of days before the password expires.
@@ -125,7 +125,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordExpirationDays
     * Number of days before the password expires.
@@ -139,7 +139,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordExpirationDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
@@ -154,7 +154,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
@@ -168,7 +168,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordMinimumCharacterSetCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumLength
     * Minimum length of passwords.
@@ -183,7 +183,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumLength
     * Minimum length of passwords.
@@ -197,7 +197,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordMinimumLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
@@ -212,7 +212,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
@@ -226,7 +226,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordMinutesOfInactivityBeforeLock"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 0 to 24
@@ -241,7 +241,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 0 to 24
@@ -255,7 +255,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequired
     * Whether or not to require a password.
@@ -270,7 +270,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordRequired
     * Whether or not to require a password.
@@ -284,7 +284,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -303,7 +303,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         }
         return null;
     }
-    
+
     /**
     * Sets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -317,7 +317,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["passwordRequiredType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the storageRequireEncryption
     * Require encryption on windows phone devices.
@@ -332,7 +332,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the storageRequireEncryption
     * Require encryption on windows phone devices.
@@ -346,5 +346,5 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
         $this->_propDict["storageRequireEncryption"] = boolval($val);
         return $this;
     }
-    
+
 }

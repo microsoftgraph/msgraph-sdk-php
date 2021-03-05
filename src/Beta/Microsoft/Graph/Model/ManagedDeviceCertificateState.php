@@ -38,7 +38,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateEnhancedKeyUsage
     * Extended key usage
@@ -52,7 +52,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateEnhancedKeyUsage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateErrorCode
     * Error code
@@ -67,7 +67,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateErrorCode
     * Error code
@@ -81,7 +81,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateErrorCode"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the certificateExpirationDateTime
     * Certificate expiry date
@@ -100,7 +100,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateExpirationDateTime
     * Certificate expiry date
@@ -114,7 +114,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateExpirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateIssuanceDateTime
     * Issuance date
@@ -133,7 +133,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateIssuanceDateTime
     * Issuance date
@@ -147,7 +147,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateIssuanceDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateIssuanceState
     * Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
@@ -166,7 +166,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateIssuanceState
     * Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
@@ -180,7 +180,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateIssuanceState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateIssuer
     * Issuer
@@ -195,7 +195,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateIssuer
     * Issuer
@@ -209,7 +209,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateIssuer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateKeyLength
     * Key length
@@ -224,7 +224,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateKeyLength
     * Key length
@@ -238,7 +238,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateKeyLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the certificateKeyStorageProvider
     * Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
@@ -257,7 +257,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateKeyStorageProvider
     * Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
@@ -271,7 +271,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateKeyStorageProvider"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateKeyUsage
     * Key usage. Possible values are: keyEncipherment, digitalSignature.
@@ -290,7 +290,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateKeyUsage
     * Key usage. Possible values are: keyEncipherment, digitalSignature.
@@ -304,7 +304,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateKeyUsage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateLastIssuanceStateChangedDateTime
     * Last certificate issuance state change
@@ -323,7 +323,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateLastIssuanceStateChangedDateTime
     * Last certificate issuance state change
@@ -337,7 +337,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateLastIssuanceStateChangedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateProfileDisplayName
     * Certificate profile display name
@@ -352,7 +352,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateProfileDisplayName
     * Certificate profile display name
@@ -366,7 +366,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateProfileDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateRevokeStatus
     * Revoke status. Possible values are: none, pending, issued, failed, revoked.
@@ -385,7 +385,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateRevokeStatus
     * Revoke status. Possible values are: none, pending, issued, failed, revoked.
@@ -399,7 +399,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateRevokeStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateSerialNumber
     * Serial number
@@ -414,7 +414,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateSerialNumber
     * Serial number
@@ -428,7 +428,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateSerialNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateSubjectAlternativeNameFormat
     * Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -447,7 +447,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateSubjectAlternativeNameFormat
     * Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -461,7 +461,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateSubjectAlternativeNameFormat"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateSubjectAlternativeNameFormatString
     * Subject alternative name format string for custom formats
@@ -476,7 +476,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateSubjectAlternativeNameFormatString
     * Subject alternative name format string for custom formats
@@ -490,7 +490,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateSubjectAlternativeNameFormatString"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateSubjectNameFormat
     * Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
@@ -509,7 +509,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateSubjectNameFormat
     * Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
@@ -523,7 +523,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateSubjectNameFormat"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateSubjectNameFormatString
     * Subject name format string for custom subject name formats
@@ -538,7 +538,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateSubjectNameFormatString
     * Subject name format string for custom subject name formats
@@ -552,7 +552,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateSubjectNameFormatString"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateThumbprint
     * Thumbprint
@@ -567,7 +567,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateThumbprint
     * Thumbprint
@@ -581,7 +581,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateThumbprint"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateValidityPeriod
     * Validity period
@@ -596,7 +596,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateValidityPeriod
     * Validity period
@@ -610,7 +610,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateValidityPeriod"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the certificateValidityPeriodUnits
     * Validity period units. Possible values are: days, months, years.
@@ -629,7 +629,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateValidityPeriodUnits
     * Validity period units. Possible values are: days, months, years.
@@ -643,7 +643,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["certificateValidityPeriodUnits"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDisplayName
     * Device display name
@@ -658,7 +658,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * Device display name
@@ -672,7 +672,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the devicePlatform
     * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
@@ -691,7 +691,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the devicePlatform
     * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
@@ -705,7 +705,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["devicePlatform"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastCertificateStateChangeDateTime
     * Last certificate issuance state change
@@ -724,7 +724,7 @@ class ManagedDeviceCertificateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastCertificateStateChangeDateTime
     * Last certificate issuance state change
@@ -738,7 +738,7 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["lastCertificateStateChangeDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userDisplayName
     * User display name
@@ -753,7 +753,7 @@ class ManagedDeviceCertificateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userDisplayName
     * User display name
@@ -767,5 +767,5 @@ class ManagedDeviceCertificateState extends Entity
         $this->_propDict["userDisplayName"] = $val;
         return $this;
     }
-    
+
 }

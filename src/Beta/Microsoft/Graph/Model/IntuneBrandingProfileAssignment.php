@@ -42,7 +42,7 @@ class IntuneBrandingProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * Assignment target that the branding profile is assigned to.
@@ -56,5 +56,5 @@ class IntuneBrandingProfileAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

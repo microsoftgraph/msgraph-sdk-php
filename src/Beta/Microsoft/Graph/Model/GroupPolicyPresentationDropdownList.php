@@ -42,7 +42,7 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultItem
     * Localized string value identifying the default choice of the list of items.
@@ -56,9 +56,9 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
         $this->_propDict["defaultItem"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the items
     * Represents a set of localized display names and their associated values.
      *
@@ -72,8 +72,8 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the items
     * Represents a set of localized display names and their associated values.
     *
@@ -83,10 +83,10 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
     */
     public function setItems($val)
     {
-		$this->_propDict["items"] = $val;
+        $this->_propDict["items"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the required
     * Requirement to enter a value in the parameter box. The default value is false.
@@ -101,7 +101,7 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
             return null;
         }
     }
-    
+
     /**
     * Sets the required
     * Requirement to enter a value in the parameter box. The default value is false.
@@ -115,5 +115,5 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
         $this->_propDict["required"] = boolval($val);
         return $this;
     }
-    
+
 }

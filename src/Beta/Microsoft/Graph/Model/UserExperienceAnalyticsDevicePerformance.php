@@ -38,7 +38,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the averageBlueScreens
     * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["averageBlueScreens"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the averageRestarts
     * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the averageRestarts
     * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["averageRestarts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the blueScreenCount
     * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the blueScreenCount
     * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["blueScreenCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the bootScore
     * The user experience analytics device boot score.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the bootScore
     * The user experience analytics device boot score.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["bootScore"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the coreBootTimeInMs
     * The user experience analytics device core boot time in milliseconds.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the coreBootTimeInMs
     * The user experience analytics device core boot time in milliseconds.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["coreBootTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the coreLoginTimeInMs
     * The user experience analytics device core login time in milliseconds.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the coreLoginTimeInMs
     * The user experience analytics device core login time in milliseconds.
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["coreLoginTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceCount
     * User experience analytics summarized device count.
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceCount
     * User experience analytics summarized device count.
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["deviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * The user experience analytics device name.
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * The user experience analytics device name.
@@ -255,7 +255,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the diskType
     * The user experience analytics device disk type. Possible values are: unkown, hdd, ssd.
@@ -274,7 +274,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the diskType
     * The user experience analytics device disk type. Possible values are: unkown, hdd, ssd.
@@ -288,7 +288,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["diskType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyBootTimeInMs
     * The user experience analytics device group policy boot time in milliseconds.
@@ -303,7 +303,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupPolicyBootTimeInMs
     * The user experience analytics device group policy boot time in milliseconds.
@@ -317,7 +317,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["groupPolicyBootTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyLoginTimeInMs
     * The user experience analytics device group policy login time in milliseconds.
@@ -332,7 +332,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupPolicyLoginTimeInMs
     * The user experience analytics device group policy login time in milliseconds.
@@ -346,7 +346,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["groupPolicyLoginTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the healthStatus
     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -365,7 +365,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the healthStatus
     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -379,7 +379,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["healthStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the loginScore
     * The user experience analytics device login score.
@@ -394,7 +394,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the loginScore
     * The user experience analytics device login score.
@@ -408,7 +408,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["loginScore"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * The user experience analytics device manufacturer.
@@ -423,7 +423,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * The user experience analytics device manufacturer.
@@ -437,7 +437,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * The user experience analytics device model.
@@ -452,7 +452,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * The user experience analytics device model.
@@ -466,7 +466,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the operatingSystemVersion
     * The user experience analytics device Operating System version.
@@ -481,7 +481,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the operatingSystemVersion
     * The user experience analytics device Operating System version.
@@ -495,7 +495,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["operatingSystemVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the responsiveDesktopTimeInMs
     * The user experience analytics responsive desktop time in milliseconds.
@@ -510,7 +510,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the responsiveDesktopTimeInMs
     * The user experience analytics responsive desktop time in milliseconds.
@@ -524,7 +524,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["responsiveDesktopTimeInMs"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restartCount
     * Number of Restarts in the last 14 days. Valid values 0 to 9999999
@@ -539,7 +539,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the restartCount
     * Number of Restarts in the last 14 days. Valid values 0 to 9999999
@@ -553,5 +553,5 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         $this->_propDict["restartCount"] = intval($val);
         return $this;
     }
-    
+
 }

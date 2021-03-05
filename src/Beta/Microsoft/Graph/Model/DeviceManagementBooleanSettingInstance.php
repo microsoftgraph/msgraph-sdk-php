@@ -38,7 +38,7 @@ class DeviceManagementBooleanSettingInstance extends DeviceManagementSettingInst
             return null;
         }
     }
-    
+
     /**
     * Sets the value
     * The boolean value
@@ -52,5 +52,5 @@ class DeviceManagementBooleanSettingInstance extends DeviceManagementSettingInst
         $this->_propDict["value"] = boolval($val);
         return $this;
     }
-    
+
 }

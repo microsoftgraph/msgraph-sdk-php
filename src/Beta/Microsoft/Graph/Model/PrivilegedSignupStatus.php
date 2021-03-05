@@ -37,7 +37,7 @@ class PrivilegedSignupStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isRegistered
     *
@@ -50,7 +50,7 @@ class PrivilegedSignupStatus extends Entity
         $this->_propDict["isRegistered"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -68,7 +68,7 @@ class PrivilegedSignupStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -81,5 +81,5 @@ class PrivilegedSignupStatus extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

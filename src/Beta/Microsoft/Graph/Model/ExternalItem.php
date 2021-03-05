@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class ExternalItem extends Entity
 {
 
-     /** 
+     /**
      * Gets the acl
     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
      *
@@ -39,8 +39,8 @@ class ExternalItem extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the acl
     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
     *
@@ -50,10 +50,10 @@ class ExternalItem extends Entity
     */
     public function setAcl($val)
     {
-		$this->_propDict["acl"] = $val;
+        $this->_propDict["acl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the content
     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
@@ -72,7 +72,7 @@ class ExternalItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
@@ -86,7 +86,7 @@ class ExternalItem extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalItemProperties
     * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
@@ -105,7 +105,7 @@ class ExternalItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the externalItemProperties
     * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
@@ -119,5 +119,5 @@ class ExternalItem extends Entity
         $this->_propDict["properties"] = $val;
         return $this;
     }
-    
+
 }

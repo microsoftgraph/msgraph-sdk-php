@@ -37,7 +37,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedProducts
     *
@@ -50,7 +50,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deletedDate
     *
@@ -68,7 +68,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     *
@@ -81,7 +81,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -95,7 +95,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -108,7 +108,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -126,7 +126,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -139,7 +139,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceAppSharingCount
     *
@@ -153,7 +153,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceAppSharingCount
     *
@@ -166,7 +166,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceAppSharingCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceAudioVideoCount
     *
@@ -180,7 +180,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceAudioVideoCount
     *
@@ -193,7 +193,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceAudioVideoCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceAudioVideoMinutes
     *
@@ -207,7 +207,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceAudioVideoMinutes
     *
@@ -220,7 +220,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceAudioVideoMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceCloudDialInMicrosoftMinutes
     *
@@ -234,7 +234,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceCloudDialInMicrosoftMinutes
     *
@@ -247,7 +247,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceCloudDialInMicrosoftMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceCloudDialInOutMicrosoftCount
     *
@@ -261,7 +261,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceCloudDialInOutMicrosoftCount
     *
@@ -274,7 +274,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceCloudDialInOutMicrosoftCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceCloudDialOutMicrosoftMinutes
     *
@@ -288,7 +288,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceCloudDialOutMicrosoftMinutes
     *
@@ -301,7 +301,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceCloudDialOutMicrosoftMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceDialInOut3rdPartyCount
     *
@@ -315,7 +315,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceDialInOut3rdPartyCount
     *
@@ -328,7 +328,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceDialInOut3rdPartyCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceIMCount
     *
@@ -342,7 +342,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceIMCount
     *
@@ -355,7 +355,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceIMCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceLastActivityDate
     *
@@ -373,7 +373,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the organizedConferenceLastActivityDate
     *
@@ -386,7 +386,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the organizedConferenceWebCount
     *
@@ -400,7 +400,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizedConferenceWebCount
     *
@@ -413,7 +413,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["organizedConferenceWebCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the participatedConferenceAppSharingCount
     *
@@ -427,7 +427,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participatedConferenceAppSharingCount
     *
@@ -440,7 +440,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["participatedConferenceAppSharingCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the participatedConferenceAudioVideoCount
     *
@@ -454,7 +454,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participatedConferenceAudioVideoCount
     *
@@ -467,7 +467,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["participatedConferenceAudioVideoCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the participatedConferenceAudioVideoMinutes
     *
@@ -481,7 +481,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participatedConferenceAudioVideoMinutes
     *
@@ -494,7 +494,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["participatedConferenceAudioVideoMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the participatedConferenceDialInOut3rdPartyCount
     *
@@ -508,7 +508,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participatedConferenceDialInOut3rdPartyCount
     *
@@ -521,7 +521,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["participatedConferenceDialInOut3rdPartyCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the participatedConferenceIMCount
     *
@@ -535,7 +535,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participatedConferenceIMCount
     *
@@ -548,7 +548,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["participatedConferenceIMCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the participatedConferenceLastActivityDate
     *
@@ -566,7 +566,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the participatedConferenceLastActivityDate
     *
@@ -579,7 +579,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["participatedConferenceLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the participatedConferenceWebCount
     *
@@ -593,7 +593,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the participatedConferenceWebCount
     *
@@ -606,7 +606,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["participatedConferenceWebCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerAppSharingCount
     *
@@ -620,7 +620,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeerAppSharingCount
     *
@@ -633,7 +633,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerAppSharingCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerAudioCount
     *
@@ -647,7 +647,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeerAudioCount
     *
@@ -660,7 +660,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerAudioCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerAudioMinutes
     *
@@ -674,7 +674,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeerAudioMinutes
     *
@@ -687,7 +687,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerAudioMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerFileTransferCount
     *
@@ -701,7 +701,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeerFileTransferCount
     *
@@ -714,7 +714,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerFileTransferCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerIMCount
     *
@@ -728,7 +728,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeerIMCount
     *
@@ -741,7 +741,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerIMCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerLastActivityDate
     *
@@ -759,7 +759,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the peerToPeerLastActivityDate
     *
@@ -772,7 +772,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerLastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerVideoCount
     *
@@ -786,7 +786,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeerVideoCount
     *
@@ -799,7 +799,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerVideoCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the peerToPeerVideoMinutes
     *
@@ -813,7 +813,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the peerToPeerVideoMinutes
     *
@@ -826,7 +826,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["peerToPeerVideoMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -840,7 +840,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -853,7 +853,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -871,7 +871,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -884,7 +884,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalOrganizedConferenceCount
     *
@@ -898,7 +898,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalOrganizedConferenceCount
     *
@@ -911,7 +911,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["totalOrganizedConferenceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalParticipatedConferenceCount
     *
@@ -925,7 +925,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalParticipatedConferenceCount
     *
@@ -938,7 +938,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["totalParticipatedConferenceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalPeerToPeerSessionCount
     *
@@ -952,7 +952,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalPeerToPeerSessionCount
     *
@@ -965,7 +965,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["totalPeerToPeerSessionCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -979,7 +979,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -992,5 +992,5 @@ class SkypeForBusinessActivityUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

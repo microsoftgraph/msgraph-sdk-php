@@ -41,7 +41,7 @@ class MailboxUsageStorage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -54,7 +54,7 @@ class MailboxUsageStorage extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -68,7 +68,7 @@ class MailboxUsageStorage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -81,7 +81,7 @@ class MailboxUsageStorage extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -99,7 +99,7 @@ class MailboxUsageStorage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -112,7 +112,7 @@ class MailboxUsageStorage extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the storageUsedInBytes
     *
@@ -126,7 +126,7 @@ class MailboxUsageStorage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the storageUsedInBytes
     *
@@ -139,5 +139,5 @@ class MailboxUsageStorage extends Entity
         $this->_propDict["storageUsedInBytes"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidForWorkCustomConfiguration extends DeviceConfiguration
 {
 
-     /** 
+     /**
      * Gets the omaSettings
     * OMA settings. This collection can contain a maximum of 500 elements.
      *
@@ -39,8 +39,8 @@ class AndroidForWorkCustomConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the omaSettings
     * OMA settings. This collection can contain a maximum of 500 elements.
     *
@@ -50,8 +50,8 @@ class AndroidForWorkCustomConfiguration extends DeviceConfiguration
     */
     public function setOmaSettings($val)
     {
-		$this->_propDict["omaSettings"] = $val;
+        $this->_propDict["omaSettings"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class ImportedDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Created Date Time of the device
@@ -56,7 +56,7 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the device
@@ -71,7 +71,7 @@ class ImportedDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the device
@@ -85,7 +85,7 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentState
     * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
@@ -104,7 +104,7 @@ class ImportedDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentState
     * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
@@ -118,7 +118,7 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["enrollmentState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the importedDeviceIdentifier
     * Imported Device Identifier
@@ -133,7 +133,7 @@ class ImportedDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the importedDeviceIdentifier
     * Imported Device Identifier
@@ -147,7 +147,7 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["importedDeviceIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the importedDeviceIdentityType
     * Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
@@ -166,7 +166,7 @@ class ImportedDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the importedDeviceIdentityType
     * Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
@@ -180,7 +180,7 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["importedDeviceIdentityType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastContactedDateTime
     * Last Contacted Date Time of the device
@@ -199,7 +199,7 @@ class ImportedDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastContactedDateTime
     * Last Contacted Date Time of the device
@@ -213,7 +213,7 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["lastContactedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last Modified DateTime of the description
@@ -232,7 +232,7 @@ class ImportedDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last Modified DateTime of the description
@@ -246,7 +246,7 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platform
     * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
@@ -265,7 +265,7 @@ class ImportedDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platform
     * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
@@ -279,5 +279,5 @@ class ImportedDeviceIdentity extends Entity
         $this->_propDict["platform"] = $val;
         return $this;
     }
-    
+
 }

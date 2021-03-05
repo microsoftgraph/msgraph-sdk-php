@@ -41,7 +41,7 @@ class EducationOutcome extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     *
@@ -54,7 +54,7 @@ class EducationOutcome extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -72,7 +72,7 @@ class EducationOutcome extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -85,5 +85,5 @@ class EducationOutcome extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

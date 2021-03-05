@@ -38,7 +38,7 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The template's description
@@ -52,7 +52,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The template's display name
@@ -67,7 +67,7 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The template's display name
@@ -81,7 +81,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the intentCount
     * Number of Intents created from this template.
@@ -96,7 +96,7 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the intentCount
     * Number of Intents created from this template.
@@ -110,7 +110,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["intentCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDeprecated
     * The template is deprecated or not. Intents cannot be created from a deprecated template.
@@ -125,7 +125,7 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeprecated
     * The template is deprecated or not. Intents cannot be created from a deprecated template.
@@ -139,7 +139,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["isDeprecated"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the platformType
     * The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
@@ -158,7 +158,7 @@ class DeviceManagementTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platformType
     * The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
@@ -172,7 +172,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["platformType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publishedDateTime
     * When the template was published
@@ -191,7 +191,7 @@ class DeviceManagementTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the publishedDateTime
     * When the template was published
@@ -205,7 +205,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["publishedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateSubtype
     * The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
@@ -224,7 +224,7 @@ class DeviceManagementTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the templateSubtype
     * The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
@@ -238,7 +238,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["templateSubtype"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateType
     * The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
@@ -257,7 +257,7 @@ class DeviceManagementTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the templateType
     * The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
@@ -271,7 +271,7 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["templateType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the versionInfo
     * The template's version information
@@ -286,7 +286,7 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the versionInfo
     * The template's version information
@@ -300,9 +300,9 @@ class DeviceManagementTemplate extends Entity
         $this->_propDict["versionInfo"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the categories
     * Collection of setting categories within the template
      *
@@ -316,8 +316,8 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the categories
     * Collection of setting categories within the template
     *
@@ -327,12 +327,12 @@ class DeviceManagementTemplate extends Entity
     */
     public function setCategories($val)
     {
-		$this->_propDict["categories"] = $val;
+        $this->_propDict["categories"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the migratableTo
     * Collection of templates this template can migrate to
      *
@@ -346,8 +346,8 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the migratableTo
     * Collection of templates this template can migrate to
     *
@@ -357,12 +357,12 @@ class DeviceManagementTemplate extends Entity
     */
     public function setMigratableTo($val)
     {
-		$this->_propDict["migratableTo"] = $val;
+        $this->_propDict["migratableTo"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settings
     * Collection of all settings this template has
      *
@@ -376,8 +376,8 @@ class DeviceManagementTemplate extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settings
     * Collection of all settings this template has
     *
@@ -387,8 +387,8 @@ class DeviceManagementTemplate extends Entity
     */
     public function setSettings($val)
     {
-		$this->_propDict["settings"] = $val;
+        $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

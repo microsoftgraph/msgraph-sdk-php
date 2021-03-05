@@ -41,7 +41,7 @@ class SiteSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the site
     *
@@ -54,5 +54,5 @@ class SiteSource extends DataSource
         $this->_propDict["site"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class Request extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the approvalId
     *
@@ -50,7 +50,7 @@ class Request extends Entity
         $this->_propDict["approvalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the completedDateTime
     *
@@ -68,7 +68,7 @@ class Request extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     *
@@ -81,7 +81,7 @@ class Request extends Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     *
@@ -99,7 +99,7 @@ class Request extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -112,7 +112,7 @@ class Request extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -130,7 +130,7 @@ class Request extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -143,7 +143,7 @@ class Request extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customData
     *
@@ -157,7 +157,7 @@ class Request extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customData
     *
@@ -170,7 +170,7 @@ class Request extends Entity
         $this->_propDict["customData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -184,7 +184,7 @@ class Request extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -197,5 +197,5 @@ class Request extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

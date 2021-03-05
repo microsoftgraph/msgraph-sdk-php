@@ -41,7 +41,7 @@ class DirectoryObject extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDateTime
     *
@@ -54,5 +54,5 @@ class DirectoryObject extends Entity
         $this->_propDict["deletedDateTime"] = $val;
         return $this;
     }
-    
+
 }

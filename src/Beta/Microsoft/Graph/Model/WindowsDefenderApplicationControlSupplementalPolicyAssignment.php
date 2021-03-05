@@ -42,7 +42,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyAssignment extends Enti
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The target group assignment defined by the admin.
@@ -56,5 +56,5 @@ class WindowsDefenderApplicationControlSupplementalPolicyAssignment extends Enti
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the action
     *
@@ -54,7 +54,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["action"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the completedDateTime
     *
@@ -72,7 +72,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     *
@@ -85,7 +85,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     *
@@ -103,7 +103,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -116,7 +116,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -134,7 +134,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -147,7 +147,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the percentProgress
     *
@@ -161,7 +161,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the percentProgress
     *
@@ -174,7 +174,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["percentProgress"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the resultInfo
     *
@@ -192,7 +192,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resultInfo
     *
@@ -205,7 +205,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["resultInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -223,7 +223,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -236,5 +236,5 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

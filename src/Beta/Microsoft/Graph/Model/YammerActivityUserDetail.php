@@ -37,7 +37,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedProducts
     *
@@ -50,7 +50,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -95,7 +95,7 @@ class YammerActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -108,7 +108,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the likedCount
     *
@@ -122,7 +122,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the likedCount
     *
@@ -135,7 +135,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["likedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the postedCount
     *
@@ -149,7 +149,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the postedCount
     *
@@ -162,7 +162,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["postedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the readCount
     *
@@ -176,7 +176,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the readCount
     *
@@ -189,7 +189,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["readCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -203,7 +203,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -216,7 +216,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -234,7 +234,7 @@ class YammerActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -247,7 +247,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the stateChangeDate
     *
@@ -265,7 +265,7 @@ class YammerActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the stateChangeDate
     *
@@ -278,7 +278,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["stateChangeDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -292,7 +292,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -305,7 +305,7 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userState
     *
@@ -319,7 +319,7 @@ class YammerActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userState
     *
@@ -332,5 +332,5 @@ class YammerActivityUserDetail extends Entity
         $this->_propDict["userState"] = $val;
         return $this;
     }
-    
+
 }

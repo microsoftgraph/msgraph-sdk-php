@@ -42,7 +42,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Creation time of the Assignment Filter.
@@ -56,7 +56,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the Assignment Filter.
@@ -71,7 +71,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the Assignment Filter.
@@ -85,7 +85,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * DisplayName of the Assignment Filter.
@@ -100,7 +100,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * DisplayName of the Assignment Filter.
@@ -114,7 +114,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last modified time of the Assignment Filter.
@@ -133,7 +133,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modified time of the Assignment Filter.
@@ -147,7 +147,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platform
     * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
@@ -166,7 +166,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platform
     * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
@@ -180,7 +180,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         $this->_propDict["platform"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTags
     * RoleScopeTags of the Assignment Filter.
@@ -195,7 +195,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTags
     * RoleScopeTags of the Assignment Filter.
@@ -209,7 +209,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         $this->_propDict["roleScopeTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rule
     * Rule definition of the Assignment Filter.
@@ -224,7 +224,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rule
     * Rule definition of the Assignment Filter.
@@ -238,5 +238,5 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         $this->_propDict["rule"] = $val;
         return $this;
     }
-    
+
 }

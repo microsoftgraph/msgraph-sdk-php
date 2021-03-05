@@ -42,7 +42,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
         }
         return null;
     }
-    
+
     /**
     * Sets the recipientActionDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -56,7 +56,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
         $this->_propDict["recipientActionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recipientActionMessage
     * Custom message sent by recipient of the offer shift request.
@@ -71,7 +71,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the recipientActionMessage
     * Custom message sent by recipient of the offer shift request.
@@ -85,7 +85,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
         $this->_propDict["recipientActionMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recipientUserId
     * User id of the recipient of the offer shift request.
@@ -100,7 +100,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the recipientUserId
     * User id of the recipient of the offer shift request.
@@ -114,7 +114,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
         $this->_propDict["recipientUserId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the senderShiftId
     * User id of the sender of the offer shift request.
@@ -129,7 +129,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the senderShiftId
     * User id of the sender of the offer shift request.
@@ -143,5 +143,5 @@ class OfferShiftRequest extends ScheduleChangeRequest
         $this->_propDict["senderShiftId"] = $val;
         return $this;
     }
-    
+
 }

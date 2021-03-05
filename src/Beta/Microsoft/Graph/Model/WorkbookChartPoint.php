@@ -38,7 +38,7 @@ class WorkbookChartPoint extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the value
     * Returns the value of a chart point. Read-only.
@@ -52,7 +52,7 @@ class WorkbookChartPoint extends Entity
         $this->_propDict["value"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Encapsulates the format properties chart point. Read-only.
@@ -71,7 +71,7 @@ class WorkbookChartPoint extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Encapsulates the format properties chart point. Read-only.
@@ -85,5 +85,5 @@ class WorkbookChartPoint extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
 }

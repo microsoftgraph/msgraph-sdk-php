@@ -42,7 +42,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
         }
         return null;
     }
-    
+
     /**
     * Sets the apiConnectorConfiguration
     * Configuration for enabling an API connector for use as part of the user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
@@ -56,9 +56,9 @@ class B2xIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["apiConnectorConfiguration"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the identityProviders
     * The identity providers included in the user flow.
      *
@@ -72,8 +72,8 @@ class B2xIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the identityProviders
     * The identity providers included in the user flow.
     *
@@ -83,12 +83,12 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     */
     public function setIdentityProviders($val)
     {
-		$this->_propDict["identityProviders"] = $val;
+        $this->_propDict["identityProviders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the languages
     * The languages supported for customization within the user flow. Language customization is enabled by default in B2X user flow. You cannot create custom languages in B2X user flows.
      *
@@ -102,8 +102,8 @@ class B2xIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the languages
     * The languages supported for customization within the user flow. Language customization is enabled by default in B2X user flow. You cannot create custom languages in B2X user flows.
     *
@@ -113,12 +113,12 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     */
     public function setLanguages($val)
     {
-		$this->_propDict["languages"] = $val;
+        $this->_propDict["languages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userAttributeAssignments
     * The user attribute assignments included in the user flow.
      *
@@ -132,8 +132,8 @@ class B2xIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userAttributeAssignments
     * The user attribute assignments included in the user flow.
     *
@@ -143,8 +143,8 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     */
     public function setUserAttributeAssignments($val)
     {
-		$this->_propDict["userAttributeAssignments"] = $val;
+        $this->_propDict["userAttributeAssignments"] = $val;
         return $this;
     }
-    
+
 }

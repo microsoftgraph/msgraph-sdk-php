@@ -41,7 +41,7 @@ class Note extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     *
@@ -54,7 +54,7 @@ class Note extends OutlookItem
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasAttachments
     *
@@ -68,7 +68,7 @@ class Note extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the hasAttachments
     *
@@ -81,7 +81,7 @@ class Note extends OutlookItem
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -95,7 +95,7 @@ class Note extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -108,7 +108,7 @@ class Note extends OutlookItem
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the subject
     *
@@ -122,7 +122,7 @@ class Note extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     *
@@ -135,9 +135,9 @@ class Note extends OutlookItem
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the attachments
      *
      * @return array The attachments
@@ -150,8 +150,8 @@ class Note extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attachments
     *
     * @param Attachment $val The attachments
@@ -160,12 +160,12 @@ class Note extends OutlookItem
     */
     public function setAttachments($val)
     {
-		$this->_propDict["attachments"] = $val;
+        $this->_propDict["attachments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extensions
      *
      * @return array The extensions
@@ -178,8 +178,8 @@ class Note extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extensions
     *
     * @param Extension $val The extensions
@@ -188,12 +188,12 @@ class Note extends OutlookItem
     */
     public function setExtensions($val)
     {
-		$this->_propDict["extensions"] = $val;
+        $this->_propDict["extensions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the multiValueExtendedProperties
      *
      * @return array The multiValueExtendedProperties
@@ -206,8 +206,8 @@ class Note extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the multiValueExtendedProperties
     *
     * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
@@ -216,12 +216,12 @@ class Note extends OutlookItem
     */
     public function setMultiValueExtendedProperties($val)
     {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
+        $this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the singleValueExtendedProperties
      *
      * @return array The singleValueExtendedProperties
@@ -234,8 +234,8 @@ class Note extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the singleValueExtendedProperties
     *
     * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
@@ -244,8 +244,8 @@ class Note extends OutlookItem
     */
     public function setSingleValueExtendedProperties($val)
     {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
+        $this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-    
+
 }

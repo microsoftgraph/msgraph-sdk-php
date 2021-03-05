@@ -37,7 +37,7 @@ class LookupResultRow extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the row
     *
@@ -50,5 +50,5 @@ class LookupResultRow extends Entity
         $this->_propDict["row"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class DeviceComplianceScheduledActionForRule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ruleName
     * Name of the rule which this scheduled action applies to.
@@ -52,9 +52,9 @@ class DeviceComplianceScheduledActionForRule extends Entity
         $this->_propDict["ruleName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the scheduledActionConfigurations
     * The list of scheduled action configurations for this compliance policy.
      *
@@ -68,8 +68,8 @@ class DeviceComplianceScheduledActionForRule extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the scheduledActionConfigurations
     * The list of scheduled action configurations for this compliance policy.
     *
@@ -79,8 +79,8 @@ class DeviceComplianceScheduledActionForRule extends Entity
     */
     public function setScheduledActionConfigurations($val)
     {
-		$this->_propDict["scheduledActionConfigurations"] = $val;
+        $this->_propDict["scheduledActionConfigurations"] = $val;
         return $this;
     }
-    
+
 }

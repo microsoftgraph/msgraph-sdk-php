@@ -37,7 +37,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupDisplayName
     *
@@ -50,7 +50,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["groupDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupType
     *
@@ -64,7 +64,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupType
     *
@@ -77,7 +77,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["groupType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -91,7 +91,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -104,7 +104,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -122,7 +122,7 @@ class YammerGroupsActivityDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -135,7 +135,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the likedCount
     *
@@ -149,7 +149,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the likedCount
     *
@@ -162,7 +162,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["likedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the memberCount
     *
@@ -176,7 +176,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the memberCount
     *
@@ -189,7 +189,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["memberCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the networkDisplayName
     *
@@ -203,7 +203,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkDisplayName
     *
@@ -216,7 +216,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["networkDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the office365Connected
     *
@@ -230,7 +230,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the office365Connected
     *
@@ -243,7 +243,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["office365Connected"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the ownerPrincipalName
     *
@@ -257,7 +257,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownerPrincipalName
     *
@@ -270,7 +270,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["ownerPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the postedCount
     *
@@ -284,7 +284,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the postedCount
     *
@@ -297,7 +297,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["postedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the readCount
     *
@@ -311,7 +311,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the readCount
     *
@@ -324,7 +324,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["readCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -338,7 +338,7 @@ class YammerGroupsActivityDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -351,7 +351,7 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -369,7 +369,7 @@ class YammerGroupsActivityDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -382,5 +382,5 @@ class YammerGroupsActivityDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
 }

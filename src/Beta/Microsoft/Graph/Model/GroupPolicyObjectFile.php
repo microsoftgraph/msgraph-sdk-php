@@ -38,7 +38,7 @@ class GroupPolicyObjectFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the content
     * The Group Policy Object file content.
@@ -52,7 +52,7 @@ class GroupPolicyObjectFile extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time at which the GroupPolicy was first uploaded.
@@ -71,7 +71,7 @@ class GroupPolicyObjectFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time at which the GroupPolicy was first uploaded.
@@ -85,7 +85,7 @@ class GroupPolicyObjectFile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupPolicyObjectId
     * The Group Policy Object GUID from GPO Xml content
@@ -100,7 +100,7 @@ class GroupPolicyObjectFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupPolicyObjectId
     * The Group Policy Object GUID from GPO Xml content
@@ -114,7 +114,7 @@ class GroupPolicyObjectFile extends Entity
         $this->_propDict["groupPolicyObjectId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time at which the GroupPolicyObjectFile was last modified.
@@ -133,7 +133,7 @@ class GroupPolicyObjectFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time at which the GroupPolicyObjectFile was last modified.
@@ -147,7 +147,7 @@ class GroupPolicyObjectFile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ouDistinguishedName
     * The distinguished name of the OU.
@@ -162,7 +162,7 @@ class GroupPolicyObjectFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ouDistinguishedName
     * The distinguished name of the OU.
@@ -176,5 +176,5 @@ class GroupPolicyObjectFile extends Entity
         $this->_propDict["ouDistinguishedName"] = $val;
         return $this;
     }
-    
+
 }

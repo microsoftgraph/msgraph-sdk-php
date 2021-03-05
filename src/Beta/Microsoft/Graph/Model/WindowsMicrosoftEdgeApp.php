@@ -42,7 +42,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp
         }
         return null;
     }
-    
+
     /**
     * Sets the channel
     * The channel to install on target devices. Possible values are: dev, beta, stable.
@@ -56,7 +56,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp
         $this->_propDict["channel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayLanguageLocale
     * The language locale to use when the Edge app displays text to the user.
@@ -71,7 +71,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the displayLanguageLocale
     * The language locale to use when the Edge app displays text to the user.
@@ -85,5 +85,5 @@ class WindowsMicrosoftEdgeApp extends MobileApp
         $this->_propDict["displayLanguageLocale"] = $val;
         return $this;
     }
-    
+
 }

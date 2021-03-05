@@ -41,7 +41,7 @@ class FileClassificationRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the file
     *
@@ -54,7 +54,7 @@ class FileClassificationRequest extends Entity
         $this->_propDict["file"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sensitiveTypeIds
     *
@@ -68,7 +68,7 @@ class FileClassificationRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sensitiveTypeIds
     *
@@ -81,5 +81,5 @@ class FileClassificationRequest extends Entity
         $this->_propDict["sensitiveTypeIds"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultValue
     * Localized default string displayed in the text box. The default value is empty.
@@ -52,7 +52,7 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
         $this->_propDict["defaultValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the maxLength
     * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
@@ -67,7 +67,7 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
             return null;
         }
     }
-    
+
     /**
     * Sets the maxLength
     * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
@@ -81,7 +81,7 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
         $this->_propDict["maxLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the required
     * Requirement to enter a value in the text box. Default value is false.
@@ -96,7 +96,7 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
             return null;
         }
     }
-    
+
     /**
     * Sets the required
     * Requirement to enter a value in the text box. Default value is false.
@@ -110,5 +110,5 @@ class GroupPolicyPresentationTextBox extends GroupPolicyPresentation
         $this->_propDict["required"] = boolval($val);
         return $this;
     }
-    
+
 }

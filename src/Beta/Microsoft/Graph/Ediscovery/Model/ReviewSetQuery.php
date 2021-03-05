@@ -41,7 +41,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -54,7 +54,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -72,7 +72,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -85,7 +85,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -99,7 +99,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -112,7 +112,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     *
@@ -130,7 +130,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     *
@@ -143,7 +143,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -161,7 +161,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -174,7 +174,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the query
     *
@@ -188,7 +188,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the query
     *
@@ -201,5 +201,5 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["query"] = $val;
         return $this;
     }
-    
+
 }

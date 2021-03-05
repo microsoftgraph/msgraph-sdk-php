@@ -38,7 +38,7 @@ class AuthenticationFlowsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
@@ -52,7 +52,7 @@ class AuthenticationFlowsPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
@@ -67,7 +67,7 @@ class AuthenticationFlowsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
@@ -81,7 +81,7 @@ class AuthenticationFlowsPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the selfServiceSignUp
     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
@@ -100,7 +100,7 @@ class AuthenticationFlowsPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the selfServiceSignUp
     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
@@ -114,5 +114,5 @@ class AuthenticationFlowsPolicy extends Entity
         $this->_propDict["selfServiceSignUp"] = $val;
         return $this;
     }
-    
+
 }

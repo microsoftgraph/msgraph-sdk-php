@@ -38,7 +38,7 @@ class EnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the configurationEndpointUrl
     * Configuration endpoint url to use for Enrollment
@@ -52,7 +52,7 @@ class EnrollmentProfile extends Entity
         $this->_propDict["configurationEndpointUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the profile
@@ -67,7 +67,7 @@ class EnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the profile
@@ -81,7 +81,7 @@ class EnrollmentProfile extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the profile
@@ -96,7 +96,7 @@ class EnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the profile
@@ -110,7 +110,7 @@ class EnrollmentProfile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enableAuthenticationViaCompanyPortal
     * Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
@@ -125,7 +125,7 @@ class EnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enableAuthenticationViaCompanyPortal
     * Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
@@ -139,7 +139,7 @@ class EnrollmentProfile extends Entity
         $this->_propDict["enableAuthenticationViaCompanyPortal"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the requireCompanyPortalOnSetupAssistantEnrolledDevices
     * Indicates that Company Portal is required on setup assistant enrolled devices
@@ -154,7 +154,7 @@ class EnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requireCompanyPortalOnSetupAssistantEnrolledDevices
     * Indicates that Company Portal is required on setup assistant enrolled devices
@@ -168,7 +168,7 @@ class EnrollmentProfile extends Entity
         $this->_propDict["requireCompanyPortalOnSetupAssistantEnrolledDevices"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the requiresUserAuthentication
     * Indicates if the profile requires user authentication
@@ -183,7 +183,7 @@ class EnrollmentProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requiresUserAuthentication
     * Indicates if the profile requires user authentication
@@ -197,5 +197,5 @@ class EnrollmentProfile extends Entity
         $this->_propDict["requiresUserAuthentication"] = boolval($val);
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class NoncustodialDataSource extends DataSourceContainer
             return null;
         }
     }
-    
+
     /**
     * Sets the applyHoldToSource
     *
@@ -50,7 +50,7 @@ class NoncustodialDataSource extends DataSourceContainer
         $this->_propDict["applyHoldToSource"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the dataSource
     *
@@ -68,7 +68,7 @@ class NoncustodialDataSource extends DataSourceContainer
         }
         return null;
     }
-    
+
     /**
     * Sets the dataSource
     *
@@ -81,5 +81,5 @@ class NoncustodialDataSource extends DataSourceContainer
         $this->_propDict["dataSource"] = $val;
         return $this;
     }
-    
+
 }

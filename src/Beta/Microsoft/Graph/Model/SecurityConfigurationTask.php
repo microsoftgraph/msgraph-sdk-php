@@ -42,7 +42,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         }
         return null;
     }
-    
+
     /**
     * Sets the applicablePlatform
     * The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer.
@@ -56,7 +56,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         $this->_propDict["applicablePlatform"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endpointSecurityPolicy
     * The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
@@ -75,7 +75,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         }
         return null;
     }
-    
+
     /**
     * Sets the endpointSecurityPolicy
     * The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
@@ -89,7 +89,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         $this->_propDict["endpointSecurityPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endpointSecurityPolicyProfile
     * The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
@@ -108,7 +108,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         }
         return null;
     }
-    
+
     /**
     * Sets the endpointSecurityPolicyProfile
     * The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
@@ -122,7 +122,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         $this->_propDict["endpointSecurityPolicyProfile"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the insights
     * Information about the mitigation.
@@ -137,7 +137,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
             return null;
         }
     }
-    
+
     /**
     * Sets the insights
     * Information about the mitigation.
@@ -151,9 +151,9 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         $this->_propDict["insights"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the intendedSettings
     * The intended settings and their values.
      *
@@ -167,8 +167,8 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the intendedSettings
     * The intended settings and their values.
     *
@@ -178,10 +178,10 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     */
     public function setIntendedSettings($val)
     {
-		$this->_propDict["intendedSettings"] = $val;
+        $this->_propDict["intendedSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceCount
     * The number of vulnerable devices.
@@ -196,7 +196,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceCount
     * The number of vulnerable devices.
@@ -210,9 +210,9 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
         $this->_propDict["managedDeviceCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedDevices
     * The vulnerable managed devices.
      *
@@ -226,8 +226,8 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedDevices
     * The vulnerable managed devices.
     *
@@ -237,8 +237,8 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     */
     public function setManagedDevices($val)
     {
-		$this->_propDict["managedDevices"] = $val;
+        $this->_propDict["managedDevices"] = $val;
         return $this;
     }
-    
+
 }

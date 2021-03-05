@@ -38,7 +38,7 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
@@ -52,7 +52,7 @@ class UnifiedRoleDefinition extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
@@ -67,7 +67,7 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
@@ -81,7 +81,7 @@ class UnifiedRoleDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isBuiltIn
     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
@@ -96,7 +96,7 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isBuiltIn
     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
@@ -110,7 +110,7 @@ class UnifiedRoleDefinition extends Entity
         $this->_propDict["isBuiltIn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
@@ -125,7 +125,7 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
@@ -139,7 +139,7 @@ class UnifiedRoleDefinition extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the resourceScopes
     * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
@@ -154,7 +154,7 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceScopes
     * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
@@ -168,9 +168,9 @@ class UnifiedRoleDefinition extends Entity
         $this->_propDict["resourceScopes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rolePermissions
     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      *
@@ -184,8 +184,8 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rolePermissions
     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
     *
@@ -195,10 +195,10 @@ class UnifiedRoleDefinition extends Entity
     */
     public function setRolePermissions($val)
     {
-		$this->_propDict["rolePermissions"] = $val;
+        $this->_propDict["rolePermissions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateId
     * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
@@ -213,7 +213,7 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the templateId
     * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
@@ -227,7 +227,7 @@ class UnifiedRoleDefinition extends Entity
         $this->_propDict["templateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
@@ -242,7 +242,7 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
@@ -256,9 +256,9 @@ class UnifiedRoleDefinition extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the inheritsPermissionsFrom
      *
      * @return array The inheritsPermissionsFrom
@@ -271,8 +271,8 @@ class UnifiedRoleDefinition extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the inheritsPermissionsFrom
     *
     * @param UnifiedRoleDefinition $val The inheritsPermissionsFrom
@@ -281,8 +281,8 @@ class UnifiedRoleDefinition extends Entity
     */
     public function setInheritsPermissionsFrom($val)
     {
-		$this->_propDict["inheritsPermissionsFrom"] = $val;
+        $this->_propDict["inheritsPermissionsFrom"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the advancedThreatProtectionAutomaticSampleSubmission
     * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
@@ -56,7 +56,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionCloudDelivered
     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
@@ -75,7 +75,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the advancedThreatProtectionCloudDelivered
     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
@@ -89,7 +89,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionCloudDelivered"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionDiagnosticDataCollection
     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
@@ -108,7 +108,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the advancedThreatProtectionDiagnosticDataCollection
     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
@@ -122,7 +122,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionDiagnosticDataCollection"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionExcludedExtensions
     * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -137,7 +137,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionExcludedExtensions
     * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -151,7 +151,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionExcludedExtensions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionExcludedFiles
     * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -166,7 +166,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionExcludedFiles
     * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -180,7 +180,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionExcludedFiles"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionExcludedFolders
     * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -195,7 +195,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionExcludedFolders
     * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -209,7 +209,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionExcludedFolders"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionExcludedProcesses
     * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -224,7 +224,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the advancedThreatProtectionExcludedProcesses
     * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -238,7 +238,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionExcludedProcesses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the advancedThreatProtectionRealTime
     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
@@ -257,7 +257,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the advancedThreatProtectionRealTime
     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
@@ -271,7 +271,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["advancedThreatProtectionRealTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultAllowDeferralUntilSignOut
     * Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
@@ -286,7 +286,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultAllowDeferralUntilSignOut
     * Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
@@ -300,7 +300,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultAllowDeferralUntilSignOut"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultDisablePromptAtSignOut
     * Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
@@ -315,7 +315,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultDisablePromptAtSignOut
     * Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
@@ -329,7 +329,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultDisablePromptAtSignOut"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultEnabled
     * Whether FileVault should be enabled or not.
@@ -344,7 +344,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultEnabled
     * Whether FileVault should be enabled or not.
@@ -358,7 +358,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultHidePersonalRecoveryKey
     * Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
@@ -373,7 +373,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultHidePersonalRecoveryKey
     * Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
@@ -387,7 +387,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultHidePersonalRecoveryKey"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultInstitutionalRecoveryKeyCertificate
     * Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key.
@@ -406,7 +406,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the fileVaultInstitutionalRecoveryKeyCertificate
     * Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key.
@@ -420,7 +420,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultInstitutionalRecoveryKeyCertificateFileName
     * File name of the institutional recovery key certificate to display in UI. (.der).
@@ -435,7 +435,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultInstitutionalRecoveryKeyCertificateFileName
     * File name of the institutional recovery key certificate to display in UI. (.der).
@@ -449,7 +449,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificateFileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultNumberOfTimesUserCanIgnore
     * Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
@@ -464,7 +464,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultNumberOfTimesUserCanIgnore
     * Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
@@ -478,7 +478,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultNumberOfTimesUserCanIgnore"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultPersonalRecoveryKeyHelpMessage
     * Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
@@ -493,7 +493,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultPersonalRecoveryKeyHelpMessage
     * Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
@@ -507,7 +507,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultPersonalRecoveryKeyHelpMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultPersonalRecoveryKeyRotationInMonths
     * Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months.
@@ -522,7 +522,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the fileVaultPersonalRecoveryKeyRotationInMonths
     * Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months.
@@ -536,7 +536,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultPersonalRecoveryKeyRotationInMonths"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fileVaultSelectedRecoveryKeyTypes
     * Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
@@ -555,7 +555,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the fileVaultSelectedRecoveryKeyTypes
     * Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
@@ -569,9 +569,9 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["fileVaultSelectedRecoveryKeyTypes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the firewallApplications
     * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
      *
@@ -585,8 +585,8 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the firewallApplications
     * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
     *
@@ -596,10 +596,10 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function setFirewallApplications($val)
     {
-		$this->_propDict["firewallApplications"] = $val;
+        $this->_propDict["firewallApplications"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the firewallBlockAllIncoming
     * Corresponds to the 'Block all incoming connections' option.
@@ -614,7 +614,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the firewallBlockAllIncoming
     * Corresponds to the 'Block all incoming connections' option.
@@ -628,7 +628,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["firewallBlockAllIncoming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the firewallEnabled
     * Whether the firewall should be enabled or not.
@@ -643,7 +643,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the firewallEnabled
     * Whether the firewall should be enabled or not.
@@ -657,7 +657,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["firewallEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the firewallEnableStealthMode
     * Corresponds to 'Enable stealth mode.'
@@ -672,7 +672,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the firewallEnableStealthMode
     * Corresponds to 'Enable stealth mode.'
@@ -686,7 +686,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["firewallEnableStealthMode"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the gatekeeperAllowedAppSource
     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
@@ -705,7 +705,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the gatekeeperAllowedAppSource
     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
@@ -719,7 +719,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["gatekeeperAllowedAppSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the gatekeeperBlockOverride
     * If set to true, the user override for Gatekeeper will be disabled.
@@ -734,7 +734,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the gatekeeperBlockOverride
     * If set to true, the user override for Gatekeeper will be disabled.
@@ -748,5 +748,5 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
         $this->_propDict["gatekeeperBlockOverride"] = boolval($val);
         return $this;
     }
-    
+
 }

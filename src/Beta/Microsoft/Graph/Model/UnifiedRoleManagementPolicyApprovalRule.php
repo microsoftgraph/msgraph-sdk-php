@@ -41,7 +41,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
         }
         return null;
     }
-    
+
     /**
     * Sets the setting
     *
@@ -54,5 +54,5 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
         $this->_propDict["setting"] = $val;
         return $this;
     }
-    
+
 }

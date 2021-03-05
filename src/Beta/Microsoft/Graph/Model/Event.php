@@ -38,7 +38,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the allowNewTimeProposals
     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
@@ -52,9 +52,9 @@ class Event extends OutlookItem
         $this->_propDict["allowNewTimeProposals"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the attendees
     * The collection of attendees for the event.
      *
@@ -68,8 +68,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attendees
     * The collection of attendees for the event.
     *
@@ -79,10 +79,10 @@ class Event extends OutlookItem
     */
     public function setAttendees($val)
     {
-		$this->_propDict["attendees"] = $val;
+        $this->_propDict["attendees"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the body
     * The body of the message associated with the event. It can be in HTML or text format.
@@ -101,7 +101,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     * The body of the message associated with the event. It can be in HTML or text format.
@@ -115,7 +115,7 @@ class Event extends OutlookItem
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bodyPreview
     * The preview of the message associated with the event. It is in text format.
@@ -130,7 +130,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the bodyPreview
     * The preview of the message associated with the event. It is in text format.
@@ -144,7 +144,7 @@ class Event extends OutlookItem
         $this->_propDict["bodyPreview"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cancelledOccurrences
     * Contains occurrenceId property values of cancelled instances in a recurring series, if the event is the series master. Instances in a recurring series that are cancelled are called cancelledOccurences.Returned only on $select in a Get operation which specifies the id of a series master event (that is, the seriesMasterId property value).
@@ -159,7 +159,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the cancelledOccurrences
     * Contains occurrenceId property values of cancelled instances in a recurring series, if the event is the series master. Instances in a recurring series that are cancelled are called cancelledOccurences.Returned only on $select in a Get operation which specifies the id of a series master event (that is, the seriesMasterId property value).
@@ -173,7 +173,7 @@ class Event extends OutlookItem
         $this->_propDict["cancelledOccurrences"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the end
     * The date, time, and time zone that the event ends. By default, the end time is in UTC.
@@ -192,7 +192,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the end
     * The date, time, and time zone that the event ends. By default, the end time is in UTC.
@@ -206,7 +206,7 @@ class Event extends OutlookItem
         $this->_propDict["end"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasAttachments
     * Set to true if the event has attachments.
@@ -221,7 +221,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the hasAttachments
     * Set to true if the event has attachments.
@@ -235,7 +235,7 @@ class Event extends OutlookItem
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hideAttendees
     * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
@@ -250,7 +250,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the hideAttendees
     * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
@@ -264,7 +264,7 @@ class Event extends OutlookItem
         $this->_propDict["hideAttendees"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the importance
     * The importance of the event. The possible values are: low, normal, high.
@@ -283,7 +283,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the importance
     * The importance of the event. The possible values are: low, normal, high.
@@ -297,7 +297,7 @@ class Event extends OutlookItem
         $this->_propDict["importance"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAllDay
     * Set to true if the event lasts all day.
@@ -312,7 +312,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isAllDay
     * Set to true if the event lasts all day.
@@ -326,7 +326,7 @@ class Event extends OutlookItem
         $this->_propDict["isAllDay"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isCancelled
     * Set to true if the event has been canceled.
@@ -341,7 +341,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isCancelled
     * Set to true if the event has been canceled.
@@ -355,7 +355,7 @@ class Event extends OutlookItem
         $this->_propDict["isCancelled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDraft
     * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
@@ -370,7 +370,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isDraft
     * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
@@ -384,7 +384,7 @@ class Event extends OutlookItem
         $this->_propDict["isDraft"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isOnlineMeeting
     * True if this event has online meeting information, false otherwise. Default is false. Optional.
@@ -399,7 +399,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isOnlineMeeting
     * True if this event has online meeting information, false otherwise. Default is false. Optional.
@@ -413,7 +413,7 @@ class Event extends OutlookItem
         $this->_propDict["isOnlineMeeting"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isOrganizer
     * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
@@ -428,7 +428,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isOrganizer
     * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
@@ -442,7 +442,7 @@ class Event extends OutlookItem
         $this->_propDict["isOrganizer"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isReminderOn
     * Set to true if an alert is set to remind the user of the event.
@@ -457,7 +457,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isReminderOn
     * Set to true if an alert is set to remind the user of the event.
@@ -471,7 +471,7 @@ class Event extends OutlookItem
         $this->_propDict["isReminderOn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the location
     * The location of the event.
@@ -490,7 +490,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the location
     * The location of the event.
@@ -504,9 +504,9 @@ class Event extends OutlookItem
         $this->_propDict["location"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the locations
     * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
      *
@@ -520,8 +520,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the locations
     * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
     *
@@ -531,10 +531,10 @@ class Event extends OutlookItem
     */
     public function setLocations($val)
     {
-		$this->_propDict["locations"] = $val;
+        $this->_propDict["locations"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the occurrenceId
     *
@@ -548,7 +548,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the occurrenceId
     *
@@ -561,7 +561,7 @@ class Event extends OutlookItem
         $this->_propDict["occurrenceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onlineMeeting
     * Details for an attendee to join the meeting online. Read-only.
@@ -580,7 +580,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the onlineMeeting
     * Details for an attendee to join the meeting online. Read-only.
@@ -594,7 +594,7 @@ class Event extends OutlookItem
         $this->_propDict["onlineMeeting"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onlineMeetingProvider
     * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
@@ -613,7 +613,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the onlineMeetingProvider
     * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
@@ -627,7 +627,7 @@ class Event extends OutlookItem
         $this->_propDict["onlineMeetingProvider"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onlineMeetingUrl
     * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
@@ -642,7 +642,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the onlineMeetingUrl
     * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
@@ -656,7 +656,7 @@ class Event extends OutlookItem
         $this->_propDict["onlineMeetingUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the organizer
     * The organizer of the event.
@@ -675,7 +675,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the organizer
     * The organizer of the event.
@@ -689,7 +689,7 @@ class Event extends OutlookItem
         $this->_propDict["organizer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the originalEndTimeZone
     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
@@ -704,7 +704,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the originalEndTimeZone
     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
@@ -718,7 +718,7 @@ class Event extends OutlookItem
         $this->_propDict["originalEndTimeZone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the originalStart
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -737,7 +737,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the originalStart
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -751,7 +751,7 @@ class Event extends OutlookItem
         $this->_propDict["originalStart"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the originalStartTimeZone
     * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
@@ -766,7 +766,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the originalStartTimeZone
     * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
@@ -780,7 +780,7 @@ class Event extends OutlookItem
         $this->_propDict["originalStartTimeZone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recurrence
     * The recurrence pattern for the event.
@@ -799,7 +799,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the recurrence
     * The recurrence pattern for the event.
@@ -813,7 +813,7 @@ class Event extends OutlookItem
         $this->_propDict["recurrence"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reminderMinutesBeforeStart
     * The number of minutes before the event start time that the reminder alert occurs.
@@ -828,7 +828,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the reminderMinutesBeforeStart
     * The number of minutes before the event start time that the reminder alert occurs.
@@ -842,7 +842,7 @@ class Event extends OutlookItem
         $this->_propDict["reminderMinutesBeforeStart"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the responseRequested
     * Default is true, which represents the organizer would like an invitee to send a response to the event.
@@ -857,7 +857,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the responseRequested
     * Default is true, which represents the organizer would like an invitee to send a response to the event.
@@ -871,7 +871,7 @@ class Event extends OutlookItem
         $this->_propDict["responseRequested"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the responseStatus
     * Indicates the type of response sent in response to an event message.
@@ -890,7 +890,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the responseStatus
     * Indicates the type of response sent in response to an event message.
@@ -904,7 +904,7 @@ class Event extends OutlookItem
         $this->_propDict["responseStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sensitivity
     * The possible values are: normal, personal, private, confidential.
@@ -923,7 +923,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the sensitivity
     * The possible values are: normal, personal, private, confidential.
@@ -937,7 +937,7 @@ class Event extends OutlookItem
         $this->_propDict["sensitivity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the seriesMasterId
     * The ID for the recurring series master item, if this event is part of a recurring series.
@@ -952,7 +952,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the seriesMasterId
     * The ID for the recurring series master item, if this event is part of a recurring series.
@@ -966,7 +966,7 @@ class Event extends OutlookItem
         $this->_propDict["seriesMasterId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the showAs
     * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
@@ -985,7 +985,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the showAs
     * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
@@ -999,7 +999,7 @@ class Event extends OutlookItem
         $this->_propDict["showAs"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the start
     * The date, time, and time zone that the event starts. By default, the start time is in UTC.
@@ -1018,7 +1018,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the start
     * The date, time, and time zone that the event starts. By default, the start time is in UTC.
@@ -1032,7 +1032,7 @@ class Event extends OutlookItem
         $this->_propDict["start"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     * The text of the event's subject line.
@@ -1047,7 +1047,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     * The text of the event's subject line.
@@ -1061,7 +1061,7 @@ class Event extends OutlookItem
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the transactionId
     * A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
@@ -1076,7 +1076,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the transactionId
     * A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
@@ -1090,7 +1090,7 @@ class Event extends OutlookItem
         $this->_propDict["transactionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
@@ -1109,7 +1109,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
@@ -1123,7 +1123,7 @@ class Event extends OutlookItem
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uid
     *
@@ -1137,7 +1137,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the uid
     *
@@ -1150,7 +1150,7 @@ class Event extends OutlookItem
         $this->_propDict["uid"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webLink
     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
@@ -1165,7 +1165,7 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the webLink
     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
@@ -1179,9 +1179,9 @@ class Event extends OutlookItem
         $this->_propDict["webLink"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the attachments
     * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      *
@@ -1195,8 +1195,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attachments
     * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
     *
@@ -1206,10 +1206,10 @@ class Event extends OutlookItem
     */
     public function setAttachments($val)
     {
-		$this->_propDict["attachments"] = $val;
+        $this->_propDict["attachments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the calendar
     * The calendar that contains the event. Navigation property. Read-only.
@@ -1228,7 +1228,7 @@ class Event extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the calendar
     * The calendar that contains the event. Navigation property. Read-only.
@@ -1242,9 +1242,9 @@ class Event extends OutlookItem
         $this->_propDict["calendar"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the exceptionOccurrences
      *
      * @return array The exceptionOccurrences
@@ -1257,8 +1257,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the exceptionOccurrences
     *
     * @param Event $val The exceptionOccurrences
@@ -1267,12 +1267,12 @@ class Event extends OutlookItem
     */
     public function setExceptionOccurrences($val)
     {
-		$this->_propDict["exceptionOccurrences"] = $val;
+        $this->_propDict["exceptionOccurrences"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extensions
     * The collection of open extensions defined for the event. Nullable.
      *
@@ -1286,8 +1286,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extensions
     * The collection of open extensions defined for the event. Nullable.
     *
@@ -1297,12 +1297,12 @@ class Event extends OutlookItem
     */
     public function setExtensions($val)
     {
-		$this->_propDict["extensions"] = $val;
+        $this->_propDict["extensions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the instances
     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      *
@@ -1316,8 +1316,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the instances
     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
     *
@@ -1327,12 +1327,12 @@ class Event extends OutlookItem
     */
     public function setInstances($val)
     {
-		$this->_propDict["instances"] = $val;
+        $this->_propDict["instances"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      *
@@ -1346,8 +1346,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
     *
@@ -1357,12 +1357,12 @@ class Event extends OutlookItem
     */
     public function setMultiValueExtendedProperties($val)
     {
-		$this->_propDict["multiValueExtendedProperties"] = $val;
+        $this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
      *
@@ -1376,8 +1376,8 @@ class Event extends OutlookItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
     *
@@ -1387,8 +1387,8 @@ class Event extends OutlookItem
     */
     public function setSingleValueExtendedProperties($val)
     {
-		$this->_propDict["singleValueExtendedProperties"] = $val;
+        $this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-    
+
 }

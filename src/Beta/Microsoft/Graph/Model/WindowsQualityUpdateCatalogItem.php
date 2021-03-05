@@ -42,7 +42,7 @@ class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem
         }
         return null;
     }
-    
+
     /**
     * Sets the classification
     * Classification of the quality update. Possible values are: all, security, nonSecurity.
@@ -56,7 +56,7 @@ class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem
         $this->_propDict["classification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isExpeditable
     * Flag indicating if update qualifies for expedite
@@ -71,7 +71,7 @@ class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem
             return null;
         }
     }
-    
+
     /**
     * Sets the isExpeditable
     * Flag indicating if update qualifies for expedite
@@ -85,7 +85,7 @@ class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem
         $this->_propDict["isExpeditable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kbArticleId
     * Knowledge base article id
@@ -100,7 +100,7 @@ class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem
             return null;
         }
     }
-    
+
     /**
     * Sets the kbArticleId
     * Knowledge base article id
@@ -114,5 +114,5 @@ class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem
         $this->_propDict["kbArticleId"] = $val;
         return $this;
     }
-    
+
 }

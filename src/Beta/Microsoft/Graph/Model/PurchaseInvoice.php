@@ -41,7 +41,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the buyFromAddress
     *
@@ -54,7 +54,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["buyFromAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyCode
     *
@@ -68,7 +68,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyCode
     *
@@ -81,7 +81,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["currencyCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currencyId
     *
@@ -95,7 +95,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currencyId
     *
@@ -108,7 +108,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["currencyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAmount
     *
@@ -126,7 +126,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discountAmount
     *
@@ -139,7 +139,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["discountAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAppliedBeforeTax
     *
@@ -153,7 +153,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the discountAppliedBeforeTax
     *
@@ -166,7 +166,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the dueDate
     *
@@ -184,7 +184,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dueDate
     *
@@ -197,7 +197,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["dueDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceDate
     *
@@ -215,7 +215,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invoiceDate
     *
@@ -228,7 +228,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["invoiceDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -246,7 +246,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -259,7 +259,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     *
@@ -273,7 +273,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     *
@@ -286,7 +286,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payToAddress
     *
@@ -304,7 +304,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the payToAddress
     *
@@ -317,7 +317,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["payToAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payToContact
     *
@@ -331,7 +331,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the payToContact
     *
@@ -344,7 +344,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["payToContact"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payToName
     *
@@ -358,7 +358,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the payToName
     *
@@ -371,7 +371,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["payToName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payToVendorId
     *
@@ -385,7 +385,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the payToVendorId
     *
@@ -398,7 +398,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["payToVendorId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payToVendorNumber
     *
@@ -412,7 +412,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the payToVendorNumber
     *
@@ -425,7 +425,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["payToVendorNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pricesIncludeTax
     *
@@ -439,7 +439,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the pricesIncludeTax
     *
@@ -452,7 +452,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["pricesIncludeTax"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the shipToAddress
     *
@@ -470,7 +470,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the shipToAddress
     *
@@ -483,7 +483,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["shipToAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shipToContact
     *
@@ -497,7 +497,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the shipToContact
     *
@@ -510,7 +510,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["shipToContact"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shipToName
     *
@@ -524,7 +524,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the shipToName
     *
@@ -537,7 +537,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["shipToName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -551,7 +551,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     *
@@ -564,7 +564,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalAmountExcludingTax
     *
@@ -582,7 +582,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalAmountExcludingTax
     *
@@ -595,7 +595,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["totalAmountExcludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalAmountIncludingTax
     *
@@ -613,7 +613,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalAmountIncludingTax
     *
@@ -626,7 +626,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["totalAmountIncludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalTaxAmount
     *
@@ -644,7 +644,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalTaxAmount
     *
@@ -657,7 +657,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["totalTaxAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorId
     *
@@ -671,7 +671,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the vendorId
     *
@@ -684,7 +684,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["vendorId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInvoiceNumber
     *
@@ -698,7 +698,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the vendorInvoiceNumber
     *
@@ -711,7 +711,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["vendorInvoiceNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorName
     *
@@ -725,7 +725,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the vendorName
     *
@@ -738,7 +738,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["vendorName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorNumber
     *
@@ -752,7 +752,7 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the vendorNumber
     *
@@ -765,7 +765,7 @@ class PurchaseInvoice extends Entity
         $this->_propDict["vendorNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currency
     *
@@ -783,7 +783,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currency
     *
@@ -796,9 +796,9 @@ class PurchaseInvoice extends Entity
         $this->_propDict["currency"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the purchaseInvoiceLines
      *
      * @return array The purchaseInvoiceLines
@@ -811,8 +811,8 @@ class PurchaseInvoice extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the purchaseInvoiceLines
     *
     * @param PurchaseInvoiceLine $val The purchaseInvoiceLines
@@ -821,10 +821,10 @@ class PurchaseInvoice extends Entity
     */
     public function setPurchaseInvoiceLines($val)
     {
-		$this->_propDict["purchaseInvoiceLines"] = $val;
+        $this->_propDict["purchaseInvoiceLines"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendor
     *
@@ -842,7 +842,7 @@ class PurchaseInvoice extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendor
     *
@@ -855,5 +855,5 @@ class PurchaseInvoice extends Entity
         $this->_propDict["vendor"] = $val;
         return $this;
     }
-    
+
 }

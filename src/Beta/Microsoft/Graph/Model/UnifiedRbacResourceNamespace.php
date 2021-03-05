@@ -37,7 +37,7 @@ class UnifiedRbacResourceNamespace extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     *
@@ -50,9 +50,9 @@ class UnifiedRbacResourceNamespace extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the resourceActions
      *
      * @return array The resourceActions
@@ -65,8 +65,8 @@ class UnifiedRbacResourceNamespace extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the resourceActions
     *
     * @param UnifiedRbacResourceAction $val The resourceActions
@@ -75,8 +75,8 @@ class UnifiedRbacResourceNamespace extends Entity
     */
     public function setResourceActions($val)
     {
-		$this->_propDict["resourceActions"] = $val;
+        $this->_propDict["resourceActions"] = $val;
         return $this;
     }
-    
+
 }

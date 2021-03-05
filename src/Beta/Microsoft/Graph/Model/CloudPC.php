@@ -38,7 +38,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The cloud PC display name.
@@ -52,7 +52,7 @@ class CloudPC extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imageDisplayName
     * Name of the OS image that's on the cloud PC.
@@ -67,7 +67,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imageDisplayName
     * Name of the OS image that's on the cloud PC.
@@ -81,7 +81,7 @@ class CloudPC extends Entity
         $this->_propDict["imageDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -100,7 +100,7 @@ class CloudPC extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -114,7 +114,7 @@ class CloudPC extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * The cloud PC’s Intune device ID.
@@ -129,7 +129,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * The cloud PC’s Intune device ID.
@@ -143,7 +143,7 @@ class CloudPC extends Entity
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceName
     * The cloud PC’s Intune device name.
@@ -158,7 +158,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceName
     * The cloud PC’s Intune device name.
@@ -172,7 +172,7 @@ class CloudPC extends Entity
         $this->_propDict["managedDeviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the provisioningPolicyId
     * The cloud PC's provisioning policy ID.
@@ -187,7 +187,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the provisioningPolicyId
     * The cloud PC's provisioning policy ID.
@@ -201,7 +201,7 @@ class CloudPC extends Entity
         $this->_propDict["provisioningPolicyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the servicePlanId
     * The cloud PC's service plan ID.
@@ -216,7 +216,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the servicePlanId
     * The cloud PC's service plan ID.
@@ -230,7 +230,7 @@ class CloudPC extends Entity
         $this->_propDict["servicePlanId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the servicePlanName
     * The cloud PC's service plan name.
@@ -245,7 +245,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the servicePlanName
     * The cloud PC's service plan name.
@@ -259,7 +259,7 @@ class CloudPC extends Entity
         $this->_propDict["servicePlanName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
@@ -278,7 +278,7 @@ class CloudPC extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
@@ -292,7 +292,7 @@ class CloudPC extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the statusDetails
     * The details of the cloud PC status.
@@ -311,7 +311,7 @@ class CloudPC extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the statusDetails
     * The details of the cloud PC status.
@@ -325,7 +325,7 @@ class CloudPC extends Entity
         $this->_propDict["statusDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The user principal name (UPN) of the user assigned to the cloud PC.
@@ -340,7 +340,7 @@ class CloudPC extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The user principal name (UPN) of the user assigned to the cloud PC.
@@ -354,5 +354,5 @@ class CloudPC extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

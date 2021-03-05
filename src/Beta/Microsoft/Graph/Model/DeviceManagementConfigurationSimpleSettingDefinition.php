@@ -42,7 +42,7 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultValue
     * Default setting value for this setting
@@ -56,9 +56,9 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
         $this->_propDict["defaultValue"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the dependedOnBy
     * list of child settings that depend on this setting
      *
@@ -72,8 +72,8 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the dependedOnBy
     * list of child settings that depend on this setting
     *
@@ -83,12 +83,12 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
     */
     public function setDependedOnBy($val)
     {
-		$this->_propDict["dependedOnBy"] = $val;
+        $this->_propDict["dependedOnBy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the dependentOn
     * list of parent settings this setting is dependent on
      *
@@ -102,8 +102,8 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the dependentOn
     * list of parent settings this setting is dependent on
     *
@@ -113,10 +113,10 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
     */
     public function setDependentOn($val)
     {
-		$this->_propDict["dependentOn"] = $val;
+        $this->_propDict["dependentOn"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the valueDefinition
     * Definition of the value for this setting
@@ -135,7 +135,7 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
         }
         return null;
     }
-    
+
     /**
     * Sets the valueDefinition
     * Definition of the value for this setting
@@ -149,5 +149,5 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
         $this->_propDict["valueDefinition"] = $val;
         return $this;
     }
-    
+
 }

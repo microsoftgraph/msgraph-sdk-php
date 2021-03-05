@@ -38,7 +38,7 @@ class DeviceComplianceScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the detectionScriptErrorDeviceCount
     * Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class DeviceComplianceScriptRunSummary extends Entity
         $this->_propDict["detectionScriptErrorDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the detectionScriptPendingDeviceCount
     * Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class DeviceComplianceScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the detectionScriptPendingDeviceCount
     * Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class DeviceComplianceScriptRunSummary extends Entity
         $this->_propDict["detectionScriptPendingDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the issueDetectedDeviceCount
     * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
@@ -96,7 +96,7 @@ class DeviceComplianceScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issueDetectedDeviceCount
     * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
@@ -110,7 +110,7 @@ class DeviceComplianceScriptRunSummary extends Entity
         $this->_propDict["issueDetectedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastScriptRunDateTime
     * Last run time for the script across all devices
@@ -129,7 +129,7 @@ class DeviceComplianceScriptRunSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastScriptRunDateTime
     * Last run time for the script across all devices
@@ -143,7 +143,7 @@ class DeviceComplianceScriptRunSummary extends Entity
         $this->_propDict["lastScriptRunDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the noIssueDetectedDeviceCount
     * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
@@ -158,7 +158,7 @@ class DeviceComplianceScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the noIssueDetectedDeviceCount
     * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
@@ -172,5 +172,5 @@ class DeviceComplianceScriptRunSummary extends Entity
         $this->_propDict["noIssueDetectedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
 }

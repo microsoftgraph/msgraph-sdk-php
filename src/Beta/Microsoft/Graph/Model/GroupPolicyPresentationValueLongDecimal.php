@@ -38,7 +38,7 @@ class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresentationVal
             return null;
         }
     }
-    
+
     /**
     * Sets the value
     * An unsigned long value for the associated presentation.
@@ -52,5 +52,5 @@ class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresentationVal
         $this->_propDict["value"] = intval($val);
         return $this;
     }
-    
+
 }

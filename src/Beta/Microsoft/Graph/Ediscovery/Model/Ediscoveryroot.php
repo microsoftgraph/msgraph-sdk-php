@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Ediscovery\Model;
 class Ediscoveryroot extends \Beta\Microsoft\Graph\Model\Entity
 {
 
-     /** 
+     /**
      * Gets the cases
      *
      * @return array The cases
@@ -38,8 +38,8 @@ class Ediscoveryroot extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the cases
     *
     * @param GraphCase $val The cases
@@ -48,8 +48,8 @@ class Ediscoveryroot extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setCases($val)
     {
-		$this->_propDict["cases"] = $val;
+        $this->_propDict["cases"] = $val;
         return $this;
     }
-    
+
 }

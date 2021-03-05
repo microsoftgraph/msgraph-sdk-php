@@ -37,7 +37,7 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
             return null;
         }
     }
-    
+
     /**
     * Sets the enabledRules
     *
@@ -50,5 +50,5 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
         $this->_propDict["enabledRules"] = $val;
         return $this;
     }
-    
+
 }

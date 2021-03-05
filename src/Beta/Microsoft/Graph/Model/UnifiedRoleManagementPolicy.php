@@ -37,7 +37,7 @@ class UnifiedRoleManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -50,7 +50,7 @@ class UnifiedRoleManagementPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class UnifiedRoleManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class UnifiedRoleManagementPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isOrganizationDefault
     *
@@ -91,7 +91,7 @@ class UnifiedRoleManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isOrganizationDefault
     *
@@ -104,7 +104,7 @@ class UnifiedRoleManagementPolicy extends Entity
         $this->_propDict["isOrganizationDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     *
@@ -122,7 +122,7 @@ class UnifiedRoleManagementPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     *
@@ -135,7 +135,7 @@ class UnifiedRoleManagementPolicy extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -153,7 +153,7 @@ class UnifiedRoleManagementPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -166,7 +166,7 @@ class UnifiedRoleManagementPolicy extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeId
     *
@@ -180,7 +180,7 @@ class UnifiedRoleManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scopeId
     *
@@ -193,7 +193,7 @@ class UnifiedRoleManagementPolicy extends Entity
         $this->_propDict["scopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeType
     *
@@ -207,7 +207,7 @@ class UnifiedRoleManagementPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scopeType
     *
@@ -220,9 +220,9 @@ class UnifiedRoleManagementPolicy extends Entity
         $this->_propDict["scopeType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the effectiveRules
      *
      * @return array The effectiveRules
@@ -235,8 +235,8 @@ class UnifiedRoleManagementPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the effectiveRules
     *
     * @param UnifiedRoleManagementPolicyRule $val The effectiveRules
@@ -245,12 +245,12 @@ class UnifiedRoleManagementPolicy extends Entity
     */
     public function setEffectiveRules($val)
     {
-		$this->_propDict["effectiveRules"] = $val;
+        $this->_propDict["effectiveRules"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rules
      *
      * @return array The rules
@@ -263,8 +263,8 @@ class UnifiedRoleManagementPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rules
     *
     * @param UnifiedRoleManagementPolicyRule $val The rules
@@ -273,8 +273,8 @@ class UnifiedRoleManagementPolicy extends Entity
     */
     public function setRules($val)
     {
-		$this->_propDict["rules"] = $val;
+        $this->_propDict["rules"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the adDomainName
     * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
@@ -52,7 +52,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["adDomainName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the adDomainPassword
     * The password associated with adDomainUsername.
@@ -67,7 +67,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the adDomainPassword
     * The password associated with adDomainUsername.
@@ -81,7 +81,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["adDomainPassword"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the adDomainUsername
     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
@@ -96,7 +96,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the adDomainUsername
     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
@@ -110,7 +110,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["adDomainUsername"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the on-premises connection.
@@ -125,7 +125,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the on-premises connection.
@@ -139,7 +139,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the healthCheckStatus
     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
@@ -158,7 +158,7 @@ class CloudPcOnPremisesConnection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the healthCheckStatus
     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
@@ -172,7 +172,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["healthCheckStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the healthCheckStatusDetails
     * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
@@ -191,7 +191,7 @@ class CloudPcOnPremisesConnection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the healthCheckStatusDetails
     * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
@@ -205,7 +205,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["healthCheckStatusDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the inUse
     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
@@ -220,7 +220,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the inUse
     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
@@ -234,7 +234,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["inUse"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizationalUnit
     * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
@@ -249,7 +249,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the organizationalUnit
     * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
@@ -263,7 +263,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["organizationalUnit"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceGroupId
     * The ID of the target resource group. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'.
@@ -278,7 +278,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceGroupId
     * The ID of the target resource group. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'.
@@ -292,7 +292,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["resourceGroupId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subnetId
     * The ID of the target subnet. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'.
@@ -307,7 +307,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subnetId
     * The ID of the target subnet. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'.
@@ -321,7 +321,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["subnetId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subscriptionId
     * The ID of the target Azure subscription that’s associated with your tenant.
@@ -336,7 +336,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subscriptionId
     * The ID of the target Azure subscription that’s associated with your tenant.
@@ -350,7 +350,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["subscriptionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subscriptionName
     * The name of the target Azure subscription. Read-only.
@@ -365,7 +365,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subscriptionName
     * The name of the target Azure subscription. Read-only.
@@ -379,7 +379,7 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["subscriptionName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the virtualNetworkId
     * The ID of the target virtual network. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'.
@@ -394,7 +394,7 @@ class CloudPcOnPremisesConnection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the virtualNetworkId
     * The ID of the target virtual network. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'.
@@ -408,5 +408,5 @@ class CloudPcOnPremisesConnection extends Entity
         $this->_propDict["virtualNetworkId"] = $val;
         return $this;
     }
-    
+
 }

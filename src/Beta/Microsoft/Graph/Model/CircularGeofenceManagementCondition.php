@@ -38,7 +38,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
             return null;
         }
     }
-    
+
     /**
     * Sets the latitude
     * Latitude in degrees, between -90 and +90 inclusive.
@@ -52,7 +52,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
         $this->_propDict["latitude"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the longitude
     * Longitude in degrees, between -180 and +180 inclusive.
@@ -67,7 +67,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
             return null;
         }
     }
-    
+
     /**
     * Sets the longitude
     * Longitude in degrees, between -180 and +180 inclusive.
@@ -81,7 +81,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
         $this->_propDict["longitude"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the radiusInMeters
     * Radius in meters.
@@ -100,7 +100,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
         }
         return null;
     }
-    
+
     /**
     * Sets the radiusInMeters
     * Radius in meters.
@@ -114,5 +114,5 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
         $this->_propDict["radiusInMeters"] = $val;
         return $this;
     }
-    
+
 }

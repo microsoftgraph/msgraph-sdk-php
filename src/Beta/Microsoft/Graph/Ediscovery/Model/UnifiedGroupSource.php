@@ -41,7 +41,7 @@ class UnifiedGroupSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the includedSources
     *
@@ -54,7 +54,7 @@ class UnifiedGroupSource extends DataSource
         $this->_propDict["includedSources"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the group
     *
@@ -72,7 +72,7 @@ class UnifiedGroupSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the group
     *
@@ -85,5 +85,5 @@ class UnifiedGroupSource extends DataSource
         $this->_propDict["group"] = $val;
         return $this;
     }
-    
+
 }

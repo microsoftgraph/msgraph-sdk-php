@@ -42,7 +42,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     * The task body that typically contains information about the task.
@@ -56,7 +56,7 @@ class TodoTask extends Entity
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bodyLastModifiedDateTime
     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -75,7 +75,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bodyLastModifiedDateTime
     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -89,7 +89,7 @@ class TodoTask extends Entity
         $this->_propDict["bodyLastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the completedDateTime
     * The date in the specified time zone that the task was finished.
@@ -108,7 +108,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDateTime
     * The date in the specified time zone that the task was finished.
@@ -122,7 +122,7 @@ class TodoTask extends Entity
         $this->_propDict["completedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -141,7 +141,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -155,7 +155,7 @@ class TodoTask extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dueDateTime
     * The date in the specified time zone that the task is to be finished.
@@ -174,7 +174,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dueDateTime
     * The date in the specified time zone that the task is to be finished.
@@ -188,7 +188,7 @@ class TodoTask extends Entity
         $this->_propDict["dueDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the importance
     * The importance of the task. Possible values are: low, normal, high.
@@ -207,7 +207,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the importance
     * The importance of the task. Possible values are: low, normal, high.
@@ -221,7 +221,7 @@ class TodoTask extends Entity
         $this->_propDict["importance"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isReminderOn
     * Set to true if an alert is set to remind the user of the task.
@@ -236,7 +236,7 @@ class TodoTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isReminderOn
     * Set to true if an alert is set to remind the user of the task.
@@ -250,7 +250,7 @@ class TodoTask extends Entity
         $this->_propDict["isReminderOn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -269,7 +269,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
@@ -283,7 +283,7 @@ class TodoTask extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recurrence
     * The recurrence pattern for the task.
@@ -302,7 +302,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the recurrence
     * The recurrence pattern for the task.
@@ -316,7 +316,7 @@ class TodoTask extends Entity
         $this->_propDict["recurrence"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reminderDateTime
     * The date and time for a reminder alert of the task to occur.
@@ -335,7 +335,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reminderDateTime
     * The date and time for a reminder alert of the task to occur.
@@ -349,7 +349,7 @@ class TodoTask extends Entity
         $this->_propDict["reminderDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
@@ -368,7 +368,7 @@ class TodoTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
@@ -382,7 +382,7 @@ class TodoTask extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * A brief description of the task.
@@ -397,7 +397,7 @@ class TodoTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the title
     * A brief description of the task.
@@ -411,9 +411,9 @@ class TodoTask extends Entity
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extensions
     * The collection of open extensions defined for the task. Nullable.
      *
@@ -427,8 +427,8 @@ class TodoTask extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extensions
     * The collection of open extensions defined for the task. Nullable.
     *
@@ -438,12 +438,12 @@ class TodoTask extends Entity
     */
     public function setExtensions($val)
     {
-		$this->_propDict["extensions"] = $val;
+        $this->_propDict["extensions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the linkedResources
     * A collection of resources linked to the task.
      *
@@ -457,8 +457,8 @@ class TodoTask extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the linkedResources
     * A collection of resources linked to the task.
     *
@@ -468,8 +468,8 @@ class TodoTask extends Entity
     */
     public function setLinkedResources($val)
     {
-		$this->_propDict["linkedResources"] = $val;
+        $this->_propDict["linkedResources"] = $val;
         return $this;
     }
-    
+
 }

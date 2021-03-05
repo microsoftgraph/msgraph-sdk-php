@@ -38,7 +38,7 @@ class SecurityBaselineState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the security baseline
@@ -52,7 +52,7 @@ class SecurityBaselineState extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the securityBaselineTemplateId
     * The security baseline template id
@@ -67,7 +67,7 @@ class SecurityBaselineState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the securityBaselineTemplateId
     * The security baseline template id
@@ -81,7 +81,7 @@ class SecurityBaselineState extends Entity
         $this->_propDict["securityBaselineTemplateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * Security baseline compliance state
@@ -100,7 +100,7 @@ class SecurityBaselineState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * Security baseline compliance state
@@ -114,7 +114,7 @@ class SecurityBaselineState extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User Principal Name
@@ -129,7 +129,7 @@ class SecurityBaselineState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User Principal Name
@@ -143,9 +143,9 @@ class SecurityBaselineState extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settingStates
     * The security baseline state for different settings for a device
      *
@@ -159,8 +159,8 @@ class SecurityBaselineState extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settingStates
     * The security baseline state for different settings for a device
     *
@@ -170,8 +170,8 @@ class SecurityBaselineState extends Entity
     */
     public function setSettingStates($val)
     {
-		$this->_propDict["settingStates"] = $val;
+        $this->_propDict["settingStates"] = $val;
         return $this;
     }
-    
+
 }

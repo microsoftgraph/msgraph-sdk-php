@@ -38,7 +38,7 @@ class WorkbookComment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the content
     * The content of the comment.
@@ -52,7 +52,7 @@ class WorkbookComment extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentType
     * Indicates the type for the comment.
@@ -67,7 +67,7 @@ class WorkbookComment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentType
     * Indicates the type for the comment.
@@ -81,9 +81,9 @@ class WorkbookComment extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the replies
     * Read-only. Nullable.
      *
@@ -97,8 +97,8 @@ class WorkbookComment extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the replies
     * Read-only. Nullable.
     *
@@ -108,8 +108,8 @@ class WorkbookComment extends Entity
     */
     public function setReplies($val)
     {
-		$this->_propDict["replies"] = $val;
+        $this->_propDict["replies"] = $val;
         return $this;
     }
-    
+
 }

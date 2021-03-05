@@ -38,7 +38,7 @@ class EventMessageRequest extends EventMessage
             return null;
         }
     }
-    
+
     /**
     * Sets the allowNewTimeProposals
     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
@@ -52,7 +52,7 @@ class EventMessageRequest extends EventMessage
         $this->_propDict["allowNewTimeProposals"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the previousEndDateTime
     * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
@@ -71,7 +71,7 @@ class EventMessageRequest extends EventMessage
         }
         return null;
     }
-    
+
     /**
     * Sets the previousEndDateTime
     * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
@@ -85,7 +85,7 @@ class EventMessageRequest extends EventMessage
         $this->_propDict["previousEndDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the previousLocation
     * If the meeting update changes the meeting location, this property specifies the previous meeting location.
@@ -104,7 +104,7 @@ class EventMessageRequest extends EventMessage
         }
         return null;
     }
-    
+
     /**
     * Sets the previousLocation
     * If the meeting update changes the meeting location, this property specifies the previous meeting location.
@@ -118,7 +118,7 @@ class EventMessageRequest extends EventMessage
         $this->_propDict["previousLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the previousStartDateTime
     * If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
@@ -137,7 +137,7 @@ class EventMessageRequest extends EventMessage
         }
         return null;
     }
-    
+
     /**
     * Sets the previousStartDateTime
     * If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
@@ -151,7 +151,7 @@ class EventMessageRequest extends EventMessage
         $this->_propDict["previousStartDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the responseRequested
     * Set to true if the sender would like the invitee to send a response to the requested meeting.
@@ -166,7 +166,7 @@ class EventMessageRequest extends EventMessage
             return null;
         }
     }
-    
+
     /**
     * Sets the responseRequested
     * Set to true if the sender would like the invitee to send a response to the requested meeting.
@@ -180,5 +180,5 @@ class EventMessageRequest extends EventMessage
         $this->_propDict["responseRequested"] = boolval($val);
         return $this;
     }
-    
+
 }

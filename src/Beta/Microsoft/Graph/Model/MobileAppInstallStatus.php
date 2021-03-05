@@ -38,7 +38,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * Device ID
@@ -52,7 +52,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device name
@@ -67,7 +67,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device name
@@ -81,7 +81,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayVersion
     * Human readable version of the application
@@ -96,7 +96,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayVersion
     * Human readable version of the application
@@ -110,7 +110,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["displayVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorCode
     * The error code for install or uninstall failures.
@@ -125,7 +125,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCode
     * The error code for install or uninstall failures.
@@ -139,7 +139,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["errorCode"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the installState
     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
@@ -158,7 +158,7 @@ class MobileAppInstallStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the installState
     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
@@ -172,7 +172,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["installState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the installStateDetail
     * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
@@ -191,7 +191,7 @@ class MobileAppInstallStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the installStateDetail
     * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
@@ -205,7 +205,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["installStateDetail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * Last sync date time
@@ -224,7 +224,7 @@ class MobileAppInstallStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * Last sync date time
@@ -238,7 +238,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mobileAppInstallStatusValue
     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
@@ -257,7 +257,7 @@ class MobileAppInstallStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the mobileAppInstallStatusValue
     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
@@ -271,7 +271,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["mobileAppInstallStatusValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osDescription
     * OS Description
@@ -286,7 +286,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osDescription
     * OS Description
@@ -300,7 +300,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["osDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * OS Version
@@ -315,7 +315,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * OS Version
@@ -329,7 +329,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * Device User Name
@@ -344,7 +344,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * Device User Name
@@ -358,7 +358,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User Principal Name
@@ -373,7 +373,7 @@ class MobileAppInstallStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User Principal Name
@@ -387,7 +387,7 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the app
     * The navigation link to the mobile app.
@@ -406,7 +406,7 @@ class MobileAppInstallStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the app
     * The navigation link to the mobile app.
@@ -420,5 +420,5 @@ class MobileAppInstallStatus extends Entity
         $this->_propDict["app"] = $val;
         return $this;
     }
-    
+
 }

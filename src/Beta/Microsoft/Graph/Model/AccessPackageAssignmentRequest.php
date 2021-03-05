@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessPackageAssignmentRequest extends Entity
 {
 
-     /** 
+     /**
      * Gets the answers
     * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
      *
@@ -39,8 +39,8 @@ class AccessPackageAssignmentRequest extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the answers
     * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
     *
@@ -50,10 +50,10 @@ class AccessPackageAssignmentRequest extends Entity
     */
     public function setAnswers($val)
     {
-		$this->_propDict["answers"] = $val;
+        $this->_propDict["answers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the completedDate
     * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -72,7 +72,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the completedDate
     * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -86,7 +86,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["completedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -105,7 +105,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -119,7 +119,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     *
@@ -137,7 +137,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     *
@@ -150,7 +150,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isValidationOnly
     * True if the request is not to be processed for assignment.
@@ -165,7 +165,7 @@ class AccessPackageAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isValidationOnly
     * True if the request is not to be processed for assignment.
@@ -179,7 +179,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["isValidationOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the justification
     * The requestor's supplied justification.
@@ -194,7 +194,7 @@ class AccessPackageAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     * The requestor's supplied justification.
@@ -208,7 +208,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestState
     * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
@@ -223,7 +223,7 @@ class AccessPackageAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requestState
     * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
@@ -237,7 +237,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["requestState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestStatus
     * More information on the request processing status. Read-only.
@@ -252,7 +252,7 @@ class AccessPackageAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requestStatus
     * More information on the request processing status. Read-only.
@@ -266,7 +266,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["requestStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestType
     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
@@ -281,7 +281,7 @@ class AccessPackageAssignmentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requestType
     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
@@ -295,7 +295,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["requestType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schedule
     * The range of dates that access is to be assigned to the requestor. Read-only.
@@ -314,7 +314,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schedule
     * The range of dates that access is to be assigned to the requestor. Read-only.
@@ -328,7 +328,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["schedule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackage
     *
@@ -346,7 +346,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackage
     *
@@ -359,7 +359,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["accessPackage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessPackageAssignment
     *
@@ -377,7 +377,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessPackageAssignment
     *
@@ -390,7 +390,7 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["accessPackageAssignment"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestor
     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.
@@ -409,7 +409,7 @@ class AccessPackageAssignmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestor
     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.
@@ -423,5 +423,5 @@ class AccessPackageAssignmentRequest extends Entity
         $this->_propDict["requestor"] = $val;
         return $this;
     }
-    
+
 }

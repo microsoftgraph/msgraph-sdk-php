@@ -41,7 +41,7 @@ class UserConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the binaryData
     *
@@ -54,5 +54,5 @@ class UserConfiguration extends Entity
         $this->_propDict["binaryData"] = $val;
         return $this;
     }
-    
+
 }

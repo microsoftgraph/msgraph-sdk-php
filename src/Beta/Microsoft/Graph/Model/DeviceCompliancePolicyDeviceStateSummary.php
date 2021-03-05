@@ -38,7 +38,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the compliantDeviceCount
     * Number of compliant devices
@@ -52,7 +52,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["compliantDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the configManagerCount
     * Number of devices that have compliance managed by System Center Configuration Manager
@@ -67,7 +67,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the configManagerCount
     * Number of devices that have compliance managed by System Center Configuration Manager
@@ -81,7 +81,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["configManagerCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the conflictDeviceCount
     * Number of conflict devices
@@ -96,7 +96,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the conflictDeviceCount
     * Number of conflict devices
@@ -110,7 +110,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["conflictDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorDeviceCount
     * Number of error devices
@@ -125,7 +125,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorDeviceCount
     * Number of error devices
@@ -139,7 +139,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["errorDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the inGracePeriodCount
     * Number of devices that are in grace period
@@ -154,7 +154,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the inGracePeriodCount
     * Number of devices that are in grace period
@@ -168,7 +168,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["inGracePeriodCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the nonCompliantDeviceCount
     * Number of NonCompliant devices
@@ -183,7 +183,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the nonCompliantDeviceCount
     * Number of NonCompliant devices
@@ -197,7 +197,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["nonCompliantDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notApplicableDeviceCount
     * Number of not applicable devices
@@ -212,7 +212,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicableDeviceCount
     * Number of not applicable devices
@@ -226,7 +226,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["notApplicableDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remediatedDeviceCount
     * Number of remediated devices
@@ -241,7 +241,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediatedDeviceCount
     * Number of remediated devices
@@ -255,7 +255,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["remediatedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unknownDeviceCount
     * Number of unknown devices
@@ -270,7 +270,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the unknownDeviceCount
     * Number of unknown devices
@@ -284,5 +284,5 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
         $this->_propDict["unknownDeviceCount"] = intval($val);
         return $this;
     }
-    
+
 }

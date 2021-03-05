@@ -38,7 +38,7 @@ class PrintTask extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the parentUrl
     * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
@@ -52,7 +52,7 @@ class PrintTask extends Entity
         $this->_propDict["parentUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The current execution status of this printTask. The calling application is responsible for updating this status when processing is finished, unless the related printJob has been redirected to another printer. Failure to report completion will result in the related print job being blocked from printing and eventually deleted.
@@ -71,7 +71,7 @@ class PrintTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The current execution status of this printTask. The calling application is responsible for updating this status when processing is finished, unless the related printJob has been redirected to another printer. Failure to report completion will result in the related print job being blocked from printing and eventually deleted.
@@ -85,7 +85,7 @@ class PrintTask extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the definition
     * The printTaskDefinition that was used to create this task. Read-only.
@@ -104,7 +104,7 @@ class PrintTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the definition
     * The printTaskDefinition that was used to create this task. Read-only.
@@ -118,7 +118,7 @@ class PrintTask extends Entity
         $this->_propDict["definition"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the trigger
     * The printTaskTrigger that triggered this task's execution. Read-only.
@@ -137,7 +137,7 @@ class PrintTask extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the trigger
     * The printTaskTrigger that triggered this task's execution. Read-only.
@@ -151,5 +151,5 @@ class PrintTask extends Entity
         $this->_propDict["trigger"] = $val;
         return $this;
     }
-    
+
 }

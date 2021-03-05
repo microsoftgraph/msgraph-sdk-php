@@ -38,7 +38,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the aaGuid
     * Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
@@ -52,7 +52,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         $this->_propDict["aaGuid"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the attestationCertificates
     * The attestation certificate(s) attached to this security key.
@@ -67,7 +67,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the attestationCertificates
     * The attestation certificate(s) attached to this security key.
@@ -81,7 +81,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         $this->_propDict["attestationCertificates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the attestationLevel
     * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
@@ -100,7 +100,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the attestationLevel
     * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
@@ -114,7 +114,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         $this->_propDict["attestationLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -132,7 +132,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -145,7 +145,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creationDateTime
     * The timestamp when this key was registered to the user.
@@ -164,7 +164,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the creationDateTime
     * The timestamp when this key was registered to the user.
@@ -178,7 +178,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the key as given by the user.
@@ -193,7 +193,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the key as given by the user.
@@ -207,7 +207,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * The manufacturer-assigned model of the FIDO2 security key.
@@ -222,7 +222,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * The manufacturer-assigned model of the FIDO2 security key.
@@ -236,5 +236,5 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
 }

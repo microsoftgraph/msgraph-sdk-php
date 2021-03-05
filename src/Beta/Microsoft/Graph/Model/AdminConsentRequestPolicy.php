@@ -37,7 +37,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     *
@@ -50,7 +50,7 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notifyReviewers
     *
@@ -64,7 +64,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notifyReviewers
     *
@@ -77,7 +77,7 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["notifyReviewers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remindersEnabled
     *
@@ -91,7 +91,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remindersEnabled
     *
@@ -104,7 +104,7 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["remindersEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the requestDurationInDays
     *
@@ -118,7 +118,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requestDurationInDays
     *
@@ -131,9 +131,9 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["requestDurationInDays"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reviewers
      *
      * @return array The reviewers
@@ -146,8 +146,8 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the reviewers
     *
     * @param AccessReviewScope $val The reviewers
@@ -156,10 +156,10 @@ class AdminConsentRequestPolicy extends Entity
     */
     public function setReviewers($val)
     {
-		$this->_propDict["reviewers"] = $val;
+        $this->_propDict["reviewers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     *
@@ -173,7 +173,7 @@ class AdminConsentRequestPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     *
@@ -186,5 +186,5 @@ class AdminConsentRequestPolicy extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
+
 }

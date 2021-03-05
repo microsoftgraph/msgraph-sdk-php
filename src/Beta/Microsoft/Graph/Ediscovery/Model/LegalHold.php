@@ -37,7 +37,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentQuery
     *
@@ -50,7 +50,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["contentQuery"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     *
@@ -68,7 +68,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -81,7 +81,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -99,7 +99,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -112,7 +112,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -126,7 +126,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -139,7 +139,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -153,7 +153,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -166,7 +166,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errors
     *
@@ -180,7 +180,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errors
     *
@@ -193,7 +193,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["errors"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     *
@@ -207,7 +207,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     *
@@ -220,7 +220,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     *
@@ -238,7 +238,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     *
@@ -251,7 +251,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -269,7 +269,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -282,7 +282,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -300,7 +300,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -313,9 +313,9 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the siteSources
      *
      * @return array The siteSources
@@ -328,8 +328,8 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the siteSources
     *
     * @param SiteSource $val The siteSources
@@ -338,12 +338,12 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setSiteSources($val)
     {
-		$this->_propDict["siteSources"] = $val;
+        $this->_propDict["siteSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the unifiedGroupSources
      *
      * @return array The unifiedGroupSources
@@ -356,8 +356,8 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the unifiedGroupSources
     *
     * @param UnifiedGroupSource $val The unifiedGroupSources
@@ -366,12 +366,12 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setUnifiedGroupSources($val)
     {
-		$this->_propDict["unifiedGroupSources"] = $val;
+        $this->_propDict["unifiedGroupSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userSources
      *
      * @return array The userSources
@@ -384,8 +384,8 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userSources
     *
     * @param UserSource $val The userSources
@@ -394,8 +394,8 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setUserSources($val)
     {
-		$this->_propDict["userSources"] = $val;
+        $this->_propDict["userSources"] = $val;
         return $this;
     }
-    
+
 }

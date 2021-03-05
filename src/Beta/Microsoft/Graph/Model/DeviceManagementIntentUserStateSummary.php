@@ -38,7 +38,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the conflictCount
     * Number of users in conflict
@@ -52,7 +52,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
         $this->_propDict["conflictCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorCount
     * Number of error users
@@ -67,7 +67,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCount
     * Number of error users
@@ -81,7 +81,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
         $this->_propDict["errorCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the failedCount
     * Number of failed users
@@ -96,7 +96,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the failedCount
     * Number of failed users
@@ -110,7 +110,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
         $this->_propDict["failedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notApplicableCount
     * Number of not applicable users
@@ -125,7 +125,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicableCount
     * Number of not applicable users
@@ -139,7 +139,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
         $this->_propDict["notApplicableCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the successCount
     * Number of succeeded users
@@ -154,7 +154,7 @@ class DeviceManagementIntentUserStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successCount
     * Number of succeeded users
@@ -168,5 +168,5 @@ class DeviceManagementIntentUserStateSummary extends Entity
         $this->_propDict["successCount"] = intval($val);
         return $this;
     }
-    
+
 }

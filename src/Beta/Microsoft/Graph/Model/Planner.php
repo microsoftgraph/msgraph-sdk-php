@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class Planner extends Entity
 {
 
-     /** 
+     /**
      * Gets the buckets
     * Read-only. Nullable. Returns a collection of the specified buckets
      *
@@ -39,8 +39,8 @@ class Planner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the buckets
     * Read-only. Nullable. Returns a collection of the specified buckets
     *
@@ -50,12 +50,12 @@ class Planner extends Entity
     */
     public function setBuckets($val)
     {
-		$this->_propDict["buckets"] = $val;
+        $this->_propDict["buckets"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the plans
     * Read-only. Nullable. Returns a collection of the specified plans
      *
@@ -69,8 +69,8 @@ class Planner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the plans
     * Read-only. Nullable. Returns a collection of the specified plans
     *
@@ -80,12 +80,12 @@ class Planner extends Entity
     */
     public function setPlans($val)
     {
-		$this->_propDict["plans"] = $val;
+        $this->_propDict["plans"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rosters
     * Read-only. Nullable. Returns a collection of the specified rosters
      *
@@ -99,8 +99,8 @@ class Planner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rosters
     * Read-only. Nullable. Returns a collection of the specified rosters
     *
@@ -110,12 +110,12 @@ class Planner extends Entity
     */
     public function setRosters($val)
     {
-		$this->_propDict["rosters"] = $val;
+        $this->_propDict["rosters"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
      *
@@ -129,8 +129,8 @@ class Planner extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
     *
@@ -140,8 +140,8 @@ class Planner extends Entity
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

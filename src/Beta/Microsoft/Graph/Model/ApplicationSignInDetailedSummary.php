@@ -42,7 +42,7 @@ class ApplicationSignInDetailedSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the aggregatedEventDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -56,7 +56,7 @@ class ApplicationSignInDetailedSummary extends Entity
         $this->_propDict["aggregatedEventDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appDisplayName
     * Name of the application that the user signed in to.
@@ -71,7 +71,7 @@ class ApplicationSignInDetailedSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * Name of the application that the user signed in to.
@@ -85,7 +85,7 @@ class ApplicationSignInDetailedSummary extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appId
     * ID of the application that the user signed in to.
@@ -100,7 +100,7 @@ class ApplicationSignInDetailedSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appId
     * ID of the application that the user signed in to.
@@ -114,7 +114,7 @@ class ApplicationSignInDetailedSummary extends Entity
         $this->_propDict["appId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the signInCount
     * Count of sign-ins made by the application.
@@ -129,7 +129,7 @@ class ApplicationSignInDetailedSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the signInCount
     * Count of sign-ins made by the application.
@@ -143,7 +143,7 @@ class ApplicationSignInDetailedSummary extends Entity
         $this->_propDict["signInCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Details of the sign-in status.
@@ -162,7 +162,7 @@ class ApplicationSignInDetailedSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Details of the sign-in status.
@@ -176,5 +176,5 @@ class ApplicationSignInDetailedSummary extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

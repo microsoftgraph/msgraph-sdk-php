@@ -42,7 +42,7 @@ class IdentityApiConnector extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationConfiguration
     * The object which describes the authentication configuration details for calling the API. Only Basic authentication is supported at this time.
@@ -56,7 +56,7 @@ class IdentityApiConnector extends Entity
         $this->_propDict["authenticationConfiguration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the API connector.
@@ -71,7 +71,7 @@ class IdentityApiConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the API connector.
@@ -85,7 +85,7 @@ class IdentityApiConnector extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetUrl
     * The URL of the API endpoint to call.
@@ -100,7 +100,7 @@ class IdentityApiConnector extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetUrl
     * The URL of the API endpoint to call.
@@ -114,5 +114,5 @@ class IdentityApiConnector extends Entity
         $this->_propDict["targetUrl"] = $val;
         return $this;
     }
-    
+
 }

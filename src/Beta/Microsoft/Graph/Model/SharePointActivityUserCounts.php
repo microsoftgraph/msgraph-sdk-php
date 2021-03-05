@@ -41,7 +41,7 @@ class SharePointActivityUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -54,7 +54,7 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -68,7 +68,7 @@ class SharePointActivityUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -81,7 +81,7 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -99,7 +99,7 @@ class SharePointActivityUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -112,7 +112,7 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharedExternally
     *
@@ -126,7 +126,7 @@ class SharePointActivityUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sharedExternally
     *
@@ -139,7 +139,7 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["sharedExternally"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sharedInternally
     *
@@ -153,7 +153,7 @@ class SharePointActivityUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sharedInternally
     *
@@ -166,7 +166,7 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["sharedInternally"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the synced
     *
@@ -180,7 +180,7 @@ class SharePointActivityUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the synced
     *
@@ -193,7 +193,7 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["synced"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the viewedOrEdited
     *
@@ -207,7 +207,7 @@ class SharePointActivityUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the viewedOrEdited
     *
@@ -220,7 +220,7 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["viewedOrEdited"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the visitedPage
     *
@@ -234,7 +234,7 @@ class SharePointActivityUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the visitedPage
     *
@@ -247,5 +247,5 @@ class SharePointActivityUserCounts extends Entity
         $this->_propDict["visitedPage"] = intval($val);
         return $this;
     }
-    
+
 }

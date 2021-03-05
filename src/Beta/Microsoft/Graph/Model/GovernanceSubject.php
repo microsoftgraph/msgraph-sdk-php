@@ -38,7 +38,7 @@ class GovernanceSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the subject.
@@ -52,7 +52,7 @@ class GovernanceSubject extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the email
     * The email address of the user subject. If the subject is in other types, it is empty.
@@ -67,7 +67,7 @@ class GovernanceSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * The email address of the user subject. If the subject is in other types, it is empty.
@@ -81,7 +81,7 @@ class GovernanceSubject extends Entity
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalName
     * The principal name of the user subject. If the subject is in other types, it is empty.
@@ -96,7 +96,7 @@ class GovernanceSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the principalName
     * The principal name of the user subject. If the subject is in other types, it is empty.
@@ -110,7 +110,7 @@ class GovernanceSubject extends Entity
         $this->_propDict["principalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The type of the subject. The value can be User, Group, and ServicePrincipal.
@@ -125,7 +125,7 @@ class GovernanceSubject extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     * The type of the subject. The value can be User, Group, and ServicePrincipal.
@@ -139,5 +139,5 @@ class GovernanceSubject extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

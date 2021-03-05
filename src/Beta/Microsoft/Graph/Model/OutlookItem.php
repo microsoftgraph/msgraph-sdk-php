@@ -38,7 +38,7 @@ class OutlookItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the categories
     * The categories associated with the item
@@ -52,7 +52,7 @@ class OutlookItem extends Entity
         $this->_propDict["categories"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the changeKey
     * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
@@ -67,7 +67,7 @@ class OutlookItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the changeKey
     * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
@@ -81,7 +81,7 @@ class OutlookItem extends Entity
         $this->_propDict["changeKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -100,7 +100,7 @@ class OutlookItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -114,7 +114,7 @@ class OutlookItem extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -133,7 +133,7 @@ class OutlookItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -147,5 +147,5 @@ class OutlookItem extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

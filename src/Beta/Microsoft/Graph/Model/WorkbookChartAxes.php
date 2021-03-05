@@ -42,7 +42,7 @@ class WorkbookChartAxes extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the categoryAxis
     * Represents the category axis in a chart. Read-only.
@@ -56,7 +56,7 @@ class WorkbookChartAxes extends Entity
         $this->_propDict["categoryAxis"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the seriesAxis
     * Represents the series axis of a 3-dimensional chart. Read-only.
@@ -75,7 +75,7 @@ class WorkbookChartAxes extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the seriesAxis
     * Represents the series axis of a 3-dimensional chart. Read-only.
@@ -89,7 +89,7 @@ class WorkbookChartAxes extends Entity
         $this->_propDict["seriesAxis"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the valueAxis
     * Represents the value axis in an axis. Read-only.
@@ -108,7 +108,7 @@ class WorkbookChartAxes extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the valueAxis
     * Represents the value axis in an axis. Read-only.
@@ -122,5 +122,5 @@ class WorkbookChartAxes extends Entity
         $this->_propDict["valueAxis"] = $val;
         return $this;
     }
-    
+
 }

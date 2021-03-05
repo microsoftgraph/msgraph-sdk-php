@@ -42,7 +42,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the acceptedDateTime
     * DateTime when the terms were last accepted by the user.
@@ -56,7 +56,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
         $this->_propDict["acceptedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the acceptedVersion
     * Most recent version number of the T&amp;C accepted by the user.
@@ -71,7 +71,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the acceptedVersion
     * Most recent version number of the T&amp;C accepted by the user.
@@ -85,7 +85,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
         $this->_propDict["acceptedVersion"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userDisplayName
     * Display name of the user whose acceptance the entity represents.
@@ -100,7 +100,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userDisplayName
     * Display name of the user whose acceptance the entity represents.
@@ -114,7 +114,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
         $this->_propDict["userDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The userPrincipalName of the User that accepted the term.
@@ -129,7 +129,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The userPrincipalName of the User that accepted the term.
@@ -143,7 +143,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the termsAndConditions
     * Navigation link to the terms and conditions that are assigned.
@@ -162,7 +162,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the termsAndConditions
     * Navigation link to the terms and conditions that are assigned.
@@ -176,5 +176,5 @@ class TermsAndConditionsAcceptanceStatus extends Entity
         $this->_propDict["termsAndConditions"] = $val;
         return $this;
     }
-    
+
 }

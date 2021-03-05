@@ -37,7 +37,7 @@ class EmailActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the read
     *
@@ -50,7 +50,7 @@ class EmailActivitySummary extends Entity
         $this->_propDict["read"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the receive
     *
@@ -64,7 +64,7 @@ class EmailActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the receive
     *
@@ -77,7 +77,7 @@ class EmailActivitySummary extends Entity
         $this->_propDict["receive"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -95,7 +95,7 @@ class EmailActivitySummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -108,7 +108,7 @@ class EmailActivitySummary extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -122,7 +122,7 @@ class EmailActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -135,7 +135,7 @@ class EmailActivitySummary extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -153,7 +153,7 @@ class EmailActivitySummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -166,7 +166,7 @@ class EmailActivitySummary extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the send
     *
@@ -180,7 +180,7 @@ class EmailActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the send
     *
@@ -193,5 +193,5 @@ class EmailActivitySummary extends Entity
         $this->_propDict["send"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class BitlockerRecoveryKey extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time when the key was originally backed up to Azure Active Directory.
@@ -56,7 +56,7 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * ID of the device the BitLocker key is originally backed up from.
@@ -71,7 +71,7 @@ class BitlockerRecoveryKey extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * ID of the device the BitLocker key is originally backed up from.
@@ -85,7 +85,7 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the key
     * The BitLocker recovery key.
@@ -100,7 +100,7 @@ class BitlockerRecoveryKey extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the key
     * The BitLocker recovery key.
@@ -114,7 +114,7 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["key"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the volumeType
     * Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
@@ -133,7 +133,7 @@ class BitlockerRecoveryKey extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the volumeType
     * Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
@@ -147,5 +147,5 @@ class BitlockerRecoveryKey extends Entity
         $this->_propDict["volumeType"] = $val;
         return $this;
     }
-    
+
 }

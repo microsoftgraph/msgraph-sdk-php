@@ -38,7 +38,7 @@ class BookingPerson extends BookingNamedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailAddress
     * The email address of the person.
@@ -52,5 +52,5 @@ class BookingPerson extends BookingNamedEntity
         $this->_propDict["emailAddress"] = $val;
         return $this;
     }
-    
+
 }

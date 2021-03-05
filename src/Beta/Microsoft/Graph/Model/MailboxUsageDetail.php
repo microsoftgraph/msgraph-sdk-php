@@ -41,7 +41,7 @@ class MailboxUsageDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDate
     *
@@ -54,7 +54,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["createdDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deletedDate
     *
@@ -72,7 +72,7 @@ class MailboxUsageDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     *
@@ -85,7 +85,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deletedItemCount
     *
@@ -99,7 +99,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deletedItemCount
     *
@@ -112,7 +112,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["deletedItemCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deletedItemSizeInBytes
     *
@@ -126,7 +126,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deletedItemSizeInBytes
     *
@@ -139,7 +139,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["deletedItemSizeInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -153,7 +153,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -166,7 +166,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -180,7 +180,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -193,7 +193,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the issueWarningQuotaInBytes
     *
@@ -207,7 +207,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issueWarningQuotaInBytes
     *
@@ -220,7 +220,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["issueWarningQuotaInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the itemCount
     *
@@ -234,7 +234,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the itemCount
     *
@@ -247,7 +247,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["itemCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -265,7 +265,7 @@ class MailboxUsageDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -278,7 +278,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the prohibitSendQuotaInBytes
     *
@@ -292,7 +292,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the prohibitSendQuotaInBytes
     *
@@ -305,7 +305,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["prohibitSendQuotaInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the prohibitSendReceiveQuotaInBytes
     *
@@ -319,7 +319,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the prohibitSendReceiveQuotaInBytes
     *
@@ -332,7 +332,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["prohibitSendReceiveQuotaInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -346,7 +346,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -359,7 +359,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -377,7 +377,7 @@ class MailboxUsageDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -390,7 +390,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the storageUsedInBytes
     *
@@ -404,7 +404,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the storageUsedInBytes
     *
@@ -417,7 +417,7 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["storageUsedInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -431,7 +431,7 @@ class MailboxUsageDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -444,5 +444,5 @@ class MailboxUsageDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

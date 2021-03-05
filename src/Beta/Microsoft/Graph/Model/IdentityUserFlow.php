@@ -41,7 +41,7 @@ class IdentityUserFlow extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userFlowType
     *
@@ -54,7 +54,7 @@ class IdentityUserFlow extends Entity
         $this->_propDict["userFlowType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userFlowTypeVersion
     *
@@ -72,7 +72,7 @@ class IdentityUserFlow extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userFlowTypeVersion
     *
@@ -85,5 +85,5 @@ class IdentityUserFlow extends Entity
         $this->_propDict["userFlowTypeVersion"] = $val;
         return $this;
     }
-    
+
 }

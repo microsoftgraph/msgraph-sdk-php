@@ -38,7 +38,7 @@ class EducationAssignmentResource extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the distributeForStudentWork
     * Indicates whether this resource should be copied to each student submission for modification and submission.
@@ -52,7 +52,7 @@ class EducationAssignmentResource extends Entity
         $this->_propDict["distributeForStudentWork"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Resource object that has been associated with this assignment.
@@ -71,7 +71,7 @@ class EducationAssignmentResource extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Resource object that has been associated with this assignment.
@@ -85,5 +85,5 @@ class EducationAssignmentResource extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
 }

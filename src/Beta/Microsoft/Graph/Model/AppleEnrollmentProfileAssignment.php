@@ -42,7 +42,7 @@ class AppleEnrollmentProfileAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the Apple user initiated deployment profile.
@@ -56,5 +56,5 @@ class AppleEnrollmentProfileAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

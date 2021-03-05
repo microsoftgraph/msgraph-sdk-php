@@ -42,7 +42,7 @@ class PlannerPlan extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the container
     * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
@@ -56,7 +56,7 @@ class PlannerPlan extends PlannerDelta
         $this->_propDict["container"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contexts
     * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
@@ -75,7 +75,7 @@ class PlannerPlan extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the contexts
     * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
@@ -89,7 +89,7 @@ class PlannerPlan extends PlannerDelta
         $this->_propDict["contexts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * Read-only. The user who created the plan.
@@ -108,7 +108,7 @@ class PlannerPlan extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * Read-only. The user who created the plan.
@@ -122,7 +122,7 @@ class PlannerPlan extends PlannerDelta
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -141,7 +141,7 @@ class PlannerPlan extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -155,7 +155,7 @@ class PlannerPlan extends PlannerDelta
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the owner
     * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
@@ -170,7 +170,7 @@ class PlannerPlan extends PlannerDelta
             return null;
         }
     }
-    
+
     /**
     * Sets the owner
     * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
@@ -184,7 +184,7 @@ class PlannerPlan extends PlannerDelta
         $this->_propDict["owner"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * Required. Title of the plan.
@@ -199,7 +199,7 @@ class PlannerPlan extends PlannerDelta
             return null;
         }
     }
-    
+
     /**
     * Sets the title
     * Required. Title of the plan.
@@ -213,9 +213,9 @@ class PlannerPlan extends PlannerDelta
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the buckets
     * Collection of buckets in the plan. Read-only. Nullable.
      *
@@ -229,8 +229,8 @@ class PlannerPlan extends PlannerDelta
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the buckets
     * Collection of buckets in the plan. Read-only. Nullable.
     *
@@ -240,10 +240,10 @@ class PlannerPlan extends PlannerDelta
     */
     public function setBuckets($val)
     {
-		$this->_propDict["buckets"] = $val;
+        $this->_propDict["buckets"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the details
     * Additional details about the plan. Read-only. Nullable.
@@ -262,7 +262,7 @@ class PlannerPlan extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the details
     * Additional details about the plan. Read-only. Nullable.
@@ -276,9 +276,9 @@ class PlannerPlan extends PlannerDelta
         $this->_propDict["details"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * Collection of tasks in the plan. Read-only. Nullable.
      *
@@ -292,8 +292,8 @@ class PlannerPlan extends PlannerDelta
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * Collection of tasks in the plan. Read-only. Nullable.
     *
@@ -303,8 +303,8 @@ class PlannerPlan extends PlannerDelta
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

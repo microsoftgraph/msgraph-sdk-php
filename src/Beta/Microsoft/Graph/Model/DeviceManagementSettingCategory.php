@@ -38,7 +38,7 @@ class DeviceManagementSettingCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The category name
@@ -52,7 +52,7 @@ class DeviceManagementSettingCategory extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasRequiredSetting
     * The category contains top level required setting
@@ -67,7 +67,7 @@ class DeviceManagementSettingCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasRequiredSetting
     * The category contains top level required setting
@@ -81,9 +81,9 @@ class DeviceManagementSettingCategory extends Entity
         $this->_propDict["hasRequiredSetting"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settingDefinitions
     * The setting definitions this category contains
      *
@@ -97,8 +97,8 @@ class DeviceManagementSettingCategory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settingDefinitions
     * The setting definitions this category contains
     *
@@ -108,8 +108,8 @@ class DeviceManagementSettingCategory extends Entity
     */
     public function setSettingDefinitions($val)
     {
-		$this->_propDict["settingDefinitions"] = $val;
+        $this->_propDict["settingDefinitions"] = $val;
         return $this;
     }
-    
+
 }

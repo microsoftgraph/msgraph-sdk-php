@@ -42,7 +42,7 @@ class Windows10PFXImportCertificateProfile extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the keyStorageProvider
     * Not yet documented. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
@@ -56,5 +56,5 @@ class Windows10PFXImportCertificateProfile extends DeviceConfiguration
         $this->_propDict["keyStorageProvider"] = $val;
         return $this;
     }
-    
+
 }

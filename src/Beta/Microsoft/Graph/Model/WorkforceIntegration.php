@@ -38,7 +38,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the apiVersion
     * API version for the call back URL. Start with 1.
@@ -52,7 +52,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["apiVersion"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the workforce integration.
@@ -67,7 +67,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the workforce integration.
@@ -81,7 +81,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eligibilityFilteringEnabledEntities
     *
@@ -99,7 +99,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the eligibilityFilteringEnabledEntities
     *
@@ -112,7 +112,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["eligibilityFilteringEnabledEntities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the encryption
     * The workforce integration encryption resource.
@@ -131,7 +131,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the encryption
     * The workforce integration encryption resource.
@@ -145,7 +145,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["encryption"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isActive
     * Indicates whether this workforce integration is currently active and available.
@@ -160,7 +160,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the isActive
     * Indicates whether this workforce integration is currently active and available.
@@ -174,7 +174,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["isActive"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the supportedEntities
     * This property will replace supports in v1.0. We recommend that you use this property instead of supports. The supports property will still be supported in beta for the time being. Possible values are none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences. If selecting more than one value, all values must start with the first letter in uppercase.
@@ -193,7 +193,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the supportedEntities
     * This property will replace supports in v1.0. We recommend that you use this property instead of supports. The supports property will still be supported in beta for the time being. Possible values are none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences. If selecting more than one value, all values must start with the first letter in uppercase.
@@ -207,7 +207,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["supportedEntities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supports
     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
@@ -226,7 +226,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the supports
     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
@@ -240,7 +240,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["supports"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the url
     * Workforce Integration URL for callbacks from the Shifts service.
@@ -255,7 +255,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the url
     * Workforce Integration URL for callbacks from the Shifts service.
@@ -269,5 +269,5 @@ class WorkforceIntegration extends ChangeTrackedEntity
         $this->_propDict["url"] = $val;
         return $this;
     }
-    
+
 }

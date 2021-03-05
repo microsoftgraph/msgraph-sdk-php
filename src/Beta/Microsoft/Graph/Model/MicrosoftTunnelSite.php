@@ -38,7 +38,7 @@ class MicrosoftTunnelSite extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The MicrosoftTunnelSite's description
@@ -52,7 +52,7 @@ class MicrosoftTunnelSite extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The MicrosoftTunnelSite's display name
@@ -67,7 +67,7 @@ class MicrosoftTunnelSite extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The MicrosoftTunnelSite's display name
@@ -81,7 +81,7 @@ class MicrosoftTunnelSite extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publicAddress
     * The MicrosoftTunnelSite's public domain name or IP address
@@ -96,7 +96,7 @@ class MicrosoftTunnelSite extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publicAddress
     * The MicrosoftTunnelSite's public domain name or IP address
@@ -110,7 +110,7 @@ class MicrosoftTunnelSite extends Entity
         $this->_propDict["publicAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -125,7 +125,7 @@ class MicrosoftTunnelSite extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -139,7 +139,7 @@ class MicrosoftTunnelSite extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the microsoftTunnelConfiguration
     * The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
@@ -158,7 +158,7 @@ class MicrosoftTunnelSite extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the microsoftTunnelConfiguration
     * The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
@@ -172,9 +172,9 @@ class MicrosoftTunnelSite extends Entity
         $this->_propDict["microsoftTunnelConfiguration"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the microsoftTunnelServers
     * A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
      *
@@ -188,8 +188,8 @@ class MicrosoftTunnelSite extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the microsoftTunnelServers
     * A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
     *
@@ -199,8 +199,8 @@ class MicrosoftTunnelSite extends Entity
     */
     public function setMicrosoftTunnelServers($val)
     {
-		$this->_propDict["microsoftTunnelServers"] = $val;
+        $this->_propDict["microsoftTunnelServers"] = $val;
         return $this;
     }
-    
+
 }

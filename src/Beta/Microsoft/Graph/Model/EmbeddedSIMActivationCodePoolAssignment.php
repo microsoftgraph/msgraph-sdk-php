@@ -42,7 +42,7 @@ class EmbeddedSIMActivationCodePoolAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The type of groups targeted by the embedded SIM activation code pool.
@@ -56,5 +56,5 @@ class EmbeddedSIMActivationCodePoolAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

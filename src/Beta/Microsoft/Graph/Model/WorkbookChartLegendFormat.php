@@ -42,7 +42,7 @@ class WorkbookChartLegendFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fill
     * Represents the fill format of an object, which includes background formating information. Read-only.
@@ -56,7 +56,7 @@ class WorkbookChartLegendFormat extends Entity
         $this->_propDict["fill"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the font
     * Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
@@ -75,7 +75,7 @@ class WorkbookChartLegendFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the font
     * Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
@@ -89,5 +89,5 @@ class WorkbookChartLegendFormat extends Entity
         $this->_propDict["font"] = $val;
         return $this;
     }
-    
+
 }

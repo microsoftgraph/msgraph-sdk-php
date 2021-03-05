@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class Document extends Entity
 {
 
-     /** 
+     /**
      * Gets the comments
      *
      * @return array The comments
@@ -38,8 +38,8 @@ class Document extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the comments
     *
     * @param DocumentComment $val The comments
@@ -48,8 +48,8 @@ class Document extends Entity
     */
     public function setComments($val)
     {
-		$this->_propDict["comments"] = $val;
+        $this->_propDict["comments"] = $val;
         return $this;
     }
-    
+
 }

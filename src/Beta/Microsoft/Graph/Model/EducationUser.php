@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationUser extends Entity
 {
 
-     /** 
+     /**
      * Gets the relatedContacts
     * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
      *
@@ -39,8 +39,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the relatedContacts
     * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
     *
@@ -50,10 +50,10 @@ class EducationUser extends Entity
     */
     public function setRelatedContacts($val)
     {
-		$this->_propDict["relatedContacts"] = $val;
+        $this->_propDict["relatedContacts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accountEnabled
     * True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.
@@ -68,7 +68,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountEnabled
     * True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.
@@ -82,9 +82,9 @@ class EducationUser extends Entity
         $this->_propDict["accountEnabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignedLicenses
     * The licenses that are assigned to the user. Not nullable.
      *
@@ -98,8 +98,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignedLicenses
     * The licenses that are assigned to the user. Not nullable.
     *
@@ -109,12 +109,12 @@ class EducationUser extends Entity
     */
     public function setAssignedLicenses($val)
     {
-		$this->_propDict["assignedLicenses"] = $val;
+        $this->_propDict["assignedLicenses"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignedPlans
     * The plans that are assigned to the user. Read-only. Not nullable.
      *
@@ -128,8 +128,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignedPlans
     * The plans that are assigned to the user. Read-only. Not nullable.
     *
@@ -139,10 +139,10 @@ class EducationUser extends Entity
     */
     public function setAssignedPlans($val)
     {
-		$this->_propDict["assignedPlans"] = $val;
+        $this->_propDict["assignedPlans"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the businessPhones
     * The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
@@ -157,7 +157,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the businessPhones
     * The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
@@ -171,7 +171,7 @@ class EducationUser extends Entity
         $this->_propDict["businessPhones"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * Entity who created the user.
@@ -190,7 +190,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * Entity who created the user.
@@ -204,7 +204,7 @@ class EducationUser extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the department
     * The name for the department in which the user works. Supports /$filter.
@@ -219,7 +219,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the department
     * The name for the department in which the user works. Supports /$filter.
@@ -233,7 +233,7 @@ class EducationUser extends Entity
         $this->_propDict["department"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name displayed in the address book for the user. Supports $filter and $orderby.
@@ -248,7 +248,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name displayed in the address book for the user. Supports $filter and $orderby.
@@ -262,7 +262,7 @@ class EducationUser extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalSource
     * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
@@ -281,7 +281,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the externalSource
     * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
@@ -295,7 +295,7 @@ class EducationUser extends Entity
         $this->_propDict["externalSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalSourceDetail
     * The name of the external source this resources was generated from.
@@ -310,7 +310,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalSourceDetail
     * The name of the external source this resources was generated from.
@@ -324,7 +324,7 @@ class EducationUser extends Entity
         $this->_propDict["externalSourceDetail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the givenName
     * The given name (first name) of the user. Supports /$filter.
@@ -339,7 +339,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the givenName
     * The given name (first name) of the user. Supports /$filter.
@@ -353,7 +353,7 @@ class EducationUser extends Entity
         $this->_propDict["givenName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mail
     * The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
@@ -368,7 +368,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mail
     * The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
@@ -382,7 +382,7 @@ class EducationUser extends Entity
         $this->_propDict["mail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mailingAddress
     * Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
@@ -401,7 +401,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the mailingAddress
     * Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
@@ -415,7 +415,7 @@ class EducationUser extends Entity
         $this->_propDict["mailingAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mailNickname
     * The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
@@ -430,7 +430,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mailNickname
     * The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
@@ -444,7 +444,7 @@ class EducationUser extends Entity
         $this->_propDict["mailNickname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the middleName
     * The middle name of user.
@@ -459,7 +459,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the middleName
     * The middle name of user.
@@ -473,7 +473,7 @@ class EducationUser extends Entity
         $this->_propDict["middleName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mobilePhone
     * The primary cellular telephone number for the user.
@@ -488,7 +488,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mobilePhone
     * The primary cellular telephone number for the user.
@@ -502,7 +502,7 @@ class EducationUser extends Entity
         $this->_propDict["mobilePhone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the officeLocation
     *
@@ -516,7 +516,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the officeLocation
     *
@@ -529,7 +529,7 @@ class EducationUser extends Entity
         $this->_propDict["officeLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesInfo
     * Additional information used to associate the AAD user with it's Active Directory counterpart.
@@ -548,7 +548,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the onPremisesInfo
     * Additional information used to associate the AAD user with it's Active Directory counterpart.
@@ -562,7 +562,7 @@ class EducationUser extends Entity
         $this->_propDict["onPremisesInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passwordPolicies
     * Specifies password policies for the user. See standard [user] resource for additional details.
@@ -577,7 +577,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordPolicies
     * Specifies password policies for the user. See standard [user] resource for additional details.
@@ -591,7 +591,7 @@ class EducationUser extends Entity
         $this->_propDict["passwordPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passwordProfile
     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
@@ -610,7 +610,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the passwordProfile
     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
@@ -624,7 +624,7 @@ class EducationUser extends Entity
         $this->_propDict["passwordProfile"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preferredLanguage
     * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
@@ -639,7 +639,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the preferredLanguage
     * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
@@ -653,7 +653,7 @@ class EducationUser extends Entity
         $this->_propDict["preferredLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the primaryRole
     * Default role for a user. The user's role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.
@@ -672,7 +672,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the primaryRole
     * Default role for a user. The user's role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.
@@ -686,9 +686,9 @@ class EducationUser extends Entity
         $this->_propDict["primaryRole"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the provisionedPlans
     * The plans that are provisioned for the user. Read-only. Not nullable.
      *
@@ -702,8 +702,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the provisionedPlans
     * The plans that are provisioned for the user. Read-only. Not nullable.
     *
@@ -713,10 +713,10 @@ class EducationUser extends Entity
     */
     public function setProvisionedPlans($val)
     {
-		$this->_propDict["provisionedPlans"] = $val;
+        $this->_propDict["provisionedPlans"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the refreshTokensValidFromDateTime
     *
@@ -734,7 +734,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the refreshTokensValidFromDateTime
     *
@@ -747,7 +747,7 @@ class EducationUser extends Entity
         $this->_propDict["refreshTokensValidFromDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the residenceAddress
     * Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
@@ -766,7 +766,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the residenceAddress
     * Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
@@ -780,7 +780,7 @@ class EducationUser extends Entity
         $this->_propDict["residenceAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the showInAddressList
     *
@@ -794,7 +794,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showInAddressList
     *
@@ -807,7 +807,7 @@ class EducationUser extends Entity
         $this->_propDict["showInAddressList"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the student
     * If the primary role is student, this block will contain student specific data.
@@ -826,7 +826,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the student
     * If the primary role is student, this block will contain student specific data.
@@ -840,7 +840,7 @@ class EducationUser extends Entity
         $this->_propDict["student"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the surname
     * The user's surname (family name or last name). Supports /$filter.
@@ -855,7 +855,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the surname
     * The user's surname (family name or last name). Supports /$filter.
@@ -869,7 +869,7 @@ class EducationUser extends Entity
         $this->_propDict["surname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teacher
     * If the primary role is teacher, this block will contain teacher specific data.
@@ -888,7 +888,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the teacher
     * If the primary role is teacher, this block will contain teacher specific data.
@@ -902,7 +902,7 @@ class EducationUser extends Entity
         $this->_propDict["teacher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usageLocation
     * A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
@@ -917,7 +917,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usageLocation
     * A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
@@ -931,7 +931,7 @@ class EducationUser extends Entity
         $this->_propDict["usageLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
@@ -946,7 +946,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
@@ -960,7 +960,7 @@ class EducationUser extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userType
     * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
@@ -975,7 +975,7 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userType
     * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
@@ -989,9 +989,9 @@ class EducationUser extends Entity
         $this->_propDict["userType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * List of assignments for the user. Nullable.
      *
@@ -1005,8 +1005,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * List of assignments for the user. Nullable.
     *
@@ -1016,12 +1016,12 @@ class EducationUser extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rubrics
      *
      * @return array The rubrics
@@ -1034,8 +1034,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rubrics
     *
     * @param EducationRubric $val The rubrics
@@ -1044,12 +1044,12 @@ class EducationUser extends Entity
     */
     public function setRubrics($val)
     {
-		$this->_propDict["rubrics"] = $val;
+        $this->_propDict["rubrics"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the classes
     * Classes to which the user belongs. Nullable.
      *
@@ -1063,8 +1063,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the classes
     * Classes to which the user belongs. Nullable.
     *
@@ -1074,12 +1074,12 @@ class EducationUser extends Entity
     */
     public function setClasses($val)
     {
-		$this->_propDict["classes"] = $val;
+        $this->_propDict["classes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the schools
     * Schools to which the user belongs. Nullable.
      *
@@ -1093,8 +1093,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the schools
     * Schools to which the user belongs. Nullable.
     *
@@ -1104,12 +1104,12 @@ class EducationUser extends Entity
     */
     public function setSchools($val)
     {
-		$this->_propDict["schools"] = $val;
+        $this->_propDict["schools"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taughtClasses
     * Classes for which the user is a teacher.
      *
@@ -1123,8 +1123,8 @@ class EducationUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the taughtClasses
     * Classes for which the user is a teacher.
     *
@@ -1134,10 +1134,10 @@ class EducationUser extends Entity
     */
     public function setTaughtClasses($val)
     {
-		$this->_propDict["taughtClasses"] = $val;
+        $this->_propDict["taughtClasses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the user
     * The directory user corresponding to this user.
@@ -1156,7 +1156,7 @@ class EducationUser extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the user
     * The directory user corresponding to this user.
@@ -1170,5 +1170,5 @@ class EducationUser extends Entity
         $this->_propDict["user"] = $val;
         return $this;
     }
-    
+
 }

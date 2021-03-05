@@ -37,7 +37,7 @@ class TenantSetupInfo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the firstTimeSetup
     *
@@ -50,7 +50,7 @@ class TenantSetupInfo extends Entity
         $this->_propDict["firstTimeSetup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the relevantRolesSettings
     *
@@ -64,7 +64,7 @@ class TenantSetupInfo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the relevantRolesSettings
     *
@@ -77,7 +77,7 @@ class TenantSetupInfo extends Entity
         $this->_propDict["relevantRolesSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the setupStatus
     *
@@ -95,7 +95,7 @@ class TenantSetupInfo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the setupStatus
     *
@@ -108,7 +108,7 @@ class TenantSetupInfo extends Entity
         $this->_propDict["setupStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the skipSetup
     *
@@ -122,7 +122,7 @@ class TenantSetupInfo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the skipSetup
     *
@@ -135,7 +135,7 @@ class TenantSetupInfo extends Entity
         $this->_propDict["skipSetup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userRolesActions
     *
@@ -149,7 +149,7 @@ class TenantSetupInfo extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userRolesActions
     *
@@ -162,7 +162,7 @@ class TenantSetupInfo extends Entity
         $this->_propDict["userRolesActions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultRolesSettings
     *
@@ -180,7 +180,7 @@ class TenantSetupInfo extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultRolesSettings
     *
@@ -193,5 +193,5 @@ class TenantSetupInfo extends Entity
         $this->_propDict["defaultRolesSettings"] = $val;
         return $this;
     }
-    
+
 }

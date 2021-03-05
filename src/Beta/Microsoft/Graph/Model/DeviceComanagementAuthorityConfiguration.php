@@ -38,7 +38,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
             return null;
         }
     }
-    
+
     /**
     * Sets the configurationManagerAgentCommandLineArgument
     * CoManagement Authority configuration ConfigurationManagerAgentCommandLineArgument
@@ -52,7 +52,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
         $this->_propDict["configurationManagerAgentCommandLineArgument"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the installConfigurationManagerAgent
     * CoManagement Authority configuration InstallConfigurationManagerAgent
@@ -67,7 +67,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
             return null;
         }
     }
-    
+
     /**
     * Sets the installConfigurationManagerAgent
     * CoManagement Authority configuration InstallConfigurationManagerAgent
@@ -81,7 +81,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
         $this->_propDict["installConfigurationManagerAgent"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceAuthority
     * CoManagement Authority configuration ManagedDeviceAuthority
@@ -96,7 +96,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceAuthority
     * CoManagement Authority configuration ManagedDeviceAuthority
@@ -110,5 +110,5 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
         $this->_propDict["managedDeviceAuthority"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class ApplicationSignInSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * Name of the application that the user signed in to.
@@ -52,7 +52,7 @@ class ApplicationSignInSummary extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the failedSignInCount
     * Count of failed sign-ins made by the application.
@@ -67,7 +67,7 @@ class ApplicationSignInSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the failedSignInCount
     * Count of failed sign-ins made by the application.
@@ -81,7 +81,7 @@ class ApplicationSignInSummary extends Entity
         $this->_propDict["failedSignInCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the successfulSignInCount
     * Count of successful sign-ins made by the application.
@@ -96,7 +96,7 @@ class ApplicationSignInSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successfulSignInCount
     * Count of successful sign-ins made by the application.
@@ -110,7 +110,7 @@ class ApplicationSignInSummary extends Entity
         $this->_propDict["successfulSignInCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the successPercentage
     * Percentage of successful sign-ins made by the application.
@@ -125,7 +125,7 @@ class ApplicationSignInSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successPercentage
     * Percentage of successful sign-ins made by the application.
@@ -139,5 +139,5 @@ class ApplicationSignInSummary extends Entity
         $this->_propDict["successPercentage"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class ExactMatchDataStore extends Entity
 {
 
-     /** 
+     /**
      * Gets the columns
      *
      * @return array The columns
@@ -38,8 +38,8 @@ class ExactMatchDataStore extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the columns
     *
     * @param ExactDataMatchStoreColumn $val The columns
@@ -48,10 +48,10 @@ class ExactMatchDataStore extends Entity
     */
     public function setColumns($val)
     {
-		$this->_propDict["columns"] = $val;
+        $this->_propDict["columns"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataLastUpdatedDateTime
     *
@@ -69,7 +69,7 @@ class ExactMatchDataStore extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dataLastUpdatedDateTime
     *
@@ -82,7 +82,7 @@ class ExactMatchDataStore extends Entity
         $this->_propDict["dataLastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -96,7 +96,7 @@ class ExactMatchDataStore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -109,7 +109,7 @@ class ExactMatchDataStore extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -123,7 +123,7 @@ class ExactMatchDataStore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -136,9 +136,9 @@ class ExactMatchDataStore extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sessions
      *
      * @return array The sessions
@@ -151,8 +151,8 @@ class ExactMatchDataStore extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sessions
     *
     * @param ExactMatchSession $val The sessions
@@ -161,8 +161,8 @@ class ExactMatchDataStore extends Entity
     */
     public function setSessions($val)
     {
-		$this->_propDict["sessions"] = $val;
+        $this->_propDict["sessions"] = $val;
         return $this;
     }
-    
+
 }

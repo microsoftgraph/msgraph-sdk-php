@@ -42,7 +42,7 @@ class PolicySetAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modified time of the PolicySetAssignment.
@@ -56,7 +56,7 @@ class PolicySetAssignment extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The target group of PolicySetAssignment
@@ -75,7 +75,7 @@ class PolicySetAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The target group of PolicySetAssignment
@@ -89,5 +89,5 @@ class PolicySetAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class ConversationThread extends Entity
 {
 
-     /** 
+     /**
      * Gets the ccRecipients
     * The Cc: recipients for the thread.
      *
@@ -39,8 +39,8 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the ccRecipients
     * The Cc: recipients for the thread.
     *
@@ -50,10 +50,10 @@ class ConversationThread extends Entity
     */
     public function setCcRecipients($val)
     {
-		$this->_propDict["ccRecipients"] = $val;
+        $this->_propDict["ccRecipients"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasAttachments
     * Indicates whether any of the posts within this thread has at least one attachment.
@@ -68,7 +68,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasAttachments
     * Indicates whether any of the posts within this thread has at least one attachment.
@@ -82,7 +82,7 @@ class ConversationThread extends Entity
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isLocked
     * Indicates if the thread is locked.
@@ -97,7 +97,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isLocked
     * Indicates if the thread is locked.
@@ -111,7 +111,7 @@ class ConversationThread extends Entity
         $this->_propDict["isLocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastDeliveredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -130,7 +130,7 @@ class ConversationThread extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastDeliveredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -144,7 +144,7 @@ class ConversationThread extends Entity
         $this->_propDict["lastDeliveredDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preview
     * A short summary from the body of the latest post in this conversation.
@@ -159,7 +159,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the preview
     * A short summary from the body of the latest post in this conversation.
@@ -173,7 +173,7 @@ class ConversationThread extends Entity
         $this->_propDict["preview"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the topic
     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
@@ -188,7 +188,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the topic
     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
@@ -202,9 +202,9 @@ class ConversationThread extends Entity
         $this->_propDict["topic"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the toRecipients
     * The To: recipients for the thread.
      *
@@ -218,8 +218,8 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the toRecipients
     * The To: recipients for the thread.
     *
@@ -229,10 +229,10 @@ class ConversationThread extends Entity
     */
     public function setToRecipients($val)
     {
-		$this->_propDict["toRecipients"] = $val;
+        $this->_propDict["toRecipients"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uniqueSenders
     * All the users that sent a message to this thread.
@@ -247,7 +247,7 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the uniqueSenders
     * All the users that sent a message to this thread.
@@ -261,9 +261,9 @@ class ConversationThread extends Entity
         $this->_propDict["uniqueSenders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the posts
     * Read-only. Nullable.
      *
@@ -277,8 +277,8 @@ class ConversationThread extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the posts
     * Read-only. Nullable.
     *
@@ -288,8 +288,8 @@ class ConversationThread extends Entity
     */
     public function setPosts($val)
     {
-		$this->_propDict["posts"] = $val;
+        $this->_propDict["posts"] = $val;
         return $this;
     }
-    
+
 }

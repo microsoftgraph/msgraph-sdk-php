@@ -42,7 +42,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date and time of term creation. Read-only
@@ -56,9 +56,9 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the descriptions
     * Description about term that is dependent on the languageTag
      *
@@ -72,8 +72,8 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the descriptions
     * Description about term that is dependent on the languageTag
     *
@@ -83,12 +83,12 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setDescriptions($val)
     {
-		$this->_propDict["descriptions"] = $val;
+        $this->_propDict["descriptions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the labels
      *
      * @return array The labels
@@ -101,8 +101,8 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the labels
     *
     * @param LocalizedLabel $val The labels
@@ -111,10 +111,10 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setLabels($val)
     {
-		$this->_propDict["labels"] = $val;
+        $this->_propDict["labels"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last date and time of term modification. Read-only
@@ -133,7 +133,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last date and time of term modification. Read-only
@@ -147,9 +147,9 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the termProperties
     * Collection of properties on the term
      *
@@ -163,8 +163,8 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the termProperties
     * Collection of properties on the term
     *
@@ -174,12 +174,12 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setTermProperties($val)
     {
-		$this->_propDict["properties"] = $val;
+        $this->_propDict["properties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the children
     * Children of current term
      *
@@ -193,8 +193,8 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the children
     * Children of current term
     *
@@ -204,12 +204,12 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setChildren($val)
     {
-		$this->_propDict["children"] = $val;
+        $this->_propDict["children"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the relations
     * To indicate which terms are related to the current term as either pinned or reused
      *
@@ -223,8 +223,8 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the relations
     * To indicate which terms are related to the current term as either pinned or reused
     *
@@ -234,10 +234,10 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setRelations($val)
     {
-		$this->_propDict["relations"] = $val;
+        $this->_propDict["relations"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the set
     * The [set] in which the term is created
@@ -256,7 +256,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the set
     * The [set] in which the term is created
@@ -270,5 +270,5 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["set"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultHealthyThreshold
     * The default threshold for being healthy
@@ -52,7 +52,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
         $this->_propDict["defaultHealthyThreshold"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the defaultUnhealthyThreshold
     * The default threshold for being unhealthy
@@ -67,7 +67,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultUnhealthyThreshold
     * The default threshold for being unhealthy
@@ -81,7 +81,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
         $this->_propDict["defaultUnhealthyThreshold"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the healthyThreshold
     * The threshold for being healthy
@@ -96,7 +96,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the healthyThreshold
     * The threshold for being healthy
@@ -110,7 +110,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
         $this->_propDict["healthyThreshold"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unhealthyThreshold
     * The threshold for being unhealthy
@@ -125,7 +125,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the unhealthyThreshold
     * The threshold for being unhealthy
@@ -139,5 +139,5 @@ class MicrosoftTunnelHealthThreshold extends Entity
         $this->_propDict["unhealthyThreshold"] = intval($val);
         return $this;
     }
-    
+
 }

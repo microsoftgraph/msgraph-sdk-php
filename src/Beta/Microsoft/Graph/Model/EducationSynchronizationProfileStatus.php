@@ -41,7 +41,7 @@ class EducationSynchronizationProfileStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDateTime
     *
@@ -54,7 +54,7 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["lastActivityDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSynchronizationDateTime
     * Represents the time when most recent changes have been observed in the directory.
@@ -73,7 +73,7 @@ class EducationSynchronizationProfileStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSynchronizationDateTime
     * Represents the time when most recent changes have been observed in the directory.
@@ -87,7 +87,7 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["lastSynchronizationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError.
@@ -106,7 +106,7 @@ class EducationSynchronizationProfileStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError.
@@ -120,5 +120,5 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

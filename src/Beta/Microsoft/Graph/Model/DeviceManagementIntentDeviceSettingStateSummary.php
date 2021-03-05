@@ -38,7 +38,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the compliantCount
     * Number of compliant devices
@@ -52,7 +52,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
         $this->_propDict["compliantCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the conflictCount
     * Number of devices in conflict
@@ -67,7 +67,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the conflictCount
     * Number of devices in conflict
@@ -81,7 +81,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
         $this->_propDict["conflictCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorCount
     * Number of error devices
@@ -96,7 +96,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCount
     * Number of error devices
@@ -110,7 +110,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
         $this->_propDict["errorCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the nonCompliantCount
     * Number of non compliant devices
@@ -125,7 +125,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the nonCompliantCount
     * Number of non compliant devices
@@ -139,7 +139,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
         $this->_propDict["nonCompliantCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notApplicableCount
     * Number of not applicable devices
@@ -154,7 +154,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicableCount
     * Number of not applicable devices
@@ -168,7 +168,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
         $this->_propDict["notApplicableCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remediatedCount
     * Number of remediated devices
@@ -183,7 +183,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediatedCount
     * Number of remediated devices
@@ -197,7 +197,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
         $this->_propDict["remediatedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the settingName
     * Name of a setting
@@ -212,7 +212,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the settingName
     * Name of a setting
@@ -226,5 +226,5 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
         $this->_propDict["settingName"] = $val;
         return $this;
     }
-    
+
 }

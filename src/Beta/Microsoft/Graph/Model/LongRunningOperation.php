@@ -41,7 +41,7 @@ class LongRunningOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -54,7 +54,7 @@ class LongRunningOperation extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastActionDateTime
     *
@@ -72,7 +72,7 @@ class LongRunningOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActionDateTime
     *
@@ -85,7 +85,7 @@ class LongRunningOperation extends Entity
         $this->_propDict["lastActionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceLocation
     *
@@ -99,7 +99,7 @@ class LongRunningOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceLocation
     *
@@ -112,7 +112,7 @@ class LongRunningOperation extends Entity
         $this->_propDict["resourceLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -130,7 +130,7 @@ class LongRunningOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -143,7 +143,7 @@ class LongRunningOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the statusDetail
     *
@@ -157,7 +157,7 @@ class LongRunningOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the statusDetail
     *
@@ -170,5 +170,5 @@ class LongRunningOperation extends Entity
         $this->_propDict["statusDetail"] = $val;
         return $this;
     }
-    
+
 }

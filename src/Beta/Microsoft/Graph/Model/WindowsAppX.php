@@ -42,7 +42,7 @@ class WindowsAppX extends MobileLobApp
         }
         return null;
     }
-    
+
     /**
     * Sets the applicableArchitectures
     * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
@@ -56,7 +56,7 @@ class WindowsAppX extends MobileLobApp
         $this->_propDict["applicableArchitectures"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityName
     * The Identity Name.
@@ -71,7 +71,7 @@ class WindowsAppX extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the identityName
     * The Identity Name.
@@ -85,7 +85,7 @@ class WindowsAppX extends MobileLobApp
         $this->_propDict["identityName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityPublisherHash
     * The Identity Publisher Hash.
@@ -100,7 +100,7 @@ class WindowsAppX extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the identityPublisherHash
     * The Identity Publisher Hash.
@@ -114,7 +114,7 @@ class WindowsAppX extends MobileLobApp
         $this->_propDict["identityPublisherHash"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityResourceIdentifier
     * The Identity Resource Identifier.
@@ -129,7 +129,7 @@ class WindowsAppX extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the identityResourceIdentifier
     * The Identity Resource Identifier.
@@ -143,7 +143,7 @@ class WindowsAppX extends MobileLobApp
         $this->_propDict["identityResourceIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityVersion
     * The identity version.
@@ -158,7 +158,7 @@ class WindowsAppX extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the identityVersion
     * The identity version.
@@ -172,7 +172,7 @@ class WindowsAppX extends MobileLobApp
         $this->_propDict["identityVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isBundle
     * Whether or not the app is a bundle.
@@ -187,7 +187,7 @@ class WindowsAppX extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the isBundle
     * Whether or not the app is a bundle.
@@ -201,7 +201,7 @@ class WindowsAppX extends MobileLobApp
         $this->_propDict["isBundle"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -220,7 +220,7 @@ class WindowsAppX extends MobileLobApp
         }
         return null;
     }
-    
+
     /**
     * Sets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -234,5 +234,5 @@ class WindowsAppX extends MobileLobApp
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class CredentialUsageSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authMethod
     * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and  alternateMobileCall (only supported for registration).
@@ -56,7 +56,7 @@ class CredentialUsageSummary extends Entity
         $this->_propDict["authMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the failureActivityCount
     * Provides the count of failed resets or registration data.
@@ -71,7 +71,7 @@ class CredentialUsageSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the failureActivityCount
     * Provides the count of failed resets or registration data.
@@ -85,7 +85,7 @@ class CredentialUsageSummary extends Entity
         $this->_propDict["failureActivityCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the feature
     * Defines the feature to report. Possible values are: registration and reset.
@@ -104,7 +104,7 @@ class CredentialUsageSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the feature
     * Defines the feature to report. Possible values are: registration and reset.
@@ -118,7 +118,7 @@ class CredentialUsageSummary extends Entity
         $this->_propDict["feature"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the successfulActivityCount
     * Provides the count of successful registrations or resets.
@@ -133,7 +133,7 @@ class CredentialUsageSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successfulActivityCount
     * Provides the count of successful registrations or resets.
@@ -147,5 +147,5 @@ class CredentialUsageSummary extends Entity
         $this->_propDict["successfulActivityCount"] = intval($val);
         return $this;
     }
-    
+
 }

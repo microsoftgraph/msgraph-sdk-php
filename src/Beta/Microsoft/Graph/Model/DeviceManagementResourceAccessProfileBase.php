@@ -42,7 +42,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the creationDateTime
     * DateTime profile was created
@@ -56,7 +56,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Profile description
@@ -71,7 +71,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Profile description
@@ -85,7 +85,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Profile display name
@@ -100,7 +100,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Profile display name
@@ -114,7 +114,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime profile was last modified
@@ -133,7 +133,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime profile was last modified
@@ -147,7 +147,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * Scope Tags
@@ -162,7 +162,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * Scope Tags
@@ -176,7 +176,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the profile
@@ -191,7 +191,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the profile
@@ -205,9 +205,9 @@ class DeviceManagementResourceAccessProfileBase extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of assignments for the device configuration profile.
      *
@@ -221,8 +221,8 @@ class DeviceManagementResourceAccessProfileBase extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of assignments for the device configuration profile.
     *
@@ -232,8 +232,8 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

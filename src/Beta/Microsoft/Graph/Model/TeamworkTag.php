@@ -37,7 +37,7 @@ class TeamworkTag extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -50,7 +50,7 @@ class TeamworkTag extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class TeamworkTag extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class TeamworkTag extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the memberCount
     *
@@ -91,7 +91,7 @@ class TeamworkTag extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the memberCount
     *
@@ -104,7 +104,7 @@ class TeamworkTag extends Entity
         $this->_propDict["memberCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tagType
     *
@@ -122,7 +122,7 @@ class TeamworkTag extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tagType
     *
@@ -135,7 +135,7 @@ class TeamworkTag extends Entity
         $this->_propDict["tagType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamId
     *
@@ -149,7 +149,7 @@ class TeamworkTag extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the teamId
     *
@@ -162,9 +162,9 @@ class TeamworkTag extends Entity
         $this->_propDict["teamId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the members
      *
      * @return array The members
@@ -177,8 +177,8 @@ class TeamworkTag extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the members
     *
     * @param TeamworkTagMember $val The members
@@ -187,8 +187,8 @@ class TeamworkTag extends Entity
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
-    
+
 }

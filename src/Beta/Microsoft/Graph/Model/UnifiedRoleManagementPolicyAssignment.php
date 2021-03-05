@@ -37,7 +37,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the policyId
     *
@@ -50,7 +50,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["policyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinitionId
     *
@@ -64,7 +64,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleDefinitionId
     *
@@ -77,7 +77,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeId
     *
@@ -91,7 +91,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scopeId
     *
@@ -104,7 +104,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["scopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeType
     *
@@ -118,7 +118,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scopeType
     *
@@ -131,7 +131,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["scopeType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policy
     *
@@ -149,7 +149,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policy
     *
@@ -162,5 +162,5 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
         $this->_propDict["policy"] = $val;
         return $this;
     }
-    
+
 }

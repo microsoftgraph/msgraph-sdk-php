@@ -38,7 +38,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The provisioning policy description.
@@ -52,7 +52,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the provisioning policy.
@@ -67,7 +67,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the provisioning policy.
@@ -81,7 +81,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imageDisplayName
     * The display name for the OS image you’re provisioning.
@@ -96,7 +96,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imageDisplayName
     * The display name for the OS image you’re provisioning.
@@ -110,7 +110,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["imageDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imageId
     * The ID of the OS image you want to provision on cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
@@ -125,7 +125,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imageId
     * The ID of the OS image you want to provision on cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
@@ -139,7 +139,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["imageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imageType
     * The type of OS image (custom or gallery) you want to provision on cloud PCs. Possible values are: gallery, custom.
@@ -158,7 +158,7 @@ class CloudPcProvisioningPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the imageType
     * The type of OS image (custom or gallery) you want to provision on cloud PCs. Possible values are: gallery, custom.
@@ -172,7 +172,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["imageType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesConnectionId
     * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
@@ -187,7 +187,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesConnectionId
     * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
@@ -201,9 +201,9 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["onPremisesConnectionId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
      *
@@ -217,8 +217,8 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
     *
@@ -228,8 +228,8 @@ class CloudPcProvisioningPolicy extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentQuery
     *
@@ -50,7 +50,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["contentQuery"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     *
@@ -68,7 +68,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     *
@@ -81,7 +81,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -99,7 +99,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -112,7 +112,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataSourceScopes
     *
@@ -130,7 +130,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dataSourceScopes
     *
@@ -143,7 +143,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["dataSourceScopes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -157,7 +157,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -170,7 +170,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -184,7 +184,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -197,7 +197,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     *
@@ -215,7 +215,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     *
@@ -228,7 +228,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -246,7 +246,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -259,7 +259,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantSources
     *
@@ -277,7 +277,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tenantSources
     *
@@ -290,9 +290,9 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the additionalSources
      *
      * @return array The additionalSources
@@ -305,8 +305,8 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the additionalSources
     *
     * @param DataSource $val The additionalSources
@@ -315,10 +315,10 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setAdditionalSources($val)
     {
-		$this->_propDict["additionalSources"] = $val;
+        $this->_propDict["additionalSources"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the addToReviewSetOperation
     *
@@ -336,7 +336,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the addToReviewSetOperation
     *
@@ -349,9 +349,9 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["addToReviewSetOperation"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the custodianSources
      *
      * @return array The custodianSources
@@ -364,8 +364,8 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the custodianSources
     *
     * @param DataSource $val The custodianSources
@@ -374,10 +374,10 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setCustodianSources($val)
     {
-		$this->_propDict["custodianSources"] = $val;
+        $this->_propDict["custodianSources"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastEstimateStatisticsOperation
     *
@@ -395,7 +395,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastEstimateStatisticsOperation
     *
@@ -408,9 +408,9 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastEstimateStatisticsOperation"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the noncustodialSources
      *
      * @return array The noncustodialSources
@@ -423,8 +423,8 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the noncustodialSources
     *
     * @param DataSource $val The noncustodialSources
@@ -433,8 +433,8 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setNoncustodialSources($val)
     {
-		$this->_propDict["noncustodialSources"] = $val;
+        $this->_propDict["noncustodialSources"] = $val;
         return $this;
     }
-    
+
 }

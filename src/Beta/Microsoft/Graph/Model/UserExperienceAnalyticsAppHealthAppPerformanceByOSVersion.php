@@ -38,7 +38,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDeviceCount
     * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["activeDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appCrashCount
     * The number of crashes for the app. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appCrashCount
     * The number of crashes for the app. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["appCrashCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appDisplayName
     * The friendly name of the application.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * The friendly name of the application.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appName
     * The name of the application.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appName
     * The name of the application.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["appName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appPublisher
     * The publisher of the application.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appPublisher
     * The publisher of the application.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["appPublisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appUsageDuration
     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appUsageDuration
     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["appUsageDuration"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the meanTimeToFailureInMinutes
     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["meanTimeToFailureInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the osBuildNumber
     * The os build number of the application.
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osBuildNumber
     * The os build number of the application.
@@ -255,7 +255,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["osBuildNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * The os version of the application.
@@ -270,7 +270,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * The os version of the application.
@@ -284,5 +284,5 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
 }

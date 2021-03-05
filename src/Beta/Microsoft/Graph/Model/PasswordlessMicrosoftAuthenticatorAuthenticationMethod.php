@@ -41,7 +41,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -54,7 +54,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creationDateTime
     * The timestamp when this method was registered to the user.
@@ -73,7 +73,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
         }
         return null;
     }
-    
+
     /**
     * Sets the creationDateTime
     * The timestamp when this method was registered to the user.
@@ -87,7 +87,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
         $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the mobile device as given by the user.
@@ -102,7 +102,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the mobile device as given by the user.
@@ -116,7 +116,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the device
     *
@@ -134,7 +134,7 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
         }
         return null;
     }
-    
+
     /**
     * Sets the device
     *
@@ -147,5 +147,5 @@ class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Authenticat
         $this->_propDict["device"] = $val;
         return $this;
     }
-    
+
 }

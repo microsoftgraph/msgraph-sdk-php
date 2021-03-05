@@ -37,7 +37,7 @@ class PrintUsageByUser extends PrintUsage
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -50,5 +50,5 @@ class PrintUsageByUser extends PrintUsage
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

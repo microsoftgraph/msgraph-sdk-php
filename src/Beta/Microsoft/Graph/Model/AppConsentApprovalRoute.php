@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AppConsentApprovalRoute extends Entity
 {
 
-     /** 
+     /**
      * Gets the appConsentRequests
      *
      * @return array The appConsentRequests
@@ -38,8 +38,8 @@ class AppConsentApprovalRoute extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appConsentRequests
     *
     * @param AppConsentRequest $val The appConsentRequests
@@ -48,8 +48,8 @@ class AppConsentApprovalRoute extends Entity
     */
     public function setAppConsentRequests($val)
     {
-		$this->_propDict["appConsentRequests"] = $val;
+        $this->_propDict["appConsentRequests"] = $val;
         return $this;
     }
-    
+
 }

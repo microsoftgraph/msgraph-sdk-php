@@ -42,7 +42,7 @@ class WindowsFeatureUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date time that the profile was created.
@@ -56,7 +56,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the profile which is specified by the user.
@@ -71,7 +71,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the profile which is specified by the user.
@@ -85,7 +85,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the profile.
@@ -100,7 +100,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the profile.
@@ -114,7 +114,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the featureUpdateVersion
     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
@@ -129,7 +129,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the featureUpdateVersion
     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
@@ -143,7 +143,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["featureUpdateVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -162,7 +162,7 @@ class WindowsFeatureUpdateProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date time that the profile was last modified.
@@ -176,7 +176,7 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Feature Update entity.
@@ -191,7 +191,7 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Feature Update entity.
@@ -205,9 +205,9 @@ class WindowsFeatureUpdateProfile extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments of the profile.
      *
@@ -221,8 +221,8 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments of the profile.
     *
@@ -232,12 +232,12 @@ class WindowsFeatureUpdateProfile extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceUpdateStates
     * The list of device states this profile targeted to
      *
@@ -251,8 +251,8 @@ class WindowsFeatureUpdateProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceUpdateStates
     * The list of device states this profile targeted to
     *
@@ -262,8 +262,8 @@ class WindowsFeatureUpdateProfile extends Entity
     */
     public function setDeviceUpdateStates($val)
     {
-		$this->_propDict["deviceUpdateStates"] = $val;
+        $this->_propDict["deviceUpdateStates"] = $val;
         return $this;
     }
-    
+
 }

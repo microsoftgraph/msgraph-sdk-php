@@ -42,7 +42,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the accessTypes
     * Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
@@ -56,7 +56,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["accessTypes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applicability
     * Details which device setting is applicable on
@@ -75,7 +75,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the applicability
     * Details which device setting is applicable on
@@ -89,7 +89,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["applicability"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the baseUri
     * Base CSP Path
@@ -104,7 +104,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the baseUri
     * Base CSP Path
@@ -118,7 +118,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["baseUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the categoryId
     * Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
@@ -133,7 +133,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the categoryId
     * Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
@@ -147,7 +147,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["categoryId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the item
@@ -162,7 +162,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the item
@@ -176,7 +176,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the item
@@ -191,7 +191,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the item
@@ -205,7 +205,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the helpText
     * Help text of the item
@@ -220,7 +220,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the helpText
     * Help text of the item
@@ -234,7 +234,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["helpText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the infoUrls
     * List of links more info for the setting can be found at
@@ -249,7 +249,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the infoUrls
     * List of links more info for the setting can be found at
@@ -263,7 +263,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["infoUrls"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keywords
     * Tokens which to search settings on
@@ -278,7 +278,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the keywords
     * Tokens which to search settings on
@@ -292,7 +292,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["keywords"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * Name of the item
@@ -307,7 +307,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Name of the item
@@ -321,7 +321,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the occurrence
     * Indicates whether the setting is required or not
@@ -340,7 +340,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the occurrence
     * Indicates whether the setting is required or not
@@ -354,7 +354,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["occurrence"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the offsetUri
     * Offset CSP Path from Base
@@ -369,7 +369,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the offsetUri
     * Offset CSP Path from Base
@@ -383,7 +383,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["offsetUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rootDefinitionId
     * Root setting definition if the setting is a child setting.
@@ -398,7 +398,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rootDefinitionId
     * Root setting definition if the setting is a child setting.
@@ -412,7 +412,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["rootDefinitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingUsage
     * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
@@ -431,7 +431,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settingUsage
     * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
@@ -445,7 +445,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["settingUsage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uxBehavior
     * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
@@ -464,7 +464,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the uxBehavior
     * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
@@ -478,7 +478,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["uxBehavior"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Item Version
@@ -493,7 +493,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Item Version
@@ -507,5 +507,5 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

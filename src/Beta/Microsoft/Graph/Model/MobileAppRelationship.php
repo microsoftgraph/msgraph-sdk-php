@@ -38,7 +38,7 @@ class MobileAppRelationship extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetDisplayName
     * The target mobile app's display name.
@@ -52,7 +52,7 @@ class MobileAppRelationship extends Entity
         $this->_propDict["targetDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetDisplayVersion
     * The target mobile app's display version.
@@ -67,7 +67,7 @@ class MobileAppRelationship extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetDisplayVersion
     * The target mobile app's display version.
@@ -81,7 +81,7 @@ class MobileAppRelationship extends Entity
         $this->_propDict["targetDisplayVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetId
     * The target mobile app's app id.
@@ -96,7 +96,7 @@ class MobileAppRelationship extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetId
     * The target mobile app's app id.
@@ -110,7 +110,7 @@ class MobileAppRelationship extends Entity
         $this->_propDict["targetId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetPublisher
     * The target mobile app's publisher.
@@ -125,7 +125,7 @@ class MobileAppRelationship extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetPublisher
     * The target mobile app's publisher.
@@ -139,7 +139,7 @@ class MobileAppRelationship extends Entity
         $this->_propDict["targetPublisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetType
     * The type of relationship indicating whether the target is a parent or child. Possible values are: child, parent.
@@ -158,7 +158,7 @@ class MobileAppRelationship extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the targetType
     * The type of relationship indicating whether the target is a parent or child. Possible values are: child, parent.
@@ -172,5 +172,5 @@ class MobileAppRelationship extends Entity
         $this->_propDict["targetType"] = $val;
         return $this;
     }
-    
+
 }

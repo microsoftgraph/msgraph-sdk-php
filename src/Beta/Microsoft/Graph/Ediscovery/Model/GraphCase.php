@@ -41,7 +41,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the closedBy
     *
@@ -54,7 +54,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["closedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the closedDateTime
     *
@@ -72,7 +72,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the closedDateTime
     *
@@ -85,7 +85,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["closedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -103,7 +103,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -116,7 +116,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -130,7 +130,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -143,7 +143,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -157,7 +157,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -170,7 +170,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     *
@@ -184,7 +184,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     *
@@ -197,7 +197,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     *
@@ -215,7 +215,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     *
@@ -228,7 +228,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -246,7 +246,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -259,7 +259,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -277,7 +277,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -290,9 +290,9 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the custodians
      *
      * @return array The custodians
@@ -305,8 +305,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the custodians
     *
     * @param Custodian $val The custodians
@@ -315,12 +315,12 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setCustodians($val)
     {
-		$this->_propDict["custodians"] = $val;
+        $this->_propDict["custodians"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the legalHolds
      *
      * @return array The legalHolds
@@ -333,8 +333,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the legalHolds
     *
     * @param LegalHold $val The legalHolds
@@ -343,12 +343,12 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setLegalHolds($val)
     {
-		$this->_propDict["legalHolds"] = $val;
+        $this->_propDict["legalHolds"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the noncustodialDataSources
      *
      * @return array The noncustodialDataSources
@@ -361,8 +361,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the noncustodialDataSources
     *
     * @param NoncustodialDataSource $val The noncustodialDataSources
@@ -371,12 +371,12 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setNoncustodialDataSources($val)
     {
-		$this->_propDict["noncustodialDataSources"] = $val;
+        $this->_propDict["noncustodialDataSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
      *
      * @return array The operations
@@ -389,8 +389,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     *
     * @param CaseOperation $val The operations
@@ -399,12 +399,12 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setOperations($val)
     {
-		$this->_propDict["operations"] = $val;
+        $this->_propDict["operations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reviewSets
      *
      * @return array The reviewSets
@@ -417,8 +417,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the reviewSets
     *
     * @param ReviewSet $val The reviewSets
@@ -427,10 +427,10 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setReviewSets($val)
     {
-		$this->_propDict["reviewSets"] = $val;
+        $this->_propDict["reviewSets"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     *
@@ -448,7 +448,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     *
@@ -461,9 +461,9 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sourceCollections
      *
      * @return array The sourceCollections
@@ -476,8 +476,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sourceCollections
     *
     * @param SourceCollection $val The sourceCollections
@@ -486,12 +486,12 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setSourceCollections($val)
     {
-		$this->_propDict["sourceCollections"] = $val;
+        $this->_propDict["sourceCollections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tags
      *
      * @return array The tags
@@ -504,8 +504,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tags
     *
     * @param Tag $val The tags
@@ -514,8 +514,8 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setTags($val)
     {
-		$this->_propDict["tags"] = $val;
+        $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
 }

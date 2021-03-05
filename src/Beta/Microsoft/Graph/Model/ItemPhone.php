@@ -38,7 +38,7 @@ class ItemPhone extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Friendly name the user has assigned this phone number.
@@ -52,7 +52,7 @@ class ItemPhone extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     * Phone number provided by the user.
@@ -67,7 +67,7 @@ class ItemPhone extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     * Phone number provided by the user.
@@ -81,7 +81,7 @@ class ItemPhone extends ItemFacet
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
@@ -100,7 +100,7 @@ class ItemPhone extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
@@ -114,5 +114,5 @@ class ItemPhone extends ItemFacet
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

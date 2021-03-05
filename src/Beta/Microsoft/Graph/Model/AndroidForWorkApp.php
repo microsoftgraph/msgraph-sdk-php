@@ -38,7 +38,7 @@ class AndroidForWorkApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appIdentifier
     * The Identity Name.
@@ -52,7 +52,7 @@ class AndroidForWorkApp extends MobileApp
         $this->_propDict["appIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appStoreUrl
     * The Play for Work Store app URL.
@@ -67,7 +67,7 @@ class AndroidForWorkApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Play for Work Store app URL.
@@ -81,7 +81,7 @@ class AndroidForWorkApp extends MobileApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the packageId
     * The package identifier.
@@ -96,7 +96,7 @@ class AndroidForWorkApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the packageId
     * The package identifier.
@@ -110,7 +110,7 @@ class AndroidForWorkApp extends MobileApp
         $this->_propDict["packageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalLicenseCount
     * The total number of VPP licenses.
@@ -125,7 +125,7 @@ class AndroidForWorkApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the totalLicenseCount
     * The total number of VPP licenses.
@@ -139,7 +139,7 @@ class AndroidForWorkApp extends MobileApp
         $this->_propDict["totalLicenseCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the usedLicenseCount
     * The number of VPP licenses in use.
@@ -154,7 +154,7 @@ class AndroidForWorkApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the usedLicenseCount
     * The number of VPP licenses in use.
@@ -168,5 +168,5 @@ class AndroidForWorkApp extends MobileApp
         $this->_propDict["usedLicenseCount"] = intval($val);
         return $this;
     }
-    
+
 }

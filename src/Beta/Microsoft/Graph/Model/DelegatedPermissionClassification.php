@@ -42,7 +42,7 @@ class DelegatedPermissionClassification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the classification
     * The classification value being given. Possible value: low. Does not support $filter.
@@ -56,7 +56,7 @@ class DelegatedPermissionClassification extends Entity
         $this->_propDict["classification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the permissionId
     * The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
@@ -71,7 +71,7 @@ class DelegatedPermissionClassification extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the permissionId
     * The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
@@ -85,7 +85,7 @@ class DelegatedPermissionClassification extends Entity
         $this->_propDict["permissionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the permissionName
     * The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
@@ -100,7 +100,7 @@ class DelegatedPermissionClassification extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the permissionName
     * The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
@@ -114,5 +114,5 @@ class DelegatedPermissionClassification extends Entity
         $this->_propDict["permissionName"] = $val;
         return $this;
     }
-    
+
 }

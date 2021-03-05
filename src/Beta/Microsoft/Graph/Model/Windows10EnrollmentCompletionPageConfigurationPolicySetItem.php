@@ -38,7 +38,7 @@ class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends Policy
             return null;
         }
     }
-    
+
     /**
     * Sets the priority
     * Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem.
@@ -52,5 +52,5 @@ class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends Policy
         $this->_propDict["priority"] = intval($val);
         return $this;
     }
-    
+
 }

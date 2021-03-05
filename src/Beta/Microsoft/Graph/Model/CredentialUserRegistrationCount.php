@@ -38,7 +38,7 @@ class CredentialUserRegistrationCount extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalUserCount
     * Provides the total user count in the tenant.
@@ -52,9 +52,9 @@ class CredentialUserRegistrationCount extends Entity
         $this->_propDict["totalUserCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userRegistrationCounts
     * A collection of registration count and status information for users in your tenant.
      *
@@ -68,8 +68,8 @@ class CredentialUserRegistrationCount extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userRegistrationCounts
     * A collection of registration count and status information for users in your tenant.
     *
@@ -79,8 +79,8 @@ class CredentialUserRegistrationCount extends Entity
     */
     public function setUserRegistrationCounts($val)
     {
-		$this->_propDict["userRegistrationCounts"] = $val;
+        $this->_propDict["userRegistrationCounts"] = $val;
         return $this;
     }
-    
+
 }

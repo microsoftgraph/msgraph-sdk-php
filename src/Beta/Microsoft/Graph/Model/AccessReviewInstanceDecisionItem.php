@@ -38,7 +38,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accessReviewId
     * The identifier of the accessReviewInstance parent.
@@ -52,7 +52,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["accessReviewId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appliedBy
     * The identifier of the user who applied the decision.
@@ -71,7 +71,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appliedBy
     * The identifier of the user who applied the decision.
@@ -85,7 +85,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["appliedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appliedDateTime
     * The DateTime when the approval decision was applied.
@@ -104,7 +104,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appliedDateTime
     * The DateTime when the approval decision was applied.
@@ -118,7 +118,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["appliedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applyResult
     * The result of applying the decision. Possible values: NotApplied, Success, Failed, NotFound, or NotSupported.
@@ -133,7 +133,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applyResult
     * The result of applying the decision. Possible values: NotApplied, Success, Failed, NotFound, or NotSupported.
@@ -147,7 +147,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["applyResult"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the decision
     * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow.
@@ -162,7 +162,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the decision
     * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow.
@@ -176,7 +176,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["decision"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the justification
     * The review decision justification.
@@ -191,7 +191,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     * The review decision justification.
@@ -205,7 +205,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recommendation
     * A system-generated recommendation for the approval decision. Possible values: Approve, Deny, or NotAvailable.
@@ -220,7 +220,7 @@ class AccessReviewInstanceDecisionItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the recommendation
     * A system-generated recommendation for the approval decision. Possible values: Approve, Deny, or NotAvailable.
@@ -234,7 +234,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["recommendation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedBy
     * The identifier of the reviewer.
@@ -253,7 +253,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedBy
     * The identifier of the reviewer.
@@ -267,7 +267,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["reviewedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedDateTime
     * The DateTime when the review occurred.
@@ -286,7 +286,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedDateTime
     * The DateTime when the review occurred.
@@ -300,7 +300,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["reviewedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget.
@@ -319,7 +319,7 @@ class AccessReviewInstanceDecisionItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget.
@@ -333,5 +333,5 @@ class AccessReviewInstanceDecisionItem extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

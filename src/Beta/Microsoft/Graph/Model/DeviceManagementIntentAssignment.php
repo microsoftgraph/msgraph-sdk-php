@@ -42,7 +42,7 @@ class DeviceManagementIntentAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target
@@ -56,5 +56,5 @@ class DeviceManagementIntentAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

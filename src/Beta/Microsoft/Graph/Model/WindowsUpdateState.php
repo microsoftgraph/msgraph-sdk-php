@@ -38,7 +38,7 @@ class WindowsUpdateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * Device display name.
@@ -52,7 +52,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The id of the device.
@@ -67,7 +67,7 @@ class WindowsUpdateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The id of the device.
@@ -81,7 +81,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the featureUpdateVersion
     * The current feature update version of the device.
@@ -96,7 +96,7 @@ class WindowsUpdateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the featureUpdateVersion
     * The current feature update version of the device.
@@ -110,7 +110,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["featureUpdateVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastScanDateTime
     * The date time that the Windows Update Agent did a successful scan.
@@ -129,7 +129,7 @@ class WindowsUpdateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastScanDateTime
     * The date time that the Windows Update Agent did a successful scan.
@@ -143,7 +143,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["lastScanDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * Last date time that the device sync with with Microsoft Intune.
@@ -162,7 +162,7 @@ class WindowsUpdateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * Last date time that the device sync with with Microsoft Intune.
@@ -176,7 +176,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the qualityUpdateVersion
     * The Quality Update Version of the device.
@@ -191,7 +191,7 @@ class WindowsUpdateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the qualityUpdateVersion
     * The Quality Update Version of the device.
@@ -205,7 +205,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["qualityUpdateVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
@@ -224,7 +224,7 @@ class WindowsUpdateState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
@@ -238,7 +238,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The id of the user.
@@ -253,7 +253,7 @@ class WindowsUpdateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The id of the user.
@@ -267,7 +267,7 @@ class WindowsUpdateState extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User principal name.
@@ -282,7 +282,7 @@ class WindowsUpdateState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User principal name.
@@ -296,5 +296,5 @@ class WindowsUpdateState extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

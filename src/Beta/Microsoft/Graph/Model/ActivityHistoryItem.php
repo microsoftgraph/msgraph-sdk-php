@@ -38,7 +38,7 @@ class ActivityHistoryItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDurationSeconds
     * Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
@@ -52,7 +52,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["activeDurationSeconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Set by the server. DateTime in UTC when the object was created on the server.
@@ -71,7 +71,7 @@ class ActivityHistoryItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Set by the server. DateTime in UTC when the object was created on the server.
@@ -85,7 +85,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
@@ -104,7 +104,7 @@ class ActivityHistoryItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
@@ -118,7 +118,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastActiveDateTime
     * Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
@@ -137,7 +137,7 @@ class ActivityHistoryItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActiveDateTime
     * Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
@@ -151,7 +151,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["lastActiveDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Set by the server. DateTime in UTC when the object was modified on the server.
@@ -170,7 +170,7 @@ class ActivityHistoryItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Set by the server. DateTime in UTC when the object was modified on the server.
@@ -184,7 +184,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startedDateTime
     * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
@@ -203,7 +203,7 @@ class ActivityHistoryItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startedDateTime
     * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
@@ -217,7 +217,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["startedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -236,7 +236,7 @@ class ActivityHistoryItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -250,7 +250,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userTimezone
     * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
@@ -265,7 +265,7 @@ class ActivityHistoryItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userTimezone
     * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
@@ -279,7 +279,7 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["userTimezone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activity
     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
@@ -298,7 +298,7 @@ class ActivityHistoryItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activity
     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
@@ -312,5 +312,5 @@ class ActivityHistoryItem extends Entity
         $this->_propDict["activity"] = $val;
         return $this;
     }
-    
+
 }

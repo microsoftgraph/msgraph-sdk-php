@@ -42,7 +42,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
@@ -56,7 +56,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["certificateValidityPeriodScale"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period.
@@ -71,7 +71,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period.
@@ -85,7 +85,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["certificateValidityPeriodValue"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage.
@@ -100,7 +100,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the renewalThresholdPercentage
     * Certificate renewal threshold percentage.
@@ -114,7 +114,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["renewalThresholdPercentage"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the subjectAlternativeNameType
     * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -133,7 +133,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the subjectAlternativeNameType
     * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
@@ -147,7 +147,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["subjectAlternativeNameType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
@@ -166,7 +166,7 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
@@ -180,5 +180,5 @@ class MacOSCertificateProfileBase extends DeviceConfiguration
         $this->_propDict["subjectNameFormat"] = $val;
         return $this;
     }
-    
+
 }

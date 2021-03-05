@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class SynchronizationSchema extends Entity
 {
 
-     /** 
+     /**
      * Gets the synchronizationRules
     * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      *
@@ -39,8 +39,8 @@ class SynchronizationSchema extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the synchronizationRules
     * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
     *
@@ -50,10 +50,10 @@ class SynchronizationSchema extends Entity
     */
     public function setSynchronizationRules($val)
     {
-		$this->_propDict["synchronizationRules"] = $val;
+        $this->_propDict["synchronizationRules"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The version of the schema, updated automatically with every schema change.
@@ -68,7 +68,7 @@ class SynchronizationSchema extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version of the schema, updated automatically with every schema change.
@@ -82,9 +82,9 @@ class SynchronizationSchema extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the directories
     * Contains the collection of directories and all of their objects.
      *
@@ -98,8 +98,8 @@ class SynchronizationSchema extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the directories
     * Contains the collection of directories and all of their objects.
     *
@@ -109,8 +109,8 @@ class SynchronizationSchema extends Entity
     */
     public function setDirectories($val)
     {
-		$this->_propDict["directories"] = $val;
+        $this->_propDict["directories"] = $val;
         return $this;
     }
-    
+
 }

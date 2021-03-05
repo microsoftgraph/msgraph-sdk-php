@@ -38,7 +38,7 @@ class Notification extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayTimeToLive
     * Sets how long (in seconds) this notification content will stay in each platform’s notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user’s Windows Action Center.
@@ -52,7 +52,7 @@ class Notification extends Entity
         $this->_propDict["displayTimeToLive"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: '2019-01-01T00:00:00Z'). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
@@ -71,7 +71,7 @@ class Notification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: '2019-01-01T00:00:00Z'). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
@@ -85,7 +85,7 @@ class Notification extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupName
     * The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
@@ -100,7 +100,7 @@ class Notification extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupName
     * The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
@@ -114,7 +114,7 @@ class Notification extends Entity
         $this->_propDict["groupName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the payload
     * This is the data content of a raw or visual user notification that will be delivered to and consumed by the app client receiving this notification.
@@ -133,7 +133,7 @@ class Notification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the payload
     * This is the data content of a raw or visual user notification that will be delivered to and consumed by the app client receiving this notification.
@@ -147,7 +147,7 @@ class Notification extends Entity
         $this->_propDict["payload"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the priority
     * Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
@@ -166,7 +166,7 @@ class Notification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the priority
     * Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
@@ -180,7 +180,7 @@ class Notification extends Entity
         $this->_propDict["priority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetHostName
     * Represents the host name of the app to which the calling service wants to post the notification, for the given user. If targeting web endpoints (see targetPolicy.platformTypes), ensure that targetHostName is the same as the name used when creating a subscription on the client side within the application JSON property.
@@ -195,7 +195,7 @@ class Notification extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetHostName
     * Represents the host name of the app to which the calling service wants to post the notification, for the given user. If targeting web endpoints (see targetPolicy.platformTypes), ensure that targetHostName is the same as the name used when creating a subscription on the client side within the application JSON property.
@@ -209,7 +209,7 @@ class Notification extends Entity
         $this->_propDict["targetHostName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetPolicy
     * Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user.
@@ -228,7 +228,7 @@ class Notification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the targetPolicy
     * Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user.
@@ -242,5 +242,5 @@ class Notification extends Entity
         $this->_propDict["targetPolicy"] = $val;
         return $this;
     }
-    
+
 }

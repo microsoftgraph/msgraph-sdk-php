@@ -38,7 +38,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
             return null;
         }
     }
-    
+
     /**
     * Sets the assetTagTemplate
     * Asset tag information for the device, displayed on the login window and lock screen.
@@ -52,7 +52,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["assetTagTemplate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentFilterSettings
     * Gets or sets iOS Web Content Filter settings, supervised mode only
@@ -71,7 +71,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the contentFilterSettings
     * Gets or sets iOS Web Content Filter settings, supervised mode only
@@ -85,9 +85,9 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["contentFilterSettings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the homeScreenDockIcons
     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      *
@@ -101,8 +101,8 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the homeScreenDockIcons
     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
     *
@@ -112,12 +112,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setHomeScreenDockIcons($val)
     {
-		$this->_propDict["homeScreenDockIcons"] = $val;
+        $this->_propDict["homeScreenDockIcons"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the homeScreenPages
     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      *
@@ -131,8 +131,8 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the homeScreenPages
     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
     *
@@ -142,10 +142,10 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setHomeScreenPages($val)
     {
-		$this->_propDict["homeScreenPages"] = $val;
+        $this->_propDict["homeScreenPages"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the iosSingleSignOnExtension
     * Gets or sets a single sign-on extension profile.
@@ -164,7 +164,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the iosSingleSignOnExtension
     * Gets or sets a single sign-on extension profile.
@@ -178,7 +178,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["iosSingleSignOnExtension"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lockScreenFootnote
     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
@@ -193,7 +193,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
             return null;
         }
     }
-    
+
     /**
     * Sets the lockScreenFootnote
     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
@@ -207,9 +207,9 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["lockScreenFootnote"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the notificationSettings
     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      *
@@ -223,8 +223,8 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the notificationSettings
     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
     *
@@ -234,10 +234,10 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setNotificationSettings($val)
     {
-		$this->_propDict["notificationSettings"] = $val;
+        $this->_propDict["notificationSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the singleSignOnExtension
     * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
@@ -256,7 +256,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the singleSignOnExtension
     * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
@@ -270,7 +270,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["singleSignOnExtension"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the singleSignOnSettings
     * The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
@@ -289,7 +289,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the singleSignOnSettings
     * The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
@@ -303,7 +303,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["singleSignOnSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the wallpaperDisplayLocation
     * A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
@@ -322,7 +322,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the wallpaperDisplayLocation
     * A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
@@ -336,7 +336,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["wallpaperDisplayLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the wallpaperImage
     * A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
@@ -355,7 +355,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the wallpaperImage
     * A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
@@ -369,7 +369,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["wallpaperImage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identityCertificateForClientAuthentication
     * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
@@ -388,7 +388,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the identityCertificateForClientAuthentication
     * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
@@ -402,7 +402,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["identityCertificateForClientAuthentication"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the singleSignOnExtensionPkinitCertificate
     * PKINIT Certificate for the authentication with single sign-on extension settings.
@@ -421,7 +421,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         }
         return null;
     }
-    
+
     /**
     * Sets the singleSignOnExtensionPkinitCertificate
     * PKINIT Certificate for the authentication with single sign-on extension settings.
@@ -435,5 +435,5 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         $this->_propDict["singleSignOnExtensionPkinitCertificate"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class AccessReviewDecision extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accessRecommendation
     * The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
@@ -52,7 +52,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["accessRecommendation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessReviewId
     * The feature-generated id of the access review.
@@ -67,7 +67,7 @@ class AccessReviewDecision extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accessReviewId
     * The feature-generated id of the access review.
@@ -81,7 +81,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["accessReviewId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appliedBy
     * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
@@ -100,7 +100,7 @@ class AccessReviewDecision extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appliedBy
     * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
@@ -114,7 +114,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["appliedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appliedDateTime
     * The date and time when the review decision was applied.
@@ -133,7 +133,7 @@ class AccessReviewDecision extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appliedDateTime
     * The date and time when the review decision was applied.
@@ -147,7 +147,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["appliedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applyResult
     * The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
@@ -162,7 +162,7 @@ class AccessReviewDecision extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applyResult
     * The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
@@ -176,7 +176,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["applyResult"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the justification
     * The reviewer's business justification, if supplied.
@@ -191,7 +191,7 @@ class AccessReviewDecision extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     * The reviewer's business justification, if supplied.
@@ -205,7 +205,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedBy
     * The identity of the reviewer. If the recommendation was used as the review, the userPrincipalName is empty.
@@ -224,7 +224,7 @@ class AccessReviewDecision extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedBy
     * The identity of the reviewer. If the recommendation was used as the review, the userPrincipalName is empty.
@@ -238,7 +238,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["reviewedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedDateTime
     *
@@ -256,7 +256,7 @@ class AccessReviewDecision extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedDateTime
     *
@@ -269,7 +269,7 @@ class AccessReviewDecision extends Entity
         $this->_propDict["reviewedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewResult
     * The result of the review, one of NotReviewed, Deny, DontKnow or Approve.
@@ -284,7 +284,7 @@ class AccessReviewDecision extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reviewResult
     * The result of the review, one of NotReviewed, Deny, DontKnow or Approve.
@@ -298,5 +298,5 @@ class AccessReviewDecision extends Entity
         $this->_propDict["reviewResult"] = $val;
         return $this;
     }
-    
+
 }
