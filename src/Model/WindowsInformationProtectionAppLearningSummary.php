@@ -38,7 +38,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicationName
     * Application Name
@@ -52,7 +52,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
         $this->_propDict["applicationName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applicationType
     * Application Type. Possible values are: universal, desktop.
@@ -71,7 +71,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the applicationType
     * Application Type. Possible values are: universal, desktop.
@@ -85,7 +85,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
         $this->_propDict["applicationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceCount
     * Device Count
@@ -100,7 +100,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceCount
     * Device Count
@@ -114,5 +114,5 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
         $this->_propDict["deviceCount"] = intval($val);
         return $this;
     }
-    
+
 }

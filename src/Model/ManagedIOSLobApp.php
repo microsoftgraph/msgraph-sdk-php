@@ -42,7 +42,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         }
         return null;
     }
-    
+
     /**
     * Sets the applicableDeviceType
     * The iOS architecture for which this app can run on.
@@ -56,7 +56,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         $this->_propDict["applicableDeviceType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the buildNumber
     * The build number of managed iOS Line of Business (LoB) app.
@@ -71,7 +71,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the buildNumber
     * The build number of managed iOS Line of Business (LoB) app.
@@ -85,7 +85,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         $this->_propDict["buildNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bundleId
     * The Identity Name.
@@ -100,7 +100,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the bundleId
     * The Identity Name.
@@ -114,7 +114,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         $this->_propDict["bundleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * The expiration time.
@@ -133,7 +133,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * The expiration time.
@@ -147,7 +147,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -166,7 +166,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         }
         return null;
     }
-    
+
     /**
     * Sets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -180,7 +180,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the versionNumber
     * The version number of managed iOS Line of Business (LoB) app.
@@ -195,7 +195,7 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the versionNumber
     * The version number of managed iOS Line of Business (LoB) app.
@@ -209,5 +209,5 @@ class ManagedIOSLobApp extends ManagedMobileLobApp
         $this->_propDict["versionNumber"] = $val;
         return $this;
     }
-    
+
 }

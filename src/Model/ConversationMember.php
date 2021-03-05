@@ -38,7 +38,7 @@ class ConversationMember extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the user.
@@ -52,7 +52,7 @@ class ConversationMember extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roles
     * The roles for that user.
@@ -67,7 +67,7 @@ class ConversationMember extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roles
     * The roles for that user.
@@ -81,5 +81,38 @@ class ConversationMember extends Entity
         $this->_propDict["roles"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the visibleHistoryStartDateTime
+    * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+    *
+    * @return \DateTime The visibleHistoryStartDateTime
+    */
+    public function getVisibleHistoryStartDateTime()
+    {
+        if (array_key_exists("visibleHistoryStartDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["visibleHistoryStartDateTime"], "\DateTime")) {
+                return $this->_propDict["visibleHistoryStartDateTime"];
+            } else {
+                $this->_propDict["visibleHistoryStartDateTime"] = new \DateTime($this->_propDict["visibleHistoryStartDateTime"]);
+                return $this->_propDict["visibleHistoryStartDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the visibleHistoryStartDateTime
+    * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+    *
+    * @param \DateTime $val The visibleHistoryStartDateTime
+    *
+    * @return ConversationMember
+    */
+    public function setVisibleHistoryStartDateTime($val)
+    {
+        $this->_propDict["visibleHistoryStartDateTime"] = $val;
+        return $this;
+    }
+
 }

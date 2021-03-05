@@ -38,7 +38,7 @@ class OpenTypeExtension extends Extension
             return null;
         }
     }
-    
+
     /**
     * Sets the extensionName
     * A unique text identifier for an open type data extension. Required.
@@ -52,5 +52,5 @@ class OpenTypeExtension extends Extension
         $this->_propDict["extensionName"] = $val;
         return $this;
     }
-    
+
 }

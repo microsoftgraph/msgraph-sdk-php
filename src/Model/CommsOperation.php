@@ -38,7 +38,7 @@ class CommsOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the clientContext
     * Unique Client Context string. Max limit is 256 chars.
@@ -52,7 +52,7 @@ class CommsOperation extends Entity
         $this->_propDict["clientContext"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resultInfo
     * The result information. Read-only.
@@ -71,7 +71,7 @@ class CommsOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resultInfo
     * The result information. Read-only.
@@ -85,7 +85,7 @@ class CommsOperation extends Entity
         $this->_propDict["resultInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Possible values are: notStarted, running, completed, failed. Read-only.
@@ -104,7 +104,7 @@ class CommsOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Possible values are: notStarted, running, completed, failed. Read-only.
@@ -118,5 +118,5 @@ class CommsOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

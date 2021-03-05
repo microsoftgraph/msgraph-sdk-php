@@ -38,7 +38,7 @@ class EducationOrganization extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Organization description.
@@ -52,7 +52,7 @@ class EducationOrganization extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Organization display name.
@@ -67,7 +67,7 @@ class EducationOrganization extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Organization display name.
@@ -81,7 +81,7 @@ class EducationOrganization extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalSource
     * Where this user was created from. Possible values are: sis, lms, or manual.
@@ -100,7 +100,7 @@ class EducationOrganization extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the externalSource
     * Where this user was created from. Possible values are: sis, lms, or manual.
@@ -114,5 +114,32 @@ class EducationOrganization extends Entity
         $this->_propDict["externalSource"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the externalSourceDetail
+    *
+    * @return string The externalSourceDetail
+    */
+    public function getExternalSourceDetail()
+    {
+        if (array_key_exists("externalSourceDetail", $this->_propDict)) {
+            return $this->_propDict["externalSourceDetail"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the externalSourceDetail
+    *
+    * @param string $val The externalSourceDetail
+    *
+    * @return EducationOrganization
+    */
+    public function setExternalSourceDetail($val)
+    {
+        $this->_propDict["externalSourceDetail"] = $val;
+        return $this;
+    }
+
 }

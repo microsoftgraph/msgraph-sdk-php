@@ -42,7 +42,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime the object was created.
@@ -56,7 +56,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Admin provided description of the Device Configuration.
@@ -71,7 +71,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Admin provided description of the Device Configuration.
@@ -85,7 +85,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Admin provided name of the device configuration.
@@ -100,7 +100,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Admin provided name of the device configuration.
@@ -114,7 +114,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -133,7 +133,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -147,7 +147,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetedMobileApps
     * the associated app.
@@ -162,7 +162,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetedMobileApps
     * the associated app.
@@ -176,7 +176,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["targetedMobileApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the device configuration.
@@ -191,7 +191,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the device configuration.
@@ -205,9 +205,9 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignemenets for app configration.
      *
@@ -221,8 +221,8 @@ class ManagedDeviceMobileAppConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignemenets for app configration.
     *
@@ -232,12 +232,12 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceStatuses
     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      *
@@ -251,8 +251,8 @@ class ManagedDeviceMobileAppConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceStatuses
     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
     *
@@ -262,10 +262,10 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     */
     public function setDeviceStatuses($val)
     {
-		$this->_propDict["deviceStatuses"] = $val;
+        $this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceStatusSummary
     * App configuration device status summary.
@@ -284,7 +284,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceStatusSummary
     * App configuration device status summary.
@@ -298,9 +298,9 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["deviceStatusSummary"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userStatuses
     * List of ManagedDeviceMobileAppConfigurationUserStatus.
      *
@@ -314,8 +314,8 @@ class ManagedDeviceMobileAppConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userStatuses
     * List of ManagedDeviceMobileAppConfigurationUserStatus.
     *
@@ -325,10 +325,10 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     */
     public function setUserStatuses($val)
     {
-		$this->_propDict["userStatuses"] = $val;
+        $this->_propDict["userStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userStatusSummary
     * App configuration user status summary.
@@ -347,7 +347,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userStatusSummary
     * App configuration user status summary.
@@ -361,5 +361,5 @@ class ManagedDeviceMobileAppConfiguration extends Entity
         $this->_propDict["userStatusSummary"] = $val;
         return $this;
     }
-    
+
 }

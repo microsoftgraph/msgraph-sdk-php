@@ -42,7 +42,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time that this Windows Hello for Business key was registered.
@@ -56,7 +56,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the device on which Windows Hello for Business is registered
@@ -71,7 +71,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the device on which Windows Hello for Business is registered
@@ -85,7 +85,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keyStrength
     * Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
@@ -104,7 +104,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the keyStrength
     * Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
@@ -118,7 +118,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["keyStrength"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the device
     * The registered device on which this Windows Hello for Business key resides.
@@ -137,7 +137,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
         }
         return null;
     }
-    
+
     /**
     * Sets the device
     * The registered device on which this Windows Hello for Business key resides.
@@ -151,5 +151,5 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["device"] = $val;
         return $this;
     }
-    
+
 }

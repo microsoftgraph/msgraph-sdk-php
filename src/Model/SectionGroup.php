@@ -38,7 +38,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the sectionGroupsUrl
     * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
@@ -52,7 +52,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
         $this->_propDict["sectionGroupsUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sectionsUrl
     * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
@@ -67,7 +67,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the sectionsUrl
     * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
@@ -81,7 +81,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
         $this->_propDict["sectionsUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentNotebook
     * The notebook that contains the section group. Read-only.
@@ -100,7 +100,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
+
     /**
     * Sets the parentNotebook
     * The notebook that contains the section group. Read-only.
@@ -114,7 +114,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
         $this->_propDict["parentNotebook"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentSectionGroup
     * The section group that contains the section group. Read-only.
@@ -133,7 +133,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
+
     /**
     * Sets the parentSectionGroup
     * The section group that contains the section group. Read-only.
@@ -147,9 +147,9 @@ class SectionGroup extends OnenoteEntityHierarchyModel
         $this->_propDict["parentSectionGroup"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sectionGroups
     * The section groups in the section. Read-only. Nullable.
      *
@@ -163,8 +163,8 @@ class SectionGroup extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sectionGroups
     * The section groups in the section. Read-only. Nullable.
     *
@@ -174,12 +174,12 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     */
     public function setSectionGroups($val)
     {
-		$this->_propDict["sectionGroups"] = $val;
+        $this->_propDict["sectionGroups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sections
     * The sections in the section group. Read-only. Nullable.
      *
@@ -193,8 +193,8 @@ class SectionGroup extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sections
     * The sections in the section group. Read-only. Nullable.
     *
@@ -204,8 +204,8 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     */
     public function setSections($val)
     {
-		$this->_propDict["sections"] = $val;
+        $this->_propDict["sections"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class ConditionalAccessRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the namedLocations
      *
      * @return array The namedLocations
@@ -38,8 +38,8 @@ class ConditionalAccessRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the namedLocations
     *
     * @param NamedLocation $val The namedLocations
@@ -48,12 +48,12 @@ class ConditionalAccessRoot extends Entity
     */
     public function setNamedLocations($val)
     {
-		$this->_propDict["namedLocations"] = $val;
+        $this->_propDict["namedLocations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the policies
      *
      * @return array The policies
@@ -66,8 +66,8 @@ class ConditionalAccessRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the policies
     *
     * @param ConditionalAccessPolicy $val The policies
@@ -76,8 +76,8 @@ class ConditionalAccessRoot extends Entity
     */
     public function setPolicies($val)
     {
-		$this->_propDict["policies"] = $val;
+        $this->_propDict["policies"] = $val;
         return $this;
     }
-    
+
 }

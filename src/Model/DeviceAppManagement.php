@@ -38,7 +38,7 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabledForMicrosoftStoreForBusiness
     * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
@@ -52,7 +52,7 @@ class DeviceAppManagement extends Entity
         $this->_propDict["isEnabledForMicrosoftStoreForBusiness"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the microsoftStoreForBusinessLanguage
     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
@@ -67,7 +67,7 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the microsoftStoreForBusinessLanguage
     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
@@ -81,7 +81,7 @@ class DeviceAppManagement extends Entity
         $this->_propDict["microsoftStoreForBusinessLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the microsoftStoreForBusinessLastCompletedApplicationSyncTime
     * The last time an application sync from the Microsoft Store for Business was completed.
@@ -100,7 +100,7 @@ class DeviceAppManagement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime
     * The last time an application sync from the Microsoft Store for Business was completed.
@@ -114,7 +114,7 @@ class DeviceAppManagement extends Entity
         $this->_propDict["microsoftStoreForBusinessLastCompletedApplicationSyncTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the microsoftStoreForBusinessLastSuccessfulSyncDateTime
     * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
@@ -133,7 +133,7 @@ class DeviceAppManagement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime
     * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
@@ -147,9 +147,9 @@ class DeviceAppManagement extends Entity
         $this->_propDict["microsoftStoreForBusinessLastSuccessfulSyncDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedEBooks
     * The Managed eBook.
      *
@@ -163,8 +163,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedEBooks
     * The Managed eBook.
     *
@@ -174,12 +174,12 @@ class DeviceAppManagement extends Entity
     */
     public function setManagedEBooks($val)
     {
-		$this->_propDict["managedEBooks"] = $val;
+        $this->_propDict["managedEBooks"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the mobileAppCategories
     * The mobile app categories.
      *
@@ -193,8 +193,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the mobileAppCategories
     * The mobile app categories.
     *
@@ -204,12 +204,12 @@ class DeviceAppManagement extends Entity
     */
     public function setMobileAppCategories($val)
     {
-		$this->_propDict["mobileAppCategories"] = $val;
+        $this->_propDict["mobileAppCategories"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the mobileAppConfigurations
     * The Managed Device Mobile Application Configurations.
      *
@@ -223,8 +223,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the mobileAppConfigurations
     * The Managed Device Mobile Application Configurations.
     *
@@ -234,12 +234,12 @@ class DeviceAppManagement extends Entity
     */
     public function setMobileAppConfigurations($val)
     {
-		$this->_propDict["mobileAppConfigurations"] = $val;
+        $this->_propDict["mobileAppConfigurations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the mobileApps
     * The mobile apps.
      *
@@ -253,8 +253,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the mobileApps
     * The mobile apps.
     *
@@ -264,12 +264,12 @@ class DeviceAppManagement extends Entity
     */
     public function setMobileApps($val)
     {
-		$this->_propDict["mobileApps"] = $val;
+        $this->_propDict["mobileApps"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the vppTokens
     * List of Vpp tokens for this organization.
      *
@@ -283,8 +283,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the vppTokens
     * List of Vpp tokens for this organization.
     *
@@ -294,12 +294,12 @@ class DeviceAppManagement extends Entity
     */
     public function setVppTokens($val)
     {
-		$this->_propDict["vppTokens"] = $val;
+        $this->_propDict["vppTokens"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the androidManagedAppProtections
     * Android managed app policies.
      *
@@ -313,8 +313,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the androidManagedAppProtections
     * Android managed app policies.
     *
@@ -324,12 +324,12 @@ class DeviceAppManagement extends Entity
     */
     public function setAndroidManagedAppProtections($val)
     {
-		$this->_propDict["androidManagedAppProtections"] = $val;
+        $this->_propDict["androidManagedAppProtections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the defaultManagedAppProtections
     * Default managed app policies.
      *
@@ -343,8 +343,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the defaultManagedAppProtections
     * Default managed app policies.
     *
@@ -354,12 +354,12 @@ class DeviceAppManagement extends Entity
     */
     public function setDefaultManagedAppProtections($val)
     {
-		$this->_propDict["defaultManagedAppProtections"] = $val;
+        $this->_propDict["defaultManagedAppProtections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the iosManagedAppProtections
     * iOS managed app policies.
      *
@@ -373,8 +373,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the iosManagedAppProtections
     * iOS managed app policies.
     *
@@ -384,12 +384,12 @@ class DeviceAppManagement extends Entity
     */
     public function setIosManagedAppProtections($val)
     {
-		$this->_propDict["iosManagedAppProtections"] = $val;
+        $this->_propDict["iosManagedAppProtections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedAppPolicies
     * Managed app policies.
      *
@@ -403,8 +403,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedAppPolicies
     * Managed app policies.
     *
@@ -414,12 +414,12 @@ class DeviceAppManagement extends Entity
     */
     public function setManagedAppPolicies($val)
     {
-		$this->_propDict["managedAppPolicies"] = $val;
+        $this->_propDict["managedAppPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedAppRegistrations
     * The managed app registrations.
      *
@@ -433,8 +433,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedAppRegistrations
     * The managed app registrations.
     *
@@ -444,12 +444,12 @@ class DeviceAppManagement extends Entity
     */
     public function setManagedAppRegistrations($val)
     {
-		$this->_propDict["managedAppRegistrations"] = $val;
+        $this->_propDict["managedAppRegistrations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the managedAppStatuses
     * The managed app statuses.
      *
@@ -463,8 +463,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the managedAppStatuses
     * The managed app statuses.
     *
@@ -474,12 +474,12 @@ class DeviceAppManagement extends Entity
     */
     public function setManagedAppStatuses($val)
     {
-		$this->_propDict["managedAppStatuses"] = $val;
+        $this->_propDict["managedAppStatuses"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the mdmWindowsInformationProtectionPolicies
     * Windows information protection for apps running on devices which are MDM enrolled.
      *
@@ -493,8 +493,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the mdmWindowsInformationProtectionPolicies
     * Windows information protection for apps running on devices which are MDM enrolled.
     *
@@ -504,12 +504,12 @@ class DeviceAppManagement extends Entity
     */
     public function setMdmWindowsInformationProtectionPolicies($val)
     {
-		$this->_propDict["mdmWindowsInformationProtectionPolicies"] = $val;
+        $this->_propDict["mdmWindowsInformationProtectionPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the targetedManagedAppConfigurations
     * Targeted managed app configurations.
      *
@@ -523,8 +523,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the targetedManagedAppConfigurations
     * Targeted managed app configurations.
     *
@@ -534,12 +534,12 @@ class DeviceAppManagement extends Entity
     */
     public function setTargetedManagedAppConfigurations($val)
     {
-		$this->_propDict["targetedManagedAppConfigurations"] = $val;
+        $this->_propDict["targetedManagedAppConfigurations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the windowsInformationProtectionPolicies
     * Windows information protection for apps running on devices which are not MDM enrolled.
      *
@@ -553,8 +553,8 @@ class DeviceAppManagement extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the windowsInformationProtectionPolicies
     * Windows information protection for apps running on devices which are not MDM enrolled.
     *
@@ -564,8 +564,8 @@ class DeviceAppManagement extends Entity
     */
     public function setWindowsInformationProtectionPolicies($val)
     {
-		$this->_propDict["windowsInformationProtectionPolicies"] = $val;
+        $this->_propDict["windowsInformationProtectionPolicies"] = $val;
         return $this;
     }
-    
+
 }

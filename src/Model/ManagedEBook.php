@@ -42,7 +42,7 @@ class ManagedEBook extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time when the eBook file was created.
@@ -56,7 +56,7 @@ class ManagedEBook extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description.
@@ -71,7 +71,7 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description.
@@ -85,7 +85,7 @@ class ManagedEBook extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the eBook.
@@ -100,7 +100,7 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the eBook.
@@ -114,7 +114,7 @@ class ManagedEBook extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the informationUrl
     * The more information Url.
@@ -129,7 +129,7 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the informationUrl
     * The more information Url.
@@ -143,7 +143,7 @@ class ManagedEBook extends Entity
         $this->_propDict["informationUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the largeCover
     * Book cover.
@@ -162,7 +162,7 @@ class ManagedEBook extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the largeCover
     * Book cover.
@@ -176,7 +176,7 @@ class ManagedEBook extends Entity
         $this->_propDict["largeCover"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time when the eBook was last modified.
@@ -195,7 +195,7 @@ class ManagedEBook extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time when the eBook was last modified.
@@ -209,7 +209,7 @@ class ManagedEBook extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the privacyInformationUrl
     * The privacy statement Url.
@@ -224,7 +224,7 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the privacyInformationUrl
     * The privacy statement Url.
@@ -238,7 +238,7 @@ class ManagedEBook extends Entity
         $this->_propDict["privacyInformationUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publishedDateTime
     * The date and time when the eBook was published.
@@ -257,7 +257,7 @@ class ManagedEBook extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the publishedDateTime
     * The date and time when the eBook was published.
@@ -271,7 +271,7 @@ class ManagedEBook extends Entity
         $this->_propDict["publishedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisher
     * Publisher.
@@ -286,7 +286,7 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publisher
     * Publisher.
@@ -300,9 +300,9 @@ class ManagedEBook extends Entity
         $this->_propDict["publisher"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of assignments for this eBook.
      *
@@ -316,8 +316,8 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of assignments for this eBook.
     *
@@ -327,12 +327,12 @@ class ManagedEBook extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceStates
     * The list of installation states for this eBook.
      *
@@ -346,8 +346,8 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceStates
     * The list of installation states for this eBook.
     *
@@ -357,10 +357,10 @@ class ManagedEBook extends Entity
     */
     public function setDeviceStates($val)
     {
-		$this->_propDict["deviceStates"] = $val;
+        $this->_propDict["deviceStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the installSummary
     * Mobile App Install Summary.
@@ -379,7 +379,7 @@ class ManagedEBook extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the installSummary
     * Mobile App Install Summary.
@@ -393,9 +393,9 @@ class ManagedEBook extends Entity
         $this->_propDict["installSummary"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userStateSummary
     * The list of installation states for this eBook.
      *
@@ -409,8 +409,8 @@ class ManagedEBook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userStateSummary
     * The list of installation states for this eBook.
     *
@@ -420,8 +420,8 @@ class ManagedEBook extends Entity
     */
     public function setUserStateSummary($val)
     {
-		$this->_propDict["userStateSummary"] = $val;
+        $this->_propDict["userStateSummary"] = $val;
         return $this;
     }
-    
+
 }

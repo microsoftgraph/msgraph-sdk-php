@@ -38,7 +38,7 @@ class CountryNamedLocation extends NamedLocation
             return null;
         }
     }
-    
+
     /**
     * Sets the countriesAndRegions
     * List of countries and/or regions in two-letter format specified by ISO 3166-2.
@@ -52,7 +52,7 @@ class CountryNamedLocation extends NamedLocation
         $this->_propDict["countriesAndRegions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the includeUnknownCountriesAndRegions
     * True if IP addresses that don't map to a country or region should be included in the named location.
@@ -67,7 +67,7 @@ class CountryNamedLocation extends NamedLocation
             return null;
         }
     }
-    
+
     /**
     * Sets the includeUnknownCountriesAndRegions
     * True if IP addresses that don't map to a country or region should be included in the named location.
@@ -81,5 +81,5 @@ class CountryNamedLocation extends NamedLocation
         $this->_propDict["includeUnknownCountriesAndRegions"] = boolval($val);
         return $this;
     }
-    
+
 }

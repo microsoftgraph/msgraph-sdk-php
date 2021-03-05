@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Teamwork extends Entity
 {
 
-     /** 
+     /**
      * Gets the workforceIntegrations
      *
      * @return array The workforceIntegrations
@@ -38,8 +38,8 @@ class Teamwork extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the workforceIntegrations
     *
     * @param WorkforceIntegration $val The workforceIntegrations
@@ -48,8 +48,8 @@ class Teamwork extends Entity
     */
     public function setWorkforceIntegrations($val)
     {
-		$this->_propDict["workforceIntegrations"] = $val;
+        $this->_propDict["workforceIntegrations"] = $val;
         return $this;
     }
-    
+
 }

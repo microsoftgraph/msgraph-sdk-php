@@ -42,7 +42,7 @@ class EnrollmentConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * Represents an assignment to managed devices in the tenant
@@ -56,5 +56,5 @@ class EnrollmentConfigurationAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

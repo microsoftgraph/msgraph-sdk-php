@@ -38,7 +38,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the position
     * DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
@@ -52,7 +52,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["position"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the separator
     * String representing the separator used for the data labels on a chart.
@@ -67,7 +67,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the separator
     * String representing the separator used for the data labels on a chart.
@@ -81,7 +81,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["separator"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the showBubbleSize
     * Boolean value representing if the data label bubble size is visible or not.
@@ -96,7 +96,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showBubbleSize
     * Boolean value representing if the data label bubble size is visible or not.
@@ -110,7 +110,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["showBubbleSize"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the showCategoryName
     * Boolean value representing if the data label category name is visible or not.
@@ -125,7 +125,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showCategoryName
     * Boolean value representing if the data label category name is visible or not.
@@ -139,7 +139,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["showCategoryName"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the showLegendKey
     * Boolean value representing if the data label legend key is visible or not.
@@ -154,7 +154,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showLegendKey
     * Boolean value representing if the data label legend key is visible or not.
@@ -168,7 +168,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["showLegendKey"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the showPercentage
     * Boolean value representing if the data label percentage is visible or not.
@@ -183,7 +183,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showPercentage
     * Boolean value representing if the data label percentage is visible or not.
@@ -197,7 +197,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["showPercentage"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the showSeriesName
     * Boolean value representing if the data label series name is visible or not.
@@ -212,7 +212,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showSeriesName
     * Boolean value representing if the data label series name is visible or not.
@@ -226,7 +226,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["showSeriesName"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the showValue
     * Boolean value representing if the data label value is visible or not.
@@ -241,7 +241,7 @@ class WorkbookChartDataLabels extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showValue
     * Boolean value representing if the data label value is visible or not.
@@ -255,7 +255,7 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["showValue"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
@@ -274,7 +274,7 @@ class WorkbookChartDataLabels extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
@@ -288,5 +288,5 @@ class WorkbookChartDataLabels extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
 }

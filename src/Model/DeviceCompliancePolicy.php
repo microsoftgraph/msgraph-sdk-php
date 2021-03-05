@@ -42,7 +42,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime the object was created.
@@ -56,7 +56,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Admin provided description of the Device Configuration.
@@ -71,7 +71,7 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Admin provided description of the Device Configuration.
@@ -85,7 +85,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Admin provided name of the device configuration.
@@ -100,7 +100,7 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Admin provided name of the device configuration.
@@ -114,7 +114,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -133,7 +133,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -147,7 +147,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the device configuration.
@@ -162,7 +162,7 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the device configuration.
@@ -176,9 +176,9 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The collection of assignments for this compliance policy.
      *
@@ -192,8 +192,8 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The collection of assignments for this compliance policy.
     *
@@ -203,12 +203,12 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceSettingStateSummaries
     * Compliance Setting State Device Summary
      *
@@ -222,8 +222,8 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceSettingStateSummaries
     * Compliance Setting State Device Summary
     *
@@ -233,12 +233,12 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setDeviceSettingStateSummaries($val)
     {
-		$this->_propDict["deviceSettingStateSummaries"] = $val;
+        $this->_propDict["deviceSettingStateSummaries"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceStatuses
     * List of DeviceComplianceDeviceStatus.
      *
@@ -252,8 +252,8 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceStatuses
     * List of DeviceComplianceDeviceStatus.
     *
@@ -263,10 +263,10 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setDeviceStatuses($val)
     {
-		$this->_propDict["deviceStatuses"] = $val;
+        $this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceStatusOverview
     * Device compliance devices status overview
@@ -285,7 +285,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceStatusOverview
     * Device compliance devices status overview
@@ -299,9 +299,9 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["deviceStatusOverview"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the scheduledActionsForRule
     * The list of scheduled action for this rule
      *
@@ -315,8 +315,8 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the scheduledActionsForRule
     * The list of scheduled action for this rule
     *
@@ -326,12 +326,12 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setScheduledActionsForRule($val)
     {
-		$this->_propDict["scheduledActionsForRule"] = $val;
+        $this->_propDict["scheduledActionsForRule"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userStatuses
     * List of DeviceComplianceUserStatus.
      *
@@ -345,8 +345,8 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userStatuses
     * List of DeviceComplianceUserStatus.
     *
@@ -356,10 +356,10 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setUserStatuses($val)
     {
-		$this->_propDict["userStatuses"] = $val;
+        $this->_propDict["userStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userStatusOverview
     * Device compliance users status overview
@@ -378,7 +378,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userStatusOverview
     * Device compliance users status overview
@@ -392,5 +392,5 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["userStatusOverview"] = $val;
         return $this;
     }
-    
+
 }

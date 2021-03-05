@@ -38,7 +38,7 @@ class WorkbookChart extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the height
     * Represents the height, in points, of the chart object.
@@ -52,7 +52,7 @@ class WorkbookChart extends Entity
         $this->_propDict["height"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the left
     * The distance, in points, from the left side of the chart to the worksheet origin.
@@ -67,7 +67,7 @@ class WorkbookChart extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the left
     * The distance, in points, from the left side of the chart to the worksheet origin.
@@ -81,7 +81,7 @@ class WorkbookChart extends Entity
         $this->_propDict["left"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * Represents the name of a chart object.
@@ -96,7 +96,7 @@ class WorkbookChart extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Represents the name of a chart object.
@@ -110,7 +110,7 @@ class WorkbookChart extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the top
     * Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
@@ -125,7 +125,7 @@ class WorkbookChart extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the top
     * Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
@@ -139,7 +139,7 @@ class WorkbookChart extends Entity
         $this->_propDict["top"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the width
     * Represents the width, in points, of the chart object.
@@ -154,7 +154,7 @@ class WorkbookChart extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the width
     * Represents the width, in points, of the chart object.
@@ -168,7 +168,7 @@ class WorkbookChart extends Entity
         $this->_propDict["width"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the axes
     * Represents chart axes. Read-only.
@@ -187,7 +187,7 @@ class WorkbookChart extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the axes
     * Represents chart axes. Read-only.
@@ -201,7 +201,7 @@ class WorkbookChart extends Entity
         $this->_propDict["axes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataLabels
     * Represents the datalabels on the chart. Read-only.
@@ -220,7 +220,7 @@ class WorkbookChart extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dataLabels
     * Represents the datalabels on the chart. Read-only.
@@ -234,7 +234,7 @@ class WorkbookChart extends Entity
         $this->_propDict["dataLabels"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Encapsulates the format properties for the chart area. Read-only.
@@ -253,7 +253,7 @@ class WorkbookChart extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Encapsulates the format properties for the chart area. Read-only.
@@ -267,7 +267,7 @@ class WorkbookChart extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the legend
     * Represents the legend for the chart. Read-only.
@@ -286,7 +286,7 @@ class WorkbookChart extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the legend
     * Represents the legend for the chart. Read-only.
@@ -300,9 +300,9 @@ class WorkbookChart extends Entity
         $this->_propDict["legend"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the series
     * Represents either a single series or collection of series in the chart. Read-only.
      *
@@ -316,8 +316,8 @@ class WorkbookChart extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the series
     * Represents either a single series or collection of series in the chart. Read-only.
     *
@@ -327,10 +327,10 @@ class WorkbookChart extends Entity
     */
     public function setSeries($val)
     {
-		$this->_propDict["series"] = $val;
+        $this->_propDict["series"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
@@ -349,7 +349,7 @@ class WorkbookChart extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the title
     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
@@ -363,7 +363,7 @@ class WorkbookChart extends Entity
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the worksheet
     * The worksheet containing the current chart. Read-only.
@@ -382,7 +382,7 @@ class WorkbookChart extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the worksheet
     * The worksheet containing the current chart. Read-only.
@@ -396,5 +396,5 @@ class WorkbookChart extends Entity
         $this->_propDict["worksheet"] = $val;
         return $this;
     }
-    
+
 }

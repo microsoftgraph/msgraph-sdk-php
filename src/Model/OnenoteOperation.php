@@ -42,7 +42,7 @@ class OnenoteOperation extends Operation
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     * The error returned by the operation.
@@ -56,7 +56,7 @@ class OnenoteOperation extends Operation
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the percentComplete
     * The operation percent complete if the operation is still in running status
@@ -71,7 +71,7 @@ class OnenoteOperation extends Operation
             return null;
         }
     }
-    
+
     /**
     * Sets the percentComplete
     * The operation percent complete if the operation is still in running status
@@ -85,7 +85,7 @@ class OnenoteOperation extends Operation
         $this->_propDict["percentComplete"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceId
     * The resource id.
@@ -100,7 +100,7 @@ class OnenoteOperation extends Operation
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceId
     * The resource id.
@@ -114,7 +114,7 @@ class OnenoteOperation extends Operation
         $this->_propDict["resourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceLocation
     * The resource URI for the object. For example, the resource URI for a copied page or section.
@@ -129,7 +129,7 @@ class OnenoteOperation extends Operation
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceLocation
     * The resource URI for the object. For example, the resource URI for a copied page or section.
@@ -143,5 +143,5 @@ class OnenoteOperation extends Operation
         $this->_propDict["resourceLocation"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the audioDeviceName
     * Specifies the name of the audio device in the room.
@@ -52,7 +52,7 @@ class Room extends Place
         $this->_propDict["audioDeviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bookingType
     * Type of room. Possible values are standard, and reserved.
@@ -71,7 +71,7 @@ class Room extends Place
         }
         return null;
     }
-    
+
     /**
     * Sets the bookingType
     * Type of room. Possible values are standard, and reserved.
@@ -85,7 +85,7 @@ class Room extends Place
         $this->_propDict["bookingType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the building
     * Specifies the building name or building number that the room is in.
@@ -100,7 +100,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the building
     * Specifies the building name or building number that the room is in.
@@ -114,7 +114,7 @@ class Room extends Place
         $this->_propDict["building"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the capacity
     * Specifies the capacity of the room.
@@ -129,7 +129,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the capacity
     * Specifies the capacity of the room.
@@ -143,7 +143,7 @@ class Room extends Place
         $this->_propDict["capacity"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayDeviceName
     * Specifies the name of the display device in the room.
@@ -158,7 +158,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the displayDeviceName
     * Specifies the name of the display device in the room.
@@ -172,7 +172,7 @@ class Room extends Place
         $this->_propDict["displayDeviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the emailAddress
     * Email address of the room.
@@ -187,7 +187,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the emailAddress
     * Email address of the room.
@@ -201,7 +201,7 @@ class Room extends Place
         $this->_propDict["emailAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the floorLabel
     * Specifies a descriptive label for the floor, for example, P.
@@ -216,7 +216,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the floorLabel
     * Specifies a descriptive label for the floor, for example, P.
@@ -230,7 +230,7 @@ class Room extends Place
         $this->_propDict["floorLabel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the floorNumber
     * Specifies the floor number that the room is on.
@@ -245,7 +245,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the floorNumber
     * Specifies the floor number that the room is on.
@@ -259,7 +259,7 @@ class Room extends Place
         $this->_propDict["floorNumber"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isWheelChairAccessible
     * Specifies whether the room is wheelchair accessible.
@@ -274,7 +274,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the isWheelChairAccessible
     * Specifies whether the room is wheelchair accessible.
@@ -288,7 +288,7 @@ class Room extends Place
         $this->_propDict["isWheelChairAccessible"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the label
     * Specifies a descriptive label for the room, for example, a number or name.
@@ -303,7 +303,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the label
     * Specifies a descriptive label for the room, for example, a number or name.
@@ -317,7 +317,7 @@ class Room extends Place
         $this->_propDict["label"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the nickname
     * Specifies a nickname for the room, for example, 'conf room'.
@@ -332,7 +332,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the nickname
     * Specifies a nickname for the room, for example, 'conf room'.
@@ -346,7 +346,7 @@ class Room extends Place
         $this->_propDict["nickname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tags
     * Specifies additional features of the room, for example, details like the type of view or furniture type.
@@ -361,7 +361,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the tags
     * Specifies additional features of the room, for example, details like the type of view or furniture type.
@@ -375,7 +375,7 @@ class Room extends Place
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the videoDeviceName
     * Specifies the name of the video device in the room.
@@ -390,7 +390,7 @@ class Room extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the videoDeviceName
     * Specifies the name of the video device in the room.
@@ -404,5 +404,5 @@ class Room extends Place
         $this->_propDict["videoDeviceName"] = $val;
         return $this;
     }
-    
+
 }

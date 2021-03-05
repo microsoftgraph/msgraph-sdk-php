@@ -38,7 +38,7 @@ class AuthorizationPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the allowedToSignUpEmailBasedSubscriptions
     * Indicates whether users can sign up for email based subscriptions.
@@ -52,7 +52,7 @@ class AuthorizationPolicy extends PolicyBase
         $this->_propDict["allowedToSignUpEmailBasedSubscriptions"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the allowedToUseSSPR
     * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
@@ -67,7 +67,7 @@ class AuthorizationPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the allowedToUseSSPR
     * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
@@ -81,7 +81,7 @@ class AuthorizationPolicy extends PolicyBase
         $this->_propDict["allowedToUseSSPR"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the allowEmailVerifiedUsersToJoinOrganization
     * Indicates whether a user can join the tenant by email validation.
@@ -96,7 +96,7 @@ class AuthorizationPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the allowEmailVerifiedUsersToJoinOrganization
     * Indicates whether a user can join the tenant by email validation.
@@ -110,7 +110,7 @@ class AuthorizationPolicy extends PolicyBase
         $this->_propDict["allowEmailVerifiedUsersToJoinOrganization"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the allowInvitesFrom
     * Indicates who can invite external users to the organization. Possible values are:none - Prevent everyone, including admins, from inviting external users. Default setting for US Government.adminsAndGuestInviters - Allow members of Global Administrators, User Administrators, and Guest Inviter roles to invite external users.adminsGuestInvitersAndAllMembers - Allow the above admin roles and all other User role members to invite external users.everyone - Allow everyone in the organization, including guest users, to invite external users. Default setting for all cloud environments except US Government.
@@ -129,7 +129,7 @@ class AuthorizationPolicy extends PolicyBase
         }
         return null;
     }
-    
+
     /**
     * Sets the allowInvitesFrom
     * Indicates who can invite external users to the organization. Possible values are:none - Prevent everyone, including admins, from inviting external users. Default setting for US Government.adminsAndGuestInviters - Allow members of Global Administrators, User Administrators, and Guest Inviter roles to invite external users.adminsGuestInvitersAndAllMembers - Allow the above admin roles and all other User role members to invite external users.everyone - Allow everyone in the organization, including guest users, to invite external users. Default setting for all cloud environments except US Government.
@@ -143,7 +143,7 @@ class AuthorizationPolicy extends PolicyBase
         $this->_propDict["allowInvitesFrom"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the blockMsolPowerShell
     * To disable the use of MSOL PowerShell set this property to true. Setting to true will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
@@ -158,7 +158,7 @@ class AuthorizationPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the blockMsolPowerShell
     * To disable the use of MSOL PowerShell set this property to true. Setting to true will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
@@ -172,7 +172,7 @@ class AuthorizationPolicy extends PolicyBase
         $this->_propDict["blockMsolPowerShell"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the defaultUserRolePermissions
     * Specifies certain customizable permissions for default user role.
@@ -191,7 +191,7 @@ class AuthorizationPolicy extends PolicyBase
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultUserRolePermissions
     * Specifies certain customizable permissions for default user role.
@@ -205,5 +205,5 @@ class AuthorizationPolicy extends PolicyBase
         $this->_propDict["defaultUserRolePermissions"] = $val;
         return $this;
     }
-    
+
 }

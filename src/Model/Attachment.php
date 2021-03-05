@@ -38,7 +38,7 @@ class Attachment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentType
     * The MIME type.
@@ -52,7 +52,7 @@ class Attachment extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isInline
     * true if the attachment is an inline attachment; otherwise, false.
@@ -67,7 +67,7 @@ class Attachment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isInline
     * true if the attachment is an inline attachment; otherwise, false.
@@ -81,7 +81,7 @@ class Attachment extends Entity
         $this->_propDict["isInline"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -100,7 +100,7 @@ class Attachment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -114,7 +114,7 @@ class Attachment extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The display name of the attachment. This does not need to be the actual file name.
@@ -129,7 +129,7 @@ class Attachment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The display name of the attachment. This does not need to be the actual file name.
@@ -143,7 +143,7 @@ class Attachment extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the size
     * The length of the attachment in bytes.
@@ -158,7 +158,7 @@ class Attachment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the size
     * The length of the attachment in bytes.
@@ -172,5 +172,5 @@ class Attachment extends Entity
         $this->_propDict["size"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class Operation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The start time of the operation.
@@ -56,7 +56,7 @@ class Operation extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastActionDateTime
     * The time of the last action of the operation.
@@ -75,7 +75,7 @@ class Operation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActionDateTime
     * The time of the last action of the operation.
@@ -89,7 +89,7 @@ class Operation extends Entity
         $this->_propDict["lastActionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Possible values are: notStarted, running, completed, failed. Read-only.
@@ -108,7 +108,7 @@ class Operation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Possible values are: notStarted, running, completed, failed. Read-only.
@@ -122,5 +122,5 @@ class Operation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

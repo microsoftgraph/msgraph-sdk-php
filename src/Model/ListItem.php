@@ -42,7 +42,7 @@ class ListItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the contentType
     * The content type of this list item
@@ -56,7 +56,7 @@ class ListItem extends BaseItem
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -75,7 +75,7 @@ class ListItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
@@ -89,7 +89,7 @@ class ListItem extends BaseItem
         $this->_propDict["sharepointIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the analytics
     * Analytics about the view activities that took place on this item.
@@ -108,7 +108,7 @@ class ListItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the analytics
     * Analytics about the view activities that took place on this item.
@@ -122,7 +122,7 @@ class ListItem extends BaseItem
         $this->_propDict["analytics"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the driveItem
     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
@@ -141,7 +141,7 @@ class ListItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the driveItem
     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
@@ -155,7 +155,7 @@ class ListItem extends BaseItem
         $this->_propDict["driveItem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fields
     * The values of the columns set on this list item.
@@ -174,7 +174,7 @@ class ListItem extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the fields
     * The values of the columns set on this list item.
@@ -188,9 +188,9 @@ class ListItem extends BaseItem
         $this->_propDict["fields"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the versions
     * The list of previous versions of the list item.
      *
@@ -204,8 +204,8 @@ class ListItem extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the versions
     * The list of previous versions of the list item.
     *
@@ -215,8 +215,8 @@ class ListItem extends BaseItem
     */
     public function setVersions($val)
     {
-		$this->_propDict["versions"] = $val;
+        $this->_propDict["versions"] = $val;
         return $this;
     }
-    
+
 }

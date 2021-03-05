@@ -42,7 +42,7 @@ class ManagedEBookAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the installIntent
     * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
@@ -56,7 +56,7 @@ class ManagedEBookAssignment extends Entity
         $this->_propDict["installIntent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The assignment target for eBook.
@@ -75,7 +75,7 @@ class ManagedEBookAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for eBook.
@@ -89,5 +89,5 @@ class ManagedEBookAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

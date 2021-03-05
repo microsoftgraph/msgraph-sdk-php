@@ -38,7 +38,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the birthday
     * The person's birthday.
@@ -52,7 +52,7 @@ class Person extends Entity
         $this->_propDict["birthday"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the companyName
     * The name of the person's company.
@@ -67,7 +67,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the companyName
     * The name of the person's company.
@@ -81,7 +81,7 @@ class Person extends Entity
         $this->_propDict["companyName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the department
     * The person's department.
@@ -96,7 +96,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the department
     * The person's department.
@@ -110,7 +110,7 @@ class Person extends Entity
         $this->_propDict["department"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The person's display name.
@@ -125,7 +125,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The person's display name.
@@ -139,7 +139,7 @@ class Person extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the givenName
     * The person's given name.
@@ -154,7 +154,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the givenName
     * The person's given name.
@@ -168,7 +168,7 @@ class Person extends Entity
         $this->_propDict["givenName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imAddress
     * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
@@ -183,7 +183,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imAddress
     * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
@@ -197,7 +197,7 @@ class Person extends Entity
         $this->_propDict["imAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isFavorite
     * true if the user has flagged this person as a favorite.
@@ -212,7 +212,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isFavorite
     * true if the user has flagged this person as a favorite.
@@ -226,7 +226,7 @@ class Person extends Entity
         $this->_propDict["isFavorite"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the jobTitle
     * The person's job title.
@@ -241,7 +241,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the jobTitle
     * The person's job title.
@@ -255,7 +255,7 @@ class Person extends Entity
         $this->_propDict["jobTitle"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the officeLocation
     * The location of the person's office.
@@ -270,7 +270,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the officeLocation
     * The location of the person's office.
@@ -284,7 +284,7 @@ class Person extends Entity
         $this->_propDict["officeLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the personNotes
     * Free-form notes that the user has taken about this person.
@@ -299,7 +299,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the personNotes
     * Free-form notes that the user has taken about this person.
@@ -313,7 +313,7 @@ class Person extends Entity
         $this->_propDict["personNotes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the personType
     * The type of person, for example distribution list.
@@ -332,7 +332,7 @@ class Person extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the personType
     * The type of person, for example distribution list.
@@ -346,9 +346,9 @@ class Person extends Entity
         $this->_propDict["personType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the phones
     * The person's phone numbers.
      *
@@ -362,8 +362,8 @@ class Person extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the phones
     * The person's phone numbers.
     *
@@ -373,12 +373,12 @@ class Person extends Entity
     */
     public function setPhones($val)
     {
-		$this->_propDict["phones"] = $val;
+        $this->_propDict["phones"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the postalAddresses
     * The person's addresses.
      *
@@ -392,8 +392,8 @@ class Person extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the postalAddresses
     * The person's addresses.
     *
@@ -403,10 +403,10 @@ class Person extends Entity
     */
     public function setPostalAddresses($val)
     {
-		$this->_propDict["postalAddresses"] = $val;
+        $this->_propDict["postalAddresses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the profession
     * The person's profession.
@@ -421,7 +421,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the profession
     * The person's profession.
@@ -435,9 +435,9 @@ class Person extends Entity
         $this->_propDict["profession"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the scoredEmailAddresses
     * The person's email addresses.
      *
@@ -451,8 +451,8 @@ class Person extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the scoredEmailAddresses
     * The person's email addresses.
     *
@@ -462,10 +462,10 @@ class Person extends Entity
     */
     public function setScoredEmailAddresses($val)
     {
-		$this->_propDict["scoredEmailAddresses"] = $val;
+        $this->_propDict["scoredEmailAddresses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the surname
     * The person's surname.
@@ -480,7 +480,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the surname
     * The person's surname.
@@ -494,7 +494,7 @@ class Person extends Entity
         $this->_propDict["surname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
@@ -509,7 +509,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
@@ -523,9 +523,9 @@ class Person extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the websites
     * The person's websites.
      *
@@ -539,8 +539,8 @@ class Person extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the websites
     * The person's websites.
     *
@@ -550,10 +550,10 @@ class Person extends Entity
     */
     public function setWebsites($val)
     {
-		$this->_propDict["websites"] = $val;
+        $this->_propDict["websites"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the yomiCompany
     * The phonetic Japanese name of the person's company.
@@ -568,7 +568,7 @@ class Person extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the yomiCompany
     * The phonetic Japanese name of the person's company.
@@ -582,5 +582,5 @@ class Person extends Entity
         $this->_propDict["yomiCompany"] = $val;
         return $this;
     }
-    
+
 }

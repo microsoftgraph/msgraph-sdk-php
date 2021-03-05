@@ -42,7 +42,7 @@ class ManagedDeviceOverview extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceExchangeAccessStateSummary
     * Distribution of Exchange Access State in Intune
@@ -56,7 +56,7 @@ class ManagedDeviceOverview extends Entity
         $this->_propDict["deviceExchangeAccessStateSummary"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceOperatingSystemSummary
     * Device operating system summary.
@@ -75,7 +75,7 @@ class ManagedDeviceOverview extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceOperatingSystemSummary
     * Device operating system summary.
@@ -89,7 +89,7 @@ class ManagedDeviceOverview extends Entity
         $this->_propDict["deviceOperatingSystemSummary"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dualEnrolledDeviceCount
     * The number of devices enrolled in both MDM and EAS
@@ -104,7 +104,7 @@ class ManagedDeviceOverview extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the dualEnrolledDeviceCount
     * The number of devices enrolled in both MDM and EAS
@@ -118,7 +118,7 @@ class ManagedDeviceOverview extends Entity
         $this->_propDict["dualEnrolledDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enrolledDeviceCount
     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
@@ -133,7 +133,7 @@ class ManagedDeviceOverview extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enrolledDeviceCount
     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
@@ -147,7 +147,7 @@ class ManagedDeviceOverview extends Entity
         $this->_propDict["enrolledDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mdmEnrolledCount
     * The number of devices enrolled in MDM
@@ -162,7 +162,7 @@ class ManagedDeviceOverview extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the mdmEnrolledCount
     * The number of devices enrolled in MDM
@@ -176,5 +176,5 @@ class ManagedDeviceOverview extends Entity
         $this->_propDict["mdmEnrolledCount"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the daysWithoutContactBeforeUnenroll
     * Offline interval before app data is wiped (days)
@@ -52,7 +52,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["daysWithoutContactBeforeUnenroll"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mdmEnrollmentUrl
     * Enrollment url for the MDM
@@ -67,7 +67,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the mdmEnrollmentUrl
     * Enrollment url for the MDM
@@ -81,7 +81,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["mdmEnrollmentUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minutesOfInactivityBeforeDeviceLock
     * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &amp;lt;= X &amp;lt;= 999.
@@ -96,7 +96,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minutesOfInactivityBeforeDeviceLock
     * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &amp;lt;= X &amp;lt;= 999.
@@ -110,7 +110,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["minutesOfInactivityBeforeDeviceLock"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberOfPastPinsRemembered
     * Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
@@ -125,7 +125,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the numberOfPastPinsRemembered
     * Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
@@ -139,7 +139,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["numberOfPastPinsRemembered"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMaximumAttemptCount
     * The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 &amp;lt;= X &amp;lt;= 16 for desktop and 0 &amp;lt;= X &amp;lt;= 999 for mobile devices.
@@ -154,7 +154,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMaximumAttemptCount
     * The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 &amp;lt;= X &amp;lt;= 16 for desktop and 0 &amp;lt;= X &amp;lt;= 999 for mobile devices.
@@ -168,7 +168,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["passwordMaximumAttemptCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the pinExpirationDays
     * Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
@@ -183,7 +183,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the pinExpirationDays
     * Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
@@ -197,7 +197,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["pinExpirationDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the pinLowercaseLetters
     * Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
@@ -216,7 +216,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the pinLowercaseLetters
     * Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
@@ -230,7 +230,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["pinLowercaseLetters"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pinMinimumLength
     * Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
@@ -245,7 +245,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the pinMinimumLength
     * Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
@@ -259,7 +259,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["pinMinimumLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the pinSpecialCharacters
     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
@@ -278,7 +278,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the pinSpecialCharacters
     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
@@ -292,7 +292,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["pinSpecialCharacters"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pinUppercaseLetters
     * Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
@@ -311,7 +311,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the pinUppercaseLetters
     * Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
@@ -325,7 +325,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["pinUppercaseLetters"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the revokeOnMdmHandoffDisabled
     * New property in RS2, pending documentation
@@ -340,7 +340,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the revokeOnMdmHandoffDisabled
     * New property in RS2, pending documentation
@@ -354,7 +354,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["revokeOnMdmHandoffDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the windowsHelloForBusinessBlocked
     * Boolean value that sets Windows Hello for Business as a method for signing into Windows.
@@ -369,7 +369,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the windowsHelloForBusinessBlocked
     * Boolean value that sets Windows Hello for Business as a method for signing into Windows.
@@ -383,5 +383,5 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
         $this->_propDict["windowsHelloForBusinessBlocked"] = boolval($val);
         return $this;
     }
-    
+
 }

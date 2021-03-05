@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class EducationRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the classes
     * Read-only. Nullable.
      *
@@ -39,8 +39,8 @@ class EducationRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the classes
     * Read-only. Nullable.
     *
@@ -50,10 +50,10 @@ class EducationRoot extends Entity
     */
     public function setClasses($val)
     {
-		$this->_propDict["classes"] = $val;
+        $this->_propDict["classes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the me
     * Read-only. Nullable.
@@ -72,7 +72,7 @@ class EducationRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the me
     * Read-only. Nullable.
@@ -86,9 +86,9 @@ class EducationRoot extends Entity
         $this->_propDict["me"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the schools
     * Read-only. Nullable.
      *
@@ -102,8 +102,8 @@ class EducationRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the schools
     * Read-only. Nullable.
     *
@@ -113,12 +113,12 @@ class EducationRoot extends Entity
     */
     public function setSchools($val)
     {
-		$this->_propDict["schools"] = $val;
+        $this->_propDict["schools"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the users
     * Read-only. Nullable.
      *
@@ -132,8 +132,8 @@ class EducationRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the users
     * Read-only. Nullable.
     *
@@ -143,8 +143,8 @@ class EducationRoot extends Entity
     */
     public function setUsers($val)
     {
-		$this->_propDict["users"] = $val;
+        $this->_propDict["users"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the categories
     * The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer,Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
@@ -52,7 +52,7 @@ class ApplicationTemplate extends Entity
         $this->_propDict["categories"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * A description of the application.
@@ -67,7 +67,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * A description of the application.
@@ -81,7 +81,7 @@ class ApplicationTemplate extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the application.
@@ -96,7 +96,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the application.
@@ -110,7 +110,7 @@ class ApplicationTemplate extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the homePageUrl
     * The home page URL of the application.
@@ -125,7 +125,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the homePageUrl
     * The home page URL of the application.
@@ -139,7 +139,7 @@ class ApplicationTemplate extends Entity
         $this->_propDict["homePageUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the logoUrl
     * The URL to get the logo for this application.
@@ -154,7 +154,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the logoUrl
     * The URL to get the logo for this application.
@@ -168,7 +168,7 @@ class ApplicationTemplate extends Entity
         $this->_propDict["logoUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisher
     * The name of the publisher for this application.
@@ -183,7 +183,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publisher
     * The name of the publisher for this application.
@@ -197,7 +197,7 @@ class ApplicationTemplate extends Entity
         $this->_propDict["publisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supportedProvisioningTypes
     * The list of provisioning modes supported by this application. The only valid value is sync.
@@ -212,7 +212,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the supportedProvisioningTypes
     * The list of provisioning modes supported by this application. The only valid value is sync.
@@ -226,7 +226,7 @@ class ApplicationTemplate extends Entity
         $this->_propDict["supportedProvisioningTypes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supportedSingleSignOnModes
     * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
@@ -241,7 +241,7 @@ class ApplicationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the supportedSingleSignOnModes
     * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
@@ -255,5 +255,5 @@ class ApplicationTemplate extends Entity
         $this->_propDict["supportedSingleSignOnModes"] = $val;
         return $this;
     }
-    
+
 }

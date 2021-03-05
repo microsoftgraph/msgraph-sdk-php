@@ -42,7 +42,7 @@ class NotificationMessageTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the brandingOptions
     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
@@ -56,7 +56,7 @@ class NotificationMessageTemplate extends Entity
         $this->_propDict["brandingOptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultLocale
     * The default locale to fallback onto when the requested locale is not available.
@@ -71,7 +71,7 @@ class NotificationMessageTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultLocale
     * The default locale to fallback onto when the requested locale is not available.
@@ -85,7 +85,7 @@ class NotificationMessageTemplate extends Entity
         $this->_propDict["defaultLocale"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name for the Notification Message Template.
@@ -100,7 +100,7 @@ class NotificationMessageTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name for the Notification Message Template.
@@ -114,7 +114,7 @@ class NotificationMessageTemplate extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -133,7 +133,7 @@ class NotificationMessageTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -147,9 +147,9 @@ class NotificationMessageTemplate extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the localizedNotificationMessages
     * The list of localized messages for this Notification Message Template.
      *
@@ -163,8 +163,8 @@ class NotificationMessageTemplate extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the localizedNotificationMessages
     * The list of localized messages for this Notification Message Template.
     *
@@ -174,8 +174,8 @@ class NotificationMessageTemplate extends Entity
     */
     public function setLocalizedNotificationMessages($val)
     {
-		$this->_propDict["localizedNotificationMessages"] = $val;
+        $this->_propDict["localizedNotificationMessages"] = $val;
         return $this;
     }
-    
+
 }

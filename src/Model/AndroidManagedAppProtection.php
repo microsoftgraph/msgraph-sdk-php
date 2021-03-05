@@ -38,7 +38,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customBrowserDisplayName
     * Friendly name of the preferred custom browser to open weblink on Android.
@@ -52,7 +52,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["customBrowserDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customBrowserPackageId
     * Unique identifier of a custom browser to open weblink on Android.
@@ -67,7 +67,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the customBrowserPackageId
     * Unique identifier of a custom browser to open weblink on Android.
@@ -81,7 +81,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["customBrowserPackageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
@@ -96,7 +96,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the deployedAppCount
     * Count of apps to which the current policy is deployed.
@@ -110,7 +110,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["deployedAppCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled
     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
@@ -125,7 +125,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled
     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
@@ -139,7 +139,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["disableAppEncryptionIfDeviceEncryptionIsEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the encryptAppData
     * Indicates whether application data for managed apps should be encrypted
@@ -154,7 +154,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the encryptAppData
     * Indicates whether application data for managed apps should be encrypted
@@ -168,7 +168,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["encryptAppData"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the minimumRequiredPatchVersion
     * Define the oldest required Android security patch level a user can have to gain secure access to the app.
@@ -183,7 +183,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumRequiredPatchVersion
     * Define the oldest required Android security patch level a user can have to gain secure access to the app.
@@ -197,7 +197,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["minimumRequiredPatchVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumWarningPatchVersion
     * Define the oldest recommended Android security patch level a user can have for secure access to the app.
@@ -212,7 +212,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumWarningPatchVersion
     * Define the oldest recommended Android security patch level a user can have for secure access to the app.
@@ -226,7 +226,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["minimumWarningPatchVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the screenCaptureBlocked
     * Indicates whether a managed user can take screen captures of managed apps
@@ -241,7 +241,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the screenCaptureBlocked
     * Indicates whether a managed user can take screen captures of managed apps
@@ -255,9 +255,9 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["screenCaptureBlocked"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
@@ -271,8 +271,8 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the apps
     * List of apps to which the policy is deployed.
     *
@@ -282,10 +282,10 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     */
     public function setApps($val)
     {
-		$this->_propDict["apps"] = $val;
+        $this->_propDict["apps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
@@ -304,7 +304,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
@@ -318,5 +318,5 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
         $this->_propDict["deploymentSummary"] = $val;
         return $this;
     }
-    
+
 }

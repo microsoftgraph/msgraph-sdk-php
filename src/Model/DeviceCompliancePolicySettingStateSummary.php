@@ -38,7 +38,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the compliantDeviceCount
     * Number of compliant devices
@@ -52,7 +52,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["compliantDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the conflictDeviceCount
     * Number of conflict devices
@@ -67,7 +67,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the conflictDeviceCount
     * Number of conflict devices
@@ -81,7 +81,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["conflictDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorDeviceCount
     * Number of error devices
@@ -96,7 +96,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorDeviceCount
     * Number of error devices
@@ -110,7 +110,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["errorDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the nonCompliantDeviceCount
     * Number of NonCompliant devices
@@ -125,7 +125,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the nonCompliantDeviceCount
     * Number of NonCompliant devices
@@ -139,7 +139,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["nonCompliantDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the notApplicableDeviceCount
     * Number of not applicable devices
@@ -154,7 +154,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notApplicableDeviceCount
     * Number of not applicable devices
@@ -168,7 +168,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["notApplicableDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the platformType
     * Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
@@ -187,7 +187,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platformType
     * Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
@@ -201,7 +201,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["platformType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the remediatedDeviceCount
     * Number of remediated devices
@@ -216,7 +216,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediatedDeviceCount
     * Number of remediated devices
@@ -230,7 +230,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["remediatedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the setting
     * The setting class name and property name.
@@ -245,7 +245,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the setting
     * The setting class name and property name.
@@ -259,7 +259,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["setting"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingName
     * Name of the setting.
@@ -274,7 +274,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the settingName
     * Name of the setting.
@@ -288,7 +288,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["settingName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unknownDeviceCount
     * Number of unknown devices
@@ -303,7 +303,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the unknownDeviceCount
     * Number of unknown devices
@@ -317,9 +317,9 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
         $this->_propDict["unknownDeviceCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceComplianceSettingStates
     * Not yet documented
      *
@@ -333,8 +333,8 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceComplianceSettingStates
     * Not yet documented
     *
@@ -344,8 +344,8 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     */
     public function setDeviceComplianceSettingStates($val)
     {
-		$this->_propDict["deviceComplianceSettingStates"] = $val;
+        $this->_propDict["deviceComplianceSettingStates"] = $val;
         return $this;
     }
-    
+
 }

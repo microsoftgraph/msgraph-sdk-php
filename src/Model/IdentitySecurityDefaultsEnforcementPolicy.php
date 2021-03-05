@@ -38,7 +38,7 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * If set to true, Azure Active Directory security defaults is enabled for the tenant.
@@ -52,5 +52,5 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
 }

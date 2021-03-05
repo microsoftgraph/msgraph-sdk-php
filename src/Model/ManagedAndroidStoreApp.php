@@ -38,7 +38,7 @@ class ManagedAndroidStoreApp extends ManagedApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Android AppStoreUrl.
@@ -52,7 +52,7 @@ class ManagedAndroidStoreApp extends ManagedApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum supported operating system.
@@ -71,7 +71,7 @@ class ManagedAndroidStoreApp extends ManagedApp
         }
         return null;
     }
-    
+
     /**
     * Sets the minimumSupportedOperatingSystem
     * The value for the minimum supported operating system.
@@ -85,7 +85,7 @@ class ManagedAndroidStoreApp extends ManagedApp
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the packageId
     * The app's package ID.
@@ -100,7 +100,7 @@ class ManagedAndroidStoreApp extends ManagedApp
             return null;
         }
     }
-    
+
     /**
     * Sets the packageId
     * The app's package ID.
@@ -114,5 +114,5 @@ class ManagedAndroidStoreApp extends ManagedApp
         $this->_propDict["packageId"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class Notebook extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     * Indicates whether this is the user's default notebook. Read-only.
@@ -52,7 +52,7 @@ class Notebook extends OnenoteEntityHierarchyModel
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isShared
     * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
@@ -67,7 +67,7 @@ class Notebook extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the isShared
     * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
@@ -81,7 +81,7 @@ class Notebook extends OnenoteEntityHierarchyModel
         $this->_propDict["isShared"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the links
     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
@@ -100,7 +100,7 @@ class Notebook extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
+
     /**
     * Sets the links
     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
@@ -114,7 +114,7 @@ class Notebook extends OnenoteEntityHierarchyModel
         $this->_propDict["links"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sectionGroupsUrl
     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
@@ -129,7 +129,7 @@ class Notebook extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the sectionGroupsUrl
     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
@@ -143,7 +143,7 @@ class Notebook extends OnenoteEntityHierarchyModel
         $this->_propDict["sectionGroupsUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sectionsUrl
     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
@@ -158,7 +158,7 @@ class Notebook extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the sectionsUrl
     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
@@ -172,7 +172,7 @@ class Notebook extends OnenoteEntityHierarchyModel
         $this->_propDict["sectionsUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userRole
     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
@@ -191,7 +191,7 @@ class Notebook extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
+
     /**
     * Sets the userRole
     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
@@ -205,9 +205,9 @@ class Notebook extends OnenoteEntityHierarchyModel
         $this->_propDict["userRole"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sectionGroups
     * The section groups in the notebook. Read-only. Nullable.
      *
@@ -221,8 +221,8 @@ class Notebook extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sectionGroups
     * The section groups in the notebook. Read-only. Nullable.
     *
@@ -232,12 +232,12 @@ class Notebook extends OnenoteEntityHierarchyModel
     */
     public function setSectionGroups($val)
     {
-		$this->_propDict["sectionGroups"] = $val;
+        $this->_propDict["sectionGroups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sections
     * The sections in the notebook. Read-only. Nullable.
      *
@@ -251,8 +251,8 @@ class Notebook extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sections
     * The sections in the notebook. Read-only. Nullable.
     *
@@ -262,8 +262,8 @@ class Notebook extends OnenoteEntityHierarchyModel
     */
     public function setSections($val)
     {
-		$this->_propDict["sections"] = $val;
+        $this->_propDict["sections"] = $val;
         return $this;
     }
-    
+
 }

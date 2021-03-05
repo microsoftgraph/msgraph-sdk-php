@@ -38,7 +38,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appsBlockClipboardSharing
     * Indicates whether or not to block clipboard sharing to copy and paste between applications.
@@ -52,7 +52,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appsBlockClipboardSharing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appsBlockCopyPaste
     * Indicates whether or not to block copy and paste within applications.
@@ -67,7 +67,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appsBlockCopyPaste
     * Indicates whether or not to block copy and paste within applications.
@@ -81,7 +81,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appsBlockCopyPaste"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appsBlockYouTube
     * Indicates whether or not to block the YouTube app.
@@ -96,7 +96,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appsBlockYouTube
     * Indicates whether or not to block the YouTube app.
@@ -110,9 +110,9 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appsBlockYouTube"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appsHideList
     * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
      *
@@ -126,8 +126,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appsHideList
     * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
     *
@@ -137,12 +137,12 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function setAppsHideList($val)
     {
-		$this->_propDict["appsHideList"] = $val;
+        $this->_propDict["appsHideList"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appsInstallAllowList
     * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
      *
@@ -156,8 +156,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appsInstallAllowList
     * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
     *
@@ -167,12 +167,12 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function setAppsInstallAllowList($val)
     {
-		$this->_propDict["appsInstallAllowList"] = $val;
+        $this->_propDict["appsInstallAllowList"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appsLaunchBlockList
     * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
      *
@@ -186,8 +186,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appsLaunchBlockList
     * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
     *
@@ -197,10 +197,10 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function setAppsLaunchBlockList($val)
     {
-		$this->_propDict["appsLaunchBlockList"] = $val;
+        $this->_propDict["appsLaunchBlockList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bluetoothBlocked
     * Indicates whether or not to block Bluetooth.
@@ -215,7 +215,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the bluetoothBlocked
     * Indicates whether or not to block Bluetooth.
@@ -229,7 +229,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["bluetoothBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cameraBlocked
     * Indicates whether or not to block the use of the camera.
@@ -244,7 +244,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cameraBlocked
     * Indicates whether or not to block the use of the camera.
@@ -258,7 +258,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cameraBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockDataRoaming
     * Indicates whether or not to block data roaming.
@@ -273,7 +273,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockDataRoaming
     * Indicates whether or not to block data roaming.
@@ -287,7 +287,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockDataRoaming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockMessaging
     * Indicates whether or not to block SMS/MMS messaging.
@@ -302,7 +302,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockMessaging
     * Indicates whether or not to block SMS/MMS messaging.
@@ -316,7 +316,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockMessaging"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockVoiceRoaming
     * Indicates whether or not to block voice roaming.
@@ -331,7 +331,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockVoiceRoaming
     * Indicates whether or not to block voice roaming.
@@ -345,7 +345,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockVoiceRoaming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockWiFiTethering
     * Indicates whether or not to block syncing Wi-Fi tethering.
@@ -360,7 +360,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockWiFiTethering
     * Indicates whether or not to block syncing Wi-Fi tethering.
@@ -374,7 +374,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockWiFiTethering"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the compliantAppListType
     * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -393,7 +393,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the compliantAppListType
     * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -407,9 +407,9 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["compliantAppListType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
@@ -423,8 +423,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
@@ -434,10 +434,10 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function setCompliantAppsList($val)
     {
-		$this->_propDict["compliantAppsList"] = $val;
+        $this->_propDict["compliantAppsList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceSharingAllowed
     * Indicates whether or not to allow device sharing mode.
@@ -452,7 +452,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceSharingAllowed
     * Indicates whether or not to allow device sharing mode.
@@ -466,7 +466,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["deviceSharingAllowed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the diagnosticDataBlockSubmission
     * Indicates whether or not to block diagnostic data submission.
@@ -481,7 +481,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the diagnosticDataBlockSubmission
     * Indicates whether or not to block diagnostic data submission.
@@ -495,7 +495,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["diagnosticDataBlockSubmission"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the factoryResetBlocked
     * Indicates whether or not to block user performing a factory reset.
@@ -510,7 +510,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the factoryResetBlocked
     * Indicates whether or not to block user performing a factory reset.
@@ -524,7 +524,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["factoryResetBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the googleAccountBlockAutoSync
     * Indicates whether or not to block Google account auto sync.
@@ -539,7 +539,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the googleAccountBlockAutoSync
     * Indicates whether or not to block Google account auto sync.
@@ -553,7 +553,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["googleAccountBlockAutoSync"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the googlePlayStoreBlocked
     * Indicates whether or not to block the Google Play store.
@@ -568,7 +568,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the googlePlayStoreBlocked
     * Indicates whether or not to block the Google Play store.
@@ -582,9 +582,9 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["googlePlayStoreBlocked"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the kioskModeApps
     * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
      *
@@ -598,8 +598,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the kioskModeApps
     * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
     *
@@ -609,10 +609,10 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function setKioskModeApps($val)
     {
-		$this->_propDict["kioskModeApps"] = $val;
+        $this->_propDict["kioskModeApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeBlockSleepButton
     * Indicates whether or not to block the screen sleep button while in Kiosk Mode.
@@ -627,7 +627,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeBlockSleepButton
     * Indicates whether or not to block the screen sleep button while in Kiosk Mode.
@@ -641,7 +641,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeBlockSleepButton"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeBlockVolumeButtons
     * Indicates whether or not to block the volume buttons while in Kiosk Mode.
@@ -656,7 +656,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeBlockVolumeButtons
     * Indicates whether or not to block the volume buttons while in Kiosk Mode.
@@ -670,7 +670,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeBlockVolumeButtons"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the locationServicesBlocked
     * Indicates whether or not to block location services.
@@ -685,7 +685,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the locationServicesBlocked
     * Indicates whether or not to block location services.
@@ -699,7 +699,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["locationServicesBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the nfcBlocked
     * Indicates whether or not to block Near-Field Communication.
@@ -714,7 +714,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the nfcBlocked
     * Indicates whether or not to block Near-Field Communication.
@@ -728,7 +728,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["nfcBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockFingerprintUnlock
     * Indicates whether or not to block fingerprint unlock.
@@ -743,7 +743,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockFingerprintUnlock
     * Indicates whether or not to block fingerprint unlock.
@@ -757,7 +757,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockFingerprintUnlock"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordBlockTrustAgents
     * Indicates whether or not to block Smart Lock and other trust agents.
@@ -772,7 +772,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordBlockTrustAgents
     * Indicates whether or not to block Smart Lock and other trust agents.
@@ -786,7 +786,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordBlockTrustAgents"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordExpirationDays
     * Number of days before the password expires. Valid values 1 to 365
@@ -801,7 +801,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordExpirationDays
     * Number of days before the password expires. Valid values 1 to 365
@@ -815,7 +815,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordExpirationDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinimumLength
     * Minimum length of passwords. Valid values 4 to 16
@@ -830,7 +830,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinimumLength
     * Minimum length of passwords. Valid values 4 to 16
@@ -844,7 +844,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinimumLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity before the screen times out.
@@ -859,7 +859,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity before the screen times out.
@@ -873,7 +873,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordMinutesOfInactivityBeforeScreenTimeout"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 0 to 24
@@ -888,7 +888,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 0 to 24
@@ -902,7 +902,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordPreviousPasswordBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequired
     * Indicates whether or not to require a password.
@@ -917,7 +917,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordRequired
     * Indicates whether or not to require a password.
@@ -931,7 +931,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passwordRequiredType
     * Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
@@ -950,7 +950,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the passwordRequiredType
     * Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
@@ -964,7 +964,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordRequiredType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passwordSignInFailureCountBeforeFactoryReset
     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
@@ -979,7 +979,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passwordSignInFailureCountBeforeFactoryReset
     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
@@ -993,7 +993,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passwordSignInFailureCountBeforeFactoryReset"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the powerOffBlocked
     * Indicates whether or not to block powering off the device.
@@ -1008,7 +1008,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the powerOffBlocked
     * Indicates whether or not to block powering off the device.
@@ -1022,7 +1022,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["powerOffBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the screenCaptureBlocked
     * Indicates whether or not to block screenshots.
@@ -1037,7 +1037,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the screenCaptureBlocked
     * Indicates whether or not to block screenshots.
@@ -1051,7 +1051,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["screenCaptureBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the securityRequireVerifyApps
     * Require the Android Verify apps feature is turned on.
@@ -1066,7 +1066,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the securityRequireVerifyApps
     * Require the Android Verify apps feature is turned on.
@@ -1080,7 +1080,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["securityRequireVerifyApps"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageBlockGoogleBackup
     * Indicates whether or not to block Google Backup.
@@ -1095,7 +1095,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the storageBlockGoogleBackup
     * Indicates whether or not to block Google Backup.
@@ -1109,7 +1109,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["storageBlockGoogleBackup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageBlockRemovableStorage
     * Indicates whether or not to block removable storage usage.
@@ -1124,7 +1124,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the storageBlockRemovableStorage
     * Indicates whether or not to block removable storage usage.
@@ -1138,7 +1138,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["storageBlockRemovableStorage"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageRequireDeviceEncryption
     * Indicates whether or not to require device encryption.
@@ -1153,7 +1153,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the storageRequireDeviceEncryption
     * Indicates whether or not to require device encryption.
@@ -1167,7 +1167,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["storageRequireDeviceEncryption"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageRequireRemovableStorageEncryption
     * Indicates whether or not to require removable storage encryption.
@@ -1182,7 +1182,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the storageRequireRemovableStorageEncryption
     * Indicates whether or not to require removable storage encryption.
@@ -1196,7 +1196,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["storageRequireRemovableStorageEncryption"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the voiceAssistantBlocked
     * Indicates whether or not to block the use of the Voice Assistant.
@@ -1211,7 +1211,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the voiceAssistantBlocked
     * Indicates whether or not to block the use of the Voice Assistant.
@@ -1225,7 +1225,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["voiceAssistantBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the voiceDialingBlocked
     * Indicates whether or not to block voice dialing.
@@ -1240,7 +1240,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the voiceDialingBlocked
     * Indicates whether or not to block voice dialing.
@@ -1254,7 +1254,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["voiceDialingBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the webBrowserBlockAutofill
     * Indicates whether or not to block the web browser's auto fill feature.
@@ -1269,7 +1269,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the webBrowserBlockAutofill
     * Indicates whether or not to block the web browser's auto fill feature.
@@ -1283,7 +1283,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["webBrowserBlockAutofill"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the webBrowserBlocked
     * Indicates whether or not to block the web browser.
@@ -1298,7 +1298,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the webBrowserBlocked
     * Indicates whether or not to block the web browser.
@@ -1312,7 +1312,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["webBrowserBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the webBrowserBlockJavaScript
     * Indicates whether or not to block JavaScript within the web browser.
@@ -1327,7 +1327,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the webBrowserBlockJavaScript
     * Indicates whether or not to block JavaScript within the web browser.
@@ -1341,7 +1341,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["webBrowserBlockJavaScript"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the webBrowserBlockPopups
     * Indicates whether or not to block popups within the web browser.
@@ -1356,7 +1356,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the webBrowserBlockPopups
     * Indicates whether or not to block popups within the web browser.
@@ -1370,7 +1370,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["webBrowserBlockPopups"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the webBrowserCookieSettings
     * Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
@@ -1389,7 +1389,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the webBrowserCookieSettings
     * Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
@@ -1403,7 +1403,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["webBrowserCookieSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the wiFiBlocked
     * Indicates whether or not to block syncing Wi-Fi.
@@ -1418,7 +1418,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the wiFiBlocked
     * Indicates whether or not to block syncing Wi-Fi.
@@ -1432,5 +1432,5 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["wiFiBlocked"] = boolval($val);
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Organization extends DirectoryObject
 {
 
-     /** 
+     /**
      * Gets the assignedPlans
     * The collection of service plans associated with the tenant. Not nullable.
      *
@@ -39,8 +39,8 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignedPlans
     * The collection of service plans associated with the tenant. Not nullable.
     *
@@ -50,10 +50,10 @@ class Organization extends DirectoryObject
     */
     public function setAssignedPlans($val)
     {
-		$this->_propDict["assignedPlans"] = $val;
+        $this->_propDict["assignedPlans"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the businessPhones
     * Telephone number for the organization. Note: Although this is a string collection, only one number can be set for this property.
@@ -68,7 +68,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the businessPhones
     * Telephone number for the organization. Note: Although this is a string collection, only one number can be set for this property.
@@ -82,7 +82,7 @@ class Organization extends DirectoryObject
         $this->_propDict["businessPhones"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the city
     * City name of the address for the organization.
@@ -97,7 +97,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the city
     * City name of the address for the organization.
@@ -111,7 +111,7 @@ class Organization extends DirectoryObject
         $this->_propDict["city"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the country
     * Country/region name of the address for the organization.
@@ -126,7 +126,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the country
     * Country/region name of the address for the organization.
@@ -140,7 +140,7 @@ class Organization extends DirectoryObject
         $this->_propDict["country"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the countryLetterCode
     * Country/region abbreviation for the organization.
@@ -155,7 +155,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the countryLetterCode
     * Country/region abbreviation for the organization.
@@ -169,7 +169,7 @@ class Organization extends DirectoryObject
         $this->_propDict["countryLetterCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -188,7 +188,7 @@ class Organization extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
@@ -202,7 +202,7 @@ class Organization extends DirectoryObject
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the tenant.
@@ -217,7 +217,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the tenant.
@@ -231,7 +231,7 @@ class Organization extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the marketingNotificationEmails
     * Not nullable.
@@ -246,7 +246,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the marketingNotificationEmails
     * Not nullable.
@@ -260,7 +260,7 @@ class Organization extends DirectoryObject
         $this->_propDict["marketingNotificationEmails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesLastSyncDateTime
     * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -279,7 +279,7 @@ class Organization extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the onPremisesLastSyncDateTime
     * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -293,7 +293,7 @@ class Organization extends DirectoryObject
         $this->_propDict["onPremisesLastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesSyncEnabled
     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
@@ -308,7 +308,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesSyncEnabled
     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
@@ -322,7 +322,7 @@ class Organization extends DirectoryObject
         $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the postalCode
     * Postal code of the address for the organization.
@@ -337,7 +337,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the postalCode
     * Postal code of the address for the organization.
@@ -351,7 +351,7 @@ class Organization extends DirectoryObject
         $this->_propDict["postalCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preferredLanguage
     * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
@@ -366,7 +366,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the preferredLanguage
     * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
@@ -380,7 +380,7 @@ class Organization extends DirectoryObject
         $this->_propDict["preferredLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the privacyProfile
     * The privacy profile of an organization.
@@ -399,7 +399,7 @@ class Organization extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the privacyProfile
     * The privacy profile of an organization.
@@ -413,9 +413,9 @@ class Organization extends DirectoryObject
         $this->_propDict["privacyProfile"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the provisionedPlans
     * Not nullable.
      *
@@ -429,8 +429,8 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the provisionedPlans
     * Not nullable.
     *
@@ -440,10 +440,10 @@ class Organization extends DirectoryObject
     */
     public function setProvisionedPlans($val)
     {
-		$this->_propDict["provisionedPlans"] = $val;
+        $this->_propDict["provisionedPlans"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the securityComplianceNotificationMails
     *
@@ -457,7 +457,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the securityComplianceNotificationMails
     *
@@ -470,7 +470,7 @@ class Organization extends DirectoryObject
         $this->_propDict["securityComplianceNotificationMails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the securityComplianceNotificationPhones
     *
@@ -484,7 +484,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the securityComplianceNotificationPhones
     *
@@ -497,7 +497,7 @@ class Organization extends DirectoryObject
         $this->_propDict["securityComplianceNotificationPhones"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * State name of the address for the organization.
@@ -512,7 +512,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the state
     * State name of the address for the organization.
@@ -526,7 +526,7 @@ class Organization extends DirectoryObject
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the street
     * Street name of the address for organization.
@@ -541,7 +541,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the street
     * Street name of the address for organization.
@@ -555,7 +555,7 @@ class Organization extends DirectoryObject
         $this->_propDict["street"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the technicalNotificationMails
     * Not nullable.
@@ -570,7 +570,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the technicalNotificationMails
     * Not nullable.
@@ -584,7 +584,7 @@ class Organization extends DirectoryObject
         $this->_propDict["technicalNotificationMails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantType
     *
@@ -598,7 +598,7 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantType
     *
@@ -611,9 +611,9 @@ class Organization extends DirectoryObject
         $this->_propDict["tenantType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the verifiedDomains
     * The collection of domains associated with this tenant. Not nullable.
      *
@@ -627,8 +627,8 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the verifiedDomains
     * The collection of domains associated with this tenant. Not nullable.
     *
@@ -638,10 +638,10 @@ class Organization extends DirectoryObject
     */
     public function setVerifiedDomains($val)
     {
-		$this->_propDict["verifiedDomains"] = $val;
+        $this->_propDict["verifiedDomains"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mobileDeviceManagementAuthority
     * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
@@ -660,7 +660,7 @@ class Organization extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the mobileDeviceManagementAuthority
     * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
@@ -674,9 +674,40 @@ class Organization extends DirectoryObject
         $this->_propDict["mobileDeviceManagementAuthority"] = $val;
         return $this;
     }
-    
 
-     /** 
+    /**
+    * Gets the branding
+    *
+    * @return OrganizationalBranding The branding
+    */
+    public function getBranding()
+    {
+        if (array_key_exists("branding", $this->_propDict)) {
+            if (is_a($this->_propDict["branding"], "Microsoft\Graph\Model\OrganizationalBranding")) {
+                return $this->_propDict["branding"];
+            } else {
+                $this->_propDict["branding"] = new OrganizationalBranding($this->_propDict["branding"]);
+                return $this->_propDict["branding"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the branding
+    *
+    * @param OrganizationalBranding $val The branding
+    *
+    * @return Organization
+    */
+    public function setBranding($val)
+    {
+        $this->_propDict["branding"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the certificateBasedAuthConfiguration
     * Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      *
@@ -690,8 +721,8 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the certificateBasedAuthConfiguration
     * Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
     *
@@ -701,12 +732,12 @@ class Organization extends DirectoryObject
     */
     public function setCertificateBasedAuthConfiguration($val)
     {
-		$this->_propDict["certificateBasedAuthConfiguration"] = $val;
+        $this->_propDict["certificateBasedAuthConfiguration"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extensions
     * The collection of open extensions defined for the organization resource. Nullable.
      *
@@ -720,8 +751,8 @@ class Organization extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extensions
     * The collection of open extensions defined for the organization resource. Nullable.
     *
@@ -731,8 +762,8 @@ class Organization extends DirectoryObject
     */
     public function setExtensions($val)
     {
-		$this->_propDict["extensions"] = $val;
+        $this->_propDict["extensions"] = $val;
         return $this;
     }
-    
+
 }

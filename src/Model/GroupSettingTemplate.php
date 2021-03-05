@@ -38,7 +38,7 @@ class GroupSettingTemplate extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the template.
@@ -52,7 +52,7 @@ class GroupSettingTemplate extends DirectoryObject
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the template.
@@ -67,7 +67,7 @@ class GroupSettingTemplate extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the template.
@@ -81,9 +81,9 @@ class GroupSettingTemplate extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the values
     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      *
@@ -97,8 +97,8 @@ class GroupSettingTemplate extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the values
     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
     *
@@ -108,8 +108,8 @@ class GroupSettingTemplate extends DirectoryObject
     */
     public function setValues($val)
     {
-		$this->_propDict["values"] = $val;
+        $this->_propDict["values"] = $val;
         return $this;
     }
-    
+
 }

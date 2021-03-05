@@ -42,7 +42,7 @@ class DeviceConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the device configuration.
@@ -56,5 +56,5 @@ class DeviceConfigurationAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

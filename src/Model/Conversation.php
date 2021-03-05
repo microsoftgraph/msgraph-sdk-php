@@ -38,7 +38,7 @@ class Conversation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasAttachments
     * Indicates whether any of the posts within this Conversation has at least one attachment.
@@ -52,7 +52,7 @@ class Conversation extends Entity
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastDeliveredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -71,7 +71,7 @@ class Conversation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastDeliveredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -85,7 +85,7 @@ class Conversation extends Entity
         $this->_propDict["lastDeliveredDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preview
     * A short summary from the body of the latest post in this converstaion.
@@ -100,7 +100,7 @@ class Conversation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the preview
     * A short summary from the body of the latest post in this converstaion.
@@ -114,7 +114,7 @@ class Conversation extends Entity
         $this->_propDict["preview"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the topic
     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
@@ -129,7 +129,7 @@ class Conversation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the topic
     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
@@ -143,7 +143,7 @@ class Conversation extends Entity
         $this->_propDict["topic"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uniqueSenders
     * All the users that sent a message to this Conversation.
@@ -158,7 +158,7 @@ class Conversation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the uniqueSenders
     * All the users that sent a message to this Conversation.
@@ -172,9 +172,9 @@ class Conversation extends Entity
         $this->_propDict["uniqueSenders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the threads
     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      *
@@ -188,8 +188,8 @@ class Conversation extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the threads
     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
     *
@@ -199,8 +199,8 @@ class Conversation extends Entity
     */
     public function setThreads($val)
     {
-		$this->_propDict["threads"] = $val;
+        $this->_propDict["threads"] = $val;
         return $this;
     }
-    
+
 }

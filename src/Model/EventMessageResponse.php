@@ -41,7 +41,7 @@ class EventMessageResponse extends EventMessage
         }
         return null;
     }
-    
+
     /**
     * Sets the proposedNewTime
     *
@@ -54,7 +54,7 @@ class EventMessageResponse extends EventMessage
         $this->_propDict["proposedNewTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the responseType
     *
@@ -72,7 +72,7 @@ class EventMessageResponse extends EventMessage
         }
         return null;
     }
-    
+
     /**
     * Sets the responseType
     *
@@ -85,5 +85,5 @@ class EventMessageResponse extends EventMessage
         $this->_propDict["responseType"] = $val;
         return $this;
     }
-    
+
 }

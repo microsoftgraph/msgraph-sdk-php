@@ -38,7 +38,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the address
     * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
@@ -52,7 +52,7 @@ class WorkbookRange extends Entity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the addressLocal
     * Represents range reference for the specified range in the language of the user. Read-only.
@@ -67,7 +67,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the addressLocal
     * Represents range reference for the specified range in the language of the user. Read-only.
@@ -81,7 +81,7 @@ class WorkbookRange extends Entity
         $this->_propDict["addressLocal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cellCount
     * Number of cells in the range. Read-only.
@@ -96,7 +96,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the cellCount
     * Number of cells in the range. Read-only.
@@ -110,7 +110,7 @@ class WorkbookRange extends Entity
         $this->_propDict["cellCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the columnCount
     * Represents the total number of columns in the range. Read-only.
@@ -125,7 +125,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the columnCount
     * Represents the total number of columns in the range. Read-only.
@@ -139,7 +139,7 @@ class WorkbookRange extends Entity
         $this->_propDict["columnCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the columnHidden
     * Represents if all columns of the current range are hidden.
@@ -154,7 +154,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the columnHidden
     * Represents if all columns of the current range are hidden.
@@ -168,7 +168,7 @@ class WorkbookRange extends Entity
         $this->_propDict["columnHidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the columnIndex
     * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
@@ -183,7 +183,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the columnIndex
     * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
@@ -197,7 +197,7 @@ class WorkbookRange extends Entity
         $this->_propDict["columnIndex"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the formulas
     * Represents the formula in A1-style notation.
@@ -212,7 +212,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the formulas
     * Represents the formula in A1-style notation.
@@ -226,7 +226,7 @@ class WorkbookRange extends Entity
         $this->_propDict["formulas"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the formulasLocal
     * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
@@ -241,7 +241,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the formulasLocal
     * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
@@ -255,7 +255,7 @@ class WorkbookRange extends Entity
         $this->_propDict["formulasLocal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the formulasR1C1
     * Represents the formula in R1C1-style notation.
@@ -270,7 +270,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the formulasR1C1
     * Represents the formula in R1C1-style notation.
@@ -284,7 +284,7 @@ class WorkbookRange extends Entity
         $this->_propDict["formulasR1C1"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hidden
     * Represents if all cells of the current range are hidden. Read-only.
@@ -299,7 +299,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hidden
     * Represents if all cells of the current range are hidden. Read-only.
@@ -313,7 +313,7 @@ class WorkbookRange extends Entity
         $this->_propDict["hidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the numberFormat
     * Represents Excel's number format code for the given cell.
@@ -328,7 +328,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the numberFormat
     * Represents Excel's number format code for the given cell.
@@ -342,7 +342,7 @@ class WorkbookRange extends Entity
         $this->_propDict["numberFormat"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the rowCount
     * Returns the total number of rows in the range. Read-only.
@@ -357,7 +357,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rowCount
     * Returns the total number of rows in the range. Read-only.
@@ -371,7 +371,7 @@ class WorkbookRange extends Entity
         $this->_propDict["rowCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the rowHidden
     * Represents if all rows of the current range are hidden.
@@ -386,7 +386,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rowHidden
     * Represents if all rows of the current range are hidden.
@@ -400,7 +400,7 @@ class WorkbookRange extends Entity
         $this->_propDict["rowHidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the rowIndex
     * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
@@ -415,7 +415,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rowIndex
     * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
@@ -429,7 +429,7 @@ class WorkbookRange extends Entity
         $this->_propDict["rowIndex"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the text
     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
@@ -444,7 +444,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the text
     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
@@ -458,7 +458,7 @@ class WorkbookRange extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the values
     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -473,7 +473,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the values
     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
@@ -487,7 +487,7 @@ class WorkbookRange extends Entity
         $this->_propDict["values"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the valueTypes
     * Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
@@ -502,7 +502,7 @@ class WorkbookRange extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the valueTypes
     * Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
@@ -516,7 +516,7 @@ class WorkbookRange extends Entity
         $this->_propDict["valueTypes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
@@ -535,7 +535,7 @@ class WorkbookRange extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
@@ -549,7 +549,7 @@ class WorkbookRange extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sort
     * The worksheet containing the current range. Read-only.
@@ -568,7 +568,7 @@ class WorkbookRange extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sort
     * The worksheet containing the current range. Read-only.
@@ -582,7 +582,7 @@ class WorkbookRange extends Entity
         $this->_propDict["sort"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the worksheet
     * The worksheet containing the current range. Read-only.
@@ -601,7 +601,7 @@ class WorkbookRange extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the worksheet
     * The worksheet containing the current range. Read-only.
@@ -615,5 +615,5 @@ class WorkbookRange extends Entity
         $this->_propDict["worksheet"] = $val;
         return $this;
     }
-    
+
 }

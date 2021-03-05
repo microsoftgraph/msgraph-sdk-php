@@ -42,7 +42,7 @@ class ChangeTrackedEntity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -56,7 +56,7 @@ class ChangeTrackedEntity extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     * Identity of the person who last modified the entity.
@@ -75,7 +75,7 @@ class ChangeTrackedEntity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     * Identity of the person who last modified the entity.
@@ -89,7 +89,7 @@ class ChangeTrackedEntity extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -108,7 +108,7 @@ class ChangeTrackedEntity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
@@ -122,5 +122,5 @@ class ChangeTrackedEntity extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

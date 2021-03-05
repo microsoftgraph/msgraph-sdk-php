@@ -38,7 +38,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the object returned. Read-only.
@@ -52,7 +52,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of directory object being returned, like group or application. Read-only.
@@ -67,7 +67,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of directory object being returned, like group or application. Read-only.
@@ -81,7 +81,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalPartnerTenantId
     * The tenant identifier for the partner tenant. Read-only.
@@ -96,7 +96,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the externalPartnerTenantId
     * The tenant identifier for the partner tenant. Read-only.
@@ -110,7 +110,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
         $this->_propDict["externalPartnerTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the objectType
     * The type of the referenced object in the partner tenant. Read-only.
@@ -125,7 +125,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the objectType
     * The type of the referenced object in the partner tenant. Read-only.
@@ -139,5 +139,5 @@ class DirectoryObjectPartnerReference extends DirectoryObject
         $this->_propDict["objectType"] = $val;
         return $this;
     }
-    
+
 }

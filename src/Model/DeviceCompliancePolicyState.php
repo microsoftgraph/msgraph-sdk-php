@@ -38,7 +38,7 @@ class DeviceCompliancePolicyState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the policy for this policyBase
@@ -52,7 +52,7 @@ class DeviceCompliancePolicyState extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platformType
     * Platform type that the policy applies to
@@ -71,7 +71,7 @@ class DeviceCompliancePolicyState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the platformType
     * Platform type that the policy applies to
@@ -85,7 +85,7 @@ class DeviceCompliancePolicyState extends Entity
         $this->_propDict["platformType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingCount
     * Count of how many setting a policy holds
@@ -100,7 +100,7 @@ class DeviceCompliancePolicyState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the settingCount
     * Count of how many setting a policy holds
@@ -114,9 +114,9 @@ class DeviceCompliancePolicyState extends Entity
         $this->_propDict["settingCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settingStates
      *
      * @return array The settingStates
@@ -129,8 +129,8 @@ class DeviceCompliancePolicyState extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settingStates
     *
     * @param DeviceCompliancePolicySettingState $val The settingStates
@@ -139,10 +139,10 @@ class DeviceCompliancePolicyState extends Entity
     */
     public function setSettingStates($val)
     {
-		$this->_propDict["settingStates"] = $val;
+        $this->_propDict["settingStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * The compliance state of the policy
@@ -161,7 +161,7 @@ class DeviceCompliancePolicyState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * The compliance state of the policy
@@ -175,7 +175,7 @@ class DeviceCompliancePolicyState extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The version of the policy
@@ -190,7 +190,7 @@ class DeviceCompliancePolicyState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version of the policy
@@ -204,5 +204,5 @@ class DeviceCompliancePolicyState extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
+
 }

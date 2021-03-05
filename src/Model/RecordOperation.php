@@ -38,7 +38,7 @@ class RecordOperation extends CommsOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the recordingAccessToken
     * The access token required to retrieve the recording.
@@ -52,7 +52,7 @@ class RecordOperation extends CommsOperation
         $this->_propDict["recordingAccessToken"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recordingLocation
     * The location where the recording is located.
@@ -67,7 +67,7 @@ class RecordOperation extends CommsOperation
             return null;
         }
     }
-    
+
     /**
     * Sets the recordingLocation
     * The location where the recording is located.
@@ -81,5 +81,5 @@ class RecordOperation extends CommsOperation
         $this->_propDict["recordingLocation"] = $val;
         return $this;
     }
-    
+
 }

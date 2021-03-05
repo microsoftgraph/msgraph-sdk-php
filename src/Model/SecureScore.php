@@ -38,7 +38,7 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeUserCount
     * Active user count of the given tenant.
@@ -52,9 +52,9 @@ class SecureScore extends Entity
         $this->_propDict["activeUserCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the averageComparativeScores
     * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      *
@@ -68,8 +68,8 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the averageComparativeScores
     * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
     *
@@ -79,10 +79,10 @@ class SecureScore extends Entity
     */
     public function setAverageComparativeScores($val)
     {
-		$this->_propDict["averageComparativeScores"] = $val;
+        $this->_propDict["averageComparativeScores"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     * GUID string for tenant ID.
@@ -97,7 +97,7 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     * GUID string for tenant ID.
@@ -111,9 +111,9 @@ class SecureScore extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the controlScores
     * Contains tenant scores for a set of controls.
      *
@@ -127,8 +127,8 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the controlScores
     * Contains tenant scores for a set of controls.
     *
@@ -138,10 +138,10 @@ class SecureScore extends Entity
     */
     public function setControlScores($val)
     {
-		$this->_propDict["controlScores"] = $val;
+        $this->_propDict["controlScores"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date when the entity is created.
@@ -160,7 +160,7 @@ class SecureScore extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date when the entity is created.
@@ -174,7 +174,7 @@ class SecureScore extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currentScore
     * Tenant current attained score on specified date.
@@ -189,7 +189,7 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the currentScore
     * Tenant current attained score on specified date.
@@ -203,7 +203,7 @@ class SecureScore extends Entity
         $this->_propDict["currentScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enabledServices
     * Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
@@ -218,7 +218,7 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enabledServices
     * Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
@@ -232,7 +232,7 @@ class SecureScore extends Entity
         $this->_propDict["enabledServices"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the licensedUserCount
     * Licensed user count of the given tenant.
@@ -247,7 +247,7 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the licensedUserCount
     * Licensed user count of the given tenant.
@@ -261,7 +261,7 @@ class SecureScore extends Entity
         $this->_propDict["licensedUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the maxScore
     * Tenant maximum possible score on specified date.
@@ -276,7 +276,7 @@ class SecureScore extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the maxScore
     * Tenant maximum possible score on specified date.
@@ -290,7 +290,7 @@ class SecureScore extends Entity
         $this->_propDict["maxScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInformation
     * Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
@@ -309,7 +309,7 @@ class SecureScore extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendorInformation
     * Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
@@ -323,5 +323,5 @@ class SecureScore extends Entity
         $this->_propDict["vendorInformation"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class IosUpdateDeviceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the complianceGracePeriodExpirationDateTime
     * The DateTime when device compliance grace period expires
@@ -56,7 +56,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["complianceGracePeriodExpirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDisplayName
     * Device name of the DevicePolicyStatus.
@@ -71,7 +71,7 @@ class IosUpdateDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDisplayName
     * Device name of the DevicePolicyStatus.
@@ -85,7 +85,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["deviceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The device id that is being reported.
@@ -100,7 +100,7 @@ class IosUpdateDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The device id that is being reported.
@@ -114,7 +114,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceModel
     * The device model that is being reported
@@ -129,7 +129,7 @@ class IosUpdateDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceModel
     * The device model that is being reported
@@ -143,7 +143,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["deviceModel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the installStatus
     * The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed.
@@ -162,7 +162,7 @@ class IosUpdateDeviceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the installStatus
     * The installation status of the policy report. Possible values are: success, available, idle, unknown, mdmClientCrashed, timeout, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, updateError, deviceOsHigherThanDesiredOsVersion, updateScanFailed.
@@ -176,7 +176,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["installStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report.
@@ -195,7 +195,7 @@ class IosUpdateDeviceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * Last modified date time of the policy report.
@@ -209,7 +209,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * The device version that is being reported.
@@ -224,7 +224,7 @@ class IosUpdateDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * The device version that is being reported.
@@ -238,7 +238,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -257,7 +257,7 @@ class IosUpdateDeviceStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
@@ -271,7 +271,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The User id that is being reported.
@@ -286,7 +286,7 @@ class IosUpdateDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The User id that is being reported.
@@ -300,7 +300,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * The User Name that is being reported
@@ -315,7 +315,7 @@ class IosUpdateDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * The User Name that is being reported
@@ -329,7 +329,7 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * UserPrincipalName.
@@ -344,7 +344,7 @@ class IosUpdateDeviceStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * UserPrincipalName.
@@ -358,5 +358,5 @@ class IosUpdateDeviceStatus extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

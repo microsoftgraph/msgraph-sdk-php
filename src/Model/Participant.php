@@ -42,7 +42,7 @@ class Participant extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the info
     * Information about the participant.
@@ -56,7 +56,7 @@ class Participant extends Entity
         $this->_propDict["info"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isInLobby
     * true if the participant is in lobby.
@@ -71,7 +71,7 @@ class Participant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isInLobby
     * true if the participant is in lobby.
@@ -85,7 +85,7 @@ class Participant extends Entity
         $this->_propDict["isInLobby"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isMuted
     * true if the participant is muted (client or server muted).
@@ -100,7 +100,7 @@ class Participant extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isMuted
     * true if the participant is muted (client or server muted).
@@ -114,9 +114,9 @@ class Participant extends Entity
         $this->_propDict["isMuted"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the mediaStreams
     * The list of media streams.
      *
@@ -130,8 +130,8 @@ class Participant extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the mediaStreams
     * The list of media streams.
     *
@@ -141,10 +141,10 @@ class Participant extends Entity
     */
     public function setMediaStreams($val)
     {
-		$this->_propDict["mediaStreams"] = $val;
+        $this->_propDict["mediaStreams"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recordingInfo
     * Information on whether the participant has recording capability.
@@ -163,7 +163,7 @@ class Participant extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the recordingInfo
     * Information on whether the participant has recording capability.
@@ -177,5 +177,5 @@ class Participant extends Entity
         $this->_propDict["recordingInfo"] = $val;
         return $this;
     }
-    
+
 }

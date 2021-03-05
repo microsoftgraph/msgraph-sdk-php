@@ -42,7 +42,7 @@ class Permission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
@@ -56,7 +56,7 @@ class Permission extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the grantedTo
     * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
@@ -75,7 +75,7 @@ class Permission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the grantedTo
     * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
@@ -89,9 +89,9 @@ class Permission extends Entity
         $this->_propDict["grantedTo"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the grantedToIdentities
     * For link type permissions, the details of the users to whom permission was granted. Read-only.
      *
@@ -105,8 +105,8 @@ class Permission extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the grantedToIdentities
     * For link type permissions, the details of the users to whom permission was granted. Read-only.
     *
@@ -116,10 +116,10 @@ class Permission extends Entity
     */
     public function setGrantedToIdentities($val)
     {
-		$this->_propDict["grantedToIdentities"] = $val;
+        $this->_propDict["grantedToIdentities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasPassword
     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
@@ -134,7 +134,7 @@ class Permission extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasPassword
     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
@@ -148,7 +148,7 @@ class Permission extends Entity
         $this->_propDict["hasPassword"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the inheritedFrom
     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
@@ -167,7 +167,7 @@ class Permission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the inheritedFrom
     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
@@ -181,7 +181,7 @@ class Permission extends Entity
         $this->_propDict["inheritedFrom"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invitation
     * Details of any associated sharing invitation for this permission. Read-only.
@@ -200,7 +200,7 @@ class Permission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invitation
     * Details of any associated sharing invitation for this permission. Read-only.
@@ -214,7 +214,7 @@ class Permission extends Entity
         $this->_propDict["invitation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the link
     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
@@ -233,7 +233,7 @@ class Permission extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the link
     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
@@ -247,7 +247,7 @@ class Permission extends Entity
         $this->_propDict["link"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roles
     * The type of permission, e.g. read. See below for the full list of roles. Read-only.
@@ -262,7 +262,7 @@ class Permission extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roles
     * The type of permission, e.g. read. See below for the full list of roles. Read-only.
@@ -276,7 +276,7 @@ class Permission extends Entity
         $this->_propDict["roles"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shareId
     * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
@@ -291,7 +291,7 @@ class Permission extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the shareId
     * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
@@ -305,5 +305,5 @@ class Permission extends Entity
         $this->_propDict["shareId"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class Drive extends BaseItem
             return null;
         }
     }
-    
+
     /**
     * Sets the driveType
     * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
@@ -52,7 +52,7 @@ class Drive extends BaseItem
         $this->_propDict["driveType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the owner
     * Optional. The user account that owns the drive. Read-only.
@@ -71,7 +71,7 @@ class Drive extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the owner
     * Optional. The user account that owns the drive. Read-only.
@@ -85,7 +85,7 @@ class Drive extends BaseItem
         $this->_propDict["owner"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the quota
     * Optional. Information about the drive's storage space quota. Read-only.
@@ -104,7 +104,7 @@ class Drive extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the quota
     * Optional. Information about the drive's storage space quota. Read-only.
@@ -118,7 +118,7 @@ class Drive extends BaseItem
         $this->_propDict["quota"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharePointIds
     *
@@ -136,7 +136,7 @@ class Drive extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the sharePointIds
     *
@@ -149,7 +149,7 @@ class Drive extends BaseItem
         $this->_propDict["sharePointIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the system
     * If present, indicates that this is a system-managed drive. Read-only.
@@ -168,7 +168,7 @@ class Drive extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the system
     * If present, indicates that this is a system-managed drive. Read-only.
@@ -182,9 +182,9 @@ class Drive extends BaseItem
         $this->_propDict["system"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the following
     * The list of items the user is following. Only in OneDrive for Business.
      *
@@ -198,8 +198,8 @@ class Drive extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the following
     * The list of items the user is following. Only in OneDrive for Business.
     *
@@ -209,12 +209,12 @@ class Drive extends BaseItem
     */
     public function setFollowing($val)
     {
-		$this->_propDict["following"] = $val;
+        $this->_propDict["following"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the items
     * All items contained in the drive. Read-only. Nullable.
      *
@@ -228,8 +228,8 @@ class Drive extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the items
     * All items contained in the drive. Read-only. Nullable.
     *
@@ -239,10 +239,10 @@ class Drive extends BaseItem
     */
     public function setItems($val)
     {
-		$this->_propDict["items"] = $val;
+        $this->_propDict["items"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the list
     * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
@@ -261,7 +261,7 @@ class Drive extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the list
     * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
@@ -275,7 +275,7 @@ class Drive extends BaseItem
         $this->_propDict["list"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the root
     * The root folder of the drive. Read-only.
@@ -294,7 +294,7 @@ class Drive extends BaseItem
         }
         return null;
     }
-    
+
     /**
     * Sets the root
     * The root folder of the drive. Read-only.
@@ -308,9 +308,9 @@ class Drive extends BaseItem
         $this->_propDict["root"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the special
     * Collection of common folders available in OneDrive. Read-only. Nullable.
      *
@@ -324,8 +324,8 @@ class Drive extends BaseItem
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the special
     * Collection of common folders available in OneDrive. Read-only. Nullable.
     *
@@ -335,8 +335,8 @@ class Drive extends BaseItem
     */
     public function setSpecial($val)
     {
-		$this->_propDict["special"] = $val;
+        $this->_propDict["special"] = $val;
         return $this;
     }
-    
+
 }

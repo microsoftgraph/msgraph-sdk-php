@@ -38,7 +38,7 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
@@ -52,5 +52,5 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
 }

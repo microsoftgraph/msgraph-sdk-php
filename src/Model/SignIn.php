@@ -38,7 +38,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * The application name displayed in the Azure Portal.
@@ -52,7 +52,7 @@ class SignIn extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appId
     * The application identifier in Azure Active Directory.
@@ -67,7 +67,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appId
     * The application identifier in Azure Active Directory.
@@ -81,9 +81,9 @@ class SignIn extends Entity
         $this->_propDict["appId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appliedConditionalAccessPolicies
     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
      *
@@ -97,8 +97,8 @@ class SignIn extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appliedConditionalAccessPolicies
     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
     *
@@ -108,10 +108,10 @@ class SignIn extends Entity
     */
     public function setAppliedConditionalAccessPolicies($val)
     {
-		$this->_propDict["appliedConditionalAccessPolicies"] = $val;
+        $this->_propDict["appliedConditionalAccessPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the clientAppUsed
     * The legacy client used for sign-in activity. For example, Browser, Exchange Active Sync,Modern clients, IMAP, MAPI, SMTP, or POP.
@@ -126,7 +126,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the clientAppUsed
     * The legacy client used for sign-in activity. For example, Browser, Exchange Active Sync,Modern clients, IMAP, MAPI, SMTP, or POP.
@@ -140,7 +140,7 @@ class SignIn extends Entity
         $this->_propDict["clientAppUsed"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the conditionalAccessStatus
     * The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.
@@ -159,7 +159,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the conditionalAccessStatus
     * The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.
@@ -173,7 +173,7 @@ class SignIn extends Entity
         $this->_propDict["conditionalAccessStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the correlationId
     * The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.
@@ -188,7 +188,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the correlationId
     * The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.
@@ -202,7 +202,7 @@ class SignIn extends Entity
         $this->_propDict["correlationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -221,7 +221,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -235,7 +235,7 @@ class SignIn extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceDetail
     * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.
@@ -254,7 +254,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceDetail
     * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.
@@ -268,7 +268,7 @@ class SignIn extends Entity
         $this->_propDict["deviceDetail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ipAddress
     * The IP address of the client from where the sign-in occurred.
@@ -283,7 +283,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ipAddress
     * The IP address of the client from where the sign-in occurred.
@@ -297,7 +297,7 @@ class SignIn extends Entity
         $this->_propDict["ipAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isInteractive
     * Indicates whether a sign-in is interactive or not.
@@ -312,7 +312,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isInteractive
     * Indicates whether a sign-in is interactive or not.
@@ -326,7 +326,7 @@ class SignIn extends Entity
         $this->_propDict["isInteractive"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the location
     * The city, state, and 2 letter country code from where the sign-in occurred.
@@ -345,7 +345,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the location
     * The city, state, and 2 letter country code from where the sign-in occurred.
@@ -359,7 +359,7 @@ class SignIn extends Entity
         $this->_propDict["location"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceDisplayName
     * The name of the resource that the user signed in to.
@@ -374,7 +374,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceDisplayName
     * The name of the resource that the user signed in to.
@@ -388,7 +388,7 @@ class SignIn extends Entity
         $this->_propDict["resourceDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceId
     * The identifier of the resource that the user signed in to.
@@ -403,7 +403,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceId
     * The identifier of the resource that the user signed in to.
@@ -417,7 +417,7 @@ class SignIn extends Entity
         $this->_propDict["resourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskDetail
     * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -436,7 +436,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskDetail
     * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -450,9 +450,9 @@ class SignIn extends Entity
         $this->_propDict["riskDetail"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the riskEventTypes
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
      *
@@ -466,8 +466,8 @@ class SignIn extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the riskEventTypes
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
     *
@@ -477,10 +477,10 @@ class SignIn extends Entity
     */
     public function setRiskEventTypes($val)
     {
-		$this->_propDict["riskEventTypes"] = $val;
+        $this->_propDict["riskEventTypes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskEventTypesV2
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
@@ -495,7 +495,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the riskEventTypesV2
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
@@ -509,7 +509,7 @@ class SignIn extends Entity
         $this->_propDict["riskEventTypes_v2"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskLevelAggregated
     * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -528,7 +528,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskLevelAggregated
     * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -542,7 +542,7 @@ class SignIn extends Entity
         $this->_propDict["riskLevelAggregated"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskLevelDuringSignIn
     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -561,7 +561,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskLevelDuringSignIn
     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
@@ -575,7 +575,7 @@ class SignIn extends Entity
         $this->_propDict["riskLevelDuringSignIn"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskState
     * The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.
@@ -594,7 +594,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the riskState
     * The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.
@@ -608,7 +608,7 @@ class SignIn extends Entity
         $this->_propDict["riskState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
@@ -627,7 +627,7 @@ class SignIn extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
@@ -641,7 +641,7 @@ class SignIn extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userDisplayName
     * The display name of the user.
@@ -656,7 +656,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userDisplayName
     * The display name of the user.
@@ -670,7 +670,7 @@ class SignIn extends Entity
         $this->_propDict["userDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The identifier of the user.
@@ -685,7 +685,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The identifier of the user.
@@ -699,7 +699,7 @@ class SignIn extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * The UPN of the user.
@@ -714,7 +714,7 @@ class SignIn extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * The UPN of the user.
@@ -728,5 +728,5 @@ class SignIn extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

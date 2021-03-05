@@ -42,7 +42,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the encodedSettingXml
     * mdm app configuration Base64 binary.
@@ -56,9 +56,9 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
         $this->_propDict["encodedSettingXml"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settings
     * app configuration setting items.
      *
@@ -72,8 +72,8 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settings
     * app configuration setting items.
     *
@@ -83,8 +83,8 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
     */
     public function setSettings($val)
     {
-		$this->_propDict["settings"] = $val;
+        $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

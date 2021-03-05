@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class PermissionGrantPolicy extends PolicyBase
 {
 
-     /** 
+     /**
      * Gets the excludes
     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
      *
@@ -39,8 +39,8 @@ class PermissionGrantPolicy extends PolicyBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the excludes
     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
     *
@@ -50,12 +50,12 @@ class PermissionGrantPolicy extends PolicyBase
     */
     public function setExcludes($val)
     {
-		$this->_propDict["excludes"] = $val;
+        $this->_propDict["excludes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the includes
     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      *
@@ -69,8 +69,8 @@ class PermissionGrantPolicy extends PolicyBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the includes
     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
     *
@@ -80,8 +80,8 @@ class PermissionGrantPolicy extends PolicyBase
     */
     public function setIncludes($val)
     {
-		$this->_propDict["includes"] = $val;
+        $this->_propDict["includes"] = $val;
         return $this;
     }
-    
+
 }

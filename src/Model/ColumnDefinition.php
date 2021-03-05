@@ -42,7 +42,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the boolean
     * This column stores boolean values.
@@ -56,7 +56,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["boolean"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the calculated
     * This column's data is calculated based on other columns.
@@ -75,7 +75,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the calculated
     * This column's data is calculated based on other columns.
@@ -89,7 +89,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["calculated"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the choice
     * This column stores data from a list of choices.
@@ -108,7 +108,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the choice
     * This column stores data from a list of choices.
@@ -122,7 +122,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["choice"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the columnGroup
     * For site columns, the name of the group this column belongs to. Helps organize related columns.
@@ -137,7 +137,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the columnGroup
     * For site columns, the name of the group this column belongs to. Helps organize related columns.
@@ -151,7 +151,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["columnGroup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currency
     * This column stores currency values.
@@ -170,7 +170,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currency
     * This column stores currency values.
@@ -184,7 +184,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["currency"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dateTime
     * This column stores DateTime values.
@@ -203,7 +203,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dateTime
     * This column stores DateTime values.
@@ -217,7 +217,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["dateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultValue
     * The default value for this column.
@@ -236,7 +236,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultValue
     * The default value for this column.
@@ -250,7 +250,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["defaultValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The user-facing description of the column.
@@ -265,7 +265,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The user-facing description of the column.
@@ -279,7 +279,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The user-facing name of the column.
@@ -294,7 +294,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The user-facing name of the column.
@@ -308,7 +308,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enforceUniqueValues
     * If true, no two list items may have the same value for this column.
@@ -323,7 +323,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enforceUniqueValues
     * If true, no two list items may have the same value for this column.
@@ -337,7 +337,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["enforceUniqueValues"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the geolocation
     * This column stores a geolocation.
@@ -356,7 +356,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the geolocation
     * This column stores a geolocation.
@@ -370,7 +370,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["geolocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hidden
     * Specifies whether the column is displayed in the user interface.
@@ -385,7 +385,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hidden
     * Specifies whether the column is displayed in the user interface.
@@ -399,7 +399,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["hidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the indexed
     * Specifies whether the column values can used for sorting and searching.
@@ -414,7 +414,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the indexed
     * Specifies whether the column values can used for sorting and searching.
@@ -428,7 +428,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["indexed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lookup
     * This column's data is looked up from another source in the site.
@@ -447,7 +447,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lookup
     * This column's data is looked up from another source in the site.
@@ -461,7 +461,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["lookup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
@@ -476,7 +476,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
@@ -490,7 +490,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     * This column stores number values.
@@ -509,7 +509,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the number
     * This column stores number values.
@@ -523,7 +523,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the personOrGroup
     * This column stores Person or Group values.
@@ -542,7 +542,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the personOrGroup
     * This column stores Person or Group values.
@@ -556,7 +556,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["personOrGroup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the readOnly
     * Specifies whether the column values can be modified.
@@ -571,7 +571,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the readOnly
     * Specifies whether the column values can be modified.
@@ -585,7 +585,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["readOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the required
     * Specifies whether the column value is not optional.
@@ -600,7 +600,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the required
     * Specifies whether the column value is not optional.
@@ -614,7 +614,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["required"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the text
     * This column stores text values.
@@ -633,7 +633,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the text
     * This column stores text values.
@@ -647,5 +647,5 @@ class ColumnDefinition extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class AuditLogRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the directoryAudits
     * Read-only. Nullable.
      *
@@ -39,8 +39,8 @@ class AuditLogRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the directoryAudits
     * Read-only. Nullable.
     *
@@ -50,12 +50,12 @@ class AuditLogRoot extends Entity
     */
     public function setDirectoryAudits($val)
     {
-		$this->_propDict["directoryAudits"] = $val;
+        $this->_propDict["directoryAudits"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the restrictedSignIns
      *
      * @return array The restrictedSignIns
@@ -68,8 +68,8 @@ class AuditLogRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the restrictedSignIns
     *
     * @param RestrictedSignIn $val The restrictedSignIns
@@ -78,12 +78,12 @@ class AuditLogRoot extends Entity
     */
     public function setRestrictedSignIns($val)
     {
-		$this->_propDict["restrictedSignIns"] = $val;
+        $this->_propDict["restrictedSignIns"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the signIns
     * Read-only. Nullable.
      *
@@ -97,8 +97,8 @@ class AuditLogRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the signIns
     * Read-only. Nullable.
     *
@@ -108,8 +108,8 @@ class AuditLogRoot extends Entity
     */
     public function setSignIns($val)
     {
-		$this->_propDict["signIns"] = $val;
+        $this->_propDict["signIns"] = $val;
         return $this;
     }
-    
+
 }

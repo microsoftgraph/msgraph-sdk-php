@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Directory extends Entity
 {
 
-     /** 
+     /**
      * Gets the administrativeUnits
      *
      * @return array The administrativeUnits
@@ -38,8 +38,8 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the administrativeUnits
     *
     * @param AdministrativeUnit $val The administrativeUnits
@@ -48,12 +48,12 @@ class Directory extends Entity
     */
     public function setAdministrativeUnits($val)
     {
-		$this->_propDict["administrativeUnits"] = $val;
+        $this->_propDict["administrativeUnits"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *
@@ -67,8 +67,8 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deletedItems
     * Recently deleted items. Read-only. Nullable.
     *
@@ -78,8 +78,8 @@ class Directory extends Entity
     */
     public function setDeletedItems($val)
     {
-		$this->_propDict["deletedItems"] = $val;
+        $this->_propDict["deletedItems"] = $val;
         return $this;
     }
-    
+
 }

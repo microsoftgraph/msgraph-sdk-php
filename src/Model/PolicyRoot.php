@@ -41,7 +41,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMethodsPolicy
     *
@@ -54,9 +54,9 @@ class PolicyRoot extends Entity
         $this->_propDict["authenticationMethodsPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the activityBasedTimeoutPolicies
      *
      * @return array The activityBasedTimeoutPolicies
@@ -69,8 +69,8 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the activityBasedTimeoutPolicies
     *
     * @param ActivityBasedTimeoutPolicy $val The activityBasedTimeoutPolicies
@@ -79,10 +79,10 @@ class PolicyRoot extends Entity
     */
     public function setActivityBasedTimeoutPolicies($val)
     {
-		$this->_propDict["activityBasedTimeoutPolicies"] = $val;
+        $this->_propDict["activityBasedTimeoutPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authorizationPolicy
     *
@@ -100,7 +100,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authorizationPolicy
     *
@@ -113,9 +113,9 @@ class PolicyRoot extends Entity
         $this->_propDict["authorizationPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the claimsMappingPolicies
      *
      * @return array The claimsMappingPolicies
@@ -128,8 +128,8 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the claimsMappingPolicies
     *
     * @param ClaimsMappingPolicy $val The claimsMappingPolicies
@@ -138,12 +138,12 @@ class PolicyRoot extends Entity
     */
     public function setClaimsMappingPolicies($val)
     {
-		$this->_propDict["claimsMappingPolicies"] = $val;
+        $this->_propDict["claimsMappingPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the homeRealmDiscoveryPolicies
      *
      * @return array The homeRealmDiscoveryPolicies
@@ -156,8 +156,8 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the homeRealmDiscoveryPolicies
     *
     * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
@@ -166,12 +166,12 @@ class PolicyRoot extends Entity
     */
     public function setHomeRealmDiscoveryPolicies($val)
     {
-		$this->_propDict["homeRealmDiscoveryPolicies"] = $val;
+        $this->_propDict["homeRealmDiscoveryPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the permissionGrantPolicies
      *
      * @return array The permissionGrantPolicies
@@ -184,8 +184,8 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the permissionGrantPolicies
     *
     * @param PermissionGrantPolicy $val The permissionGrantPolicies
@@ -194,12 +194,12 @@ class PolicyRoot extends Entity
     */
     public function setPermissionGrantPolicies($val)
     {
-		$this->_propDict["permissionGrantPolicies"] = $val;
+        $this->_propDict["permissionGrantPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tokenIssuancePolicies
      *
      * @return array The tokenIssuancePolicies
@@ -212,8 +212,8 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tokenIssuancePolicies
     *
     * @param TokenIssuancePolicy $val The tokenIssuancePolicies
@@ -222,12 +222,12 @@ class PolicyRoot extends Entity
     */
     public function setTokenIssuancePolicies($val)
     {
-		$this->_propDict["tokenIssuancePolicies"] = $val;
+        $this->_propDict["tokenIssuancePolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tokenLifetimePolicies
      *
      * @return array The tokenLifetimePolicies
@@ -240,8 +240,8 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tokenLifetimePolicies
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
@@ -250,12 +250,12 @@ class PolicyRoot extends Entity
     */
     public function setTokenLifetimePolicies($val)
     {
-		$this->_propDict["tokenLifetimePolicies"] = $val;
+        $this->_propDict["tokenLifetimePolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the conditionalAccessPolicies
      *
      * @return array The conditionalAccessPolicies
@@ -268,8 +268,8 @@ class PolicyRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the conditionalAccessPolicies
     *
     * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
@@ -278,10 +278,10 @@ class PolicyRoot extends Entity
     */
     public function setConditionalAccessPolicies($val)
     {
-		$this->_propDict["conditionalAccessPolicies"] = $val;
+        $this->_propDict["conditionalAccessPolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identitySecurityDefaultsEnforcementPolicy
     *
@@ -299,7 +299,7 @@ class PolicyRoot extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the identitySecurityDefaultsEnforcementPolicy
     *
@@ -312,5 +312,5 @@ class PolicyRoot extends Entity
         $this->_propDict["identitySecurityDefaultsEnforcementPolicy"] = $val;
         return $this;
     }
-    
+
 }

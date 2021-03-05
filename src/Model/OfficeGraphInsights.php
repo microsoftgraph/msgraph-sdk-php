@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class OfficeGraphInsights extends Entity
 {
 
-     /** 
+     /**
      * Gets the shared
     * Access this property from the derived type itemInsights.
      *
@@ -39,8 +39,8 @@ class OfficeGraphInsights extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the shared
     * Access this property from the derived type itemInsights.
     *
@@ -50,12 +50,12 @@ class OfficeGraphInsights extends Entity
     */
     public function setShared($val)
     {
-		$this->_propDict["shared"] = $val;
+        $this->_propDict["shared"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the trending
     * Access this property from the derived type itemInsights.
      *
@@ -69,8 +69,8 @@ class OfficeGraphInsights extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the trending
     * Access this property from the derived type itemInsights.
     *
@@ -80,12 +80,12 @@ class OfficeGraphInsights extends Entity
     */
     public function setTrending($val)
     {
-		$this->_propDict["trending"] = $val;
+        $this->_propDict["trending"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the used
     * Access this property from the derived type itemInsights.
      *
@@ -99,8 +99,8 @@ class OfficeGraphInsights extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the used
     * Access this property from the derived type itemInsights.
     *
@@ -110,8 +110,8 @@ class OfficeGraphInsights extends Entity
     */
     public function setUsed($val)
     {
-		$this->_propDict["used"] = $val;
+        $this->_propDict["used"] = $val;
         return $this;
     }
-    
+
 }

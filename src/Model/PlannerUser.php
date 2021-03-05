@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class PlannerUser extends Entity
 {
 
-     /** 
+     /**
      * Gets the plans
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
@@ -39,8 +39,8 @@ class PlannerUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the plans
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
@@ -50,12 +50,12 @@ class PlannerUser extends Entity
     */
     public function setPlans($val)
     {
-		$this->_propDict["plans"] = $val;
+        $this->_propDict["plans"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
@@ -69,8 +69,8 @@ class PlannerUser extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
@@ -80,8 +80,8 @@ class PlannerUser extends Entity
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

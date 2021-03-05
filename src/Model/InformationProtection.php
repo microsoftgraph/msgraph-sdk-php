@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class InformationProtection extends Entity
 {
 
-     /** 
+     /**
      * Gets the threatAssessmentRequests
      *
      * @return array The threatAssessmentRequests
@@ -38,8 +38,8 @@ class InformationProtection extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the threatAssessmentRequests
     *
     * @param ThreatAssessmentRequest $val The threatAssessmentRequests
@@ -48,8 +48,8 @@ class InformationProtection extends Entity
     */
     public function setThreatAssessmentRequests($val)
     {
-		$this->_propDict["threatAssessmentRequests"] = $val;
+        $this->_propDict["threatAssessmentRequests"] = $val;
         return $this;
     }
-    
+
 }

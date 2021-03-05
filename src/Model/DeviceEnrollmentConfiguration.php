@@ -42,7 +42,7 @@ class DeviceEnrollmentConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Created date time in UTC of the device enrollment configuration
@@ -56,7 +56,7 @@ class DeviceEnrollmentConfiguration extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The description of the device enrollment configuration
@@ -71,7 +71,7 @@ class DeviceEnrollmentConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the device enrollment configuration
@@ -85,7 +85,7 @@ class DeviceEnrollmentConfiguration extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the device enrollment configuration
@@ -100,7 +100,7 @@ class DeviceEnrollmentConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the device enrollment configuration
@@ -114,7 +114,7 @@ class DeviceEnrollmentConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last modified date time in UTC of the device enrollment configuration
@@ -133,7 +133,7 @@ class DeviceEnrollmentConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modified date time in UTC of the device enrollment configuration
@@ -147,7 +147,7 @@ class DeviceEnrollmentConfiguration extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the priority
     * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
@@ -162,7 +162,7 @@ class DeviceEnrollmentConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the priority
     * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
@@ -176,7 +176,7 @@ class DeviceEnrollmentConfiguration extends Entity
         $this->_propDict["priority"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The version of the device enrollment configuration
@@ -191,7 +191,7 @@ class DeviceEnrollmentConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version of the device enrollment configuration
@@ -205,9 +205,9 @@ class DeviceEnrollmentConfiguration extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments for the device configuration profile
      *
@@ -221,8 +221,8 @@ class DeviceEnrollmentConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments for the device configuration profile
     *
@@ -232,8 +232,8 @@ class DeviceEnrollmentConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class WorkbookWorksheetProtection extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the options
     * Sheet protection options. Read-only.
@@ -56,7 +56,7 @@ class WorkbookWorksheetProtection extends Entity
         $this->_propDict["options"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the protected
     * Indicates if the worksheet is protected.  Read-only.
@@ -71,7 +71,7 @@ class WorkbookWorksheetProtection extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the protected
     * Indicates if the worksheet is protected.  Read-only.
@@ -85,5 +85,5 @@ class WorkbookWorksheetProtection extends Entity
         $this->_propDict["protected"] = boolval($val);
         return $this;
     }
-    
+
 }

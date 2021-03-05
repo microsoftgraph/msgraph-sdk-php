@@ -41,7 +41,7 @@ class Workbook extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the application
     *
@@ -54,9 +54,9 @@ class Workbook extends Entity
         $this->_propDict["application"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the comments
      *
      * @return array The comments
@@ -69,8 +69,8 @@ class Workbook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the comments
     *
     * @param WorkbookComment $val The comments
@@ -79,10 +79,10 @@ class Workbook extends Entity
     */
     public function setComments($val)
     {
-		$this->_propDict["comments"] = $val;
+        $this->_propDict["comments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the functions
     *
@@ -100,7 +100,7 @@ class Workbook extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the functions
     *
@@ -113,9 +113,9 @@ class Workbook extends Entity
         $this->_propDict["functions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the names
     * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
      *
@@ -129,8 +129,8 @@ class Workbook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the names
     * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
     *
@@ -140,12 +140,12 @@ class Workbook extends Entity
     */
     public function setNames($val)
     {
-		$this->_propDict["names"] = $val;
+        $this->_propDict["names"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
     * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      *
@@ -159,8 +159,8 @@ class Workbook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
     *
@@ -170,12 +170,12 @@ class Workbook extends Entity
     */
     public function setOperations($val)
     {
-		$this->_propDict["operations"] = $val;
+        $this->_propDict["operations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tables
     * Represents a collection of tables associated with the workbook. Read-only.
      *
@@ -189,8 +189,8 @@ class Workbook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tables
     * Represents a collection of tables associated with the workbook. Read-only.
     *
@@ -200,12 +200,12 @@ class Workbook extends Entity
     */
     public function setTables($val)
     {
-		$this->_propDict["tables"] = $val;
+        $this->_propDict["tables"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the worksheets
     * Represents a collection of worksheets associated with the workbook. Read-only.
      *
@@ -219,8 +219,8 @@ class Workbook extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the worksheets
     * Represents a collection of worksheets associated with the workbook. Read-only.
     *
@@ -230,8 +230,8 @@ class Workbook extends Entity
     */
     public function setWorksheets($val)
     {
-		$this->_propDict["worksheets"] = $val;
+        $this->_propDict["worksheets"] = $val;
         return $this;
     }
-    
+
 }

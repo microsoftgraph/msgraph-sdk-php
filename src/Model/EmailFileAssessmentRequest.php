@@ -38,7 +38,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the contentData
     * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
@@ -52,7 +52,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["contentData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the destinationRoutingReason
     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
@@ -71,7 +71,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
         }
         return null;
     }
-    
+
     /**
     * Sets the destinationRoutingReason
     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
@@ -85,7 +85,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["destinationRoutingReason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recipientEmail
     * The mail recipient whose policies are used to assess the mail.
@@ -100,7 +100,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
             return null;
         }
     }
-    
+
     /**
     * Sets the recipientEmail
     * The mail recipient whose policies are used to assess the mail.
@@ -114,5 +114,5 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
         $this->_propDict["recipientEmail"] = $val;
         return $this;
     }
-    
+
 }

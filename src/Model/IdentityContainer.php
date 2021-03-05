@@ -41,7 +41,7 @@ class IdentityContainer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the conditionalAccess
     *
@@ -54,5 +54,5 @@ class IdentityContainer extends Entity
         $this->_propDict["conditionalAccess"] = $val;
         return $this;
     }
-    
+
 }

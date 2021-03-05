@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class OrgContact extends DirectoryObject
 {
 
-     /** 
+     /**
      * Gets the addresses
     * Postal addresses for this organizational contact. For now a contact can only have one physical address.
      *
@@ -39,8 +39,8 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the addresses
     * Postal addresses for this organizational contact. For now a contact can only have one physical address.
     *
@@ -50,10 +50,10 @@ class OrgContact extends DirectoryObject
     */
     public function setAddresses($val)
     {
-		$this->_propDict["addresses"] = $val;
+        $this->_propDict["addresses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the companyName
     * Name of the company that this organizational contact belong to.
@@ -68,7 +68,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the companyName
     * Name of the company that this organizational contact belong to.
@@ -82,7 +82,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["companyName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the department
     * The name for the department in which the contact works.
@@ -97,7 +97,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the department
     * The name for the department in which the contact works.
@@ -111,7 +111,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["department"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name for this organizational contact.
@@ -126,7 +126,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name for this organizational contact.
@@ -140,7 +140,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the givenName
     * First name for this organizational contact.
@@ -155,7 +155,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the givenName
     * First name for this organizational contact.
@@ -169,7 +169,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["givenName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the jobTitle
     * Job title for this organizational contact.
@@ -184,7 +184,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the jobTitle
     * Job title for this organizational contact.
@@ -198,7 +198,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["jobTitle"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mail
     * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'.
@@ -213,7 +213,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the mail
     * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'.
@@ -227,7 +227,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["mail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mailNickname
     * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact.
@@ -242,7 +242,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the mailNickname
     * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact.
@@ -256,7 +256,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["mailNickname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesLastSyncDateTime
     * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -275,7 +275,7 @@ class OrgContact extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the onPremisesLastSyncDateTime
     * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
@@ -289,9 +289,9 @@ class OrgContact extends DirectoryObject
         $this->_propDict["onPremisesLastSyncDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onPremisesProvisioningErrors
     * List of any synchronization provisioning errors for this organizational contact.
      *
@@ -305,8 +305,8 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onPremisesProvisioningErrors
     * List of any synchronization provisioning errors for this organizational contact.
     *
@@ -316,10 +316,10 @@ class OrgContact extends DirectoryObject
     */
     public function setOnPremisesProvisioningErrors($val)
     {
-		$this->_propDict["onPremisesProvisioningErrors"] = $val;
+        $this->_propDict["onPremisesProvisioningErrors"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesSyncEnabled
     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).
@@ -334,7 +334,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesSyncEnabled
     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).
@@ -348,9 +348,9 @@ class OrgContact extends DirectoryObject
         $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the phones
     * List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection.
      *
@@ -364,8 +364,8 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the phones
     * List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection.
     *
@@ -375,10 +375,10 @@ class OrgContact extends DirectoryObject
     */
     public function setPhones($val)
     {
-		$this->_propDict["phones"] = $val;
+        $this->_propDict["phones"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyAddresses
     * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter.
@@ -393,7 +393,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyAddresses
     * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter.
@@ -407,7 +407,7 @@ class OrgContact extends DirectoryObject
         $this->_propDict["proxyAddresses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the surname
     * Last name for this organizational contact.
@@ -422,7 +422,7 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the surname
     * Last name for this organizational contact.
@@ -436,9 +436,9 @@ class OrgContact extends DirectoryObject
         $this->_propDict["surname"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the directReports
     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable.
      *
@@ -452,8 +452,8 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the directReports
     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable.
     *
@@ -463,10 +463,10 @@ class OrgContact extends DirectoryObject
     */
     public function setDirectReports($val)
     {
-		$this->_propDict["directReports"] = $val;
+        $this->_propDict["directReports"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manager
     * The user or contact that is this contact's manager. Read-only.
@@ -485,7 +485,7 @@ class OrgContact extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the manager
     * The user or contact that is this contact's manager. Read-only.
@@ -499,9 +499,9 @@ class OrgContact extends DirectoryObject
         $this->_propDict["manager"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the memberOf
     * Groups that this contact is a member of. Read-only. Nullable.
      *
@@ -515,8 +515,8 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the memberOf
     * Groups that this contact is a member of. Read-only. Nullable.
     *
@@ -526,12 +526,12 @@ class OrgContact extends DirectoryObject
     */
     public function setMemberOf($val)
     {
-		$this->_propDict["memberOf"] = $val;
+        $this->_propDict["memberOf"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the transitiveMemberOf
      *
      * @return array The transitiveMemberOf
@@ -544,8 +544,8 @@ class OrgContact extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the transitiveMemberOf
     *
     * @param DirectoryObject $val The transitiveMemberOf
@@ -554,8 +554,8 @@ class OrgContact extends DirectoryObject
     */
     public function setTransitiveMemberOf($val)
     {
-		$this->_propDict["transitiveMemberOf"] = $val;
+        $this->_propDict["transitiveMemberOf"] = $val;
         return $this;
     }
-    
+
 }
