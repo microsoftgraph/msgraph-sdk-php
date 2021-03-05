@@ -22,10 +22,38 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OfficeConfiguration extends 
+class OfficeConfiguration implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    protected $_propDict;
 
-     /** 
+    /**
+    * Construct a new OfficeConfiguration
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the OfficeConfiguration
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+
+     /**
      * Gets the tenantCheckinStatuses
     * List of office Client check-in status.
      *
@@ -39,8 +67,8 @@ class OfficeConfiguration extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tenantCheckinStatuses
     * List of office Client check-in status.
     *
@@ -50,10 +78,10 @@ class OfficeConfiguration extends
     */
     public function setTenantCheckinStatuses($val)
     {
-		$this->_propDict["tenantCheckinStatuses"] = $val;
+        $this->_propDict["tenantCheckinStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantUserCheckinSummary
     * Entity that describes tenant check-in statues
@@ -72,7 +100,7 @@ class OfficeConfiguration extends
         }
         return null;
     }
-    
+
     /**
     * Sets the tenantUserCheckinSummary
     * Entity that describes tenant check-in statues
@@ -86,9 +114,9 @@ class OfficeConfiguration extends
         $this->_propDict["tenantUserCheckinSummary"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the clientConfigurations
     * List of office Client configuration.
      *
@@ -102,8 +130,8 @@ class OfficeConfiguration extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the clientConfigurations
     * List of office Client configuration.
     *
@@ -113,8 +141,49 @@ class OfficeConfiguration extends
     */
     public function setClientConfigurations($val)
     {
-		$this->_propDict["clientConfigurations"] = $val;
+        $this->_propDict["clientConfigurations"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+
+    /**
+    * Serializes the object by property array
+    * Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }

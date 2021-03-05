@@ -22,10 +22,38 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CommsApplication extends 
+class CommsApplication implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    protected $_propDict;
 
-     /** 
+    /**
+    * Construct a new CommsApplication
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the CommsApplication
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+
+     /**
      * Gets the calls
      *
      * @return array The calls
@@ -38,8 +66,8 @@ class CommsApplication extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the calls
     *
     * @param Call $val The calls
@@ -48,12 +76,12 @@ class CommsApplication extends
     */
     public function setCalls($val)
     {
-		$this->_propDict["calls"] = $val;
+        $this->_propDict["calls"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onlineMeetings
      *
      * @return array The onlineMeetings
@@ -66,8 +94,8 @@ class CommsApplication extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onlineMeetings
     *
     * @param OnlineMeeting $val The onlineMeetings
@@ -76,8 +104,49 @@ class CommsApplication extends
     */
     public function setOnlineMeetings($val)
     {
-		$this->_propDict["onlineMeetings"] = $val;
+        $this->_propDict["onlineMeetings"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+
+    /**
+    * Serializes the object by property array
+    * Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }

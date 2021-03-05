@@ -22,10 +22,38 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentityProtectionRoot extends 
+class IdentityProtectionRoot implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    protected $_propDict;
 
-     /** 
+    /**
+    * Construct a new IdentityProtectionRoot
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the IdentityProtectionRoot
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+
+     /**
      * Gets the riskDetections
      *
      * @return array The riskDetections
@@ -38,8 +66,8 @@ class IdentityProtectionRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the riskDetections
     *
     * @param RiskDetection $val The riskDetections
@@ -48,12 +76,12 @@ class IdentityProtectionRoot extends
     */
     public function setRiskDetections($val)
     {
-		$this->_propDict["riskDetections"] = $val;
+        $this->_propDict["riskDetections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the riskyUsers
      *
      * @return array The riskyUsers
@@ -66,8 +94,8 @@ class IdentityProtectionRoot extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the riskyUsers
     *
     * @param RiskyUser $val The riskyUsers
@@ -76,8 +104,49 @@ class IdentityProtectionRoot extends
     */
     public function setRiskyUsers($val)
     {
-		$this->_propDict["riskyUsers"] = $val;
+        $this->_propDict["riskyUsers"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+
+    /**
+    * Serializes the object by property array
+    * Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }

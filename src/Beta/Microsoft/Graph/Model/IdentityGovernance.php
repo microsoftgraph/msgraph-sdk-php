@@ -22,8 +22,36 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentityGovernance extends 
+class IdentityGovernance implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    protected $_propDict;
+
+    /**
+    * Construct a new IdentityGovernance
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the IdentityGovernance
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
     /**
     * Gets the accessReviews
     *
@@ -41,7 +69,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the accessReviews
     *
@@ -54,7 +82,7 @@ class IdentityGovernance extends
         $this->_propDict["accessReviews"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appConsent
     *
@@ -72,7 +100,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the appConsent
     *
@@ -85,7 +113,7 @@ class IdentityGovernance extends
         $this->_propDict["appConsent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the termsOfUse
     *
@@ -103,7 +131,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the termsOfUse
     *
@@ -116,7 +144,7 @@ class IdentityGovernance extends
         $this->_propDict["termsOfUse"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the entitlementManagement
     *
@@ -134,7 +162,7 @@ class IdentityGovernance extends
         }
         return null;
     }
-    
+
     /**
     * Sets the entitlementManagement
     *
@@ -147,5 +175,46 @@ class IdentityGovernance extends
         $this->_propDict["entitlementManagement"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+
+    /**
+    * Serializes the object by property array
+    * Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }

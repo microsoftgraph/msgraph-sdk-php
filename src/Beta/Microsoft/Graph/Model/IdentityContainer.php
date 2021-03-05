@@ -22,8 +22,36 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdentityContainer extends 
+class IdentityContainer implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    protected $_propDict;
+
+    /**
+    * Construct a new IdentityContainer
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the IdentityContainer
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
     /**
     * Gets the conditionalAccess
     *
@@ -41,7 +69,7 @@ class IdentityContainer extends
         }
         return null;
     }
-    
+
     /**
     * Sets the conditionalAccess
     *
@@ -54,9 +82,9 @@ class IdentityContainer extends
         $this->_propDict["conditionalAccess"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the apiConnectors
      *
      * @return array The apiConnectors
@@ -69,8 +97,8 @@ class IdentityContainer extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the apiConnectors
     *
     * @param IdentityApiConnector $val The apiConnectors
@@ -79,12 +107,12 @@ class IdentityContainer extends
     */
     public function setApiConnectors($val)
     {
-		$this->_propDict["apiConnectors"] = $val;
+        $this->_propDict["apiConnectors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the b2cUserFlows
      *
      * @return array The b2cUserFlows
@@ -97,8 +125,8 @@ class IdentityContainer extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the b2cUserFlows
     *
     * @param B2cIdentityUserFlow $val The b2cUserFlows
@@ -107,12 +135,12 @@ class IdentityContainer extends
     */
     public function setB2cUserFlows($val)
     {
-		$this->_propDict["b2cUserFlows"] = $val;
+        $this->_propDict["b2cUserFlows"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the b2xUserFlows
      *
      * @return array The b2xUserFlows
@@ -125,8 +153,8 @@ class IdentityContainer extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the b2xUserFlows
     *
     * @param B2xIdentityUserFlow $val The b2xUserFlows
@@ -135,12 +163,12 @@ class IdentityContainer extends
     */
     public function setB2xUserFlows($val)
     {
-		$this->_propDict["b2xUserFlows"] = $val;
+        $this->_propDict["b2xUserFlows"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userFlowAttributes
      *
      * @return array The userFlowAttributes
@@ -153,8 +181,8 @@ class IdentityContainer extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userFlowAttributes
     *
     * @param IdentityUserFlowAttribute $val The userFlowAttributes
@@ -163,12 +191,12 @@ class IdentityContainer extends
     */
     public function setUserFlowAttributes($val)
     {
-		$this->_propDict["userFlowAttributes"] = $val;
+        $this->_propDict["userFlowAttributes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userFlows
      *
      * @return array The userFlows
@@ -181,8 +209,8 @@ class IdentityContainer extends
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userFlows
     *
     * @param IdentityUserFlow $val The userFlows
@@ -191,10 +219,10 @@ class IdentityContainer extends
     */
     public function setUserFlows($val)
     {
-		$this->_propDict["userFlows"] = $val;
+        $this->_propDict["userFlows"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the continuousAccessEvaluationPolicy
     *
@@ -212,7 +240,7 @@ class IdentityContainer extends
         }
         return null;
     }
-    
+
     /**
     * Sets the continuousAccessEvaluationPolicy
     *
@@ -225,5 +253,46 @@ class IdentityContainer extends
         $this->_propDict["continuousAccessEvaluationPolicy"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+
+    /**
+    * Serializes the object by property array
+    * Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }

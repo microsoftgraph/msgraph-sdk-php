@@ -22,8 +22,36 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RoleManagement extends 
+class RoleManagement implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    protected $_propDict;
+
+    /**
+    * Construct a new RoleManagement
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the RoleManagement
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
     /**
     * Gets the directory
     *
@@ -41,7 +69,7 @@ class RoleManagement extends
         }
         return null;
     }
-    
+
     /**
     * Sets the directory
     *
@@ -54,7 +82,7 @@ class RoleManagement extends
         $this->_propDict["directory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the entitlementManagement
     * The RbacApplication for Entitlement Management
@@ -73,7 +101,7 @@ class RoleManagement extends
         }
         return null;
     }
-    
+
     /**
     * Sets the entitlementManagement
     * The RbacApplication for Entitlement Management
@@ -87,7 +115,7 @@ class RoleManagement extends
         $this->_propDict["entitlementManagement"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceManagement
     * The RbacApplication for Device Management
@@ -106,7 +134,7 @@ class RoleManagement extends
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceManagement
     * The RbacApplication for Device Management
@@ -120,5 +148,46 @@ class RoleManagement extends
         $this->_propDict["deviceManagement"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+
+    /**
+    * Serializes the object by property array
+    * Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }
