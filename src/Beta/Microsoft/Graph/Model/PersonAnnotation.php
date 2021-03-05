@@ -42,7 +42,7 @@ class PersonAnnotation extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the detail
     * Contains the detail of the note itself.
@@ -56,7 +56,7 @@ class PersonAnnotation extends ItemFacet
         $this->_propDict["detail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Contains a friendly name for the note.
@@ -71,7 +71,7 @@ class PersonAnnotation extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Contains a friendly name for the note.
@@ -85,5 +85,32 @@ class PersonAnnotation extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the thumbnailUrl
+    *
+    * @return string The thumbnailUrl
+    */
+    public function getThumbnailUrl()
+    {
+        if (array_key_exists("thumbnailUrl", $this->_propDict)) {
+            return $this->_propDict["thumbnailUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the thumbnailUrl
+    *
+    * @param string $val The thumbnailUrl
+    *
+    * @return PersonAnnotation
+    */
+    public function setThumbnailUrl($val)
+    {
+        $this->_propDict["thumbnailUrl"] = $val;
+        return $this;
+    }
+
 }

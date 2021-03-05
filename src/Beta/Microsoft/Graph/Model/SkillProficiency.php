@@ -38,7 +38,7 @@ class SkillProficiency extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the categories
     * Contains categories a user has associated with the skill (for example, personal, professional, hobby).
@@ -52,7 +52,7 @@ class SkillProficiency extends ItemFacet
         $this->_propDict["categories"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the collaborationTags
     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
@@ -67,7 +67,7 @@ class SkillProficiency extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the collaborationTags
     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
@@ -81,7 +81,7 @@ class SkillProficiency extends ItemFacet
         $this->_propDict["collaborationTags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Contains a friendly name for the skill.
@@ -96,7 +96,7 @@ class SkillProficiency extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Contains a friendly name for the skill.
@@ -110,7 +110,7 @@ class SkillProficiency extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proficiency
     * Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
@@ -129,7 +129,7 @@ class SkillProficiency extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the proficiency
     * Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
@@ -143,7 +143,34 @@ class SkillProficiency extends ItemFacet
         $this->_propDict["proficiency"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the thumbnailUrl
+    *
+    * @return string The thumbnailUrl
+    */
+    public function getThumbnailUrl()
+    {
+        if (array_key_exists("thumbnailUrl", $this->_propDict)) {
+            return $this->_propDict["thumbnailUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the thumbnailUrl
+    *
+    * @param string $val The thumbnailUrl
+    *
+    * @return SkillProficiency
+    */
+    public function setThumbnailUrl($val)
+    {
+        $this->_propDict["thumbnailUrl"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the webUrl
     * Contains a link to an information source about the skill.
@@ -158,7 +185,7 @@ class SkillProficiency extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * Contains a link to an information source about the skill.
@@ -172,5 +199,5 @@ class SkillProficiency extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class PersonWebsite extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the categories
     * Contains categories a user has associated with the website (for example, personal, recipes).
@@ -52,7 +52,7 @@ class PersonWebsite extends ItemFacet
         $this->_propDict["categories"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Contains a description of the website.
@@ -67,7 +67,7 @@ class PersonWebsite extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Contains a description of the website.
@@ -81,7 +81,7 @@ class PersonWebsite extends ItemFacet
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Contains a friendly name for the website.
@@ -96,7 +96,7 @@ class PersonWebsite extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Contains a friendly name for the website.
@@ -110,7 +110,34 @@ class PersonWebsite extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the thumbnailUrl
+    *
+    * @return string The thumbnailUrl
+    */
+    public function getThumbnailUrl()
+    {
+        if (array_key_exists("thumbnailUrl", $this->_propDict)) {
+            return $this->_propDict["thumbnailUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the thumbnailUrl
+    *
+    * @param string $val The thumbnailUrl
+    *
+    * @return PersonWebsite
+    */
+    public function setThumbnailUrl($val)
+    {
+        $this->_propDict["thumbnailUrl"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the webUrl
     * Contains a link to the website itself.
@@ -125,7 +152,7 @@ class PersonWebsite extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * Contains a link to the website itself.
@@ -139,5 +166,5 @@ class PersonWebsite extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

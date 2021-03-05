@@ -38,7 +38,7 @@ class LanguageProficiency extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Contains the long-form name for the language.
@@ -52,7 +52,7 @@ class LanguageProficiency extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proficiency
     *
@@ -70,7 +70,7 @@ class LanguageProficiency extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the proficiency
     *
@@ -83,7 +83,7 @@ class LanguageProficiency extends ItemFacet
         $this->_propDict["proficiency"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reading
     * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -102,7 +102,7 @@ class LanguageProficiency extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the reading
     * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -116,7 +116,7 @@ class LanguageProficiency extends ItemFacet
         $this->_propDict["reading"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the spoken
     * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -135,7 +135,7 @@ class LanguageProficiency extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the spoken
     * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -149,7 +149,7 @@ class LanguageProficiency extends ItemFacet
         $this->_propDict["spoken"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tag
     * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
@@ -164,7 +164,7 @@ class LanguageProficiency extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the tag
     * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
@@ -178,7 +178,34 @@ class LanguageProficiency extends ItemFacet
         $this->_propDict["tag"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the thumbnailUrl
+    *
+    * @return string The thumbnailUrl
+    */
+    public function getThumbnailUrl()
+    {
+        if (array_key_exists("thumbnailUrl", $this->_propDict)) {
+            return $this->_propDict["thumbnailUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the thumbnailUrl
+    *
+    * @param string $val The thumbnailUrl
+    *
+    * @return LanguageProficiency
+    */
+    public function setThumbnailUrl($val)
+    {
+        $this->_propDict["thumbnailUrl"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the written
     * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -197,7 +224,7 @@ class LanguageProficiency extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the written
     * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
@@ -211,5 +238,5 @@ class LanguageProficiency extends ItemFacet
         $this->_propDict["written"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class Group extends DirectoryObject
 {
 
-     /** 
+     /**
      * Gets the assignedLabels
     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      *
@@ -39,8 +39,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignedLabels
     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
     *
@@ -50,12 +50,12 @@ class Group extends DirectoryObject
     */
     public function setAssignedLabels($val)
     {
-		$this->_propDict["assignedLabels"] = $val;
+        $this->_propDict["assignedLabels"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignedLicenses
     * The licenses that are assigned to the group. Returned only on $select. Read-only.
      *
@@ -69,8 +69,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignedLicenses
     * The licenses that are assigned to the group. Returned only on $select. Read-only.
     *
@@ -80,10 +80,10 @@ class Group extends DirectoryObject
     */
     public function setAssignedLicenses($val)
     {
-		$this->_propDict["assignedLicenses"] = $val;
+        $this->_propDict["assignedLicenses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the classification
     * Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default.
@@ -98,7 +98,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the classification
     * Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default.
@@ -112,7 +112,7 @@ class Group extends DirectoryObject
         $this->_propDict["classification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdByAppId
     * App ID of the app used to create the group. Can be null for some groups. Returned by default. Read-only. Supports $filter.
@@ -127,7 +127,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the createdByAppId
     * App ID of the app used to create the group. Can be null for some groups. Returned by default. Read-only. Supports $filter.
@@ -141,7 +141,7 @@ class Group extends DirectoryObject
         $this->_propDict["createdByAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -160,7 +160,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -174,7 +174,7 @@ class Group extends DirectoryObject
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * An optional description for the group. Returned by default.
@@ -189,7 +189,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * An optional description for the group. Returned by default.
@@ -203,7 +203,7 @@ class Group extends DirectoryObject
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the group. This property is required when a group is created and cannot be cleared during updates. Returned by default. Supports $filter and $orderby.
@@ -218,7 +218,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the group. This property is required when a group is created and cannot be cleared during updates. Returned by default. Supports $filter and $orderby.
@@ -232,7 +232,7 @@ class Group extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -251,7 +251,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -265,7 +265,7 @@ class Group extends DirectoryObject
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupTypes
     * Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
@@ -280,7 +280,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the groupTypes
     * Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
@@ -294,7 +294,7 @@ class Group extends DirectoryObject
         $this->_propDict["groupTypes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasMembersWithLicenseErrors
     * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true).
@@ -309,7 +309,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the hasMembersWithLicenseErrors
     * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true).
@@ -323,7 +323,7 @@ class Group extends DirectoryObject
         $this->_propDict["hasMembersWithLicenseErrors"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the infoCatalogs
     * Identifies the info segments assigned to the group. Returned by default.
@@ -338,7 +338,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the infoCatalogs
     * Identifies the info segments assigned to the group. Returned by default.
@@ -352,7 +352,7 @@ class Group extends DirectoryObject
         $this->_propDict["infoCatalogs"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAssignableToRole
     * Indicates whether this group can be assigned to an Azure Active Directory role or not.This property can only be set while creating the group and is immutable. Only Global Administrator and Privileged Role Administrator roles can set this property. For more information, see Using a group to manage Azure AD role assignmentsReturned by default.
@@ -367,7 +367,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the isAssignableToRole
     * Indicates whether this group can be assigned to an Azure Active Directory role or not.This property can only be set while creating the group and is immutable. Only Global Administrator and Privileged Role Administrator roles can set this property. For more information, see Using a group to manage Azure AD role assignmentsReturned by default.
@@ -381,7 +381,7 @@ class Group extends DirectoryObject
         $this->_propDict["isAssignableToRole"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the licenseProcessingState
     * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
@@ -400,7 +400,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the licenseProcessingState
     * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
@@ -414,7 +414,7 @@ class Group extends DirectoryObject
         $this->_propDict["licenseProcessingState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mail
     * The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter.
@@ -429,7 +429,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the mail
     * The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Returned by default. Read-only. Supports $filter.
@@ -443,7 +443,7 @@ class Group extends DirectoryObject
         $this->_propDict["mail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mailEnabled
     * Specifies whether the group is mail-enabled. Returned by default.
@@ -458,7 +458,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the mailEnabled
     * Specifies whether the group is mail-enabled. Returned by default.
@@ -472,7 +472,7 @@ class Group extends DirectoryObject
         $this->_propDict["mailEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mailNickname
     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
@@ -487,7 +487,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the mailNickname
     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.&amp;lt;&amp;gt;,SPACE. Returned by default. Supports $filter.
@@ -501,7 +501,7 @@ class Group extends DirectoryObject
         $this->_propDict["mailNickname"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mdmAppId
     *
@@ -515,7 +515,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the mdmAppId
     *
@@ -528,7 +528,7 @@ class Group extends DirectoryObject
         $this->_propDict["mdmAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the membershipRule
     * The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default.
@@ -543,7 +543,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the membershipRule
     * The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default.
@@ -557,7 +557,7 @@ class Group extends DirectoryObject
         $this->_propDict["membershipRule"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the membershipRuleProcessingState
     * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
@@ -572,7 +572,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the membershipRuleProcessingState
     * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
@@ -586,7 +586,7 @@ class Group extends DirectoryObject
         $this->_propDict["membershipRuleProcessingState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesDomainName
     * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
@@ -601,7 +601,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesDomainName
     * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
@@ -615,7 +615,7 @@ class Group extends DirectoryObject
         $this->_propDict["onPremisesDomainName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesLastSyncDateTime
     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
@@ -634,7 +634,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the onPremisesLastSyncDateTime
     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
@@ -648,7 +648,7 @@ class Group extends DirectoryObject
         $this->_propDict["onPremisesLastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesNetBiosName
     * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
@@ -663,7 +663,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesNetBiosName
     * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
@@ -677,9 +677,9 @@ class Group extends DirectoryObject
         $this->_propDict["onPremisesNetBiosName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onPremisesProvisioningErrors
     * Errors when using Microsoft synchronization product during provisioning. Returned by default.
      *
@@ -693,8 +693,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onPremisesProvisioningErrors
     * Errors when using Microsoft synchronization product during provisioning. Returned by default.
     *
@@ -704,10 +704,10 @@ class Group extends DirectoryObject
     */
     public function setOnPremisesProvisioningErrors($val)
     {
-		$this->_propDict["onPremisesProvisioningErrors"] = $val;
+        $this->_propDict["onPremisesProvisioningErrors"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesSamAccountName
     * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
@@ -722,7 +722,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesSamAccountName
     * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
@@ -736,7 +736,7 @@ class Group extends DirectoryObject
         $this->_propDict["onPremisesSamAccountName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesSecurityIdentifier
     * Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Returned by default. Read-only.
@@ -751,7 +751,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesSecurityIdentifier
     * Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud. Returned by default. Read-only.
@@ -765,7 +765,7 @@ class Group extends DirectoryObject
         $this->_propDict["onPremisesSecurityIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesSyncEnabled
     * true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter.
@@ -780,7 +780,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesSyncEnabled
     * true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter.
@@ -794,7 +794,7 @@ class Group extends DirectoryObject
         $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the preferredDataLocation
     * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
@@ -809,7 +809,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the preferredDataLocation
     * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
@@ -823,7 +823,7 @@ class Group extends DirectoryObject
         $this->_propDict["preferredDataLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preferredLanguage
     * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
@@ -838,7 +838,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the preferredLanguage
     * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
@@ -852,7 +852,7 @@ class Group extends DirectoryObject
         $this->_propDict["preferredLanguage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the proxyAddresses
     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required for filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
@@ -867,7 +867,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the proxyAddresses
     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required for filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
@@ -881,7 +881,7 @@ class Group extends DirectoryObject
         $this->_propDict["proxyAddresses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the renewedDateTime
     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -900,7 +900,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the renewedDateTime
     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
@@ -914,7 +914,7 @@ class Group extends DirectoryObject
         $this->_propDict["renewedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceBehaviorOptions
     * Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
@@ -929,7 +929,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceBehaviorOptions
     * Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
@@ -943,7 +943,7 @@ class Group extends DirectoryObject
         $this->_propDict["resourceBehaviorOptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceProvisioningOptions
     * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options.
@@ -958,7 +958,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceProvisioningOptions
     * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options.
@@ -972,7 +972,7 @@ class Group extends DirectoryObject
         $this->_propDict["resourceProvisioningOptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the securityEnabled
     * Specifies whether the group is a security group. Returned by default. Supports $filter.
@@ -987,7 +987,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the securityEnabled
     * Specifies whether the group is a security group. Returned by default. Supports $filter.
@@ -1001,7 +1001,7 @@ class Group extends DirectoryObject
         $this->_propDict["securityEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the securityIdentifier
     * Security identifier of the group, used in Windows scenarios. Returned by default.
@@ -1016,7 +1016,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the securityIdentifier
     * Security identifier of the group, used in Windows scenarios. Returned by default.
@@ -1030,7 +1030,7 @@ class Group extends DirectoryObject
         $this->_propDict["securityIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the theme
     * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
@@ -1045,7 +1045,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the theme
     * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
@@ -1059,7 +1059,7 @@ class Group extends DirectoryObject
         $this->_propDict["theme"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the visibility
     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default.
@@ -1074,7 +1074,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the visibility
     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default.
@@ -1088,7 +1088,7 @@ class Group extends DirectoryObject
         $this->_propDict["visibility"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the accessType
     *
@@ -1106,7 +1106,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the accessType
     *
@@ -1119,7 +1119,7 @@ class Group extends DirectoryObject
         $this->_propDict["accessType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowExternalSenders
     * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select.
@@ -1134,7 +1134,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the allowExternalSenders
     * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select.
@@ -1148,7 +1148,7 @@ class Group extends DirectoryObject
         $this->_propDict["allowExternalSenders"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the autoSubscribeNewMembers
     * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select.
@@ -1163,7 +1163,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the autoSubscribeNewMembers
     * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select.
@@ -1177,7 +1177,7 @@ class Group extends DirectoryObject
         $this->_propDict["autoSubscribeNewMembers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hideFromAddressLists
     * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
@@ -1192,7 +1192,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the hideFromAddressLists
     * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
@@ -1206,7 +1206,7 @@ class Group extends DirectoryObject
         $this->_propDict["hideFromAddressLists"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hideFromOutlookClients
     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
@@ -1221,7 +1221,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the hideFromOutlookClients
     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
@@ -1235,7 +1235,7 @@ class Group extends DirectoryObject
         $this->_propDict["hideFromOutlookClients"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isFavorite
     *
@@ -1249,7 +1249,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the isFavorite
     *
@@ -1262,7 +1262,7 @@ class Group extends DirectoryObject
         $this->_propDict["isFavorite"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isSubscribedByMail
     * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select.
@@ -1277,7 +1277,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the isSubscribedByMail
     * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select.
@@ -1291,7 +1291,7 @@ class Group extends DirectoryObject
         $this->_propDict["isSubscribedByMail"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unseenConversationsCount
     * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
@@ -1306,7 +1306,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the unseenConversationsCount
     * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group. This property is the same as unseenCount. Returned only on $select.
@@ -1320,7 +1320,7 @@ class Group extends DirectoryObject
         $this->_propDict["unseenConversationsCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unseenCount
     * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select.
@@ -1335,7 +1335,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the unseenCount
     * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select.
@@ -1349,7 +1349,7 @@ class Group extends DirectoryObject
         $this->_propDict["unseenCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the unseenMessagesCount
     * Count of new posts that have been delivered to the group's conversations since the signed-in user's last visit to the group. Returned only on $select.
@@ -1364,7 +1364,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the unseenMessagesCount
     * Count of new posts that have been delivered to the group's conversations since the signed-in user's last visit to the group. Returned only on $select.
@@ -1378,7 +1378,7 @@ class Group extends DirectoryObject
         $this->_propDict["unseenMessagesCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the membershipRuleProcessingStatus
     * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supports $filter. Read-only.
@@ -1397,7 +1397,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the membershipRuleProcessingStatus
     * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supports $filter. Read-only.
@@ -1411,7 +1411,7 @@ class Group extends DirectoryObject
         $this->_propDict["membershipRuleProcessingStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isArchived
     *
@@ -1425,7 +1425,7 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the isArchived
     *
@@ -1438,10 +1438,11 @@ class Group extends DirectoryObject
         $this->_propDict["isArchived"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appRoleAssignments
+    * Represents the app roles a group has been granted for an application.
      *
      * @return array The appRoleAssignments
      */
@@ -1453,9 +1454,10 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appRoleAssignments
+    * Represents the app roles a group has been granted for an application.
     *
     * @param AppRoleAssignment $val The appRoleAssignments
     *
@@ -1463,10 +1465,10 @@ class Group extends DirectoryObject
     */
     public function setAppRoleAssignments($val)
     {
-		$this->_propDict["appRoleAssignments"] = $val;
+        $this->_propDict["appRoleAssignments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdOnBehalfOf
     * The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.
@@ -1485,7 +1487,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the createdOnBehalfOf
     * The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.
@@ -1499,9 +1501,9 @@ class Group extends DirectoryObject
         $this->_propDict["createdOnBehalfOf"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the endpoints
     * Endpoints for the group. Read-only. Nullable.
      *
@@ -1515,8 +1517,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the endpoints
     * Endpoints for the group. Read-only. Nullable.
     *
@@ -1526,12 +1528,12 @@ class Group extends DirectoryObject
     */
     public function setEndpoints($val)
     {
-		$this->_propDict["endpoints"] = $val;
+        $this->_propDict["endpoints"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the memberOf
     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      *
@@ -1545,8 +1547,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the memberOf
     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
     *
@@ -1556,12 +1558,12 @@ class Group extends DirectoryObject
     */
     public function setMemberOf($val)
     {
-		$this->_propDict["memberOf"] = $val;
+        $this->_propDict["memberOf"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the members
     * Users, contacts, and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
      *
@@ -1575,8 +1577,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the members
     * Users, contacts, and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
     *
@@ -1586,12 +1588,12 @@ class Group extends DirectoryObject
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the membersWithLicenseErrors
     * A list of group members with license errors from this group-based license assignment. Read-only.
      *
@@ -1605,8 +1607,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the membersWithLicenseErrors
     * A list of group members with license errors from this group-based license assignment. Read-only.
     *
@@ -1616,12 +1618,12 @@ class Group extends DirectoryObject
     */
     public function setMembersWithLicenseErrors($val)
     {
-		$this->_propDict["membersWithLicenseErrors"] = $val;
+        $this->_propDict["membersWithLicenseErrors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the owners
     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
      *
@@ -1635,8 +1637,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the owners
     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
     *
@@ -1646,12 +1648,12 @@ class Group extends DirectoryObject
     */
     public function setOwners($val)
     {
-		$this->_propDict["owners"] = $val;
+        $this->_propDict["owners"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the permissionGrants
      *
      * @return array The permissionGrants
@@ -1664,8 +1666,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the permissionGrants
     *
     * @param ResourceSpecificPermissionGrant $val The permissionGrants
@@ -1674,12 +1676,12 @@ class Group extends DirectoryObject
     */
     public function setPermissionGrants($val)
     {
-		$this->_propDict["permissionGrants"] = $val;
+        $this->_propDict["permissionGrants"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settings
     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      *
@@ -1693,8 +1695,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settings
     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
     *
@@ -1704,12 +1706,12 @@ class Group extends DirectoryObject
     */
     public function setSettings($val)
     {
-		$this->_propDict["settings"] = $val;
+        $this->_propDict["settings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the transitiveMemberOf
      *
      * @return array The transitiveMemberOf
@@ -1722,8 +1724,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the transitiveMemberOf
     *
     * @param DirectoryObject $val The transitiveMemberOf
@@ -1732,12 +1734,12 @@ class Group extends DirectoryObject
     */
     public function setTransitiveMemberOf($val)
     {
-		$this->_propDict["transitiveMemberOf"] = $val;
+        $this->_propDict["transitiveMemberOf"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the transitiveMembers
      *
      * @return array The transitiveMembers
@@ -1750,8 +1752,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the transitiveMembers
     *
     * @param DirectoryObject $val The transitiveMembers
@@ -1760,12 +1762,12 @@ class Group extends DirectoryObject
     */
     public function setTransitiveMembers($val)
     {
-		$this->_propDict["transitiveMembers"] = $val;
+        $this->_propDict["transitiveMembers"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the acceptedSenders
     * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      *
@@ -1779,8 +1781,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the acceptedSenders
     * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
     *
@@ -1790,10 +1792,10 @@ class Group extends DirectoryObject
     */
     public function setAcceptedSenders($val)
     {
-		$this->_propDict["acceptedSenders"] = $val;
+        $this->_propDict["acceptedSenders"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the calendar
     * The group's calendar. Read-only.
@@ -1812,7 +1814,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the calendar
     * The group's calendar. Read-only.
@@ -1826,9 +1828,9 @@ class Group extends DirectoryObject
         $this->_propDict["calendar"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the calendarView
     * The calendar view for the calendar. Read-only.
      *
@@ -1842,8 +1844,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the calendarView
     * The calendar view for the calendar. Read-only.
     *
@@ -1853,12 +1855,12 @@ class Group extends DirectoryObject
     */
     public function setCalendarView($val)
     {
-		$this->_propDict["calendarView"] = $val;
+        $this->_propDict["calendarView"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the conversations
     * The group's conversations.
      *
@@ -1872,8 +1874,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the conversations
     * The group's conversations.
     *
@@ -1883,12 +1885,12 @@ class Group extends DirectoryObject
     */
     public function setConversations($val)
     {
-		$this->_propDict["conversations"] = $val;
+        $this->_propDict["conversations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the events
     * The group's events.
      *
@@ -1902,8 +1904,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the events
     * The group's events.
     *
@@ -1913,75 +1915,12 @@ class Group extends DirectoryObject
     */
     public function setEvents($val)
     {
-		$this->_propDict["events"] = $val;
+        $this->_propDict["events"] = $val;
         return $this;
     }
-    
-    /**
-    * Gets the photo
-    * The group's profile photo.
-    *
-    * @return ProfilePhoto The photo
-    */
-    public function getPhoto()
-    {
-        if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Beta\Microsoft\Graph\Model\ProfilePhoto")) {
-                return $this->_propDict["photo"];
-            } else {
-                $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
-                return $this->_propDict["photo"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the photo
-    * The group's profile photo.
-    *
-    * @param ProfilePhoto $val The photo
-    *
-    * @return Group
-    */
-    public function setPhoto($val)
-    {
-        $this->_propDict["photo"] = $val;
-        return $this;
-    }
-    
 
-     /** 
-     * Gets the photos
-    * The profile photos owned by the group. Read-only. Nullable.
-     *
-     * @return array The photos
-     */
-    public function getPhotos()
-    {
-        if (array_key_exists("photos", $this->_propDict)) {
-           return $this->_propDict["photos"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the photos
-    * The profile photos owned by the group. Read-only. Nullable.
-    *
-    * @param ProfilePhoto $val The photos
-    *
-    * @return Group
-    */
-    public function setPhotos($val)
-    {
-		$this->_propDict["photos"] = $val;
-        return $this;
-    }
-    
 
-     /** 
+     /**
      * Gets the rejectedSenders
     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      *
@@ -1995,8 +1934,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the rejectedSenders
     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
     *
@@ -2006,12 +1945,12 @@ class Group extends DirectoryObject
     */
     public function setRejectedSenders($val)
     {
-		$this->_propDict["rejectedSenders"] = $val;
+        $this->_propDict["rejectedSenders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the threads
     * The group's conversation threads. Nullable.
      *
@@ -2025,8 +1964,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the threads
     * The group's conversation threads. Nullable.
     *
@@ -2036,10 +1975,10 @@ class Group extends DirectoryObject
     */
     public function setThreads($val)
     {
-		$this->_propDict["threads"] = $val;
+        $this->_propDict["threads"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the drive
     * The group's default drive. Read-only.
@@ -2058,7 +1997,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the drive
     * The group's default drive. Read-only.
@@ -2072,9 +2011,9 @@ class Group extends DirectoryObject
         $this->_propDict["drive"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the drives
     * The group's drives. Read-only.
      *
@@ -2088,8 +2027,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the drives
     * The group's drives. Read-only.
     *
@@ -2099,12 +2038,12 @@ class Group extends DirectoryObject
     */
     public function setDrives($val)
     {
-		$this->_propDict["drives"] = $val;
+        $this->_propDict["drives"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sites
     * The list of SharePoint sites in this group. Access the default site with /sites/root.
      *
@@ -2118,8 +2057,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sites
     * The list of SharePoint sites in this group. Access the default site with /sites/root.
     *
@@ -2129,12 +2068,12 @@ class Group extends DirectoryObject
     */
     public function setSites($val)
     {
-		$this->_propDict["sites"] = $val;
+        $this->_propDict["sites"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extensions
     * The collection of open extensions defined for the group. Read-only. Nullable.
      *
@@ -2148,8 +2087,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the extensions
     * The collection of open extensions defined for the group. Read-only. Nullable.
     *
@@ -2159,12 +2098,12 @@ class Group extends DirectoryObject
     */
     public function setExtensions($val)
     {
-		$this->_propDict["extensions"] = $val;
+        $this->_propDict["extensions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groupLifecyclePolicies
     * The collection of lifecycle policies for this group. Read-only. Nullable.
      *
@@ -2178,8 +2117,8 @@ class Group extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groupLifecyclePolicies
     * The collection of lifecycle policies for this group. Read-only. Nullable.
     *
@@ -2189,10 +2128,10 @@ class Group extends DirectoryObject
     */
     public function setGroupLifecyclePolicies($val)
     {
-		$this->_propDict["groupLifecyclePolicies"] = $val;
+        $this->_propDict["groupLifecyclePolicies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the planner
     * Selective Planner services available to the group. Read-only. Nullable.
@@ -2211,7 +2150,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the planner
     * Selective Planner services available to the group. Read-only. Nullable.
@@ -2225,7 +2164,7 @@ class Group extends DirectoryObject
         $this->_propDict["planner"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onenote
     * Read-only.
@@ -2244,7 +2183,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the onenote
     * Read-only.
@@ -2258,7 +2197,70 @@ class Group extends DirectoryObject
         $this->_propDict["onenote"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the photo
+    * The group's profile photo.
+    *
+    * @return ProfilePhoto The photo
+    */
+    public function getPhoto()
+    {
+        if (array_key_exists("photo", $this->_propDict)) {
+            if (is_a($this->_propDict["photo"], "Beta\Microsoft\Graph\Model\ProfilePhoto")) {
+                return $this->_propDict["photo"];
+            } else {
+                $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
+                return $this->_propDict["photo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the photo
+    * The group's profile photo.
+    *
+    * @param ProfilePhoto $val The photo
+    *
+    * @return Group
+    */
+    public function setPhoto($val)
+    {
+        $this->_propDict["photo"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+     *
+     * @return array The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the photos
+    * The profile photos owned by the group. Read-only. Nullable.
+    *
+    * @param ProfilePhoto $val The photos
+    *
+    * @return Group
+    */
+    public function setPhotos($val)
+    {
+        $this->_propDict["photos"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the team
     *
@@ -2276,7 +2278,7 @@ class Group extends DirectoryObject
         }
         return null;
     }
-    
+
     /**
     * Sets the team
     *
@@ -2289,5 +2291,5 @@ class Group extends DirectoryObject
         $this->_propDict["team"] = $val;
         return $this;
     }
-    
+
 }

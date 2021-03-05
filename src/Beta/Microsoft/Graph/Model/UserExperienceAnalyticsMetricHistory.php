@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsMetricHistory extends Entity
 {
     /**
+    * Gets the deviceId
+    * The user experience analytics device id.
+    *
+    * @return string The deviceId
+    */
+    public function getDeviceId()
+    {
+        if (array_key_exists("deviceId", $this->_propDict)) {
+            return $this->_propDict["deviceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceId
+    * The user experience analytics device id.
+    *
+    * @param string $val The deviceId
+    *
+    * @return UserExperienceAnalyticsMetricHistory
+    */
+    public function setDeviceId($val)
+    {
+        $this->_propDict["deviceId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the metricDateTime
     * The user experience analytics metric date time.
     *
@@ -42,7 +71,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the metricDateTime
     * The user experience analytics metric date time.
@@ -56,7 +85,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["metricDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the metricType
     * The user experience analytics metric type.
@@ -71,7 +100,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the metricType
     * The user experience analytics metric type.
@@ -85,7 +114,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["metricType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userExperienceAnalyticsMetric
     * User experience analytics metric.
@@ -104,7 +133,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userExperienceAnalyticsMetric
     * User experience analytics metric.
@@ -118,5 +147,5 @@ class UserExperienceAnalyticsMetricHistory extends Entity
         $this->_propDict["userExperienceAnalyticsMetric"] = $val;
         return $this;
     }
-    
+
 }

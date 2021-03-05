@@ -42,7 +42,7 @@ class ItemFacet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the allowedAudiences
     * The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
@@ -56,7 +56,7 @@ class ItemFacet extends Entity
         $this->_propDict["allowedAudiences"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * Provides the identifier of the user and/or application that created the entity.
@@ -75,7 +75,7 @@ class ItemFacet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * Provides the identifier of the user and/or application that created the entity.
@@ -89,7 +89,7 @@ class ItemFacet extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Provides the dateTimeOffset for when the entity was created.
@@ -108,7 +108,7 @@ class ItemFacet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Provides the dateTimeOffset for when the entity was created.
@@ -122,7 +122,7 @@ class ItemFacet extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the inference
     * Contains inference detail if the entity is inferred by the creating or modifying application.
@@ -141,7 +141,7 @@ class ItemFacet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the inference
     * Contains inference detail if the entity is inferred by the creating or modifying application.
@@ -155,7 +155,34 @@ class ItemFacet extends Entity
         $this->_propDict["inference"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the isSearchable
+    *
+    * @return bool The isSearchable
+    */
+    public function getIsSearchable()
+    {
+        if (array_key_exists("isSearchable", $this->_propDict)) {
+            return $this->_propDict["isSearchable"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isSearchable
+    *
+    * @param bool $val The isSearchable
+    *
+    * @return ItemFacet
+    */
+    public function setIsSearchable($val)
+    {
+        $this->_propDict["isSearchable"] = boolval($val);
+        return $this;
+    }
+
     /**
     * Gets the lastModifiedBy
     * Provides the identifier of the user and/or application that last modified the entity.
@@ -174,7 +201,7 @@ class ItemFacet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     * Provides the identifier of the user and/or application that last modified the entity.
@@ -188,7 +215,7 @@ class ItemFacet extends Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Provides the dateTimeOffset for when the entity was created.
@@ -207,7 +234,7 @@ class ItemFacet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Provides the dateTimeOffset for when the entity was created.
@@ -221,7 +248,7 @@ class ItemFacet extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the source
     * Where the values within an entity originated if synced from another service.
@@ -240,7 +267,7 @@ class ItemFacet extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the source
     * Where the values within an entity originated if synced from another service.
@@ -254,5 +281,5 @@ class ItemFacet extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
-    
+
 }

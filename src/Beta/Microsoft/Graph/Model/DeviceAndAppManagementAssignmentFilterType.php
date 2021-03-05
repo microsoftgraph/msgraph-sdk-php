@@ -31,4 +31,5 @@ class DeviceAndAppManagementAssignmentFilterType extends Enum
     */
     const NONE = "none";
     const GRAPHINCLUDE = "include";
+    const EXCLUDE = "exclude";
 }
