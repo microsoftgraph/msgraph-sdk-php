@@ -161,7 +161,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
             if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["organizer"];
             } else {
-                $this->_propDict["organizer"] = new Microsoft\Graph\Model\IdentitySet($this->_propDict["organizer"]);
+                $this->_propDict["organizer"] = new \Microsoft\Graph\Model\IdentitySet($this->_propDict["organizer"]);
                 return $this->_propDict["organizer"];
             }
         }
