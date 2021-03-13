@@ -25,6 +25,7 @@ class AudioConferencing extends Entity
 {
     /**
     * Gets the conferenceId
+    * The conference id of the online meeting.
     *
     * @return string The conferenceId
     */
@@ -39,6 +40,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the conferenceId
+    * The conference id of the online meeting.
     *
     * @param string $val The value of the conferenceId
     *

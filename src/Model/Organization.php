@@ -172,7 +172,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -191,7 +191,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -263,7 +263,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -282,7 +282,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -672,6 +672,37 @@ class Organization extends DirectoryObject
     public function setMobileDeviceManagementAuthority($val)
     {
         $this->_propDict["mobileDeviceManagementAuthority"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the branding
+    *
+    * @return OrganizationalBranding The branding
+    */
+    public function getBranding()
+    {
+        if (array_key_exists("branding", $this->_propDict)) {
+            if (is_a($this->_propDict["branding"], "Microsoft\Graph\Model\OrganizationalBranding")) {
+                return $this->_propDict["branding"];
+            } else {
+                $this->_propDict["branding"] = new OrganizationalBranding($this->_propDict["branding"]);
+                return $this->_propDict["branding"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the branding
+    *
+    * @param OrganizationalBranding $val The branding
+    *
+    * @return Organization
+    */
+    public function setBranding($val)
+    {
+        $this->_propDict["branding"] = $val;
         return $this;
     }
     
