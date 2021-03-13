@@ -40,7 +40,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MESSAGE_TITLE: Generated beta models using Typewriter
-        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. See [beta_metadata.xml](https://github.com/microsoftgraph/msgraph-metadata/blob/master/beta_metadata.xml) for metadata changes. \n\n Make sure the version number is incremented in /src/Core/GraphConstants.php. Compare the version against the latest release on [packagist.org](https://packagist.org/packages/microsoft/microsoft-graph) and update the version in src/Core/GraphConstants. \n\n cc: @darrelmiller"
+        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. See [beta_metadata.xml](https://github.com/microsoftgraph/msgraph-metadata/blob/master/beta_metadata.xml) for metadata changes. \n\n Make sure the version number is incremented in /src/Core/GraphConstants.php. Compare the version against the latest release on [packagist.org](https://packagist.org/packages/microsoft/microsoft-graph) and update the version in src/Core/GraphConstants."
         ASSIGNEDTO: MIchaelMainer
         LABELS: generated
         BASE: dev
