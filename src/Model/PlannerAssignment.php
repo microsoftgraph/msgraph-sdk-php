@@ -59,7 +59,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Gets the assignedDateTime
-    * The time at which the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The time at which the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The assignedDateTime
     */
@@ -78,7 +78,7 @@ class PlannerAssignment extends Entity
 
     /**
     * Sets the assignedDateTime
-    * The time at which the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The time at which the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The value to assign to the assignedDateTime
     *

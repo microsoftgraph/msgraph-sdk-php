@@ -115,7 +115,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -134,7 +134,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -206,7 +206,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the expirationDateTime
-    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -225,7 +225,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the expirationDateTime
-    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -504,7 +504,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -523,7 +523,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -770,7 +770,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @return \DateTime The renewedDateTime
     */
@@ -789,7 +789,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @param \DateTime $val The renewedDateTime
     *
@@ -1121,6 +1121,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignments
+    * Represents the app roles a group has been granted for an application.
      *
      * @return array The appRoleAssignments
      */
@@ -1135,6 +1136,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignments
+    * Represents the app roles a group has been granted for an application.
     *
     * @param AppRoleAssignment $val The appRoleAssignments
     *

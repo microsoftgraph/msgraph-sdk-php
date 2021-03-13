@@ -115,4 +115,31 @@ class EducationOrganization extends Entity
         return $this;
     }
     
+    /**
+    * Gets the externalSourceDetail
+    *
+    * @return string The externalSourceDetail
+    */
+    public function getExternalSourceDetail()
+    {
+        if (array_key_exists("externalSourceDetail", $this->_propDict)) {
+            return $this->_propDict["externalSourceDetail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalSourceDetail
+    *
+    * @param string $val The externalSourceDetail
+    *
+    * @return EducationOrganization
+    */
+    public function setExternalSourceDetail($val)
+    {
+        $this->_propDict["externalSourceDetail"] = $val;
+        return $this;
+    }
+    
 }

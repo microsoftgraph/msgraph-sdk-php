@@ -267,6 +267,35 @@ class EducationUser extends Entity
     }
     
     /**
+    * Gets the externalSourceDetail
+    * The name of the external source this resources was generated from.
+    *
+    * @return string The externalSourceDetail
+    */
+    public function getExternalSourceDetail()
+    {
+        if (array_key_exists("externalSourceDetail", $this->_propDict)) {
+            return $this->_propDict["externalSourceDetail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalSourceDetail
+    * The name of the external source this resources was generated from.
+    *
+    * @param string $val The externalSourceDetail
+    *
+    * @return EducationUser
+    */
+    public function setExternalSourceDetail($val)
+    {
+        $this->_propDict["externalSourceDetail"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the givenName
     * The given name (first name) of the user. Supports /$filter.
     *
@@ -468,6 +497,39 @@ class EducationUser extends Entity
     public function setOfficeLocation($val)
     {
         $this->_propDict["officeLocation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the onPremisesInfo
+    * Additional information used to associate the AAD user with it's Active Directory counterpart.
+    *
+    * @return EducationOnPremisesInfo The onPremisesInfo
+    */
+    public function getOnPremisesInfo()
+    {
+        if (array_key_exists("onPremisesInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["onPremisesInfo"], "Microsoft\Graph\Model\EducationOnPremisesInfo")) {
+                return $this->_propDict["onPremisesInfo"];
+            } else {
+                $this->_propDict["onPremisesInfo"] = new EducationOnPremisesInfo($this->_propDict["onPremisesInfo"]);
+                return $this->_propDict["onPremisesInfo"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onPremisesInfo
+    * Additional information used to associate the AAD user with it's Active Directory counterpart.
+    *
+    * @param EducationOnPremisesInfo $val The onPremisesInfo
+    *
+    * @return EducationUser
+    */
+    public function setOnPremisesInfo($val)
+    {
+        $this->_propDict["onPremisesInfo"] = $val;
         return $this;
     }
     
@@ -955,6 +1017,36 @@ class EducationUser extends Entity
     public function setSchools($val)
     {
 		$this->_propDict["schools"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the taughtClasses
+    * Classes for which the user is a teacher.
+     *
+     * @return array The taughtClasses
+     */
+    public function getTaughtClasses()
+    {
+        if (array_key_exists("taughtClasses", $this->_propDict)) {
+           return $this->_propDict["taughtClasses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the taughtClasses
+    * Classes for which the user is a teacher.
+    *
+    * @param EducationClass $val The taughtClasses
+    *
+    * @return EducationUser
+    */
+    public function setTaughtClasses($val)
+    {
+		$this->_propDict["taughtClasses"] = $val;
         return $this;
     }
     
