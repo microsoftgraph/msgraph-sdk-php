@@ -155,6 +155,16 @@ class GraphRequest
     }
 
     /**
+     * Gets whether request returns a stream or not
+     *
+     * @return boolean
+     */
+    public function getReturnsStream()
+    {
+        return $this->returnsStream;
+    }
+
+    /**
     * Sets a http errors option
     *
     * @param string $http_errors A bool option to the Graph call
