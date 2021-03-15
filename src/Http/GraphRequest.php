@@ -137,7 +137,7 @@ class GraphRequest
     /**
      * Gets the Base URL the request is made to
      *
-     * @return String
+     * @return string
      */
     public function getBaseUrl()
     {
@@ -147,7 +147,7 @@ class GraphRequest
     /**
      * Gets the API version in use for the request
      *
-     * @return String
+     * @return string
      */
     public function getApiVersion()
     {
@@ -264,6 +264,16 @@ class GraphRequest
     {
         $this->timeout = $timeout;
         return $this;
+    }
+
+    /**
+     * Gets the timeout value of the request
+     *
+     * @return string
+     */
+    public function getTimeout()
+    {
+        return $this->timeout;
     }
 
     /**

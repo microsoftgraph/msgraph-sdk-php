@@ -122,12 +122,12 @@ class GraphRequestTest extends TestCase
     public function testSetTimeout()
     {
         $this->requests[0]->setTimeout('200');
-        $this->assertAttributeEquals('200', 'timeout', $this->requests[0]);
+        $this->assertEquals('200', $this->requests[0]->getTimeout());
     }
 
     public function testDefaultTimeout()
     {
-        $this->assertAttributeEquals('100', 'timeout', $this->requests[0]);
+        $this->assertEquals('100', $this->requests[0]->getTimeout());
     }
 
     public function testCreateGuzzleClient()
