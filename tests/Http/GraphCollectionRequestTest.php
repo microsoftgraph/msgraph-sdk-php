@@ -31,7 +31,7 @@ class GraphCollectionRequestTest extends TestCase
 
     public function testHitEndOfCollection()
     {
-        $this->expectException(\PHPUnit\Framework\Error\Error::class);
+        $this->expectError();
 
         //First page
         $this->collectionRequest->setPageCallInfo();
