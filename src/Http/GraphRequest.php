@@ -135,6 +135,26 @@ class GraphRequest
     }
 
     /**
+     * Gets the Base URL the request is made to
+     *
+     * @return String
+     */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * Gets the API version in use for the request
+     *
+     * @return String
+     */
+    public function getApiVersion()
+    {
+        return $this->apiVersion;
+    }
+
+    /**
     * Sets a http errors option
     *
     * @param string $http_errors A bool option to the Graph call
