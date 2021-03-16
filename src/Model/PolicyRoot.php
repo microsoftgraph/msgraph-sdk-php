@@ -256,6 +256,34 @@ class PolicyRoot extends Entity
     
 
      /** 
+     * Gets the featureRolloutPolicies
+     *
+     * @return array The featureRolloutPolicies
+     */
+    public function getFeatureRolloutPolicies()
+    {
+        if (array_key_exists("featureRolloutPolicies", $this->_propDict)) {
+           return $this->_propDict["featureRolloutPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the featureRolloutPolicies
+    *
+    * @param FeatureRolloutPolicy $val The featureRolloutPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setFeatureRolloutPolicies($val)
+    {
+		$this->_propDict["featureRolloutPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the conditionalAccessPolicies
      *
      * @return array The conditionalAccessPolicies

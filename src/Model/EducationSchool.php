@@ -349,6 +349,37 @@ class EducationSchool extends EducationOrganization
         return $this;
     }
     
+    /**
+    * Gets the administrativeUnit
+    *
+    * @return AdministrativeUnit The administrativeUnit
+    */
+    public function getAdministrativeUnit()
+    {
+        if (array_key_exists("administrativeUnit", $this->_propDict)) {
+            if (is_a($this->_propDict["administrativeUnit"], "Microsoft\Graph\Model\AdministrativeUnit")) {
+                return $this->_propDict["administrativeUnit"];
+            } else {
+                $this->_propDict["administrativeUnit"] = new AdministrativeUnit($this->_propDict["administrativeUnit"]);
+                return $this->_propDict["administrativeUnit"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the administrativeUnit
+    *
+    * @param AdministrativeUnit $val The administrativeUnit
+    *
+    * @return EducationSchool
+    */
+    public function setAdministrativeUnit($val)
+    {
+        $this->_propDict["administrativeUnit"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the classes

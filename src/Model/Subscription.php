@@ -319,6 +319,33 @@ class Subscription extends Entity
     }
     
     /**
+    * Gets the notificationQueryOptions
+    *
+    * @return string The notificationQueryOptions
+    */
+    public function getNotificationQueryOptions()
+    {
+        if (array_key_exists("notificationQueryOptions", $this->_propDict)) {
+            return $this->_propDict["notificationQueryOptions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notificationQueryOptions
+    *
+    * @param string $val The notificationQueryOptions
+    *
+    * @return Subscription
+    */
+    public function setNotificationQueryOptions($val)
+    {
+        $this->_propDict["notificationQueryOptions"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the notificationUrl
     * The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Required.
     *

@@ -54,6 +54,39 @@ class EducationClass extends Entity
     }
     
     /**
+    * Gets the course
+    * Course information for the class
+    *
+    * @return EducationCourse The course
+    */
+    public function getCourse()
+    {
+        if (array_key_exists("course", $this->_propDict)) {
+            if (is_a($this->_propDict["course"], "Microsoft\Graph\Model\EducationCourse")) {
+                return $this->_propDict["course"];
+            } else {
+                $this->_propDict["course"] = new EducationCourse($this->_propDict["course"]);
+                return $this->_propDict["course"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the course
+    * Course information for the class
+    *
+    * @param EducationCourse $val The course
+    *
+    * @return EducationClass
+    */
+    public function setCourse($val)
+    {
+        $this->_propDict["course"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the createdBy
     * Entity who created the class
     *
@@ -232,6 +265,64 @@ class EducationClass extends Entity
     public function setExternalSource($val)
     {
         $this->_propDict["externalSource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the externalSourceDetail
+    * The name of the external source this resources was generated from.
+    *
+    * @return string The externalSourceDetail
+    */
+    public function getExternalSourceDetail()
+    {
+        if (array_key_exists("externalSourceDetail", $this->_propDict)) {
+            return $this->_propDict["externalSourceDetail"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the externalSourceDetail
+    * The name of the external source this resources was generated from.
+    *
+    * @param string $val The externalSourceDetail
+    *
+    * @return EducationClass
+    */
+    public function setExternalSourceDetail($val)
+    {
+        $this->_propDict["externalSourceDetail"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the grade
+    * Grade level of the class.
+    *
+    * @return string The grade
+    */
+    public function getGrade()
+    {
+        if (array_key_exists("grade", $this->_propDict)) {
+            return $this->_propDict["grade"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the grade
+    * Grade level of the class.
+    *
+    * @param string $val The grade
+    *
+    * @return EducationClass
+    */
+    public function setGrade($val)
+    {
+        $this->_propDict["grade"] = $val;
         return $this;
     }
     

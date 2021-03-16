@@ -22,8 +22,67 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PolicyRoot extends 
+class PolicyRoot implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    protected $_propDict;
+    
+    /**
+    * Construct a new PolicyRoot
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+		$this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the PolicyRoot
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+    
+    /**
+    * Gets the authenticationMethodsPolicy
+    *
+    * @return AuthenticationMethodsPolicy The authenticationMethodsPolicy
+    */
+    public function getAuthenticationMethodsPolicy()
+    {
+        if (array_key_exists("authenticationMethodsPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationMethodsPolicy"], "Beta\Microsoft\Graph\Model\AuthenticationMethodsPolicy")) {
+                return $this->_propDict["authenticationMethodsPolicy"];
+            } else {
+                $this->_propDict["authenticationMethodsPolicy"] = new AuthenticationMethodsPolicy($this->_propDict["authenticationMethodsPolicy"]);
+                return $this->_propDict["authenticationMethodsPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationMethodsPolicy
+    *
+    * @param AuthenticationMethodsPolicy $val The authenticationMethodsPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setAuthenticationMethodsPolicy($val)
+    {
+        $this->_propDict["authenticationMethodsPolicy"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the authenticationFlowsPolicy
     *
@@ -487,4 +546,45 @@ class PolicyRoot extends
         return $this;
     }
     
+    /**
+    * Gets the ODataType
+    *
+    * @return string The ODataType
+    */
+    public function getODataType()
+    {
+        return $this->_propDict["@odata.type"];
+    }
+    
+    /**
+    * Sets the ODataType
+    *
+    * @param string The ODataType
+    *
+    * @return Entity
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Serializes the object by property array
+	* Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }
