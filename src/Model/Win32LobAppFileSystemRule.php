@@ -126,7 +126,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
     public function getOperationType()
     {
         if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "Microsoft\Graph\Model\Win32LobAppFileSystemOperationType")) {
+            if (is_a($this->_propDict["operationType"], "\Microsoft\Graph\Model\Win32LobAppFileSystemOperationType")) {
                 return $this->_propDict["operationType"];
             } else {
                 $this->_propDict["operationType"] = new Win32LobAppFileSystemOperationType($this->_propDict["operationType"]);
@@ -159,7 +159,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
+            if (is_a($this->_propDict["operator"], "\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new Win32LobAppRuleOperator($this->_propDict["operator"]);

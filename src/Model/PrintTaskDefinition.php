@@ -33,7 +33,7 @@ class PrintTaskDefinition extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\AppIdentity")) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\AppIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new AppIdentity($this->_propDict["createdBy"]);

@@ -32,7 +32,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     public function getAuthenticationMode()
     {
         if (array_key_exists("authenticationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMode"], "Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode")) {
+            if (is_a($this->_propDict["authenticationMode"], "\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode")) {
                 return $this->_propDict["authenticationMode"];
             } else {
                 $this->_propDict["authenticationMode"] = new MicrosoftAuthenticatorAuthenticationMode($this->_propDict["authenticationMode"]);
@@ -63,7 +63,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     public function getFeatureSettings()
     {
         if (array_key_exists("featureSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["featureSettings"], "Microsoft\Graph\Model\AuthenticatorAppFeatureSettings")) {
+            if (is_a($this->_propDict["featureSettings"], "\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings")) {
                 return $this->_propDict["featureSettings"];
             } else {
                 $this->_propDict["featureSettings"] = new AuthenticatorAppFeatureSettings($this->_propDict["featureSettings"]);

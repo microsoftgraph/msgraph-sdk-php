@@ -33,7 +33,7 @@ class ConditionalAccessPlatforms extends Entity
     public function getExcludePlatforms()
     {
         if (array_key_exists("excludePlatforms", $this->_propDict)) {
-            if (is_a($this->_propDict["excludePlatforms"], "Microsoft\Graph\Model\ConditionalAccessDevicePlatform")) {
+            if (is_a($this->_propDict["excludePlatforms"], "\Microsoft\Graph\Model\ConditionalAccessDevicePlatform")) {
                 return $this->_propDict["excludePlatforms"];
             } else {
                 $this->_propDict["excludePlatforms"] = new ConditionalAccessDevicePlatform($this->_propDict["excludePlatforms"]);
@@ -66,7 +66,7 @@ class ConditionalAccessPlatforms extends Entity
     public function getIncludePlatforms()
     {
         if (array_key_exists("includePlatforms", $this->_propDict)) {
-            if (is_a($this->_propDict["includePlatforms"], "Microsoft\Graph\Model\ConditionalAccessDevicePlatform")) {
+            if (is_a($this->_propDict["includePlatforms"], "\Microsoft\Graph\Model\ConditionalAccessDevicePlatform")) {
                 return $this->_propDict["includePlatforms"];
             } else {
                 $this->_propDict["includePlatforms"] = new ConditionalAccessDevicePlatform($this->_propDict["includePlatforms"]);

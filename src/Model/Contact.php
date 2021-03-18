@@ -95,7 +95,7 @@ class Contact extends OutlookItem
     public function getBusinessAddress()
     {
         if (array_key_exists("businessAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["businessAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["businessAddress"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["businessAddress"];
             } else {
                 $this->_propDict["businessAddress"] = new PhysicalAddress($this->_propDict["businessAddress"]);
@@ -419,7 +419,7 @@ class Contact extends OutlookItem
     public function getHomeAddress()
     {
         if (array_key_exists("homeAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["homeAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["homeAddress"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["homeAddress"];
             } else {
                 $this->_propDict["homeAddress"] = new PhysicalAddress($this->_propDict["homeAddress"]);
@@ -713,7 +713,7 @@ class Contact extends OutlookItem
     public function getOtherAddress()
     {
         if (array_key_exists("otherAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["otherAddress"], "Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["otherAddress"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["otherAddress"];
             } else {
                 $this->_propDict["otherAddress"] = new PhysicalAddress($this->_propDict["otherAddress"]);
@@ -1067,7 +1067,7 @@ class Contact extends OutlookItem
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);

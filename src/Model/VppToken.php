@@ -219,7 +219,7 @@ class VppToken extends Entity
     public function getLastSyncStatus()
     {
         if (array_key_exists("lastSyncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncStatus"], "Microsoft\Graph\Model\VppTokenSyncStatus")) {
+            if (is_a($this->_propDict["lastSyncStatus"], "\Microsoft\Graph\Model\VppTokenSyncStatus")) {
                 return $this->_propDict["lastSyncStatus"];
             } else {
                 $this->_propDict["lastSyncStatus"] = new VppTokenSyncStatus($this->_propDict["lastSyncStatus"]);
@@ -281,7 +281,7 @@ class VppToken extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\VppTokenState")) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\VppTokenState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new VppTokenState($this->_propDict["state"]);
@@ -343,7 +343,7 @@ class VppToken extends Entity
     public function getVppTokenAccountType()
     {
         if (array_key_exists("vppTokenAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["vppTokenAccountType"], "Microsoft\Graph\Model\VppTokenAccountType")) {
+            if (is_a($this->_propDict["vppTokenAccountType"], "\Microsoft\Graph\Model\VppTokenAccountType")) {
                 return $this->_propDict["vppTokenAccountType"];
             } else {
                 $this->_propDict["vppTokenAccountType"] = new VppTokenAccountType($this->_propDict["vppTokenAccountType"]);

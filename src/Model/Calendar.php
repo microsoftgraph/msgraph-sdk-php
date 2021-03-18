@@ -179,7 +179,7 @@ class Calendar extends Entity
     public function getColor()
     {
         if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "Microsoft\Graph\Model\CalendarColor")) {
+            if (is_a($this->_propDict["color"], "\Microsoft\Graph\Model\CalendarColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CalendarColor($this->_propDict["color"]);
@@ -212,7 +212,7 @@ class Calendar extends Entity
     public function getDefaultOnlineMeetingProvider()
     {
         if (array_key_exists("defaultOnlineMeetingProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultOnlineMeetingProvider"], "Microsoft\Graph\Model\OnlineMeetingProviderType")) {
+            if (is_a($this->_propDict["defaultOnlineMeetingProvider"], "\Microsoft\Graph\Model\OnlineMeetingProviderType")) {
                 return $this->_propDict["defaultOnlineMeetingProvider"];
             } else {
                 $this->_propDict["defaultOnlineMeetingProvider"] = new OnlineMeetingProviderType($this->_propDict["defaultOnlineMeetingProvider"]);
@@ -390,7 +390,7 @@ class Calendar extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\EmailAddress")) {
+            if (is_a($this->_propDict["owner"], "\Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new EmailAddress($this->_propDict["owner"]);

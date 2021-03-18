@@ -42,7 +42,7 @@ class OmaSettingFloatingPoint extends OmaSetting
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["value"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new Single($this->_propDict["value"]);

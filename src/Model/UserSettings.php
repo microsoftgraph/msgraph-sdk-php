@@ -91,7 +91,7 @@ class UserSettings extends Entity
     public function getShiftPreferences()
     {
         if (array_key_exists("shiftPreferences", $this->_propDict)) {
-            if (is_a($this->_propDict["shiftPreferences"], "Microsoft\Graph\Model\ShiftPreferences")) {
+            if (is_a($this->_propDict["shiftPreferences"], "\Microsoft\Graph\Model\ShiftPreferences")) {
                 return $this->_propDict["shiftPreferences"];
             } else {
                 $this->_propDict["shiftPreferences"] = new ShiftPreferences($this->_propDict["shiftPreferences"]);

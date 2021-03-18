@@ -33,7 +33,7 @@ class PlannerAssignment extends Entity
     public function getAssignedBy()
     {
         if (array_key_exists("assignedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["assignedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["assignedBy"];
             } else {
                 $this->_propDict["assignedBy"] = new IdentitySet($this->_propDict["assignedBy"]);

@@ -149,7 +149,7 @@ class Channel extends Entity
     public function getMembershipType()
     {
         if (array_key_exists("membershipType", $this->_propDict)) {
-            if (is_a($this->_propDict["membershipType"], "Microsoft\Graph\Model\ChannelMembershipType")) {
+            if (is_a($this->_propDict["membershipType"], "\Microsoft\Graph\Model\ChannelMembershipType")) {
                 return $this->_propDict["membershipType"];
             } else {
                 $this->_propDict["membershipType"] = new ChannelMembershipType($this->_propDict["membershipType"]);
@@ -211,7 +211,7 @@ class Channel extends Entity
     public function getFilesFolder()
     {
         if (array_key_exists("filesFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["filesFolder"], "Microsoft\Graph\Model\DriveItem")) {
+            if (is_a($this->_propDict["filesFolder"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["filesFolder"];
             } else {
                 $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);

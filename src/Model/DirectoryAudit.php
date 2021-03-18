@@ -183,7 +183,7 @@ class DirectoryAudit extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Model\AuditActivityInitiator")) {
+            if (is_a($this->_propDict["initiatedBy"], "\Microsoft\Graph\Model\AuditActivityInitiator")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new AuditActivityInitiator($this->_propDict["initiatedBy"]);
@@ -272,7 +272,7 @@ class DirectoryAudit extends Entity
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "Microsoft\Graph\Model\OperationResult")) {
+            if (is_a($this->_propDict["result"], "\Microsoft\Graph\Model\OperationResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new OperationResult($this->_propDict["result"]);
