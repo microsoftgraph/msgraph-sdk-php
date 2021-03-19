@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * External File
 * PHP version 7
 *
@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class External extends Entity
 {
 
-     /** 
+     /**
      * Gets the connections
      *
      * @return array The connections
@@ -38,8 +38,8 @@ class External extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the connections
     *
     * @param ExternalConnection $val The connections
@@ -51,5 +51,5 @@ class External extends Entity
 		$this->_propDict["connections"] = $val;
         return $this;
     }
-    
+
 }

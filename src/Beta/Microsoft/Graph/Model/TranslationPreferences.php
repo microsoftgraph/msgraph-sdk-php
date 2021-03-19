@@ -33,7 +33,7 @@ class TranslationPreferences extends Entity
     public function getLanguageOverrides()
     {
         if (array_key_exists("languageOverrides", $this->_propDict)) {
-            if (is_a($this->_propDict["languageOverrides"], "Beta\Microsoft\Graph\Model\TranslationLanguageOverride")) {
+            if (is_a($this->_propDict["languageOverrides"], "\Beta\Microsoft\Graph\Model\TranslationLanguageOverride")) {
                 return $this->_propDict["languageOverrides"];
             } else {
                 $this->_propDict["languageOverrides"] = new TranslationLanguageOverride($this->_propDict["languageOverrides"]);
@@ -66,7 +66,7 @@ class TranslationPreferences extends Entity
     public function getTranslationBehavior()
     {
         if (array_key_exists("translationBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["translationBehavior"], "Beta\Microsoft\Graph\Model\TranslationBehavior")) {
+            if (is_a($this->_propDict["translationBehavior"], "\Beta\Microsoft\Graph\Model\TranslationBehavior")) {
                 return $this->_propDict["translationBehavior"];
             } else {
                 $this->_propDict["translationBehavior"] = new TranslationBehavior($this->_propDict["translationBehavior"]);

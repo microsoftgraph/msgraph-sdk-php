@@ -33,7 +33,7 @@ class Place extends Entity
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Beta\Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -95,7 +95,7 @@ class Place extends Entity
     public function getGeoCoordinates()
     {
         if (array_key_exists("geoCoordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["geoCoordinates"], "Beta\Microsoft\Graph\Model\OutlookGeoCoordinates")) {
+            if (is_a($this->_propDict["geoCoordinates"], "\Beta\Microsoft\Graph\Model\OutlookGeoCoordinates")) {
                 return $this->_propDict["geoCoordinates"];
             } else {
                 $this->_propDict["geoCoordinates"] = new OutlookGeoCoordinates($this->_propDict["geoCoordinates"]);

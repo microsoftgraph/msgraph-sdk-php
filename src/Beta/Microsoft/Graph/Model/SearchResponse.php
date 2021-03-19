@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * SearchResponse File
 * PHP version 7
 *
@@ -32,7 +32,7 @@ class SearchResponse extends Entity
     public function getQueryAlterationResponse()
     {
         if (array_key_exists("queryAlterationResponse", $this->_propDict)) {
-            if (is_a($this->_propDict["queryAlterationResponse"], "Beta\Microsoft\Graph\Model\AlterationResponse")) {
+            if (is_a($this->_propDict["queryAlterationResponse"], "\Beta\Microsoft\Graph\Model\AlterationResponse")) {
                 return $this->_propDict["queryAlterationResponse"];
             } else {
                 $this->_propDict["queryAlterationResponse"] = new AlterationResponse($this->_propDict["queryAlterationResponse"]);
@@ -63,7 +63,7 @@ class SearchResponse extends Entity
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Beta\Microsoft\Graph\Model\SearchResultSet")) {
+            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\SearchResultSet")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new SearchResultSet($this->_propDict["value"]);

@@ -99,7 +99,7 @@ class EducationalActivity extends ItemFacet
     public function getInstitution()
     {
         if (array_key_exists("institution", $this->_propDict)) {
-            if (is_a($this->_propDict["institution"], "Beta\Microsoft\Graph\Model\InstitutionData")) {
+            if (is_a($this->_propDict["institution"], "\Beta\Microsoft\Graph\Model\InstitutionData")) {
                 return $this->_propDict["institution"];
             } else {
                 $this->_propDict["institution"] = new InstitutionData($this->_propDict["institution"]);
@@ -132,7 +132,7 @@ class EducationalActivity extends ItemFacet
     public function getProgram()
     {
         if (array_key_exists("program", $this->_propDict)) {
-            if (is_a($this->_propDict["program"], "Beta\Microsoft\Graph\Model\EducationalActivityDetail")) {
+            if (is_a($this->_propDict["program"], "\Beta\Microsoft\Graph\Model\EducationalActivityDetail")) {
                 return $this->_propDict["program"];
             } else {
                 $this->_propDict["program"] = new EducationalActivityDetail($this->_propDict["program"]);

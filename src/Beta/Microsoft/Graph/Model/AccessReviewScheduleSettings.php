@@ -33,7 +33,7 @@ class AccessReviewScheduleSettings extends Entity
     public function getApplyActions()
     {
         if (array_key_exists("applyActions", $this->_propDict)) {
-            if (is_a($this->_propDict["applyActions"], "Beta\Microsoft\Graph\Model\AccessReviewApplyAction")) {
+            if (is_a($this->_propDict["applyActions"], "\Beta\Microsoft\Graph\Model\AccessReviewApplyAction")) {
                 return $this->_propDict["applyActions"];
             } else {
                 $this->_propDict["applyActions"] = new AccessReviewApplyAction($this->_propDict["applyActions"]);
@@ -262,7 +262,7 @@ class AccessReviewScheduleSettings extends Entity
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);

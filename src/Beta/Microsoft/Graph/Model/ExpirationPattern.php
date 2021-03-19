@@ -33,7 +33,7 @@ class ExpirationPattern extends Entity
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["duration"];
             } else {
                 $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
@@ -99,7 +99,7 @@ class ExpirationPattern extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\ExpirationPatternType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\ExpirationPatternType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new ExpirationPatternType($this->_propDict["type"]);

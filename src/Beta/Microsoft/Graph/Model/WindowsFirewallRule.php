@@ -33,7 +33,7 @@ class WindowsFirewallRule extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\StateManagementSetting")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new StateManagementSetting($this->_propDict["action"]);
@@ -122,7 +122,7 @@ class WindowsFirewallRule extends Entity
     public function getEdgeTraversal()
     {
         if (array_key_exists("edgeTraversal", $this->_propDict)) {
-            if (is_a($this->_propDict["edgeTraversal"], "Beta\Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["edgeTraversal"], "\Beta\Microsoft\Graph\Model\StateManagementSetting")) {
                 return $this->_propDict["edgeTraversal"];
             } else {
                 $this->_propDict["edgeTraversal"] = new StateManagementSetting($this->_propDict["edgeTraversal"]);
@@ -183,7 +183,7 @@ class WindowsFirewallRule extends Entity
     public function getInterfaceTypes()
     {
         if (array_key_exists("interfaceTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["interfaceTypes"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleInterfaceTypes")) {
+            if (is_a($this->_propDict["interfaceTypes"], "\Beta\Microsoft\Graph\Model\WindowsFirewallRuleInterfaceTypes")) {
                 return $this->_propDict["interfaceTypes"];
             } else {
                 $this->_propDict["interfaceTypes"] = new WindowsFirewallRuleInterfaceTypes($this->_propDict["interfaceTypes"]);
@@ -328,7 +328,7 @@ class WindowsFirewallRule extends Entity
     public function getProfileTypes()
     {
         if (array_key_exists("profileTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["profileTypes"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleNetworkProfileTypes")) {
+            if (is_a($this->_propDict["profileTypes"], "\Beta\Microsoft\Graph\Model\WindowsFirewallRuleNetworkProfileTypes")) {
                 return $this->_propDict["profileTypes"];
             } else {
                 $this->_propDict["profileTypes"] = new WindowsFirewallRuleNetworkProfileTypes($this->_propDict["profileTypes"]);
@@ -473,7 +473,7 @@ class WindowsFirewallRule extends Entity
     public function getTrafficDirection()
     {
         if (array_key_exists("trafficDirection", $this->_propDict)) {
-            if (is_a($this->_propDict["trafficDirection"], "Beta\Microsoft\Graph\Model\WindowsFirewallRuleTrafficDirectionType")) {
+            if (is_a($this->_propDict["trafficDirection"], "\Beta\Microsoft\Graph\Model\WindowsFirewallRuleTrafficDirectionType")) {
                 return $this->_propDict["trafficDirection"];
             } else {
                 $this->_propDict["trafficDirection"] = new WindowsFirewallRuleTrafficDirectionType($this->_propDict["trafficDirection"]);

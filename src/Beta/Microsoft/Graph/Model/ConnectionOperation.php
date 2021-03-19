@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * ConnectionOperation File
 * PHP version 7
 *
@@ -42,7 +42,7 @@ class ConnectionOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     * If status is failed, provides more information about the error that caused the failure.
@@ -56,7 +56,7 @@ class ConnectionOperation extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
@@ -66,7 +66,7 @@ class ConnectionOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ConnectionOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ConnectionOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionOperationStatus($this->_propDict["status"]);
@@ -75,7 +75,7 @@ class ConnectionOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
@@ -89,5 +89,5 @@ class ConnectionOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

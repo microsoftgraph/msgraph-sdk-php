@@ -60,7 +60,7 @@ class RoleManagement implements \JsonSerializable
     public function getDirectory()
     {
         if (array_key_exists("directory", $this->_propDict)) {
-            if (is_a($this->_propDict["directory"], "Beta\Microsoft\Graph\Model\RbacApplication")) {
+            if (is_a($this->_propDict["directory"], "\Beta\Microsoft\Graph\Model\RbacApplication")) {
                 return $this->_propDict["directory"];
             } else {
                 $this->_propDict["directory"] = new RbacApplication($this->_propDict["directory"]);
@@ -92,7 +92,7 @@ class RoleManagement implements \JsonSerializable
     public function getEntitlementManagement()
     {
         if (array_key_exists("entitlementManagement", $this->_propDict)) {
-            if (is_a($this->_propDict["entitlementManagement"], "Beta\Microsoft\Graph\Model\RbacApplication")) {
+            if (is_a($this->_propDict["entitlementManagement"], "\Beta\Microsoft\Graph\Model\RbacApplication")) {
                 return $this->_propDict["entitlementManagement"];
             } else {
                 $this->_propDict["entitlementManagement"] = new RbacApplication($this->_propDict["entitlementManagement"]);
@@ -125,7 +125,7 @@ class RoleManagement implements \JsonSerializable
     public function getDeviceManagement()
     {
         if (array_key_exists("deviceManagement", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceManagement"], "Beta\Microsoft\Graph\Model\RbacApplicationMultiple")) {
+            if (is_a($this->_propDict["deviceManagement"], "\Beta\Microsoft\Graph\Model\RbacApplicationMultiple")) {
                 return $this->_propDict["deviceManagement"];
             } else {
                 $this->_propDict["deviceManagement"] = new RbacApplicationMultiple($this->_propDict["deviceManagement"]);

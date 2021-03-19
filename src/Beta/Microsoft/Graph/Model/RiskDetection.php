@@ -33,7 +33,7 @@ class RiskDetection extends Entity
     public function getActivity()
     {
         if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "Beta\Microsoft\Graph\Model\ActivityType")) {
+            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\ActivityType")) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new ActivityType($this->_propDict["activity"]);
@@ -190,7 +190,7 @@ class RiskDetection extends Entity
     public function getDetectionTimingType()
     {
         if (array_key_exists("detectionTimingType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionTimingType"], "Beta\Microsoft\Graph\Model\RiskDetectionTimingType")) {
+            if (is_a($this->_propDict["detectionTimingType"], "\Beta\Microsoft\Graph\Model\RiskDetectionTimingType")) {
                 return $this->_propDict["detectionTimingType"];
             } else {
                 $this->_propDict["detectionTimingType"] = new RiskDetectionTimingType($this->_propDict["detectionTimingType"]);
@@ -285,7 +285,7 @@ class RiskDetection extends Entity
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\SignInLocation")) {
+            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\SignInLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new SignInLocation($this->_propDict["location"]);
@@ -347,7 +347,7 @@ class RiskDetection extends Entity
     public function getRiskDetail()
     {
         if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
+            if (is_a($this->_propDict["riskDetail"], "\Beta\Microsoft\Graph\Model\RiskDetail")) {
                 return $this->_propDict["riskDetail"];
             } else {
                 $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
@@ -409,7 +409,7 @@ class RiskDetection extends Entity
     public function getRiskLevel()
     {
         if (array_key_exists("riskLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevel"], "Beta\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevel"], "\Beta\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["riskLevel"];
             } else {
                 $this->_propDict["riskLevel"] = new RiskLevel($this->_propDict["riskLevel"]);
@@ -442,7 +442,7 @@ class RiskDetection extends Entity
     public function getRiskState()
     {
         if (array_key_exists("riskState", $this->_propDict)) {
-            if (is_a($this->_propDict["riskState"], "Beta\Microsoft\Graph\Model\RiskState")) {
+            if (is_a($this->_propDict["riskState"], "\Beta\Microsoft\Graph\Model\RiskState")) {
                 return $this->_propDict["riskState"];
             } else {
                 $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);
@@ -475,7 +475,7 @@ class RiskDetection extends Entity
     public function getRiskType()
     {
         if (array_key_exists("riskType", $this->_propDict)) {
-            if (is_a($this->_propDict["riskType"], "Beta\Microsoft\Graph\Model\RiskEventType")) {
+            if (is_a($this->_propDict["riskType"], "\Beta\Microsoft\Graph\Model\RiskEventType")) {
                 return $this->_propDict["riskType"];
             } else {
                 $this->_propDict["riskType"] = new RiskEventType($this->_propDict["riskType"]);
@@ -537,7 +537,7 @@ class RiskDetection extends Entity
     public function getTokenIssuerType()
     {
         if (array_key_exists("tokenIssuerType", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenIssuerType"], "Beta\Microsoft\Graph\Model\TokenIssuerType")) {
+            if (is_a($this->_propDict["tokenIssuerType"], "\Beta\Microsoft\Graph\Model\TokenIssuerType")) {
                 return $this->_propDict["tokenIssuerType"];
             } else {
                 $this->_propDict["tokenIssuerType"] = new TokenIssuerType($this->_propDict["tokenIssuerType"]);

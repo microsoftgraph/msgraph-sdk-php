@@ -66,7 +66,7 @@ class SynchronizationSchedule extends Entity
     public function getInterval()
     {
         if (array_key_exists("interval", $this->_propDict)) {
-            if (is_a($this->_propDict["interval"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["interval"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["interval"];
             } else {
                 $this->_propDict["interval"] = new Duration($this->_propDict["interval"]);
@@ -99,7 +99,7 @@ class SynchronizationSchedule extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\SynchronizationScheduleState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SynchronizationScheduleState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SynchronizationScheduleState($this->_propDict["state"]);

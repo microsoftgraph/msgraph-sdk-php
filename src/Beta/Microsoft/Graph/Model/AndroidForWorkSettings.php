@@ -33,7 +33,7 @@ class AndroidForWorkSettings extends Entity
     public function getBindStatus()
     {
         if (array_key_exists("bindStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["bindStatus"], "Beta\Microsoft\Graph\Model\AndroidForWorkBindStatus")) {
+            if (is_a($this->_propDict["bindStatus"], "\Beta\Microsoft\Graph\Model\AndroidForWorkBindStatus")) {
                 return $this->_propDict["bindStatus"];
             } else {
                 $this->_propDict["bindStatus"] = new AndroidForWorkBindStatus($this->_propDict["bindStatus"]);
@@ -95,7 +95,7 @@ class AndroidForWorkSettings extends Entity
     public function getEnrollmentTarget()
     {
         if (array_key_exists("enrollmentTarget", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentTarget"], "Beta\Microsoft\Graph\Model\AndroidForWorkEnrollmentTarget")) {
+            if (is_a($this->_propDict["enrollmentTarget"], "\Beta\Microsoft\Graph\Model\AndroidForWorkEnrollmentTarget")) {
                 return $this->_propDict["enrollmentTarget"];
             } else {
                 $this->_propDict["enrollmentTarget"] = new AndroidForWorkEnrollmentTarget($this->_propDict["enrollmentTarget"]);
@@ -161,7 +161,7 @@ class AndroidForWorkSettings extends Entity
     public function getLastAppSyncStatus()
     {
         if (array_key_exists("lastAppSyncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAppSyncStatus"], "Beta\Microsoft\Graph\Model\AndroidForWorkSyncStatus")) {
+            if (is_a($this->_propDict["lastAppSyncStatus"], "\Beta\Microsoft\Graph\Model\AndroidForWorkSyncStatus")) {
                 return $this->_propDict["lastAppSyncStatus"];
             } else {
                 $this->_propDict["lastAppSyncStatus"] = new AndroidForWorkSyncStatus($this->_propDict["lastAppSyncStatus"]);

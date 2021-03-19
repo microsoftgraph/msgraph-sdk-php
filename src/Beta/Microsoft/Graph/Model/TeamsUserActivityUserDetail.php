@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * TeamsUserActivityUserDetail File
 * PHP version 7
 *
@@ -37,7 +37,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the adHocMeetingsAttendedCount
     *
@@ -50,7 +50,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["adHocMeetingsAttendedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the adHocMeetingsOrganizedCount
     *
@@ -64,7 +64,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the adHocMeetingsOrganizedCount
     *
@@ -77,7 +77,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["adHocMeetingsOrganizedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the assignedProducts
     *
@@ -91,7 +91,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedProducts
     *
@@ -104,7 +104,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["assignedProducts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the audioDuration
     *
@@ -122,7 +122,7 @@ class TeamsUserActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the audioDuration
     *
@@ -135,7 +135,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["audioDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the callCount
     *
@@ -149,7 +149,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the callCount
     *
@@ -162,7 +162,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["callCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deletedDate
     *
@@ -180,7 +180,7 @@ class TeamsUserActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deletedDate
     *
@@ -193,7 +193,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["deletedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasOtherAction
     *
@@ -207,7 +207,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hasOtherAction
     *
@@ -220,7 +220,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["hasOtherAction"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDeleted
     *
@@ -234,7 +234,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeleted
     *
@@ -247,7 +247,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["isDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isLicensed
     *
@@ -261,7 +261,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isLicensed
     *
@@ -274,7 +274,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["isLicensed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDate
     *
@@ -292,7 +292,7 @@ class TeamsUserActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDate
     *
@@ -305,7 +305,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["lastActivityDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the meetingCount
     *
@@ -319,7 +319,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the meetingCount
     *
@@ -332,7 +332,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["meetingCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the meetingsAttendedCount
     *
@@ -346,7 +346,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the meetingsAttendedCount
     *
@@ -359,7 +359,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["meetingsAttendedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the meetingsOrganizedCount
     *
@@ -373,7 +373,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the meetingsOrganizedCount
     *
@@ -386,7 +386,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["meetingsOrganizedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the privateChatMessageCount
     *
@@ -400,7 +400,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the privateChatMessageCount
     *
@@ -413,7 +413,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["privateChatMessageCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -427,7 +427,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -440,7 +440,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -458,7 +458,7 @@ class TeamsUserActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -471,7 +471,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scheduledOneTimeMeetingsAttendedCount
     *
@@ -485,7 +485,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scheduledOneTimeMeetingsAttendedCount
     *
@@ -498,7 +498,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["scheduledOneTimeMeetingsAttendedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the scheduledOneTimeMeetingsOrganizedCount
     *
@@ -512,7 +512,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scheduledOneTimeMeetingsOrganizedCount
     *
@@ -525,7 +525,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["scheduledOneTimeMeetingsOrganizedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the scheduledRecurringMeetingsAttendedCount
     *
@@ -539,7 +539,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scheduledRecurringMeetingsAttendedCount
     *
@@ -552,7 +552,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["scheduledRecurringMeetingsAttendedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the scheduledRecurringMeetingsOrganizedCount
     *
@@ -566,7 +566,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scheduledRecurringMeetingsOrganizedCount
     *
@@ -579,7 +579,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["scheduledRecurringMeetingsOrganizedCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the screenShareDuration
     *
@@ -597,7 +597,7 @@ class TeamsUserActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the screenShareDuration
     *
@@ -610,7 +610,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["screenShareDuration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamChatMessageCount
     *
@@ -624,7 +624,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the teamChatMessageCount
     *
@@ -637,7 +637,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["teamChatMessageCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -651,7 +651,7 @@ class TeamsUserActivityUserDetail extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -664,7 +664,7 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the videoDuration
     *
@@ -682,7 +682,7 @@ class TeamsUserActivityUserDetail extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the videoDuration
     *
@@ -695,5 +695,5 @@ class TeamsUserActivityUserDetail extends Entity
         $this->_propDict["videoDuration"] = $val;
         return $this;
     }
-    
+
 }

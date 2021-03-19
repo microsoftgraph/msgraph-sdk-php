@@ -62,7 +62,7 @@ class UserSource extends DataSource
     public function getIncludedSources()
     {
         if (array_key_exists("includedSources", $this->_propDict)) {
-            if (is_a($this->_propDict["includedSources"], "Beta\Microsoft\Graph\Ediscovery\Model\SourceType")) {
+            if (is_a($this->_propDict["includedSources"], "\Beta\Microsoft\Graph\Ediscovery\Model\SourceType")) {
                 return $this->_propDict["includedSources"];
             } else {
                 $this->_propDict["includedSources"] = new SourceType($this->_propDict["includedSources"]);

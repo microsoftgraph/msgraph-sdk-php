@@ -33,7 +33,7 @@ class UserCredentialUsageDetails extends Entity
     public function getAuthMethod()
     {
         if (array_key_exists("authMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authMethod"], "Beta\Microsoft\Graph\Model\UsageAuthMethod")) {
+            if (is_a($this->_propDict["authMethod"], "\Beta\Microsoft\Graph\Model\UsageAuthMethod")) {
                 return $this->_propDict["authMethod"];
             } else {
                 $this->_propDict["authMethod"] = new UsageAuthMethod($this->_propDict["authMethod"]);
@@ -128,7 +128,7 @@ class UserCredentialUsageDetails extends Entity
     public function getFeature()
     {
         if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "Beta\Microsoft\Graph\Model\FeatureType")) {
+            if (is_a($this->_propDict["feature"], "\Beta\Microsoft\Graph\Model\FeatureType")) {
                 return $this->_propDict["feature"];
             } else {
                 $this->_propDict["feature"] = new FeatureType($this->_propDict["feature"]);

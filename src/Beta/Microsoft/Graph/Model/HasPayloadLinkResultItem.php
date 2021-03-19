@@ -117,7 +117,7 @@ class HasPayloadLinkResultItem extends Entity
     public function getSources()
     {
         if (array_key_exists("sources", $this->_propDict)) {
-            if (is_a($this->_propDict["sources"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentSource")) {
+            if (is_a($this->_propDict["sources"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentSource")) {
                 return $this->_propDict["sources"];
             } else {
                 $this->_propDict["sources"] = new DeviceAndAppManagementAssignmentSource($this->_propDict["sources"]);

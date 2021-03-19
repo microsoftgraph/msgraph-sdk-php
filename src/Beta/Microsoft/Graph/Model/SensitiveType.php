@@ -32,7 +32,7 @@ class SensitiveType extends Entity
     public function getClassificationMethod()
     {
         if (array_key_exists("classificationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["classificationMethod"], "Beta\Microsoft\Graph\Model\ClassificationMethod")) {
+            if (is_a($this->_propDict["classificationMethod"], "\Beta\Microsoft\Graph\Model\ClassificationMethod")) {
                 return $this->_propDict["classificationMethod"];
             } else {
                 $this->_propDict["classificationMethod"] = new ClassificationMethod($this->_propDict["classificationMethod"]);
@@ -198,7 +198,7 @@ class SensitiveType extends Entity
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "Beta\Microsoft\Graph\Model\SensitiveTypeScope")) {
+            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\Model\SensitiveTypeScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new SensitiveTypeScope($this->_propDict["scope"]);
@@ -229,7 +229,7 @@ class SensitiveType extends Entity
     public function getSensitiveTypeSource()
     {
         if (array_key_exists("sensitiveTypeSource", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitiveTypeSource"], "Beta\Microsoft\Graph\Model\SensitiveTypeSource")) {
+            if (is_a($this->_propDict["sensitiveTypeSource"], "\Beta\Microsoft\Graph\Model\SensitiveTypeSource")) {
                 return $this->_propDict["sensitiveTypeSource"];
             } else {
                 $this->_propDict["sensitiveTypeSource"] = new SensitiveTypeSource($this->_propDict["sensitiveTypeSource"]);

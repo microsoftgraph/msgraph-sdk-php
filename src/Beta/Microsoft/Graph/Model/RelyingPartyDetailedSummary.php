@@ -62,7 +62,7 @@ class RelyingPartyDetailedSummary extends Entity
     public function getMigrationStatus()
     {
         if (array_key_exists("migrationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["migrationStatus"], "Beta\Microsoft\Graph\Model\MigrationStatus")) {
+            if (is_a($this->_propDict["migrationStatus"], "\Beta\Microsoft\Graph\Model\MigrationStatus")) {
                 return $this->_propDict["migrationStatus"];
             } else {
                 $this->_propDict["migrationStatus"] = new MigrationStatus($this->_propDict["migrationStatus"]);

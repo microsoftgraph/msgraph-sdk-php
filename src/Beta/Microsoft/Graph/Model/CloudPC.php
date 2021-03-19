@@ -269,7 +269,7 @@ class CloudPC extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\CloudPcStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\CloudPcStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CloudPcStatus($this->_propDict["status"]);
@@ -302,7 +302,7 @@ class CloudPC extends Entity
     public function getStatusDetails()
     {
         if (array_key_exists("statusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["statusDetails"], "Beta\Microsoft\Graph\Model\CloudPcStatusDetails")) {
+            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcStatusDetails")) {
                 return $this->_propDict["statusDetails"];
             } else {
                 $this->_propDict["statusDetails"] = new CloudPcStatusDetails($this->_propDict["statusDetails"]);

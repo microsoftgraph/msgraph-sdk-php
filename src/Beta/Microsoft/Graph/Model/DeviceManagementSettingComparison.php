@@ -33,7 +33,7 @@ class DeviceManagementSettingComparison extends Entity
     public function getComparisonResult()
     {
         if (array_key_exists("comparisonResult", $this->_propDict)) {
-            if (is_a($this->_propDict["comparisonResult"], "Beta\Microsoft\Graph\Model\DeviceManagementComparisonResult")) {
+            if (is_a($this->_propDict["comparisonResult"], "\Beta\Microsoft\Graph\Model\DeviceManagementComparisonResult")) {
                 return $this->_propDict["comparisonResult"];
             } else {
                 $this->_propDict["comparisonResult"] = new DeviceManagementComparisonResult($this->_propDict["comparisonResult"]);

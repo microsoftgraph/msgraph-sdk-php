@@ -42,7 +42,7 @@ class DeviceManagementConfigurationSimpleSettingCollectionInstance extends Devic
     public function getSimpleSettingCollectionValue()
     {
         if (array_key_exists("simpleSettingCollectionValue", $this->_propDict)) {
-            if (is_a($this->_propDict["simpleSettingCollectionValue"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValue")) {
+            if (is_a($this->_propDict["simpleSettingCollectionValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValue")) {
                 return $this->_propDict["simpleSettingCollectionValue"];
             } else {
                 $this->_propDict["simpleSettingCollectionValue"] = new DeviceManagementConfigurationSimpleSettingValue($this->_propDict["simpleSettingCollectionValue"]);

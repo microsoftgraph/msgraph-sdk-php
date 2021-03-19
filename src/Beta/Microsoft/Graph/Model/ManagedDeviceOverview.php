@@ -33,7 +33,7 @@ class ManagedDeviceOverview extends Entity
     public function getDeviceExchangeAccessStateSummary()
     {
         if (array_key_exists("deviceExchangeAccessStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "Beta\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary")) {
+            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary")) {
                 return $this->_propDict["deviceExchangeAccessStateSummary"];
             } else {
                 $this->_propDict["deviceExchangeAccessStateSummary"] = new DeviceExchangeAccessStateSummary($this->_propDict["deviceExchangeAccessStateSummary"]);
@@ -66,7 +66,7 @@ class ManagedDeviceOverview extends Entity
     public function getDeviceOperatingSystemSummary()
     {
         if (array_key_exists("deviceOperatingSystemSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceOperatingSystemSummary"], "Beta\Microsoft\Graph\Model\DeviceOperatingSystemSummary")) {
+            if (is_a($this->_propDict["deviceOperatingSystemSummary"], "\Beta\Microsoft\Graph\Model\DeviceOperatingSystemSummary")) {
                 return $this->_propDict["deviceOperatingSystemSummary"];
             } else {
                 $this->_propDict["deviceOperatingSystemSummary"] = new DeviceOperatingSystemSummary($this->_propDict["deviceOperatingSystemSummary"]);
@@ -190,7 +190,7 @@ class ManagedDeviceOverview extends Entity
     public function getManagedDeviceModelsAndManufacturers()
     {
         if (array_key_exists("managedDeviceModelsAndManufacturers", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceModelsAndManufacturers"], "Beta\Microsoft\Graph\Model\ManagedDeviceModelsAndManufacturers")) {
+            if (is_a($this->_propDict["managedDeviceModelsAndManufacturers"], "\Beta\Microsoft\Graph\Model\ManagedDeviceModelsAndManufacturers")) {
                 return $this->_propDict["managedDeviceModelsAndManufacturers"];
             } else {
                 $this->_propDict["managedDeviceModelsAndManufacturers"] = new ManagedDeviceModelsAndManufacturers($this->_propDict["managedDeviceModelsAndManufacturers"]);

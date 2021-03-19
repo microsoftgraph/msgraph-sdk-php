@@ -33,7 +33,7 @@ class PlannerPlanDetails extends PlannerDelta
     public function getCategoryDescriptions()
     {
         if (array_key_exists("categoryDescriptions", $this->_propDict)) {
-            if (is_a($this->_propDict["categoryDescriptions"], "Beta\Microsoft\Graph\Model\PlannerCategoryDescriptions")) {
+            if (is_a($this->_propDict["categoryDescriptions"], "\Beta\Microsoft\Graph\Model\PlannerCategoryDescriptions")) {
                 return $this->_propDict["categoryDescriptions"];
             } else {
                 $this->_propDict["categoryDescriptions"] = new PlannerCategoryDescriptions($this->_propDict["categoryDescriptions"]);
@@ -66,7 +66,7 @@ class PlannerPlanDetails extends PlannerDelta
     public function getContextDetails()
     {
         if (array_key_exists("contextDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["contextDetails"], "Beta\Microsoft\Graph\Model\PlannerPlanContextDetailsCollection")) {
+            if (is_a($this->_propDict["contextDetails"], "\Beta\Microsoft\Graph\Model\PlannerPlanContextDetailsCollection")) {
                 return $this->_propDict["contextDetails"];
             } else {
                 $this->_propDict["contextDetails"] = new PlannerPlanContextDetailsCollection($this->_propDict["contextDetails"]);
@@ -99,7 +99,7 @@ class PlannerPlanDetails extends PlannerDelta
     public function getSharedWith()
     {
         if (array_key_exists("sharedWith", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedWith"], "Beta\Microsoft\Graph\Model\PlannerUserIds")) {
+            if (is_a($this->_propDict["sharedWith"], "\Beta\Microsoft\Graph\Model\PlannerUserIds")) {
                 return $this->_propDict["sharedWith"];
             } else {
                 $this->_propDict["sharedWith"] = new PlannerUserIds($this->_propDict["sharedWith"]);

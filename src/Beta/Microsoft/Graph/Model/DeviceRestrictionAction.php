@@ -58,7 +58,7 @@ class DeviceRestrictionAction extends DlpActionInfo
     public function getRestrictionAction()
     {
         if (array_key_exists("restrictionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["restrictionAction"], "Beta\Microsoft\Graph\Model\RestrictionAction")) {
+            if (is_a($this->_propDict["restrictionAction"], "\Beta\Microsoft\Graph\Model\RestrictionAction")) {
                 return $this->_propDict["restrictionAction"];
             } else {
                 $this->_propDict["restrictionAction"] = new RestrictionAction($this->_propDict["restrictionAction"]);
@@ -89,7 +89,7 @@ class DeviceRestrictionAction extends DlpActionInfo
     public function getTriggers()
     {
         if (array_key_exists("triggers", $this->_propDict)) {
-            if (is_a($this->_propDict["triggers"], "Beta\Microsoft\Graph\Model\RestrictionTrigger")) {
+            if (is_a($this->_propDict["triggers"], "\Beta\Microsoft\Graph\Model\RestrictionTrigger")) {
                 return $this->_propDict["triggers"];
             } else {
                 $this->_propDict["triggers"] = new RestrictionTrigger($this->_propDict["triggers"]);

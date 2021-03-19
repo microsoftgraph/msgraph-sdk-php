@@ -41,7 +41,7 @@ class EducationIdentityCreationConfiguration extends EducationIdentitySynchroniz
     public function getUserDomains()
     {
         if (array_key_exists("userDomains", $this->_propDict)) {
-            if (is_a($this->_propDict["userDomains"], "Beta\Microsoft\Graph\Model\EducationIdentityDomain")) {
+            if (is_a($this->_propDict["userDomains"], "\Beta\Microsoft\Graph\Model\EducationIdentityDomain")) {
                 return $this->_propDict["userDomains"];
             } else {
                 $this->_propDict["userDomains"] = new EducationIdentityDomain($this->_propDict["userDomains"]);

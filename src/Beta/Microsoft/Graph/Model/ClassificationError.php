@@ -32,7 +32,7 @@ class ClassificationError extends ClassifcationErrorBase
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\ClassifcationErrorBase")) {
+            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\ClassifcationErrorBase")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new ClassifcationErrorBase($this->_propDict["details"]);

@@ -89,7 +89,7 @@ class LogonUser extends Entity
     public function getAccountType()
     {
         if (array_key_exists("accountType", $this->_propDict)) {
-            if (is_a($this->_propDict["accountType"], "Beta\Microsoft\Graph\Model\UserAccountSecurityType")) {
+            if (is_a($this->_propDict["accountType"], "\Beta\Microsoft\Graph\Model\UserAccountSecurityType")) {
                 return $this->_propDict["accountType"];
             } else {
                 $this->_propDict["accountType"] = new UserAccountSecurityType($this->_propDict["accountType"]);
@@ -216,7 +216,7 @@ class LogonUser extends Entity
     public function getLogonTypes()
     {
         if (array_key_exists("logonTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["logonTypes"], "Beta\Microsoft\Graph\Model\LogonType")) {
+            if (is_a($this->_propDict["logonTypes"], "\Beta\Microsoft\Graph\Model\LogonType")) {
                 return $this->_propDict["logonTypes"];
             } else {
                 $this->_propDict["logonTypes"] = new LogonType($this->_propDict["logonTypes"]);

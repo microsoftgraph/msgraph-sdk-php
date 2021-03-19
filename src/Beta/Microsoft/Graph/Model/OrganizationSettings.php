@@ -33,7 +33,7 @@ class OrganizationSettings extends Entity
     public function getItemInsights()
     {
         if (array_key_exists("itemInsights", $this->_propDict)) {
-            if (is_a($this->_propDict["itemInsights"], "Beta\Microsoft\Graph\Model\ItemInsightsSettings")) {
+            if (is_a($this->_propDict["itemInsights"], "\Beta\Microsoft\Graph\Model\ItemInsightsSettings")) {
                 return $this->_propDict["itemInsights"];
             } else {
                 $this->_propDict["itemInsights"] = new ItemInsightsSettings($this->_propDict["itemInsights"]);

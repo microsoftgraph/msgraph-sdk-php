@@ -61,7 +61,7 @@ class SynchronizationJobApplicationParameters extends Entity
     public function getSubjects()
     {
         if (array_key_exists("subjects", $this->_propDict)) {
-            if (is_a($this->_propDict["subjects"], "Beta\Microsoft\Graph\Model\SynchronizationJobSubject")) {
+            if (is_a($this->_propDict["subjects"], "\Beta\Microsoft\Graph\Model\SynchronizationJobSubject")) {
                 return $this->_propDict["subjects"];
             } else {
                 $this->_propDict["subjects"] = new SynchronizationJobSubject($this->_propDict["subjects"]);

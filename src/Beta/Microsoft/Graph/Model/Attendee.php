@@ -33,7 +33,7 @@ class Attendee extends AttendeeBase
     public function getProposedNewTime()
     {
         if (array_key_exists("proposedNewTime", $this->_propDict)) {
-            if (is_a($this->_propDict["proposedNewTime"], "Beta\Microsoft\Graph\Model\TimeSlot")) {
+            if (is_a($this->_propDict["proposedNewTime"], "\Beta\Microsoft\Graph\Model\TimeSlot")) {
                 return $this->_propDict["proposedNewTime"];
             } else {
                 $this->_propDict["proposedNewTime"] = new TimeSlot($this->_propDict["proposedNewTime"]);
@@ -66,7 +66,7 @@ class Attendee extends AttendeeBase
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ResponseStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ResponseStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ResponseStatus($this->_propDict["status"]);

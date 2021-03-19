@@ -117,7 +117,7 @@ class MobileAppIntentAndStateDetail extends Entity
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "Beta\Microsoft\Graph\Model\ResultantAppState")) {
+            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new ResultantAppState($this->_propDict["installState"]);
@@ -150,7 +150,7 @@ class MobileAppIntentAndStateDetail extends Entity
     public function getMobileAppIntent()
     {
         if (array_key_exists("mobileAppIntent", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppIntent"], "Beta\Microsoft\Graph\Model\MobileAppIntent")) {
+            if (is_a($this->_propDict["mobileAppIntent"], "\Beta\Microsoft\Graph\Model\MobileAppIntent")) {
                 return $this->_propDict["mobileAppIntent"];
             } else {
                 $this->_propDict["mobileAppIntent"] = new MobileAppIntent($this->_propDict["mobileAppIntent"]);
@@ -183,7 +183,7 @@ class MobileAppIntentAndStateDetail extends Entity
     public function getSupportedDeviceTypes()
     {
         if (array_key_exists("supportedDeviceTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedDeviceTypes"], "Beta\Microsoft\Graph\Model\MobileAppSupportedDeviceType")) {
+            if (is_a($this->_propDict["supportedDeviceTypes"], "\Beta\Microsoft\Graph\Model\MobileAppSupportedDeviceType")) {
                 return $this->_propDict["supportedDeviceTypes"];
             } else {
                 $this->_propDict["supportedDeviceTypes"] = new MobileAppSupportedDeviceType($this->_propDict["supportedDeviceTypes"]);

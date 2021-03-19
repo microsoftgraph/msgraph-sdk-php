@@ -33,7 +33,7 @@ class DeviceComplianceActionItem extends Entity
     public function getActionType()
     {
         if (array_key_exists("actionType", $this->_propDict)) {
-            if (is_a($this->_propDict["actionType"], "Beta\Microsoft\Graph\Model\DeviceComplianceActionType")) {
+            if (is_a($this->_propDict["actionType"], "\Beta\Microsoft\Graph\Model\DeviceComplianceActionType")) {
                 return $this->_propDict["actionType"];
             } else {
                 $this->_propDict["actionType"] = new DeviceComplianceActionType($this->_propDict["actionType"]);

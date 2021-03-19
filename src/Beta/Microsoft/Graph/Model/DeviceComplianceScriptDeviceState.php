@@ -33,7 +33,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     public function getDetectionState()
     {
         if (array_key_exists("detectionState", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionState"], "Beta\Microsoft\Graph\Model\RunState")) {
+            if (is_a($this->_propDict["detectionState"], "\Beta\Microsoft\Graph\Model\RunState")) {
                 return $this->_propDict["detectionState"];
             } else {
                 $this->_propDict["detectionState"] = new RunState($this->_propDict["detectionState"]);
@@ -223,7 +223,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     public function getManagedDevice()
     {
         if (array_key_exists("managedDevice", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDevice"], "Beta\Microsoft\Graph\Model\ManagedDevice")) {
+            if (is_a($this->_propDict["managedDevice"], "\Beta\Microsoft\Graph\Model\ManagedDevice")) {
                 return $this->_propDict["managedDevice"];
             } else {
                 $this->_propDict["managedDevice"] = new ManagedDevice($this->_propDict["managedDevice"]);

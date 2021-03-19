@@ -91,7 +91,7 @@ class AuthenticationFlowsPolicy extends Entity
     public function getSelfServiceSignUp()
     {
         if (array_key_exists("selfServiceSignUp", $this->_propDict)) {
-            if (is_a($this->_propDict["selfServiceSignUp"], "Beta\Microsoft\Graph\Model\SelfServiceSignUpAuthenticationFlowConfiguration")) {
+            if (is_a($this->_propDict["selfServiceSignUp"], "\Beta\Microsoft\Graph\Model\SelfServiceSignUpAuthenticationFlowConfiguration")) {
                 return $this->_propDict["selfServiceSignUp"];
             } else {
                 $this->_propDict["selfServiceSignUp"] = new SelfServiceSignUpAuthenticationFlowConfiguration($this->_propDict["selfServiceSignUp"]);
