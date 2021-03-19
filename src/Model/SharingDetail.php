@@ -33,7 +33,7 @@ class SharingDetail extends Entity
     public function getSharedBy()
     {
         if (array_key_exists("sharedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedBy"], "Microsoft\Graph\Model\InsightIdentity")) {
+            if (is_a($this->_propDict["sharedBy"], "\Microsoft\Graph\Model\InsightIdentity")) {
                 return $this->_propDict["sharedBy"];
             } else {
                 $this->_propDict["sharedBy"] = new InsightIdentity($this->_propDict["sharedBy"]);
@@ -98,7 +98,7 @@ class SharingDetail extends Entity
     public function getSharingReference()
     {
         if (array_key_exists("sharingReference", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingReference"], "Microsoft\Graph\Model\ResourceReference")) {
+            if (is_a($this->_propDict["sharingReference"], "\Microsoft\Graph\Model\ResourceReference")) {
                 return $this->_propDict["sharingReference"];
             } else {
                 $this->_propDict["sharingReference"] = new ResourceReference($this->_propDict["sharingReference"]);

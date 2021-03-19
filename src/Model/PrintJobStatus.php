@@ -61,7 +61,7 @@ class PrintJobStatus extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\PrintJobStateDetail")) {
+            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\PrintJobStateDetail")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PrintJobStateDetail($this->_propDict["details"]);
@@ -122,7 +122,7 @@ class PrintJobStatus extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\PrintJobProcessingState")) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\PrintJobProcessingState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new PrintJobProcessingState($this->_propDict["state"]);

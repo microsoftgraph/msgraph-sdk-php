@@ -91,7 +91,7 @@ class IdentityGovernance implements \JsonSerializable
     public function getTermsOfUse()
     {
         if (array_key_exists("termsOfUse", $this->_propDict)) {
-            if (is_a($this->_propDict["termsOfUse"], "Microsoft\Graph\Model\TermsOfUseContainer")) {
+            if (is_a($this->_propDict["termsOfUse"], "\Microsoft\Graph\Model\TermsOfUseContainer")) {
                 return $this->_propDict["termsOfUse"];
             } else {
                 $this->_propDict["termsOfUse"] = new TermsOfUseContainer($this->_propDict["termsOfUse"]);

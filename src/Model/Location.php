@@ -33,7 +33,7 @@ class Location extends Entity
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -66,7 +66,7 @@ class Location extends Entity
     public function getCoordinates()
     {
         if (array_key_exists("coordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["coordinates"], "Microsoft\Graph\Model\OutlookGeoCoordinates")) {
+            if (is_a($this->_propDict["coordinates"], "\Microsoft\Graph\Model\OutlookGeoCoordinates")) {
                 return $this->_propDict["coordinates"];
             } else {
                 $this->_propDict["coordinates"] = new OutlookGeoCoordinates($this->_propDict["coordinates"]);
@@ -155,7 +155,7 @@ class Location extends Entity
     public function getLocationType()
     {
         if (array_key_exists("locationType", $this->_propDict)) {
-            if (is_a($this->_propDict["locationType"], "Microsoft\Graph\Model\LocationType")) {
+            if (is_a($this->_propDict["locationType"], "\Microsoft\Graph\Model\LocationType")) {
                 return $this->_propDict["locationType"];
             } else {
                 $this->_propDict["locationType"] = new LocationType($this->_propDict["locationType"]);
@@ -244,7 +244,7 @@ class Location extends Entity
     public function getUniqueIdType()
     {
         if (array_key_exists("uniqueIdType", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueIdType"], "Microsoft\Graph\Model\LocationUniqueIdType")) {
+            if (is_a($this->_propDict["uniqueIdType"], "\Microsoft\Graph\Model\LocationUniqueIdType")) {
                 return $this->_propDict["uniqueIdType"];
             } else {
                 $this->_propDict["uniqueIdType"] = new LocationUniqueIdType($this->_propDict["uniqueIdType"]);

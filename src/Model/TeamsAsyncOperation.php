@@ -95,7 +95,7 @@ class TeamsAsyncOperation extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\OperationError")) {
+            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\OperationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new OperationError($this->_propDict["error"]);
@@ -161,7 +161,7 @@ class TeamsAsyncOperation extends Entity
     public function getOperationType()
     {
         if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "Microsoft\Graph\Model\TeamsAsyncOperationType")) {
+            if (is_a($this->_propDict["operationType"], "\Microsoft\Graph\Model\TeamsAsyncOperationType")) {
                 return $this->_propDict["operationType"];
             } else {
                 $this->_propDict["operationType"] = new TeamsAsyncOperationType($this->_propDict["operationType"]);
@@ -194,7 +194,7 @@ class TeamsAsyncOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\TeamsAsyncOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\TeamsAsyncOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new TeamsAsyncOperationStatus($this->_propDict["status"]);

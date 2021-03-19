@@ -390,7 +390,7 @@ class Organization extends DirectoryObject
     public function getPrivacyProfile()
     {
         if (array_key_exists("privacyProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Model\PrivacyProfile")) {
+            if (is_a($this->_propDict["privacyProfile"], "\Microsoft\Graph\Model\PrivacyProfile")) {
                 return $this->_propDict["privacyProfile"];
             } else {
                 $this->_propDict["privacyProfile"] = new PrivacyProfile($this->_propDict["privacyProfile"]);
@@ -651,7 +651,7 @@ class Organization extends DirectoryObject
     public function getMobileDeviceManagementAuthority()
     {
         if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "\Microsoft\Graph\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -683,7 +683,7 @@ class Organization extends DirectoryObject
     public function getBranding()
     {
         if (array_key_exists("branding", $this->_propDict)) {
-            if (is_a($this->_propDict["branding"], "Microsoft\Graph\Model\OrganizationalBranding")) {
+            if (is_a($this->_propDict["branding"], "\Microsoft\Graph\Model\OrganizationalBranding")) {
                 return $this->_propDict["branding"];
             } else {
                 $this->_propDict["branding"] = new OrganizationalBranding($this->_propDict["branding"]);

@@ -33,7 +33,7 @@ class InvitedUserMessageInfo extends Entity
     public function getCcRecipients()
     {
         if (array_key_exists("ccRecipients", $this->_propDict)) {
-            if (is_a($this->_propDict["ccRecipients"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["ccRecipients"], "\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["ccRecipients"];
             } else {
                 $this->_propDict["ccRecipients"] = new Recipient($this->_propDict["ccRecipients"]);

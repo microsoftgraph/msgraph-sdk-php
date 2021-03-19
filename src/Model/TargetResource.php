@@ -61,7 +61,7 @@ class TargetResource extends Entity
     public function getGroupType()
     {
         if (array_key_exists("groupType", $this->_propDict)) {
-            if (is_a($this->_propDict["groupType"], "Microsoft\Graph\Model\GroupType")) {
+            if (is_a($this->_propDict["groupType"], "\Microsoft\Graph\Model\GroupType")) {
                 return $this->_propDict["groupType"];
             } else {
                 $this->_propDict["groupType"] = new GroupType($this->_propDict["groupType"]);
@@ -122,7 +122,7 @@ class TargetResource extends Entity
     public function getModifiedProperties()
     {
         if (array_key_exists("modifiedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedProperties"], "Microsoft\Graph\Model\ModifiedProperty")) {
+            if (is_a($this->_propDict["modifiedProperties"], "\Microsoft\Graph\Model\ModifiedProperty")) {
                 return $this->_propDict["modifiedProperties"];
             } else {
                 $this->_propDict["modifiedProperties"] = new ModifiedProperty($this->_propDict["modifiedProperties"]);

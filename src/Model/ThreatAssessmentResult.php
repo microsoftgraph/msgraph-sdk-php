@@ -95,7 +95,7 @@ class ThreatAssessmentResult extends Entity
     public function getResultType()
     {
         if (array_key_exists("resultType", $this->_propDict)) {
-            if (is_a($this->_propDict["resultType"], "Microsoft\Graph\Model\ThreatAssessmentResultType")) {
+            if (is_a($this->_propDict["resultType"], "\Microsoft\Graph\Model\ThreatAssessmentResultType")) {
                 return $this->_propDict["resultType"];
             } else {
                 $this->_propDict["resultType"] = new ThreatAssessmentResultType($this->_propDict["resultType"]);

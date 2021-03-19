@@ -32,7 +32,7 @@ class PolicyRoot extends Entity
     public function getAuthenticationMethodsPolicy()
     {
         if (array_key_exists("authenticationMethodsPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethodsPolicy"], "Microsoft\Graph\Model\AuthenticationMethodsPolicy")) {
+            if (is_a($this->_propDict["authenticationMethodsPolicy"], "\Microsoft\Graph\Model\AuthenticationMethodsPolicy")) {
                 return $this->_propDict["authenticationMethodsPolicy"];
             } else {
                 $this->_propDict["authenticationMethodsPolicy"] = new AuthenticationMethodsPolicy($this->_propDict["authenticationMethodsPolicy"]);
@@ -91,7 +91,7 @@ class PolicyRoot extends Entity
     public function getAuthorizationPolicy()
     {
         if (array_key_exists("authorizationPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["authorizationPolicy"], "Microsoft\Graph\Model\AuthorizationPolicy")) {
+            if (is_a($this->_propDict["authorizationPolicy"], "\Microsoft\Graph\Model\AuthorizationPolicy")) {
                 return $this->_propDict["authorizationPolicy"];
             } else {
                 $this->_propDict["authorizationPolicy"] = new AuthorizationPolicy($this->_propDict["authorizationPolicy"]);
@@ -349,7 +349,7 @@ class PolicyRoot extends Entity
     public function getIdentitySecurityDefaultsEnforcementPolicy()
     {
         if (array_key_exists("identitySecurityDefaultsEnforcementPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["identitySecurityDefaultsEnforcementPolicy"], "Microsoft\Graph\Model\IdentitySecurityDefaultsEnforcementPolicy")) {
+            if (is_a($this->_propDict["identitySecurityDefaultsEnforcementPolicy"], "\Microsoft\Graph\Model\IdentitySecurityDefaultsEnforcementPolicy")) {
                 return $this->_propDict["identitySecurityDefaultsEnforcementPolicy"];
             } else {
                 $this->_propDict["identitySecurityDefaultsEnforcementPolicy"] = new IdentitySecurityDefaultsEnforcementPolicy($this->_propDict["identitySecurityDefaultsEnforcementPolicy"]);
