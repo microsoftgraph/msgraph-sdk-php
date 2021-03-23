@@ -53,6 +53,37 @@ class IdentityGovernance implements \JsonSerializable
     }
     
     /**
+    * Gets the appConsent
+    *
+    * @return AppConsentApprovalRoute The appConsent
+    */
+    public function getAppConsent()
+    {
+        if (array_key_exists("appConsent", $this->_propDict)) {
+            if (is_a($this->_propDict["appConsent"], "Microsoft\Graph\Model\AppConsentApprovalRoute")) {
+                return $this->_propDict["appConsent"];
+            } else {
+                $this->_propDict["appConsent"] = new AppConsentApprovalRoute($this->_propDict["appConsent"]);
+                return $this->_propDict["appConsent"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appConsent
+    *
+    * @param AppConsentApprovalRoute $val The appConsent
+    *
+    * @return IdentityGovernance
+    */
+    public function setAppConsent($val)
+    {
+        $this->_propDict["appConsent"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the termsOfUse
     *
     * @return TermsOfUseContainer The termsOfUse

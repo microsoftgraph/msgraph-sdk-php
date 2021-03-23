@@ -26,7 +26,7 @@ class RolePermission extends Entity
 
     /**
     * Gets the resourceActions
-    * Resource Actions each containing a set of allowed and not allowed permissions.
+    * Actions
     *
     * @return ResourceAction The resourceActions
     */
@@ -45,7 +45,7 @@ class RolePermission extends Entity
 
     /**
     * Sets the resourceActions
-    * Resource Actions each containing a set of allowed and not allowed permissions.
+    * Actions
     *
     * @param ResourceAction $val The value to assign to the resourceActions
     *

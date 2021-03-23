@@ -282,6 +282,37 @@ class PolicyRoot extends Entity
         return $this;
     }
     
+    /**
+    * Gets the adminConsentRequestPolicy
+    *
+    * @return AdminConsentRequestPolicy The adminConsentRequestPolicy
+    */
+    public function getAdminConsentRequestPolicy()
+    {
+        if (array_key_exists("adminConsentRequestPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["adminConsentRequestPolicy"], "Microsoft\Graph\Model\AdminConsentRequestPolicy")) {
+                return $this->_propDict["adminConsentRequestPolicy"];
+            } else {
+                $this->_propDict["adminConsentRequestPolicy"] = new AdminConsentRequestPolicy($this->_propDict["adminConsentRequestPolicy"]);
+                return $this->_propDict["adminConsentRequestPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the adminConsentRequestPolicy
+    *
+    * @param AdminConsentRequestPolicy $val The adminConsentRequestPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setAdminConsentRequestPolicy($val)
+    {
+        $this->_propDict["adminConsentRequestPolicy"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the conditionalAccessPolicies

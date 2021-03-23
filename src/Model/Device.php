@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @return bool The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @param bool $val The accountEnabled
     *
@@ -445,7 +445,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @return string The operatingSystemVersion
     */
@@ -460,7 +460,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @param string $val The operatingSystemVersion
     *
@@ -503,7 +503,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the profileType
-    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+    * The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
     *
     * @return string The profileType
     */
@@ -518,7 +518,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the profileType
-    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+    * The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
     *
     * @param string $val The profileType
     *
@@ -561,7 +561,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @return string The trustType
     */
@@ -576,7 +576,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @param string $val The trustType
     *
