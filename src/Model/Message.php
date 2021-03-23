@@ -89,7 +89,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the bodyPreview
-    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+    * The first 255 characters of the message body. It is in text format.
     *
     * @return string The bodyPreview
     */
@@ -104,7 +104,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the bodyPreview
-    * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+    * The first 255 characters of the message body. It is in text format.
     *
     * @param string $val The bodyPreview
     *
@@ -305,7 +305,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the message: Low, Normal, High.
+    * The importance of the message. The possible values are: low, normal, and high.
     *
     * @return Importance The importance
     */
@@ -324,7 +324,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the message: Low, Normal, High.
+    * The importance of the message. The possible values are: low, normal, and high.
     *
     * @param Importance $val The importance
     *

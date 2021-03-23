@@ -117,6 +117,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the createdDateTime
+    * The timestamp when this key was registered to the user.
     *
     * @return \DateTime The createdDateTime
     */
@@ -135,6 +136,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the createdDateTime
+    * The timestamp when this key was registered to the user.
     *
     * @param \DateTime $val The createdDateTime
     *

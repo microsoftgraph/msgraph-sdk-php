@@ -54,7 +54,7 @@ class TargetResource extends Entity
 
     /**
     * Gets the groupType
-    * When type is set to Group, this indicates the group type.
+    * When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
     *
     * @return GroupType The groupType
     */
@@ -73,7 +73,7 @@ class TargetResource extends Entity
 
     /**
     * Sets the groupType
-    * When type is set to Group, this indicates the group type.
+    * When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
     *
     * @param GroupType $val The value to assign to the groupType
     *

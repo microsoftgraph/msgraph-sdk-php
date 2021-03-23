@@ -25,6 +25,39 @@ namespace Microsoft\Graph\Model;
 class Channel extends Entity
 {
     /**
+    * Gets the createdDateTime
+    * Read only. Timestamp at which the channel was created.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * Read only. Timestamp at which the channel was created.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return Channel
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * Optional textual description for the channel.
     *
@@ -142,7 +175,7 @@ class Channel extends Entity
     
     /**
     * Gets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
     *
     * @return ChannelMembershipType The membershipType
     */
@@ -161,7 +194,7 @@ class Channel extends Entity
     
     /**
     * Sets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
     *
     * @param ChannelMembershipType $val The membershipType
     *
