@@ -350,7 +350,7 @@ class AttributeDefinition extends Entity
 
     /**
     * Gets the type
-    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean. Default is String.
+    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
     *
     * @return AttributeType The type
     */
@@ -369,7 +369,7 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the type
-    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean. Default is String.
+    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
     *
     * @param AttributeType $val The value to assign to the type
     *

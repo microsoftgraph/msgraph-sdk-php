@@ -145,35 +145,6 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
-    * Gets the orderIdentifier
-    * Order Id of the Windows autopilot device. - Deprecate
-    *
-    * @return string The orderIdentifier
-    */
-    public function getOrderIdentifier()
-    {
-        if (array_key_exists("orderIdentifier", $this->_propDict)) {
-            return $this->_propDict["orderIdentifier"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the orderIdentifier
-    * Order Id of the Windows autopilot device. - Deprecate
-    *
-    * @param string $val The orderIdentifier
-    *
-    * @return ImportedWindowsAutopilotDeviceIdentity
-    */
-    public function setOrderIdentifier($val)
-    {
-        $this->_propDict["orderIdentifier"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the productKey
     * Product Key of the Windows autopilot device.
     *

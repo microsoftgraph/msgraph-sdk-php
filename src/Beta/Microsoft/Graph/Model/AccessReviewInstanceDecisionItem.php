@@ -88,7 +88,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the appliedDateTime
-    * The DateTime when the approval decision was applied.
+    * The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The appliedDateTime
     */
@@ -107,7 +107,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the appliedDateTime
-    * The DateTime when the approval decision was applied.
+    * The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The appliedDateTime
     *
@@ -207,6 +207,64 @@ class AccessReviewInstanceDecisionItem extends Entity
     }
     
     /**
+    * Gets the principal
+    *
+    * @return Identity The principal
+    */
+    public function getPrincipal()
+    {
+        if (array_key_exists("principal", $this->_propDict)) {
+            if (is_a($this->_propDict["principal"], "Beta\Microsoft\Graph\Model\Identity")) {
+                return $this->_propDict["principal"];
+            } else {
+                $this->_propDict["principal"] = new Identity($this->_propDict["principal"]);
+                return $this->_propDict["principal"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the principal
+    *
+    * @param Identity $val The principal
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setPrincipal($val)
+    {
+        $this->_propDict["principal"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the principalLink
+    *
+    * @return string The principalLink
+    */
+    public function getPrincipalLink()
+    {
+        if (array_key_exists("principalLink", $this->_propDict)) {
+            return $this->_propDict["principalLink"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the principalLink
+    *
+    * @param string $val The principalLink
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setPrincipalLink($val)
+    {
+        $this->_propDict["principalLink"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the recommendation
     * A system-generated recommendation for the approval decision. Possible values: Approve, Deny, or NotAvailable.
     *
@@ -232,6 +290,64 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function setRecommendation($val)
     {
         $this->_propDict["recommendation"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resource
+    *
+    * @return AccessReviewInstanceDecisionItemResource The resource
+    */
+    public function getResource()
+    {
+        if (array_key_exists("resource", $this->_propDict)) {
+            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemResource")) {
+                return $this->_propDict["resource"];
+            } else {
+                $this->_propDict["resource"] = new AccessReviewInstanceDecisionItemResource($this->_propDict["resource"]);
+                return $this->_propDict["resource"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the resource
+    *
+    * @param AccessReviewInstanceDecisionItemResource $val The resource
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setResource($val)
+    {
+        $this->_propDict["resource"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the resourceLink
+    *
+    * @return string The resourceLink
+    */
+    public function getResourceLink()
+    {
+        if (array_key_exists("resourceLink", $this->_propDict)) {
+            return $this->_propDict["resourceLink"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourceLink
+    *
+    * @param string $val The resourceLink
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setResourceLink($val)
+    {
+        $this->_propDict["resourceLink"] = $val;
         return $this;
     }
     
@@ -270,7 +386,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the reviewedDateTime
-    * The DateTime when the review occurred.
+    * The timestamp when the review occurred.
     *
     * @return \DateTime The reviewedDateTime
     */
@@ -289,7 +405,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the reviewedDateTime
-    * The DateTime when the review occurred.
+    * The timestamp when the review occurred.
     *
     * @param \DateTime $val The reviewedDateTime
     *

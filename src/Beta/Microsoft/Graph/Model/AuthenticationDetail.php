@@ -25,7 +25,7 @@ class AuthenticationDetail extends Entity
 {
     /**
     * Gets the authenticationMethod
-    * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token.
+    * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token, Previously satisfied.
     *
     * @return string The authenticationMethod
     */
@@ -40,7 +40,7 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationMethod
-    * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token.
+    * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token, Previously satisfied.
     *
     * @param string $val The value of the authenticationMethod
     *
@@ -82,7 +82,7 @@ class AuthenticationDetail extends Entity
 
     /**
     * Gets the authenticationStepDateTime
-    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The authenticationStepDateTime
     */
@@ -101,7 +101,7 @@ class AuthenticationDetail extends Entity
 
     /**
     * Sets the authenticationStepDateTime
-    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the authenticationStepDateTime
     *

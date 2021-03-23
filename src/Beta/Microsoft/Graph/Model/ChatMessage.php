@@ -89,6 +89,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the channelIdentity
+    * The identity of the channel in which the message was posted.
     *
     * @return ChannelIdentity The channelIdentity
     */
@@ -107,6 +108,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the channelIdentity
+    * The identity of the channel in which the message was posted.
     *
     * @param ChannelIdentity $val The channelIdentity
     *
@@ -120,6 +122,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the chatId
+    * The identity of the chat in which the message was posted.
     *
     * @return string The chatId
     */
@@ -134,6 +137,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the chatId
+    * The identity of the chat in which the message was posted.
     *
     * @param string $val The chatId
     *

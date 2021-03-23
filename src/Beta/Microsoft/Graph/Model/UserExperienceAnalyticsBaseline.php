@@ -280,4 +280,37 @@ class UserExperienceAnalyticsBaseline extends Entity
         return $this;
     }
     
+    /**
+    * Gets the workFromAnywhereMetrics
+    * The user experience analytics work from anywhere metrics.
+    *
+    * @return UserExperienceAnalyticsCategory The workFromAnywhereMetrics
+    */
+    public function getWorkFromAnywhereMetrics()
+    {
+        if (array_key_exists("workFromAnywhereMetrics", $this->_propDict)) {
+            if (is_a($this->_propDict["workFromAnywhereMetrics"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
+                return $this->_propDict["workFromAnywhereMetrics"];
+            } else {
+                $this->_propDict["workFromAnywhereMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["workFromAnywhereMetrics"]);
+                return $this->_propDict["workFromAnywhereMetrics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the workFromAnywhereMetrics
+    * The user experience analytics work from anywhere metrics.
+    *
+    * @param UserExperienceAnalyticsCategory $val The workFromAnywhereMetrics
+    *
+    * @return UserExperienceAnalyticsBaseline
+    */
+    public function setWorkFromAnywhereMetrics($val)
+    {
+        $this->_propDict["workFromAnywhereMetrics"] = $val;
+        return $this;
+    }
+    
 }

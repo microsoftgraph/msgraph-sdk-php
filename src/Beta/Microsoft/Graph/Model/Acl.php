@@ -56,33 +56,38 @@ class Acl extends Entity
         $this->_propDict["accessType"] = $val;
          return $this;
     }
+
     /**
     * Gets the identitySource
     * The source of identity. Possible values are azureActiveDirectory or external.
     *
-    * @return string The identitySource
+    * @return IdentitySourceType The identitySource
     */
     public function getIdentitySource()
     {
         if (array_key_exists("identitySource", $this->_propDict)) {
-            return $this->_propDict["identitySource"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["identitySource"], "Beta\Microsoft\Graph\Model\IdentitySourceType")) {
+                return $this->_propDict["identitySource"];
+            } else {
+                $this->_propDict["identitySource"] = new IdentitySourceType($this->_propDict["identitySource"]);
+                return $this->_propDict["identitySource"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the identitySource
     * The source of identity. Possible values are azureActiveDirectory or external.
     *
-    * @param string $val The value of the identitySource
+    * @param IdentitySourceType $val The value to assign to the identitySource
     *
-    * @return Acl
+    * @return Acl The Acl
     */
     public function setIdentitySource($val)
     {
         $this->_propDict["identitySource"] = $val;
-        return $this;
+         return $this;
     }
 
     /**

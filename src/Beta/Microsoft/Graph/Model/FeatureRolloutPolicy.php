@@ -84,7 +84,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Gets the feature
-    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
+    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
     *
     * @return StagedFeatureName The feature
     */
@@ -103,7 +103,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Sets the feature
-    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
+    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
     *
     * @param StagedFeatureName $val The feature
     *

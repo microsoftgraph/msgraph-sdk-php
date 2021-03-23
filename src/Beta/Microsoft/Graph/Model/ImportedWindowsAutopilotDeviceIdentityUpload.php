@@ -59,7 +59,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     
     /**
     * Gets the status
-    * Upload status. Possible values are: noUpload, pending, complete, error.
+    * Upload status.
     *
     * @return ImportedWindowsAutopilotDeviceIdentityUploadStatus The status
     */
@@ -78,7 +78,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     
     /**
     * Sets the status
-    * Upload status. Possible values are: noUpload, pending, complete, error.
+    * Upload status.
     *
     * @param ImportedWindowsAutopilotDeviceIdentityUploadStatus $val The status
     *

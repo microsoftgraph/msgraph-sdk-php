@@ -52,32 +52,6 @@ class Property extends Entity
         return $this;
     }
     /**
-    * Gets the isContent
-    *
-    * @return bool The isContent
-    */
-    public function getIsContent()
-    {
-        if (array_key_exists("isContent", $this->_propDict)) {
-            return $this->_propDict["isContent"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the isContent
-    *
-    * @param bool $val The value of the isContent
-    *
-    * @return Property
-    */
-    public function setIsContent($val)
-    {
-        $this->_propDict["isContent"] = $val;
-        return $this;
-    }
-    /**
     * Gets the isQueryable
     * Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
     *

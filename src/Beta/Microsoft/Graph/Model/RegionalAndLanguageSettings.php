@@ -221,6 +221,7 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Gets the translationPreferences
+    * The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
     *
     * @return TranslationPreferences The translationPreferences
     */
@@ -239,6 +240,7 @@ class RegionalAndLanguageSettings extends Entity
     
     /**
     * Sets the translationPreferences
+    * The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
     *
     * @param TranslationPreferences $val The translationPreferences
     *

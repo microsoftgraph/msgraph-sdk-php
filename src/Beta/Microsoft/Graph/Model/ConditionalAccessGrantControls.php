@@ -26,7 +26,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Gets the builtInControls
-    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange.
+    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
     *
     * @return ConditionalAccessGrantControl The builtInControls
     */
@@ -45,7 +45,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Sets the builtInControls
-    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange.
+    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
     *
     * @param ConditionalAccessGrantControl $val The value to assign to the builtInControls
     *

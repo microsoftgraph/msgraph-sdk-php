@@ -50,9 +50,10 @@ class DeviceType extends Enum
     const ANDROID_ENTERPRISE = "androidEnterprise";
     const WINDOWS10X = "windows10x";
     const ANDROIDN_GMS = "androidnGMS";
-    const CLOUD_PC = "cloudPC";
+    const CHROME_OS = "chromeOS";
     const LINUX = "linux";
     const BLACKBERRY = "blackberry";
     const PALM = "palm";
     const UNKNOWN = "unknown";
+    const CLOUD_PC = "cloudPC";
 }

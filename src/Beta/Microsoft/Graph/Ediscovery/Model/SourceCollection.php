@@ -26,6 +26,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the contentQuery
+    * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery.  You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
     *
     * @return string The contentQuery
     */
@@ -40,6 +41,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the contentQuery
+    * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery.  You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
     *
     * @param string $val The contentQuery
     *
@@ -53,6 +55,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdBy
+    * The user who created the sourceCollection.
     *
     * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
@@ -71,6 +74,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdBy
+    * The user who created the sourceCollection.
     *
     * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
@@ -84,6 +88,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time the sourceCollection was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -102,6 +107,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time the sourceCollection was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -146,6 +152,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * The description of the sourceCollection
     *
     * @return string The description
     */
@@ -160,6 +167,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * The description of the sourceCollection
     *
     * @param string $val The description
     *
@@ -173,6 +181,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name of the sourceCollection
     *
     * @return string The displayName
     */
@@ -187,6 +196,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name of the sourceCollection
     *
     * @param string $val The displayName
     *
@@ -200,6 +210,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedBy
+    * The last user who modified the sourceCollection.
     *
     * @return Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
     */
@@ -218,6 +229,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedBy
+    * The last user who modified the sourceCollection.
     *
     * @param Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
@@ -231,6 +243,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The last date and time the sourceCollection was modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -249,6 +262,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The last date and time the sourceCollection was modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -262,6 +276,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantSources
+    * When specified, the collection will span across a service for an entire workload. Possible values are: allMailboxes, allSites.
     *
     * @return TenantSources The tenantSources
     */
@@ -280,6 +295,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantSources
+    * When specified, the collection will span across a service for an entire workload. Possible values are: allMailboxes, allSites.
     *
     * @param TenantSources $val The tenantSources
     *
@@ -294,6 +310,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the additionalSources
+    * Adds an additional source to the sourceCollection.
      *
      * @return array The additionalSources
      */
@@ -308,6 +325,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the additionalSources
+    * Adds an additional source to the sourceCollection.
     *
     * @param DataSource $val The additionalSources
     *
@@ -321,6 +339,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the addToReviewSetOperation
+    * Adds the results of the sourceCollection to the specified reviewSet.
     *
     * @return AddToReviewSetOperation The addToReviewSetOperation
     */
@@ -339,6 +358,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the addToReviewSetOperation
+    * Adds the results of the sourceCollection to the specified reviewSet.
     *
     * @param AddToReviewSetOperation $val The addToReviewSetOperation
     *
@@ -353,6 +373,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the custodianSources
+    * Custodian sources that are included in the sourceCollection.
      *
      * @return array The custodianSources
      */
@@ -367,6 +388,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the custodianSources
+    * Custodian sources that are included in the sourceCollection.
     *
     * @param DataSource $val The custodianSources
     *
@@ -380,6 +402,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastEstimateStatisticsOperation
+    * The last estimate operation associated with the sourceCollection.
     *
     * @return EstimateStatisticsOperation The lastEstimateStatisticsOperation
     */
@@ -398,6 +421,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastEstimateStatisticsOperation
+    * The last estimate operation associated with the sourceCollection.
     *
     * @param EstimateStatisticsOperation $val The lastEstimateStatisticsOperation
     *

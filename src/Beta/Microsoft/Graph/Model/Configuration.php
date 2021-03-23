@@ -24,6 +24,32 @@ namespace Beta\Microsoft\Graph\Model;
 class Configuration extends Entity
 {
     /**
+    * Gets the authorizedAppIds
+    *
+    * @return string The authorizedAppIds
+    */
+    public function getAuthorizedAppIds()
+    {
+        if (array_key_exists("authorizedAppIds", $this->_propDict)) {
+            return $this->_propDict["authorizedAppIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authorizedAppIds
+    *
+    * @param string $val The value of the authorizedAppIds
+    *
+    * @return Configuration
+    */
+    public function setAuthorizedAppIds($val)
+    {
+        $this->_propDict["authorizedAppIds"] = $val;
+        return $this;
+    }
+    /**
     * Gets the authorizedApps
     * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
     *

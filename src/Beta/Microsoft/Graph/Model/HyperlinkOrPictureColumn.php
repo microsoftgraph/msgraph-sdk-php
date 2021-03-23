@@ -25,6 +25,7 @@ class HyperlinkOrPictureColumn extends Entity
 {
     /**
     * Gets the isPicture
+    * Specifies whether the display format used for URL columns is an image or a hyperlink.
     *
     * @return bool The isPicture
     */
@@ -39,6 +40,7 @@ class HyperlinkOrPictureColumn extends Entity
 
     /**
     * Sets the isPicture
+    * Specifies whether the display format used for URL columns is an image or a hyperlink.
     *
     * @param bool $val The value of the isPicture
     *

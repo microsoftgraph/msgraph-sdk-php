@@ -26,7 +26,7 @@ class UserCredentialUsageDetails extends Entity
 {
     /**
     * Gets the authMethod
-    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobileCall (supported only in registration).
+    * Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue
     *
     * @return UsageAuthMethod The authMethod
     */
@@ -45,7 +45,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the authMethod
-    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobileCall (supported only in registration).
+    * Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue
     *
     * @param UsageAuthMethod $val The authMethod
     *
@@ -59,7 +59,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the eventDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The eventDateTime
     */
@@ -78,7 +78,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the eventDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The eventDateTime
     *
@@ -121,7 +121,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the feature
-    * Possible values are: registration and reset.
+    * Possible values are: registration, reset, unknownFutureValue.
     *
     * @return FeatureType The feature
     */
@@ -140,7 +140,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the feature
-    * Possible values are: registration and reset.
+    * Possible values are: registration, reset, unknownFutureValue.
     *
     * @param FeatureType $val The feature
     *

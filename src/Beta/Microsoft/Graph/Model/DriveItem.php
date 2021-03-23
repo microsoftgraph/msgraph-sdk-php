@@ -349,6 +349,37 @@ class DriveItem extends BaseItem
     }
     
     /**
+    * Gets the media
+    *
+    * @return Media The media
+    */
+    public function getMedia()
+    {
+        if (array_key_exists("media", $this->_propDict)) {
+            if (is_a($this->_propDict["media"], "Beta\Microsoft\Graph\Model\Media")) {
+                return $this->_propDict["media"];
+            } else {
+                $this->_propDict["media"] = new Media($this->_propDict["media"]);
+                return $this->_propDict["media"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the media
+    *
+    * @param Media $val The media
+    *
+    * @return DriveItem
+    */
+    public function setMedia($val)
+    {
+        $this->_propDict["media"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the package
     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
@@ -671,6 +702,37 @@ class DriveItem extends BaseItem
     public function setSize($val)
     {
         $this->_propDict["size"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the source
+    *
+    * @return DriveItemSource The source
+    */
+    public function getSource()
+    {
+        if (array_key_exists("source", $this->_propDict)) {
+            if (is_a($this->_propDict["source"], "Beta\Microsoft\Graph\Model\DriveItemSource")) {
+                return $this->_propDict["source"];
+            } else {
+                $this->_propDict["source"] = new DriveItemSource($this->_propDict["source"]);
+                return $this->_propDict["source"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the source
+    *
+    * @param DriveItemSource $val The source
+    *
+    * @return DriveItem
+    */
+    public function setSource($val)
+    {
+        $this->_propDict["source"] = $val;
         return $this;
     }
     

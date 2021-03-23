@@ -26,7 +26,7 @@ class IdentityUserFlowAttribute extends Entity
 {
     /**
     * Gets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are:string - denotes that the dataType for the identityUserFlowAttribute is a string. boolean - denotes that the dataType for the identityUserFlowAttribute is a Boolean.int64 - denotes that the dataType for the identityUserFlowAttribute is an integer.
+    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
     *
     * @return IdentityUserFlowAttributeDataType The dataType
     */
@@ -45,7 +45,7 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are:string - denotes that the dataType for the identityUserFlowAttribute is a string. boolean - denotes that the dataType for the identityUserFlowAttribute is a Boolean.int64 - denotes that the dataType for the identityUserFlowAttribute is an integer.
+    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
     *
     * @param IdentityUserFlowAttributeDataType $val The dataType
     *
@@ -117,7 +117,7 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Gets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
+    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
     *
     * @return IdentityUserFlowAttributeType The userFlowAttributeType
     */
@@ -136,7 +136,7 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
+    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
     *
     * @param IdentityUserFlowAttributeType $val The userFlowAttributeType
     *

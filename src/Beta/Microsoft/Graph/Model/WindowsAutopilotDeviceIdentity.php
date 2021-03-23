@@ -55,7 +55,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the azureActiveDirectoryDeviceId
-    * AAD Device ID
+    * AAD Device ID - to be deprecated
     *
     * @return string The azureActiveDirectoryDeviceId
     */
@@ -70,7 +70,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the azureActiveDirectoryDeviceId
-    * AAD Device ID
+    * AAD Device ID - to be deprecated
     *
     * @param string $val The azureActiveDirectoryDeviceId
     *
@@ -79,6 +79,35 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function setAzureActiveDirectoryDeviceId($val)
     {
         $this->_propDict["azureActiveDirectoryDeviceId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the azureAdDeviceId
+    * AAD Device ID
+    *
+    * @return string The azureAdDeviceId
+    */
+    public function getAzureAdDeviceId()
+    {
+        if (array_key_exists("azureAdDeviceId", $this->_propDict)) {
+            return $this->_propDict["azureAdDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the azureAdDeviceId
+    * AAD Device ID
+    *
+    * @param string $val The azureAdDeviceId
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setAzureAdDeviceId($val)
+    {
+        $this->_propDict["azureAdDeviceId"] = $val;
         return $this;
     }
     
@@ -389,35 +418,6 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function setModel($val)
     {
         $this->_propDict["model"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the orderIdentifier
-    * Order Identifier of the Windows autopilot device - Deprecated
-    *
-    * @return string The orderIdentifier
-    */
-    public function getOrderIdentifier()
-    {
-        if (array_key_exists("orderIdentifier", $this->_propDict)) {
-            return $this->_propDict["orderIdentifier"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the orderIdentifier
-    * Order Identifier of the Windows autopilot device - Deprecated
-    *
-    * @param string $val The orderIdentifier
-    *
-    * @return WindowsAutopilotDeviceIdentity
-    */
-    public function setOrderIdentifier($val)
-    {
-        $this->_propDict["orderIdentifier"] = $val;
         return $this;
     }
     

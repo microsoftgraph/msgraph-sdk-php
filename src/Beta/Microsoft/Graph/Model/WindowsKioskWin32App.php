@@ -110,7 +110,7 @@ class WindowsKioskWin32App extends WindowsKioskAppBase
 
     /**
     * Gets the edgeKioskType
-    * Edge kiosk type for Edge kiosk mode
+    * Edge kiosk type for Edge kiosk mode. Possible values are: publicBrowsing, fullScreen.
     *
     * @return WindowsEdgeKioskType The edgeKioskType
     */
@@ -129,7 +129,7 @@ class WindowsKioskWin32App extends WindowsKioskAppBase
 
     /**
     * Sets the edgeKioskType
-    * Edge kiosk type for Edge kiosk mode
+    * Edge kiosk type for Edge kiosk mode. Possible values are: publicBrowsing, fullScreen.
     *
     * @param WindowsEdgeKioskType $val The value to assign to the edgeKioskType
     *

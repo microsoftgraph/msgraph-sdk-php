@@ -59,6 +59,7 @@ class PrintJob extends Entity
     
     /**
     * Gets the createdBy
+    * Read-only. Nullable.
     *
     * @return UserIdentity The createdBy
     */
@@ -77,6 +78,7 @@ class PrintJob extends Entity
     
     /**
     * Sets the createdBy
+    * Read-only. Nullable.
     *
     * @param UserIdentity $val The createdBy
     *

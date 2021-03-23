@@ -25,6 +25,7 @@ class TranslationLanguageOverride extends Entity
 {
     /**
     * Gets the languageTag
+    * The language to apply the override.Returned by default. Not nullable.
     *
     * @return string The languageTag
     */
@@ -39,6 +40,7 @@ class TranslationLanguageOverride extends Entity
 
     /**
     * Sets the languageTag
+    * The language to apply the override.Returned by default. Not nullable.
     *
     * @param string $val The value of the languageTag
     *
@@ -52,6 +54,7 @@ class TranslationLanguageOverride extends Entity
 
     /**
     * Gets the translationBehavior
+    * The translation override behavior for the language, if any.Returned by default. Not nullable.
     *
     * @return TranslationBehavior The translationBehavior
     */
@@ -70,6 +73,7 @@ class TranslationLanguageOverride extends Entity
 
     /**
     * Sets the translationBehavior
+    * The translation override behavior for the language, if any.Returned by default. Not nullable.
     *
     * @param TranslationBehavior $val The value to assign to the translationBehavior
     *

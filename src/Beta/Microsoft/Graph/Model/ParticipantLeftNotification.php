@@ -26,6 +26,7 @@ class ParticipantLeftNotification extends Entity
 {
     /**
     * Gets the participantId
+    * ID of the participant under the policy who has left the meeting.
     *
     * @return string The participantId
     */
@@ -40,6 +41,7 @@ class ParticipantLeftNotification extends Entity
     
     /**
     * Sets the participantId
+    * ID of the participant under the policy who has left the meeting.
     *
     * @param string $val The participantId
     *

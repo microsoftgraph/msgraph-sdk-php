@@ -116,6 +116,33 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     }
     
     /**
+    * Gets the parentSiteId
+    *
+    * @return string The parentSiteId
+    */
+    public function getParentSiteId()
+    {
+        if (array_key_exists("parentSiteId", $this->_propDict)) {
+            return $this->_propDict["parentSiteId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the parentSiteId
+    *
+    * @param string $val The parentSiteId
+    *
+    * @return Group
+    */
+    public function setParentSiteId($val)
+    {
+        $this->_propDict["parentSiteId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the scope
     * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
     *

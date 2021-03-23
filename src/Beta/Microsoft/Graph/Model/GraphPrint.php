@@ -118,6 +118,7 @@ class GraphPrint implements \JsonSerializable
 
      /** 
      * Gets the operations
+    * The list of print long running operations.
      *
      * @return array The operations
      */
@@ -132,6 +133,7 @@ class GraphPrint implements \JsonSerializable
     
     /** 
     * Sets the operations
+    * The list of print long running operations.
     *
     * @param PrintOperation $val The operations
     *
@@ -295,6 +297,7 @@ class GraphPrint implements \JsonSerializable
 
      /** 
      * Gets the taskDefinitions
+    * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      *
      * @return array The taskDefinitions
      */
@@ -309,6 +312,7 @@ class GraphPrint implements \JsonSerializable
     
     /** 
     * Sets the taskDefinitions
+    * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
     *
     * @param PrintTaskDefinition $val The taskDefinitions
     *

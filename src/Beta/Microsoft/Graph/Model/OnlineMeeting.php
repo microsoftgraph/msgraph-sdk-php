@@ -254,7 +254,7 @@ class OnlineMeeting extends Entity
 
      /** 
      * Gets the capabilities
-    * The list of meeting capabilities. Possible values are: questionAndAnswer.
+    * The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
      *
      * @return array The capabilities
      */
@@ -269,7 +269,7 @@ class OnlineMeeting extends Entity
     
     /** 
     * Sets the capabilities
-    * The list of meeting capabilities. Possible values are: questionAndAnswer.
+    * The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
     *
     * @param MeetingCapabilities $val The capabilities
     *

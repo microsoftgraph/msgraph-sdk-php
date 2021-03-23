@@ -342,6 +342,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the externalColumns
+    * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
      *
      * @return array The externalColumns
      */
@@ -356,6 +357,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the externalColumns
+    * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
     *
     * @param ColumnDefinition $val The externalColumns
     *
@@ -514,6 +516,37 @@ class Site extends BaseItem
     public function setSites($val)
     {
 		$this->_propDict["sites"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the termStore
+    *
+    * @return Beta\Microsoft\Graph\TermStore\Model\Store The termStore
+    */
+    public function getTermStore()
+    {
+        if (array_key_exists("termStore", $this->_propDict)) {
+            if (is_a($this->_propDict["termStore"], "Beta\Microsoft\Graph\TermStore\Model\Store")) {
+                return $this->_propDict["termStore"];
+            } else {
+                $this->_propDict["termStore"] = new Beta\Microsoft\Graph\TermStore\Model\Store($this->_propDict["termStore"]);
+                return $this->_propDict["termStore"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the termStore
+    *
+    * @param Beta\Microsoft\Graph\TermStore\Model\Store $val The termStore
+    *
+    * @return Site
+    */
+    public function setTermStore($val)
+    {
+        $this->_propDict["termStore"] = $val;
         return $this;
     }
     

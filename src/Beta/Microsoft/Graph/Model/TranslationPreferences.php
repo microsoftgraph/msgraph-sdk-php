@@ -26,6 +26,7 @@ class TranslationPreferences extends Entity
 
     /**
     * Gets the languageOverrides
+    * Translation override behavior for languages, if any.Returned by default.
     *
     * @return TranslationLanguageOverride The languageOverrides
     */
@@ -44,6 +45,7 @@ class TranslationPreferences extends Entity
 
     /**
     * Sets the languageOverrides
+    * Translation override behavior for languages, if any.Returned by default.
     *
     * @param TranslationLanguageOverride $val The value to assign to the languageOverrides
     *
@@ -57,6 +59,7 @@ class TranslationPreferences extends Entity
 
     /**
     * Gets the translationBehavior
+    * The user's preferred translation behavior.Returned by default. Not nullable.
     *
     * @return TranslationBehavior The translationBehavior
     */
@@ -75,6 +78,7 @@ class TranslationPreferences extends Entity
 
     /**
     * Sets the translationBehavior
+    * The user's preferred translation behavior.Returned by default. Not nullable.
     *
     * @param TranslationBehavior $val The value to assign to the translationBehavior
     *
@@ -87,6 +91,7 @@ class TranslationPreferences extends Entity
     }
     /**
     * Gets the untranslatedLanguages
+    * The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only.
     *
     * @return string The untranslatedLanguages
     */
@@ -101,6 +106,7 @@ class TranslationPreferences extends Entity
 
     /**
     * Sets the untranslatedLanguages
+    * The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only.
     *
     * @param string $val The value of the untranslatedLanguages
     *

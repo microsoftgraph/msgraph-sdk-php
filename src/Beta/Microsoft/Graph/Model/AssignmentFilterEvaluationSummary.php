@@ -180,6 +180,39 @@ class AssignmentFilterEvaluationSummary extends Entity
     }
 
     /**
+    * Gets the assignmentFilterTypeAndEvaluationResults
+    * A collection of filter types and their corresponding evaluation results.
+    *
+    * @return AssignmentFilterTypeAndEvaluationResult The assignmentFilterTypeAndEvaluationResults
+    */
+    public function getAssignmentFilterTypeAndEvaluationResults()
+    {
+        if (array_key_exists("assignmentFilterTypeAndEvaluationResults", $this->_propDict)) {
+            if (is_a($this->_propDict["assignmentFilterTypeAndEvaluationResults"], "Beta\Microsoft\Graph\Model\AssignmentFilterTypeAndEvaluationResult")) {
+                return $this->_propDict["assignmentFilterTypeAndEvaluationResults"];
+            } else {
+                $this->_propDict["assignmentFilterTypeAndEvaluationResults"] = new AssignmentFilterTypeAndEvaluationResult($this->_propDict["assignmentFilterTypeAndEvaluationResults"]);
+                return $this->_propDict["assignmentFilterTypeAndEvaluationResults"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the assignmentFilterTypeAndEvaluationResults
+    * A collection of filter types and their corresponding evaluation results.
+    *
+    * @param AssignmentFilterTypeAndEvaluationResult $val The value to assign to the assignmentFilterTypeAndEvaluationResults
+    *
+    * @return AssignmentFilterEvaluationSummary The AssignmentFilterEvaluationSummary
+    */
+    public function setAssignmentFilterTypeAndEvaluationResults($val)
+    {
+        $this->_propDict["assignmentFilterTypeAndEvaluationResults"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the evaluationDateTime
     * The time assignment filter was evaluated.
     *

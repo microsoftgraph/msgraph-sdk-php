@@ -88,7 +88,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the smsSignInState
-    * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured.
+    * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
     *
     * @return AuthenticationMethodSignInState The smsSignInState
     */
@@ -107,7 +107,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the smsSignInState
-    * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured.
+    * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
     *
     * @param AuthenticationMethodSignInState $val The smsSignInState
     *

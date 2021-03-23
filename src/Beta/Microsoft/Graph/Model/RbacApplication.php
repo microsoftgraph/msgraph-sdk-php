@@ -110,6 +110,34 @@ class RbacApplication extends Entity
     
 
      /** 
+     * Gets the roleAssignmentApprovals
+     *
+     * @return array The roleAssignmentApprovals
+     */
+    public function getRoleAssignmentApprovals()
+    {
+        if (array_key_exists("roleAssignmentApprovals", $this->_propDict)) {
+           return $this->_propDict["roleAssignmentApprovals"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the roleAssignmentApprovals
+    *
+    * @param Approval $val The roleAssignmentApprovals
+    *
+    * @return RbacApplication
+    */
+    public function setRoleAssignmentApprovals($val)
+    {
+		$this->_propDict["roleAssignmentApprovals"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the roleAssignmentRequests
      *
      * @return array The roleAssignmentRequests

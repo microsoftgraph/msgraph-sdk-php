@@ -25,6 +25,7 @@ class AppConsentRequestScope extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the scope.
     *
     * @return string The displayName
     */
@@ -39,6 +40,7 @@ class AppConsentRequestScope extends Entity
 
     /**
     * Sets the displayName
+    * The name of the scope.
     *
     * @param string $val The value of the displayName
     *

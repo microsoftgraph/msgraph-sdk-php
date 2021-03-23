@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsAppDefinition extends Entity
 {
     /**
+    * Gets the allowedInstallationScopes
+    *
+    * @return TeamsAppInstallationScopes The allowedInstallationScopes
+    */
+    public function getAllowedInstallationScopes()
+    {
+        if (array_key_exists("allowedInstallationScopes", $this->_propDict)) {
+            if (is_a($this->_propDict["allowedInstallationScopes"], "Beta\Microsoft\Graph\Model\TeamsAppInstallationScopes")) {
+                return $this->_propDict["allowedInstallationScopes"];
+            } else {
+                $this->_propDict["allowedInstallationScopes"] = new TeamsAppInstallationScopes($this->_propDict["allowedInstallationScopes"]);
+                return $this->_propDict["allowedInstallationScopes"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the allowedInstallationScopes
+    *
+    * @param TeamsAppInstallationScopes $val The allowedInstallationScopes
+    *
+    * @return TeamsAppDefinition
+    */
+    public function setAllowedInstallationScopes($val)
+    {
+        $this->_propDict["allowedInstallationScopes"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the azureADAppId
     * The WebApplicationInfo.id from the Teams App manifest.
     *
@@ -86,6 +117,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the description
+    * Verbose description of the application.
     *
     * @return string The description
     */
@@ -100,6 +132,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the description
+    * Verbose description of the application.
     *
     * @param string $val The description
     *

@@ -508,4 +508,37 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         return $this;
     }
     
+    /**
+    * Gets the visibility
+    * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
+    *
+    * @return DeviceManagementConfigurationSettingVisibility The visibility
+    */
+    public function getVisibility()
+    {
+        if (array_key_exists("visibility", $this->_propDict)) {
+            if (is_a($this->_propDict["visibility"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingVisibility")) {
+                return $this->_propDict["visibility"];
+            } else {
+                $this->_propDict["visibility"] = new DeviceManagementConfigurationSettingVisibility($this->_propDict["visibility"]);
+                return $this->_propDict["visibility"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the visibility
+    * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
+    *
+    * @param DeviceManagementConfigurationSettingVisibility $val The visibility
+    *
+    * @return DeviceManagementConfigurationSettingDefinition
+    */
+    public function setVisibility($val)
+    {
+        $this->_propDict["visibility"] = $val;
+        return $this;
+    }
+    
 }

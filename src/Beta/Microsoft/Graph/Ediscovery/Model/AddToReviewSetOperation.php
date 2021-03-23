@@ -26,6 +26,7 @@ class AddToReviewSetOperation extends CaseOperation
 {
     /**
     * Gets the reviewSet
+    * The review set to which items matching the source collection query are added to.
     *
     * @return ReviewSet The reviewSet
     */
@@ -44,6 +45,7 @@ class AddToReviewSetOperation extends CaseOperation
     
     /**
     * Sets the reviewSet
+    * The review set to which items matching the source collection query are added to.
     *
     * @param ReviewSet $val The reviewSet
     *
@@ -57,6 +59,7 @@ class AddToReviewSetOperation extends CaseOperation
     
     /**
     * Gets the sourceCollection
+    * The sourceCollection that items are being added from.
     *
     * @return SourceCollection The sourceCollection
     */
@@ -75,6 +78,7 @@ class AddToReviewSetOperation extends CaseOperation
     
     /**
     * Sets the sourceCollection
+    * The sourceCollection that items are being added from.
     *
     * @param SourceCollection $val The sourceCollection
     *

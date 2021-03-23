@@ -179,7 +179,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetAppsVerificationFailed
     */
@@ -198,7 +198,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetAppsVerificationFailed
     *
@@ -212,7 +212,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetDeviceAttestationFailed
     */
@@ -231,7 +231,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetDeviceAttestationFailed
     *

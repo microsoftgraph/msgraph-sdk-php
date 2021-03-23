@@ -26,7 +26,7 @@ class ConnectorGroup extends Entity
 {
     /**
     * Gets the connectorGroupType
-    * Indicates the type of hybrid agent. This pre-set by the system. Read-only.
+    * Indicates the type of hybrid agent. This pre-set by the system. Possible values are: applicationProxy. Read-only.
     *
     * @return ConnectorGroupType The connectorGroupType
     */
@@ -45,7 +45,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Sets the connectorGroupType
-    * Indicates the type of hybrid agent. This pre-set by the system. Read-only.
+    * Indicates the type of hybrid agent. This pre-set by the system. Possible values are: applicationProxy. Read-only.
     *
     * @param ConnectorGroupType $val The connectorGroupType
     *
@@ -117,7 +117,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Gets the region
-    * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: nam, eur, aus, asia, ind.
+    * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
     *
     * @return ConnectorGroupRegion The region
     */
@@ -136,7 +136,7 @@ class ConnectorGroup extends Entity
     
     /**
     * Sets the region
-    * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: nam, eur, aus, asia, ind.
+    * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
     *
     * @param ConnectorGroupRegion $val The region
     *

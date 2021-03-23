@@ -147,6 +147,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the appDescription
+    * The description exposed by the associated application.
     *
     * @return string The appDescription
     */
@@ -161,6 +162,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the appDescription
+    * The description exposed by the associated application.
     *
     * @param string $val The appDescription
     *
@@ -349,6 +351,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the description
+    * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters.
     *
     * @return string The description
     */
@@ -363,6 +366,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the description
+    * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters.
     *
     * @param string $val The description
     *
@@ -584,6 +588,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the notes
+    * Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.
     *
     * @return string The notes
     */
@@ -598,6 +603,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the notes
+    * Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.
     *
     * @param string $val The notes
     *

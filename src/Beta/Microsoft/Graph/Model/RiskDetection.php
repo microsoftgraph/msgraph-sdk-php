@@ -59,7 +59,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the activityDateTime
-    * Date and time that the risky activity occurred.
+    * Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The activityDateTime
     */
@@ -78,7 +78,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the activityDateTime
-    * Date and time that the risky activity occurred.
+    * Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -150,7 +150,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the detectedDateTime
-    * Date and time that the risk was detected.
+    * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The detectedDateTime
     */
@@ -169,7 +169,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the detectedDateTime
-    * Date and time that the risk was detected.
+    * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The detectedDateTime
     *
@@ -373,7 +373,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the riskEventType
-    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
+    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
     *
     * @return string The riskEventType
     */
@@ -388,7 +388,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the riskEventType
-    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
+    * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
     *
     * @param string $val The riskEventType
     *
@@ -468,7 +468,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the riskType
-    * List of risk event types.Note: This property is deprecated. Use riskEventTypes instead.
+    * List of risk event types.Note: This property is deprecated. Use riskEventType instead.
     *
     * @return RiskEventType The riskType
     */
@@ -487,7 +487,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the riskType
-    * List of risk event types.Note: This property is deprecated. Use riskEventTypes instead.
+    * List of risk event types.Note: This property is deprecated. Use riskEventType instead.
     *
     * @param RiskEventType $val The riskType
     *
@@ -501,7 +501,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the source
-    * Source of the risk detection. For example, 'activeDirectory'.
+    * Source of the risk detection. For example, activeDirectory.
     *
     * @return string The source
     */
@@ -516,7 +516,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the source
-    * Source of the risk detection. For example, 'activeDirectory'.
+    * Source of the risk detection. For example, activeDirectory.
     *
     * @param string $val The source
     *
@@ -592,7 +592,7 @@ class RiskDetection extends Entity
     
     /**
     * Gets the userId
-    * Unique ID of the user.
+    * Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return string The userId
     */
@@ -607,7 +607,7 @@ class RiskDetection extends Entity
     
     /**
     * Sets the userId
-    * Unique ID of the user.
+    * Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param string $val The userId
     *
