@@ -55,7 +55,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Gets the displayName
-    * The value is always 'Continuous Access Evaluation'. Read-only.
+    * The value is always Continuous Access Evaluation. Read-only.
     *
     * @return string The displayName
     */
@@ -70,7 +70,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
     
     /**
     * Sets the displayName
-    * The value is always 'Continuous Access Evaluation'. Read-only.
+    * The value is always Continuous Access Evaluation. Read-only.
     *
     * @param string $val The displayName
     *

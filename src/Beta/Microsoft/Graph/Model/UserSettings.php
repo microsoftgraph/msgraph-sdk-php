@@ -83,6 +83,37 @@ class UserSettings extends Entity
     }
     
     /**
+    * Gets the itemInsights
+    *
+    * @return UserInsightsSettings The itemInsights
+    */
+    public function getItemInsights()
+    {
+        if (array_key_exists("itemInsights", $this->_propDict)) {
+            if (is_a($this->_propDict["itemInsights"], "Beta\Microsoft\Graph\Model\UserInsightsSettings")) {
+                return $this->_propDict["itemInsights"];
+            } else {
+                $this->_propDict["itemInsights"] = new UserInsightsSettings($this->_propDict["itemInsights"]);
+                return $this->_propDict["itemInsights"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the itemInsights
+    *
+    * @param UserInsightsSettings $val The itemInsights
+    *
+    * @return UserSettings
+    */
+    public function setItemInsights($val)
+    {
+        $this->_propDict["itemInsights"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the regionalAndLanguageSettings
     * The user's preferences for languages, regional locale and date/time formatting.
     *

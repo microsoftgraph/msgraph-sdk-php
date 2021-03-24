@@ -117,7 +117,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskLastUpdatedDateTime
-    * The date and time that the risky user was last updated
+    * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z
     *
     * @return \DateTime The riskLastUpdatedDateTime
     */
@@ -136,7 +136,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskLastUpdatedDateTime
-    * The date and time that the risky user was last updated
+    * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The riskLastUpdatedDateTime
     *
@@ -150,7 +150,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskLevel
-    * The possible values are low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
     *
     * @return RiskLevel The riskLevel
     */
@@ -169,7 +169,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskLevel
-    * The possible values are low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
     *
     * @param RiskLevel $val The riskLevel
     *
@@ -183,7 +183,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskState
-    * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
+    * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @return RiskState The riskState
     */
@@ -202,7 +202,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskState
-    * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
+    * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @param RiskState $val The riskState
     *

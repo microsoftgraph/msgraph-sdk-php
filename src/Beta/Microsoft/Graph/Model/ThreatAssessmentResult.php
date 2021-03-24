@@ -26,7 +26,7 @@ class ThreatAssessmentResult extends Entity
 {
     /**
     * Gets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The createdDateTime
     */
@@ -45,7 +45,7 @@ class ThreatAssessmentResult extends Entity
     
     /**
     * Sets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,7 +88,7 @@ class ThreatAssessmentResult extends Entity
     
     /**
     * Gets the resultType
-    * The threat assessment result type. Possible values are: checkPolicy, rescan.
+    * The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
     *
     * @return ThreatAssessmentResultType The resultType
     */
@@ -107,7 +107,7 @@ class ThreatAssessmentResult extends Entity
     
     /**
     * Sets the resultType
-    * The threat assessment result type. Possible values are: checkPolicy, rescan.
+    * The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
     *
     * @param ThreatAssessmentResultType $val The resultType
     *

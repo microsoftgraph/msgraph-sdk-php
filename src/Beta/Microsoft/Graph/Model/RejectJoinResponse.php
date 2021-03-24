@@ -26,6 +26,7 @@ class RejectJoinResponse extends ParticipantJoiningResponse
 
     /**
     * Gets the reason
+    * The rejection reason. Possible values are None, Busy, and Forbidden.
     *
     * @return RejectReason The reason
     */
@@ -44,6 +45,7 @@ class RejectJoinResponse extends ParticipantJoiningResponse
 
     /**
     * Sets the reason
+    * The rejection reason. Possible values are None, Busy, and Forbidden.
     *
     * @param RejectReason $val The value to assign to the reason
     *

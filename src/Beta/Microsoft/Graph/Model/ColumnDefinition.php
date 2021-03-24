@@ -154,6 +154,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the contentApprovalStatus
+    * This column stores content approval status.
     *
     * @return ContentApprovalStatusColumn The contentApprovalStatus
     */
@@ -172,6 +173,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the contentApprovalStatus
+    * This column stores content approval status.
     *
     * @param ContentApprovalStatusColumn $val The contentApprovalStatus
     *
@@ -433,6 +435,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the hyperlinkOrPicture
+    * This column stores hyperlink or picture values.
     *
     * @return HyperlinkOrPictureColumn The hyperlinkOrPicture
     */
@@ -451,6 +454,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the hyperlinkOrPicture
+    * This column stores hyperlink or picture values.
     *
     * @param HyperlinkOrPictureColumn $val The hyperlinkOrPicture
     *
@@ -493,6 +497,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the isDeletable
+    * Indicates whether this column can be deleted.
     *
     * @return bool The isDeletable
     */
@@ -507,6 +512,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the isDeletable
+    * Indicates whether this column can be deleted.
     *
     * @param bool $val The isDeletable
     *
@@ -520,6 +526,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the isReorderable
+    * Indicates whether values in the column can be reordered. Read-only.
     *
     * @return bool The isReorderable
     */
@@ -534,6 +541,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the isReorderable
+    * Indicates whether values in the column can be reordered. Read-only.
     *
     * @param bool $val The isReorderable
     *
@@ -547,6 +555,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the isSealed
+    * Specifies whether column can be changed.
     *
     * @return bool The isSealed
     */
@@ -561,6 +570,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the isSealed
+    * Specifies whether column can be changed.
     *
     * @param bool $val The isSealed
     *
@@ -702,6 +712,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the propagateChanges
+    * If 'True' changes to this column will be propagated to lists that implement the column.
     *
     * @return bool The propagateChanges
     */
@@ -716,6 +727,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the propagateChanges
+    * If 'True' changes to this column will be propagated to lists that implement the column.
     *
     * @param bool $val The propagateChanges
     *
@@ -787,6 +799,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the term
+    * This column stores taxonomy terms.
     *
     * @return TermColumn The term
     */
@@ -805,6 +818,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the term
+    * This column stores taxonomy terms.
     *
     * @param TermColumn $val The term
     *
@@ -851,6 +865,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the thumbnail
+    * This column stores thumbnail values.
     *
     * @return ThumbnailColumn The thumbnail
     */
@@ -869,6 +884,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the thumbnail
+    * This column stores thumbnail values.
     *
     * @param ThumbnailColumn $val The thumbnail
     *
@@ -882,6 +898,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the type
+    * For site columns, the type of column. Read-only
     *
     * @return ColumnTypes The type
     */
@@ -900,6 +917,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the type
+    * For site columns, the type of column. Read-only
     *
     * @param ColumnTypes $val The type
     *
@@ -913,6 +931,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the validation
+    * This column stores validation formula and message for the column.
     *
     * @return ColumnValidation The validation
     */
@@ -931,6 +950,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the validation
+    * This column stores validation formula and message for the column.
     *
     * @param ColumnValidation $val The validation
     *
@@ -944,6 +964,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the sourceColumn
+    * The source column for content type column.
     *
     * @return ColumnDefinition The sourceColumn
     */
@@ -962,6 +983,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the sourceColumn
+    * The source column for content type column.
     *
     * @param ColumnDefinition $val The sourceColumn
     *

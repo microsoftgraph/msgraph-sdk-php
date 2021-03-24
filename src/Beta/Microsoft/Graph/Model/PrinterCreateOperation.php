@@ -55,6 +55,7 @@ class PrinterCreateOperation extends PrintOperation
     
     /**
     * Gets the printer
+    * The created printer entity. Read-only.
     *
     * @return Printer The printer
     */
@@ -73,6 +74,7 @@ class PrinterCreateOperation extends PrintOperation
     
     /**
     * Sets the printer
+    * The created printer entity. Read-only.
     *
     * @param Printer $val The printer
     *

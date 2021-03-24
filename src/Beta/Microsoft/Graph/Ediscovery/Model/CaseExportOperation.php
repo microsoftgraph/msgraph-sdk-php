@@ -26,6 +26,7 @@ class CaseExportOperation extends CaseOperation
 {
     /**
     * Gets the azureBlobContainer
+    * The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
     *
     * @return string The azureBlobContainer
     */
@@ -40,6 +41,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Sets the azureBlobContainer
+    * The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
     *
     * @param string $val The azureBlobContainer
     *
@@ -53,6 +55,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Gets the azureBlobToken
+    * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
     *
     * @return string The azureBlobToken
     */
@@ -67,6 +70,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Sets the azureBlobToken
+    * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
     *
     * @param string $val The azureBlobToken
     *
@@ -80,6 +84,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Gets the description
+    * The description provided for the export.
     *
     * @return string The description
     */
@@ -94,6 +99,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Sets the description
+    * The description provided for the export.
     *
     * @param string $val The description
     *
@@ -107,6 +113,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Gets the exportOptions
+    * The options provided for the export. See reviewSet: export for more details. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
     *
     * @return ExportOptions The exportOptions
     */
@@ -125,6 +132,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Sets the exportOptions
+    * The options provided for the export. See reviewSet: export for more details. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
     *
     * @param ExportOptions $val The exportOptions
     *
@@ -138,6 +146,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Gets the exportStructure
+    * The options provided that specify the structure of the export. See reviewSet: export for more details. Possible values are: none, directory, pst.
     *
     * @return ExportFileStructure The exportStructure
     */
@@ -156,6 +165,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Sets the exportStructure
+    * The options provided that specify the structure of the export. See reviewSet: export for more details. Possible values are: none, directory, pst.
     *
     * @param ExportFileStructure $val The exportStructure
     *
@@ -196,6 +206,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Gets the outputName
+    * The name provided for the export.
     *
     * @return string The outputName
     */
@@ -210,6 +221,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Sets the outputName
+    * The name provided for the export.
     *
     * @param string $val The outputName
     *
@@ -223,6 +235,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Gets the reviewSet
+    * The review set the content is being exported from.
     *
     * @return ReviewSet The reviewSet
     */
@@ -241,6 +254,7 @@ class CaseExportOperation extends CaseOperation
     
     /**
     * Sets the reviewSet
+    * The review set the content is being exported from.
     *
     * @param ReviewSet $val The reviewSet
     *

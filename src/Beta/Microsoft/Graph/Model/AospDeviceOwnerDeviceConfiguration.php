@@ -316,7 +316,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
-    * Indicates the minimum password quality required on the device.
+    * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
     *
     * @return AndroidDeviceOwnerRequiredPasswordType The passwordRequiredType
     */
@@ -335,7 +335,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
-    * Indicates the minimum password quality required on the device.
+    * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
     *
     * @param AndroidDeviceOwnerRequiredPasswordType $val The passwordRequiredType
     *

@@ -89,7 +89,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect.
+    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect.
     *
     * @return Windows10VpnConnectionType The connectionType
     */
@@ -108,7 +108,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect.
+    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect.
     *
     * @param Windows10VpnConnectionType $val The connectionType
     *

@@ -26,6 +26,7 @@ class DocumentSet extends Entity
 
     /**
     * Gets the allowedContentTypes
+    * Content types allowed in document set.
     *
     * @return ContentTypeInfo The allowedContentTypes
     */
@@ -44,6 +45,7 @@ class DocumentSet extends Entity
 
     /**
     * Sets the allowedContentTypes
+    * Content types allowed in document set.
     *
     * @param ContentTypeInfo $val The value to assign to the allowedContentTypes
     *
@@ -57,6 +59,7 @@ class DocumentSet extends Entity
 
     /**
     * Gets the defaultContents
+    * Default contents of document set.
     *
     * @return DocumentSetContent The defaultContents
     */
@@ -75,6 +78,7 @@ class DocumentSet extends Entity
 
     /**
     * Sets the defaultContents
+    * Default contents of document set.
     *
     * @param DocumentSetContent $val The value to assign to the defaultContents
     *
@@ -87,6 +91,7 @@ class DocumentSet extends Entity
     }
     /**
     * Gets the propagateWelcomePageChanges
+    * Specifies whether to push welcome page changes to inherited content types.
     *
     * @return bool The propagateWelcomePageChanges
     */
@@ -101,6 +106,7 @@ class DocumentSet extends Entity
 
     /**
     * Sets the propagateWelcomePageChanges
+    * Specifies whether to push welcome page changes to inherited content types.
     *
     * @param bool $val The value of the propagateWelcomePageChanges
     *
@@ -113,6 +119,7 @@ class DocumentSet extends Entity
     }
     /**
     * Gets the shouldPrefixNameToFile
+    * Add the name of the Document Set to each file name.
     *
     * @return bool The shouldPrefixNameToFile
     */
@@ -127,6 +134,7 @@ class DocumentSet extends Entity
 
     /**
     * Sets the shouldPrefixNameToFile
+    * Add the name of the Document Set to each file name.
     *
     * @param bool $val The value of the shouldPrefixNameToFile
     *
@@ -139,6 +147,7 @@ class DocumentSet extends Entity
     }
     /**
     * Gets the welcomePageUrl
+    * Welcome page absolute URL.
     *
     * @return string The welcomePageUrl
     */
@@ -153,6 +162,7 @@ class DocumentSet extends Entity
 
     /**
     * Sets the welcomePageUrl
+    * Welcome page absolute URL.
     *
     * @param string $val The value of the welcomePageUrl
     *

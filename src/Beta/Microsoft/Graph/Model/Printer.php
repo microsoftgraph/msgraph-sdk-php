@@ -111,6 +111,7 @@ class Printer extends PrinterBase
     
     /**
     * Gets the lastSeenDateTime
+    * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
     *
     * @return \DateTime The lastSeenDateTime
     */
@@ -129,6 +130,7 @@ class Printer extends PrinterBase
     
     /**
     * Sets the lastSeenDateTime
+    * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
     *
     * @param \DateTime $val The lastSeenDateTime
     *

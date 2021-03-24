@@ -26,6 +26,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the contentQuery
+    * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
     *
     * @return string The contentQuery
     */
@@ -40,6 +41,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the contentQuery
+    * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
     *
     * @param string $val The contentQuery
     *
@@ -53,6 +55,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdBy
+    * The user who created the legal hold.
     *
     * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
@@ -71,6 +74,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdBy
+    * The user who created the legal hold.
     *
     * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
@@ -84,6 +88,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time the legal hold was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -102,6 +107,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time the legal hold was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -115,6 +121,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * The legal hold description.
     *
     * @return string The description
     */
@@ -129,6 +136,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * The legal hold description.
     *
     * @param string $val The description
     *
@@ -142,6 +150,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name of the legal hold.
     *
     * @return string The displayName
     */
@@ -156,6 +165,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name of the legal hold.
     *
     * @param string $val The displayName
     *
@@ -169,6 +179,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the errors
+    * Lists any errors that happened while placing the hold.
     *
     * @return string The errors
     */
@@ -183,6 +194,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the errors
+    * Lists any errors that happened while placing the hold.
     *
     * @param string $val The errors
     *
@@ -196,6 +208,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the isEnabled
+    * Indicates whether the hold is enabled and actively holding content.
     *
     * @return bool The isEnabled
     */
@@ -210,6 +223,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the isEnabled
+    * Indicates whether the hold is enabled and actively holding content.
     *
     * @param bool $val The isEnabled
     *
@@ -223,6 +237,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedBy
+    * the user who last modified the legal hold.
     *
     * @return Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
     */
@@ -241,6 +256,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedBy
+    * the user who last modified the legal hold.
     *
     * @param Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
@@ -254,6 +270,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time the legal hold was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -272,6 +289,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time the legal hold was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -285,6 +303,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the status
+    * The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
     *
     * @return LegalHoldStatus The status
     */
@@ -303,6 +322,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the status
+    * The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
     *
     * @param LegalHoldStatus $val The status
     *
@@ -317,6 +337,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the siteSources
+    * Data source entity for SharePoint sites associated with the legal hold.
      *
      * @return array The siteSources
      */
@@ -331,6 +352,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the siteSources
+    * Data source entity for SharePoint sites associated with the legal hold.
     *
     * @param SiteSource $val The siteSources
     *
@@ -373,6 +395,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the userSources
+    * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
      *
      * @return array The userSources
      */
@@ -387,6 +410,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the userSources
+    * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
     *
     * @param UserSource $val The userSources
     *

@@ -144,7 +144,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -163,7 +163,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -235,7 +235,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the expirationDateTime
-    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -254,7 +254,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the expirationDateTime
-    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -560,7 +560,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the membershipRuleProcessingState
-    * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
+    * Indicates whether the dynamic membership processing is on or paused. Possible values are On or Paused. Returned by default.
     *
     * @return string The membershipRuleProcessingState
     */
@@ -575,7 +575,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the membershipRuleProcessingState
-    * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
+    * Indicates whether the dynamic membership processing is on or paused. Possible values are On or Paused. Returned by default.
     *
     * @param string $val The membershipRuleProcessingState
     *
@@ -618,7 +618,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -637,7 +637,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
+    * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -884,7 +884,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @return \DateTime The renewedDateTime
     */
@@ -903,7 +903,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the renewedDateTime
-    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+    * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
     *
     * @param \DateTime $val The renewedDateTime
     *
@@ -1180,7 +1180,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the hideFromAddressLists
-    * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
+    * true if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
     *
     * @return bool The hideFromAddressLists
     */
@@ -1195,7 +1195,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the hideFromAddressLists
-    * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
+    * true if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
     *
     * @param bool $val The hideFromAddressLists
     *
@@ -1209,7 +1209,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the hideFromOutlookClients
-    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
+    * true if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
     *
     * @return bool The hideFromOutlookClients
     */
@@ -1224,7 +1224,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the hideFromOutlookClients
-    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
+    * true if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
     *
     * @param bool $val The hideFromOutlookClients
     *

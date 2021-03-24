@@ -125,7 +125,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     
     /**
     * Gets the lastSyncDateTime
-    * The last time that Intune Management Extension synced with Intune
+    * The last time that Intune Managment Extension synced with Intune
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -144,7 +144,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * The last time that Intune Management Extension synced with Intune
+    * The last time that Intune Managment Extension synced with Intune
     *
     * @param \DateTime $val The lastSyncDateTime
     *

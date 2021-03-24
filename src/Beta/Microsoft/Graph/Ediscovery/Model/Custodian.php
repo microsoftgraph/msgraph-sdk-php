@@ -26,6 +26,7 @@ class Custodian extends DataSourceContainer
 {
     /**
     * Gets the acknowledgedDateTime
+    * Date and time the custodian acknowledged a hold notification.
     *
     * @return \DateTime The acknowledgedDateTime
     */
@@ -44,6 +45,7 @@ class Custodian extends DataSourceContainer
     
     /**
     * Sets the acknowledgedDateTime
+    * Date and time the custodian acknowledged a hold notification.
     *
     * @param \DateTime $val The acknowledgedDateTime
     *
@@ -57,6 +59,7 @@ class Custodian extends DataSourceContainer
     
     /**
     * Gets the applyHoldToSources
+    * Identifies whether a custodian's sources were placed on hold during creation.
     *
     * @return bool The applyHoldToSources
     */
@@ -71,6 +74,7 @@ class Custodian extends DataSourceContainer
     
     /**
     * Sets the applyHoldToSources
+    * Identifies whether a custodian's sources were placed on hold during creation.
     *
     * @param bool $val The applyHoldToSources
     *
@@ -84,6 +88,7 @@ class Custodian extends DataSourceContainer
     
     /**
     * Gets the email
+    * Email address of the custodian.
     *
     * @return string The email
     */
@@ -98,6 +103,7 @@ class Custodian extends DataSourceContainer
     
     /**
     * Sets the email
+    * Email address of the custodian.
     *
     * @param string $val The email
     *
@@ -112,6 +118,7 @@ class Custodian extends DataSourceContainer
 
      /** 
      * Gets the siteSources
+    * Data source entity for SharePoint sites associated with the custodian.
      *
      * @return array The siteSources
      */
@@ -126,6 +133,7 @@ class Custodian extends DataSourceContainer
     
     /** 
     * Sets the siteSources
+    * Data source entity for SharePoint sites associated with the custodian.
     *
     * @param SiteSource $val The siteSources
     *
@@ -140,6 +148,7 @@ class Custodian extends DataSourceContainer
 
      /** 
      * Gets the unifiedGroupSources
+    * Data source entity for groups associated with the custodian.
      *
      * @return array The unifiedGroupSources
      */
@@ -154,6 +163,7 @@ class Custodian extends DataSourceContainer
     
     /** 
     * Sets the unifiedGroupSources
+    * Data source entity for groups associated with the custodian.
     *
     * @param UnifiedGroupSource $val The unifiedGroupSources
     *
@@ -168,6 +178,7 @@ class Custodian extends DataSourceContainer
 
      /** 
      * Gets the userSources
+    * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      *
      * @return array The userSources
      */
@@ -182,6 +193,7 @@ class Custodian extends DataSourceContainer
     
     /** 
     * Sets the userSources
+    * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
     *
     * @param UserSource $val The userSources
     *

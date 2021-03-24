@@ -26,6 +26,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the closedBy
+    * The user who closed the case.
     *
     * @return Beta\Microsoft\Graph\Model\IdentitySet The closedBy
     */
@@ -44,6 +45,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the closedBy
+    * The user who closed the case.
     *
     * @param Beta\Microsoft\Graph\Model\IdentitySet $val The closedBy
     *
@@ -57,6 +59,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the closedDateTime
+    * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The closedDateTime
     */
@@ -75,6 +78,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the closedDateTime
+    * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The closedDateTime
     *
@@ -88,6 +92,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The createdDateTime
     */
@@ -106,6 +111,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * The case description.
     *
     * @return string The description
     */
@@ -133,6 +140,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * The case description.
     *
     * @param string $val The description
     *
@@ -146,6 +154,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The case name.
     *
     * @return string The displayName
     */
@@ -160,6 +169,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The case name.
     *
     * @param string $val The displayName
     *
@@ -173,6 +183,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the externalId
+    * The external case number for customer reference.
     *
     * @return string The externalId
     */
@@ -187,6 +198,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the externalId
+    * The external case number for customer reference.
     *
     * @param string $val The externalId
     *
@@ -200,6 +212,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedBy
+    * The last user who modified the entity.
     *
     * @return Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
     */
@@ -218,6 +231,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedBy
+    * The last user who modified the entity.
     *
     * @param Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
@@ -231,6 +245,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -249,6 +264,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -262,6 +278,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the status
+    * The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
     *
     * @return CaseStatus The status
     */
@@ -280,6 +297,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the status
+    * The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
     *
     * @param CaseStatus $val The status
     *
@@ -465,6 +483,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the sourceCollections
+    * Returns a list of sourceCollection objects associated with this case.
      *
      * @return array The sourceCollections
      */
@@ -479,6 +498,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the sourceCollections
+    * Returns a list of sourceCollection objects associated with this case.
     *
     * @param SourceCollection $val The sourceCollections
     *
@@ -493,6 +513,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the tags
+    * Returns a list of tag objects associated to this case.
      *
      * @return array The tags
      */
@@ -507,6 +528,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the tags
+    * Returns a list of tag objects associated to this case.
     *
     * @param Tag $val The tags
     *

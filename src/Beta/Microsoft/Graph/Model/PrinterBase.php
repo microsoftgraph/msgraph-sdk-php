@@ -26,6 +26,7 @@ class PrinterBase extends Entity
 {
     /**
     * Gets the capabilities
+    * The capabilities of the printer/printerShare.
     *
     * @return PrinterCapabilities The capabilities
     */
@@ -44,6 +45,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the capabilities
+    * The capabilities of the printer/printerShare.
     *
     * @param PrinterCapabilities $val The capabilities
     *
@@ -57,6 +59,7 @@ class PrinterBase extends Entity
     
     /**
     * Gets the defaults
+    * The default print settings of printer/printerShare.
     *
     * @return PrinterDefaults The defaults
     */
@@ -75,6 +78,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the defaults
+    * The default print settings of printer/printerShare.
     *
     * @param PrinterDefaults $val The defaults
     *
@@ -88,6 +92,7 @@ class PrinterBase extends Entity
     
     /**
     * Gets the displayName
+    * The name of the printer/printerShare.
     *
     * @return string The displayName
     */
@@ -102,6 +107,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the displayName
+    * The name of the printer/printerShare.
     *
     * @param string $val The displayName
     *
@@ -115,6 +121,7 @@ class PrinterBase extends Entity
     
     /**
     * Gets the isAcceptingJobs
+    * Whether the printer/printerShare is currently accepting new print jobs.
     *
     * @return bool The isAcceptingJobs
     */
@@ -129,6 +136,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the isAcceptingJobs
+    * Whether the printer/printerShare is currently accepting new print jobs.
     *
     * @param bool $val The isAcceptingJobs
     *
@@ -142,6 +150,7 @@ class PrinterBase extends Entity
     
     /**
     * Gets the location
+    * The physical and/or organizational location of the printer/printerShare.
     *
     * @return PrinterLocation The location
     */
@@ -160,6 +169,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the location
+    * The physical and/or organizational location of the printer/printerShare.
     *
     * @param PrinterLocation $val The location
     *
@@ -173,6 +183,7 @@ class PrinterBase extends Entity
     
     /**
     * Gets the manufacturer
+    * The manufacturer of the printer/printerShare.
     *
     * @return string The manufacturer
     */
@@ -187,6 +198,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the manufacturer
+    * The manufacturer of the printer/printerShare.
     *
     * @param string $val The manufacturer
     *
@@ -200,6 +212,7 @@ class PrinterBase extends Entity
     
     /**
     * Gets the model
+    * The model name of the printer/printerShare.
     *
     * @return string The model
     */
@@ -214,6 +227,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the model
+    * The model name of the printer/printerShare.
     *
     * @param string $val The model
     *
@@ -254,6 +268,7 @@ class PrinterBase extends Entity
     
     /**
     * Gets the status
+    * The processing status of the printer/printerShare, including any errors.
     *
     * @return PrinterStatus The status
     */
@@ -272,6 +287,7 @@ class PrinterBase extends Entity
     
     /**
     * Sets the status
+    * The processing status of the printer/printerShare, including any errors.
     *
     * @param PrinterStatus $val The status
     *
@@ -286,6 +302,7 @@ class PrinterBase extends Entity
 
      /** 
      * Gets the jobs
+    * The list of jobs that are queued for printing by the printer/printerShare.
      *
      * @return array The jobs
      */
@@ -300,6 +317,7 @@ class PrinterBase extends Entity
     
     /** 
     * Sets the jobs
+    * The list of jobs that are queued for printing by the printer/printerShare.
     *
     * @param PrintJob $val The jobs
     *

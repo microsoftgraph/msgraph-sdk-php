@@ -26,6 +26,7 @@ class DocumentSetContent extends Entity
 
     /**
     * Gets the contentType
+    * Content type information of the file.
     *
     * @return ContentTypeInfo The contentType
     */
@@ -44,6 +45,7 @@ class DocumentSetContent extends Entity
 
     /**
     * Sets the contentType
+    * Content type information of the file.
     *
     * @param ContentTypeInfo $val The value to assign to the contentType
     *
@@ -56,6 +58,7 @@ class DocumentSetContent extends Entity
     }
     /**
     * Gets the fileName
+    * Name of the file in resource folder that should be added as a default content or a template in the document set
     *
     * @return string The fileName
     */
@@ -70,6 +73,7 @@ class DocumentSetContent extends Entity
 
     /**
     * Sets the fileName
+    * Name of the file in resource folder that should be added as a default content or a template in the document set
     *
     * @param string $val The value of the fileName
     *
@@ -82,6 +86,7 @@ class DocumentSetContent extends Entity
     }
     /**
     * Gets the folderName
+    * Folder name in which the file will be placed when a new document set is created in the library.
     *
     * @return string The folderName
     */
@@ -96,6 +101,7 @@ class DocumentSetContent extends Entity
 
     /**
     * Sets the folderName
+    * Folder name in which the file will be placed when a new document set is created in the library.
     *
     * @param string $val The value of the folderName
     *

@@ -118,7 +118,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the assignedLicenses
-    * The licenses that are assigned to the user. Returned only on $select. Not nullable.
+    * The licenses that are assigned to the user. Not nullable. Supports $filter.
      *
      * @return array The assignedLicenses
      */
@@ -133,7 +133,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the assignedLicenses
-    * The licenses that are assigned to the user. Returned only on $select. Not nullable.
+    * The licenses that are assigned to the user. Not nullable. Supports $filter.
     *
     * @param AssignedLicense $val The assignedLicenses
     *
@@ -235,7 +235,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 characters.Returned only on $select.
     *
     * @return string The companyName
     */
@@ -250,7 +250,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 characters.Returned only on $select.
     *
     * @param string $val The companyName
     *
@@ -856,7 +856,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. Read-only.
     *
     * @return \DateTime The lastPasswordChangeDateTime
     */
@@ -875,7 +875,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. Read-only.
     *
     * @param \DateTime $val The lastPasswordChangeDateTime
     *
@@ -1184,7 +1184,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -1203,7 +1203,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -1960,7 +1960,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
     *
     * @return \DateTime The birthday
     */
@@ -1979,7 +1979,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
     *
     * @param \DateTime $val The birthday
     *
@@ -1993,7 +1993,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @return \DateTime The hireDate
     */
@@ -2012,7 +2012,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @param \DateTime $val The hireDate
     *
@@ -2497,6 +2497,34 @@ class User extends DirectoryObject
     public function setMemberOf($val)
     {
 		$this->_propDict["memberOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the oauth2PermissionGrants
+     *
+     * @return array The oauth2PermissionGrants
+     */
+    public function getOauth2PermissionGrants()
+    {
+        if (array_key_exists("oauth2PermissionGrants", $this->_propDict)) {
+           return $this->_propDict["oauth2PermissionGrants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the oauth2PermissionGrants
+    *
+    * @param OAuth2PermissionGrant $val The oauth2PermissionGrants
+    *
+    * @return User
+    */
+    public function setOauth2PermissionGrants($val)
+    {
+		$this->_propDict["oauth2PermissionGrants"] = $val;
         return $this;
     }
     

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DataCollectionScope File
+* AccessPackageAssignmentFilterByCurrentUserOptions File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Ediscovery\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DataCollectionScope class
+* AccessPackageAssignmentFilterByCurrentUserOptions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DataCollectionScope extends Enum
+class AccessPackageAssignmentFilterByCurrentUserOptions extends Enum
 {
     /**
-    * The Enum DataCollectionScope
+    * The Enum AccessPackageAssignmentFilterByCurrentUserOptions
     */
-    const ALL_VERSIONS = "allVersions";
-    const CONVERSATIONS = "conversations";
-    const LINKED_FILES = "linkedFiles";
+    const TARGET = "target";
+    const CREATED_BY = "createdBy";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

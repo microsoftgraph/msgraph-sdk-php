@@ -229,7 +229,7 @@ class ApplicationTemplate extends Entity
     
     /**
     * Gets the supportedSingleSignOnModes
-    * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
+    * The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
     *
     * @return string The supportedSingleSignOnModes
     */
@@ -244,7 +244,7 @@ class ApplicationTemplate extends Entity
     
     /**
     * Sets the supportedSingleSignOnModes
-    * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
+    * The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
     *
     * @param string $val The supportedSingleSignOnModes
     *

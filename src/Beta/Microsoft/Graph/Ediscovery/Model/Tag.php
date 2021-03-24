@@ -26,6 +26,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the childSelectability
+    * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
     *
     * @return ChildSelectability The childSelectability
     */
@@ -44,6 +45,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the childSelectability
+    * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
     *
     * @param ChildSelectability $val The childSelectability
     *
@@ -57,6 +59,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdBy
+    * The user who created the tag.
     *
     * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
@@ -75,6 +78,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdBy
+    * The user who created the tag.
     *
     * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
@@ -88,6 +92,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * The description for the tag.
     *
     * @return string The description
     */
@@ -102,6 +107,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * The description for the tag.
     *
     * @param string $val The description
     *
@@ -115,6 +121,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * Display name of the tag.
     *
     * @return string The displayName
     */
@@ -129,6 +136,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * Display name of the tag.
     *
     * @param string $val The displayName
     *
@@ -142,6 +150,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time the tag was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -160,6 +169,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time the tag was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -174,6 +184,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the childTags
+    * Returns the tags that are a child of a tag.
      *
      * @return array The childTags
      */
@@ -188,6 +199,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the childTags
+    * Returns the tags that are a child of a tag.
     *
     * @param Tag $val The childTags
     *
@@ -201,6 +213,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the parent
+    * Returns the parent tag of the specified tag.
     *
     * @return Tag The parent
     */
@@ -219,6 +232,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the parent
+    * Returns the parent tag of the specified tag.
     *
     * @param Tag $val The parent
     *

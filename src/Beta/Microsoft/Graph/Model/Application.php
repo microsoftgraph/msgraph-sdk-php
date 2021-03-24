@@ -118,7 +118,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The date and time the application was registered. Read-only.
+    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -137,7 +137,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The date and time the application was registered. Read-only.
+    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -234,7 +234,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
     * @return string The groupMembershipClaims
     */
@@ -249,7 +249,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
     * @param string $val The groupMembershipClaims
     *
@@ -444,6 +444,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the notes
+    * Notes relevant for the management of the application.
     *
     * @return string The notes
     */
@@ -458,6 +459,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the notes
+    * Notes relevant for the management of the application.
     *
     * @param string $val The notes
     *
@@ -659,7 +661,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+    * Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below.
     *
     * @return string The signInAudience
     */
@@ -674,7 +676,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+    * Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below.
     *
     * @param string $val The signInAudience
     *

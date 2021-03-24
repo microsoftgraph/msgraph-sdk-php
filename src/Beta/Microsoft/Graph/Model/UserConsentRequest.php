@@ -26,6 +26,7 @@ class UserConsentRequest extends Request
 {
     /**
     * Gets the reason
+    * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
     *
     * @return string The reason
     */
@@ -40,6 +41,7 @@ class UserConsentRequest extends Request
     
     /**
     * Sets the reason
+    * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
     *
     * @param string $val The reason
     *
@@ -53,6 +55,7 @@ class UserConsentRequest extends Request
     
     /**
     * Gets the approval
+    * Approval decisions associated with a request.
     *
     * @return Approval The approval
     */
@@ -71,6 +74,7 @@ class UserConsentRequest extends Request
     
     /**
     * Sets the approval
+    * Approval decisions associated with a request.
     *
     * @param Approval $val The approval
     *

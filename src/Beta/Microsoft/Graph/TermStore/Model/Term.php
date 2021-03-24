@@ -90,6 +90,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the labels
+    * Label metadata for a term
      *
      * @return array The labels
      */
@@ -104,6 +105,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the labels
+    * Label metadata for a term
     *
     * @param LocalizedLabel $val The labels
     *

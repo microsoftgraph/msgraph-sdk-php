@@ -89,7 +89,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the createdDateTime
-    * DateTime when review series was created.
+    * Timestamp when review series was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -108,7 +108,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the createdDateTime
-    * DateTime when review series was created.
+    * Timestamp when review series was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -242,7 +242,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * DateTime when review series was last modified.
+    * Timestamp when review series was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -261,7 +261,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * DateTime when review series was last modified.
+    * Timestamp when review series was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *

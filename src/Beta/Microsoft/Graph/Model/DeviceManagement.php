@@ -2793,6 +2793,36 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the userExperienceAnalyticsNotAutopilotReadyDevice
+    * User experience analytics devices not Windows Autopilot ready.
+     *
+     * @return array The userExperienceAnalyticsNotAutopilotReadyDevice
+     */
+    public function getUserExperienceAnalyticsNotAutopilotReadyDevice()
+    {
+        if (array_key_exists("userExperienceAnalyticsNotAutopilotReadyDevice", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsNotAutopilotReadyDevice"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsNotAutopilotReadyDevice
+    * User experience analytics devices not Windows Autopilot ready.
+    *
+    * @param UserExperienceAnalyticsNotAutopilotReadyDevice $val The userExperienceAnalyticsNotAutopilotReadyDevice
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsNotAutopilotReadyDevice($val)
+    {
+		$this->_propDict["userExperienceAnalyticsNotAutopilotReadyDevice"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the userExperienceAnalyticsOverview
     * User experience analytics overview

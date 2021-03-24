@@ -88,7 +88,7 @@ class PrivilegedOperationEvent extends Entity
     
     /**
     * Gets the expirationDateTime
-    * This is only used when the requestType is 'Activate', and it indicates the expiration time for the role activation.
+    * This is only used when the requestType is Activate, and it indicates the expiration time for the role activation.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -107,7 +107,7 @@ class PrivilegedOperationEvent extends Entity
     
     /**
     * Sets the expirationDateTime
-    * This is only used when the requestType is 'Activate', and it indicates the expiration time for the role activation.
+    * This is only used when the requestType is Activate, and it indicates the expiration time for the role activation.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -237,7 +237,7 @@ class PrivilegedOperationEvent extends Entity
     
     /**
     * Gets the requestType
-    * The request operation type. The requestType value can be: Assign (role assignment), Activate (role activation), Unassign (remove role assignment), Deactivate (role deactivation), ScanAlersNow (scan security alerts), DismissAlert (dismiss security alert), FixAlertItem (fix a security alert issue), AccessReview_Review (review an Access Review), AccessReview_Create (create an Access Review), AccessReview_Update (update an Access Review), and AccessReview_Delete (delete an Access Review).
+    * The request operation type. The requestType value can be: Assign (role assignment), Activate (role activation), Unassign (remove role assignment), Deactivate (role deactivation), ScanAlertsNow (scan security alerts), DismissAlert (dismiss security alert), FixAlertItem (fix a security alert issue),  AccessReview_Review (review an Access Review), AccessReview_Create (create an Access Review) , AccessReview_Update (update an Access Review), AccessReview_Delete (delete an Access Review).
     *
     * @return string The requestType
     */
@@ -252,7 +252,7 @@ class PrivilegedOperationEvent extends Entity
     
     /**
     * Sets the requestType
-    * The request operation type. The requestType value can be: Assign (role assignment), Activate (role activation), Unassign (remove role assignment), Deactivate (role deactivation), ScanAlersNow (scan security alerts), DismissAlert (dismiss security alert), FixAlertItem (fix a security alert issue), AccessReview_Review (review an Access Review), AccessReview_Create (create an Access Review), AccessReview_Update (update an Access Review), and AccessReview_Delete (delete an Access Review).
+    * The request operation type. The requestType value can be: Assign (role assignment), Activate (role activation), Unassign (remove role assignment), Deactivate (role deactivation), ScanAlertsNow (scan security alerts), DismissAlert (dismiss security alert), FixAlertItem (fix a security alert issue),  AccessReview_Review (review an Access Review), AccessReview_Create (create an Access Review) , AccessReview_Update (update an Access Review), AccessReview_Delete (delete an Access Review).
     *
     * @param string $val The requestType
     *

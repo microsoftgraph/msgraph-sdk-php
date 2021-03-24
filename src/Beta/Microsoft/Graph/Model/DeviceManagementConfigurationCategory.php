@@ -262,7 +262,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Gets the settingUsage
-    * Indicates that the category contains settings that are used for Compliance or Configuration.
+    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
     *
     * @return DeviceManagementConfigurationSettingUsage The settingUsage
     */
@@ -281,7 +281,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Sets the settingUsage
-    * Indicates that the category contains settings that are used for Compliance or Configuration.
+    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
     *
     * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
     *

@@ -121,7 +121,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Gets the localizationType
-    * Configures how the requested export job is localized
+    * Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
     *
     * @return DeviceManagementExportJobLocalizationType The localizationType
     */
@@ -140,7 +140,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Sets the localizationType
-    * Configures how the requested export job is localized
+    * Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
     *
     * @param DeviceManagementExportJobLocalizationType $val The localizationType
     *

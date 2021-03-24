@@ -83,6 +83,33 @@ class TeamsDeviceUsageUserDetail extends Entity
     }
     
     /**
+    * Gets the isLicensed
+    *
+    * @return bool The isLicensed
+    */
+    public function getIsLicensed()
+    {
+        if (array_key_exists("isLicensed", $this->_propDict)) {
+            return $this->_propDict["isLicensed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isLicensed
+    *
+    * @param bool $val The isLicensed
+    *
+    * @return TeamsDeviceUsageUserDetail
+    */
+    public function setIsLicensed($val)
+    {
+        $this->_propDict["isLicensed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastActivityDate
     *
     * @return \DateTime The lastActivityDate
@@ -199,6 +226,33 @@ class TeamsDeviceUsageUserDetail extends Entity
     }
     
     /**
+    * Gets the usedChromeOS
+    *
+    * @return bool The usedChromeOS
+    */
+    public function getUsedChromeOS()
+    {
+        if (array_key_exists("usedChromeOS", $this->_propDict)) {
+            return $this->_propDict["usedChromeOS"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the usedChromeOS
+    *
+    * @param bool $val The usedChromeOS
+    *
+    * @return TeamsDeviceUsageUserDetail
+    */
+    public function setUsedChromeOS($val)
+    {
+        $this->_propDict["usedChromeOS"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the usediOS
     *
     * @return bool The usediOS
@@ -222,6 +276,33 @@ class TeamsDeviceUsageUserDetail extends Entity
     public function setUsediOS($val)
     {
         $this->_propDict["usediOS"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the usedLinux
+    *
+    * @return bool The usedLinux
+    */
+    public function getUsedLinux()
+    {
+        if (array_key_exists("usedLinux", $this->_propDict)) {
+            return $this->_propDict["usedLinux"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the usedLinux
+    *
+    * @param bool $val The usedLinux
+    *
+    * @return TeamsDeviceUsageUserDetail
+    */
+    public function setUsedLinux($val)
+    {
+        $this->_propDict["usedLinux"] = boolval($val);
         return $this;
     }
     
