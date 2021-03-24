@@ -26,6 +26,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
 {
     /**
     * Gets the authenticationMode
+    * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
     *
     * @return MicrosoftAuthenticatorAuthenticationMode The authenticationMode
     */
@@ -44,6 +45,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     
     /**
     * Sets the authenticationMode
+    * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
     *
     * @param MicrosoftAuthenticatorAuthenticationMode $val The authenticationMode
     *
@@ -57,6 +59,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     
     /**
     * Gets the featureSettings
+    * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
     *
     * @return AuthenticatorAppFeatureSettings The featureSettings
     */
@@ -75,6 +78,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     
     /**
     * Sets the featureSettings
+    * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
     *
     * @param AuthenticatorAppFeatureSettings $val The featureSettings
     *

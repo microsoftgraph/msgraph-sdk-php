@@ -59,7 +59,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
     *
     * @return ConditionalAccessClientApp The clientAppTypes
     */
@@ -78,7 +78,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the clientAppTypes
-    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
+    * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
     *
     * @param ConditionalAccessClientApp $val The value to assign to the clientAppTypes
     *
@@ -158,7 +158,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the signInRiskLevels
-    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
+    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
     *
     * @return RiskLevel The signInRiskLevels
     */
@@ -177,7 +177,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the signInRiskLevels
-    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
+    * Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
     *
     * @param RiskLevel $val The value to assign to the signInRiskLevels
     *
@@ -191,7 +191,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Gets the userRiskLevels
-    * User risk levels included in the policy. Possible values are: low, medium, high, none.
+    * User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
     *
     * @return RiskLevel The userRiskLevels
     */
@@ -210,7 +210,7 @@ class ConditionalAccessConditionSet extends Entity
 
     /**
     * Sets the userRiskLevels
-    * User risk levels included in the policy. Possible values are: low, medium, high, none.
+    * User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
     *
     * @param RiskLevel $val The value to assign to the userRiskLevels
     *

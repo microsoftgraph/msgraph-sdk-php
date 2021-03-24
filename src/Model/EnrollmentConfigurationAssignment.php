@@ -26,7 +26,7 @@ class EnrollmentConfigurationAssignment extends Entity
 {
     /**
     * Gets the target
-    * Represents an assignment to managed devices in the tenant
+    * Not yet documented
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
@@ -45,7 +45,7 @@ class EnrollmentConfigurationAssignment extends Entity
     
     /**
     * Sets the target
-    * Represents an assignment to managed devices in the tenant
+    * Not yet documented
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

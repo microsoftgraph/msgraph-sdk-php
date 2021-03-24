@@ -13,9 +13,9 @@ class GraphRequestTest extends TestCase
     public function setUp(): void
     {
         $this->requests = array(
-            new GraphRequest("GET", "/endpoint", "token", "baseUrl", "/version"),
-            new GraphRequest("PATCH", "/endpoint?query", "token", "baseUrl", "/version"),
-            new GraphRequest("GET", "/endpoint?query&query2", "token", "baseUrl", "/version")
+            new GraphRequest("GET", "/endpoint", "token", "baseUrl", "version"),
+            new GraphRequest("PATCH", "/endpoint?query", "token", "baseUrl", "version"),
+            new GraphRequest("GET", "/endpoint?query&query2", "token", "baseUrl", "version")
         );
 
         $this->defaultHeaders = array(
@@ -42,17 +42,17 @@ class GraphRequestTest extends TestCase
         $reflectionMethod->setAccessible(true);
 
         $graph = new Graph();
-        $graph->setApiVersion('/beta');
+        $graph->setApiVersion('beta');
         $graph->setAccessToken('token');
         $request = $graph->createRequest("get", "/me");
-        $graph->setApiVersion('/v1.0');
+        $graph->setApiVersion('v1.0');
 
         $requestUrl = $reflectionMethod->invokeArgs($request, array());
-        $this->assertEquals($requestUrl, "/beta/me");
+        $this->assertEquals($requestUrl, "beta/me");
 
         $request2 = $graph->createRequest("get", "/me");
         $requestUrl = $reflectionMethod->invokeArgs($request2, array());
-        $this->assertEquals("/v1.0/me", $requestUrl);
+        $this->assertEquals("v1.0/me", $requestUrl);
     }
 
     public function testAddHeaders()
@@ -122,12 +122,12 @@ class GraphRequestTest extends TestCase
     public function testSetTimeout()
     {
         $this->requests[0]->setTimeout('200');
-        $this->assertAttributeEquals('200', 'timeout', $this->requests[0]);
+        $this->assertEquals('200', $this->requests[0]->getTimeout());
     }
 
     public function testDefaultTimeout()
     {
-        $this->assertAttributeEquals('100', 'timeout', $this->requests[0]);
+        $this->assertEquals('100', $this->requests[0]->getTimeout());
     }
 
     public function testCreateGuzzleClient()
@@ -186,7 +186,7 @@ class GraphRequestTest extends TestCase
         $reflectionMethod->setAccessible(true);
 
         $requestUrl = $reflectionMethod->invokeArgs($this->requests[0], array());
-        $this->assertEquals($requestUrl, "/version/endpoint");
+        $this->assertEquals($requestUrl, "version/endpoint");
     }
 
     public function testGetConcatenator()
