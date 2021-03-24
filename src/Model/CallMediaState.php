@@ -26,7 +26,7 @@ class CallMediaState extends Entity
 
     /**
     * Gets the audio
-    * The audio media state. Possible values are: active, inactive.
+    * The audio media state. Possible values are: active, inactive, unknownFutureValue.
     *
     * @return MediaState The audio
     */
@@ -45,7 +45,7 @@ class CallMediaState extends Entity
 
     /**
     * Sets the audio
-    * The audio media state. Possible values are: active, inactive.
+    * The audio media state. Possible values are: active, inactive, unknownFutureValue.
     *
     * @param MediaState $val The value to assign to the audio
     *

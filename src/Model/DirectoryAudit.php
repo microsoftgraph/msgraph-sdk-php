@@ -26,7 +26,7 @@ class DirectoryAudit extends Entity
 {
     /**
     * Gets the activityDateTime
-    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The activityDateTime
     */
@@ -45,7 +45,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the activityDateTime
-    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -59,7 +59,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the activityDisplayName
-    * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
     *
     * @return string The activityDisplayName
     */
@@ -74,7 +74,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the activityDisplayName
-    * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
     *
     * @param string $val The activityDisplayName
     *
@@ -298,7 +298,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the resultReason
-    * Indicates the reason for failure if the result is 'Failure' or 'timeout'.
+    * Indicates the reason for failure if the result is failure or timeout.
     *
     * @return string The resultReason
     */
@@ -313,7 +313,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the resultReason
-    * Indicates the reason for failure if the result is 'Failure' or 'timeout'.
+    * Indicates the reason for failure if the result is failure or timeout.
     *
     * @param string $val The resultReason
     *

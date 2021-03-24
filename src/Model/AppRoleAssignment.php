@@ -26,7 +26,7 @@ class AppRoleAssignment extends DirectoryObject
 {
     /**
     * Gets the appRoleId
-    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. Does not support $filter.
+    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
     *
     * @return string The appRoleId
     */
@@ -41,7 +41,7 @@ class AppRoleAssignment extends DirectoryObject
     
     /**
     * Sets the appRoleId
-    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. Does not support $filter.
+    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
     *
     * @param string $val The appRoleId
     *
@@ -115,7 +115,7 @@ class AppRoleAssignment extends DirectoryObject
     
     /**
     * Gets the principalId
-    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create. Does not support $filter.
+    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
     *
     * @return string The principalId
     */
@@ -130,7 +130,7 @@ class AppRoleAssignment extends DirectoryObject
     
     /**
     * Sets the principalId
-    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create. Does not support $filter.
+    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
     *
     * @param string $val The principalId
     *
@@ -144,7 +144,7 @@ class AppRoleAssignment extends DirectoryObject
     
     /**
     * Gets the principalType
-    * The type of the assigned principal. This can either be 'User', 'Group' or 'ServicePrincipal'. Read-only. Does not support $filter.
+    * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
     *
     * @return string The principalType
     */
@@ -159,7 +159,7 @@ class AppRoleAssignment extends DirectoryObject
     
     /**
     * Sets the principalType
-    * The type of the assigned principal. This can either be 'User', 'Group' or 'ServicePrincipal'. Read-only. Does not support $filter.
+    * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
     *
     * @param string $val The principalType
     *
@@ -173,7 +173,7 @@ class AppRoleAssignment extends DirectoryObject
     
     /**
     * Gets the resourceDisplayName
-    * The display name of the resource app's service principal to which the assignment is made. Does not support $filter.
+    * The display name of the resource app's service principal to which the assignment is made.
     *
     * @return string The resourceDisplayName
     */
@@ -188,7 +188,7 @@ class AppRoleAssignment extends DirectoryObject
     
     /**
     * Sets the resourceDisplayName
-    * The display name of the resource app's service principal to which the assignment is made. Does not support $filter.
+    * The display name of the resource app's service principal to which the assignment is made.
     *
     * @param string $val The resourceDisplayName
     *

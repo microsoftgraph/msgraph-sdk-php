@@ -59,7 +59,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Gets the percentComplete
-    * The operation percent complete if the operation is still in running status
+    * The operation percent complete if the operation is still in running status.
     *
     * @return string The percentComplete
     */
@@ -74,7 +74,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Sets the percentComplete
-    * The operation percent complete if the operation is still in running status
+    * The operation percent complete if the operation is still in running status.
     *
     * @param string $val The percentComplete
     *
