@@ -135,6 +135,36 @@ class GraphRequest
     }
 
     /**
+     * Gets the Base URL the request is made to
+     *
+     * @return string
+     */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * Gets the API version in use for the request
+     *
+     * @return string
+     */
+    public function getApiVersion()
+    {
+        return $this->apiVersion;
+    }
+
+    /**
+     * Gets whether request returns a stream or not
+     *
+     * @return boolean
+     */
+    public function getReturnsStream()
+    {
+        return $this->returnsStream;
+    }
+
+    /**
     * Sets a http errors option
     *
     * @param string $http_errors A bool option to the Graph call
@@ -244,6 +274,16 @@ class GraphRequest
     {
         $this->timeout = $timeout;
         return $this;
+    }
+
+    /**
+     * Gets the timeout value of the request
+     *
+     * @return string
+     */
+    public function getTimeout()
+    {
+        return $this->timeout;
     }
 
     /**
