@@ -63,7 +63,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     public function getDefaultAccessLevel()
     {
         if (array_key_exists("defaultAccessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultAccessLevel"], "Beta\Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel")) {
+            if (is_a($this->_propDict["defaultAccessLevel"], "\Beta\Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel")) {
                 return $this->_propDict["defaultAccessLevel"];
             } else {
                 $this->_propDict["defaultAccessLevel"] = new DeviceManagementExchangeAccessLevel($this->_propDict["defaultAccessLevel"]);
@@ -159,7 +159,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     public function getConditionalAccessSettings()
     {
         if (array_key_exists("conditionalAccessSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessSettings"], "Beta\Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
+            if (is_a($this->_propDict["conditionalAccessSettings"], "\Beta\Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
                 return $this->_propDict["conditionalAccessSettings"];
             } else {
                 $this->_propDict["conditionalAccessSettings"] = new OnPremisesConditionalAccessSettings($this->_propDict["conditionalAccessSettings"]);

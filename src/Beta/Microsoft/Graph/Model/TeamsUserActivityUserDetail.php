@@ -113,7 +113,7 @@ class TeamsUserActivityUserDetail extends Entity
     public function getAudioDuration()
     {
         if (array_key_exists("audioDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["audioDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["audioDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["audioDuration"];
             } else {
                 $this->_propDict["audioDuration"] = new Duration($this->_propDict["audioDuration"]);
@@ -588,7 +588,7 @@ class TeamsUserActivityUserDetail extends Entity
     public function getScreenShareDuration()
     {
         if (array_key_exists("screenShareDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["screenShareDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["screenShareDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["screenShareDuration"];
             } else {
                 $this->_propDict["screenShareDuration"] = new Duration($this->_propDict["screenShareDuration"]);
@@ -673,7 +673,7 @@ class TeamsUserActivityUserDetail extends Entity
     public function getVideoDuration()
     {
         if (array_key_exists("videoDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["videoDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["videoDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["videoDuration"];
             } else {
                 $this->_propDict["videoDuration"] = new Duration($this->_propDict["videoDuration"]);

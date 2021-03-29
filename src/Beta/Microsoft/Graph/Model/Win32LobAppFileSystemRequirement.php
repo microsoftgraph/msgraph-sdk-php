@@ -70,7 +70,7 @@ class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement
     public function getDetectionType()
     {
         if (array_key_exists("detectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionType"], "Beta\Microsoft\Graph\Model\Win32LobAppFileSystemDetectionType")) {
+            if (is_a($this->_propDict["detectionType"], "\Beta\Microsoft\Graph\Model\Win32LobAppFileSystemDetectionType")) {
                 return $this->_propDict["detectionType"];
             } else {
                 $this->_propDict["detectionType"] = new Win32LobAppFileSystemDetectionType($this->_propDict["detectionType"]);

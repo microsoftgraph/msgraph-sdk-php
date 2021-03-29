@@ -25,7 +25,7 @@ class MailboxSettings extends Entity
 {
     /**
     * Gets the archiveFolder
-    * Folder ID of an archive folder for the user. Read only.
+    * Folder ID of an archive folder for the user.
     *
     * @return string The archiveFolder
     */
@@ -40,7 +40,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
-    * Folder ID of an archive folder for the user. Read only.
+    * Folder ID of an archive folder for the user.
     *
     * @param string $val The value of the archiveFolder
     *
@@ -61,7 +61,7 @@ class MailboxSettings extends Entity
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "Beta\Microsoft\Graph\Model\AutomaticRepliesSetting")) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "\Beta\Microsoft\Graph\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -115,14 +115,14 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
     *
     * @return DelegateMeetingMessageDeliveryOptions The delegateMeetingMessageDeliveryOptions
     */
     public function getDelegateMeetingMessageDeliveryOptions()
     {
         if (array_key_exists("delegateMeetingMessageDeliveryOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "Beta\Microsoft\Graph\Model\DelegateMeetingMessageDeliveryOptions")) {
+            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "\Beta\Microsoft\Graph\Model\DelegateMeetingMessageDeliveryOptions")) {
                 return $this->_propDict["delegateMeetingMessageDeliveryOptions"];
             } else {
                 $this->_propDict["delegateMeetingMessageDeliveryOptions"] = new DelegateMeetingMessageDeliveryOptions($this->_propDict["delegateMeetingMessageDeliveryOptions"]);
@@ -134,7 +134,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
     *
     * @param DelegateMeetingMessageDeliveryOptions $val The value to assign to the delegateMeetingMessageDeliveryOptions
     *
@@ -155,7 +155,7 @@ class MailboxSettings extends Entity
     public function getLanguage()
     {
         if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["language"], "\Beta\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
@@ -244,7 +244,7 @@ class MailboxSettings extends Entity
     public function getUserPurpose()
     {
         if (array_key_exists("userPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["userPurpose"], "Beta\Microsoft\Graph\Model\UserPurpose")) {
+            if (is_a($this->_propDict["userPurpose"], "\Beta\Microsoft\Graph\Model\UserPurpose")) {
                 return $this->_propDict["userPurpose"];
             } else {
                 $this->_propDict["userPurpose"] = new UserPurpose($this->_propDict["userPurpose"]);
@@ -276,7 +276,7 @@ class MailboxSettings extends Entity
     public function getUserPurposeV2()
     {
         if (array_key_exists("userPurposeV2", $this->_propDict)) {
-            if (is_a($this->_propDict["userPurposeV2"], "Beta\Microsoft\Graph\Model\MailboxRecipientType")) {
+            if (is_a($this->_propDict["userPurposeV2"], "\Beta\Microsoft\Graph\Model\MailboxRecipientType")) {
                 return $this->_propDict["userPurposeV2"];
             } else {
                 $this->_propDict["userPurposeV2"] = new MailboxRecipientType($this->_propDict["userPurposeV2"]);
@@ -308,7 +308,7 @@ class MailboxSettings extends Entity
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "Beta\Microsoft\Graph\Model\WorkingHours")) {
+            if (is_a($this->_propDict["workingHours"], "\Beta\Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

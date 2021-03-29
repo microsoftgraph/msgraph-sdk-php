@@ -28,15 +28,15 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdBy
     * The user who created the review set. Read-only.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -47,7 +47,7 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the createdBy
     * The user who created the review set. Read-only.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
     * @return ReviewSet
     */

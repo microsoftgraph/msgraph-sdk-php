@@ -32,7 +32,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
     public function getPrincipalScopes()
     {
         if (array_key_exists("principalScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["principalScopes"], "Beta\Microsoft\Graph\Model\AccessReviewScope")) {
+            if (is_a($this->_propDict["principalScopes"], "\Beta\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["principalScopes"];
             } else {
                 $this->_propDict["principalScopes"] = new AccessReviewScope($this->_propDict["principalScopes"]);
@@ -63,7 +63,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
     public function getResourceScopes()
     {
         if (array_key_exists("resourceScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceScopes"], "Beta\Microsoft\Graph\Model\AccessReviewScope")) {
+            if (is_a($this->_propDict["resourceScopes"], "\Beta\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["resourceScopes"];
             } else {
                 $this->_propDict["resourceScopes"] = new AccessReviewScope($this->_propDict["resourceScopes"]);

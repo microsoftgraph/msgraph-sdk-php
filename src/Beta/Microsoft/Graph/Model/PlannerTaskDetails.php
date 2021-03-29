@@ -33,7 +33,7 @@ class PlannerTaskDetails extends PlannerDelta
     public function getChecklist()
     {
         if (array_key_exists("checklist", $this->_propDict)) {
-            if (is_a($this->_propDict["checklist"], "Beta\Microsoft\Graph\Model\PlannerChecklistItems")) {
+            if (is_a($this->_propDict["checklist"], "\Beta\Microsoft\Graph\Model\PlannerChecklistItems")) {
                 return $this->_propDict["checklist"];
             } else {
                 $this->_propDict["checklist"] = new PlannerChecklistItems($this->_propDict["checklist"]);
@@ -88,14 +88,14 @@ class PlannerTaskDetails extends PlannerDelta
     
     /**
     * Gets the previewType
-    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     *
     * @return PlannerPreviewType The previewType
     */
     public function getPreviewType()
     {
         if (array_key_exists("previewType", $this->_propDict)) {
-            if (is_a($this->_propDict["previewType"], "Beta\Microsoft\Graph\Model\PlannerPreviewType")) {
+            if (is_a($this->_propDict["previewType"], "\Beta\Microsoft\Graph\Model\PlannerPreviewType")) {
                 return $this->_propDict["previewType"];
             } else {
                 $this->_propDict["previewType"] = new PlannerPreviewType($this->_propDict["previewType"]);
@@ -107,7 +107,7 @@ class PlannerTaskDetails extends PlannerDelta
     
     /**
     * Sets the previewType
-    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
     *
     * @param PlannerPreviewType $val The previewType
     *
@@ -128,7 +128,7 @@ class PlannerTaskDetails extends PlannerDelta
     public function getReferences()
     {
         if (array_key_exists("references", $this->_propDict)) {
-            if (is_a($this->_propDict["references"], "Beta\Microsoft\Graph\Model\PlannerExternalReferences")) {
+            if (is_a($this->_propDict["references"], "\Beta\Microsoft\Graph\Model\PlannerExternalReferences")) {
                 return $this->_propDict["references"];
             } else {
                 $this->_propDict["references"] = new PlannerExternalReferences($this->_propDict["references"]);

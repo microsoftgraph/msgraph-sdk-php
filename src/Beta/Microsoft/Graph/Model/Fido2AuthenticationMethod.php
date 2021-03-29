@@ -84,14 +84,14 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the attestationLevel
-    * The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
     *
     * @return AttestationLevel The attestationLevel
     */
     public function getAttestationLevel()
     {
         if (array_key_exists("attestationLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["attestationLevel"], "Beta\Microsoft\Graph\Model\AttestationLevel")) {
+            if (is_a($this->_propDict["attestationLevel"], "\Beta\Microsoft\Graph\Model\AttestationLevel")) {
                 return $this->_propDict["attestationLevel"];
             } else {
                 $this->_propDict["attestationLevel"] = new AttestationLevel($this->_propDict["attestationLevel"]);
@@ -103,7 +103,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the attestationLevel
-    * The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
     *
     * @param AttestationLevel $val The attestationLevel
     *

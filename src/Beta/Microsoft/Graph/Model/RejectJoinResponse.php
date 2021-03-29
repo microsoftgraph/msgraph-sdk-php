@@ -33,7 +33,7 @@ class RejectJoinResponse extends ParticipantJoiningResponse
     public function getReason()
     {
         if (array_key_exists("reason", $this->_propDict)) {
-            if (is_a($this->_propDict["reason"], "Beta\Microsoft\Graph\Model\RejectReason")) {
+            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\Model\RejectReason")) {
                 return $this->_propDict["reason"];
             } else {
                 $this->_propDict["reason"] = new RejectReason($this->_propDict["reason"]);

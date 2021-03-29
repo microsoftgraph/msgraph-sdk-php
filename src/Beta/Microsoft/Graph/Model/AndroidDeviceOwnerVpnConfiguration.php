@@ -91,7 +91,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Beta\Microsoft\Graph\Model\AndroidVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\AndroidVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AndroidVpnConnectionType($this->_propDict["connectionType"]);
@@ -213,7 +213,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "Beta\Microsoft\Graph\Model\VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new VpnProxyServer($this->_propDict["proxyServer"]);
@@ -305,7 +305,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     public function getDerivedCredentialSettings()
     {
         if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
                 return $this->_propDict["derivedCredentialSettings"];
             } else {
                 $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
@@ -338,7 +338,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new AndroidDeviceOwnerCertificateProfileBase($this->_propDict["identityCertificate"]);

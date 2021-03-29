@@ -32,7 +32,7 @@ class PrintDocument extends Entity
     public function getConfiguration()
     {
         if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\Model\PrinterDocumentConfiguration")) {
+            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\Model\PrinterDocumentConfiguration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new PrinterDocumentConfiguration($this->_propDict["configuration"]);

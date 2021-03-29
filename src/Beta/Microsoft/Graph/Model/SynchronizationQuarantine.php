@@ -66,7 +66,7 @@ class SynchronizationQuarantine extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\SynchronizationError")) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\SynchronizationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
@@ -132,7 +132,7 @@ class SynchronizationQuarantine extends Entity
     public function getReason()
     {
         if (array_key_exists("reason", $this->_propDict)) {
-            if (is_a($this->_propDict["reason"], "Beta\Microsoft\Graph\Model\QuarantineReason")) {
+            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\Model\QuarantineReason")) {
                 return $this->_propDict["reason"];
             } else {
                 $this->_propDict["reason"] = new QuarantineReason($this->_propDict["reason"]);

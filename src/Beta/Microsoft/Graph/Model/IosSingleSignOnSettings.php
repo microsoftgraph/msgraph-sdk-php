@@ -33,7 +33,7 @@ class IosSingleSignOnSettings extends Entity
     public function getAllowedAppsList()
     {
         if (array_key_exists("allowedAppsList", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAppsList"], "Beta\Microsoft\Graph\Model\AppListItem")) {
+            if (is_a($this->_propDict["allowedAppsList"], "\Beta\Microsoft\Graph\Model\AppListItem")) {
                 return $this->_propDict["allowedAppsList"];
             } else {
                 $this->_propDict["allowedAppsList"] = new AppListItem($this->_propDict["allowedAppsList"]);

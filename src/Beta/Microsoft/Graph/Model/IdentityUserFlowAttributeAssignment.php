@@ -150,7 +150,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
     public function getUserInputType()
     {
         if (array_key_exists("userInputType", $this->_propDict)) {
-            if (is_a($this->_propDict["userInputType"], "Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeInputType")) {
+            if (is_a($this->_propDict["userInputType"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeInputType")) {
                 return $this->_propDict["userInputType"];
             } else {
                 $this->_propDict["userInputType"] = new IdentityUserFlowAttributeInputType($this->_propDict["userInputType"]);
@@ -183,7 +183,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
     public function getUserAttribute()
     {
         if (array_key_exists("userAttribute", $this->_propDict)) {
-            if (is_a($this->_propDict["userAttribute"], "Beta\Microsoft\Graph\Model\IdentityUserFlowAttribute")) {
+            if (is_a($this->_propDict["userAttribute"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttribute")) {
                 return $this->_propDict["userAttribute"];
             } else {
                 $this->_propDict["userAttribute"] = new IdentityUserFlowAttribute($this->_propDict["userAttribute"]);

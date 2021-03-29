@@ -32,7 +32,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope
     public function getInactiveDuration()
     {
         if (array_key_exists("inactiveDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["inactiveDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["inactiveDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["inactiveDuration"];
             } else {
                 $this->_propDict["inactiveDuration"] = new Duration($this->_propDict["inactiveDuration"]);

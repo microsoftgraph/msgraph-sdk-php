@@ -61,7 +61,7 @@ class ApprovalSettings extends Entity
     public function getApprovalStages()
     {
         if (array_key_exists("approvalStages", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalStages"], "Beta\Microsoft\Graph\Model\ApprovalStage")) {
+            if (is_a($this->_propDict["approvalStages"], "\Beta\Microsoft\Graph\Model\ApprovalStage")) {
                 return $this->_propDict["approvalStages"];
             } else {
                 $this->_propDict["approvalStages"] = new ApprovalStage($this->_propDict["approvalStages"]);

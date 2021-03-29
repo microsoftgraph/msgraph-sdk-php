@@ -26,14 +26,14 @@ class WindowsUniversalAppX extends MobileLobApp
 {
     /**
     * Gets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
     *
     * @return WindowsArchitecture The applicableArchitectures
     */
     public function getApplicableArchitectures()
     {
         if (array_key_exists("applicableArchitectures", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitectures"], "Beta\Microsoft\Graph\Model\WindowsArchitecture")) {
+            if (is_a($this->_propDict["applicableArchitectures"], "\Beta\Microsoft\Graph\Model\WindowsArchitecture")) {
                 return $this->_propDict["applicableArchitectures"];
             } else {
                 $this->_propDict["applicableArchitectures"] = new WindowsArchitecture($this->_propDict["applicableArchitectures"]);
@@ -45,7 +45,7 @@ class WindowsUniversalAppX extends MobileLobApp
     
     /**
     * Sets the applicableArchitectures
-    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+    * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
     *
     * @param WindowsArchitecture $val The applicableArchitectures
     *
@@ -66,7 +66,7 @@ class WindowsUniversalAppX extends MobileLobApp
     public function getApplicableDeviceTypes()
     {
         if (array_key_exists("applicableDeviceTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceTypes"], "Beta\Microsoft\Graph\Model\WindowsDeviceType")) {
+            if (is_a($this->_propDict["applicableDeviceTypes"], "\Beta\Microsoft\Graph\Model\WindowsDeviceType")) {
                 return $this->_propDict["applicableDeviceTypes"];
             } else {
                 $this->_propDict["applicableDeviceTypes"] = new WindowsDeviceType($this->_propDict["applicableDeviceTypes"]);
@@ -244,7 +244,7 @@ class WindowsUniversalAppX extends MobileLobApp
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "Beta\Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Beta\Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);

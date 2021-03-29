@@ -62,7 +62,7 @@ class WebAccount extends ItemFacet
     public function getService()
     {
         if (array_key_exists("service", $this->_propDict)) {
-            if (is_a($this->_propDict["service"], "Beta\Microsoft\Graph\Model\ServiceInformation")) {
+            if (is_a($this->_propDict["service"], "\Beta\Microsoft\Graph\Model\ServiceInformation")) {
                 return $this->_propDict["service"];
             } else {
                 $this->_propDict["service"] = new ServiceInformation($this->_propDict["service"]);

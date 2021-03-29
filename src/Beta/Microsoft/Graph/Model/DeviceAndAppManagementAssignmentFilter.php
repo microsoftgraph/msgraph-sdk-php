@@ -157,7 +157,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
+            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\DevicePlatformType")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new DevicePlatformType($this->_propDict["platform"]);

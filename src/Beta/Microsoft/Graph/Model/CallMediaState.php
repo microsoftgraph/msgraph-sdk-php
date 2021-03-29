@@ -33,7 +33,7 @@ class CallMediaState extends Entity
     public function getAudio()
     {
         if (array_key_exists("audio", $this->_propDict)) {
-            if (is_a($this->_propDict["audio"], "Beta\Microsoft\Graph\Model\MediaState")) {
+            if (is_a($this->_propDict["audio"], "\Beta\Microsoft\Graph\Model\MediaState")) {
                 return $this->_propDict["audio"];
             } else {
                 $this->_propDict["audio"] = new MediaState($this->_propDict["audio"]);

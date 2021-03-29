@@ -33,7 +33,7 @@ class WindowsKioskAppBase extends Entity
     public function getAppType()
     {
         if (array_key_exists("appType", $this->_propDict)) {
-            if (is_a($this->_propDict["appType"], "Beta\Microsoft\Graph\Model\WindowsKioskAppType")) {
+            if (is_a($this->_propDict["appType"], "\Beta\Microsoft\Graph\Model\WindowsKioskAppType")) {
                 return $this->_propDict["appType"];
             } else {
                 $this->_propDict["appType"] = new WindowsKioskAppType($this->_propDict["appType"]);
@@ -122,7 +122,7 @@ class WindowsKioskAppBase extends Entity
     public function getStartLayoutTileSize()
     {
         if (array_key_exists("startLayoutTileSize", $this->_propDict)) {
-            if (is_a($this->_propDict["startLayoutTileSize"], "Beta\Microsoft\Graph\Model\WindowsAppStartLayoutTileSize")) {
+            if (is_a($this->_propDict["startLayoutTileSize"], "\Beta\Microsoft\Graph\Model\WindowsAppStartLayoutTileSize")) {
                 return $this->_propDict["startLayoutTileSize"];
             } else {
                 $this->_propDict["startLayoutTileSize"] = new WindowsAppStartLayoutTileSize($this->_propDict["startLayoutTileSize"]);

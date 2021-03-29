@@ -33,7 +33,7 @@ class OnPremisesPublishingProfile extends Entity
     public function getHybridAgentUpdaterConfiguration()
     {
         if (array_key_exists("hybridAgentUpdaterConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["hybridAgentUpdaterConfiguration"], "Beta\Microsoft\Graph\Model\HybridAgentUpdaterConfiguration")) {
+            if (is_a($this->_propDict["hybridAgentUpdaterConfiguration"], "\Beta\Microsoft\Graph\Model\HybridAgentUpdaterConfiguration")) {
                 return $this->_propDict["hybridAgentUpdaterConfiguration"];
             } else {
                 $this->_propDict["hybridAgentUpdaterConfiguration"] = new HybridAgentUpdaterConfiguration($this->_propDict["hybridAgentUpdaterConfiguration"]);

@@ -315,7 +315,7 @@ class DomainSecurityProfile extends Entity
     public function getRegistrant()
     {
         if (array_key_exists("registrant", $this->_propDict)) {
-            if (is_a($this->_propDict["registrant"], "Beta\Microsoft\Graph\Model\DomainRegistrant")) {
+            if (is_a($this->_propDict["registrant"], "\Beta\Microsoft\Graph\Model\DomainRegistrant")) {
                 return $this->_propDict["registrant"];
             } else {
                 $this->_propDict["registrant"] = new DomainRegistrant($this->_propDict["registrant"]);
@@ -400,7 +400,7 @@ class DomainSecurityProfile extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

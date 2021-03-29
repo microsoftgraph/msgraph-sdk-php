@@ -33,7 +33,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getApplications()
     {
         if (array_key_exists("applications", $this->_propDict)) {
-            if (is_a($this->_propDict["applications"], "Beta\Microsoft\Graph\Model\ConditionalAccessApplications")) {
+            if (is_a($this->_propDict["applications"], "\Beta\Microsoft\Graph\Model\ConditionalAccessApplications")) {
                 return $this->_propDict["applications"];
             } else {
                 $this->_propDict["applications"] = new ConditionalAccessApplications($this->_propDict["applications"]);
@@ -65,7 +65,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getClientApplications()
     {
         if (array_key_exists("clientApplications", $this->_propDict)) {
-            if (is_a($this->_propDict["clientApplications"], "Beta\Microsoft\Graph\Model\ConditionalAccessClientApplications")) {
+            if (is_a($this->_propDict["clientApplications"], "\Beta\Microsoft\Graph\Model\ConditionalAccessClientApplications")) {
                 return $this->_propDict["clientApplications"];
             } else {
                 $this->_propDict["clientApplications"] = new ConditionalAccessClientApplications($this->_propDict["clientApplications"]);
@@ -97,7 +97,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getClientAppTypes()
     {
         if (array_key_exists("clientAppTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["clientAppTypes"], "Beta\Microsoft\Graph\Model\ConditionalAccessClientApp")) {
+            if (is_a($this->_propDict["clientAppTypes"], "\Beta\Microsoft\Graph\Model\ConditionalAccessClientApp")) {
                 return $this->_propDict["clientAppTypes"];
             } else {
                 $this->_propDict["clientAppTypes"] = new ConditionalAccessClientApp($this->_propDict["clientAppTypes"]);
@@ -130,7 +130,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getDevices()
     {
         if (array_key_exists("devices", $this->_propDict)) {
-            if (is_a($this->_propDict["devices"], "Beta\Microsoft\Graph\Model\ConditionalAccessDevices")) {
+            if (is_a($this->_propDict["devices"], "\Beta\Microsoft\Graph\Model\ConditionalAccessDevices")) {
                 return $this->_propDict["devices"];
             } else {
                 $this->_propDict["devices"] = new ConditionalAccessDevices($this->_propDict["devices"]);
@@ -163,7 +163,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getDeviceStates()
     {
         if (array_key_exists("deviceStates", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStates"], "Beta\Microsoft\Graph\Model\ConditionalAccessDeviceStates")) {
+            if (is_a($this->_propDict["deviceStates"], "\Beta\Microsoft\Graph\Model\ConditionalAccessDeviceStates")) {
                 return $this->_propDict["deviceStates"];
             } else {
                 $this->_propDict["deviceStates"] = new ConditionalAccessDeviceStates($this->_propDict["deviceStates"]);
@@ -196,7 +196,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "Beta\Microsoft\Graph\Model\ConditionalAccessLocations")) {
+            if (is_a($this->_propDict["locations"], "\Beta\Microsoft\Graph\Model\ConditionalAccessLocations")) {
                 return $this->_propDict["locations"];
             } else {
                 $this->_propDict["locations"] = new ConditionalAccessLocations($this->_propDict["locations"]);
@@ -229,7 +229,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getPlatforms()
     {
         if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "Beta\Microsoft\Graph\Model\ConditionalAccessPlatforms")) {
+            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\ConditionalAccessPlatforms")) {
                 return $this->_propDict["platforms"];
             } else {
                 $this->_propDict["platforms"] = new ConditionalAccessPlatforms($this->_propDict["platforms"]);
@@ -262,7 +262,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getSignInRiskLevels()
     {
         if (array_key_exists("signInRiskLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["signInRiskLevels"], "Beta\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["signInRiskLevels"], "\Beta\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["signInRiskLevels"];
             } else {
                 $this->_propDict["signInRiskLevels"] = new RiskLevel($this->_propDict["signInRiskLevels"]);
@@ -295,7 +295,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getUserRiskLevels()
     {
         if (array_key_exists("userRiskLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["userRiskLevels"], "Beta\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["userRiskLevels"], "\Beta\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["userRiskLevels"];
             } else {
                 $this->_propDict["userRiskLevels"] = new RiskLevel($this->_propDict["userRiskLevels"]);
@@ -328,7 +328,7 @@ class ConditionalAccessConditionSet extends Entity
     public function getUsers()
     {
         if (array_key_exists("users", $this->_propDict)) {
-            if (is_a($this->_propDict["users"], "Beta\Microsoft\Graph\Model\ConditionalAccessUsers")) {
+            if (is_a($this->_propDict["users"], "\Beta\Microsoft\Graph\Model\ConditionalAccessUsers")) {
                 return $this->_propDict["users"];
             } else {
                 $this->_propDict["users"] = new ConditionalAccessUsers($this->_propDict["users"]);

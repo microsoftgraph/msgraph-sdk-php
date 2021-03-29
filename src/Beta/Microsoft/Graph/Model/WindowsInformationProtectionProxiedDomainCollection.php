@@ -61,7 +61,7 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
     public function getProxiedDomains()
     {
         if (array_key_exists("proxiedDomains", $this->_propDict)) {
-            if (is_a($this->_propDict["proxiedDomains"], "Beta\Microsoft\Graph\Model\ProxiedDomain")) {
+            if (is_a($this->_propDict["proxiedDomains"], "\Beta\Microsoft\Graph\Model\ProxiedDomain")) {
                 return $this->_propDict["proxiedDomains"];
             } else {
                 $this->_propDict["proxiedDomains"] = new ProxiedDomain($this->_propDict["proxiedDomains"]);

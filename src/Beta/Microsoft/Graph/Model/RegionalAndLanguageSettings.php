@@ -63,7 +63,7 @@ class RegionalAndLanguageSettings extends Entity
     public function getDefaultDisplayLanguage()
     {
         if (array_key_exists("defaultDisplayLanguage", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultDisplayLanguage"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["defaultDisplayLanguage"], "\Beta\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["defaultDisplayLanguage"];
             } else {
                 $this->_propDict["defaultDisplayLanguage"] = new LocaleInfo($this->_propDict["defaultDisplayLanguage"]);
@@ -96,7 +96,7 @@ class RegionalAndLanguageSettings extends Entity
     public function getDefaultRegionalFormat()
     {
         if (array_key_exists("defaultRegionalFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultRegionalFormat"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["defaultRegionalFormat"], "\Beta\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["defaultRegionalFormat"];
             } else {
                 $this->_propDict["defaultRegionalFormat"] = new LocaleInfo($this->_propDict["defaultRegionalFormat"]);
@@ -129,7 +129,7 @@ class RegionalAndLanguageSettings extends Entity
     public function getDefaultSpeechInputLanguage()
     {
         if (array_key_exists("defaultSpeechInputLanguage", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultSpeechInputLanguage"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["defaultSpeechInputLanguage"], "\Beta\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["defaultSpeechInputLanguage"];
             } else {
                 $this->_propDict["defaultSpeechInputLanguage"] = new LocaleInfo($this->_propDict["defaultSpeechInputLanguage"]);
@@ -162,7 +162,7 @@ class RegionalAndLanguageSettings extends Entity
     public function getDefaultTranslationLanguage()
     {
         if (array_key_exists("defaultTranslationLanguage", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultTranslationLanguage"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["defaultTranslationLanguage"], "\Beta\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["defaultTranslationLanguage"];
             } else {
                 $this->_propDict["defaultTranslationLanguage"] = new LocaleInfo($this->_propDict["defaultTranslationLanguage"]);
@@ -195,7 +195,7 @@ class RegionalAndLanguageSettings extends Entity
     public function getRegionalFormatOverrides()
     {
         if (array_key_exists("regionalFormatOverrides", $this->_propDict)) {
-            if (is_a($this->_propDict["regionalFormatOverrides"], "Beta\Microsoft\Graph\Model\RegionalFormatOverrides")) {
+            if (is_a($this->_propDict["regionalFormatOverrides"], "\Beta\Microsoft\Graph\Model\RegionalFormatOverrides")) {
                 return $this->_propDict["regionalFormatOverrides"];
             } else {
                 $this->_propDict["regionalFormatOverrides"] = new RegionalFormatOverrides($this->_propDict["regionalFormatOverrides"]);
@@ -228,7 +228,7 @@ class RegionalAndLanguageSettings extends Entity
     public function getTranslationPreferences()
     {
         if (array_key_exists("translationPreferences", $this->_propDict)) {
-            if (is_a($this->_propDict["translationPreferences"], "Beta\Microsoft\Graph\Model\TranslationPreferences")) {
+            if (is_a($this->_propDict["translationPreferences"], "\Beta\Microsoft\Graph\Model\TranslationPreferences")) {
                 return $this->_propDict["translationPreferences"];
             } else {
                 $this->_propDict["translationPreferences"] = new TranslationPreferences($this->_propDict["translationPreferences"]);

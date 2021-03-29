@@ -32,7 +32,7 @@ class Workbook extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Beta\Microsoft\Graph\Model\WorkbookApplication")) {
+            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\WorkbookApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new WorkbookApplication($this->_propDict["application"]);
@@ -91,7 +91,7 @@ class Workbook extends Entity
     public function getFunctions()
     {
         if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "Beta\Microsoft\Graph\Model\WorkbookFunctions")) {
+            if (is_a($this->_propDict["functions"], "\Beta\Microsoft\Graph\Model\WorkbookFunctions")) {
                 return $this->_propDict["functions"];
             } else {
                 $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
@@ -147,7 +147,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the operations
-    * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      *
      * @return array The operations
      */
@@ -162,7 +162,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the operations
-    * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
+    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
     *
     * @param WorkbookOperation $val The operations
     *

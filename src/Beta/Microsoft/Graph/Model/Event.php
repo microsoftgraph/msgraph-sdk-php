@@ -92,7 +92,7 @@ class Event extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -183,7 +183,7 @@ class Event extends OutlookItem
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -274,7 +274,7 @@ class Event extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Beta\Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -481,7 +481,7 @@ class Event extends OutlookItem
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new Location($this->_propDict["location"]);
@@ -571,7 +571,7 @@ class Event extends OutlookItem
     public function getOnlineMeeting()
     {
         if (array_key_exists("onlineMeeting", $this->_propDict)) {
-            if (is_a($this->_propDict["onlineMeeting"], "Beta\Microsoft\Graph\Model\OnlineMeetingInfo")) {
+            if (is_a($this->_propDict["onlineMeeting"], "\Beta\Microsoft\Graph\Model\OnlineMeetingInfo")) {
                 return $this->_propDict["onlineMeeting"];
             } else {
                 $this->_propDict["onlineMeeting"] = new OnlineMeetingInfo($this->_propDict["onlineMeeting"]);
@@ -604,7 +604,7 @@ class Event extends OutlookItem
     public function getOnlineMeetingProvider()
     {
         if (array_key_exists("onlineMeetingProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["onlineMeetingProvider"], "Beta\Microsoft\Graph\Model\OnlineMeetingProviderType")) {
+            if (is_a($this->_propDict["onlineMeetingProvider"], "\Beta\Microsoft\Graph\Model\OnlineMeetingProviderType")) {
                 return $this->_propDict["onlineMeetingProvider"];
             } else {
                 $this->_propDict["onlineMeetingProvider"] = new OnlineMeetingProviderType($this->_propDict["onlineMeetingProvider"]);
@@ -666,7 +666,7 @@ class Event extends OutlookItem
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["organizer"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new Recipient($this->_propDict["organizer"]);
@@ -790,7 +790,7 @@ class Event extends OutlookItem
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -881,7 +881,7 @@ class Event extends OutlookItem
     public function getResponseStatus()
     {
         if (array_key_exists("responseStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["responseStatus"], "Beta\Microsoft\Graph\Model\ResponseStatus")) {
+            if (is_a($this->_propDict["responseStatus"], "\Beta\Microsoft\Graph\Model\ResponseStatus")) {
                 return $this->_propDict["responseStatus"];
             } else {
                 $this->_propDict["responseStatus"] = new ResponseStatus($this->_propDict["responseStatus"]);
@@ -914,7 +914,7 @@ class Event extends OutlookItem
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "Beta\Microsoft\Graph\Model\Sensitivity")) {
+            if (is_a($this->_propDict["sensitivity"], "\Beta\Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -976,7 +976,7 @@ class Event extends OutlookItem
     public function getShowAs()
     {
         if (array_key_exists("showAs", $this->_propDict)) {
-            if (is_a($this->_propDict["showAs"], "Beta\Microsoft\Graph\Model\FreeBusyStatus")) {
+            if (is_a($this->_propDict["showAs"], "\Beta\Microsoft\Graph\Model\FreeBusyStatus")) {
                 return $this->_propDict["showAs"];
             } else {
                 $this->_propDict["showAs"] = new FreeBusyStatus($this->_propDict["showAs"]);
@@ -1009,7 +1009,7 @@ class Event extends OutlookItem
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -1100,7 +1100,7 @@ class Event extends OutlookItem
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\EventType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\EventType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EventType($this->_propDict["type"]);
@@ -1183,7 +1183,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the attachments
-    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
      *
      * @return array The attachments
      */
@@ -1198,7 +1198,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the attachments
-    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -1219,7 +1219,7 @@ class Event extends OutlookItem
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Beta\Microsoft\Graph\Model\Calendar")) {
+            if (is_a($this->_propDict["calendar"], "\Beta\Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -1274,7 +1274,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the event. Nullable.
+    * The collection of open extensions defined for the event. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -1289,7 +1289,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the event. Nullable.
+    * The collection of open extensions defined for the event. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -1304,7 +1304,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the instances
-    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+    * The instances of the event. Navigation property. Read-only. Nullable.
      *
      * @return array The instances
      */
@@ -1319,7 +1319,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the instances
-    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+    * The instances of the event. Navigation property. Read-only. Nullable.
     *
     * @param Event $val The instances
     *

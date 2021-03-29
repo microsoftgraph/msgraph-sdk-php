@@ -26,14 +26,14 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
 {
     /**
     * Gets the enhancedBiometricsState
-    * Controls the ability to use the anti-spoofing features for facial recognition on devices which support it. If set to disabled, anti-spoofing features are not allowed. If set to Not Configured, the user can choose whether they want to use anti-spoofing. Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The enhancedBiometricsState
     */
     public function getEnhancedBiometricsState()
     {
         if (array_key_exists("enhancedBiometricsState", $this->_propDict)) {
-            if (is_a($this->_propDict["enhancedBiometricsState"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["enhancedBiometricsState"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["enhancedBiometricsState"];
             } else {
                 $this->_propDict["enhancedBiometricsState"] = new Enablement($this->_propDict["enhancedBiometricsState"]);
@@ -45,7 +45,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the enhancedBiometricsState
-    * Controls the ability to use the anti-spoofing features for facial recognition on devices which support it. If set to disabled, anti-spoofing features are not allowed. If set to Not Configured, the user can choose whether they want to use anti-spoofing. Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The enhancedBiometricsState
     *
@@ -59,7 +59,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinExpirationInDays
-    * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
+    * Not yet documented
     *
     * @return int The pinExpirationInDays
     */
@@ -74,7 +74,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinExpirationInDays
-    * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
+    * Not yet documented
     *
     * @param int $val The pinExpirationInDays
     *
@@ -88,14 +88,14 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinLowercaseCharactersUsage
-    * Controls the ability to use lowercase letters in the Windows Hello for Business PIN.  Allowed permits the use of lowercase letter(s), whereas Required ensures they are present. If set to Not Allowed, lowercase letters will not be permitted. Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinLowercaseCharactersUsage
     */
     public function getPinLowercaseCharactersUsage()
     {
         if (array_key_exists("pinLowercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "Beta\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
+            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "\Beta\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinLowercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinLowercaseCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinLowercaseCharactersUsage"]);
@@ -107,7 +107,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinLowercaseCharactersUsage
-    * Controls the ability to use lowercase letters in the Windows Hello for Business PIN.  Allowed permits the use of lowercase letter(s), whereas Required ensures they are present. If set to Not Allowed, lowercase letters will not be permitted. Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinLowercaseCharactersUsage
     *
@@ -121,7 +121,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinMaximumLength
-    * Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
+    * Not yet documented
     *
     * @return int The pinMaximumLength
     */
@@ -136,7 +136,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinMaximumLength
-    * Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
+    * Not yet documented
     *
     * @param int $val The pinMaximumLength
     *
@@ -150,7 +150,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinMinimumLength
-    * Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
+    * Not yet documented
     *
     * @return int The pinMinimumLength
     */
@@ -165,7 +165,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinMinimumLength
-    * Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
+    * Not yet documented
     *
     * @param int $val The pinMinimumLength
     *
@@ -179,7 +179,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinPreviousBlockCount
-    * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
+    * Not yet documented
     *
     * @return int The pinPreviousBlockCount
     */
@@ -194,7 +194,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinPreviousBlockCount
-    * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
+    * Not yet documented
     *
     * @param int $val The pinPreviousBlockCount
     *
@@ -208,14 +208,14 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinSpecialCharactersUsage
-    * Controls the ability to use special characters in the Windows Hello for Business PIN.  Allowed permits the use of special character(s), whereas Required ensures they are present. If set to Not Allowed, special character(s) will not be permitted. Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinSpecialCharactersUsage
     */
     public function getPinSpecialCharactersUsage()
     {
         if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "Beta\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
+            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "\Beta\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinSpecialCharactersUsage"];
             } else {
                 $this->_propDict["pinSpecialCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinSpecialCharactersUsage"]);
@@ -227,7 +227,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinSpecialCharactersUsage
-    * Controls the ability to use special characters in the Windows Hello for Business PIN.  Allowed permits the use of special character(s), whereas Required ensures they are present. If set to Not Allowed, special character(s) will not be permitted. Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinSpecialCharactersUsage
     *
@@ -241,14 +241,14 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the pinUppercaseCharactersUsage
-    * Controls the ability to use uppercase letters in the Windows Hello for Business PIN.  Allowed permits the use of uppercase letter(s), whereas Required ensures they are present. If set to Not Allowed, uppercase letters will not be permitted. Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @return WindowsHelloForBusinessPinUsage The pinUppercaseCharactersUsage
     */
     public function getPinUppercaseCharactersUsage()
     {
         if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "Beta\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
+            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "\Beta\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinUppercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinUppercaseCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinUppercaseCharactersUsage"]);
@@ -260,7 +260,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the pinUppercaseCharactersUsage
-    * Controls the ability to use uppercase letters in the Windows Hello for Business PIN.  Allowed permits the use of uppercase letter(s), whereas Required ensures they are present. If set to Not Allowed, uppercase letters will not be permitted. Possible values are: allowed, required, disallowed.
+    * Not yet documented. Possible values are: allowed, required, disallowed.
     *
     * @param WindowsHelloForBusinessPinUsage $val The pinUppercaseCharactersUsage
     *
@@ -274,7 +274,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the remotePassportEnabled
-    * Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
+    * Not yet documented
     *
     * @return bool The remotePassportEnabled
     */
@@ -289,7 +289,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the remotePassportEnabled
-    * Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
+    * Not yet documented
     *
     * @param bool $val The remotePassportEnabled
     *
@@ -303,7 +303,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the securityDeviceRequired
-    * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
+    * Not yet documented
     *
     * @return bool The securityDeviceRequired
     */
@@ -318,7 +318,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the securityDeviceRequired
-    * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
+    * Not yet documented
     *
     * @param bool $val The securityDeviceRequired
     *
@@ -339,7 +339,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function getSecurityKeyForSignIn()
     {
         if (array_key_exists("securityKeyForSignIn", $this->_propDict)) {
-            if (is_a($this->_propDict["securityKeyForSignIn"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["securityKeyForSignIn"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["securityKeyForSignIn"];
             } else {
                 $this->_propDict["securityKeyForSignIn"] = new Enablement($this->_propDict["securityKeyForSignIn"]);
@@ -365,14 +365,14 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the state
-    * Controls whether to allow the device to be configured for Windows Hello for Business. If set to disabled, the user cannot provision Windows Hello for Business except on Azure Active Directory joined mobile phones if otherwise required. If set to Not Configured, Intune will not override client defaults. Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @return Enablement The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new Enablement($this->_propDict["state"]);
@@ -384,7 +384,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the state
-    * Controls whether to allow the device to be configured for Windows Hello for Business. If set to disabled, the user cannot provision Windows Hello for Business except on Azure Active Directory joined mobile phones if otherwise required. If set to Not Configured, Intune will not override client defaults. Possible values are: notConfigured, enabled, disabled.
+    * Not yet documented. Possible values are: notConfigured, enabled, disabled.
     *
     * @param Enablement $val The state
     *
@@ -398,7 +398,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Gets the unlockWithBiometricsEnabled
-    * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
+    * Not yet documented
     *
     * @return bool The unlockWithBiometricsEnabled
     */
@@ -413,7 +413,7 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     
     /**
     * Sets the unlockWithBiometricsEnabled
-    * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
+    * Not yet documented
     *
     * @param bool $val The unlockWithBiometricsEnabled
     *

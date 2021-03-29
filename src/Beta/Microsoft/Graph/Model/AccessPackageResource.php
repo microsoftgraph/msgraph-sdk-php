@@ -326,7 +326,7 @@ class AccessPackageResource extends Entity
     public function getAccessPackageResourceEnvironment()
     {
         if (array_key_exists("accessPackageResourceEnvironment", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResourceEnvironment"], "Beta\Microsoft\Graph\Model\AccessPackageResourceEnvironment")) {
+            if (is_a($this->_propDict["accessPackageResourceEnvironment"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceEnvironment")) {
                 return $this->_propDict["accessPackageResourceEnvironment"];
             } else {
                 $this->_propDict["accessPackageResourceEnvironment"] = new AccessPackageResourceEnvironment($this->_propDict["accessPackageResourceEnvironment"]);

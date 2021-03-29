@@ -61,7 +61,7 @@ class DeviceManagementSettings extends Entity
     public function getDerivedCredentialProvider()
     {
         if (array_key_exists("derivedCredentialProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialProvider"], "Beta\Microsoft\Graph\Model\DerivedCredentialProviderType")) {
+            if (is_a($this->_propDict["derivedCredentialProvider"], "\Beta\Microsoft\Graph\Model\DerivedCredentialProviderType")) {
                 return $this->_propDict["derivedCredentialProvider"];
             } else {
                 $this->_propDict["derivedCredentialProvider"] = new DerivedCredentialProviderType($this->_propDict["derivedCredentialProvider"]);
@@ -114,7 +114,7 @@ class DeviceManagementSettings extends Entity
     }
     /**
     * Gets the deviceComplianceCheckinThresholdDays
-    * The number of days a device is allowed to go without checking in to remain compliant.
+    * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
     *
     * @return int The deviceComplianceCheckinThresholdDays
     */
@@ -129,7 +129,7 @@ class DeviceManagementSettings extends Entity
 
     /**
     * Sets the deviceComplianceCheckinThresholdDays
-    * The number of days a device is allowed to go without checking in to remain compliant.
+    * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
     *
     * @param int $val The value of the deviceComplianceCheckinThresholdDays
     *

@@ -307,7 +307,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     public function getDeploySummary()
     {
         if (array_key_exists("deploySummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploySummary"], "Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploySummary"], "\Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary")) {
                 return $this->_propDict["deploySummary"];
             } else {
                 $this->_propDict["deploySummary"] = new WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary($this->_propDict["deploySummary"]);

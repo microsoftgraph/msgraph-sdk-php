@@ -26,14 +26,14 @@ class ResponseStatus extends Entity
 
     /**
     * Gets the response
-    * The response type. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
+    * The response type. The possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
     *
     * @return ResponseType The response
     */
     public function getResponse()
     {
         if (array_key_exists("response", $this->_propDict)) {
-            if (is_a($this->_propDict["response"], "Beta\Microsoft\Graph\Model\ResponseType")) {
+            if (is_a($this->_propDict["response"], "\Beta\Microsoft\Graph\Model\ResponseType")) {
                 return $this->_propDict["response"];
             } else {
                 $this->_propDict["response"] = new ResponseType($this->_propDict["response"]);
@@ -45,7 +45,7 @@ class ResponseStatus extends Entity
 
     /**
     * Sets the response
-    * The response type. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
+    * The response type. The possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
     *
     * @param ResponseType $val The value to assign to the response
     *

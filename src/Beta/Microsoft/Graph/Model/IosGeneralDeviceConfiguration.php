@@ -520,7 +520,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the appStoreBlocked
-    * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using the App Store.
     *
     * @return bool The appStoreBlocked
     */
@@ -535,7 +535,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the appStoreBlocked
-    * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using the App Store.
     *
     * @param bool $val The appStoreBlocked
     *
@@ -673,7 +673,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getAppsVisibilityListType()
     {
         if (array_key_exists("appsVisibilityListType", $this->_propDict)) {
-            if (is_a($this->_propDict["appsVisibilityListType"], "Beta\Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["appsVisibilityListType"], "\Beta\Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["appsVisibilityListType"];
             } else {
                 $this->_propDict["appsVisibilityListType"] = new AppListType($this->_propDict["appsVisibilityListType"]);
@@ -786,7 +786,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the cameraBlocked
-    * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing the camera of the device.
     *
     * @return bool The cameraBlocked
     */
@@ -801,7 +801,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the cameraBlocked
-    * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing the camera of the device.
     *
     * @param bool $val The cameraBlocked
     *
@@ -1199,7 +1199,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "Beta\Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "\Beta\Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -1690,7 +1690,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the enterpriseAppBlockTrustModification
-    * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+    * Indicates whether or not to block the user from modifying the enterprise app trust settings.
     *
     * @return bool The enterpriseAppBlockTrustModification
     */
@@ -1705,7 +1705,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the enterpriseAppBlockTrustModification
-    * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+    * Indicates whether or not to block the user from modifying the enterprise app trust settings.
     *
     * @param bool $val The enterpriseAppBlockTrustModification
     *
@@ -1806,7 +1806,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the faceTimeBlocked
-    * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using FaceTime.
     *
     * @return bool The faceTimeBlocked
     */
@@ -1821,7 +1821,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the faceTimeBlocked
-    * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using FaceTime.
     *
     * @param bool $val The faceTimeBlocked
     *
@@ -1922,7 +1922,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the findMyFriendsBlocked
-    * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
+    * Indicates whether or not to block Find My Friends when the device is in supervised mode.
     *
     * @return bool The findMyFriendsBlocked
     */
@@ -1937,7 +1937,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the findMyFriendsBlocked
-    * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
+    * Indicates whether or not to block Find My Friends when the device is in supervised mode.
     *
     * @param bool $val The findMyFriendsBlocked
     *
@@ -2009,7 +2009,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the gamingBlockGameCenterFriends
-    * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from having friends in Game Center.
     *
     * @return bool The gamingBlockGameCenterFriends
     */
@@ -2024,7 +2024,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gamingBlockGameCenterFriends
-    * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from having friends in Game Center.
     *
     * @param bool $val The gamingBlockGameCenterFriends
     *
@@ -2038,7 +2038,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the gamingBlockMultiplayer
-    * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using multiplayer gaming.
     *
     * @return bool The gamingBlockMultiplayer
     */
@@ -2053,7 +2053,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the gamingBlockMultiplayer
-    * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using multiplayer gaming.
     *
     * @param bool $val The gamingBlockMultiplayer
     *
@@ -2183,7 +2183,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockBackup
-    * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud backup.
     *
     * @return bool The iCloudBlockBackup
     */
@@ -2198,7 +2198,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockBackup
-    * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud backup.
     *
     * @param bool $val The iCloudBlockBackup
     *
@@ -2212,7 +2212,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iCloudBlockDocumentSync
-    * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud document sync.
     *
     * @return bool The iCloudBlockDocumentSync
     */
@@ -2227,7 +2227,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iCloudBlockDocumentSync
-    * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block iCloud document sync.
     *
     * @param bool $val The iCloudBlockDocumentSync
     *
@@ -2415,7 +2415,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the iTunesBlockExplicitContent
-    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store.
     *
     * @return bool The iTunesBlockExplicitContent
     */
@@ -2430,7 +2430,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the iTunesBlockExplicitContent
-    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store.
     *
     * @param bool $val The iTunesBlockExplicitContent
     *
@@ -2734,7 +2734,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowAutoLock
-    * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+    * Indicates whether or not to allow device auto lock while in kiosk mode.
     *
     * @return bool The kioskModeAllowAutoLock
     */
@@ -2749,7 +2749,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowAutoLock
-    * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+    * Indicates whether or not to allow device auto lock while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowAutoLock
     *
@@ -2792,7 +2792,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowRingerSwitch
-    * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+    * Indicates whether or not to allow use of the ringer switch while in kiosk mode.
     *
     * @return bool The kioskModeAllowRingerSwitch
     */
@@ -2807,7 +2807,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowRingerSwitch
-    * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+    * Indicates whether or not to allow use of the ringer switch while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowRingerSwitch
     *
@@ -2821,7 +2821,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowScreenRotation
-    * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+    * Indicates whether or not to allow screen rotation while in kiosk mode.
     *
     * @return bool The kioskModeAllowScreenRotation
     */
@@ -2836,7 +2836,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowScreenRotation
-    * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+    * Indicates whether or not to allow screen rotation while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowScreenRotation
     *
@@ -2850,7 +2850,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowSleepButton
-    * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+    * Indicates whether or not to allow use of the sleep button while in kiosk mode.
     *
     * @return bool The kioskModeAllowSleepButton
     */
@@ -2865,7 +2865,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowSleepButton
-    * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+    * Indicates whether or not to allow use of the sleep button while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowSleepButton
     *
@@ -2879,7 +2879,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowTouchscreen
-    * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+    * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
     *
     * @return bool The kioskModeAllowTouchscreen
     */
@@ -2894,7 +2894,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowTouchscreen
-    * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+    * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowTouchscreen
     *
@@ -2966,7 +2966,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeAllowVolumeButtons
-    * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+    * Indicates whether or not to allow use of the volume buttons while in kiosk mode.
     *
     * @return bool The kioskModeAllowVolumeButtons
     */
@@ -2981,7 +2981,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeAllowVolumeButtons
-    * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+    * Indicates whether or not to allow use of the volume buttons while in kiosk mode.
     *
     * @param bool $val The kioskModeAllowVolumeButtons
     *
@@ -3060,7 +3060,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskModeAppType()
     {
         if (array_key_exists("kioskModeAppType", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeAppType"], "Beta\Microsoft\Graph\Model\IosKioskModeAppType")) {
+            if (is_a($this->_propDict["kioskModeAppType"], "\Beta\Microsoft\Graph\Model\IosKioskModeAppType")) {
                 return $this->_propDict["kioskModeAppType"];
             } else {
                 $this->_propDict["kioskModeAppType"] = new IosKioskModeAppType($this->_propDict["kioskModeAppType"]);
@@ -3615,7 +3615,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingApps()
     {
         if (array_key_exists("mediaContentRatingApps", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingApps"], "Beta\Microsoft\Graph\Model\RatingAppsType")) {
+            if (is_a($this->_propDict["mediaContentRatingApps"], "\Beta\Microsoft\Graph\Model\RatingAppsType")) {
                 return $this->_propDict["mediaContentRatingApps"];
             } else {
                 $this->_propDict["mediaContentRatingApps"] = new RatingAppsType($this->_propDict["mediaContentRatingApps"]);
@@ -3648,7 +3648,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingAustralia()
     {
         if (array_key_exists("mediaContentRatingAustralia", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingAustralia"], "Beta\Microsoft\Graph\Model\MediaContentRatingAustralia")) {
+            if (is_a($this->_propDict["mediaContentRatingAustralia"], "\Beta\Microsoft\Graph\Model\MediaContentRatingAustralia")) {
                 return $this->_propDict["mediaContentRatingAustralia"];
             } else {
                 $this->_propDict["mediaContentRatingAustralia"] = new MediaContentRatingAustralia($this->_propDict["mediaContentRatingAustralia"]);
@@ -3681,7 +3681,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingCanada()
     {
         if (array_key_exists("mediaContentRatingCanada", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingCanada"], "Beta\Microsoft\Graph\Model\MediaContentRatingCanada")) {
+            if (is_a($this->_propDict["mediaContentRatingCanada"], "\Beta\Microsoft\Graph\Model\MediaContentRatingCanada")) {
                 return $this->_propDict["mediaContentRatingCanada"];
             } else {
                 $this->_propDict["mediaContentRatingCanada"] = new MediaContentRatingCanada($this->_propDict["mediaContentRatingCanada"]);
@@ -3714,7 +3714,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingFrance()
     {
         if (array_key_exists("mediaContentRatingFrance", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingFrance"], "Beta\Microsoft\Graph\Model\MediaContentRatingFrance")) {
+            if (is_a($this->_propDict["mediaContentRatingFrance"], "\Beta\Microsoft\Graph\Model\MediaContentRatingFrance")) {
                 return $this->_propDict["mediaContentRatingFrance"];
             } else {
                 $this->_propDict["mediaContentRatingFrance"] = new MediaContentRatingFrance($this->_propDict["mediaContentRatingFrance"]);
@@ -3747,7 +3747,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingGermany()
     {
         if (array_key_exists("mediaContentRatingGermany", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingGermany"], "Beta\Microsoft\Graph\Model\MediaContentRatingGermany")) {
+            if (is_a($this->_propDict["mediaContentRatingGermany"], "\Beta\Microsoft\Graph\Model\MediaContentRatingGermany")) {
                 return $this->_propDict["mediaContentRatingGermany"];
             } else {
                 $this->_propDict["mediaContentRatingGermany"] = new MediaContentRatingGermany($this->_propDict["mediaContentRatingGermany"]);
@@ -3780,7 +3780,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingIreland()
     {
         if (array_key_exists("mediaContentRatingIreland", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingIreland"], "Beta\Microsoft\Graph\Model\MediaContentRatingIreland")) {
+            if (is_a($this->_propDict["mediaContentRatingIreland"], "\Beta\Microsoft\Graph\Model\MediaContentRatingIreland")) {
                 return $this->_propDict["mediaContentRatingIreland"];
             } else {
                 $this->_propDict["mediaContentRatingIreland"] = new MediaContentRatingIreland($this->_propDict["mediaContentRatingIreland"]);
@@ -3813,7 +3813,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingJapan()
     {
         if (array_key_exists("mediaContentRatingJapan", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingJapan"], "Beta\Microsoft\Graph\Model\MediaContentRatingJapan")) {
+            if (is_a($this->_propDict["mediaContentRatingJapan"], "\Beta\Microsoft\Graph\Model\MediaContentRatingJapan")) {
                 return $this->_propDict["mediaContentRatingJapan"];
             } else {
                 $this->_propDict["mediaContentRatingJapan"] = new MediaContentRatingJapan($this->_propDict["mediaContentRatingJapan"]);
@@ -3846,7 +3846,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingNewZealand()
     {
         if (array_key_exists("mediaContentRatingNewZealand", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingNewZealand"], "Beta\Microsoft\Graph\Model\MediaContentRatingNewZealand")) {
+            if (is_a($this->_propDict["mediaContentRatingNewZealand"], "\Beta\Microsoft\Graph\Model\MediaContentRatingNewZealand")) {
                 return $this->_propDict["mediaContentRatingNewZealand"];
             } else {
                 $this->_propDict["mediaContentRatingNewZealand"] = new MediaContentRatingNewZealand($this->_propDict["mediaContentRatingNewZealand"]);
@@ -3879,7 +3879,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingUnitedKingdom()
     {
         if (array_key_exists("mediaContentRatingUnitedKingdom", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingUnitedKingdom"], "Beta\Microsoft\Graph\Model\MediaContentRatingUnitedKingdom")) {
+            if (is_a($this->_propDict["mediaContentRatingUnitedKingdom"], "\Beta\Microsoft\Graph\Model\MediaContentRatingUnitedKingdom")) {
                 return $this->_propDict["mediaContentRatingUnitedKingdom"];
             } else {
                 $this->_propDict["mediaContentRatingUnitedKingdom"] = new MediaContentRatingUnitedKingdom($this->_propDict["mediaContentRatingUnitedKingdom"]);
@@ -3912,7 +3912,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingUnitedStates()
     {
         if (array_key_exists("mediaContentRatingUnitedStates", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingUnitedStates"], "Beta\Microsoft\Graph\Model\MediaContentRatingUnitedStates")) {
+            if (is_a($this->_propDict["mediaContentRatingUnitedStates"], "\Beta\Microsoft\Graph\Model\MediaContentRatingUnitedStates")) {
                 return $this->_propDict["mediaContentRatingUnitedStates"];
             } else {
                 $this->_propDict["mediaContentRatingUnitedStates"] = new MediaContentRatingUnitedStates($this->_propDict["mediaContentRatingUnitedStates"]);
@@ -4352,7 +4352,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasscodeRequiredType()
     {
         if (array_key_exists("passcodeRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passcodeRequiredType"], "Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passcodeRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passcodeRequiredType"];
             } else {
                 $this->_propDict["passcodeRequiredType"] = new RequiredPasswordType($this->_propDict["passcodeRequiredType"]);
@@ -4378,7 +4378,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passcodeSignInFailureCountBeforeWipe
-    * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
+    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
     *
     * @return int The passcodeSignInFailureCountBeforeWipe
     */
@@ -4393,7 +4393,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passcodeSignInFailureCountBeforeWipe
-    * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
+    * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
     *
     * @param int $val The passcodeSignInFailureCountBeforeWipe
     *
@@ -4610,7 +4610,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the safariBlockAutofill
-    * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Auto fill in Safari.
     *
     * @return bool The safariBlockAutofill
     */
@@ -4625,7 +4625,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the safariBlockAutofill
-    * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Auto fill in Safari.
     *
     * @param bool $val The safariBlockAutofill
     *
@@ -4639,7 +4639,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the safariBlocked
-    * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Safari.
     *
     * @return bool The safariBlocked
     */
@@ -4654,7 +4654,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the safariBlocked
-    * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
+    * Indicates whether or not to block the user from using Safari.
     *
     * @param bool $val The safariBlocked
     *
@@ -4733,7 +4733,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getSafariCookieSettings()
     {
         if (array_key_exists("safariCookieSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["safariCookieSettings"], "Beta\Microsoft\Graph\Model\WebBrowserCookieSettings")) {
+            if (is_a($this->_propDict["safariCookieSettings"], "\Beta\Microsoft\Graph\Model\WebBrowserCookieSettings")) {
                 return $this->_propDict["safariCookieSettings"];
             } else {
                 $this->_propDict["safariCookieSettings"] = new WebBrowserCookieSettings($this->_propDict["safariCookieSettings"]);

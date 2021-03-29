@@ -84,7 +84,7 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Gets the userId
-    * The GUID of the user.
+    * The guid of the user.
     *
     * @return string The userId
     */
@@ -99,7 +99,7 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Sets the userId
-    * The GUID of the user.
+    * The guid of the user.
     *
     * @param string $val The userId
     *
@@ -119,7 +119,7 @@ class AadUserConversationMember extends ConversationMember
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Beta\Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\User")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new User($this->_propDict["user"]);

@@ -91,7 +91,7 @@ class ContentType extends Entity
     public function getDocumentSet()
     {
         if (array_key_exists("documentSet", $this->_propDict)) {
-            if (is_a($this->_propDict["documentSet"], "Beta\Microsoft\Graph\Model\DocumentSet")) {
+            if (is_a($this->_propDict["documentSet"], "\Beta\Microsoft\Graph\Model\DocumentSet")) {
                 return $this->_propDict["documentSet"];
             } else {
                 $this->_propDict["documentSet"] = new DocumentSet($this->_propDict["documentSet"]);
@@ -124,7 +124,7 @@ class ContentType extends Entity
     public function getDocumentTemplate()
     {
         if (array_key_exists("documentTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["documentTemplate"], "Beta\Microsoft\Graph\Model\DocumentSetContent")) {
+            if (is_a($this->_propDict["documentTemplate"], "\Beta\Microsoft\Graph\Model\DocumentSetContent")) {
                 return $this->_propDict["documentTemplate"];
             } else {
                 $this->_propDict["documentTemplate"] = new DocumentSetContent($this->_propDict["documentTemplate"]);
@@ -215,7 +215,7 @@ class ContentType extends Entity
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "Beta\Microsoft\Graph\Model\ItemReference")) {
+            if (is_a($this->_propDict["inheritedFrom"], "\Beta\Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -306,7 +306,7 @@ class ContentType extends Entity
     public function getOrder()
     {
         if (array_key_exists("order", $this->_propDict)) {
-            if (is_a($this->_propDict["order"], "Beta\Microsoft\Graph\Model\ContentTypeOrder")) {
+            if (is_a($this->_propDict["order"], "\Beta\Microsoft\Graph\Model\ContentTypeOrder")) {
                 return $this->_propDict["order"];
             } else {
                 $this->_propDict["order"] = new ContentTypeOrder($this->_propDict["order"]);
@@ -455,7 +455,7 @@ class ContentType extends Entity
     public function getBase()
     {
         if (array_key_exists("base", $this->_propDict)) {
-            if (is_a($this->_propDict["base"], "Beta\Microsoft\Graph\Model\ContentType")) {
+            if (is_a($this->_propDict["base"], "\Beta\Microsoft\Graph\Model\ContentType")) {
                 return $this->_propDict["base"];
             } else {
                 $this->_propDict["base"] = new ContentType($this->_propDict["base"]);

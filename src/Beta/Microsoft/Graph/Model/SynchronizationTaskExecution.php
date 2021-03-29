@@ -313,7 +313,7 @@ class SynchronizationTaskExecution extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\SynchronizationError")) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\SynchronizationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
@@ -346,7 +346,7 @@ class SynchronizationTaskExecution extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SynchronizationTaskExecutionResult($this->_propDict["state"]);

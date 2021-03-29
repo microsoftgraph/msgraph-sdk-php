@@ -33,7 +33,7 @@ class EducationFeedback extends Entity
     public function getFeedbackBy()
     {
         if (array_key_exists("feedbackBy", $this->_propDict)) {
-            if (is_a($this->_propDict["feedbackBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["feedbackBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["feedbackBy"];
             } else {
                 $this->_propDict["feedbackBy"] = new IdentitySet($this->_propDict["feedbackBy"]);
@@ -99,7 +99,7 @@ class EducationFeedback extends Entity
     public function getText()
     {
         if (array_key_exists("text", $this->_propDict)) {
-            if (is_a($this->_propDict["text"], "Beta\Microsoft\Graph\Model\EducationItemBody")) {
+            if (is_a($this->_propDict["text"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["text"];
             } else {
                 $this->_propDict["text"] = new EducationItemBody($this->_propDict["text"]);

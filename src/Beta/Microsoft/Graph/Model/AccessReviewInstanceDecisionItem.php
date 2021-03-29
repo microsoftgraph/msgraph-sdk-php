@@ -62,7 +62,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getAppliedBy()
     {
         if (array_key_exists("appliedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["appliedBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["appliedBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["appliedBy"];
             } else {
                 $this->_propDict["appliedBy"] = new UserIdentity($this->_propDict["appliedBy"]);
@@ -214,7 +214,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getPrincipal()
     {
         if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new Identity($this->_propDict["principal"]);
@@ -301,7 +301,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemResource")) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new AccessReviewInstanceDecisionItemResource($this->_propDict["resource"]);
@@ -360,7 +360,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getReviewedBy()
     {
         if (array_key_exists("reviewedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["reviewedBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["reviewedBy"];
             } else {
                 $this->_propDict["reviewedBy"] = new UserIdentity($this->_propDict["reviewedBy"]);
@@ -426,7 +426,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemTarget")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new AccessReviewInstanceDecisionItemTarget($this->_propDict["target"]);

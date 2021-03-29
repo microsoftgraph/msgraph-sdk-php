@@ -175,14 +175,14 @@ class Channel extends Entity
     
     /**
     * Gets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
     *
     * @return ChannelMembershipType The membershipType
     */
     public function getMembershipType()
     {
         if (array_key_exists("membershipType", $this->_propDict)) {
-            if (is_a($this->_propDict["membershipType"], "Beta\Microsoft\Graph\Model\ChannelMembershipType")) {
+            if (is_a($this->_propDict["membershipType"], "\Beta\Microsoft\Graph\Model\ChannelMembershipType")) {
                 return $this->_propDict["membershipType"];
             } else {
                 $this->_propDict["membershipType"] = new ChannelMembershipType($this->_propDict["membershipType"]);
@@ -194,7 +194,7 @@ class Channel extends Entity
     
     /**
     * Sets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
     *
     * @param ChannelMembershipType $val The membershipType
     *
@@ -215,7 +215,7 @@ class Channel extends Entity
     public function getModerationSettings()
     {
         if (array_key_exists("moderationSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["moderationSettings"], "Beta\Microsoft\Graph\Model\ChannelModerationSettings")) {
+            if (is_a($this->_propDict["moderationSettings"], "\Beta\Microsoft\Graph\Model\ChannelModerationSettings")) {
                 return $this->_propDict["moderationSettings"];
             } else {
                 $this->_propDict["moderationSettings"] = new ChannelModerationSettings($this->_propDict["moderationSettings"]);
@@ -277,7 +277,7 @@ class Channel extends Entity
     public function getFilesFolder()
     {
         if (array_key_exists("filesFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["filesFolder"], "Beta\Microsoft\Graph\Model\DriveItem")) {
+            if (is_a($this->_propDict["filesFolder"], "\Beta\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["filesFolder"];
             } else {
                 $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);

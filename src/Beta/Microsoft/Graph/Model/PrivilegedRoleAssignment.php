@@ -182,7 +182,7 @@ class PrivilegedRoleAssignment extends Entity
     public function getRoleInfo()
     {
         if (array_key_exists("roleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleInfo"], "Beta\Microsoft\Graph\Model\PrivilegedRole")) {
+            if (is_a($this->_propDict["roleInfo"], "\Beta\Microsoft\Graph\Model\PrivilegedRole")) {
                 return $this->_propDict["roleInfo"];
             } else {
                 $this->_propDict["roleInfo"] = new PrivilegedRole($this->_propDict["roleInfo"]);

@@ -33,7 +33,7 @@ class Chat extends Entity
     public function getChatType()
     {
         if (array_key_exists("chatType", $this->_propDict)) {
-            if (is_a($this->_propDict["chatType"], "Beta\Microsoft\Graph\Model\ChatType")) {
+            if (is_a($this->_propDict["chatType"], "\Beta\Microsoft\Graph\Model\ChatType")) {
                 return $this->_propDict["chatType"];
             } else {
                 $this->_propDict["chatType"] = new ChatType($this->_propDict["chatType"]);

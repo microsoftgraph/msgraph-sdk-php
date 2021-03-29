@@ -28,15 +28,15 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdBy
     * The user who created the query.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -47,7 +47,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the createdBy
     * The user who created the query.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
     * @return ReviewSetQuery
     */
@@ -123,15 +123,15 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lastModifiedBy
     * The user who last modified the query.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
-                $this->_propDict["lastModifiedBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
+                $this->_propDict["lastModifiedBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
                 return $this->_propDict["lastModifiedBy"];
             }
         }
@@ -142,7 +142,7 @@ class ReviewSetQuery extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the lastModifiedBy
     * The user who last modified the query.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
     * @return ReviewSetQuery
     */

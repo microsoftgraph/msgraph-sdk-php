@@ -95,7 +95,7 @@ class DeviceConfiguration extends Entity
     public function getDeviceManagementApplicabilityRuleDeviceMode()
     {
         if (array_key_exists("deviceManagementApplicabilityRuleDeviceMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceManagementApplicabilityRuleDeviceMode"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleDeviceMode")) {
+            if (is_a($this->_propDict["deviceManagementApplicabilityRuleDeviceMode"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleDeviceMode")) {
                 return $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"];
             } else {
                 $this->_propDict["deviceManagementApplicabilityRuleDeviceMode"] = new DeviceManagementApplicabilityRuleDeviceMode($this->_propDict["deviceManagementApplicabilityRuleDeviceMode"]);
@@ -128,7 +128,7 @@ class DeviceConfiguration extends Entity
     public function getDeviceManagementApplicabilityRuleOsEdition()
     {
         if (array_key_exists("deviceManagementApplicabilityRuleOsEdition", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsEdition"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsEdition")) {
+            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsEdition"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsEdition")) {
                 return $this->_propDict["deviceManagementApplicabilityRuleOsEdition"];
             } else {
                 $this->_propDict["deviceManagementApplicabilityRuleOsEdition"] = new DeviceManagementApplicabilityRuleOsEdition($this->_propDict["deviceManagementApplicabilityRuleOsEdition"]);
@@ -161,7 +161,7 @@ class DeviceConfiguration extends Entity
     public function getDeviceManagementApplicabilityRuleOsVersion()
     {
         if (array_key_exists("deviceManagementApplicabilityRuleOsVersion", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsVersion"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsVersion")) {
+            if (is_a($this->_propDict["deviceManagementApplicabilityRuleOsVersion"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleOsVersion")) {
                 return $this->_propDict["deviceManagementApplicabilityRuleOsVersion"];
             } else {
                 $this->_propDict["deviceManagementApplicabilityRuleOsVersion"] = new DeviceManagementApplicabilityRuleOsVersion($this->_propDict["deviceManagementApplicabilityRuleOsVersion"]);
@@ -433,7 +433,7 @@ class DeviceConfiguration extends Entity
     public function getDeviceStatusOverview()
     {
         if (array_key_exists("deviceStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStatusOverview"], "Beta\Microsoft\Graph\Model\DeviceConfigurationDeviceOverview")) {
+            if (is_a($this->_propDict["deviceStatusOverview"], "\Beta\Microsoft\Graph\Model\DeviceConfigurationDeviceOverview")) {
                 return $this->_propDict["deviceStatusOverview"];
             } else {
                 $this->_propDict["deviceStatusOverview"] = new DeviceConfigurationDeviceOverview($this->_propDict["deviceStatusOverview"]);
@@ -526,7 +526,7 @@ class DeviceConfiguration extends Entity
     public function getUserStatusOverview()
     {
         if (array_key_exists("userStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["userStatusOverview"], "Beta\Microsoft\Graph\Model\DeviceConfigurationUserOverview")) {
+            if (is_a($this->_propDict["userStatusOverview"], "\Beta\Microsoft\Graph\Model\DeviceConfigurationUserOverview")) {
                 return $this->_propDict["userStatusOverview"];
             } else {
                 $this->_propDict["userStatusOverview"] = new DeviceConfigurationUserOverview($this->_propDict["userStatusOverview"]);

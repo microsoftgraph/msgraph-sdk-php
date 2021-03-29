@@ -207,7 +207,7 @@ class EstimateStatisticsOperation extends CaseOperation
     public function getSourceCollection()
     {
         if (array_key_exists("sourceCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceCollection"], "Beta\Microsoft\Graph\Ediscovery\Model\SourceCollection")) {
+            if (is_a($this->_propDict["sourceCollection"], "\Beta\Microsoft\Graph\Ediscovery\Model\SourceCollection")) {
                 return $this->_propDict["sourceCollection"];
             } else {
                 $this->_propDict["sourceCollection"] = new SourceCollection($this->_propDict["sourceCollection"]);

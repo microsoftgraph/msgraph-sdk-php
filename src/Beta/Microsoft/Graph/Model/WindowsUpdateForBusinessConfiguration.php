@@ -26,14 +26,14 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @return AutomaticUpdateMode The automaticUpdateMode
     */
     public function getAutomaticUpdateMode()
     {
         if (array_key_exists("automaticUpdateMode", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticUpdateMode"], "Beta\Microsoft\Graph\Model\AutomaticUpdateMode")) {
+            if (is_a($this->_propDict["automaticUpdateMode"], "\Beta\Microsoft\Graph\Model\AutomaticUpdateMode")) {
                 return $this->_propDict["automaticUpdateMode"];
             } else {
                 $this->_propDict["automaticUpdateMode"] = new AutomaticUpdateMode($this->_propDict["automaticUpdateMode"]);
@@ -45,7 +45,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /**
     * Sets the automaticUpdateMode
-    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+    * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
     * @param AutomaticUpdateMode $val The automaticUpdateMode
     *
@@ -66,7 +66,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getAutoRestartNotificationDismissal()
     {
         if (array_key_exists("autoRestartNotificationDismissal", $this->_propDict)) {
-            if (is_a($this->_propDict["autoRestartNotificationDismissal"], "Beta\Microsoft\Graph\Model\AutoRestartNotificationDismissalMethod")) {
+            if (is_a($this->_propDict["autoRestartNotificationDismissal"], "\Beta\Microsoft\Graph\Model\AutoRestartNotificationDismissalMethod")) {
                 return $this->_propDict["autoRestartNotificationDismissal"];
             } else {
                 $this->_propDict["autoRestartNotificationDismissal"] = new AutoRestartNotificationDismissalMethod($this->_propDict["autoRestartNotificationDismissal"]);
@@ -99,7 +99,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getBusinessReadyUpdatesOnly()
     {
         if (array_key_exists("businessReadyUpdatesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "Beta\Microsoft\Graph\Model\WindowsUpdateType")) {
+            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "\Beta\Microsoft\Graph\Model\WindowsUpdateType")) {
                 return $this->_propDict["businessReadyUpdatesOnly"];
             } else {
                 $this->_propDict["businessReadyUpdatesOnly"] = new WindowsUpdateType($this->_propDict["businessReadyUpdatesOnly"]);
@@ -219,7 +219,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getDeliveryOptimizationMode()
     {
         if (array_key_exists("deliveryOptimizationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationMode"], "Beta\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
+            if (is_a($this->_propDict["deliveryOptimizationMode"], "\Beta\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
                 return $this->_propDict["deliveryOptimizationMode"];
             } else {
                 $this->_propDict["deliveryOptimizationMode"] = new WindowsDeliveryOptimizationMode($this->_propDict["deliveryOptimizationMode"]);
@@ -583,7 +583,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getInstallationSchedule()
     {
         if (array_key_exists("installationSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["installationSchedule"], "Beta\Microsoft\Graph\Model\WindowsUpdateInstallScheduleType")) {
+            if (is_a($this->_propDict["installationSchedule"], "\Beta\Microsoft\Graph\Model\WindowsUpdateInstallScheduleType")) {
                 return $this->_propDict["installationSchedule"];
             } else {
                 $this->_propDict["installationSchedule"] = new WindowsUpdateInstallScheduleType($this->_propDict["installationSchedule"]);
@@ -674,7 +674,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getPrereleaseFeatures()
     {
         if (array_key_exists("prereleaseFeatures", $this->_propDict)) {
-            if (is_a($this->_propDict["prereleaseFeatures"], "Beta\Microsoft\Graph\Model\PrereleaseFeatures")) {
+            if (is_a($this->_propDict["prereleaseFeatures"], "\Beta\Microsoft\Graph\Model\PrereleaseFeatures")) {
                 return $this->_propDict["prereleaseFeatures"];
             } else {
                 $this->_propDict["prereleaseFeatures"] = new PrereleaseFeatures($this->_propDict["prereleaseFeatures"]);
@@ -980,7 +980,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getUpdateNotificationLevel()
     {
         if (array_key_exists("updateNotificationLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["updateNotificationLevel"], "Beta\Microsoft\Graph\Model\WindowsUpdateNotificationDisplayOption")) {
+            if (is_a($this->_propDict["updateNotificationLevel"], "\Beta\Microsoft\Graph\Model\WindowsUpdateNotificationDisplayOption")) {
                 return $this->_propDict["updateNotificationLevel"];
             } else {
                 $this->_propDict["updateNotificationLevel"] = new WindowsUpdateNotificationDisplayOption($this->_propDict["updateNotificationLevel"]);
@@ -1013,7 +1013,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getUpdateWeeks()
     {
         if (array_key_exists("updateWeeks", $this->_propDict)) {
-            if (is_a($this->_propDict["updateWeeks"], "Beta\Microsoft\Graph\Model\WindowsUpdateForBusinessUpdateWeeks")) {
+            if (is_a($this->_propDict["updateWeeks"], "\Beta\Microsoft\Graph\Model\WindowsUpdateForBusinessUpdateWeeks")) {
                 return $this->_propDict["updateWeeks"];
             } else {
                 $this->_propDict["updateWeeks"] = new WindowsUpdateForBusinessUpdateWeeks($this->_propDict["updateWeeks"]);
@@ -1046,7 +1046,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getUserPauseAccess()
     {
         if (array_key_exists("userPauseAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["userPauseAccess"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["userPauseAccess"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["userPauseAccess"];
             } else {
                 $this->_propDict["userPauseAccess"] = new Enablement($this->_propDict["userPauseAccess"]);
@@ -1079,7 +1079,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getUserWindowsUpdateScanAccess()
     {
         if (array_key_exists("userWindowsUpdateScanAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["userWindowsUpdateScanAccess"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["userWindowsUpdateScanAccess"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["userWindowsUpdateScanAccess"];
             } else {
                 $this->_propDict["userWindowsUpdateScanAccess"] = new Enablement($this->_propDict["userWindowsUpdateScanAccess"]);

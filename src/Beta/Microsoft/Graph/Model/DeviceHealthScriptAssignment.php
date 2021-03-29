@@ -62,7 +62,7 @@ class DeviceHealthScriptAssignment extends Entity
     public function getRunSchedule()
     {
         if (array_key_exists("runSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["runSchedule"], "Beta\Microsoft\Graph\Model\DeviceHealthScriptRunSchedule")) {
+            if (is_a($this->_propDict["runSchedule"], "\Beta\Microsoft\Graph\Model\DeviceHealthScriptRunSchedule")) {
                 return $this->_propDict["runSchedule"];
             } else {
                 $this->_propDict["runSchedule"] = new DeviceHealthScriptRunSchedule($this->_propDict["runSchedule"]);
@@ -95,7 +95,7 @@ class DeviceHealthScriptAssignment extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);

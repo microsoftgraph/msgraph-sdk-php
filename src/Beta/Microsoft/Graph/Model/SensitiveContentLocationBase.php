@@ -32,7 +32,7 @@ class SensitiveContentLocationBase extends Entity
     public function getEvidences()
     {
         if (array_key_exists("evidences", $this->_propDict)) {
-            if (is_a($this->_propDict["evidences"], "Beta\Microsoft\Graph\Model\SensitiveContentEvidence")) {
+            if (is_a($this->_propDict["evidences"], "\Beta\Microsoft\Graph\Model\SensitiveContentEvidence")) {
                 return $this->_propDict["evidences"];
             } else {
                 $this->_propDict["evidences"] = new SensitiveContentEvidence($this->_propDict["evidences"]);

@@ -33,7 +33,7 @@ class AddToReviewSetOperation extends CaseOperation
     public function getReviewSet()
     {
         if (array_key_exists("reviewSet", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewSet"], "Beta\Microsoft\Graph\Ediscovery\Model\ReviewSet")) {
+            if (is_a($this->_propDict["reviewSet"], "\Beta\Microsoft\Graph\Ediscovery\Model\ReviewSet")) {
                 return $this->_propDict["reviewSet"];
             } else {
                 $this->_propDict["reviewSet"] = new ReviewSet($this->_propDict["reviewSet"]);
@@ -66,7 +66,7 @@ class AddToReviewSetOperation extends CaseOperation
     public function getSourceCollection()
     {
         if (array_key_exists("sourceCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceCollection"], "Beta\Microsoft\Graph\Ediscovery\Model\SourceCollection")) {
+            if (is_a($this->_propDict["sourceCollection"], "\Beta\Microsoft\Graph\Ediscovery\Model\SourceCollection")) {
                 return $this->_propDict["sourceCollection"];
             } else {
                 $this->_propDict["sourceCollection"] = new SourceCollection($this->_propDict["sourceCollection"]);

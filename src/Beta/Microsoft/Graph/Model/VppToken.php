@@ -266,7 +266,7 @@ class VppToken extends Entity
     
     /**
     * Gets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
+    * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
     *
     * @return \DateTime The lastSyncDateTime
     */
@@ -285,7 +285,7 @@ class VppToken extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
+    * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -306,7 +306,7 @@ class VppToken extends Entity
     public function getLastSyncStatus()
     {
         if (array_key_exists("lastSyncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncStatus"], "Beta\Microsoft\Graph\Model\VppTokenSyncStatus")) {
+            if (is_a($this->_propDict["lastSyncStatus"], "\Beta\Microsoft\Graph\Model\VppTokenSyncStatus")) {
                 return $this->_propDict["lastSyncStatus"];
             } else {
                 $this->_propDict["lastSyncStatus"] = new VppTokenSyncStatus($this->_propDict["lastSyncStatus"]);
@@ -419,14 +419,14 @@ class VppToken extends Entity
     
     /**
     * Gets the state
-    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
+    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
     *
     * @return VppTokenState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\VppTokenState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\VppTokenState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new VppTokenState($this->_propDict["state"]);
@@ -438,7 +438,7 @@ class VppToken extends Entity
     
     /**
     * Sets the state
-    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
+    * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
     *
     * @param VppTokenState $val The state
     *
@@ -518,7 +518,7 @@ class VppToken extends Entity
     public function getVppTokenAccountType()
     {
         if (array_key_exists("vppTokenAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["vppTokenAccountType"], "Beta\Microsoft\Graph\Model\VppTokenAccountType")) {
+            if (is_a($this->_propDict["vppTokenAccountType"], "\Beta\Microsoft\Graph\Model\VppTokenAccountType")) {
                 return $this->_propDict["vppTokenAccountType"];
             } else {
                 $this->_propDict["vppTokenAccountType"] = new VppTokenAccountType($this->_propDict["vppTokenAccountType"]);

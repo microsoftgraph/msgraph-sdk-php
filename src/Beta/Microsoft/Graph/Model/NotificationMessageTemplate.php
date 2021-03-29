@@ -26,14 +26,14 @@ class NotificationMessageTemplate extends Entity
 {
     /**
     * Gets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
     * @return NotificationTemplateBrandingOptions The brandingOptions
     */
     public function getBrandingOptions()
     {
         if (array_key_exists("brandingOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["brandingOptions"], "Beta\Microsoft\Graph\Model\NotificationTemplateBrandingOptions")) {
+            if (is_a($this->_propDict["brandingOptions"], "\Beta\Microsoft\Graph\Model\NotificationTemplateBrandingOptions")) {
                 return $this->_propDict["brandingOptions"];
             } else {
                 $this->_propDict["brandingOptions"] = new NotificationTemplateBrandingOptions($this->_propDict["brandingOptions"]);
@@ -45,7 +45,7 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Sets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
     * @param NotificationTemplateBrandingOptions $val The brandingOptions
     *

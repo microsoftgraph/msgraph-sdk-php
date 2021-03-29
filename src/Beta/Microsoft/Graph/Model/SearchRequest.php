@@ -61,7 +61,7 @@ class SearchRequest extends Entity
     public function getAggregations()
     {
         if (array_key_exists("aggregations", $this->_propDict)) {
-            if (is_a($this->_propDict["aggregations"], "Beta\Microsoft\Graph\Model\AggregationOption")) {
+            if (is_a($this->_propDict["aggregations"], "\Beta\Microsoft\Graph\Model\AggregationOption")) {
                 return $this->_propDict["aggregations"];
             } else {
                 $this->_propDict["aggregations"] = new AggregationOption($this->_propDict["aggregations"]);
@@ -150,7 +150,7 @@ class SearchRequest extends Entity
     public function getEntityTypes()
     {
         if (array_key_exists("entityTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["entityTypes"], "Beta\Microsoft\Graph\Model\EntityType")) {
+            if (is_a($this->_propDict["entityTypes"], "\Beta\Microsoft\Graph\Model\EntityType")) {
                 return $this->_propDict["entityTypes"];
             } else {
                 $this->_propDict["entityTypes"] = new EntityType($this->_propDict["entityTypes"]);
@@ -239,7 +239,7 @@ class SearchRequest extends Entity
     public function getQuery()
     {
         if (array_key_exists("query", $this->_propDict)) {
-            if (is_a($this->_propDict["query"], "Beta\Microsoft\Graph\Model\SearchQuery")) {
+            if (is_a($this->_propDict["query"], "\Beta\Microsoft\Graph\Model\SearchQuery")) {
                 return $this->_propDict["query"];
             } else {
                 $this->_propDict["query"] = new SearchQuery($this->_propDict["query"]);
@@ -300,7 +300,7 @@ class SearchRequest extends Entity
     public function getSortProperties()
     {
         if (array_key_exists("sortProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["sortProperties"], "Beta\Microsoft\Graph\Model\SortProperty")) {
+            if (is_a($this->_propDict["sortProperties"], "\Beta\Microsoft\Graph\Model\SortProperty")) {
                 return $this->_propDict["sortProperties"];
             } else {
                 $this->_propDict["sortProperties"] = new SortProperty($this->_propDict["sortProperties"]);

@@ -122,7 +122,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
     public function getErrorType()
     {
         if (array_key_exists("errorType", $this->_propDict)) {
-            if (is_a($this->_propDict["errorType"], "Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionHealthCheckErrorType")) {
+            if (is_a($this->_propDict["errorType"], "\Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionHealthCheckErrorType")) {
                 return $this->_propDict["errorType"];
             } else {
                 $this->_propDict["errorType"] = new CloudPcOnPremisesConnectionHealthCheckErrorType($this->_propDict["errorType"]);
@@ -216,7 +216,7 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CloudPcOnPremisesConnectionStatus($this->_propDict["status"]);

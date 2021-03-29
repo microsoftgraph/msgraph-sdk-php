@@ -61,7 +61,7 @@ class WebApplication extends Entity
     public function getImplicitGrantSettings()
     {
         if (array_key_exists("implicitGrantSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["implicitGrantSettings"], "Beta\Microsoft\Graph\Model\ImplicitGrantSettings")) {
+            if (is_a($this->_propDict["implicitGrantSettings"], "\Beta\Microsoft\Graph\Model\ImplicitGrantSettings")) {
                 return $this->_propDict["implicitGrantSettings"];
             } else {
                 $this->_propDict["implicitGrantSettings"] = new ImplicitGrantSettings($this->_propDict["implicitGrantSettings"]);

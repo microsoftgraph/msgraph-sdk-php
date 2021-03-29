@@ -287,7 +287,7 @@ class WorkbookTable extends Entity
     
     /**
     * Gets the style
-    * Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+    * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
     *
     * @return string The style
     */
@@ -302,7 +302,7 @@ class WorkbookTable extends Entity
     
     /**
     * Sets the style
-    * Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+    * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
     *
     * @param string $val The style
     *
@@ -383,7 +383,7 @@ class WorkbookTable extends Entity
     public function getSort()
     {
         if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "Beta\Microsoft\Graph\Model\WorkbookTableSort")) {
+            if (is_a($this->_propDict["sort"], "\Beta\Microsoft\Graph\Model\WorkbookTableSort")) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookTableSort($this->_propDict["sort"]);
@@ -416,7 +416,7 @@ class WorkbookTable extends Entity
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "Beta\Microsoft\Graph\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "\Beta\Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);

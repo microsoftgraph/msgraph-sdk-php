@@ -33,7 +33,7 @@ class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\EasAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\EasAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new EasAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -66,7 +66,7 @@ class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration
     public function getDurationOfEmailToSync()
     {
         if (array_key_exists("durationOfEmailToSync", $this->_propDict)) {
-            if (is_a($this->_propDict["durationOfEmailToSync"], "Beta\Microsoft\Graph\Model\EmailSyncDuration")) {
+            if (is_a($this->_propDict["durationOfEmailToSync"], "\Beta\Microsoft\Graph\Model\EmailSyncDuration")) {
                 return $this->_propDict["durationOfEmailToSync"];
             } else {
                 $this->_propDict["durationOfEmailToSync"] = new EmailSyncDuration($this->_propDict["durationOfEmailToSync"]);
@@ -99,7 +99,7 @@ class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration
     public function getEmailAddressSource()
     {
         if (array_key_exists("emailAddressSource", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddressSource"], "Beta\Microsoft\Graph\Model\UserEmailSource")) {
+            if (is_a($this->_propDict["emailAddressSource"], "\Beta\Microsoft\Graph\Model\UserEmailSource")) {
                 return $this->_propDict["emailAddressSource"];
             } else {
                 $this->_propDict["emailAddressSource"] = new UserEmailSource($this->_propDict["emailAddressSource"]);
@@ -190,7 +190,7 @@ class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration
     public function getUsernameSource()
     {
         if (array_key_exists("usernameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameSource"], "Beta\Microsoft\Graph\Model\AndroidUsernameSource")) {
+            if (is_a($this->_propDict["usernameSource"], "\Beta\Microsoft\Graph\Model\AndroidUsernameSource")) {
                 return $this->_propDict["usernameSource"];
             } else {
                 $this->_propDict["usernameSource"] = new AndroidUsernameSource($this->_propDict["usernameSource"]);
@@ -223,7 +223,7 @@ class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "Beta\Microsoft\Graph\Model\AndroidWorkProfileCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new AndroidWorkProfileCertificateProfileBase($this->_propDict["identityCertificate"]);

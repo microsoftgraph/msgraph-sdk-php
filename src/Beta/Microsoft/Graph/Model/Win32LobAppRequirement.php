@@ -61,7 +61,7 @@ class Win32LobAppRequirement extends Entity
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
+            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new Win32LobAppDetectionOperator($this->_propDict["operator"]);

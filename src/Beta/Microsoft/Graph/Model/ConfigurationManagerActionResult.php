@@ -33,7 +33,7 @@ class ConfigurationManagerActionResult extends DeviceActionResult
     public function getActionDeliveryStatus()
     {
         if (array_key_exists("actionDeliveryStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["actionDeliveryStatus"], "Beta\Microsoft\Graph\Model\ConfigurationManagerActionDeliveryStatus")) {
+            if (is_a($this->_propDict["actionDeliveryStatus"], "\Beta\Microsoft\Graph\Model\ConfigurationManagerActionDeliveryStatus")) {
                 return $this->_propDict["actionDeliveryStatus"];
             } else {
                 $this->_propDict["actionDeliveryStatus"] = new ConfigurationManagerActionDeliveryStatus($this->_propDict["actionDeliveryStatus"]);
