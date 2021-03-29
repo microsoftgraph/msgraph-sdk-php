@@ -412,7 +412,7 @@ class ServicePrincipal extends DirectoryObject
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "Microsoft\Graph\Model\InformationalUrl")) {
+            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\InformationalUrl")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -738,7 +738,7 @@ class ServicePrincipal extends DirectoryObject
     public function getSamlSingleSignOnSettings()
     {
         if (array_key_exists("samlSingleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["samlSingleSignOnSettings"], "Microsoft\Graph\Model\SamlSingleSignOnSettings")) {
+            if (is_a($this->_propDict["samlSingleSignOnSettings"], "\Microsoft\Graph\Model\SamlSingleSignOnSettings")) {
                 return $this->_propDict["samlSingleSignOnSettings"];
             } else {
                 $this->_propDict["samlSingleSignOnSettings"] = new SamlSingleSignOnSettings($this->_propDict["samlSingleSignOnSettings"]);

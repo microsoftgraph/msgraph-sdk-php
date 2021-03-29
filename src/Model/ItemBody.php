@@ -61,7 +61,7 @@ class ItemBody extends Entity
     public function getContentType()
     {
         if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Model\BodyType")) {
+            if (is_a($this->_propDict["contentType"], "\Microsoft\Graph\Model\BodyType")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new BodyType($this->_propDict["contentType"]);

@@ -33,7 +33,7 @@ class ConditionalAccessGrantControls extends Entity
     public function getBuiltInControls()
     {
         if (array_key_exists("builtInControls", $this->_propDict)) {
-            if (is_a($this->_propDict["builtInControls"], "Microsoft\Graph\Model\ConditionalAccessGrantControl")) {
+            if (is_a($this->_propDict["builtInControls"], "\Microsoft\Graph\Model\ConditionalAccessGrantControl")) {
                 return $this->_propDict["builtInControls"];
             } else {
                 $this->_propDict["builtInControls"] = new ConditionalAccessGrantControl($this->_propDict["builtInControls"]);

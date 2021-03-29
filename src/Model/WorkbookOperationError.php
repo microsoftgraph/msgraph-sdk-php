@@ -60,7 +60,7 @@ class WorkbookOperationError extends Entity
     public function getInnerError()
     {
         if (array_key_exists("innerError", $this->_propDict)) {
-            if (is_a($this->_propDict["innerError"], "Microsoft\Graph\Model\WorkbookOperationError")) {
+            if (is_a($this->_propDict["innerError"], "\Microsoft\Graph\Model\WorkbookOperationError")) {
                 return $this->_propDict["innerError"];
             } else {
                 $this->_propDict["innerError"] = new WorkbookOperationError($this->_propDict["innerError"]);
