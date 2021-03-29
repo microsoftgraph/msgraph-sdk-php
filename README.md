@@ -110,7 +110,7 @@ This is especially helpful when the library does not return the results you expe
 ### Run Tests
 
 Run
-```php
+ ```shell
 vendor/bin/phpunit --exclude-group functional
 ```
 from the base directory.
