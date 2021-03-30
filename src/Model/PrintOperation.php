@@ -66,7 +66,7 @@ class PrintOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\PrintOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrintOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrintOperationStatus($this->_propDict["status"]);

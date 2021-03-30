@@ -26,6 +26,7 @@ class ApprovalStage extends Entity
 {
     /**
     * Gets the assignedToMe
+    * Indicates whether the stage is assigned to the calling user to review. Read-only.
     *
     * @return bool The assignedToMe
     */
@@ -40,6 +41,7 @@ class ApprovalStage extends Entity
     
     /**
     * Sets the assignedToMe
+    * Indicates whether the stage is assigned to the calling user to review. Read-only.
     *
     * @param bool $val The assignedToMe
     *
@@ -53,6 +55,7 @@ class ApprovalStage extends Entity
     
     /**
     * Gets the displayName
+    * The label provided by the policy creator to identify an approval stage. Read-only.
     *
     * @return string The displayName
     */
@@ -67,6 +70,7 @@ class ApprovalStage extends Entity
     
     /**
     * Sets the displayName
+    * The label provided by the policy creator to identify an approval stage. Read-only.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class ApprovalStage extends Entity
     
     /**
     * Gets the justification
+    * The justification associated with the approval stage decision.
     *
     * @return string The justification
     */
@@ -94,6 +99,7 @@ class ApprovalStage extends Entity
     
     /**
     * Sets the justification
+    * The justification associated with the approval stage decision.
     *
     * @param string $val The justification
     *
@@ -107,13 +113,14 @@ class ApprovalStage extends Entity
     
     /**
     * Gets the reviewedBy
+    * The identifier of the reviewer. Read-only.
     *
     * @return Identity The reviewedBy
     */
     public function getReviewedBy()
     {
         if (array_key_exists("reviewedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedBy"], "Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["reviewedBy"], "\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["reviewedBy"];
             } else {
                 $this->_propDict["reviewedBy"] = new Identity($this->_propDict["reviewedBy"]);
@@ -125,6 +132,7 @@ class ApprovalStage extends Entity
     
     /**
     * Sets the reviewedBy
+    * The identifier of the reviewer. Read-only.
     *
     * @param Identity $val The reviewedBy
     *
@@ -138,6 +146,7 @@ class ApprovalStage extends Entity
     
     /**
     * Gets the reviewedDateTime
+    * The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The reviewedDateTime
     */
@@ -156,6 +165,7 @@ class ApprovalStage extends Entity
     
     /**
     * Sets the reviewedDateTime
+    * The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The reviewedDateTime
     *
@@ -169,6 +179,7 @@ class ApprovalStage extends Entity
     
     /**
     * Gets the reviewResult
+    * The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
     *
     * @return string The reviewResult
     */
@@ -183,6 +194,7 @@ class ApprovalStage extends Entity
     
     /**
     * Sets the reviewResult
+    * The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
     *
     * @param string $val The reviewResult
     *
@@ -196,6 +208,7 @@ class ApprovalStage extends Entity
     
     /**
     * Gets the status
+    * The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
     *
     * @return string The status
     */
@@ -210,6 +223,7 @@ class ApprovalStage extends Entity
     
     /**
     * Sets the status
+    * The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
     *
     * @param string $val The status
     *

@@ -33,7 +33,7 @@ class WorkbookOperation extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\WorkbookOperationError")) {
+            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\WorkbookOperationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new WorkbookOperationError($this->_propDict["error"]);
@@ -95,7 +95,7 @@ class WorkbookOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\WorkbookOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\WorkbookOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new WorkbookOperationStatus($this->_propDict["status"]);

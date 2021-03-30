@@ -63,7 +63,7 @@ class ChatMessage extends Entity
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -84,6 +84,68 @@ class ChatMessage extends Entity
     public function setBody($val)
     {
         $this->_propDict["body"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the channelIdentity
+    * The identity of the channel in which the message was posted.
+    *
+    * @return ChannelIdentity The channelIdentity
+    */
+    public function getChannelIdentity()
+    {
+        if (array_key_exists("channelIdentity", $this->_propDict)) {
+            if (is_a($this->_propDict["channelIdentity"], "\Microsoft\Graph\Model\ChannelIdentity")) {
+                return $this->_propDict["channelIdentity"];
+            } else {
+                $this->_propDict["channelIdentity"] = new ChannelIdentity($this->_propDict["channelIdentity"]);
+                return $this->_propDict["channelIdentity"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the channelIdentity
+    * The identity of the channel in which the message was posted.
+    *
+    * @param ChannelIdentity $val The channelIdentity
+    *
+    * @return ChatMessage
+    */
+    public function setChannelIdentity($val)
+    {
+        $this->_propDict["channelIdentity"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the chatId
+    * The identity of the chat in which the message was posted.
+    *
+    * @return string The chatId
+    */
+    public function getChatId()
+    {
+        if (array_key_exists("chatId", $this->_propDict)) {
+            return $this->_propDict["chatId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the chatId
+    * The identity of the chat in which the message was posted.
+    *
+    * @param string $val The chatId
+    *
+    * @return ChatMessage
+    */
+    public function setChatId($val)
+    {
+        $this->_propDict["chatId"] = $val;
         return $this;
     }
     
@@ -191,7 +253,7 @@ class ChatMessage extends Entity
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["from"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new IdentitySet($this->_propDict["from"]);
@@ -224,7 +286,7 @@ class ChatMessage extends Entity
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Microsoft\Graph\Model\ChatMessageImportance")) {
+            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\ChatMessageImportance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new ChatMessageImportance($this->_propDict["importance"]);
@@ -382,7 +444,7 @@ class ChatMessage extends Entity
     public function getMessageType()
     {
         if (array_key_exists("messageType", $this->_propDict)) {
-            if (is_a($this->_propDict["messageType"], "Microsoft\Graph\Model\ChatMessageType")) {
+            if (is_a($this->_propDict["messageType"], "\Microsoft\Graph\Model\ChatMessageType")) {
                 return $this->_propDict["messageType"];
             } else {
                 $this->_propDict["messageType"] = new ChatMessageType($this->_propDict["messageType"]);
@@ -415,7 +477,7 @@ class ChatMessage extends Entity
     public function getPolicyViolation()
     {
         if (array_key_exists("policyViolation", $this->_propDict)) {
-            if (is_a($this->_propDict["policyViolation"], "Microsoft\Graph\Model\ChatMessagePolicyViolation")) {
+            if (is_a($this->_propDict["policyViolation"], "\Microsoft\Graph\Model\ChatMessagePolicyViolation")) {
                 return $this->_propDict["policyViolation"];
             } else {
                 $this->_propDict["policyViolation"] = new ChatMessagePolicyViolation($this->_propDict["policyViolation"]);

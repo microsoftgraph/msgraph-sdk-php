@@ -91,7 +91,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     public function getAttestationLevel()
     {
         if (array_key_exists("attestationLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["attestationLevel"], "Microsoft\Graph\Model\AttestationLevel")) {
+            if (is_a($this->_propDict["attestationLevel"], "\Microsoft\Graph\Model\AttestationLevel")) {
                 return $this->_propDict["attestationLevel"];
             } else {
                 $this->_propDict["attestationLevel"] = new AttestationLevel($this->_propDict["attestationLevel"]);

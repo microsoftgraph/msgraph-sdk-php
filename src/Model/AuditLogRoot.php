@@ -56,6 +56,34 @@ class AuditLogRoot extends Entity
     
 
      /** 
+     * Gets the provisioning
+     *
+     * @return array The provisioning
+     */
+    public function getProvisioning()
+    {
+        if (array_key_exists("provisioning", $this->_propDict)) {
+           return $this->_propDict["provisioning"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the provisioning
+    *
+    * @param ProvisioningObjectSummary $val The provisioning
+    *
+    * @return AuditLogRoot
+    */
+    public function setProvisioning($val)
+    {
+		$this->_propDict["provisioning"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the restrictedSignIns
      *
      * @return array The restrictedSignIns

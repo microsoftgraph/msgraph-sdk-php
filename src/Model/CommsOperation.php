@@ -62,7 +62,7 @@ class CommsOperation extends Entity
     public function getResultInfo()
     {
         if (array_key_exists("resultInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["resultInfo"], "Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["resultInfo"], "\Microsoft\Graph\Model\ResultInfo")) {
                 return $this->_propDict["resultInfo"];
             } else {
                 $this->_propDict["resultInfo"] = new ResultInfo($this->_propDict["resultInfo"]);
@@ -95,7 +95,7 @@ class CommsOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);

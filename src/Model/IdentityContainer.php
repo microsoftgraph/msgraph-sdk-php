@@ -32,7 +32,7 @@ class IdentityContainer extends Entity
     public function getConditionalAccess()
     {
         if (array_key_exists("conditionalAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccess"], "Microsoft\Graph\Model\ConditionalAccessRoot")) {
+            if (is_a($this->_propDict["conditionalAccess"], "\Microsoft\Graph\Model\ConditionalAccessRoot")) {
                 return $this->_propDict["conditionalAccess"];
             } else {
                 $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);

@@ -272,7 +272,7 @@ class ComplianceManagementPartner extends Entity
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
+            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);

@@ -33,7 +33,7 @@ class TermsExpiration extends Entity
     public function getFrequency()
     {
         if (array_key_exists("frequency", $this->_propDict)) {
-            if (is_a($this->_propDict["frequency"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["frequency"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["frequency"];
             } else {
                 $this->_propDict["frequency"] = new Duration($this->_propDict["frequency"]);
