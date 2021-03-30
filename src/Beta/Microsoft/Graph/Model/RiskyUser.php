@@ -84,14 +84,14 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskDetail
-    * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
     *
     * @return RiskDetail The riskDetail
     */
     public function getRiskDetail()
     {
         if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
+            if (is_a($this->_propDict["riskDetail"], "\Beta\Microsoft\Graph\Model\RiskDetail")) {
                 return $this->_propDict["riskDetail"];
             } else {
                 $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
@@ -103,7 +103,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskDetail
-    * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
     *
     * @param RiskDetail $val The riskDetail
     *
@@ -150,14 +150,14 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskLevel
-    * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
     *
     * @return RiskLevel The riskLevel
     */
     public function getRiskLevel()
     {
         if (array_key_exists("riskLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevel"], "Beta\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevel"], "\Beta\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["riskLevel"];
             } else {
                 $this->_propDict["riskLevel"] = new RiskLevel($this->_propDict["riskLevel"]);
@@ -169,7 +169,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskLevel
-    * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
     *
     * @param RiskLevel $val The riskLevel
     *
@@ -190,7 +190,7 @@ class RiskyUser extends Entity
     public function getRiskState()
     {
         if (array_key_exists("riskState", $this->_propDict)) {
-            if (is_a($this->_propDict["riskState"], "Beta\Microsoft\Graph\Model\RiskState")) {
+            if (is_a($this->_propDict["riskState"], "\Beta\Microsoft\Graph\Model\RiskState")) {
                 return $this->_propDict["riskState"];
             } else {
                 $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);

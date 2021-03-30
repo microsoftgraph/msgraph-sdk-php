@@ -153,7 +153,7 @@ class WindowsQualityUpdateProfile extends Entity
     public function getExpeditedUpdateSettings()
     {
         if (array_key_exists("expeditedUpdateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["expeditedUpdateSettings"], "Beta\Microsoft\Graph\Model\ExpeditedWindowsQualityUpdateSettings")) {
+            if (is_a($this->_propDict["expeditedUpdateSettings"], "\Beta\Microsoft\Graph\Model\ExpeditedWindowsQualityUpdateSettings")) {
                 return $this->_propDict["expeditedUpdateSettings"];
             } else {
                 $this->_propDict["expeditedUpdateSettings"] = new ExpeditedWindowsQualityUpdateSettings($this->_propDict["expeditedUpdateSettings"]);

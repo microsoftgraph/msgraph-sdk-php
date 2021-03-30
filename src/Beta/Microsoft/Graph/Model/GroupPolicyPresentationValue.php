@@ -99,7 +99,7 @@ class GroupPolicyPresentationValue extends Entity
     public function getDefinitionValue()
     {
         if (array_key_exists("definitionValue", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionValue"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionValue")) {
+            if (is_a($this->_propDict["definitionValue"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionValue")) {
                 return $this->_propDict["definitionValue"];
             } else {
                 $this->_propDict["definitionValue"] = new GroupPolicyDefinitionValue($this->_propDict["definitionValue"]);
@@ -132,7 +132,7 @@ class GroupPolicyPresentationValue extends Entity
     public function getPresentation()
     {
         if (array_key_exists("presentation", $this->_propDict)) {
-            if (is_a($this->_propDict["presentation"], "Beta\Microsoft\Graph\Model\GroupPolicyPresentation")) {
+            if (is_a($this->_propDict["presentation"], "\Beta\Microsoft\Graph\Model\GroupPolicyPresentation")) {
                 return $this->_propDict["presentation"];
             } else {
                 $this->_propDict["presentation"] = new GroupPolicyPresentation($this->_propDict["presentation"]);

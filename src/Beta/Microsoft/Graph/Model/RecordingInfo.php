@@ -33,7 +33,7 @@ class RecordingInfo extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "Beta\Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["initiatedBy"], "\Beta\Microsoft\Graph\Model\ParticipantInfo")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new ParticipantInfo($this->_propDict["initiatedBy"]);
@@ -59,14 +59,14 @@ class RecordingInfo extends Entity
 
     /**
     * Gets the initiator
-    * The identities of recording initiator.
+    * The identities of the recording initiator.
     *
     * @return IdentitySet The initiator
     */
     public function getInitiator()
     {
         if (array_key_exists("initiator", $this->_propDict)) {
-            if (is_a($this->_propDict["initiator"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["initiator"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["initiator"];
             } else {
                 $this->_propDict["initiator"] = new IdentitySet($this->_propDict["initiator"]);
@@ -78,7 +78,7 @@ class RecordingInfo extends Entity
 
     /**
     * Sets the initiator
-    * The identities of recording initiator.
+    * The identities of the recording initiator.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -99,7 +99,7 @@ class RecordingInfo extends Entity
     public function getRecordingStatus()
     {
         if (array_key_exists("recordingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["recordingStatus"], "Beta\Microsoft\Graph\Model\RecordingStatus")) {
+            if (is_a($this->_propDict["recordingStatus"], "\Beta\Microsoft\Graph\Model\RecordingStatus")) {
                 return $this->_propDict["recordingStatus"];
             } else {
                 $this->_propDict["recordingStatus"] = new RecordingStatus($this->_propDict["recordingStatus"]);

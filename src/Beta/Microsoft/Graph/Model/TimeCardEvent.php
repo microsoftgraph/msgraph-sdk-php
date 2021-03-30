@@ -89,7 +89,7 @@ class TimeCardEvent extends Entity
     public function getNotes()
     {
         if (array_key_exists("notes", $this->_propDict)) {
-            if (is_a($this->_propDict["notes"], "Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["notes"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["notes"];
             } else {
                 $this->_propDict["notes"] = new ItemBody($this->_propDict["notes"]);

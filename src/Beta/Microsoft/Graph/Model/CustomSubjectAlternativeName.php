@@ -61,7 +61,7 @@ class CustomSubjectAlternativeName extends Entity
     public function getSanType()
     {
         if (array_key_exists("sanType", $this->_propDict)) {
-            if (is_a($this->_propDict["sanType"], "Beta\Microsoft\Graph\Model\SubjectAlternativeNameType")) {
+            if (is_a($this->_propDict["sanType"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["sanType"];
             } else {
                 $this->_propDict["sanType"] = new SubjectAlternativeNameType($this->_propDict["sanType"]);

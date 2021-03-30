@@ -33,7 +33,7 @@ class InvitationParticipantInfo extends Entity
     public function getEndpointType()
     {
         if (array_key_exists("endpointType", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointType"], "Beta\Microsoft\Graph\Model\EndpointType")) {
+            if (is_a($this->_propDict["endpointType"], "\Beta\Microsoft\Graph\Model\EndpointType")) {
                 return $this->_propDict["endpointType"];
             } else {
                 $this->_propDict["endpointType"] = new EndpointType($this->_propDict["endpointType"]);
@@ -66,7 +66,7 @@ class InvitationParticipantInfo extends Entity
     public function getIdentity()
     {
         if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["identity"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["identity"];
             } else {
                 $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
@@ -91,7 +91,7 @@ class InvitationParticipantInfo extends Entity
     }
     /**
     * Gets the replacesCallId
-    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
     *
     * @return string The replacesCallId
     */
@@ -106,7 +106,7 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the replacesCallId
-    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
     *
     * @param string $val The value of the replacesCallId
     *

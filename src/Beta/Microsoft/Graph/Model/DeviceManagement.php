@@ -186,7 +186,7 @@ class DeviceManagement extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\DeviceManagementSettings")) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\DeviceManagementSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new DeviceManagementSettings($this->_propDict["settings"]);
@@ -248,7 +248,7 @@ class DeviceManagement extends Entity
     public function getIntuneBrand()
     {
         if (array_key_exists("intuneBrand", $this->_propDict)) {
-            if (is_a($this->_propDict["intuneBrand"], "Beta\Microsoft\Graph\Model\IntuneBrand")) {
+            if (is_a($this->_propDict["intuneBrand"], "\Beta\Microsoft\Graph\Model\IntuneBrand")) {
                 return $this->_propDict["intuneBrand"];
             } else {
                 $this->_propDict["intuneBrand"] = new IntuneBrand($this->_propDict["intuneBrand"]);
@@ -314,7 +314,7 @@ class DeviceManagement extends Entity
     public function getAdminConsent()
     {
         if (array_key_exists("adminConsent", $this->_propDict)) {
-            if (is_a($this->_propDict["adminConsent"], "Beta\Microsoft\Graph\Model\AdminConsent")) {
+            if (is_a($this->_propDict["adminConsent"], "\Beta\Microsoft\Graph\Model\AdminConsent")) {
                 return $this->_propDict["adminConsent"];
             } else {
                 $this->_propDict["adminConsent"] = new AdminConsent($this->_propDict["adminConsent"]);
@@ -347,7 +347,7 @@ class DeviceManagement extends Entity
     public function getDeviceProtectionOverview()
     {
         if (array_key_exists("deviceProtectionOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceProtectionOverview"], "Beta\Microsoft\Graph\Model\DeviceProtectionOverview")) {
+            if (is_a($this->_propDict["deviceProtectionOverview"], "\Beta\Microsoft\Graph\Model\DeviceProtectionOverview")) {
                 return $this->_propDict["deviceProtectionOverview"];
             } else {
                 $this->_propDict["deviceProtectionOverview"] = new DeviceProtectionOverview($this->_propDict["deviceProtectionOverview"]);
@@ -380,7 +380,7 @@ class DeviceManagement extends Entity
     public function getManagedDeviceCleanupSettings()
     {
         if (array_key_exists("managedDeviceCleanupSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceCleanupSettings"], "Beta\Microsoft\Graph\Model\ManagedDeviceCleanupSettings")) {
+            if (is_a($this->_propDict["managedDeviceCleanupSettings"], "\Beta\Microsoft\Graph\Model\ManagedDeviceCleanupSettings")) {
                 return $this->_propDict["managedDeviceCleanupSettings"];
             } else {
                 $this->_propDict["managedDeviceCleanupSettings"] = new ManagedDeviceCleanupSettings($this->_propDict["managedDeviceCleanupSettings"]);
@@ -413,7 +413,7 @@ class DeviceManagement extends Entity
     public function getSubscriptions()
     {
         if (array_key_exists("subscriptions", $this->_propDict)) {
-            if (is_a($this->_propDict["subscriptions"], "Beta\Microsoft\Graph\Model\DeviceManagementSubscriptions")) {
+            if (is_a($this->_propDict["subscriptions"], "\Beta\Microsoft\Graph\Model\DeviceManagementSubscriptions")) {
                 return $this->_propDict["subscriptions"];
             } else {
                 $this->_propDict["subscriptions"] = new DeviceManagementSubscriptions($this->_propDict["subscriptions"]);
@@ -439,14 +439,14 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the subscriptionState
-    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @return DeviceManagementSubscriptionState The subscriptionState
     */
     public function getSubscriptionState()
     {
         if (array_key_exists("subscriptionState", $this->_propDict)) {
-            if (is_a($this->_propDict["subscriptionState"], "Beta\Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
+            if (is_a($this->_propDict["subscriptionState"], "\Beta\Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
                 return $this->_propDict["subscriptionState"];
             } else {
                 $this->_propDict["subscriptionState"] = new DeviceManagementSubscriptionState($this->_propDict["subscriptionState"]);
@@ -458,7 +458,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the subscriptionState
-    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @param DeviceManagementSubscriptionState $val The subscriptionState
     *
@@ -479,7 +479,7 @@ class DeviceManagement extends Entity
     public function getUserExperienceAnalyticsSettings()
     {
         if (array_key_exists("userExperienceAnalyticsSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsSettings"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsSettings")) {
+            if (is_a($this->_propDict["userExperienceAnalyticsSettings"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsSettings")) {
                 return $this->_propDict["userExperienceAnalyticsSettings"];
             } else {
                 $this->_propDict["userExperienceAnalyticsSettings"] = new UserExperienceAnalyticsSettings($this->_propDict["userExperienceAnalyticsSettings"]);
@@ -512,7 +512,7 @@ class DeviceManagement extends Entity
     public function getWindowsMalwareOverview()
     {
         if (array_key_exists("windowsMalwareOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsMalwareOverview"], "Beta\Microsoft\Graph\Model\WindowsMalwareOverview")) {
+            if (is_a($this->_propDict["windowsMalwareOverview"], "\Beta\Microsoft\Graph\Model\WindowsMalwareOverview")) {
                 return $this->_propDict["windowsMalwareOverview"];
             } else {
                 $this->_propDict["windowsMalwareOverview"] = new WindowsMalwareOverview($this->_propDict["windowsMalwareOverview"]);
@@ -574,7 +574,7 @@ class DeviceManagement extends Entity
     public function getVirtualEndpoint()
     {
         if (array_key_exists("virtualEndpoint", $this->_propDict)) {
-            if (is_a($this->_propDict["virtualEndpoint"], "Beta\Microsoft\Graph\Model\VirtualEndpoint")) {
+            if (is_a($this->_propDict["virtualEndpoint"], "\Beta\Microsoft\Graph\Model\VirtualEndpoint")) {
                 return $this->_propDict["virtualEndpoint"];
             } else {
                 $this->_propDict["virtualEndpoint"] = new VirtualEndpoint($this->_propDict["virtualEndpoint"]);
@@ -666,7 +666,7 @@ class DeviceManagement extends Entity
     public function getAndroidForWorkSettings()
     {
         if (array_key_exists("androidForWorkSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["androidForWorkSettings"], "Beta\Microsoft\Graph\Model\AndroidForWorkSettings")) {
+            if (is_a($this->_propDict["androidForWorkSettings"], "\Beta\Microsoft\Graph\Model\AndroidForWorkSettings")) {
                 return $this->_propDict["androidForWorkSettings"];
             } else {
                 $this->_propDict["androidForWorkSettings"] = new AndroidForWorkSettings($this->_propDict["androidForWorkSettings"]);
@@ -699,7 +699,7 @@ class DeviceManagement extends Entity
     public function getAndroidManagedStoreAccountEnterpriseSettings()
     {
         if (array_key_exists("androidManagedStoreAccountEnterpriseSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["androidManagedStoreAccountEnterpriseSettings"], "Beta\Microsoft\Graph\Model\AndroidManagedStoreAccountEnterpriseSettings")) {
+            if (is_a($this->_propDict["androidManagedStoreAccountEnterpriseSettings"], "\Beta\Microsoft\Graph\Model\AndroidManagedStoreAccountEnterpriseSettings")) {
                 return $this->_propDict["androidManagedStoreAccountEnterpriseSettings"];
             } else {
                 $this->_propDict["androidManagedStoreAccountEnterpriseSettings"] = new AndroidManagedStoreAccountEnterpriseSettings($this->_propDict["androidManagedStoreAccountEnterpriseSettings"]);
@@ -852,7 +852,7 @@ class DeviceManagement extends Entity
     public function getAdvancedThreatProtectionOnboardingStateSummary()
     {
         if (array_key_exists("advancedThreatProtectionOnboardingStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionOnboardingStateSummary"], "Beta\Microsoft\Graph\Model\AdvancedThreatProtectionOnboardingStateSummary")) {
+            if (is_a($this->_propDict["advancedThreatProtectionOnboardingStateSummary"], "\Beta\Microsoft\Graph\Model\AdvancedThreatProtectionOnboardingStateSummary")) {
                 return $this->_propDict["advancedThreatProtectionOnboardingStateSummary"];
             } else {
                 $this->_propDict["advancedThreatProtectionOnboardingStateSummary"] = new AdvancedThreatProtectionOnboardingStateSummary($this->_propDict["advancedThreatProtectionOnboardingStateSummary"]);
@@ -945,7 +945,7 @@ class DeviceManagement extends Entity
     public function getDeviceCompliancePolicyDeviceStateSummary()
     {
         if (array_key_exists("deviceCompliancePolicyDeviceStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCompliancePolicyDeviceStateSummary"], "Beta\Microsoft\Graph\Model\DeviceCompliancePolicyDeviceStateSummary")) {
+            if (is_a($this->_propDict["deviceCompliancePolicyDeviceStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceCompliancePolicyDeviceStateSummary")) {
                 return $this->_propDict["deviceCompliancePolicyDeviceStateSummary"];
             } else {
                 $this->_propDict["deviceCompliancePolicyDeviceStateSummary"] = new DeviceCompliancePolicyDeviceStateSummary($this->_propDict["deviceCompliancePolicyDeviceStateSummary"]);
@@ -1038,7 +1038,7 @@ class DeviceManagement extends Entity
     public function getDeviceConfigurationDeviceStateSummaries()
     {
         if (array_key_exists("deviceConfigurationDeviceStateSummaries", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceConfigurationDeviceStateSummaries"], "Beta\Microsoft\Graph\Model\DeviceConfigurationDeviceStateSummary")) {
+            if (is_a($this->_propDict["deviceConfigurationDeviceStateSummaries"], "\Beta\Microsoft\Graph\Model\DeviceConfigurationDeviceStateSummary")) {
                 return $this->_propDict["deviceConfigurationDeviceStateSummaries"];
             } else {
                 $this->_propDict["deviceConfigurationDeviceStateSummaries"] = new DeviceConfigurationDeviceStateSummary($this->_propDict["deviceConfigurationDeviceStateSummaries"]);
@@ -1161,7 +1161,7 @@ class DeviceManagement extends Entity
     public function getDeviceConfigurationUserStateSummaries()
     {
         if (array_key_exists("deviceConfigurationUserStateSummaries", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceConfigurationUserStateSummaries"], "Beta\Microsoft\Graph\Model\DeviceConfigurationUserStateSummary")) {
+            if (is_a($this->_propDict["deviceConfigurationUserStateSummaries"], "\Beta\Microsoft\Graph\Model\DeviceConfigurationUserStateSummary")) {
                 return $this->_propDict["deviceConfigurationUserStateSummaries"];
             } else {
                 $this->_propDict["deviceConfigurationUserStateSummaries"] = new DeviceConfigurationUserStateSummary($this->_propDict["deviceConfigurationUserStateSummaries"]);
@@ -1314,7 +1314,7 @@ class DeviceManagement extends Entity
     public function getSoftwareUpdateStatusSummary()
     {
         if (array_key_exists("softwareUpdateStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "Beta\Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
+            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "\Beta\Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
                 return $this->_propDict["softwareUpdateStatusSummary"];
             } else {
                 $this->_propDict["softwareUpdateStatusSummary"] = new SoftwareUpdateStatusSummary($this->_propDict["softwareUpdateStatusSummary"]);
@@ -1467,7 +1467,7 @@ class DeviceManagement extends Entity
     public function getConditionalAccessSettings()
     {
         if (array_key_exists("conditionalAccessSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessSettings"], "Beta\Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
+            if (is_a($this->_propDict["conditionalAccessSettings"], "\Beta\Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
                 return $this->_propDict["conditionalAccessSettings"];
             } else {
                 $this->_propDict["conditionalAccessSettings"] = new OnPremisesConditionalAccessSettings($this->_propDict["conditionalAccessSettings"]);
@@ -1650,7 +1650,7 @@ class DeviceManagement extends Entity
     public function getExchangeOnPremisesPolicy()
     {
         if (array_key_exists("exchangeOnPremisesPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeOnPremisesPolicy"], "Beta\Microsoft\Graph\Model\DeviceManagementExchangeOnPremisesPolicy")) {
+            if (is_a($this->_propDict["exchangeOnPremisesPolicy"], "\Beta\Microsoft\Graph\Model\DeviceManagementExchangeOnPremisesPolicy")) {
                 return $this->_propDict["exchangeOnPremisesPolicy"];
             } else {
                 $this->_propDict["exchangeOnPremisesPolicy"] = new DeviceManagementExchangeOnPremisesPolicy($this->_propDict["exchangeOnPremisesPolicy"]);
@@ -1833,7 +1833,7 @@ class DeviceManagement extends Entity
     public function getApplePushNotificationCertificate()
     {
         if (array_key_exists("applePushNotificationCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["applePushNotificationCertificate"], "Beta\Microsoft\Graph\Model\ApplePushNotificationCertificate")) {
+            if (is_a($this->_propDict["applePushNotificationCertificate"], "\Beta\Microsoft\Graph\Model\ApplePushNotificationCertificate")) {
                 return $this->_propDict["applePushNotificationCertificate"];
             } else {
                 $this->_propDict["applePushNotificationCertificate"] = new ApplePushNotificationCertificate($this->_propDict["applePushNotificationCertificate"]);
@@ -2136,7 +2136,7 @@ class DeviceManagement extends Entity
     public function getManagedDeviceOverview()
     {
         if (array_key_exists("managedDeviceOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceOverview"], "Beta\Microsoft\Graph\Model\ManagedDeviceOverview")) {
+            if (is_a($this->_propDict["managedDeviceOverview"], "\Beta\Microsoft\Graph\Model\ManagedDeviceOverview")) {
                 return $this->_propDict["managedDeviceOverview"];
             } else {
                 $this->_propDict["managedDeviceOverview"] = new ManagedDeviceOverview($this->_propDict["managedDeviceOverview"]);
@@ -2469,7 +2469,7 @@ class DeviceManagement extends Entity
     public function getUserExperienceAnalyticsAppHealthOverview()
     {
         if (array_key_exists("userExperienceAnalyticsAppHealthOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsAppHealthOverview"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
+            if (is_a($this->_propDict["userExperienceAnalyticsAppHealthOverview"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
                 return $this->_propDict["userExperienceAnalyticsAppHealthOverview"];
             } else {
                 $this->_propDict["userExperienceAnalyticsAppHealthOverview"] = new UserExperienceAnalyticsCategory($this->_propDict["userExperienceAnalyticsAppHealthOverview"]);
@@ -2832,7 +2832,7 @@ class DeviceManagement extends Entity
     public function getUserExperienceAnalyticsOverview()
     {
         if (array_key_exists("userExperienceAnalyticsOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsOverview"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOverview")) {
+            if (is_a($this->_propDict["userExperienceAnalyticsOverview"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOverview")) {
                 return $this->_propDict["userExperienceAnalyticsOverview"];
             } else {
                 $this->_propDict["userExperienceAnalyticsOverview"] = new UserExperienceAnalyticsOverview($this->_propDict["userExperienceAnalyticsOverview"]);
@@ -2865,7 +2865,7 @@ class DeviceManagement extends Entity
     public function getUserExperienceAnalyticsRegressionSummary()
     {
         if (array_key_exists("userExperienceAnalyticsRegressionSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsRegressionSummary"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsRegressionSummary")) {
+            if (is_a($this->_propDict["userExperienceAnalyticsRegressionSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsRegressionSummary")) {
                 return $this->_propDict["userExperienceAnalyticsRegressionSummary"];
             } else {
                 $this->_propDict["userExperienceAnalyticsRegressionSummary"] = new UserExperienceAnalyticsRegressionSummary($this->_propDict["userExperienceAnalyticsRegressionSummary"]);
@@ -3258,7 +3258,7 @@ class DeviceManagement extends Entity
     public function getWindowsAutopilotSettings()
     {
         if (array_key_exists("windowsAutopilotSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsAutopilotSettings"], "Beta\Microsoft\Graph\Model\WindowsAutopilotSettings")) {
+            if (is_a($this->_propDict["windowsAutopilotSettings"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotSettings")) {
                 return $this->_propDict["windowsAutopilotSettings"];
             } else {
                 $this->_propDict["windowsAutopilotSettings"] = new WindowsAutopilotSettings($this->_propDict["windowsAutopilotSettings"]);
@@ -3921,7 +3921,7 @@ class DeviceManagement extends Entity
     public function getReports()
     {
         if (array_key_exists("reports", $this->_propDict)) {
-            if (is_a($this->_propDict["reports"], "Beta\Microsoft\Graph\Model\DeviceManagementReports")) {
+            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\DeviceManagementReports")) {
                 return $this->_propDict["reports"];
             } else {
                 $this->_propDict["reports"] = new DeviceManagementReports($this->_propDict["reports"]);

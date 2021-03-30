@@ -33,7 +33,7 @@ class Participant extends Entity
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "Beta\Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["info"], "\Beta\Microsoft\Graph\Model\ParticipantInfo")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new ParticipantInfo($this->_propDict["info"]);
@@ -176,14 +176,14 @@ class Participant extends Entity
     
     /**
     * Gets the recordingInfo
-    * Information on whether the participant has recording capability.
+    * Information about whether the participant has recording capability.
     *
     * @return RecordingInfo The recordingInfo
     */
     public function getRecordingInfo()
     {
         if (array_key_exists("recordingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["recordingInfo"], "Beta\Microsoft\Graph\Model\RecordingInfo")) {
+            if (is_a($this->_propDict["recordingInfo"], "\Beta\Microsoft\Graph\Model\RecordingInfo")) {
                 return $this->_propDict["recordingInfo"];
             } else {
                 $this->_propDict["recordingInfo"] = new RecordingInfo($this->_propDict["recordingInfo"]);
@@ -195,7 +195,7 @@ class Participant extends Entity
     
     /**
     * Sets the recordingInfo
-    * Information on whether the participant has recording capability.
+    * Information about whether the participant has recording capability.
     *
     * @param RecordingInfo $val The recordingInfo
     *

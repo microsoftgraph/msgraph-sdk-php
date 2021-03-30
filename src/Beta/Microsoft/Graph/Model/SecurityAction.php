@@ -213,7 +213,7 @@ class SecurityAction extends Entity
     public function getErrorInfo()
     {
         if (array_key_exists("errorInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["errorInfo"], "Beta\Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["errorInfo"], "\Beta\Microsoft\Graph\Model\ResultInfo")) {
                 return $this->_propDict["errorInfo"];
             } else {
                 $this->_propDict["errorInfo"] = new ResultInfo($this->_propDict["errorInfo"]);
@@ -368,7 +368,7 @@ class SecurityAction extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -430,7 +430,7 @@ class SecurityAction extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

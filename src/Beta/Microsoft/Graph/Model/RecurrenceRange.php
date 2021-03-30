@@ -148,14 +148,14 @@ class RecurrenceRange extends Entity
 
     /**
     * Gets the type
-    * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+    * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
     *
     * @return RecurrenceRangeType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\RecurrenceRangeType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\RecurrenceRangeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new RecurrenceRangeType($this->_propDict["type"]);
@@ -167,7 +167,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Sets the type
-    * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+    * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
     *
     * @param RecurrenceRangeType $val The value to assign to the type
     *

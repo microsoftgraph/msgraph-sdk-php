@@ -92,14 +92,14 @@ class Operation extends Entity
     
     /**
     * Gets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
+    * The current status of the operation: notStarted, running, completed, failed
     *
     * @return OperationStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -111,7 +111,7 @@ class Operation extends Entity
     
     /**
     * Sets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
+    * The current status of the operation: notStarted, running, completed, failed
     *
     * @param OperationStatus $val The status
     *

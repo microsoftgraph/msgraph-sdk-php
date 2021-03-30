@@ -33,7 +33,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     public function getAutopilotDevicesSummary()
     {
         if (array_key_exists("autopilotDevicesSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["autopilotDevicesSummary"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsAutopilotDevicesSummary")) {
+            if (is_a($this->_propDict["autopilotDevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsAutopilotDevicesSummary")) {
                 return $this->_propDict["autopilotDevicesSummary"];
             } else {
                 $this->_propDict["autopilotDevicesSummary"] = new UserExperienceAnalyticsAutopilotDevicesSummary($this->_propDict["autopilotDevicesSummary"]);
@@ -66,7 +66,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     public function getCloudManagementDevicesSummary()
     {
         if (array_key_exists("cloudManagementDevicesSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["cloudManagementDevicesSummary"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCloudManagementDevicesSummary")) {
+            if (is_a($this->_propDict["cloudManagementDevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCloudManagementDevicesSummary")) {
                 return $this->_propDict["cloudManagementDevicesSummary"];
             } else {
                 $this->_propDict["cloudManagementDevicesSummary"] = new UserExperienceAnalyticsCloudManagementDevicesSummary($this->_propDict["cloudManagementDevicesSummary"]);
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     public function getWindows10DevicesSummary()
     {
         if (array_key_exists("windows10DevicesSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["windows10DevicesSummary"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsWindows10DevicesSummary")) {
+            if (is_a($this->_propDict["windows10DevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsWindows10DevicesSummary")) {
                 return $this->_propDict["windows10DevicesSummary"];
             } else {
                 $this->_propDict["windows10DevicesSummary"] = new UserExperienceAnalyticsWindows10DevicesSummary($this->_propDict["windows10DevicesSummary"]);

@@ -61,7 +61,7 @@ class RequestorSettings extends Entity
     public function getAllowedRequestors()
     {
         if (array_key_exists("allowedRequestors", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedRequestors"], "Beta\Microsoft\Graph\Model\UserSet")) {
+            if (is_a($this->_propDict["allowedRequestors"], "\Beta\Microsoft\Graph\Model\UserSet")) {
                 return $this->_propDict["allowedRequestors"];
             } else {
                 $this->_propDict["allowedRequestors"] = new UserSet($this->_propDict["allowedRequestors"]);

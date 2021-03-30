@@ -32,7 +32,7 @@ class OnlineMeeting extends Entity
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "Beta\Microsoft\Graph\Model\AccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "\Beta\Microsoft\Graph\Model\AccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new AccessLevel($this->_propDict["accessLevel"]);
@@ -57,14 +57,14 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the allowedPresenters
-    * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @return OnlineMeetingPresenters The allowedPresenters
     */
     public function getAllowedPresenters()
     {
         if (array_key_exists("allowedPresenters", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedPresenters"], "Beta\Microsoft\Graph\Model\OnlineMeetingPresenters")) {
+            if (is_a($this->_propDict["allowedPresenters"], "\Beta\Microsoft\Graph\Model\OnlineMeetingPresenters")) {
                 return $this->_propDict["allowedPresenters"];
             } else {
                 $this->_propDict["allowedPresenters"] = new OnlineMeetingPresenters($this->_propDict["allowedPresenters"]);
@@ -76,7 +76,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the allowedPresenters
-    * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @param OnlineMeetingPresenters $val The allowedPresenters
     *
@@ -163,7 +163,7 @@ class OnlineMeeting extends Entity
     public function getAudioConferencing()
     {
         if (array_key_exists("audioConferencing", $this->_propDict)) {
-            if (is_a($this->_propDict["audioConferencing"], "Beta\Microsoft\Graph\Model\AudioConferencing")) {
+            if (is_a($this->_propDict["audioConferencing"], "\Beta\Microsoft\Graph\Model\AudioConferencing")) {
                 return $this->_propDict["audioConferencing"];
             } else {
                 $this->_propDict["audioConferencing"] = new AudioConferencing($this->_propDict["audioConferencing"]);
@@ -196,7 +196,7 @@ class OnlineMeeting extends Entity
     public function getBroadcastSettings()
     {
         if (array_key_exists("broadcastSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["broadcastSettings"], "Beta\Microsoft\Graph\Model\BroadcastMeetingSettings")) {
+            if (is_a($this->_propDict["broadcastSettings"], "\Beta\Microsoft\Graph\Model\BroadcastMeetingSettings")) {
                 return $this->_propDict["broadcastSettings"];
             } else {
                 $this->_propDict["broadcastSettings"] = new BroadcastMeetingSettings($this->_propDict["broadcastSettings"]);
@@ -290,7 +290,7 @@ class OnlineMeeting extends Entity
     public function getChatInfo()
     {
         if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "Beta\Microsoft\Graph\Model\ChatInfo")) {
+            if (is_a($this->_propDict["chatInfo"], "\Beta\Microsoft\Graph\Model\ChatInfo")) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -554,14 +554,14 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @return ItemBody The joinInformation
     */
     public function getJoinInformation()
     {
         if (array_key_exists("joinInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["joinInformation"], "Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["joinInformation"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["joinInformation"];
             } else {
                 $this->_propDict["joinInformation"] = new ItemBody($this->_propDict["joinInformation"]);
@@ -573,7 +573,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @param ItemBody $val The joinInformation
     *
@@ -614,14 +614,14 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @return LobbyBypassSettings The lobbyBypassSettings
     */
     public function getLobbyBypassSettings()
     {
         if (array_key_exists("lobbyBypassSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["lobbyBypassSettings"], "Beta\Microsoft\Graph\Model\LobbyBypassSettings")) {
+            if (is_a($this->_propDict["lobbyBypassSettings"], "\Beta\Microsoft\Graph\Model\LobbyBypassSettings")) {
                 return $this->_propDict["lobbyBypassSettings"];
             } else {
                 $this->_propDict["lobbyBypassSettings"] = new LobbyBypassSettings($this->_propDict["lobbyBypassSettings"]);
@@ -633,7 +633,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @param LobbyBypassSettings $val The lobbyBypassSettings
     *
@@ -654,7 +654,7 @@ class OnlineMeeting extends Entity
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "Beta\Microsoft\Graph\Model\MeetingParticipants")) {
+            if (is_a($this->_propDict["participants"], "\Beta\Microsoft\Graph\Model\MeetingParticipants")) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new MeetingParticipants($this->_propDict["participants"]);

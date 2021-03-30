@@ -32,7 +32,7 @@ class ItemAnalytics extends Entity
     public function getAllTime()
     {
         if (array_key_exists("allTime", $this->_propDict)) {
-            if (is_a($this->_propDict["allTime"], "Beta\Microsoft\Graph\Model\ItemActivityStat")) {
+            if (is_a($this->_propDict["allTime"], "\Beta\Microsoft\Graph\Model\ItemActivityStat")) {
                 return $this->_propDict["allTime"];
             } else {
                 $this->_propDict["allTime"] = new ItemActivityStat($this->_propDict["allTime"]);
@@ -91,7 +91,7 @@ class ItemAnalytics extends Entity
     public function getLastSevenDays()
     {
         if (array_key_exists("lastSevenDays", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSevenDays"], "Beta\Microsoft\Graph\Model\ItemActivityStat")) {
+            if (is_a($this->_propDict["lastSevenDays"], "\Beta\Microsoft\Graph\Model\ItemActivityStat")) {
                 return $this->_propDict["lastSevenDays"];
             } else {
                 $this->_propDict["lastSevenDays"] = new ItemActivityStat($this->_propDict["lastSevenDays"]);

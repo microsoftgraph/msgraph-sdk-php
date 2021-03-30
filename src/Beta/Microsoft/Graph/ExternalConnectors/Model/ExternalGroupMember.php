@@ -32,7 +32,7 @@ class ExternalGroupMember extends \Beta\Microsoft\Graph\Model\Entity
     public function getIdentitySource()
     {
         if (array_key_exists("identitySource", $this->_propDict)) {
-            if (is_a($this->_propDict["identitySource"], "Beta\Microsoft\Graph\ExternalConnectors\Model\IdentitySourceType")) {
+            if (is_a($this->_propDict["identitySource"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\IdentitySourceType")) {
                 return $this->_propDict["identitySource"];
             } else {
                 $this->_propDict["identitySource"] = new IdentitySourceType($this->_propDict["identitySource"]);
@@ -63,7 +63,7 @@ class ExternalGroupMember extends \Beta\Microsoft\Graph\Model\Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalGroupMemberType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalGroupMemberType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new ExternalGroupMemberType($this->_propDict["type"]);

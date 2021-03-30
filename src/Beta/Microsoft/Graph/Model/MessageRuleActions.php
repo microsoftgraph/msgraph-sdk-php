@@ -117,7 +117,7 @@ class MessageRuleActions extends Entity
     public function getForwardAsAttachmentTo()
     {
         if (array_key_exists("forwardAsAttachmentTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardAsAttachmentTo"], "Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["forwardAsAttachmentTo"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["forwardAsAttachmentTo"];
             } else {
                 $this->_propDict["forwardAsAttachmentTo"] = new Recipient($this->_propDict["forwardAsAttachmentTo"]);
@@ -150,7 +150,7 @@ class MessageRuleActions extends Entity
     public function getForwardTo()
     {
         if (array_key_exists("forwardTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardTo"], "Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["forwardTo"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["forwardTo"];
             } else {
                 $this->_propDict["forwardTo"] = new Recipient($this->_propDict["forwardTo"]);
@@ -211,7 +211,7 @@ class MessageRuleActions extends Entity
     public function getMarkImportance()
     {
         if (array_key_exists("markImportance", $this->_propDict)) {
-            if (is_a($this->_propDict["markImportance"], "Beta\Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["markImportance"], "\Beta\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["markImportance"];
             } else {
                 $this->_propDict["markImportance"] = new Importance($this->_propDict["markImportance"]);
@@ -293,14 +293,14 @@ class MessageRuleActions extends Entity
 
     /**
     * Gets the redirectTo
-    * The email address to which a message should be redirected.
+    * The email addresses to which a message should be redirected.
     *
     * @return Recipient The redirectTo
     */
     public function getRedirectTo()
     {
         if (array_key_exists("redirectTo", $this->_propDict)) {
-            if (is_a($this->_propDict["redirectTo"], "Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["redirectTo"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["redirectTo"];
             } else {
                 $this->_propDict["redirectTo"] = new Recipient($this->_propDict["redirectTo"]);
@@ -312,7 +312,7 @@ class MessageRuleActions extends Entity
 
     /**
     * Sets the redirectTo
-    * The email address to which a message should be redirected.
+    * The email addresses to which a message should be redirected.
     *
     * @param Recipient $val The value to assign to the redirectTo
     *

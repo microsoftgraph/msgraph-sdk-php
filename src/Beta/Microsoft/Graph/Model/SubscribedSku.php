@@ -120,7 +120,7 @@ class SubscribedSku extends Entity
     public function getPrepaidUnits()
     {
         if (array_key_exists("prepaidUnits", $this->_propDict)) {
-            if (is_a($this->_propDict["prepaidUnits"], "Beta\Microsoft\Graph\Model\LicenseUnitsDetail")) {
+            if (is_a($this->_propDict["prepaidUnits"], "\Beta\Microsoft\Graph\Model\LicenseUnitsDetail")) {
                 return $this->_propDict["prepaidUnits"];
             } else {
                 $this->_propDict["prepaidUnits"] = new LicenseUnitsDetail($this->_propDict["prepaidUnits"]);

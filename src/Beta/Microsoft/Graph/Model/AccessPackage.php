@@ -332,7 +332,7 @@ class AccessPackage extends Entity
     public function getAccessPackageCatalog()
     {
         if (array_key_exists("accessPackageCatalog", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageCatalog"], "Beta\Microsoft\Graph\Model\AccessPackageCatalog")) {
+            if (is_a($this->_propDict["accessPackageCatalog"], "\Beta\Microsoft\Graph\Model\AccessPackageCatalog")) {
                 return $this->_propDict["accessPackageCatalog"];
             } else {
                 $this->_propDict["accessPackageCatalog"] = new AccessPackageCatalog($this->_propDict["accessPackageCatalog"]);

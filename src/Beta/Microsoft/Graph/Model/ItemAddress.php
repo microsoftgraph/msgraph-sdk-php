@@ -33,7 +33,7 @@ class ItemAddress extends ItemFacet
     public function getDetail()
     {
         if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "Beta\Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["detail"];
             } else {
                 $this->_propDict["detail"] = new PhysicalAddress($this->_propDict["detail"]);
@@ -95,7 +95,7 @@ class ItemAddress extends ItemFacet
     public function getGeoCoordinates()
     {
         if (array_key_exists("geoCoordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["geoCoordinates"], "Beta\Microsoft\Graph\Model\GeoCoordinates")) {
+            if (is_a($this->_propDict["geoCoordinates"], "\Beta\Microsoft\Graph\Model\GeoCoordinates")) {
                 return $this->_propDict["geoCoordinates"];
             } else {
                 $this->_propDict["geoCoordinates"] = new GeoCoordinates($this->_propDict["geoCoordinates"]);

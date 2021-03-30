@@ -149,7 +149,7 @@ class CloudPcProvisioningPolicy extends Entity
     public function getImageType()
     {
         if (array_key_exists("imageType", $this->_propDict)) {
-            if (is_a($this->_propDict["imageType"], "Beta\Microsoft\Graph\Model\CloudPcProvisioningPolicyImageType")) {
+            if (is_a($this->_propDict["imageType"], "\Beta\Microsoft\Graph\Model\CloudPcProvisioningPolicyImageType")) {
                 return $this->_propDict["imageType"];
             } else {
                 $this->_propDict["imageType"] = new CloudPcProvisioningPolicyImageType($this->_propDict["imageType"]);

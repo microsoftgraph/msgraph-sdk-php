@@ -143,7 +143,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the controlCategory
-    * Control action category (Account, Data, Device, Apps, Infrastructure).
+    * Control action category (Identity, Data, Device, Apps, Infrastructure).
     *
     * @return string The controlCategory
     */
@@ -158,7 +158,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the controlCategory
-    * Control action category (Account, Data, Device, Apps, Infrastructure).
+    * Control action category (Identity, Data, Device, Apps, Infrastructure).
     *
     * @param string $val The controlCategory
     *
@@ -293,7 +293,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the maxScore
-    * Current obtained max score on specified date.
+    * max attainable score for the control.
     *
     * @return float The maxScore
     */
@@ -308,7 +308,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the maxScore
-    * Current obtained max score on specified date.
+    * max attainable score for the control.
     *
     * @param float $val The maxScore
     *
@@ -438,7 +438,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Gets the threats
-    * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+    * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
     *
     * @return string The threats
     */
@@ -453,7 +453,7 @@ class SecureScoreControlProfile extends Entity
     
     /**
     * Sets the threats
-    * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+    * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
     *
     * @param string $val The threats
     *
@@ -560,7 +560,7 @@ class SecureScoreControlProfile extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

@@ -33,7 +33,7 @@ class RubricQualityFeedbackModel extends Entity
     public function getFeedback()
     {
         if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "Beta\Microsoft\Graph\Model\EducationItemBody")) {
+            if (is_a($this->_propDict["feedback"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new EducationItemBody($this->_propDict["feedback"]);

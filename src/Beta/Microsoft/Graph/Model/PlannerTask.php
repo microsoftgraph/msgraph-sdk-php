@@ -62,7 +62,7 @@ class PlannerTask extends PlannerDelta
     public function getAppliedCategories()
     {
         if (array_key_exists("appliedCategories", $this->_propDict)) {
-            if (is_a($this->_propDict["appliedCategories"], "Beta\Microsoft\Graph\Model\PlannerAppliedCategories")) {
+            if (is_a($this->_propDict["appliedCategories"], "\Beta\Microsoft\Graph\Model\PlannerAppliedCategories")) {
                 return $this->_propDict["appliedCategories"];
             } else {
                 $this->_propDict["appliedCategories"] = new PlannerAppliedCategories($this->_propDict["appliedCategories"]);
@@ -124,7 +124,7 @@ class PlannerTask extends PlannerDelta
     public function getAssignments()
     {
         if (array_key_exists("assignments", $this->_propDict)) {
-            if (is_a($this->_propDict["assignments"], "Beta\Microsoft\Graph\Model\PlannerAssignments")) {
+            if (is_a($this->_propDict["assignments"], "\Beta\Microsoft\Graph\Model\PlannerAssignments")) {
                 return $this->_propDict["assignments"];
             } else {
                 $this->_propDict["assignments"] = new PlannerAssignments($this->_propDict["assignments"]);
@@ -215,7 +215,7 @@ class PlannerTask extends PlannerDelta
     public function getCompletedBy()
     {
         if (array_key_exists("completedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["completedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["completedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["completedBy"];
             } else {
                 $this->_propDict["completedBy"] = new IdentitySet($this->_propDict["completedBy"]);
@@ -310,7 +310,7 @@ class PlannerTask extends PlannerDelta
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -376,7 +376,7 @@ class PlannerTask extends PlannerDelta
     public function getCreationSource()
     {
         if (array_key_exists("creationSource", $this->_propDict)) {
-            if (is_a($this->_propDict["creationSource"], "Beta\Microsoft\Graph\Model\PlannerTaskCreation")) {
+            if (is_a($this->_propDict["creationSource"], "\Beta\Microsoft\Graph\Model\PlannerTaskCreation")) {
                 return $this->_propDict["creationSource"];
             } else {
                 $this->_propDict["creationSource"] = new PlannerTaskCreation($this->_propDict["creationSource"]);
@@ -551,14 +551,14 @@ class PlannerTask extends PlannerDelta
     
     /**
     * Gets the previewType
-    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @return PlannerPreviewType The previewType
     */
     public function getPreviewType()
     {
         if (array_key_exists("previewType", $this->_propDict)) {
-            if (is_a($this->_propDict["previewType"], "Beta\Microsoft\Graph\Model\PlannerPreviewType")) {
+            if (is_a($this->_propDict["previewType"], "\Beta\Microsoft\Graph\Model\PlannerPreviewType")) {
                 return $this->_propDict["previewType"];
             } else {
                 $this->_propDict["previewType"] = new PlannerPreviewType($this->_propDict["previewType"]);
@@ -570,7 +570,7 @@ class PlannerTask extends PlannerDelta
     
     /**
     * Sets the previewType
-    * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+    * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
     *
     * @param PlannerPreviewType $val The previewType
     *
@@ -711,7 +711,7 @@ class PlannerTask extends PlannerDelta
     public function getAssignedToTaskBoardFormat()
     {
         if (array_key_exists("assignedToTaskBoardFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedToTaskBoardFormat"], "Beta\Microsoft\Graph\Model\PlannerAssignedToTaskBoardTaskFormat")) {
+            if (is_a($this->_propDict["assignedToTaskBoardFormat"], "\Beta\Microsoft\Graph\Model\PlannerAssignedToTaskBoardTaskFormat")) {
                 return $this->_propDict["assignedToTaskBoardFormat"];
             } else {
                 $this->_propDict["assignedToTaskBoardFormat"] = new PlannerAssignedToTaskBoardTaskFormat($this->_propDict["assignedToTaskBoardFormat"]);
@@ -744,7 +744,7 @@ class PlannerTask extends PlannerDelta
     public function getBucketTaskBoardFormat()
     {
         if (array_key_exists("bucketTaskBoardFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["bucketTaskBoardFormat"], "Beta\Microsoft\Graph\Model\PlannerBucketTaskBoardTaskFormat")) {
+            if (is_a($this->_propDict["bucketTaskBoardFormat"], "\Beta\Microsoft\Graph\Model\PlannerBucketTaskBoardTaskFormat")) {
                 return $this->_propDict["bucketTaskBoardFormat"];
             } else {
                 $this->_propDict["bucketTaskBoardFormat"] = new PlannerBucketTaskBoardTaskFormat($this->_propDict["bucketTaskBoardFormat"]);
@@ -777,7 +777,7 @@ class PlannerTask extends PlannerDelta
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\PlannerTaskDetails")) {
+            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\PlannerTaskDetails")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PlannerTaskDetails($this->_propDict["details"]);
@@ -810,7 +810,7 @@ class PlannerTask extends PlannerDelta
     public function getProgressTaskBoardFormat()
     {
         if (array_key_exists("progressTaskBoardFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["progressTaskBoardFormat"], "Beta\Microsoft\Graph\Model\PlannerProgressTaskBoardTaskFormat")) {
+            if (is_a($this->_propDict["progressTaskBoardFormat"], "\Beta\Microsoft\Graph\Model\PlannerProgressTaskBoardTaskFormat")) {
                 return $this->_propDict["progressTaskBoardFormat"];
             } else {
                 $this->_propDict["progressTaskBoardFormat"] = new PlannerProgressTaskBoardTaskFormat($this->_propDict["progressTaskBoardFormat"]);

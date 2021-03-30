@@ -59,7 +59,7 @@ class Currency extends Entity
     public function getAmountRoundingPrecision()
     {
         if (array_key_exists("amountRoundingPrecision", $this->_propDict)) {
-            if (is_a($this->_propDict["amountRoundingPrecision"], "Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["amountRoundingPrecision"], "\Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["amountRoundingPrecision"];
             } else {
                 $this->_propDict["amountRoundingPrecision"] = new Decimal($this->_propDict["amountRoundingPrecision"]);

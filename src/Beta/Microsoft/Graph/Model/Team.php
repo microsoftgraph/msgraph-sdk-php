@@ -55,7 +55,7 @@ class Team extends Entity
     
     /**
     * Gets the createdDateTime
-    * Read only. Timestamp at which the team was created.
+    * Timestamp at which the team was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -74,7 +74,7 @@ class Team extends Entity
     
     /**
     * Sets the createdDateTime
-    * Read only. Timestamp at which the team was created.
+    * Timestamp at which the team was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -124,7 +124,7 @@ class Team extends Entity
     public function getDiscoverySettings()
     {
         if (array_key_exists("discoverySettings", $this->_propDict)) {
-            if (is_a($this->_propDict["discoverySettings"], "Beta\Microsoft\Graph\Model\TeamDiscoverySettings")) {
+            if (is_a($this->_propDict["discoverySettings"], "\Beta\Microsoft\Graph\Model\TeamDiscoverySettings")) {
                 return $this->_propDict["discoverySettings"];
             } else {
                 $this->_propDict["discoverySettings"] = new TeamDiscoverySettings($this->_propDict["discoverySettings"]);
@@ -186,7 +186,7 @@ class Team extends Entity
     public function getFunSettings()
     {
         if (array_key_exists("funSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["funSettings"], "Beta\Microsoft\Graph\Model\TeamFunSettings")) {
+            if (is_a($this->_propDict["funSettings"], "\Beta\Microsoft\Graph\Model\TeamFunSettings")) {
                 return $this->_propDict["funSettings"];
             } else {
                 $this->_propDict["funSettings"] = new TeamFunSettings($this->_propDict["funSettings"]);
@@ -219,7 +219,7 @@ class Team extends Entity
     public function getGuestSettings()
     {
         if (array_key_exists("guestSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["guestSettings"], "Beta\Microsoft\Graph\Model\TeamGuestSettings")) {
+            if (is_a($this->_propDict["guestSettings"], "\Beta\Microsoft\Graph\Model\TeamGuestSettings")) {
                 return $this->_propDict["guestSettings"];
             } else {
                 $this->_propDict["guestSettings"] = new TeamGuestSettings($this->_propDict["guestSettings"]);
@@ -339,7 +339,7 @@ class Team extends Entity
     public function getMemberSettings()
     {
         if (array_key_exists("memberSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["memberSettings"], "Beta\Microsoft\Graph\Model\TeamMemberSettings")) {
+            if (is_a($this->_propDict["memberSettings"], "\Beta\Microsoft\Graph\Model\TeamMemberSettings")) {
                 return $this->_propDict["memberSettings"];
             } else {
                 $this->_propDict["memberSettings"] = new TeamMemberSettings($this->_propDict["memberSettings"]);
@@ -372,7 +372,7 @@ class Team extends Entity
     public function getMessagingSettings()
     {
         if (array_key_exists("messagingSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["messagingSettings"], "Beta\Microsoft\Graph\Model\TeamMessagingSettings")) {
+            if (is_a($this->_propDict["messagingSettings"], "\Beta\Microsoft\Graph\Model\TeamMessagingSettings")) {
                 return $this->_propDict["messagingSettings"];
             } else {
                 $this->_propDict["messagingSettings"] = new TeamMessagingSettings($this->_propDict["messagingSettings"]);
@@ -405,7 +405,7 @@ class Team extends Entity
     public function getSpecialization()
     {
         if (array_key_exists("specialization", $this->_propDict)) {
-            if (is_a($this->_propDict["specialization"], "Beta\Microsoft\Graph\Model\TeamSpecialization")) {
+            if (is_a($this->_propDict["specialization"], "\Beta\Microsoft\Graph\Model\TeamSpecialization")) {
                 return $this->_propDict["specialization"];
             } else {
                 $this->_propDict["specialization"] = new TeamSpecialization($this->_propDict["specialization"]);
@@ -438,7 +438,7 @@ class Team extends Entity
     public function getVisibility()
     {
         if (array_key_exists("visibility", $this->_propDict)) {
-            if (is_a($this->_propDict["visibility"], "Beta\Microsoft\Graph\Model\TeamVisibilityType")) {
+            if (is_a($this->_propDict["visibility"], "\Beta\Microsoft\Graph\Model\TeamVisibilityType")) {
                 return $this->_propDict["visibility"];
             } else {
                 $this->_propDict["visibility"] = new TeamVisibilityType($this->_propDict["visibility"]);
@@ -500,7 +500,7 @@ class Team extends Entity
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\Schedule")) {
+            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\Schedule")) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new Schedule($this->_propDict["schedule"]);
@@ -562,7 +562,7 @@ class Team extends Entity
     public function getGroup()
     {
         if (array_key_exists("group", $this->_propDict)) {
-            if (is_a($this->_propDict["group"], "Beta\Microsoft\Graph\Model\Group")) {
+            if (is_a($this->_propDict["group"], "\Beta\Microsoft\Graph\Model\Group")) {
                 return $this->_propDict["group"];
             } else {
                 $this->_propDict["group"] = new Group($this->_propDict["group"]);
@@ -714,7 +714,7 @@ class Team extends Entity
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Beta\Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "\Beta\Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -747,7 +747,7 @@ class Team extends Entity
     public function getPrimaryChannel()
     {
         if (array_key_exists("primaryChannel", $this->_propDict)) {
-            if (is_a($this->_propDict["primaryChannel"], "Beta\Microsoft\Graph\Model\Channel")) {
+            if (is_a($this->_propDict["primaryChannel"], "\Beta\Microsoft\Graph\Model\Channel")) {
                 return $this->_propDict["primaryChannel"];
             } else {
                 $this->_propDict["primaryChannel"] = new Channel($this->_propDict["primaryChannel"]);
@@ -808,7 +808,7 @@ class Team extends Entity
     public function getTemplate()
     {
         if (array_key_exists("template", $this->_propDict)) {
-            if (is_a($this->_propDict["template"], "Beta\Microsoft\Graph\Model\TeamsTemplate")) {
+            if (is_a($this->_propDict["template"], "\Beta\Microsoft\Graph\Model\TeamsTemplate")) {
                 return $this->_propDict["template"];
             } else {
                 $this->_propDict["template"] = new TeamsTemplate($this->_propDict["template"]);

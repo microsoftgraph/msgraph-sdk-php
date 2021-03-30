@@ -61,7 +61,7 @@ class GraphPrint implements \JsonSerializable
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\PrintSettings")) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\PrintSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new PrintSettings($this->_propDict["settings"]);
@@ -211,7 +211,7 @@ class GraphPrint implements \JsonSerializable
     public function getReports()
     {
         if (array_key_exists("reports", $this->_propDict)) {
-            if (is_a($this->_propDict["reports"], "Beta\Microsoft\Graph\Model\ReportRoot")) {
+            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\ReportRoot")) {
                 return $this->_propDict["reports"];
             } else {
                 $this->_propDict["reports"] = new ReportRoot($this->_propDict["reports"]);

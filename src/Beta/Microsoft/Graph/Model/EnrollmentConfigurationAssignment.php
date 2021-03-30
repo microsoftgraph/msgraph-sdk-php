@@ -33,7 +33,7 @@ class EnrollmentConfigurationAssignment extends Entity
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentSource")) {
+            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentSource")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new DeviceAndAppManagementAssignmentSource($this->_propDict["source"]);
@@ -88,14 +88,14 @@ class EnrollmentConfigurationAssignment extends Entity
     
     /**
     * Gets the target
-    * Represents an assignment to managed devices in the tenant
+    * Not yet documented
     *
     * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);
@@ -107,7 +107,7 @@ class EnrollmentConfigurationAssignment extends Entity
     
     /**
     * Sets the target
-    * Represents an assignment to managed devices in the tenant
+    * Not yet documented
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

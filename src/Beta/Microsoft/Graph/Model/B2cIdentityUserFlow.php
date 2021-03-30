@@ -33,7 +33,7 @@ class B2cIdentityUserFlow extends IdentityUserFlow
     public function getApiConnectorConfiguration()
     {
         if (array_key_exists("apiConnectorConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["apiConnectorConfiguration"], "Beta\Microsoft\Graph\Model\UserFlowApiConnectorConfiguration")) {
+            if (is_a($this->_propDict["apiConnectorConfiguration"], "\Beta\Microsoft\Graph\Model\UserFlowApiConnectorConfiguration")) {
                 return $this->_propDict["apiConnectorConfiguration"];
             } else {
                 $this->_propDict["apiConnectorConfiguration"] = new UserFlowApiConnectorConfiguration($this->_propDict["apiConnectorConfiguration"]);

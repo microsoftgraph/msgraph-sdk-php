@@ -186,7 +186,7 @@ class ManagedAllDeviceCertificateState extends Entity
     public function getCertificateRevokeStatus()
     {
         if (array_key_exists("certificateRevokeStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateRevokeStatus"], "Beta\Microsoft\Graph\Model\CertificateRevocationStatus")) {
+            if (is_a($this->_propDict["certificateRevokeStatus"], "\Beta\Microsoft\Graph\Model\CertificateRevocationStatus")) {
                 return $this->_propDict["certificateRevokeStatus"];
             } else {
                 $this->_propDict["certificateRevokeStatus"] = new CertificateRevocationStatus($this->_propDict["certificateRevokeStatus"]);

@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @return bool The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @param bool $val The accountEnabled
     *
@@ -180,7 +180,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceId
-    * Identifier set by Azure Device Registration Service at the time of registration.
+    * Unique identifier set by Azure Device Registration Service at the time of registration.
     *
     * @return string The deviceId
     */
@@ -195,7 +195,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceId
-    * Identifier set by Azure Device Registration Service at the time of registration.
+    * Unique identifier set by Azure Device Registration Service at the time of registration.
     *
     * @param string $val The deviceId
     *
@@ -418,7 +418,7 @@ class Device extends DirectoryObject
     public function getExtensionAttributes()
     {
         if (array_key_exists("extensionAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["extensionAttributes"], "Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
+            if (is_a($this->_propDict["extensionAttributes"], "\Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
                 return $this->_propDict["extensionAttributes"];
             } else {
                 $this->_propDict["extensionAttributes"] = new OnPremisesExtensionAttributes($this->_propDict["extensionAttributes"]);
@@ -679,7 +679,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @return string The operatingSystemVersion
     */
@@ -694,7 +694,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @param string $val The operatingSystemVersion
     *
@@ -828,7 +828,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @return string The trustType
     */
@@ -843,7 +843,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @param string $val The trustType
     *

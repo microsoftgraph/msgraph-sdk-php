@@ -61,7 +61,7 @@ class ApprovalStage extends Entity
     public function getEscalationApprovers()
     {
         if (array_key_exists("escalationApprovers", $this->_propDict)) {
-            if (is_a($this->_propDict["escalationApprovers"], "Beta\Microsoft\Graph\Model\UserSet")) {
+            if (is_a($this->_propDict["escalationApprovers"], "\Beta\Microsoft\Graph\Model\UserSet")) {
                 return $this->_propDict["escalationApprovers"];
             } else {
                 $this->_propDict["escalationApprovers"] = new UserSet($this->_propDict["escalationApprovers"]);
@@ -178,7 +178,7 @@ class ApprovalStage extends Entity
     public function getPrimaryApprovers()
     {
         if (array_key_exists("primaryApprovers", $this->_propDict)) {
-            if (is_a($this->_propDict["primaryApprovers"], "Beta\Microsoft\Graph\Model\UserSet")) {
+            if (is_a($this->_propDict["primaryApprovers"], "\Beta\Microsoft\Graph\Model\UserSet")) {
                 return $this->_propDict["primaryApprovers"];
             } else {
                 $this->_propDict["primaryApprovers"] = new UserSet($this->_propDict["primaryApprovers"]);

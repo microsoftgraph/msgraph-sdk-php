@@ -331,7 +331,7 @@ class DeviceManagementIntent extends Entity
     public function getDeviceStateSummary()
     {
         if (array_key_exists("deviceStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStateSummary"], "Beta\Microsoft\Graph\Model\DeviceManagementIntentDeviceStateSummary")) {
+            if (is_a($this->_propDict["deviceStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementIntentDeviceStateSummary")) {
                 return $this->_propDict["deviceStateSummary"];
             } else {
                 $this->_propDict["deviceStateSummary"] = new DeviceManagementIntentDeviceStateSummary($this->_propDict["deviceStateSummary"]);
@@ -424,7 +424,7 @@ class DeviceManagementIntent extends Entity
     public function getUserStateSummary()
     {
         if (array_key_exists("userStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userStateSummary"], "Beta\Microsoft\Graph\Model\DeviceManagementIntentUserStateSummary")) {
+            if (is_a($this->_propDict["userStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementIntentUserStateSummary")) {
                 return $this->_propDict["userStateSummary"];
             } else {
                 $this->_propDict["userStateSummary"] = new DeviceManagementIntentUserStateSummary($this->_propDict["userStateSummary"]);

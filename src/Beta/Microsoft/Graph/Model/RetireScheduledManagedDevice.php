@@ -33,7 +33,7 @@ class RetireScheduledManagedDevice extends Entity
     public function getComplianceState()
     {
         if (array_key_exists("complianceState", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceState"], "Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["complianceState"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["complianceState"];
             } else {
                 $this->_propDict["complianceState"] = new ComplianceStatus($this->_propDict["complianceState"]);
@@ -122,7 +122,7 @@ class RetireScheduledManagedDevice extends Entity
     public function getDeviceType()
     {
         if (array_key_exists("deviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceType"], "Beta\Microsoft\Graph\Model\DeviceType")) {
+            if (is_a($this->_propDict["deviceType"], "\Beta\Microsoft\Graph\Model\DeviceType")) {
                 return $this->_propDict["deviceType"];
             } else {
                 $this->_propDict["deviceType"] = new DeviceType($this->_propDict["deviceType"]);
@@ -239,7 +239,7 @@ class RetireScheduledManagedDevice extends Entity
     public function getManagementAgent()
     {
         if (array_key_exists("managementAgent", $this->_propDict)) {
-            if (is_a($this->_propDict["managementAgent"], "Beta\Microsoft\Graph\Model\ManagementAgentType")) {
+            if (is_a($this->_propDict["managementAgent"], "\Beta\Microsoft\Graph\Model\ManagementAgentType")) {
                 return $this->_propDict["managementAgent"];
             } else {
                 $this->_propDict["managementAgent"] = new ManagementAgentType($this->_propDict["managementAgent"]);
@@ -272,7 +272,7 @@ class RetireScheduledManagedDevice extends Entity
     public function getOwnerType()
     {
         if (array_key_exists("ownerType", $this->_propDict)) {
-            if (is_a($this->_propDict["ownerType"], "Beta\Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
+            if (is_a($this->_propDict["ownerType"], "\Beta\Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
                 return $this->_propDict["ownerType"];
             } else {
                 $this->_propDict["ownerType"] = new ManagedDeviceOwnerType($this->_propDict["ownerType"]);

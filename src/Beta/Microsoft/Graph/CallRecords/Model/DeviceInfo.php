@@ -84,15 +84,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the captureNotFunctioningEventRatio
     * Fraction of the call that the media endpoint detected the capture device was not working properly.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The captureNotFunctioningEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The captureNotFunctioningEventRatio
     */
     public function getCaptureNotFunctioningEventRatio()
     {
         if (array_key_exists("captureNotFunctioningEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["captureNotFunctioningEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["captureNotFunctioningEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["captureNotFunctioningEventRatio"];
             } else {
-                $this->_propDict["captureNotFunctioningEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["captureNotFunctioningEventRatio"]);
+                $this->_propDict["captureNotFunctioningEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["captureNotFunctioningEventRatio"]);
                 return $this->_propDict["captureNotFunctioningEventRatio"];
             }
         }
@@ -103,7 +103,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the captureNotFunctioningEventRatio
     * Fraction of the call that the media endpoint detected the capture device was not working properly.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the captureNotFunctioningEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the captureNotFunctioningEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -117,15 +117,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the cpuInsufficentEventRatio
     * Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The cpuInsufficentEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The cpuInsufficentEventRatio
     */
     public function getCpuInsufficentEventRatio()
     {
         if (array_key_exists("cpuInsufficentEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["cpuInsufficentEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["cpuInsufficentEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["cpuInsufficentEventRatio"];
             } else {
-                $this->_propDict["cpuInsufficentEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["cpuInsufficentEventRatio"]);
+                $this->_propDict["cpuInsufficentEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["cpuInsufficentEventRatio"]);
                 return $this->_propDict["cpuInsufficentEventRatio"];
             }
         }
@@ -136,7 +136,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the cpuInsufficentEventRatio
     * Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the cpuInsufficentEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the cpuInsufficentEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -150,15 +150,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the deviceClippingEventRatio
     * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The deviceClippingEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The deviceClippingEventRatio
     */
     public function getDeviceClippingEventRatio()
     {
         if (array_key_exists("deviceClippingEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceClippingEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["deviceClippingEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["deviceClippingEventRatio"];
             } else {
-                $this->_propDict["deviceClippingEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["deviceClippingEventRatio"]);
+                $this->_propDict["deviceClippingEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["deviceClippingEventRatio"]);
                 return $this->_propDict["deviceClippingEventRatio"];
             }
         }
@@ -169,7 +169,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the deviceClippingEventRatio
     * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the deviceClippingEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the deviceClippingEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -183,15 +183,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the deviceGlitchEventRatio
     * Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The deviceGlitchEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The deviceGlitchEventRatio
     */
     public function getDeviceGlitchEventRatio()
     {
         if (array_key_exists("deviceGlitchEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceGlitchEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["deviceGlitchEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["deviceGlitchEventRatio"];
             } else {
-                $this->_propDict["deviceGlitchEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["deviceGlitchEventRatio"]);
+                $this->_propDict["deviceGlitchEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["deviceGlitchEventRatio"]);
                 return $this->_propDict["deviceGlitchEventRatio"];
             }
         }
@@ -202,7 +202,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the deviceGlitchEventRatio
     * Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the deviceGlitchEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the deviceGlitchEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -244,15 +244,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the initialSignalLevelRootMeanSquare
     * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The initialSignalLevelRootMeanSquare
+    * @return \Beta\Microsoft\Graph\Model\Single The initialSignalLevelRootMeanSquare
     */
     public function getInitialSignalLevelRootMeanSquare()
     {
         if (array_key_exists("initialSignalLevelRootMeanSquare", $this->_propDict)) {
-            if (is_a($this->_propDict["initialSignalLevelRootMeanSquare"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["initialSignalLevelRootMeanSquare"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["initialSignalLevelRootMeanSquare"];
             } else {
-                $this->_propDict["initialSignalLevelRootMeanSquare"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["initialSignalLevelRootMeanSquare"]);
+                $this->_propDict["initialSignalLevelRootMeanSquare"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["initialSignalLevelRootMeanSquare"]);
                 return $this->_propDict["initialSignalLevelRootMeanSquare"];
             }
         }
@@ -263,7 +263,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the initialSignalLevelRootMeanSquare
     * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the initialSignalLevelRootMeanSquare
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the initialSignalLevelRootMeanSquare
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -277,15 +277,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lowSpeechLevelEventRatio
     * Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The lowSpeechLevelEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The lowSpeechLevelEventRatio
     */
     public function getLowSpeechLevelEventRatio()
     {
         if (array_key_exists("lowSpeechLevelEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["lowSpeechLevelEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["lowSpeechLevelEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["lowSpeechLevelEventRatio"];
             } else {
-                $this->_propDict["lowSpeechLevelEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["lowSpeechLevelEventRatio"]);
+                $this->_propDict["lowSpeechLevelEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["lowSpeechLevelEventRatio"]);
                 return $this->_propDict["lowSpeechLevelEventRatio"];
             }
         }
@@ -296,7 +296,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the lowSpeechLevelEventRatio
     * Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the lowSpeechLevelEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the lowSpeechLevelEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -310,15 +310,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lowSpeechToNoiseEventRatio
     * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The lowSpeechToNoiseEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The lowSpeechToNoiseEventRatio
     */
     public function getLowSpeechToNoiseEventRatio()
     {
         if (array_key_exists("lowSpeechToNoiseEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["lowSpeechToNoiseEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["lowSpeechToNoiseEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["lowSpeechToNoiseEventRatio"];
             } else {
-                $this->_propDict["lowSpeechToNoiseEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["lowSpeechToNoiseEventRatio"]);
+                $this->_propDict["lowSpeechToNoiseEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["lowSpeechToNoiseEventRatio"]);
                 return $this->_propDict["lowSpeechToNoiseEventRatio"];
             }
         }
@@ -329,7 +329,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the lowSpeechToNoiseEventRatio
     * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the lowSpeechToNoiseEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the lowSpeechToNoiseEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -343,15 +343,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the micGlitchRate
     * Glitches per 5 minute interval for the media endpoint's microphone.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The micGlitchRate
+    * @return \Beta\Microsoft\Graph\Model\Single The micGlitchRate
     */
     public function getMicGlitchRate()
     {
         if (array_key_exists("micGlitchRate", $this->_propDict)) {
-            if (is_a($this->_propDict["micGlitchRate"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["micGlitchRate"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["micGlitchRate"];
             } else {
-                $this->_propDict["micGlitchRate"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["micGlitchRate"]);
+                $this->_propDict["micGlitchRate"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["micGlitchRate"]);
                 return $this->_propDict["micGlitchRate"];
             }
         }
@@ -362,7 +362,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the micGlitchRate
     * Glitches per 5 minute interval for the media endpoint's microphone.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the micGlitchRate
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the micGlitchRate
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -488,15 +488,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the renderMuteEventRatio
     * Fraction of the call that media endpoint detected device render is muted.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The renderMuteEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The renderMuteEventRatio
     */
     public function getRenderMuteEventRatio()
     {
         if (array_key_exists("renderMuteEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["renderMuteEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["renderMuteEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["renderMuteEventRatio"];
             } else {
-                $this->_propDict["renderMuteEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["renderMuteEventRatio"]);
+                $this->_propDict["renderMuteEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["renderMuteEventRatio"]);
                 return $this->_propDict["renderMuteEventRatio"];
             }
         }
@@ -507,7 +507,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the renderMuteEventRatio
     * Fraction of the call that media endpoint detected device render is muted.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderMuteEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderMuteEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -521,15 +521,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the renderNotFunctioningEventRatio
     * Fraction of the call that the media endpoint detected the render device was not working properly.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The renderNotFunctioningEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The renderNotFunctioningEventRatio
     */
     public function getRenderNotFunctioningEventRatio()
     {
         if (array_key_exists("renderNotFunctioningEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["renderNotFunctioningEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["renderNotFunctioningEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["renderNotFunctioningEventRatio"];
             } else {
-                $this->_propDict["renderNotFunctioningEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["renderNotFunctioningEventRatio"]);
+                $this->_propDict["renderNotFunctioningEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["renderNotFunctioningEventRatio"]);
                 return $this->_propDict["renderNotFunctioningEventRatio"];
             }
         }
@@ -540,7 +540,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the renderNotFunctioningEventRatio
     * Fraction of the call that the media endpoint detected the render device was not working properly.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderNotFunctioningEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderNotFunctioningEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -554,15 +554,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the renderZeroVolumeEventRatio
     * Fraction of the call that media endpoint detected device render volume is set to 0.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The renderZeroVolumeEventRatio
+    * @return \Beta\Microsoft\Graph\Model\Single The renderZeroVolumeEventRatio
     */
     public function getRenderZeroVolumeEventRatio()
     {
         if (array_key_exists("renderZeroVolumeEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["renderZeroVolumeEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["renderZeroVolumeEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["renderZeroVolumeEventRatio"];
             } else {
-                $this->_propDict["renderZeroVolumeEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["renderZeroVolumeEventRatio"]);
+                $this->_propDict["renderZeroVolumeEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["renderZeroVolumeEventRatio"]);
                 return $this->_propDict["renderZeroVolumeEventRatio"];
             }
         }
@@ -573,7 +573,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the renderZeroVolumeEventRatio
     * Fraction of the call that media endpoint detected device render volume is set to 0.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderZeroVolumeEventRatio
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the renderZeroVolumeEventRatio
     *
     * @return DeviceInfo The DeviceInfo
     */
@@ -643,15 +643,15 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the speakerGlitchRate
     * Glitches per 5 minute internal for the media endpoint's loudspeaker.
     *
-    * @return Beta\Microsoft\Graph\Model\Single The speakerGlitchRate
+    * @return \Beta\Microsoft\Graph\Model\Single The speakerGlitchRate
     */
     public function getSpeakerGlitchRate()
     {
         if (array_key_exists("speakerGlitchRate", $this->_propDict)) {
-            if (is_a($this->_propDict["speakerGlitchRate"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["speakerGlitchRate"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["speakerGlitchRate"];
             } else {
-                $this->_propDict["speakerGlitchRate"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["speakerGlitchRate"]);
+                $this->_propDict["speakerGlitchRate"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["speakerGlitchRate"]);
                 return $this->_propDict["speakerGlitchRate"];
             }
         }
@@ -662,7 +662,7 @@ class DeviceInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the speakerGlitchRate
     * Glitches per 5 minute internal for the media endpoint's loudspeaker.
     *
-    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the speakerGlitchRate
+    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the speakerGlitchRate
     *
     * @return DeviceInfo The DeviceInfo
     */

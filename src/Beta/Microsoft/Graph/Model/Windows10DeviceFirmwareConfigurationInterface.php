@@ -33,7 +33,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function getBootFromBuiltInNetworkAdapters()
     {
         if (array_key_exists("bootFromBuiltInNetworkAdapters", $this->_propDict)) {
-            if (is_a($this->_propDict["bootFromBuiltInNetworkAdapters"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["bootFromBuiltInNetworkAdapters"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["bootFromBuiltInNetworkAdapters"];
             } else {
                 $this->_propDict["bootFromBuiltInNetworkAdapters"] = new Enablement($this->_propDict["bootFromBuiltInNetworkAdapters"]);
@@ -66,7 +66,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function getBootFromExternalMedia()
     {
         if (array_key_exists("bootFromExternalMedia", $this->_propDict)) {
-            if (is_a($this->_propDict["bootFromExternalMedia"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["bootFromExternalMedia"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["bootFromExternalMedia"];
             } else {
                 $this->_propDict["bootFromExternalMedia"] = new Enablement($this->_propDict["bootFromExternalMedia"]);
@@ -99,7 +99,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function getCameras()
     {
         if (array_key_exists("cameras", $this->_propDict)) {
-            if (is_a($this->_propDict["cameras"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["cameras"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["cameras"];
             } else {
                 $this->_propDict["cameras"] = new Enablement($this->_propDict["cameras"]);
@@ -132,7 +132,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function getChangeUefiSettingsPermission()
     {
         if (array_key_exists("changeUefiSettingsPermission", $this->_propDict)) {
-            if (is_a($this->_propDict["changeUefiSettingsPermission"], "Beta\Microsoft\Graph\Model\ChangeUefiSettingsPermission")) {
+            if (is_a($this->_propDict["changeUefiSettingsPermission"], "\Beta\Microsoft\Graph\Model\ChangeUefiSettingsPermission")) {
                 return $this->_propDict["changeUefiSettingsPermission"];
             } else {
                 $this->_propDict["changeUefiSettingsPermission"] = new ChangeUefiSettingsPermission($this->_propDict["changeUefiSettingsPermission"]);
@@ -165,7 +165,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function getMicrophonesAndSpeakers()
     {
         if (array_key_exists("microphonesAndSpeakers", $this->_propDict)) {
-            if (is_a($this->_propDict["microphonesAndSpeakers"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["microphonesAndSpeakers"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["microphonesAndSpeakers"];
             } else {
                 $this->_propDict["microphonesAndSpeakers"] = new Enablement($this->_propDict["microphonesAndSpeakers"]);
@@ -198,7 +198,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function getRadios()
     {
         if (array_key_exists("radios", $this->_propDict)) {
-            if (is_a($this->_propDict["radios"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["radios"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["radios"];
             } else {
                 $this->_propDict["radios"] = new Enablement($this->_propDict["radios"]);
@@ -231,7 +231,7 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function getVirtualizationOfCpuAndIO()
     {
         if (array_key_exists("virtualizationOfCpuAndIO", $this->_propDict)) {
-            if (is_a($this->_propDict["virtualizationOfCpuAndIO"], "Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["virtualizationOfCpuAndIO"], "\Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["virtualizationOfCpuAndIO"];
             } else {
                 $this->_propDict["virtualizationOfCpuAndIO"] = new Enablement($this->_propDict["virtualizationOfCpuAndIO"]);

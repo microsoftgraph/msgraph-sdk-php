@@ -62,7 +62,7 @@ class EducationClass extends Entity
     public function getCourse()
     {
         if (array_key_exists("course", $this->_propDict)) {
-            if (is_a($this->_propDict["course"], "Beta\Microsoft\Graph\Model\EducationCourse")) {
+            if (is_a($this->_propDict["course"], "\Beta\Microsoft\Graph\Model\EducationCourse")) {
                 return $this->_propDict["course"];
             } else {
                 $this->_propDict["course"] = new EducationCourse($this->_propDict["course"]);
@@ -95,7 +95,7 @@ class EducationClass extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -237,14 +237,14 @@ class EducationClass extends Entity
     
     /**
     * Gets the externalSource
-    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
     *
     * @return EducationExternalSource The externalSource
     */
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Beta\Microsoft\Graph\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "\Beta\Microsoft\Graph\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -256,7 +256,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the externalSource
-    * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+    * How this class was created. The possible values are: sis, manual, unknownFutureValue.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -357,14 +357,14 @@ class EducationClass extends Entity
     
     /**
     * Gets the term
-    * Term for the class.
+    * Term for this class.
     *
     * @return EducationTerm The term
     */
     public function getTerm()
     {
         if (array_key_exists("term", $this->_propDict)) {
-            if (is_a($this->_propDict["term"], "Beta\Microsoft\Graph\Model\EducationTerm")) {
+            if (is_a($this->_propDict["term"], "\Beta\Microsoft\Graph\Model\EducationTerm")) {
                 return $this->_propDict["term"];
             } else {
                 $this->_propDict["term"] = new EducationTerm($this->_propDict["term"]);
@@ -376,7 +376,7 @@ class EducationClass extends Entity
     
     /**
     * Sets the term
-    * Term for the class.
+    * Term for this class.
     *
     * @param EducationTerm $val The term
     *
@@ -424,7 +424,7 @@ class EducationClass extends Entity
     public function getAssignmentDefaults()
     {
         if (array_key_exists("assignmentDefaults", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentDefaults"], "Beta\Microsoft\Graph\Model\EducationAssignmentDefaults")) {
+            if (is_a($this->_propDict["assignmentDefaults"], "\Beta\Microsoft\Graph\Model\EducationAssignmentDefaults")) {
                 return $this->_propDict["assignmentDefaults"];
             } else {
                 $this->_propDict["assignmentDefaults"] = new EducationAssignmentDefaults($this->_propDict["assignmentDefaults"]);
@@ -485,7 +485,7 @@ class EducationClass extends Entity
     public function getAssignmentSettings()
     {
         if (array_key_exists("assignmentSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentSettings"], "Beta\Microsoft\Graph\Model\EducationAssignmentSettings")) {
+            if (is_a($this->_propDict["assignmentSettings"], "\Beta\Microsoft\Graph\Model\EducationAssignmentSettings")) {
                 return $this->_propDict["assignmentSettings"];
             } else {
                 $this->_propDict["assignmentSettings"] = new EducationAssignmentSettings($this->_propDict["assignmentSettings"]);
@@ -517,7 +517,7 @@ class EducationClass extends Entity
     public function getGroup()
     {
         if (array_key_exists("group", $this->_propDict)) {
-            if (is_a($this->_propDict["group"], "Beta\Microsoft\Graph\Model\Group")) {
+            if (is_a($this->_propDict["group"], "\Beta\Microsoft\Graph\Model\Group")) {
                 return $this->_propDict["group"];
             } else {
                 $this->_propDict["group"] = new Group($this->_propDict["group"]);

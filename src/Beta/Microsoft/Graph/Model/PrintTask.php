@@ -26,7 +26,7 @@ class PrintTask extends Entity
 {
     /**
     * Gets the parentUrl
-    * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+    * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
     *
     * @return string The parentUrl
     */
@@ -41,7 +41,7 @@ class PrintTask extends Entity
     
     /**
     * Sets the parentUrl
-    * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+    * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
     *
     * @param string $val The parentUrl
     *
@@ -62,7 +62,7 @@ class PrintTask extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\PrintTaskStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\PrintTaskStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrintTaskStatus($this->_propDict["status"]);
@@ -95,7 +95,7 @@ class PrintTask extends Entity
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "Beta\Microsoft\Graph\Model\PrintTaskDefinition")) {
+            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\PrintTaskDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new PrintTaskDefinition($this->_propDict["definition"]);
@@ -128,7 +128,7 @@ class PrintTask extends Entity
     public function getTrigger()
     {
         if (array_key_exists("trigger", $this->_propDict)) {
-            if (is_a($this->_propDict["trigger"], "Beta\Microsoft\Graph\Model\PrintTaskTrigger")) {
+            if (is_a($this->_propDict["trigger"], "\Beta\Microsoft\Graph\Model\PrintTaskTrigger")) {
                 return $this->_propDict["trigger"];
             } else {
                 $this->_propDict["trigger"] = new PrintTaskTrigger($this->_propDict["trigger"]);

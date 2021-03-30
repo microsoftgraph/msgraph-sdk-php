@@ -32,7 +32,7 @@ class TimeCardEntry extends Entity
     public function getBreaks()
     {
         if (array_key_exists("breaks", $this->_propDict)) {
-            if (is_a($this->_propDict["breaks"], "Beta\Microsoft\Graph\Model\TimeCardBreak")) {
+            if (is_a($this->_propDict["breaks"], "\Beta\Microsoft\Graph\Model\TimeCardBreak")) {
                 return $this->_propDict["breaks"];
             } else {
                 $this->_propDict["breaks"] = new TimeCardBreak($this->_propDict["breaks"]);
@@ -63,7 +63,7 @@ class TimeCardEntry extends Entity
     public function getClockInEvent()
     {
         if (array_key_exists("clockInEvent", $this->_propDict)) {
-            if (is_a($this->_propDict["clockInEvent"], "Beta\Microsoft\Graph\Model\TimeCardEvent")) {
+            if (is_a($this->_propDict["clockInEvent"], "\Beta\Microsoft\Graph\Model\TimeCardEvent")) {
                 return $this->_propDict["clockInEvent"];
             } else {
                 $this->_propDict["clockInEvent"] = new TimeCardEvent($this->_propDict["clockInEvent"]);
@@ -94,7 +94,7 @@ class TimeCardEntry extends Entity
     public function getClockOutEvent()
     {
         if (array_key_exists("clockOutEvent", $this->_propDict)) {
-            if (is_a($this->_propDict["clockOutEvent"], "Beta\Microsoft\Graph\Model\TimeCardEvent")) {
+            if (is_a($this->_propDict["clockOutEvent"], "\Beta\Microsoft\Graph\Model\TimeCardEvent")) {
                 return $this->_propDict["clockOutEvent"];
             } else {
                 $this->_propDict["clockOutEvent"] = new TimeCardEvent($this->_propDict["clockOutEvent"]);

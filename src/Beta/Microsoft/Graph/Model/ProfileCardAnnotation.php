@@ -61,7 +61,7 @@ class ProfileCardAnnotation extends Entity
     public function getLocalizations()
     {
         if (array_key_exists("localizations", $this->_propDict)) {
-            if (is_a($this->_propDict["localizations"], "Beta\Microsoft\Graph\Model\DisplayNameLocalization")) {
+            if (is_a($this->_propDict["localizations"], "\Beta\Microsoft\Graph\Model\DisplayNameLocalization")) {
                 return $this->_propDict["localizations"];
             } else {
                 $this->_propDict["localizations"] = new DisplayNameLocalization($this->_propDict["localizations"]);

@@ -32,7 +32,7 @@ class ExternalItemContent extends \Beta\Microsoft\Graph\Model\Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContentType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContentType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new ExternalItemContentType($this->_propDict["type"]);
