@@ -19,7 +19,7 @@ You can install the PHP SDK with Composer, either run `composer require microsof
 
 ### Register your application
 
-Register your application to use the Microsoft Graph API using [Microsoft Azure Active Directory](https://manage.windowsazure.com) in your tenant's Active Directory to support work or school users for your tenant, or multiple tenants.
+Register your application to use the Microsoft Graph API using [Microsoft Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) in your tenant's Active Directory to support work or school users for your tenant, or multiple tenants.
 
 ### Authenticate with the Microsoft Graph service
 
@@ -101,7 +101,7 @@ You can use the library with a proxy such as [Fiddler](http://www.telerik.com/fi
 ```php
 $graph->setProxyPort("localhost:8888");
 ```
-Then, open your proxy client to view the requests & responses sent using the library. 
+Then, open your proxy client to view the requests & responses sent using the library.
 
 ![Screenshot of Fiddler /me/sendmail request and response](https://github.com/microsoftgraph/msgraph-sdk-php/blob/master/docs/images/Fiddler.PNG)
 
@@ -109,13 +109,13 @@ This is especially helpful when the library does not return the results you expe
 
 ### Run Tests
 
-Run 
-```php
+Run
+ ```shell
 vendor/bin/phpunit --exclude-group functional
-``` 
+```
 from the base directory.
 
-*The set of functional tests are meant to be run against a test account. Currently, the 
+*The set of functional tests are meant to be run against a test account. Currently, the
 tests to do not restore state of the account.*
 
 #### Debug tests on Windows
