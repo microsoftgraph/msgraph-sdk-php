@@ -61,7 +61,7 @@ class PlannerPlanContextDetails extends Entity
     public function getDisplayLinkType()
     {
         if (array_key_exists("displayLinkType", $this->_propDict)) {
-            if (is_a($this->_propDict["displayLinkType"], "Beta\Microsoft\Graph\Model\PlannerPlanContextType")) {
+            if (is_a($this->_propDict["displayLinkType"], "\Beta\Microsoft\Graph\Model\PlannerPlanContextType")) {
                 return $this->_propDict["displayLinkType"];
             } else {
                 $this->_propDict["displayLinkType"] = new PlannerPlanContextType($this->_propDict["displayLinkType"]);

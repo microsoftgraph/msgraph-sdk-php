@@ -162,7 +162,7 @@ class UnifiedRoleManagementPolicyRuleTarget extends Entity
     public function getTargetObjects()
     {
         if (array_key_exists("targetObjects", $this->_propDict)) {
-            if (is_a($this->_propDict["targetObjects"], "Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["targetObjects"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["targetObjects"];
             } else {
                 $this->_propDict["targetObjects"] = new DirectoryObject($this->_propDict["targetObjects"]);

@@ -128,7 +128,7 @@ class RemoteAssistancePartner extends Entity
     public function getOnboardingStatus()
     {
         if (array_key_exists("onboardingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["onboardingStatus"], "Beta\Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus")) {
+            if (is_a($this->_propDict["onboardingStatus"], "\Beta\Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus")) {
                 return $this->_propDict["onboardingStatus"];
             } else {
                 $this->_propDict["onboardingStatus"] = new RemoteAssistanceOnboardingStatus($this->_propDict["onboardingStatus"]);

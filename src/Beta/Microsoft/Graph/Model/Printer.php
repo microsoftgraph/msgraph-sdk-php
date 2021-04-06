@@ -213,7 +213,7 @@ class Printer extends PrinterBase
     public function getShare()
     {
         if (array_key_exists("share", $this->_propDict)) {
-            if (is_a($this->_propDict["share"], "Beta\Microsoft\Graph\Model\PrinterShare")) {
+            if (is_a($this->_propDict["share"], "\Beta\Microsoft\Graph\Model\PrinterShare")) {
                 return $this->_propDict["share"];
             } else {
                 $this->_propDict["share"] = new PrinterShare($this->_propDict["share"]);

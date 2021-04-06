@@ -33,7 +33,7 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl
     public function getMode()
     {
         if (array_key_exists("mode", $this->_propDict)) {
-            if (is_a($this->_propDict["mode"], "Beta\Microsoft\Graph\Model\PersistentBrowserSessionMode")) {
+            if (is_a($this->_propDict["mode"], "\Beta\Microsoft\Graph\Model\PersistentBrowserSessionMode")) {
                 return $this->_propDict["mode"];
             } else {
                 $this->_propDict["mode"] = new PersistentBrowserSessionMode($this->_propDict["mode"]);

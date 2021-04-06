@@ -61,7 +61,7 @@ class CommentAction extends Entity
     public function getParentAuthor()
     {
         if (array_key_exists("parentAuthor", $this->_propDict)) {
-            if (is_a($this->_propDict["parentAuthor"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["parentAuthor"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["parentAuthor"];
             } else {
                 $this->_propDict["parentAuthor"] = new IdentitySet($this->_propDict["parentAuthor"]);
@@ -94,7 +94,7 @@ class CommentAction extends Entity
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["participants"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new IdentitySet($this->_propDict["participants"]);

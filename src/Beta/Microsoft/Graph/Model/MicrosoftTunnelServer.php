@@ -95,7 +95,7 @@ class MicrosoftTunnelServer extends Entity
     public function getTunnelServerHealthStatus()
     {
         if (array_key_exists("tunnelServerHealthStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["tunnelServerHealthStatus"], "Beta\Microsoft\Graph\Model\MicrosoftTunnelServerHealthStatus")) {
+            if (is_a($this->_propDict["tunnelServerHealthStatus"], "\Beta\Microsoft\Graph\Model\MicrosoftTunnelServerHealthStatus")) {
                 return $this->_propDict["tunnelServerHealthStatus"];
             } else {
                 $this->_propDict["tunnelServerHealthStatus"] = new MicrosoftTunnelServerHealthStatus($this->_propDict["tunnelServerHealthStatus"]);

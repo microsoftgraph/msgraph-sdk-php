@@ -33,7 +33,7 @@ class ServicePrincipal extends DirectoryObject
     public function getPasswordSingleSignOnSettings()
     {
         if (array_key_exists("passwordSingleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordSingleSignOnSettings"], "Beta\Microsoft\Graph\Model\PasswordSingleSignOnSettings")) {
+            if (is_a($this->_propDict["passwordSingleSignOnSettings"], "\Beta\Microsoft\Graph\Model\PasswordSingleSignOnSettings")) {
                 return $this->_propDict["passwordSingleSignOnSettings"];
             } else {
                 $this->_propDict["passwordSingleSignOnSettings"] = new PasswordSingleSignOnSettings($this->_propDict["passwordSingleSignOnSettings"]);
@@ -474,7 +474,7 @@ class ServicePrincipal extends DirectoryObject
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "Beta\Microsoft\Graph\Model\InformationalUrl")) {
+            if (is_a($this->_propDict["info"], "\Beta\Microsoft\Graph\Model\InformationalUrl")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -889,7 +889,7 @@ class ServicePrincipal extends DirectoryObject
     public function getSamlSingleSignOnSettings()
     {
         if (array_key_exists("samlSingleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["samlSingleSignOnSettings"], "Beta\Microsoft\Graph\Model\SamlSingleSignOnSettings")) {
+            if (is_a($this->_propDict["samlSingleSignOnSettings"], "\Beta\Microsoft\Graph\Model\SamlSingleSignOnSettings")) {
                 return $this->_propDict["samlSingleSignOnSettings"];
             } else {
                 $this->_propDict["samlSingleSignOnSettings"] = new SamlSingleSignOnSettings($this->_propDict["samlSingleSignOnSettings"]);
@@ -973,7 +973,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the signInAudience
-    * Specifies what Microsoft accounts are supported for the associated application. Read-only.
+    * Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
     *
     * @return string The signInAudience
     */
@@ -988,7 +988,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the signInAudience
-    * Specifies what Microsoft accounts are supported for the associated application. Read-only.
+    * Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
     *
     * @param string $val The signInAudience
     *
@@ -1512,7 +1512,7 @@ class ServicePrincipal extends DirectoryObject
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "Beta\Microsoft\Graph\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "\Beta\Microsoft\Graph\Model\Synchronization")) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

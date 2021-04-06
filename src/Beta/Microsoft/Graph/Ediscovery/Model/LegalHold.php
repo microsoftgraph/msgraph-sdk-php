@@ -57,15 +57,15 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdBy
     * The user who created the legal hold.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -76,7 +76,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the createdBy
     * The user who created the legal hold.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
     * @return LegalHold
     */
@@ -239,15 +239,15 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lastModifiedBy
     * the user who last modified the legal hold.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
-                $this->_propDict["lastModifiedBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
+                $this->_propDict["lastModifiedBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
                 return $this->_propDict["lastModifiedBy"];
             }
         }
@@ -258,7 +258,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the lastModifiedBy
     * the user who last modified the legal hold.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
     * @return LegalHold
     */
@@ -310,7 +310,7 @@ class LegalHold extends \Beta\Microsoft\Graph\Model\Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Ediscovery\Model\LegalHoldStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Ediscovery\Model\LegalHoldStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new LegalHoldStatus($this->_propDict["status"]);

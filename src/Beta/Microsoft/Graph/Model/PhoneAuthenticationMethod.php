@@ -62,7 +62,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     public function getPhoneType()
     {
         if (array_key_exists("phoneType", $this->_propDict)) {
-            if (is_a($this->_propDict["phoneType"], "Beta\Microsoft\Graph\Model\AuthenticationPhoneType")) {
+            if (is_a($this->_propDict["phoneType"], "\Beta\Microsoft\Graph\Model\AuthenticationPhoneType")) {
                 return $this->_propDict["phoneType"];
             } else {
                 $this->_propDict["phoneType"] = new AuthenticationPhoneType($this->_propDict["phoneType"]);
@@ -95,7 +95,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     public function getSmsSignInState()
     {
         if (array_key_exists("smsSignInState", $this->_propDict)) {
-            if (is_a($this->_propDict["smsSignInState"], "Beta\Microsoft\Graph\Model\AuthenticationMethodSignInState")) {
+            if (is_a($this->_propDict["smsSignInState"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodSignInState")) {
                 return $this->_propDict["smsSignInState"];
             } else {
                 $this->_propDict["smsSignInState"] = new AuthenticationMethodSignInState($this->_propDict["smsSignInState"]);

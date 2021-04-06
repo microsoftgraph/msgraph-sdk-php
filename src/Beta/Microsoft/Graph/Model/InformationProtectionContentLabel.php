@@ -33,7 +33,7 @@ class InformationProtectionContentLabel extends Entity
     public function getAssignmentMethod()
     {
         if (array_key_exists("assignmentMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentMethod"], "Beta\Microsoft\Graph\Model\AssignmentMethod")) {
+            if (is_a($this->_propDict["assignmentMethod"], "\Beta\Microsoft\Graph\Model\AssignmentMethod")) {
                 return $this->_propDict["assignmentMethod"];
             } else {
                 $this->_propDict["assignmentMethod"] = new AssignmentMethod($this->_propDict["assignmentMethod"]);
@@ -99,7 +99,7 @@ class InformationProtectionContentLabel extends Entity
     public function getLabel()
     {
         if (array_key_exists("label", $this->_propDict)) {
-            if (is_a($this->_propDict["label"], "Beta\Microsoft\Graph\Model\LabelDetails")) {
+            if (is_a($this->_propDict["label"], "\Beta\Microsoft\Graph\Model\LabelDetails")) {
                 return $this->_propDict["label"];
             } else {
                 $this->_propDict["label"] = new LabelDetails($this->_propDict["label"]);

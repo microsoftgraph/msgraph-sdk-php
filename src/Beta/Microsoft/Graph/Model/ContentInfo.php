@@ -33,7 +33,7 @@ class ContentInfo extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Beta\Microsoft\Graph\Model\ContentFormat")) {
+            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\ContentFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new ContentFormat($this->_propDict["format"]);
@@ -94,7 +94,7 @@ class ContentInfo extends Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "Beta\Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new KeyValuePair($this->_propDict["metadata"]);
@@ -127,7 +127,7 @@ class ContentInfo extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ContentState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ContentState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ContentState($this->_propDict["state"]);

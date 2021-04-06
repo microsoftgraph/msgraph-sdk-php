@@ -173,7 +173,7 @@ class Property extends Entity
     public function getLabels()
     {
         if (array_key_exists("labels", $this->_propDict)) {
-            if (is_a($this->_propDict["labels"], "Beta\Microsoft\Graph\Model\Label")) {
+            if (is_a($this->_propDict["labels"], "\Beta\Microsoft\Graph\Model\Label")) {
                 return $this->_propDict["labels"];
             } else {
                 $this->_propDict["labels"] = new Label($this->_propDict["labels"]);
@@ -234,7 +234,7 @@ class Property extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\PropertyType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\PropertyType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PropertyType($this->_propDict["type"]);

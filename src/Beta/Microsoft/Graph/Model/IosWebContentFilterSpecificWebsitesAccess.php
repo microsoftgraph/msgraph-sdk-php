@@ -42,7 +42,7 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     public function getSpecificWebsitesOnly()
     {
         if (array_key_exists("specificWebsitesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["specificWebsitesOnly"], "Beta\Microsoft\Graph\Model\IosBookmark")) {
+            if (is_a($this->_propDict["specificWebsitesOnly"], "\Beta\Microsoft\Graph\Model\IosBookmark")) {
                 return $this->_propDict["specificWebsitesOnly"];
             } else {
                 $this->_propDict["specificWebsitesOnly"] = new IosBookmark($this->_propDict["specificWebsitesOnly"]);
@@ -75,7 +75,7 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     public function getWebsiteList()
     {
         if (array_key_exists("websiteList", $this->_propDict)) {
-            if (is_a($this->_propDict["websiteList"], "Beta\Microsoft\Graph\Model\IosBookmark")) {
+            if (is_a($this->_propDict["websiteList"], "\Beta\Microsoft\Graph\Model\IosBookmark")) {
                 return $this->_propDict["websiteList"];
             } else {
                 $this->_propDict["websiteList"] = new IosBookmark($this->_propDict["websiteList"]);

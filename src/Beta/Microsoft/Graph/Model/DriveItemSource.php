@@ -32,7 +32,7 @@ class DriveItemSource extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Beta\Microsoft\Graph\Model\DriveItemSourceApplication")) {
+            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\DriveItemSourceApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new DriveItemSourceApplication($this->_propDict["application"]);

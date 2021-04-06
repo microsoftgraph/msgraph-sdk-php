@@ -86,7 +86,7 @@ class JournalLine extends Entity
     public function getAmount()
     {
         if (array_key_exists("amount", $this->_propDict)) {
-            if (is_a($this->_propDict["amount"], "Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["amount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["amount"];
             } else {
                 $this->_propDict["amount"] = new Decimal($this->_propDict["amount"]);
@@ -341,7 +341,7 @@ class JournalLine extends Entity
     public function getAccount()
     {
         if (array_key_exists("account", $this->_propDict)) {
-            if (is_a($this->_propDict["account"], "Beta\Microsoft\Graph\Model\Account")) {
+            if (is_a($this->_propDict["account"], "\Beta\Microsoft\Graph\Model\Account")) {
                 return $this->_propDict["account"];
             } else {
                 $this->_propDict["account"] = new Account($this->_propDict["account"]);

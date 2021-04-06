@@ -62,7 +62,7 @@ class AccessPackageAssignmentPolicy extends Entity
     public function getAccessReviewSettings()
     {
         if (array_key_exists("accessReviewSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["accessReviewSettings"], "Beta\Microsoft\Graph\Model\AssignmentReviewSettings")) {
+            if (is_a($this->_propDict["accessReviewSettings"], "\Beta\Microsoft\Graph\Model\AssignmentReviewSettings")) {
                 return $this->_propDict["accessReviewSettings"];
             } else {
                 $this->_propDict["accessReviewSettings"] = new AssignmentReviewSettings($this->_propDict["accessReviewSettings"]);
@@ -398,7 +398,7 @@ class AccessPackageAssignmentPolicy extends Entity
     public function getRequestApprovalSettings()
     {
         if (array_key_exists("requestApprovalSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["requestApprovalSettings"], "Beta\Microsoft\Graph\Model\ApprovalSettings")) {
+            if (is_a($this->_propDict["requestApprovalSettings"], "\Beta\Microsoft\Graph\Model\ApprovalSettings")) {
                 return $this->_propDict["requestApprovalSettings"];
             } else {
                 $this->_propDict["requestApprovalSettings"] = new ApprovalSettings($this->_propDict["requestApprovalSettings"]);
@@ -431,7 +431,7 @@ class AccessPackageAssignmentPolicy extends Entity
     public function getRequestorSettings()
     {
         if (array_key_exists("requestorSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["requestorSettings"], "Beta\Microsoft\Graph\Model\RequestorSettings")) {
+            if (is_a($this->_propDict["requestorSettings"], "\Beta\Microsoft\Graph\Model\RequestorSettings")) {
                 return $this->_propDict["requestorSettings"];
             } else {
                 $this->_propDict["requestorSettings"] = new RequestorSettings($this->_propDict["requestorSettings"]);
@@ -464,7 +464,7 @@ class AccessPackageAssignmentPolicy extends Entity
     public function getAccessPackage()
     {
         if (array_key_exists("accessPackage", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackage"], "Beta\Microsoft\Graph\Model\AccessPackage")) {
+            if (is_a($this->_propDict["accessPackage"], "\Beta\Microsoft\Graph\Model\AccessPackage")) {
                 return $this->_propDict["accessPackage"];
             } else {
                 $this->_propDict["accessPackage"] = new AccessPackage($this->_propDict["accessPackage"]);
@@ -496,7 +496,7 @@ class AccessPackageAssignmentPolicy extends Entity
     public function getAccessPackageCatalog()
     {
         if (array_key_exists("accessPackageCatalog", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageCatalog"], "Beta\Microsoft\Graph\Model\AccessPackageCatalog")) {
+            if (is_a($this->_propDict["accessPackageCatalog"], "\Beta\Microsoft\Graph\Model\AccessPackageCatalog")) {
                 return $this->_propDict["accessPackageCatalog"];
             } else {
                 $this->_propDict["accessPackageCatalog"] = new AccessPackageCatalog($this->_propDict["accessPackageCatalog"]);

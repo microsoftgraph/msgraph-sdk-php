@@ -33,7 +33,7 @@ class PrintJob extends Entity
     public function getConfiguration()
     {
         if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\Model\PrintJobConfiguration")) {
+            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\Model\PrintJobConfiguration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new PrintJobConfiguration($this->_propDict["configuration"]);
@@ -66,7 +66,7 @@ class PrintJob extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -219,7 +219,7 @@ class PrintJob extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\PrintJobStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\PrintJobStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrintJobStatus($this->_propDict["status"]);

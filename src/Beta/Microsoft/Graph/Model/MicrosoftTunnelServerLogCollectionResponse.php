@@ -223,7 +223,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\MicrosoftTunnelLogCollectionStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\MicrosoftTunnelLogCollectionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new MicrosoftTunnelLogCollectionStatus($this->_propDict["status"]);

@@ -33,7 +33,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Ediscovery\Model\CaseAction")) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Ediscovery\Model\CaseAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new CaseAction($this->_propDict["action"]);
@@ -94,15 +94,15 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdBy
     * The user that created the operation.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -113,7 +113,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the createdBy
     * The user that created the operation.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
     * @return CaseOperation
     */
@@ -189,15 +189,15 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the resultInfo
     * Contains success and failure-specific result information.
     *
-    * @return Beta\Microsoft\Graph\Model\ResultInfo The resultInfo
+    * @return \Beta\Microsoft\Graph\Model\ResultInfo The resultInfo
     */
     public function getResultInfo()
     {
         if (array_key_exists("resultInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["resultInfo"], "Beta\Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["resultInfo"], "\Beta\Microsoft\Graph\Model\ResultInfo")) {
                 return $this->_propDict["resultInfo"];
             } else {
-                $this->_propDict["resultInfo"] = new Beta\Microsoft\Graph\Model\ResultInfo($this->_propDict["resultInfo"]);
+                $this->_propDict["resultInfo"] = new \Beta\Microsoft\Graph\Model\ResultInfo($this->_propDict["resultInfo"]);
                 return $this->_propDict["resultInfo"];
             }
         }
@@ -208,7 +208,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the resultInfo
     * Contains success and failure-specific result information.
     *
-    * @param Beta\Microsoft\Graph\Model\ResultInfo $val The resultInfo
+    * @param \Beta\Microsoft\Graph\Model\ResultInfo $val The resultInfo
     *
     * @return CaseOperation
     */
@@ -227,7 +227,7 @@ class CaseOperation extends \Beta\Microsoft\Graph\Model\Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Ediscovery\Model\CaseOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Ediscovery\Model\CaseOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CaseOperationStatus($this->_propDict["status"]);

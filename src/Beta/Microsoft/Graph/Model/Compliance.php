@@ -55,15 +55,15 @@ class Compliance implements \JsonSerializable
     /**
     * Gets the ediscovery
     *
-    * @return Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot The ediscovery
+    * @return \Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot The ediscovery
     */
     public function getEdiscovery()
     {
         if (array_key_exists("ediscovery", $this->_propDict)) {
-            if (is_a($this->_propDict["ediscovery"], "Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot")) {
+            if (is_a($this->_propDict["ediscovery"], "\Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot")) {
                 return $this->_propDict["ediscovery"];
             } else {
-                $this->_propDict["ediscovery"] = new Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot($this->_propDict["ediscovery"]);
+                $this->_propDict["ediscovery"] = new \Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot($this->_propDict["ediscovery"]);
                 return $this->_propDict["ediscovery"];
             }
         }
@@ -73,7 +73,7 @@ class Compliance implements \JsonSerializable
     /**
     * Sets the ediscovery
     *
-    * @param Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot $val The ediscovery
+    * @param \Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot $val The ediscovery
     *
     * @return Compliance
     */

@@ -149,7 +149,7 @@ class MicrosoftTunnelSite extends Entity
     public function getMicrosoftTunnelConfiguration()
     {
         if (array_key_exists("microsoftTunnelConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftTunnelConfiguration"], "Beta\Microsoft\Graph\Model\MicrosoftTunnelConfiguration")) {
+            if (is_a($this->_propDict["microsoftTunnelConfiguration"], "\Beta\Microsoft\Graph\Model\MicrosoftTunnelConfiguration")) {
                 return $this->_propDict["microsoftTunnelConfiguration"];
             } else {
                 $this->_propDict["microsoftTunnelConfiguration"] = new MicrosoftTunnelConfiguration($this->_propDict["microsoftTunnelConfiguration"]);

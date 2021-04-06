@@ -33,7 +33,7 @@ class EducationAssignmentGrade extends Entity
     public function getGradedBy()
     {
         if (array_key_exists("gradedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["gradedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["gradedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["gradedBy"];
             } else {
                 $this->_propDict["gradedBy"] = new IdentitySet($this->_propDict["gradedBy"]);

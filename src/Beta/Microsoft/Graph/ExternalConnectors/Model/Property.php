@@ -162,7 +162,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     public function getLabels()
     {
         if (array_key_exists("labels", $this->_propDict)) {
-            if (is_a($this->_propDict["labels"], "Beta\Microsoft\Graph\ExternalConnectors\Model\Label")) {
+            if (is_a($this->_propDict["labels"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Label")) {
                 return $this->_propDict["labels"];
             } else {
                 $this->_propDict["labels"] = new Label($this->_propDict["labels"]);
@@ -219,7 +219,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\ExternalConnectors\Model\PropertyType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\PropertyType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PropertyType($this->_propDict["type"]);

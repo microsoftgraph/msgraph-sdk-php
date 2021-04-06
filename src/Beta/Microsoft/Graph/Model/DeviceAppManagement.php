@@ -157,7 +157,7 @@ class DeviceAppManagement extends Entity
     public function getMicrosoftStoreForBusinessPortalSelection()
     {
         if (array_key_exists("microsoftStoreForBusinessPortalSelection", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftStoreForBusinessPortalSelection"], "Beta\Microsoft\Graph\Model\MicrosoftStoreForBusinessPortalSelectionOptions")) {
+            if (is_a($this->_propDict["microsoftStoreForBusinessPortalSelection"], "\Beta\Microsoft\Graph\Model\MicrosoftStoreForBusinessPortalSelectionOptions")) {
                 return $this->_propDict["microsoftStoreForBusinessPortalSelection"];
             } else {
                 $this->_propDict["microsoftStoreForBusinessPortalSelection"] = new MicrosoftStoreForBusinessPortalSelectionOptions($this->_propDict["microsoftStoreForBusinessPortalSelection"]);
@@ -370,7 +370,7 @@ class DeviceAppManagement extends Entity
     public function getSymantecCodeSigningCertificate()
     {
         if (array_key_exists("symantecCodeSigningCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "Beta\Microsoft\Graph\Model\SymantecCodeSigningCertificate")) {
+            if (is_a($this->_propDict["symantecCodeSigningCertificate"], "\Beta\Microsoft\Graph\Model\SymantecCodeSigningCertificate")) {
                 return $this->_propDict["symantecCodeSigningCertificate"];
             } else {
                 $this->_propDict["symantecCodeSigningCertificate"] = new SymantecCodeSigningCertificate($this->_propDict["symantecCodeSigningCertificate"]);
@@ -523,7 +523,7 @@ class DeviceAppManagement extends Entity
     public function getWindowsManagementApp()
     {
         if (array_key_exists("windowsManagementApp", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsManagementApp"], "Beta\Microsoft\Graph\Model\WindowsManagementApp")) {
+            if (is_a($this->_propDict["windowsManagementApp"], "\Beta\Microsoft\Graph\Model\WindowsManagementApp")) {
                 return $this->_propDict["windowsManagementApp"];
             } else {
                 $this->_propDict["windowsManagementApp"] = new WindowsManagementApp($this->_propDict["windowsManagementApp"]);

@@ -33,7 +33,7 @@ class IntuneBrand extends Entity
     public function getCompanyPortalBlockedActions()
     {
         if (array_key_exists("companyPortalBlockedActions", $this->_propDict)) {
-            if (is_a($this->_propDict["companyPortalBlockedActions"], "Beta\Microsoft\Graph\Model\CompanyPortalBlockedAction")) {
+            if (is_a($this->_propDict["companyPortalBlockedActions"], "\Beta\Microsoft\Graph\Model\CompanyPortalBlockedAction")) {
                 return $this->_propDict["companyPortalBlockedActions"];
             } else {
                 $this->_propDict["companyPortalBlockedActions"] = new CompanyPortalBlockedAction($this->_propDict["companyPortalBlockedActions"]);
@@ -262,7 +262,7 @@ class IntuneBrand extends Entity
     public function getDarkBackgroundLogo()
     {
         if (array_key_exists("darkBackgroundLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["darkBackgroundLogo"], "Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["darkBackgroundLogo"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["darkBackgroundLogo"];
             } else {
                 $this->_propDict["darkBackgroundLogo"] = new MimeContent($this->_propDict["darkBackgroundLogo"]);
@@ -351,7 +351,7 @@ class IntuneBrand extends Entity
     public function getEnrollmentAvailability()
     {
         if (array_key_exists("enrollmentAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentAvailability"], "Beta\Microsoft\Graph\Model\EnrollmentAvailabilityOptions")) {
+            if (is_a($this->_propDict["enrollmentAvailability"], "\Beta\Microsoft\Graph\Model\EnrollmentAvailabilityOptions")) {
                 return $this->_propDict["enrollmentAvailability"];
             } else {
                 $this->_propDict["enrollmentAvailability"] = new EnrollmentAvailabilityOptions($this->_propDict["enrollmentAvailability"]);
@@ -440,7 +440,7 @@ class IntuneBrand extends Entity
     public function getLandingPageCustomizedImage()
     {
         if (array_key_exists("landingPageCustomizedImage", $this->_propDict)) {
-            if (is_a($this->_propDict["landingPageCustomizedImage"], "Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["landingPageCustomizedImage"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["landingPageCustomizedImage"];
             } else {
                 $this->_propDict["landingPageCustomizedImage"] = new MimeContent($this->_propDict["landingPageCustomizedImage"]);
@@ -473,7 +473,7 @@ class IntuneBrand extends Entity
     public function getLightBackgroundLogo()
     {
         if (array_key_exists("lightBackgroundLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["lightBackgroundLogo"], "Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["lightBackgroundLogo"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["lightBackgroundLogo"];
             } else {
                 $this->_propDict["lightBackgroundLogo"] = new MimeContent($this->_propDict["lightBackgroundLogo"]);
@@ -786,7 +786,7 @@ class IntuneBrand extends Entity
     public function getThemeColor()
     {
         if (array_key_exists("themeColor", $this->_propDict)) {
-            if (is_a($this->_propDict["themeColor"], "Beta\Microsoft\Graph\Model\RgbColor")) {
+            if (is_a($this->_propDict["themeColor"], "\Beta\Microsoft\Graph\Model\RgbColor")) {
                 return $this->_propDict["themeColor"];
             } else {
                 $this->_propDict["themeColor"] = new RgbColor($this->_propDict["themeColor"]);

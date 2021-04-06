@@ -33,7 +33,7 @@ class RequestSchedule extends Entity
     public function getExpiration()
     {
         if (array_key_exists("expiration", $this->_propDict)) {
-            if (is_a($this->_propDict["expiration"], "Beta\Microsoft\Graph\Model\ExpirationPattern")) {
+            if (is_a($this->_propDict["expiration"], "\Beta\Microsoft\Graph\Model\ExpirationPattern")) {
                 return $this->_propDict["expiration"];
             } else {
                 $this->_propDict["expiration"] = new ExpirationPattern($this->_propDict["expiration"]);
@@ -66,7 +66,7 @@ class RequestSchedule extends Entity
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);

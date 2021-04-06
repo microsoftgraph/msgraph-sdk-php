@@ -33,7 +33,7 @@ class LabelingOptions extends Entity
     public function getAssignmentMethod()
     {
         if (array_key_exists("assignmentMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentMethod"], "Beta\Microsoft\Graph\Model\AssignmentMethod")) {
+            if (is_a($this->_propDict["assignmentMethod"], "\Beta\Microsoft\Graph\Model\AssignmentMethod")) {
                 return $this->_propDict["assignmentMethod"];
             } else {
                 $this->_propDict["assignmentMethod"] = new AssignmentMethod($this->_propDict["assignmentMethod"]);
@@ -66,7 +66,7 @@ class LabelingOptions extends Entity
     public function getDowngradeJustification()
     {
         if (array_key_exists("downgradeJustification", $this->_propDict)) {
-            if (is_a($this->_propDict["downgradeJustification"], "Beta\Microsoft\Graph\Model\DowngradeJustification")) {
+            if (is_a($this->_propDict["downgradeJustification"], "\Beta\Microsoft\Graph\Model\DowngradeJustification")) {
                 return $this->_propDict["downgradeJustification"];
             } else {
                 $this->_propDict["downgradeJustification"] = new DowngradeJustification($this->_propDict["downgradeJustification"]);
@@ -99,7 +99,7 @@ class LabelingOptions extends Entity
     public function getExtendedProperties()
     {
         if (array_key_exists("extendedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["extendedProperties"], "Beta\Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["extendedProperties"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["extendedProperties"];
             } else {
                 $this->_propDict["extendedProperties"] = new KeyValuePair($this->_propDict["extendedProperties"]);

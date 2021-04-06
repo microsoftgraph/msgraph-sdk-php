@@ -58,7 +58,7 @@ class ContentClassification extends Entity
     public function getMatches()
     {
         if (array_key_exists("matches", $this->_propDict)) {
-            if (is_a($this->_propDict["matches"], "Beta\Microsoft\Graph\Model\MatchLocation")) {
+            if (is_a($this->_propDict["matches"], "\Beta\Microsoft\Graph\Model\MatchLocation")) {
                 return $this->_propDict["matches"];
             } else {
                 $this->_propDict["matches"] = new MatchLocation($this->_propDict["matches"]);
