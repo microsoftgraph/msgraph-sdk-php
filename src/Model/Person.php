@@ -316,14 +316,14 @@ class Person extends Entity
     
     /**
     * Gets the personType
-    * The type of person.
+    * The type of person, for example distribution list.
     *
     * @return PersonType The personType
     */
     public function getPersonType()
     {
         if (array_key_exists("personType", $this->_propDict)) {
-            if (is_a($this->_propDict["personType"], "Microsoft\Graph\Model\PersonType")) {
+            if (is_a($this->_propDict["personType"], "\Microsoft\Graph\Model\PersonType")) {
                 return $this->_propDict["personType"];
             } else {
                 $this->_propDict["personType"] = new PersonType($this->_propDict["personType"]);
@@ -335,7 +335,7 @@ class Person extends Entity
     
     /**
     * Sets the personType
-    * The type of person.
+    * The type of person, for example distribution list.
     *
     * @param PersonType $val The personType
     *

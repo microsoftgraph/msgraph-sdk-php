@@ -66,7 +66,7 @@ class Permission extends Entity
     public function getGrantedTo()
     {
         if (array_key_exists("grantedTo", $this->_propDict)) {
-            if (is_a($this->_propDict["grantedTo"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["grantedTo"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["grantedTo"];
             } else {
                 $this->_propDict["grantedTo"] = new IdentitySet($this->_propDict["grantedTo"]);
@@ -158,7 +158,7 @@ class Permission extends Entity
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "Microsoft\Graph\Model\ItemReference")) {
+            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -191,7 +191,7 @@ class Permission extends Entity
     public function getInvitation()
     {
         if (array_key_exists("invitation", $this->_propDict)) {
-            if (is_a($this->_propDict["invitation"], "Microsoft\Graph\Model\SharingInvitation")) {
+            if (is_a($this->_propDict["invitation"], "\Microsoft\Graph\Model\SharingInvitation")) {
                 return $this->_propDict["invitation"];
             } else {
                 $this->_propDict["invitation"] = new SharingInvitation($this->_propDict["invitation"]);
@@ -224,7 +224,7 @@ class Permission extends Entity
     public function getLink()
     {
         if (array_key_exists("link", $this->_propDict)) {
-            if (is_a($this->_propDict["link"], "Microsoft\Graph\Model\SharingLink")) {
+            if (is_a($this->_propDict["link"], "\Microsoft\Graph\Model\SharingLink")) {
                 return $this->_propDict["link"];
             } else {
                 $this->_propDict["link"] = new SharingLink($this->_propDict["link"]);
@@ -279,7 +279,7 @@ class Permission extends Entity
     
     /**
     * Gets the shareId
-    * A unique token that can be used to access this shared item via the **shares** API. Read-only.
+    * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
     *
     * @return string The shareId
     */
@@ -294,7 +294,7 @@ class Permission extends Entity
     
     /**
     * Sets the shareId
-    * A unique token that can be used to access this shared item via the **shares** API. Read-only.
+    * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
     *
     * @param string $val The shareId
     *

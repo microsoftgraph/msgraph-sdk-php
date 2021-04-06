@@ -33,7 +33,7 @@ class PlannerPlan extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -151,7 +151,7 @@ class PlannerPlan extends Entity
 
      /** 
      * Gets the buckets
-    * Read-only. Nullable. Collection of buckets in the plan.
+    * Collection of buckets in the plan. Read-only. Nullable.
      *
      * @return array The buckets
      */
@@ -166,7 +166,7 @@ class PlannerPlan extends Entity
     
     /** 
     * Sets the buckets
-    * Read-only. Nullable. Collection of buckets in the plan.
+    * Collection of buckets in the plan. Read-only. Nullable.
     *
     * @param PlannerBucket $val The buckets
     *
@@ -180,14 +180,14 @@ class PlannerPlan extends Entity
     
     /**
     * Gets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Additional details about the plan. Read-only. Nullable.
     *
     * @return PlannerPlanDetails The details
     */
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\PlannerPlanDetails")) {
+            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\PlannerPlanDetails")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PlannerPlanDetails($this->_propDict["details"]);
@@ -199,7 +199,7 @@ class PlannerPlan extends Entity
     
     /**
     * Sets the details
-    * Read-only. Nullable. Additional details about the plan.
+    * Additional details about the plan. Read-only. Nullable.
     *
     * @param PlannerPlanDetails $val The details
     *
@@ -214,7 +214,7 @@ class PlannerPlan extends Entity
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
+    * Collection of tasks in the plan. Read-only. Nullable.
      *
      * @return array The tasks
      */
@@ -229,7 +229,7 @@ class PlannerPlan extends Entity
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Collection of tasks in the plan.
+    * Collection of tasks in the plan. Read-only. Nullable.
     *
     * @param PlannerTask $val The tasks
     *

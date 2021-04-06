@@ -91,7 +91,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     public function getEncryption()
     {
         if (array_key_exists("encryption", $this->_propDict)) {
-            if (is_a($this->_propDict["encryption"], "Microsoft\Graph\Model\WorkforceIntegrationEncryption")) {
+            if (is_a($this->_propDict["encryption"], "\Microsoft\Graph\Model\WorkforceIntegrationEncryption")) {
                 return $this->_propDict["encryption"];
             } else {
                 $this->_propDict["encryption"] = new WorkforceIntegrationEncryption($this->_propDict["encryption"]);
@@ -146,14 +146,14 @@ class WorkforceIntegration extends ChangeTrackedEntity
     
     /**
     * Gets the supportedEntities
-    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
+    * This property will replace supports in v1.0. We recommend that you use this property instead of supports. The supports property will still be supported in beta for the time being. Possible values are none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences. If selecting more than one value, all values must start with the first letter in uppercase.
     *
     * @return WorkforceIntegrationSupportedEntities The supportedEntities
     */
     public function getSupportedEntities()
     {
         if (array_key_exists("supportedEntities", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedEntities"], "Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities")) {
+            if (is_a($this->_propDict["supportedEntities"], "\Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities")) {
                 return $this->_propDict["supportedEntities"];
             } else {
                 $this->_propDict["supportedEntities"] = new WorkforceIntegrationSupportedEntities($this->_propDict["supportedEntities"]);
@@ -165,7 +165,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     
     /**
     * Sets the supportedEntities
-    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
+    * This property will replace supports in v1.0. We recommend that you use this property instead of supports. The supports property will still be supported in beta for the time being. Possible values are none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences. If selecting more than one value, all values must start with the first letter in uppercase.
     *
     * @param WorkforceIntegrationSupportedEntities $val The supportedEntities
     *

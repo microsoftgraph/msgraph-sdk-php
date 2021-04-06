@@ -348,7 +348,7 @@ class Domain extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\DomainState")) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\DomainState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new DomainState($this->_propDict["state"]);
@@ -374,7 +374,7 @@ class Domain extends Entity
     
     /**
     * Gets the supportedServices
-    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
+    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
     *
     * @return string The supportedServices
     */
@@ -389,7 +389,7 @@ class Domain extends Entity
     
     /**
     * Sets the supportedServices
-    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
+    * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline,SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
     *
     * @param string $val The supportedServices
     *

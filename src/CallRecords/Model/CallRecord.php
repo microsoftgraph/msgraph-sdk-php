@@ -153,15 +153,15 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     * Gets the organizer
     * The organizing party's identity.
     *
-    * @return Microsoft\Graph\Model\IdentitySet The organizer
+    * @return \Microsoft\Graph\Model\IdentitySet The organizer
     */
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["organizer"];
             } else {
-                $this->_propDict["organizer"] = new Microsoft\Graph\Model\IdentitySet($this->_propDict["organizer"]);
+                $this->_propDict["organizer"] = new \Microsoft\Graph\Model\IdentitySet($this->_propDict["organizer"]);
                 return $this->_propDict["organizer"];
             }
         }
@@ -172,7 +172,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     * Sets the organizer
     * The organizing party's identity.
     *
-    * @param Microsoft\Graph\Model\IdentitySet $val The organizer
+    * @param \Microsoft\Graph\Model\IdentitySet $val The organizer
     *
     * @return CallRecord
     */
@@ -202,7 +202,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     * Sets the participants
     * List of distinct identities involved in the call.
     *
-    * @param Microsoft\Graph\Model\IdentitySet $val The participants
+    * @param \Microsoft\Graph\Model\IdentitySet $val The participants
     *
     * @return CallRecord
     */
@@ -214,7 +214,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     
     /**
     * Gets the startDateTime
-    * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The startDateTime
     */
@@ -233,7 +233,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     
     /**
     * Sets the startDateTime
-    * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The startDateTime
     *
@@ -254,7 +254,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\CallRecords\Model\CallType")) {
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\CallRecords\Model\CallType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new CallType($this->_propDict["type"]);
@@ -280,7 +280,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     
     /**
     * Gets the version
-    * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
+    * Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
     *
     * @return int The version
     */
@@ -295,7 +295,7 @@ class CallRecord extends \Microsoft\Graph\Model\Entity
     
     /**
     * Sets the version
-    * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
+    * Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
     *
     * @param int $val The version
     *

@@ -62,7 +62,7 @@ class DeviceManagement extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Microsoft\Graph\Model\DeviceManagementSettings")) {
+            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\DeviceManagementSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new DeviceManagementSettings($this->_propDict["settings"]);
@@ -95,7 +95,7 @@ class DeviceManagement extends Entity
     public function getIntuneBrand()
     {
         if (array_key_exists("intuneBrand", $this->_propDict)) {
-            if (is_a($this->_propDict["intuneBrand"], "Microsoft\Graph\Model\IntuneBrand")) {
+            if (is_a($this->_propDict["intuneBrand"], "\Microsoft\Graph\Model\IntuneBrand")) {
                 return $this->_propDict["intuneBrand"];
             } else {
                 $this->_propDict["intuneBrand"] = new IntuneBrand($this->_propDict["intuneBrand"]);
@@ -121,14 +121,14 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @return DeviceManagementSubscriptionState The subscriptionState
     */
     public function getSubscriptionState()
     {
         if (array_key_exists("subscriptionState", $this->_propDict)) {
-            if (is_a($this->_propDict["subscriptionState"], "Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
+            if (is_a($this->_propDict["subscriptionState"], "\Microsoft\Graph\Model\DeviceManagementSubscriptionState")) {
                 return $this->_propDict["subscriptionState"];
             } else {
                 $this->_propDict["subscriptionState"] = new DeviceManagementSubscriptionState($this->_propDict["subscriptionState"]);
@@ -140,7 +140,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @param DeviceManagementSubscriptionState $val The subscriptionState
     *
@@ -221,7 +221,7 @@ class DeviceManagement extends Entity
     public function getDeviceCompliancePolicyDeviceStateSummary()
     {
         if (array_key_exists("deviceCompliancePolicyDeviceStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCompliancePolicyDeviceStateSummary"], "Microsoft\Graph\Model\DeviceCompliancePolicyDeviceStateSummary")) {
+            if (is_a($this->_propDict["deviceCompliancePolicyDeviceStateSummary"], "\Microsoft\Graph\Model\DeviceCompliancePolicyDeviceStateSummary")) {
                 return $this->_propDict["deviceCompliancePolicyDeviceStateSummary"];
             } else {
                 $this->_propDict["deviceCompliancePolicyDeviceStateSummary"] = new DeviceCompliancePolicyDeviceStateSummary($this->_propDict["deviceCompliancePolicyDeviceStateSummary"]);
@@ -284,7 +284,7 @@ class DeviceManagement extends Entity
     public function getDeviceConfigurationDeviceStateSummaries()
     {
         if (array_key_exists("deviceConfigurationDeviceStateSummaries", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceConfigurationDeviceStateSummaries"], "Microsoft\Graph\Model\DeviceConfigurationDeviceStateSummary")) {
+            if (is_a($this->_propDict["deviceConfigurationDeviceStateSummaries"], "\Microsoft\Graph\Model\DeviceConfigurationDeviceStateSummary")) {
                 return $this->_propDict["deviceConfigurationDeviceStateSummaries"];
             } else {
                 $this->_propDict["deviceConfigurationDeviceStateSummaries"] = new DeviceConfigurationDeviceStateSummary($this->_propDict["deviceConfigurationDeviceStateSummaries"]);
@@ -377,7 +377,7 @@ class DeviceManagement extends Entity
     public function getSoftwareUpdateStatusSummary()
     {
         if (array_key_exists("softwareUpdateStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
+            if (is_a($this->_propDict["softwareUpdateStatusSummary"], "\Microsoft\Graph\Model\SoftwareUpdateStatusSummary")) {
                 return $this->_propDict["softwareUpdateStatusSummary"];
             } else {
                 $this->_propDict["softwareUpdateStatusSummary"] = new SoftwareUpdateStatusSummary($this->_propDict["softwareUpdateStatusSummary"]);
@@ -440,7 +440,7 @@ class DeviceManagement extends Entity
     public function getConditionalAccessSettings()
     {
         if (array_key_exists("conditionalAccessSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessSettings"], "Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
+            if (is_a($this->_propDict["conditionalAccessSettings"], "\Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
                 return $this->_propDict["conditionalAccessSettings"];
             } else {
                 $this->_propDict["conditionalAccessSettings"] = new OnPremisesConditionalAccessSettings($this->_propDict["conditionalAccessSettings"]);
@@ -623,7 +623,7 @@ class DeviceManagement extends Entity
     public function getApplePushNotificationCertificate()
     {
         if (array_key_exists("applePushNotificationCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["applePushNotificationCertificate"], "Microsoft\Graph\Model\ApplePushNotificationCertificate")) {
+            if (is_a($this->_propDict["applePushNotificationCertificate"], "\Microsoft\Graph\Model\ApplePushNotificationCertificate")) {
                 return $this->_propDict["applePushNotificationCertificate"];
             } else {
                 $this->_propDict["applePushNotificationCertificate"] = new ApplePushNotificationCertificate($this->_propDict["applePushNotificationCertificate"]);
@@ -686,7 +686,7 @@ class DeviceManagement extends Entity
     public function getManagedDeviceOverview()
     {
         if (array_key_exists("managedDeviceOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceOverview"], "Microsoft\Graph\Model\ManagedDeviceOverview")) {
+            if (is_a($this->_propDict["managedDeviceOverview"], "\Microsoft\Graph\Model\ManagedDeviceOverview")) {
                 return $this->_propDict["managedDeviceOverview"];
             } else {
                 $this->_propDict["managedDeviceOverview"] = new ManagedDeviceOverview($this->_propDict["managedDeviceOverview"]);
