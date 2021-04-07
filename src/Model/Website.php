@@ -82,14 +82,14 @@ class Website extends Entity
 
     /**
     * Gets the type
-    * The possible values are: other, home, work, blog, profile.
+    * Possible values are: other, home, work, blog, profile.
     *
     * @return WebsiteType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\WebsiteType")) {
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\WebsiteType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new WebsiteType($this->_propDict["type"]);
@@ -101,7 +101,7 @@ class Website extends Entity
 
     /**
     * Sets the type
-    * The possible values are: other, home, work, blog, profile.
+    * Possible values are: other, home, work, blog, profile.
     *
     * @param WebsiteType $val The value to assign to the type
     *

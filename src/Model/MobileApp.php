@@ -211,7 +211,7 @@ class MobileApp extends Entity
     public function getLargeIcon()
     {
         if (array_key_exists("largeIcon", $this->_propDict)) {
-            if (is_a($this->_propDict["largeIcon"], "Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["largeIcon"], "\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["largeIcon"];
             } else {
                 $this->_propDict["largeIcon"] = new MimeContent($this->_propDict["largeIcon"]);
@@ -393,7 +393,7 @@ class MobileApp extends Entity
     public function getPublishingState()
     {
         if (array_key_exists("publishingState", $this->_propDict)) {
-            if (is_a($this->_propDict["publishingState"], "Microsoft\Graph\Model\MobileAppPublishingState")) {
+            if (is_a($this->_propDict["publishingState"], "\Microsoft\Graph\Model\MobileAppPublishingState")) {
                 return $this->_propDict["publishingState"];
             } else {
                 $this->_propDict["publishingState"] = new MobileAppPublishingState($this->_propDict["publishingState"]);

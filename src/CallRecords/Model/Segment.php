@@ -33,7 +33,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
     public function getCallee()
     {
         if (array_key_exists("callee", $this->_propDict)) {
-            if (is_a($this->_propDict["callee"], "Microsoft\Graph\CallRecords\Model\Endpoint")) {
+            if (is_a($this->_propDict["callee"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["callee"];
             } else {
                 $this->_propDict["callee"] = new Endpoint($this->_propDict["callee"]);
@@ -66,7 +66,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
     public function getCaller()
     {
         if (array_key_exists("caller", $this->_propDict)) {
-            if (is_a($this->_propDict["caller"], "Microsoft\Graph\CallRecords\Model\Endpoint")) {
+            if (is_a($this->_propDict["caller"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["caller"];
             } else {
                 $this->_propDict["caller"] = new Endpoint($this->_propDict["caller"]);
@@ -132,7 +132,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
     public function getFailureInfo()
     {
         if (array_key_exists("failureInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["failureInfo"], "Microsoft\Graph\CallRecords\Model\FailureInfo")) {
+            if (is_a($this->_propDict["failureInfo"], "\Microsoft\Graph\CallRecords\Model\FailureInfo")) {
                 return $this->_propDict["failureInfo"];
             } else {
                 $this->_propDict["failureInfo"] = new FailureInfo($this->_propDict["failureInfo"]);

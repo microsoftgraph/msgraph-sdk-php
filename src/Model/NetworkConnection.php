@@ -25,7 +25,7 @@ class NetworkConnection extends Entity
 {
     /**
     * Gets the applicationName
-    * Name of the application managing the network connection (for example, Facebook or SMTP).
+    * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
     *
     * @return string The applicationName
     */
@@ -40,7 +40,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the applicationName
-    * Name of the application managing the network connection (for example, Facebook or SMTP).
+    * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
     *
     * @param string $val The value of the applicationName
     *
@@ -201,7 +201,7 @@ class NetworkConnection extends Entity
     public function getDirection()
     {
         if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Model\ConnectionDirection")) {
+            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\ConnectionDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new ConnectionDirection($this->_propDict["direction"]);
@@ -407,7 +407,7 @@ class NetworkConnection extends Entity
     public function getProtocol()
     {
         if (array_key_exists("protocol", $this->_propDict)) {
-            if (is_a($this->_propDict["protocol"], "Microsoft\Graph\Model\SecurityNetworkProtocol")) {
+            if (is_a($this->_propDict["protocol"], "\Microsoft\Graph\Model\SecurityNetworkProtocol")) {
                 return $this->_propDict["protocol"];
             } else {
                 $this->_propDict["protocol"] = new SecurityNetworkProtocol($this->_propDict["protocol"]);
@@ -552,7 +552,7 @@ class NetworkConnection extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ConnectionStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ConnectionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionStatus($this->_propDict["status"]);

@@ -33,7 +33,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function getAppDataEncryptionType()
     {
         if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "\Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
                 return $this->_propDict["appDataEncryptionType"];
             } else {
                 $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
@@ -59,7 +59,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * A custom browser protocol to open weblink on iOS.
     *
     * @return string The customBrowserProtocol
     */
@@ -74,7 +74,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * A custom browser protocol to open weblink on iOS.
     *
     * @param string $val The customBrowserProtocol
     *
@@ -212,7 +212,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

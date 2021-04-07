@@ -84,14 +84,14 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the externalSource
-    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
+    * Where this user was created from. Possible values are: sis, lms, or manual.
     *
     * @return EducationExternalSource The externalSource
     */
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Microsoft\Graph\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "\Microsoft\Graph\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -103,7 +103,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the externalSource
-    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
+    * Where this user was created from. Possible values are: sis, lms, or manual.
     *
     * @param EducationExternalSource $val The externalSource
     *

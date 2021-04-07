@@ -91,7 +91,7 @@ class FeatureRolloutPolicy extends Entity
     public function getFeature()
     {
         if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "Microsoft\Graph\Model\StagedFeatureName")) {
+            if (is_a($this->_propDict["feature"], "\Microsoft\Graph\Model\StagedFeatureName")) {
                 return $this->_propDict["feature"];
             } else {
                 $this->_propDict["feature"] = new StagedFeatureName($this->_propDict["feature"]);

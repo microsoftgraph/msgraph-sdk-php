@@ -33,7 +33,7 @@ class TeamsTab extends Entity
     public function getConfiguration()
     {
         if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Microsoft\Graph\Model\TeamsTabConfiguration")) {
+            if (is_a($this->_propDict["configuration"], "\Microsoft\Graph\Model\TeamsTabConfiguration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new TeamsTabConfiguration($this->_propDict["configuration"]);
@@ -117,14 +117,14 @@ class TeamsTab extends Entity
     
     /**
     * Gets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
     * @return TeamsApp The teamsApp
     */
     public function getTeamsApp()
     {
         if (array_key_exists("teamsApp", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsApp"], "Microsoft\Graph\Model\TeamsApp")) {
+            if (is_a($this->_propDict["teamsApp"], "\Microsoft\Graph\Model\TeamsApp")) {
                 return $this->_propDict["teamsApp"];
             } else {
                 $this->_propDict["teamsApp"] = new TeamsApp($this->_propDict["teamsApp"]);
@@ -136,7 +136,7 @@ class TeamsTab extends Entity
     
     /**
     * Sets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
     * @param TeamsApp $val The teamsApp
     *

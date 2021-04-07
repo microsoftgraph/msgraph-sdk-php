@@ -171,14 +171,14 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     
     /**
     * Gets the platformType
-    * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
+    * Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
     *
     * @return PolicyPlatformType The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "Microsoft\Graph\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "\Microsoft\Graph\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -190,7 +190,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     
     /**
     * Sets the platformType
-    * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
+    * Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
     *
     * @param PolicyPlatformType $val The platformType
     *

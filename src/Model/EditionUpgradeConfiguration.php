@@ -55,14 +55,14 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the licenseType
-    * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
+    * Edition Upgrade License Type. Possible values are: productKey, licenseFile, notConfigured.
     *
     * @return EditionUpgradeLicenseType The licenseType
     */
     public function getLicenseType()
     {
         if (array_key_exists("licenseType", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseType"], "Microsoft\Graph\Model\EditionUpgradeLicenseType")) {
+            if (is_a($this->_propDict["licenseType"], "\Microsoft\Graph\Model\EditionUpgradeLicenseType")) {
                 return $this->_propDict["licenseType"];
             } else {
                 $this->_propDict["licenseType"] = new EditionUpgradeLicenseType($this->_propDict["licenseType"]);
@@ -74,7 +74,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the licenseType
-    * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
+    * Edition Upgrade License Type. Possible values are: productKey, licenseFile, notConfigured.
     *
     * @param EditionUpgradeLicenseType $val The licenseType
     *
@@ -117,14 +117,14 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Gets the targetEdition
-    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
+    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN, notConfigured, windows10Home, windows10HomeChina, windows10HomeN, windows10HomeSingleLanguage, windows10Mobile, windows10IoTCore, windows10IoTCoreCommercial.
     *
     * @return Windows10EditionType The targetEdition
     */
     public function getTargetEdition()
     {
         if (array_key_exists("targetEdition", $this->_propDict)) {
-            if (is_a($this->_propDict["targetEdition"], "Microsoft\Graph\Model\Windows10EditionType")) {
+            if (is_a($this->_propDict["targetEdition"], "\Microsoft\Graph\Model\Windows10EditionType")) {
                 return $this->_propDict["targetEdition"];
             } else {
                 $this->_propDict["targetEdition"] = new Windows10EditionType($this->_propDict["targetEdition"]);
@@ -136,7 +136,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration
     
     /**
     * Sets the targetEdition
-    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
+    * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN, notConfigured, windows10Home, windows10HomeChina, windows10HomeN, windows10HomeSingleLanguage, windows10Mobile, windows10IoTCore, windows10IoTCoreCommercial.
     *
     * @param Windows10EditionType $val The targetEdition
     *

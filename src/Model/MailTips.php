@@ -33,7 +33,7 @@ class MailTips extends Entity
     public function getAutomaticReplies()
     {
         if (array_key_exists("automaticReplies", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticReplies"], "Microsoft\Graph\Model\AutomaticRepliesMailTips")) {
+            if (is_a($this->_propDict["automaticReplies"], "\Microsoft\Graph\Model\AutomaticRepliesMailTips")) {
                 return $this->_propDict["automaticReplies"];
             } else {
                 $this->_propDict["automaticReplies"] = new AutomaticRepliesMailTips($this->_propDict["automaticReplies"]);
@@ -122,7 +122,7 @@ class MailTips extends Entity
     public function getEmailAddress()
     {
         if (array_key_exists("emailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddress"], "Microsoft\Graph\Model\EmailAddress")) {
+            if (is_a($this->_propDict["emailAddress"], "\Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["emailAddress"];
             } else {
                 $this->_propDict["emailAddress"] = new EmailAddress($this->_propDict["emailAddress"]);
@@ -155,7 +155,7 @@ class MailTips extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\MailTipsError")) {
+            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\MailTipsError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new MailTipsError($this->_propDict["error"]);
@@ -300,7 +300,7 @@ class MailTips extends Entity
     public function getRecipientScope()
     {
         if (array_key_exists("recipientScope", $this->_propDict)) {
-            if (is_a($this->_propDict["recipientScope"], "Microsoft\Graph\Model\RecipientScopeType")) {
+            if (is_a($this->_propDict["recipientScope"], "\Microsoft\Graph\Model\RecipientScopeType")) {
                 return $this->_propDict["recipientScope"];
             } else {
                 $this->_propDict["recipientScope"] = new RecipientScopeType($this->_propDict["recipientScope"]);
@@ -333,7 +333,7 @@ class MailTips extends Entity
     public function getRecipientSuggestions()
     {
         if (array_key_exists("recipientSuggestions", $this->_propDict)) {
-            if (is_a($this->_propDict["recipientSuggestions"], "Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["recipientSuggestions"], "\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["recipientSuggestions"];
             } else {
                 $this->_propDict["recipientSuggestions"] = new Recipient($this->_propDict["recipientSuggestions"]);

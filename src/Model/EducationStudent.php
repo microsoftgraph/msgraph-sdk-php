@@ -87,14 +87,14 @@ class EducationStudent extends Entity
 
     /**
     * Gets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
     * @return EducationGender The gender
     */
     public function getGender()
     {
         if (array_key_exists("gender", $this->_propDict)) {
-            if (is_a($this->_propDict["gender"], "Microsoft\Graph\Model\EducationGender")) {
+            if (is_a($this->_propDict["gender"], "\Microsoft\Graph\Model\EducationGender")) {
                 return $this->_propDict["gender"];
             } else {
                 $this->_propDict["gender"] = new EducationGender($this->_propDict["gender"]);
@@ -106,7 +106,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
     * @param EducationGender $val The value to assign to the gender
     *

@@ -33,7 +33,7 @@ class ConditionalAccessGrantControls extends Entity
     public function getBuiltInControls()
     {
         if (array_key_exists("builtInControls", $this->_propDict)) {
-            if (is_a($this->_propDict["builtInControls"], "Microsoft\Graph\Model\ConditionalAccessGrantControl")) {
+            if (is_a($this->_propDict["builtInControls"], "\Microsoft\Graph\Model\ConditionalAccessGrantControl")) {
                 return $this->_propDict["builtInControls"];
             } else {
                 $this->_propDict["builtInControls"] = new ConditionalAccessGrantControl($this->_propDict["builtInControls"]);
@@ -58,7 +58,7 @@ class ConditionalAccessGrantControls extends Entity
     }
     /**
     * Gets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. Learn more about custom controls here: https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview
     *
     * @return string The customAuthenticationFactors
     */
@@ -73,7 +73,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Sets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. Learn more about custom controls here: https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview
     *
     * @param string $val The value of the customAuthenticationFactors
     *

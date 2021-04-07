@@ -42,7 +42,7 @@ class EdgeSearchEngine extends EdgeSearchEngineBase
     public function getEdgeSearchEngineType()
     {
         if (array_key_exists("edgeSearchEngineType", $this->_propDict)) {
-            if (is_a($this->_propDict["edgeSearchEngineType"], "Microsoft\Graph\Model\EdgeSearchEngineType")) {
+            if (is_a($this->_propDict["edgeSearchEngineType"], "\Microsoft\Graph\Model\EdgeSearchEngineType")) {
                 return $this->_propDict["edgeSearchEngineType"];
             } else {
                 $this->_propDict["edgeSearchEngineType"] = new EdgeSearchEngineType($this->_propDict["edgeSearchEngineType"]);

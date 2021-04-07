@@ -61,7 +61,7 @@ class Fido2KeyRestrictions extends Entity
     public function getEnforcementType()
     {
         if (array_key_exists("enforcementType", $this->_propDict)) {
-            if (is_a($this->_propDict["enforcementType"], "Microsoft\Graph\Model\Fido2RestrictionEnforcementType")) {
+            if (is_a($this->_propDict["enforcementType"], "\Microsoft\Graph\Model\Fido2RestrictionEnforcementType")) {
                 return $this->_propDict["enforcementType"];
             } else {
                 $this->_propDict["enforcementType"] = new Fido2RestrictionEnforcementType($this->_propDict["enforcementType"]);

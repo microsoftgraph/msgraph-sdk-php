@@ -88,14 +88,14 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Gets the onboardingStatus
-    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
+    * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @return RemoteAssistanceOnboardingStatus The onboardingStatus
     */
     public function getOnboardingStatus()
     {
         if (array_key_exists("onboardingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["onboardingStatus"], "Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus")) {
+            if (is_a($this->_propDict["onboardingStatus"], "\Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus")) {
                 return $this->_propDict["onboardingStatus"];
             } else {
                 $this->_propDict["onboardingStatus"] = new RemoteAssistanceOnboardingStatus($this->_propDict["onboardingStatus"]);
@@ -107,7 +107,7 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Sets the onboardingStatus
-    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
+    * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @param RemoteAssistanceOnboardingStatus $val The onboardingStatus
     *
