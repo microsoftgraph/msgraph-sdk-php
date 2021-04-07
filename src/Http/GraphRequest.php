@@ -18,7 +18,9 @@
 namespace Microsoft\Graph\Http;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\BadResponseException;
 use Microsoft\Graph\Core\GraphConstants;
+use Microsoft\Graph\Core\Utils;
 use Microsoft\Graph\Exception\GraphException;
 
 /**
@@ -291,8 +293,8 @@ class GraphRequest
     *
     * @param mixed $client The client to use in the request
     *
-     * @throws GraphException if response is invalid
-     *
+    * @throws GraphException if response is invalid; if 4xx/5xx is returned and $http_errors is true
+    *
     * @return mixed object or array of objects
     *         of class $returnType
     */
@@ -302,14 +304,18 @@ class GraphRequest
             $client = $this->createGuzzleClient();
         }
 
-        $result = $client->request(
-            $this->requestType,
-            $this->_getRequestUrl(),
-            [
-                'body' => $this->requestBody,
-                'timeout' => $this->timeout
-            ]
-        );
+        try {
+            $result = $client->request(
+                $this->requestType,
+                $this->_getRequestUrl(),
+                [
+                    'body' => $this->requestBody,
+                    'timeout' => $this->timeout
+                ]
+            );
+        } catch(BadResponseException $e) {
+            throw Utils::wrapGuzzleBadResponseException($e);
+        }
 
         // Check to see if returnType is a stream, if so return it immediately
         if($this->returnsStream) {
@@ -379,6 +385,9 @@ class GraphRequest
             },
             // On fail, log the error and return null
             function ($reason) {
+                if ($reason instanceof BadResponseException) {
+                    $reason = Utils::wrapGuzzleBadResponseException($reason);
+                }
                 trigger_error("Async call failed: " . $reason->getMessage());
                 return null;
             }
@@ -392,7 +401,7 @@ class GraphRequest
     * @param string $path   The path to download the file to
     * @param mixed  $client The client to use in the request
     *
-     * @throws GraphException if file path is invalid
+     * @throws GraphException if file path is invalid; if \GuzzleHttp\Exception\BadResponseException is thrown for 4xx/5xx responses
      *
     * @return null
     */
@@ -422,6 +431,8 @@ class GraphRequest
 
         } catch(GraphException $e) {
             throw new GraphException(GraphConstants::INVALID_FILE);
+        } catch(BadResponseException $e) {
+            throw Utils::wrapGuzzleBadResponseException($e);
         }
 
         return null;
