@@ -93,7 +93,7 @@ class HybridAgentUpdaterConfiguration extends Entity
     public function getUpdateWindow()
     {
         if (array_key_exists("updateWindow", $this->_propDict)) {
-            if (is_a($this->_propDict["updateWindow"], "Beta\Microsoft\Graph\Model\UpdateWindow")) {
+            if (is_a($this->_propDict["updateWindow"], "\Beta\Microsoft\Graph\Model\UpdateWindow")) {
                 return $this->_propDict["updateWindow"];
             } else {
                 $this->_propDict["updateWindow"] = new UpdateWindow($this->_propDict["updateWindow"]);

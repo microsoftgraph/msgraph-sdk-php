@@ -84,7 +84,7 @@ class SearchAlteration extends Entity
     public function getAlteredQueryTokens()
     {
         if (array_key_exists("alteredQueryTokens", $this->_propDict)) {
-            if (is_a($this->_propDict["alteredQueryTokens"], "Beta\Microsoft\Graph\Model\AlteredQueryToken")) {
+            if (is_a($this->_propDict["alteredQueryTokens"], "\Beta\Microsoft\Graph\Model\AlteredQueryToken")) {
                 return $this->_propDict["alteredQueryTokens"];
             } else {
                 $this->_propDict["alteredQueryTokens"] = new AlteredQueryToken($this->_propDict["alteredQueryTokens"]);

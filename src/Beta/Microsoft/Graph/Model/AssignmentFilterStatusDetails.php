@@ -33,7 +33,7 @@ class AssignmentFilterStatusDetails extends Entity
     public function getDeviceProperties()
     {
         if (array_key_exists("deviceProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceProperties"], "Beta\Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["deviceProperties"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["deviceProperties"];
             } else {
                 $this->_propDict["deviceProperties"] = new KeyValuePair($this->_propDict["deviceProperties"]);
@@ -66,7 +66,7 @@ class AssignmentFilterStatusDetails extends Entity
     public function getEvalutionSummaries()
     {
         if (array_key_exists("evalutionSummaries", $this->_propDict)) {
-            if (is_a($this->_propDict["evalutionSummaries"], "Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationSummary")) {
+            if (is_a($this->_propDict["evalutionSummaries"], "\Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationSummary")) {
                 return $this->_propDict["evalutionSummaries"];
             } else {
                 $this->_propDict["evalutionSummaries"] = new AssignmentFilterEvaluationSummary($this->_propDict["evalutionSummaries"]);

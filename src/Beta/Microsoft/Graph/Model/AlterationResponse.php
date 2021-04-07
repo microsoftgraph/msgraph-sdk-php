@@ -58,7 +58,7 @@ class AlterationResponse extends Entity
     public function getQueryAlteration()
     {
         if (array_key_exists("queryAlteration", $this->_propDict)) {
-            if (is_a($this->_propDict["queryAlteration"], "Beta\Microsoft\Graph\Model\SearchAlteration")) {
+            if (is_a($this->_propDict["queryAlteration"], "\Beta\Microsoft\Graph\Model\SearchAlteration")) {
                 return $this->_propDict["queryAlteration"];
             } else {
                 $this->_propDict["queryAlteration"] = new SearchAlteration($this->_propDict["queryAlteration"]);
@@ -89,7 +89,7 @@ class AlterationResponse extends Entity
     public function getQueryAlterationType()
     {
         if (array_key_exists("queryAlterationType", $this->_propDict)) {
-            if (is_a($this->_propDict["queryAlterationType"], "Beta\Microsoft\Graph\Model\SearchAlterationType")) {
+            if (is_a($this->_propDict["queryAlterationType"], "\Beta\Microsoft\Graph\Model\SearchAlterationType")) {
                 return $this->_propDict["queryAlterationType"];
             } else {
                 $this->_propDict["queryAlterationType"] = new SearchAlterationType($this->_propDict["queryAlterationType"]);

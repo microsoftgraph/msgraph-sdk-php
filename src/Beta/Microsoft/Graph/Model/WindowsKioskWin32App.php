@@ -117,7 +117,7 @@ class WindowsKioskWin32App extends WindowsKioskAppBase
     public function getEdgeKioskType()
     {
         if (array_key_exists("edgeKioskType", $this->_propDict)) {
-            if (is_a($this->_propDict["edgeKioskType"], "Beta\Microsoft\Graph\Model\WindowsEdgeKioskType")) {
+            if (is_a($this->_propDict["edgeKioskType"], "\Beta\Microsoft\Graph\Model\WindowsEdgeKioskType")) {
                 return $this->_propDict["edgeKioskType"];
             } else {
                 $this->_propDict["edgeKioskType"] = new WindowsEdgeKioskType($this->_propDict["edgeKioskType"]);

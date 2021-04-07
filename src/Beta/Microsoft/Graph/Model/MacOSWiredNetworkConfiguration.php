@@ -33,7 +33,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -66,7 +66,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function getEapFastConfiguration()
     {
         if (array_key_exists("eapFastConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["eapFastConfiguration"], "Beta\Microsoft\Graph\Model\EapFastConfiguration")) {
+            if (is_a($this->_propDict["eapFastConfiguration"], "\Beta\Microsoft\Graph\Model\EapFastConfiguration")) {
                 return $this->_propDict["eapFastConfiguration"];
             } else {
                 $this->_propDict["eapFastConfiguration"] = new EapFastConfiguration($this->_propDict["eapFastConfiguration"]);
@@ -99,7 +99,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "\Beta\Microsoft\Graph\Model\EapType")) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -161,7 +161,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function getNetworkInterface()
     {
         if (array_key_exists("networkInterface", $this->_propDict)) {
-            if (is_a($this->_propDict["networkInterface"], "Beta\Microsoft\Graph\Model\WiredNetworkInterface")) {
+            if (is_a($this->_propDict["networkInterface"], "\Beta\Microsoft\Graph\Model\WiredNetworkInterface")) {
                 return $this->_propDict["networkInterface"];
             } else {
                 $this->_propDict["networkInterface"] = new WiredNetworkInterface($this->_propDict["networkInterface"]);
@@ -223,7 +223,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function getNonEapAuthenticationMethodForEapTtls()
     {
         if (array_key_exists("nonEapAuthenticationMethodForEapTtls", $this->_propDict)) {
-            if (is_a($this->_propDict["nonEapAuthenticationMethodForEapTtls"], "Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["nonEapAuthenticationMethodForEapTtls"], "\Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
                 return $this->_propDict["nonEapAuthenticationMethodForEapTtls"];
             } else {
                 $this->_propDict["nonEapAuthenticationMethodForEapTtls"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["nonEapAuthenticationMethodForEapTtls"]);
@@ -285,7 +285,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new MacOSCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -318,7 +318,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     public function getRootCertificateForServerValidation()
     {
         if (array_key_exists("rootCertificateForServerValidation", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificateForServerValidation"], "Beta\Microsoft\Graph\Model\MacOSTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificateForServerValidation"], "\Beta\Microsoft\Graph\Model\MacOSTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificateForServerValidation"];
             } else {
                 $this->_propDict["rootCertificateForServerValidation"] = new MacOSTrustedRootCertificate($this->_propDict["rootCertificateForServerValidation"]);

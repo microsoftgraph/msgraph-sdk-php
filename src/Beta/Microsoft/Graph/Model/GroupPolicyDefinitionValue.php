@@ -33,7 +33,7 @@ class GroupPolicyDefinitionValue extends Entity
     public function getConfigurationType()
     {
         if (array_key_exists("configurationType", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationType"], "Beta\Microsoft\Graph\Model\GroupPolicyConfigurationType")) {
+            if (is_a($this->_propDict["configurationType"], "\Beta\Microsoft\Graph\Model\GroupPolicyConfigurationType")) {
                 return $this->_propDict["configurationType"];
             } else {
                 $this->_propDict["configurationType"] = new GroupPolicyConfigurationType($this->_propDict["configurationType"]);
@@ -161,7 +161,7 @@ class GroupPolicyDefinitionValue extends Entity
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinition")) {
+            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new GroupPolicyDefinition($this->_propDict["definition"]);

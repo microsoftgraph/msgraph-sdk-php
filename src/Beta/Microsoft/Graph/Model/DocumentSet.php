@@ -33,7 +33,7 @@ class DocumentSet extends Entity
     public function getAllowedContentTypes()
     {
         if (array_key_exists("allowedContentTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedContentTypes"], "Beta\Microsoft\Graph\Model\ContentTypeInfo")) {
+            if (is_a($this->_propDict["allowedContentTypes"], "\Beta\Microsoft\Graph\Model\ContentTypeInfo")) {
                 return $this->_propDict["allowedContentTypes"];
             } else {
                 $this->_propDict["allowedContentTypes"] = new ContentTypeInfo($this->_propDict["allowedContentTypes"]);
@@ -66,7 +66,7 @@ class DocumentSet extends Entity
     public function getDefaultContents()
     {
         if (array_key_exists("defaultContents", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultContents"], "Beta\Microsoft\Graph\Model\DocumentSetContent")) {
+            if (is_a($this->_propDict["defaultContents"], "\Beta\Microsoft\Graph\Model\DocumentSetContent")) {
                 return $this->_propDict["defaultContents"];
             } else {
                 $this->_propDict["defaultContents"] = new DocumentSetContent($this->_propDict["defaultContents"]);
@@ -182,7 +182,7 @@ class DocumentSet extends Entity
     public function getSharedColumns()
     {
         if (array_key_exists("sharedColumns", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedColumns"], "Beta\Microsoft\Graph\Model\ColumnDefinition")) {
+            if (is_a($this->_propDict["sharedColumns"], "\Beta\Microsoft\Graph\Model\ColumnDefinition")) {
                 return $this->_propDict["sharedColumns"];
             } else {
                 $this->_propDict["sharedColumns"] = new ColumnDefinition($this->_propDict["sharedColumns"]);
@@ -213,7 +213,7 @@ class DocumentSet extends Entity
     public function getWelcomePageColumns()
     {
         if (array_key_exists("welcomePageColumns", $this->_propDict)) {
-            if (is_a($this->_propDict["welcomePageColumns"], "Beta\Microsoft\Graph\Model\ColumnDefinition")) {
+            if (is_a($this->_propDict["welcomePageColumns"], "\Beta\Microsoft\Graph\Model\ColumnDefinition")) {
                 return $this->_propDict["welcomePageColumns"];
             } else {
                 $this->_propDict["welcomePageColumns"] = new ColumnDefinition($this->_propDict["welcomePageColumns"]);

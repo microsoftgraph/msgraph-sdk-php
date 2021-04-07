@@ -61,7 +61,7 @@ class ProvisioningStep extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\DetailsInfo")) {
+            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\DetailsInfo")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new DetailsInfo($this->_propDict["details"]);
@@ -122,7 +122,7 @@ class ProvisioningStep extends Entity
     public function getProvisioningStepType()
     {
         if (array_key_exists("provisioningStepType", $this->_propDict)) {
-            if (is_a($this->_propDict["provisioningStepType"], "Beta\Microsoft\Graph\Model\ProvisioningStepType")) {
+            if (is_a($this->_propDict["provisioningStepType"], "\Beta\Microsoft\Graph\Model\ProvisioningStepType")) {
                 return $this->_propDict["provisioningStepType"];
             } else {
                 $this->_propDict["provisioningStepType"] = new ProvisioningStepType($this->_propDict["provisioningStepType"]);
@@ -155,7 +155,7 @@ class ProvisioningStep extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ProvisioningResult")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ProvisioningResult")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ProvisioningResult($this->_propDict["status"]);

@@ -91,7 +91,7 @@ class ItemPhone extends ItemFacet
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\PhoneType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\PhoneType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PhoneType($this->_propDict["type"]);

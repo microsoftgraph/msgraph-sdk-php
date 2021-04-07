@@ -32,7 +32,7 @@ class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContentBase
     public function getMatches()
     {
         if (array_key_exists("matches", $this->_propDict)) {
-            if (is_a($this->_propDict["matches"], "Beta\Microsoft\Graph\Model\ExactMatchSensitiveContentLocation")) {
+            if (is_a($this->_propDict["matches"], "\Beta\Microsoft\Graph\Model\ExactMatchSensitiveContentLocation")) {
                 return $this->_propDict["matches"];
             } else {
                 $this->_propDict["matches"] = new ExactMatchSensitiveContentLocation($this->_propDict["matches"]);

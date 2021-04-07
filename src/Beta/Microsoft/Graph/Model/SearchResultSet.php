@@ -32,7 +32,7 @@ class SearchResultSet extends Entity
     public function getHitsContainers()
     {
         if (array_key_exists("hitsContainers", $this->_propDict)) {
-            if (is_a($this->_propDict["hitsContainers"], "Beta\Microsoft\Graph\Model\SearchHitsContainer")) {
+            if (is_a($this->_propDict["hitsContainers"], "\Beta\Microsoft\Graph\Model\SearchHitsContainer")) {
                 return $this->_propDict["hitsContainers"];
             } else {
                 $this->_propDict["hitsContainers"] = new SearchHitsContainer($this->_propDict["hitsContainers"]);

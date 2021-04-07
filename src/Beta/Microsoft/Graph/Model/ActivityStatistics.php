@@ -33,7 +33,7 @@ class ActivityStatistics extends Entity
     public function getActivity()
     {
         if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "Beta\Microsoft\Graph\Model\AnalyticsActivityType")) {
+            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\AnalyticsActivityType")) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new AnalyticsActivityType($this->_propDict["activity"]);
@@ -66,7 +66,7 @@ class ActivityStatistics extends Entity
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["duration"];
             } else {
                 $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);

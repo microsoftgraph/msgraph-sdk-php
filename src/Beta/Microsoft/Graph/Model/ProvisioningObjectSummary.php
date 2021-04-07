@@ -182,7 +182,7 @@ class ProvisioningObjectSummary extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "Beta\Microsoft\Graph\Model\Initiator")) {
+            if (is_a($this->_propDict["initiatedBy"], "\Beta\Microsoft\Graph\Model\Initiator")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new Initiator($this->_propDict["initiatedBy"]);
@@ -304,7 +304,7 @@ class ProvisioningObjectSummary extends Entity
     public function getServicePrincipal()
     {
         if (array_key_exists("servicePrincipal", $this->_propDict)) {
-            if (is_a($this->_propDict["servicePrincipal"], "Beta\Microsoft\Graph\Model\ProvisioningServicePrincipal")) {
+            if (is_a($this->_propDict["servicePrincipal"], "\Beta\Microsoft\Graph\Model\ProvisioningServicePrincipal")) {
                 return $this->_propDict["servicePrincipal"];
             } else {
                 $this->_propDict["servicePrincipal"] = new ProvisioningServicePrincipal($this->_propDict["servicePrincipal"]);
@@ -337,7 +337,7 @@ class ProvisioningObjectSummary extends Entity
     public function getSourceIdentity()
     {
         if (array_key_exists("sourceIdentity", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceIdentity"], "Beta\Microsoft\Graph\Model\ProvisionedIdentity")) {
+            if (is_a($this->_propDict["sourceIdentity"], "\Beta\Microsoft\Graph\Model\ProvisionedIdentity")) {
                 return $this->_propDict["sourceIdentity"];
             } else {
                 $this->_propDict["sourceIdentity"] = new ProvisionedIdentity($this->_propDict["sourceIdentity"]);
@@ -370,7 +370,7 @@ class ProvisioningObjectSummary extends Entity
     public function getSourceSystem()
     {
         if (array_key_exists("sourceSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceSystem"], "Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
+            if (is_a($this->_propDict["sourceSystem"], "\Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
                 return $this->_propDict["sourceSystem"];
             } else {
                 $this->_propDict["sourceSystem"] = new ProvisioningSystemDetails($this->_propDict["sourceSystem"]);
@@ -403,7 +403,7 @@ class ProvisioningObjectSummary extends Entity
     public function getStatusInfo()
     {
         if (array_key_exists("statusInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["statusInfo"], "Beta\Microsoft\Graph\Model\StatusBase")) {
+            if (is_a($this->_propDict["statusInfo"], "\Beta\Microsoft\Graph\Model\StatusBase")) {
                 return $this->_propDict["statusInfo"];
             } else {
                 $this->_propDict["statusInfo"] = new StatusBase($this->_propDict["statusInfo"]);
@@ -436,7 +436,7 @@ class ProvisioningObjectSummary extends Entity
     public function getTargetIdentity()
     {
         if (array_key_exists("targetIdentity", $this->_propDict)) {
-            if (is_a($this->_propDict["targetIdentity"], "Beta\Microsoft\Graph\Model\ProvisionedIdentity")) {
+            if (is_a($this->_propDict["targetIdentity"], "\Beta\Microsoft\Graph\Model\ProvisionedIdentity")) {
                 return $this->_propDict["targetIdentity"];
             } else {
                 $this->_propDict["targetIdentity"] = new ProvisionedIdentity($this->_propDict["targetIdentity"]);
@@ -469,7 +469,7 @@ class ProvisioningObjectSummary extends Entity
     public function getTargetSystem()
     {
         if (array_key_exists("targetSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["targetSystem"], "Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
+            if (is_a($this->_propDict["targetSystem"], "\Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
                 return $this->_propDict["targetSystem"];
             } else {
                 $this->_propDict["targetSystem"] = new ProvisioningSystemDetails($this->_propDict["targetSystem"]);

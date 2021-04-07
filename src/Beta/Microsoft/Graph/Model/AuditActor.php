@@ -313,7 +313,7 @@ class AuditActor extends Entity
     public function getUserRoleScopeTags()
     {
         if (array_key_exists("userRoleScopeTags", $this->_propDict)) {
-            if (is_a($this->_propDict["userRoleScopeTags"], "Beta\Microsoft\Graph\Model\RoleScopeTagInfo")) {
+            if (is_a($this->_propDict["userRoleScopeTags"], "\Beta\Microsoft\Graph\Model\RoleScopeTagInfo")) {
                 return $this->_propDict["userRoleScopeTags"];
             } else {
                 $this->_propDict["userRoleScopeTags"] = new RoleScopeTagInfo($this->_propDict["userRoleScopeTags"]);

@@ -42,7 +42,7 @@ class EducationIdentityMatchingConfiguration extends EducationIdentitySynchroniz
     public function getMatchingOptions()
     {
         if (array_key_exists("matchingOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["matchingOptions"], "Beta\Microsoft\Graph\Model\EducationIdentityMatchingOptions")) {
+            if (is_a($this->_propDict["matchingOptions"], "\Beta\Microsoft\Graph\Model\EducationIdentityMatchingOptions")) {
                 return $this->_propDict["matchingOptions"];
             } else {
                 $this->_propDict["matchingOptions"] = new EducationIdentityMatchingOptions($this->_propDict["matchingOptions"]);

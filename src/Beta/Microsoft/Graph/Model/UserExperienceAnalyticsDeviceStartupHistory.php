@@ -323,7 +323,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     public function getRestartCategory()
     {
         if (array_key_exists("restartCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["restartCategory"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOperatingSystemRestartCategory")) {
+            if (is_a($this->_propDict["restartCategory"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOperatingSystemRestartCategory")) {
                 return $this->_propDict["restartCategory"];
             } else {
                 $this->_propDict["restartCategory"] = new UserExperienceAnalyticsOperatingSystemRestartCategory($this->_propDict["restartCategory"]);

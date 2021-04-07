@@ -33,7 +33,7 @@ class ConnectorGroup extends Entity
     public function getConnectorGroupType()
     {
         if (array_key_exists("connectorGroupType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectorGroupType"], "Beta\Microsoft\Graph\Model\ConnectorGroupType")) {
+            if (is_a($this->_propDict["connectorGroupType"], "\Beta\Microsoft\Graph\Model\ConnectorGroupType")) {
                 return $this->_propDict["connectorGroupType"];
             } else {
                 $this->_propDict["connectorGroupType"] = new ConnectorGroupType($this->_propDict["connectorGroupType"]);
@@ -124,7 +124,7 @@ class ConnectorGroup extends Entity
     public function getRegion()
     {
         if (array_key_exists("region", $this->_propDict)) {
-            if (is_a($this->_propDict["region"], "Beta\Microsoft\Graph\Model\ConnectorGroupRegion")) {
+            if (is_a($this->_propDict["region"], "\Beta\Microsoft\Graph\Model\ConnectorGroupRegion")) {
                 return $this->_propDict["region"];
             } else {
                 $this->_propDict["region"] = new ConnectorGroupRegion($this->_propDict["region"]);

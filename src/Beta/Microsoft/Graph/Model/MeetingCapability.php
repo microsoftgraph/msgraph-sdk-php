@@ -89,7 +89,7 @@ class MeetingCapability extends Entity
     public function getAutoAdmittedUsers()
     {
         if (array_key_exists("autoAdmittedUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["autoAdmittedUsers"], "Beta\Microsoft\Graph\Model\AutoAdmittedUsersType")) {
+            if (is_a($this->_propDict["autoAdmittedUsers"], "\Beta\Microsoft\Graph\Model\AutoAdmittedUsersType")) {
                 return $this->_propDict["autoAdmittedUsers"];
             } else {
                 $this->_propDict["autoAdmittedUsers"] = new AutoAdmittedUsersType($this->_propDict["autoAdmittedUsers"]);

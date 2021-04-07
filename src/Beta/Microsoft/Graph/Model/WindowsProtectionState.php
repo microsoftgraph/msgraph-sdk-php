@@ -62,7 +62,7 @@ class WindowsProtectionState extends Entity
     public function getDeviceState()
     {
         if (array_key_exists("deviceState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceState"], "Beta\Microsoft\Graph\Model\WindowsDeviceHealthState")) {
+            if (is_a($this->_propDict["deviceState"], "\Beta\Microsoft\Graph\Model\WindowsDeviceHealthState")) {
                 return $this->_propDict["deviceState"];
             } else {
                 $this->_propDict["deviceState"] = new WindowsDeviceHealthState($this->_propDict["deviceState"]);
@@ -426,7 +426,7 @@ class WindowsProtectionState extends Entity
     public function getProductStatus()
     {
         if (array_key_exists("productStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["productStatus"], "Beta\Microsoft\Graph\Model\WindowsDefenderProductStatus")) {
+            if (is_a($this->_propDict["productStatus"], "\Beta\Microsoft\Graph\Model\WindowsDefenderProductStatus")) {
                 return $this->_propDict["productStatus"];
             } else {
                 $this->_propDict["productStatus"] = new WindowsDefenderProductStatus($this->_propDict["productStatus"]);

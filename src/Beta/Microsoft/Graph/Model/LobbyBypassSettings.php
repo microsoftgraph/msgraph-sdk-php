@@ -61,7 +61,7 @@ class LobbyBypassSettings extends Entity
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "Beta\Microsoft\Graph\Model\LobbyBypassScope")) {
+            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\Model\LobbyBypassScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new LobbyBypassScope($this->_propDict["scope"]);

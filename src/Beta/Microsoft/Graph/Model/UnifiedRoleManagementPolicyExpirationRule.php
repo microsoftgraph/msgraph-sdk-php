@@ -59,7 +59,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     public function getMaximumDuration()
     {
         if (array_key_exists("maximumDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["maximumDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maximumDuration"];
             } else {
                 $this->_propDict["maximumDuration"] = new Duration($this->_propDict["maximumDuration"]);

@@ -33,7 +33,7 @@ class DeviceManagementConfigurationOptionDefinition extends Entity
     public function getDependedOnBy()
     {
         if (array_key_exists("dependedOnBy", $this->_propDict)) {
-            if (is_a($this->_propDict["dependedOnBy"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingDependedOnBy")) {
+            if (is_a($this->_propDict["dependedOnBy"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingDependedOnBy")) {
                 return $this->_propDict["dependedOnBy"];
             } else {
                 $this->_propDict["dependedOnBy"] = new DeviceManagementConfigurationSettingDependedOnBy($this->_propDict["dependedOnBy"]);
@@ -66,7 +66,7 @@ class DeviceManagementConfigurationOptionDefinition extends Entity
     public function getDependentOn()
     {
         if (array_key_exists("dependentOn", $this->_propDict)) {
-            if (is_a($this->_propDict["dependentOn"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationDependentOn")) {
+            if (is_a($this->_propDict["dependentOn"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationDependentOn")) {
                 return $this->_propDict["dependentOn"];
             } else {
                 $this->_propDict["dependentOn"] = new DeviceManagementConfigurationDependentOn($this->_propDict["dependentOn"]);
@@ -239,7 +239,7 @@ class DeviceManagementConfigurationOptionDefinition extends Entity
     public function getOptionValue()
     {
         if (array_key_exists("optionValue", $this->_propDict)) {
-            if (is_a($this->_propDict["optionValue"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingValue")) {
+            if (is_a($this->_propDict["optionValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingValue")) {
                 return $this->_propDict["optionValue"];
             } else {
                 $this->_propDict["optionValue"] = new DeviceManagementConfigurationSettingValue($this->_propDict["optionValue"]);

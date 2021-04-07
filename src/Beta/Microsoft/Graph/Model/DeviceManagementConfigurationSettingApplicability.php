@@ -61,7 +61,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
     public function getDeviceMode()
     {
         if (array_key_exists("deviceMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceMode"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationDeviceMode")) {
+            if (is_a($this->_propDict["deviceMode"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationDeviceMode")) {
                 return $this->_propDict["deviceMode"];
             } else {
                 $this->_propDict["deviceMode"] = new DeviceManagementConfigurationDeviceMode($this->_propDict["deviceMode"]);
@@ -94,7 +94,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
+            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new DeviceManagementConfigurationPlatforms($this->_propDict["platform"]);
@@ -127,7 +127,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
     public function getTechnologies()
     {
         if (array_key_exists("technologies", $this->_propDict)) {
-            if (is_a($this->_propDict["technologies"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
+            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
                 return $this->_propDict["technologies"];
             } else {
                 $this->_propDict["technologies"] = new DeviceManagementConfigurationTechnologies($this->_propDict["technologies"]);

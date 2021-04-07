@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TenantSources File
+* OnboardingStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Ediscovery\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TenantSources class
+* OnboardingStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TenantSources extends Enum
+class OnboardingStatus extends Enum
 {
     /**
-    * The Enum TenantSources
+    * The Enum OnboardingStatus
     */
-    const ALL_MAILBOXES = "allMailboxes";
-    const ALL_SITES = "allSites";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const UNKNOWN = "unknown";
+    const INPROGRESS = "inprogress";
+    const ONBOARDED = "onboarded";
+    const FAILED = "failed";
 }

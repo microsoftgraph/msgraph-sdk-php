@@ -33,7 +33,7 @@ class PlannerPlan extends PlannerDelta
     public function getContainer()
     {
         if (array_key_exists("container", $this->_propDict)) {
-            if (is_a($this->_propDict["container"], "Beta\Microsoft\Graph\Model\PlannerPlanContainer")) {
+            if (is_a($this->_propDict["container"], "\Beta\Microsoft\Graph\Model\PlannerPlanContainer")) {
                 return $this->_propDict["container"];
             } else {
                 $this->_propDict["container"] = new PlannerPlanContainer($this->_propDict["container"]);
@@ -66,7 +66,7 @@ class PlannerPlan extends PlannerDelta
     public function getContexts()
     {
         if (array_key_exists("contexts", $this->_propDict)) {
-            if (is_a($this->_propDict["contexts"], "Beta\Microsoft\Graph\Model\PlannerPlanContextCollection")) {
+            if (is_a($this->_propDict["contexts"], "\Beta\Microsoft\Graph\Model\PlannerPlanContextCollection")) {
                 return $this->_propDict["contexts"];
             } else {
                 $this->_propDict["contexts"] = new PlannerPlanContextCollection($this->_propDict["contexts"]);
@@ -99,7 +99,7 @@ class PlannerPlan extends PlannerDelta
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -253,7 +253,7 @@ class PlannerPlan extends PlannerDelta
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\PlannerPlanDetails")) {
+            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\PlannerPlanDetails")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PlannerPlanDetails($this->_propDict["details"]);

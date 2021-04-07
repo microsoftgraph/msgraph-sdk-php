@@ -33,7 +33,7 @@ class AppliedConditionalAccessPolicy extends Entity
     public function getConditionsNotSatisfied()
     {
         if (array_key_exists("conditionsNotSatisfied", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionsNotSatisfied"], "Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
+            if (is_a($this->_propDict["conditionsNotSatisfied"], "\Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
                 return $this->_propDict["conditionsNotSatisfied"];
             } else {
                 $this->_propDict["conditionsNotSatisfied"] = new ConditionalAccessConditions($this->_propDict["conditionsNotSatisfied"]);
@@ -66,7 +66,7 @@ class AppliedConditionalAccessPolicy extends Entity
     public function getConditionsSatisfied()
     {
         if (array_key_exists("conditionsSatisfied", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionsSatisfied"], "Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
+            if (is_a($this->_propDict["conditionsSatisfied"], "\Beta\Microsoft\Graph\Model\ConditionalAccessConditions")) {
                 return $this->_propDict["conditionsSatisfied"];
             } else {
                 $this->_propDict["conditionsSatisfied"] = new ConditionalAccessConditions($this->_propDict["conditionsSatisfied"]);
@@ -211,7 +211,7 @@ class AppliedConditionalAccessPolicy extends Entity
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "Beta\Microsoft\Graph\Model\AppliedConditionalAccessPolicyResult")) {
+            if (is_a($this->_propDict["result"], "\Beta\Microsoft\Graph\Model\AppliedConditionalAccessPolicyResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new AppliedConditionalAccessPolicyResult($this->_propDict["result"]);

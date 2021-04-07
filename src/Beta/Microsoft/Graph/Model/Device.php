@@ -418,7 +418,7 @@ class Device extends DirectoryObject
     public function getExtensionAttributes()
     {
         if (array_key_exists("extensionAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["extensionAttributes"], "Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
+            if (is_a($this->_propDict["extensionAttributes"], "\Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
                 return $this->_propDict["extensionAttributes"];
             } else {
                 $this->_propDict["extensionAttributes"] = new OnPremisesExtensionAttributes($this->_propDict["extensionAttributes"]);

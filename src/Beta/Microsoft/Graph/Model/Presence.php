@@ -91,7 +91,7 @@ class Presence extends Entity
     public function getOutOfOfficeSettings()
     {
         if (array_key_exists("outOfOfficeSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["outOfOfficeSettings"], "Beta\Microsoft\Graph\Model\OutOfOfficeSettings")) {
+            if (is_a($this->_propDict["outOfOfficeSettings"], "\Beta\Microsoft\Graph\Model\OutOfOfficeSettings")) {
                 return $this->_propDict["outOfOfficeSettings"];
             } else {
                 $this->_propDict["outOfOfficeSettings"] = new OutOfOfficeSettings($this->_propDict["outOfOfficeSettings"]);

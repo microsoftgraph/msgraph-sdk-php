@@ -33,7 +33,7 @@ class DirectoryDefinition extends Entity
     public function getDiscoverabilities()
     {
         if (array_key_exists("discoverabilities", $this->_propDict)) {
-            if (is_a($this->_propDict["discoverabilities"], "Beta\Microsoft\Graph\Model\DirectoryDefinitionDiscoverabilities")) {
+            if (is_a($this->_propDict["discoverabilities"], "\Beta\Microsoft\Graph\Model\DirectoryDefinitionDiscoverabilities")) {
                 return $this->_propDict["discoverabilities"];
             } else {
                 $this->_propDict["discoverabilities"] = new DirectoryDefinitionDiscoverabilities($this->_propDict["discoverabilities"]);

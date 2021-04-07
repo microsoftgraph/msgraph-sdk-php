@@ -161,7 +161,7 @@ class UserPFXCertificate extends Entity
     public function getIntendedPurpose()
     {
         if (array_key_exists("intendedPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedPurpose"], "Beta\Microsoft\Graph\Model\UserPfxIntendedPurpose")) {
+            if (is_a($this->_propDict["intendedPurpose"], "\Beta\Microsoft\Graph\Model\UserPfxIntendedPurpose")) {
                 return $this->_propDict["intendedPurpose"];
             } else {
                 $this->_propDict["intendedPurpose"] = new UserPfxIntendedPurpose($this->_propDict["intendedPurpose"]);
@@ -256,7 +256,7 @@ class UserPFXCertificate extends Entity
     public function getPaddingScheme()
     {
         if (array_key_exists("paddingScheme", $this->_propDict)) {
-            if (is_a($this->_propDict["paddingScheme"], "Beta\Microsoft\Graph\Model\UserPfxPaddingScheme")) {
+            if (is_a($this->_propDict["paddingScheme"], "\Beta\Microsoft\Graph\Model\UserPfxPaddingScheme")) {
                 return $this->_propDict["paddingScheme"];
             } else {
                 $this->_propDict["paddingScheme"] = new UserPfxPaddingScheme($this->_propDict["paddingScheme"]);

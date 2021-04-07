@@ -62,7 +62,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getAppliedBy()
     {
         if (array_key_exists("appliedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["appliedBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["appliedBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["appliedBy"];
             } else {
                 $this->_propDict["appliedBy"] = new UserIdentity($this->_propDict["appliedBy"]);
@@ -208,13 +208,14 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the principal
+    * Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity.
     *
     * @return Identity The principal
     */
     public function getPrincipal()
     {
         if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new Identity($this->_propDict["principal"]);
@@ -226,6 +227,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the principal
+    * Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity.
     *
     * @param Identity $val The principal
     *
@@ -295,13 +297,14 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the resource
+    * Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource
     *
     * @return AccessReviewInstanceDecisionItemResource The resource
     */
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemResource")) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new AccessReviewInstanceDecisionItemResource($this->_propDict["resource"]);
@@ -313,6 +316,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the resource
+    * Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource
     *
     * @param AccessReviewInstanceDecisionItemResource $val The resource
     *
@@ -360,7 +364,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getReviewedBy()
     {
         if (array_key_exists("reviewedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["reviewedBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["reviewedBy"];
             } else {
                 $this->_propDict["reviewedBy"] = new UserIdentity($this->_propDict["reviewedBy"]);
@@ -426,7 +430,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemTarget")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new AccessReviewInstanceDecisionItemTarget($this->_propDict["target"]);

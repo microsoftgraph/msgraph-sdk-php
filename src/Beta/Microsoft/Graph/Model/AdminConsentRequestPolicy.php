@@ -160,7 +160,7 @@ class AdminConsentRequestPolicy extends Entity
     * Sets the reviewers
     * Required.
     *
-    * @param AccessReviewScope $val The reviewers
+    * @param AccessReviewReviewerScope $val The reviewers
     *
     * @return AdminConsentRequestPolicy
     */

@@ -33,7 +33,7 @@ class Chat extends Entity
     public function getChatType()
     {
         if (array_key_exists("chatType", $this->_propDict)) {
-            if (is_a($this->_propDict["chatType"], "Beta\Microsoft\Graph\Model\ChatType")) {
+            if (is_a($this->_propDict["chatType"], "\Beta\Microsoft\Graph\Model\ChatType")) {
                 return $this->_propDict["chatType"];
             } else {
                 $this->_propDict["chatType"] = new ChatType($this->_propDict["chatType"]);
@@ -239,6 +239,36 @@ class Chat extends Entity
     public function setMessages($val)
     {
 		$this->_propDict["messages"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the permissionGrants
+    * A collection of permissions granted to apps for the chat.
+     *
+     * @return array The permissionGrants
+     */
+    public function getPermissionGrants()
+    {
+        if (array_key_exists("permissionGrants", $this->_propDict)) {
+           return $this->_propDict["permissionGrants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the permissionGrants
+    * A collection of permissions granted to apps for the chat.
+    *
+    * @param ResourceSpecificPermissionGrant $val The permissionGrants
+    *
+    * @return Chat
+    */
+    public function setPermissionGrants($val)
+    {
+		$this->_propDict["permissionGrants"] = $val;
         return $this;
     }
     

@@ -221,7 +221,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getScheduleInfo()
     {
         if (array_key_exists("scheduleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleInfo"], "Beta\Microsoft\Graph\Model\RequestSchedule")) {
+            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
                 return $this->_propDict["scheduleInfo"];
             } else {
                 $this->_propDict["scheduleInfo"] = new RequestSchedule($this->_propDict["scheduleInfo"]);
@@ -279,7 +279,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getTicketInfo()
     {
         if (array_key_exists("ticketInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["ticketInfo"], "Beta\Microsoft\Graph\Model\TicketInfo")) {
+            if (is_a($this->_propDict["ticketInfo"], "\Beta\Microsoft\Graph\Model\TicketInfo")) {
                 return $this->_propDict["ticketInfo"];
             } else {
                 $this->_propDict["ticketInfo"] = new TicketInfo($this->_propDict["ticketInfo"]);
@@ -310,7 +310,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getActivatedUsing()
     {
         if (array_key_exists("activatedUsing", $this->_propDict)) {
-            if (is_a($this->_propDict["activatedUsing"], "Beta\Microsoft\Graph\Model\UnifiedRoleEligibilitySchedule")) {
+            if (is_a($this->_propDict["activatedUsing"], "\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilitySchedule")) {
                 return $this->_propDict["activatedUsing"];
             } else {
                 $this->_propDict["activatedUsing"] = new UnifiedRoleEligibilitySchedule($this->_propDict["activatedUsing"]);
@@ -341,7 +341,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getAppScope()
     {
         if (array_key_exists("appScope", $this->_propDict)) {
-            if (is_a($this->_propDict["appScope"], "Beta\Microsoft\Graph\Model\AppScope")) {
+            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope")) {
                 return $this->_propDict["appScope"];
             } else {
                 $this->_propDict["appScope"] = new AppScope($this->_propDict["appScope"]);
@@ -372,7 +372,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getDirectoryScope()
     {
         if (array_key_exists("directoryScope", $this->_propDict)) {
-            if (is_a($this->_propDict["directoryScope"], "Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["directoryScope"];
             } else {
                 $this->_propDict["directoryScope"] = new DirectoryObject($this->_propDict["directoryScope"]);
@@ -403,7 +403,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getPrincipal()
     {
         if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new DirectoryObject($this->_propDict["principal"]);
@@ -434,7 +434,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new UnifiedRoleDefinition($this->_propDict["roleDefinition"]);
@@ -465,7 +465,7 @@ class UnifiedRoleAssignmentRequest extends Request
     public function getTargetSchedule()
     {
         if (array_key_exists("targetSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["targetSchedule"], "Beta\Microsoft\Graph\Model\UnifiedRoleAssignmentSchedule")) {
+            if (is_a($this->_propDict["targetSchedule"], "\Beta\Microsoft\Graph\Model\UnifiedRoleAssignmentSchedule")) {
                 return $this->_propDict["targetSchedule"];
             } else {
                 $this->_propDict["targetSchedule"] = new UnifiedRoleAssignmentSchedule($this->_propDict["targetSchedule"]);

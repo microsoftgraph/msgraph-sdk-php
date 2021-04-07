@@ -150,7 +150,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     public function getProfileApplicability()
     {
         if (array_key_exists("profileApplicability", $this->_propDict)) {
-            if (is_a($this->_propDict["profileApplicability"], "Beta\Microsoft\Graph\Model\AndroidProfileApplicability")) {
+            if (is_a($this->_propDict["profileApplicability"], "\Beta\Microsoft\Graph\Model\AndroidProfileApplicability")) {
                 return $this->_propDict["profileApplicability"];
             } else {
                 $this->_propDict["profileApplicability"] = new AndroidProfileApplicability($this->_propDict["profileApplicability"]);

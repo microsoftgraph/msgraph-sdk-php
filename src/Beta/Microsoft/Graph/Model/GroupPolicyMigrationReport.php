@@ -223,7 +223,7 @@ class GroupPolicyMigrationReport extends Entity
     public function getMigrationReadiness()
     {
         if (array_key_exists("migrationReadiness", $this->_propDict)) {
-            if (is_a($this->_propDict["migrationReadiness"], "Beta\Microsoft\Graph\Model\GroupPolicyMigrationReadiness")) {
+            if (is_a($this->_propDict["migrationReadiness"], "\Beta\Microsoft\Graph\Model\GroupPolicyMigrationReadiness")) {
                 return $this->_propDict["migrationReadiness"];
             } else {
                 $this->_propDict["migrationReadiness"] = new GroupPolicyMigrationReadiness($this->_propDict["migrationReadiness"]);

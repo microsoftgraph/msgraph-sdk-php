@@ -66,7 +66,7 @@ class CloudPcOnPremisesConnectionStatusDetails extends Entity
     public function getHealthChecks()
     {
         if (array_key_exists("healthChecks", $this->_propDict)) {
-            if (is_a($this->_propDict["healthChecks"], "Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionHealthCheck")) {
+            if (is_a($this->_propDict["healthChecks"], "\Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionHealthCheck")) {
                 return $this->_propDict["healthChecks"];
             } else {
                 $this->_propDict["healthChecks"] = new CloudPcOnPremisesConnectionHealthCheck($this->_propDict["healthChecks"]);

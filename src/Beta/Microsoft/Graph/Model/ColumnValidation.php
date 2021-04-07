@@ -61,7 +61,7 @@ class ColumnValidation extends Entity
     public function getDescriptions()
     {
         if (array_key_exists("descriptions", $this->_propDict)) {
-            if (is_a($this->_propDict["descriptions"], "Beta\Microsoft\Graph\Model\DisplayNameLocalization")) {
+            if (is_a($this->_propDict["descriptions"], "\Beta\Microsoft\Graph\Model\DisplayNameLocalization")) {
                 return $this->_propDict["descriptions"];
             } else {
                 $this->_propDict["descriptions"] = new DisplayNameLocalization($this->_propDict["descriptions"]);

@@ -117,6 +117,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the parentSiteId
+    * Id of the parent site of this group.
     *
     * @return string The parentSiteId
     */
@@ -131,6 +132,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the parentSiteId
+    * Id of the parent site of this group.
     *
     * @param string $val The parentSiteId
     *
@@ -151,7 +153,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "Beta\Microsoft\Graph\TermStore\Model\TermGroupScope")) {
+            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\TermStore\Model\TermGroupScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new TermGroupScope($this->_propDict["scope"]);

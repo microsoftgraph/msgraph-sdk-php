@@ -33,7 +33,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
     public function getActionFailureReason()
     {
         if (array_key_exists("actionFailureReason", $this->_propDict)) {
-            if (is_a($this->_propDict["actionFailureReason"], "Beta\Microsoft\Graph\Model\VppTokenActionFailureReason")) {
+            if (is_a($this->_propDict["actionFailureReason"], "\Beta\Microsoft\Graph\Model\VppTokenActionFailureReason")) {
                 return $this->_propDict["actionFailureReason"];
             } else {
                 $this->_propDict["actionFailureReason"] = new VppTokenActionFailureReason($this->_propDict["actionFailureReason"]);
@@ -94,7 +94,7 @@ class IosVppAppRevokeLicensesActionResult extends Entity
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "Beta\Microsoft\Graph\Model\ActionState")) {
+            if (is_a($this->_propDict["actionState"], "\Beta\Microsoft\Graph\Model\ActionState")) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);

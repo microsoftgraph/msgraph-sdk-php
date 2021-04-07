@@ -33,7 +33,7 @@ class OpenIdConnectProvider extends IdentityProvider
     public function getClaimsMapping()
     {
         if (array_key_exists("claimsMapping", $this->_propDict)) {
-            if (is_a($this->_propDict["claimsMapping"], "Beta\Microsoft\Graph\Model\ClaimsMapping")) {
+            if (is_a($this->_propDict["claimsMapping"], "\Beta\Microsoft\Graph\Model\ClaimsMapping")) {
                 return $this->_propDict["claimsMapping"];
             } else {
                 $this->_propDict["claimsMapping"] = new ClaimsMapping($this->_propDict["claimsMapping"]);
@@ -124,7 +124,7 @@ class OpenIdConnectProvider extends IdentityProvider
     public function getResponseMode()
     {
         if (array_key_exists("responseMode", $this->_propDict)) {
-            if (is_a($this->_propDict["responseMode"], "Beta\Microsoft\Graph\Model\OpenIdConnectResponseMode")) {
+            if (is_a($this->_propDict["responseMode"], "\Beta\Microsoft\Graph\Model\OpenIdConnectResponseMode")) {
                 return $this->_propDict["responseMode"];
             } else {
                 $this->_propDict["responseMode"] = new OpenIdConnectResponseMode($this->_propDict["responseMode"]);
@@ -157,7 +157,7 @@ class OpenIdConnectProvider extends IdentityProvider
     public function getResponseType()
     {
         if (array_key_exists("responseType", $this->_propDict)) {
-            if (is_a($this->_propDict["responseType"], "Beta\Microsoft\Graph\Model\OpenIdConnectResponseTypes")) {
+            if (is_a($this->_propDict["responseType"], "\Beta\Microsoft\Graph\Model\OpenIdConnectResponseTypes")) {
                 return $this->_propDict["responseType"];
             } else {
                 $this->_propDict["responseType"] = new OpenIdConnectResponseTypes($this->_propDict["responseType"]);
