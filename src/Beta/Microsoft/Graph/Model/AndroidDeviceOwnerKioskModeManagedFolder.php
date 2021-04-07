@@ -89,7 +89,7 @@ class AndroidDeviceOwnerKioskModeManagedFolder extends Entity
     public function getItems()
     {
         if (array_key_exists("items", $this->_propDict)) {
-            if (is_a($this->_propDict["items"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeFolderItem")) {
+            if (is_a($this->_propDict["items"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeFolderItem")) {
                 return $this->_propDict["items"];
             } else {
                 $this->_propDict["items"] = new AndroidDeviceOwnerKioskModeFolderItem($this->_propDict["items"]);

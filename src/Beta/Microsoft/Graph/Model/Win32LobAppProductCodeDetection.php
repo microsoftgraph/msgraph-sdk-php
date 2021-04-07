@@ -98,7 +98,7 @@ class Win32LobAppProductCodeDetection extends Win32LobAppDetection
     public function getProductVersionOperator()
     {
         if (array_key_exists("productVersionOperator", $this->_propDict)) {
-            if (is_a($this->_propDict["productVersionOperator"], "Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
+            if (is_a($this->_propDict["productVersionOperator"], "\Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
                 return $this->_propDict["productVersionOperator"];
             } else {
                 $this->_propDict["productVersionOperator"] = new Win32LobAppDetectionOperator($this->_propDict["productVersionOperator"]);

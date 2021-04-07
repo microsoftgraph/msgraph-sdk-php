@@ -62,7 +62,7 @@ class PrintConnector extends Entity
     public function getDeviceHealth()
     {
         if (array_key_exists("deviceHealth", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceHealth"], "Beta\Microsoft\Graph\Model\DeviceHealth")) {
+            if (is_a($this->_propDict["deviceHealth"], "\Beta\Microsoft\Graph\Model\DeviceHealth")) {
                 return $this->_propDict["deviceHealth"];
             } else {
                 $this->_propDict["deviceHealth"] = new DeviceHealth($this->_propDict["deviceHealth"]);
@@ -153,7 +153,7 @@ class PrintConnector extends Entity
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\PrinterLocation")) {
+            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\PrinterLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new PrinterLocation($this->_propDict["location"]);

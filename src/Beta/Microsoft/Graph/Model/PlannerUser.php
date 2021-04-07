@@ -33,7 +33,7 @@ class PlannerUser extends PlannerDelta
     public function getFavoritePlanReferences()
     {
         if (array_key_exists("favoritePlanReferences", $this->_propDict)) {
-            if (is_a($this->_propDict["favoritePlanReferences"], "Beta\Microsoft\Graph\Model\PlannerFavoritePlanReferenceCollection")) {
+            if (is_a($this->_propDict["favoritePlanReferences"], "\Beta\Microsoft\Graph\Model\PlannerFavoritePlanReferenceCollection")) {
                 return $this->_propDict["favoritePlanReferences"];
             } else {
                 $this->_propDict["favoritePlanReferences"] = new PlannerFavoritePlanReferenceCollection($this->_propDict["favoritePlanReferences"]);
@@ -66,7 +66,7 @@ class PlannerUser extends PlannerDelta
     public function getRecentPlanReferences()
     {
         if (array_key_exists("recentPlanReferences", $this->_propDict)) {
-            if (is_a($this->_propDict["recentPlanReferences"], "Beta\Microsoft\Graph\Model\PlannerRecentPlanReferenceCollection")) {
+            if (is_a($this->_propDict["recentPlanReferences"], "\Beta\Microsoft\Graph\Model\PlannerRecentPlanReferenceCollection")) {
                 return $this->_propDict["recentPlanReferences"];
             } else {
                 $this->_propDict["recentPlanReferences"] = new PlannerRecentPlanReferenceCollection($this->_propDict["recentPlanReferences"]);

@@ -120,7 +120,7 @@ class CaseExportOperation extends CaseOperation
     public function getExportOptions()
     {
         if (array_key_exists("exportOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["exportOptions"], "Beta\Microsoft\Graph\Ediscovery\Model\ExportOptions")) {
+            if (is_a($this->_propDict["exportOptions"], "\Beta\Microsoft\Graph\Ediscovery\Model\ExportOptions")) {
                 return $this->_propDict["exportOptions"];
             } else {
                 $this->_propDict["exportOptions"] = new ExportOptions($this->_propDict["exportOptions"]);
@@ -153,7 +153,7 @@ class CaseExportOperation extends CaseOperation
     public function getExportStructure()
     {
         if (array_key_exists("exportStructure", $this->_propDict)) {
-            if (is_a($this->_propDict["exportStructure"], "Beta\Microsoft\Graph\Ediscovery\Model\ExportFileStructure")) {
+            if (is_a($this->_propDict["exportStructure"], "\Beta\Microsoft\Graph\Ediscovery\Model\ExportFileStructure")) {
                 return $this->_propDict["exportStructure"];
             } else {
                 $this->_propDict["exportStructure"] = new ExportFileStructure($this->_propDict["exportStructure"]);
@@ -242,7 +242,7 @@ class CaseExportOperation extends CaseOperation
     public function getReviewSet()
     {
         if (array_key_exists("reviewSet", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewSet"], "Beta\Microsoft\Graph\Ediscovery\Model\ReviewSet")) {
+            if (is_a($this->_propDict["reviewSet"], "\Beta\Microsoft\Graph\Ediscovery\Model\ReviewSet")) {
                 return $this->_propDict["reviewSet"];
             } else {
                 $this->_propDict["reviewSet"] = new ReviewSet($this->_propDict["reviewSet"]);

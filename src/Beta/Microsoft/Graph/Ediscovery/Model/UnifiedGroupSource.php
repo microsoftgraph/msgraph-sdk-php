@@ -33,7 +33,7 @@ class UnifiedGroupSource extends DataSource
     public function getIncludedSources()
     {
         if (array_key_exists("includedSources", $this->_propDict)) {
-            if (is_a($this->_propDict["includedSources"], "Beta\Microsoft\Graph\Ediscovery\Model\SourceType")) {
+            if (is_a($this->_propDict["includedSources"], "\Beta\Microsoft\Graph\Ediscovery\Model\SourceType")) {
                 return $this->_propDict["includedSources"];
             } else {
                 $this->_propDict["includedSources"] = new SourceType($this->_propDict["includedSources"]);
@@ -61,15 +61,15 @@ class UnifiedGroupSource extends DataSource
     * Gets the group
     * The group associated with the unifiedGroupSource.
     *
-    * @return Beta\Microsoft\Graph\Model\Group The group
+    * @return \Beta\Microsoft\Graph\Model\Group The group
     */
     public function getGroup()
     {
         if (array_key_exists("group", $this->_propDict)) {
-            if (is_a($this->_propDict["group"], "Beta\Microsoft\Graph\Model\Group")) {
+            if (is_a($this->_propDict["group"], "\Beta\Microsoft\Graph\Model\Group")) {
                 return $this->_propDict["group"];
             } else {
-                $this->_propDict["group"] = new Beta\Microsoft\Graph\Model\Group($this->_propDict["group"]);
+                $this->_propDict["group"] = new \Beta\Microsoft\Graph\Model\Group($this->_propDict["group"]);
                 return $this->_propDict["group"];
             }
         }
@@ -80,7 +80,7 @@ class UnifiedGroupSource extends DataSource
     * Sets the group
     * The group associated with the unifiedGroupSource.
     *
-    * @param Beta\Microsoft\Graph\Model\Group $val The group
+    * @param \Beta\Microsoft\Graph\Model\Group $val The group
     *
     * @return UnifiedGroupSource
     */

@@ -33,7 +33,7 @@ class SynchronizationJobRestartCriteria extends Entity
     public function getResetScope()
     {
         if (array_key_exists("resetScope", $this->_propDict)) {
-            if (is_a($this->_propDict["resetScope"], "Beta\Microsoft\Graph\Model\SynchronizationJobRestartScope")) {
+            if (is_a($this->_propDict["resetScope"], "\Beta\Microsoft\Graph\Model\SynchronizationJobRestartScope")) {
                 return $this->_propDict["resetScope"];
             } else {
                 $this->_propDict["resetScope"] = new SynchronizationJobRestartScope($this->_propDict["resetScope"]);

@@ -120,7 +120,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     public function getAzureAdRegistered()
     {
         if (array_key_exists("azureAdRegistered", $this->_propDict)) {
-            if (is_a($this->_propDict["azureAdRegistered"], "Beta\Microsoft\Graph\Model\AzureAdRegisteredState")) {
+            if (is_a($this->_propDict["azureAdRegistered"], "\Beta\Microsoft\Graph\Model\AzureAdRegisteredState")) {
                 return $this->_propDict["azureAdRegistered"];
             } else {
                 $this->_propDict["azureAdRegistered"] = new AzureAdRegisteredState($this->_propDict["azureAdRegistered"]);

@@ -91,7 +91,7 @@ class DeviceCompliancePolicyGroupAssignment extends Entity
     public function getDeviceCompliancePolicy()
     {
         if (array_key_exists("deviceCompliancePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCompliancePolicy"], "Beta\Microsoft\Graph\Model\DeviceCompliancePolicy")) {
+            if (is_a($this->_propDict["deviceCompliancePolicy"], "\Beta\Microsoft\Graph\Model\DeviceCompliancePolicy")) {
                 return $this->_propDict["deviceCompliancePolicy"];
             } else {
                 $this->_propDict["deviceCompliancePolicy"] = new DeviceCompliancePolicy($this->_propDict["deviceCompliancePolicy"]);

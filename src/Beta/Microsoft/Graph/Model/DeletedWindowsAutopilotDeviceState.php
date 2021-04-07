@@ -33,7 +33,7 @@ class DeletedWindowsAutopilotDeviceState extends Entity
     public function getDeletionState()
     {
         if (array_key_exists("deletionState", $this->_propDict)) {
-            if (is_a($this->_propDict["deletionState"], "Beta\Microsoft\Graph\Model\WindowsAutopilotDeviceDeletionState")) {
+            if (is_a($this->_propDict["deletionState"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeviceDeletionState")) {
                 return $this->_propDict["deletionState"];
             } else {
                 $this->_propDict["deletionState"] = new WindowsAutopilotDeviceDeletionState($this->_propDict["deletionState"]);

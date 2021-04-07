@@ -61,7 +61,7 @@ class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration
     public function getApps()
     {
         if (array_key_exists("apps", $this->_propDict)) {
-            if (is_a($this->_propDict["apps"], "Beta\Microsoft\Graph\Model\WindowsKioskAppBase")) {
+            if (is_a($this->_propDict["apps"], "\Beta\Microsoft\Graph\Model\WindowsKioskAppBase")) {
                 return $this->_propDict["apps"];
             } else {
                 $this->_propDict["apps"] = new WindowsKioskAppBase($this->_propDict["apps"]);

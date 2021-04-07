@@ -26,14 +26,14 @@ class IdentityApiConnector extends Entity
 {
     /**
     * Gets the authenticationConfiguration
-    * The object which describes the authentication configuration details for calling the API. Only Basic authentication is supported at this time.
+    * The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
     *
     * @return ApiAuthenticationConfigurationBase The authenticationConfiguration
     */
     public function getAuthenticationConfiguration()
     {
         if (array_key_exists("authenticationConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationConfiguration"], "Beta\Microsoft\Graph\Model\ApiAuthenticationConfigurationBase")) {
+            if (is_a($this->_propDict["authenticationConfiguration"], "\Beta\Microsoft\Graph\Model\ApiAuthenticationConfigurationBase")) {
                 return $this->_propDict["authenticationConfiguration"];
             } else {
                 $this->_propDict["authenticationConfiguration"] = new ApiAuthenticationConfigurationBase($this->_propDict["authenticationConfiguration"]);
@@ -45,7 +45,7 @@ class IdentityApiConnector extends Entity
     
     /**
     * Sets the authenticationConfiguration
-    * The object which describes the authentication configuration details for calling the API. Only Basic authentication is supported at this time.
+    * The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
     *
     * @param ApiAuthenticationConfigurationBase $val The authenticationConfiguration
     *

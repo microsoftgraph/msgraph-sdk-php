@@ -28,15 +28,15 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the closedBy
     * The user who closed the case.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The closedBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The closedBy
     */
     public function getClosedBy()
     {
         if (array_key_exists("closedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["closedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["closedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["closedBy"];
             } else {
-                $this->_propDict["closedBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["closedBy"]);
+                $this->_propDict["closedBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["closedBy"]);
                 return $this->_propDict["closedBy"];
             }
         }
@@ -47,7 +47,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the closedBy
     * The user who closed the case.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The closedBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The closedBy
     *
     * @return Case
     */
@@ -214,15 +214,15 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lastModifiedBy
     * The last user who modified the entity.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
-                $this->_propDict["lastModifiedBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
+                $this->_propDict["lastModifiedBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
                 return $this->_propDict["lastModifiedBy"];
             }
         }
@@ -233,7 +233,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the lastModifiedBy
     * The last user who modified the entity.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
     * @return Case
     */
@@ -285,7 +285,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Ediscovery\Model\CaseStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Ediscovery\Model\CaseStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CaseStatus($this->_propDict["status"]);
@@ -457,7 +457,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Ediscovery\Model\Settings")) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Ediscovery\Model\Settings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new Settings($this->_propDict["settings"]);

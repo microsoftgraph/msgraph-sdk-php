@@ -33,7 +33,7 @@ class DeviceComplianceScriptError extends Entity
     public function getCode()
     {
         if (array_key_exists("code", $this->_propDict)) {
-            if (is_a($this->_propDict["code"], "Beta\Microsoft\Graph\Model\Code")) {
+            if (is_a($this->_propDict["code"], "\Beta\Microsoft\Graph\Model\Code")) {
                 return $this->_propDict["code"];
             } else {
                 $this->_propDict["code"] = new Code($this->_propDict["code"]);
@@ -66,7 +66,7 @@ class DeviceComplianceScriptError extends Entity
     public function getDeviceComplianceScriptRulesValidationError()
     {
         if (array_key_exists("deviceComplianceScriptRulesValidationError", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceComplianceScriptRulesValidationError"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRulesValidationError")) {
+            if (is_a($this->_propDict["deviceComplianceScriptRulesValidationError"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptRulesValidationError")) {
                 return $this->_propDict["deviceComplianceScriptRulesValidationError"];
             } else {
                 $this->_propDict["deviceComplianceScriptRulesValidationError"] = new DeviceComplianceScriptRulesValidationError($this->_propDict["deviceComplianceScriptRulesValidationError"]);

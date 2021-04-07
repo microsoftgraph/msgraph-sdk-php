@@ -33,7 +33,7 @@ class DeviceManagementSettingDependency extends Entity
     public function getConstraints()
     {
         if (array_key_exists("constraints", $this->_propDict)) {
-            if (is_a($this->_propDict["constraints"], "Beta\Microsoft\Graph\Model\DeviceManagementConstraint")) {
+            if (is_a($this->_propDict["constraints"], "\Beta\Microsoft\Graph\Model\DeviceManagementConstraint")) {
                 return $this->_propDict["constraints"];
             } else {
                 $this->_propDict["constraints"] = new DeviceManagementConstraint($this->_propDict["constraints"]);

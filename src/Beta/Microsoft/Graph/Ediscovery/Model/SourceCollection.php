@@ -57,15 +57,15 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdBy
     * The user who created the sourceCollection.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -76,7 +76,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the createdBy
     * The user who created the sourceCollection.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
     * @return SourceCollection
     */
@@ -127,7 +127,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     public function getDataSourceScopes()
     {
         if (array_key_exists("dataSourceScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["dataSourceScopes"], "Beta\Microsoft\Graph\Ediscovery\Model\DataSourceScopes")) {
+            if (is_a($this->_propDict["dataSourceScopes"], "\Beta\Microsoft\Graph\Ediscovery\Model\DataSourceScopes")) {
                 return $this->_propDict["dataSourceScopes"];
             } else {
                 $this->_propDict["dataSourceScopes"] = new DataSourceScopes($this->_propDict["dataSourceScopes"]);
@@ -212,15 +212,15 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lastModifiedBy
     * The last user who modified the sourceCollection.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
-                $this->_propDict["lastModifiedBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
+                $this->_propDict["lastModifiedBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["lastModifiedBy"]);
                 return $this->_propDict["lastModifiedBy"];
             }
         }
@@ -231,7 +231,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the lastModifiedBy
     * The last user who modified the sourceCollection.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
     * @return SourceCollection
     */
@@ -274,39 +274,6 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     
-    /**
-    * Gets the tenantSources
-    * When specified, the collection will span across a service for an entire workload. Possible values are: allMailboxes, allSites.
-    *
-    * @return TenantSources The tenantSources
-    */
-    public function getTenantSources()
-    {
-        if (array_key_exists("tenantSources", $this->_propDict)) {
-            if (is_a($this->_propDict["tenantSources"], "Beta\Microsoft\Graph\Ediscovery\Model\TenantSources")) {
-                return $this->_propDict["tenantSources"];
-            } else {
-                $this->_propDict["tenantSources"] = new TenantSources($this->_propDict["tenantSources"]);
-                return $this->_propDict["tenantSources"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the tenantSources
-    * When specified, the collection will span across a service for an entire workload. Possible values are: allMailboxes, allSites.
-    *
-    * @param TenantSources $val The tenantSources
-    *
-    * @return SourceCollection
-    */
-    public function setTenantSources($val)
-    {
-        $this->_propDict["tenantSources"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the additionalSources
@@ -346,7 +313,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     public function getAddToReviewSetOperation()
     {
         if (array_key_exists("addToReviewSetOperation", $this->_propDict)) {
-            if (is_a($this->_propDict["addToReviewSetOperation"], "Beta\Microsoft\Graph\Ediscovery\Model\AddToReviewSetOperation")) {
+            if (is_a($this->_propDict["addToReviewSetOperation"], "\Beta\Microsoft\Graph\Ediscovery\Model\AddToReviewSetOperation")) {
                 return $this->_propDict["addToReviewSetOperation"];
             } else {
                 $this->_propDict["addToReviewSetOperation"] = new AddToReviewSetOperation($this->_propDict["addToReviewSetOperation"]);
@@ -409,7 +376,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     public function getLastEstimateStatisticsOperation()
     {
         if (array_key_exists("lastEstimateStatisticsOperation", $this->_propDict)) {
-            if (is_a($this->_propDict["lastEstimateStatisticsOperation"], "Beta\Microsoft\Graph\Ediscovery\Model\EstimateStatisticsOperation")) {
+            if (is_a($this->_propDict["lastEstimateStatisticsOperation"], "\Beta\Microsoft\Graph\Ediscovery\Model\EstimateStatisticsOperation")) {
                 return $this->_propDict["lastEstimateStatisticsOperation"];
             } else {
                 $this->_propDict["lastEstimateStatisticsOperation"] = new EstimateStatisticsOperation($this->_propDict["lastEstimateStatisticsOperation"]);

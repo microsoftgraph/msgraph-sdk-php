@@ -26,13 +26,14 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope
 
     /**
     * Gets the inactiveDuration
+    * Defines the length of the duration period of inactivity. Inactivity is based on the last sign in date of the user.
     *
     * @return Duration The inactiveDuration
     */
     public function getInactiveDuration()
     {
         if (array_key_exists("inactiveDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["inactiveDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["inactiveDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["inactiveDuration"];
             } else {
                 $this->_propDict["inactiveDuration"] = new Duration($this->_propDict["inactiveDuration"]);
@@ -44,6 +45,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope
 
     /**
     * Sets the inactiveDuration
+    * Defines the length of the duration period of inactivity. Inactivity is based on the last sign in date of the user.
     *
     * @param Duration $val The value to assign to the inactiveDuration
     *

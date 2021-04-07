@@ -33,7 +33,7 @@ class OnenotePatchContentCommand extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\OnenotePatchActionType")) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\OnenotePatchActionType")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new OnenotePatchActionType($this->_propDict["action"]);
@@ -94,7 +94,7 @@ class OnenotePatchContentCommand extends Entity
     public function getPosition()
     {
         if (array_key_exists("position", $this->_propDict)) {
-            if (is_a($this->_propDict["position"], "Beta\Microsoft\Graph\Model\OnenotePatchInsertPosition")) {
+            if (is_a($this->_propDict["position"], "\Beta\Microsoft\Graph\Model\OnenotePatchInsertPosition")) {
                 return $this->_propDict["position"];
             } else {
                 $this->_propDict["position"] = new OnenotePatchInsertPosition($this->_propDict["position"]);

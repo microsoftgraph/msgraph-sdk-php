@@ -33,7 +33,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     public function getChildSelectability()
     {
         if (array_key_exists("childSelectability", $this->_propDict)) {
-            if (is_a($this->_propDict["childSelectability"], "Beta\Microsoft\Graph\Ediscovery\Model\ChildSelectability")) {
+            if (is_a($this->_propDict["childSelectability"], "\Beta\Microsoft\Graph\Ediscovery\Model\ChildSelectability")) {
                 return $this->_propDict["childSelectability"];
             } else {
                 $this->_propDict["childSelectability"] = new ChildSelectability($this->_propDict["childSelectability"]);
@@ -61,15 +61,15 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdBy
     * The user who created the tag.
     *
-    * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
+    * @return \Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -80,7 +80,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the createdBy
     * The user who created the tag.
     *
-    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
+    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
     * @return Tag
     */
@@ -220,7 +220,7 @@ class Tag extends \Beta\Microsoft\Graph\Model\Entity
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "Beta\Microsoft\Graph\Ediscovery\Model\Tag")) {
+            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Ediscovery\Model\Tag")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new Tag($this->_propDict["parent"]);

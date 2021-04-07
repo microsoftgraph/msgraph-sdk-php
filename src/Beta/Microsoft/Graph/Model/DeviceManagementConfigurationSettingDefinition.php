@@ -33,7 +33,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     public function getAccessTypes()
     {
         if (array_key_exists("accessTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["accessTypes"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingAccessTypes")) {
+            if (is_a($this->_propDict["accessTypes"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingAccessTypes")) {
                 return $this->_propDict["accessTypes"];
             } else {
                 $this->_propDict["accessTypes"] = new DeviceManagementConfigurationSettingAccessTypes($this->_propDict["accessTypes"]);
@@ -66,7 +66,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     public function getApplicability()
     {
         if (array_key_exists("applicability", $this->_propDict)) {
-            if (is_a($this->_propDict["applicability"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingApplicability")) {
+            if (is_a($this->_propDict["applicability"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingApplicability")) {
                 return $this->_propDict["applicability"];
             } else {
                 $this->_propDict["applicability"] = new DeviceManagementConfigurationSettingApplicability($this->_propDict["applicability"]);
@@ -331,7 +331,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     public function getOccurrence()
     {
         if (array_key_exists("occurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["occurrence"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingOccurrence")) {
+            if (is_a($this->_propDict["occurrence"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingOccurrence")) {
                 return $this->_propDict["occurrence"];
             } else {
                 $this->_propDict["occurrence"] = new DeviceManagementConfigurationSettingOccurrence($this->_propDict["occurrence"]);
@@ -422,7 +422,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     public function getSettingUsage()
     {
         if (array_key_exists("settingUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["settingUsage"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingUsage")) {
+            if (is_a($this->_propDict["settingUsage"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingUsage")) {
                 return $this->_propDict["settingUsage"];
             } else {
                 $this->_propDict["settingUsage"] = new DeviceManagementConfigurationSettingUsage($this->_propDict["settingUsage"]);
@@ -455,7 +455,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     public function getUxBehavior()
     {
         if (array_key_exists("uxBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["uxBehavior"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationControlType")) {
+            if (is_a($this->_propDict["uxBehavior"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationControlType")) {
                 return $this->_propDict["uxBehavior"];
             } else {
                 $this->_propDict["uxBehavior"] = new DeviceManagementConfigurationControlType($this->_propDict["uxBehavior"]);
@@ -517,7 +517,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     public function getVisibility()
     {
         if (array_key_exists("visibility", $this->_propDict)) {
-            if (is_a($this->_propDict["visibility"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingVisibility")) {
+            if (is_a($this->_propDict["visibility"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingVisibility")) {
                 return $this->_propDict["visibility"];
             } else {
                 $this->_propDict["visibility"] = new DeviceManagementConfigurationSettingVisibility($this->_propDict["visibility"]);

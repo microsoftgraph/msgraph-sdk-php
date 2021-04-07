@@ -25,6 +25,7 @@ class ServicePrincipalIdentity extends Identity
 {
     /**
     * Gets the appId
+    * The application identifier of the service principal.
     *
     * @return string The appId
     */
@@ -39,6 +40,7 @@ class ServicePrincipalIdentity extends Identity
 
     /**
     * Sets the appId
+    * The application identifier of the service principal.
     *
     * @param string $val The value of the appId
     *

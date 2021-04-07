@@ -120,7 +120,7 @@ class FeatureUsageDetail extends Entity
     public function getLicenseAssigned()
     {
         if (array_key_exists("licenseAssigned", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseAssigned"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+            if (is_a($this->_propDict["licenseAssigned"], "\Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
                 return $this->_propDict["licenseAssigned"];
             } else {
                 $this->_propDict["licenseAssigned"] = new AzureADLicenseType($this->_propDict["licenseAssigned"]);
@@ -151,7 +151,7 @@ class FeatureUsageDetail extends Entity
     public function getLicenseRequired()
     {
         if (array_key_exists("licenseRequired", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseRequired"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+            if (is_a($this->_propDict["licenseRequired"], "\Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
                 return $this->_propDict["licenseRequired"];
             } else {
                 $this->_propDict["licenseRequired"] = new AzureADLicenseType($this->_propDict["licenseRequired"]);

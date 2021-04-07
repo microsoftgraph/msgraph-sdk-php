@@ -91,7 +91,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function getAlwaysOnConfiguration()
     {
         if (array_key_exists("alwaysOnConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["alwaysOnConfiguration"], "Beta\Microsoft\Graph\Model\AppleVpnAlwaysOnConfiguration")) {
+            if (is_a($this->_propDict["alwaysOnConfiguration"], "\Beta\Microsoft\Graph\Model\AppleVpnAlwaysOnConfiguration")) {
                 return $this->_propDict["alwaysOnConfiguration"];
             } else {
                 $this->_propDict["alwaysOnConfiguration"] = new AppleVpnAlwaysOnConfiguration($this->_propDict["alwaysOnConfiguration"]);
@@ -124,7 +124,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function getChildSecurityAssociationParameters()
     {
         if (array_key_exists("childSecurityAssociationParameters", $this->_propDict)) {
-            if (is_a($this->_propDict["childSecurityAssociationParameters"], "Beta\Microsoft\Graph\Model\IosVpnSecurityAssociationParameters")) {
+            if (is_a($this->_propDict["childSecurityAssociationParameters"], "\Beta\Microsoft\Graph\Model\IosVpnSecurityAssociationParameters")) {
                 return $this->_propDict["childSecurityAssociationParameters"];
             } else {
                 $this->_propDict["childSecurityAssociationParameters"] = new IosVpnSecurityAssociationParameters($this->_propDict["childSecurityAssociationParameters"]);
@@ -157,7 +157,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function getClientAuthenticationType()
     {
         if (array_key_exists("clientAuthenticationType", $this->_propDict)) {
-            if (is_a($this->_propDict["clientAuthenticationType"], "Beta\Microsoft\Graph\Model\VpnClientAuthenticationType")) {
+            if (is_a($this->_propDict["clientAuthenticationType"], "\Beta\Microsoft\Graph\Model\VpnClientAuthenticationType")) {
                 return $this->_propDict["clientAuthenticationType"];
             } else {
                 $this->_propDict["clientAuthenticationType"] = new VpnClientAuthenticationType($this->_propDict["clientAuthenticationType"]);
@@ -190,7 +190,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function getDeadPeerDetectionRate()
     {
         if (array_key_exists("deadPeerDetectionRate", $this->_propDict)) {
-            if (is_a($this->_propDict["deadPeerDetectionRate"], "Beta\Microsoft\Graph\Model\VpnDeadPeerDetectionRate")) {
+            if (is_a($this->_propDict["deadPeerDetectionRate"], "\Beta\Microsoft\Graph\Model\VpnDeadPeerDetectionRate")) {
                 return $this->_propDict["deadPeerDetectionRate"];
             } else {
                 $this->_propDict["deadPeerDetectionRate"] = new VpnDeadPeerDetectionRate($this->_propDict["deadPeerDetectionRate"]);
@@ -426,7 +426,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function getLocalIdentifier()
     {
         if (array_key_exists("localIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["localIdentifier"], "Beta\Microsoft\Graph\Model\VpnLocalIdentifier")) {
+            if (is_a($this->_propDict["localIdentifier"], "\Beta\Microsoft\Graph\Model\VpnLocalIdentifier")) {
                 return $this->_propDict["localIdentifier"];
             } else {
                 $this->_propDict["localIdentifier"] = new VpnLocalIdentifier($this->_propDict["localIdentifier"]);
@@ -517,7 +517,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function getSecurityAssociationParameters()
     {
         if (array_key_exists("securityAssociationParameters", $this->_propDict)) {
-            if (is_a($this->_propDict["securityAssociationParameters"], "Beta\Microsoft\Graph\Model\IosVpnSecurityAssociationParameters")) {
+            if (is_a($this->_propDict["securityAssociationParameters"], "\Beta\Microsoft\Graph\Model\IosVpnSecurityAssociationParameters")) {
                 return $this->_propDict["securityAssociationParameters"];
             } else {
                 $this->_propDict["securityAssociationParameters"] = new IosVpnSecurityAssociationParameters($this->_propDict["securityAssociationParameters"]);
@@ -608,7 +608,7 @@ class IosikEv2VpnConfiguration extends IosVpnConfiguration
     public function getServerCertificateType()
     {
         if (array_key_exists("serverCertificateType", $this->_propDict)) {
-            if (is_a($this->_propDict["serverCertificateType"], "Beta\Microsoft\Graph\Model\VpnServerCertificateType")) {
+            if (is_a($this->_propDict["serverCertificateType"], "\Beta\Microsoft\Graph\Model\VpnServerCertificateType")) {
                 return $this->_propDict["serverCertificateType"];
             } else {
                 $this->_propDict["serverCertificateType"] = new VpnServerCertificateType($this->_propDict["serverCertificateType"]);

@@ -115,7 +115,7 @@ class ContentProperties extends Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "Beta\Microsoft\Graph\Model\ContentMetadata")) {
+            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\ContentMetadata")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new ContentMetadata($this->_propDict["metadata"]);

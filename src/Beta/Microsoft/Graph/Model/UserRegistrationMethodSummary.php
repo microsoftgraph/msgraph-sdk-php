@@ -61,7 +61,7 @@ class UserRegistrationMethodSummary extends Entity
     public function getUserRegistrationMethodCounts()
     {
         if (array_key_exists("userRegistrationMethodCounts", $this->_propDict)) {
-            if (is_a($this->_propDict["userRegistrationMethodCounts"], "Beta\Microsoft\Graph\Model\UserRegistrationMethodCount")) {
+            if (is_a($this->_propDict["userRegistrationMethodCounts"], "\Beta\Microsoft\Graph\Model\UserRegistrationMethodCount")) {
                 return $this->_propDict["userRegistrationMethodCounts"];
             } else {
                 $this->_propDict["userRegistrationMethodCounts"] = new UserRegistrationMethodCount($this->_propDict["userRegistrationMethodCounts"]);
@@ -94,7 +94,7 @@ class UserRegistrationMethodSummary extends Entity
     public function getUserRoles()
     {
         if (array_key_exists("userRoles", $this->_propDict)) {
-            if (is_a($this->_propDict["userRoles"], "Beta\Microsoft\Graph\Model\IncludedUserRoles")) {
+            if (is_a($this->_propDict["userRoles"], "\Beta\Microsoft\Graph\Model\IncludedUserRoles")) {
                 return $this->_propDict["userRoles"];
             } else {
                 $this->_propDict["userRoles"] = new IncludedUserRoles($this->_propDict["userRoles"]);
@@ -127,7 +127,7 @@ class UserRegistrationMethodSummary extends Entity
     public function getUserTypes()
     {
         if (array_key_exists("userTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["userTypes"], "Beta\Microsoft\Graph\Model\IncludedUserTypes")) {
+            if (is_a($this->_propDict["userTypes"], "\Beta\Microsoft\Graph\Model\IncludedUserTypes")) {
                 return $this->_propDict["userTypes"];
             } else {
                 $this->_propDict["userTypes"] = new IncludedUserTypes($this->_propDict["userTypes"]);

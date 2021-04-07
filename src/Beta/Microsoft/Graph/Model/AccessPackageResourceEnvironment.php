@@ -33,7 +33,7 @@ class AccessPackageResourceEnvironment extends Entity
     public function getConnectionInfo()
     {
         if (array_key_exists("connectionInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionInfo"], "Beta\Microsoft\Graph\Model\ConnectionInfo")) {
+            if (is_a($this->_propDict["connectionInfo"], "\Beta\Microsoft\Graph\Model\ConnectionInfo")) {
                 return $this->_propDict["connectionInfo"];
             } else {
                 $this->_propDict["connectionInfo"] = new ConnectionInfo($this->_propDict["connectionInfo"]);

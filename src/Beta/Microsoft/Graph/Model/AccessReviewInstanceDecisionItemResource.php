@@ -25,6 +25,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of the resource
     *
     * @return string The displayName
     */
@@ -39,6 +40,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the resource
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
     }
     /**
     * Gets the id
+    * Resource ID
     *
     * @return string The id
     */
@@ -65,6 +68,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
 
     /**
     * Sets the id
+    * Resource ID
     *
     * @param string $val The value of the id
     *
@@ -77,6 +81,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
     }
     /**
     * Gets the type
+    * Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.
     *
     * @return string The type
     */
@@ -91,6 +96,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
 
     /**
     * Sets the type
+    * Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.
     *
     * @param string $val The value of the type
     *

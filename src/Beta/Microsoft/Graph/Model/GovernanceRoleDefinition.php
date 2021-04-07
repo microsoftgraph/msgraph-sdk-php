@@ -147,7 +147,7 @@ class GovernanceRoleDefinition extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -180,7 +180,7 @@ class GovernanceRoleDefinition extends Entity
     public function getRoleSetting()
     {
         if (array_key_exists("roleSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["roleSetting"], "Beta\Microsoft\Graph\Model\GovernanceRoleSetting")) {
+            if (is_a($this->_propDict["roleSetting"], "\Beta\Microsoft\Graph\Model\GovernanceRoleSetting")) {
                 return $this->_propDict["roleSetting"];
             } else {
                 $this->_propDict["roleSetting"] = new GovernanceRoleSetting($this->_propDict["roleSetting"]);

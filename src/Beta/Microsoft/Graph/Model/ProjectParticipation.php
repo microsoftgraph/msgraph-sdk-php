@@ -62,7 +62,7 @@ class ProjectParticipation extends ItemFacet
     public function getClient()
     {
         if (array_key_exists("client", $this->_propDict)) {
-            if (is_a($this->_propDict["client"], "Beta\Microsoft\Graph\Model\CompanyDetail")) {
+            if (is_a($this->_propDict["client"], "\Beta\Microsoft\Graph\Model\CompanyDetail")) {
                 return $this->_propDict["client"];
             } else {
                 $this->_propDict["client"] = new CompanyDetail($this->_propDict["client"]);
@@ -154,7 +154,7 @@ class ProjectParticipation extends ItemFacet
     public function getDetail()
     {
         if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "Beta\Microsoft\Graph\Model\PositionDetail")) {
+            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\PositionDetail")) {
                 return $this->_propDict["detail"];
             } else {
                 $this->_propDict["detail"] = new PositionDetail($this->_propDict["detail"]);

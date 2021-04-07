@@ -92,7 +92,7 @@ class WorkPosition extends ItemFacet
     public function getDetail()
     {
         if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "Beta\Microsoft\Graph\Model\PositionDetail")) {
+            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\PositionDetail")) {
                 return $this->_propDict["detail"];
             } else {
                 $this->_propDict["detail"] = new PositionDetail($this->_propDict["detail"]);
@@ -154,7 +154,7 @@ class WorkPosition extends ItemFacet
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "Beta\Microsoft\Graph\Model\RelatedPerson")) {
+            if (is_a($this->_propDict["manager"], "\Beta\Microsoft\Graph\Model\RelatedPerson")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new RelatedPerson($this->_propDict["manager"]);

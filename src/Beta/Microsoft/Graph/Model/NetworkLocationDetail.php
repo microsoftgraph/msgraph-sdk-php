@@ -61,7 +61,7 @@ class NetworkLocationDetail extends Entity
     public function getNetworkType()
     {
         if (array_key_exists("networkType", $this->_propDict)) {
-            if (is_a($this->_propDict["networkType"], "Beta\Microsoft\Graph\Model\NetworkType")) {
+            if (is_a($this->_propDict["networkType"], "\Beta\Microsoft\Graph\Model\NetworkType")) {
                 return $this->_propDict["networkType"];
             } else {
                 $this->_propDict["networkType"] = new NetworkType($this->_propDict["networkType"]);

@@ -32,7 +32,7 @@ class InstanceResourceAccess extends Entity
     public function getPermissions()
     {
         if (array_key_exists("permissions", $this->_propDict)) {
-            if (is_a($this->_propDict["permissions"], "Beta\Microsoft\Graph\Model\ResourcePermission")) {
+            if (is_a($this->_propDict["permissions"], "\Beta\Microsoft\Graph\Model\ResourcePermission")) {
                 return $this->_propDict["permissions"];
             } else {
                 $this->_propDict["permissions"] = new ResourcePermission($this->_propDict["permissions"]);

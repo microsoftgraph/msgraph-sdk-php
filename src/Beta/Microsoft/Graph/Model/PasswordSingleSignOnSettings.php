@@ -32,7 +32,7 @@ class PasswordSingleSignOnSettings extends Entity
     public function getFields()
     {
         if (array_key_exists("fields", $this->_propDict)) {
-            if (is_a($this->_propDict["fields"], "Beta\Microsoft\Graph\Model\PasswordSingleSignOnField")) {
+            if (is_a($this->_propDict["fields"], "\Beta\Microsoft\Graph\Model\PasswordSingleSignOnField")) {
                 return $this->_propDict["fields"];
             } else {
                 $this->_propDict["fields"] = new PasswordSingleSignOnField($this->_propDict["fields"]);

@@ -32,7 +32,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     public function getConfiguration()
     {
         if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "Beta\Microsoft\Graph\ExternalConnectors\Model\Configuration")) {
+            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Configuration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new Configuration($this->_propDict["configuration"]);
@@ -117,7 +117,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\ExternalConnectors\Model\ConnectionState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ConnectionState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ConnectionState($this->_propDict["state"]);
@@ -232,7 +232,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     public function getSchema()
     {
         if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "Beta\Microsoft\Graph\ExternalConnectors\Model\Schema")) {
+            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Schema")) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new Schema($this->_propDict["schema"]);
