@@ -84,7 +84,7 @@ class HttpTest extends TestCase
 
     public function testInvalidVerb()
     {
-        $this->expectException(GuzzleHttp\Exception\ClientException::class);
+        $this->expectException(GraphException::class);
 
         $mock = new MockHandler([
             new Response(400, ['foo' => 'bar'])
