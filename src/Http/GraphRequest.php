@@ -20,7 +20,7 @@ namespace Microsoft\Graph\Http;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use Microsoft\Graph\Core\GraphConstants;
-use Microsoft\Graph\Core\Utils;
+use Microsoft\Graph\Core\ExceptionWrapper;
 use Microsoft\Graph\Exception\GraphException;
 
 /**
@@ -314,7 +314,7 @@ class GraphRequest
                 ]
             );
         } catch(BadResponseException $e) {
-            throw Utils::wrapGuzzleBadResponseException($e);
+            throw ExceptionWrapper::wrapGuzzleBadResponseException($e);
         }
 
         // Check to see if returnType is a stream, if so return it immediately
@@ -386,7 +386,7 @@ class GraphRequest
             // On fail, log the error and return null
             function ($reason) {
                 if ($reason instanceof BadResponseException) {
-                    $reason = Utils::wrapGuzzleBadResponseException($reason);
+                    $reason = ExceptionWrapper::wrapGuzzleBadResponseException($reason);
                 }
                 trigger_error("Async call failed: " . $reason->getMessage());
                 return null;
@@ -432,7 +432,7 @@ class GraphRequest
         } catch(GraphException $e) {
             throw new GraphException(GraphConstants::INVALID_FILE);
         } catch(BadResponseException $e) {
-            throw Utils::wrapGuzzleBadResponseException($e);
+            throw ExceptionWrapper::wrapGuzzleBadResponseException($e);
         }
 
         return null;
