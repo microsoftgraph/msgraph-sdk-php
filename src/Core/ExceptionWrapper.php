@@ -4,7 +4,7 @@
 * Licensed under the MIT License.  See License in the project root
 * for license information.
 *
-* Utils File
+* ExceptionWrapper File
 * PHP version 7
 *
 * @category  Library
@@ -21,14 +21,14 @@ use GuzzleHttp\Exception\BadResponseException;
 use Microsoft\Graph\Exception\GraphException;
 
 /**
- * Class Utils
+ * Class ExceptionWrapper
  *
  * @category Library
  * @package  Microsoft.Graph
  * @license  https://opensource.org/licenses/MIT MIT License
  * @link     https://graph.microsoft.io/
  */
-class Utils
+class ExceptionWrapper
 {
     /**
      * Wrap Guzzle BadResponseException which returns truncated exception messages for 4xx and 5xx responses.
