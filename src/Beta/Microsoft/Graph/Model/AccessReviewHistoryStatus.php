@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WorkforceIntegrationSupportedEntities File
+* AccessReviewHistoryStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* WorkforceIntegrationSupportedEntities class
+* AccessReviewHistoryStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,21 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WorkforceIntegrationSupportedEntities extends Enum
+class AccessReviewHistoryStatus extends Enum
 {
     /**
-    * The Enum WorkforceIntegrationSupportedEntities
+    * The Enum AccessReviewHistoryStatus
     */
-    const NONE = "none";
-    const SHIFT = "shift";
-    const SWAP_REQUEST = "swapRequest";
-    const USER_SHIFT_PREFERENCES = "userShiftPreferences";
-    const OPEN_SHIFT = "openShift";
-    const OPEN_SHIFT_REQUEST = "openShiftRequest";
-    const OFFER_SHIFT_REQUEST = "offerShiftRequest";
+    const DONE = "done";
+    const INPROGRESS = "inprogress";
+    const ERROR = "error";
+    const REQUESTED = "requested";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TIME_CARD = "timeCard";
-    const TIME_OFF_REASON = "timeOffReason";
-    const TIME_OFF = "timeOff";
-    const TIME_OFF_REQUEST = "timeOffRequest";
 }

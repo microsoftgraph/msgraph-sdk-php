@@ -1060,7 +1060,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups that this device is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      *
      * @return array The memberOf
      */
@@ -1075,7 +1075,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups that this device is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
     *
     * @param DirectoryObject $val The memberOf
     *

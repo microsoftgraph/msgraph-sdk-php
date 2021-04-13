@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WorkforceIntegrationSupportedEntities File
+* AccessReviewHistoryDecisionFilter File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* WorkforceIntegrationSupportedEntities class
+* AccessReviewHistoryDecisionFilter class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,21 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WorkforceIntegrationSupportedEntities extends Enum
+class AccessReviewHistoryDecisionFilter extends Enum
 {
     /**
-    * The Enum WorkforceIntegrationSupportedEntities
+    * The Enum AccessReviewHistoryDecisionFilter
     */
-    const NONE = "none";
-    const SHIFT = "shift";
-    const SWAP_REQUEST = "swapRequest";
-    const USER_SHIFT_PREFERENCES = "userShiftPreferences";
-    const OPEN_SHIFT = "openShift";
-    const OPEN_SHIFT_REQUEST = "openShiftRequest";
-    const OFFER_SHIFT_REQUEST = "offerShiftRequest";
+    const APPROVE = "approve";
+    const DENY = "deny";
+    const NOT_REVIEWED = "notReviewed";
+    const DONT_KNOW = "dontKnow";
+    const NOT_NOTIFIED = "notNotified";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TIME_CARD = "timeCard";
-    const TIME_OFF_REASON = "timeOffReason";
-    const TIME_OFF = "timeOff";
-    const TIME_OFF_REQUEST = "timeOffRequest";
 }
