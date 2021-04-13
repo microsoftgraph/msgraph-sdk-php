@@ -33,7 +33,7 @@ class WorkbookFilter extends Entity
     public function getCriteria()
     {
         if (array_key_exists("criteria", $this->_propDict)) {
-            if (is_a($this->_propDict["criteria"], "Beta\Microsoft\Graph\Model\WorkbookFilterCriteria")) {
+            if (is_a($this->_propDict["criteria"], "\Beta\Microsoft\Graph\Model\WorkbookFilterCriteria")) {
                 return $this->_propDict["criteria"];
             } else {
                 $this->_propDict["criteria"] = new WorkbookFilterCriteria($this->_propDict["criteria"]);

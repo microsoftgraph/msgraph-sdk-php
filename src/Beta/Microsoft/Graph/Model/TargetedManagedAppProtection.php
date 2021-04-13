@@ -62,7 +62,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     public function getTargetedAppManagementLevels()
     {
         if (array_key_exists("targetedAppManagementLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["targetedAppManagementLevels"], "Beta\Microsoft\Graph\Model\AppManagementLevel")) {
+            if (is_a($this->_propDict["targetedAppManagementLevels"], "\Beta\Microsoft\Graph\Model\AppManagementLevel")) {
                 return $this->_propDict["targetedAppManagementLevels"];
             } else {
                 $this->_propDict["targetedAppManagementLevels"] = new AppManagementLevel($this->_propDict["targetedAppManagementLevels"]);

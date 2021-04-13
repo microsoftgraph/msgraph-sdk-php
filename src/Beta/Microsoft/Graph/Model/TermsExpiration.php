@@ -33,7 +33,7 @@ class TermsExpiration extends Entity
     public function getFrequency()
     {
         if (array_key_exists("frequency", $this->_propDict)) {
-            if (is_a($this->_propDict["frequency"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["frequency"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["frequency"];
             } else {
                 $this->_propDict["frequency"] = new Duration($this->_propDict["frequency"]);
@@ -59,7 +59,7 @@ class TermsExpiration extends Entity
 
     /**
     * Gets the startDateTime
-    * The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The startDateTime
     */
@@ -78,7 +78,7 @@ class TermsExpiration extends Entity
 
     /**
     * Sets the startDateTime
-    * The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+    * The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

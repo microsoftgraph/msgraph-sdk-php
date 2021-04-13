@@ -154,7 +154,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\GroupPolicyUploadedDefinitionFileStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\GroupPolicyUploadedDefinitionFileStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new GroupPolicyUploadedDefinitionFileStatus($this->_propDict["status"]);

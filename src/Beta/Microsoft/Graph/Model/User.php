@@ -33,7 +33,7 @@ class User extends DirectoryObject
     public function getSignInActivity()
     {
         if (array_key_exists("signInActivity", $this->_propDict)) {
-            if (is_a($this->_propDict["signInActivity"], "Beta\Microsoft\Graph\Model\SignInActivity")) {
+            if (is_a($this->_propDict["signInActivity"], "\Beta\Microsoft\Graph\Model\SignInActivity")) {
                 return $this->_propDict["signInActivity"];
             } else {
                 $this->_propDict["signInActivity"] = new SignInActivity($this->_propDict["signInActivity"]);
@@ -118,7 +118,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the assignedLicenses
-    * The licenses that are assigned to the user. Returned only on $select. Not nullable.
+    * The licenses that are assigned to the user. Not nullable. Supports $filter.
      *
      * @return array The assignedLicenses
      */
@@ -133,7 +133,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the assignedLicenses
-    * The licenses that are assigned to the user. Returned only on $select. Not nullable.
+    * The licenses that are assigned to the user. Not nullable. Supports $filter.
     *
     * @param AssignedLicense $val The assignedLicenses
     *
@@ -235,7 +235,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 characters.Returned only on $select.
     *
     * @return string The companyName
     */
@@ -250,7 +250,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the companyName
-    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
+    * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 characters.Returned only on $select.
     *
     * @param string $val The companyName
     *
@@ -539,7 +539,7 @@ class User extends DirectoryObject
     public function getEmployeeOrgData()
     {
         if (array_key_exists("employeeOrgData", $this->_propDict)) {
-            if (is_a($this->_propDict["employeeOrgData"], "Beta\Microsoft\Graph\Model\EmployeeOrgData")) {
+            if (is_a($this->_propDict["employeeOrgData"], "\Beta\Microsoft\Graph\Model\EmployeeOrgData")) {
                 return $this->_propDict["employeeOrgData"];
             } else {
                 $this->_propDict["employeeOrgData"] = new EmployeeOrgData($this->_propDict["employeeOrgData"]);
@@ -856,7 +856,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. Read-only.
     *
     * @return \DateTime The lastPasswordChangeDateTime
     */
@@ -875,7 +875,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
+    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. Read-only.
     *
     * @param \DateTime $val The lastPasswordChangeDateTime
     *
@@ -1129,7 +1129,7 @@ class User extends DirectoryObject
     public function getOnPremisesExtensionAttributes()
     {
         if (array_key_exists("onPremisesExtensionAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesExtensionAttributes"], "Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
+            if (is_a($this->_propDict["onPremisesExtensionAttributes"], "\Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
                 return $this->_propDict["onPremisesExtensionAttributes"];
             } else {
                 $this->_propDict["onPremisesExtensionAttributes"] = new OnPremisesExtensionAttributes($this->_propDict["onPremisesExtensionAttributes"]);
@@ -1184,7 +1184,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -1203,7 +1203,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -1428,7 +1428,7 @@ class User extends DirectoryObject
     public function getPasswordProfile()
     {
         if (array_key_exists("passwordProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordProfile"], "Beta\Microsoft\Graph\Model\PasswordProfile")) {
+            if (is_a($this->_propDict["passwordProfile"], "\Beta\Microsoft\Graph\Model\PasswordProfile")) {
                 return $this->_propDict["passwordProfile"];
             } else {
                 $this->_propDict["passwordProfile"] = new PasswordProfile($this->_propDict["passwordProfile"]);
@@ -1876,7 +1876,7 @@ class User extends DirectoryObject
     public function getMailboxSettings()
     {
         if (array_key_exists("mailboxSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["mailboxSettings"], "Beta\Microsoft\Graph\Model\MailboxSettings")) {
+            if (is_a($this->_propDict["mailboxSettings"], "\Beta\Microsoft\Graph\Model\MailboxSettings")) {
                 return $this->_propDict["mailboxSettings"];
             } else {
                 $this->_propDict["mailboxSettings"] = new MailboxSettings($this->_propDict["mailboxSettings"]);
@@ -1960,7 +1960,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
     *
     * @return \DateTime The birthday
     */
@@ -1979,7 +1979,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
     *
     * @param \DateTime $val The birthday
     *
@@ -1993,7 +1993,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @return \DateTime The hireDate
     */
@@ -2012,7 +2012,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the hireDate
-    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+    * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
     *
     * @param \DateTime $val The hireDate
     *
@@ -2235,7 +2235,7 @@ class User extends DirectoryObject
     public function getAnalytics()
     {
         if (array_key_exists("analytics", $this->_propDict)) {
-            if (is_a($this->_propDict["analytics"], "Beta\Microsoft\Graph\Model\UserAnalytics")) {
+            if (is_a($this->_propDict["analytics"], "\Beta\Microsoft\Graph\Model\UserAnalytics")) {
                 return $this->_propDict["analytics"];
             } else {
                 $this->_propDict["analytics"] = new UserAnalytics($this->_propDict["analytics"]);
@@ -2294,7 +2294,7 @@ class User extends DirectoryObject
     public function getInformationProtection()
     {
         if (array_key_exists("informationProtection", $this->_propDict)) {
-            if (is_a($this->_propDict["informationProtection"], "Beta\Microsoft\Graph\Model\InformationProtection")) {
+            if (is_a($this->_propDict["informationProtection"], "\Beta\Microsoft\Graph\Model\InformationProtection")) {
                 return $this->_propDict["informationProtection"];
             } else {
                 $this->_propDict["informationProtection"] = new InformationProtection($this->_propDict["informationProtection"]);
@@ -2446,7 +2446,7 @@ class User extends DirectoryObject
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["manager"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);
@@ -2497,6 +2497,34 @@ class User extends DirectoryObject
     public function setMemberOf($val)
     {
 		$this->_propDict["memberOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the oauth2PermissionGrants
+     *
+     * @return array The oauth2PermissionGrants
+     */
+    public function getOauth2PermissionGrants()
+    {
+        if (array_key_exists("oauth2PermissionGrants", $this->_propDict)) {
+           return $this->_propDict["oauth2PermissionGrants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the oauth2PermissionGrants
+    *
+    * @param OAuth2PermissionGrant $val The oauth2PermissionGrants
+    *
+    * @return User
+    */
+    public function setOauth2PermissionGrants($val)
+    {
+		$this->_propDict["oauth2PermissionGrants"] = $val;
         return $this;
     }
     
@@ -2657,7 +2685,7 @@ class User extends DirectoryObject
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "Beta\Microsoft\Graph\Model\Calendar")) {
+            if (is_a($this->_propDict["calendar"], "\Beta\Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -2870,7 +2898,7 @@ class User extends DirectoryObject
     public function getInferenceClassification()
     {
         if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "Beta\Microsoft\Graph\Model\InferenceClassification")) {
+            if (is_a($this->_propDict["inferenceClassification"], "\Beta\Microsoft\Graph\Model\InferenceClassification")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassification($this->_propDict["inferenceClassification"]);
@@ -2993,7 +3021,7 @@ class User extends DirectoryObject
     public function getOutlook()
     {
         if (array_key_exists("outlook", $this->_propDict)) {
-            if (is_a($this->_propDict["outlook"], "Beta\Microsoft\Graph\Model\OutlookUser")) {
+            if (is_a($this->_propDict["outlook"], "\Beta\Microsoft\Graph\Model\OutlookUser")) {
                 return $this->_propDict["outlook"];
             } else {
                 $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
@@ -3056,7 +3084,7 @@ class User extends DirectoryObject
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "Beta\Microsoft\Graph\Model\Drive")) {
+            if (is_a($this->_propDict["drive"], "\Beta\Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -3531,7 +3559,7 @@ class User extends DirectoryObject
     public function getPlanner()
     {
         if (array_key_exists("planner", $this->_propDict)) {
-            if (is_a($this->_propDict["planner"], "Beta\Microsoft\Graph\Model\PlannerUser")) {
+            if (is_a($this->_propDict["planner"], "\Beta\Microsoft\Graph\Model\PlannerUser")) {
                 return $this->_propDict["planner"];
             } else {
                 $this->_propDict["planner"] = new PlannerUser($this->_propDict["planner"]);
@@ -3564,7 +3592,7 @@ class User extends DirectoryObject
     public function getInsights()
     {
         if (array_key_exists("insights", $this->_propDict)) {
-            if (is_a($this->_propDict["insights"], "Beta\Microsoft\Graph\Model\ItemInsights")) {
+            if (is_a($this->_propDict["insights"], "\Beta\Microsoft\Graph\Model\ItemInsights")) {
                 return $this->_propDict["insights"];
             } else {
                 $this->_propDict["insights"] = new ItemInsights($this->_propDict["insights"]);
@@ -3597,7 +3625,7 @@ class User extends DirectoryObject
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\UserSettings")) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\UserSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new UserSettings($this->_propDict["settings"]);
@@ -3630,7 +3658,7 @@ class User extends DirectoryObject
     public function getOnenote()
     {
         if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "Beta\Microsoft\Graph\Model\Onenote")) {
+            if (is_a($this->_propDict["onenote"], "\Beta\Microsoft\Graph\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
@@ -3663,7 +3691,7 @@ class User extends DirectoryObject
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "Beta\Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "\Beta\Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -3726,7 +3754,7 @@ class User extends DirectoryObject
     public function getProfile()
     {
         if (array_key_exists("profile", $this->_propDict)) {
-            if (is_a($this->_propDict["profile"], "Beta\Microsoft\Graph\Model\Profile")) {
+            if (is_a($this->_propDict["profile"], "\Beta\Microsoft\Graph\Model\Profile")) {
                 return $this->_propDict["profile"];
             } else {
                 $this->_propDict["profile"] = new Profile($this->_propDict["profile"]);
@@ -3844,7 +3872,7 @@ class User extends DirectoryObject
     public function getPresence()
     {
         if (array_key_exists("presence", $this->_propDict)) {
-            if (is_a($this->_propDict["presence"], "Beta\Microsoft\Graph\Model\Presence")) {
+            if (is_a($this->_propDict["presence"], "\Beta\Microsoft\Graph\Model\Presence")) {
                 return $this->_propDict["presence"];
             } else {
                 $this->_propDict["presence"] = new Presence($this->_propDict["presence"]);
@@ -3875,7 +3903,7 @@ class User extends DirectoryObject
     public function getAuthentication()
     {
         if (array_key_exists("authentication", $this->_propDict)) {
-            if (is_a($this->_propDict["authentication"], "Beta\Microsoft\Graph\Model\Authentication")) {
+            if (is_a($this->_propDict["authentication"], "\Beta\Microsoft\Graph\Model\Authentication")) {
                 return $this->_propDict["authentication"];
             } else {
                 $this->_propDict["authentication"] = new Authentication($this->_propDict["authentication"]);
@@ -3965,7 +3993,7 @@ class User extends DirectoryObject
     public function getTeamwork()
     {
         if (array_key_exists("teamwork", $this->_propDict)) {
-            if (is_a($this->_propDict["teamwork"], "Beta\Microsoft\Graph\Model\UserTeamwork")) {
+            if (is_a($this->_propDict["teamwork"], "\Beta\Microsoft\Graph\Model\UserTeamwork")) {
                 return $this->_propDict["teamwork"];
             } else {
                 $this->_propDict["teamwork"] = new UserTeamwork($this->_propDict["teamwork"]);
@@ -3998,7 +4026,7 @@ class User extends DirectoryObject
     public function getTodo()
     {
         if (array_key_exists("todo", $this->_propDict)) {
-            if (is_a($this->_propDict["todo"], "Beta\Microsoft\Graph\Model\Todo")) {
+            if (is_a($this->_propDict["todo"], "\Beta\Microsoft\Graph\Model\Todo")) {
                 return $this->_propDict["todo"];
             } else {
                 $this->_propDict["todo"] = new Todo($this->_propDict["todo"]);

@@ -91,7 +91,7 @@ class OnPremisesAgent extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\AgentStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\AgentStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AgentStatus($this->_propDict["status"]);

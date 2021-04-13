@@ -221,7 +221,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the kty
-    * The 'kty' (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
+    * The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
     *
     * @return string The kty
     */
@@ -236,7 +236,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the kty
-    * The 'kty' (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
+    * The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
     *
     * @param string $val The value of the kty
     *
@@ -389,7 +389,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the use
-    * The 'use' (public key use) parameter identifies the intended use of the public key.  The 'use' parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are    1. 'sig' (signature)    2.  'enc' (encryption)
+    * The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
     *
     * @return string The use
     */
@@ -404,7 +404,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the use
-    * The 'use' (public key use) parameter identifies the intended use of the public key.  The 'use' parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are    1. 'sig' (signature)    2.  'enc' (encryption)
+    * The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
     *
     * @param string $val The value of the use
     *
@@ -417,7 +417,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the x5c
-    * The 'x5c' (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
+    * The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
     *
     * @return string The x5c
     */
@@ -432,7 +432,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the x5c
-    * The 'x5c' (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
+    * The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
     *
     * @param string $val The value of the x5c
     *
@@ -445,7 +445,7 @@ class TrustFrameworkKey extends Entity
     }
     /**
     * Gets the x5t
-    * The 'x5t' (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+    * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
     *
     * @return string The x5t
     */
@@ -460,7 +460,7 @@ class TrustFrameworkKey extends Entity
 
     /**
     * Sets the x5t
-    * The 'x5t' (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+    * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
     *
     * @param string $val The value of the x5t
     *

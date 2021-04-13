@@ -33,7 +33,7 @@ class Post extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -124,7 +124,7 @@ class Post extends OutlookItem
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["from"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -186,7 +186,7 @@ class Post extends OutlookItem
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "Beta\Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -242,7 +242,7 @@ class Post extends OutlookItem
     
     /**
     * Gets the receivedDateTime
-    * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The receivedDateTime
     */
@@ -261,7 +261,7 @@ class Post extends OutlookItem
     
     /**
     * Sets the receivedDateTime
-    * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The receivedDateTime
     *
@@ -282,7 +282,7 @@ class Post extends OutlookItem
     public function getSender()
     {
         if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["sender"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -375,7 +375,7 @@ class Post extends OutlookItem
     public function getInReplyTo()
     {
         if (array_key_exists("inReplyTo", $this->_propDict)) {
-            if (is_a($this->_propDict["inReplyTo"], "Beta\Microsoft\Graph\Model\Post")) {
+            if (is_a($this->_propDict["inReplyTo"], "\Beta\Microsoft\Graph\Model\Post")) {
                 return $this->_propDict["inReplyTo"];
             } else {
                 $this->_propDict["inReplyTo"] = new Post($this->_propDict["inReplyTo"]);

@@ -32,7 +32,7 @@ class UnifiedRoleManagementPolicyRule extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\UnifiedRoleManagementPolicyRuleTarget")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\UnifiedRoleManagementPolicyRuleTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new UnifiedRoleManagementPolicyRuleTarget($this->_propDict["target"]);

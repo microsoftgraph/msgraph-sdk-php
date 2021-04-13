@@ -117,7 +117,7 @@ class BucketAggregationDefinition extends Entity
     public function getRanges()
     {
         if (array_key_exists("ranges", $this->_propDict)) {
-            if (is_a($this->_propDict["ranges"], "Beta\Microsoft\Graph\Model\BucketAggregationRange")) {
+            if (is_a($this->_propDict["ranges"], "\Beta\Microsoft\Graph\Model\BucketAggregationRange")) {
                 return $this->_propDict["ranges"];
             } else {
                 $this->_propDict["ranges"] = new BucketAggregationRange($this->_propDict["ranges"]);
@@ -150,7 +150,7 @@ class BucketAggregationDefinition extends Entity
     public function getSortBy()
     {
         if (array_key_exists("sortBy", $this->_propDict)) {
-            if (is_a($this->_propDict["sortBy"], "Beta\Microsoft\Graph\Model\BucketAggregationSortProperty")) {
+            if (is_a($this->_propDict["sortBy"], "\Beta\Microsoft\Graph\Model\BucketAggregationSortProperty")) {
                 return $this->_propDict["sortBy"];
             } else {
                 $this->_propDict["sortBy"] = new BucketAggregationSortProperty($this->_propDict["sortBy"]);

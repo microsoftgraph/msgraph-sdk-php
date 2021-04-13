@@ -55,14 +55,14 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     
     /**
     * Gets the enrollmentType
-    * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
+    * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
     *
     * @return DeviceEnrollmentType The enrollmentType
     */
     public function getEnrollmentType()
     {
         if (array_key_exists("enrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentType"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentType")) {
+            if (is_a($this->_propDict["enrollmentType"], "\Beta\Microsoft\Graph\Model\DeviceEnrollmentType")) {
                 return $this->_propDict["enrollmentType"];
             } else {
                 $this->_propDict["enrollmentType"] = new DeviceEnrollmentType($this->_propDict["enrollmentType"]);
@@ -74,7 +74,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     
     /**
     * Sets the enrollmentType
-    * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
+    * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
     *
     * @param DeviceEnrollmentType $val The enrollmentType
     *
@@ -95,7 +95,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     public function getFailureCategory()
     {
         if (array_key_exists("failureCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["failureCategory"], "Beta\Microsoft\Graph\Model\DeviceEnrollmentFailureReason")) {
+            if (is_a($this->_propDict["failureCategory"], "\Beta\Microsoft\Graph\Model\DeviceEnrollmentFailureReason")) {
                 return $this->_propDict["failureCategory"];
             } else {
                 $this->_propDict["failureCategory"] = new DeviceEnrollmentFailureReason($this->_propDict["failureCategory"]);

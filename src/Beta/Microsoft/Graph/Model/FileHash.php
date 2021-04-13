@@ -33,7 +33,7 @@ class FileHash extends Entity
     public function getHashType()
     {
         if (array_key_exists("hashType", $this->_propDict)) {
-            if (is_a($this->_propDict["hashType"], "Beta\Microsoft\Graph\Model\FileHashType")) {
+            if (is_a($this->_propDict["hashType"], "\Beta\Microsoft\Graph\Model\FileHashType")) {
                 return $this->_propDict["hashType"];
             } else {
                 $this->_propDict["hashType"] = new FileHashType($this->_propDict["hashType"]);

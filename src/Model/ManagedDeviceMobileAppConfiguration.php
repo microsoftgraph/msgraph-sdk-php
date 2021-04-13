@@ -275,7 +275,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     public function getDeviceStatusSummary()
     {
         if (array_key_exists("deviceStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStatusSummary"], "Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationDeviceSummary")) {
+            if (is_a($this->_propDict["deviceStatusSummary"], "\Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationDeviceSummary")) {
                 return $this->_propDict["deviceStatusSummary"];
             } else {
                 $this->_propDict["deviceStatusSummary"] = new ManagedDeviceMobileAppConfigurationDeviceSummary($this->_propDict["deviceStatusSummary"]);
@@ -338,7 +338,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     public function getUserStatusSummary()
     {
         if (array_key_exists("userStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userStatusSummary"], "Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationUserSummary")) {
+            if (is_a($this->_propDict["userStatusSummary"], "\Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationUserSummary")) {
                 return $this->_propDict["userStatusSummary"];
             } else {
                 $this->_propDict["userStatusSummary"] = new ManagedDeviceMobileAppConfigurationUserSummary($this->_propDict["userStatusSummary"]);

@@ -32,6 +32,6 @@ class ProvisioningResult extends Enum
     const SUCCESS = "success";
     const FAILURE = "failure";
     const SKIPPED = "skipped";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const WARNING = "warning";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -211,7 +211,7 @@ class ArchivedPrintJob extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -389,7 +389,7 @@ class ArchivedPrintJob extends Entity
     public function getProcessingState()
     {
         if (array_key_exists("processingState", $this->_propDict)) {
-            if (is_a($this->_propDict["processingState"], "Beta\Microsoft\Graph\Model\PrintJobProcessingState")) {
+            if (is_a($this->_propDict["processingState"], "\Beta\Microsoft\Graph\Model\PrintJobProcessingState")) {
                 return $this->_propDict["processingState"];
             } else {
                 $this->_propDict["processingState"] = new PrintJobProcessingState($this->_propDict["processingState"]);

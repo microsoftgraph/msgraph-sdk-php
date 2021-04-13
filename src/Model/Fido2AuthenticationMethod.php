@@ -84,14 +84,14 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the attestationLevel
-    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+    * The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
     *
     * @return AttestationLevel The attestationLevel
     */
     public function getAttestationLevel()
     {
         if (array_key_exists("attestationLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["attestationLevel"], "Microsoft\Graph\Model\AttestationLevel")) {
+            if (is_a($this->_propDict["attestationLevel"], "\Microsoft\Graph\Model\AttestationLevel")) {
                 return $this->_propDict["attestationLevel"];
             } else {
                 $this->_propDict["attestationLevel"] = new AttestationLevel($this->_propDict["attestationLevel"]);
@@ -103,7 +103,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the attestationLevel
-    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+    * The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
     *
     * @param AttestationLevel $val The attestationLevel
     *
@@ -117,6 +117,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the createdDateTime
+    * The timestamp when this key was registered to the user.
     *
     * @return \DateTime The createdDateTime
     */
@@ -135,6 +136,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the createdDateTime
+    * The timestamp when this key was registered to the user.
     *
     * @param \DateTime $val The createdDateTime
     *

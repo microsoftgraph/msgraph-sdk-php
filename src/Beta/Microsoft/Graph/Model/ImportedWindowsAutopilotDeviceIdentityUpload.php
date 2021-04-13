@@ -59,14 +59,14 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     
     /**
     * Gets the status
-    * Upload status. Possible values are: noUpload, pending, complete, error.
+    * Upload status.
     *
     * @return ImportedWindowsAutopilotDeviceIdentityUploadStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ImportedWindowsAutopilotDeviceIdentityUploadStatus($this->_propDict["status"]);
@@ -78,7 +78,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     
     /**
     * Sets the status
-    * Upload status. Possible values are: noUpload, pending, complete, error.
+    * Upload status.
     *
     * @param ImportedWindowsAutopilotDeviceIdentityUploadStatus $val The status
     *

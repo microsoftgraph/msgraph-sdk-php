@@ -28,15 +28,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageAudioDegradation
     * Average Network Mean Opinion Score degradation for stream. Represents how much the network loss and jitter has impacted the quality of received audio.
     *
-    * @return Microsoft\Graph\Model\Single The averageAudioDegradation
+    * @return \Microsoft\Graph\Model\Single The averageAudioDegradation
     */
     public function getAverageAudioDegradation()
     {
         if (array_key_exists("averageAudioDegradation", $this->_propDict)) {
-            if (is_a($this->_propDict["averageAudioDegradation"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["averageAudioDegradation"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["averageAudioDegradation"];
             } else {
-                $this->_propDict["averageAudioDegradation"] = new Microsoft\Graph\Model\Single($this->_propDict["averageAudioDegradation"]);
+                $this->_propDict["averageAudioDegradation"] = new \Microsoft\Graph\Model\Single($this->_propDict["averageAudioDegradation"]);
                 return $this->_propDict["averageAudioDegradation"];
             }
         }
@@ -47,7 +47,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageAudioDegradation
     * Average Network Mean Opinion Score degradation for stream. Represents how much the network loss and jitter has impacted the quality of received audio.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the averageAudioDegradation
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the averageAudioDegradation
     *
     * @return MediaStream The MediaStream
     */
@@ -61,15 +61,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageAudioNetworkJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return Microsoft\Graph\Model\Duration The averageAudioNetworkJitter
+    * @return \Microsoft\Graph\Model\Duration The averageAudioNetworkJitter
     */
     public function getAverageAudioNetworkJitter()
     {
         if (array_key_exists("averageAudioNetworkJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["averageAudioNetworkJitter"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["averageAudioNetworkJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["averageAudioNetworkJitter"];
             } else {
-                $this->_propDict["averageAudioNetworkJitter"] = new Microsoft\Graph\Model\Duration($this->_propDict["averageAudioNetworkJitter"]);
+                $this->_propDict["averageAudioNetworkJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["averageAudioNetworkJitter"]);
                 return $this->_propDict["averageAudioNetworkJitter"];
             }
         }
@@ -80,7 +80,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageAudioNetworkJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param Microsoft\Graph\Model\Duration $val The value to assign to the averageAudioNetworkJitter
+    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the averageAudioNetworkJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -122,15 +122,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return Microsoft\Graph\Model\Duration The averageJitter
+    * @return \Microsoft\Graph\Model\Duration The averageJitter
     */
     public function getAverageJitter()
     {
         if (array_key_exists("averageJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["averageJitter"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["averageJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["averageJitter"];
             } else {
-                $this->_propDict["averageJitter"] = new Microsoft\Graph\Model\Duration($this->_propDict["averageJitter"]);
+                $this->_propDict["averageJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["averageJitter"]);
                 return $this->_propDict["averageJitter"];
             }
         }
@@ -141,7 +141,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param Microsoft\Graph\Model\Duration $val The value to assign to the averageJitter
+    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the averageJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -155,15 +155,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averagePacketLossRate
     * Average packet loss rate for stream.
     *
-    * @return Microsoft\Graph\Model\Single The averagePacketLossRate
+    * @return \Microsoft\Graph\Model\Single The averagePacketLossRate
     */
     public function getAveragePacketLossRate()
     {
         if (array_key_exists("averagePacketLossRate", $this->_propDict)) {
-            if (is_a($this->_propDict["averagePacketLossRate"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["averagePacketLossRate"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["averagePacketLossRate"];
             } else {
-                $this->_propDict["averagePacketLossRate"] = new Microsoft\Graph\Model\Single($this->_propDict["averagePacketLossRate"]);
+                $this->_propDict["averagePacketLossRate"] = new \Microsoft\Graph\Model\Single($this->_propDict["averagePacketLossRate"]);
                 return $this->_propDict["averagePacketLossRate"];
             }
         }
@@ -174,7 +174,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averagePacketLossRate
     * Average packet loss rate for stream.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the averagePacketLossRate
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the averagePacketLossRate
     *
     * @return MediaStream The MediaStream
     */
@@ -188,15 +188,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageRatioOfConcealedSamples
     * Ratio of the number of audio frames with samples generated by packet loss concealment to the total number of audio frames.
     *
-    * @return Microsoft\Graph\Model\Single The averageRatioOfConcealedSamples
+    * @return \Microsoft\Graph\Model\Single The averageRatioOfConcealedSamples
     */
     public function getAverageRatioOfConcealedSamples()
     {
         if (array_key_exists("averageRatioOfConcealedSamples", $this->_propDict)) {
-            if (is_a($this->_propDict["averageRatioOfConcealedSamples"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["averageRatioOfConcealedSamples"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["averageRatioOfConcealedSamples"];
             } else {
-                $this->_propDict["averageRatioOfConcealedSamples"] = new Microsoft\Graph\Model\Single($this->_propDict["averageRatioOfConcealedSamples"]);
+                $this->_propDict["averageRatioOfConcealedSamples"] = new \Microsoft\Graph\Model\Single($this->_propDict["averageRatioOfConcealedSamples"]);
                 return $this->_propDict["averageRatioOfConcealedSamples"];
             }
         }
@@ -207,7 +207,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageRatioOfConcealedSamples
     * Ratio of the number of audio frames with samples generated by packet loss concealment to the total number of audio frames.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the averageRatioOfConcealedSamples
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the averageRatioOfConcealedSamples
     *
     * @return MediaStream The MediaStream
     */
@@ -221,15 +221,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageReceivedFrameRate
     * Average frames per second received for all video streams computed over the duration of the session.
     *
-    * @return Microsoft\Graph\Model\Single The averageReceivedFrameRate
+    * @return \Microsoft\Graph\Model\Single The averageReceivedFrameRate
     */
     public function getAverageReceivedFrameRate()
     {
         if (array_key_exists("averageReceivedFrameRate", $this->_propDict)) {
-            if (is_a($this->_propDict["averageReceivedFrameRate"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["averageReceivedFrameRate"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["averageReceivedFrameRate"];
             } else {
-                $this->_propDict["averageReceivedFrameRate"] = new Microsoft\Graph\Model\Single($this->_propDict["averageReceivedFrameRate"]);
+                $this->_propDict["averageReceivedFrameRate"] = new \Microsoft\Graph\Model\Single($this->_propDict["averageReceivedFrameRate"]);
                 return $this->_propDict["averageReceivedFrameRate"];
             }
         }
@@ -240,7 +240,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageReceivedFrameRate
     * Average frames per second received for all video streams computed over the duration of the session.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the averageReceivedFrameRate
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the averageReceivedFrameRate
     *
     * @return MediaStream The MediaStream
     */
@@ -254,15 +254,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageRoundTripTime
     * Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return Microsoft\Graph\Model\Duration The averageRoundTripTime
+    * @return \Microsoft\Graph\Model\Duration The averageRoundTripTime
     */
     public function getAverageRoundTripTime()
     {
         if (array_key_exists("averageRoundTripTime", $this->_propDict)) {
-            if (is_a($this->_propDict["averageRoundTripTime"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["averageRoundTripTime"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["averageRoundTripTime"];
             } else {
-                $this->_propDict["averageRoundTripTime"] = new Microsoft\Graph\Model\Duration($this->_propDict["averageRoundTripTime"]);
+                $this->_propDict["averageRoundTripTime"] = new \Microsoft\Graph\Model\Duration($this->_propDict["averageRoundTripTime"]);
                 return $this->_propDict["averageRoundTripTime"];
             }
         }
@@ -273,7 +273,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageRoundTripTime
     * Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param Microsoft\Graph\Model\Duration $val The value to assign to the averageRoundTripTime
+    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the averageRoundTripTime
     *
     * @return MediaStream The MediaStream
     */
@@ -287,15 +287,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageVideoFrameLossPercentage
     * Average percentage of video frames lost as displayed to the user.
     *
-    * @return Microsoft\Graph\Model\Single The averageVideoFrameLossPercentage
+    * @return \Microsoft\Graph\Model\Single The averageVideoFrameLossPercentage
     */
     public function getAverageVideoFrameLossPercentage()
     {
         if (array_key_exists("averageVideoFrameLossPercentage", $this->_propDict)) {
-            if (is_a($this->_propDict["averageVideoFrameLossPercentage"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["averageVideoFrameLossPercentage"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["averageVideoFrameLossPercentage"];
             } else {
-                $this->_propDict["averageVideoFrameLossPercentage"] = new Microsoft\Graph\Model\Single($this->_propDict["averageVideoFrameLossPercentage"]);
+                $this->_propDict["averageVideoFrameLossPercentage"] = new \Microsoft\Graph\Model\Single($this->_propDict["averageVideoFrameLossPercentage"]);
                 return $this->_propDict["averageVideoFrameLossPercentage"];
             }
         }
@@ -306,7 +306,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageVideoFrameLossPercentage
     * Average percentage of video frames lost as displayed to the user.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the averageVideoFrameLossPercentage
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the averageVideoFrameLossPercentage
     *
     * @return MediaStream The MediaStream
     */
@@ -320,15 +320,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageVideoFrameRate
     * Average frames per second received for a video stream, computed over the duration of the session.
     *
-    * @return Microsoft\Graph\Model\Single The averageVideoFrameRate
+    * @return \Microsoft\Graph\Model\Single The averageVideoFrameRate
     */
     public function getAverageVideoFrameRate()
     {
         if (array_key_exists("averageVideoFrameRate", $this->_propDict)) {
-            if (is_a($this->_propDict["averageVideoFrameRate"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["averageVideoFrameRate"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["averageVideoFrameRate"];
             } else {
-                $this->_propDict["averageVideoFrameRate"] = new Microsoft\Graph\Model\Single($this->_propDict["averageVideoFrameRate"]);
+                $this->_propDict["averageVideoFrameRate"] = new \Microsoft\Graph\Model\Single($this->_propDict["averageVideoFrameRate"]);
                 return $this->_propDict["averageVideoFrameRate"];
             }
         }
@@ -339,7 +339,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageVideoFrameRate
     * Average frames per second received for a video stream, computed over the duration of the session.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the averageVideoFrameRate
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the averageVideoFrameRate
     *
     * @return MediaStream The MediaStream
     */
@@ -353,15 +353,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageVideoPacketLossRate
     * Average fraction of packets lost, as specified in [RFC 3550][], computed over the duration of the session.
     *
-    * @return Microsoft\Graph\Model\Single The averageVideoPacketLossRate
+    * @return \Microsoft\Graph\Model\Single The averageVideoPacketLossRate
     */
     public function getAverageVideoPacketLossRate()
     {
         if (array_key_exists("averageVideoPacketLossRate", $this->_propDict)) {
-            if (is_a($this->_propDict["averageVideoPacketLossRate"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["averageVideoPacketLossRate"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["averageVideoPacketLossRate"];
             } else {
-                $this->_propDict["averageVideoPacketLossRate"] = new Microsoft\Graph\Model\Single($this->_propDict["averageVideoPacketLossRate"]);
+                $this->_propDict["averageVideoPacketLossRate"] = new \Microsoft\Graph\Model\Single($this->_propDict["averageVideoPacketLossRate"]);
                 return $this->_propDict["averageVideoPacketLossRate"];
             }
         }
@@ -372,7 +372,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageVideoPacketLossRate
     * Average fraction of packets lost, as specified in [RFC 3550][], computed over the duration of the session.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the averageVideoPacketLossRate
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the averageVideoPacketLossRate
     *
     * @return MediaStream The MediaStream
     */
@@ -419,15 +419,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the lowFrameRateRatio
     * Fraction of the call where frame rate is less than 7.5 frames per second.
     *
-    * @return Microsoft\Graph\Model\Single The lowFrameRateRatio
+    * @return \Microsoft\Graph\Model\Single The lowFrameRateRatio
     */
     public function getLowFrameRateRatio()
     {
         if (array_key_exists("lowFrameRateRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["lowFrameRateRatio"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["lowFrameRateRatio"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["lowFrameRateRatio"];
             } else {
-                $this->_propDict["lowFrameRateRatio"] = new Microsoft\Graph\Model\Single($this->_propDict["lowFrameRateRatio"]);
+                $this->_propDict["lowFrameRateRatio"] = new \Microsoft\Graph\Model\Single($this->_propDict["lowFrameRateRatio"]);
                 return $this->_propDict["lowFrameRateRatio"];
             }
         }
@@ -438,7 +438,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the lowFrameRateRatio
     * Fraction of the call where frame rate is less than 7.5 frames per second.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the lowFrameRateRatio
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the lowFrameRateRatio
     *
     * @return MediaStream The MediaStream
     */
@@ -452,15 +452,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the lowVideoProcessingCapabilityRatio
     * Fraction of the call that the client is running less than 70% expected video processing capability.
     *
-    * @return Microsoft\Graph\Model\Single The lowVideoProcessingCapabilityRatio
+    * @return \Microsoft\Graph\Model\Single The lowVideoProcessingCapabilityRatio
     */
     public function getLowVideoProcessingCapabilityRatio()
     {
         if (array_key_exists("lowVideoProcessingCapabilityRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["lowVideoProcessingCapabilityRatio"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["lowVideoProcessingCapabilityRatio"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["lowVideoProcessingCapabilityRatio"];
             } else {
-                $this->_propDict["lowVideoProcessingCapabilityRatio"] = new Microsoft\Graph\Model\Single($this->_propDict["lowVideoProcessingCapabilityRatio"]);
+                $this->_propDict["lowVideoProcessingCapabilityRatio"] = new \Microsoft\Graph\Model\Single($this->_propDict["lowVideoProcessingCapabilityRatio"]);
                 return $this->_propDict["lowVideoProcessingCapabilityRatio"];
             }
         }
@@ -471,7 +471,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the lowVideoProcessingCapabilityRatio
     * Fraction of the call that the client is running less than 70% expected video processing capability.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the lowVideoProcessingCapabilityRatio
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the lowVideoProcessingCapabilityRatio
     *
     * @return MediaStream The MediaStream
     */
@@ -485,15 +485,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxAudioNetworkJitter
     * Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return Microsoft\Graph\Model\Duration The maxAudioNetworkJitter
+    * @return \Microsoft\Graph\Model\Duration The maxAudioNetworkJitter
     */
     public function getMaxAudioNetworkJitter()
     {
         if (array_key_exists("maxAudioNetworkJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["maxAudioNetworkJitter"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["maxAudioNetworkJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maxAudioNetworkJitter"];
             } else {
-                $this->_propDict["maxAudioNetworkJitter"] = new Microsoft\Graph\Model\Duration($this->_propDict["maxAudioNetworkJitter"]);
+                $this->_propDict["maxAudioNetworkJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["maxAudioNetworkJitter"]);
                 return $this->_propDict["maxAudioNetworkJitter"];
             }
         }
@@ -504,7 +504,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxAudioNetworkJitter
     * Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param Microsoft\Graph\Model\Duration $val The value to assign to the maxAudioNetworkJitter
+    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the maxAudioNetworkJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -518,15 +518,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxJitter
     * Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return Microsoft\Graph\Model\Duration The maxJitter
+    * @return \Microsoft\Graph\Model\Duration The maxJitter
     */
     public function getMaxJitter()
     {
         if (array_key_exists("maxJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["maxJitter"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["maxJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maxJitter"];
             } else {
-                $this->_propDict["maxJitter"] = new Microsoft\Graph\Model\Duration($this->_propDict["maxJitter"]);
+                $this->_propDict["maxJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["maxJitter"]);
                 return $this->_propDict["maxJitter"];
             }
         }
@@ -537,7 +537,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxJitter
     * Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param Microsoft\Graph\Model\Duration $val The value to assign to the maxJitter
+    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the maxJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -551,15 +551,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxPacketLossRate
     * Maximum packet loss rate for the stream.
     *
-    * @return Microsoft\Graph\Model\Single The maxPacketLossRate
+    * @return \Microsoft\Graph\Model\Single The maxPacketLossRate
     */
     public function getMaxPacketLossRate()
     {
         if (array_key_exists("maxPacketLossRate", $this->_propDict)) {
-            if (is_a($this->_propDict["maxPacketLossRate"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["maxPacketLossRate"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["maxPacketLossRate"];
             } else {
-                $this->_propDict["maxPacketLossRate"] = new Microsoft\Graph\Model\Single($this->_propDict["maxPacketLossRate"]);
+                $this->_propDict["maxPacketLossRate"] = new \Microsoft\Graph\Model\Single($this->_propDict["maxPacketLossRate"]);
                 return $this->_propDict["maxPacketLossRate"];
             }
         }
@@ -570,7 +570,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxPacketLossRate
     * Maximum packet loss rate for the stream.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the maxPacketLossRate
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the maxPacketLossRate
     *
     * @return MediaStream The MediaStream
     */
@@ -584,15 +584,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxRatioOfConcealedSamples
     * Maximum ratio of packets concealed by the healer.
     *
-    * @return Microsoft\Graph\Model\Single The maxRatioOfConcealedSamples
+    * @return \Microsoft\Graph\Model\Single The maxRatioOfConcealedSamples
     */
     public function getMaxRatioOfConcealedSamples()
     {
         if (array_key_exists("maxRatioOfConcealedSamples", $this->_propDict)) {
-            if (is_a($this->_propDict["maxRatioOfConcealedSamples"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["maxRatioOfConcealedSamples"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["maxRatioOfConcealedSamples"];
             } else {
-                $this->_propDict["maxRatioOfConcealedSamples"] = new Microsoft\Graph\Model\Single($this->_propDict["maxRatioOfConcealedSamples"]);
+                $this->_propDict["maxRatioOfConcealedSamples"] = new \Microsoft\Graph\Model\Single($this->_propDict["maxRatioOfConcealedSamples"]);
                 return $this->_propDict["maxRatioOfConcealedSamples"];
             }
         }
@@ -603,7 +603,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxRatioOfConcealedSamples
     * Maximum ratio of packets concealed by the healer.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the maxRatioOfConcealedSamples
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the maxRatioOfConcealedSamples
     *
     * @return MediaStream The MediaStream
     */
@@ -617,15 +617,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxRoundTripTime
     * Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return Microsoft\Graph\Model\Duration The maxRoundTripTime
+    * @return \Microsoft\Graph\Model\Duration The maxRoundTripTime
     */
     public function getMaxRoundTripTime()
     {
         if (array_key_exists("maxRoundTripTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maxRoundTripTime"], "Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["maxRoundTripTime"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maxRoundTripTime"];
             } else {
-                $this->_propDict["maxRoundTripTime"] = new Microsoft\Graph\Model\Duration($this->_propDict["maxRoundTripTime"]);
+                $this->_propDict["maxRoundTripTime"] = new \Microsoft\Graph\Model\Duration($this->_propDict["maxRoundTripTime"]);
                 return $this->_propDict["maxRoundTripTime"];
             }
         }
@@ -636,7 +636,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxRoundTripTime
     * Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param Microsoft\Graph\Model\Duration $val The value to assign to the maxRoundTripTime
+    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the maxRoundTripTime
     *
     * @return MediaStream The MediaStream
     */
@@ -678,15 +678,15 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the postForwardErrorCorrectionPacketLossRate
     * Packet loss rate after FEC has been applied aggregated across all video streams and codecs.
     *
-    * @return Microsoft\Graph\Model\Single The postForwardErrorCorrectionPacketLossRate
+    * @return \Microsoft\Graph\Model\Single The postForwardErrorCorrectionPacketLossRate
     */
     public function getPostForwardErrorCorrectionPacketLossRate()
     {
         if (array_key_exists("postForwardErrorCorrectionPacketLossRate", $this->_propDict)) {
-            if (is_a($this->_propDict["postForwardErrorCorrectionPacketLossRate"], "Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["postForwardErrorCorrectionPacketLossRate"], "\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["postForwardErrorCorrectionPacketLossRate"];
             } else {
-                $this->_propDict["postForwardErrorCorrectionPacketLossRate"] = new Microsoft\Graph\Model\Single($this->_propDict["postForwardErrorCorrectionPacketLossRate"]);
+                $this->_propDict["postForwardErrorCorrectionPacketLossRate"] = new \Microsoft\Graph\Model\Single($this->_propDict["postForwardErrorCorrectionPacketLossRate"]);
                 return $this->_propDict["postForwardErrorCorrectionPacketLossRate"];
             }
         }
@@ -697,7 +697,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the postForwardErrorCorrectionPacketLossRate
     * Packet loss rate after FEC has been applied aggregated across all video streams and codecs.
     *
-    * @param Microsoft\Graph\Model\Single $val The value to assign to the postForwardErrorCorrectionPacketLossRate
+    * @param \Microsoft\Graph\Model\Single $val The value to assign to the postForwardErrorCorrectionPacketLossRate
     *
     * @return MediaStream The MediaStream
     */
@@ -749,7 +749,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     public function getStreamDirection()
     {
         if (array_key_exists("streamDirection", $this->_propDict)) {
-            if (is_a($this->_propDict["streamDirection"], "Microsoft\Graph\CallRecords\Model\MediaStreamDirection")) {
+            if (is_a($this->_propDict["streamDirection"], "\Microsoft\Graph\CallRecords\Model\MediaStreamDirection")) {
                 return $this->_propDict["streamDirection"];
             } else {
                 $this->_propDict["streamDirection"] = new MediaStreamDirection($this->_propDict["streamDirection"]);

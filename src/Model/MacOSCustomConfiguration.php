@@ -59,7 +59,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payloadFileName
-    * Payload file name (.mobileconfig | .xml).
+    * Payload file name (.mobileconfig
     *
     * @return string The payloadFileName
     */
@@ -74,7 +74,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadFileName
-    * Payload file name (.mobileconfig | .xml).
+    * Payload file name (.mobileconfig
     *
     * @param string $val The payloadFileName
     *

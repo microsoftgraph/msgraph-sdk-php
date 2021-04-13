@@ -61,7 +61,7 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
     public function getOsEditionTypes()
     {
         if (array_key_exists("osEditionTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["osEditionTypes"], "Beta\Microsoft\Graph\Model\Windows10EditionType")) {
+            if (is_a($this->_propDict["osEditionTypes"], "\Beta\Microsoft\Graph\Model\Windows10EditionType")) {
                 return $this->_propDict["osEditionTypes"];
             } else {
                 $this->_propDict["osEditionTypes"] = new Windows10EditionType($this->_propDict["osEditionTypes"]);
@@ -94,7 +94,7 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
     public function getRuleType()
     {
         if (array_key_exists("ruleType", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleType"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType")) {
+            if (is_a($this->_propDict["ruleType"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType")) {
                 return $this->_propDict["ruleType"];
             } else {
                 $this->_propDict["ruleType"] = new DeviceManagementApplicabilityRuleType($this->_propDict["ruleType"]);

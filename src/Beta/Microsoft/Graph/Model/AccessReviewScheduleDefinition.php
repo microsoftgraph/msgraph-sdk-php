@@ -63,7 +63,7 @@ class AccessReviewScheduleDefinition extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -89,7 +89,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the createdDateTime
-    * DateTime when review series was created.
+    * Timestamp when review series was created.
     *
     * @return \DateTime The createdDateTime
     */
@@ -108,7 +108,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the createdDateTime
-    * DateTime when review series was created.
+    * Timestamp when review series was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -216,7 +216,7 @@ class AccessReviewScheduleDefinition extends Entity
     public function getInstanceEnumerationScope()
     {
         if (array_key_exists("instanceEnumerationScope", $this->_propDict)) {
-            if (is_a($this->_propDict["instanceEnumerationScope"], "Beta\Microsoft\Graph\Model\AccessReviewScope")) {
+            if (is_a($this->_propDict["instanceEnumerationScope"], "\Beta\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["instanceEnumerationScope"];
             } else {
                 $this->_propDict["instanceEnumerationScope"] = new AccessReviewScope($this->_propDict["instanceEnumerationScope"]);
@@ -242,7 +242,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * DateTime when review series was last modified.
+    * Timestamp when review series was last modified.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -261,7 +261,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * DateTime when review series was last modified.
+    * Timestamp when review series was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -312,7 +312,7 @@ class AccessReviewScheduleDefinition extends Entity
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "Beta\Microsoft\Graph\Model\AccessReviewScope")) {
+            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new AccessReviewScope($this->_propDict["scope"]);
@@ -345,7 +345,7 @@ class AccessReviewScheduleDefinition extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\AccessReviewScheduleSettings")) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\AccessReviewScheduleSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new AccessReviewScheduleSettings($this->_propDict["settings"]);

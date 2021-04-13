@@ -153,7 +153,7 @@ class ManagedEBook extends Entity
     public function getLargeCover()
     {
         if (array_key_exists("largeCover", $this->_propDict)) {
-            if (is_a($this->_propDict["largeCover"], "Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["largeCover"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["largeCover"];
             } else {
                 $this->_propDict["largeCover"] = new MimeContent($this->_propDict["largeCover"]);
@@ -400,7 +400,7 @@ class ManagedEBook extends Entity
     public function getInstallSummary()
     {
         if (array_key_exists("installSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["installSummary"], "Beta\Microsoft\Graph\Model\EBookInstallSummary")) {
+            if (is_a($this->_propDict["installSummary"], "\Beta\Microsoft\Graph\Model\EBookInstallSummary")) {
                 return $this->_propDict["installSummary"];
             } else {
                 $this->_propDict["installSummary"] = new EBookInstallSummary($this->_propDict["installSummary"]);

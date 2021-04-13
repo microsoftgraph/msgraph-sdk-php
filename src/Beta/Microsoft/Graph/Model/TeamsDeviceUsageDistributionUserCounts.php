@@ -52,6 +52,33 @@ class TeamsDeviceUsageDistributionUserCounts extends Entity
     }
     
     /**
+    * Gets the chromeOS
+    *
+    * @return int The chromeOS
+    */
+    public function getChromeOS()
+    {
+        if (array_key_exists("chromeOS", $this->_propDict)) {
+            return $this->_propDict["chromeOS"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the chromeOS
+    *
+    * @param int $val The chromeOS
+    *
+    * @return TeamsDeviceUsageDistributionUserCounts
+    */
+    public function setChromeOS($val)
+    {
+        $this->_propDict["chromeOS"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the ios
     *
     * @return int The ios
@@ -75,6 +102,33 @@ class TeamsDeviceUsageDistributionUserCounts extends Entity
     public function setIos($val)
     {
         $this->_propDict["ios"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the linux
+    *
+    * @return int The linux
+    */
+    public function getLinux()
+    {
+        if (array_key_exists("linux", $this->_propDict)) {
+            return $this->_propDict["linux"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the linux
+    *
+    * @param int $val The linux
+    *
+    * @return TeamsDeviceUsageDistributionUserCounts
+    */
+    public function setLinux($val)
+    {
+        $this->_propDict["linux"] = intval($val);
         return $this;
     }
     

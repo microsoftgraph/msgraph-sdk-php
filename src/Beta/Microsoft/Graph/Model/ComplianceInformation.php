@@ -33,7 +33,7 @@ class ComplianceInformation extends Entity
     public function getCertificationControls()
     {
         if (array_key_exists("certificationControls", $this->_propDict)) {
-            if (is_a($this->_propDict["certificationControls"], "Beta\Microsoft\Graph\Model\CertificationControl")) {
+            if (is_a($this->_propDict["certificationControls"], "\Beta\Microsoft\Graph\Model\CertificationControl")) {
                 return $this->_propDict["certificationControls"];
             } else {
                 $this->_propDict["certificationControls"] = new CertificationControl($this->_propDict["certificationControls"]);

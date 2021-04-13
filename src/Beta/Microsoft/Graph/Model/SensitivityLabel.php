@@ -32,7 +32,7 @@ class SensitivityLabel extends Entity
     public function getApplicableTo()
     {
         if (array_key_exists("applicableTo", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableTo"], "Beta\Microsoft\Graph\Model\SensitivityLabelTarget")) {
+            if (is_a($this->_propDict["applicableTo"], "\Beta\Microsoft\Graph\Model\SensitivityLabelTarget")) {
                 return $this->_propDict["applicableTo"];
             } else {
                 $this->_propDict["applicableTo"] = new SensitivityLabelTarget($this->_propDict["applicableTo"]);
@@ -63,7 +63,7 @@ class SensitivityLabel extends Entity
     public function getApplicationMode()
     {
         if (array_key_exists("applicationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationMode"], "Beta\Microsoft\Graph\Model\ApplicationMode")) {
+            if (is_a($this->_propDict["applicationMode"], "\Beta\Microsoft\Graph\Model\ApplicationMode")) {
                 return $this->_propDict["applicationMode"];
             } else {
                 $this->_propDict["applicationMode"] = new ApplicationMode($this->_propDict["applicationMode"]);
@@ -122,7 +122,7 @@ class SensitivityLabel extends Entity
     public function getAutoLabeling()
     {
         if (array_key_exists("autoLabeling", $this->_propDict)) {
-            if (is_a($this->_propDict["autoLabeling"], "Beta\Microsoft\Graph\Model\AutoLabeling")) {
+            if (is_a($this->_propDict["autoLabeling"], "\Beta\Microsoft\Graph\Model\AutoLabeling")) {
                 return $this->_propDict["autoLabeling"];
             } else {
                 $this->_propDict["autoLabeling"] = new AutoLabeling($this->_propDict["autoLabeling"]);

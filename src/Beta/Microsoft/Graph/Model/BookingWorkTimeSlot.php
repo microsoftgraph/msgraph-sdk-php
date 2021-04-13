@@ -33,7 +33,7 @@ class BookingWorkTimeSlot extends Entity
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new TimeOfDay($this->_propDict["end"]);
@@ -66,7 +66,7 @@ class BookingWorkTimeSlot extends Entity
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new TimeOfDay($this->_propDict["start"]);

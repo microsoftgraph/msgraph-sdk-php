@@ -66,7 +66,7 @@ class GroupPolicyOperation extends Entity
     public function getOperationStatus()
     {
         if (array_key_exists("operationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["operationStatus"], "Beta\Microsoft\Graph\Model\GroupPolicyOperationStatus")) {
+            if (is_a($this->_propDict["operationStatus"], "\Beta\Microsoft\Graph\Model\GroupPolicyOperationStatus")) {
                 return $this->_propDict["operationStatus"];
             } else {
                 $this->_propDict["operationStatus"] = new GroupPolicyOperationStatus($this->_propDict["operationStatus"]);
@@ -99,7 +99,7 @@ class GroupPolicyOperation extends Entity
     public function getOperationType()
     {
         if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "Beta\Microsoft\Graph\Model\GroupPolicyOperationType")) {
+            if (is_a($this->_propDict["operationType"], "\Beta\Microsoft\Graph\Model\GroupPolicyOperationType")) {
                 return $this->_propDict["operationType"];
             } else {
                 $this->_propDict["operationType"] = new GroupPolicyOperationType($this->_propDict["operationType"]);

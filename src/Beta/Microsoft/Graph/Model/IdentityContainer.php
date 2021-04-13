@@ -60,7 +60,7 @@ class IdentityContainer implements \JsonSerializable
     public function getConditionalAccess()
     {
         if (array_key_exists("conditionalAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccess"], "Beta\Microsoft\Graph\Model\ConditionalAccessRoot")) {
+            if (is_a($this->_propDict["conditionalAccess"], "\Beta\Microsoft\Graph\Model\ConditionalAccessRoot")) {
                 return $this->_propDict["conditionalAccess"];
             } else {
                 $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);
@@ -231,7 +231,7 @@ class IdentityContainer implements \JsonSerializable
     public function getContinuousAccessEvaluationPolicy()
     {
         if (array_key_exists("continuousAccessEvaluationPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["continuousAccessEvaluationPolicy"], "Beta\Microsoft\Graph\Model\ContinuousAccessEvaluationPolicy")) {
+            if (is_a($this->_propDict["continuousAccessEvaluationPolicy"], "\Beta\Microsoft\Graph\Model\ContinuousAccessEvaluationPolicy")) {
                 return $this->_propDict["continuousAccessEvaluationPolicy"];
             } else {
                 $this->_propDict["continuousAccessEvaluationPolicy"] = new ContinuousAccessEvaluationPolicy($this->_propDict["continuousAccessEvaluationPolicy"]);

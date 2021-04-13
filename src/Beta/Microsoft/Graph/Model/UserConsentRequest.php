@@ -26,6 +26,7 @@ class UserConsentRequest extends Request
 {
     /**
     * Gets the reason
+    * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
     *
     * @return string The reason
     */
@@ -40,6 +41,7 @@ class UserConsentRequest extends Request
     
     /**
     * Sets the reason
+    * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
     *
     * @param string $val The reason
     *
@@ -53,13 +55,14 @@ class UserConsentRequest extends Request
     
     /**
     * Gets the approval
+    * Approval decisions associated with a request.
     *
     * @return Approval The approval
     */
     public function getApproval()
     {
         if (array_key_exists("approval", $this->_propDict)) {
-            if (is_a($this->_propDict["approval"], "Beta\Microsoft\Graph\Model\Approval")) {
+            if (is_a($this->_propDict["approval"], "\Beta\Microsoft\Graph\Model\Approval")) {
                 return $this->_propDict["approval"];
             } else {
                 $this->_propDict["approval"] = new Approval($this->_propDict["approval"]);
@@ -71,6 +74,7 @@ class UserConsentRequest extends Request
     
     /**
     * Sets the approval
+    * Approval decisions associated with a request.
     *
     * @param Approval $val The approval
     *

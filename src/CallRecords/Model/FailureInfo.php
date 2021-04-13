@@ -61,7 +61,7 @@ class FailureInfo extends \Microsoft\Graph\Model\Entity
     public function getStage()
     {
         if (array_key_exists("stage", $this->_propDict)) {
-            if (is_a($this->_propDict["stage"], "Microsoft\Graph\CallRecords\Model\FailureStage")) {
+            if (is_a($this->_propDict["stage"], "\Microsoft\Graph\CallRecords\Model\FailureStage")) {
                 return $this->_propDict["stage"];
             } else {
                 $this->_propDict["stage"] = new FailureStage($this->_propDict["stage"]);

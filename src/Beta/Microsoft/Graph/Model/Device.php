@@ -85,7 +85,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the approximateLastSignInDateTime
-    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The approximateLastSignInDateTime
     */
@@ -104,7 +104,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the approximateLastSignInDateTime
-    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The approximateLastSignInDateTime
     *
@@ -118,7 +118,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the complianceExpirationDateTime
-    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The complianceExpirationDateTime
     */
@@ -137,7 +137,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the complianceExpirationDateTime
-    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The complianceExpirationDateTime
     *
@@ -180,7 +180,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration.
+    * Identifier set by Azure Device Registration Service at the time of registration.
     *
     * @return string The deviceId
     */
@@ -195,7 +195,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration.
+    * Identifier set by Azure Device Registration Service at the time of registration.
     *
     * @param string $val The deviceId
     *
@@ -418,7 +418,7 @@ class Device extends DirectoryObject
     public function getExtensionAttributes()
     {
         if (array_key_exists("extensionAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["extensionAttributes"], "Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
+            if (is_a($this->_propDict["extensionAttributes"], "\Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
                 return $this->_propDict["extensionAttributes"];
             } else {
                 $this->_propDict["extensionAttributes"] = new OnPremisesExtensionAttributes($this->_propDict["extensionAttributes"]);
@@ -443,6 +443,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the hostnames
+    * List of hostNames for the device.
     *
     * @return string The hostnames
     */
@@ -457,6 +458,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the hostnames
+    * List of hostNames for the device.
     *
     * @param string $val The hostnames
     *
@@ -586,7 +588,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -605,7 +607,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+    * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -735,7 +737,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the profileType
-    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+    * The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
     *
     * @return string The profileType
     */
@@ -750,7 +752,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the profileType
-    * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+    * The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
     *
     * @param string $val The profileType
     *
@@ -764,7 +766,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the registrationDateTime
-    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The registrationDateTime
     */
@@ -783,7 +785,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the registrationDateTime
-    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The registrationDateTime
     *
@@ -826,7 +828,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @return string The trustType
     */
@@ -841,7 +843,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @param string $val The trustType
     *
@@ -855,6 +857,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the kind
+    * Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string The kind
     */
@@ -869,6 +872,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the kind
+    * Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The kind
     *
@@ -940,6 +944,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the name
+    * Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string The name
     */
@@ -954,6 +959,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the name
+    * Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The name
     *
@@ -967,6 +973,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the platform
+    * Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string The platform
     */
@@ -981,6 +988,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the platform
+    * Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The platform
     *
@@ -994,6 +1002,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the status
+    * Device is online or offline. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @return string The status
     */
@@ -1008,6 +1017,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the status
+    * Device is online or offline. Only returned if user signs in with a Microsoft account as part of Project Rome.
     *
     * @param string $val The status
     *

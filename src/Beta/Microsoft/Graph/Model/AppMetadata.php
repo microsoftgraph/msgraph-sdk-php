@@ -32,7 +32,7 @@ class AppMetadata extends Entity
     public function getData()
     {
         if (array_key_exists("data", $this->_propDict)) {
-            if (is_a($this->_propDict["data"], "Beta\Microsoft\Graph\Model\AppMetadataEntry")) {
+            if (is_a($this->_propDict["data"], "\Beta\Microsoft\Graph\Model\AppMetadataEntry")) {
                 return $this->_propDict["data"];
             } else {
                 $this->_propDict["data"] = new AppMetadataEntry($this->_propDict["data"]);

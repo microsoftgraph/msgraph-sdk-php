@@ -26,7 +26,7 @@ class GovernanceRoleAssignment extends Entity
 {
     /**
     * Gets the assignmentState
-    * The state of the assignment. The value can be  Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+    * The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
     * @return string The assignmentState
     */
@@ -41,7 +41,7 @@ class GovernanceRoleAssignment extends Entity
     
     /**
     * Sets the assignmentState
-    * The state of the assignment. The value can be  Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+    * The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
     * @param string $val The assignmentState
     *
@@ -55,7 +55,7 @@ class GovernanceRoleAssignment extends Entity
     
     /**
     * Gets the endDateTime
-    * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The endDateTime
     */
@@ -74,7 +74,7 @@ class GovernanceRoleAssignment extends Entity
     
     /**
     * Sets the endDateTime
-    * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The endDateTime
     *
@@ -146,7 +146,7 @@ class GovernanceRoleAssignment extends Entity
     
     /**
     * Gets the memberType
-    * The type of member. The value can be: Inherited - the role assignment is inherited from a parent resource scopeGroup- the role assignment is not inherited, but comes from the membership of a group assignmentUser - the role assignment is neither inherited nor from a group assignment.
+    * The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
     *
     * @return string The memberType
     */
@@ -161,7 +161,7 @@ class GovernanceRoleAssignment extends Entity
     
     /**
     * Sets the memberType
-    * The type of member. The value can be: Inherited - the role assignment is inherited from a parent resource scopeGroup- the role assignment is not inherited, but comes from the membership of a group assignmentUser - the role assignment is neither inherited nor from a group assignment.
+    * The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
     *
     * @param string $val The memberType
     *
@@ -233,7 +233,7 @@ class GovernanceRoleAssignment extends Entity
     
     /**
     * Gets the startDateTime
-    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The startDateTime
     */
@@ -252,7 +252,7 @@ class GovernanceRoleAssignment extends Entity
     
     /**
     * Sets the startDateTime
-    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The startDateTime
     *
@@ -329,7 +329,7 @@ class GovernanceRoleAssignment extends Entity
     public function getLinkedEligibleRoleAssignment()
     {
         if (array_key_exists("linkedEligibleRoleAssignment", $this->_propDict)) {
-            if (is_a($this->_propDict["linkedEligibleRoleAssignment"], "Beta\Microsoft\Graph\Model\GovernanceRoleAssignment")) {
+            if (is_a($this->_propDict["linkedEligibleRoleAssignment"], "\Beta\Microsoft\Graph\Model\GovernanceRoleAssignment")) {
                 return $this->_propDict["linkedEligibleRoleAssignment"];
             } else {
                 $this->_propDict["linkedEligibleRoleAssignment"] = new GovernanceRoleAssignment($this->_propDict["linkedEligibleRoleAssignment"]);
@@ -362,7 +362,7 @@ class GovernanceRoleAssignment extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -395,7 +395,7 @@ class GovernanceRoleAssignment extends Entity
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);
@@ -428,7 +428,7 @@ class GovernanceRoleAssignment extends Entity
     public function getSubject()
     {
         if (array_key_exists("subject", $this->_propDict)) {
-            if (is_a($this->_propDict["subject"], "Beta\Microsoft\Graph\Model\GovernanceSubject")) {
+            if (is_a($this->_propDict["subject"], "\Beta\Microsoft\Graph\Model\GovernanceSubject")) {
                 return $this->_propDict["subject"];
             } else {
                 $this->_propDict["subject"] = new GovernanceSubject($this->_propDict["subject"]);

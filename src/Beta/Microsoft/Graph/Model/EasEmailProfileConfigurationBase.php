@@ -62,7 +62,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     public function getUserDomainNameSource()
     {
         if (array_key_exists("userDomainNameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["userDomainNameSource"], "Beta\Microsoft\Graph\Model\DomainNameSource")) {
+            if (is_a($this->_propDict["userDomainNameSource"], "\Beta\Microsoft\Graph\Model\DomainNameSource")) {
                 return $this->_propDict["userDomainNameSource"];
             } else {
                 $this->_propDict["userDomainNameSource"] = new DomainNameSource($this->_propDict["userDomainNameSource"]);
@@ -95,7 +95,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     public function getUsernameAADSource()
     {
         if (array_key_exists("usernameAADSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameAADSource"], "Beta\Microsoft\Graph\Model\UsernameSource")) {
+            if (is_a($this->_propDict["usernameAADSource"], "\Beta\Microsoft\Graph\Model\UsernameSource")) {
                 return $this->_propDict["usernameAADSource"];
             } else {
                 $this->_propDict["usernameAADSource"] = new UsernameSource($this->_propDict["usernameAADSource"]);
@@ -128,7 +128,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
     public function getUsernameSource()
     {
         if (array_key_exists("usernameSource", $this->_propDict)) {
-            if (is_a($this->_propDict["usernameSource"], "Beta\Microsoft\Graph\Model\UserEmailSource")) {
+            if (is_a($this->_propDict["usernameSource"], "\Beta\Microsoft\Graph\Model\UserEmailSource")) {
                 return $this->_propDict["usernameSource"];
             } else {
                 $this->_propDict["usernameSource"] = new UserEmailSource($this->_propDict["usernameSource"]);

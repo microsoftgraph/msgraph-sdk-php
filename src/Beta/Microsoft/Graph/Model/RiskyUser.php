@@ -91,7 +91,7 @@ class RiskyUser extends Entity
     public function getRiskDetail()
     {
         if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
+            if (is_a($this->_propDict["riskDetail"], "\Beta\Microsoft\Graph\Model\RiskDetail")) {
                 return $this->_propDict["riskDetail"];
             } else {
                 $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
@@ -117,7 +117,7 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskLastUpdatedDateTime
-    * The date and time that the risky user was last updated
+    * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z
     *
     * @return \DateTime The riskLastUpdatedDateTime
     */
@@ -136,7 +136,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskLastUpdatedDateTime
-    * The date and time that the risky user was last updated
+    * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The riskLastUpdatedDateTime
     *
@@ -150,14 +150,14 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskLevel
-    * The possible values are low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
     *
     * @return RiskLevel The riskLevel
     */
     public function getRiskLevel()
     {
         if (array_key_exists("riskLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevel"], "Beta\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevel"], "\Beta\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["riskLevel"];
             } else {
                 $this->_propDict["riskLevel"] = new RiskLevel($this->_propDict["riskLevel"]);
@@ -169,7 +169,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskLevel
-    * The possible values are low, medium, high, hidden, none, unknownFutureValue.
+    * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
     *
     * @param RiskLevel $val The riskLevel
     *
@@ -183,14 +183,14 @@ class RiskyUser extends Entity
     
     /**
     * Gets the riskState
-    * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
+    * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @return RiskState The riskState
     */
     public function getRiskState()
     {
         if (array_key_exists("riskState", $this->_propDict)) {
-            if (is_a($this->_propDict["riskState"], "Beta\Microsoft\Graph\Model\RiskState")) {
+            if (is_a($this->_propDict["riskState"], "\Beta\Microsoft\Graph\Model\RiskState")) {
                 return $this->_propDict["riskState"];
             } else {
                 $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);
@@ -202,7 +202,7 @@ class RiskyUser extends Entity
     
     /**
     * Sets the riskState
-    * The possible values are none, confirmedSafe, remediated, atRisk, unknownFutureValue.
+    * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @param RiskState $val The riskState
     *

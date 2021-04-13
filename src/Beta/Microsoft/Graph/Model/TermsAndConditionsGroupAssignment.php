@@ -62,7 +62,7 @@ class TermsAndConditionsGroupAssignment extends Entity
     public function getTermsAndConditions()
     {
         if (array_key_exists("termsAndConditions", $this->_propDict)) {
-            if (is_a($this->_propDict["termsAndConditions"], "Beta\Microsoft\Graph\Model\TermsAndConditions")) {
+            if (is_a($this->_propDict["termsAndConditions"], "\Beta\Microsoft\Graph\Model\TermsAndConditions")) {
                 return $this->_propDict["termsAndConditions"];
             } else {
                 $this->_propDict["termsAndConditions"] = new TermsAndConditions($this->_propDict["termsAndConditions"]);

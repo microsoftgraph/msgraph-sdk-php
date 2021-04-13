@@ -154,7 +154,7 @@ class GroupPolicyCategory extends Entity
     public function getDefinitionFile()
     {
         if (array_key_exists("definitionFile", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionFile"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
+            if (is_a($this->_propDict["definitionFile"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
                 return $this->_propDict["definitionFile"];
             } else {
                 $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);
@@ -217,7 +217,7 @@ class GroupPolicyCategory extends Entity
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
+            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new GroupPolicyCategory($this->_propDict["parent"]);

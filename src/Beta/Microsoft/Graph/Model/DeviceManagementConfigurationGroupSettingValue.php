@@ -42,7 +42,7 @@ class DeviceManagementConfigurationGroupSettingValue extends DeviceManagementCon
     public function getChildren()
     {
         if (array_key_exists("children", $this->_propDict)) {
-            if (is_a($this->_propDict["children"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance")) {
+            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance")) {
                 return $this->_propDict["children"];
             } else {
                 $this->_propDict["children"] = new DeviceManagementConfigurationSettingInstance($this->_propDict["children"]);

@@ -93,7 +93,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getAllowedInboundDataTransferSources()
     {
         if (array_key_exists("allowedInboundDataTransferSources", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedInboundDataTransferSources"], "Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
+            if (is_a($this->_propDict["allowedInboundDataTransferSources"], "\Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
                 return $this->_propDict["allowedInboundDataTransferSources"];
             } else {
                 $this->_propDict["allowedInboundDataTransferSources"] = new ManagedAppDataTransferLevel($this->_propDict["allowedInboundDataTransferSources"]);
@@ -155,7 +155,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getAllowedOutboundClipboardSharingLevel()
     {
         if (array_key_exists("allowedOutboundClipboardSharingLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "Beta\Microsoft\Graph\Model\ManagedAppClipboardSharingLevel")) {
+            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppClipboardSharingLevel")) {
                 return $this->_propDict["allowedOutboundClipboardSharingLevel"];
             } else {
                 $this->_propDict["allowedOutboundClipboardSharingLevel"] = new ManagedAppClipboardSharingLevel($this->_propDict["allowedOutboundClipboardSharingLevel"]);
@@ -188,7 +188,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getAllowedOutboundDataTransferDestinations()
     {
         if (array_key_exists("allowedOutboundDataTransferDestinations", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOutboundDataTransferDestinations"], "Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
+            if (is_a($this->_propDict["allowedOutboundDataTransferDestinations"], "\Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
                 return $this->_propDict["allowedOutboundDataTransferDestinations"];
             } else {
                 $this->_propDict["allowedOutboundDataTransferDestinations"] = new ManagedAppDataTransferLevel($this->_propDict["allowedOutboundDataTransferDestinations"]);
@@ -221,7 +221,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getAppActionIfDeviceComplianceRequired()
     {
         if (array_key_exists("appActionIfDeviceComplianceRequired", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfDeviceComplianceRequired"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfDeviceComplianceRequired"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfDeviceComplianceRequired"];
             } else {
                 $this->_propDict["appActionIfDeviceComplianceRequired"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDeviceComplianceRequired"]);
@@ -254,7 +254,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getAppActionIfMaximumPinRetriesExceeded()
     {
         if (array_key_exists("appActionIfMaximumPinRetriesExceeded", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfMaximumPinRetriesExceeded"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfMaximumPinRetriesExceeded"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfMaximumPinRetriesExceeded"];
             } else {
                 $this->_propDict["appActionIfMaximumPinRetriesExceeded"] = new ManagedAppRemediationAction($this->_propDict["appActionIfMaximumPinRetriesExceeded"]);
@@ -287,7 +287,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getAppActionIfUnableToAuthenticateUser()
     {
         if (array_key_exists("appActionIfUnableToAuthenticateUser", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfUnableToAuthenticateUser"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfUnableToAuthenticateUser"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfUnableToAuthenticateUser"];
             } else {
                 $this->_propDict["appActionIfUnableToAuthenticateUser"] = new ManagedAppRemediationAction($this->_propDict["appActionIfUnableToAuthenticateUser"]);
@@ -436,7 +436,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getDialerRestrictionLevel()
     {
         if (array_key_exists("dialerRestrictionLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["dialerRestrictionLevel"], "Beta\Microsoft\Graph\Model\ManagedAppPhoneNumberRedirectLevel")) {
+            if (is_a($this->_propDict["dialerRestrictionLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppPhoneNumberRedirectLevel")) {
                 return $this->_propDict["dialerRestrictionLevel"];
             } else {
                 $this->_propDict["dialerRestrictionLevel"] = new ManagedAppPhoneNumberRedirectLevel($this->_propDict["dialerRestrictionLevel"]);
@@ -527,7 +527,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getManagedBrowser()
     {
         if (array_key_exists("managedBrowser", $this->_propDict)) {
-            if (is_a($this->_propDict["managedBrowser"], "Beta\Microsoft\Graph\Model\ManagedBrowserType")) {
+            if (is_a($this->_propDict["managedBrowser"], "\Beta\Microsoft\Graph\Model\ManagedBrowserType")) {
                 return $this->_propDict["managedBrowser"];
             } else {
                 $this->_propDict["managedBrowser"] = new ManagedBrowserType($this->_propDict["managedBrowser"]);
@@ -589,7 +589,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getMaximumAllowedDeviceThreatLevel()
     {
         if (array_key_exists("maximumAllowedDeviceThreatLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumAllowedDeviceThreatLevel"], "Beta\Microsoft\Graph\Model\ManagedAppDeviceThreatLevel")) {
+            if (is_a($this->_propDict["maximumAllowedDeviceThreatLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppDeviceThreatLevel")) {
                 return $this->_propDict["maximumAllowedDeviceThreatLevel"];
             } else {
                 $this->_propDict["maximumAllowedDeviceThreatLevel"] = new ManagedAppDeviceThreatLevel($this->_propDict["maximumAllowedDeviceThreatLevel"]);
@@ -941,7 +941,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getMobileThreatDefenseRemediationAction()
     {
         if (array_key_exists("mobileThreatDefenseRemediationAction", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileThreatDefenseRemediationAction"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["mobileThreatDefenseRemediationAction"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["mobileThreatDefenseRemediationAction"];
             } else {
                 $this->_propDict["mobileThreatDefenseRemediationAction"] = new ManagedAppRemediationAction($this->_propDict["mobileThreatDefenseRemediationAction"]);
@@ -974,7 +974,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getNotificationRestriction()
     {
         if (array_key_exists("notificationRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["notificationRestriction"], "Beta\Microsoft\Graph\Model\ManagedAppNotificationRestriction")) {
+            if (is_a($this->_propDict["notificationRestriction"], "\Beta\Microsoft\Graph\Model\ManagedAppNotificationRestriction")) {
                 return $this->_propDict["notificationRestriction"];
             } else {
                 $this->_propDict["notificationRestriction"] = new ManagedAppNotificationRestriction($this->_propDict["notificationRestriction"]);
@@ -1036,7 +1036,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getPeriodBeforePinReset()
     {
         if (array_key_exists("periodBeforePinReset", $this->_propDict)) {
-            if (is_a($this->_propDict["periodBeforePinReset"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodBeforePinReset"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodBeforePinReset"];
             } else {
                 $this->_propDict["periodBeforePinReset"] = new Duration($this->_propDict["periodBeforePinReset"]);
@@ -1069,7 +1069,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getPeriodOfflineBeforeAccessCheck()
     {
         if (array_key_exists("periodOfflineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodOfflineBeforeAccessCheck"];
             } else {
                 $this->_propDict["periodOfflineBeforeAccessCheck"] = new Duration($this->_propDict["periodOfflineBeforeAccessCheck"]);
@@ -1102,7 +1102,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getPeriodOfflineBeforeWipeIsEnforced()
     {
         if (array_key_exists("periodOfflineBeforeWipeIsEnforced", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodOfflineBeforeWipeIsEnforced"];
             } else {
                 $this->_propDict["periodOfflineBeforeWipeIsEnforced"] = new Duration($this->_propDict["periodOfflineBeforeWipeIsEnforced"]);
@@ -1135,7 +1135,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getPeriodOnlineBeforeAccessCheck()
     {
         if (array_key_exists("periodOnlineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodOnlineBeforeAccessCheck"];
             } else {
                 $this->_propDict["periodOnlineBeforeAccessCheck"] = new Duration($this->_propDict["periodOnlineBeforeAccessCheck"]);
@@ -1168,7 +1168,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getPinCharacterSet()
     {
         if (array_key_exists("pinCharacterSet", $this->_propDict)) {
-            if (is_a($this->_propDict["pinCharacterSet"], "Beta\Microsoft\Graph\Model\ManagedAppPinCharacterSet")) {
+            if (is_a($this->_propDict["pinCharacterSet"], "\Beta\Microsoft\Graph\Model\ManagedAppPinCharacterSet")) {
                 return $this->_propDict["pinCharacterSet"];
             } else {
                 $this->_propDict["pinCharacterSet"] = new ManagedAppPinCharacterSet($this->_propDict["pinCharacterSet"]);
@@ -1230,7 +1230,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     public function getPinRequiredInsteadOfBiometricTimeout()
     {
         if (array_key_exists("pinRequiredInsteadOfBiometricTimeout", $this->_propDict)) {
-            if (is_a($this->_propDict["pinRequiredInsteadOfBiometricTimeout"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["pinRequiredInsteadOfBiometricTimeout"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["pinRequiredInsteadOfBiometricTimeout"];
             } else {
                 $this->_propDict["pinRequiredInsteadOfBiometricTimeout"] = new Duration($this->_propDict["pinRequiredInsteadOfBiometricTimeout"]);

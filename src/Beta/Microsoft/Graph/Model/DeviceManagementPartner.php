@@ -154,7 +154,7 @@ class DeviceManagementPartner extends Entity
     public function getPartnerAppType()
     {
         if (array_key_exists("partnerAppType", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerAppType"], "Beta\Microsoft\Graph\Model\DeviceManagementPartnerAppType")) {
+            if (is_a($this->_propDict["partnerAppType"], "\Beta\Microsoft\Graph\Model\DeviceManagementPartnerAppType")) {
                 return $this->_propDict["partnerAppType"];
             } else {
                 $this->_propDict["partnerAppType"] = new DeviceManagementPartnerAppType($this->_propDict["partnerAppType"]);
@@ -187,7 +187,7 @@ class DeviceManagementPartner extends Entity
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "Beta\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
+            if (is_a($this->_propDict["partnerState"], "\Beta\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);

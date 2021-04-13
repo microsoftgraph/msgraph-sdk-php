@@ -183,7 +183,7 @@ class OfficeClientConfiguration extends Entity
     public function getUserCheckinSummary()
     {
         if (array_key_exists("userCheckinSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userCheckinSummary"], "Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
+            if (is_a($this->_propDict["userCheckinSummary"], "\Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
                 return $this->_propDict["userCheckinSummary"];
             } else {
                 $this->_propDict["userCheckinSummary"] = new OfficeUserCheckinSummary($this->_propDict["userCheckinSummary"]);
