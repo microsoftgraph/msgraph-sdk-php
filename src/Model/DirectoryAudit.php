@@ -26,7 +26,7 @@ class DirectoryAudit extends Entity
 {
     /**
     * Gets the activityDateTime
-    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The activityDateTime
     */
@@ -45,7 +45,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the activityDateTime
-    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -183,7 +183,7 @@ class DirectoryAudit extends Entity
     public function getInitiatedBy()
     {
         if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "\Microsoft\Graph\Model\AuditActivityInitiator")) {
+            if (is_a($this->_propDict["initiatedBy"], "Microsoft\Graph\Model\AuditActivityInitiator")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new AuditActivityInitiator($this->_propDict["initiatedBy"]);
@@ -272,7 +272,7 @@ class DirectoryAudit extends Entity
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "\Microsoft\Graph\Model\OperationResult")) {
+            if (is_a($this->_propDict["result"], "Microsoft\Graph\Model\OperationResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new OperationResult($this->_propDict["result"]);
@@ -298,7 +298,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the resultReason
-    * Indicates the reason for failure if the result is failure or timeout.
+    * Indicates the reason for failure if the result is 'Failure' or 'timeout'.
     *
     * @return string The resultReason
     */
@@ -313,7 +313,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the resultReason
-    * Indicates the reason for failure if the result is failure or timeout.
+    * Indicates the reason for failure if the result is 'Failure' or 'timeout'.
     *
     * @param string $val The resultReason
     *

@@ -33,7 +33,7 @@ class CommsNotifications extends Entity
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\CommsNotification")) {
+            if (is_a($this->_propDict["value"], "Beta\Microsoft\Graph\Model\CommsNotification")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new CommsNotification($this->_propDict["value"]);

@@ -207,7 +207,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     public function getPinLowercaseLetters()
     {
         if (array_key_exists("pinLowercaseLetters", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseLetters"], "\Beta\Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
+            if (is_a($this->_propDict["pinLowercaseLetters"], "Beta\Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
                 return $this->_propDict["pinLowercaseLetters"];
             } else {
                 $this->_propDict["pinLowercaseLetters"] = new WindowsInformationProtectionPinCharacterRequirements($this->_propDict["pinLowercaseLetters"]);
@@ -269,7 +269,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     public function getPinSpecialCharacters()
     {
         if (array_key_exists("pinSpecialCharacters", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharacters"], "\Beta\Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
+            if (is_a($this->_propDict["pinSpecialCharacters"], "Beta\Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
                 return $this->_propDict["pinSpecialCharacters"];
             } else {
                 $this->_propDict["pinSpecialCharacters"] = new WindowsInformationProtectionPinCharacterRequirements($this->_propDict["pinSpecialCharacters"]);
@@ -302,7 +302,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection
     public function getPinUppercaseLetters()
     {
         if (array_key_exists("pinUppercaseLetters", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseLetters"], "\Beta\Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
+            if (is_a($this->_propDict["pinUppercaseLetters"], "Beta\Microsoft\Graph\Model\WindowsInformationProtectionPinCharacterRequirements")) {
                 return $this->_propDict["pinUppercaseLetters"];
             } else {
                 $this->_propDict["pinUppercaseLetters"] = new WindowsInformationProtectionPinCharacterRequirements($this->_propDict["pinUppercaseLetters"]);

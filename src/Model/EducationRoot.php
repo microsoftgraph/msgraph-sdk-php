@@ -63,7 +63,7 @@ class EducationRoot extends Entity
     public function getMe()
     {
         if (array_key_exists("me", $this->_propDict)) {
-            if (is_a($this->_propDict["me"], "\Microsoft\Graph\Model\EducationUser")) {
+            if (is_a($this->_propDict["me"], "Microsoft\Graph\Model\EducationUser")) {
                 return $this->_propDict["me"];
             } else {
                 $this->_propDict["me"] = new EducationUser($this->_propDict["me"]);

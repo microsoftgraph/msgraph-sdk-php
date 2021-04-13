@@ -33,7 +33,7 @@ class CloudPcStatusDetails extends Entity
     public function getAdditionalInformation()
     {
         if (array_key_exists("additionalInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["additionalInformation"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["additionalInformation"], "Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["additionalInformation"];
             } else {
                 $this->_propDict["additionalInformation"] = new KeyValuePair($this->_propDict["additionalInformation"]);

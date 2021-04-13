@@ -59,7 +59,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase
     public function getScheduleInfo()
     {
         if (array_key_exists("scheduleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
+            if (is_a($this->_propDict["scheduleInfo"], "Beta\Microsoft\Graph\Model\RequestSchedule")) {
                 return $this->_propDict["scheduleInfo"];
             } else {
                 $this->_propDict["scheduleInfo"] = new RequestSchedule($this->_propDict["scheduleInfo"]);

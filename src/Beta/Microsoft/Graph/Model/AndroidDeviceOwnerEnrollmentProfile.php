@@ -182,7 +182,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function getEnrollmentMode()
     {
         if (array_key_exists("enrollmentMode", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentMode"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentMode")) {
+            if (is_a($this->_propDict["enrollmentMode"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentMode")) {
                 return $this->_propDict["enrollmentMode"];
             } else {
                 $this->_propDict["enrollmentMode"] = new AndroidDeviceOwnerEnrollmentMode($this->_propDict["enrollmentMode"]);
@@ -215,7 +215,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function getEnrollmentTokenType()
     {
         if (array_key_exists("enrollmentTokenType", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentTokenType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentTokenType")) {
+            if (is_a($this->_propDict["enrollmentTokenType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentTokenType")) {
                 return $this->_propDict["enrollmentTokenType"];
             } else {
                 $this->_propDict["enrollmentTokenType"] = new AndroidDeviceOwnerEnrollmentTokenType($this->_propDict["enrollmentTokenType"]);
@@ -310,7 +310,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     public function getQrCodeImage()
     {
         if (array_key_exists("qrCodeImage", $this->_propDict)) {
-            if (is_a($this->_propDict["qrCodeImage"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["qrCodeImage"], "Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["qrCodeImage"];
             } else {
                 $this->_propDict["qrCodeImage"] = new MimeContent($this->_propDict["qrCodeImage"]);

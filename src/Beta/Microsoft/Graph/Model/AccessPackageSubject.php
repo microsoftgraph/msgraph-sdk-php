@@ -258,7 +258,7 @@ class AccessPackageSubject extends Entity
     public function getConnectedOrganization()
     {
         if (array_key_exists("connectedOrganization", $this->_propDict)) {
-            if (is_a($this->_propDict["connectedOrganization"], "\Beta\Microsoft\Graph\Model\ConnectedOrganization")) {
+            if (is_a($this->_propDict["connectedOrganization"], "Beta\Microsoft\Graph\Model\ConnectedOrganization")) {
                 return $this->_propDict["connectedOrganization"];
             } else {
                 $this->_propDict["connectedOrganization"] = new ConnectedOrganization($this->_propDict["connectedOrganization"]);

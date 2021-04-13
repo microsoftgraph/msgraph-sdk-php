@@ -61,7 +61,7 @@ class ManagedDeviceSummarizedAppState extends Entity
     public function getSummarizedAppState()
     {
         if (array_key_exists("summarizedAppState", $this->_propDict)) {
-            if (is_a($this->_propDict["summarizedAppState"], "\Beta\Microsoft\Graph\Model\RunState")) {
+            if (is_a($this->_propDict["summarizedAppState"], "Beta\Microsoft\Graph\Model\RunState")) {
                 return $this->_propDict["summarizedAppState"];
             } else {
                 $this->_propDict["summarizedAppState"] = new RunState($this->_propDict["summarizedAppState"]);

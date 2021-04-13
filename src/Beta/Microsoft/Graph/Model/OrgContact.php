@@ -259,7 +259,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -278,7 +278,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -476,7 +476,7 @@ class OrgContact extends DirectoryObject
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["manager"], "Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);

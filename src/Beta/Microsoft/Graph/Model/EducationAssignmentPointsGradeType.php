@@ -42,7 +42,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType
     public function getMaxPoints()
     {
         if (array_key_exists("maxPoints", $this->_propDict)) {
-            if (is_a($this->_propDict["maxPoints"], "\Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["maxPoints"], "Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["maxPoints"];
             } else {
                 $this->_propDict["maxPoints"] = new Single($this->_propDict["maxPoints"]);

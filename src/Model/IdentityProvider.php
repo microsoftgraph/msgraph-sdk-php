@@ -26,7 +26,7 @@ class IdentityProvider extends Entity
 {
     /**
     * Gets the clientId
-    * The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+    * The client ID for the application obtained when registering the application with the identity provider. This is a required field.
     *
     * @return string The clientId
     */
@@ -41,7 +41,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the clientId
-    * The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+    * The client ID for the application obtained when registering the application with the identity provider. This is a required field.
     *
     * @param string $val The clientId
     *
@@ -55,7 +55,7 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return '****'. This is a required field.
     *
     * @return string The clientSecret
     */
@@ -70,7 +70,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return '****'. This is a required field.
     *
     * @param string $val The clientSecret
     *
@@ -84,7 +84,7 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the name
-    * The display name of the identity provider. Not nullable.
+    * The display name of the identity provider.
     *
     * @return string The name
     */
@@ -99,7 +99,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the name
-    * The display name of the identity provider. Not nullable.
+    * The display name of the identity provider.
     *
     * @param string $val The name
     *
@@ -113,7 +113,7 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the type
-    * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
+    * The identity provider type is a required field.For B2B scenario:GoogleFacebookFor B2C scenario:MicrosoftGoogleAmazonLinkedInFacebookGitHubTwitterWeiboQQWeChatOpenIDConnect
     *
     * @return string The type
     */
@@ -128,7 +128,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the type
-    * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
+    * The identity provider type is a required field.For B2B scenario:GoogleFacebookFor B2C scenario:MicrosoftGoogleAmazonLinkedInFacebookGitHubTwitterWeiboQQWeChatOpenIDConnect
     *
     * @param string $val The type
     *

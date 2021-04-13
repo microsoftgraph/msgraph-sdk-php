@@ -26,7 +26,7 @@ class AccessReviewInstance extends Entity
 {
     /**
     * Gets the endDateTime
-    * DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime when review instance is scheduled to end.
     *
     * @return \DateTime The endDateTime
     */
@@ -45,7 +45,7 @@ class AccessReviewInstance extends Entity
     
     /**
     * Sets the endDateTime
-    * DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime when review instance is scheduled to end.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -66,7 +66,7 @@ class AccessReviewInstance extends Entity
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\Model\AccessReviewScope")) {
+            if (is_a($this->_propDict["scope"], "Beta\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new AccessReviewScope($this->_propDict["scope"]);
@@ -92,7 +92,7 @@ class AccessReviewInstance extends Entity
     
     /**
     * Gets the startDateTime
-    * DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime when review instance is scheduled to start. May be in the future.
     *
     * @return \DateTime The startDateTime
     */
@@ -111,7 +111,7 @@ class AccessReviewInstance extends Entity
     
     /**
     * Sets the startDateTime
-    * DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime when review instance is scheduled to start. May be in the future.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -191,7 +191,7 @@ class AccessReviewInstance extends Entity
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\AccessReviewScheduleDefinition")) {
+            if (is_a($this->_propDict["definition"], "Beta\Microsoft\Graph\Model\AccessReviewScheduleDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new AccessReviewScheduleDefinition($this->_propDict["definition"]);

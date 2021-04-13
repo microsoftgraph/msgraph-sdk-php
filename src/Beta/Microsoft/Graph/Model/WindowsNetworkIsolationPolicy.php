@@ -33,7 +33,7 @@ class WindowsNetworkIsolationPolicy extends Entity
     public function getEnterpriseCloudResources()
     {
         if (array_key_exists("enterpriseCloudResources", $this->_propDict)) {
-            if (is_a($this->_propDict["enterpriseCloudResources"], "\Beta\Microsoft\Graph\Model\ProxiedDomain")) {
+            if (is_a($this->_propDict["enterpriseCloudResources"], "Beta\Microsoft\Graph\Model\ProxiedDomain")) {
                 return $this->_propDict["enterpriseCloudResources"];
             } else {
                 $this->_propDict["enterpriseCloudResources"] = new ProxiedDomain($this->_propDict["enterpriseCloudResources"]);
@@ -94,7 +94,7 @@ class WindowsNetworkIsolationPolicy extends Entity
     public function getEnterpriseIPRanges()
     {
         if (array_key_exists("enterpriseIPRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["enterpriseIPRanges"], "\Beta\Microsoft\Graph\Model\IpRange")) {
+            if (is_a($this->_propDict["enterpriseIPRanges"], "Beta\Microsoft\Graph\Model\IpRange")) {
                 return $this->_propDict["enterpriseIPRanges"];
             } else {
                 $this->_propDict["enterpriseIPRanges"] = new IpRange($this->_propDict["enterpriseIPRanges"]);

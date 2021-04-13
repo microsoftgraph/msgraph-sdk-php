@@ -33,7 +33,7 @@ class ExpressionInputObject extends Entity
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\ObjectDefinition")) {
+            if (is_a($this->_propDict["definition"], "Beta\Microsoft\Graph\Model\ObjectDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new ObjectDefinition($this->_propDict["definition"]);
@@ -66,7 +66,7 @@ class ExpressionInputObject extends Entity
     public function getExpressionInputObjectProperties()
     {
         if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\Model\StringKeyObjectValuePair")) {
+            if (is_a($this->_propDict["properties"], "Beta\Microsoft\Graph\Model\StringKeyObjectValuePair")) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new StringKeyObjectValuePair($this->_propDict["properties"]);

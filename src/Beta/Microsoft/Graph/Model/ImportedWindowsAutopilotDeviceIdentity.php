@@ -145,6 +145,35 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     }
     
     /**
+    * Gets the orderIdentifier
+    * Order Id of the Windows autopilot device. - Deprecate
+    *
+    * @return string The orderIdentifier
+    */
+    public function getOrderIdentifier()
+    {
+        if (array_key_exists("orderIdentifier", $this->_propDict)) {
+            return $this->_propDict["orderIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the orderIdentifier
+    * Order Id of the Windows autopilot device. - Deprecate
+    *
+    * @param string $val The orderIdentifier
+    *
+    * @return ImportedWindowsAutopilotDeviceIdentity
+    */
+    public function setOrderIdentifier($val)
+    {
+        $this->_propDict["orderIdentifier"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the productKey
     * Product Key of the Windows autopilot device.
     *
@@ -211,7 +240,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityState")) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ImportedWindowsAutopilotDeviceIdentityState($this->_propDict["state"]);

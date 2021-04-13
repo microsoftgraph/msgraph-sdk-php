@@ -81,7 +81,7 @@ class RelatedContact extends Entity
     }
     /**
     * Gets the emailAddress
-    * Email address of the contact.
+    * Primary email address of the contact.
     *
     * @return string The emailAddress
     */
@@ -96,7 +96,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the emailAddress
-    * Email address of the contact.
+    * Primary email address of the contact.
     *
     * @param string $val The value of the emailAddress
     *
@@ -166,14 +166,14 @@ class RelatedContact extends Entity
 
     /**
     * Gets the relationship
-    * Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other.
     *
     * @return ContactRelationship The relationship
     */
     public function getRelationship()
     {
         if (array_key_exists("relationship", $this->_propDict)) {
-            if (is_a($this->_propDict["relationship"], "\Beta\Microsoft\Graph\Model\ContactRelationship")) {
+            if (is_a($this->_propDict["relationship"], "Beta\Microsoft\Graph\Model\ContactRelationship")) {
                 return $this->_propDict["relationship"];
             } else {
                 $this->_propDict["relationship"] = new ContactRelationship($this->_propDict["relationship"]);
@@ -185,7 +185,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the relationship
-    * Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other.
     *
     * @param ContactRelationship $val The value to assign to the relationship
     *

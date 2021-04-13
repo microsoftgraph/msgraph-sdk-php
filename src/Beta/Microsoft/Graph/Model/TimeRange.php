@@ -33,7 +33,7 @@ class TimeRange extends Entity
     public function getEndTime()
     {
         if (array_key_exists("endTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["endTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["endTime"];
             } else {
                 $this->_propDict["endTime"] = new TimeOfDay($this->_propDict["endTime"]);
@@ -66,7 +66,7 @@ class TimeRange extends Entity
     public function getStartTime()
     {
         if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["startTime"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["startTime"];
             } else {
                 $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);

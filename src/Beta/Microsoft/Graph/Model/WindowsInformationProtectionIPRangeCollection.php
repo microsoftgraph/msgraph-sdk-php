@@ -61,7 +61,7 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
     public function getRanges()
     {
         if (array_key_exists("ranges", $this->_propDict)) {
-            if (is_a($this->_propDict["ranges"], "\Beta\Microsoft\Graph\Model\IpRange")) {
+            if (is_a($this->_propDict["ranges"], "Beta\Microsoft\Graph\Model\IpRange")) {
                 return $this->_propDict["ranges"];
             } else {
                 $this->_propDict["ranges"] = new IpRange($this->_propDict["ranges"]);

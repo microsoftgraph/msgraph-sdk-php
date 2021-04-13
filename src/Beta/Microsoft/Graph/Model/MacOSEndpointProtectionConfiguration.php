@@ -33,7 +33,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     public function getAdvancedThreatProtectionAutomaticSampleSubmission()
     {
         if (array_key_exists("advancedThreatProtectionAutomaticSampleSubmission", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"], "Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"];
             } else {
                 $this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"] = new Enablement($this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"]);
@@ -66,7 +66,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     public function getAdvancedThreatProtectionCloudDelivered()
     {
         if (array_key_exists("advancedThreatProtectionCloudDelivered", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionCloudDelivered"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionCloudDelivered"], "Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["advancedThreatProtectionCloudDelivered"];
             } else {
                 $this->_propDict["advancedThreatProtectionCloudDelivered"] = new Enablement($this->_propDict["advancedThreatProtectionCloudDelivered"]);
@@ -99,7 +99,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     public function getAdvancedThreatProtectionDiagnosticDataCollection()
     {
         if (array_key_exists("advancedThreatProtectionDiagnosticDataCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionDiagnosticDataCollection"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionDiagnosticDataCollection"], "Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["advancedThreatProtectionDiagnosticDataCollection"];
             } else {
                 $this->_propDict["advancedThreatProtectionDiagnosticDataCollection"] = new Enablement($this->_propDict["advancedThreatProtectionDiagnosticDataCollection"]);
@@ -248,7 +248,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     public function getAdvancedThreatProtectionRealTime()
     {
         if (array_key_exists("advancedThreatProtectionRealTime", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionRealTime"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionRealTime"], "Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["advancedThreatProtectionRealTime"];
             } else {
                 $this->_propDict["advancedThreatProtectionRealTime"] = new Enablement($this->_propDict["advancedThreatProtectionRealTime"]);
@@ -546,7 +546,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     public function getFileVaultSelectedRecoveryKeyTypes()
     {
         if (array_key_exists("fileVaultSelectedRecoveryKeyTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["fileVaultSelectedRecoveryKeyTypes"], "\Beta\Microsoft\Graph\Model\MacOSFileVaultRecoveryKeyTypes")) {
+            if (is_a($this->_propDict["fileVaultSelectedRecoveryKeyTypes"], "Beta\Microsoft\Graph\Model\MacOSFileVaultRecoveryKeyTypes")) {
                 return $this->_propDict["fileVaultSelectedRecoveryKeyTypes"];
             } else {
                 $this->_propDict["fileVaultSelectedRecoveryKeyTypes"] = new MacOSFileVaultRecoveryKeyTypes($this->_propDict["fileVaultSelectedRecoveryKeyTypes"]);
@@ -696,7 +696,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     public function getGatekeeperAllowedAppSource()
     {
         if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
-            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "\Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
+            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
                 return $this->_propDict["gatekeeperAllowedAppSource"];
             } else {
                 $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);

@@ -33,7 +33,7 @@ class PrinterBase extends Entity
     public function getCapabilities()
     {
         if (array_key_exists("capabilities", $this->_propDict)) {
-            if (is_a($this->_propDict["capabilities"], "\Microsoft\Graph\Model\PrinterCapabilities")) {
+            if (is_a($this->_propDict["capabilities"], "Microsoft\Graph\Model\PrinterCapabilities")) {
                 return $this->_propDict["capabilities"];
             } else {
                 $this->_propDict["capabilities"] = new PrinterCapabilities($this->_propDict["capabilities"]);
@@ -66,7 +66,7 @@ class PrinterBase extends Entity
     public function getDefaults()
     {
         if (array_key_exists("defaults", $this->_propDict)) {
-            if (is_a($this->_propDict["defaults"], "\Microsoft\Graph\Model\PrinterDefaults")) {
+            if (is_a($this->_propDict["defaults"], "Microsoft\Graph\Model\PrinterDefaults")) {
                 return $this->_propDict["defaults"];
             } else {
                 $this->_propDict["defaults"] = new PrinterDefaults($this->_propDict["defaults"]);
@@ -157,7 +157,7 @@ class PrinterBase extends Entity
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\PrinterLocation")) {
+            if (is_a($this->_propDict["location"], "Microsoft\Graph\Model\PrinterLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new PrinterLocation($this->_propDict["location"]);
@@ -248,7 +248,7 @@ class PrinterBase extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrinterStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\PrinterStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrinterStatus($this->_propDict["status"]);

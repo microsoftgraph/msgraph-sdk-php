@@ -33,7 +33,7 @@ class ServiceUserAgent extends UserAgent
     public function getRole()
     {
         if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "\Beta\Microsoft\Graph\CallRecords\Model\ServiceRole")) {
+            if (is_a($this->_propDict["role"], "Beta\Microsoft\Graph\CallRecords\Model\ServiceRole")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new ServiceRole($this->_propDict["role"]);

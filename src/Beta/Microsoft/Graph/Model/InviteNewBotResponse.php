@@ -25,7 +25,6 @@ class InviteNewBotResponse extends ParticipantJoiningResponse
 {
     /**
     * Gets the inviteUri
-    * URI to receive new incoming call notification.
     *
     * @return string The inviteUri
     */
@@ -40,7 +39,6 @@ class InviteNewBotResponse extends ParticipantJoiningResponse
 
     /**
     * Sets the inviteUri
-    * URI to receive new incoming call notification.
     *
     * @param string $val The value of the inviteUri
     *

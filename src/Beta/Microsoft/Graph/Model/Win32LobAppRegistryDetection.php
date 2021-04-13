@@ -70,7 +70,7 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
     public function getDetectionType()
     {
         if (array_key_exists("detectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionType"], "\Beta\Microsoft\Graph\Model\Win32LobAppRegistryDetectionType")) {
+            if (is_a($this->_propDict["detectionType"], "Beta\Microsoft\Graph\Model\Win32LobAppRegistryDetectionType")) {
                 return $this->_propDict["detectionType"];
             } else {
                 $this->_propDict["detectionType"] = new Win32LobAppRegistryDetectionType($this->_propDict["detectionType"]);
@@ -159,7 +159,7 @@ class Win32LobAppRegistryDetection extends Win32LobAppDetection
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
+            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new Win32LobAppDetectionOperator($this->_propDict["operator"]);

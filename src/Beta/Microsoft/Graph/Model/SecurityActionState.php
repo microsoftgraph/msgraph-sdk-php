@@ -61,7 +61,7 @@ class SecurityActionState extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -87,7 +87,7 @@ class SecurityActionState extends Entity
 
     /**
     * Gets the updatedDateTime
-    * Timestamp when the actionState was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the actionState was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The updatedDateTime
     */
@@ -106,7 +106,7 @@ class SecurityActionState extends Entity
 
     /**
     * Sets the updatedDateTime
-    * Timestamp when the actionState was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the actionState was updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the updatedDateTime
     *

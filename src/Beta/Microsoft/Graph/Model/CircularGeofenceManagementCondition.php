@@ -91,7 +91,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     public function getRadiusInMeters()
     {
         if (array_key_exists("radiusInMeters", $this->_propDict)) {
-            if (is_a($this->_propDict["radiusInMeters"], "\Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["radiusInMeters"], "Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["radiusInMeters"];
             } else {
                 $this->_propDict["radiusInMeters"] = new Single($this->_propDict["radiusInMeters"]);

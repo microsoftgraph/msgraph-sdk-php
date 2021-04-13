@@ -61,7 +61,7 @@ class PublicError extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\PublicErrorDetail")) {
+            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\PublicErrorDetail")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PublicErrorDetail($this->_propDict["details"]);
@@ -94,7 +94,7 @@ class PublicError extends Entity
     public function getInnerError()
     {
         if (array_key_exists("innerError", $this->_propDict)) {
-            if (is_a($this->_propDict["innerError"], "\Beta\Microsoft\Graph\Model\PublicInnerError")) {
+            if (is_a($this->_propDict["innerError"], "Beta\Microsoft\Graph\Model\PublicInnerError")) {
                 return $this->_propDict["innerError"];
             } else {
                 $this->_propDict["innerError"] = new PublicInnerError($this->_propDict["innerError"]);

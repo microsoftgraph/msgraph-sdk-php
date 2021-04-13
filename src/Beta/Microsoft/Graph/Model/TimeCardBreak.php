@@ -58,7 +58,7 @@ class TimeCardBreak extends Entity
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\TimeCardEvent")) {
+            if (is_a($this->_propDict["end"], "Beta\Microsoft\Graph\Model\TimeCardEvent")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new TimeCardEvent($this->_propDict["end"]);
@@ -89,7 +89,7 @@ class TimeCardBreak extends Entity
     public function getNotes()
     {
         if (array_key_exists("notes", $this->_propDict)) {
-            if (is_a($this->_propDict["notes"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["notes"], "Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["notes"];
             } else {
                 $this->_propDict["notes"] = new ItemBody($this->_propDict["notes"]);
@@ -120,7 +120,7 @@ class TimeCardBreak extends Entity
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\TimeCardEvent")) {
+            if (is_a($this->_propDict["start"], "Beta\Microsoft\Graph\Model\TimeCardEvent")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new TimeCardEvent($this->_propDict["start"]);

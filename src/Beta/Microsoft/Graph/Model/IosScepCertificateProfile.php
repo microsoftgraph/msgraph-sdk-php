@@ -33,7 +33,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getCertificateStore()
     {
         if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "\Beta\Microsoft\Graph\Model\CertificateStore")) {
+            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
                 return $this->_propDict["certificateStore"];
             } else {
                 $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
@@ -126,7 +126,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "\Beta\Microsoft\Graph\Model\KeySize")) {
+            if (is_a($this->_propDict["keySize"], "Beta\Microsoft\Graph\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -159,7 +159,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages")) {
+            if (is_a($this->_propDict["keyUsage"], "Beta\Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -309,7 +309,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "\Beta\Microsoft\Graph\Model\IosTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificate"], "Beta\Microsoft\Graph\Model\IosTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new IosTrustedRootCertificate($this->_propDict["rootCertificate"]);

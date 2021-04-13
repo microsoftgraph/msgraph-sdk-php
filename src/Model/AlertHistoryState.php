@@ -117,7 +117,7 @@ class AlertHistoryState extends Entity
     public function getFeedback()
     {
         if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "\Microsoft\Graph\Model\AlertFeedback")) {
+            if (is_a($this->_propDict["feedback"], "Microsoft\Graph\Model\AlertFeedback")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new AlertFeedback($this->_propDict["feedback"]);
@@ -150,7 +150,7 @@ class AlertHistoryState extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\AlertStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\AlertStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AlertStatus($this->_propDict["status"]);

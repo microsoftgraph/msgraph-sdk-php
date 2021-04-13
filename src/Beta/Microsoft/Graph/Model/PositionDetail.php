@@ -33,7 +33,7 @@ class PositionDetail extends Entity
     public function getCompany()
     {
         if (array_key_exists("company", $this->_propDict)) {
-            if (is_a($this->_propDict["company"], "\Beta\Microsoft\Graph\Model\CompanyDetail")) {
+            if (is_a($this->_propDict["company"], "Beta\Microsoft\Graph\Model\CompanyDetail")) {
                 return $this->_propDict["company"];
             } else {
                 $this->_propDict["company"] = new CompanyDetail($this->_propDict["company"]);

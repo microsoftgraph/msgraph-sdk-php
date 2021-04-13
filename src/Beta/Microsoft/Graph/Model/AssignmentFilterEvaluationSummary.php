@@ -122,7 +122,7 @@ class AssignmentFilterEvaluationSummary extends Entity
     public function getAssignmentFilterPlatform()
     {
         if (array_key_exists("assignmentFilterPlatform", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentFilterPlatform"], "\Beta\Microsoft\Graph\Model\DevicePlatformType")) {
+            if (is_a($this->_propDict["assignmentFilterPlatform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
                 return $this->_propDict["assignmentFilterPlatform"];
             } else {
                 $this->_propDict["assignmentFilterPlatform"] = new DevicePlatformType($this->_propDict["assignmentFilterPlatform"]);
@@ -155,7 +155,7 @@ class AssignmentFilterEvaluationSummary extends Entity
     public function getAssignmentFilterType()
     {
         if (array_key_exists("assignmentFilterType", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentFilterType"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentFilterType")) {
+            if (is_a($this->_propDict["assignmentFilterType"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentFilterType")) {
                 return $this->_propDict["assignmentFilterType"];
             } else {
                 $this->_propDict["assignmentFilterType"] = new DeviceAndAppManagementAssignmentFilterType($this->_propDict["assignmentFilterType"]);
@@ -176,39 +176,6 @@ class AssignmentFilterEvaluationSummary extends Entity
     public function setAssignmentFilterType($val)
     {
         $this->_propDict["assignmentFilterType"] = $val;
-         return $this;
-    }
-
-    /**
-    * Gets the assignmentFilterTypeAndEvaluationResults
-    * A collection of filter types and their corresponding evaluation results.
-    *
-    * @return AssignmentFilterTypeAndEvaluationResult The assignmentFilterTypeAndEvaluationResults
-    */
-    public function getAssignmentFilterTypeAndEvaluationResults()
-    {
-        if (array_key_exists("assignmentFilterTypeAndEvaluationResults", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentFilterTypeAndEvaluationResults"], "\Beta\Microsoft\Graph\Model\AssignmentFilterTypeAndEvaluationResult")) {
-                return $this->_propDict["assignmentFilterTypeAndEvaluationResults"];
-            } else {
-                $this->_propDict["assignmentFilterTypeAndEvaluationResults"] = new AssignmentFilterTypeAndEvaluationResult($this->_propDict["assignmentFilterTypeAndEvaluationResults"]);
-                return $this->_propDict["assignmentFilterTypeAndEvaluationResults"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the assignmentFilterTypeAndEvaluationResults
-    * A collection of filter types and their corresponding evaluation results.
-    *
-    * @param AssignmentFilterTypeAndEvaluationResult $val The value to assign to the assignmentFilterTypeAndEvaluationResults
-    *
-    * @return AssignmentFilterEvaluationSummary The AssignmentFilterEvaluationSummary
-    */
-    public function setAssignmentFilterTypeAndEvaluationResults($val)
-    {
-        $this->_propDict["assignmentFilterTypeAndEvaluationResults"] = $val;
          return $this;
     }
 
@@ -254,7 +221,7 @@ class AssignmentFilterEvaluationSummary extends Entity
     public function getEvaluationResult()
     {
         if (array_key_exists("evaluationResult", $this->_propDict)) {
-            if (is_a($this->_propDict["evaluationResult"], "\Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationResult")) {
+            if (is_a($this->_propDict["evaluationResult"], "Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationResult")) {
                 return $this->_propDict["evaluationResult"];
             } else {
                 $this->_propDict["evaluationResult"] = new AssignmentFilterEvaluationResult($this->_propDict["evaluationResult"]);

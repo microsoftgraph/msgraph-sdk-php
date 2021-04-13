@@ -61,7 +61,7 @@ class DeviceActionResult extends Entity
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "\Beta\Microsoft\Graph\Model\ActionState")) {
+            if (is_a($this->_propDict["actionState"], "Beta\Microsoft\Graph\Model\ActionState")) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);

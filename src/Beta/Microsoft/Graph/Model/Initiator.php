@@ -89,7 +89,7 @@ class Initiator extends Entity
     public function getInitiatorType()
     {
         if (array_key_exists("initiatorType", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatorType"], "\Beta\Microsoft\Graph\Model\InitiatorType")) {
+            if (is_a($this->_propDict["initiatorType"], "Beta\Microsoft\Graph\Model\InitiatorType")) {
                 return $this->_propDict["initiatorType"];
             } else {
                 $this->_propDict["initiatorType"] = new InitiatorType($this->_propDict["initiatorType"]);

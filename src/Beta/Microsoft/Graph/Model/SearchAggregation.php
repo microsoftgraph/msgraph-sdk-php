@@ -33,7 +33,7 @@ class SearchAggregation extends Entity
     public function getBuckets()
     {
         if (array_key_exists("buckets", $this->_propDict)) {
-            if (is_a($this->_propDict["buckets"], "\Beta\Microsoft\Graph\Model\SearchBucket")) {
+            if (is_a($this->_propDict["buckets"], "Beta\Microsoft\Graph\Model\SearchBucket")) {
                 return $this->_propDict["buckets"];
             } else {
                 $this->_propDict["buckets"] = new SearchBucket($this->_propDict["buckets"]);

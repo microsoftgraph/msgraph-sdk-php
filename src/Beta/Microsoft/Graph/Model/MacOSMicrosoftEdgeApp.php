@@ -33,7 +33,7 @@ class MacOSMicrosoftEdgeApp extends MobileApp
     public function getChannel()
     {
         if (array_key_exists("channel", $this->_propDict)) {
-            if (is_a($this->_propDict["channel"], "\Beta\Microsoft\Graph\Model\MicrosoftEdgeChannel")) {
+            if (is_a($this->_propDict["channel"], "Beta\Microsoft\Graph\Model\MicrosoftEdgeChannel")) {
                 return $this->_propDict["channel"];
             } else {
                 $this->_propDict["channel"] = new MicrosoftEdgeChannel($this->_propDict["channel"]);

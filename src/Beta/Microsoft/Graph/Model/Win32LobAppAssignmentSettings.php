@@ -42,7 +42,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     public function getDeliveryOptimizationPriority()
     {
         if (array_key_exists("deliveryOptimizationPriority", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationPriority"], "\Beta\Microsoft\Graph\Model\Win32LobAppDeliveryOptimizationPriority")) {
+            if (is_a($this->_propDict["deliveryOptimizationPriority"], "Beta\Microsoft\Graph\Model\Win32LobAppDeliveryOptimizationPriority")) {
                 return $this->_propDict["deliveryOptimizationPriority"];
             } else {
                 $this->_propDict["deliveryOptimizationPriority"] = new Win32LobAppDeliveryOptimizationPriority($this->_propDict["deliveryOptimizationPriority"]);
@@ -75,7 +75,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     public function getInstallTimeSettings()
     {
         if (array_key_exists("installTimeSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["installTimeSettings"], "\Beta\Microsoft\Graph\Model\MobileAppInstallTimeSettings")) {
+            if (is_a($this->_propDict["installTimeSettings"], "Beta\Microsoft\Graph\Model\MobileAppInstallTimeSettings")) {
                 return $this->_propDict["installTimeSettings"];
             } else {
                 $this->_propDict["installTimeSettings"] = new MobileAppInstallTimeSettings($this->_propDict["installTimeSettings"]);
@@ -108,7 +108,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     public function getNotifications()
     {
         if (array_key_exists("notifications", $this->_propDict)) {
-            if (is_a($this->_propDict["notifications"], "\Beta\Microsoft\Graph\Model\Win32LobAppNotification")) {
+            if (is_a($this->_propDict["notifications"], "Beta\Microsoft\Graph\Model\Win32LobAppNotification")) {
                 return $this->_propDict["notifications"];
             } else {
                 $this->_propDict["notifications"] = new Win32LobAppNotification($this->_propDict["notifications"]);
@@ -141,7 +141,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     public function getRestartSettings()
     {
         if (array_key_exists("restartSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["restartSettings"], "\Beta\Microsoft\Graph\Model\Win32LobAppRestartSettings")) {
+            if (is_a($this->_propDict["restartSettings"], "Beta\Microsoft\Graph\Model\Win32LobAppRestartSettings")) {
                 return $this->_propDict["restartSettings"];
             } else {
                 $this->_propDict["restartSettings"] = new Win32LobAppRestartSettings($this->_propDict["restartSettings"]);

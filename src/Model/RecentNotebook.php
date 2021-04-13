@@ -94,7 +94,7 @@ class RecentNotebook extends Entity
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\RecentNotebookLinks")) {
+            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\RecentNotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new RecentNotebookLinks($this->_propDict["links"]);
@@ -127,7 +127,7 @@ class RecentNotebook extends Entity
     public function getSourceService()
     {
         if (array_key_exists("sourceService", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceService"], "\Microsoft\Graph\Model\OnenoteSourceService")) {
+            if (is_a($this->_propDict["sourceService"], "Microsoft\Graph\Model\OnenoteSourceService")) {
                 return $this->_propDict["sourceService"];
             } else {
                 $this->_propDict["sourceService"] = new OnenoteSourceService($this->_propDict["sourceService"]);

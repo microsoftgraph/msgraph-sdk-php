@@ -84,7 +84,7 @@ class UserPrintUsageSummary extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["user"], "Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new Identity($this->_propDict["user"]);

@@ -33,7 +33,7 @@ class PlannerTaskCreation extends Entity
     public function getTeamsPublicationInfo()
     {
         if (array_key_exists("teamsPublicationInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsPublicationInfo"], "\Beta\Microsoft\Graph\Model\PlannerTeamsPublicationInfo")) {
+            if (is_a($this->_propDict["teamsPublicationInfo"], "Beta\Microsoft\Graph\Model\PlannerTeamsPublicationInfo")) {
                 return $this->_propDict["teamsPublicationInfo"];
             } else {
                 $this->_propDict["teamsPublicationInfo"] = new PlannerTeamsPublicationInfo($this->_propDict["teamsPublicationInfo"]);

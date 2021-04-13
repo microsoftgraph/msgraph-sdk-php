@@ -33,7 +33,7 @@ class ConditionalAccessSessionControls extends Entity
     public function getApplicationEnforcedRestrictions()
     {
         if (array_key_exists("applicationEnforcedRestrictions", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationEnforcedRestrictions"], "\Beta\Microsoft\Graph\Model\ApplicationEnforcedRestrictionsSessionControl")) {
+            if (is_a($this->_propDict["applicationEnforcedRestrictions"], "Beta\Microsoft\Graph\Model\ApplicationEnforcedRestrictionsSessionControl")) {
                 return $this->_propDict["applicationEnforcedRestrictions"];
             } else {
                 $this->_propDict["applicationEnforcedRestrictions"] = new ApplicationEnforcedRestrictionsSessionControl($this->_propDict["applicationEnforcedRestrictions"]);
@@ -66,7 +66,7 @@ class ConditionalAccessSessionControls extends Entity
     public function getCloudAppSecurity()
     {
         if (array_key_exists("cloudAppSecurity", $this->_propDict)) {
-            if (is_a($this->_propDict["cloudAppSecurity"], "\Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControl")) {
+            if (is_a($this->_propDict["cloudAppSecurity"], "Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControl")) {
                 return $this->_propDict["cloudAppSecurity"];
             } else {
                 $this->_propDict["cloudAppSecurity"] = new CloudAppSecuritySessionControl($this->_propDict["cloudAppSecurity"]);
@@ -99,7 +99,7 @@ class ConditionalAccessSessionControls extends Entity
     public function getPersistentBrowser()
     {
         if (array_key_exists("persistentBrowser", $this->_propDict)) {
-            if (is_a($this->_propDict["persistentBrowser"], "\Beta\Microsoft\Graph\Model\PersistentBrowserSessionControl")) {
+            if (is_a($this->_propDict["persistentBrowser"], "Beta\Microsoft\Graph\Model\PersistentBrowserSessionControl")) {
                 return $this->_propDict["persistentBrowser"];
             } else {
                 $this->_propDict["persistentBrowser"] = new PersistentBrowserSessionControl($this->_propDict["persistentBrowser"]);
@@ -132,7 +132,7 @@ class ConditionalAccessSessionControls extends Entity
     public function getSignInFrequency()
     {
         if (array_key_exists("signInFrequency", $this->_propDict)) {
-            if (is_a($this->_propDict["signInFrequency"], "\Beta\Microsoft\Graph\Model\SignInFrequencySessionControl")) {
+            if (is_a($this->_propDict["signInFrequency"], "Beta\Microsoft\Graph\Model\SignInFrequencySessionControl")) {
                 return $this->_propDict["signInFrequency"];
             } else {
                 $this->_propDict["signInFrequency"] = new SignInFrequencySessionControl($this->_propDict["signInFrequency"]);

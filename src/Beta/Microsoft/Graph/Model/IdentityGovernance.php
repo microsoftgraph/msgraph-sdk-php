@@ -60,7 +60,7 @@ class IdentityGovernance implements \JsonSerializable
     public function getAccessReviews()
     {
         if (array_key_exists("accessReviews", $this->_propDict)) {
-            if (is_a($this->_propDict["accessReviews"], "\Beta\Microsoft\Graph\Model\AccessReviewSet")) {
+            if (is_a($this->_propDict["accessReviews"], "Beta\Microsoft\Graph\Model\AccessReviewSet")) {
                 return $this->_propDict["accessReviews"];
             } else {
                 $this->_propDict["accessReviews"] = new AccessReviewSet($this->_propDict["accessReviews"]);
@@ -91,7 +91,7 @@ class IdentityGovernance implements \JsonSerializable
     public function getAppConsent()
     {
         if (array_key_exists("appConsent", $this->_propDict)) {
-            if (is_a($this->_propDict["appConsent"], "\Beta\Microsoft\Graph\Model\AppConsentApprovalRoute")) {
+            if (is_a($this->_propDict["appConsent"], "Beta\Microsoft\Graph\Model\AppConsentApprovalRoute")) {
                 return $this->_propDict["appConsent"];
             } else {
                 $this->_propDict["appConsent"] = new AppConsentApprovalRoute($this->_propDict["appConsent"]);
@@ -122,7 +122,7 @@ class IdentityGovernance implements \JsonSerializable
     public function getTermsOfUse()
     {
         if (array_key_exists("termsOfUse", $this->_propDict)) {
-            if (is_a($this->_propDict["termsOfUse"], "\Beta\Microsoft\Graph\Model\TermsOfUseContainer")) {
+            if (is_a($this->_propDict["termsOfUse"], "Beta\Microsoft\Graph\Model\TermsOfUseContainer")) {
                 return $this->_propDict["termsOfUse"];
             } else {
                 $this->_propDict["termsOfUse"] = new TermsOfUseContainer($this->_propDict["termsOfUse"]);
@@ -153,7 +153,7 @@ class IdentityGovernance implements \JsonSerializable
     public function getEntitlementManagement()
     {
         if (array_key_exists("entitlementManagement", $this->_propDict)) {
-            if (is_a($this->_propDict["entitlementManagement"], "\Beta\Microsoft\Graph\Model\EntitlementManagement")) {
+            if (is_a($this->_propDict["entitlementManagement"], "Beta\Microsoft\Graph\Model\EntitlementManagement")) {
                 return $this->_propDict["entitlementManagement"];
             } else {
                 $this->_propDict["entitlementManagement"] = new EntitlementManagement($this->_propDict["entitlementManagement"]);

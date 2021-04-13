@@ -1,0 +1,140 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* IdentitySet File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* IdentitySet class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class IdentitySet
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * IdentitySet constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the application
+    *
+    * @return Identity The application
+    */
+    public function getApplication()
+    {
+        if (array_key_exists("application", $this->propDict)) {
+            if (is_a($this->propDict["application"], 'Identity')) {
+                return $this->propDict["application"];
+            } else {
+                $this->propDict["application"] = new Identity($this->propDict["application"]);
+                return $this->propDict["application"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the application
+    *
+    * @param Identity $val The value to assign to the application
+    *
+    * @return null
+    */
+    public function setApplication($val)
+    {
+        $this->propDict["application"] = $val;
+    }
+
+    /**
+    * Gets the device
+    *
+    * @return Identity The device
+    */
+    public function getDevice()
+    {
+        if (array_key_exists("device", $this->propDict)) {
+            if (is_a($this->propDict["device"], 'Identity')) {
+                return $this->propDict["device"];
+            } else {
+                $this->propDict["device"] = new Identity($this->propDict["device"]);
+                return $this->propDict["device"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the device
+    *
+    * @param Identity $val The value to assign to the device
+    *
+    * @return null
+    */
+    public function setDevice($val)
+    {
+        $this->propDict["device"] = $val;
+    }
+
+    /**
+    * Gets the user
+    *
+    * @return Identity The user
+    */
+    public function getUser()
+    {
+        if (array_key_exists("user", $this->propDict)) {
+            if (is_a($this->propDict["user"], 'Identity')) {
+                return $this->propDict["user"];
+            } else {
+                $this->propDict["user"] = new Identity($this->propDict["user"]);
+                return $this->propDict["user"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the user
+    *
+    * @param Identity $val The value to assign to the user
+    *
+    * @return null
+    */
+    public function setUser($val)
+    {
+        $this->propDict["user"] = $val;
+    }
+}
+

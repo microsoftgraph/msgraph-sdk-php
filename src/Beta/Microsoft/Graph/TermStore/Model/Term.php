@@ -90,7 +90,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the labels
-    * Label metadata for a term
      *
      * @return array The labels
      */
@@ -105,7 +104,6 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the labels
-    * Label metadata for a term
     *
     * @param LocalizedLabel $val The labels
     *
@@ -170,7 +168,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the termProperties
     * Collection of properties on the term
     *
-    * @param \Beta\Microsoft\Graph\Model\KeyValue $val The termProperties
+    * @param Beta\Microsoft\Graph\Model\KeyValue $val The termProperties
     *
     * @return Term
     */
@@ -249,7 +247,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     public function getSet()
     {
         if (array_key_exists("set", $this->_propDict)) {
-            if (is_a($this->_propDict["set"], "\Beta\Microsoft\Graph\TermStore\Model\Set")) {
+            if (is_a($this->_propDict["set"], "Beta\Microsoft\Graph\TermStore\Model\Set")) {
                 return $this->_propDict["set"];
             } else {
                 $this->_propDict["set"] = new Set($this->_propDict["set"]);

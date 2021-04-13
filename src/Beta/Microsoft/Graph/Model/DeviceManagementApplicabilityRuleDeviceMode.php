@@ -33,7 +33,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
     public function getDeviceMode()
     {
         if (array_key_exists("deviceMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceMode"], "\Beta\Microsoft\Graph\Model\Windows10DeviceModeType")) {
+            if (is_a($this->_propDict["deviceMode"], "Beta\Microsoft\Graph\Model\Windows10DeviceModeType")) {
                 return $this->_propDict["deviceMode"];
             } else {
                 $this->_propDict["deviceMode"] = new Windows10DeviceModeType($this->_propDict["deviceMode"]);
@@ -94,7 +94,7 @@ class DeviceManagementApplicabilityRuleDeviceMode extends Entity
     public function getRuleType()
     {
         if (array_key_exists("ruleType", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleType"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType")) {
+            if (is_a($this->_propDict["ruleType"], "Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType")) {
                 return $this->_propDict["ruleType"];
             } else {
                 $this->_propDict["ruleType"] = new DeviceManagementApplicabilityRuleType($this->_propDict["ruleType"]);

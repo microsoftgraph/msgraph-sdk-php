@@ -33,7 +33,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     public function getDataType()
     {
         if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "\Beta\Microsoft\Graph\Model\AndroidForWorkAppConfigurationSchemaItemDataType")) {
+            if (is_a($this->_propDict["dataType"], "Beta\Microsoft\Graph\Model\AndroidForWorkAppConfigurationSchemaItemDataType")) {
                 return $this->_propDict["dataType"];
             } else {
                 $this->_propDict["dataType"] = new AndroidForWorkAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
@@ -262,7 +262,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     public function getSelections()
     {
         if (array_key_exists("selections", $this->_propDict)) {
-            if (is_a($this->_propDict["selections"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["selections"], "Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["selections"];
             } else {
                 $this->_propDict["selections"] = new KeyValuePair($this->_propDict["selections"]);

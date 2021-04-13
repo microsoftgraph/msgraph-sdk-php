@@ -1,0 +1,169 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* ContactFolder File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* ContactFolder class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class ContactFolder
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new ContactFolder
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the ContactFolder
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the parentFolderId
+    *
+    * @return string The parentFolderId
+    */
+    public function getParentFolderId()
+    {
+        if (array_key_exists("parentFolderId", $this->_propDict)) {
+            return $this->_propDict["parentFolderId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the parentFolderId
+    *
+    * @param string $val The parentFolderId
+    *
+    * @return null
+    */
+    public function setParentFolderId($val)
+    {
+        $this->propDict["parentFolderId"] = $val;
+    }
+
+    /**
+    * Gets the displayName
+    *
+    * @return string The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the displayName
+    *
+    * @param string $val The displayName
+    *
+    * @return null
+    */
+    public function setDisplayName($val)
+    {
+        $this->propDict["displayName"] = $val;
+    }
+
+    /** 
+    * Gets the contacts
+    *
+    * @return ContactsCollectionPage The contacts
+    */
+    public function getContacts()
+    {
+        if (array_key_exists("contacts", $this->_propDict)) {
+            return ContactsCollectionPage($this->_propDict["contacts"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the childFolders
+    *
+    * @return ChildFoldersCollectionPage The childFolders
+    */
+    public function getChildFolders()
+    {
+        if (array_key_exists("childFolders", $this->_propDict)) {
+            return ChildFoldersCollectionPage($this->_propDict["childFolders"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the singleValueExtendedProperties
+    *
+    * @return SingleValueExtendedPropertiesCollectionPage The singleValueExtendedProperties
+    */
+    public function getSingleValueExtendedProperties()
+    {
+        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
+            return SingleValueExtendedPropertiesCollectionPage($this->_propDict["singleValueExtendedProperties"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the multiValueExtendedProperties
+    *
+    * @return MultiValueExtendedPropertiesCollectionPage The multiValueExtendedProperties
+    */
+    public function getMultiValueExtendedProperties()
+    {
+        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
+            return MultiValueExtendedPropertiesCollectionPage($this->_propDict["multiValueExtendedProperties"]);
+        } else {
+            return null;
+        }
+    }
+
+}

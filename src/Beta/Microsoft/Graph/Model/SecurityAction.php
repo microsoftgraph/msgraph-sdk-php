@@ -140,7 +140,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the completedDateTime
-    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The completedDateTime
     */
@@ -159,7 +159,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the completedDateTime
-    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -173,7 +173,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the createdDateTime
-    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -192,7 +192,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the createdDateTime
-    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -213,7 +213,7 @@ class SecurityAction extends Entity
     public function getErrorInfo()
     {
         if (array_key_exists("errorInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["errorInfo"], "\Beta\Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["errorInfo"], "Beta\Microsoft\Graph\Model\ResultInfo")) {
                 return $this->_propDict["errorInfo"];
             } else {
                 $this->_propDict["errorInfo"] = new ResultInfo($this->_propDict["errorInfo"]);
@@ -239,7 +239,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the lastActionDateTime
-    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastActionDateTime
     */
@@ -258,7 +258,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the lastActionDateTime
-    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastActionDateTime
     *
@@ -368,7 +368,7 @@ class SecurityAction extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -430,7 +430,7 @@ class SecurityAction extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

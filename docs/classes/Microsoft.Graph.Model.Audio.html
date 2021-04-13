@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Microsoft.html">\Microsoft</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2081643181"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-2081643181" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1888711382"></a>
+                                <a href="../namespaces/Microsoft.html" style="margin-left: 30px; padding-left: 0">Microsoft</a>
+            </div>
+            <div id="namespace-1888711382" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-925748602"></a>
+                                <a href="../namespaces/Microsoft.Graph.html" style="margin-left: 30px; padding-left: 0">Graph</a>
+            </div>
+            <div id="namespace-925748602" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-538199964"></a>
+                                <a href="../namespaces/Microsoft.Graph.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-538199964" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Core.Enum.html">Enum</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-231373974"></a>
+                                <a href="../namespaces/Microsoft.Graph.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-231373974" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Exception.GraphException.html">GraphException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1295741956"></a>
+                                <a href="../namespaces/Microsoft.Graph.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
+            </div>
+            <div id="namespace-1295741956" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Http.GraphCollectionRequest.html">GraphCollectionRequest</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Http.GraphRequest.html">GraphRequest</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Http.GraphResponse.html">GraphResponse</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1362527191"></a>
+                                <a href="../namespaces/Microsoft.Graph.Model.html" style="margin-left: 30px; padding-left: 0">Model</a>
+            </div>
+            <div id="namespace-1362527191" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AlternativeSecurityId.html">AlternativeSecurityId</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AssignedLicense.html">AssignedLicense</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AssignedPlan.html">AssignedPlan</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Attachment.html">Attachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Attendee.html">Attendee</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AttendeeType.html">AttendeeType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Audio.html">Audio</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AutomaticRepliesSetting.html">AutomaticRepliesSetting</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AutomaticRepliesStatus.html">AutomaticRepliesStatus</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.BodyType.html">BodyType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Calendar.html">Calendar</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.CalendarColor.html">CalendarColor</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.CalendarGroup.html">CalendarGroup</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Contact.html">Contact</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ContactFolder.html">ContactFolder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Conversation.html">Conversation</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ConversationThread.html">ConversationThread</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DateTimeTimeZone.html">DateTimeTimeZone</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DayOfWeek.html">DayOfWeek</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Deleted.html">Deleted</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Device.html">Device</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DirectoryObject.html">DirectoryObject</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DirectoryRole.html">DirectoryRole</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DirectoryRoleTemplate.html">DirectoryRoleTemplate</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Drive.html">Drive</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DriveItem.html">DriveItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DriveItemUploadableProperties.html">DriveItemUploadableProperties</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DriveRecipient.html">DriveRecipient</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.EmailAddress.html">EmailAddress</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Entity.html">Entity</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Event.html">Event</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.EventMessage.html">EventMessage</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.EventType.html">EventType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Extension.html">Extension</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ExternalAudienceScope.html">ExternalAudienceScope</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.File.html">File</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.FileAttachment.html">FileAttachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.FileSystemInfo.html">FileSystemInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Folder.html">Folder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.FreeBusyStatus.html">FreeBusyStatus</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.GeoCoordinates.html">GeoCoordinates</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Group.html">Group</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Hashes.html">Hashes</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Identity.html">Identity</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.IdentitySet.html">IdentitySet</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Image.html">Image</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Importance.html">Importance</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.InferenceClassification.html">InferenceClassification</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.InferenceClassificationOverride.html">InferenceClassificationOverride</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.InferenceClassificationType.html">InferenceClassificationType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ItemAttachment.html">ItemAttachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ItemBody.html">ItemBody</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ItemReference.html">ItemReference</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.LicenseUnitsDetail.html">LicenseUnitsDetail</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.LocaleInfo.html">LocaleInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Location.html">Location</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MailboxSettings.html">MailboxSettings</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MailFolder.html">MailFolder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MeetingMessageType.html">MeetingMessageType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Message.html">Message</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MultiValueLegacyExtendedProperty.html">MultiValueLegacyExtendedProperty</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.OpenTypeExtension.html">OpenTypeExtension</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Organization.html">Organization</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.OutlookItem.html">OutlookItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Package.html">Package</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.PasswordProfile.html">PasswordProfile</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.PatternedRecurrence.html">PatternedRecurrence</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Permission.html">Permission</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Photo.html">Photo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.PhysicalAddress.html">PhysicalAddress</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Post.html">Post</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ProfilePhoto.html">ProfilePhoto</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ProvisionedPlan.html">ProvisionedPlan</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Quota.html">Quota</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Recipient.html">Recipient</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrencePattern.html">RecurrencePattern</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrencePatternType.html">RecurrencePatternType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrenceRange.html">RecurrenceRange</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrenceRangeType.html">RecurrenceRangeType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ReferenceAttachment.html">ReferenceAttachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Reminder.html">Reminder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RemoteItem.html">RemoteItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ResponseStatus.html">ResponseStatus</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ResponseType.html">ResponseType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Root.html">Root</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SearchResult.html">SearchResult</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ServicePlanInfo.html">ServicePlanInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Shared.html">Shared</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharedDriveItem.html">SharedDriveItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharepointIds.html">SharepointIds</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharingInvitation.html">SharingInvitation</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharingLink.html">SharingLink</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SingleValueLegacyExtendedProperty.html">SingleValueLegacyExtendedProperty</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SpecialFolder.html">SpecialFolder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SubscribedSku.html">SubscribedSku</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Subscription.html">Subscription</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Thumbnail.html">Thumbnail</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ThumbnailSet.html">ThumbnailSet</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.UploadSession.html">UploadSession</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.User.html">User</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.VerifiedDomain.html">VerifiedDomain</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Video.html">Video</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WeekIndex.html">WeekIndex</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Workbook.html">Workbook</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookApplication.html">WorkbookApplication</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChart.html">WorkbookChart</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAreaFormat.html">WorkbookChartAreaFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxes.html">WorkbookChartAxes</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxis.html">WorkbookChartAxis</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxisFormat.html">WorkbookChartAxisFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxisTitle.html">WorkbookChartAxisTitle</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxisTitleFormat.html">WorkbookChartAxisTitleFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartDataLabelFormat.html">WorkbookChartDataLabelFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartDataLabels.html">WorkbookChartDataLabels</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartFill.html">WorkbookChartFill</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartFont.html">WorkbookChartFont</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartGridlines.html">WorkbookChartGridlines</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartGridlinesFormat.html">WorkbookChartGridlinesFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartLegend.html">WorkbookChartLegend</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartLegendFormat.html">WorkbookChartLegendFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartLineFormat.html">WorkbookChartLineFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartPoint.html">WorkbookChartPoint</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartPointFormat.html">WorkbookChartPointFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartSeries.html">WorkbookChartSeries</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartSeriesFormat.html">WorkbookChartSeriesFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartTitle.html">WorkbookChartTitle</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartTitleFormat.html">WorkbookChartTitleFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFilter.html">WorkbookFilter</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFilterCriteria.html">WorkbookFilterCriteria</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFilterDatetime.html">WorkbookFilterDatetime</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFormatProtection.html">WorkbookFormatProtection</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFunctionResult.html">WorkbookFunctionResult</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFunctions.html">WorkbookFunctions</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookIcon.html">WorkbookIcon</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookNamedItem.html">WorkbookNamedItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRange.html">WorkbookRange</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeBorder.html">WorkbookRangeBorder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeFill.html">WorkbookRangeFill</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeFont.html">WorkbookRangeFont</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeFormat.html">WorkbookRangeFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeReference.html">WorkbookRangeReference</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeSort.html">WorkbookRangeSort</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookSessionInfo.html">WorkbookSessionInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookSortField.html">WorkbookSortField</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTable.html">WorkbookTable</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTableColumn.html">WorkbookTableColumn</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTableRow.html">WorkbookTableRow</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTableSort.html">WorkbookTableSort</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookWorksheet.html">WorkbookWorksheet</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookWorksheetProtection.html">WorkbookWorksheetProtection</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookWorksheetProtectionOptions.html">WorkbookWorksheetProtectionOptions</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Graph.html">Graph</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Microsoft.Graph.Model.html">\Microsoft\Graph\Model</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Microsoft\Graph\Model</small>Audio</h1>
+                    <p><em>Audio class</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getAlbum" class="">getAlbum()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setAlbum" class="">setAlbum()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getAlbumArtist" class="">getAlbumArtist()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setAlbumArtist" class="">setAlbumArtist()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getArtist" class="">getArtist()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setArtist" class="">setArtist()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getBitrate" class="">getBitrate()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setBitrate" class="">setBitrate()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getComposers" class="">getComposers()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setComposers" class="">setComposers()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getCopyright" class="">getCopyright()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setCopyright" class="">setCopyright()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getDisc" class="">getDisc()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setDisc" class="">setDisc()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getDiscCount" class="">getDiscCount()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setDiscCount" class="">setDiscCount()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getDuration" class="">getDuration()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setDuration" class="">setDuration()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getGenre" class="">getGenre()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setGenre" class="">setGenre()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getHasDrm" class="">getHasDrm()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setHasDrm" class="">setHasDrm()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getIsVariableBitrate" class="">getIsVariableBitrate()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setIsVariableBitrate" class="">setIsVariableBitrate()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getTitle" class="">getTitle()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setTitle" class="">setTitle()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getTrack" class="">getTrack()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setTrack" class="">setTrack()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getTrackCount" class="">getTrackCount()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setTrackCount" class="">setTrackCount()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_getYear" class="">getYear()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#method_setYear" class="">setYear()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Microsoft.Graph.Model.Audio.html#property__propDict" class="">$_propDict</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Model.Audio.html"><div class="path-wrapper">Model\Audio.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Microsoft.Graph</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Microsoft\Graph\Model\Audio</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                            <dt>See also</dt>
+                                                                                        <dd><a href="https://graph.microsoft.io/"><span class="namespace-wrapper">https://graph.microsoft.io/</span></a></dd>
+                                                    
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                category
+                            </th>
+                            <td>
+                                                                    <p>Model</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Caitlin Bales <a href="mailto:caitbal@microsoft.com">caitbal@microsoft.com</a></p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                copyright
+                            </th>
+                            <td>
+                                                                    <p>2016 Microsoft Corporation</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                license
+                            </th>
+                            <td>
+                                                                    <p><a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a> MIT License</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                version
+                            </th>
+                            <td>
+                                                                    <p>Release: 0.1.0</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property__propDict" name="property__propDict" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$_propDict</h3>
+                <pre class="signature">$_propDict : \Microsoft\Graph\Model\array(string</pre>
+                <p><em>The array of properties available
+to the model</em></p>
+                
+
+                                <h4>Type</h4>
+                \Microsoft\Graph\Model\array(string
+                &mdash; =&gt; string)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$propDict = array()</span>) : null</pre>
+                <p><em>Audio constructor</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$propDict </td>
+                                <td><p>List of properties to set
+Defaults to an empty array</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAlbum" name="method_getAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAlbum() : string</pre>
+                <p><em>Gets the album</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The album</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setAlbum" name="method_setAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setAlbum(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the album</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The value of the album</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAlbumArtist" name="method_getAlbumArtist" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAlbumArtist()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAlbumArtist() : string</pre>
+                <p><em>Gets the albumArtist</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The albumArtist</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setAlbumArtist" name="method_setAlbumArtist" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setAlbumArtist()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setAlbumArtist(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the albumArtist</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The value of the albumArtist</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getArtist" name="method_getArtist" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getArtist()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getArtist() : string</pre>
+                <p><em>Gets the artist</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The artist</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setArtist" name="method_setArtist" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setArtist()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setArtist(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the artist</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The value of the artist</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBitrate" name="method_getBitrate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getBitrate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBitrate() : integer</pre>
+                <p><em>Gets the bitrate</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The bitrate</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setBitrate" name="method_setBitrate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setBitrate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setBitrate(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the bitrate</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The value of the bitrate</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getComposers" name="method_getComposers" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getComposers()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getComposers() : string</pre>
+                <p><em>Gets the composers</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The composers</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setComposers" name="method_setComposers" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setComposers()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setComposers(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the composers</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The value of the composers</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCopyright" name="method_getCopyright" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCopyright()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCopyright() : string</pre>
+                <p><em>Gets the copyright</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The copyright</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setCopyright" name="method_setCopyright" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setCopyright()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setCopyright(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the copyright</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The value of the copyright</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDisc" name="method_getDisc" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDisc()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDisc() : integer</pre>
+                <p><em>Gets the disc</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The disc</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setDisc" name="method_setDisc" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setDisc()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setDisc(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the disc</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The value of the disc</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDiscCount" name="method_getDiscCount" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDiscCount()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDiscCount() : integer</pre>
+                <p><em>Gets the discCount</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The discCount</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setDiscCount" name="method_setDiscCount" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setDiscCount()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setDiscCount(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the discCount</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The value of the discCount</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDuration" name="method_getDuration" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDuration()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDuration() : integer</pre>
+                <p><em>Gets the duration</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The duration</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setDuration" name="method_setDuration" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setDuration()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setDuration(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the duration</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The value of the duration</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getGenre" name="method_getGenre" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getGenre()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getGenre() : string</pre>
+                <p><em>Gets the genre</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The genre</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setGenre" name="method_setGenre" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setGenre()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setGenre(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the genre</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The value of the genre</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getHasDrm" name="method_getHasDrm" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getHasDrm()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getHasDrm() : boolean</pre>
+                <p><em>Gets the hasDrm</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The hasDrm</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setHasDrm" name="method_setHasDrm" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setHasDrm()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setHasDrm(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the hasDrm</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The value of the hasDrm</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getIsVariableBitrate" name="method_getIsVariableBitrate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getIsVariableBitrate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getIsVariableBitrate() : boolean</pre>
+                <p><em>Gets the isVariableBitrate</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The isVariableBitrate</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setIsVariableBitrate" name="method_setIsVariableBitrate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setIsVariableBitrate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setIsVariableBitrate(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the isVariableBitrate</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The value of the isVariableBitrate</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTitle" name="method_getTitle" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTitle()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTitle() : string</pre>
+                <p><em>Gets the title</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The title</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setTitle" name="method_setTitle" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setTitle()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setTitle(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the title</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The value of the title</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTrack" name="method_getTrack" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTrack()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTrack() : integer</pre>
+                <p><em>Gets the track</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The track</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setTrack" name="method_setTrack" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setTrack()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setTrack(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the track</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The value of the track</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTrackCount" name="method_getTrackCount" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTrackCount()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTrackCount() : integer</pre>
+                <p><em>Gets the trackCount</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The trackCount</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setTrackCount" name="method_setTrackCount" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setTrackCount()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setTrackCount(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the trackCount</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The value of the trackCount</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getYear" name="method_getYear" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getYear()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getYear() : integer</pre>
+                <p><em>Gets the year</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The year</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setYear" name="method_setYear" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setYear()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setYear(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the year</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The value of the year</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Audio.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Model\Audio.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Microsoft.html">\Microsoft</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on October 25th, 2016 at 23:02.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

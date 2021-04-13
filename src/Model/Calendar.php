@@ -56,7 +56,7 @@ class Calendar extends Entity
     
     /**
     * Gets the canEdit
-    * true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+    * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
     *
     * @return bool The canEdit
     */
@@ -71,7 +71,7 @@ class Calendar extends Entity
     
     /**
     * Sets the canEdit
-    * true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+    * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
     *
     * @param bool $val The canEdit
     *
@@ -85,7 +85,7 @@ class Calendar extends Entity
     
     /**
     * Gets the canShare
-    * true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+    * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
     *
     * @return bool The canShare
     */
@@ -100,7 +100,7 @@ class Calendar extends Entity
     
     /**
     * Sets the canShare
-    * true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+    * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
     *
     * @param bool $val The canShare
     *
@@ -114,7 +114,7 @@ class Calendar extends Entity
     
     /**
     * Gets the canViewPrivateItems
-    * true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+    * True if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
     *
     * @return bool The canViewPrivateItems
     */
@@ -129,7 +129,7 @@ class Calendar extends Entity
     
     /**
     * Sets the canViewPrivateItems
-    * true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+    * True if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
     *
     * @param bool $val The canViewPrivateItems
     *
@@ -172,14 +172,14 @@ class Calendar extends Entity
     
     /**
     * Gets the color
-    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
+    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @return CalendarColor The color
     */
     public function getColor()
     {
         if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "\Microsoft\Graph\Model\CalendarColor")) {
+            if (is_a($this->_propDict["color"], "Microsoft\Graph\Model\CalendarColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CalendarColor($this->_propDict["color"]);
@@ -191,7 +191,7 @@ class Calendar extends Entity
     
     /**
     * Sets the color
-    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
+    * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
     *
     * @param CalendarColor $val The color
     *
@@ -212,7 +212,7 @@ class Calendar extends Entity
     public function getDefaultOnlineMeetingProvider()
     {
         if (array_key_exists("defaultOnlineMeetingProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultOnlineMeetingProvider"], "\Microsoft\Graph\Model\OnlineMeetingProviderType")) {
+            if (is_a($this->_propDict["defaultOnlineMeetingProvider"], "Microsoft\Graph\Model\OnlineMeetingProviderType")) {
                 return $this->_propDict["defaultOnlineMeetingProvider"];
             } else {
                 $this->_propDict["defaultOnlineMeetingProvider"] = new OnlineMeetingProviderType($this->_propDict["defaultOnlineMeetingProvider"]);
@@ -238,7 +238,7 @@ class Calendar extends Entity
     
     /**
     * Gets the hexColor
-    * The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+    * The calendar color, expressed in a hex color code of three hexidecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
     *
     * @return string The hexColor
     */
@@ -253,7 +253,7 @@ class Calendar extends Entity
     
     /**
     * Sets the hexColor
-    * The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+    * The calendar color, expressed in a hex color code of three hexidecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
     *
     * @param string $val The hexColor
     *
@@ -267,7 +267,7 @@ class Calendar extends Entity
     
     /**
     * Gets the isDefaultCalendar
-    * true if this is the default calendar where new events are created by default, false otherwise.
+    * True if this is the default calendar where new events are created by default, false otherwise.
     *
     * @return bool The isDefaultCalendar
     */
@@ -282,7 +282,7 @@ class Calendar extends Entity
     
     /**
     * Sets the isDefaultCalendar
-    * true if this is the default calendar where new events are created by default, false otherwise.
+    * True if this is the default calendar where new events are created by default, false otherwise.
     *
     * @param bool $val The isDefaultCalendar
     *
@@ -390,7 +390,7 @@ class Calendar extends Entity
     public function getOwner()
     {
         if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "\Microsoft\Graph\Model\EmailAddress")) {
+            if (is_a($this->_propDict["owner"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new EmailAddress($this->_propDict["owner"]);

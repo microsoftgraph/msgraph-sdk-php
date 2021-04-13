@@ -66,7 +66,7 @@ class MobileAppTroubleshootingHistoryItem extends Entity
     public function getTroubleshootingErrorDetails()
     {
         if (array_key_exists("troubleshootingErrorDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["troubleshootingErrorDetails"], "\Beta\Microsoft\Graph\Model\DeviceManagementTroubleshootingErrorDetails")) {
+            if (is_a($this->_propDict["troubleshootingErrorDetails"], "Beta\Microsoft\Graph\Model\DeviceManagementTroubleshootingErrorDetails")) {
                 return $this->_propDict["troubleshootingErrorDetails"];
             } else {
                 $this->_propDict["troubleshootingErrorDetails"] = new DeviceManagementTroubleshootingErrorDetails($this->_propDict["troubleshootingErrorDetails"]);

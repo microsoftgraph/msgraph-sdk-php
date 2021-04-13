@@ -33,7 +33,7 @@ class ItemFacet extends Entity
     public function getAllowedAudiences()
     {
         if (array_key_exists("allowedAudiences", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAudiences"], "\Beta\Microsoft\Graph\Model\AllowedAudiences")) {
+            if (is_a($this->_propDict["allowedAudiences"], "Beta\Microsoft\Graph\Model\AllowedAudiences")) {
                 return $this->_propDict["allowedAudiences"];
             } else {
                 $this->_propDict["allowedAudiences"] = new AllowedAudiences($this->_propDict["allowedAudiences"]);
@@ -66,7 +66,7 @@ class ItemFacet extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -132,7 +132,7 @@ class ItemFacet extends Entity
     public function getInference()
     {
         if (array_key_exists("inference", $this->_propDict)) {
-            if (is_a($this->_propDict["inference"], "\Beta\Microsoft\Graph\Model\InferenceData")) {
+            if (is_a($this->_propDict["inference"], "Beta\Microsoft\Graph\Model\InferenceData")) {
                 return $this->_propDict["inference"];
             } else {
                 $this->_propDict["inference"] = new InferenceData($this->_propDict["inference"]);
@@ -192,7 +192,7 @@ class ItemFacet extends Entity
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -258,7 +258,7 @@ class ItemFacet extends Entity
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\PersonDataSources")) {
+            if (is_a($this->_propDict["source"], "Beta\Microsoft\Graph\Model\PersonDataSources")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new PersonDataSources($this->_propDict["source"]);

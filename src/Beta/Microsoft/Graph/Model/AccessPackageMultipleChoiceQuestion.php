@@ -70,7 +70,7 @@ class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion
     public function getChoices()
     {
         if (array_key_exists("choices", $this->_propDict)) {
-            if (is_a($this->_propDict["choices"], "\Beta\Microsoft\Graph\Model\AccessPackageAnswerChoice")) {
+            if (is_a($this->_propDict["choices"], "Beta\Microsoft\Graph\Model\AccessPackageAnswerChoice")) {
                 return $this->_propDict["choices"];
             } else {
                 $this->_propDict["choices"] = new AccessPackageAnswerChoice($this->_propDict["choices"]);

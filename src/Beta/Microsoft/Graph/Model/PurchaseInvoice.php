@@ -32,7 +32,7 @@ class PurchaseInvoice extends Entity
     public function getBuyFromAddress()
     {
         if (array_key_exists("buyFromAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["buyFromAddress"], "\Beta\Microsoft\Graph\Model\PostalAddressType")) {
+            if (is_a($this->_propDict["buyFromAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
                 return $this->_propDict["buyFromAddress"];
             } else {
                 $this->_propDict["buyFromAddress"] = new PostalAddressType($this->_propDict["buyFromAddress"]);
@@ -117,7 +117,7 @@ class PurchaseInvoice extends Entity
     public function getDiscountAmount()
     {
         if (array_key_exists("discountAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["discountAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["discountAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["discountAmount"];
             } else {
                 $this->_propDict["discountAmount"] = new Decimal($this->_propDict["discountAmount"]);
@@ -295,7 +295,7 @@ class PurchaseInvoice extends Entity
     public function getPayToAddress()
     {
         if (array_key_exists("payToAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["payToAddress"], "\Beta\Microsoft\Graph\Model\PostalAddressType")) {
+            if (is_a($this->_propDict["payToAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
                 return $this->_propDict["payToAddress"];
             } else {
                 $this->_propDict["payToAddress"] = new PostalAddressType($this->_propDict["payToAddress"]);
@@ -461,7 +461,7 @@ class PurchaseInvoice extends Entity
     public function getShipToAddress()
     {
         if (array_key_exists("shipToAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["shipToAddress"], "\Beta\Microsoft\Graph\Model\PostalAddressType")) {
+            if (is_a($this->_propDict["shipToAddress"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
                 return $this->_propDict["shipToAddress"];
             } else {
                 $this->_propDict["shipToAddress"] = new PostalAddressType($this->_propDict["shipToAddress"]);
@@ -573,7 +573,7 @@ class PurchaseInvoice extends Entity
     public function getTotalAmountExcludingTax()
     {
         if (array_key_exists("totalAmountExcludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["totalAmountExcludingTax"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["totalAmountExcludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["totalAmountExcludingTax"];
             } else {
                 $this->_propDict["totalAmountExcludingTax"] = new Decimal($this->_propDict["totalAmountExcludingTax"]);
@@ -604,7 +604,7 @@ class PurchaseInvoice extends Entity
     public function getTotalAmountIncludingTax()
     {
         if (array_key_exists("totalAmountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["totalAmountIncludingTax"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["totalAmountIncludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["totalAmountIncludingTax"];
             } else {
                 $this->_propDict["totalAmountIncludingTax"] = new Decimal($this->_propDict["totalAmountIncludingTax"]);
@@ -635,7 +635,7 @@ class PurchaseInvoice extends Entity
     public function getTotalTaxAmount()
     {
         if (array_key_exists("totalTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["totalTaxAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["totalTaxAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["totalTaxAmount"];
             } else {
                 $this->_propDict["totalTaxAmount"] = new Decimal($this->_propDict["totalTaxAmount"]);
@@ -774,7 +774,7 @@ class PurchaseInvoice extends Entity
     public function getCurrency()
     {
         if (array_key_exists("currency", $this->_propDict)) {
-            if (is_a($this->_propDict["currency"], "\Beta\Microsoft\Graph\Model\Currency")) {
+            if (is_a($this->_propDict["currency"], "Beta\Microsoft\Graph\Model\Currency")) {
                 return $this->_propDict["currency"];
             } else {
                 $this->_propDict["currency"] = new Currency($this->_propDict["currency"]);
@@ -833,7 +833,7 @@ class PurchaseInvoice extends Entity
     public function getVendor()
     {
         if (array_key_exists("vendor", $this->_propDict)) {
-            if (is_a($this->_propDict["vendor"], "\Beta\Microsoft\Graph\Model\Vendor")) {
+            if (is_a($this->_propDict["vendor"], "Beta\Microsoft\Graph\Model\Vendor")) {
                 return $this->_propDict["vendor"];
             } else {
                 $this->_propDict["vendor"] = new Vendor($this->_propDict["vendor"]);

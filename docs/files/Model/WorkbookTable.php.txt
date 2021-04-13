@@ -1,0 +1,251 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* WorkbookTable File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* WorkbookTable class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class WorkbookTable
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new WorkbookTable
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the WorkbookTable
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return null
+    */
+    public function setName($val)
+    {
+        $this->propDict["name"] = $val;
+    }
+
+    /**
+    * Gets the showHeaders
+    *
+    * @return bool The showHeaders
+    */
+    public function getShowHeaders()
+    {
+        if (array_key_exists("showHeaders", $this->_propDict)) {
+            return $this->_propDict["showHeaders"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the showHeaders
+    *
+    * @param bool $val The showHeaders
+    *
+    * @return null
+    */
+    public function setShowHeaders($val)
+    {
+        $this->propDict["showHeaders"] = boolval($val);
+    }
+
+    /**
+    * Gets the showTotals
+    *
+    * @return bool The showTotals
+    */
+    public function getShowTotals()
+    {
+        if (array_key_exists("showTotals", $this->_propDict)) {
+            return $this->_propDict["showTotals"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the showTotals
+    *
+    * @param bool $val The showTotals
+    *
+    * @return null
+    */
+    public function setShowTotals($val)
+    {
+        $this->propDict["showTotals"] = boolval($val);
+    }
+
+    /**
+    * Gets the style
+    *
+    * @return string The style
+    */
+    public function getStyle()
+    {
+        if (array_key_exists("style", $this->_propDict)) {
+            return $this->_propDict["style"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the style
+    *
+    * @param string $val The style
+    *
+    * @return null
+    */
+    public function setStyle($val)
+    {
+        $this->propDict["style"] = $val;
+    }
+
+    /** 
+    * Gets the columns
+    *
+    * @return ColumnsCollectionPage The columns
+    */
+    public function getColumns()
+    {
+        if (array_key_exists("columns", $this->_propDict)) {
+            return ColumnsCollectionPage($this->_propDict["columns"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the rows
+    *
+    * @return RowsCollectionPage The rows
+    */
+    public function getRows()
+    {
+        if (array_key_exists("rows", $this->_propDict)) {
+            return RowsCollectionPage($this->_propDict["rows"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+    * Gets the sort
+    *
+    * @return WorkbookTableSort The sort
+    */
+    public function getSort()
+    {
+        if (array_key_exists("sort", $this->_propDict)) {
+            if (is_a($this->_propDict["sort"], 'WorkbookTableSort')) {
+                return $this->_propDict["sort"];
+            } else {
+                $this->_propDict["sort"] = new WorkbookTableSort($this->_propDict["sort"]);
+                return $this->_propDict["sort"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sort
+    *
+    * @param string $val The sort
+    *
+    * @return null
+    */
+    public function setSort($val)
+    {
+        $this->propDict["sort"] = $val;
+    }
+
+    /**
+    * Gets the worksheet
+    *
+    * @return WorkbookWorksheet The worksheet
+    */
+    public function getWorksheet()
+    {
+        if (array_key_exists("worksheet", $this->_propDict)) {
+            if (is_a($this->_propDict["worksheet"], 'WorkbookWorksheet')) {
+                return $this->_propDict["worksheet"];
+            } else {
+                $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
+                return $this->_propDict["worksheet"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the worksheet
+    *
+    * @param string $val The worksheet
+    *
+    * @return null
+    */
+    public function setWorksheet($val)
+    {
+        $this->propDict["worksheet"] = $val;
+    }
+}

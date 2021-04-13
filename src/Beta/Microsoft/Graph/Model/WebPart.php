@@ -33,7 +33,7 @@ class WebPart extends Entity
     public function getData()
     {
         if (array_key_exists("data", $this->_propDict)) {
-            if (is_a($this->_propDict["data"], "\Beta\Microsoft\Graph\Model\SitePageData")) {
+            if (is_a($this->_propDict["data"], "Beta\Microsoft\Graph\Model\SitePageData")) {
                 return $this->_propDict["data"];
             } else {
                 $this->_propDict["data"] = new SitePageData($this->_propDict["data"]);

@@ -91,7 +91,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     public function getEncryption()
     {
         if (array_key_exists("encryption", $this->_propDict)) {
-            if (is_a($this->_propDict["encryption"], "\Microsoft\Graph\Model\WorkforceIntegrationEncryption")) {
+            if (is_a($this->_propDict["encryption"], "Microsoft\Graph\Model\WorkforceIntegrationEncryption")) {
                 return $this->_propDict["encryption"];
             } else {
                 $this->_propDict["encryption"] = new WorkforceIntegrationEncryption($this->_propDict["encryption"]);
@@ -153,7 +153,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     public function getSupportedEntities()
     {
         if (array_key_exists("supportedEntities", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedEntities"], "\Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities")) {
+            if (is_a($this->_propDict["supportedEntities"], "Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities")) {
                 return $this->_propDict["supportedEntities"];
             } else {
                 $this->_propDict["supportedEntities"] = new WorkforceIntegrationSupportedEntities($this->_propDict["supportedEntities"]);

@@ -32,7 +32,7 @@ class ExactMatchClassificationResult extends Entity
     public function getClassification()
     {
         if (array_key_exists("classification", $this->_propDict)) {
-            if (is_a($this->_propDict["classification"], "\Beta\Microsoft\Graph\Model\ExactMatchDetectedSensitiveContent")) {
+            if (is_a($this->_propDict["classification"], "Beta\Microsoft\Graph\Model\ExactMatchDetectedSensitiveContent")) {
                 return $this->_propDict["classification"];
             } else {
                 $this->_propDict["classification"] = new ExactMatchDetectedSensitiveContent($this->_propDict["classification"]);
@@ -63,7 +63,7 @@ class ExactMatchClassificationResult extends Entity
     public function getErrors()
     {
         if (array_key_exists("errors", $this->_propDict)) {
-            if (is_a($this->_propDict["errors"], "\Beta\Microsoft\Graph\Model\ClassificationError")) {
+            if (is_a($this->_propDict["errors"], "Beta\Microsoft\Graph\Model\ClassificationError")) {
                 return $this->_propDict["errors"];
             } else {
                 $this->_propDict["errors"] = new ClassificationError($this->_propDict["errors"]);

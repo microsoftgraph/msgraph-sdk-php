@@ -313,7 +313,7 @@ class SynchronizationTaskExecution extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\SynchronizationError")) {
+            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\SynchronizationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
@@ -346,7 +346,7 @@ class SynchronizationTaskExecution extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SynchronizationTaskExecutionResult($this->_propDict["state"]);
@@ -372,7 +372,7 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Gets the timeBegan
-    * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The timeBegan
     */
@@ -391,7 +391,7 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the timeBegan
-    * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the timeBegan
     *
@@ -405,7 +405,7 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Gets the timeEnded
-    * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The timeEnded
     */
@@ -424,7 +424,7 @@ class SynchronizationTaskExecution extends Entity
 
     /**
     * Sets the timeEnded
-    * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the timeEnded
     *

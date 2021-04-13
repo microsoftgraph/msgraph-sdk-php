@@ -25,7 +25,6 @@ class TermColumn extends Entity
 {
     /**
     * Gets the allowMultipleValues
-    * Specifies whether the column will allow more than one value
     *
     * @return bool The allowMultipleValues
     */
@@ -40,7 +39,6 @@ class TermColumn extends Entity
 
     /**
     * Sets the allowMultipleValues
-    * Specifies whether the column will allow more than one value
     *
     * @param bool $val The value of the allowMultipleValues
     *
@@ -53,7 +51,6 @@ class TermColumn extends Entity
     }
     /**
     * Gets the showFullyQualifiedName
-    * Specifies whether to display the entire term path or only the term label.
     *
     * @return bool The showFullyQualifiedName
     */
@@ -68,7 +65,6 @@ class TermColumn extends Entity
 
     /**
     * Sets the showFullyQualifiedName
-    * Specifies whether to display the entire term path or only the term label.
     *
     * @param bool $val The value of the showFullyQualifiedName
     *

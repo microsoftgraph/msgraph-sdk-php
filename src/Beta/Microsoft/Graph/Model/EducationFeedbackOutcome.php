@@ -33,7 +33,7 @@ class EducationFeedbackOutcome extends EducationOutcome
     public function getFeedback()
     {
         if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "\Beta\Microsoft\Graph\Model\EducationFeedback")) {
+            if (is_a($this->_propDict["feedback"], "Beta\Microsoft\Graph\Model\EducationFeedback")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new EducationFeedback($this->_propDict["feedback"]);
@@ -66,7 +66,7 @@ class EducationFeedbackOutcome extends EducationOutcome
     public function getPublishedFeedback()
     {
         if (array_key_exists("publishedFeedback", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedFeedback"], "\Beta\Microsoft\Graph\Model\EducationFeedback")) {
+            if (is_a($this->_propDict["publishedFeedback"], "Beta\Microsoft\Graph\Model\EducationFeedback")) {
                 return $this->_propDict["publishedFeedback"];
             } else {
                 $this->_propDict["publishedFeedback"] = new EducationFeedback($this->_propDict["publishedFeedback"]);

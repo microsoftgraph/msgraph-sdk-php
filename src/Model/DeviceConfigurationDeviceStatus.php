@@ -157,7 +157,7 @@ class DeviceConfigurationDeviceStatus extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);

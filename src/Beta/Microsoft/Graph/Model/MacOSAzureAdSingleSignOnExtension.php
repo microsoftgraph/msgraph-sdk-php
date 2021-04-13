@@ -70,7 +70,7 @@ class MacOSAzureAdSingleSignOnExtension extends MacOSSingleSignOnExtension
     public function getConfigurations()
     {
         if (array_key_exists("configurations", $this->_propDict)) {
-            if (is_a($this->_propDict["configurations"], "\Beta\Microsoft\Graph\Model\KeyTypedValuePair")) {
+            if (is_a($this->_propDict["configurations"], "Beta\Microsoft\Graph\Model\KeyTypedValuePair")) {
                 return $this->_propDict["configurations"];
             } else {
                 $this->_propDict["configurations"] = new KeyTypedValuePair($this->_propDict["configurations"]);

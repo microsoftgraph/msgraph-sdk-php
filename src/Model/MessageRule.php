@@ -33,7 +33,7 @@ class MessageRule extends Entity
     public function getActions()
     {
         if (array_key_exists("actions", $this->_propDict)) {
-            if (is_a($this->_propDict["actions"], "\Microsoft\Graph\Model\MessageRuleActions")) {
+            if (is_a($this->_propDict["actions"], "Microsoft\Graph\Model\MessageRuleActions")) {
                 return $this->_propDict["actions"];
             } else {
                 $this->_propDict["actions"] = new MessageRuleActions($this->_propDict["actions"]);
@@ -66,7 +66,7 @@ class MessageRule extends Entity
     public function getConditions()
     {
         if (array_key_exists("conditions", $this->_propDict)) {
-            if (is_a($this->_propDict["conditions"], "\Microsoft\Graph\Model\MessageRulePredicates")) {
+            if (is_a($this->_propDict["conditions"], "Microsoft\Graph\Model\MessageRulePredicates")) {
                 return $this->_propDict["conditions"];
             } else {
                 $this->_propDict["conditions"] = new MessageRulePredicates($this->_propDict["conditions"]);
@@ -128,7 +128,7 @@ class MessageRule extends Entity
     public function getExceptions()
     {
         if (array_key_exists("exceptions", $this->_propDict)) {
-            if (is_a($this->_propDict["exceptions"], "\Microsoft\Graph\Model\MessageRulePredicates")) {
+            if (is_a($this->_propDict["exceptions"], "Microsoft\Graph\Model\MessageRulePredicates")) {
                 return $this->_propDict["exceptions"];
             } else {
                 $this->_propDict["exceptions"] = new MessageRulePredicates($this->_propDict["exceptions"]);

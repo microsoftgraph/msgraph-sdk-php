@@ -33,7 +33,7 @@ class DirectoryDefinition extends Entity
     public function getDiscoverabilities()
     {
         if (array_key_exists("discoverabilities", $this->_propDict)) {
-            if (is_a($this->_propDict["discoverabilities"], "\Beta\Microsoft\Graph\Model\DirectoryDefinitionDiscoverabilities")) {
+            if (is_a($this->_propDict["discoverabilities"], "Beta\Microsoft\Graph\Model\DirectoryDefinitionDiscoverabilities")) {
                 return $this->_propDict["discoverabilities"];
             } else {
                 $this->_propDict["discoverabilities"] = new DirectoryDefinitionDiscoverabilities($this->_propDict["discoverabilities"]);
@@ -59,7 +59,7 @@ class DirectoryDefinition extends Entity
     
     /**
     * Gets the discoveryDateTime
-    * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The discoveryDateTime
     */
@@ -78,7 +78,7 @@ class DirectoryDefinition extends Entity
     
     /**
     * Sets the discoveryDateTime
-    * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The discoveryDateTime
     *
@@ -178,7 +178,7 @@ class DirectoryDefinition extends Entity
     
     /**
     * Gets the version
-    * Read only value that indicates version discovered. null if discovery has not yet occurred.
+    * Read only value that indicates version discovered. Null if discovery has not yet occurred.
     *
     * @return string The version
     */
@@ -193,7 +193,7 @@ class DirectoryDefinition extends Entity
     
     /**
     * Sets the version
-    * Read only value that indicates version discovered. null if discovery has not yet occurred.
+    * Read only value that indicates version discovered. Null if discovery has not yet occurred.
     *
     * @param string $val The version
     *

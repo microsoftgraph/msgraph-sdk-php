@@ -33,7 +33,7 @@ class ConfigurationManagerAction extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\ConfigurationManagerActionType")) {
+            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\ConfigurationManagerActionType")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new ConfigurationManagerActionType($this->_propDict["action"]);

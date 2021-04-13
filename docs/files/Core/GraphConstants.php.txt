@@ -1,0 +1,56 @@
+<?php 
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  
+* Licensed under the MIT License.  See License in the project root 
+* for license information.
+* 
+* Constants File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+
+namespace Microsoft\Graph\Core;
+
+//Configure these to match your app
+define("REST_ENDPOINT", "https://graph.microsoft.com/");
+define("API_VERSION", "v1.0");
+
+//Define HTTP Request constants
+define("SDK_VERSION", "0.1.0");
+
+//Define error constants
+define("TIMEOUT", "Timeout error");
+define("MAX_PAGE_SIZE", 999);
+define("MAX_PAGE_SIZE_ERROR", "Page size must be less than " . MAX_PAGE_SIZE);
+
+//Define error message constants
+define("BASE_URL_MISSING", "Base URL cannot be null or empty.");
+define("REQUEST_TIMED_OUT", "The request timed out.");
+
+define("UNABLE_TO_CREATE_INSTANCE_OF_TYPE", "Unable to create an instance of type ");
+
+//Define user error constants
+define(
+    "NO_APP_ID", 
+    "No app ID has been provided. Please supply a app id in the constructor " .
+    "or update Microsoft\Graph\Core\GraphConstants.php to reflect your " .
+    "application's information."
+);
+define(
+    "NO_APP_SECRET", 
+    "No app secret has been provided. Please supply a app secret in the " .
+    "constructor or update Microsoft\Graph\Core\GraphConstants.php to reflect " .
+    "your application's information."
+);
+define(
+    "NO_ACCESS_TOKEN", 
+    "No access token has been provided. Please supply an access token for " .
+    "the graph user."
+);

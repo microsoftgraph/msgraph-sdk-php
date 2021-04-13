@@ -211,7 +211,7 @@ class GovernanceResource extends Entity
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["parent"], "Beta\Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new GovernanceResource($this->_propDict["parent"]);

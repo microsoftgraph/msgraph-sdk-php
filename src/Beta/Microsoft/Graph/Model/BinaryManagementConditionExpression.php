@@ -33,7 +33,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
     public function getFirstOperand()
     {
         if (array_key_exists("firstOperand", $this->_propDict)) {
-            if (is_a($this->_propDict["firstOperand"], "\Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
+            if (is_a($this->_propDict["firstOperand"], "Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
                 return $this->_propDict["firstOperand"];
             } else {
                 $this->_propDict["firstOperand"] = new ManagementConditionExpressionModel($this->_propDict["firstOperand"]);
@@ -66,7 +66,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\BinaryManagementConditionExpressionOperatorType")) {
+            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\BinaryManagementConditionExpressionOperatorType")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new BinaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
@@ -99,7 +99,7 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
     public function getSecondOperand()
     {
         if (array_key_exists("secondOperand", $this->_propDict)) {
-            if (is_a($this->_propDict["secondOperand"], "\Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
+            if (is_a($this->_propDict["secondOperand"], "Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
                 return $this->_propDict["secondOperand"];
             } else {
                 $this->_propDict["secondOperand"] = new ManagementConditionExpressionModel($this->_propDict["secondOperand"]);

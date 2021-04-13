@@ -33,7 +33,7 @@ class EducationSynchronizationProfile extends Entity
     public function getDataProvider()
     {
         if (array_key_exists("dataProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["dataProvider"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationDataProvider")) {
+            if (is_a($this->_propDict["dataProvider"], "Beta\Microsoft\Graph\Model\EducationSynchronizationDataProvider")) {
                 return $this->_propDict["dataProvider"];
             } else {
                 $this->_propDict["dataProvider"] = new EducationSynchronizationDataProvider($this->_propDict["dataProvider"]);
@@ -157,7 +157,7 @@ class EducationSynchronizationProfile extends Entity
     public function getIdentitySynchronizationConfiguration()
     {
         if (array_key_exists("identitySynchronizationConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["identitySynchronizationConfiguration"], "\Beta\Microsoft\Graph\Model\EducationIdentitySynchronizationConfiguration")) {
+            if (is_a($this->_propDict["identitySynchronizationConfiguration"], "Beta\Microsoft\Graph\Model\EducationIdentitySynchronizationConfiguration")) {
                 return $this->_propDict["identitySynchronizationConfiguration"];
             } else {
                 $this->_propDict["identitySynchronizationConfiguration"] = new EducationIdentitySynchronizationConfiguration($this->_propDict["identitySynchronizationConfiguration"]);
@@ -220,7 +220,7 @@ class EducationSynchronizationProfile extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationProfileState")) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\EducationSynchronizationProfileState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new EducationSynchronizationProfileState($this->_propDict["state"]);
@@ -283,7 +283,7 @@ class EducationSynchronizationProfile extends Entity
     public function getProfileStatus()
     {
         if (array_key_exists("profileStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["profileStatus"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationProfileStatus")) {
+            if (is_a($this->_propDict["profileStatus"], "Beta\Microsoft\Graph\Model\EducationSynchronizationProfileStatus")) {
                 return $this->_propDict["profileStatus"];
             } else {
                 $this->_propDict["profileStatus"] = new EducationSynchronizationProfileStatus($this->_propDict["profileStatus"]);

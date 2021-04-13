@@ -368,7 +368,7 @@ class DepOnboardingSetting extends Entity
     public function getTokenType()
     {
         if (array_key_exists("tokenType", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenType"], "\Beta\Microsoft\Graph\Model\DepTokenType")) {
+            if (is_a($this->_propDict["tokenType"], "Beta\Microsoft\Graph\Model\DepTokenType")) {
                 return $this->_propDict["tokenType"];
             } else {
                 $this->_propDict["tokenType"] = new DepTokenType($this->_propDict["tokenType"]);
@@ -401,7 +401,7 @@ class DepOnboardingSetting extends Entity
     public function getDefaultIosEnrollmentProfile()
     {
         if (array_key_exists("defaultIosEnrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultIosEnrollmentProfile"], "\Beta\Microsoft\Graph\Model\DepIOSEnrollmentProfile")) {
+            if (is_a($this->_propDict["defaultIosEnrollmentProfile"], "Beta\Microsoft\Graph\Model\DepIOSEnrollmentProfile")) {
                 return $this->_propDict["defaultIosEnrollmentProfile"];
             } else {
                 $this->_propDict["defaultIosEnrollmentProfile"] = new DepIOSEnrollmentProfile($this->_propDict["defaultIosEnrollmentProfile"]);
@@ -434,7 +434,7 @@ class DepOnboardingSetting extends Entity
     public function getDefaultMacOsEnrollmentProfile()
     {
         if (array_key_exists("defaultMacOsEnrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultMacOsEnrollmentProfile"], "\Beta\Microsoft\Graph\Model\DepMacOSEnrollmentProfile")) {
+            if (is_a($this->_propDict["defaultMacOsEnrollmentProfile"], "Beta\Microsoft\Graph\Model\DepMacOSEnrollmentProfile")) {
                 return $this->_propDict["defaultMacOsEnrollmentProfile"];
             } else {
                 $this->_propDict["defaultMacOsEnrollmentProfile"] = new DepMacOSEnrollmentProfile($this->_propDict["defaultMacOsEnrollmentProfile"]);

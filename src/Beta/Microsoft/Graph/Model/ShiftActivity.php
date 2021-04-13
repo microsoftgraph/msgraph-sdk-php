@@ -82,7 +82,7 @@ class ShiftActivity extends Entity
 
     /**
     * Gets the endDateTime
-    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @return \DateTime The endDateTime
     */
@@ -101,7 +101,7 @@ class ShiftActivity extends Entity
 
     /**
     * Sets the endDateTime
-    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -143,7 +143,7 @@ class ShiftActivity extends Entity
 
     /**
     * Gets the startDateTime
-    * The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    * The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @return \DateTime The startDateTime
     */
@@ -162,7 +162,7 @@ class ShiftActivity extends Entity
 
     /**
     * Sets the startDateTime
-    * The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    * The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -182,7 +182,7 @@ class ShiftActivity extends Entity
     public function getTheme()
     {
         if (array_key_exists("theme", $this->_propDict)) {
-            if (is_a($this->_propDict["theme"], "\Beta\Microsoft\Graph\Model\ScheduleEntityTheme")) {
+            if (is_a($this->_propDict["theme"], "Beta\Microsoft\Graph\Model\ScheduleEntityTheme")) {
                 return $this->_propDict["theme"];
             } else {
                 $this->_propDict["theme"] = new ScheduleEntityTheme($this->_propDict["theme"]);

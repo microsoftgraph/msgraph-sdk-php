@@ -59,7 +59,7 @@ class PrivilegedSignupStatus extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\SetupStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\SetupStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SetupStatus($this->_propDict["status"]);

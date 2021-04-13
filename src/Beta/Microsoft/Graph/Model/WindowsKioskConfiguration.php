@@ -295,7 +295,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     public function getWindowsKioskForceUpdateSchedule()
     {
         if (array_key_exists("windowsKioskForceUpdateSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsKioskForceUpdateSchedule"], "\Beta\Microsoft\Graph\Model\WindowsKioskForceUpdateSchedule")) {
+            if (is_a($this->_propDict["windowsKioskForceUpdateSchedule"], "Beta\Microsoft\Graph\Model\WindowsKioskForceUpdateSchedule")) {
                 return $this->_propDict["windowsKioskForceUpdateSchedule"];
             } else {
                 $this->_propDict["windowsKioskForceUpdateSchedule"] = new WindowsKioskForceUpdateSchedule($this->_propDict["windowsKioskForceUpdateSchedule"]);

@@ -92,7 +92,7 @@ class PrivilegedRole extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\PrivilegedRoleSettings")) {
+            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\PrivilegedRoleSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new PrivilegedRoleSettings($this->_propDict["settings"]);
@@ -125,7 +125,7 @@ class PrivilegedRole extends Entity
     public function getSummary()
     {
         if (array_key_exists("summary", $this->_propDict)) {
-            if (is_a($this->_propDict["summary"], "\Beta\Microsoft\Graph\Model\PrivilegedRoleSummary")) {
+            if (is_a($this->_propDict["summary"], "Beta\Microsoft\Graph\Model\PrivilegedRoleSummary")) {
                 return $this->_propDict["summary"];
             } else {
                 $this->_propDict["summary"] = new PrivilegedRoleSummary($this->_propDict["summary"]);

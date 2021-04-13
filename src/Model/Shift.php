@@ -33,7 +33,7 @@ class Shift extends ChangeTrackedEntity
     public function getDraftShift()
     {
         if (array_key_exists("draftShift", $this->_propDict)) {
-            if (is_a($this->_propDict["draftShift"], "\Microsoft\Graph\Model\ShiftItem")) {
+            if (is_a($this->_propDict["draftShift"], "Microsoft\Graph\Model\ShiftItem")) {
                 return $this->_propDict["draftShift"];
             } else {
                 $this->_propDict["draftShift"] = new ShiftItem($this->_propDict["draftShift"]);
@@ -95,7 +95,7 @@ class Shift extends ChangeTrackedEntity
     public function getSharedShift()
     {
         if (array_key_exists("sharedShift", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedShift"], "\Microsoft\Graph\Model\ShiftItem")) {
+            if (is_a($this->_propDict["sharedShift"], "Microsoft\Graph\Model\ShiftItem")) {
                 return $this->_propDict["sharedShift"];
             } else {
                 $this->_propDict["sharedShift"] = new ShiftItem($this->_propDict["sharedShift"]);

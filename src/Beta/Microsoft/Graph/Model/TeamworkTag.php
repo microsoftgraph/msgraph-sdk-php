@@ -113,7 +113,7 @@ class TeamworkTag extends Entity
     public function getTagType()
     {
         if (array_key_exists("tagType", $this->_propDict)) {
-            if (is_a($this->_propDict["tagType"], "\Beta\Microsoft\Graph\Model\TeamworkTagType")) {
+            if (is_a($this->_propDict["tagType"], "Beta\Microsoft\Graph\Model\TeamworkTagType")) {
                 return $this->_propDict["tagType"];
             } else {
                 $this->_propDict["tagType"] = new TeamworkTagType($this->_propDict["tagType"]);

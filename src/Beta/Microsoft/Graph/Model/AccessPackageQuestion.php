@@ -117,7 +117,7 @@ class AccessPackageQuestion extends Entity
     public function getText()
     {
         if (array_key_exists("text", $this->_propDict)) {
-            if (is_a($this->_propDict["text"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedContent")) {
+            if (is_a($this->_propDict["text"], "Beta\Microsoft\Graph\Model\AccessPackageLocalizedContent")) {
                 return $this->_propDict["text"];
             } else {
                 $this->_propDict["text"] = new AccessPackageLocalizedContent($this->_propDict["text"]);

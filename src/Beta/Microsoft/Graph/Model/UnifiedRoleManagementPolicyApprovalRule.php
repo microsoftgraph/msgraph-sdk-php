@@ -32,7 +32,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
     public function getSetting()
     {
         if (array_key_exists("setting", $this->_propDict)) {
-            if (is_a($this->_propDict["setting"], "\Beta\Microsoft\Graph\Model\ApprovalSettings")) {
+            if (is_a($this->_propDict["setting"], "Beta\Microsoft\Graph\Model\ApprovalSettings")) {
                 return $this->_propDict["setting"];
             } else {
                 $this->_propDict["setting"] = new ApprovalSettings($this->_propDict["setting"]);

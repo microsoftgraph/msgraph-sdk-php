@@ -33,7 +33,7 @@ class Win32LobAppInstallExperience extends Entity
     public function getDeviceRestartBehavior()
     {
         if (array_key_exists("deviceRestartBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceRestartBehavior"], "\Microsoft\Graph\Model\Win32LobAppRestartBehavior")) {
+            if (is_a($this->_propDict["deviceRestartBehavior"], "Microsoft\Graph\Model\Win32LobAppRestartBehavior")) {
                 return $this->_propDict["deviceRestartBehavior"];
             } else {
                 $this->_propDict["deviceRestartBehavior"] = new Win32LobAppRestartBehavior($this->_propDict["deviceRestartBehavior"]);
@@ -66,7 +66,7 @@ class Win32LobAppInstallExperience extends Entity
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Microsoft\Graph\Model\RunAsAccountType")) {
+            if (is_a($this->_propDict["runAsAccount"], "Microsoft\Graph\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);

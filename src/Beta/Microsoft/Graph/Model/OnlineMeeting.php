@@ -32,7 +32,7 @@ class OnlineMeeting extends Entity
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "\Beta\Microsoft\Graph\Model\AccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "Beta\Microsoft\Graph\Model\AccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new AccessLevel($this->_propDict["accessLevel"]);
@@ -64,7 +64,7 @@ class OnlineMeeting extends Entity
     public function getAllowedPresenters()
     {
         if (array_key_exists("allowedPresenters", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedPresenters"], "\Beta\Microsoft\Graph\Model\OnlineMeetingPresenters")) {
+            if (is_a($this->_propDict["allowedPresenters"], "Beta\Microsoft\Graph\Model\OnlineMeetingPresenters")) {
                 return $this->_propDict["allowedPresenters"];
             } else {
                 $this->_propDict["allowedPresenters"] = new OnlineMeetingPresenters($this->_propDict["allowedPresenters"]);
@@ -163,7 +163,7 @@ class OnlineMeeting extends Entity
     public function getAudioConferencing()
     {
         if (array_key_exists("audioConferencing", $this->_propDict)) {
-            if (is_a($this->_propDict["audioConferencing"], "\Beta\Microsoft\Graph\Model\AudioConferencing")) {
+            if (is_a($this->_propDict["audioConferencing"], "Beta\Microsoft\Graph\Model\AudioConferencing")) {
                 return $this->_propDict["audioConferencing"];
             } else {
                 $this->_propDict["audioConferencing"] = new AudioConferencing($this->_propDict["audioConferencing"]);
@@ -196,7 +196,7 @@ class OnlineMeeting extends Entity
     public function getBroadcastSettings()
     {
         if (array_key_exists("broadcastSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["broadcastSettings"], "\Beta\Microsoft\Graph\Model\BroadcastMeetingSettings")) {
+            if (is_a($this->_propDict["broadcastSettings"], "Beta\Microsoft\Graph\Model\BroadcastMeetingSettings")) {
                 return $this->_propDict["broadcastSettings"];
             } else {
                 $this->_propDict["broadcastSettings"] = new BroadcastMeetingSettings($this->_propDict["broadcastSettings"]);
@@ -254,7 +254,7 @@ class OnlineMeeting extends Entity
 
      /** 
      * Gets the capabilities
-    * The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
+    * The list of meeting capabilities. Possible values are: questionAndAnswer.
      *
      * @return array The capabilities
      */
@@ -269,7 +269,7 @@ class OnlineMeeting extends Entity
     
     /** 
     * Sets the capabilities
-    * The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
+    * The list of meeting capabilities. Possible values are: questionAndAnswer.
     *
     * @param MeetingCapabilities $val The capabilities
     *
@@ -290,7 +290,7 @@ class OnlineMeeting extends Entity
     public function getChatInfo()
     {
         if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "\Beta\Microsoft\Graph\Model\ChatInfo")) {
+            if (is_a($this->_propDict["chatInfo"], "Beta\Microsoft\Graph\Model\ChatInfo")) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -561,7 +561,7 @@ class OnlineMeeting extends Entity
     public function getJoinInformation()
     {
         if (array_key_exists("joinInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["joinInformation"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["joinInformation"], "Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["joinInformation"];
             } else {
                 $this->_propDict["joinInformation"] = new ItemBody($this->_propDict["joinInformation"]);
@@ -621,7 +621,7 @@ class OnlineMeeting extends Entity
     public function getLobbyBypassSettings()
     {
         if (array_key_exists("lobbyBypassSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["lobbyBypassSettings"], "\Beta\Microsoft\Graph\Model\LobbyBypassSettings")) {
+            if (is_a($this->_propDict["lobbyBypassSettings"], "Beta\Microsoft\Graph\Model\LobbyBypassSettings")) {
                 return $this->_propDict["lobbyBypassSettings"];
             } else {
                 $this->_propDict["lobbyBypassSettings"] = new LobbyBypassSettings($this->_propDict["lobbyBypassSettings"]);
@@ -654,7 +654,7 @@ class OnlineMeeting extends Entity
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "\Beta\Microsoft\Graph\Model\MeetingParticipants")) {
+            if (is_a($this->_propDict["participants"], "Beta\Microsoft\Graph\Model\MeetingParticipants")) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new MeetingParticipants($this->_propDict["participants"]);
@@ -799,37 +799,6 @@ class OnlineMeeting extends Entity
     public function setVideoTeleconferenceId($val)
     {
         $this->_propDict["videoTeleconferenceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the meetingAttendanceReport
-    *
-    * @return MeetingAttendanceReport The meetingAttendanceReport
-    */
-    public function getMeetingAttendanceReport()
-    {
-        if (array_key_exists("meetingAttendanceReport", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingAttendanceReport"], "\Beta\Microsoft\Graph\Model\MeetingAttendanceReport")) {
-                return $this->_propDict["meetingAttendanceReport"];
-            } else {
-                $this->_propDict["meetingAttendanceReport"] = new MeetingAttendanceReport($this->_propDict["meetingAttendanceReport"]);
-                return $this->_propDict["meetingAttendanceReport"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the meetingAttendanceReport
-    *
-    * @param MeetingAttendanceReport $val The meetingAttendanceReport
-    *
-    * @return OnlineMeeting
-    */
-    public function setMeetingAttendanceReport($val)
-    {
-        $this->_propDict["meetingAttendanceReport"] = $val;
         return $this;
     }
     

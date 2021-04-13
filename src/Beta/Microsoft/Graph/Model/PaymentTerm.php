@@ -113,7 +113,7 @@ class PaymentTerm extends Entity
     public function getDiscountPercent()
     {
         if (array_key_exists("discountPercent", $this->_propDict)) {
-            if (is_a($this->_propDict["discountPercent"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["discountPercent"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["discountPercent"];
             } else {
                 $this->_propDict["discountPercent"] = new Decimal($this->_propDict["discountPercent"]);

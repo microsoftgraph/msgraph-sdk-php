@@ -149,7 +149,7 @@ class DeviceManagementTemplate extends Entity
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "Beta\Microsoft\Graph\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -215,7 +215,7 @@ class DeviceManagementTemplate extends Entity
     public function getTemplateSubtype()
     {
         if (array_key_exists("templateSubtype", $this->_propDict)) {
-            if (is_a($this->_propDict["templateSubtype"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateSubtype")) {
+            if (is_a($this->_propDict["templateSubtype"], "Beta\Microsoft\Graph\Model\DeviceManagementTemplateSubtype")) {
                 return $this->_propDict["templateSubtype"];
             } else {
                 $this->_propDict["templateSubtype"] = new DeviceManagementTemplateSubtype($this->_propDict["templateSubtype"]);
@@ -248,7 +248,7 @@ class DeviceManagementTemplate extends Entity
     public function getTemplateType()
     {
         if (array_key_exists("templateType", $this->_propDict)) {
-            if (is_a($this->_propDict["templateType"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateType")) {
+            if (is_a($this->_propDict["templateType"], "Beta\Microsoft\Graph\Model\DeviceManagementTemplateType")) {
                 return $this->_propDict["templateType"];
             } else {
                 $this->_propDict["templateType"] = new DeviceManagementTemplateType($this->_propDict["templateType"]);

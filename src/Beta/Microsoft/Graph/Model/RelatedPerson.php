@@ -61,7 +61,7 @@ class RelatedPerson extends Entity
     public function getRelationship()
     {
         if (array_key_exists("relationship", $this->_propDict)) {
-            if (is_a($this->_propDict["relationship"], "\Beta\Microsoft\Graph\Model\PersonRelationship")) {
+            if (is_a($this->_propDict["relationship"], "Beta\Microsoft\Graph\Model\PersonRelationship")) {
                 return $this->_propDict["relationship"];
             } else {
                 $this->_propDict["relationship"] = new PersonRelationship($this->_propDict["relationship"]);

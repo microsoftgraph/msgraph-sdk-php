@@ -25,7 +25,6 @@ class ChannelIdentity extends Entity
 {
     /**
     * Gets the channelId
-    * The identity of the channel in which the message was posted.
     *
     * @return string The channelId
     */
@@ -40,7 +39,6 @@ class ChannelIdentity extends Entity
 
     /**
     * Sets the channelId
-    * The identity of the channel in which the message was posted.
     *
     * @param string $val The value of the channelId
     *
@@ -53,7 +51,6 @@ class ChannelIdentity extends Entity
     }
     /**
     * Gets the teamId
-    * The identity of the team in which the message was posted.
     *
     * @return string The teamId
     */
@@ -68,7 +65,6 @@ class ChannelIdentity extends Entity
 
     /**
     * Sets the teamId
-    * The identity of the team in which the message was posted.
     *
     * @param string $val The value of the teamId
     *

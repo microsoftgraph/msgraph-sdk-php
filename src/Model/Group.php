@@ -304,7 +304,7 @@ class Group extends DirectoryObject
     public function getLicenseProcessingState()
     {
         if (array_key_exists("licenseProcessingState", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseProcessingState"], "\Microsoft\Graph\Model\LicenseProcessingState")) {
+            if (is_a($this->_propDict["licenseProcessingState"], "Microsoft\Graph\Model\LicenseProcessingState")) {
                 return $this->_propDict["licenseProcessingState"];
             } else {
                 $this->_propDict["licenseProcessingState"] = new LicenseProcessingState($this->_propDict["licenseProcessingState"]);
@@ -446,7 +446,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the membershipRuleProcessingState
-    * Indicates whether the dynamic membership processing is on or paused. Possible values are On or Paused. Returned by default.
+    * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
     *
     * @return string The membershipRuleProcessingState
     */
@@ -461,7 +461,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the membershipRuleProcessingState
-    * Indicates whether the dynamic membership processing is on or paused. Possible values are On or Paused. Returned by default.
+    * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
     *
     * @param string $val The membershipRuleProcessingState
     *
@@ -919,7 +919,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the allowExternalSenders
-    * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select.
     *
     * @return bool The allowExternalSenders
     */
@@ -934,7 +934,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the allowExternalSenders
-    * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select.
     *
     * @param bool $val The allowExternalSenders
     *
@@ -948,7 +948,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the autoSubscribeNewMembers
-    * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select.
     *
     * @return bool The autoSubscribeNewMembers
     */
@@ -963,7 +963,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the autoSubscribeNewMembers
-    * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select.
     *
     * @param bool $val The autoSubscribeNewMembers
     *
@@ -977,7 +977,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the hideFromAddressLists
-    * true if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
     *
     * @return bool The hideFromAddressLists
     */
@@ -992,7 +992,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the hideFromAddressLists
-    * true if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
     *
     * @param bool $val The hideFromAddressLists
     *
@@ -1006,7 +1006,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the hideFromOutlookClients
-    * true if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
     *
     * @return bool The hideFromOutlookClients
     */
@@ -1021,7 +1021,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the hideFromOutlookClients
-    * true if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
     *
     * @param bool $val The hideFromOutlookClients
     *
@@ -1035,7 +1035,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the isSubscribedByMail
-    * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select.
     *
     * @return bool The isSubscribedByMail
     */
@@ -1050,7 +1050,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the isSubscribedByMail
-    * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select.
     *
     * @param bool $val The isSubscribedByMail
     *
@@ -1064,7 +1064,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the unseenCount
-    * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select.
     *
     * @return int The unseenCount
     */
@@ -1079,7 +1079,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the unseenCount
-    * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+    * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select.
     *
     * @param int $val The unseenCount
     *
@@ -1157,7 +1157,7 @@ class Group extends DirectoryObject
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -1454,7 +1454,7 @@ class Group extends DirectoryObject
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "\Microsoft\Graph\Model\Calendar")) {
+            if (is_a($this->_propDict["calendar"], "Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -1577,7 +1577,7 @@ class Group extends DirectoryObject
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto")) {
+            if (is_a($this->_propDict["photo"], "Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -1700,7 +1700,7 @@ class Group extends DirectoryObject
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive")) {
+            if (is_a($this->_propDict["drive"], "Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -1853,7 +1853,7 @@ class Group extends DirectoryObject
     public function getPlanner()
     {
         if (array_key_exists("planner", $this->_propDict)) {
-            if (is_a($this->_propDict["planner"], "\Microsoft\Graph\Model\PlannerGroup")) {
+            if (is_a($this->_propDict["planner"], "Microsoft\Graph\Model\PlannerGroup")) {
                 return $this->_propDict["planner"];
             } else {
                 $this->_propDict["planner"] = new PlannerGroup($this->_propDict["planner"]);
@@ -1886,7 +1886,7 @@ class Group extends DirectoryObject
     public function getOnenote()
     {
         if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "\Microsoft\Graph\Model\Onenote")) {
+            if (is_a($this->_propDict["onenote"], "Microsoft\Graph\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
@@ -1918,7 +1918,7 @@ class Group extends DirectoryObject
     public function getTeam()
     {
         if (array_key_exists("team", $this->_propDict)) {
-            if (is_a($this->_propDict["team"], "\Microsoft\Graph\Model\Team")) {
+            if (is_a($this->_propDict["team"], "Microsoft\Graph\Model\Team")) {
                 return $this->_propDict["team"];
             } else {
                 $this->_propDict["team"] = new Team($this->_propDict["team"]);

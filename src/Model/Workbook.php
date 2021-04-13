@@ -32,7 +32,7 @@ class Workbook extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "\Microsoft\Graph\Model\WorkbookApplication")) {
+            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\WorkbookApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new WorkbookApplication($this->_propDict["application"]);
@@ -91,7 +91,7 @@ class Workbook extends Entity
     public function getFunctions()
     {
         if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "\Microsoft\Graph\Model\WorkbookFunctions")) {
+            if (is_a($this->_propDict["functions"], "Microsoft\Graph\Model\WorkbookFunctions")) {
                 return $this->_propDict["functions"];
             } else {
                 $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);

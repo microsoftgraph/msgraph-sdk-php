@@ -42,7 +42,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem
     public function getPages()
     {
         if (array_key_exists("pages", $this->_propDict)) {
-            if (is_a($this->_propDict["pages"], "\Beta\Microsoft\Graph\Model\IosHomeScreenFolderPage")) {
+            if (is_a($this->_propDict["pages"], "Beta\Microsoft\Graph\Model\IosHomeScreenFolderPage")) {
                 return $this->_propDict["pages"];
             } else {
                 $this->_propDict["pages"] = new IosHomeScreenFolderPage($this->_propDict["pages"]);

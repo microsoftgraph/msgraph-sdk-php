@@ -91,7 +91,7 @@ class AzureADUserFeatureUsage extends Entity
     public function getLicenseAssigned()
     {
         if (array_key_exists("licenseAssigned", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseAssigned"], "\Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+            if (is_a($this->_propDict["licenseAssigned"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
                 return $this->_propDict["licenseAssigned"];
             } else {
                 $this->_propDict["licenseAssigned"] = new AzureADLicenseType($this->_propDict["licenseAssigned"]);
@@ -122,7 +122,7 @@ class AzureADUserFeatureUsage extends Entity
     public function getLicenseRecommended()
     {
         if (array_key_exists("licenseRecommended", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseRecommended"], "\Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+            if (is_a($this->_propDict["licenseRecommended"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
                 return $this->_propDict["licenseRecommended"];
             } else {
                 $this->_propDict["licenseRecommended"] = new AzureADLicenseType($this->_propDict["licenseRecommended"]);

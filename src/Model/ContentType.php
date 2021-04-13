@@ -120,7 +120,7 @@ class ContentType extends Entity
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference")) {
+            if (is_a($this->_propDict["inheritedFrom"], "Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -182,7 +182,7 @@ class ContentType extends Entity
     public function getOrder()
     {
         if (array_key_exists("order", $this->_propDict)) {
-            if (is_a($this->_propDict["order"], "\Microsoft\Graph\Model\ContentTypeOrder")) {
+            if (is_a($this->_propDict["order"], "Microsoft\Graph\Model\ContentTypeOrder")) {
                 return $this->_propDict["order"];
             } else {
                 $this->_propDict["order"] = new ContentTypeOrder($this->_propDict["order"]);

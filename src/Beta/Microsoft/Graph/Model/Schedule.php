@@ -120,7 +120,7 @@ class Schedule extends Entity
     public function getProvisionStatus()
     {
         if (array_key_exists("provisionStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["provisionStatus"], "\Beta\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["provisionStatus"], "Beta\Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["provisionStatus"];
             } else {
                 $this->_propDict["provisionStatus"] = new OperationStatus($this->_propDict["provisionStatus"]);
@@ -239,7 +239,7 @@ class Schedule extends Entity
     public function getTimeClockSettings()
     {
         if (array_key_exists("timeClockSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["timeClockSettings"], "\Beta\Microsoft\Graph\Model\TimeClockSettings")) {
+            if (is_a($this->_propDict["timeClockSettings"], "Beta\Microsoft\Graph\Model\TimeClockSettings")) {
                 return $this->_propDict["timeClockSettings"];
             } else {
                 $this->_propDict["timeClockSettings"] = new TimeClockSettings($this->_propDict["timeClockSettings"]);

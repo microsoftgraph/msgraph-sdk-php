@@ -32,7 +32,7 @@ class DlpPoliciesJobResult extends Entity
     public function getMatchingRules()
     {
         if (array_key_exists("matchingRules", $this->_propDict)) {
-            if (is_a($this->_propDict["matchingRules"], "\Beta\Microsoft\Graph\Model\MatchingDlpRule")) {
+            if (is_a($this->_propDict["matchingRules"], "Beta\Microsoft\Graph\Model\MatchingDlpRule")) {
                 return $this->_propDict["matchingRules"];
             } else {
                 $this->_propDict["matchingRules"] = new MatchingDlpRule($this->_propDict["matchingRules"]);

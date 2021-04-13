@@ -33,7 +33,7 @@ class Acl extends Entity
     public function getAccessType()
     {
         if (array_key_exists("accessType", $this->_propDict)) {
-            if (is_a($this->_propDict["accessType"], "\Beta\Microsoft\Graph\Model\AccessType")) {
+            if (is_a($this->_propDict["accessType"], "Beta\Microsoft\Graph\Model\AccessType")) {
                 return $this->_propDict["accessType"];
             } else {
                 $this->_propDict["accessType"] = new AccessType($this->_propDict["accessType"]);
@@ -56,38 +56,33 @@ class Acl extends Entity
         $this->_propDict["accessType"] = $val;
          return $this;
     }
-
     /**
     * Gets the identitySource
     * The source of identity. Possible values are azureActiveDirectory or external.
     *
-    * @return IdentitySourceType The identitySource
+    * @return string The identitySource
     */
     public function getIdentitySource()
     {
         if (array_key_exists("identitySource", $this->_propDict)) {
-            if (is_a($this->_propDict["identitySource"], "\Beta\Microsoft\Graph\Model\IdentitySourceType")) {
-                return $this->_propDict["identitySource"];
-            } else {
-                $this->_propDict["identitySource"] = new IdentitySourceType($this->_propDict["identitySource"]);
-                return $this->_propDict["identitySource"];
-            }
+            return $this->_propDict["identitySource"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
     * Sets the identitySource
     * The source of identity. Possible values are azureActiveDirectory or external.
     *
-    * @param IdentitySourceType $val The value to assign to the identitySource
+    * @param string $val The value of the identitySource
     *
-    * @return Acl The Acl
+    * @return Acl
     */
     public function setIdentitySource($val)
     {
         $this->_propDict["identitySource"] = $val;
-         return $this;
+        return $this;
     }
 
     /**
@@ -99,7 +94,7 @@ class Acl extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\AclType")) {
+            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\AclType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AclType($this->_propDict["type"]);

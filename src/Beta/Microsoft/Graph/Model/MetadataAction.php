@@ -33,7 +33,7 @@ class MetadataAction extends InformationProtectionAction
     public function getMetadataToAdd()
     {
         if (array_key_exists("metadataToAdd", $this->_propDict)) {
-            if (is_a($this->_propDict["metadataToAdd"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["metadataToAdd"], "Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["metadataToAdd"];
             } else {
                 $this->_propDict["metadataToAdd"] = new KeyValuePair($this->_propDict["metadataToAdd"]);

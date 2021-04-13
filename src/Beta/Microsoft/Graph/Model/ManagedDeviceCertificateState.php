@@ -157,7 +157,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateIssuanceState()
     {
         if (array_key_exists("certificateIssuanceState", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateIssuanceState"], "\Beta\Microsoft\Graph\Model\CertificateIssuanceStates")) {
+            if (is_a($this->_propDict["certificateIssuanceState"], "Beta\Microsoft\Graph\Model\CertificateIssuanceStates")) {
                 return $this->_propDict["certificateIssuanceState"];
             } else {
                 $this->_propDict["certificateIssuanceState"] = new CertificateIssuanceStates($this->_propDict["certificateIssuanceState"]);
@@ -248,7 +248,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateKeyStorageProvider()
     {
         if (array_key_exists("certificateKeyStorageProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateKeyStorageProvider"], "\Beta\Microsoft\Graph\Model\KeyStorageProviderOption")) {
+            if (is_a($this->_propDict["certificateKeyStorageProvider"], "Beta\Microsoft\Graph\Model\KeyStorageProviderOption")) {
                 return $this->_propDict["certificateKeyStorageProvider"];
             } else {
                 $this->_propDict["certificateKeyStorageProvider"] = new KeyStorageProviderOption($this->_propDict["certificateKeyStorageProvider"]);
@@ -281,7 +281,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateKeyUsage()
     {
         if (array_key_exists("certificateKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateKeyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages")) {
+            if (is_a($this->_propDict["certificateKeyUsage"], "Beta\Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["certificateKeyUsage"];
             } else {
                 $this->_propDict["certificateKeyUsage"] = new KeyUsages($this->_propDict["certificateKeyUsage"]);
@@ -376,7 +376,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateRevokeStatus()
     {
         if (array_key_exists("certificateRevokeStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateRevokeStatus"], "\Beta\Microsoft\Graph\Model\CertificateRevocationStatus")) {
+            if (is_a($this->_propDict["certificateRevokeStatus"], "Beta\Microsoft\Graph\Model\CertificateRevocationStatus")) {
                 return $this->_propDict["certificateRevokeStatus"];
             } else {
                 $this->_propDict["certificateRevokeStatus"] = new CertificateRevocationStatus($this->_propDict["certificateRevokeStatus"]);
@@ -438,7 +438,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateSubjectAlternativeNameFormat()
     {
         if (array_key_exists("certificateSubjectAlternativeNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateSubjectAlternativeNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType")) {
+            if (is_a($this->_propDict["certificateSubjectAlternativeNameFormat"], "Beta\Microsoft\Graph\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["certificateSubjectAlternativeNameFormat"];
             } else {
                 $this->_propDict["certificateSubjectAlternativeNameFormat"] = new SubjectAlternativeNameType($this->_propDict["certificateSubjectAlternativeNameFormat"]);
@@ -500,7 +500,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateSubjectNameFormat()
     {
         if (array_key_exists("certificateSubjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateSubjectNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
+            if (is_a($this->_propDict["certificateSubjectNameFormat"], "Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
                 return $this->_propDict["certificateSubjectNameFormat"];
             } else {
                 $this->_propDict["certificateSubjectNameFormat"] = new SubjectNameFormat($this->_propDict["certificateSubjectNameFormat"]);
@@ -620,7 +620,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getCertificateValidityPeriodUnits()
     {
         if (array_key_exists("certificateValidityPeriodUnits", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodUnits"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
+            if (is_a($this->_propDict["certificateValidityPeriodUnits"], "Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodUnits"];
             } else {
                 $this->_propDict["certificateValidityPeriodUnits"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodUnits"]);
@@ -682,7 +682,7 @@ class ManagedDeviceCertificateState extends Entity
     public function getDevicePlatform()
     {
         if (array_key_exists("devicePlatform", $this->_propDict)) {
-            if (is_a($this->_propDict["devicePlatform"], "\Beta\Microsoft\Graph\Model\DevicePlatformType")) {
+            if (is_a($this->_propDict["devicePlatform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
                 return $this->_propDict["devicePlatform"];
             } else {
                 $this->_propDict["devicePlatform"] = new DevicePlatformType($this->_propDict["devicePlatform"]);

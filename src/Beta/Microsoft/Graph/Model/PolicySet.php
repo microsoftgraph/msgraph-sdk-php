@@ -124,7 +124,7 @@ class PolicySet extends Entity
     public function getErrorCode()
     {
         if (array_key_exists("errorCode", $this->_propDict)) {
-            if (is_a($this->_propDict["errorCode"], "\Beta\Microsoft\Graph\Model\ErrorCode")) {
+            if (is_a($this->_propDict["errorCode"], "Beta\Microsoft\Graph\Model\ErrorCode")) {
                 return $this->_propDict["errorCode"];
             } else {
                 $this->_propDict["errorCode"] = new ErrorCode($this->_propDict["errorCode"]);
@@ -248,7 +248,7 @@ class PolicySet extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\PolicySetStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\PolicySetStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PolicySetStatus($this->_propDict["status"]);

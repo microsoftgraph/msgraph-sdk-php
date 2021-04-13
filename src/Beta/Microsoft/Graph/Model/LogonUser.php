@@ -89,7 +89,7 @@ class LogonUser extends Entity
     public function getAccountType()
     {
         if (array_key_exists("accountType", $this->_propDict)) {
-            if (is_a($this->_propDict["accountType"], "\Beta\Microsoft\Graph\Model\UserAccountSecurityType")) {
+            if (is_a($this->_propDict["accountType"], "Beta\Microsoft\Graph\Model\UserAccountSecurityType")) {
                 return $this->_propDict["accountType"];
             } else {
                 $this->_propDict["accountType"] = new UserAccountSecurityType($this->_propDict["accountType"]);
@@ -115,7 +115,7 @@ class LogonUser extends Entity
 
     /**
     * Gets the firstSeenDateTime
-    * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The firstSeenDateTime
     */
@@ -134,7 +134,7 @@ class LogonUser extends Entity
 
     /**
     * Sets the firstSeenDateTime
-    * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the firstSeenDateTime
     *
@@ -148,7 +148,7 @@ class LogonUser extends Entity
 
     /**
     * Gets the lastSeenDateTime
-    * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The lastSeenDateTime
     */
@@ -167,7 +167,7 @@ class LogonUser extends Entity
 
     /**
     * Sets the lastSeenDateTime
-    * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the lastSeenDateTime
     *
@@ -216,7 +216,7 @@ class LogonUser extends Entity
     public function getLogonTypes()
     {
         if (array_key_exists("logonTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["logonTypes"], "\Beta\Microsoft\Graph\Model\LogonType")) {
+            if (is_a($this->_propDict["logonTypes"], "Beta\Microsoft\Graph\Model\LogonType")) {
                 return $this->_propDict["logonTypes"];
             } else {
                 $this->_propDict["logonTypes"] = new LogonType($this->_propDict["logonTypes"]);

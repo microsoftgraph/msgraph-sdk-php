@@ -33,7 +33,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     public function getAllOtherUpdateBehavior()
     {
         if (array_key_exists("allOtherUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["allOtherUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["allOtherUpdateBehavior"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
                 return $this->_propDict["allOtherUpdateBehavior"];
             } else {
                 $this->_propDict["allOtherUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["allOtherUpdateBehavior"]);
@@ -66,7 +66,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     public function getConfigDataUpdateBehavior()
     {
         if (array_key_exists("configDataUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["configDataUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["configDataUpdateBehavior"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
                 return $this->_propDict["configDataUpdateBehavior"];
             } else {
                 $this->_propDict["configDataUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["configDataUpdateBehavior"]);
@@ -99,7 +99,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     public function getCriticalUpdateBehavior()
     {
         if (array_key_exists("criticalUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["criticalUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["criticalUpdateBehavior"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
                 return $this->_propDict["criticalUpdateBehavior"];
             } else {
                 $this->_propDict["criticalUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["criticalUpdateBehavior"]);
@@ -162,7 +162,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     public function getFirmwareUpdateBehavior()
     {
         if (array_key_exists("firmwareUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["firmwareUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["firmwareUpdateBehavior"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
                 return $this->_propDict["firmwareUpdateBehavior"];
             } else {
                 $this->_propDict["firmwareUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["firmwareUpdateBehavior"]);
@@ -195,7 +195,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     public function getUpdateScheduleType()
     {
         if (array_key_exists("updateScheduleType", $this->_propDict)) {
-            if (is_a($this->_propDict["updateScheduleType"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateScheduleType")) {
+            if (is_a($this->_propDict["updateScheduleType"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateScheduleType")) {
                 return $this->_propDict["updateScheduleType"];
             } else {
                 $this->_propDict["updateScheduleType"] = new MacOSSoftwareUpdateScheduleType($this->_propDict["updateScheduleType"]);

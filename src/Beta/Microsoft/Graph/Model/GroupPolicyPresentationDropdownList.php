@@ -33,7 +33,7 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
     public function getDefaultItem()
     {
         if (array_key_exists("defaultItem", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultItem"], "\Beta\Microsoft\Graph\Model\GroupPolicyPresentationDropdownListItem")) {
+            if (is_a($this->_propDict["defaultItem"], "Beta\Microsoft\Graph\Model\GroupPolicyPresentationDropdownListItem")) {
                 return $this->_propDict["defaultItem"];
             } else {
                 $this->_propDict["defaultItem"] = new GroupPolicyPresentationDropdownListItem($this->_propDict["defaultItem"]);

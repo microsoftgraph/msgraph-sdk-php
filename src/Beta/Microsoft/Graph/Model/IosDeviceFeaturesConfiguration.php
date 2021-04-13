@@ -62,7 +62,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getContentFilterSettings()
     {
         if (array_key_exists("contentFilterSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["contentFilterSettings"], "\Beta\Microsoft\Graph\Model\IosWebContentFilterBase")) {
+            if (is_a($this->_propDict["contentFilterSettings"], "Beta\Microsoft\Graph\Model\IosWebContentFilterBase")) {
                 return $this->_propDict["contentFilterSettings"];
             } else {
                 $this->_propDict["contentFilterSettings"] = new IosWebContentFilterBase($this->_propDict["contentFilterSettings"]);
@@ -155,7 +155,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getIosSingleSignOnExtension()
     {
         if (array_key_exists("iosSingleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["iosSingleSignOnExtension"], "\Beta\Microsoft\Graph\Model\IosSingleSignOnExtension")) {
+            if (is_a($this->_propDict["iosSingleSignOnExtension"], "Beta\Microsoft\Graph\Model\IosSingleSignOnExtension")) {
                 return $this->_propDict["iosSingleSignOnExtension"];
             } else {
                 $this->_propDict["iosSingleSignOnExtension"] = new IosSingleSignOnExtension($this->_propDict["iosSingleSignOnExtension"]);
@@ -247,7 +247,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getSingleSignOnExtension()
     {
         if (array_key_exists("singleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtension"], "\Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
+            if (is_a($this->_propDict["singleSignOnExtension"], "Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
                 return $this->_propDict["singleSignOnExtension"];
             } else {
                 $this->_propDict["singleSignOnExtension"] = new SingleSignOnExtension($this->_propDict["singleSignOnExtension"]);
@@ -280,7 +280,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getSingleSignOnSettings()
     {
         if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnSettings"], "\Beta\Microsoft\Graph\Model\IosSingleSignOnSettings")) {
+            if (is_a($this->_propDict["singleSignOnSettings"], "Beta\Microsoft\Graph\Model\IosSingleSignOnSettings")) {
                 return $this->_propDict["singleSignOnSettings"];
             } else {
                 $this->_propDict["singleSignOnSettings"] = new IosSingleSignOnSettings($this->_propDict["singleSignOnSettings"]);
@@ -313,7 +313,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getWallpaperDisplayLocation()
     {
         if (array_key_exists("wallpaperDisplayLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["wallpaperDisplayLocation"], "\Beta\Microsoft\Graph\Model\IosWallpaperDisplayLocation")) {
+            if (is_a($this->_propDict["wallpaperDisplayLocation"], "Beta\Microsoft\Graph\Model\IosWallpaperDisplayLocation")) {
                 return $this->_propDict["wallpaperDisplayLocation"];
             } else {
                 $this->_propDict["wallpaperDisplayLocation"] = new IosWallpaperDisplayLocation($this->_propDict["wallpaperDisplayLocation"]);
@@ -346,7 +346,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getWallpaperImage()
     {
         if (array_key_exists("wallpaperImage", $this->_propDict)) {
-            if (is_a($this->_propDict["wallpaperImage"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["wallpaperImage"], "Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["wallpaperImage"];
             } else {
                 $this->_propDict["wallpaperImage"] = new MimeContent($this->_propDict["wallpaperImage"]);
@@ -379,7 +379,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -412,7 +412,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getSingleSignOnExtensionPkinitCertificate()
     {
         if (array_key_exists("singleSignOnExtensionPkinitCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["singleSignOnExtensionPkinitCertificate"];
             } else {
                 $this->_propDict["singleSignOnExtensionPkinitCertificate"] = new IosCertificateProfileBase($this->_propDict["singleSignOnExtensionPkinitCertificate"]);

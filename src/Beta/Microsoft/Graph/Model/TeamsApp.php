@@ -62,7 +62,7 @@ class TeamsApp extends Entity
     public function getDistributionMethod()
     {
         if (array_key_exists("distributionMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["distributionMethod"], "\Beta\Microsoft\Graph\Model\TeamsAppDistributionMethod")) {
+            if (is_a($this->_propDict["distributionMethod"], "Beta\Microsoft\Graph\Model\TeamsAppDistributionMethod")) {
                 return $this->_propDict["distributionMethod"];
             } else {
                 $this->_propDict["distributionMethod"] = new TeamsAppDistributionMethod($this->_propDict["distributionMethod"]);

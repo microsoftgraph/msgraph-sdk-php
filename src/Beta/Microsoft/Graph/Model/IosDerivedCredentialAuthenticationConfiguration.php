@@ -33,7 +33,7 @@ class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfiguratio
     public function getDerivedCredentialSettings()
     {
         if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
                 return $this->_propDict["derivedCredentialSettings"];
             } else {
                 $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);

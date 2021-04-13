@@ -1,0 +1,292 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* WorkbookRangeFormat File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* WorkbookRangeFormat class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class WorkbookRangeFormat
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new WorkbookRangeFormat
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the WorkbookRangeFormat
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the columnWidth
+    *
+    * @return float The columnWidth
+    */
+    public function getColumnWidth()
+    {
+        if (array_key_exists("columnWidth", $this->_propDict)) {
+            return $this->_propDict["columnWidth"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the columnWidth
+    *
+    * @param float $val The columnWidth
+    *
+    * @return null
+    */
+    public function setColumnWidth($val)
+    {
+        $this->propDict["columnWidth"] = $val;
+    }
+
+    /**
+    * Gets the horizontalAlignment
+    *
+    * @return string The horizontalAlignment
+    */
+    public function getHorizontalAlignment()
+    {
+        if (array_key_exists("horizontalAlignment", $this->_propDict)) {
+            return $this->_propDict["horizontalAlignment"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the horizontalAlignment
+    *
+    * @param string $val The horizontalAlignment
+    *
+    * @return null
+    */
+    public function setHorizontalAlignment($val)
+    {
+        $this->propDict["horizontalAlignment"] = $val;
+    }
+
+    /**
+    * Gets the rowHeight
+    *
+    * @return float The rowHeight
+    */
+    public function getRowHeight()
+    {
+        if (array_key_exists("rowHeight", $this->_propDict)) {
+            return $this->_propDict["rowHeight"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the rowHeight
+    *
+    * @param float $val The rowHeight
+    *
+    * @return null
+    */
+    public function setRowHeight($val)
+    {
+        $this->propDict["rowHeight"] = $val;
+    }
+
+    /**
+    * Gets the verticalAlignment
+    *
+    * @return string The verticalAlignment
+    */
+    public function getVerticalAlignment()
+    {
+        if (array_key_exists("verticalAlignment", $this->_propDict)) {
+            return $this->_propDict["verticalAlignment"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the verticalAlignment
+    *
+    * @param string $val The verticalAlignment
+    *
+    * @return null
+    */
+    public function setVerticalAlignment($val)
+    {
+        $this->propDict["verticalAlignment"] = $val;
+    }
+
+    /**
+    * Gets the wrapText
+    *
+    * @return bool The wrapText
+    */
+    public function getWrapText()
+    {
+        if (array_key_exists("wrapText", $this->_propDict)) {
+            return $this->_propDict["wrapText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the wrapText
+    *
+    * @param bool $val The wrapText
+    *
+    * @return null
+    */
+    public function setWrapText($val)
+    {
+        $this->propDict["wrapText"] = boolval($val);
+    }
+
+    /** 
+    * Gets the borders
+    *
+    * @return BordersCollectionPage The borders
+    */
+    public function getBorders()
+    {
+        if (array_key_exists("borders", $this->_propDict)) {
+            return BordersCollectionPage($this->_propDict["borders"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+    * Gets the fill
+    *
+    * @return WorkbookRangeFill The fill
+    */
+    public function getFill()
+    {
+        if (array_key_exists("fill", $this->_propDict)) {
+            if (is_a($this->_propDict["fill"], 'WorkbookRangeFill')) {
+                return $this->_propDict["fill"];
+            } else {
+                $this->_propDict["fill"] = new WorkbookRangeFill($this->_propDict["fill"]);
+                return $this->_propDict["fill"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the fill
+    *
+    * @param string $val The fill
+    *
+    * @return null
+    */
+    public function setFill($val)
+    {
+        $this->propDict["fill"] = $val;
+    }
+
+    /**
+    * Gets the font
+    *
+    * @return WorkbookRangeFont The font
+    */
+    public function getFont()
+    {
+        if (array_key_exists("font", $this->_propDict)) {
+            if (is_a($this->_propDict["font"], 'WorkbookRangeFont')) {
+                return $this->_propDict["font"];
+            } else {
+                $this->_propDict["font"] = new WorkbookRangeFont($this->_propDict["font"]);
+                return $this->_propDict["font"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the font
+    *
+    * @param string $val The font
+    *
+    * @return null
+    */
+    public function setFont($val)
+    {
+        $this->propDict["font"] = $val;
+    }
+
+    /**
+    * Gets the protection
+    *
+    * @return WorkbookFormatProtection The protection
+    */
+    public function getProtection()
+    {
+        if (array_key_exists("protection", $this->_propDict)) {
+            if (is_a($this->_propDict["protection"], 'WorkbookFormatProtection')) {
+                return $this->_propDict["protection"];
+            } else {
+                $this->_propDict["protection"] = new WorkbookFormatProtection($this->_propDict["protection"]);
+                return $this->_propDict["protection"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the protection
+    *
+    * @param string $val The protection
+    *
+    * @return null
+    */
+    public function setProtection($val)
+    {
+        $this->propDict["protection"] = $val;
+    }
+}

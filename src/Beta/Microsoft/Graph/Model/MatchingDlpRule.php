@@ -32,7 +32,7 @@ class MatchingDlpRule extends Entity
     public function getActions()
     {
         if (array_key_exists("actions", $this->_propDict)) {
-            if (is_a($this->_propDict["actions"], "\Beta\Microsoft\Graph\Model\DlpActionInfo")) {
+            if (is_a($this->_propDict["actions"], "Beta\Microsoft\Graph\Model\DlpActionInfo")) {
                 return $this->_propDict["actions"];
             } else {
                 $this->_propDict["actions"] = new DlpActionInfo($this->_propDict["actions"]);
@@ -193,7 +193,7 @@ class MatchingDlpRule extends Entity
     public function getRuleMode()
     {
         if (array_key_exists("ruleMode", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleMode"], "\Beta\Microsoft\Graph\Model\RuleMode")) {
+            if (is_a($this->_propDict["ruleMode"], "Beta\Microsoft\Graph\Model\RuleMode")) {
                 return $this->_propDict["ruleMode"];
             } else {
                 $this->_propDict["ruleMode"] = new RuleMode($this->_propDict["ruleMode"]);

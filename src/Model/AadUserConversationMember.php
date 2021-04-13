@@ -119,7 +119,7 @@ class AadUserConversationMember extends ConversationMember
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "\Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["user"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new User($this->_propDict["user"]);

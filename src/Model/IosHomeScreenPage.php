@@ -61,7 +61,7 @@ class IosHomeScreenPage extends Entity
     public function getIcons()
     {
         if (array_key_exists("icons", $this->_propDict)) {
-            if (is_a($this->_propDict["icons"], "\Microsoft\Graph\Model\IosHomeScreenItem")) {
+            if (is_a($this->_propDict["icons"], "Microsoft\Graph\Model\IosHomeScreenItem")) {
                 return $this->_propDict["icons"];
             } else {
                 $this->_propDict["icons"] = new IosHomeScreenItem($this->_propDict["icons"]);

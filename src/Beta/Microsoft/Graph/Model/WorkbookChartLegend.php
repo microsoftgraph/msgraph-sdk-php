@@ -120,7 +120,7 @@ class WorkbookChartLegend extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\WorkbookChartLegendFormat")) {
+            if (is_a($this->_propDict["format"], "Beta\Microsoft\Graph\Model\WorkbookChartLegendFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartLegendFormat($this->_propDict["format"]);

@@ -325,7 +325,7 @@ class DeviceManagementSettingDefinition extends Entity
     public function getValueType()
     {
         if (array_key_exists("valueType", $this->_propDict)) {
-            if (is_a($this->_propDict["valueType"], "\Beta\Microsoft\Graph\Model\DeviceManangementIntentValueType")) {
+            if (is_a($this->_propDict["valueType"], "Beta\Microsoft\Graph\Model\DeviceManangementIntentValueType")) {
                 return $this->_propDict["valueType"];
             } else {
                 $this->_propDict["valueType"] = new DeviceManangementIntentValueType($this->_propDict["valueType"]);

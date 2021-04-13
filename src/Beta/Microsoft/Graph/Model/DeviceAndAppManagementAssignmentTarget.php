@@ -61,7 +61,7 @@ class DeviceAndAppManagementAssignmentTarget extends Entity
     public function getDeviceAndAppManagementAssignmentFilterType()
     {
         if (array_key_exists("deviceAndAppManagementAssignmentFilterType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceAndAppManagementAssignmentFilterType"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentFilterType")) {
+            if (is_a($this->_propDict["deviceAndAppManagementAssignmentFilterType"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentFilterType")) {
                 return $this->_propDict["deviceAndAppManagementAssignmentFilterType"];
             } else {
                 $this->_propDict["deviceAndAppManagementAssignmentFilterType"] = new DeviceAndAppManagementAssignmentFilterType($this->_propDict["deviceAndAppManagementAssignmentFilterType"]);

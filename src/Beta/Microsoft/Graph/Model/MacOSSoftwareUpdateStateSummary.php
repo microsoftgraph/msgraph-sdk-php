@@ -124,7 +124,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateState")) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new MacOSSoftwareUpdateState($this->_propDict["state"]);
@@ -157,7 +157,7 @@ class MacOSSoftwareUpdateStateSummary extends Entity
     public function getUpdateCategory()
     {
         if (array_key_exists("updateCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["updateCategory"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateCategory")) {
+            if (is_a($this->_propDict["updateCategory"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateCategory")) {
                 return $this->_propDict["updateCategory"];
             } else {
                 $this->_propDict["updateCategory"] = new MacOSSoftwareUpdateCategory($this->_propDict["updateCategory"]);

@@ -33,7 +33,7 @@ class RiskyUserHistoryItem extends RiskyUser
     public function getActivity()
     {
         if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\RiskUserActivity")) {
+            if (is_a($this->_propDict["activity"], "Beta\Microsoft\Graph\Model\RiskUserActivity")) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new RiskUserActivity($this->_propDict["activity"]);

@@ -33,7 +33,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     public function getAllowExternalIdToUseEmailOtp()
     {
         if (array_key_exists("allowExternalIdToUseEmailOtp", $this->_propDict)) {
-            if (is_a($this->_propDict["allowExternalIdToUseEmailOtp"], "\Microsoft\Graph\Model\ExternalEmailOtpState")) {
+            if (is_a($this->_propDict["allowExternalIdToUseEmailOtp"], "Microsoft\Graph\Model\ExternalEmailOtpState")) {
                 return $this->_propDict["allowExternalIdToUseEmailOtp"];
             } else {
                 $this->_propDict["allowExternalIdToUseEmailOtp"] = new ExternalEmailOtpState($this->_propDict["allowExternalIdToUseEmailOtp"]);

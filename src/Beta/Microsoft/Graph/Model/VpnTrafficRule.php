@@ -61,7 +61,7 @@ class VpnTrafficRule extends Entity
     public function getAppType()
     {
         if (array_key_exists("appType", $this->_propDict)) {
-            if (is_a($this->_propDict["appType"], "\Beta\Microsoft\Graph\Model\VpnTrafficRuleAppType")) {
+            if (is_a($this->_propDict["appType"], "Beta\Microsoft\Graph\Model\VpnTrafficRuleAppType")) {
                 return $this->_propDict["appType"];
             } else {
                 $this->_propDict["appType"] = new VpnTrafficRuleAppType($this->_propDict["appType"]);
@@ -122,7 +122,7 @@ class VpnTrafficRule extends Entity
     public function getLocalAddressRanges()
     {
         if (array_key_exists("localAddressRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["localAddressRanges"], "\Beta\Microsoft\Graph\Model\IPv4Range")) {
+            if (is_a($this->_propDict["localAddressRanges"], "Beta\Microsoft\Graph\Model\IPv4Range")) {
                 return $this->_propDict["localAddressRanges"];
             } else {
                 $this->_propDict["localAddressRanges"] = new IPv4Range($this->_propDict["localAddressRanges"]);
@@ -155,7 +155,7 @@ class VpnTrafficRule extends Entity
     public function getLocalPortRanges()
     {
         if (array_key_exists("localPortRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["localPortRanges"], "\Beta\Microsoft\Graph\Model\NumberRange")) {
+            if (is_a($this->_propDict["localPortRanges"], "Beta\Microsoft\Graph\Model\NumberRange")) {
                 return $this->_propDict["localPortRanges"];
             } else {
                 $this->_propDict["localPortRanges"] = new NumberRange($this->_propDict["localPortRanges"]);
@@ -244,7 +244,7 @@ class VpnTrafficRule extends Entity
     public function getRemoteAddressRanges()
     {
         if (array_key_exists("remoteAddressRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["remoteAddressRanges"], "\Beta\Microsoft\Graph\Model\IPv4Range")) {
+            if (is_a($this->_propDict["remoteAddressRanges"], "Beta\Microsoft\Graph\Model\IPv4Range")) {
                 return $this->_propDict["remoteAddressRanges"];
             } else {
                 $this->_propDict["remoteAddressRanges"] = new IPv4Range($this->_propDict["remoteAddressRanges"]);
@@ -277,7 +277,7 @@ class VpnTrafficRule extends Entity
     public function getRemotePortRanges()
     {
         if (array_key_exists("remotePortRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["remotePortRanges"], "\Beta\Microsoft\Graph\Model\NumberRange")) {
+            if (is_a($this->_propDict["remotePortRanges"], "Beta\Microsoft\Graph\Model\NumberRange")) {
                 return $this->_propDict["remotePortRanges"];
             } else {
                 $this->_propDict["remotePortRanges"] = new NumberRange($this->_propDict["remotePortRanges"]);
@@ -310,7 +310,7 @@ class VpnTrafficRule extends Entity
     public function getRoutingPolicyType()
     {
         if (array_key_exists("routingPolicyType", $this->_propDict)) {
-            if (is_a($this->_propDict["routingPolicyType"], "\Beta\Microsoft\Graph\Model\VpnTrafficRuleRoutingPolicyType")) {
+            if (is_a($this->_propDict["routingPolicyType"], "Beta\Microsoft\Graph\Model\VpnTrafficRuleRoutingPolicyType")) {
                 return $this->_propDict["routingPolicyType"];
             } else {
                 $this->_propDict["routingPolicyType"] = new VpnTrafficRuleRoutingPolicyType($this->_propDict["routingPolicyType"]);

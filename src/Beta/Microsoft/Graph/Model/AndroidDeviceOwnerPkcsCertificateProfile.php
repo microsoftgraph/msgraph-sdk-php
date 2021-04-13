@@ -33,7 +33,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     public function getCertificateStore()
     {
         if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "\Beta\Microsoft\Graph\Model\CertificateStore")) {
+            if (is_a($this->_propDict["certificateStore"], "Beta\Microsoft\Graph\Model\CertificateStore")) {
                 return $this->_propDict["certificateStore"];
             } else {
                 $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
@@ -153,7 +153,7 @@ class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwnerCertifi
     public function getCertificationAuthorityType()
     {
         if (array_key_exists("certificationAuthorityType", $this->_propDict)) {
-            if (is_a($this->_propDict["certificationAuthorityType"], "\Beta\Microsoft\Graph\Model\DeviceManagementCertificationAuthority")) {
+            if (is_a($this->_propDict["certificationAuthorityType"], "Beta\Microsoft\Graph\Model\DeviceManagementCertificationAuthority")) {
                 return $this->_propDict["certificationAuthorityType"];
             } else {
                 $this->_propDict["certificationAuthorityType"] = new DeviceManagementCertificationAuthority($this->_propDict["certificationAuthorityType"]);

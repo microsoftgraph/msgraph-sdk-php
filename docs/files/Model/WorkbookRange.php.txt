@@ -1,0 +1,617 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* WorkbookRange File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* WorkbookRange class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class WorkbookRange
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new WorkbookRange
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the WorkbookRange
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the address
+    *
+    * @return string The address
+    */
+    public function getAddress()
+    {
+        if (array_key_exists("address", $this->_propDict)) {
+            return $this->_propDict["address"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the address
+    *
+    * @param string $val The address
+    *
+    * @return null
+    */
+    public function setAddress($val)
+    {
+        $this->propDict["address"] = $val;
+    }
+
+    /**
+    * Gets the addressLocal
+    *
+    * @return string The addressLocal
+    */
+    public function getAddressLocal()
+    {
+        if (array_key_exists("addressLocal", $this->_propDict)) {
+            return $this->_propDict["addressLocal"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the addressLocal
+    *
+    * @param string $val The addressLocal
+    *
+    * @return null
+    */
+    public function setAddressLocal($val)
+    {
+        $this->propDict["addressLocal"] = $val;
+    }
+
+    /**
+    * Gets the cellCount
+    *
+    * @return int The cellCount
+    */
+    public function getCellCount()
+    {
+        if (array_key_exists("cellCount", $this->_propDict)) {
+            return $this->_propDict["cellCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the cellCount
+    *
+    * @param int $val The cellCount
+    *
+    * @return null
+    */
+    public function setCellCount($val)
+    {
+        $this->propDict["cellCount"] = intval($val);
+    }
+
+    /**
+    * Gets the columnCount
+    *
+    * @return int The columnCount
+    */
+    public function getColumnCount()
+    {
+        if (array_key_exists("columnCount", $this->_propDict)) {
+            return $this->_propDict["columnCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the columnCount
+    *
+    * @param int $val The columnCount
+    *
+    * @return null
+    */
+    public function setColumnCount($val)
+    {
+        $this->propDict["columnCount"] = intval($val);
+    }
+
+    /**
+    * Gets the columnHidden
+    *
+    * @return bool The columnHidden
+    */
+    public function getColumnHidden()
+    {
+        if (array_key_exists("columnHidden", $this->_propDict)) {
+            return $this->_propDict["columnHidden"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the columnHidden
+    *
+    * @param bool $val The columnHidden
+    *
+    * @return null
+    */
+    public function setColumnHidden($val)
+    {
+        $this->propDict["columnHidden"] = boolval($val);
+    }
+
+    /**
+    * Gets the columnIndex
+    *
+    * @return int The columnIndex
+    */
+    public function getColumnIndex()
+    {
+        if (array_key_exists("columnIndex", $this->_propDict)) {
+            return $this->_propDict["columnIndex"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the columnIndex
+    *
+    * @param int $val The columnIndex
+    *
+    * @return null
+    */
+    public function setColumnIndex($val)
+    {
+        $this->propDict["columnIndex"] = intval($val);
+    }
+
+    /**
+    * Gets the formulas
+    *
+    * @return Json The formulas
+    */
+    public function getFormulas()
+    {
+        if (array_key_exists("formulas", $this->_propDict)) {
+            if (is_a($this->_propDict["formulas"], 'Json')) {
+                return $this->_propDict["formulas"];
+            } else {
+                $this->_propDict["formulas"] = new Json($this->_propDict["formulas"]);
+                return $this->_propDict["formulas"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the formulas
+    *
+    * @param string $val The formulas
+    *
+    * @return null
+    */
+    public function setFormulas($val)
+    {
+        $this->propDict["formulas"] = $val;
+    }
+
+    /**
+    * Gets the formulasLocal
+    *
+    * @return Json The formulasLocal
+    */
+    public function getFormulasLocal()
+    {
+        if (array_key_exists("formulasLocal", $this->_propDict)) {
+            if (is_a($this->_propDict["formulasLocal"], 'Json')) {
+                return $this->_propDict["formulasLocal"];
+            } else {
+                $this->_propDict["formulasLocal"] = new Json($this->_propDict["formulasLocal"]);
+                return $this->_propDict["formulasLocal"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the formulasLocal
+    *
+    * @param string $val The formulasLocal
+    *
+    * @return null
+    */
+    public function setFormulasLocal($val)
+    {
+        $this->propDict["formulasLocal"] = $val;
+    }
+
+    /**
+    * Gets the formulasR1C1
+    *
+    * @return Json The formulasR1C1
+    */
+    public function getFormulasR1C1()
+    {
+        if (array_key_exists("formulasR1C1", $this->_propDict)) {
+            if (is_a($this->_propDict["formulasR1C1"], 'Json')) {
+                return $this->_propDict["formulasR1C1"];
+            } else {
+                $this->_propDict["formulasR1C1"] = new Json($this->_propDict["formulasR1C1"]);
+                return $this->_propDict["formulasR1C1"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the formulasR1C1
+    *
+    * @param string $val The formulasR1C1
+    *
+    * @return null
+    */
+    public function setFormulasR1C1($val)
+    {
+        $this->propDict["formulasR1C1"] = $val;
+    }
+
+    /**
+    * Gets the hidden
+    *
+    * @return bool The hidden
+    */
+    public function getHidden()
+    {
+        if (array_key_exists("hidden", $this->_propDict)) {
+            return $this->_propDict["hidden"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hidden
+    *
+    * @param bool $val The hidden
+    *
+    * @return null
+    */
+    public function setHidden($val)
+    {
+        $this->propDict["hidden"] = boolval($val);
+    }
+
+    /**
+    * Gets the numberFormat
+    *
+    * @return Json The numberFormat
+    */
+    public function getNumberFormat()
+    {
+        if (array_key_exists("numberFormat", $this->_propDict)) {
+            if (is_a($this->_propDict["numberFormat"], 'Json')) {
+                return $this->_propDict["numberFormat"];
+            } else {
+                $this->_propDict["numberFormat"] = new Json($this->_propDict["numberFormat"]);
+                return $this->_propDict["numberFormat"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the numberFormat
+    *
+    * @param string $val The numberFormat
+    *
+    * @return null
+    */
+    public function setNumberFormat($val)
+    {
+        $this->propDict["numberFormat"] = $val;
+    }
+
+    /**
+    * Gets the rowCount
+    *
+    * @return int The rowCount
+    */
+    public function getRowCount()
+    {
+        if (array_key_exists("rowCount", $this->_propDict)) {
+            return $this->_propDict["rowCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the rowCount
+    *
+    * @param int $val The rowCount
+    *
+    * @return null
+    */
+    public function setRowCount($val)
+    {
+        $this->propDict["rowCount"] = intval($val);
+    }
+
+    /**
+    * Gets the rowHidden
+    *
+    * @return bool The rowHidden
+    */
+    public function getRowHidden()
+    {
+        if (array_key_exists("rowHidden", $this->_propDict)) {
+            return $this->_propDict["rowHidden"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the rowHidden
+    *
+    * @param bool $val The rowHidden
+    *
+    * @return null
+    */
+    public function setRowHidden($val)
+    {
+        $this->propDict["rowHidden"] = boolval($val);
+    }
+
+    /**
+    * Gets the rowIndex
+    *
+    * @return int The rowIndex
+    */
+    public function getRowIndex()
+    {
+        if (array_key_exists("rowIndex", $this->_propDict)) {
+            return $this->_propDict["rowIndex"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the rowIndex
+    *
+    * @param int $val The rowIndex
+    *
+    * @return null
+    */
+    public function setRowIndex($val)
+    {
+        $this->propDict["rowIndex"] = intval($val);
+    }
+
+    /**
+    * Gets the text
+    *
+    * @return Json The text
+    */
+    public function getText()
+    {
+        if (array_key_exists("text", $this->_propDict)) {
+            if (is_a($this->_propDict["text"], 'Json')) {
+                return $this->_propDict["text"];
+            } else {
+                $this->_propDict["text"] = new Json($this->_propDict["text"]);
+                return $this->_propDict["text"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the text
+    *
+    * @param string $val The text
+    *
+    * @return null
+    */
+    public function setText($val)
+    {
+        $this->propDict["text"] = $val;
+    }
+
+    /**
+    * Gets the valueTypes
+    *
+    * @return Json The valueTypes
+    */
+    public function getValueTypes()
+    {
+        if (array_key_exists("valueTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["valueTypes"], 'Json')) {
+                return $this->_propDict["valueTypes"];
+            } else {
+                $this->_propDict["valueTypes"] = new Json($this->_propDict["valueTypes"]);
+                return $this->_propDict["valueTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the valueTypes
+    *
+    * @param string $val The valueTypes
+    *
+    * @return null
+    */
+    public function setValueTypes($val)
+    {
+        $this->propDict["valueTypes"] = $val;
+    }
+
+    /**
+    * Gets the values
+    *
+    * @return Json The values
+    */
+    public function getValues()
+    {
+        if (array_key_exists("values", $this->_propDict)) {
+            if (is_a($this->_propDict["values"], 'Json')) {
+                return $this->_propDict["values"];
+            } else {
+                $this->_propDict["values"] = new Json($this->_propDict["values"]);
+                return $this->_propDict["values"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the values
+    *
+    * @param string $val The values
+    *
+    * @return null
+    */
+    public function setValues($val)
+    {
+        $this->propDict["values"] = $val;
+    }
+
+    /**
+    * Gets the format
+    *
+    * @return WorkbookRangeFormat The format
+    */
+    public function getFormat()
+    {
+        if (array_key_exists("format", $this->_propDict)) {
+            if (is_a($this->_propDict["format"], 'WorkbookRangeFormat')) {
+                return $this->_propDict["format"];
+            } else {
+                $this->_propDict["format"] = new WorkbookRangeFormat($this->_propDict["format"]);
+                return $this->_propDict["format"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the format
+    *
+    * @param string $val The format
+    *
+    * @return null
+    */
+    public function setFormat($val)
+    {
+        $this->propDict["format"] = $val;
+    }
+
+    /**
+    * Gets the sort
+    *
+    * @return WorkbookRangeSort The sort
+    */
+    public function getSort()
+    {
+        if (array_key_exists("sort", $this->_propDict)) {
+            if (is_a($this->_propDict["sort"], 'WorkbookRangeSort')) {
+                return $this->_propDict["sort"];
+            } else {
+                $this->_propDict["sort"] = new WorkbookRangeSort($this->_propDict["sort"]);
+                return $this->_propDict["sort"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sort
+    *
+    * @param string $val The sort
+    *
+    * @return null
+    */
+    public function setSort($val)
+    {
+        $this->propDict["sort"] = $val;
+    }
+
+    /**
+    * Gets the worksheet
+    *
+    * @return WorkbookWorksheet The worksheet
+    */
+    public function getWorksheet()
+    {
+        if (array_key_exists("worksheet", $this->_propDict)) {
+            if (is_a($this->_propDict["worksheet"], 'WorkbookWorksheet')) {
+                return $this->_propDict["worksheet"];
+            } else {
+                $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);
+                return $this->_propDict["worksheet"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the worksheet
+    *
+    * @param string $val The worksheet
+    *
+    * @return null
+    */
+    public function setWorksheet($val)
+    {
+        $this->propDict["worksheet"] = $val;
+    }
+}

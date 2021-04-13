@@ -25,60 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class PrivateLinkResourcePolicy extends Entity
 {
     /**
-    * Gets the allowedTenantIds
-    *
-    * @return string The allowedTenantIds
-    */
-    public function getAllowedTenantIds()
-    {
-        if (array_key_exists("allowedTenantIds", $this->_propDict)) {
-            return $this->_propDict["allowedTenantIds"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the allowedTenantIds
-    *
-    * @param string $val The allowedTenantIds
-    *
-    * @return PrivateLinkResourcePolicy
-    */
-    public function setAllowedTenantIds($val)
-    {
-        $this->_propDict["allowedTenantIds"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the displayName
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the displayName
-    *
-    * @param string $val The displayName
-    *
-    * @return PrivateLinkResourcePolicy
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the externalPrivateLinkId
     *
     * @return string The externalPrivateLinkId
@@ -107,29 +53,29 @@ class PrivateLinkResourcePolicy extends Entity
     
 
      /** 
-     * Gets the privateEndpointConnections
+     * Gets the tenantApprovals
      *
-     * @return array The privateEndpointConnections
+     * @return array The tenantApprovals
      */
-    public function getPrivateEndpointConnections()
+    public function getTenantApprovals()
     {
-        if (array_key_exists("privateEndpointConnections", $this->_propDict)) {
-           return $this->_propDict["privateEndpointConnections"];
+        if (array_key_exists("tenantApprovals", $this->_propDict)) {
+           return $this->_propDict["tenantApprovals"];
         } else {
             return null;
         }
     }
     
     /** 
-    * Sets the privateEndpointConnections
+    * Sets the tenantApprovals
     *
-    * @param PrivateEndpointConnection $val The privateEndpointConnections
+    * @param TenantApprovals $val The tenantApprovals
     *
     * @return PrivateLinkResourcePolicy
     */
-    public function setPrivateEndpointConnections($val)
+    public function setTenantApprovals($val)
     {
-		$this->_propDict["privateEndpointConnections"] = $val;
+		$this->_propDict["tenantApprovals"] = $val;
         return $this;
     }
     

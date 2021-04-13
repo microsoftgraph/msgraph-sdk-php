@@ -61,7 +61,7 @@ class PrinterStatus extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\PrinterProcessingStateDetail")) {
+            if (is_a($this->_propDict["details"], "Microsoft\Graph\Model\PrinterProcessingStateDetail")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PrinterProcessingStateDetail($this->_propDict["details"]);
@@ -94,7 +94,7 @@ class PrinterStatus extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\PrinterProcessingState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\PrinterProcessingState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new PrinterProcessingState($this->_propDict["state"]);

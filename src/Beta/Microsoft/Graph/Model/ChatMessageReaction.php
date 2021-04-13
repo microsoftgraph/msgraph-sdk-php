@@ -26,7 +26,7 @@ class ChatMessageReaction extends Entity
 
     /**
     * Gets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The createdDateTime
     */
@@ -45,7 +45,7 @@ class ChatMessageReaction extends Entity
 
     /**
     * Sets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -94,7 +94,7 @@ class ChatMessageReaction extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["user"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new IdentitySet($this->_propDict["user"]);

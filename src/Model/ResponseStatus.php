@@ -33,7 +33,7 @@ class ResponseStatus extends Entity
     public function getResponse()
     {
         if (array_key_exists("response", $this->_propDict)) {
-            if (is_a($this->_propDict["response"], "\Microsoft\Graph\Model\ResponseType")) {
+            if (is_a($this->_propDict["response"], "Microsoft\Graph\Model\ResponseType")) {
                 return $this->_propDict["response"];
             } else {
                 $this->_propDict["response"] = new ResponseType($this->_propDict["response"]);

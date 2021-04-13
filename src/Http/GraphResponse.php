@@ -100,7 +100,7 @@ class GraphResponse
     /**
     * Get the undecoded body of the HTTP response
     *
-    * @return string The undecoded body
+    * @return array The undecoded body
     */
     public function getRawBody()
     {

@@ -55,7 +55,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the azureActiveDirectoryDeviceId
-    * AAD Device ID - to be deprecated
+    * AAD Device ID
     *
     * @return string The azureActiveDirectoryDeviceId
     */
@@ -70,7 +70,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the azureActiveDirectoryDeviceId
-    * AAD Device ID - to be deprecated
+    * AAD Device ID
     *
     * @param string $val The azureActiveDirectoryDeviceId
     *
@@ -79,35 +79,6 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function setAzureActiveDirectoryDeviceId($val)
     {
         $this->_propDict["azureActiveDirectoryDeviceId"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the azureAdDeviceId
-    * AAD Device ID
-    *
-    * @return string The azureAdDeviceId
-    */
-    public function getAzureAdDeviceId()
-    {
-        if (array_key_exists("azureAdDeviceId", $this->_propDict)) {
-            return $this->_propDict["azureAdDeviceId"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the azureAdDeviceId
-    * AAD Device ID
-    *
-    * @param string $val The azureAdDeviceId
-    *
-    * @return WindowsAutopilotDeviceIdentity
-    */
-    public function setAzureAdDeviceId($val)
-    {
-        $this->_propDict["azureAdDeviceId"] = $val;
         return $this;
     }
     
@@ -153,7 +124,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getDeploymentProfileAssignmentDetailedStatus()
     {
         if (array_key_exists("deploymentProfileAssignmentDetailedStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfileAssignmentDetailedStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentDetailedStatus")) {
+            if (is_a($this->_propDict["deploymentProfileAssignmentDetailedStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentDetailedStatus")) {
                 return $this->_propDict["deploymentProfileAssignmentDetailedStatus"];
             } else {
                 $this->_propDict["deploymentProfileAssignmentDetailedStatus"] = new WindowsAutopilotProfileAssignmentDetailedStatus($this->_propDict["deploymentProfileAssignmentDetailedStatus"]);
@@ -186,7 +157,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getDeploymentProfileAssignmentStatus()
     {
         if (array_key_exists("deploymentProfileAssignmentStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentStatus")) {
+            if (is_a($this->_propDict["deploymentProfileAssignmentStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotProfileAssignmentStatus")) {
                 return $this->_propDict["deploymentProfileAssignmentStatus"];
             } else {
                 $this->_propDict["deploymentProfileAssignmentStatus"] = new WindowsAutopilotProfileAssignmentStatus($this->_propDict["deploymentProfileAssignmentStatus"]);
@@ -248,7 +219,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "\Beta\Microsoft\Graph\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "Beta\Microsoft\Graph\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -418,6 +389,35 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function setModel($val)
     {
         $this->_propDict["model"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the orderIdentifier
+    * Order Identifier of the Windows autopilot device - Deprecated
+    *
+    * @return string The orderIdentifier
+    */
+    public function getOrderIdentifier()
+    {
+        if (array_key_exists("orderIdentifier", $this->_propDict)) {
+            return $this->_propDict["orderIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the orderIdentifier
+    * Order Identifier of the Windows autopilot device - Deprecated
+    *
+    * @param string $val The orderIdentifier
+    *
+    * @return WindowsAutopilotDeviceIdentity
+    */
+    public function setOrderIdentifier($val)
+    {
+        $this->_propDict["orderIdentifier"] = $val;
         return $this;
     }
     
@@ -633,7 +633,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getDeploymentProfile()
     {
         if (array_key_exists("deploymentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentProfile"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentProfile")) {
+            if (is_a($this->_propDict["deploymentProfile"], "Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentProfile")) {
                 return $this->_propDict["deploymentProfile"];
             } else {
                 $this->_propDict["deploymentProfile"] = new WindowsAutopilotDeploymentProfile($this->_propDict["deploymentProfile"]);
@@ -666,7 +666,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     public function getIntendedDeploymentProfile()
     {
         if (array_key_exists("intendedDeploymentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedDeploymentProfile"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentProfile")) {
+            if (is_a($this->_propDict["intendedDeploymentProfile"], "Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentProfile")) {
                 return $this->_propDict["intendedDeploymentProfile"];
             } else {
                 $this->_propDict["intendedDeploymentProfile"] = new WindowsAutopilotDeploymentProfile($this->_propDict["intendedDeploymentProfile"]);

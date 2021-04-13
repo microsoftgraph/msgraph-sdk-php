@@ -352,7 +352,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "\Beta\Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Beta\Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -1314,7 +1314,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -1493,7 +1493,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration
     public function getUpdateDelayPolicy()
     {
         if (array_key_exists("updateDelayPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["updateDelayPolicy"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateDelayPolicy")) {
+            if (is_a($this->_propDict["updateDelayPolicy"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateDelayPolicy")) {
                 return $this->_propDict["updateDelayPolicy"];
             } else {
                 $this->_propDict["updateDelayPolicy"] = new MacOSSoftwareUpdateDelayPolicy($this->_propDict["updateDelayPolicy"]);

@@ -33,7 +33,7 @@ class FilterGroup extends Entity
     public function getClauses()
     {
         if (array_key_exists("clauses", $this->_propDict)) {
-            if (is_a($this->_propDict["clauses"], "\Beta\Microsoft\Graph\Model\FilterClause")) {
+            if (is_a($this->_propDict["clauses"], "Beta\Microsoft\Graph\Model\FilterClause")) {
                 return $this->_propDict["clauses"];
             } else {
                 $this->_propDict["clauses"] = new FilterClause($this->_propDict["clauses"]);

@@ -1,0 +1,128 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* Thumbnail File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* Thumbnail class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class Thumbnail
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Thumbnail constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+    
+    /**
+    * Gets the height
+    *
+    * @return int The height
+    */
+    public function getHeight()
+    {
+        if (array_key_exists("height", $this->propDict)) {
+            return $this->propDict["height"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the height
+    *
+    * @param int $val The value of the height
+    *
+    * @return null
+    */
+    public function setHeight($val)
+    {
+        $this->_propDict["height"] = $val;
+    }
+    
+    /**
+    * Gets the url
+    *
+    * @return string The url
+    */
+    public function getUrl()
+    {
+        if (array_key_exists("url", $this->propDict)) {
+            return $this->propDict["url"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the url
+    *
+    * @param string $val The value of the url
+    *
+    * @return null
+    */
+    public function setUrl($val)
+    {
+        $this->_propDict["url"] = $val;
+    }
+    
+    /**
+    * Gets the width
+    *
+    * @return int The width
+    */
+    public function getWidth()
+    {
+        if (array_key_exists("width", $this->propDict)) {
+            return $this->propDict["width"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the width
+    *
+    * @param int $val The value of the width
+    *
+    * @return null
+    */
+    public function setWidth($val)
+    {
+        $this->_propDict["width"] = $val;
+    }
+}
+

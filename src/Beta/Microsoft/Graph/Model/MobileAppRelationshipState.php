@@ -89,7 +89,7 @@ class MobileAppRelationshipState extends Entity
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState")) {
+            if (is_a($this->_propDict["installState"], "Beta\Microsoft\Graph\Model\ResultantAppState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new ResultantAppState($this->_propDict["installState"]);
@@ -122,7 +122,7 @@ class MobileAppRelationshipState extends Entity
     public function getInstallStateDetail()
     {
         if (array_key_exists("installStateDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["installStateDetail"], "\Beta\Microsoft\Graph\Model\ResultantAppStateDetail")) {
+            if (is_a($this->_propDict["installStateDetail"], "Beta\Microsoft\Graph\Model\ResultantAppStateDetail")) {
                 return $this->_propDict["installStateDetail"];
             } else {
                 $this->_propDict["installStateDetail"] = new ResultantAppStateDetail($this->_propDict["installStateDetail"]);

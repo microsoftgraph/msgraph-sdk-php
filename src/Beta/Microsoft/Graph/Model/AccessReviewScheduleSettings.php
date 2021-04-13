@@ -33,7 +33,7 @@ class AccessReviewScheduleSettings extends Entity
     public function getApplyActions()
     {
         if (array_key_exists("applyActions", $this->_propDict)) {
-            if (is_a($this->_propDict["applyActions"], "\Beta\Microsoft\Graph\Model\AccessReviewApplyAction")) {
+            if (is_a($this->_propDict["applyActions"], "Beta\Microsoft\Graph\Model\AccessReviewApplyAction")) {
                 return $this->_propDict["applyActions"];
             } else {
                 $this->_propDict["applyActions"] = new AccessReviewApplyAction($this->_propDict["applyActions"]);
@@ -255,14 +255,14 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Gets the recurrence
-    * Detailed settings for recurrence. Using standard Outlook recurrence object. Note that dayOfMonth is not supported - use property startDate on recurrenceRange to determine the day the review will start on.
+    * Detailed settings for recurrence. Using standard Outlook recurrence object.
     *
     * @return PatternedRecurrence The recurrence
     */
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -274,7 +274,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the recurrence
-    * Detailed settings for recurrence. Using standard Outlook recurrence object. Note that dayOfMonth is not supported - use property startDate on recurrenceRange to determine the day the review will start on.
+    * Detailed settings for recurrence. Using standard Outlook recurrence object.
     *
     * @param PatternedRecurrence $val The value to assign to the recurrence
     *

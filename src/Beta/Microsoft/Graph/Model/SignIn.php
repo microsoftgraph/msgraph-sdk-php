@@ -289,7 +289,7 @@ class SignIn extends Entity
     
     /**
     * Gets the clientAppUsed
-    * The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP.
+    * The legacy client used for sign-in activity. For example, Browser, Exchange Active Sync,Modern clients, IMAP, MAPI, SMTP, or POP.
     *
     * @return string The clientAppUsed
     */
@@ -304,7 +304,7 @@ class SignIn extends Entity
     
     /**
     * Sets the clientAppUsed
-    * The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP.
+    * The legacy client used for sign-in activity. For example, Browser, Exchange Active Sync,Modern clients, IMAP, MAPI, SMTP, or POP.
     *
     * @param string $val The clientAppUsed
     *
@@ -325,7 +325,7 @@ class SignIn extends Entity
     public function getConditionalAccessStatus()
     {
         if (array_key_exists("conditionalAccessStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessStatus"], "\Beta\Microsoft\Graph\Model\ConditionalAccessStatus")) {
+            if (is_a($this->_propDict["conditionalAccessStatus"], "Beta\Microsoft\Graph\Model\ConditionalAccessStatus")) {
                 return $this->_propDict["conditionalAccessStatus"];
             } else {
                 $this->_propDict["conditionalAccessStatus"] = new ConditionalAccessStatus($this->_propDict["conditionalAccessStatus"]);
@@ -380,7 +380,7 @@ class SignIn extends Entity
     
     /**
     * Gets the createdDateTime
-    * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The createdDateTime
     */
@@ -399,7 +399,7 @@ class SignIn extends Entity
     
     /**
     * Sets the createdDateTime
-    * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -420,7 +420,7 @@ class SignIn extends Entity
     public function getDeviceDetail()
     {
         if (array_key_exists("deviceDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceDetail"], "\Beta\Microsoft\Graph\Model\DeviceDetail")) {
+            if (is_a($this->_propDict["deviceDetail"], "Beta\Microsoft\Graph\Model\DeviceDetail")) {
                 return $this->_propDict["deviceDetail"];
             } else {
                 $this->_propDict["deviceDetail"] = new DeviceDetail($this->_propDict["deviceDetail"]);
@@ -592,7 +592,7 @@ class SignIn extends Entity
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\SignInLocation")) {
+            if (is_a($this->_propDict["location"], "Beta\Microsoft\Graph\Model\SignInLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new SignInLocation($this->_propDict["location"]);
@@ -624,7 +624,7 @@ class SignIn extends Entity
     public function getMfaDetail()
     {
         if (array_key_exists("mfaDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["mfaDetail"], "\Beta\Microsoft\Graph\Model\MfaDetail")) {
+            if (is_a($this->_propDict["mfaDetail"], "Beta\Microsoft\Graph\Model\MfaDetail")) {
                 return $this->_propDict["mfaDetail"];
             } else {
                 $this->_propDict["mfaDetail"] = new MfaDetail($this->_propDict["mfaDetail"]);
@@ -650,7 +650,7 @@ class SignIn extends Entity
 
      /** 
      * Gets the networkLocationDetails
-    * The network location details including the type of network used and its names.
+    * The network location details, such as IP address, location of the sign-in, the type of network used, and its names. Possible values: Named Netowrk, Extranet, Intranet, or Trusted Network.
      *
      * @return array The networkLocationDetails
      */
@@ -665,7 +665,7 @@ class SignIn extends Entity
     
     /** 
     * Sets the networkLocationDetails
-    * The network location details including the type of network used and its names.
+    * The network location details, such as IP address, location of the sign-in, the type of network used, and its names. Possible values: Named Netowrk, Extranet, Intranet, or Trusted Network.
     *
     * @param NetworkLocationDetail $val The networkLocationDetails
     *
@@ -829,7 +829,7 @@ class SignIn extends Entity
     public function getRiskDetail()
     {
         if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "\Beta\Microsoft\Graph\Model\RiskDetail")) {
+            if (is_a($this->_propDict["riskDetail"], "Beta\Microsoft\Graph\Model\RiskDetail")) {
                 return $this->_propDict["riskDetail"];
             } else {
                 $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
@@ -921,7 +921,7 @@ class SignIn extends Entity
     public function getRiskLevelAggregated()
     {
         if (array_key_exists("riskLevelAggregated", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevelAggregated"], "\Beta\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevelAggregated"], "Beta\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["riskLevelAggregated"];
             } else {
                 $this->_propDict["riskLevelAggregated"] = new RiskLevel($this->_propDict["riskLevelAggregated"]);
@@ -954,7 +954,7 @@ class SignIn extends Entity
     public function getRiskLevelDuringSignIn()
     {
         if (array_key_exists("riskLevelDuringSignIn", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevelDuringSignIn"], "\Beta\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevelDuringSignIn"], "Beta\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["riskLevelDuringSignIn"];
             } else {
                 $this->_propDict["riskLevelDuringSignIn"] = new RiskLevel($this->_propDict["riskLevelDuringSignIn"]);
@@ -987,7 +987,7 @@ class SignIn extends Entity
     public function getRiskState()
     {
         if (array_key_exists("riskState", $this->_propDict)) {
-            if (is_a($this->_propDict["riskState"], "\Beta\Microsoft\Graph\Model\RiskState")) {
+            if (is_a($this->_propDict["riskState"], "Beta\Microsoft\Graph\Model\RiskState")) {
                 return $this->_propDict["riskState"];
             } else {
                 $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);
@@ -1131,7 +1131,7 @@ class SignIn extends Entity
     public function getSignInIdentifierType()
     {
         if (array_key_exists("signInIdentifierType", $this->_propDict)) {
-            if (is_a($this->_propDict["signInIdentifierType"], "\Beta\Microsoft\Graph\Model\SignInIdentifierType")) {
+            if (is_a($this->_propDict["signInIdentifierType"], "Beta\Microsoft\Graph\Model\SignInIdentifierType")) {
                 return $this->_propDict["signInIdentifierType"];
             } else {
                 $this->_propDict["signInIdentifierType"] = new SignInIdentifierType($this->_propDict["signInIdentifierType"]);
@@ -1163,7 +1163,7 @@ class SignIn extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\SignInStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\SignInStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SignInStatus($this->_propDict["status"]);
@@ -1225,7 +1225,7 @@ class SignIn extends Entity
     public function getTokenIssuerType()
     {
         if (array_key_exists("tokenIssuerType", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenIssuerType"], "\Beta\Microsoft\Graph\Model\TokenIssuerType")) {
+            if (is_a($this->_propDict["tokenIssuerType"], "Beta\Microsoft\Graph\Model\TokenIssuerType")) {
                 return $this->_propDict["tokenIssuerType"];
             } else {
                 $this->_propDict["tokenIssuerType"] = new TokenIssuerType($this->_propDict["tokenIssuerType"]);
@@ -1373,7 +1373,7 @@ class SignIn extends Entity
     public function getUserType()
     {
         if (array_key_exists("userType", $this->_propDict)) {
-            if (is_a($this->_propDict["userType"], "\Beta\Microsoft\Graph\Model\SignInUserType")) {
+            if (is_a($this->_propDict["userType"], "Beta\Microsoft\Graph\Model\SignInUserType")) {
                 return $this->_propDict["userType"];
             } else {
                 $this->_propDict["userType"] = new SignInUserType($this->_propDict["userType"]);

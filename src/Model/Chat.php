@@ -33,7 +33,7 @@ class Chat extends Entity
     public function getChatType()
     {
         if (array_key_exists("chatType", $this->_propDict)) {
-            if (is_a($this->_propDict["chatType"], "\Microsoft\Graph\Model\ChatType")) {
+            if (is_a($this->_propDict["chatType"], "Microsoft\Graph\Model\ChatType")) {
                 return $this->_propDict["chatType"];
             } else {
                 $this->_propDict["chatType"] = new ChatType($this->_propDict["chatType"]);
@@ -209,36 +209,6 @@ class Chat extends Entity
     public function setMembers($val)
     {
 		$this->_propDict["members"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the messages
-    * A collection of all the messages in the chat. Nullable.
-     *
-     * @return array The messages
-     */
-    public function getMessages()
-    {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the messages
-    * A collection of all the messages in the chat. Nullable.
-    *
-    * @param ChatMessage $val The messages
-    *
-    * @return Chat
-    */
-    public function setMessages($val)
-    {
-		$this->_propDict["messages"] = $val;
         return $this;
     }
     

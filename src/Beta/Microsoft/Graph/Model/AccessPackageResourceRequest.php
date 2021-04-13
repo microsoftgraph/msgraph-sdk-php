@@ -82,7 +82,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Gets the expirationDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The expirationDateTime
     */
@@ -101,7 +101,7 @@ class AccessPackageResourceRequest extends Entity
     
     /**
     * Sets the expirationDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -267,7 +267,7 @@ class AccessPackageResourceRequest extends Entity
     public function getAccessPackageResource()
     {
         if (array_key_exists("accessPackageResource", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResource"], "\Beta\Microsoft\Graph\Model\AccessPackageResource")) {
+            if (is_a($this->_propDict["accessPackageResource"], "Beta\Microsoft\Graph\Model\AccessPackageResource")) {
                 return $this->_propDict["accessPackageResource"];
             } else {
                 $this->_propDict["accessPackageResource"] = new AccessPackageResource($this->_propDict["accessPackageResource"]);
@@ -300,7 +300,7 @@ class AccessPackageResourceRequest extends Entity
     public function getRequestor()
     {
         if (array_key_exists("requestor", $this->_propDict)) {
-            if (is_a($this->_propDict["requestor"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
+            if (is_a($this->_propDict["requestor"], "Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
                 return $this->_propDict["requestor"];
             } else {
                 $this->_propDict["requestor"] = new AccessPackageSubject($this->_propDict["requestor"]);

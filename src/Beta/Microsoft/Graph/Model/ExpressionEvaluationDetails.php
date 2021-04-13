@@ -61,7 +61,7 @@ class ExpressionEvaluationDetails extends Entity
     public function getExpressionEvaluationDetails()
     {
         if (array_key_exists("expressionEvaluationDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["expressionEvaluationDetails"], "\Beta\Microsoft\Graph\Model\ExpressionEvaluationDetails")) {
+            if (is_a($this->_propDict["expressionEvaluationDetails"], "Beta\Microsoft\Graph\Model\ExpressionEvaluationDetails")) {
                 return $this->_propDict["expressionEvaluationDetails"];
             } else {
                 $this->_propDict["expressionEvaluationDetails"] = new ExpressionEvaluationDetails($this->_propDict["expressionEvaluationDetails"]);
@@ -122,7 +122,7 @@ class ExpressionEvaluationDetails extends Entity
     public function getPropertyToEvaluate()
     {
         if (array_key_exists("propertyToEvaluate", $this->_propDict)) {
-            if (is_a($this->_propDict["propertyToEvaluate"], "\Beta\Microsoft\Graph\Model\PropertyToEvaluate")) {
+            if (is_a($this->_propDict["propertyToEvaluate"], "Beta\Microsoft\Graph\Model\PropertyToEvaluate")) {
                 return $this->_propDict["propertyToEvaluate"];
             } else {
                 $this->_propDict["propertyToEvaluate"] = new PropertyToEvaluate($this->_propDict["propertyToEvaluate"]);

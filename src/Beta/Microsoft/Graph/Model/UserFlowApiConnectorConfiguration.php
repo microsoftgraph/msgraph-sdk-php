@@ -32,7 +32,7 @@ class UserFlowApiConnectorConfiguration extends Entity
     public function getPostAttributeCollection()
     {
         if (array_key_exists("postAttributeCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["postAttributeCollection"], "\Beta\Microsoft\Graph\Model\IdentityApiConnector")) {
+            if (is_a($this->_propDict["postAttributeCollection"], "Beta\Microsoft\Graph\Model\IdentityApiConnector")) {
                 return $this->_propDict["postAttributeCollection"];
             } else {
                 $this->_propDict["postAttributeCollection"] = new IdentityApiConnector($this->_propDict["postAttributeCollection"]);
@@ -63,7 +63,7 @@ class UserFlowApiConnectorConfiguration extends Entity
     public function getPostFederationSignup()
     {
         if (array_key_exists("postFederationSignup", $this->_propDict)) {
-            if (is_a($this->_propDict["postFederationSignup"], "\Beta\Microsoft\Graph\Model\IdentityApiConnector")) {
+            if (is_a($this->_propDict["postFederationSignup"], "Beta\Microsoft\Graph\Model\IdentityApiConnector")) {
                 return $this->_propDict["postFederationSignup"];
             } else {
                 $this->_propDict["postFederationSignup"] = new IdentityApiConnector($this->_propDict["postFederationSignup"]);

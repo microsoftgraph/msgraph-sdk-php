@@ -32,7 +32,7 @@ class ExactMatchClassificationRequest extends Entity
     public function getContentClassifications()
     {
         if (array_key_exists("contentClassifications", $this->_propDict)) {
-            if (is_a($this->_propDict["contentClassifications"], "\Beta\Microsoft\Graph\Model\ContentClassification")) {
+            if (is_a($this->_propDict["contentClassifications"], "Beta\Microsoft\Graph\Model\ContentClassification")) {
                 return $this->_propDict["contentClassifications"];
             } else {
                 $this->_propDict["contentClassifications"] = new ContentClassification($this->_propDict["contentClassifications"]);

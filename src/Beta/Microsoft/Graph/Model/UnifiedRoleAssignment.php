@@ -204,7 +204,7 @@ class UnifiedRoleAssignment extends Entity
     public function getAppScope()
     {
         if (array_key_exists("appScope", $this->_propDict)) {
-            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope")) {
+            if (is_a($this->_propDict["appScope"], "Beta\Microsoft\Graph\Model\AppScope")) {
                 return $this->_propDict["appScope"];
             } else {
                 $this->_propDict["appScope"] = new AppScope($this->_propDict["appScope"]);
@@ -235,7 +235,7 @@ class UnifiedRoleAssignment extends Entity
     public function getDirectoryScope()
     {
         if (array_key_exists("directoryScope", $this->_propDict)) {
-            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["directoryScope"], "Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["directoryScope"];
             } else {
                 $this->_propDict["directoryScope"] = new DirectoryObject($this->_propDict["directoryScope"]);
@@ -266,7 +266,7 @@ class UnifiedRoleAssignment extends Entity
     public function getPrincipal()
     {
         if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["principal"], "Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new DirectoryObject($this->_propDict["principal"]);
@@ -297,7 +297,7 @@ class UnifiedRoleAssignment extends Entity
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new UnifiedRoleDefinition($this->_propDict["roleDefinition"]);

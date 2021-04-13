@@ -33,7 +33,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     public function getAdvancedThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("advancedThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"]);
@@ -95,7 +95,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -505,7 +505,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     public function getPasscodeRequiredType()
     {
         if (array_key_exists("passcodeRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passcodeRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passcodeRequiredType"], "Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passcodeRequiredType"];
             } else {
                 $this->_propDict["passcodeRequiredType"] = new RequiredPasswordType($this->_propDict["passcodeRequiredType"]);

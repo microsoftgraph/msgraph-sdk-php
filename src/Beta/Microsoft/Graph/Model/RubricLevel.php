@@ -33,7 +33,7 @@ class RubricLevel extends Entity
     public function getDescription()
     {
         if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
+            if (is_a($this->_propDict["description"], "Beta\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new EducationItemBody($this->_propDict["description"]);
@@ -94,7 +94,7 @@ class RubricLevel extends Entity
     public function getGrading()
     {
         if (array_key_exists("grading", $this->_propDict)) {
-            if (is_a($this->_propDict["grading"], "\Beta\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
+            if (is_a($this->_propDict["grading"], "Beta\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
                 return $this->_propDict["grading"];
             } else {
                 $this->_propDict["grading"] = new EducationAssignmentGradeType($this->_propDict["grading"]);

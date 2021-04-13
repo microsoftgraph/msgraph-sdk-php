@@ -320,7 +320,6 @@ class Subscription extends Entity
     
     /**
     * Gets the notificationContentType
-    * Desired content-type for MS Graph change notifications for supported resource types. The default content-type is the 'application/json' content-type.
     *
     * @return string The notificationContentType
     */
@@ -335,7 +334,6 @@ class Subscription extends Entity
     
     /**
     * Sets the notificationContentType
-    * Desired content-type for MS Graph change notifications for supported resource types. The default content-type is the 'application/json' content-type.
     *
     * @param string $val The notificationContentType
     *
@@ -349,7 +347,6 @@ class Subscription extends Entity
     
     /**
     * Gets the notificationQueryOptions
-    * OData Query Options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property eg  when the print job is completed, when a print job resource isFetchable property value becomes true etc.
     *
     * @return string The notificationQueryOptions
     */
@@ -364,7 +361,6 @@ class Subscription extends Entity
     
     /**
     * Sets the notificationQueryOptions
-    * OData Query Options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property eg  when the print job is completed, when a print job resource isFetchable property value becomes true etc.
     *
     * @param string $val The notificationQueryOptions
     *

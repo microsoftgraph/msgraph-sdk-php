@@ -70,7 +70,7 @@ class CloudCommunications extends Entity
     /** 
     * Sets the callRecords
     *
-    * @param \Microsoft\Graph\CallRecords\Model\CallRecord $val The callRecords
+    * @param Microsoft\Graph\CallRecords\Model\CallRecord $val The callRecords
     *
     * @return CloudCommunications
     */

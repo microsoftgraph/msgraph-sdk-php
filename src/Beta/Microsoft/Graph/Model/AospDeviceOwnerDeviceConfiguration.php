@@ -316,14 +316,14 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the passwordRequiredType
-    * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+    * Indicates the minimum password quality required on the device.
     *
     * @return AndroidDeviceOwnerRequiredPasswordType The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidDeviceOwnerRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -335,7 +335,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the passwordRequiredType
-    * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+    * Indicates the minimum password quality required on the device.
     *
     * @param AndroidDeviceOwnerRequiredPasswordType $val The passwordRequiredType
     *

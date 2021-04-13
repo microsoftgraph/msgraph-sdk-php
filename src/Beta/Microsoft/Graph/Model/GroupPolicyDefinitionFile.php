@@ -153,7 +153,7 @@ class GroupPolicyDefinitionFile extends Entity
     public function getPolicyType()
     {
         if (array_key_exists("policyType", $this->_propDict)) {
-            if (is_a($this->_propDict["policyType"], "\Beta\Microsoft\Graph\Model\GroupPolicyType")) {
+            if (is_a($this->_propDict["policyType"], "Beta\Microsoft\Graph\Model\GroupPolicyType")) {
                 return $this->_propDict["policyType"];
             } else {
                 $this->_propDict["policyType"] = new GroupPolicyType($this->_propDict["policyType"]);

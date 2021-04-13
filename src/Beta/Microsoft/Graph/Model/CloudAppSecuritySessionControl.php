@@ -33,7 +33,7 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl
     public function getCloudAppSecurityType()
     {
         if (array_key_exists("cloudAppSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["cloudAppSecurityType"], "\Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControlType")) {
+            if (is_a($this->_propDict["cloudAppSecurityType"], "Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControlType")) {
                 return $this->_propDict["cloudAppSecurityType"];
             } else {
                 $this->_propDict["cloudAppSecurityType"] = new CloudAppSecuritySessionControlType($this->_propDict["cloudAppSecurityType"]);

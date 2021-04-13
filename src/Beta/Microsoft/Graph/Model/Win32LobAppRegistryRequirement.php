@@ -70,7 +70,7 @@ class Win32LobAppRegistryRequirement extends Win32LobAppRequirement
     public function getDetectionType()
     {
         if (array_key_exists("detectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionType"], "\Beta\Microsoft\Graph\Model\Win32LobAppRegistryDetectionType")) {
+            if (is_a($this->_propDict["detectionType"], "Beta\Microsoft\Graph\Model\Win32LobAppRegistryDetectionType")) {
                 return $this->_propDict["detectionType"];
             } else {
                 $this->_propDict["detectionType"] = new Win32LobAppRegistryDetectionType($this->_propDict["detectionType"]);

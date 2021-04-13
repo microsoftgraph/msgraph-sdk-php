@@ -58,7 +58,7 @@ class AuthenticationRequirementPolicy extends Entity
     public function getRequirementProvider()
     {
         if (array_key_exists("requirementProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["requirementProvider"], "\Beta\Microsoft\Graph\Model\RequirementProvider")) {
+            if (is_a($this->_propDict["requirementProvider"], "Beta\Microsoft\Graph\Model\RequirementProvider")) {
                 return $this->_propDict["requirementProvider"];
             } else {
                 $this->_propDict["requirementProvider"] = new RequirementProvider($this->_propDict["requirementProvider"]);

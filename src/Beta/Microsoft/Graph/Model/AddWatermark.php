@@ -32,7 +32,7 @@ class AddWatermark extends MarkContent
     public function getOrientation()
     {
         if (array_key_exists("orientation", $this->_propDict)) {
-            if (is_a($this->_propDict["orientation"], "\Beta\Microsoft\Graph\Model\PageOrientation")) {
+            if (is_a($this->_propDict["orientation"], "Beta\Microsoft\Graph\Model\PageOrientation")) {
                 return $this->_propDict["orientation"];
             } else {
                 $this->_propDict["orientation"] = new PageOrientation($this->_propDict["orientation"]);

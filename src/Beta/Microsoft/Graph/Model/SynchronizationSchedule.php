@@ -26,7 +26,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Gets the expiration
-    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The expiration
     */
@@ -45,7 +45,7 @@ class SynchronizationSchedule extends Entity
 
     /**
     * Sets the expiration
-    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the expiration
     *
@@ -66,7 +66,7 @@ class SynchronizationSchedule extends Entity
     public function getInterval()
     {
         if (array_key_exists("interval", $this->_propDict)) {
-            if (is_a($this->_propDict["interval"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["interval"], "Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["interval"];
             } else {
                 $this->_propDict["interval"] = new Duration($this->_propDict["interval"]);
@@ -99,7 +99,7 @@ class SynchronizationSchedule extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SynchronizationScheduleState")) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\SynchronizationScheduleState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SynchronizationScheduleState($this->_propDict["state"]);

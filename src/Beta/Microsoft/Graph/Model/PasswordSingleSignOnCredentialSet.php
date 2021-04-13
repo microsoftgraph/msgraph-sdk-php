@@ -33,7 +33,7 @@ class PasswordSingleSignOnCredentialSet extends Entity
     public function getCredentials()
     {
         if (array_key_exists("credentials", $this->_propDict)) {
-            if (is_a($this->_propDict["credentials"], "\Beta\Microsoft\Graph\Model\Credential")) {
+            if (is_a($this->_propDict["credentials"], "Beta\Microsoft\Graph\Model\Credential")) {
                 return $this->_propDict["credentials"];
             } else {
                 $this->_propDict["credentials"] = new Credential($this->_propDict["credentials"]);

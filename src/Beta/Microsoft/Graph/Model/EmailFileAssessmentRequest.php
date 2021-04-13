@@ -62,7 +62,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest
     public function getDestinationRoutingReason()
     {
         if (array_key_exists("destinationRoutingReason", $this->_propDict)) {
-            if (is_a($this->_propDict["destinationRoutingReason"], "\Beta\Microsoft\Graph\Model\MailDestinationRoutingReason")) {
+            if (is_a($this->_propDict["destinationRoutingReason"], "Beta\Microsoft\Graph\Model\MailDestinationRoutingReason")) {
                 return $this->_propDict["destinationRoutingReason"];
             } else {
                 $this->_propDict["destinationRoutingReason"] = new MailDestinationRoutingReason($this->_propDict["destinationRoutingReason"]);

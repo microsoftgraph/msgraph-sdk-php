@@ -60,7 +60,7 @@ class AttributeDefinition extends Entity
     public function getApiExpressions()
     {
         if (array_key_exists("apiExpressions", $this->_propDict)) {
-            if (is_a($this->_propDict["apiExpressions"], "\Beta\Microsoft\Graph\Model\StringKeyStringValuePair")) {
+            if (is_a($this->_propDict["apiExpressions"], "Beta\Microsoft\Graph\Model\StringKeyStringValuePair")) {
                 return $this->_propDict["apiExpressions"];
             } else {
                 $this->_propDict["apiExpressions"] = new StringKeyStringValuePair($this->_propDict["apiExpressions"]);
@@ -174,7 +174,7 @@ class AttributeDefinition extends Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\MetadataEntry")) {
+            if (is_a($this->_propDict["metadata"], "Beta\Microsoft\Graph\Model\MetadataEntry")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new MetadataEntry($this->_propDict["metadata"]);
@@ -235,7 +235,7 @@ class AttributeDefinition extends Entity
     public function getMutability()
     {
         if (array_key_exists("mutability", $this->_propDict)) {
-            if (is_a($this->_propDict["mutability"], "\Beta\Microsoft\Graph\Model\Mutability")) {
+            if (is_a($this->_propDict["mutability"], "Beta\Microsoft\Graph\Model\Mutability")) {
                 return $this->_propDict["mutability"];
             } else {
                 $this->_propDict["mutability"] = new Mutability($this->_propDict["mutability"]);
@@ -296,7 +296,7 @@ class AttributeDefinition extends Entity
     public function getReferencedObjects()
     {
         if (array_key_exists("referencedObjects", $this->_propDict)) {
-            if (is_a($this->_propDict["referencedObjects"], "\Beta\Microsoft\Graph\Model\ReferencedObject")) {
+            if (is_a($this->_propDict["referencedObjects"], "Beta\Microsoft\Graph\Model\ReferencedObject")) {
                 return $this->_propDict["referencedObjects"];
             } else {
                 $this->_propDict["referencedObjects"] = new ReferencedObject($this->_propDict["referencedObjects"]);
@@ -350,14 +350,14 @@ class AttributeDefinition extends Entity
 
     /**
     * Gets the type
-    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
+    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean. Default is String.
     *
     * @return AttributeType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\AttributeType")) {
+            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\AttributeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AttributeType($this->_propDict["type"]);
@@ -369,7 +369,7 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the type
-    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
+    * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean. Default is String.
     *
     * @param AttributeType $val The value to assign to the type
     *

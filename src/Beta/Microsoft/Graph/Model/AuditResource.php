@@ -61,7 +61,7 @@ class AuditResource extends Entity
     public function getModifiedProperties()
     {
         if (array_key_exists("modifiedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedProperties"], "\Beta\Microsoft\Graph\Model\AuditProperty")) {
+            if (is_a($this->_propDict["modifiedProperties"], "Beta\Microsoft\Graph\Model\AuditProperty")) {
                 return $this->_propDict["modifiedProperties"];
             } else {
                 $this->_propDict["modifiedProperties"] = new AuditProperty($this->_propDict["modifiedProperties"]);

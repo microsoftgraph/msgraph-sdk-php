@@ -144,7 +144,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Gets the lastUpdatedDateTime
-    * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastUpdatedDateTime
     */
@@ -163,7 +163,7 @@ class GovernanceRoleSetting extends Entity
     
     /**
     * Sets the lastUpdatedDateTime
-    * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
@@ -302,7 +302,7 @@ class GovernanceRoleSetting extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -335,7 +335,7 @@ class GovernanceRoleSetting extends Entity
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);

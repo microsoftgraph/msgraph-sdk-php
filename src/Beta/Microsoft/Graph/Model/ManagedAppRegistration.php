@@ -33,7 +33,7 @@ class ManagedAppRegistration extends Entity
     public function getAppIdentifier()
     {
         if (array_key_exists("appIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["appIdentifier"], "\Beta\Microsoft\Graph\Model\MobileAppIdentifier")) {
+            if (is_a($this->_propDict["appIdentifier"], "Beta\Microsoft\Graph\Model\MobileAppIdentifier")) {
                 return $this->_propDict["appIdentifier"];
             } else {
                 $this->_propDict["appIdentifier"] = new MobileAppIdentifier($this->_propDict["appIdentifier"]);

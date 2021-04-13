@@ -1,0 +1,180 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* ItemReference File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+/**
+* ItemReference class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class ItemReference
+{
+    /**
+    * The array of properties available 
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * ItemReference constructor
+    *
+    * @param array $propDict List of properties to set
+    * Defaults to an empty array
+    *
+    * @return null
+    */
+    public function __construct($propDict=array())
+    {
+        $this->_propDict = $propDict;
+    }
+    
+    /**
+    * Gets the driveId
+    *
+    * @return string The driveId
+    */
+    public function getDriveId()
+    {
+        if (array_key_exists("driveId", $this->propDict)) {
+            return $this->propDict["driveId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the driveId
+    *
+    * @param string $val The value of the driveId
+    *
+    * @return null
+    */
+    public function setDriveId($val)
+    {
+        $this->_propDict["drive_id"] = $val;
+    }
+    
+    /**
+    * Gets the id
+    *
+    * @return string The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->propDict)) {
+            return $this->propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The value of the id
+    *
+    * @return null
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+    }
+    
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->propDict)) {
+            return $this->propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The value of the name
+    *
+    * @return null
+    */
+    public function setName($val)
+    {
+        $this->_propDict["name"] = $val;
+    }
+    
+    /**
+    * Gets the path
+    *
+    * @return string The path
+    */
+    public function getPath()
+    {
+        if (array_key_exists("path", $this->propDict)) {
+            return $this->propDict["path"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the path
+    *
+    * @param string $val The value of the path
+    *
+    * @return null
+    */
+    public function setPath($val)
+    {
+        $this->_propDict["path"] = $val;
+    }
+    
+    /**
+    * Gets the shareId
+    *
+    * @return string The shareId
+    */
+    public function getShareId()
+    {
+        if (array_key_exists("shareId", $this->propDict)) {
+            return $this->propDict["shareId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the shareId
+    *
+    * @param string $val The value of the shareId
+    *
+    * @return null
+    */
+    public function setShareId($val)
+    {
+        $this->_propDict["share_id"] = $val;
+    }
+}
+

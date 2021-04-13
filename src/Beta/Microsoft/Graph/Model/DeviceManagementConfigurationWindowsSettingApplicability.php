@@ -117,7 +117,7 @@ class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceMan
     public function getRequiredAzureAdTrustType()
     {
         if (array_key_exists("requiredAzureAdTrustType", $this->_propDict)) {
-            if (is_a($this->_propDict["requiredAzureAdTrustType"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationAzureAdTrustType")) {
+            if (is_a($this->_propDict["requiredAzureAdTrustType"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationAzureAdTrustType")) {
                 return $this->_propDict["requiredAzureAdTrustType"];
             } else {
                 $this->_propDict["requiredAzureAdTrustType"] = new DeviceManagementConfigurationAzureAdTrustType($this->_propDict["requiredAzureAdTrustType"]);
@@ -178,7 +178,7 @@ class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceMan
     public function getWindowsSkus()
     {
         if (array_key_exists("windowsSkus", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsSkus"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationWindowsSkus")) {
+            if (is_a($this->_propDict["windowsSkus"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationWindowsSkus")) {
                 return $this->_propDict["windowsSkus"];
             } else {
                 $this->_propDict["windowsSkus"] = new DeviceManagementConfigurationWindowsSkus($this->_propDict["windowsSkus"]);

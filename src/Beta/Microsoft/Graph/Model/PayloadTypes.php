@@ -61,7 +61,7 @@ class PayloadTypes extends Entity
     public function getVisualContent()
     {
         if (array_key_exists("visualContent", $this->_propDict)) {
-            if (is_a($this->_propDict["visualContent"], "\Beta\Microsoft\Graph\Model\VisualProperties")) {
+            if (is_a($this->_propDict["visualContent"], "Beta\Microsoft\Graph\Model\VisualProperties")) {
                 return $this->_propDict["visualContent"];
             } else {
                 $this->_propDict["visualContent"] = new VisualProperties($this->_propDict["visualContent"]);

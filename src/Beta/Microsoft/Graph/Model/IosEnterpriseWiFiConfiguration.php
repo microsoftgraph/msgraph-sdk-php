@@ -33,7 +33,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -66,7 +66,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getEapFastConfiguration()
     {
         if (array_key_exists("eapFastConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["eapFastConfiguration"], "\Beta\Microsoft\Graph\Model\EapFastConfiguration")) {
+            if (is_a($this->_propDict["eapFastConfiguration"], "Beta\Microsoft\Graph\Model\EapFastConfiguration")) {
                 return $this->_propDict["eapFastConfiguration"];
             } else {
                 $this->_propDict["eapFastConfiguration"] = new EapFastConfiguration($this->_propDict["eapFastConfiguration"]);
@@ -99,7 +99,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "\Beta\Microsoft\Graph\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -132,7 +132,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getInnerAuthenticationProtocolForEapTtls()
     {
         if (array_key_exists("innerAuthenticationProtocolForEapTtls", $this->_propDict)) {
-            if (is_a($this->_propDict["innerAuthenticationProtocolForEapTtls"], "\Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["innerAuthenticationProtocolForEapTtls"], "Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
                 return $this->_propDict["innerAuthenticationProtocolForEapTtls"];
             } else {
                 $this->_propDict["innerAuthenticationProtocolForEapTtls"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["innerAuthenticationProtocolForEapTtls"]);
@@ -281,7 +281,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getDerivedCredentialSettings()
     {
         if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
                 return $this->_propDict["derivedCredentialSettings"];
             } else {
                 $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
@@ -314,7 +314,7 @@ class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);

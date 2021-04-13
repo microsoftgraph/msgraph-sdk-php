@@ -66,7 +66,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ActionState")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ActionState")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ActionState($this->_propDict["status"]);

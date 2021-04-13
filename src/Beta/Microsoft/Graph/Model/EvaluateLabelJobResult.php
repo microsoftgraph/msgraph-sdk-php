@@ -32,7 +32,7 @@ class EvaluateLabelJobResult extends Entity
     public function getResponsiblePolicy()
     {
         if (array_key_exists("responsiblePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["responsiblePolicy"], "\Beta\Microsoft\Graph\Model\ResponsiblePolicy")) {
+            if (is_a($this->_propDict["responsiblePolicy"], "Beta\Microsoft\Graph\Model\ResponsiblePolicy")) {
                 return $this->_propDict["responsiblePolicy"];
             } else {
                 $this->_propDict["responsiblePolicy"] = new ResponsiblePolicy($this->_propDict["responsiblePolicy"]);
@@ -63,7 +63,7 @@ class EvaluateLabelJobResult extends Entity
     public function getResponsibleSensitiveTypes()
     {
         if (array_key_exists("responsibleSensitiveTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["responsibleSensitiveTypes"], "\Beta\Microsoft\Graph\Model\ResponsibleSensitiveType")) {
+            if (is_a($this->_propDict["responsibleSensitiveTypes"], "Beta\Microsoft\Graph\Model\ResponsibleSensitiveType")) {
                 return $this->_propDict["responsibleSensitiveTypes"];
             } else {
                 $this->_propDict["responsibleSensitiveTypes"] = new ResponsibleSensitiveType($this->_propDict["responsibleSensitiveTypes"]);
@@ -94,7 +94,7 @@ class EvaluateLabelJobResult extends Entity
     public function getSensitivityLabel()
     {
         if (array_key_exists("sensitivityLabel", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivityLabel"], "\Beta\Microsoft\Graph\Model\MatchingLabel")) {
+            if (is_a($this->_propDict["sensitivityLabel"], "Beta\Microsoft\Graph\Model\MatchingLabel")) {
                 return $this->_propDict["sensitivityLabel"];
             } else {
                 $this->_propDict["sensitivityLabel"] = new MatchingLabel($this->_propDict["sensitivityLabel"]);

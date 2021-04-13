@@ -63,7 +63,7 @@ class AgedAccountsPayable extends Entity
     public function getBalanceDue()
     {
         if (array_key_exists("balanceDue", $this->_propDict)) {
-            if (is_a($this->_propDict["balanceDue"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["balanceDue"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["balanceDue"];
             } else {
                 $this->_propDict["balanceDue"] = new Decimal($this->_propDict["balanceDue"]);
@@ -121,7 +121,7 @@ class AgedAccountsPayable extends Entity
     public function getCurrentAmount()
     {
         if (array_key_exists("currentAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["currentAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["currentAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["currentAmount"];
             } else {
                 $this->_propDict["currentAmount"] = new Decimal($this->_propDict["currentAmount"]);
@@ -179,7 +179,7 @@ class AgedAccountsPayable extends Entity
     public function getPeriod1Amount()
     {
         if (array_key_exists("period1Amount", $this->_propDict)) {
-            if (is_a($this->_propDict["period1Amount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["period1Amount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["period1Amount"];
             } else {
                 $this->_propDict["period1Amount"] = new Decimal($this->_propDict["period1Amount"]);
@@ -210,7 +210,7 @@ class AgedAccountsPayable extends Entity
     public function getPeriod2Amount()
     {
         if (array_key_exists("period2Amount", $this->_propDict)) {
-            if (is_a($this->_propDict["period2Amount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["period2Amount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["period2Amount"];
             } else {
                 $this->_propDict["period2Amount"] = new Decimal($this->_propDict["period2Amount"]);
@@ -241,7 +241,7 @@ class AgedAccountsPayable extends Entity
     public function getPeriod3Amount()
     {
         if (array_key_exists("period3Amount", $this->_propDict)) {
-            if (is_a($this->_propDict["period3Amount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["period3Amount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["period3Amount"];
             } else {
                 $this->_propDict["period3Amount"] = new Decimal($this->_propDict["period3Amount"]);

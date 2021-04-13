@@ -62,7 +62,7 @@ class DeviceAppManagementTask extends Entity
     public function getCategory()
     {
         if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\Model\DeviceAppManagementTaskCategory")) {
+            if (is_a($this->_propDict["category"], "Beta\Microsoft\Graph\Model\DeviceAppManagementTaskCategory")) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new DeviceAppManagementTaskCategory($this->_propDict["category"]);
@@ -277,7 +277,7 @@ class DeviceAppManagementTask extends Entity
     public function getPriority()
     {
         if (array_key_exists("priority", $this->_propDict)) {
-            if (is_a($this->_propDict["priority"], "\Beta\Microsoft\Graph\Model\DeviceAppManagementTaskPriority")) {
+            if (is_a($this->_propDict["priority"], "Beta\Microsoft\Graph\Model\DeviceAppManagementTaskPriority")) {
                 return $this->_propDict["priority"];
             } else {
                 $this->_propDict["priority"] = new DeviceAppManagementTaskPriority($this->_propDict["priority"]);
@@ -310,7 +310,7 @@ class DeviceAppManagementTask extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DeviceAppManagementTaskStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\DeviceAppManagementTaskStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DeviceAppManagementTaskStatus($this->_propDict["status"]);
