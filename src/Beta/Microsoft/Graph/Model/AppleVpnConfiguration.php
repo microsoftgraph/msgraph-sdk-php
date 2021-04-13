@@ -62,7 +62,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -124,7 +124,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "Beta\Microsoft\Graph\Model\AppleVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\AppleVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AppleVpnConnectionType($this->_propDict["connectionType"]);
@@ -450,7 +450,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getProviderType()
     {
         if (array_key_exists("providerType", $this->_propDict)) {
-            if (is_a($this->_propDict["providerType"], "Beta\Microsoft\Graph\Model\VpnProviderType")) {
+            if (is_a($this->_propDict["providerType"], "\Beta\Microsoft\Graph\Model\VpnProviderType")) {
                 return $this->_propDict["providerType"];
             } else {
                 $this->_propDict["providerType"] = new VpnProviderType($this->_propDict["providerType"]);
@@ -483,7 +483,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "Beta\Microsoft\Graph\Model\VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new VpnProxyServer($this->_propDict["proxyServer"]);
@@ -603,7 +603,7 @@ class AppleVpnConfiguration extends DeviceConfiguration
     public function getServer()
     {
         if (array_key_exists("server", $this->_propDict)) {
-            if (is_a($this->_propDict["server"], "Beta\Microsoft\Graph\Model\VpnServer")) {
+            if (is_a($this->_propDict["server"], "\Beta\Microsoft\Graph\Model\VpnServer")) {
                 return $this->_propDict["server"];
             } else {
                 $this->_propDict["server"] = new VpnServer($this->_propDict["server"]);

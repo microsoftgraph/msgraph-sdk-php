@@ -33,7 +33,7 @@ class IosHomeScreenFolderPage extends Entity
     public function getApps()
     {
         if (array_key_exists("apps", $this->_propDict)) {
-            if (is_a($this->_propDict["apps"], "Beta\Microsoft\Graph\Model\IosHomeScreenApp")) {
+            if (is_a($this->_propDict["apps"], "\Beta\Microsoft\Graph\Model\IosHomeScreenApp")) {
                 return $this->_propDict["apps"];
             } else {
                 $this->_propDict["apps"] = new IosHomeScreenApp($this->_propDict["apps"]);

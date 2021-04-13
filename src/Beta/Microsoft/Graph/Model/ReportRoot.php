@@ -60,7 +60,7 @@ class ReportRoot extends Entity
     public function getAuthenticationMethods()
     {
         if (array_key_exists("authenticationMethods", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethods"], "Beta\Microsoft\Graph\Model\AuthenticationMethodsRoot")) {
+            if (is_a($this->_propDict["authenticationMethods"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsRoot")) {
                 return $this->_propDict["authenticationMethods"];
             } else {
                 $this->_propDict["authenticationMethods"] = new AuthenticationMethodsRoot($this->_propDict["authenticationMethods"]);

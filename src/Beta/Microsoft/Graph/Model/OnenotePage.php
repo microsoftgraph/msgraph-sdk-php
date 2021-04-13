@@ -117,7 +117,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Gets the lastModifiedDateTime
-    * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -136,7 +136,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     
     /**
     * Sets the lastModifiedDateTime
-    * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -186,7 +186,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Beta\Microsoft\Graph\Model\PageLinks")) {
+            if (is_a($this->_propDict["links"], "\Beta\Microsoft\Graph\Model\PageLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new PageLinks($this->_propDict["links"]);
@@ -304,7 +304,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     public function getParentNotebook()
     {
         if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "Beta\Microsoft\Graph\Model\Notebook")) {
+            if (is_a($this->_propDict["parentNotebook"], "\Beta\Microsoft\Graph\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -337,7 +337,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     public function getParentSection()
     {
         if (array_key_exists("parentSection", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSection"], "Beta\Microsoft\Graph\Model\OnenoteSection")) {
+            if (is_a($this->_propDict["parentSection"], "\Beta\Microsoft\Graph\Model\OnenoteSection")) {
                 return $this->_propDict["parentSection"];
             } else {
                 $this->_propDict["parentSection"] = new OnenoteSection($this->_propDict["parentSection"]);

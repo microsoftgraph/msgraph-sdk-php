@@ -124,7 +124,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
     public function getUserExperienceAnalyticsMetric()
     {
         if (array_key_exists("userExperienceAnalyticsMetric", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsMetric"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsMetric")) {
+            if (is_a($this->_propDict["userExperienceAnalyticsMetric"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsMetric")) {
                 return $this->_propDict["userExperienceAnalyticsMetric"];
             } else {
                 $this->_propDict["userExperienceAnalyticsMetric"] = new UserExperienceAnalyticsMetric($this->_propDict["userExperienceAnalyticsMetric"]);

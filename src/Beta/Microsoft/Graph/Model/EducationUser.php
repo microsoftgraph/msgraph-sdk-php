@@ -181,7 +181,7 @@ class EducationUser extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -272,7 +272,7 @@ class EducationUser extends Entity
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "Beta\Microsoft\Graph\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "\Beta\Microsoft\Graph\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -392,7 +392,7 @@ class EducationUser extends Entity
     public function getMailingAddress()
     {
         if (array_key_exists("mailingAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["mailingAddress"], "Beta\Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["mailingAddress"], "\Beta\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["mailingAddress"];
             } else {
                 $this->_propDict["mailingAddress"] = new PhysicalAddress($this->_propDict["mailingAddress"]);
@@ -539,7 +539,7 @@ class EducationUser extends Entity
     public function getOnPremisesInfo()
     {
         if (array_key_exists("onPremisesInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesInfo"], "Beta\Microsoft\Graph\Model\EducationOnPremisesInfo")) {
+            if (is_a($this->_propDict["onPremisesInfo"], "\Beta\Microsoft\Graph\Model\EducationOnPremisesInfo")) {
                 return $this->_propDict["onPremisesInfo"];
             } else {
                 $this->_propDict["onPremisesInfo"] = new EducationOnPremisesInfo($this->_propDict["onPremisesInfo"]);
@@ -601,7 +601,7 @@ class EducationUser extends Entity
     public function getPasswordProfile()
     {
         if (array_key_exists("passwordProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordProfile"], "Beta\Microsoft\Graph\Model\PasswordProfile")) {
+            if (is_a($this->_propDict["passwordProfile"], "\Beta\Microsoft\Graph\Model\PasswordProfile")) {
                 return $this->_propDict["passwordProfile"];
             } else {
                 $this->_propDict["passwordProfile"] = new PasswordProfile($this->_propDict["passwordProfile"]);
@@ -663,7 +663,7 @@ class EducationUser extends Entity
     public function getPrimaryRole()
     {
         if (array_key_exists("primaryRole", $this->_propDict)) {
-            if (is_a($this->_propDict["primaryRole"], "Beta\Microsoft\Graph\Model\EducationUserRole")) {
+            if (is_a($this->_propDict["primaryRole"], "\Beta\Microsoft\Graph\Model\EducationUserRole")) {
                 return $this->_propDict["primaryRole"];
             } else {
                 $this->_propDict["primaryRole"] = new EducationUserRole($this->_propDict["primaryRole"]);
@@ -757,7 +757,7 @@ class EducationUser extends Entity
     public function getResidenceAddress()
     {
         if (array_key_exists("residenceAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["residenceAddress"], "Beta\Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["residenceAddress"], "\Beta\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["residenceAddress"];
             } else {
                 $this->_propDict["residenceAddress"] = new PhysicalAddress($this->_propDict["residenceAddress"]);
@@ -817,7 +817,7 @@ class EducationUser extends Entity
     public function getStudent()
     {
         if (array_key_exists("student", $this->_propDict)) {
-            if (is_a($this->_propDict["student"], "Beta\Microsoft\Graph\Model\EducationStudent")) {
+            if (is_a($this->_propDict["student"], "\Beta\Microsoft\Graph\Model\EducationStudent")) {
                 return $this->_propDict["student"];
             } else {
                 $this->_propDict["student"] = new EducationStudent($this->_propDict["student"]);
@@ -879,7 +879,7 @@ class EducationUser extends Entity
     public function getTeacher()
     {
         if (array_key_exists("teacher", $this->_propDict)) {
-            if (is_a($this->_propDict["teacher"], "Beta\Microsoft\Graph\Model\EducationTeacher")) {
+            if (is_a($this->_propDict["teacher"], "\Beta\Microsoft\Graph\Model\EducationTeacher")) {
                 return $this->_propDict["teacher"];
             } else {
                 $this->_propDict["teacher"] = new EducationTeacher($this->_propDict["teacher"]);
@@ -1147,7 +1147,7 @@ class EducationUser extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Beta\Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\User")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new User($this->_propDict["user"]);

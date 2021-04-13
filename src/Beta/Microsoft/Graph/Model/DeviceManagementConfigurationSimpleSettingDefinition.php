@@ -33,7 +33,7 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
     public function getDefaultValue()
     {
         if (array_key_exists("defaultValue", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultValue"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingValue")) {
+            if (is_a($this->_propDict["defaultValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingValue")) {
                 return $this->_propDict["defaultValue"];
             } else {
                 $this->_propDict["defaultValue"] = new DeviceManagementConfigurationSettingValue($this->_propDict["defaultValue"]);
@@ -126,7 +126,7 @@ class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagem
     public function getValueDefinition()
     {
         if (array_key_exists("valueDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["valueDefinition"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingValueDefinition")) {
+            if (is_a($this->_propDict["valueDefinition"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingValueDefinition")) {
                 return $this->_propDict["valueDefinition"];
             } else {
                 $this->_propDict["valueDefinition"] = new DeviceManagementConfigurationSettingValueDefinition($this->_propDict["valueDefinition"]);

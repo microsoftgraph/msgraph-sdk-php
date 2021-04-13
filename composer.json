@@ -12,12 +12,12 @@
 		}
 	],
 	"require": {
-		"php": "^8.0 || ^7.1",
+		"php": "^8.0 || ^7.3",
 		"guzzlehttp/guzzle": "^6.0 || ^7.0",
 		"ext-json": "*"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "^7.5 || ^8.0",
+		"phpunit/phpunit": "^8.0 || ^9.0",
 		"mikey179/vfsstream": "^1.2"
 	},
 	"autoload": {
@@ -28,7 +28,8 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Microsoft\\Graph\\Test\\": "tests/Functional/"
+			"Microsoft\\Graph\\Test\\": "tests/Functional/",
+			"Microsoft\\Graph\\Http\\Test\\": "tests/Http/"
 		}
 	}
 }

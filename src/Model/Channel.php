@@ -25,6 +25,39 @@ namespace Microsoft\Graph\Model;
 class Channel extends Entity
 {
     /**
+    * Gets the createdDateTime
+    * Read only. Timestamp at which the channel was created.
+    *
+    * @return \DateTime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * Read only. Timestamp at which the channel was created.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return Channel
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * Optional textual description for the channel.
     *
@@ -149,7 +182,7 @@ class Channel extends Entity
     public function getMembershipType()
     {
         if (array_key_exists("membershipType", $this->_propDict)) {
-            if (is_a($this->_propDict["membershipType"], "Microsoft\Graph\Model\ChannelMembershipType")) {
+            if (is_a($this->_propDict["membershipType"], "\Microsoft\Graph\Model\ChannelMembershipType")) {
                 return $this->_propDict["membershipType"];
             } else {
                 $this->_propDict["membershipType"] = new ChannelMembershipType($this->_propDict["membershipType"]);
@@ -211,7 +244,7 @@ class Channel extends Entity
     public function getFilesFolder()
     {
         if (array_key_exists("filesFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["filesFolder"], "Microsoft\Graph\Model\DriveItem")) {
+            if (is_a($this->_propDict["filesFolder"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["filesFolder"];
             } else {
                 $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);

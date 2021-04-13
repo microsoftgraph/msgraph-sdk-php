@@ -95,7 +95,7 @@ class DeviceManagementExportJob extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat")) {
+            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new DeviceManagementReportFileFormat($this->_propDict["format"]);
@@ -121,14 +121,14 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Gets the localizationType
-    * Configures how the requested export job is localized
+    * Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
     *
     * @return DeviceManagementExportJobLocalizationType The localizationType
     */
     public function getLocalizationType()
     {
         if (array_key_exists("localizationType", $this->_propDict)) {
-            if (is_a($this->_propDict["localizationType"], "Beta\Microsoft\Graph\Model\DeviceManagementExportJobLocalizationType")) {
+            if (is_a($this->_propDict["localizationType"], "\Beta\Microsoft\Graph\Model\DeviceManagementExportJobLocalizationType")) {
                 return $this->_propDict["localizationType"];
             } else {
                 $this->_propDict["localizationType"] = new DeviceManagementExportJobLocalizationType($this->_propDict["localizationType"]);
@@ -140,7 +140,7 @@ class DeviceManagementExportJob extends Entity
     
     /**
     * Sets the localizationType
-    * Configures how the requested export job is localized
+    * Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
     *
     * @param DeviceManagementExportJobLocalizationType $val The localizationType
     *
@@ -281,7 +281,7 @@ class DeviceManagementExportJob extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\DeviceManagementReportStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DeviceManagementReportStatus($this->_propDict["status"]);

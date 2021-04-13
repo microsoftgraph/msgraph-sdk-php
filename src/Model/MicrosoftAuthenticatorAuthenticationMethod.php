@@ -153,7 +153,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
     public function getDevice()
     {
         if (array_key_exists("device", $this->_propDict)) {
-            if (is_a($this->_propDict["device"], "Microsoft\Graph\Model\Device")) {
+            if (is_a($this->_propDict["device"], "\Microsoft\Graph\Model\Device")) {
                 return $this->_propDict["device"];
             } else {
                 $this->_propDict["device"] = new Device($this->_propDict["device"]);

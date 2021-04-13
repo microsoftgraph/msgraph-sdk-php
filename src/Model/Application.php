@@ -63,7 +63,7 @@ class Application extends DirectoryObject
     public function getApi()
     {
         if (array_key_exists("api", $this->_propDict)) {
-            if (is_a($this->_propDict["api"], "Microsoft\Graph\Model\ApiApplication")) {
+            if (is_a($this->_propDict["api"], "\Microsoft\Graph\Model\ApiApplication")) {
                 return $this->_propDict["api"];
             } else {
                 $this->_propDict["api"] = new ApiApplication($this->_propDict["api"]);
@@ -175,7 +175,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The date and time the application was registered. Read-only.
+    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -194,7 +194,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The date and time the application was registered. Read-only.
+    * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -264,7 +264,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
     * @return string The groupMembershipClaims
     */
@@ -279,7 +279,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
     * @param string $val The groupMembershipClaims
     *
@@ -329,7 +329,7 @@ class Application extends DirectoryObject
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "Microsoft\Graph\Model\InformationalUrl")) {
+            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\InformationalUrl")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -474,6 +474,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the notes
+    * Notes relevant for the management of the application.
     *
     * @return string The notes
     */
@@ -488,6 +489,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the notes
+    * Notes relevant for the management of the application.
     *
     * @param string $val The notes
     *
@@ -535,7 +537,7 @@ class Application extends DirectoryObject
     public function getOptionalClaims()
     {
         if (array_key_exists("optionalClaims", $this->_propDict)) {
-            if (is_a($this->_propDict["optionalClaims"], "Microsoft\Graph\Model\OptionalClaims")) {
+            if (is_a($this->_propDict["optionalClaims"], "\Microsoft\Graph\Model\OptionalClaims")) {
                 return $this->_propDict["optionalClaims"];
             } else {
                 $this->_propDict["optionalClaims"] = new OptionalClaims($this->_propDict["optionalClaims"]);
@@ -568,7 +570,7 @@ class Application extends DirectoryObject
     public function getParentalControlSettings()
     {
         if (array_key_exists("parentalControlSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["parentalControlSettings"], "Microsoft\Graph\Model\ParentalControlSettings")) {
+            if (is_a($this->_propDict["parentalControlSettings"], "\Microsoft\Graph\Model\ParentalControlSettings")) {
                 return $this->_propDict["parentalControlSettings"];
             } else {
                 $this->_propDict["parentalControlSettings"] = new ParentalControlSettings($this->_propDict["parentalControlSettings"]);
@@ -631,7 +633,7 @@ class Application extends DirectoryObject
     public function getPublicClient()
     {
         if (array_key_exists("publicClient", $this->_propDict)) {
-            if (is_a($this->_propDict["publicClient"], "Microsoft\Graph\Model\PublicClientApplication")) {
+            if (is_a($this->_propDict["publicClient"], "\Microsoft\Graph\Model\PublicClientApplication")) {
                 return $this->_propDict["publicClient"];
             } else {
                 $this->_propDict["publicClient"] = new PublicClientApplication($this->_propDict["publicClient"]);
@@ -716,7 +718,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+    * Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below.
     *
     * @return string The signInAudience
     */
@@ -731,7 +733,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the signInAudience
-    * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+    * Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below.
     *
     * @param string $val The signInAudience
     *
@@ -752,7 +754,7 @@ class Application extends DirectoryObject
     public function getSpa()
     {
         if (array_key_exists("spa", $this->_propDict)) {
-            if (is_a($this->_propDict["spa"], "Microsoft\Graph\Model\SpaApplication")) {
+            if (is_a($this->_propDict["spa"], "\Microsoft\Graph\Model\SpaApplication")) {
                 return $this->_propDict["spa"];
             } else {
                 $this->_propDict["spa"] = new SpaApplication($this->_propDict["spa"]);
@@ -843,7 +845,7 @@ class Application extends DirectoryObject
     public function getWeb()
     {
         if (array_key_exists("web", $this->_propDict)) {
-            if (is_a($this->_propDict["web"], "Microsoft\Graph\Model\WebApplication")) {
+            if (is_a($this->_propDict["web"], "\Microsoft\Graph\Model\WebApplication")) {
                 return $this->_propDict["web"];
             } else {
                 $this->_propDict["web"] = new WebApplication($this->_propDict["web"]);
@@ -876,7 +878,7 @@ class Application extends DirectoryObject
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);

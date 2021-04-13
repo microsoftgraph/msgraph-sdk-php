@@ -61,7 +61,7 @@ class AutomaticRepliesMailTips extends Entity
     public function getMessageLanguage()
     {
         if (array_key_exists("messageLanguage", $this->_propDict)) {
-            if (is_a($this->_propDict["messageLanguage"], "Beta\Microsoft\Graph\Model\LocaleInfo")) {
+            if (is_a($this->_propDict["messageLanguage"], "\Beta\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["messageLanguage"];
             } else {
                 $this->_propDict["messageLanguage"] = new LocaleInfo($this->_propDict["messageLanguage"]);
@@ -94,7 +94,7 @@ class AutomaticRepliesMailTips extends Entity
     public function getScheduledEndTime()
     {
         if (array_key_exists("scheduledEndTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledEndTime"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledEndTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledEndTime"];
             } else {
                 $this->_propDict["scheduledEndTime"] = new DateTimeTimeZone($this->_propDict["scheduledEndTime"]);
@@ -127,7 +127,7 @@ class AutomaticRepliesMailTips extends Entity
     public function getScheduledStartTime()
     {
         if (array_key_exists("scheduledStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledStartTime"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledStartTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledStartTime"];
             } else {
                 $this->_propDict["scheduledStartTime"] = new DateTimeTimeZone($this->_propDict["scheduledStartTime"]);

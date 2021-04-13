@@ -33,7 +33,7 @@ class UserRegistrationFeatureCount extends Entity
     public function getFeature()
     {
         if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "Beta\Microsoft\Graph\Model\AuthenticationMethodFeature")) {
+            if (is_a($this->_propDict["feature"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodFeature")) {
                 return $this->_propDict["feature"];
             } else {
                 $this->_propDict["feature"] = new AuthenticationMethodFeature($this->_propDict["feature"]);

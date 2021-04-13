@@ -60,7 +60,7 @@ class PolicyRoot implements \JsonSerializable
     public function getAuthenticationMethodsPolicy()
     {
         if (array_key_exists("authenticationMethodsPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethodsPolicy"], "Beta\Microsoft\Graph\Model\AuthenticationMethodsPolicy")) {
+            if (is_a($this->_propDict["authenticationMethodsPolicy"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsPolicy")) {
                 return $this->_propDict["authenticationMethodsPolicy"];
             } else {
                 $this->_propDict["authenticationMethodsPolicy"] = new AuthenticationMethodsPolicy($this->_propDict["authenticationMethodsPolicy"]);
@@ -91,7 +91,7 @@ class PolicyRoot implements \JsonSerializable
     public function getAuthenticationFlowsPolicy()
     {
         if (array_key_exists("authenticationFlowsPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationFlowsPolicy"], "Beta\Microsoft\Graph\Model\AuthenticationFlowsPolicy")) {
+            if (is_a($this->_propDict["authenticationFlowsPolicy"], "\Beta\Microsoft\Graph\Model\AuthenticationFlowsPolicy")) {
                 return $this->_propDict["authenticationFlowsPolicy"];
             } else {
                 $this->_propDict["authenticationFlowsPolicy"] = new AuthenticationFlowsPolicy($this->_propDict["authenticationFlowsPolicy"]);
@@ -122,7 +122,7 @@ class PolicyRoot implements \JsonSerializable
     public function getB2cAuthenticationMethodsPolicy()
     {
         if (array_key_exists("b2cAuthenticationMethodsPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["b2cAuthenticationMethodsPolicy"], "Beta\Microsoft\Graph\Model\B2cAuthenticationMethodsPolicy")) {
+            if (is_a($this->_propDict["b2cAuthenticationMethodsPolicy"], "\Beta\Microsoft\Graph\Model\B2cAuthenticationMethodsPolicy")) {
                 return $this->_propDict["b2cAuthenticationMethodsPolicy"];
             } else {
                 $this->_propDict["b2cAuthenticationMethodsPolicy"] = new B2cAuthenticationMethodsPolicy($this->_propDict["b2cAuthenticationMethodsPolicy"]);
@@ -369,6 +369,34 @@ class PolicyRoot implements \JsonSerializable
         return $this;
     }
     
+
+     /** 
+     * Gets the featureRolloutPolicies
+     *
+     * @return array The featureRolloutPolicies
+     */
+    public function getFeatureRolloutPolicies()
+    {
+        if (array_key_exists("featureRolloutPolicies", $this->_propDict)) {
+           return $this->_propDict["featureRolloutPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the featureRolloutPolicies
+    *
+    * @param FeatureRolloutPolicy $val The featureRolloutPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setFeatureRolloutPolicies($val)
+    {
+		$this->_propDict["featureRolloutPolicies"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the adminConsentRequestPolicy
     *
@@ -377,7 +405,7 @@ class PolicyRoot implements \JsonSerializable
     public function getAdminConsentRequestPolicy()
     {
         if (array_key_exists("adminConsentRequestPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["adminConsentRequestPolicy"], "Beta\Microsoft\Graph\Model\AdminConsentRequestPolicy")) {
+            if (is_a($this->_propDict["adminConsentRequestPolicy"], "\Beta\Microsoft\Graph\Model\AdminConsentRequestPolicy")) {
                 return $this->_propDict["adminConsentRequestPolicy"];
             } else {
                 $this->_propDict["adminConsentRequestPolicy"] = new AdminConsentRequestPolicy($this->_propDict["adminConsentRequestPolicy"]);
@@ -408,7 +436,7 @@ class PolicyRoot implements \JsonSerializable
     public function getDirectoryRoleAccessReviewPolicy()
     {
         if (array_key_exists("directoryRoleAccessReviewPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["directoryRoleAccessReviewPolicy"], "Beta\Microsoft\Graph\Model\DirectoryRoleAccessReviewPolicy")) {
+            if (is_a($this->_propDict["directoryRoleAccessReviewPolicy"], "\Beta\Microsoft\Graph\Model\DirectoryRoleAccessReviewPolicy")) {
                 return $this->_propDict["directoryRoleAccessReviewPolicy"];
             } else {
                 $this->_propDict["directoryRoleAccessReviewPolicy"] = new DirectoryRoleAccessReviewPolicy($this->_propDict["directoryRoleAccessReviewPolicy"]);
@@ -467,7 +495,7 @@ class PolicyRoot implements \JsonSerializable
     public function getIdentitySecurityDefaultsEnforcementPolicy()
     {
         if (array_key_exists("identitySecurityDefaultsEnforcementPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["identitySecurityDefaultsEnforcementPolicy"], "Beta\Microsoft\Graph\Model\IdentitySecurityDefaultsEnforcementPolicy")) {
+            if (is_a($this->_propDict["identitySecurityDefaultsEnforcementPolicy"], "\Beta\Microsoft\Graph\Model\IdentitySecurityDefaultsEnforcementPolicy")) {
                 return $this->_propDict["identitySecurityDefaultsEnforcementPolicy"];
             } else {
                 $this->_propDict["identitySecurityDefaultsEnforcementPolicy"] = new IdentitySecurityDefaultsEnforcementPolicy($this->_propDict["identitySecurityDefaultsEnforcementPolicy"]);

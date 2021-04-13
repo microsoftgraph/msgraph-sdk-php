@@ -33,7 +33,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -124,7 +124,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getAuthenticationType()
     {
         if (array_key_exists("authenticationType", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationType"], "Beta\Microsoft\Graph\Model\WifiAuthenticationType")) {
+            if (is_a($this->_propDict["authenticationType"], "\Beta\Microsoft\Graph\Model\WifiAuthenticationType")) {
                 return $this->_propDict["authenticationType"];
             } else {
                 $this->_propDict["authenticationType"] = new WifiAuthenticationType($this->_propDict["authenticationType"]);
@@ -244,7 +244,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "Beta\Microsoft\Graph\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "\Beta\Microsoft\Graph\Model\EapType")) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -335,7 +335,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getInnerAuthenticationProtocolForEAPTTLS()
     {
         if (array_key_exists("innerAuthenticationProtocolForEAPTTLS", $this->_propDict)) {
-            if (is_a($this->_propDict["innerAuthenticationProtocolForEAPTTLS"], "Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["innerAuthenticationProtocolForEAPTTLS"], "\Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
                 return $this->_propDict["innerAuthenticationProtocolForEAPTTLS"];
             } else {
                 $this->_propDict["innerAuthenticationProtocolForEAPTTLS"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["innerAuthenticationProtocolForEAPTTLS"]);
@@ -542,7 +542,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getNetworkSingleSignOn()
     {
         if (array_key_exists("networkSingleSignOn", $this->_propDict)) {
-            if (is_a($this->_propDict["networkSingleSignOn"], "Beta\Microsoft\Graph\Model\NetworkSingleSignOnType")) {
+            if (is_a($this->_propDict["networkSingleSignOn"], "\Beta\Microsoft\Graph\Model\NetworkSingleSignOnType")) {
                 return $this->_propDict["networkSingleSignOn"];
             } else {
                 $this->_propDict["networkSingleSignOn"] = new NetworkSingleSignOnType($this->_propDict["networkSingleSignOn"]);
@@ -749,7 +749,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "Beta\Microsoft\Graph\Model\WindowsCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\WindowsCertificateProfileBase")) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new WindowsCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -782,7 +782,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     public function getRootCertificateForClientValidation()
     {
         if (array_key_exists("rootCertificateForClientValidation", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificateForClientValidation"], "Beta\Microsoft\Graph\Model\Windows81TrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificateForClientValidation"], "\Beta\Microsoft\Graph\Model\Windows81TrustedRootCertificate")) {
                 return $this->_propDict["rootCertificateForClientValidation"];
             } else {
                 $this->_propDict["rootCertificateForClientValidation"] = new Windows81TrustedRootCertificate($this->_propDict["rootCertificateForClientValidation"]);

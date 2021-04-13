@@ -95,7 +95,7 @@ class ImportedAppleDeviceIdentity extends Entity
     public function getDiscoverySource()
     {
         if (array_key_exists("discoverySource", $this->_propDict)) {
-            if (is_a($this->_propDict["discoverySource"], "Beta\Microsoft\Graph\Model\DiscoverySource")) {
+            if (is_a($this->_propDict["discoverySource"], "\Beta\Microsoft\Graph\Model\DiscoverySource")) {
                 return $this->_propDict["discoverySource"];
             } else {
                 $this->_propDict["discoverySource"] = new DiscoverySource($this->_propDict["discoverySource"]);
@@ -128,7 +128,7 @@ class ImportedAppleDeviceIdentity extends Entity
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "Beta\Microsoft\Graph\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "\Beta\Microsoft\Graph\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -252,7 +252,7 @@ class ImportedAppleDeviceIdentity extends Entity
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\Platform")) {
+            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\Platform")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new Platform($this->_propDict["platform"]);

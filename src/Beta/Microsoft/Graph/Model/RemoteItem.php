@@ -33,7 +33,7 @@ class RemoteItem extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -99,7 +99,7 @@ class RemoteItem extends Entity
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], "Beta\Microsoft\Graph\Model\File")) {
+            if (is_a($this->_propDict["file"], "\Beta\Microsoft\Graph\Model\File")) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = new File($this->_propDict["file"]);
@@ -132,7 +132,7 @@ class RemoteItem extends Entity
     public function getFileSystemInfo()
     {
         if (array_key_exists("fileSystemInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["fileSystemInfo"], "Beta\Microsoft\Graph\Model\FileSystemInfo")) {
+            if (is_a($this->_propDict["fileSystemInfo"], "\Beta\Microsoft\Graph\Model\FileSystemInfo")) {
                 return $this->_propDict["fileSystemInfo"];
             } else {
                 $this->_propDict["fileSystemInfo"] = new FileSystemInfo($this->_propDict["fileSystemInfo"]);
@@ -165,7 +165,7 @@ class RemoteItem extends Entity
     public function getFolder()
     {
         if (array_key_exists("folder", $this->_propDict)) {
-            if (is_a($this->_propDict["folder"], "Beta\Microsoft\Graph\Model\Folder")) {
+            if (is_a($this->_propDict["folder"], "\Beta\Microsoft\Graph\Model\Folder")) {
                 return $this->_propDict["folder"];
             } else {
                 $this->_propDict["folder"] = new Folder($this->_propDict["folder"]);
@@ -226,7 +226,7 @@ class RemoteItem extends Entity
     public function getImage()
     {
         if (array_key_exists("image", $this->_propDict)) {
-            if (is_a($this->_propDict["image"], "Beta\Microsoft\Graph\Model\Image")) {
+            if (is_a($this->_propDict["image"], "\Beta\Microsoft\Graph\Model\Image")) {
                 return $this->_propDict["image"];
             } else {
                 $this->_propDict["image"] = new Image($this->_propDict["image"]);
@@ -259,7 +259,7 @@ class RemoteItem extends Entity
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -353,7 +353,7 @@ class RemoteItem extends Entity
     public function getPackage()
     {
         if (array_key_exists("package", $this->_propDict)) {
-            if (is_a($this->_propDict["package"], "Beta\Microsoft\Graph\Model\Package")) {
+            if (is_a($this->_propDict["package"], "\Beta\Microsoft\Graph\Model\Package")) {
                 return $this->_propDict["package"];
             } else {
                 $this->_propDict["package"] = new Package($this->_propDict["package"]);
@@ -386,7 +386,7 @@ class RemoteItem extends Entity
     public function getParentReference()
     {
         if (array_key_exists("parentReference", $this->_propDict)) {
-            if (is_a($this->_propDict["parentReference"], "Beta\Microsoft\Graph\Model\ItemReference")) {
+            if (is_a($this->_propDict["parentReference"], "\Beta\Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["parentReference"];
             } else {
                 $this->_propDict["parentReference"] = new ItemReference($this->_propDict["parentReference"]);
@@ -419,7 +419,7 @@ class RemoteItem extends Entity
     public function getShared()
     {
         if (array_key_exists("shared", $this->_propDict)) {
-            if (is_a($this->_propDict["shared"], "Beta\Microsoft\Graph\Model\Shared")) {
+            if (is_a($this->_propDict["shared"], "\Beta\Microsoft\Graph\Model\Shared")) {
                 return $this->_propDict["shared"];
             } else {
                 $this->_propDict["shared"] = new Shared($this->_propDict["shared"]);
@@ -452,7 +452,7 @@ class RemoteItem extends Entity
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "Beta\Microsoft\Graph\Model\SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "\Beta\Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -513,7 +513,7 @@ class RemoteItem extends Entity
     public function getSpecialFolder()
     {
         if (array_key_exists("specialFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["specialFolder"], "Beta\Microsoft\Graph\Model\SpecialFolder")) {
+            if (is_a($this->_propDict["specialFolder"], "\Beta\Microsoft\Graph\Model\SpecialFolder")) {
                 return $this->_propDict["specialFolder"];
             } else {
                 $this->_propDict["specialFolder"] = new SpecialFolder($this->_propDict["specialFolder"]);
@@ -546,7 +546,7 @@ class RemoteItem extends Entity
     public function getVideo()
     {
         if (array_key_exists("video", $this->_propDict)) {
-            if (is_a($this->_propDict["video"], "Beta\Microsoft\Graph\Model\Video")) {
+            if (is_a($this->_propDict["video"], "\Beta\Microsoft\Graph\Model\Video")) {
                 return $this->_propDict["video"];
             } else {
                 $this->_propDict["video"] = new Video($this->_propDict["video"]);

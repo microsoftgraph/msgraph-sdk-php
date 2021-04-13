@@ -54,7 +54,7 @@ class HybridAgentUpdaterConfiguration extends Entity
 
     /**
     * Gets the deferUpdateDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The deferUpdateDateTime
     */
@@ -73,7 +73,7 @@ class HybridAgentUpdaterConfiguration extends Entity
 
     /**
     * Sets the deferUpdateDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The value to assign to the deferUpdateDateTime
     *
@@ -93,7 +93,7 @@ class HybridAgentUpdaterConfiguration extends Entity
     public function getUpdateWindow()
     {
         if (array_key_exists("updateWindow", $this->_propDict)) {
-            if (is_a($this->_propDict["updateWindow"], "Beta\Microsoft\Graph\Model\UpdateWindow")) {
+            if (is_a($this->_propDict["updateWindow"], "\Beta\Microsoft\Graph\Model\UpdateWindow")) {
                 return $this->_propDict["updateWindow"];
             } else {
                 $this->_propDict["updateWindow"] = new UpdateWindow($this->_propDict["updateWindow"]);

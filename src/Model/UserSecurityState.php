@@ -117,7 +117,7 @@ class UserSecurityState extends Entity
     public function getEmailRole()
     {
         if (array_key_exists("emailRole", $this->_propDict)) {
-            if (is_a($this->_propDict["emailRole"], "Microsoft\Graph\Model\EmailRole")) {
+            if (is_a($this->_propDict["emailRole"], "\Microsoft\Graph\Model\EmailRole")) {
                 return $this->_propDict["emailRole"];
             } else {
                 $this->_propDict["emailRole"] = new EmailRole($this->_propDict["emailRole"]);
@@ -295,7 +295,7 @@ class UserSecurityState extends Entity
     public function getLogonType()
     {
         if (array_key_exists("logonType", $this->_propDict)) {
-            if (is_a($this->_propDict["logonType"], "Microsoft\Graph\Model\LogonType")) {
+            if (is_a($this->_propDict["logonType"], "\Microsoft\Graph\Model\LogonType")) {
                 return $this->_propDict["logonType"];
             } else {
                 $this->_propDict["logonType"] = new LogonType($this->_propDict["logonType"]);
@@ -384,7 +384,7 @@ class UserSecurityState extends Entity
     public function getUserAccountType()
     {
         if (array_key_exists("userAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["userAccountType"], "Microsoft\Graph\Model\UserAccountSecurityType")) {
+            if (is_a($this->_propDict["userAccountType"], "\Microsoft\Graph\Model\UserAccountSecurityType")) {
                 return $this->_propDict["userAccountType"];
             } else {
                 $this->_propDict["userAccountType"] = new UserAccountSecurityType($this->_propDict["userAccountType"]);

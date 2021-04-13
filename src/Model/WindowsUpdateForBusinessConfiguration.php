@@ -33,7 +33,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getAutomaticUpdateMode()
     {
         if (array_key_exists("automaticUpdateMode", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticUpdateMode"], "Microsoft\Graph\Model\AutomaticUpdateMode")) {
+            if (is_a($this->_propDict["automaticUpdateMode"], "\Microsoft\Graph\Model\AutomaticUpdateMode")) {
                 return $this->_propDict["automaticUpdateMode"];
             } else {
                 $this->_propDict["automaticUpdateMode"] = new AutomaticUpdateMode($this->_propDict["automaticUpdateMode"]);
@@ -66,7 +66,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getBusinessReadyUpdatesOnly()
     {
         if (array_key_exists("businessReadyUpdatesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "Microsoft\Graph\Model\WindowsUpdateType")) {
+            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "\Microsoft\Graph\Model\WindowsUpdateType")) {
                 return $this->_propDict["businessReadyUpdatesOnly"];
             } else {
                 $this->_propDict["businessReadyUpdatesOnly"] = new WindowsUpdateType($this->_propDict["businessReadyUpdatesOnly"]);
@@ -99,7 +99,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getDeliveryOptimizationMode()
     {
         if (array_key_exists("deliveryOptimizationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationMode"], "Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
+            if (is_a($this->_propDict["deliveryOptimizationMode"], "\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
                 return $this->_propDict["deliveryOptimizationMode"];
             } else {
                 $this->_propDict["deliveryOptimizationMode"] = new WindowsDeliveryOptimizationMode($this->_propDict["deliveryOptimizationMode"]);
@@ -252,7 +252,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getInstallationSchedule()
     {
         if (array_key_exists("installationSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["installationSchedule"], "Microsoft\Graph\Model\WindowsUpdateInstallScheduleType")) {
+            if (is_a($this->_propDict["installationSchedule"], "\Microsoft\Graph\Model\WindowsUpdateInstallScheduleType")) {
                 return $this->_propDict["installationSchedule"];
             } else {
                 $this->_propDict["installationSchedule"] = new WindowsUpdateInstallScheduleType($this->_propDict["installationSchedule"]);
@@ -314,7 +314,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     public function getPrereleaseFeatures()
     {
         if (array_key_exists("prereleaseFeatures", $this->_propDict)) {
-            if (is_a($this->_propDict["prereleaseFeatures"], "Microsoft\Graph\Model\PrereleaseFeatures")) {
+            if (is_a($this->_propDict["prereleaseFeatures"], "\Microsoft\Graph\Model\PrereleaseFeatures")) {
                 return $this->_propDict["prereleaseFeatures"];
             } else {
                 $this->_propDict["prereleaseFeatures"] = new PrereleaseFeatures($this->_propDict["prereleaseFeatures"]);

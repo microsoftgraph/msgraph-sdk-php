@@ -33,7 +33,7 @@ class SharedPCAccountManagerPolicy extends Entity
     public function getAccountDeletionPolicy()
     {
         if (array_key_exists("accountDeletionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accountDeletionPolicy"], "Beta\Microsoft\Graph\Model\SharedPCAccountDeletionPolicyType")) {
+            if (is_a($this->_propDict["accountDeletionPolicy"], "\Beta\Microsoft\Graph\Model\SharedPCAccountDeletionPolicyType")) {
                 return $this->_propDict["accountDeletionPolicy"];
             } else {
                 $this->_propDict["accountDeletionPolicy"] = new SharedPCAccountDeletionPolicyType($this->_propDict["accountDeletionPolicy"]);

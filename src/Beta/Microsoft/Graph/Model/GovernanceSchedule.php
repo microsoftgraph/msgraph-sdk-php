@@ -33,7 +33,7 @@ class GovernanceSchedule extends Entity
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["duration"];
             } else {
                 $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
@@ -59,7 +59,7 @@ class GovernanceSchedule extends Entity
 
     /**
     * Gets the endDateTime
-    * The end time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Note: if the value is null, it indicates a permanent assignment.
+    * The end time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Note: if the value is null, it indicates a permanent assignment.
     *
     * @return \DateTime The endDateTime
     */
@@ -78,7 +78,7 @@ class GovernanceSchedule extends Entity
 
     /**
     * Sets the endDateTime
-    * The end time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Note: if the value is null, it indicates a permanent assignment.
+    * The end time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Note: if the value is null, it indicates a permanent assignment.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -92,7 +92,7 @@ class GovernanceSchedule extends Entity
 
     /**
     * Gets the startDateTime
-    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The startDateTime
     */
@@ -111,7 +111,7 @@ class GovernanceSchedule extends Entity
 
     /**
     * Sets the startDateTime
-    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

@@ -33,7 +33,7 @@ class RubricQuality extends Entity
     public function getCriteria()
     {
         if (array_key_exists("criteria", $this->_propDict)) {
-            if (is_a($this->_propDict["criteria"], "Beta\Microsoft\Graph\Model\RubricCriterion")) {
+            if (is_a($this->_propDict["criteria"], "\Beta\Microsoft\Graph\Model\RubricCriterion")) {
                 return $this->_propDict["criteria"];
             } else {
                 $this->_propDict["criteria"] = new RubricCriterion($this->_propDict["criteria"]);
@@ -66,7 +66,7 @@ class RubricQuality extends Entity
     public function getDescription()
     {
         if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "Beta\Microsoft\Graph\Model\EducationItemBody")) {
+            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new EducationItemBody($this->_propDict["description"]);
@@ -155,7 +155,7 @@ class RubricQuality extends Entity
     public function getWeight()
     {
         if (array_key_exists("weight", $this->_propDict)) {
-            if (is_a($this->_propDict["weight"], "Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["weight"], "\Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["weight"];
             } else {
                 $this->_propDict["weight"] = new Single($this->_propDict["weight"]);

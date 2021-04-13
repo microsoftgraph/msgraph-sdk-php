@@ -89,7 +89,7 @@ class SearchRequest extends Entity
     public function getEntityTypes()
     {
         if (array_key_exists("entityTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["entityTypes"], "Microsoft\Graph\Model\EntityType")) {
+            if (is_a($this->_propDict["entityTypes"], "\Microsoft\Graph\Model\EntityType")) {
                 return $this->_propDict["entityTypes"];
             } else {
                 $this->_propDict["entityTypes"] = new EntityType($this->_propDict["entityTypes"]);
@@ -178,7 +178,7 @@ class SearchRequest extends Entity
     public function getQuery()
     {
         if (array_key_exists("query", $this->_propDict)) {
-            if (is_a($this->_propDict["query"], "Microsoft\Graph\Model\SearchQuery")) {
+            if (is_a($this->_propDict["query"], "\Microsoft\Graph\Model\SearchQuery")) {
                 return $this->_propDict["query"];
             } else {
                 $this->_propDict["query"] = new SearchQuery($this->_propDict["query"]);

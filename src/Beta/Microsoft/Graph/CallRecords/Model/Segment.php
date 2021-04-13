@@ -33,7 +33,7 @@ class Segment extends \Beta\Microsoft\Graph\Model\Entity
     public function getCallee()
     {
         if (array_key_exists("callee", $this->_propDict)) {
-            if (is_a($this->_propDict["callee"], "Beta\Microsoft\Graph\CallRecords\Model\Endpoint")) {
+            if (is_a($this->_propDict["callee"], "\Beta\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["callee"];
             } else {
                 $this->_propDict["callee"] = new Endpoint($this->_propDict["callee"]);
@@ -66,7 +66,7 @@ class Segment extends \Beta\Microsoft\Graph\Model\Entity
     public function getCaller()
     {
         if (array_key_exists("caller", $this->_propDict)) {
-            if (is_a($this->_propDict["caller"], "Beta\Microsoft\Graph\CallRecords\Model\Endpoint")) {
+            if (is_a($this->_propDict["caller"], "\Beta\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["caller"];
             } else {
                 $this->_propDict["caller"] = new Endpoint($this->_propDict["caller"]);
@@ -92,7 +92,7 @@ class Segment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the endDateTime
-    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The endDateTime
     */
@@ -111,7 +111,7 @@ class Segment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the endDateTime
-    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The endDateTime
     *
@@ -132,7 +132,7 @@ class Segment extends \Beta\Microsoft\Graph\Model\Entity
     public function getFailureInfo()
     {
         if (array_key_exists("failureInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["failureInfo"], "Beta\Microsoft\Graph\CallRecords\Model\FailureInfo")) {
+            if (is_a($this->_propDict["failureInfo"], "\Beta\Microsoft\Graph\CallRecords\Model\FailureInfo")) {
                 return $this->_propDict["failureInfo"];
             } else {
                 $this->_propDict["failureInfo"] = new FailureInfo($this->_propDict["failureInfo"]);
@@ -188,7 +188,7 @@ class Segment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the startDateTime
-    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The startDateTime
     */
@@ -207,7 +207,7 @@ class Segment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the startDateTime
-    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The startDateTime
     *

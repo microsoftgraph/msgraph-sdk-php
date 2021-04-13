@@ -41,7 +41,7 @@ class ProtectSite extends LabelActionBase
     public function getAccessType()
     {
         if (array_key_exists("accessType", $this->_propDict)) {
-            if (is_a($this->_propDict["accessType"], "Beta\Microsoft\Graph\Model\SiteAccessType")) {
+            if (is_a($this->_propDict["accessType"], "\Beta\Microsoft\Graph\Model\SiteAccessType")) {
                 return $this->_propDict["accessType"];
             } else {
                 $this->_propDict["accessType"] = new SiteAccessType($this->_propDict["accessType"]);

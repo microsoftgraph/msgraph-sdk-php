@@ -445,7 +445,7 @@ class ExactMatchSession extends ExactMatchJobBase
     public function getUploadAgent()
     {
         if (array_key_exists("uploadAgent", $this->_propDict)) {
-            if (is_a($this->_propDict["uploadAgent"], "Beta\Microsoft\Graph\Model\ExactMatchUploadAgent")) {
+            if (is_a($this->_propDict["uploadAgent"], "\Beta\Microsoft\Graph\Model\ExactMatchUploadAgent")) {
                 return $this->_propDict["uploadAgent"];
             } else {
                 $this->_propDict["uploadAgent"] = new ExactMatchUploadAgent($this->_propDict["uploadAgent"]);

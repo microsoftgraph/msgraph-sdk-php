@@ -62,7 +62,7 @@ class AccessReview extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\UserIdentity")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -186,7 +186,7 @@ class AccessReview extends Entity
     public function getReviewedEntity()
     {
         if (array_key_exists("reviewedEntity", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedEntity"], "Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["reviewedEntity"], "\Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["reviewedEntity"];
             } else {
                 $this->_propDict["reviewedEntity"] = new Identity($this->_propDict["reviewedEntity"]);
@@ -248,7 +248,7 @@ class AccessReview extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\AccessReviewSettings")) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\AccessReviewSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new AccessReviewSettings($this->_propDict["settings"]);

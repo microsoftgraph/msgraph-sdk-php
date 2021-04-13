@@ -87,7 +87,7 @@ class PasswordCredential extends Entity
 
     /**
     * Gets the endDateTime
-    * The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Optional.
+    * The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @return \DateTime The endDateTime
     */
@@ -106,7 +106,7 @@ class PasswordCredential extends Entity
 
     /**
     * Sets the endDateTime
-    * The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Optional.
+    * The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -204,7 +204,7 @@ class PasswordCredential extends Entity
 
     /**
     * Gets the startDateTime
-    * The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Optional.
+    * The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @return \DateTime The startDateTime
     */
@@ -223,7 +223,7 @@ class PasswordCredential extends Entity
 
     /**
     * Sets the startDateTime
-    * The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Optional.
+    * The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

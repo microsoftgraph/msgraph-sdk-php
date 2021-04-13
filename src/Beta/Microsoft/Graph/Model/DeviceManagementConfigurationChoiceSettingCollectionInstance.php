@@ -42,7 +42,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionInstance extends Devic
     public function getChoiceSettingCollectionValue()
     {
         if (array_key_exists("choiceSettingCollectionValue", $this->_propDict)) {
-            if (is_a($this->_propDict["choiceSettingCollectionValue"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationChoiceSettingValue")) {
+            if (is_a($this->_propDict["choiceSettingCollectionValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationChoiceSettingValue")) {
                 return $this->_propDict["choiceSettingCollectionValue"];
             } else {
                 $this->_propDict["choiceSettingCollectionValue"] = new DeviceManagementConfigurationChoiceSettingValue($this->_propDict["choiceSettingCollectionValue"]);

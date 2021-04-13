@@ -33,7 +33,7 @@ class ChangeNotification extends Entity
     public function getChangeType()
     {
         if (array_key_exists("changeType", $this->_propDict)) {
-            if (is_a($this->_propDict["changeType"], "Microsoft\Graph\Model\ChangeType")) {
+            if (is_a($this->_propDict["changeType"], "\Microsoft\Graph\Model\ChangeType")) {
                 return $this->_propDict["changeType"];
             } else {
                 $this->_propDict["changeType"] = new ChangeType($this->_propDict["changeType"]);
@@ -94,7 +94,7 @@ class ChangeNotification extends Entity
     public function getEncryptedContent()
     {
         if (array_key_exists("encryptedContent", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptedContent"], "Microsoft\Graph\Model\ChangeNotificationEncryptedContent")) {
+            if (is_a($this->_propDict["encryptedContent"], "\Microsoft\Graph\Model\ChangeNotificationEncryptedContent")) {
                 return $this->_propDict["encryptedContent"];
             } else {
                 $this->_propDict["encryptedContent"] = new ChangeNotificationEncryptedContent($this->_propDict["encryptedContent"]);
@@ -155,7 +155,7 @@ class ChangeNotification extends Entity
     public function getLifecycleEvent()
     {
         if (array_key_exists("lifecycleEvent", $this->_propDict)) {
-            if (is_a($this->_propDict["lifecycleEvent"], "Microsoft\Graph\Model\LifecycleEventType")) {
+            if (is_a($this->_propDict["lifecycleEvent"], "\Microsoft\Graph\Model\LifecycleEventType")) {
                 return $this->_propDict["lifecycleEvent"];
             } else {
                 $this->_propDict["lifecycleEvent"] = new LifecycleEventType($this->_propDict["lifecycleEvent"]);
@@ -216,7 +216,7 @@ class ChangeNotification extends Entity
     public function getResourceData()
     {
         if (array_key_exists("resourceData", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceData"], "Microsoft\Graph\Model\ResourceData")) {
+            if (is_a($this->_propDict["resourceData"], "\Microsoft\Graph\Model\ResourceData")) {
                 return $this->_propDict["resourceData"];
             } else {
                 $this->_propDict["resourceData"] = new ResourceData($this->_propDict["resourceData"]);

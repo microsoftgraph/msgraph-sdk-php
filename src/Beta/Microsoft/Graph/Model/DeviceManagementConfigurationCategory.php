@@ -207,7 +207,7 @@ class DeviceManagementConfigurationCategory extends Entity
     public function getPlatforms()
     {
         if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
+            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
                 return $this->_propDict["platforms"];
             } else {
                 $this->_propDict["platforms"] = new DeviceManagementConfigurationPlatforms($this->_propDict["platforms"]);
@@ -262,14 +262,14 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Gets the settingUsage
-    * Indicates that the category contains settings that are used for Compliance or Configuration.
+    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
     *
     * @return DeviceManagementConfigurationSettingUsage The settingUsage
     */
     public function getSettingUsage()
     {
         if (array_key_exists("settingUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["settingUsage"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingUsage")) {
+            if (is_a($this->_propDict["settingUsage"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingUsage")) {
                 return $this->_propDict["settingUsage"];
             } else {
                 $this->_propDict["settingUsage"] = new DeviceManagementConfigurationSettingUsage($this->_propDict["settingUsage"]);
@@ -281,7 +281,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Sets the settingUsage
-    * Indicates that the category contains settings that are used for Compliance or Configuration.
+    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
     *
     * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
     *
@@ -302,7 +302,7 @@ class DeviceManagementConfigurationCategory extends Entity
     public function getTechnologies()
     {
         if (array_key_exists("technologies", $this->_propDict)) {
-            if (is_a($this->_propDict["technologies"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
+            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
                 return $this->_propDict["technologies"];
             } else {
                 $this->_propDict["technologies"] = new DeviceManagementConfigurationTechnologies($this->_propDict["technologies"]);

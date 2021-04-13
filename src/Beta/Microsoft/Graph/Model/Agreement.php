@@ -120,7 +120,7 @@ class Agreement extends Entity
     public function getTermsExpiration()
     {
         if (array_key_exists("termsExpiration", $this->_propDict)) {
-            if (is_a($this->_propDict["termsExpiration"], "Beta\Microsoft\Graph\Model\TermsExpiration")) {
+            if (is_a($this->_propDict["termsExpiration"], "\Beta\Microsoft\Graph\Model\TermsExpiration")) {
                 return $this->_propDict["termsExpiration"];
             } else {
                 $this->_propDict["termsExpiration"] = new TermsExpiration($this->_propDict["termsExpiration"]);
@@ -153,7 +153,7 @@ class Agreement extends Entity
     public function getUserReacceptRequiredFrequency()
     {
         if (array_key_exists("userReacceptRequiredFrequency", $this->_propDict)) {
-            if (is_a($this->_propDict["userReacceptRequiredFrequency"], "Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["userReacceptRequiredFrequency"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["userReacceptRequiredFrequency"];
             } else {
                 $this->_propDict["userReacceptRequiredFrequency"] = new Duration($this->_propDict["userReacceptRequiredFrequency"]);
@@ -216,7 +216,7 @@ class Agreement extends Entity
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], "Beta\Microsoft\Graph\Model\AgreementFile")) {
+            if (is_a($this->_propDict["file"], "\Beta\Microsoft\Graph\Model\AgreementFile")) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = new AgreementFile($this->_propDict["file"]);

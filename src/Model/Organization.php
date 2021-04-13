@@ -56,7 +56,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the businessPhones
-    * Telephone number for the organization. Note: Although this is a string collection, only one number can be set for this property.
+    * Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
     *
     * @return string The businessPhones
     */
@@ -71,7 +71,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the businessPhones
-    * Telephone number for the organization. Note: Although this is a string collection, only one number can be set for this property.
+    * Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
     *
     * @param string $val The businessPhones
     *
@@ -296,7 +296,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
     *
     * @return bool The onPremisesSyncEnabled
     */
@@ -311,7 +311,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -354,7 +354,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
     *
     * @return string The preferredLanguage
     */
@@ -369,7 +369,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
-    * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
+    * The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
     *
     * @param string $val The preferredLanguage
     *
@@ -390,7 +390,7 @@ class Organization extends DirectoryObject
     public function getPrivacyProfile()
     {
         if (array_key_exists("privacyProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["privacyProfile"], "Microsoft\Graph\Model\PrivacyProfile")) {
+            if (is_a($this->_propDict["privacyProfile"], "\Microsoft\Graph\Model\PrivacyProfile")) {
                 return $this->_propDict["privacyProfile"];
             } else {
                 $this->_propDict["privacyProfile"] = new PrivacyProfile($this->_propDict["privacyProfile"]);
@@ -651,7 +651,7 @@ class Organization extends DirectoryObject
     public function getMobileDeviceManagementAuthority()
     {
         if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "Microsoft\Graph\Model\MdmAuthority")) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "\Microsoft\Graph\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -683,7 +683,7 @@ class Organization extends DirectoryObject
     public function getBranding()
     {
         if (array_key_exists("branding", $this->_propDict)) {
-            if (is_a($this->_propDict["branding"], "Microsoft\Graph\Model\OrganizationalBranding")) {
+            if (is_a($this->_propDict["branding"], "\Microsoft\Graph\Model\OrganizationalBranding")) {
                 return $this->_propDict["branding"];
             } else {
                 $this->_propDict["branding"] = new OrganizationalBranding($this->_propDict["branding"]);

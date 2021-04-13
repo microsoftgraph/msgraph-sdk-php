@@ -171,7 +171,7 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Gets the expiredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The expiredDateTime
     */
@@ -190,7 +190,7 @@ class AccessPackageAssignment extends Entity
     
     /**
     * Sets the expiredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The expiredDateTime
     *
@@ -240,7 +240,7 @@ class AccessPackageAssignment extends Entity
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\RequestSchedule")) {
+            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new RequestSchedule($this->_propDict["schedule"]);
@@ -302,7 +302,7 @@ class AccessPackageAssignment extends Entity
     public function getAccessPackage()
     {
         if (array_key_exists("accessPackage", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackage"], "Beta\Microsoft\Graph\Model\AccessPackage")) {
+            if (is_a($this->_propDict["accessPackage"], "\Beta\Microsoft\Graph\Model\AccessPackage")) {
                 return $this->_propDict["accessPackage"];
             } else {
                 $this->_propDict["accessPackage"] = new AccessPackage($this->_propDict["accessPackage"]);
@@ -335,7 +335,7 @@ class AccessPackageAssignment extends Entity
     public function getAccessPackageAssignmentPolicy()
     {
         if (array_key_exists("accessPackageAssignmentPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageAssignmentPolicy"], "Beta\Microsoft\Graph\Model\AccessPackageAssignmentPolicy")) {
+            if (is_a($this->_propDict["accessPackageAssignmentPolicy"], "\Beta\Microsoft\Graph\Model\AccessPackageAssignmentPolicy")) {
                 return $this->_propDict["accessPackageAssignmentPolicy"];
             } else {
                 $this->_propDict["accessPackageAssignmentPolicy"] = new AccessPackageAssignmentPolicy($this->_propDict["accessPackageAssignmentPolicy"]);
@@ -426,7 +426,7 @@ class AccessPackageAssignment extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new AccessPackageSubject($this->_propDict["target"]);

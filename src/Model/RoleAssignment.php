@@ -120,7 +120,7 @@ class RoleAssignment extends Entity
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Microsoft\Graph\Model\RoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "\Microsoft\Graph\Model\RoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new RoleDefinition($this->_propDict["roleDefinition"]);

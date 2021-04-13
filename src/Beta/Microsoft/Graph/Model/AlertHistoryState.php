@@ -117,7 +117,7 @@ class AlertHistoryState extends Entity
     public function getFeedback()
     {
         if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "Beta\Microsoft\Graph\Model\AlertFeedback")) {
+            if (is_a($this->_propDict["feedback"], "\Beta\Microsoft\Graph\Model\AlertFeedback")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new AlertFeedback($this->_propDict["feedback"]);
@@ -150,7 +150,7 @@ class AlertHistoryState extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\AlertStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\AlertStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AlertStatus($this->_propDict["status"]);
@@ -176,7 +176,7 @@ class AlertHistoryState extends Entity
 
     /**
     * Gets the updatedDateTime
-    * Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The updatedDateTime
     */
@@ -195,7 +195,7 @@ class AlertHistoryState extends Entity
 
     /**
     * Sets the updatedDateTime
-    * Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The value to assign to the updatedDateTime
     *

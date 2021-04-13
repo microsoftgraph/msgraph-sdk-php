@@ -227,7 +227,7 @@ class ActivityHistoryItem extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\Status")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\Status")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new Status($this->_propDict["status"]);
@@ -289,7 +289,7 @@ class ActivityHistoryItem extends Entity
     public function getActivity()
     {
         if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "Beta\Microsoft\Graph\Model\UserActivity")) {
+            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\UserActivity")) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new UserActivity($this->_propDict["activity"]);

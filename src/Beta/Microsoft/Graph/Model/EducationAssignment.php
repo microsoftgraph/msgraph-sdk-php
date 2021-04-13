@@ -33,7 +33,7 @@ class EducationAssignment extends Entity
     public function getAddedStudentAction()
     {
         if (array_key_exists("addedStudentAction", $this->_propDict)) {
-            if (is_a($this->_propDict["addedStudentAction"], "Beta\Microsoft\Graph\Model\EducationAddedStudentAction")) {
+            if (is_a($this->_propDict["addedStudentAction"], "\Beta\Microsoft\Graph\Model\EducationAddedStudentAction")) {
                 return $this->_propDict["addedStudentAction"];
             } else {
                 $this->_propDict["addedStudentAction"] = new EducationAddedStudentAction($this->_propDict["addedStudentAction"]);
@@ -117,7 +117,7 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the assignDateTime
-    * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The assignDateTime
     */
@@ -136,7 +136,7 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the assignDateTime
-    * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The assignDateTime
     *
@@ -150,7 +150,7 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the assignedDateTime
-    * The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The assignedDateTime
     */
@@ -169,7 +169,7 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the assignedDateTime
-    * The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The assignedDateTime
     *
@@ -190,7 +190,7 @@ class EducationAssignment extends Entity
     public function getAssignTo()
     {
         if (array_key_exists("assignTo", $this->_propDict)) {
-            if (is_a($this->_propDict["assignTo"], "Beta\Microsoft\Graph\Model\EducationAssignmentRecipient")) {
+            if (is_a($this->_propDict["assignTo"], "\Beta\Microsoft\Graph\Model\EducationAssignmentRecipient")) {
                 return $this->_propDict["assignTo"];
             } else {
                 $this->_propDict["assignTo"] = new EducationAssignmentRecipient($this->_propDict["assignTo"]);
@@ -245,7 +245,7 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the closeDateTime
-    * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The closeDateTime
     */
@@ -264,7 +264,7 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the closeDateTime
-    * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The closeDateTime
     *
@@ -285,7 +285,7 @@ class EducationAssignment extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -311,7 +311,7 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the createdDateTime
-    * Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The createdDateTime
     */
@@ -330,7 +330,7 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the createdDateTime
-    * Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -373,7 +373,7 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the dueDateTime
-    * Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The dueDateTime
     */
@@ -392,7 +392,7 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the dueDateTime
-    * Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The dueDateTime
     *
@@ -413,7 +413,7 @@ class EducationAssignment extends Entity
     public function getGrading()
     {
         if (array_key_exists("grading", $this->_propDict)) {
-            if (is_a($this->_propDict["grading"], "Beta\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
+            if (is_a($this->_propDict["grading"], "\Beta\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
                 return $this->_propDict["grading"];
             } else {
                 $this->_propDict["grading"] = new EducationAssignmentGradeType($this->_propDict["grading"]);
@@ -446,7 +446,7 @@ class EducationAssignment extends Entity
     public function getInstructions()
     {
         if (array_key_exists("instructions", $this->_propDict)) {
-            if (is_a($this->_propDict["instructions"], "Beta\Microsoft\Graph\Model\EducationItemBody")) {
+            if (is_a($this->_propDict["instructions"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["instructions"];
             } else {
                 $this->_propDict["instructions"] = new EducationItemBody($this->_propDict["instructions"]);
@@ -479,7 +479,7 @@ class EducationAssignment extends Entity
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -505,7 +505,7 @@ class EducationAssignment extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -524,7 +524,7 @@ class EducationAssignment extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -574,7 +574,7 @@ class EducationAssignment extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\EducationAssignmentStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\EducationAssignmentStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new EducationAssignmentStatus($this->_propDict["status"]);
@@ -667,7 +667,7 @@ class EducationAssignment extends Entity
     public function getRubric()
     {
         if (array_key_exists("rubric", $this->_propDict)) {
-            if (is_a($this->_propDict["rubric"], "Beta\Microsoft\Graph\Model\EducationRubric")) {
+            if (is_a($this->_propDict["rubric"], "\Beta\Microsoft\Graph\Model\EducationRubric")) {
                 return $this->_propDict["rubric"];
             } else {
                 $this->_propDict["rubric"] = new EducationRubric($this->_propDict["rubric"]);

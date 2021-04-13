@@ -94,7 +94,7 @@ class ChatMessageReaction extends Entity
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["user"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new IdentitySet($this->_propDict["user"]);

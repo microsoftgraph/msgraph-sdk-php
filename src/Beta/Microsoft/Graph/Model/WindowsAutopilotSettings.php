@@ -99,7 +99,7 @@ class WindowsAutopilotSettings extends Entity
     public function getSyncStatus()
     {
         if (array_key_exists("syncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["syncStatus"], "Beta\Microsoft\Graph\Model\WindowsAutopilotSyncStatus")) {
+            if (is_a($this->_propDict["syncStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotSyncStatus")) {
                 return $this->_propDict["syncStatus"];
             } else {
                 $this->_propDict["syncStatus"] = new WindowsAutopilotSyncStatus($this->_propDict["syncStatus"]);

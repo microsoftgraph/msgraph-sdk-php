@@ -84,14 +84,14 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Gets the feature
-    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
+    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
     *
     * @return StagedFeatureName The feature
     */
     public function getFeature()
     {
         if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "Beta\Microsoft\Graph\Model\StagedFeatureName")) {
+            if (is_a($this->_propDict["feature"], "\Beta\Microsoft\Graph\Model\StagedFeatureName")) {
                 return $this->_propDict["feature"];
             } else {
                 $this->_propDict["feature"] = new StagedFeatureName($this->_propDict["feature"]);
@@ -103,7 +103,7 @@ class FeatureRolloutPolicy extends Entity
     
     /**
     * Sets the feature
-    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
+    * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
     *
     * @param StagedFeatureName $val The feature
     *

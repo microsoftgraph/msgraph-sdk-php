@@ -33,7 +33,7 @@ class OnenoteOperation extends Operation
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "Microsoft\Graph\Model\OnenoteOperationError")) {
+            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\OnenoteOperationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new OnenoteOperationError($this->_propDict["error"]);
@@ -59,7 +59,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Gets the percentComplete
-    * The operation percent complete if the operation is still in running status
+    * The operation percent complete if the operation is still in running status.
     *
     * @return string The percentComplete
     */
@@ -74,7 +74,7 @@ class OnenoteOperation extends Operation
     
     /**
     * Sets the percentComplete
-    * The operation percent complete if the operation is still in running status
+    * The operation percent complete if the operation is still in running status.
     *
     * @param string $val The percentComplete
     *

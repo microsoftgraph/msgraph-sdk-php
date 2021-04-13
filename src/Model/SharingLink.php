@@ -33,7 +33,7 @@ class SharingLink extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["application"], "\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Identity($this->_propDict["application"]);

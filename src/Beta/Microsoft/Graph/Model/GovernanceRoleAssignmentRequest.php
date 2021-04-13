@@ -26,7 +26,7 @@ class GovernanceRoleAssignmentRequest extends Entity
 {
     /**
     * Gets the assignmentState
-    * Required. The state of the assignment. The value can be  Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+    * Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
     *
     * @return string The assignmentState
     */
@@ -41,7 +41,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the assignmentState
-    * Required. The state of the assignment. The value can be  Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
+    * Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
     *
     * @param string $val The assignmentState
     *
@@ -113,7 +113,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the requestedDateTime
-    * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The requestedDateTime
     */
@@ -132,7 +132,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the requestedDateTime
-    * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+    * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The requestedDateTime
     *
@@ -211,7 +211,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\GovernanceSchedule")) {
+            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\GovernanceSchedule")) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new GovernanceSchedule($this->_propDict["schedule"]);
@@ -244,7 +244,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\GovernanceRoleAssignmentRequestStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\GovernanceRoleAssignmentRequestStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new GovernanceRoleAssignmentRequestStatus($this->_propDict["status"]);
@@ -299,7 +299,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Gets the type
-    * Required. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
+    * Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
     *
     * @return string The type
     */
@@ -314,7 +314,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     
     /**
     * Sets the type
-    * Required. Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
+    * Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
     *
     * @param string $val The type
     *
@@ -335,7 +335,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -368,7 +368,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);
@@ -401,7 +401,7 @@ class GovernanceRoleAssignmentRequest extends Entity
     public function getSubject()
     {
         if (array_key_exists("subject", $this->_propDict)) {
-            if (is_a($this->_propDict["subject"], "Beta\Microsoft\Graph\Model\GovernanceSubject")) {
+            if (is_a($this->_propDict["subject"], "\Beta\Microsoft\Graph\Model\GovernanceSubject")) {
                 return $this->_propDict["subject"];
             } else {
                 $this->_propDict["subject"] = new GovernanceSubject($this->_propDict["subject"]);

@@ -33,7 +33,7 @@ class DeviceManagementConfigurationSetting extends Entity
     public function getSettingInstance()
     {
         if (array_key_exists("settingInstance", $this->_propDict)) {
-            if (is_a($this->_propDict["settingInstance"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance")) {
+            if (is_a($this->_propDict["settingInstance"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance")) {
                 return $this->_propDict["settingInstance"];
             } else {
                 $this->_propDict["settingInstance"] = new DeviceManagementConfigurationSettingInstance($this->_propDict["settingInstance"]);

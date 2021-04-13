@@ -62,7 +62,7 @@ class EventMessageRequest extends EventMessage
     public function getPreviousEndDateTime()
     {
         if (array_key_exists("previousEndDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["previousEndDateTime"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["previousEndDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["previousEndDateTime"];
             } else {
                 $this->_propDict["previousEndDateTime"] = new DateTimeTimeZone($this->_propDict["previousEndDateTime"]);
@@ -95,7 +95,7 @@ class EventMessageRequest extends EventMessage
     public function getPreviousLocation()
     {
         if (array_key_exists("previousLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["previousLocation"], "Beta\Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["previousLocation"], "\Beta\Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["previousLocation"];
             } else {
                 $this->_propDict["previousLocation"] = new Location($this->_propDict["previousLocation"]);
@@ -128,7 +128,7 @@ class EventMessageRequest extends EventMessage
     public function getPreviousStartDateTime()
     {
         if (array_key_exists("previousStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["previousStartDateTime"], "Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["previousStartDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["previousStartDateTime"];
             } else {
                 $this->_propDict["previousStartDateTime"] = new DateTimeTimeZone($this->_propDict["previousStartDateTime"]);

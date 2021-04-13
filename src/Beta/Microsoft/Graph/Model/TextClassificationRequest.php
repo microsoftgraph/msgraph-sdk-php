@@ -59,7 +59,7 @@ class TextClassificationRequest extends Entity
     public function getMatchTolerancesToInclude()
     {
         if (array_key_exists("matchTolerancesToInclude", $this->_propDict)) {
-            if (is_a($this->_propDict["matchTolerancesToInclude"], "Beta\Microsoft\Graph\Model\MlClassificationMatchTolerance")) {
+            if (is_a($this->_propDict["matchTolerancesToInclude"], "\Beta\Microsoft\Graph\Model\MlClassificationMatchTolerance")) {
                 return $this->_propDict["matchTolerancesToInclude"];
             } else {
                 $this->_propDict["matchTolerancesToInclude"] = new MlClassificationMatchTolerance($this->_propDict["matchTolerancesToInclude"]);
@@ -90,7 +90,7 @@ class TextClassificationRequest extends Entity
     public function getScopesToRun()
     {
         if (array_key_exists("scopesToRun", $this->_propDict)) {
-            if (is_a($this->_propDict["scopesToRun"], "Beta\Microsoft\Graph\Model\SensitiveTypeScope")) {
+            if (is_a($this->_propDict["scopesToRun"], "\Beta\Microsoft\Graph\Model\SensitiveTypeScope")) {
                 return $this->_propDict["scopesToRun"];
             } else {
                 $this->_propDict["scopesToRun"] = new SensitiveTypeScope($this->_propDict["scopesToRun"]);

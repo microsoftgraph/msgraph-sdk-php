@@ -95,7 +95,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
     public function getKeyStrength()
     {
         if (array_key_exists("keyStrength", $this->_propDict)) {
-            if (is_a($this->_propDict["keyStrength"], "Beta\Microsoft\Graph\Model\AuthenticationMethodKeyStrength")) {
+            if (is_a($this->_propDict["keyStrength"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodKeyStrength")) {
                 return $this->_propDict["keyStrength"];
             } else {
                 $this->_propDict["keyStrength"] = new AuthenticationMethodKeyStrength($this->_propDict["keyStrength"]);
@@ -128,7 +128,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
     public function getDevice()
     {
         if (array_key_exists("device", $this->_propDict)) {
-            if (is_a($this->_propDict["device"], "Beta\Microsoft\Graph\Model\Device")) {
+            if (is_a($this->_propDict["device"], "\Beta\Microsoft\Graph\Model\Device")) {
                 return $this->_propDict["device"];
             } else {
                 $this->_propDict["device"] = new Device($this->_propDict["device"]);

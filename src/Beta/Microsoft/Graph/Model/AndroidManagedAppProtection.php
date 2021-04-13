@@ -91,7 +91,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function getAppActionIfAndroidDeviceManufacturerNotAllowed()
     {
         if (array_key_exists("appActionIfAndroidDeviceManufacturerNotAllowed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"];
             } else {
                 $this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceManufacturerNotAllowed"]);
@@ -124,7 +124,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function getAppActionIfAndroidDeviceModelNotAllowed()
     {
         if (array_key_exists("appActionIfAndroidDeviceModelNotAllowed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidDeviceModelNotAllowed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfAndroidDeviceModelNotAllowed"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"];
             } else {
                 $this->_propDict["appActionIfAndroidDeviceModelNotAllowed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidDeviceModelNotAllowed"]);
@@ -150,14 +150,14 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetAppsVerificationFailed
     */
     public function getAppActionIfAndroidSafetyNetAppsVerificationFailed()
     {
         if (array_key_exists("appActionIfAndroidSafetyNetAppsVerificationFailed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"];
             } else {
                 $this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidSafetyNetAppsVerificationFailed"]);
@@ -169,7 +169,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetAppsVerificationFailed
     *
@@ -183,14 +183,14 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction The appActionIfAndroidSafetyNetDeviceAttestationFailed
     */
     public function getAppActionIfAndroidSafetyNetDeviceAttestationFailed()
     {
         if (array_key_exists("appActionIfAndroidSafetyNetDeviceAttestationFailed", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"];
             } else {
                 $this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAndroidSafetyNetDeviceAttestationFailed"]);
@@ -202,7 +202,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed
-    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails. Possible values are: block, wipe, warn.
+    * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAndroidSafetyNetDeviceAttestationFailed
     *
@@ -223,7 +223,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function getAppActionIfDeviceLockNotSet()
     {
         if (array_key_exists("appActionIfDeviceLockNotSet", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfDeviceLockNotSet"], "Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfDeviceLockNotSet"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
                 return $this->_propDict["appActionIfDeviceLockNotSet"];
             } else {
                 $this->_propDict["appActionIfDeviceLockNotSet"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDeviceLockNotSet"]);
@@ -809,7 +809,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function getRequiredAndroidSafetyNetAppsVerificationType()
     {
         if (array_key_exists("requiredAndroidSafetyNetAppsVerificationType", $this->_propDict)) {
-            if (is_a($this->_propDict["requiredAndroidSafetyNetAppsVerificationType"], "Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetAppsVerificationType")) {
+            if (is_a($this->_propDict["requiredAndroidSafetyNetAppsVerificationType"], "\Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetAppsVerificationType")) {
                 return $this->_propDict["requiredAndroidSafetyNetAppsVerificationType"];
             } else {
                 $this->_propDict["requiredAndroidSafetyNetAppsVerificationType"] = new AndroidManagedAppSafetyNetAppsVerificationType($this->_propDict["requiredAndroidSafetyNetAppsVerificationType"]);
@@ -842,7 +842,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function getRequiredAndroidSafetyNetDeviceAttestationType()
     {
         if (array_key_exists("requiredAndroidSafetyNetDeviceAttestationType", $this->_propDict)) {
-            if (is_a($this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"], "Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetDeviceAttestationType")) {
+            if (is_a($this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"], "\Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetDeviceAttestationType")) {
                 return $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"];
             } else {
                 $this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"] = new AndroidManagedAppSafetyNetDeviceAttestationType($this->_propDict["requiredAndroidSafetyNetDeviceAttestationType"]);
@@ -875,7 +875,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function getRequiredAndroidSafetyNetEvaluationType()
     {
         if (array_key_exists("requiredAndroidSafetyNetEvaluationType", $this->_propDict)) {
-            if (is_a($this->_propDict["requiredAndroidSafetyNetEvaluationType"], "Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetEvaluationType")) {
+            if (is_a($this->_propDict["requiredAndroidSafetyNetEvaluationType"], "\Beta\Microsoft\Graph\Model\AndroidManagedAppSafetyNetEvaluationType")) {
                 return $this->_propDict["requiredAndroidSafetyNetEvaluationType"];
             } else {
                 $this->_propDict["requiredAndroidSafetyNetEvaluationType"] = new AndroidManagedAppSafetyNetEvaluationType($this->_propDict["requiredAndroidSafetyNetEvaluationType"]);
@@ -1025,7 +1025,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "Beta\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploymentSummary"], "\Beta\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

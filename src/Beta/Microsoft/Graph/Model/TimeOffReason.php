@@ -62,7 +62,7 @@ class TimeOffReason extends ChangeTrackedEntity
     public function getIconType()
     {
         if (array_key_exists("iconType", $this->_propDict)) {
-            if (is_a($this->_propDict["iconType"], "Beta\Microsoft\Graph\Model\TimeOffReasonIconType")) {
+            if (is_a($this->_propDict["iconType"], "\Beta\Microsoft\Graph\Model\TimeOffReasonIconType")) {
                 return $this->_propDict["iconType"];
             } else {
                 $this->_propDict["iconType"] = new TimeOffReasonIconType($this->_propDict["iconType"]);

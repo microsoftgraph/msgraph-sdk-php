@@ -186,7 +186,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "Microsoft\Graph\Model\PageLinks")) {
+            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\PageLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new PageLinks($this->_propDict["links"]);
@@ -304,7 +304,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     public function getParentNotebook()
     {
         if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "Microsoft\Graph\Model\Notebook")) {
+            if (is_a($this->_propDict["parentNotebook"], "\Microsoft\Graph\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -337,7 +337,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     public function getParentSection()
     {
         if (array_key_exists("parentSection", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSection"], "Microsoft\Graph\Model\OnenoteSection")) {
+            if (is_a($this->_propDict["parentSection"], "\Microsoft\Graph\Model\OnenoteSection")) {
                 return $this->_propDict["parentSection"];
             } else {
                 $this->_propDict["parentSection"] = new OnenoteSection($this->_propDict["parentSection"]);

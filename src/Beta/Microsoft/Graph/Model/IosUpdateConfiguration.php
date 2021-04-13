@@ -33,7 +33,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     public function getActiveHoursEnd()
     {
         if (array_key_exists("activeHoursEnd", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursEnd"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["activeHoursEnd"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["activeHoursEnd"];
             } else {
                 $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);
@@ -66,7 +66,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     public function getActiveHoursStart()
     {
         if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["activeHoursStart"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["activeHoursStart"];
             } else {
                 $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
@@ -246,7 +246,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     public function getUpdateScheduleType()
     {
         if (array_key_exists("updateScheduleType", $this->_propDict)) {
-            if (is_a($this->_propDict["updateScheduleType"], "Beta\Microsoft\Graph\Model\IosSoftwareUpdateScheduleType")) {
+            if (is_a($this->_propDict["updateScheduleType"], "\Beta\Microsoft\Graph\Model\IosSoftwareUpdateScheduleType")) {
                 return $this->_propDict["updateScheduleType"];
             } else {
                 $this->_propDict["updateScheduleType"] = new IosSoftwareUpdateScheduleType($this->_propDict["updateScheduleType"]);

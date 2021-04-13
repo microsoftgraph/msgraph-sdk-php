@@ -56,7 +56,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the completedDate
-    * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The completedDate
     */
@@ -75,7 +75,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the completedDate
-    * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The completedDate
     *
@@ -89,7 +89,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -108,7 +108,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the createdDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -305,7 +305,7 @@ class AccessPackageAssignmentRequest extends Entity
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "Beta\Microsoft\Graph\Model\RequestSchedule")) {
+            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new RequestSchedule($this->_propDict["schedule"]);
@@ -337,7 +337,7 @@ class AccessPackageAssignmentRequest extends Entity
     public function getAccessPackage()
     {
         if (array_key_exists("accessPackage", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackage"], "Beta\Microsoft\Graph\Model\AccessPackage")) {
+            if (is_a($this->_propDict["accessPackage"], "\Beta\Microsoft\Graph\Model\AccessPackage")) {
                 return $this->_propDict["accessPackage"];
             } else {
                 $this->_propDict["accessPackage"] = new AccessPackage($this->_propDict["accessPackage"]);
@@ -368,7 +368,7 @@ class AccessPackageAssignmentRequest extends Entity
     public function getAccessPackageAssignment()
     {
         if (array_key_exists("accessPackageAssignment", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageAssignment"], "Beta\Microsoft\Graph\Model\AccessPackageAssignment")) {
+            if (is_a($this->_propDict["accessPackageAssignment"], "\Beta\Microsoft\Graph\Model\AccessPackageAssignment")) {
                 return $this->_propDict["accessPackageAssignment"];
             } else {
                 $this->_propDict["accessPackageAssignment"] = new AccessPackageAssignment($this->_propDict["accessPackageAssignment"]);
@@ -400,7 +400,7 @@ class AccessPackageAssignmentRequest extends Entity
     public function getRequestor()
     {
         if (array_key_exists("requestor", $this->_propDict)) {
-            if (is_a($this->_propDict["requestor"], "Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
+            if (is_a($this->_propDict["requestor"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
                 return $this->_propDict["requestor"];
             } else {
                 $this->_propDict["requestor"] = new AccessPackageSubject($this->_propDict["requestor"]);

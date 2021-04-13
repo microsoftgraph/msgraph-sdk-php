@@ -55,13 +55,14 @@ class PrinterCreateOperation extends PrintOperation
     
     /**
     * Gets the printer
+    * The created printer entity. Read-only.
     *
     * @return Printer The printer
     */
     public function getPrinter()
     {
         if (array_key_exists("printer", $this->_propDict)) {
-            if (is_a($this->_propDict["printer"], "Beta\Microsoft\Graph\Model\Printer")) {
+            if (is_a($this->_propDict["printer"], "\Beta\Microsoft\Graph\Model\Printer")) {
                 return $this->_propDict["printer"];
             } else {
                 $this->_propDict["printer"] = new Printer($this->_propDict["printer"]);
@@ -73,6 +74,7 @@ class PrinterCreateOperation extends PrintOperation
     
     /**
     * Sets the printer
+    * The created printer entity. Read-only.
     *
     * @param Printer $val The printer
     *
