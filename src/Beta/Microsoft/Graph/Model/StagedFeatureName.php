@@ -32,6 +32,6 @@ class StagedFeatureName extends Enum
     const PASSTHROUGH_AUTHENTICATION = "passthroughAuthentication";
     const SEAMLESS_SSO = "seamlessSso";
     const PASSWORD_HASH_SYNC = "passwordHashSync";
-    const EMAIL_AS_ALTERNATE_ID = "emailAsAlternateId";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const EMAIL_AS_ALTERNATE_ID = "emailAsAlternateId";
 }

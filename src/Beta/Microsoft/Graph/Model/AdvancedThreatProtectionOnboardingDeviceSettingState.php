@@ -153,7 +153,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\DeviceType")) {
+            if (is_a($this->_propDict["platformType"], "Beta\Microsoft\Graph\Model\DeviceType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new DeviceType($this->_propDict["platformType"]);
@@ -244,7 +244,7 @@ class AdvancedThreatProtectionOnboardingDeviceSettingState extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);

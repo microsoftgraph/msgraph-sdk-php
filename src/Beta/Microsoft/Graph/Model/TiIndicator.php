@@ -33,7 +33,7 @@ class TiIndicator extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\TiAction")) {
+            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\TiAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new TiAction($this->_propDict["action"]);
@@ -211,7 +211,7 @@ class TiIndicator extends Entity
     public function getDiamondModel()
     {
         if (array_key_exists("diamondModel", $this->_propDict)) {
-            if (is_a($this->_propDict["diamondModel"], "\Beta\Microsoft\Graph\Model\DiamondModel")) {
+            if (is_a($this->_propDict["diamondModel"], "Beta\Microsoft\Graph\Model\DiamondModel")) {
                 return $this->_propDict["diamondModel"];
             } else {
                 $this->_propDict["diamondModel"] = new DiamondModel($this->_propDict["diamondModel"]);
@@ -507,7 +507,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the expirationDateTime
-    * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @return \DateTime The expirationDateTime
     */
@@ -526,7 +526,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the expirationDateTime
-    * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+    * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Required.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -637,7 +637,7 @@ class TiIndicator extends Entity
     public function getFileHashType()
     {
         if (array_key_exists("fileHashType", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHashType"], "\Beta\Microsoft\Graph\Model\FileHashType")) {
+            if (is_a($this->_propDict["fileHashType"], "Beta\Microsoft\Graph\Model\FileHashType")) {
                 return $this->_propDict["fileHashType"];
             } else {
                 $this->_propDict["fileHashType"] = new FileHashType($this->_propDict["fileHashType"]);
@@ -851,7 +851,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the ingestedDateTime
-    * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The ingestedDateTime
     */
@@ -870,7 +870,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the ingestedDateTime
-    * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The ingestedDateTime
     *
@@ -971,7 +971,7 @@ class TiIndicator extends Entity
     
     /**
     * Gets the lastReportedDateTime
-    * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The lastReportedDateTime
     */
@@ -990,7 +990,7 @@ class TiIndicator extends Entity
     
     /**
     * Sets the lastReportedDateTime
-    * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -1590,7 +1590,7 @@ class TiIndicator extends Entity
     public function getTlpLevel()
     {
         if (array_key_exists("tlpLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["tlpLevel"], "\Beta\Microsoft\Graph\Model\TlpLevel")) {
+            if (is_a($this->_propDict["tlpLevel"], "Beta\Microsoft\Graph\Model\TlpLevel")) {
                 return $this->_propDict["tlpLevel"];
             } else {
                 $this->_propDict["tlpLevel"] = new TlpLevel($this->_propDict["tlpLevel"]);

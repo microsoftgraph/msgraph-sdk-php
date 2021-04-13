@@ -131,15 +131,15 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the charge
     *
-    * @return \Beta\Microsoft\Graph\Model\Decimal The charge
+    * @return Beta\Microsoft\Graph\Model\Decimal The charge
     */
     public function getCharge()
     {
         if (array_key_exists("charge", $this->_propDict)) {
-            if (is_a($this->_propDict["charge"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["charge"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["charge"];
             } else {
-                $this->_propDict["charge"] = new \Beta\Microsoft\Graph\Model\Decimal($this->_propDict["charge"]);
+                $this->_propDict["charge"] = new Beta\Microsoft\Graph\Model\Decimal($this->_propDict["charge"]);
                 return $this->_propDict["charge"];
             }
         }
@@ -149,7 +149,7 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Sets the charge
     *
-    * @param \Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the charge
+    * @param Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the charge
     *
     * @return PstnCallLogRow The PstnCallLogRow
     */
@@ -188,15 +188,15 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the connectionCharge
     *
-    * @return \Beta\Microsoft\Graph\Model\Decimal The connectionCharge
+    * @return Beta\Microsoft\Graph\Model\Decimal The connectionCharge
     */
     public function getConnectionCharge()
     {
         if (array_key_exists("connectionCharge", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionCharge"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["connectionCharge"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["connectionCharge"];
             } else {
-                $this->_propDict["connectionCharge"] = new \Beta\Microsoft\Graph\Model\Decimal($this->_propDict["connectionCharge"]);
+                $this->_propDict["connectionCharge"] = new Beta\Microsoft\Graph\Model\Decimal($this->_propDict["connectionCharge"]);
                 return $this->_propDict["connectionCharge"];
             }
         }
@@ -206,7 +206,7 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Sets the connectionCharge
     *
-    * @param \Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the connectionCharge
+    * @param Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the connectionCharge
     *
     * @return PstnCallLogRow The PstnCallLogRow
     */

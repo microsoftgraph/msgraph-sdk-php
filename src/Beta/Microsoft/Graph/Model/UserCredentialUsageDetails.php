@@ -26,14 +26,14 @@ class UserCredentialUsageDetails extends Entity
 {
     /**
     * Gets the authMethod
-    * Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue
+    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobileCall (supported only in registration).
     *
     * @return UsageAuthMethod The authMethod
     */
     public function getAuthMethod()
     {
         if (array_key_exists("authMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authMethod"], "\Beta\Microsoft\Graph\Model\UsageAuthMethod")) {
+            if (is_a($this->_propDict["authMethod"], "Beta\Microsoft\Graph\Model\UsageAuthMethod")) {
                 return $this->_propDict["authMethod"];
             } else {
                 $this->_propDict["authMethod"] = new UsageAuthMethod($this->_propDict["authMethod"]);
@@ -45,7 +45,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the authMethod
-    * Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue
+    * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobileCall (supported only in registration).
     *
     * @param UsageAuthMethod $val The authMethod
     *
@@ -59,7 +59,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the eventDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The eventDateTime
     */
@@ -78,7 +78,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the eventDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The eventDateTime
     *
@@ -121,14 +121,14 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Gets the feature
-    * Possible values are: registration, reset, unknownFutureValue.
+    * Possible values are: registration and reset.
     *
     * @return FeatureType The feature
     */
     public function getFeature()
     {
         if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "\Beta\Microsoft\Graph\Model\FeatureType")) {
+            if (is_a($this->_propDict["feature"], "Beta\Microsoft\Graph\Model\FeatureType")) {
                 return $this->_propDict["feature"];
             } else {
                 $this->_propDict["feature"] = new FeatureType($this->_propDict["feature"]);
@@ -140,7 +140,7 @@ class UserCredentialUsageDetails extends Entity
     
     /**
     * Sets the feature
-    * Possible values are: registration, reset, unknownFutureValue.
+    * Possible values are: registration and reset.
     *
     * @param FeatureType $val The feature
     *

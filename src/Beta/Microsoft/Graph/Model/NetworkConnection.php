@@ -201,7 +201,7 @@ class NetworkConnection extends Entity
     public function getDirection()
     {
         if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "\Beta\Microsoft\Graph\Model\ConnectionDirection")) {
+            if (is_a($this->_propDict["direction"], "Beta\Microsoft\Graph\Model\ConnectionDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new ConnectionDirection($this->_propDict["direction"]);
@@ -227,7 +227,7 @@ class NetworkConnection extends Entity
 
     /**
     * Gets the domainRegisteredDateTime
-    * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The domainRegisteredDateTime
     */
@@ -246,7 +246,7 @@ class NetworkConnection extends Entity
 
     /**
     * Sets the domainRegisteredDateTime
-    * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The value to assign to the domainRegisteredDateTime
     *
@@ -407,7 +407,7 @@ class NetworkConnection extends Entity
     public function getProtocol()
     {
         if (array_key_exists("protocol", $this->_propDict)) {
-            if (is_a($this->_propDict["protocol"], "\Beta\Microsoft\Graph\Model\SecurityNetworkProtocol")) {
+            if (is_a($this->_propDict["protocol"], "Beta\Microsoft\Graph\Model\SecurityNetworkProtocol")) {
                 return $this->_propDict["protocol"];
             } else {
                 $this->_propDict["protocol"] = new SecurityNetworkProtocol($this->_propDict["protocol"]);
@@ -552,7 +552,7 @@ class NetworkConnection extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ConnectionStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ConnectionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionStatus($this->_propDict["status"]);

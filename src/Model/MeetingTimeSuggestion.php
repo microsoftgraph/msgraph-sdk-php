@@ -33,7 +33,7 @@ class MeetingTimeSuggestion extends Entity
     public function getAttendeeAvailability()
     {
         if (array_key_exists("attendeeAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["attendeeAvailability"], "\Microsoft\Graph\Model\AttendeeAvailability")) {
+            if (is_a($this->_propDict["attendeeAvailability"], "Microsoft\Graph\Model\AttendeeAvailability")) {
                 return $this->_propDict["attendeeAvailability"];
             } else {
                 $this->_propDict["attendeeAvailability"] = new AttendeeAvailability($this->_propDict["attendeeAvailability"]);
@@ -94,7 +94,7 @@ class MeetingTimeSuggestion extends Entity
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "\Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["locations"], "Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["locations"];
             } else {
                 $this->_propDict["locations"] = new Location($this->_propDict["locations"]);
@@ -127,7 +127,7 @@ class MeetingTimeSuggestion extends Entity
     public function getMeetingTimeSlot()
     {
         if (array_key_exists("meetingTimeSlot", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSlot"], "\Microsoft\Graph\Model\TimeSlot")) {
+            if (is_a($this->_propDict["meetingTimeSlot"], "Microsoft\Graph\Model\TimeSlot")) {
                 return $this->_propDict["meetingTimeSlot"];
             } else {
                 $this->_propDict["meetingTimeSlot"] = new TimeSlot($this->_propDict["meetingTimeSlot"]);
@@ -188,7 +188,7 @@ class MeetingTimeSuggestion extends Entity
     public function getOrganizerAvailability()
     {
         if (array_key_exists("organizerAvailability", $this->_propDict)) {
-            if (is_a($this->_propDict["organizerAvailability"], "\Microsoft\Graph\Model\FreeBusyStatus")) {
+            if (is_a($this->_propDict["organizerAvailability"], "Microsoft\Graph\Model\FreeBusyStatus")) {
                 return $this->_propDict["organizerAvailability"];
             } else {
                 $this->_propDict["organizerAvailability"] = new FreeBusyStatus($this->_propDict["organizerAvailability"]);

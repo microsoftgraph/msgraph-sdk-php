@@ -62,7 +62,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     public function getBandwidthMode()
     {
         if (array_key_exists("bandwidthMode", $this->_propDict)) {
-            if (is_a($this->_propDict["bandwidthMode"], "\Beta\Microsoft\Graph\Model\DeliveryOptimizationBandwidth")) {
+            if (is_a($this->_propDict["bandwidthMode"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationBandwidth")) {
                 return $this->_propDict["bandwidthMode"];
             } else {
                 $this->_propDict["bandwidthMode"] = new DeliveryOptimizationBandwidth($this->_propDict["bandwidthMode"]);
@@ -182,7 +182,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     public function getDeliveryOptimizationMode()
     {
         if (array_key_exists("deliveryOptimizationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationMode"], "\Beta\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
+            if (is_a($this->_propDict["deliveryOptimizationMode"], "Beta\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
                 return $this->_propDict["deliveryOptimizationMode"];
             } else {
                 $this->_propDict["deliveryOptimizationMode"] = new WindowsDeliveryOptimizationMode($this->_propDict["deliveryOptimizationMode"]);
@@ -244,7 +244,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     public function getGroupIdSource()
     {
         if (array_key_exists("groupIdSource", $this->_propDict)) {
-            if (is_a($this->_propDict["groupIdSource"], "\Beta\Microsoft\Graph\Model\DeliveryOptimizationGroupIdSource")) {
+            if (is_a($this->_propDict["groupIdSource"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationGroupIdSource")) {
                 return $this->_propDict["groupIdSource"];
             } else {
                 $this->_propDict["groupIdSource"] = new DeliveryOptimizationGroupIdSource($this->_propDict["groupIdSource"]);
@@ -306,7 +306,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     public function getMaximumCacheSize()
     {
         if (array_key_exists("maximumCacheSize", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumCacheSize"], "\Beta\Microsoft\Graph\Model\DeliveryOptimizationMaxCacheSize")) {
+            if (is_a($this->_propDict["maximumCacheSize"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationMaxCacheSize")) {
                 return $this->_propDict["maximumCacheSize"];
             } else {
                 $this->_propDict["maximumCacheSize"] = new DeliveryOptimizationMaxCacheSize($this->_propDict["maximumCacheSize"]);
@@ -484,7 +484,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     public function getRestrictPeerSelectionBy()
     {
         if (array_key_exists("restrictPeerSelectionBy", $this->_propDict)) {
-            if (is_a($this->_propDict["restrictPeerSelectionBy"], "\Beta\Microsoft\Graph\Model\DeliveryOptimizationRestrictPeerSelectionByOptions")) {
+            if (is_a($this->_propDict["restrictPeerSelectionBy"], "Beta\Microsoft\Graph\Model\DeliveryOptimizationRestrictPeerSelectionByOptions")) {
                 return $this->_propDict["restrictPeerSelectionBy"];
             } else {
                 $this->_propDict["restrictPeerSelectionBy"] = new DeliveryOptimizationRestrictPeerSelectionByOptions($this->_propDict["restrictPeerSelectionBy"]);
@@ -517,7 +517,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     public function getVpnPeerCaching()
     {
         if (array_key_exists("vpnPeerCaching", $this->_propDict)) {
-            if (is_a($this->_propDict["vpnPeerCaching"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["vpnPeerCaching"], "Beta\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["vpnPeerCaching"];
             } else {
                 $this->_propDict["vpnPeerCaching"] = new Enablement($this->_propDict["vpnPeerCaching"]);

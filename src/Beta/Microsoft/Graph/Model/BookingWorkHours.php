@@ -33,7 +33,7 @@ class BookingWorkHours extends Entity
     public function getDay()
     {
         if (array_key_exists("day", $this->_propDict)) {
-            if (is_a($this->_propDict["day"], "\Beta\Microsoft\Graph\Model\DayOfWeek")) {
+            if (is_a($this->_propDict["day"], "Beta\Microsoft\Graph\Model\DayOfWeek")) {
                 return $this->_propDict["day"];
             } else {
                 $this->_propDict["day"] = new DayOfWeek($this->_propDict["day"]);
@@ -66,7 +66,7 @@ class BookingWorkHours extends Entity
     public function getTimeSlots()
     {
         if (array_key_exists("timeSlots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeSlots"], "\Beta\Microsoft\Graph\Model\BookingWorkTimeSlot")) {
+            if (is_a($this->_propDict["timeSlots"], "Beta\Microsoft\Graph\Model\BookingWorkTimeSlot")) {
                 return $this->_propDict["timeSlots"];
             } else {
                 $this->_propDict["timeSlots"] = new BookingWorkTimeSlot($this->_propDict["timeSlots"]);

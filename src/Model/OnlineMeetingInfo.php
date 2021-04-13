@@ -89,7 +89,7 @@ class OnlineMeetingInfo extends Entity
     public function getPhones()
     {
         if (array_key_exists("phones", $this->_propDict)) {
-            if (is_a($this->_propDict["phones"], "\Microsoft\Graph\Model\Phone")) {
+            if (is_a($this->_propDict["phones"], "Microsoft\Graph\Model\Phone")) {
                 return $this->_propDict["phones"];
             } else {
                 $this->_propDict["phones"] = new Phone($this->_propDict["phones"]);

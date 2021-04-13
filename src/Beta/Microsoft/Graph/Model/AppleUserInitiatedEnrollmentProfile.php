@@ -96,7 +96,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     public function getDefaultEnrollmentType()
     {
         if (array_key_exists("defaultEnrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultEnrollmentType"], "\Beta\Microsoft\Graph\Model\AppleUserInitiatedEnrollmentType")) {
+            if (is_a($this->_propDict["defaultEnrollmentType"], "Beta\Microsoft\Graph\Model\AppleUserInitiatedEnrollmentType")) {
                 return $this->_propDict["defaultEnrollmentType"];
             } else {
                 $this->_propDict["defaultEnrollmentType"] = new AppleUserInitiatedEnrollmentType($this->_propDict["defaultEnrollmentType"]);
@@ -220,7 +220,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\DevicePlatformType")) {
+            if (is_a($this->_propDict["platform"], "Beta\Microsoft\Graph\Model\DevicePlatformType")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new DevicePlatformType($this->_propDict["platform"]);

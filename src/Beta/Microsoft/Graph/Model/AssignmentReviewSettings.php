@@ -117,7 +117,7 @@ class AssignmentReviewSettings extends Entity
     public function getReviewers()
     {
         if (array_key_exists("reviewers", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewers"], "\Beta\Microsoft\Graph\Model\UserSet")) {
+            if (is_a($this->_propDict["reviewers"], "Beta\Microsoft\Graph\Model\UserSet")) {
                 return $this->_propDict["reviewers"];
             } else {
                 $this->_propDict["reviewers"] = new UserSet($this->_propDict["reviewers"]);

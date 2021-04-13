@@ -94,7 +94,7 @@ class MembershipRuleProcessingStatus extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\MembershipRuleProcessingStatusDetails")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\MembershipRuleProcessingStatusDetails")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new MembershipRuleProcessingStatusDetails($this->_propDict["status"]);

@@ -32,7 +32,7 @@ class IdentityUserFlow extends Entity
     public function getUserFlowType()
     {
         if (array_key_exists("userFlowType", $this->_propDict)) {
-            if (is_a($this->_propDict["userFlowType"], "\Beta\Microsoft\Graph\Model\UserFlowType")) {
+            if (is_a($this->_propDict["userFlowType"], "Beta\Microsoft\Graph\Model\UserFlowType")) {
                 return $this->_propDict["userFlowType"];
             } else {
                 $this->_propDict["userFlowType"] = new UserFlowType($this->_propDict["userFlowType"]);
@@ -63,7 +63,7 @@ class IdentityUserFlow extends Entity
     public function getUserFlowTypeVersion()
     {
         if (array_key_exists("userFlowTypeVersion", $this->_propDict)) {
-            if (is_a($this->_propDict["userFlowTypeVersion"], "\Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["userFlowTypeVersion"], "Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["userFlowTypeVersion"];
             } else {
                 $this->_propDict["userFlowTypeVersion"] = new Single($this->_propDict["userFlowTypeVersion"]);

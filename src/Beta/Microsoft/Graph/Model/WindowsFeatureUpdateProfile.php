@@ -58,35 +58,6 @@ class WindowsFeatureUpdateProfile extends Entity
     }
     
     /**
-    * Gets the deployableContentDisplayName
-    * Friendly display name of the quality update profile deployable content
-    *
-    * @return string The deployableContentDisplayName
-    */
-    public function getDeployableContentDisplayName()
-    {
-        if (array_key_exists("deployableContentDisplayName", $this->_propDict)) {
-            return $this->_propDict["deployableContentDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deployableContentDisplayName
-    * Friendly display name of the quality update profile deployable content
-    *
-    * @param string $val The deployableContentDisplayName
-    *
-    * @return WindowsFeatureUpdateProfile
-    */
-    public function setDeployableContentDisplayName($val)
-    {
-        $this->_propDict["deployableContentDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * The description of the profile which is specified by the user.
     *

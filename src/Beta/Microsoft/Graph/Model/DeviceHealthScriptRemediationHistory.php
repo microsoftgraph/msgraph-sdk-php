@@ -33,7 +33,7 @@ class DeviceHealthScriptRemediationHistory extends Entity
     public function getHistoryData()
     {
         if (array_key_exists("historyData", $this->_propDict)) {
-            if (is_a($this->_propDict["historyData"], "\Beta\Microsoft\Graph\Model\DeviceHealthScriptRemediationHistoryData")) {
+            if (is_a($this->_propDict["historyData"], "Beta\Microsoft\Graph\Model\DeviceHealthScriptRemediationHistoryData")) {
                 return $this->_propDict["historyData"];
             } else {
                 $this->_propDict["historyData"] = new DeviceHealthScriptRemediationHistoryData($this->_propDict["historyData"]);

@@ -155,7 +155,7 @@ class RecurrenceRange extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\RecurrenceRangeType")) {
+            if (is_a($this->_propDict["type"], "Microsoft\Graph\Model\RecurrenceRangeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new RecurrenceRangeType($this->_propDict["type"]);

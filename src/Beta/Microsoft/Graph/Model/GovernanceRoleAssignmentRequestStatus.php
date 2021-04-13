@@ -58,7 +58,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
     public function getStatusDetails()
     {
         if (array_key_exists("statusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\KeyValue")) {
+            if (is_a($this->_propDict["statusDetails"], "Beta\Microsoft\Graph\Model\KeyValue")) {
                 return $this->_propDict["statusDetails"];
             } else {
                 $this->_propDict["statusDetails"] = new KeyValue($this->_propDict["statusDetails"]);

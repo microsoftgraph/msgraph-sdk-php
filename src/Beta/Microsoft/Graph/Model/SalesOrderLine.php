@@ -59,7 +59,7 @@ class SalesOrderLine extends Entity
     public function getAmountExcludingTax()
     {
         if (array_key_exists("amountExcludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["amountExcludingTax"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["amountExcludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["amountExcludingTax"];
             } else {
                 $this->_propDict["amountExcludingTax"] = new Decimal($this->_propDict["amountExcludingTax"]);
@@ -90,7 +90,7 @@ class SalesOrderLine extends Entity
     public function getAmountIncludingTax()
     {
         if (array_key_exists("amountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["amountIncludingTax"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["amountIncludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["amountIncludingTax"];
             } else {
                 $this->_propDict["amountIncludingTax"] = new Decimal($this->_propDict["amountIncludingTax"]);
@@ -148,7 +148,7 @@ class SalesOrderLine extends Entity
     public function getDiscountAmount()
     {
         if (array_key_exists("discountAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["discountAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["discountAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["discountAmount"];
             } else {
                 $this->_propDict["discountAmount"] = new Decimal($this->_propDict["discountAmount"]);
@@ -206,7 +206,7 @@ class SalesOrderLine extends Entity
     public function getDiscountPercent()
     {
         if (array_key_exists("discountPercent", $this->_propDict)) {
-            if (is_a($this->_propDict["discountPercent"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["discountPercent"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["discountPercent"];
             } else {
                 $this->_propDict["discountPercent"] = new Decimal($this->_propDict["discountPercent"]);
@@ -264,7 +264,7 @@ class SalesOrderLine extends Entity
     public function getInvoiceDiscountAllocation()
     {
         if (array_key_exists("invoiceDiscountAllocation", $this->_propDict)) {
-            if (is_a($this->_propDict["invoiceDiscountAllocation"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["invoiceDiscountAllocation"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["invoiceDiscountAllocation"];
             } else {
                 $this->_propDict["invoiceDiscountAllocation"] = new Decimal($this->_propDict["invoiceDiscountAllocation"]);
@@ -295,7 +295,7 @@ class SalesOrderLine extends Entity
     public function getInvoicedQuantity()
     {
         if (array_key_exists("invoicedQuantity", $this->_propDict)) {
-            if (is_a($this->_propDict["invoicedQuantity"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["invoicedQuantity"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["invoicedQuantity"];
             } else {
                 $this->_propDict["invoicedQuantity"] = new Decimal($this->_propDict["invoicedQuantity"]);
@@ -326,7 +326,7 @@ class SalesOrderLine extends Entity
     public function getInvoiceQuantity()
     {
         if (array_key_exists("invoiceQuantity", $this->_propDict)) {
-            if (is_a($this->_propDict["invoiceQuantity"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["invoiceQuantity"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["invoiceQuantity"];
             } else {
                 $this->_propDict["invoiceQuantity"] = new Decimal($this->_propDict["invoiceQuantity"]);
@@ -411,7 +411,7 @@ class SalesOrderLine extends Entity
     public function getNetAmount()
     {
         if (array_key_exists("netAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["netAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["netAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["netAmount"];
             } else {
                 $this->_propDict["netAmount"] = new Decimal($this->_propDict["netAmount"]);
@@ -442,7 +442,7 @@ class SalesOrderLine extends Entity
     public function getNetAmountIncludingTax()
     {
         if (array_key_exists("netAmountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["netAmountIncludingTax"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["netAmountIncludingTax"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["netAmountIncludingTax"];
             } else {
                 $this->_propDict["netAmountIncludingTax"] = new Decimal($this->_propDict["netAmountIncludingTax"]);
@@ -473,7 +473,7 @@ class SalesOrderLine extends Entity
     public function getNetTaxAmount()
     {
         if (array_key_exists("netTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["netTaxAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["netTaxAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["netTaxAmount"];
             } else {
                 $this->_propDict["netTaxAmount"] = new Decimal($this->_propDict["netTaxAmount"]);
@@ -504,7 +504,7 @@ class SalesOrderLine extends Entity
     public function getQuantity()
     {
         if (array_key_exists("quantity", $this->_propDict)) {
-            if (is_a($this->_propDict["quantity"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["quantity"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["quantity"];
             } else {
                 $this->_propDict["quantity"] = new Decimal($this->_propDict["quantity"]);
@@ -593,7 +593,7 @@ class SalesOrderLine extends Entity
     public function getShippedQuantity()
     {
         if (array_key_exists("shippedQuantity", $this->_propDict)) {
-            if (is_a($this->_propDict["shippedQuantity"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["shippedQuantity"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["shippedQuantity"];
             } else {
                 $this->_propDict["shippedQuantity"] = new Decimal($this->_propDict["shippedQuantity"]);
@@ -624,7 +624,7 @@ class SalesOrderLine extends Entity
     public function getShipQuantity()
     {
         if (array_key_exists("shipQuantity", $this->_propDict)) {
-            if (is_a($this->_propDict["shipQuantity"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["shipQuantity"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["shipQuantity"];
             } else {
                 $this->_propDict["shipQuantity"] = new Decimal($this->_propDict["shipQuantity"]);
@@ -682,7 +682,7 @@ class SalesOrderLine extends Entity
     public function getTaxPercent()
     {
         if (array_key_exists("taxPercent", $this->_propDict)) {
-            if (is_a($this->_propDict["taxPercent"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["taxPercent"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["taxPercent"];
             } else {
                 $this->_propDict["taxPercent"] = new Decimal($this->_propDict["taxPercent"]);
@@ -713,7 +713,7 @@ class SalesOrderLine extends Entity
     public function getTotalTaxAmount()
     {
         if (array_key_exists("totalTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["totalTaxAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["totalTaxAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["totalTaxAmount"];
             } else {
                 $this->_propDict["totalTaxAmount"] = new Decimal($this->_propDict["totalTaxAmount"]);
@@ -771,7 +771,7 @@ class SalesOrderLine extends Entity
     public function getUnitPrice()
     {
         if (array_key_exists("unitPrice", $this->_propDict)) {
-            if (is_a($this->_propDict["unitPrice"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["unitPrice"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["unitPrice"];
             } else {
                 $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
@@ -802,7 +802,7 @@ class SalesOrderLine extends Entity
     public function getAccount()
     {
         if (array_key_exists("account", $this->_propDict)) {
-            if (is_a($this->_propDict["account"], "\Beta\Microsoft\Graph\Model\Account")) {
+            if (is_a($this->_propDict["account"], "Beta\Microsoft\Graph\Model\Account")) {
                 return $this->_propDict["account"];
             } else {
                 $this->_propDict["account"] = new Account($this->_propDict["account"]);
@@ -833,7 +833,7 @@ class SalesOrderLine extends Entity
     public function getItem()
     {
         if (array_key_exists("item", $this->_propDict)) {
-            if (is_a($this->_propDict["item"], "\Beta\Microsoft\Graph\Model\Item")) {
+            if (is_a($this->_propDict["item"], "Beta\Microsoft\Graph\Model\Item")) {
                 return $this->_propDict["item"];
             } else {
                 $this->_propDict["item"] = new Item($this->_propDict["item"]);

@@ -83,37 +83,6 @@ class UserSettings extends Entity
     }
     
     /**
-    * Gets the itemInsights
-    *
-    * @return UserInsightsSettings The itemInsights
-    */
-    public function getItemInsights()
-    {
-        if (array_key_exists("itemInsights", $this->_propDict)) {
-            if (is_a($this->_propDict["itemInsights"], "\Beta\Microsoft\Graph\Model\UserInsightsSettings")) {
-                return $this->_propDict["itemInsights"];
-            } else {
-                $this->_propDict["itemInsights"] = new UserInsightsSettings($this->_propDict["itemInsights"]);
-                return $this->_propDict["itemInsights"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the itemInsights
-    *
-    * @param UserInsightsSettings $val The itemInsights
-    *
-    * @return UserSettings
-    */
-    public function setItemInsights($val)
-    {
-        $this->_propDict["itemInsights"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the regionalAndLanguageSettings
     * The user's preferences for languages, regional locale and date/time formatting.
     *
@@ -122,7 +91,7 @@ class UserSettings extends Entity
     public function getRegionalAndLanguageSettings()
     {
         if (array_key_exists("regionalAndLanguageSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["regionalAndLanguageSettings"], "\Beta\Microsoft\Graph\Model\RegionalAndLanguageSettings")) {
+            if (is_a($this->_propDict["regionalAndLanguageSettings"], "Beta\Microsoft\Graph\Model\RegionalAndLanguageSettings")) {
                 return $this->_propDict["regionalAndLanguageSettings"];
             } else {
                 $this->_propDict["regionalAndLanguageSettings"] = new RegionalAndLanguageSettings($this->_propDict["regionalAndLanguageSettings"]);
@@ -155,7 +124,7 @@ class UserSettings extends Entity
     public function getShiftPreferences()
     {
         if (array_key_exists("shiftPreferences", $this->_propDict)) {
-            if (is_a($this->_propDict["shiftPreferences"], "\Beta\Microsoft\Graph\Model\ShiftPreferences")) {
+            if (is_a($this->_propDict["shiftPreferences"], "Beta\Microsoft\Graph\Model\ShiftPreferences")) {
                 return $this->_propDict["shiftPreferences"];
             } else {
                 $this->_propDict["shiftPreferences"] = new ShiftPreferences($this->_propDict["shiftPreferences"]);

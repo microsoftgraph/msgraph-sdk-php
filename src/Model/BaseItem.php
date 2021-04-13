@@ -33,7 +33,7 @@ class BaseItem extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -157,7 +157,7 @@ class BaseItem extends Entity
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -252,7 +252,7 @@ class BaseItem extends Entity
     public function getParentReference()
     {
         if (array_key_exists("parentReference", $this->_propDict)) {
-            if (is_a($this->_propDict["parentReference"], "\Microsoft\Graph\Model\ItemReference")) {
+            if (is_a($this->_propDict["parentReference"], "Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["parentReference"];
             } else {
                 $this->_propDict["parentReference"] = new ItemReference($this->_propDict["parentReference"]);
@@ -314,7 +314,7 @@ class BaseItem extends Entity
     public function getCreatedByUser()
     {
         if (array_key_exists("createdByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["createdByUser"], "\Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["createdByUser"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["createdByUser"];
             } else {
                 $this->_propDict["createdByUser"] = new User($this->_propDict["createdByUser"]);
@@ -347,7 +347,7 @@ class BaseItem extends Entity
     public function getLastModifiedByUser()
     {
         if (array_key_exists("lastModifiedByUser", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedByUser"], "\Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["lastModifiedByUser"], "Microsoft\Graph\Model\User")) {
                 return $this->_propDict["lastModifiedByUser"];
             } else {
                 $this->_propDict["lastModifiedByUser"] = new User($this->_propDict["lastModifiedByUser"]);

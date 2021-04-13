@@ -26,7 +26,7 @@ class AppRoleAssignment extends Entity
 {
     /**
     * Gets the appRoleId
-    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. Does not support $filter.
     *
     * @return string The appRoleId
     */
@@ -41,7 +41,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Sets the appRoleId
-    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+    * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. Does not support $filter.
     *
     * @param string $val The appRoleId
     *
@@ -55,7 +55,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Gets the creationTimestamp
-    * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. Does not support $filter.
     *
     * @return \DateTime The creationTimestamp
     */
@@ -74,7 +74,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Sets the creationTimestamp
-    * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. Does not support $filter.
     *
     * @param \DateTime $val The creationTimestamp
     *
@@ -117,7 +117,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Gets the principalId
-    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
+    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create. Does not support $filter.
     *
     * @return string The principalId
     */
@@ -132,7 +132,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Sets the principalId
-    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
+    * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create. Does not support $filter.
     *
     * @param string $val The principalId
     *
@@ -146,7 +146,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Gets the principalType
-    * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
+    * The type of the assigned principal. This can either be 'User', 'Group' or 'ServicePrincipal'. Read-only. Does not support $filter.
     *
     * @return string The principalType
     */
@@ -161,7 +161,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Sets the principalType
-    * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
+    * The type of the assigned principal. This can either be 'User', 'Group' or 'ServicePrincipal'. Read-only. Does not support $filter.
     *
     * @param string $val The principalType
     *
@@ -175,7 +175,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Gets the resourceDisplayName
-    * The display name of the resource app's service principal to which the assignment is made.
+    * The display name of the resource app's service principal to which the assignment is made. Does not support $filter.
     *
     * @return string The resourceDisplayName
     */
@@ -190,7 +190,7 @@ class AppRoleAssignment extends Entity
     
     /**
     * Sets the resourceDisplayName
-    * The display name of the resource app's service principal to which the assignment is made.
+    * The display name of the resource app's service principal to which the assignment is made. Does not support $filter.
     *
     * @param string $val The resourceDisplayName
     *

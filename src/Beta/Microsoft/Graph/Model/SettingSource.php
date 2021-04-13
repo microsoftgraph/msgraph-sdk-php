@@ -89,7 +89,7 @@ class SettingSource extends Entity
     public function getSourceType()
     {
         if (array_key_exists("sourceType", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceType"], "\Beta\Microsoft\Graph\Model\SettingSourceType")) {
+            if (is_a($this->_propDict["sourceType"], "Beta\Microsoft\Graph\Model\SettingSourceType")) {
                 return $this->_propDict["sourceType"];
             } else {
                 $this->_propDict["sourceType"] = new SettingSourceType($this->_propDict["sourceType"]);

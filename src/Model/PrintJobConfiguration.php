@@ -61,7 +61,7 @@ class PrintJobConfiguration extends Entity
     public function getColorMode()
     {
         if (array_key_exists("colorMode", $this->_propDict)) {
-            if (is_a($this->_propDict["colorMode"], "\Microsoft\Graph\Model\PrintColorMode")) {
+            if (is_a($this->_propDict["colorMode"], "Microsoft\Graph\Model\PrintColorMode")) {
                 return $this->_propDict["colorMode"];
             } else {
                 $this->_propDict["colorMode"] = new PrintColorMode($this->_propDict["colorMode"]);
@@ -150,7 +150,7 @@ class PrintJobConfiguration extends Entity
     public function getDuplexMode()
     {
         if (array_key_exists("duplexMode", $this->_propDict)) {
-            if (is_a($this->_propDict["duplexMode"], "\Microsoft\Graph\Model\PrintDuplexMode")) {
+            if (is_a($this->_propDict["duplexMode"], "Microsoft\Graph\Model\PrintDuplexMode")) {
                 return $this->_propDict["duplexMode"];
             } else {
                 $this->_propDict["duplexMode"] = new PrintDuplexMode($this->_propDict["duplexMode"]);
@@ -183,7 +183,7 @@ class PrintJobConfiguration extends Entity
     public function getFeedOrientation()
     {
         if (array_key_exists("feedOrientation", $this->_propDict)) {
-            if (is_a($this->_propDict["feedOrientation"], "\Microsoft\Graph\Model\PrinterFeedOrientation")) {
+            if (is_a($this->_propDict["feedOrientation"], "Microsoft\Graph\Model\PrinterFeedOrientation")) {
                 return $this->_propDict["feedOrientation"];
             } else {
                 $this->_propDict["feedOrientation"] = new PrinterFeedOrientation($this->_propDict["feedOrientation"]);
@@ -216,7 +216,7 @@ class PrintJobConfiguration extends Entity
     public function getFinishings()
     {
         if (array_key_exists("finishings", $this->_propDict)) {
-            if (is_a($this->_propDict["finishings"], "\Microsoft\Graph\Model\PrintFinishing")) {
+            if (is_a($this->_propDict["finishings"], "Microsoft\Graph\Model\PrintFinishing")) {
                 return $this->_propDict["finishings"];
             } else {
                 $this->_propDict["finishings"] = new PrintFinishing($this->_propDict["finishings"]);
@@ -303,7 +303,7 @@ class PrintJobConfiguration extends Entity
     public function getMargin()
     {
         if (array_key_exists("margin", $this->_propDict)) {
-            if (is_a($this->_propDict["margin"], "\Microsoft\Graph\Model\PrintMargin")) {
+            if (is_a($this->_propDict["margin"], "Microsoft\Graph\Model\PrintMargin")) {
                 return $this->_propDict["margin"];
             } else {
                 $this->_propDict["margin"] = new PrintMargin($this->_propDict["margin"]);
@@ -392,7 +392,7 @@ class PrintJobConfiguration extends Entity
     public function getMultipageLayout()
     {
         if (array_key_exists("multipageLayout", $this->_propDict)) {
-            if (is_a($this->_propDict["multipageLayout"], "\Microsoft\Graph\Model\PrintMultipageLayout")) {
+            if (is_a($this->_propDict["multipageLayout"], "Microsoft\Graph\Model\PrintMultipageLayout")) {
                 return $this->_propDict["multipageLayout"];
             } else {
                 $this->_propDict["multipageLayout"] = new PrintMultipageLayout($this->_propDict["multipageLayout"]);
@@ -425,7 +425,7 @@ class PrintJobConfiguration extends Entity
     public function getOrientation()
     {
         if (array_key_exists("orientation", $this->_propDict)) {
-            if (is_a($this->_propDict["orientation"], "\Microsoft\Graph\Model\PrintOrientation")) {
+            if (is_a($this->_propDict["orientation"], "Microsoft\Graph\Model\PrintOrientation")) {
                 return $this->_propDict["orientation"];
             } else {
                 $this->_propDict["orientation"] = new PrintOrientation($this->_propDict["orientation"]);
@@ -486,7 +486,7 @@ class PrintJobConfiguration extends Entity
     public function getPageRanges()
     {
         if (array_key_exists("pageRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["pageRanges"], "\Microsoft\Graph\Model\IntegerRange")) {
+            if (is_a($this->_propDict["pageRanges"], "Microsoft\Graph\Model\IntegerRange")) {
                 return $this->_propDict["pageRanges"];
             } else {
                 $this->_propDict["pageRanges"] = new IntegerRange($this->_propDict["pageRanges"]);
@@ -547,7 +547,7 @@ class PrintJobConfiguration extends Entity
     public function getQuality()
     {
         if (array_key_exists("quality", $this->_propDict)) {
-            if (is_a($this->_propDict["quality"], "\Microsoft\Graph\Model\PrintQuality")) {
+            if (is_a($this->_propDict["quality"], "Microsoft\Graph\Model\PrintQuality")) {
                 return $this->_propDict["quality"];
             } else {
                 $this->_propDict["quality"] = new PrintQuality($this->_propDict["quality"]);
@@ -580,7 +580,7 @@ class PrintJobConfiguration extends Entity
     public function getScaling()
     {
         if (array_key_exists("scaling", $this->_propDict)) {
-            if (is_a($this->_propDict["scaling"], "\Microsoft\Graph\Model\PrintScaling")) {
+            if (is_a($this->_propDict["scaling"], "Microsoft\Graph\Model\PrintScaling")) {
                 return $this->_propDict["scaling"];
             } else {
                 $this->_propDict["scaling"] = new PrintScaling($this->_propDict["scaling"]);

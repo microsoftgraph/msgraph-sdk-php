@@ -61,7 +61,7 @@ class GraphPrint implements \JsonSerializable
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\PrintSettings")) {
+            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\PrintSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new PrintSettings($this->_propDict["settings"]);
@@ -118,7 +118,6 @@ class GraphPrint implements \JsonSerializable
 
      /** 
      * Gets the operations
-    * The list of print long running operations.
      *
      * @return array The operations
      */
@@ -133,7 +132,6 @@ class GraphPrint implements \JsonSerializable
     
     /** 
     * Sets the operations
-    * The list of print long running operations.
     *
     * @param PrintOperation $val The operations
     *
@@ -211,7 +209,7 @@ class GraphPrint implements \JsonSerializable
     public function getReports()
     {
         if (array_key_exists("reports", $this->_propDict)) {
-            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\ReportRoot")) {
+            if (is_a($this->_propDict["reports"], "Beta\Microsoft\Graph\Model\ReportRoot")) {
                 return $this->_propDict["reports"];
             } else {
                 $this->_propDict["reports"] = new ReportRoot($this->_propDict["reports"]);
@@ -297,7 +295,6 @@ class GraphPrint implements \JsonSerializable
 
      /** 
      * Gets the taskDefinitions
-    * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      *
      * @return array The taskDefinitions
      */
@@ -312,7 +309,6 @@ class GraphPrint implements \JsonSerializable
     
     /** 
     * Sets the taskDefinitions
-    * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
     *
     * @param PrintTaskDefinition $val The taskDefinitions
     *

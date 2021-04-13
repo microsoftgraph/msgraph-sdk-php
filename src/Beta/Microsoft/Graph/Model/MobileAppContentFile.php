@@ -335,7 +335,7 @@ class MobileAppContentFile extends Entity
     public function getUploadState()
     {
         if (array_key_exists("uploadState", $this->_propDict)) {
-            if (is_a($this->_propDict["uploadState"], "\Beta\Microsoft\Graph\Model\MobileAppContentFileUploadState")) {
+            if (is_a($this->_propDict["uploadState"], "Beta\Microsoft\Graph\Model\MobileAppContentFileUploadState")) {
                 return $this->_propDict["uploadState"];
             } else {
                 $this->_propDict["uploadState"] = new MobileAppContentFileUploadState($this->_propDict["uploadState"]);

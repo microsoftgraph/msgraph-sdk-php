@@ -33,7 +33,7 @@ class MediaContentRatingAustralia extends Entity
     public function getMovieRating()
     {
         if (array_key_exists("movieRating", $this->_propDict)) {
-            if (is_a($this->_propDict["movieRating"], "\Beta\Microsoft\Graph\Model\RatingAustraliaMoviesType")) {
+            if (is_a($this->_propDict["movieRating"], "Beta\Microsoft\Graph\Model\RatingAustraliaMoviesType")) {
                 return $this->_propDict["movieRating"];
             } else {
                 $this->_propDict["movieRating"] = new RatingAustraliaMoviesType($this->_propDict["movieRating"]);
@@ -66,7 +66,7 @@ class MediaContentRatingAustralia extends Entity
     public function getTvRating()
     {
         if (array_key_exists("tvRating", $this->_propDict)) {
-            if (is_a($this->_propDict["tvRating"], "\Beta\Microsoft\Graph\Model\RatingAustraliaTelevisionType")) {
+            if (is_a($this->_propDict["tvRating"], "Beta\Microsoft\Graph\Model\RatingAustraliaTelevisionType")) {
                 return $this->_propDict["tvRating"];
             } else {
                 $this->_propDict["tvRating"] = new RatingAustraliaTelevisionType($this->_propDict["tvRating"]);

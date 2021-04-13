@@ -61,7 +61,7 @@ class ScheduleInformation extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\FreeBusyError")) {
+            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\FreeBusyError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new FreeBusyError($this->_propDict["error"]);
@@ -122,7 +122,7 @@ class ScheduleInformation extends Entity
     public function getScheduleItems()
     {
         if (array_key_exists("scheduleItems", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleItems"], "\Beta\Microsoft\Graph\Model\ScheduleItem")) {
+            if (is_a($this->_propDict["scheduleItems"], "Beta\Microsoft\Graph\Model\ScheduleItem")) {
                 return $this->_propDict["scheduleItems"];
             } else {
                 $this->_propDict["scheduleItems"] = new ScheduleItem($this->_propDict["scheduleItems"]);
@@ -155,7 +155,7 @@ class ScheduleInformation extends Entity
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "\Beta\Microsoft\Graph\Model\WorkingHours")) {
+            if (is_a($this->_propDict["workingHours"], "Beta\Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

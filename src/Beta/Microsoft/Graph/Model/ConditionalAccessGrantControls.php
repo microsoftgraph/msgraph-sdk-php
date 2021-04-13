@@ -26,14 +26,14 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Gets the builtInControls
-    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange.
     *
     * @return ConditionalAccessGrantControl The builtInControls
     */
     public function getBuiltInControls()
     {
         if (array_key_exists("builtInControls", $this->_propDict)) {
-            if (is_a($this->_propDict["builtInControls"], "\Beta\Microsoft\Graph\Model\ConditionalAccessGrantControl")) {
+            if (is_a($this->_propDict["builtInControls"], "Beta\Microsoft\Graph\Model\ConditionalAccessGrantControl")) {
                 return $this->_propDict["builtInControls"];
             } else {
                 $this->_propDict["builtInControls"] = new ConditionalAccessGrantControl($this->_propDict["builtInControls"]);
@@ -45,7 +45,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Sets the builtInControls
-    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+    * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange.
     *
     * @param ConditionalAccessGrantControl $val The value to assign to the builtInControls
     *

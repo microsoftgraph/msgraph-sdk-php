@@ -33,7 +33,7 @@ class Filter extends Entity
     public function getCategoryFilterGroups()
     {
         if (array_key_exists("categoryFilterGroups", $this->_propDict)) {
-            if (is_a($this->_propDict["categoryFilterGroups"], "\Beta\Microsoft\Graph\Model\FilterGroup")) {
+            if (is_a($this->_propDict["categoryFilterGroups"], "Beta\Microsoft\Graph\Model\FilterGroup")) {
                 return $this->_propDict["categoryFilterGroups"];
             } else {
                 $this->_propDict["categoryFilterGroups"] = new FilterGroup($this->_propDict["categoryFilterGroups"]);
@@ -66,7 +66,7 @@ class Filter extends Entity
     public function getGroups()
     {
         if (array_key_exists("groups", $this->_propDict)) {
-            if (is_a($this->_propDict["groups"], "\Beta\Microsoft\Graph\Model\FilterGroup")) {
+            if (is_a($this->_propDict["groups"], "Beta\Microsoft\Graph\Model\FilterGroup")) {
                 return $this->_propDict["groups"];
             } else {
                 $this->_propDict["groups"] = new FilterGroup($this->_propDict["groups"]);
@@ -99,7 +99,7 @@ class Filter extends Entity
     public function getInputFilterGroups()
     {
         if (array_key_exists("inputFilterGroups", $this->_propDict)) {
-            if (is_a($this->_propDict["inputFilterGroups"], "\Beta\Microsoft\Graph\Model\FilterGroup")) {
+            if (is_a($this->_propDict["inputFilterGroups"], "Beta\Microsoft\Graph\Model\FilterGroup")) {
                 return $this->_propDict["inputFilterGroups"];
             } else {
                 $this->_propDict["inputFilterGroups"] = new FilterGroup($this->_propDict["inputFilterGroups"]);

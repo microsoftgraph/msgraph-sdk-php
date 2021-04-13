@@ -33,7 +33,7 @@ class Bundle extends Entity
     public function getAlbum()
     {
         if (array_key_exists("album", $this->_propDict)) {
-            if (is_a($this->_propDict["album"], "\Beta\Microsoft\Graph\Model\Album")) {
+            if (is_a($this->_propDict["album"], "Beta\Microsoft\Graph\Model\Album")) {
                 return $this->_propDict["album"];
             } else {
                 $this->_propDict["album"] = new Album($this->_propDict["album"]);

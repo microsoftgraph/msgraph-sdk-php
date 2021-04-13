@@ -1,0 +1,999 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* DriveItem File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   GIT: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+namespace Microsoft\Graph\Model;
+
+/**
+* DriveItem class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @author    Caitlin Bales <caitbal@microsoft.com>
+* @copyright 2016 Microsoft Corporation
+* @license   https://opensource.org/licenses/MIT MIT License
+* @version   Release: 0.1.0
+* @link      https://graph.microsoft.io/
+*/
+class DriveItem
+{
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array(string => string)
+    */
+    private $_propDict;
+    /**
+    * Construct a new DriveItem
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the DriveItem
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+
+    /**
+    * Gets the createdBy
+    *
+    * @return IdentitySet The createdBy
+    */
+    public function getCreatedBy()
+    {
+        if (array_key_exists("createdBy", $this->_propDict)) {
+            if (is_a($this->_propDict["createdBy"], 'IdentitySet')) {
+                return $this->_propDict["createdBy"];
+            } else {
+                $this->_propDict["createdBy"] 
+                    = new IdentitySet($this->_propDict["createdBy"]);
+                return $this->_propDict["createdBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the createdBy
+    *
+    * @param string $val The createdBy
+    *
+    * @return null
+    */
+    public function setCreatedBy($val)
+    {
+        $this->propDict["createdBy"] = $val;
+    }
+
+    /**
+    * Gets the createdDateTime
+    *
+    * @return datetime The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            return new \DateTime($this->_propDict["createdDateTime"]);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the createdDateTime
+    *
+    * @param datetime $val The createdDateTime
+    *
+    * @return null
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] 
+            = $val->format(\DateTime::ISO8601) . "Z";
+    }
+
+    /**
+    * Gets the description
+    *
+    * @return string The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return null
+    */
+    public function setDescription($val)
+    {
+        $this->propDict["description"] = $val;
+    }
+
+    /**
+    * Gets the eTag
+    *
+    * @return string The eTag
+    */
+    public function getETag()
+    {
+        if (array_key_exists("eTag", $this->_propDict)) {
+            return $this->_propDict["eTag"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the eTag
+    *
+    * @param string $val The eTag
+    *
+    * @return null
+    */
+    public function setETag($val)
+    {
+        $this->propDict["eTag"] = $val;
+    }
+
+    /**
+    * Gets the lastModifiedBy
+    *
+    * @return IdentitySet The lastModifiedBy
+    */
+    public function getLastModifiedBy()
+    {
+        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedBy"], 'IdentitySet')) {
+                return $this->_propDict["lastModifiedBy"];
+            } else {
+                $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
+                return $this->_propDict["lastModifiedBy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastModifiedBy
+    *
+    * @param string $val The lastModifiedBy
+    *
+    * @return null
+    */
+    public function setLastModifiedBy($val)
+    {
+        $this->propDict["lastModifiedBy"] = $val;
+    }
+
+    /**
+    * Gets the lastModifiedDateTime
+    *
+    * @return datetime The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
+            return new \DateTime($this->_propDict["lastModifiedDateTime"]);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lastModifiedDateTime
+    *
+    * @param datetime $val The lastModifiedDateTime
+    *
+    * @return null
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] 
+            = $val->format(\DateTime::ISO8601) . "Z";
+    }
+
+    /**
+    * Gets the name
+    *
+    * @return string The name
+    */
+    public function getName()
+    {
+        if (array_key_exists("name", $this->_propDict)) {
+            return $this->_propDict["name"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the name
+    *
+    * @param string $val The name
+    *
+    * @return null
+    */
+    public function setName($val)
+    {
+        $this->propDict["name"] = $val;
+    }
+
+    /**
+    * Gets the webUrl
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the webUrl
+    *
+    * @param string $val The webUrl
+    *
+    * @return null
+    */
+    public function setWebUrl($val)
+    {
+        $this->propDict["webUrl"] = $val;
+    }
+
+    /**
+    * Gets the audio
+    *
+    * @return Audio The audio
+    */
+    public function getAudio()
+    {
+        if (array_key_exists("audio", $this->_propDict)) {
+            if (is_a($this->_propDict["audio"], 'Audio')) {
+                return $this->_propDict["audio"];
+            } else {
+                $this->_propDict["audio"] = new Audio($this->_propDict["audio"]);
+                return $this->_propDict["audio"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the audio
+    *
+    * @param string $val The audio
+    *
+    * @return null
+    */
+    public function setAudio($val)
+    {
+        $this->propDict["audio"] = $val;
+    }
+
+    /**
+    * Gets the cTag
+    *
+    * @return string The cTag
+    */
+    public function getCTag()
+    {
+        if (array_key_exists("cTag", $this->_propDict)) {
+            return $this->_propDict["cTag"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the cTag
+    *
+    * @param string $val The cTag
+    *
+    * @return null
+    */
+    public function setCTag($val)
+    {
+        $this->propDict["cTag"] = $val;
+    }
+
+    /**
+    * Gets the deleted
+    *
+    * @return Deleted The deleted
+    */
+    public function getDeleted()
+    {
+        if (array_key_exists("deleted", $this->_propDict)) {
+            if (is_a($this->_propDict["deleted"], 'Deleted')) {
+                return $this->_propDict["deleted"];
+            } else {
+                $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
+                return $this->_propDict["deleted"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deleted
+    *
+    * @param string $val The deleted
+    *
+    * @return null
+    */
+    public function setDeleted($val)
+    {
+        $this->propDict["deleted"] = $val;
+    }
+
+    /**
+    * Gets the file
+    *
+    * @return File The file
+    */
+    public function getFile()
+    {
+        if (array_key_exists("file", $this->_propDict)) {
+            if (is_a($this->_propDict["file"], 'File')) {
+                return $this->_propDict["file"];
+            } else {
+                $this->_propDict["file"] = new File($this->_propDict["file"]);
+                return $this->_propDict["file"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the file
+    *
+    * @param string $val The file
+    *
+    * @return null
+    */
+    public function setFile($val)
+    {
+        $this->propDict["file"] = $val;
+    }
+
+    /**
+    * Gets the fileSystemInfo
+    *
+    * @return FileSystemInfo The fileSystemInfo
+    */
+    public function getFileSystemInfo()
+    {
+        if (array_key_exists("fileSystemInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["fileSystemInfo"], 'FileSystemInfo')) {
+                return $this->_propDict["fileSystemInfo"];
+            } else {
+                $this->_propDict["fileSystemInfo"] = new FileSystemInfo($this->_propDict["fileSystemInfo"]);
+                return $this->_propDict["fileSystemInfo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the fileSystemInfo
+    *
+    * @param string $val The fileSystemInfo
+    *
+    * @return null
+    */
+    public function setFileSystemInfo($val)
+    {
+        $this->propDict["fileSystemInfo"] = $val;
+    }
+
+    /**
+    * Gets the folder
+    *
+    * @return Folder The folder
+    */
+    public function getFolder()
+    {
+        if (array_key_exists("folder", $this->_propDict)) {
+            if (is_a($this->_propDict["folder"], 'Folder')) {
+                return $this->_propDict["folder"];
+            } else {
+                $this->_propDict["folder"] = new Folder($this->_propDict["folder"]);
+                return $this->_propDict["folder"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the folder
+    *
+    * @param string $val The folder
+    *
+    * @return null
+    */
+    public function setFolder($val)
+    {
+        $this->propDict["folder"] = $val;
+    }
+
+    /**
+    * Gets the image
+    *
+    * @return Image The image
+    */
+    public function getImage()
+    {
+        if (array_key_exists("image", $this->_propDict)) {
+            if (is_a($this->_propDict["image"], 'Image')) {
+                return $this->_propDict["image"];
+            } else {
+                $this->_propDict["image"] = new Image($this->_propDict["image"]);
+                return $this->_propDict["image"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the image
+    *
+    * @param string $val The image
+    *
+    * @return null
+    */
+    public function setImage($val)
+    {
+        $this->propDict["image"] = $val;
+    }
+
+    /**
+    * Gets the location
+    *
+    * @return GeoCoordinates The location
+    */
+    public function getLocation()
+    {
+        if (array_key_exists("location", $this->_propDict)) {
+            if (is_a($this->_propDict["location"], 'GeoCoordinates')) {
+                return $this->_propDict["location"];
+            } else {
+                $this->_propDict["location"] = new GeoCoordinates($this->_propDict["location"]);
+                return $this->_propDict["location"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the location
+    *
+    * @param string $val The location
+    *
+    * @return null
+    */
+    public function setLocation($val)
+    {
+        $this->propDict["location"] = $val;
+    }
+
+    /**
+    * Gets the package
+    *
+    * @return Package The package
+    */
+    public function getPackage()
+    {
+        if (array_key_exists("package", $this->_propDict)) {
+            if (is_a($this->_propDict["package"], 'Package')) {
+                return $this->_propDict["package"];
+            } else {
+                $this->_propDict["package"] = new Package($this->_propDict["package"]);
+                return $this->_propDict["package"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the package
+    *
+    * @param string $val The package
+    *
+    * @return null
+    */
+    public function setPackage($val)
+    {
+        $this->propDict["package"] = $val;
+    }
+
+    /**
+    * Gets the parentReference
+    *
+    * @return ItemReference The parentReference
+    */
+    public function getParentReference()
+    {
+        if (array_key_exists("parentReference", $this->_propDict)) {
+            if (is_a($this->_propDict["parentReference"], 'ItemReference')) {
+                return $this->_propDict["parentReference"];
+            } else {
+                $this->_propDict["parentReference"] = new ItemReference($this->_propDict["parentReference"]);
+                return $this->_propDict["parentReference"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the parentReference
+    *
+    * @param string $val The parentReference
+    *
+    * @return null
+    */
+    public function setParentReference($val)
+    {
+        $this->propDict["parentReference"] = $val;
+    }
+
+    /**
+    * Gets the photo
+    *
+    * @return Photo The photo
+    */
+    public function getPhoto()
+    {
+        if (array_key_exists("photo", $this->_propDict)) {
+            if (is_a($this->_propDict["photo"], 'Photo')) {
+                return $this->_propDict["photo"];
+            } else {
+                $this->_propDict["photo"] = new Photo($this->_propDict["photo"]);
+                return $this->_propDict["photo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the photo
+    *
+    * @param string $val The photo
+    *
+    * @return null
+    */
+    public function setPhoto($val)
+    {
+        $this->propDict["photo"] = $val;
+    }
+
+    /**
+    * Gets the remoteItem
+    *
+    * @return RemoteItem The remoteItem
+    */
+    public function getRemoteItem()
+    {
+        if (array_key_exists("remoteItem", $this->_propDict)) {
+            if (is_a($this->_propDict["remoteItem"], 'RemoteItem')) {
+                return $this->_propDict["remoteItem"];
+            } else {
+                $this->_propDict["remoteItem"] = new RemoteItem($this->_propDict["remoteItem"]);
+                return $this->_propDict["remoteItem"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the remoteItem
+    *
+    * @param string $val The remoteItem
+    *
+    * @return null
+    */
+    public function setRemoteItem($val)
+    {
+        $this->propDict["remoteItem"] = $val;
+    }
+
+    /**
+    * Gets the root
+    *
+    * @return Root The root
+    */
+    public function getRoot()
+    {
+        if (array_key_exists("root", $this->_propDict)) {
+            if (is_a($this->_propDict["root"], 'Root')) {
+                return $this->_propDict["root"];
+            } else {
+                $this->_propDict["root"] = new Root($this->_propDict["root"]);
+                return $this->_propDict["root"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the root
+    *
+    * @param string $val The root
+    *
+    * @return null
+    */
+    public function setRoot($val)
+    {
+        $this->propDict["root"] = $val;
+    }
+
+    /**
+    * Gets the searchResult
+    *
+    * @return SearchResult The searchResult
+    */
+    public function getSearchResult()
+    {
+        if (array_key_exists("searchResult", $this->_propDict)) {
+            if (is_a($this->_propDict["searchResult"], 'SearchResult')) {
+                return $this->_propDict["searchResult"];
+            } else {
+                $this->_propDict["searchResult"] = new SearchResult($this->_propDict["searchResult"]);
+                return $this->_propDict["searchResult"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the searchResult
+    *
+    * @param string $val The searchResult
+    *
+    * @return null
+    */
+    public function setSearchResult($val)
+    {
+        $this->propDict["searchResult"] = $val;
+    }
+
+    /**
+    * Gets the shared
+    *
+    * @return Shared The shared
+    */
+    public function getShared()
+    {
+        if (array_key_exists("shared", $this->_propDict)) {
+            if (is_a($this->_propDict["shared"], 'Shared')) {
+                return $this->_propDict["shared"];
+            } else {
+                $this->_propDict["shared"] = new Shared($this->_propDict["shared"]);
+                return $this->_propDict["shared"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the shared
+    *
+    * @param string $val The shared
+    *
+    * @return null
+    */
+    public function setShared($val)
+    {
+        $this->propDict["shared"] = $val;
+    }
+
+    /**
+    * Gets the sharepointIds
+    *
+    * @return SharepointIds The sharepointIds
+    */
+    public function getSharepointIds()
+    {
+        if (array_key_exists("sharepointIds", $this->_propDict)) {
+            if (is_a($this->_propDict["sharepointIds"], 'SharepointIds')) {
+                return $this->_propDict["sharepointIds"];
+            } else {
+                $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
+                return $this->_propDict["sharepointIds"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sharepointIds
+    *
+    * @param string $val The sharepointIds
+    *
+    * @return null
+    */
+    public function setSharepointIds($val)
+    {
+        $this->propDict["sharepointIds"] = $val;
+    }
+
+    /**
+    * Gets the size
+    *
+    * @return int The size
+    */
+    public function getSize()
+    {
+        if (array_key_exists("size", $this->_propDict)) {
+            return $this->_propDict["size"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the size
+    *
+    * @param int $val The size
+    *
+    * @return null
+    */
+    public function setSize($val)
+    {
+        $this->propDict["size"] = intval($val);
+    }
+
+    /**
+    * Gets the specialFolder
+    *
+    * @return SpecialFolder The specialFolder
+    */
+    public function getSpecialFolder()
+    {
+        if (array_key_exists("specialFolder", $this->_propDict)) {
+            if (is_a($this->_propDict["specialFolder"], 'SpecialFolder')) {
+                return $this->_propDict["specialFolder"];
+            } else {
+                $this->_propDict["specialFolder"] = new SpecialFolder($this->_propDict["specialFolder"]);
+                return $this->_propDict["specialFolder"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the specialFolder
+    *
+    * @param string $val The specialFolder
+    *
+    * @return null
+    */
+    public function setSpecialFolder($val)
+    {
+        $this->propDict["specialFolder"] = $val;
+    }
+
+    /**
+    * Gets the video
+    *
+    * @return Video The video
+    */
+    public function getVideo()
+    {
+        if (array_key_exists("video", $this->_propDict)) {
+            if (is_a($this->_propDict["video"], 'Video')) {
+                return $this->_propDict["video"];
+            } else {
+                $this->_propDict["video"] = new Video($this->_propDict["video"]);
+                return $this->_propDict["video"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the video
+    *
+    * @param string $val The video
+    *
+    * @return null
+    */
+    public function setVideo($val)
+    {
+        $this->propDict["video"] = $val;
+    }
+
+    /**
+    * Gets the webDavUrl
+    *
+    * @return string The webDavUrl
+    */
+    public function getWebDavUrl()
+    {
+        if (array_key_exists("webDavUrl", $this->_propDict)) {
+            return $this->_propDict["webDavUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the webDavUrl
+    *
+    * @param string $val The webDavUrl
+    *
+    * @return null
+    */
+    public function setWebDavUrl($val)
+    {
+        $this->propDict["webDavUrl"] = $val;
+    }
+
+    /**
+    * Gets the createdByUser
+    *
+    * @return User The createdByUser
+    */
+    public function getCreatedByUser()
+    {
+        if (array_key_exists("createdByUser", $this->_propDict)) {
+            if (is_a($this->_propDict["createdByUser"], 'User')) {
+                return $this->_propDict["createdByUser"];
+            } else {
+                $this->_propDict["createdByUser"] = new User($this->_propDict["createdByUser"]);
+                return $this->_propDict["createdByUser"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the createdByUser
+    *
+    * @param string $val The createdByUser
+    *
+    * @return null
+    */
+    public function setCreatedByUser($val)
+    {
+        $this->propDict["createdByUser"] = $val;
+    }
+
+    /**
+    * Gets the workbook
+    *
+    * @return Workbook The workbook
+    */
+    public function getWorkbook()
+    {
+        if (array_key_exists("workbook", $this->_propDict)) {
+            if (is_a($this->_propDict["workbook"], 'Workbook')) {
+                return $this->_propDict["workbook"];
+            } else {
+                $this->_propDict["workbook"] = new Workbook($this->_propDict["workbook"]);
+                return $this->_propDict["workbook"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the workbook
+    *
+    * @param string $val The workbook
+    *
+    * @return null
+    */
+    public function setWorkbook($val)
+    {
+        $this->propDict["workbook"] = $val;
+    }
+
+    /**
+    * Gets the lastModifiedByUser
+    *
+    * @return User The lastModifiedByUser
+    */
+    public function getLastModifiedByUser()
+    {
+        if (array_key_exists("lastModifiedByUser", $this->_propDict)) {
+            if (is_a($this->_propDict["lastModifiedByUser"], 'User')) {
+                return $this->_propDict["lastModifiedByUser"];
+            } else {
+                $this->_propDict["lastModifiedByUser"] = new User($this->_propDict["lastModifiedByUser"]);
+                return $this->_propDict["lastModifiedByUser"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the lastModifiedByUser
+    *
+    * @param string $val The lastModifiedByUser
+    *
+    * @return null
+    */
+    public function setLastModifiedByUser($val)
+    {
+        $this->propDict["lastModifiedByUser"] = $val;
+    }
+
+    /** 
+    * Gets the children
+    *
+    * @return ChildrenCollectionPage The children
+    */
+    public function getChildren()
+    {
+        if (array_key_exists("children", $this->_propDict)) {
+            return ChildrenCollectionPage($this->_propDict["children"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the permissions
+    *
+    * @return PermissionsCollectionPage The permissions
+    */
+    public function getPermissions()
+    {
+        if (array_key_exists("permissions", $this->_propDict)) {
+            return PermissionsCollectionPage($this->_propDict["permissions"]);
+        } else {
+            return null;
+        }
+    }
+
+
+    /** 
+    * Gets the thumbnails
+    *
+    * @return ThumbnailsCollectionPage The thumbnails
+    */
+    public function getThumbnails()
+    {
+        if (array_key_exists("thumbnails", $this->_propDict)) {
+            return ThumbnailsCollectionPage($this->_propDict["thumbnails"]);
+        } else {
+            return null;
+        }
+    }
+
+}

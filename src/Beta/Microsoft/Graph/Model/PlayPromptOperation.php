@@ -33,7 +33,7 @@ class PlayPromptOperation extends CommsOperation
     public function getCompletionReason()
     {
         if (array_key_exists("completionReason", $this->_propDict)) {
-            if (is_a($this->_propDict["completionReason"], "\Beta\Microsoft\Graph\Model\PlayPromptCompletionReason")) {
+            if (is_a($this->_propDict["completionReason"], "Beta\Microsoft\Graph\Model\PlayPromptCompletionReason")) {
                 return $this->_propDict["completionReason"];
             } else {
                 $this->_propDict["completionReason"] = new PlayPromptCompletionReason($this->_propDict["completionReason"]);

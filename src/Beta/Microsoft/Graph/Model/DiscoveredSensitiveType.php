@@ -32,7 +32,7 @@ class DiscoveredSensitiveType extends Entity
     public function getClassificationAttributes()
     {
         if (array_key_exists("classificationAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["classificationAttributes"], "\Beta\Microsoft\Graph\Model\ClassificationAttribute")) {
+            if (is_a($this->_propDict["classificationAttributes"], "Beta\Microsoft\Graph\Model\ClassificationAttribute")) {
                 return $this->_propDict["classificationAttributes"];
             } else {
                 $this->_propDict["classificationAttributes"] = new ClassificationAttribute($this->_propDict["classificationAttributes"]);

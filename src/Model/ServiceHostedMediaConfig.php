@@ -42,7 +42,7 @@ class ServiceHostedMediaConfig extends MediaConfig
     public function getPreFetchMedia()
     {
         if (array_key_exists("preFetchMedia", $this->_propDict)) {
-            if (is_a($this->_propDict["preFetchMedia"], "\Microsoft\Graph\Model\MediaInfo")) {
+            if (is_a($this->_propDict["preFetchMedia"], "Microsoft\Graph\Model\MediaInfo")) {
                 return $this->_propDict["preFetchMedia"];
             } else {
                 $this->_propDict["preFetchMedia"] = new MediaInfo($this->_propDict["preFetchMedia"]);

@@ -32,7 +32,7 @@ class LicenseInfoDetail extends Entity
     public function getLicenseType()
     {
         if (array_key_exists("licenseType", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseType"], "\Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
+            if (is_a($this->_propDict["licenseType"], "Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
                 return $this->_propDict["licenseType"];
             } else {
                 $this->_propDict["licenseType"] = new AzureADLicenseType($this->_propDict["licenseType"]);

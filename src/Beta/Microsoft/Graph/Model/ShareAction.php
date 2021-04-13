@@ -33,7 +33,7 @@ class ShareAction extends Entity
     public function getRecipients()
     {
         if (array_key_exists("recipients", $this->_propDict)) {
-            if (is_a($this->_propDict["recipients"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["recipients"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["recipients"];
             } else {
                 $this->_propDict["recipients"] = new IdentitySet($this->_propDict["recipients"]);

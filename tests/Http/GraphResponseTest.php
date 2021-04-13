@@ -32,7 +32,7 @@ class GraphResponseTest extends TestCase
         $handler = GuzzleHttp\HandlerStack::create($mock);
         $this->client = new GuzzleHttp\Client(['handler' => $handler]);
 
-        $this->request = new GraphRequest("GET", "/endpoint", "token", "baseUrl", "version");
+        $this->request = new GraphRequest("GET", "/endpoint", "token", "baseUrl", "/version");
         $this->response = new GraphResponse($this->request, "{response}", "200", ["foo" => "bar"]);
     }
 
@@ -122,7 +122,7 @@ class GraphResponseTest extends TestCase
         $this->request->execute($this->client);
         $hosts = $this->request->setReturnType(Model\User::class)->execute($this->client);
 
-        $this->assertIsArray($hosts);
+        $this->assertInternalType('array', $hosts);
         $this->assertContainsOnlyInstancesOf(Model\User::class, $hosts);
         $this->assertSame(array_values($hosts), $hosts);
         $this->assertEquals(2, count($hosts));

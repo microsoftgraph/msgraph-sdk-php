@@ -33,7 +33,7 @@ class Win32LobAppMsiInformation extends Entity
     public function getPackageType()
     {
         if (array_key_exists("packageType", $this->_propDict)) {
-            if (is_a($this->_propDict["packageType"], "\Microsoft\Graph\Model\Win32LobAppMsiPackageType")) {
+            if (is_a($this->_propDict["packageType"], "Microsoft\Graph\Model\Win32LobAppMsiPackageType")) {
                 return $this->_propDict["packageType"];
             } else {
                 $this->_propDict["packageType"] = new Win32LobAppMsiPackageType($this->_propDict["packageType"]);

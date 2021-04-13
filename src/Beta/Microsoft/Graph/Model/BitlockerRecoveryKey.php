@@ -124,7 +124,7 @@ class BitlockerRecoveryKey extends Entity
     public function getVolumeType()
     {
         if (array_key_exists("volumeType", $this->_propDict)) {
-            if (is_a($this->_propDict["volumeType"], "\Beta\Microsoft\Graph\Model\VolumeType")) {
+            if (is_a($this->_propDict["volumeType"], "Beta\Microsoft\Graph\Model\VolumeType")) {
                 return $this->_propDict["volumeType"];
             } else {
                 $this->_propDict["volumeType"] = new VolumeType($this->_propDict["volumeType"]);

@@ -152,7 +152,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Ediscovery\Model\DataSourceContainerStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Ediscovery\Model\DataSourceContainerStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DataSourceContainerStatus($this->_propDict["status"]);
@@ -183,7 +183,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     public function getLastIndexOperation()
     {
         if (array_key_exists("lastIndexOperation", $this->_propDict)) {
-            if (is_a($this->_propDict["lastIndexOperation"], "\Beta\Microsoft\Graph\Ediscovery\Model\CaseIndexOperation")) {
+            if (is_a($this->_propDict["lastIndexOperation"], "Beta\Microsoft\Graph\Ediscovery\Model\CaseIndexOperation")) {
                 return $this->_propDict["lastIndexOperation"];
             } else {
                 $this->_propDict["lastIndexOperation"] = new CaseIndexOperation($this->_propDict["lastIndexOperation"]);

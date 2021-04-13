@@ -89,7 +89,7 @@ class ApiApplication extends Entity
     public function getOauth2PermissionScopes()
     {
         if (array_key_exists("oauth2PermissionScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["oauth2PermissionScopes"], "\Beta\Microsoft\Graph\Model\PermissionScope")) {
+            if (is_a($this->_propDict["oauth2PermissionScopes"], "Beta\Microsoft\Graph\Model\PermissionScope")) {
                 return $this->_propDict["oauth2PermissionScopes"];
             } else {
                 $this->_propDict["oauth2PermissionScopes"] = new PermissionScope($this->_propDict["oauth2PermissionScopes"]);
@@ -122,7 +122,7 @@ class ApiApplication extends Entity
     public function getPreAuthorizedApplications()
     {
         if (array_key_exists("preAuthorizedApplications", $this->_propDict)) {
-            if (is_a($this->_propDict["preAuthorizedApplications"], "\Beta\Microsoft\Graph\Model\PreAuthorizedApplication")) {
+            if (is_a($this->_propDict["preAuthorizedApplications"], "Beta\Microsoft\Graph\Model\PreAuthorizedApplication")) {
                 return $this->_propDict["preAuthorizedApplications"];
             } else {
                 $this->_propDict["preAuthorizedApplications"] = new PreAuthorizedApplication($this->_propDict["preAuthorizedApplications"]);

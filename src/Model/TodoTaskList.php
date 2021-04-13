@@ -120,7 +120,7 @@ class TodoTaskList extends Entity
     public function getWellknownListName()
     {
         if (array_key_exists("wellknownListName", $this->_propDict)) {
-            if (is_a($this->_propDict["wellknownListName"], "\Microsoft\Graph\Model\WellknownListName")) {
+            if (is_a($this->_propDict["wellknownListName"], "Microsoft\Graph\Model\WellknownListName")) {
                 return $this->_propDict["wellknownListName"];
             } else {
                 $this->_propDict["wellknownListName"] = new WellknownListName($this->_propDict["wellknownListName"]);

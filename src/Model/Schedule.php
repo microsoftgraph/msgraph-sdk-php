@@ -120,7 +120,7 @@ class Schedule extends Entity
     public function getProvisionStatus()
     {
         if (array_key_exists("provisionStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["provisionStatus"], "\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["provisionStatus"], "Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["provisionStatus"];
             } else {
                 $this->_propDict["provisionStatus"] = new OperationStatus($this->_propDict["provisionStatus"]);

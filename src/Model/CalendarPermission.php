@@ -63,7 +63,7 @@ class CalendarPermission extends Entity
     public function getEmailAddress()
     {
         if (array_key_exists("emailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddress"], "\Microsoft\Graph\Model\EmailAddress")) {
+            if (is_a($this->_propDict["emailAddress"], "Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["emailAddress"];
             } else {
                 $this->_propDict["emailAddress"] = new EmailAddress($this->_propDict["emailAddress"]);
@@ -154,7 +154,7 @@ class CalendarPermission extends Entity
     public function getRole()
     {
         if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "\Microsoft\Graph\Model\CalendarRoleType")) {
+            if (is_a($this->_propDict["role"], "Microsoft\Graph\Model\CalendarRoleType")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new CalendarRoleType($this->_propDict["role"]);

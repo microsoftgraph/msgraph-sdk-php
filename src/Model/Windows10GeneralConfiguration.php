@@ -91,7 +91,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getAppsAllowTrustedAppsSideloading()
     {
         if (array_key_exists("appsAllowTrustedAppsSideloading", $this->_propDict)) {
-            if (is_a($this->_propDict["appsAllowTrustedAppsSideloading"], "\Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["appsAllowTrustedAppsSideloading"], "Microsoft\Graph\Model\StateManagementSetting")) {
                 return $this->_propDict["appsAllowTrustedAppsSideloading"];
             } else {
                 $this->_propDict["appsAllowTrustedAppsSideloading"] = new StateManagementSetting($this->_propDict["appsAllowTrustedAppsSideloading"]);
@@ -559,7 +559,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderCloudBlockLevel()
     {
         if (array_key_exists("defenderCloudBlockLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderCloudBlockLevel"], "\Microsoft\Graph\Model\DefenderCloudBlockLevelType")) {
+            if (is_a($this->_propDict["defenderCloudBlockLevel"], "Microsoft\Graph\Model\DefenderCloudBlockLevelType")) {
                 return $this->_propDict["defenderCloudBlockLevel"];
             } else {
                 $this->_propDict["defenderCloudBlockLevel"] = new DefenderCloudBlockLevelType($this->_propDict["defenderCloudBlockLevel"]);
@@ -621,7 +621,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderDetectedMalwareActions()
     {
         if (array_key_exists("defenderDetectedMalwareActions", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderDetectedMalwareActions"], "\Microsoft\Graph\Model\DefenderDetectedMalwareActions")) {
+            if (is_a($this->_propDict["defenderDetectedMalwareActions"], "Microsoft\Graph\Model\DefenderDetectedMalwareActions")) {
                 return $this->_propDict["defenderDetectedMalwareActions"];
             } else {
                 $this->_propDict["defenderDetectedMalwareActions"] = new DefenderDetectedMalwareActions($this->_propDict["defenderDetectedMalwareActions"]);
@@ -712,7 +712,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderMonitorFileActivity()
     {
         if (array_key_exists("defenderMonitorFileActivity", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderMonitorFileActivity"], "\Microsoft\Graph\Model\DefenderMonitorFileActivity")) {
+            if (is_a($this->_propDict["defenderMonitorFileActivity"], "Microsoft\Graph\Model\DefenderMonitorFileActivity")) {
                 return $this->_propDict["defenderMonitorFileActivity"];
             } else {
                 $this->_propDict["defenderMonitorFileActivity"] = new DefenderMonitorFileActivity($this->_propDict["defenderMonitorFileActivity"]);
@@ -774,7 +774,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderPromptForSampleSubmission()
     {
         if (array_key_exists("defenderPromptForSampleSubmission", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderPromptForSampleSubmission"], "\Microsoft\Graph\Model\DefenderPromptForSampleSubmission")) {
+            if (is_a($this->_propDict["defenderPromptForSampleSubmission"], "Microsoft\Graph\Model\DefenderPromptForSampleSubmission")) {
                 return $this->_propDict["defenderPromptForSampleSubmission"];
             } else {
                 $this->_propDict["defenderPromptForSampleSubmission"] = new DefenderPromptForSampleSubmission($this->_propDict["defenderPromptForSampleSubmission"]);
@@ -1155,7 +1155,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderScanType()
     {
         if (array_key_exists("defenderScanType", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScanType"], "\Microsoft\Graph\Model\DefenderScanType")) {
+            if (is_a($this->_propDict["defenderScanType"], "Microsoft\Graph\Model\DefenderScanType")) {
                 return $this->_propDict["defenderScanType"];
             } else {
                 $this->_propDict["defenderScanType"] = new DefenderScanType($this->_propDict["defenderScanType"]);
@@ -1188,7 +1188,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderScheduledQuickScanTime()
     {
         if (array_key_exists("defenderScheduledQuickScanTime", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScheduledQuickScanTime"], "\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["defenderScheduledQuickScanTime"], "Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["defenderScheduledQuickScanTime"];
             } else {
                 $this->_propDict["defenderScheduledQuickScanTime"] = new TimeOfDay($this->_propDict["defenderScheduledQuickScanTime"]);
@@ -1221,7 +1221,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderScheduledScanTime()
     {
         if (array_key_exists("defenderScheduledScanTime", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScheduledScanTime"], "\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["defenderScheduledScanTime"], "Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["defenderScheduledScanTime"];
             } else {
                 $this->_propDict["defenderScheduledScanTime"] = new TimeOfDay($this->_propDict["defenderScheduledScanTime"]);
@@ -1283,7 +1283,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDefenderSystemScanSchedule()
     {
         if (array_key_exists("defenderSystemScanSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderSystemScanSchedule"], "\Microsoft\Graph\Model\WeeklySchedule")) {
+            if (is_a($this->_propDict["defenderSystemScanSchedule"], "Microsoft\Graph\Model\WeeklySchedule")) {
                 return $this->_propDict["defenderSystemScanSchedule"];
             } else {
                 $this->_propDict["defenderSystemScanSchedule"] = new WeeklySchedule($this->_propDict["defenderSystemScanSchedule"]);
@@ -1316,7 +1316,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDeveloperUnlockSetting()
     {
         if (array_key_exists("developerUnlockSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["developerUnlockSetting"], "\Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["developerUnlockSetting"], "Microsoft\Graph\Model\StateManagementSetting")) {
                 return $this->_propDict["developerUnlockSetting"];
             } else {
                 $this->_propDict["developerUnlockSetting"] = new StateManagementSetting($this->_propDict["developerUnlockSetting"]);
@@ -1407,7 +1407,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getDiagnosticsDataSubmissionMode()
     {
         if (array_key_exists("diagnosticsDataSubmissionMode", $this->_propDict)) {
-            if (is_a($this->_propDict["diagnosticsDataSubmissionMode"], "\Microsoft\Graph\Model\DiagnosticDataSubmissionMode")) {
+            if (is_a($this->_propDict["diagnosticsDataSubmissionMode"], "Microsoft\Graph\Model\DiagnosticDataSubmissionMode")) {
                 return $this->_propDict["diagnosticsDataSubmissionMode"];
             } else {
                 $this->_propDict["diagnosticsDataSubmissionMode"] = new DiagnosticDataSubmissionMode($this->_propDict["diagnosticsDataSubmissionMode"]);
@@ -1933,7 +1933,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getEdgeCookiePolicy()
     {
         if (array_key_exists("edgeCookiePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["edgeCookiePolicy"], "\Microsoft\Graph\Model\EdgeCookiePolicy")) {
+            if (is_a($this->_propDict["edgeCookiePolicy"], "Microsoft\Graph\Model\EdgeCookiePolicy")) {
                 return $this->_propDict["edgeCookiePolicy"];
             } else {
                 $this->_propDict["edgeCookiePolicy"] = new EdgeCookiePolicy($this->_propDict["edgeCookiePolicy"]);
@@ -2111,7 +2111,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getEdgeSearchEngine()
     {
         if (array_key_exists("edgeSearchEngine", $this->_propDict)) {
-            if (is_a($this->_propDict["edgeSearchEngine"], "\Microsoft\Graph\Model\EdgeSearchEngineBase")) {
+            if (is_a($this->_propDict["edgeSearchEngine"], "Microsoft\Graph\Model\EdgeSearchEngineBase")) {
                 return $this->_propDict["edgeSearchEngine"];
             } else {
                 $this->_propDict["edgeSearchEngine"] = new EdgeSearchEngineBase($this->_propDict["edgeSearchEngine"]);
@@ -2869,7 +2869,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getNetworkProxyServer()
     {
         if (array_key_exists("networkProxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["networkProxyServer"], "\Microsoft\Graph\Model\Windows10NetworkProxyServer")) {
+            if (is_a($this->_propDict["networkProxyServer"], "Microsoft\Graph\Model\Windows10NetworkProxyServer")) {
                 return $this->_propDict["networkProxyServer"];
             } else {
                 $this->_propDict["networkProxyServer"] = new Windows10NetworkProxyServer($this->_propDict["networkProxyServer"]);
@@ -3163,7 +3163,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -3312,7 +3312,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getPrivacyAdvertisingId()
     {
         if (array_key_exists("privacyAdvertisingId", $this->_propDict)) {
-            if (is_a($this->_propDict["privacyAdvertisingId"], "\Microsoft\Graph\Model\StateManagementSetting")) {
+            if (is_a($this->_propDict["privacyAdvertisingId"], "Microsoft\Graph\Model\StateManagementSetting")) {
                 return $this->_propDict["privacyAdvertisingId"];
             } else {
                 $this->_propDict["privacyAdvertisingId"] = new StateManagementSetting($this->_propDict["privacyAdvertisingId"]);
@@ -3432,7 +3432,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getSafeSearchFilter()
     {
         if (array_key_exists("safeSearchFilter", $this->_propDict)) {
-            if (is_a($this->_propDict["safeSearchFilter"], "\Microsoft\Graph\Model\SafeSearchFilterType")) {
+            if (is_a($this->_propDict["safeSearchFilter"], "Microsoft\Graph\Model\SafeSearchFilterType")) {
                 return $this->_propDict["safeSearchFilter"];
             } else {
                 $this->_propDict["safeSearchFilter"] = new SafeSearchFilterType($this->_propDict["safeSearchFilter"]);
@@ -4393,7 +4393,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuAppListVisibility()
     {
         if (array_key_exists("startMenuAppListVisibility", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuAppListVisibility"], "\Microsoft\Graph\Model\WindowsStartMenuAppListVisibilityType")) {
+            if (is_a($this->_propDict["startMenuAppListVisibility"], "Microsoft\Graph\Model\WindowsStartMenuAppListVisibilityType")) {
                 return $this->_propDict["startMenuAppListVisibility"];
             } else {
                 $this->_propDict["startMenuAppListVisibility"] = new WindowsStartMenuAppListVisibilityType($this->_propDict["startMenuAppListVisibility"]);
@@ -4869,7 +4869,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuMode()
     {
         if (array_key_exists("startMenuMode", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuMode"], "\Microsoft\Graph\Model\WindowsStartMenuModeType")) {
+            if (is_a($this->_propDict["startMenuMode"], "Microsoft\Graph\Model\WindowsStartMenuModeType")) {
                 return $this->_propDict["startMenuMode"];
             } else {
                 $this->_propDict["startMenuMode"] = new WindowsStartMenuModeType($this->_propDict["startMenuMode"]);
@@ -4902,7 +4902,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderDocuments()
     {
         if (array_key_exists("startMenuPinnedFolderDocuments", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderDocuments"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderDocuments"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderDocuments"];
             } else {
                 $this->_propDict["startMenuPinnedFolderDocuments"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderDocuments"]);
@@ -4935,7 +4935,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderDownloads()
     {
         if (array_key_exists("startMenuPinnedFolderDownloads", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderDownloads"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderDownloads"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderDownloads"];
             } else {
                 $this->_propDict["startMenuPinnedFolderDownloads"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderDownloads"]);
@@ -4968,7 +4968,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderFileExplorer()
     {
         if (array_key_exists("startMenuPinnedFolderFileExplorer", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderFileExplorer"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderFileExplorer"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderFileExplorer"];
             } else {
                 $this->_propDict["startMenuPinnedFolderFileExplorer"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderFileExplorer"]);
@@ -5001,7 +5001,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderHomeGroup()
     {
         if (array_key_exists("startMenuPinnedFolderHomeGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderHomeGroup"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderHomeGroup"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderHomeGroup"];
             } else {
                 $this->_propDict["startMenuPinnedFolderHomeGroup"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderHomeGroup"]);
@@ -5034,7 +5034,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderMusic()
     {
         if (array_key_exists("startMenuPinnedFolderMusic", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderMusic"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderMusic"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderMusic"];
             } else {
                 $this->_propDict["startMenuPinnedFolderMusic"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderMusic"]);
@@ -5067,7 +5067,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderNetwork()
     {
         if (array_key_exists("startMenuPinnedFolderNetwork", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderNetwork"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderNetwork"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderNetwork"];
             } else {
                 $this->_propDict["startMenuPinnedFolderNetwork"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderNetwork"]);
@@ -5100,7 +5100,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderPersonalFolder()
     {
         if (array_key_exists("startMenuPinnedFolderPersonalFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderPersonalFolder"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderPersonalFolder"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderPersonalFolder"];
             } else {
                 $this->_propDict["startMenuPinnedFolderPersonalFolder"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderPersonalFolder"]);
@@ -5133,7 +5133,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderPictures()
     {
         if (array_key_exists("startMenuPinnedFolderPictures", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderPictures"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderPictures"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderPictures"];
             } else {
                 $this->_propDict["startMenuPinnedFolderPictures"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderPictures"]);
@@ -5166,7 +5166,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderSettings()
     {
         if (array_key_exists("startMenuPinnedFolderSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderSettings"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderSettings"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderSettings"];
             } else {
                 $this->_propDict["startMenuPinnedFolderSettings"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderSettings"]);
@@ -5199,7 +5199,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getStartMenuPinnedFolderVideos()
     {
         if (array_key_exists("startMenuPinnedFolderVideos", $this->_propDict)) {
-            if (is_a($this->_propDict["startMenuPinnedFolderVideos"], "\Microsoft\Graph\Model\VisibilitySetting")) {
+            if (is_a($this->_propDict["startMenuPinnedFolderVideos"], "Microsoft\Graph\Model\VisibilitySetting")) {
                 return $this->_propDict["startMenuPinnedFolderVideos"];
             } else {
                 $this->_propDict["startMenuPinnedFolderVideos"] = new VisibilitySetting($this->_propDict["startMenuPinnedFolderVideos"]);
@@ -5783,7 +5783,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     public function getWindowsSpotlightConfigureOnLockScreen()
     {
         if (array_key_exists("windowsSpotlightConfigureOnLockScreen", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsSpotlightConfigureOnLockScreen"], "\Microsoft\Graph\Model\WindowsSpotlightEnablementSettings")) {
+            if (is_a($this->_propDict["windowsSpotlightConfigureOnLockScreen"], "Microsoft\Graph\Model\WindowsSpotlightEnablementSettings")) {
                 return $this->_propDict["windowsSpotlightConfigureOnLockScreen"];
             } else {
                 $this->_propDict["windowsSpotlightConfigureOnLockScreen"] = new WindowsSpotlightEnablementSettings($this->_propDict["windowsSpotlightConfigureOnLockScreen"]);

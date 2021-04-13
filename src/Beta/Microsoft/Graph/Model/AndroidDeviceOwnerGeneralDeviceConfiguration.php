@@ -91,7 +91,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getAppsAutoUpdatePolicy()
     {
         if (array_key_exists("appsAutoUpdatePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["appsAutoUpdatePolicy"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerAppAutoUpdatePolicyType")) {
+            if (is_a($this->_propDict["appsAutoUpdatePolicy"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerAppAutoUpdatePolicyType")) {
                 return $this->_propDict["appsAutoUpdatePolicy"];
             } else {
                 $this->_propDict["appsAutoUpdatePolicy"] = new AndroidDeviceOwnerAppAutoUpdatePolicyType($this->_propDict["appsAutoUpdatePolicy"]);
@@ -124,7 +124,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getAppsDefaultPermissionPolicy()
     {
         if (array_key_exists("appsDefaultPermissionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["appsDefaultPermissionPolicy"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerDefaultAppPermissionPolicyType")) {
+            if (is_a($this->_propDict["appsDefaultPermissionPolicy"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerDefaultAppPermissionPolicyType")) {
                 return $this->_propDict["appsDefaultPermissionPolicy"];
             } else {
                 $this->_propDict["appsDefaultPermissionPolicy"] = new AndroidDeviceOwnerDefaultAppPermissionPolicyType($this->_propDict["appsDefaultPermissionPolicy"]);
@@ -389,7 +389,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getEnrollmentProfile()
     {
         if (array_key_exists("enrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentProfile"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfileType")) {
+            if (is_a($this->_propDict["enrollmentProfile"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfileType")) {
                 return $this->_propDict["enrollmentProfile"];
             } else {
                 $this->_propDict["enrollmentProfile"] = new AndroidDeviceOwnerEnrollmentProfileType($this->_propDict["enrollmentProfile"]);
@@ -480,7 +480,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getGlobalProxy()
     {
         if (array_key_exists("globalProxy", $this->_propDict)) {
-            if (is_a($this->_propDict["globalProxy"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerGlobalProxy")) {
+            if (is_a($this->_propDict["globalProxy"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerGlobalProxy")) {
                 return $this->_propDict["globalProxy"];
             } else {
                 $this->_propDict["globalProxy"] = new AndroidDeviceOwnerGlobalProxy($this->_propDict["globalProxy"]);
@@ -600,7 +600,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskCustomizationStatusBar()
     {
         if (array_key_exists("kioskCustomizationStatusBar", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskCustomizationStatusBar"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskCustomizationStatusBar")) {
+            if (is_a($this->_propDict["kioskCustomizationStatusBar"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskCustomizationStatusBar")) {
                 return $this->_propDict["kioskCustomizationStatusBar"];
             } else {
                 $this->_propDict["kioskCustomizationStatusBar"] = new AndroidDeviceOwnerKioskCustomizationStatusBar($this->_propDict["kioskCustomizationStatusBar"]);
@@ -662,7 +662,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskCustomizationSystemNavigation()
     {
         if (array_key_exists("kioskCustomizationSystemNavigation", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskCustomizationSystemNavigation"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskCustomizationSystemNavigation")) {
+            if (is_a($this->_propDict["kioskCustomizationSystemNavigation"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskCustomizationSystemNavigation")) {
                 return $this->_propDict["kioskCustomizationSystemNavigation"];
             } else {
                 $this->_propDict["kioskCustomizationSystemNavigation"] = new AndroidDeviceOwnerKioskCustomizationSystemNavigation($this->_propDict["kioskCustomizationSystemNavigation"]);
@@ -929,7 +929,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskModeFolderIcon()
     {
         if (array_key_exists("kioskModeFolderIcon", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeFolderIcon"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeFolderIcon")) {
+            if (is_a($this->_propDict["kioskModeFolderIcon"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeFolderIcon")) {
                 return $this->_propDict["kioskModeFolderIcon"];
             } else {
                 $this->_propDict["kioskModeFolderIcon"] = new AndroidDeviceOwnerKioskModeFolderIcon($this->_propDict["kioskModeFolderIcon"]);
@@ -1020,7 +1020,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskModeIconSize()
     {
         if (array_key_exists("kioskModeIconSize", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeIconSize"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeIconSize")) {
+            if (is_a($this->_propDict["kioskModeIconSize"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeIconSize")) {
                 return $this->_propDict["kioskModeIconSize"];
             } else {
                 $this->_propDict["kioskModeIconSize"] = new AndroidDeviceOwnerKioskModeIconSize($this->_propDict["kioskModeIconSize"]);
@@ -1170,7 +1170,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskModeScreenOrientation()
     {
         if (array_key_exists("kioskModeScreenOrientation", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeScreenOrientation"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeScreenOrientation")) {
+            if (is_a($this->_propDict["kioskModeScreenOrientation"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerKioskModeScreenOrientation")) {
                 return $this->_propDict["kioskModeScreenOrientation"];
             } else {
                 $this->_propDict["kioskModeScreenOrientation"] = new AndroidDeviceOwnerKioskModeScreenOrientation($this->_propDict["kioskModeScreenOrientation"]);
@@ -1435,7 +1435,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskModeVirtualHomeButtonType()
     {
         if (array_key_exists("kioskModeVirtualHomeButtonType", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeVirtualHomeButtonType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerVirtualHomeButtonType")) {
+            if (is_a($this->_propDict["kioskModeVirtualHomeButtonType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerVirtualHomeButtonType")) {
                 return $this->_propDict["kioskModeVirtualHomeButtonType"];
             } else {
                 $this->_propDict["kioskModeVirtualHomeButtonType"] = new AndroidDeviceOwnerVirtualHomeButtonType($this->_propDict["kioskModeVirtualHomeButtonType"]);
@@ -1729,7 +1729,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMicrosoftLauncherDockPresenceConfiguration()
     {
         if (array_key_exists("microsoftLauncherDockPresenceConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftLauncherDockPresenceConfiguration"], "\Beta\Microsoft\Graph\Model\MicrosoftLauncherDockPresence")) {
+            if (is_a($this->_propDict["microsoftLauncherDockPresenceConfiguration"], "Beta\Microsoft\Graph\Model\MicrosoftLauncherDockPresence")) {
                 return $this->_propDict["microsoftLauncherDockPresenceConfiguration"];
             } else {
                 $this->_propDict["microsoftLauncherDockPresenceConfiguration"] = new MicrosoftLauncherDockPresence($this->_propDict["microsoftLauncherDockPresenceConfiguration"]);
@@ -1820,7 +1820,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMicrosoftLauncherSearchBarPlacementConfiguration()
     {
         if (array_key_exists("microsoftLauncherSearchBarPlacementConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"], "\Beta\Microsoft\Graph\Model\MicrosoftLauncherSearchBarPlacement")) {
+            if (is_a($this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"], "Beta\Microsoft\Graph\Model\MicrosoftLauncherSearchBarPlacement")) {
                 return $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"];
             } else {
                 $this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"] = new MicrosoftLauncherSearchBarPlacement($this->_propDict["microsoftLauncherSearchBarPlacementConfiguration"]);
@@ -2260,7 +2260,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidDeviceOwnerRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -2409,7 +2409,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPlayStoreMode()
     {
         if (array_key_exists("playStoreMode", $this->_propDict)) {
-            if (is_a($this->_propDict["playStoreMode"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerPlayStoreMode")) {
+            if (is_a($this->_propDict["playStoreMode"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerPlayStoreMode")) {
                 return $this->_propDict["playStoreMode"];
             } else {
                 $this->_propDict["playStoreMode"] = new AndroidDeviceOwnerPlayStoreMode($this->_propDict["playStoreMode"]);
@@ -2704,7 +2704,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getSystemUpdateInstallType()
     {
         if (array_key_exists("systemUpdateInstallType", $this->_propDict)) {
-            if (is_a($this->_propDict["systemUpdateInstallType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerSystemUpdateInstallType")) {
+            if (is_a($this->_propDict["systemUpdateInstallType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerSystemUpdateInstallType")) {
                 return $this->_propDict["systemUpdateInstallType"];
             } else {
                 $this->_propDict["systemUpdateInstallType"] = new AndroidDeviceOwnerSystemUpdateInstallType($this->_propDict["systemUpdateInstallType"]);
@@ -3288,7 +3288,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     public function getWorkProfilePasswordRequiredType()
     {
         if (array_key_exists("workProfilePasswordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["workProfilePasswordRequiredType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
+            if (is_a($this->_propDict["workProfilePasswordRequiredType"], "Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
                 return $this->_propDict["workProfilePasswordRequiredType"];
             } else {
                 $this->_propDict["workProfilePasswordRequiredType"] = new AndroidDeviceOwnerRequiredPasswordType($this->_propDict["workProfilePasswordRequiredType"]);

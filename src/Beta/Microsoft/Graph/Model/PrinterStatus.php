@@ -61,7 +61,7 @@ class PrinterStatus extends Entity
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\PrinterProcessingStateDetail")) {
+            if (is_a($this->_propDict["details"], "Beta\Microsoft\Graph\Model\PrinterProcessingStateDetail")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PrinterProcessingStateDetail($this->_propDict["details"]);
@@ -93,7 +93,7 @@ class PrinterStatus extends Entity
     public function getProcessingState()
     {
         if (array_key_exists("processingState", $this->_propDict)) {
-            if (is_a($this->_propDict["processingState"], "\Beta\Microsoft\Graph\Model\PrinterProcessingState")) {
+            if (is_a($this->_propDict["processingState"], "Beta\Microsoft\Graph\Model\PrinterProcessingState")) {
                 return $this->_propDict["processingState"];
             } else {
                 $this->_propDict["processingState"] = new PrinterProcessingState($this->_propDict["processingState"]);
@@ -150,7 +150,7 @@ class PrinterStatus extends Entity
     public function getProcessingStateReasons()
     {
         if (array_key_exists("processingStateReasons", $this->_propDict)) {
-            if (is_a($this->_propDict["processingStateReasons"], "\Beta\Microsoft\Graph\Model\PrinterProcessingStateReason")) {
+            if (is_a($this->_propDict["processingStateReasons"], "Beta\Microsoft\Graph\Model\PrinterProcessingStateReason")) {
                 return $this->_propDict["processingStateReasons"];
             } else {
                 $this->_propDict["processingStateReasons"] = new PrinterProcessingStateReason($this->_propDict["processingStateReasons"]);
@@ -182,7 +182,7 @@ class PrinterStatus extends Entity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\PrinterProcessingState")) {
+            if (is_a($this->_propDict["state"], "Beta\Microsoft\Graph\Model\PrinterProcessingState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new PrinterProcessingState($this->_propDict["state"]);

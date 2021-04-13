@@ -33,7 +33,7 @@ class DeviceComplianceScriptValidationResult extends Entity
     public function getRuleErrors()
     {
         if (array_key_exists("ruleErrors", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleErrors"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptRuleError")) {
+            if (is_a($this->_propDict["ruleErrors"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRuleError")) {
                 return $this->_propDict["ruleErrors"];
             } else {
                 $this->_propDict["ruleErrors"] = new DeviceComplianceScriptRuleError($this->_propDict["ruleErrors"]);
@@ -66,7 +66,7 @@ class DeviceComplianceScriptValidationResult extends Entity
     public function getRules()
     {
         if (array_key_exists("rules", $this->_propDict)) {
-            if (is_a($this->_propDict["rules"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptRule")) {
+            if (is_a($this->_propDict["rules"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptRule")) {
                 return $this->_propDict["rules"];
             } else {
                 $this->_propDict["rules"] = new DeviceComplianceScriptRule($this->_propDict["rules"]);
@@ -99,7 +99,7 @@ class DeviceComplianceScriptValidationResult extends Entity
     public function getScriptErrors()
     {
         if (array_key_exists("scriptErrors", $this->_propDict)) {
-            if (is_a($this->_propDict["scriptErrors"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptError")) {
+            if (is_a($this->_propDict["scriptErrors"], "Beta\Microsoft\Graph\Model\DeviceComplianceScriptError")) {
                 return $this->_propDict["scriptErrors"];
             } else {
                 $this->_propDict["scriptErrors"] = new DeviceComplianceScriptError($this->_propDict["scriptErrors"]);

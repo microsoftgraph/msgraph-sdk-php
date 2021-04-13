@@ -33,7 +33,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     public function getAirPrintExceptionAction()
     {
         if (array_key_exists("airPrintExceptionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["airPrintExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
+            if (is_a($this->_propDict["airPrintExceptionAction"], "Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
                 return $this->_propDict["airPrintExceptionAction"];
             } else {
                 $this->_propDict["airPrintExceptionAction"] = new VpnServiceExceptionAction($this->_propDict["airPrintExceptionAction"]);
@@ -122,7 +122,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     public function getAllowedCaptiveNetworkPlugins()
     {
         if (array_key_exists("allowedCaptiveNetworkPlugins", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedCaptiveNetworkPlugins"], "\Beta\Microsoft\Graph\Model\SpecifiedCaptiveNetworkPlugins")) {
+            if (is_a($this->_propDict["allowedCaptiveNetworkPlugins"], "Beta\Microsoft\Graph\Model\SpecifiedCaptiveNetworkPlugins")) {
                 return $this->_propDict["allowedCaptiveNetworkPlugins"];
             } else {
                 $this->_propDict["allowedCaptiveNetworkPlugins"] = new SpecifiedCaptiveNetworkPlugins($this->_propDict["allowedCaptiveNetworkPlugins"]);
@@ -155,7 +155,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     public function getCellularExceptionAction()
     {
         if (array_key_exists("cellularExceptionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["cellularExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
+            if (is_a($this->_propDict["cellularExceptionAction"], "Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
                 return $this->_propDict["cellularExceptionAction"];
             } else {
                 $this->_propDict["cellularExceptionAction"] = new VpnServiceExceptionAction($this->_propDict["cellularExceptionAction"]);
@@ -244,7 +244,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     public function getTunnelConfiguration()
     {
         if (array_key_exists("tunnelConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["tunnelConfiguration"], "\Beta\Microsoft\Graph\Model\VpnTunnelConfigurationType")) {
+            if (is_a($this->_propDict["tunnelConfiguration"], "Beta\Microsoft\Graph\Model\VpnTunnelConfigurationType")) {
                 return $this->_propDict["tunnelConfiguration"];
             } else {
                 $this->_propDict["tunnelConfiguration"] = new VpnTunnelConfigurationType($this->_propDict["tunnelConfiguration"]);
@@ -305,7 +305,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     public function getVoicemailExceptionAction()
     {
         if (array_key_exists("voicemailExceptionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["voicemailExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
+            if (is_a($this->_propDict["voicemailExceptionAction"], "Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
                 return $this->_propDict["voicemailExceptionAction"];
             } else {
                 $this->_propDict["voicemailExceptionAction"] = new VpnServiceExceptionAction($this->_propDict["voicemailExceptionAction"]);

@@ -61,7 +61,7 @@ class Win32LobAppReturnCode extends Entity
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\Win32LobAppReturnCodeType")) {
+            if (is_a($this->_propDict["type"], "Beta\Microsoft\Graph\Model\Win32LobAppReturnCodeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new Win32LobAppReturnCodeType($this->_propDict["type"]);

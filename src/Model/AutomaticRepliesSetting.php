@@ -33,7 +33,7 @@ class AutomaticRepliesSetting extends Entity
     public function getExternalAudience()
     {
         if (array_key_exists("externalAudience", $this->_propDict)) {
-            if (is_a($this->_propDict["externalAudience"], "\Microsoft\Graph\Model\ExternalAudienceScope")) {
+            if (is_a($this->_propDict["externalAudience"], "Microsoft\Graph\Model\ExternalAudienceScope")) {
                 return $this->_propDict["externalAudience"];
             } else {
                 $this->_propDict["externalAudience"] = new ExternalAudienceScope($this->_propDict["externalAudience"]);
@@ -122,7 +122,7 @@ class AutomaticRepliesSetting extends Entity
     public function getScheduledEndDateTime()
     {
         if (array_key_exists("scheduledEndDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledEndDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledEndDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledEndDateTime"];
             } else {
                 $this->_propDict["scheduledEndDateTime"] = new DateTimeTimeZone($this->_propDict["scheduledEndDateTime"]);
@@ -155,7 +155,7 @@ class AutomaticRepliesSetting extends Entity
     public function getScheduledStartDateTime()
     {
         if (array_key_exists("scheduledStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledStartDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["scheduledStartDateTime"], "Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledStartDateTime"];
             } else {
                 $this->_propDict["scheduledStartDateTime"] = new DateTimeTimeZone($this->_propDict["scheduledStartDateTime"]);
@@ -188,7 +188,7 @@ class AutomaticRepliesSetting extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\AutomaticRepliesStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\AutomaticRepliesStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AutomaticRepliesStatus($this->_propDict["status"]);

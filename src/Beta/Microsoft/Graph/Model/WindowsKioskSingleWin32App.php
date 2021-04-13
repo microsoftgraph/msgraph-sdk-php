@@ -33,7 +33,7 @@ class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration
     public function getWin32App()
     {
         if (array_key_exists("win32App", $this->_propDict)) {
-            if (is_a($this->_propDict["win32App"], "\Beta\Microsoft\Graph\Model\WindowsKioskWin32App")) {
+            if (is_a($this->_propDict["win32App"], "Beta\Microsoft\Graph\Model\WindowsKioskWin32App")) {
                 return $this->_propDict["win32App"];
             } else {
                 $this->_propDict["win32App"] = new WindowsKioskWin32App($this->_propDict["win32App"]);

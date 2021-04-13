@@ -26,17 +26,16 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdBy
-    * The user who created the review set. Read-only.
     *
-    * @return \Beta\Microsoft\Graph\Model\IdentitySet The createdBy
+    * @return Beta\Microsoft\Graph\Model\IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
-                $this->_propDict["createdBy"] = new \Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
+                $this->_propDict["createdBy"] = new Beta\Microsoft\Graph\Model\IdentitySet($this->_propDict["createdBy"]);
                 return $this->_propDict["createdBy"];
             }
         }
@@ -45,9 +44,8 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdBy
-    * The user who created the review set. Read-only.
     *
-    * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
+    * @param Beta\Microsoft\Graph\Model\IdentitySet $val The createdBy
     *
     * @return ReviewSet
     */
@@ -59,7 +57,6 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdDateTime
-    * The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -78,7 +75,6 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
-    * The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -92,7 +88,6 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
-    * The review set name. The name is unique with a maximum limit of 64 characters.
     *
     * @return string The displayName
     */
@@ -107,7 +102,6 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
-    * The review set name. The name is unique with a maximum limit of 64 characters.
     *
     * @param string $val The displayName
     *
@@ -122,7 +116,6 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the queries
-    * Read-only. Nullable.
      *
      * @return array The queries
      */
@@ -137,7 +130,6 @@ class ReviewSet extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the queries
-    * Read-only. Nullable.
     *
     * @param ReviewSetQuery $val The queries
     *

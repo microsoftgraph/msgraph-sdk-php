@@ -94,7 +94,7 @@ class JobResponseBase extends Entity
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\ClassificationError")) {
+            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\ClassificationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new ClassificationError($this->_propDict["error"]);

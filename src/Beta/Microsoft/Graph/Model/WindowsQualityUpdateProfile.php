@@ -58,35 +58,6 @@ class WindowsQualityUpdateProfile extends Entity
     }
     
     /**
-    * Gets the deployableContentDisplayName
-    * Friendly display name of the quality update profile deployable content
-    *
-    * @return string The deployableContentDisplayName
-    */
-    public function getDeployableContentDisplayName()
-    {
-        if (array_key_exists("deployableContentDisplayName", $this->_propDict)) {
-            return $this->_propDict["deployableContentDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deployableContentDisplayName
-    * Friendly display name of the quality update profile deployable content
-    *
-    * @param string $val The deployableContentDisplayName
-    *
-    * @return WindowsQualityUpdateProfile
-    */
-    public function setDeployableContentDisplayName($val)
-    {
-        $this->_propDict["deployableContentDisplayName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the description
     * The description of the profile which is specified by the user.
     *
@@ -153,7 +124,7 @@ class WindowsQualityUpdateProfile extends Entity
     public function getExpeditedUpdateSettings()
     {
         if (array_key_exists("expeditedUpdateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["expeditedUpdateSettings"], "\Beta\Microsoft\Graph\Model\ExpeditedWindowsQualityUpdateSettings")) {
+            if (is_a($this->_propDict["expeditedUpdateSettings"], "Beta\Microsoft\Graph\Model\ExpeditedWindowsQualityUpdateSettings")) {
                 return $this->_propDict["expeditedUpdateSettings"];
             } else {
                 $this->_propDict["expeditedUpdateSettings"] = new ExpeditedWindowsQualityUpdateSettings($this->_propDict["expeditedUpdateSettings"]);
@@ -207,35 +178,6 @@ class WindowsQualityUpdateProfile extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the releaseDateDisplayName
-    * Friendly release date to display for a Quality Update release
-    *
-    * @return string The releaseDateDisplayName
-    */
-    public function getReleaseDateDisplayName()
-    {
-        if (array_key_exists("releaseDateDisplayName", $this->_propDict)) {
-            return $this->_propDict["releaseDateDisplayName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the releaseDateDisplayName
-    * Friendly release date to display for a Quality Update release
-    *
-    * @param string $val The releaseDateDisplayName
-    *
-    * @return WindowsQualityUpdateProfile
-    */
-    public function setReleaseDateDisplayName($val)
-    {
-        $this->_propDict["releaseDateDisplayName"] = $val;
         return $this;
     }
     

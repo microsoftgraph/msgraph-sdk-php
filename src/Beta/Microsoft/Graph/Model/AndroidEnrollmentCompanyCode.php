@@ -89,7 +89,7 @@ class AndroidEnrollmentCompanyCode extends Entity
     public function getQrCodeImage()
     {
         if (array_key_exists("qrCodeImage", $this->_propDict)) {
-            if (is_a($this->_propDict["qrCodeImage"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["qrCodeImage"], "Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["qrCodeImage"];
             } else {
                 $this->_propDict["qrCodeImage"] = new MimeContent($this->_propDict["qrCodeImage"]);

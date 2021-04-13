@@ -283,7 +283,7 @@ class CloudAppSecurityProfile extends Entity
     public function getPermissionsRequired()
     {
         if (array_key_exists("permissionsRequired", $this->_propDict)) {
-            if (is_a($this->_propDict["permissionsRequired"], "\Beta\Microsoft\Graph\Model\ApplicationPermissionsRequired")) {
+            if (is_a($this->_propDict["permissionsRequired"], "Beta\Microsoft\Graph\Model\ApplicationPermissionsRequired")) {
                 return $this->_propDict["permissionsRequired"];
             } else {
                 $this->_propDict["permissionsRequired"] = new ApplicationPermissionsRequired($this->_propDict["permissionsRequired"]);
@@ -476,7 +476,7 @@ class CloudAppSecurityProfile extends Entity
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

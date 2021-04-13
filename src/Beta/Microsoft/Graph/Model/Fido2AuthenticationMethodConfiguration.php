@@ -91,7 +91,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     public function getKeyRestrictions()
     {
         if (array_key_exists("keyRestrictions", $this->_propDict)) {
-            if (is_a($this->_propDict["keyRestrictions"], "\Beta\Microsoft\Graph\Model\Fido2KeyRestrictions")) {
+            if (is_a($this->_propDict["keyRestrictions"], "Beta\Microsoft\Graph\Model\Fido2KeyRestrictions")) {
                 return $this->_propDict["keyRestrictions"];
             } else {
                 $this->_propDict["keyRestrictions"] = new Fido2KeyRestrictions($this->_propDict["keyRestrictions"]);

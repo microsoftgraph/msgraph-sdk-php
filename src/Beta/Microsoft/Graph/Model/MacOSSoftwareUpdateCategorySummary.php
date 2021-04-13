@@ -211,7 +211,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
     public function getUpdateCategory()
     {
         if (array_key_exists("updateCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["updateCategory"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateCategory")) {
+            if (is_a($this->_propDict["updateCategory"], "Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateCategory")) {
                 return $this->_propDict["updateCategory"];
             } else {
                 $this->_propDict["updateCategory"] = new MacOSSoftwareUpdateCategory($this->_propDict["updateCategory"]);

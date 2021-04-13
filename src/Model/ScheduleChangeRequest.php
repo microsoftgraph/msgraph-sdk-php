@@ -32,7 +32,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     public function getAssignedTo()
     {
         if (array_key_exists("assignedTo", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedTo"], "\Microsoft\Graph\Model\ScheduleChangeRequestActor")) {
+            if (is_a($this->_propDict["assignedTo"], "Microsoft\Graph\Model\ScheduleChangeRequestActor")) {
                 return $this->_propDict["assignedTo"];
             } else {
                 $this->_propDict["assignedTo"] = new ScheduleChangeRequestActor($this->_propDict["assignedTo"]);
@@ -233,7 +233,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ScheduleChangeState")) {
+            if (is_a($this->_propDict["state"], "Microsoft\Graph\Model\ScheduleChangeState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ScheduleChangeState($this->_propDict["state"]);

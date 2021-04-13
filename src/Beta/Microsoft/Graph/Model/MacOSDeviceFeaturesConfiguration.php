@@ -414,7 +414,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     public function getContentCachingClientPolicy()
     {
         if (array_key_exists("contentCachingClientPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingClientPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingClientPolicy")) {
+            if (is_a($this->_propDict["contentCachingClientPolicy"], "Beta\Microsoft\Graph\Model\MacOSContentCachingClientPolicy")) {
                 return $this->_propDict["contentCachingClientPolicy"];
             } else {
                 $this->_propDict["contentCachingClientPolicy"] = new MacOSContentCachingClientPolicy($this->_propDict["contentCachingClientPolicy"]);
@@ -679,7 +679,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     public function getContentCachingParentSelectionPolicy()
     {
         if (array_key_exists("contentCachingParentSelectionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingParentSelectionPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingParentSelectionPolicy")) {
+            if (is_a($this->_propDict["contentCachingParentSelectionPolicy"], "Beta\Microsoft\Graph\Model\MacOSContentCachingParentSelectionPolicy")) {
                 return $this->_propDict["contentCachingParentSelectionPolicy"];
             } else {
                 $this->_propDict["contentCachingParentSelectionPolicy"] = new MacOSContentCachingParentSelectionPolicy($this->_propDict["contentCachingParentSelectionPolicy"]);
@@ -772,7 +772,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     public function getContentCachingPeerPolicy()
     {
         if (array_key_exists("contentCachingPeerPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingPeerPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingPeerPolicy")) {
+            if (is_a($this->_propDict["contentCachingPeerPolicy"], "Beta\Microsoft\Graph\Model\MacOSContentCachingPeerPolicy")) {
                 return $this->_propDict["contentCachingPeerPolicy"];
             } else {
                 $this->_propDict["contentCachingPeerPolicy"] = new MacOSContentCachingPeerPolicy($this->_propDict["contentCachingPeerPolicy"]);
@@ -893,7 +893,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     public function getContentCachingType()
     {
         if (array_key_exists("contentCachingType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingType"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingType")) {
+            if (is_a($this->_propDict["contentCachingType"], "Beta\Microsoft\Graph\Model\MacOSContentCachingType")) {
                 return $this->_propDict["contentCachingType"];
             } else {
                 $this->_propDict["contentCachingType"] = new MacOSContentCachingType($this->_propDict["contentCachingType"]);
@@ -984,7 +984,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     public function getMacOSSingleSignOnExtension()
     {
         if (array_key_exists("macOSSingleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["macOSSingleSignOnExtension"], "\Beta\Microsoft\Graph\Model\MacOSSingleSignOnExtension")) {
+            if (is_a($this->_propDict["macOSSingleSignOnExtension"], "Beta\Microsoft\Graph\Model\MacOSSingleSignOnExtension")) {
                 return $this->_propDict["macOSSingleSignOnExtension"];
             } else {
                 $this->_propDict["macOSSingleSignOnExtension"] = new MacOSSingleSignOnExtension($this->_propDict["macOSSingleSignOnExtension"]);
@@ -1191,7 +1191,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     public function getSingleSignOnExtension()
     {
         if (array_key_exists("singleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtension"], "\Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
+            if (is_a($this->_propDict["singleSignOnExtension"], "Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
                 return $this->_propDict["singleSignOnExtension"];
             } else {
                 $this->_propDict["singleSignOnExtension"] = new SingleSignOnExtension($this->_propDict["singleSignOnExtension"]);
@@ -1253,7 +1253,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     public function getSingleSignOnExtensionPkinitCertificate()
     {
         if (array_key_exists("singleSignOnExtensionPkinitCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "\Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
+            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
                 return $this->_propDict["singleSignOnExtensionPkinitCertificate"];
             } else {
                 $this->_propDict["singleSignOnExtensionPkinitCertificate"] = new MacOSCertificateProfileBase($this->_propDict["singleSignOnExtensionPkinitCertificate"]);

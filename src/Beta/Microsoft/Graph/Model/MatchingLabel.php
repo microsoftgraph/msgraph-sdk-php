@@ -32,7 +32,7 @@ class MatchingLabel extends Entity
     public function getApplicationMode()
     {
         if (array_key_exists("applicationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationMode"], "\Beta\Microsoft\Graph\Model\ApplicationMode")) {
+            if (is_a($this->_propDict["applicationMode"], "Beta\Microsoft\Graph\Model\ApplicationMode")) {
                 return $this->_propDict["applicationMode"];
             } else {
                 $this->_propDict["applicationMode"] = new ApplicationMode($this->_propDict["applicationMode"]);
@@ -167,7 +167,7 @@ class MatchingLabel extends Entity
     public function getLabelActions()
     {
         if (array_key_exists("labelActions", $this->_propDict)) {
-            if (is_a($this->_propDict["labelActions"], "\Beta\Microsoft\Graph\Model\LabelActionBase")) {
+            if (is_a($this->_propDict["labelActions"], "Beta\Microsoft\Graph\Model\LabelActionBase")) {
                 return $this->_propDict["labelActions"];
             } else {
                 $this->_propDict["labelActions"] = new LabelActionBase($this->_propDict["labelActions"]);

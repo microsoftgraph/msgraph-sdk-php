@@ -140,7 +140,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     public function getPolicy()
     {
         if (array_key_exists("policy", $this->_propDict)) {
-            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\UnifiedRoleManagementPolicy")) {
+            if (is_a($this->_propDict["policy"], "Beta\Microsoft\Graph\Model\UnifiedRoleManagementPolicy")) {
                 return $this->_propDict["policy"];
             } else {
                 $this->_propDict["policy"] = new UnifiedRoleManagementPolicy($this->_propDict["policy"]);

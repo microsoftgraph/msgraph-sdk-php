@@ -265,7 +265,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     public function getDiskType()
     {
         if (array_key_exists("diskType", $this->_propDict)) {
-            if (is_a($this->_propDict["diskType"], "\Beta\Microsoft\Graph\Model\DiskType")) {
+            if (is_a($this->_propDict["diskType"], "Beta\Microsoft\Graph\Model\DiskType")) {
                 return $this->_propDict["diskType"];
             } else {
                 $this->_propDict["diskType"] = new DiskType($this->_propDict["diskType"]);
@@ -356,7 +356,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     public function getHealthStatus()
     {
         if (array_key_exists("healthStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["healthStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState")) {
+            if (is_a($this->_propDict["healthStatus"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState")) {
                 return $this->_propDict["healthStatus"];
             } else {
                 $this->_propDict["healthStatus"] = new UserExperienceAnalyticsHealthState($this->_propDict["healthStatus"]);

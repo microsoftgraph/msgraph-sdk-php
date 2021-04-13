@@ -86,7 +86,7 @@ class GeneralLedgerEntry extends Entity
     public function getCreditAmount()
     {
         if (array_key_exists("creditAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["creditAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["creditAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["creditAmount"];
             } else {
                 $this->_propDict["creditAmount"] = new Decimal($this->_propDict["creditAmount"]);
@@ -117,7 +117,7 @@ class GeneralLedgerEntry extends Entity
     public function getDebitAmount()
     {
         if (array_key_exists("debitAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["debitAmount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["debitAmount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["debitAmount"];
             } else {
                 $this->_propDict["debitAmount"] = new Decimal($this->_propDict["debitAmount"]);
@@ -291,7 +291,7 @@ class GeneralLedgerEntry extends Entity
     public function getAccount()
     {
         if (array_key_exists("account", $this->_propDict)) {
-            if (is_a($this->_propDict["account"], "\Beta\Microsoft\Graph\Model\Account")) {
+            if (is_a($this->_propDict["account"], "Beta\Microsoft\Graph\Model\Account")) {
                 return $this->_propDict["account"];
             } else {
                 $this->_propDict["account"] = new Account($this->_propDict["account"]);

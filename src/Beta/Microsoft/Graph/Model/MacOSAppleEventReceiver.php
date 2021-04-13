@@ -117,7 +117,7 @@ class MacOSAppleEventReceiver extends Entity
     public function getIdentifierType()
     {
         if (array_key_exists("identifierType", $this->_propDict)) {
-            if (is_a($this->_propDict["identifierType"], "\Beta\Microsoft\Graph\Model\MacOSProcessIdentifierType")) {
+            if (is_a($this->_propDict["identifierType"], "Beta\Microsoft\Graph\Model\MacOSProcessIdentifierType")) {
                 return $this->_propDict["identifierType"];
             } else {
                 $this->_propDict["identifierType"] = new MacOSProcessIdentifierType($this->_propDict["identifierType"]);

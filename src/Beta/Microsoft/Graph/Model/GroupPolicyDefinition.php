@@ -62,7 +62,7 @@ class GroupPolicyDefinition extends Entity
     public function getClassType()
     {
         if (array_key_exists("classType", $this->_propDict)) {
-            if (is_a($this->_propDict["classType"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionClassType")) {
+            if (is_a($this->_propDict["classType"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionClassType")) {
                 return $this->_propDict["classType"];
             } else {
                 $this->_propDict["classType"] = new GroupPolicyDefinitionClassType($this->_propDict["classType"]);
@@ -215,7 +215,7 @@ class GroupPolicyDefinition extends Entity
     public function getPolicyType()
     {
         if (array_key_exists("policyType", $this->_propDict)) {
-            if (is_a($this->_propDict["policyType"], "\Beta\Microsoft\Graph\Model\GroupPolicyType")) {
+            if (is_a($this->_propDict["policyType"], "Beta\Microsoft\Graph\Model\GroupPolicyType")) {
                 return $this->_propDict["policyType"];
             } else {
                 $this->_propDict["policyType"] = new GroupPolicyType($this->_propDict["policyType"]);
@@ -277,7 +277,7 @@ class GroupPolicyDefinition extends Entity
     public function getCategory()
     {
         if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
+            if (is_a($this->_propDict["category"], "Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new GroupPolicyCategory($this->_propDict["category"]);
@@ -310,7 +310,7 @@ class GroupPolicyDefinition extends Entity
     public function getDefinitionFile()
     {
         if (array_key_exists("definitionFile", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionFile"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
+            if (is_a($this->_propDict["definitionFile"], "Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
                 return $this->_propDict["definitionFile"];
             } else {
                 $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);

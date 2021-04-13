@@ -33,7 +33,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
     public function getChat()
     {
         if (array_key_exists("chat", $this->_propDict)) {
-            if (is_a($this->_propDict["chat"], "\Microsoft\Graph\Model\Chat")) {
+            if (is_a($this->_propDict["chat"], "Microsoft\Graph\Model\Chat")) {
                 return $this->_propDict["chat"];
             } else {
                 $this->_propDict["chat"] = new Chat($this->_propDict["chat"]);

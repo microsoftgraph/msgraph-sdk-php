@@ -33,7 +33,7 @@ class ThreatAssessmentRequest extends Entity
     public function getCategory()
     {
         if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Microsoft\Graph\Model\ThreatCategory")) {
+            if (is_a($this->_propDict["category"], "Microsoft\Graph\Model\ThreatCategory")) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new ThreatCategory($this->_propDict["category"]);
@@ -66,7 +66,7 @@ class ThreatAssessmentRequest extends Entity
     public function getContentType()
     {
         if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "\Microsoft\Graph\Model\ThreatAssessmentContentType")) {
+            if (is_a($this->_propDict["contentType"], "Microsoft\Graph\Model\ThreatAssessmentContentType")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new ThreatAssessmentContentType($this->_propDict["contentType"]);
@@ -99,7 +99,7 @@ class ThreatAssessmentRequest extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -165,7 +165,7 @@ class ThreatAssessmentRequest extends Entity
     public function getExpectedAssessment()
     {
         if (array_key_exists("expectedAssessment", $this->_propDict)) {
-            if (is_a($this->_propDict["expectedAssessment"], "\Microsoft\Graph\Model\ThreatExpectedAssessment")) {
+            if (is_a($this->_propDict["expectedAssessment"], "Microsoft\Graph\Model\ThreatExpectedAssessment")) {
                 return $this->_propDict["expectedAssessment"];
             } else {
                 $this->_propDict["expectedAssessment"] = new ThreatExpectedAssessment($this->_propDict["expectedAssessment"]);
@@ -198,7 +198,7 @@ class ThreatAssessmentRequest extends Entity
     public function getRequestSource()
     {
         if (array_key_exists("requestSource", $this->_propDict)) {
-            if (is_a($this->_propDict["requestSource"], "\Microsoft\Graph\Model\ThreatAssessmentRequestSource")) {
+            if (is_a($this->_propDict["requestSource"], "Microsoft\Graph\Model\ThreatAssessmentRequestSource")) {
                 return $this->_propDict["requestSource"];
             } else {
                 $this->_propDict["requestSource"] = new ThreatAssessmentRequestSource($this->_propDict["requestSource"]);
@@ -231,7 +231,7 @@ class ThreatAssessmentRequest extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ThreatAssessmentStatus")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\ThreatAssessmentStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ThreatAssessmentStatus($this->_propDict["status"]);

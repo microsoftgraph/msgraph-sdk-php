@@ -32,7 +32,7 @@ class EvaluateSensitivityLabelsRequest extends Entity
     public function getCurrentLabel()
     {
         if (array_key_exists("currentLabel", $this->_propDict)) {
-            if (is_a($this->_propDict["currentLabel"], "\Beta\Microsoft\Graph\Model\CurrentLabel")) {
+            if (is_a($this->_propDict["currentLabel"], "Beta\Microsoft\Graph\Model\CurrentLabel")) {
                 return $this->_propDict["currentLabel"];
             } else {
                 $this->_propDict["currentLabel"] = new CurrentLabel($this->_propDict["currentLabel"]);
@@ -63,7 +63,7 @@ class EvaluateSensitivityLabelsRequest extends Entity
     public function getDiscoveredSensitiveTypes()
     {
         if (array_key_exists("discoveredSensitiveTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["discoveredSensitiveTypes"], "\Beta\Microsoft\Graph\Model\DiscoveredSensitiveType")) {
+            if (is_a($this->_propDict["discoveredSensitiveTypes"], "Beta\Microsoft\Graph\Model\DiscoveredSensitiveType")) {
                 return $this->_propDict["discoveredSensitiveTypes"];
             } else {
                 $this->_propDict["discoveredSensitiveTypes"] = new DiscoveredSensitiveType($this->_propDict["discoveredSensitiveTypes"]);

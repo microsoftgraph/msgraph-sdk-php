@@ -33,7 +33,7 @@ class AddContentHeaderAction extends InformationProtectionAction
     public function getAlignment()
     {
         if (array_key_exists("alignment", $this->_propDict)) {
-            if (is_a($this->_propDict["alignment"], "\Beta\Microsoft\Graph\Model\ContentAlignment")) {
+            if (is_a($this->_propDict["alignment"], "Beta\Microsoft\Graph\Model\ContentAlignment")) {
                 return $this->_propDict["alignment"];
             } else {
                 $this->_propDict["alignment"] = new ContentAlignment($this->_propDict["alignment"]);

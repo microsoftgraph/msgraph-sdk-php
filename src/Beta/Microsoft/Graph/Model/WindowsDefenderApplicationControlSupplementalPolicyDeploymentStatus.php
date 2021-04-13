@@ -33,7 +33,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     public function getDeploymentStatus()
     {
         if (array_key_exists("deploymentStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentStatus"], "\Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyStatuses")) {
+            if (is_a($this->_propDict["deploymentStatus"], "Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyStatuses")) {
                 return $this->_propDict["deploymentStatus"];
             } else {
                 $this->_propDict["deploymentStatus"] = new WindowsDefenderApplicationControlSupplementalPolicyStatuses($this->_propDict["deploymentStatus"]);
@@ -302,7 +302,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus extend
     public function getPolicy()
     {
         if (array_key_exists("policy", $this->_propDict)) {
-            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicy")) {
+            if (is_a($this->_propDict["policy"], "Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicy")) {
                 return $this->_propDict["policy"];
             } else {
                 $this->_propDict["policy"] = new WindowsDefenderApplicationControlSupplementalPolicy($this->_propDict["policy"]);

@@ -140,7 +140,7 @@ class UnifiedRbacResourceAction extends Entity
     public function getResourceScope()
     {
         if (array_key_exists("resourceScope", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceScope"], "\Beta\Microsoft\Graph\Model\UnifiedRbacResourceScope")) {
+            if (is_a($this->_propDict["resourceScope"], "Beta\Microsoft\Graph\Model\UnifiedRbacResourceScope")) {
                 return $this->_propDict["resourceScope"];
             } else {
                 $this->_propDict["resourceScope"] = new UnifiedRbacResourceScope($this->_propDict["resourceScope"]);

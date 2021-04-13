@@ -33,7 +33,7 @@ class RequestSchedule extends Entity
     public function getExpiration()
     {
         if (array_key_exists("expiration", $this->_propDict)) {
-            if (is_a($this->_propDict["expiration"], "\Beta\Microsoft\Graph\Model\ExpirationPattern")) {
+            if (is_a($this->_propDict["expiration"], "Beta\Microsoft\Graph\Model\ExpirationPattern")) {
                 return $this->_propDict["expiration"];
             } else {
                 $this->_propDict["expiration"] = new ExpirationPattern($this->_propDict["expiration"]);
@@ -66,7 +66,7 @@ class RequestSchedule extends Entity
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -92,7 +92,7 @@ class RequestSchedule extends Entity
 
     /**
     * Gets the startDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The startDateTime
     */
@@ -111,7 +111,7 @@ class RequestSchedule extends Entity
 
     /**
     * Sets the startDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

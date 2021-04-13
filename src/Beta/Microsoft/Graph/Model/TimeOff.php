@@ -33,7 +33,7 @@ class TimeOff extends ChangeTrackedEntity
     public function getDraftTimeOff()
     {
         if (array_key_exists("draftTimeOff", $this->_propDict)) {
-            if (is_a($this->_propDict["draftTimeOff"], "\Beta\Microsoft\Graph\Model\TimeOffItem")) {
+            if (is_a($this->_propDict["draftTimeOff"], "Beta\Microsoft\Graph\Model\TimeOffItem")) {
                 return $this->_propDict["draftTimeOff"];
             } else {
                 $this->_propDict["draftTimeOff"] = new TimeOffItem($this->_propDict["draftTimeOff"]);
@@ -93,7 +93,7 @@ class TimeOff extends ChangeTrackedEntity
     public function getSharedTimeOff()
     {
         if (array_key_exists("sharedTimeOff", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedTimeOff"], "\Beta\Microsoft\Graph\Model\TimeOffItem")) {
+            if (is_a($this->_propDict["sharedTimeOff"], "Beta\Microsoft\Graph\Model\TimeOffItem")) {
                 return $this->_propDict["sharedTimeOff"];
             } else {
                 $this->_propDict["sharedTimeOff"] = new TimeOffItem($this->_propDict["sharedTimeOff"]);

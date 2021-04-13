@@ -33,7 +33,7 @@ class ShiftItem extends ScheduleEntity
     public function getActivities()
     {
         if (array_key_exists("activities", $this->_propDict)) {
-            if (is_a($this->_propDict["activities"], "\Microsoft\Graph\Model\ShiftActivity")) {
+            if (is_a($this->_propDict["activities"], "Microsoft\Graph\Model\ShiftActivity")) {
                 return $this->_propDict["activities"];
             } else {
                 $this->_propDict["activities"] = new ShiftActivity($this->_propDict["activities"]);

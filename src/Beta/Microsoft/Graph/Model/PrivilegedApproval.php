@@ -32,7 +32,7 @@ class PrivilegedApproval extends Entity
     public function getApprovalDuration()
     {
         if (array_key_exists("approvalDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["approvalDuration"], "Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["approvalDuration"];
             } else {
                 $this->_propDict["approvalDuration"] = new Duration($this->_propDict["approvalDuration"]);
@@ -64,7 +64,7 @@ class PrivilegedApproval extends Entity
     public function getApprovalState()
     {
         if (array_key_exists("approvalState", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalState"], "\Beta\Microsoft\Graph\Model\ApprovalState")) {
+            if (is_a($this->_propDict["approvalState"], "Beta\Microsoft\Graph\Model\ApprovalState")) {
                 return $this->_propDict["approvalState"];
             } else {
                 $this->_propDict["approvalState"] = new ApprovalState($this->_propDict["approvalState"]);
@@ -144,7 +144,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Gets the endDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The endDateTime
     */
@@ -163,7 +163,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Sets the endDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The endDateTime
     *
@@ -231,7 +231,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Gets the startDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The startDateTime
     */
@@ -250,7 +250,7 @@ class PrivilegedApproval extends Entity
     
     /**
     * Sets the startDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The startDateTime
     *
@@ -298,7 +298,7 @@ class PrivilegedApproval extends Entity
     public function getRequest()
     {
         if (array_key_exists("request", $this->_propDict)) {
-            if (is_a($this->_propDict["request"], "\Beta\Microsoft\Graph\Model\PrivilegedRoleAssignmentRequest")) {
+            if (is_a($this->_propDict["request"], "Beta\Microsoft\Graph\Model\PrivilegedRoleAssignmentRequest")) {
                 return $this->_propDict["request"];
             } else {
                 $this->_propDict["request"] = new PrivilegedRoleAssignmentRequest($this->_propDict["request"]);
@@ -331,7 +331,7 @@ class PrivilegedApproval extends Entity
     public function getRoleInfo()
     {
         if (array_key_exists("roleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleInfo"], "\Beta\Microsoft\Graph\Model\PrivilegedRole")) {
+            if (is_a($this->_propDict["roleInfo"], "Beta\Microsoft\Graph\Model\PrivilegedRole")) {
                 return $this->_propDict["roleInfo"];
             } else {
                 $this->_propDict["roleInfo"] = new PrivilegedRole($this->_propDict["roleInfo"]);

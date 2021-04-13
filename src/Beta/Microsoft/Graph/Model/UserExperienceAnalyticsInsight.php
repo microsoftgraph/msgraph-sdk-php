@@ -61,7 +61,7 @@ class UserExperienceAnalyticsInsight extends Entity
     public function getSeverity()
     {
         if (array_key_exists("severity", $this->_propDict)) {
-            if (is_a($this->_propDict["severity"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsInsightSeverity")) {
+            if (is_a($this->_propDict["severity"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsInsightSeverity")) {
                 return $this->_propDict["severity"];
             } else {
                 $this->_propDict["severity"] = new UserExperienceAnalyticsInsightSeverity($this->_propDict["severity"]);
@@ -122,7 +122,7 @@ class UserExperienceAnalyticsInsight extends Entity
     public function getValues()
     {
         if (array_key_exists("values", $this->_propDict)) {
-            if (is_a($this->_propDict["values"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsInsightValue")) {
+            if (is_a($this->_propDict["values"], "Beta\Microsoft\Graph\Model\UserExperienceAnalyticsInsightValue")) {
                 return $this->_propDict["values"];
             } else {
                 $this->_propDict["values"] = new UserExperienceAnalyticsInsightValue($this->_propDict["values"]);

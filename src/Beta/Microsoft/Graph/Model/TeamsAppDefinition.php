@@ -25,37 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class TeamsAppDefinition extends Entity
 {
     /**
-    * Gets the allowedInstallationScopes
-    *
-    * @return TeamsAppInstallationScopes The allowedInstallationScopes
-    */
-    public function getAllowedInstallationScopes()
-    {
-        if (array_key_exists("allowedInstallationScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedInstallationScopes"], "\Beta\Microsoft\Graph\Model\TeamsAppInstallationScopes")) {
-                return $this->_propDict["allowedInstallationScopes"];
-            } else {
-                $this->_propDict["allowedInstallationScopes"] = new TeamsAppInstallationScopes($this->_propDict["allowedInstallationScopes"]);
-                return $this->_propDict["allowedInstallationScopes"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the allowedInstallationScopes
-    *
-    * @param TeamsAppInstallationScopes $val The allowedInstallationScopes
-    *
-    * @return TeamsAppDefinition
-    */
-    public function setAllowedInstallationScopes($val)
-    {
-        $this->_propDict["allowedInstallationScopes"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the azureADAppId
     * The WebApplicationInfo.id from the Teams App manifest.
     *
@@ -92,7 +61,7 @@ class TeamsAppDefinition extends Entity
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -117,7 +86,6 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the description
-    * Verbose description of the application.
     *
     * @return string The description
     */
@@ -132,7 +100,6 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the description
-    * Verbose description of the application.
     *
     * @param string $val The description
     *
@@ -213,7 +180,7 @@ class TeamsAppDefinition extends Entity
     public function getPublishingState()
     {
         if (array_key_exists("publishingState", $this->_propDict)) {
-            if (is_a($this->_propDict["publishingState"], "\Beta\Microsoft\Graph\Model\TeamsAppPublishingState")) {
+            if (is_a($this->_propDict["publishingState"], "Beta\Microsoft\Graph\Model\TeamsAppPublishingState")) {
                 return $this->_propDict["publishingState"];
             } else {
                 $this->_propDict["publishingState"] = new TeamsAppPublishingState($this->_propDict["publishingState"]);
@@ -331,7 +298,7 @@ class TeamsAppDefinition extends Entity
     public function getBot()
     {
         if (array_key_exists("bot", $this->_propDict)) {
-            if (is_a($this->_propDict["bot"], "\Beta\Microsoft\Graph\Model\TeamworkBot")) {
+            if (is_a($this->_propDict["bot"], "Beta\Microsoft\Graph\Model\TeamworkBot")) {
                 return $this->_propDict["bot"];
             } else {
                 $this->_propDict["bot"] = new TeamworkBot($this->_propDict["bot"]);

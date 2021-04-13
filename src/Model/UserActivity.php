@@ -335,7 +335,7 @@ class UserActivity extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\Status")) {
+            if (is_a($this->_propDict["status"], "Microsoft\Graph\Model\Status")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new Status($this->_propDict["status"]);
@@ -397,7 +397,7 @@ class UserActivity extends Entity
     public function getVisualElements()
     {
         if (array_key_exists("visualElements", $this->_propDict)) {
-            if (is_a($this->_propDict["visualElements"], "\Microsoft\Graph\Model\VisualInfo")) {
+            if (is_a($this->_propDict["visualElements"], "Microsoft\Graph\Model\VisualInfo")) {
                 return $this->_propDict["visualElements"];
             } else {
                 $this->_propDict["visualElements"] = new VisualInfo($this->_propDict["visualElements"]);

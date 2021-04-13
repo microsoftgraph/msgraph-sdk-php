@@ -117,7 +117,7 @@ class MessageRulePredicates extends Entity
     public function getFromAddresses()
     {
         if (array_key_exists("fromAddresses", $this->_propDict)) {
-            if (is_a($this->_propDict["fromAddresses"], "\Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["fromAddresses"], "Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["fromAddresses"];
             } else {
                 $this->_propDict["fromAddresses"] = new Recipient($this->_propDict["fromAddresses"]);
@@ -206,7 +206,7 @@ class MessageRulePredicates extends Entity
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "Beta\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -547,7 +547,7 @@ class MessageRulePredicates extends Entity
     public function getMessageActionFlag()
     {
         if (array_key_exists("messageActionFlag", $this->_propDict)) {
-            if (is_a($this->_propDict["messageActionFlag"], "\Beta\Microsoft\Graph\Model\MessageActionFlag")) {
+            if (is_a($this->_propDict["messageActionFlag"], "Beta\Microsoft\Graph\Model\MessageActionFlag")) {
                 return $this->_propDict["messageActionFlag"];
             } else {
                 $this->_propDict["messageActionFlag"] = new MessageActionFlag($this->_propDict["messageActionFlag"]);
@@ -664,7 +664,7 @@ class MessageRulePredicates extends Entity
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "\Beta\Microsoft\Graph\Model\Sensitivity")) {
+            if (is_a($this->_propDict["sensitivity"], "Beta\Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -753,7 +753,7 @@ class MessageRulePredicates extends Entity
     public function getSentToAddresses()
     {
         if (array_key_exists("sentToAddresses", $this->_propDict)) {
-            if (is_a($this->_propDict["sentToAddresses"], "\Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["sentToAddresses"], "Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sentToAddresses"];
             } else {
                 $this->_propDict["sentToAddresses"] = new Recipient($this->_propDict["sentToAddresses"]);
@@ -870,7 +870,7 @@ class MessageRulePredicates extends Entity
     public function getWithinSizeRange()
     {
         if (array_key_exists("withinSizeRange", $this->_propDict)) {
-            if (is_a($this->_propDict["withinSizeRange"], "\Beta\Microsoft\Graph\Model\SizeRange")) {
+            if (is_a($this->_propDict["withinSizeRange"], "Beta\Microsoft\Graph\Model\SizeRange")) {
                 return $this->_propDict["withinSizeRange"];
             } else {
                 $this->_propDict["withinSizeRange"] = new SizeRange($this->_propDict["withinSizeRange"]);

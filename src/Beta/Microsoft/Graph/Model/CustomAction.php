@@ -61,7 +61,7 @@ class CustomAction extends InformationProtectionAction
     public function getCustomActionProperties()
     {
         if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
+            if (is_a($this->_propDict["properties"], "Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new KeyValuePair($this->_propDict["properties"]);

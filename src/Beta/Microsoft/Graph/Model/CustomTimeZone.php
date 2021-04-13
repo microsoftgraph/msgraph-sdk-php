@@ -61,7 +61,7 @@ class CustomTimeZone extends TimeZoneBase
     public function getDaylightOffset()
     {
         if (array_key_exists("daylightOffset", $this->_propDict)) {
-            if (is_a($this->_propDict["daylightOffset"], "\Beta\Microsoft\Graph\Model\DaylightTimeZoneOffset")) {
+            if (is_a($this->_propDict["daylightOffset"], "Beta\Microsoft\Graph\Model\DaylightTimeZoneOffset")) {
                 return $this->_propDict["daylightOffset"];
             } else {
                 $this->_propDict["daylightOffset"] = new DaylightTimeZoneOffset($this->_propDict["daylightOffset"]);
@@ -94,7 +94,7 @@ class CustomTimeZone extends TimeZoneBase
     public function getStandardOffset()
     {
         if (array_key_exists("standardOffset", $this->_propDict)) {
-            if (is_a($this->_propDict["standardOffset"], "\Beta\Microsoft\Graph\Model\StandardTimeZoneOffset")) {
+            if (is_a($this->_propDict["standardOffset"], "Beta\Microsoft\Graph\Model\StandardTimeZoneOffset")) {
                 return $this->_propDict["standardOffset"];
             } else {
                 $this->_propDict["standardOffset"] = new StandardTimeZoneOffset($this->_propDict["standardOffset"]);

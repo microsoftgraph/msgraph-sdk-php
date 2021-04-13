@@ -33,7 +33,7 @@ class WindowsKioskProfile extends Entity
     public function getAppConfiguration()
     {
         if (array_key_exists("appConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["appConfiguration"], "\Beta\Microsoft\Graph\Model\WindowsKioskAppConfiguration")) {
+            if (is_a($this->_propDict["appConfiguration"], "Beta\Microsoft\Graph\Model\WindowsKioskAppConfiguration")) {
                 return $this->_propDict["appConfiguration"];
             } else {
                 $this->_propDict["appConfiguration"] = new WindowsKioskAppConfiguration($this->_propDict["appConfiguration"]);
@@ -122,7 +122,7 @@ class WindowsKioskProfile extends Entity
     public function getUserAccountsConfiguration()
     {
         if (array_key_exists("userAccountsConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["userAccountsConfiguration"], "\Beta\Microsoft\Graph\Model\WindowsKioskUser")) {
+            if (is_a($this->_propDict["userAccountsConfiguration"], "Beta\Microsoft\Graph\Model\WindowsKioskUser")) {
                 return $this->_propDict["userAccountsConfiguration"];
             } else {
                 $this->_propDict["userAccountsConfiguration"] = new WindowsKioskUser($this->_propDict["userAccountsConfiguration"]);

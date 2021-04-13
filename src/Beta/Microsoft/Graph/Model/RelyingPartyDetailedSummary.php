@@ -55,14 +55,14 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Gets the migrationStatus
-    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
+    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired.
     *
     * @return MigrationStatus The migrationStatus
     */
     public function getMigrationStatus()
     {
         if (array_key_exists("migrationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["migrationStatus"], "\Beta\Microsoft\Graph\Model\MigrationStatus")) {
+            if (is_a($this->_propDict["migrationStatus"], "Beta\Microsoft\Graph\Model\MigrationStatus")) {
                 return $this->_propDict["migrationStatus"];
             } else {
                 $this->_propDict["migrationStatus"] = new MigrationStatus($this->_propDict["migrationStatus"]);
@@ -74,7 +74,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /**
     * Sets the migrationStatus
-    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
+    * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired.
     *
     * @param MigrationStatus $val The migrationStatus
     *
@@ -89,7 +89,7 @@ class RelyingPartyDetailedSummary extends Entity
 
      /** 
      * Gets the migrationValidationDetails
-    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
+    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. Possible result values are 0, 1, or 2. 0 when the validation check passed, 1 when the validation check failed and 2 when the validation check is a warning.
      *
      * @return array The migrationValidationDetails
      */
@@ -104,7 +104,7 @@ class RelyingPartyDetailedSummary extends Entity
     
     /** 
     * Sets the migrationValidationDetails
-    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
+    * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. Possible result values are 0, 1, or 2. 0 when the validation check passed, 1 when the validation check failed and 2 when the validation check is a warning.
     *
     * @param KeyValuePair $val The migrationValidationDetails
     *

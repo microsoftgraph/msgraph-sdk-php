@@ -265,7 +265,7 @@ class PersonName extends ItemFacet
     public function getPronunciation()
     {
         if (array_key_exists("pronunciation", $this->_propDict)) {
-            if (is_a($this->_propDict["pronunciation"], "\Beta\Microsoft\Graph\Model\PersonNamePronounciation")) {
+            if (is_a($this->_propDict["pronunciation"], "Beta\Microsoft\Graph\Model\PersonNamePronounciation")) {
                 return $this->_propDict["pronunciation"];
             } else {
                 $this->_propDict["pronunciation"] = new PersonNamePronounciation($this->_propDict["pronunciation"]);

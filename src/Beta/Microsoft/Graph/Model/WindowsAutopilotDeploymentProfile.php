@@ -124,7 +124,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getDeviceType()
     {
         if (array_key_exists("deviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceType"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeviceType")) {
+            if (is_a($this->_propDict["deviceType"], "Beta\Microsoft\Graph\Model\WindowsAutopilotDeviceType")) {
                 return $this->_propDict["deviceType"];
             } else {
                 $this->_propDict["deviceType"] = new WindowsAutopilotDeviceType($this->_propDict["deviceType"]);
@@ -215,7 +215,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getEnrollmentStatusScreenSettings()
     {
         if (array_key_exists("enrollmentStatusScreenSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "\Beta\Microsoft\Graph\Model\WindowsEnrollmentStatusScreenSettings")) {
+            if (is_a($this->_propDict["enrollmentStatusScreenSettings"], "Beta\Microsoft\Graph\Model\WindowsEnrollmentStatusScreenSettings")) {
                 return $this->_propDict["enrollmentStatusScreenSettings"];
             } else {
                 $this->_propDict["enrollmentStatusScreenSettings"] = new WindowsEnrollmentStatusScreenSettings($this->_propDict["enrollmentStatusScreenSettings"]);
@@ -339,7 +339,7 @@ class WindowsAutopilotDeploymentProfile extends Entity
     public function getOutOfBoxExperienceSettings()
     {
         if (array_key_exists("outOfBoxExperienceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "\Beta\Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
+            if (is_a($this->_propDict["outOfBoxExperienceSettings"], "Beta\Microsoft\Graph\Model\OutOfBoxExperienceSettings")) {
                 return $this->_propDict["outOfBoxExperienceSettings"];
             } else {
                 $this->_propDict["outOfBoxExperienceSettings"] = new OutOfBoxExperienceSettings($this->_propDict["outOfBoxExperienceSettings"]);

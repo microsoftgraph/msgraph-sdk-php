@@ -33,7 +33,7 @@ class OutOfBoxExperienceSettings extends Entity
     public function getDeviceUsageType()
     {
         if (array_key_exists("deviceUsageType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceUsageType"], "\Beta\Microsoft\Graph\Model\WindowsDeviceUsageType")) {
+            if (is_a($this->_propDict["deviceUsageType"], "Beta\Microsoft\Graph\Model\WindowsDeviceUsageType")) {
                 return $this->_propDict["deviceUsageType"];
             } else {
                 $this->_propDict["deviceUsageType"] = new WindowsDeviceUsageType($this->_propDict["deviceUsageType"]);
@@ -178,7 +178,7 @@ class OutOfBoxExperienceSettings extends Entity
     public function getUserType()
     {
         if (array_key_exists("userType", $this->_propDict)) {
-            if (is_a($this->_propDict["userType"], "\Beta\Microsoft\Graph\Model\WindowsUserType")) {
+            if (is_a($this->_propDict["userType"], "Beta\Microsoft\Graph\Model\WindowsUserType")) {
                 return $this->_propDict["userType"];
             } else {
                 $this->_propDict["userType"] = new WindowsUserType($this->_propDict["userType"]);

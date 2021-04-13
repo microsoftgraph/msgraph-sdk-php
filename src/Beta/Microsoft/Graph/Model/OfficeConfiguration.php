@@ -91,7 +91,7 @@ class OfficeConfiguration implements \JsonSerializable
     public function getTenantUserCheckinSummary()
     {
         if (array_key_exists("tenantUserCheckinSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["tenantUserCheckinSummary"], "\Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
+            if (is_a($this->_propDict["tenantUserCheckinSummary"], "Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
                 return $this->_propDict["tenantUserCheckinSummary"];
             } else {
                 $this->_propDict["tenantUserCheckinSummary"] = new OfficeUserCheckinSummary($this->_propDict["tenantUserCheckinSummary"]);

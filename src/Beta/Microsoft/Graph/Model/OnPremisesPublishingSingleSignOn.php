@@ -33,7 +33,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
     public function getKerberosSignOnSettings()
     {
         if (array_key_exists("kerberosSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["kerberosSignOnSettings"], "\Beta\Microsoft\Graph\Model\KerberosSignOnSettings")) {
+            if (is_a($this->_propDict["kerberosSignOnSettings"], "Beta\Microsoft\Graph\Model\KerberosSignOnSettings")) {
                 return $this->_propDict["kerberosSignOnSettings"];
             } else {
                 $this->_propDict["kerberosSignOnSettings"] = new KerberosSignOnSettings($this->_propDict["kerberosSignOnSettings"]);
@@ -66,7 +66,7 @@ class OnPremisesPublishingSingleSignOn extends Entity
     public function getSingleSignOnMode()
     {
         if (array_key_exists("singleSignOnMode", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnMode"], "\Beta\Microsoft\Graph\Model\SingleSignOnMode")) {
+            if (is_a($this->_propDict["singleSignOnMode"], "Beta\Microsoft\Graph\Model\SingleSignOnMode")) {
                 return $this->_propDict["singleSignOnMode"];
             } else {
                 $this->_propDict["singleSignOnMode"] = new SingleSignOnMode($this->_propDict["singleSignOnMode"]);

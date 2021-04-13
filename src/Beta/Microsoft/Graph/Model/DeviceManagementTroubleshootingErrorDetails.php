@@ -145,7 +145,7 @@ class DeviceManagementTroubleshootingErrorDetails extends Entity
     public function getResources()
     {
         if (array_key_exists("resources", $this->_propDict)) {
-            if (is_a($this->_propDict["resources"], "\Beta\Microsoft\Graph\Model\DeviceManagementTroubleshootingErrorResource")) {
+            if (is_a($this->_propDict["resources"], "Beta\Microsoft\Graph\Model\DeviceManagementTroubleshootingErrorResource")) {
                 return $this->_propDict["resources"];
             } else {
                 $this->_propDict["resources"] = new DeviceManagementTroubleshootingErrorResource($this->_propDict["resources"]);

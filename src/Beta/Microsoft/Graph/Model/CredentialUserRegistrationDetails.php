@@ -27,7 +27,7 @@ class CredentialUserRegistrationDetails extends Entity
 
      /** 
      * Gets the authMethods
-    * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
+    * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobilePhone (supported only in registration).
      *
      * @return array The authMethods
      */
@@ -42,7 +42,7 @@ class CredentialUserRegistrationDetails extends Entity
     
     /** 
     * Sets the authMethods
-    * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
+    * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobilePhone (supported only in registration).
     *
     * @param RegistrationAuthMethod $val The authMethods
     *
@@ -85,7 +85,7 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the isEnabled
-    * Indicates whether the user enabled to perform self-service password reset.
+    * Indiciates whether the user enabled to perform self-service password reset.
     *
     * @return bool The isEnabled
     */
@@ -100,7 +100,7 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the isEnabled
-    * Indicates whether the user enabled to perform self-service password reset.
+    * Indiciates whether the user enabled to perform self-service password reset.
     *
     * @param bool $val The isEnabled
     *
@@ -114,7 +114,7 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Gets the isMfaRegistered
-    * Indicates whether the user is registered for MFA.
+    * Indiciates whether the user is registered for MFA.
     *
     * @return bool The isMfaRegistered
     */
@@ -129,7 +129,7 @@ class CredentialUserRegistrationDetails extends Entity
     
     /**
     * Sets the isMfaRegistered
-    * Indicates whether the user is registered for MFA.
+    * Indiciates whether the user is registered for MFA.
     *
     * @param bool $val The isMfaRegistered
     *

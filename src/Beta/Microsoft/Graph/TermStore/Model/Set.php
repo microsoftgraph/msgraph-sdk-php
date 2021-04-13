@@ -136,7 +136,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the setProperties
     * Custom properties for the set.
     *
-    * @param \Beta\Microsoft\Graph\Model\KeyValue $val The setProperties
+    * @param Beta\Microsoft\Graph\Model\KeyValue $val The setProperties
     *
     * @return Set
     */
@@ -185,7 +185,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     public function getParentGroup()
     {
         if (array_key_exists("parentGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentGroup"], "\Beta\Microsoft\Graph\TermStore\Model\Group")) {
+            if (is_a($this->_propDict["parentGroup"], "Beta\Microsoft\Graph\TermStore\Model\Group")) {
                 return $this->_propDict["parentGroup"];
             } else {
                 $this->_propDict["parentGroup"] = new Group($this->_propDict["parentGroup"]);

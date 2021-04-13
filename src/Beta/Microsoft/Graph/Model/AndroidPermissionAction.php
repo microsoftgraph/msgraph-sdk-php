@@ -33,7 +33,7 @@ class AndroidPermissionAction extends Entity
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\AndroidPermissionActionType")) {
+            if (is_a($this->_propDict["action"], "Beta\Microsoft\Graph\Model\AndroidPermissionActionType")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new AndroidPermissionActionType($this->_propDict["action"]);

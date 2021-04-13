@@ -32,7 +32,7 @@ class CustomerPayment extends Entity
     public function getAmount()
     {
         if (array_key_exists("amount", $this->_propDict)) {
-            if (is_a($this->_propDict["amount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["amount"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["amount"];
             } else {
                 $this->_propDict["amount"] = new Decimal($this->_propDict["amount"]);
@@ -422,7 +422,7 @@ class CustomerPayment extends Entity
     public function getCustomer()
     {
         if (array_key_exists("customer", $this->_propDict)) {
-            if (is_a($this->_propDict["customer"], "\Beta\Microsoft\Graph\Model\Customer")) {
+            if (is_a($this->_propDict["customer"], "Beta\Microsoft\Graph\Model\Customer")) {
                 return $this->_propDict["customer"];
             } else {
                 $this->_propDict["customer"] = new Customer($this->_propDict["customer"]);

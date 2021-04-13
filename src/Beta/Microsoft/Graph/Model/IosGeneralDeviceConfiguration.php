@@ -673,7 +673,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getAppsVisibilityListType()
     {
         if (array_key_exists("appsVisibilityListType", $this->_propDict)) {
-            if (is_a($this->_propDict["appsVisibilityListType"], "\Beta\Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["appsVisibilityListType"], "Beta\Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["appsVisibilityListType"];
             } else {
                 $this->_propDict["appsVisibilityListType"] = new AppListType($this->_propDict["appsVisibilityListType"]);
@@ -1199,7 +1199,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "\Beta\Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "Beta\Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -3060,7 +3060,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getKioskModeAppType()
     {
         if (array_key_exists("kioskModeAppType", $this->_propDict)) {
-            if (is_a($this->_propDict["kioskModeAppType"], "\Beta\Microsoft\Graph\Model\IosKioskModeAppType")) {
+            if (is_a($this->_propDict["kioskModeAppType"], "Beta\Microsoft\Graph\Model\IosKioskModeAppType")) {
                 return $this->_propDict["kioskModeAppType"];
             } else {
                 $this->_propDict["kioskModeAppType"] = new IosKioskModeAppType($this->_propDict["kioskModeAppType"]);
@@ -3615,7 +3615,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingApps()
     {
         if (array_key_exists("mediaContentRatingApps", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingApps"], "\Beta\Microsoft\Graph\Model\RatingAppsType")) {
+            if (is_a($this->_propDict["mediaContentRatingApps"], "Beta\Microsoft\Graph\Model\RatingAppsType")) {
                 return $this->_propDict["mediaContentRatingApps"];
             } else {
                 $this->_propDict["mediaContentRatingApps"] = new RatingAppsType($this->_propDict["mediaContentRatingApps"]);
@@ -3648,7 +3648,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingAustralia()
     {
         if (array_key_exists("mediaContentRatingAustralia", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingAustralia"], "\Beta\Microsoft\Graph\Model\MediaContentRatingAustralia")) {
+            if (is_a($this->_propDict["mediaContentRatingAustralia"], "Beta\Microsoft\Graph\Model\MediaContentRatingAustralia")) {
                 return $this->_propDict["mediaContentRatingAustralia"];
             } else {
                 $this->_propDict["mediaContentRatingAustralia"] = new MediaContentRatingAustralia($this->_propDict["mediaContentRatingAustralia"]);
@@ -3681,7 +3681,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingCanada()
     {
         if (array_key_exists("mediaContentRatingCanada", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingCanada"], "\Beta\Microsoft\Graph\Model\MediaContentRatingCanada")) {
+            if (is_a($this->_propDict["mediaContentRatingCanada"], "Beta\Microsoft\Graph\Model\MediaContentRatingCanada")) {
                 return $this->_propDict["mediaContentRatingCanada"];
             } else {
                 $this->_propDict["mediaContentRatingCanada"] = new MediaContentRatingCanada($this->_propDict["mediaContentRatingCanada"]);
@@ -3714,7 +3714,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingFrance()
     {
         if (array_key_exists("mediaContentRatingFrance", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingFrance"], "\Beta\Microsoft\Graph\Model\MediaContentRatingFrance")) {
+            if (is_a($this->_propDict["mediaContentRatingFrance"], "Beta\Microsoft\Graph\Model\MediaContentRatingFrance")) {
                 return $this->_propDict["mediaContentRatingFrance"];
             } else {
                 $this->_propDict["mediaContentRatingFrance"] = new MediaContentRatingFrance($this->_propDict["mediaContentRatingFrance"]);
@@ -3747,7 +3747,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingGermany()
     {
         if (array_key_exists("mediaContentRatingGermany", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingGermany"], "\Beta\Microsoft\Graph\Model\MediaContentRatingGermany")) {
+            if (is_a($this->_propDict["mediaContentRatingGermany"], "Beta\Microsoft\Graph\Model\MediaContentRatingGermany")) {
                 return $this->_propDict["mediaContentRatingGermany"];
             } else {
                 $this->_propDict["mediaContentRatingGermany"] = new MediaContentRatingGermany($this->_propDict["mediaContentRatingGermany"]);
@@ -3780,7 +3780,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingIreland()
     {
         if (array_key_exists("mediaContentRatingIreland", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingIreland"], "\Beta\Microsoft\Graph\Model\MediaContentRatingIreland")) {
+            if (is_a($this->_propDict["mediaContentRatingIreland"], "Beta\Microsoft\Graph\Model\MediaContentRatingIreland")) {
                 return $this->_propDict["mediaContentRatingIreland"];
             } else {
                 $this->_propDict["mediaContentRatingIreland"] = new MediaContentRatingIreland($this->_propDict["mediaContentRatingIreland"]);
@@ -3813,7 +3813,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingJapan()
     {
         if (array_key_exists("mediaContentRatingJapan", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingJapan"], "\Beta\Microsoft\Graph\Model\MediaContentRatingJapan")) {
+            if (is_a($this->_propDict["mediaContentRatingJapan"], "Beta\Microsoft\Graph\Model\MediaContentRatingJapan")) {
                 return $this->_propDict["mediaContentRatingJapan"];
             } else {
                 $this->_propDict["mediaContentRatingJapan"] = new MediaContentRatingJapan($this->_propDict["mediaContentRatingJapan"]);
@@ -3846,7 +3846,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingNewZealand()
     {
         if (array_key_exists("mediaContentRatingNewZealand", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingNewZealand"], "\Beta\Microsoft\Graph\Model\MediaContentRatingNewZealand")) {
+            if (is_a($this->_propDict["mediaContentRatingNewZealand"], "Beta\Microsoft\Graph\Model\MediaContentRatingNewZealand")) {
                 return $this->_propDict["mediaContentRatingNewZealand"];
             } else {
                 $this->_propDict["mediaContentRatingNewZealand"] = new MediaContentRatingNewZealand($this->_propDict["mediaContentRatingNewZealand"]);
@@ -3879,7 +3879,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingUnitedKingdom()
     {
         if (array_key_exists("mediaContentRatingUnitedKingdom", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingUnitedKingdom"], "\Beta\Microsoft\Graph\Model\MediaContentRatingUnitedKingdom")) {
+            if (is_a($this->_propDict["mediaContentRatingUnitedKingdom"], "Beta\Microsoft\Graph\Model\MediaContentRatingUnitedKingdom")) {
                 return $this->_propDict["mediaContentRatingUnitedKingdom"];
             } else {
                 $this->_propDict["mediaContentRatingUnitedKingdom"] = new MediaContentRatingUnitedKingdom($this->_propDict["mediaContentRatingUnitedKingdom"]);
@@ -3912,7 +3912,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getMediaContentRatingUnitedStates()
     {
         if (array_key_exists("mediaContentRatingUnitedStates", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaContentRatingUnitedStates"], "\Beta\Microsoft\Graph\Model\MediaContentRatingUnitedStates")) {
+            if (is_a($this->_propDict["mediaContentRatingUnitedStates"], "Beta\Microsoft\Graph\Model\MediaContentRatingUnitedStates")) {
                 return $this->_propDict["mediaContentRatingUnitedStates"];
             } else {
                 $this->_propDict["mediaContentRatingUnitedStates"] = new MediaContentRatingUnitedStates($this->_propDict["mediaContentRatingUnitedStates"]);
@@ -4352,7 +4352,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getPasscodeRequiredType()
     {
         if (array_key_exists("passcodeRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passcodeRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passcodeRequiredType"], "Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passcodeRequiredType"];
             } else {
                 $this->_propDict["passcodeRequiredType"] = new RequiredPasswordType($this->_propDict["passcodeRequiredType"]);
@@ -4733,7 +4733,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function getSafariCookieSettings()
     {
         if (array_key_exists("safariCookieSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["safariCookieSettings"], "\Beta\Microsoft\Graph\Model\WebBrowserCookieSettings")) {
+            if (is_a($this->_propDict["safariCookieSettings"], "Beta\Microsoft\Graph\Model\WebBrowserCookieSettings")) {
                 return $this->_propDict["safariCookieSettings"];
             } else {
                 $this->_propDict["safariCookieSettings"] = new WebBrowserCookieSettings($this->_propDict["safariCookieSettings"]);

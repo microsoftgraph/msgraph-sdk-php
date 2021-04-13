@@ -33,7 +33,7 @@ class MeetingParticipantInfo extends Entity
     public function getIdentity()
     {
         if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["identity"], "Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["identity"];
             } else {
                 $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
@@ -59,14 +59,14 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Gets the role
-    * Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
+    * Specifies the participant's role in the meeting.  Possible values are attendee, presenter, and unknownFutureValue.
     *
     * @return OnlineMeetingRole The role
     */
     public function getRole()
     {
         if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "\Microsoft\Graph\Model\OnlineMeetingRole")) {
+            if (is_a($this->_propDict["role"], "Microsoft\Graph\Model\OnlineMeetingRole")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new OnlineMeetingRole($this->_propDict["role"]);
@@ -78,7 +78,7 @@ class MeetingParticipantInfo extends Entity
 
     /**
     * Sets the role
-    * Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
+    * Specifies the participant's role in the meeting.  Possible values are attendee, presenter, and unknownFutureValue.
     *
     * @param OnlineMeetingRole $val The value to assign to the role
     *

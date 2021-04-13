@@ -42,7 +42,7 @@ class DeviceManagementConfigurationGroupSettingInstance extends DeviceManagement
     public function getGroupSettingValue()
     {
         if (array_key_exists("groupSettingValue", $this->_propDict)) {
-            if (is_a($this->_propDict["groupSettingValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValue")) {
+            if (is_a($this->_propDict["groupSettingValue"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValue")) {
                 return $this->_propDict["groupSettingValue"];
             } else {
                 $this->_propDict["groupSettingValue"] = new DeviceManagementConfigurationGroupSettingValue($this->_propDict["groupSettingValue"]);

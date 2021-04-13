@@ -117,7 +117,7 @@ class OnPremisesPublishing extends Entity
     public function getExternalAuthenticationType()
     {
         if (array_key_exists("externalAuthenticationType", $this->_propDict)) {
-            if (is_a($this->_propDict["externalAuthenticationType"], "\Beta\Microsoft\Graph\Model\ExternalAuthenticationType")) {
+            if (is_a($this->_propDict["externalAuthenticationType"], "Beta\Microsoft\Graph\Model\ExternalAuthenticationType")) {
                 return $this->_propDict["externalAuthenticationType"];
             } else {
                 $this->_propDict["externalAuthenticationType"] = new ExternalAuthenticationType($this->_propDict["externalAuthenticationType"]);
@@ -374,7 +374,7 @@ class OnPremisesPublishing extends Entity
     public function getSingleSignOnSettings()
     {
         if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnSettings"], "\Beta\Microsoft\Graph\Model\OnPremisesPublishingSingleSignOn")) {
+            if (is_a($this->_propDict["singleSignOnSettings"], "Beta\Microsoft\Graph\Model\OnPremisesPublishingSingleSignOn")) {
                 return $this->_propDict["singleSignOnSettings"];
             } else {
                 $this->_propDict["singleSignOnSettings"] = new OnPremisesPublishingSingleSignOn($this->_propDict["singleSignOnSettings"]);
@@ -433,7 +433,7 @@ class OnPremisesPublishing extends Entity
     public function getVerifiedCustomDomainCertificatesMetadata()
     {
         if (array_key_exists("verifiedCustomDomainCertificatesMetadata", $this->_propDict)) {
-            if (is_a($this->_propDict["verifiedCustomDomainCertificatesMetadata"], "\Beta\Microsoft\Graph\Model\VerifiedCustomDomainCertificatesMetadata")) {
+            if (is_a($this->_propDict["verifiedCustomDomainCertificatesMetadata"], "Beta\Microsoft\Graph\Model\VerifiedCustomDomainCertificatesMetadata")) {
                 return $this->_propDict["verifiedCustomDomainCertificatesMetadata"];
             } else {
                 $this->_propDict["verifiedCustomDomainCertificatesMetadata"] = new VerifiedCustomDomainCertificatesMetadata($this->_propDict["verifiedCustomDomainCertificatesMetadata"]);
@@ -466,7 +466,7 @@ class OnPremisesPublishing extends Entity
     public function getVerifiedCustomDomainKeyCredential()
     {
         if (array_key_exists("verifiedCustomDomainKeyCredential", $this->_propDict)) {
-            if (is_a($this->_propDict["verifiedCustomDomainKeyCredential"], "\Beta\Microsoft\Graph\Model\KeyCredential")) {
+            if (is_a($this->_propDict["verifiedCustomDomainKeyCredential"], "Beta\Microsoft\Graph\Model\KeyCredential")) {
                 return $this->_propDict["verifiedCustomDomainKeyCredential"];
             } else {
                 $this->_propDict["verifiedCustomDomainKeyCredential"] = new KeyCredential($this->_propDict["verifiedCustomDomainKeyCredential"]);
@@ -499,7 +499,7 @@ class OnPremisesPublishing extends Entity
     public function getVerifiedCustomDomainPasswordCredential()
     {
         if (array_key_exists("verifiedCustomDomainPasswordCredential", $this->_propDict)) {
-            if (is_a($this->_propDict["verifiedCustomDomainPasswordCredential"], "\Beta\Microsoft\Graph\Model\PasswordCredential")) {
+            if (is_a($this->_propDict["verifiedCustomDomainPasswordCredential"], "Beta\Microsoft\Graph\Model\PasswordCredential")) {
                 return $this->_propDict["verifiedCustomDomainPasswordCredential"];
             } else {
                 $this->_propDict["verifiedCustomDomainPasswordCredential"] = new PasswordCredential($this->_propDict["verifiedCustomDomainPasswordCredential"]);

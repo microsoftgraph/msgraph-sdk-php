@@ -32,7 +32,7 @@ class InformationProtection extends Entity
     public function getBitlocker()
     {
         if (array_key_exists("bitlocker", $this->_propDict)) {
-            if (is_a($this->_propDict["bitlocker"], "\Beta\Microsoft\Graph\Model\Bitlocker")) {
+            if (is_a($this->_propDict["bitlocker"], "Beta\Microsoft\Graph\Model\Bitlocker")) {
                 return $this->_propDict["bitlocker"];
             } else {
                 $this->_propDict["bitlocker"] = new Bitlocker($this->_propDict["bitlocker"]);
@@ -119,7 +119,7 @@ class InformationProtection extends Entity
     public function getSensitivityPolicySettings()
     {
         if (array_key_exists("sensitivityPolicySettings", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivityPolicySettings"], "\Beta\Microsoft\Graph\Model\SensitivityPolicySettings")) {
+            if (is_a($this->_propDict["sensitivityPolicySettings"], "Beta\Microsoft\Graph\Model\SensitivityPolicySettings")) {
                 return $this->_propDict["sensitivityPolicySettings"];
             } else {
                 $this->_propDict["sensitivityPolicySettings"] = new SensitivityPolicySettings($this->_propDict["sensitivityPolicySettings"]);
@@ -150,7 +150,7 @@ class InformationProtection extends Entity
     public function getPolicy()
     {
         if (array_key_exists("policy", $this->_propDict)) {
-            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\InformationProtectionPolicy")) {
+            if (is_a($this->_propDict["policy"], "Beta\Microsoft\Graph\Model\InformationProtectionPolicy")) {
                 return $this->_propDict["policy"];
             } else {
                 $this->_propDict["policy"] = new InformationProtectionPolicy($this->_propDict["policy"]);

@@ -93,7 +93,7 @@ class SecurityBaselineTemplate extends DeviceManagementTemplate
     public function getDeviceStateSummary()
     {
         if (array_key_exists("deviceStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStateSummary"], "\Beta\Microsoft\Graph\Model\SecurityBaselineStateSummary")) {
+            if (is_a($this->_propDict["deviceStateSummary"], "Beta\Microsoft\Graph\Model\SecurityBaselineStateSummary")) {
                 return $this->_propDict["deviceStateSummary"];
             } else {
                 $this->_propDict["deviceStateSummary"] = new SecurityBaselineStateSummary($this->_propDict["deviceStateSummary"]);

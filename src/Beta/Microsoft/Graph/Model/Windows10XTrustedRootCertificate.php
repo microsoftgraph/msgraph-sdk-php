@@ -62,7 +62,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
     public function getDestinationStore()
     {
         if (array_key_exists("destinationStore", $this->_propDict)) {
-            if (is_a($this->_propDict["destinationStore"], "\Beta\Microsoft\Graph\Model\CertificateDestinationStore")) {
+            if (is_a($this->_propDict["destinationStore"], "Beta\Microsoft\Graph\Model\CertificateDestinationStore")) {
                 return $this->_propDict["destinationStore"];
             } else {
                 $this->_propDict["destinationStore"] = new CertificateDestinationStore($this->_propDict["destinationStore"]);

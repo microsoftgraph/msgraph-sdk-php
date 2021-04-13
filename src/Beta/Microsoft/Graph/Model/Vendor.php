@@ -32,7 +32,7 @@ class Vendor extends Entity
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PostalAddressType")) {
+            if (is_a($this->_propDict["address"], "Beta\Microsoft\Graph\Model\PostalAddressType")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PostalAddressType($this->_propDict["address"]);
@@ -63,7 +63,7 @@ class Vendor extends Entity
     public function getBalance()
     {
         if (array_key_exists("balance", $this->_propDict)) {
-            if (is_a($this->_propDict["balance"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["balance"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["balance"];
             } else {
                 $this->_propDict["balance"] = new Decimal($this->_propDict["balance"]);
@@ -449,7 +449,7 @@ class Vendor extends Entity
     public function getCurrency()
     {
         if (array_key_exists("currency", $this->_propDict)) {
-            if (is_a($this->_propDict["currency"], "\Beta\Microsoft\Graph\Model\Currency")) {
+            if (is_a($this->_propDict["currency"], "Beta\Microsoft\Graph\Model\Currency")) {
                 return $this->_propDict["currency"];
             } else {
                 $this->_propDict["currency"] = new Currency($this->_propDict["currency"]);
@@ -480,7 +480,7 @@ class Vendor extends Entity
     public function getPaymentMethod()
     {
         if (array_key_exists("paymentMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["paymentMethod"], "\Beta\Microsoft\Graph\Model\PaymentMethod")) {
+            if (is_a($this->_propDict["paymentMethod"], "Beta\Microsoft\Graph\Model\PaymentMethod")) {
                 return $this->_propDict["paymentMethod"];
             } else {
                 $this->_propDict["paymentMethod"] = new PaymentMethod($this->_propDict["paymentMethod"]);
@@ -511,7 +511,7 @@ class Vendor extends Entity
     public function getPaymentTerm()
     {
         if (array_key_exists("paymentTerm", $this->_propDict)) {
-            if (is_a($this->_propDict["paymentTerm"], "\Beta\Microsoft\Graph\Model\PaymentTerm")) {
+            if (is_a($this->_propDict["paymentTerm"], "Beta\Microsoft\Graph\Model\PaymentTerm")) {
                 return $this->_propDict["paymentTerm"];
             } else {
                 $this->_propDict["paymentTerm"] = new PaymentTerm($this->_propDict["paymentTerm"]);

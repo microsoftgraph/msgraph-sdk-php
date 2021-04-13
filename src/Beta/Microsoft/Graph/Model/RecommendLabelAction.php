@@ -33,7 +33,7 @@ class RecommendLabelAction extends InformationProtectionAction
     public function getActions()
     {
         if (array_key_exists("actions", $this->_propDict)) {
-            if (is_a($this->_propDict["actions"], "\Beta\Microsoft\Graph\Model\InformationProtectionAction")) {
+            if (is_a($this->_propDict["actions"], "Beta\Microsoft\Graph\Model\InformationProtectionAction")) {
                 return $this->_propDict["actions"];
             } else {
                 $this->_propDict["actions"] = new InformationProtectionAction($this->_propDict["actions"]);
@@ -66,7 +66,7 @@ class RecommendLabelAction extends InformationProtectionAction
     public function getActionSource()
     {
         if (array_key_exists("actionSource", $this->_propDict)) {
-            if (is_a($this->_propDict["actionSource"], "\Beta\Microsoft\Graph\Model\ActionSource")) {
+            if (is_a($this->_propDict["actionSource"], "Beta\Microsoft\Graph\Model\ActionSource")) {
                 return $this->_propDict["actionSource"];
             } else {
                 $this->_propDict["actionSource"] = new ActionSource($this->_propDict["actionSource"]);
@@ -99,7 +99,7 @@ class RecommendLabelAction extends InformationProtectionAction
     public function getLabel()
     {
         if (array_key_exists("label", $this->_propDict)) {
-            if (is_a($this->_propDict["label"], "\Beta\Microsoft\Graph\Model\LabelDetails")) {
+            if (is_a($this->_propDict["label"], "Beta\Microsoft\Graph\Model\LabelDetails")) {
                 return $this->_propDict["label"];
             } else {
                 $this->_propDict["label"] = new LabelDetails($this->_propDict["label"]);

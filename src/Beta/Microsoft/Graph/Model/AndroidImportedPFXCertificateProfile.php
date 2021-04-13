@@ -33,7 +33,7 @@ class AndroidImportedPFXCertificateProfile extends AndroidCertificateProfileBase
     public function getIntendedPurpose()
     {
         if (array_key_exists("intendedPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedPurpose"], "\Beta\Microsoft\Graph\Model\IntendedPurpose")) {
+            if (is_a($this->_propDict["intendedPurpose"], "Beta\Microsoft\Graph\Model\IntendedPurpose")) {
                 return $this->_propDict["intendedPurpose"];
             } else {
                 $this->_propDict["intendedPurpose"] = new IntendedPurpose($this->_propDict["intendedPurpose"]);

@@ -126,7 +126,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     public function getOperationType()
     {
         if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "\Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptRuleOperationType")) {
+            if (is_a($this->_propDict["operationType"], "Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptRuleOperationType")) {
                 return $this->_propDict["operationType"];
             } else {
                 $this->_propDict["operationType"] = new Win32LobAppPowerShellScriptRuleOperationType($this->_propDict["operationType"]);
@@ -159,7 +159,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
+            if (is_a($this->_propDict["operator"], "Beta\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new Win32LobAppRuleOperator($this->_propDict["operator"]);
@@ -220,7 +220,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType")) {
+            if (is_a($this->_propDict["runAsAccount"], "Beta\Microsoft\Graph\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);

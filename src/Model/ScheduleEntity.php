@@ -94,7 +94,7 @@ class ScheduleEntity extends Entity
     public function getTheme()
     {
         if (array_key_exists("theme", $this->_propDict)) {
-            if (is_a($this->_propDict["theme"], "\Microsoft\Graph\Model\ScheduleEntityTheme")) {
+            if (is_a($this->_propDict["theme"], "Microsoft\Graph\Model\ScheduleEntityTheme")) {
                 return $this->_propDict["theme"];
             } else {
                 $this->_propDict["theme"] = new ScheduleEntityTheme($this->_propDict["theme"]);

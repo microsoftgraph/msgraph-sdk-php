@@ -26,7 +26,6 @@ class ContentType extends Entity
 {
     /**
     * Gets the associatedHubsUrls
-    * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
     *
     * @return string The associatedHubsUrls
     */
@@ -41,7 +40,6 @@ class ContentType extends Entity
     
     /**
     * Sets the associatedHubsUrls
-    * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
     *
     * @param string $val The associatedHubsUrls
     *
@@ -84,14 +82,13 @@ class ContentType extends Entity
     
     /**
     * Gets the documentSet
-    * Document Set metadata.
     *
     * @return DocumentSet The documentSet
     */
     public function getDocumentSet()
     {
         if (array_key_exists("documentSet", $this->_propDict)) {
-            if (is_a($this->_propDict["documentSet"], "\Beta\Microsoft\Graph\Model\DocumentSet")) {
+            if (is_a($this->_propDict["documentSet"], "Beta\Microsoft\Graph\Model\DocumentSet")) {
                 return $this->_propDict["documentSet"];
             } else {
                 $this->_propDict["documentSet"] = new DocumentSet($this->_propDict["documentSet"]);
@@ -103,7 +100,6 @@ class ContentType extends Entity
     
     /**
     * Sets the documentSet
-    * Document Set metadata.
     *
     * @param DocumentSet $val The documentSet
     *
@@ -117,14 +113,13 @@ class ContentType extends Entity
     
     /**
     * Gets the documentTemplate
-    * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
     *
     * @return DocumentSetContent The documentTemplate
     */
     public function getDocumentTemplate()
     {
         if (array_key_exists("documentTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["documentTemplate"], "\Beta\Microsoft\Graph\Model\DocumentSetContent")) {
+            if (is_a($this->_propDict["documentTemplate"], "Beta\Microsoft\Graph\Model\DocumentSetContent")) {
                 return $this->_propDict["documentTemplate"];
             } else {
                 $this->_propDict["documentTemplate"] = new DocumentSetContent($this->_propDict["documentTemplate"]);
@@ -136,7 +131,6 @@ class ContentType extends Entity
     
     /**
     * Sets the documentTemplate
-    * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
     *
     * @param DocumentSetContent $val The documentTemplate
     *
@@ -215,7 +209,7 @@ class ContentType extends Entity
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "\Beta\Microsoft\Graph\Model\ItemReference")) {
+            if (is_a($this->_propDict["inheritedFrom"], "Beta\Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -241,7 +235,6 @@ class ContentType extends Entity
     
     /**
     * Gets the isBuiltIn
-    * Specifies if a content type is a built-in content type.
     *
     * @return bool The isBuiltIn
     */
@@ -256,7 +249,6 @@ class ContentType extends Entity
     
     /**
     * Sets the isBuiltIn
-    * Specifies if a content type is a built-in content type.
     *
     * @param bool $val The isBuiltIn
     *
@@ -306,7 +298,7 @@ class ContentType extends Entity
     public function getOrder()
     {
         if (array_key_exists("order", $this->_propDict)) {
-            if (is_a($this->_propDict["order"], "\Beta\Microsoft\Graph\Model\ContentTypeOrder")) {
+            if (is_a($this->_propDict["order"], "Beta\Microsoft\Graph\Model\ContentTypeOrder")) {
                 return $this->_propDict["order"];
             } else {
                 $this->_propDict["order"] = new ContentTypeOrder($this->_propDict["order"]);
@@ -361,7 +353,6 @@ class ContentType extends Entity
     
     /**
     * Gets the propagateChanges
-    * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
     *
     * @return bool The propagateChanges
     */
@@ -376,7 +367,6 @@ class ContentType extends Entity
     
     /**
     * Sets the propagateChanges
-    * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
     *
     * @param bool $val The propagateChanges
     *
@@ -448,14 +438,13 @@ class ContentType extends Entity
     
     /**
     * Gets the base
-    * Parent contentType from which this content type is derived.
     *
     * @return ContentType The base
     */
     public function getBase()
     {
         if (array_key_exists("base", $this->_propDict)) {
-            if (is_a($this->_propDict["base"], "\Beta\Microsoft\Graph\Model\ContentType")) {
+            if (is_a($this->_propDict["base"], "Beta\Microsoft\Graph\Model\ContentType")) {
                 return $this->_propDict["base"];
             } else {
                 $this->_propDict["base"] = new ContentType($this->_propDict["base"]);
@@ -467,7 +456,6 @@ class ContentType extends Entity
     
     /**
     * Sets the base
-    * Parent contentType from which this content type is derived.
     *
     * @param ContentType $val The base
     *
@@ -482,7 +470,6 @@ class ContentType extends Entity
 
      /** 
      * Gets the baseTypes
-    * The collection of content types that are ancestors of this content type.
      *
      * @return array The baseTypes
      */
@@ -497,7 +484,6 @@ class ContentType extends Entity
     
     /** 
     * Sets the baseTypes
-    * The collection of content types that are ancestors of this content type.
     *
     * @param ContentType $val The baseTypes
     *
@@ -542,7 +528,6 @@ class ContentType extends Entity
 
      /** 
      * Gets the columnPositions
-    * Column order information in a content type.
      *
      * @return array The columnPositions
      */
@@ -557,7 +542,6 @@ class ContentType extends Entity
     
     /** 
     * Sets the columnPositions
-    * Column order information in a content type.
     *
     * @param ColumnDefinition $val The columnPositions
     *
@@ -572,7 +556,6 @@ class ContentType extends Entity
 
      /** 
      * Gets the columns
-    * The collection of column definitions for this contentType.
      *
      * @return array The columns
      */
@@ -587,7 +570,6 @@ class ContentType extends Entity
     
     /** 
     * Sets the columns
-    * The collection of column definitions for this contentType.
     *
     * @param ColumnDefinition $val The columns
     *

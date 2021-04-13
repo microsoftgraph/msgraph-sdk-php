@@ -89,7 +89,7 @@ class NotifyUserAction extends DlpActionInfo
     public function getOverrideOption()
     {
         if (array_key_exists("overrideOption", $this->_propDict)) {
-            if (is_a($this->_propDict["overrideOption"], "\Beta\Microsoft\Graph\Model\OverrideOption")) {
+            if (is_a($this->_propDict["overrideOption"], "Beta\Microsoft\Graph\Model\OverrideOption")) {
                 return $this->_propDict["overrideOption"];
             } else {
                 $this->_propDict["overrideOption"] = new OverrideOption($this->_propDict["overrideOption"]);

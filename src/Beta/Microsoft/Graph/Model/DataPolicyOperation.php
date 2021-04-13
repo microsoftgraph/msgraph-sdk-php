@@ -26,7 +26,7 @@ class DataPolicyOperation extends Entity
 {
     /**
     * Gets the completedDateTime
-    * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
+    * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Null until the operation completes.
     *
     * @return \DateTime The completedDateTime
     */
@@ -45,7 +45,7 @@ class DataPolicyOperation extends Entity
     
     /**
     * Sets the completedDateTime
-    * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
+    * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Null until the operation completes.
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -95,7 +95,7 @@ class DataPolicyOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DataPolicyOperationStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\DataPolicyOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DataPolicyOperationStatus($this->_propDict["status"]);
@@ -150,7 +150,7 @@ class DataPolicyOperation extends Entity
     
     /**
     * Gets the submittedDateTime
-    * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The submittedDateTime
     */
@@ -169,7 +169,7 @@ class DataPolicyOperation extends Entity
     
     /**
     * Sets the submittedDateTime
-    * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The submittedDateTime
     *

@@ -32,7 +32,7 @@ class ObjectDefinition extends Entity
     public function getAttributes()
     {
         if (array_key_exists("attributes", $this->_propDict)) {
-            if (is_a($this->_propDict["attributes"], "\Beta\Microsoft\Graph\Model\AttributeDefinition")) {
+            if (is_a($this->_propDict["attributes"], "Beta\Microsoft\Graph\Model\AttributeDefinition")) {
                 return $this->_propDict["attributes"];
             } else {
                 $this->_propDict["attributes"] = new AttributeDefinition($this->_propDict["attributes"]);
@@ -63,7 +63,7 @@ class ObjectDefinition extends Entity
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\MetadataEntry")) {
+            if (is_a($this->_propDict["metadata"], "Beta\Microsoft\Graph\Model\MetadataEntry")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new MetadataEntry($this->_propDict["metadata"]);

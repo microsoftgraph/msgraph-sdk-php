@@ -58,7 +58,7 @@ class CopyNotebookModel extends Entity
     public function getCreatedByIdentity()
     {
         if (array_key_exists("createdByIdentity", $this->_propDict)) {
-            if (is_a($this->_propDict["createdByIdentity"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdByIdentity"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdByIdentity"];
             } else {
                 $this->_propDict["createdByIdentity"] = new IdentitySet($this->_propDict["createdByIdentity"]);
@@ -224,7 +224,7 @@ class CopyNotebookModel extends Entity
     public function getLastModifiedByIdentity()
     {
         if (array_key_exists("lastModifiedByIdentity", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedByIdentity"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedByIdentity"], "Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedByIdentity"];
             } else {
                 $this->_propDict["lastModifiedByIdentity"] = new IdentitySet($this->_propDict["lastModifiedByIdentity"]);
@@ -286,7 +286,7 @@ class CopyNotebookModel extends Entity
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "\Beta\Microsoft\Graph\Model\NotebookLinks")) {
+            if (is_a($this->_propDict["links"], "Beta\Microsoft\Graph\Model\NotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new NotebookLinks($this->_propDict["links"]);
@@ -421,7 +421,7 @@ class CopyNotebookModel extends Entity
     public function getUserRole()
     {
         if (array_key_exists("userRole", $this->_propDict)) {
-            if (is_a($this->_propDict["userRole"], "\Beta\Microsoft\Graph\Model\OnenoteUserRole")) {
+            if (is_a($this->_propDict["userRole"], "Beta\Microsoft\Graph\Model\OnenoteUserRole")) {
                 return $this->_propDict["userRole"];
             } else {
                 $this->_propDict["userRole"] = new OnenoteUserRole($this->_propDict["userRole"]);

@@ -94,7 +94,7 @@ class EducationStudent extends Entity
     public function getGender()
     {
         if (array_key_exists("gender", $this->_propDict)) {
-            if (is_a($this->_propDict["gender"], "\Beta\Microsoft\Graph\Model\EducationGender")) {
+            if (is_a($this->_propDict["gender"], "Beta\Microsoft\Graph\Model\EducationGender")) {
                 return $this->_propDict["gender"];
             } else {
                 $this->_propDict["gender"] = new EducationGender($this->_propDict["gender"]);

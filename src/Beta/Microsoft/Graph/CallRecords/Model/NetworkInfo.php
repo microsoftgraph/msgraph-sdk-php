@@ -28,15 +28,15 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the bandwidthLowEventRatio
     * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
     *
-    * @return \Beta\Microsoft\Graph\Model\Single The bandwidthLowEventRatio
+    * @return Beta\Microsoft\Graph\Model\Single The bandwidthLowEventRatio
     */
     public function getBandwidthLowEventRatio()
     {
         if (array_key_exists("bandwidthLowEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["bandwidthLowEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["bandwidthLowEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["bandwidthLowEventRatio"];
             } else {
-                $this->_propDict["bandwidthLowEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["bandwidthLowEventRatio"]);
+                $this->_propDict["bandwidthLowEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["bandwidthLowEventRatio"]);
                 return $this->_propDict["bandwidthLowEventRatio"];
             }
         }
@@ -47,7 +47,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the bandwidthLowEventRatio
     * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
     *
-    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the bandwidthLowEventRatio
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the bandwidthLowEventRatio
     *
     * @return NetworkInfo The NetworkInfo
     */
@@ -94,7 +94,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\CallRecords\Model\NetworkConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "Beta\Microsoft\Graph\CallRecords\Model\NetworkConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new NetworkConnectionType($this->_propDict["connectionType"]);
@@ -122,15 +122,15 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the delayEventRatio
     * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
     *
-    * @return \Beta\Microsoft\Graph\Model\Single The delayEventRatio
+    * @return Beta\Microsoft\Graph\Model\Single The delayEventRatio
     */
     public function getDelayEventRatio()
     {
         if (array_key_exists("delayEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["delayEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["delayEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["delayEventRatio"];
             } else {
-                $this->_propDict["delayEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["delayEventRatio"]);
+                $this->_propDict["delayEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["delayEventRatio"]);
                 return $this->_propDict["delayEventRatio"];
             }
         }
@@ -141,7 +141,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the delayEventRatio
     * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
     *
-    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the delayEventRatio
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the delayEventRatio
     *
     * @return NetworkInfo The NetworkInfo
     */
@@ -295,15 +295,15 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the receivedQualityEventRatio
     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
     *
-    * @return \Beta\Microsoft\Graph\Model\Single The receivedQualityEventRatio
+    * @return Beta\Microsoft\Graph\Model\Single The receivedQualityEventRatio
     */
     public function getReceivedQualityEventRatio()
     {
         if (array_key_exists("receivedQualityEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["receivedQualityEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["receivedQualityEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["receivedQualityEventRatio"];
             } else {
-                $this->_propDict["receivedQualityEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["receivedQualityEventRatio"]);
+                $this->_propDict["receivedQualityEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["receivedQualityEventRatio"]);
                 return $this->_propDict["receivedQualityEventRatio"];
             }
         }
@@ -314,7 +314,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the receivedQualityEventRatio
     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
     *
-    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the receivedQualityEventRatio
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the receivedQualityEventRatio
     *
     * @return NetworkInfo The NetworkInfo
     */
@@ -412,15 +412,15 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the sentQualityEventRatio
     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
     *
-    * @return \Beta\Microsoft\Graph\Model\Single The sentQualityEventRatio
+    * @return Beta\Microsoft\Graph\Model\Single The sentQualityEventRatio
     */
     public function getSentQualityEventRatio()
     {
         if (array_key_exists("sentQualityEventRatio", $this->_propDict)) {
-            if (is_a($this->_propDict["sentQualityEventRatio"], "\Beta\Microsoft\Graph\Model\Single")) {
+            if (is_a($this->_propDict["sentQualityEventRatio"], "Beta\Microsoft\Graph\Model\Single")) {
                 return $this->_propDict["sentQualityEventRatio"];
             } else {
-                $this->_propDict["sentQualityEventRatio"] = new \Beta\Microsoft\Graph\Model\Single($this->_propDict["sentQualityEventRatio"]);
+                $this->_propDict["sentQualityEventRatio"] = new Beta\Microsoft\Graph\Model\Single($this->_propDict["sentQualityEventRatio"]);
                 return $this->_propDict["sentQualityEventRatio"];
             }
         }
@@ -431,7 +431,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the sentQualityEventRatio
     * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
     *
-    * @param \Beta\Microsoft\Graph\Model\Single $val The value to assign to the sentQualityEventRatio
+    * @param Beta\Microsoft\Graph\Model\Single $val The value to assign to the sentQualityEventRatio
     *
     * @return NetworkInfo The NetworkInfo
     */
@@ -478,7 +478,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     public function getWifiBand()
     {
         if (array_key_exists("wifiBand", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiBand"], "\Beta\Microsoft\Graph\CallRecords\Model\WifiBand")) {
+            if (is_a($this->_propDict["wifiBand"], "Beta\Microsoft\Graph\CallRecords\Model\WifiBand")) {
                 return $this->_propDict["wifiBand"];
             } else {
                 $this->_propDict["wifiBand"] = new WifiBand($this->_propDict["wifiBand"]);
@@ -623,7 +623,7 @@ class NetworkInfo extends \Beta\Microsoft\Graph\Model\Entity
     public function getWifiRadioType()
     {
         if (array_key_exists("wifiRadioType", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiRadioType"], "\Beta\Microsoft\Graph\CallRecords\Model\WifiRadioType")) {
+            if (is_a($this->_propDict["wifiRadioType"], "Beta\Microsoft\Graph\CallRecords\Model\WifiRadioType")) {
                 return $this->_propDict["wifiRadioType"];
             } else {
                 $this->_propDict["wifiRadioType"] = new WifiRadioType($this->_propDict["wifiRadioType"]);

@@ -149,7 +149,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     public function getMeteredConnectionLimit()
     {
         if (array_key_exists("meteredConnectionLimit", $this->_propDict)) {
-            if (is_a($this->_propDict["meteredConnectionLimit"], "\Beta\Microsoft\Graph\Model\MeteredConnectionLimitType")) {
+            if (is_a($this->_propDict["meteredConnectionLimit"], "Beta\Microsoft\Graph\Model\MeteredConnectionLimitType")) {
                 return $this->_propDict["meteredConnectionLimit"];
             } else {
                 $this->_propDict["meteredConnectionLimit"] = new MeteredConnectionLimitType($this->_propDict["meteredConnectionLimit"]);
@@ -327,7 +327,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     public function getProxySetting()
     {
         if (array_key_exists("proxySetting", $this->_propDict)) {
-            if (is_a($this->_propDict["proxySetting"], "\Beta\Microsoft\Graph\Model\WiFiProxySetting")) {
+            if (is_a($this->_propDict["proxySetting"], "Beta\Microsoft\Graph\Model\WiFiProxySetting")) {
                 return $this->_propDict["proxySetting"];
             } else {
                 $this->_propDict["proxySetting"] = new WiFiProxySetting($this->_propDict["proxySetting"]);
@@ -389,7 +389,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     public function getWifiSecurityType()
     {
         if (array_key_exists("wifiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiSecurityType"], "\Beta\Microsoft\Graph\Model\WiFiSecurityType")) {
+            if (is_a($this->_propDict["wifiSecurityType"], "Beta\Microsoft\Graph\Model\WiFiSecurityType")) {
                 return $this->_propDict["wifiSecurityType"];
             } else {
                 $this->_propDict["wifiSecurityType"] = new WiFiSecurityType($this->_propDict["wifiSecurityType"]);

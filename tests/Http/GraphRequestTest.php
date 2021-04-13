@@ -1,12 +1,8 @@
 <?php
-
-use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Core\GraphConstants;
-use Microsoft\Graph\Exception\GraphException;
 use Microsoft\Graph\Graph;
 use Microsoft\Graph\Http\GraphRequest;
-use Microsoft\Graph\Http\Test\MockClientFactory;
 
 class GraphRequestTest extends TestCase
 {
@@ -17,9 +13,9 @@ class GraphRequestTest extends TestCase
     public function setUp(): void
     {
         $this->requests = array(
-            new GraphRequest("GET", "/endpoint", "token", "baseUrl", "version"),
-            new GraphRequest("PATCH", "/endpoint?query", "token", "baseUrl", "version"),
-            new GraphRequest("GET", "/endpoint?query&query2", "token", "baseUrl", "version")
+            new GraphRequest("GET", "/endpoint", "token", "baseUrl", "/version"),
+            new GraphRequest("PATCH", "/endpoint?query", "token", "baseUrl", "/version"),
+            new GraphRequest("GET", "/endpoint?query&query2", "token", "baseUrl", "/version")
         );
 
         $this->defaultHeaders = array(
@@ -46,17 +42,17 @@ class GraphRequestTest extends TestCase
         $reflectionMethod->setAccessible(true);
 
         $graph = new Graph();
-        $graph->setApiVersion('beta');
+        $graph->setApiVersion('/beta');
         $graph->setAccessToken('token');
         $request = $graph->createRequest("get", "/me");
-        $graph->setApiVersion('v1.0');
+        $graph->setApiVersion('/v1.0');
 
         $requestUrl = $reflectionMethod->invokeArgs($request, array());
-        $this->assertEquals($requestUrl, "beta/me");
+        $this->assertEquals($requestUrl, "/beta/me");
 
         $request2 = $graph->createRequest("get", "/me");
         $requestUrl = $reflectionMethod->invokeArgs($request2, array());
-        $this->assertEquals("v1.0/me", $requestUrl);
+        $this->assertEquals("/v1.0/me", $requestUrl);
     }
 
     public function testAddHeaders()
@@ -126,12 +122,12 @@ class GraphRequestTest extends TestCase
     public function testSetTimeout()
     {
         $this->requests[0]->setTimeout('200');
-        $this->assertEquals('200', $this->requests[0]->getTimeout());
+        $this->assertAttributeEquals('200', 'timeout', $this->requests[0]);
     }
 
     public function testDefaultTimeout()
     {
-        $this->assertEquals('100', $this->requests[0]->getTimeout());
+        $this->assertAttributeEquals('100', 'timeout', $this->requests[0]);
     }
 
     public function testCreateGuzzleClient()
@@ -162,6 +158,8 @@ class GraphRequestTest extends TestCase
 
     public function testExecuteAsync()
     {
+        $body = json_encode(array('body' => 'content'));
+
         $promise = $this->requests[0]
                          ->executeAsync($this->client);
         $this->assertInstanceOf(GuzzleHttp\Promise\PromiseInterface::class, $promise);
@@ -169,6 +167,11 @@ class GraphRequestTest extends TestCase
         $promise = $this->requests[1]
                          ->executeAsync($this->client);
         $this->assertInstanceOf(GuzzleHttp\Promise\PromiseInterface::class, $promise);
+
+        $promise = $this->requests[0]
+                         ->executeAsync($this->client);
+        $promise2 = $this->requests[2]
+                          ->executeAsync($this->client);
 
         $response = \GuzzleHttp\Promise\unwrap(array($promise));
         foreach ($response as $responseItem) {
@@ -183,7 +186,7 @@ class GraphRequestTest extends TestCase
         $reflectionMethod->setAccessible(true);
 
         $requestUrl = $reflectionMethod->invokeArgs($this->requests[0], array());
-        $this->assertEquals($requestUrl, "version/endpoint");
+        $this->assertEquals($requestUrl, "/version/endpoint");
     }
 
     public function testGetConcatenator()
@@ -200,39 +203,5 @@ class GraphRequestTest extends TestCase
 
         $concatenator = $reflectionMethod->invokeArgs($this->requests[2], array());
         $this->assertEquals($concatenator, "&");
-    }
-
-    public function testExecuteWith4xxResponse()
-    {
-        $this->expectException(GraphException::class);
-        $mockResponse = array(new Response(400));
-        $client = MockClientFactory::create(['http_errors' => true], $mockResponse);
-        $this->requests[0]->execute($client);
-    }
-
-    public function testExecuteWith5xxResponse()
-    {
-        $this->expectException(GraphException::class);
-        $mockResponse = array(new Response(500));
-        $client = MockClientFactory::create(['http_errors' => true], $mockResponse);
-        $this->requests[0]->execute($client);
-    }
-    
-    public function testExecuteAsyncWithBadResponseTriggersNotice()
-    {
-        $this->expectNotice();
-        $mockResponse = array(new Response(400));
-        $client = MockClientFactory::create(['http_errors' => true], $mockResponse);
-        $promise = $this->requests[0]->executeAsync($client);
-        $promise->wait();
-    }
-
-    public function testExecuteAsyncWithBadResponseReturnsNull()
-    {
-        $mockResponse = array(new Response(400));
-        $client = MockClientFactory::create(['http_errors' => true], $mockResponse);
-        $promise = $this->requests[0]->executeAsync($client);
-        $result = @$promise->wait();
-        $this->assertNull($result);
     }
 }

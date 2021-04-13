@@ -33,7 +33,7 @@ class UserAnalytics extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\Settings")) {
+            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\Settings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new Settings($this->_propDict["settings"]);

@@ -18,9 +18,7 @@
 namespace Microsoft\Graph\Http;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\BadResponseException;
 use Microsoft\Graph\Core\GraphConstants;
-use Microsoft\Graph\Core\ExceptionWrapper;
 use Microsoft\Graph\Exception\GraphException;
 
 /**
@@ -137,36 +135,6 @@ class GraphRequest
     }
 
     /**
-     * Gets the Base URL the request is made to
-     *
-     * @return string
-     */
-    public function getBaseUrl()
-    {
-        return $this->baseUrl;
-    }
-
-    /**
-     * Gets the API version in use for the request
-     *
-     * @return string
-     */
-    public function getApiVersion()
-    {
-        return $this->apiVersion;
-    }
-
-    /**
-     * Gets whether request returns a stream or not
-     *
-     * @return boolean
-     */
-    public function getReturnsStream()
-    {
-        return $this->returnsStream;
-    }
-
-    /**
     * Sets a http errors option
     *
     * @param string $http_errors A bool option to the Graph call
@@ -279,22 +247,12 @@ class GraphRequest
     }
 
     /**
-     * Gets the timeout value of the request
-     *
-     * @return string
-     */
-    public function getTimeout()
-    {
-        return $this->timeout;
-    }
-
-    /**
     * Executes the HTTP request using Guzzle
     *
     * @param mixed $client The client to use in the request
     *
-    * @throws GraphException if response is invalid; if 4xx/5xx is returned and $http_errors is true
-    *
+     * @throws GraphException if response is invalid
+     *
     * @return mixed object or array of objects
     *         of class $returnType
     */
@@ -304,18 +262,14 @@ class GraphRequest
             $client = $this->createGuzzleClient();
         }
 
-        try {
-            $result = $client->request(
-                $this->requestType,
-                $this->_getRequestUrl(),
-                [
-                    'body' => $this->requestBody,
-                    'timeout' => $this->timeout
-                ]
-            );
-        } catch(BadResponseException $e) {
-            throw ExceptionWrapper::wrapGuzzleBadResponseException($e);
-        }
+        $result = $client->request(
+            $this->requestType,
+            $this->_getRequestUrl(),
+            [
+                'body' => $this->requestBody,
+                'timeout' => $this->timeout
+            ]
+        );
 
         // Check to see if returnType is a stream, if so return it immediately
         if($this->returnsStream) {
@@ -385,9 +339,6 @@ class GraphRequest
             },
             // On fail, log the error and return null
             function ($reason) {
-                if ($reason instanceof BadResponseException) {
-                    $reason = ExceptionWrapper::wrapGuzzleBadResponseException($reason);
-                }
                 trigger_error("Async call failed: " . $reason->getMessage());
                 return null;
             }
@@ -401,7 +352,7 @@ class GraphRequest
     * @param string $path   The path to download the file to
     * @param mixed  $client The client to use in the request
     *
-     * @throws GraphException if file path is invalid; if \GuzzleHttp\Exception\BadResponseException is thrown for 4xx/5xx responses
+     * @throws GraphException if file path is invalid
      *
     * @return null
     */
@@ -431,8 +382,6 @@ class GraphRequest
 
         } catch(GraphException $e) {
             throw new GraphException(GraphConstants::INVALID_FILE);
-        } catch(BadResponseException $e) {
-            throw ExceptionWrapper::wrapGuzzleBadResponseException($e);
         }
 
         return null;

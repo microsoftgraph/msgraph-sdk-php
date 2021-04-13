@@ -33,7 +33,7 @@ class SearchHitsContainer extends Entity
     public function getAggregations()
     {
         if (array_key_exists("aggregations", $this->_propDict)) {
-            if (is_a($this->_propDict["aggregations"], "\Beta\Microsoft\Graph\Model\SearchAggregation")) {
+            if (is_a($this->_propDict["aggregations"], "Beta\Microsoft\Graph\Model\SearchAggregation")) {
                 return $this->_propDict["aggregations"];
             } else {
                 $this->_propDict["aggregations"] = new SearchAggregation($this->_propDict["aggregations"]);
@@ -66,7 +66,7 @@ class SearchHitsContainer extends Entity
     public function getHits()
     {
         if (array_key_exists("hits", $this->_propDict)) {
-            if (is_a($this->_propDict["hits"], "\Beta\Microsoft\Graph\Model\SearchHit")) {
+            if (is_a($this->_propDict["hits"], "Beta\Microsoft\Graph\Model\SearchHit")) {
                 return $this->_propDict["hits"];
             } else {
                 $this->_propDict["hits"] = new SearchHit($this->_propDict["hits"]);

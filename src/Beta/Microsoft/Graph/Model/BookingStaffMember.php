@@ -91,7 +91,7 @@ class BookingStaffMember extends BookingPerson
     public function getRole()
     {
         if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "\Beta\Microsoft\Graph\Model\BookingStaffRole")) {
+            if (is_a($this->_propDict["role"], "Beta\Microsoft\Graph\Model\BookingStaffRole")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new BookingStaffRole($this->_propDict["role"]);

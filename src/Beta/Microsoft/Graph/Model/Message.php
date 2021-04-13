@@ -63,7 +63,7 @@ class Message extends OutlookItem
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["body"], "Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -217,7 +217,7 @@ class Message extends OutlookItem
     public function getFlag()
     {
         if (array_key_exists("flag", $this->_propDict)) {
-            if (is_a($this->_propDict["flag"], "\Beta\Microsoft\Graph\Model\FollowupFlag")) {
+            if (is_a($this->_propDict["flag"], "Beta\Microsoft\Graph\Model\FollowupFlag")) {
                 return $this->_propDict["flag"];
             } else {
                 $this->_propDict["flag"] = new FollowupFlag($this->_propDict["flag"]);
@@ -250,7 +250,7 @@ class Message extends OutlookItem
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "\Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["from"], "Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -305,14 +305,14 @@ class Message extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the message. The possible values are: low, normal, and high.
+    * The importance of the message: Low, Normal, High.
     *
     * @return Importance The importance
     */
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance")) {
+            if (is_a($this->_propDict["importance"], "Beta\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -324,7 +324,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the message. The possible values are: low, normal, and high.
+    * The importance of the message: Low, Normal, High.
     *
     * @param Importance $val The importance
     *
@@ -345,7 +345,7 @@ class Message extends OutlookItem
     public function getInferenceClassification()
     {
         if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "\Beta\Microsoft\Graph\Model\InferenceClassificationType")) {
+            if (is_a($this->_propDict["inferenceClassification"], "Beta\Microsoft\Graph\Model\InferenceClassificationType")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassificationType($this->_propDict["inferenceClassification"]);
@@ -552,7 +552,7 @@ class Message extends OutlookItem
     public function getMentionsPreview()
     {
         if (array_key_exists("mentionsPreview", $this->_propDict)) {
-            if (is_a($this->_propDict["mentionsPreview"], "\Beta\Microsoft\Graph\Model\MentionsPreview")) {
+            if (is_a($this->_propDict["mentionsPreview"], "Beta\Microsoft\Graph\Model\MentionsPreview")) {
                 return $this->_propDict["mentionsPreview"];
             } else {
                 $this->_propDict["mentionsPreview"] = new MentionsPreview($this->_propDict["mentionsPreview"]);
@@ -606,7 +606,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the receivedDateTime
-    * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The receivedDateTime
     */
@@ -625,7 +625,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the receivedDateTime
-    * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The receivedDateTime
     *
@@ -676,7 +676,7 @@ class Message extends OutlookItem
     public function getSender()
     {
         if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "\Beta\Microsoft\Graph\Model\Recipient")) {
+            if (is_a($this->_propDict["sender"], "Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -702,7 +702,7 @@ class Message extends OutlookItem
     
     /**
     * Gets the sentDateTime
-    * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime The sentDateTime
     */
@@ -721,7 +721,7 @@ class Message extends OutlookItem
     
     /**
     * Sets the sentDateTime
-    * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The sentDateTime
     *
@@ -801,7 +801,7 @@ class Message extends OutlookItem
     public function getUniqueBody()
     {
         if (array_key_exists("uniqueBody", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueBody"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["uniqueBody"], "Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["uniqueBody"];
             } else {
                 $this->_propDict["uniqueBody"] = new ItemBody($this->_propDict["uniqueBody"]);

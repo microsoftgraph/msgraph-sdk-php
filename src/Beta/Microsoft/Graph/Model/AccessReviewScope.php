@@ -23,4 +23,60 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AccessReviewScope extends Entity
 {
+    /**
+    * Gets the query
+    * The query specifying what will be reviewed. See table for examples.
+    *
+    * @return string The query
+    */
+    public function getQuery()
+    {
+        if (array_key_exists("query", $this->_propDict)) {
+            return $this->_propDict["query"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the query
+    * The query specifying what will be reviewed. See table for examples.
+    *
+    * @param string $val The value of the query
+    *
+    * @return AccessReviewScope
+    */
+    public function setQuery($val)
+    {
+        $this->_propDict["query"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the queryType
+    * The type of query. Examples include MicrosoftGraph and ARM.
+    *
+    * @return string The queryType
+    */
+    public function getQueryType()
+    {
+        if (array_key_exists("queryType", $this->_propDict)) {
+            return $this->_propDict["queryType"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the queryType
+    * The type of query. Examples include MicrosoftGraph and ARM.
+    *
+    * @param string $val The value of the queryType
+    *
+    * @return AccessReviewScope
+    */
+    public function setQueryType($val)
+    {
+        $this->_propDict["queryType"] = $val;
+        return $this;
+    }
 }

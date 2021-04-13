@@ -32,7 +32,7 @@ class ApplicationServicePrincipal extends Entity
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\Application")) {
+            if (is_a($this->_propDict["application"], "Beta\Microsoft\Graph\Model\Application")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Application($this->_propDict["application"]);
@@ -63,7 +63,7 @@ class ApplicationServicePrincipal extends Entity
     public function getServicePrincipal()
     {
         if (array_key_exists("servicePrincipal", $this->_propDict)) {
-            if (is_a($this->_propDict["servicePrincipal"], "\Beta\Microsoft\Graph\Model\ServicePrincipal")) {
+            if (is_a($this->_propDict["servicePrincipal"], "Beta\Microsoft\Graph\Model\ServicePrincipal")) {
                 return $this->_propDict["servicePrincipal"];
             } else {
                 $this->_propDict["servicePrincipal"] = new ServicePrincipal($this->_propDict["servicePrincipal"]);

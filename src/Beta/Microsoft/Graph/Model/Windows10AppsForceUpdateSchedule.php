@@ -33,7 +33,7 @@ class Windows10AppsForceUpdateSchedule extends Entity
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\Windows10AppsUpdateRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\Windows10AppsUpdateRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new Windows10AppsUpdateRecurrence($this->_propDict["recurrence"]);

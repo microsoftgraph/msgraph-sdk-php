@@ -33,7 +33,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
     public function getIntent()
     {
         if (array_key_exists("intent", $this->_propDict)) {
-            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\DeviceManagementResourceAccessProfileIntent")) {
+            if (is_a($this->_propDict["intent"], "Beta\Microsoft\Graph\Model\DeviceManagementResourceAccessProfileIntent")) {
                 return $this->_propDict["intent"];
             } else {
                 $this->_propDict["intent"] = new DeviceManagementResourceAccessProfileIntent($this->_propDict["intent"]);
@@ -95,7 +95,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);

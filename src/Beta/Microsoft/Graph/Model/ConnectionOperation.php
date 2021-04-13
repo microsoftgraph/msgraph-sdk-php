@@ -28,15 +28,15 @@ class ConnectionOperation extends Entity
     * Gets the error
     * If status is failed, provides more information about the error that caused the failure.
     *
-    * @return PublicError The error
+    * @return ErrorDetail The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\PublicError")) {
+            if (is_a($this->_propDict["error"], "Beta\Microsoft\Graph\Model\ErrorDetail")) {
                 return $this->_propDict["error"];
             } else {
-                $this->_propDict["error"] = new PublicError($this->_propDict["error"]);
+                $this->_propDict["error"] = new ErrorDetail($this->_propDict["error"]);
                 return $this->_propDict["error"];
             }
         }
@@ -47,7 +47,7 @@ class ConnectionOperation extends Entity
     * Sets the error
     * If status is failed, provides more information about the error that caused the failure.
     *
-    * @param PublicError $val The error
+    * @param ErrorDetail $val The error
     *
     * @return ConnectionOperation
     */
@@ -66,7 +66,7 @@ class ConnectionOperation extends Entity
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ConnectionOperationStatus")) {
+            if (is_a($this->_propDict["status"], "Beta\Microsoft\Graph\Model\ConnectionOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionOperationStatus($this->_propDict["status"]);

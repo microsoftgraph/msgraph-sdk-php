@@ -182,7 +182,7 @@ class AuditEvent extends Entity
     public function getActor()
     {
         if (array_key_exists("actor", $this->_propDict)) {
-            if (is_a($this->_propDict["actor"], "\Beta\Microsoft\Graph\Model\AuditActor")) {
+            if (is_a($this->_propDict["actor"], "Beta\Microsoft\Graph\Model\AuditActor")) {
                 return $this->_propDict["actor"];
             } else {
                 $this->_propDict["actor"] = new AuditActor($this->_propDict["actor"]);

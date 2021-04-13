@@ -140,7 +140,7 @@ class Item extends Entity
     public function getInventory()
     {
         if (array_key_exists("inventory", $this->_propDict)) {
-            if (is_a($this->_propDict["inventory"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["inventory"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["inventory"];
             } else {
                 $this->_propDict["inventory"] = new Decimal($this->_propDict["inventory"]);
@@ -391,7 +391,7 @@ class Item extends Entity
     public function getUnitCost()
     {
         if (array_key_exists("unitCost", $this->_propDict)) {
-            if (is_a($this->_propDict["unitCost"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["unitCost"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["unitCost"];
             } else {
                 $this->_propDict["unitCost"] = new Decimal($this->_propDict["unitCost"]);
@@ -422,7 +422,7 @@ class Item extends Entity
     public function getUnitPrice()
     {
         if (array_key_exists("unitPrice", $this->_propDict)) {
-            if (is_a($this->_propDict["unitPrice"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["unitPrice"], "Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["unitPrice"];
             } else {
                 $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
@@ -453,7 +453,7 @@ class Item extends Entity
     public function getItemCategory()
     {
         if (array_key_exists("itemCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["itemCategory"], "\Beta\Microsoft\Graph\Model\ItemCategory")) {
+            if (is_a($this->_propDict["itemCategory"], "Beta\Microsoft\Graph\Model\ItemCategory")) {
                 return $this->_propDict["itemCategory"];
             } else {
                 $this->_propDict["itemCategory"] = new ItemCategory($this->_propDict["itemCategory"]);

@@ -1,0 +1,2769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Microsoft.html">\Microsoft</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1005626820"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1005626820" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1029298099"></a>
+                                <a href="../namespaces/Microsoft.html" style="margin-left: 30px; padding-left: 0">Microsoft</a>
+            </div>
+            <div id="namespace-1029298099" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1773078224"></a>
+                                <a href="../namespaces/Microsoft.Graph.html" style="margin-left: 30px; padding-left: 0">Graph</a>
+            </div>
+            <div id="namespace-1773078224" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1119281908"></a>
+                                <a href="../namespaces/Microsoft.Graph.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-1119281908" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Core.Enum.html">Enum</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-726989526"></a>
+                                <a href="../namespaces/Microsoft.Graph.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-726989526" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Exception.GraphException.html">GraphException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1745490872"></a>
+                                <a href="../namespaces/Microsoft.Graph.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
+            </div>
+            <div id="namespace-1745490872" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Http.GraphCollectionRequest.html">GraphCollectionRequest</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Http.GraphRequest.html">GraphRequest</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Http.GraphResponse.html">GraphResponse</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-189638473"></a>
+                                <a href="../namespaces/Microsoft.Graph.Model.html" style="margin-left: 30px; padding-left: 0">Model</a>
+            </div>
+            <div id="namespace-189638473" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AlternativeSecurityId.html">AlternativeSecurityId</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AssignedLicense.html">AssignedLicense</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AssignedPlan.html">AssignedPlan</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Attachment.html">Attachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Attendee.html">Attendee</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AttendeeType.html">AttendeeType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Audio.html">Audio</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AutomaticRepliesSetting.html">AutomaticRepliesSetting</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.AutomaticRepliesStatus.html">AutomaticRepliesStatus</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.BodyType.html">BodyType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Calendar.html">Calendar</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.CalendarColor.html">CalendarColor</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.CalendarGroup.html">CalendarGroup</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Contact.html">Contact</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ContactFolder.html">ContactFolder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Conversation.html">Conversation</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ConversationThread.html">ConversationThread</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DateTimeTimeZone.html">DateTimeTimeZone</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DayOfWeek.html">DayOfWeek</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Deleted.html">Deleted</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Device.html">Device</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DirectoryObject.html">DirectoryObject</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DirectoryRole.html">DirectoryRole</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DirectoryRoleTemplate.html">DirectoryRoleTemplate</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Drive.html">Drive</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DriveItem.html">DriveItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DriveItemUploadableProperties.html">DriveItemUploadableProperties</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.DriveRecipient.html">DriveRecipient</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.EmailAddress.html">EmailAddress</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Entity.html">Entity</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Event.html">Event</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.EventMessage.html">EventMessage</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.EventType.html">EventType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Extension.html">Extension</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ExternalAudienceScope.html">ExternalAudienceScope</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.File.html">File</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.FileAttachment.html">FileAttachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.FileSystemInfo.html">FileSystemInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Folder.html">Folder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.FreeBusyStatus.html">FreeBusyStatus</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.GeoCoordinates.html">GeoCoordinates</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Group.html">Group</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Hashes.html">Hashes</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Identity.html">Identity</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.IdentitySet.html">IdentitySet</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Image.html">Image</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Importance.html">Importance</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.InferenceClassification.html">InferenceClassification</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.InferenceClassificationOverride.html">InferenceClassificationOverride</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.InferenceClassificationType.html">InferenceClassificationType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ItemAttachment.html">ItemAttachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ItemBody.html">ItemBody</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ItemReference.html">ItemReference</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.LicenseUnitsDetail.html">LicenseUnitsDetail</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.LocaleInfo.html">LocaleInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Location.html">Location</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MailboxSettings.html">MailboxSettings</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MailFolder.html">MailFolder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MeetingMessageType.html">MeetingMessageType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Message.html">Message</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.MultiValueLegacyExtendedProperty.html">MultiValueLegacyExtendedProperty</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.OpenTypeExtension.html">OpenTypeExtension</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Organization.html">Organization</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.OutlookItem.html">OutlookItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Package.html">Package</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.PasswordProfile.html">PasswordProfile</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.PatternedRecurrence.html">PatternedRecurrence</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Permission.html">Permission</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Photo.html">Photo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.PhysicalAddress.html">PhysicalAddress</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Post.html">Post</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ProfilePhoto.html">ProfilePhoto</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ProvisionedPlan.html">ProvisionedPlan</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Quota.html">Quota</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Recipient.html">Recipient</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrencePattern.html">RecurrencePattern</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrencePatternType.html">RecurrencePatternType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrenceRange.html">RecurrenceRange</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RecurrenceRangeType.html">RecurrenceRangeType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ReferenceAttachment.html">ReferenceAttachment</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Reminder.html">Reminder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.RemoteItem.html">RemoteItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ResponseStatus.html">ResponseStatus</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ResponseType.html">ResponseType</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Root.html">Root</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SearchResult.html">SearchResult</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ServicePlanInfo.html">ServicePlanInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Shared.html">Shared</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharedDriveItem.html">SharedDriveItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharepointIds.html">SharepointIds</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharingInvitation.html">SharingInvitation</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SharingLink.html">SharingLink</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SingleValueLegacyExtendedProperty.html">SingleValueLegacyExtendedProperty</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SpecialFolder.html">SpecialFolder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.SubscribedSku.html">SubscribedSku</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Subscription.html">Subscription</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Thumbnail.html">Thumbnail</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.ThumbnailSet.html">ThumbnailSet</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.UploadSession.html">UploadSession</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.User.html">User</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.VerifiedDomain.html">VerifiedDomain</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Video.html">Video</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WeekIndex.html">WeekIndex</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.Workbook.html">Workbook</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookApplication.html">WorkbookApplication</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChart.html">WorkbookChart</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAreaFormat.html">WorkbookChartAreaFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxes.html">WorkbookChartAxes</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxis.html">WorkbookChartAxis</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxisFormat.html">WorkbookChartAxisFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxisTitle.html">WorkbookChartAxisTitle</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartAxisTitleFormat.html">WorkbookChartAxisTitleFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartDataLabelFormat.html">WorkbookChartDataLabelFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartDataLabels.html">WorkbookChartDataLabels</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartFill.html">WorkbookChartFill</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartFont.html">WorkbookChartFont</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartGridlines.html">WorkbookChartGridlines</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartGridlinesFormat.html">WorkbookChartGridlinesFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartLegend.html">WorkbookChartLegend</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartLegendFormat.html">WorkbookChartLegendFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartLineFormat.html">WorkbookChartLineFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartPoint.html">WorkbookChartPoint</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartPointFormat.html">WorkbookChartPointFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartSeries.html">WorkbookChartSeries</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartSeriesFormat.html">WorkbookChartSeriesFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartTitle.html">WorkbookChartTitle</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookChartTitleFormat.html">WorkbookChartTitleFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFilter.html">WorkbookFilter</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFilterCriteria.html">WorkbookFilterCriteria</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFilterDatetime.html">WorkbookFilterDatetime</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFormatProtection.html">WorkbookFormatProtection</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFunctionResult.html">WorkbookFunctionResult</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookFunctions.html">WorkbookFunctions</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookIcon.html">WorkbookIcon</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookNamedItem.html">WorkbookNamedItem</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRange.html">WorkbookRange</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeBorder.html">WorkbookRangeBorder</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeFill.html">WorkbookRangeFill</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeFont.html">WorkbookRangeFont</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeFormat.html">WorkbookRangeFormat</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeReference.html">WorkbookRangeReference</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookRangeSort.html">WorkbookRangeSort</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookSessionInfo.html">WorkbookSessionInfo</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookSortField.html">WorkbookSortField</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTable.html">WorkbookTable</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTableColumn.html">WorkbookTableColumn</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTableRow.html">WorkbookTableRow</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookTableSort.html">WorkbookTableSort</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookWorksheet.html">WorkbookWorksheet</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookWorksheetProtection.html">WorkbookWorksheetProtection</a></li>
+                                                    <li class="class"><a href="../classes/Microsoft.Graph.Model.WorkbookWorksheetProtectionOptions.html">WorkbookWorksheetProtectionOptions</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Microsoft.Graph.Graph.html">Graph</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Microsoft.Graph.Model.html">\Microsoft\Graph\Model</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Microsoft\Graph\Model</small>Event</h1>
+                    <p><em>Event class</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getProperties" class="">getProperties()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getOriginalStartTimeZone" class="">getOriginalStartTimeZone()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setOriginalStartTimeZone" class="">setOriginalStartTimeZone()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getOriginalEndTimeZone" class="">getOriginalEndTimeZone()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setOriginalEndTimeZone" class="">setOriginalEndTimeZone()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getResponseStatus" class="">getResponseStatus()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setResponseStatus" class="">setResponseStatus()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getICalUId" class="">getICalUId()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setICalUId" class="">setICalUId()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getReminderMinutesBeforeStart" class="">getReminderMinutesBeforeStart()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setReminderMinutesBeforeStart" class="">setReminderMinutesBeforeStart()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getIsReminderOn" class="">getIsReminderOn()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setIsReminderOn" class="">setIsReminderOn()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getHasAttachments" class="">getHasAttachments()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setHasAttachments" class="">setHasAttachments()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getSubject" class="">getSubject()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setSubject" class="">setSubject()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getBody" class="">getBody()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setBody" class="">setBody()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getBodyPreview" class="">getBodyPreview()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setBodyPreview" class="">setBodyPreview()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getImportance" class="">getImportance()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setImportance" class="">setImportance()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getSensitivity" class="">getSensitivity()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setSensitivity" class="">setSensitivity()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getStart" class="">getStart()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setStart" class="">setStart()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getOriginalStart" class="">getOriginalStart()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setOriginalStart" class="">setOriginalStart()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getEnd" class="">getEnd()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setEnd" class="">setEnd()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getLocation" class="">getLocation()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setLocation" class="">setLocation()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getIsAllDay" class="">getIsAllDay()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setIsAllDay" class="">setIsAllDay()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getIsCancelled" class="">getIsCancelled()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setIsCancelled" class="">setIsCancelled()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getIsOrganizer" class="">getIsOrganizer()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setIsOrganizer" class="">setIsOrganizer()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getRecurrence" class="">getRecurrence()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setRecurrence" class="">setRecurrence()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getResponseRequested" class="">getResponseRequested()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setResponseRequested" class="">setResponseRequested()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getSeriesMasterId" class="">getSeriesMasterId()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setSeriesMasterId" class="">setSeriesMasterId()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getShowAs" class="">getShowAs()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setShowAs" class="">setShowAs()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getType" class="">getType()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setType" class="">setType()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getAttendees" class="">getAttendees()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getOrganizer" class="">getOrganizer()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setOrganizer" class="">setOrganizer()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getWebLink" class="">getWebLink()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setWebLink" class="">setWebLink()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getOnlineMeetingUrl" class="">getOnlineMeetingUrl()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setOnlineMeetingUrl" class="">setOnlineMeetingUrl()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getCalendar" class="">getCalendar()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_setCalendar" class="">setCalendar()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getInstances" class="">getInstances()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getExtensions" class="">getExtensions()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getAttachments" class="">getAttachments()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getSingleValueExtendedProperties" class="">getSingleValueExtendedProperties()</a><br />
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#method_getMultiValueExtendedProperties" class="">getMultiValueExtendedProperties()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Microsoft.Graph.Model.Event.html#property__propDict" class="">$_propDict</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Model.Event.html"><div class="path-wrapper">Model\Event.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Microsoft.Graph</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Microsoft\Graph\Model\Event</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                            <dt>See also</dt>
+                                                                                        <dd><a href="https://graph.microsoft.io/"><span class="namespace-wrapper">https://graph.microsoft.io/</span></a></dd>
+                                                    
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                category
+                            </th>
+                            <td>
+                                                                    <p>Model</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Caitlin Bales <a href="mailto:caitbal@microsoft.com">caitbal@microsoft.com</a></p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                copyright
+                            </th>
+                            <td>
+                                                                    <p>2016 Microsoft Corporation</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                license
+                            </th>
+                            <td>
+                                                                    <p><a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a> MIT License</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                version
+                            </th>
+                            <td>
+                                                                    <p>Release: 0.1.0</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property__propDict" name="property__propDict" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$_propDict</h3>
+                <pre class="signature">$_propDict : \Microsoft\Graph\Model\array(string</pre>
+                <p><em>The array of properties available
+to the model</em></p>
+                
+
+                                <h4>Type</h4>
+                \Microsoft\Graph\Model\array(string
+                &mdash; =&gt; string)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$propDict = array()</span>) </pre>
+                <p><em>Construct a new Event</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$propDict </td>
+                                <td><p>A list of properties to set</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getProperties" name="method_getProperties" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getProperties()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getProperties() : array</pre>
+                <p><em>Gets the property dictionary of the Event</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The list of properties</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getOriginalStartTimeZone" name="method_getOriginalStartTimeZone" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getOriginalStartTimeZone()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getOriginalStartTimeZone() : string</pre>
+                <p><em>Gets the originalStartTimeZone</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The originalStartTimeZone</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setOriginalStartTimeZone" name="method_setOriginalStartTimeZone" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setOriginalStartTimeZone()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setOriginalStartTimeZone(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the originalStartTimeZone</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The originalStartTimeZone</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getOriginalEndTimeZone" name="method_getOriginalEndTimeZone" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getOriginalEndTimeZone()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getOriginalEndTimeZone() : string</pre>
+                <p><em>Gets the originalEndTimeZone</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The originalEndTimeZone</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setOriginalEndTimeZone" name="method_setOriginalEndTimeZone" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setOriginalEndTimeZone()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setOriginalEndTimeZone(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the originalEndTimeZone</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The originalEndTimeZone</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getResponseStatus" name="method_getResponseStatus" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getResponseStatus()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getResponseStatus() : \Microsoft\Graph\Model\ResponseStatus</pre>
+                <p><em>Gets the responseStatus</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.ResponseStatus.html">\Microsoft\Graph\Model\ResponseStatus</a>
+                                            &mdash; <p>The responseStatus</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setResponseStatus" name="method_setResponseStatus" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setResponseStatus()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setResponseStatus(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the responseStatus</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The responseStatus</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getICalUId" name="method_getICalUId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getICalUId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getICalUId() : string</pre>
+                <p><em>Gets the iCalUId</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The iCalUId</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setICalUId" name="method_setICalUId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setICalUId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setICalUId(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the iCalUId</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The iCalUId</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getReminderMinutesBeforeStart" name="method_getReminderMinutesBeforeStart" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getReminderMinutesBeforeStart()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getReminderMinutesBeforeStart() : integer</pre>
+                <p><em>Gets the reminderMinutesBeforeStart</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                            &mdash; <p>The reminderMinutesBeforeStart</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setReminderMinutesBeforeStart" name="method_setReminderMinutesBeforeStart" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setReminderMinutesBeforeStart()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setReminderMinutesBeforeStart(integer  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the reminderMinutesBeforeStart</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$val </td>
+                                <td><p>The reminderMinutesBeforeStart</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getIsReminderOn" name="method_getIsReminderOn" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getIsReminderOn()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getIsReminderOn() : boolean</pre>
+                <p><em>Gets the isReminderOn</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The isReminderOn</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setIsReminderOn" name="method_setIsReminderOn" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setIsReminderOn()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setIsReminderOn(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the isReminderOn</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The isReminderOn</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getHasAttachments" name="method_getHasAttachments" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getHasAttachments()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getHasAttachments() : boolean</pre>
+                <p><em>Gets the hasAttachments</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The hasAttachments</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setHasAttachments" name="method_setHasAttachments" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setHasAttachments()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setHasAttachments(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the hasAttachments</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The hasAttachments</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getSubject" name="method_getSubject" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getSubject()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getSubject() : string</pre>
+                <p><em>Gets the subject</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The subject</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setSubject" name="method_setSubject" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setSubject()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setSubject(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the subject</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The subject</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBody" name="method_getBody" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getBody()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBody() : \Microsoft\Graph\Model\ItemBody</pre>
+                <p><em>Gets the body</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.ItemBody.html">\Microsoft\Graph\Model\ItemBody</a>
+                                            &mdash; <p>The body</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setBody" name="method_setBody" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setBody()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setBody(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the body</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The body</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBodyPreview" name="method_getBodyPreview" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getBodyPreview()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBodyPreview() : string</pre>
+                <p><em>Gets the bodyPreview</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The bodyPreview</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setBodyPreview" name="method_setBodyPreview" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setBodyPreview()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setBodyPreview(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the bodyPreview</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The bodyPreview</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getImportance" name="method_getImportance" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getImportance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getImportance() : \Microsoft\Graph\Model\Importance</pre>
+                <p><em>Gets the importance</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.Importance.html">\Microsoft\Graph\Model\Importance</a>
+                                            &mdash; <p>The importance</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setImportance" name="method_setImportance" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setImportance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setImportance(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the importance</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The importance</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getSensitivity" name="method_getSensitivity" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getSensitivity()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getSensitivity() : \Microsoft\Graph\Model\Sensitivity</pre>
+                <p><em>Gets the sensitivity</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\Sensitivity
+                                            &mdash; <p>The sensitivity</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setSensitivity" name="method_setSensitivity" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setSensitivity()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setSensitivity(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the sensitivity</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The sensitivity</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getStart" name="method_getStart" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getStart()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getStart() : \Microsoft\Graph\Model\DateTimeTimeZone</pre>
+                <p><em>Gets the start</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.DateTimeTimeZone.html">\Microsoft\Graph\Model\DateTimeTimeZone</a>
+                                            &mdash; <p>The start</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setStart" name="method_setStart" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setStart()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setStart(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the start</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The start</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getOriginalStart" name="method_getOriginalStart" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getOriginalStart()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getOriginalStart() : \Microsoft\Graph\Model\datetime</pre>
+                <p><em>Gets the originalStart</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\datetime
+                                            &mdash; <p>The originalStart</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setOriginalStart" name="method_setOriginalStart" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setOriginalStart()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setOriginalStart(\Microsoft\Graph\Model\datetime  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the originalStart</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\Microsoft\Graph\Model\datetime</td>
+                                <td>$val </td>
+                                <td><p>The originalStart</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getEnd" name="method_getEnd" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getEnd()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getEnd() : \Microsoft\Graph\Model\DateTimeTimeZone</pre>
+                <p><em>Gets the end</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.DateTimeTimeZone.html">\Microsoft\Graph\Model\DateTimeTimeZone</a>
+                                            &mdash; <p>The end</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setEnd" name="method_setEnd" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setEnd()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setEnd(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the end</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The end</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLocation" name="method_getLocation" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLocation()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLocation() : \Microsoft\Graph\Model\Location</pre>
+                <p><em>Gets the location</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.Location.html">\Microsoft\Graph\Model\Location</a>
+                                            &mdash; <p>The location</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setLocation" name="method_setLocation" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setLocation()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setLocation(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the location</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The location</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getIsAllDay" name="method_getIsAllDay" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getIsAllDay()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getIsAllDay() : boolean</pre>
+                <p><em>Gets the isAllDay</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The isAllDay</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setIsAllDay" name="method_setIsAllDay" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setIsAllDay()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setIsAllDay(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the isAllDay</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The isAllDay</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getIsCancelled" name="method_getIsCancelled" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getIsCancelled()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getIsCancelled() : boolean</pre>
+                <p><em>Gets the isCancelled</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The isCancelled</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setIsCancelled" name="method_setIsCancelled" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setIsCancelled()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setIsCancelled(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the isCancelled</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The isCancelled</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getIsOrganizer" name="method_getIsOrganizer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getIsOrganizer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getIsOrganizer() : boolean</pre>
+                <p><em>Gets the isOrganizer</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The isOrganizer</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setIsOrganizer" name="method_setIsOrganizer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setIsOrganizer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setIsOrganizer(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the isOrganizer</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The isOrganizer</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRecurrence" name="method_getRecurrence" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRecurrence()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRecurrence() : \Microsoft\Graph\Model\PatternedRecurrence</pre>
+                <p><em>Gets the recurrence</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.PatternedRecurrence.html">\Microsoft\Graph\Model\PatternedRecurrence</a>
+                                            &mdash; <p>The recurrence</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setRecurrence" name="method_setRecurrence" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setRecurrence()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setRecurrence(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the recurrence</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The recurrence</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getResponseRequested" name="method_getResponseRequested" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getResponseRequested()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getResponseRequested() : boolean</pre>
+                <p><em>Gets the responseRequested</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>The responseRequested</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setResponseRequested" name="method_setResponseRequested" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setResponseRequested()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setResponseRequested(boolean  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the responseRequested</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$val </td>
+                                <td><p>The responseRequested</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getSeriesMasterId" name="method_getSeriesMasterId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getSeriesMasterId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getSeriesMasterId() : string</pre>
+                <p><em>Gets the seriesMasterId</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The seriesMasterId</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setSeriesMasterId" name="method_setSeriesMasterId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setSeriesMasterId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setSeriesMasterId(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the seriesMasterId</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The seriesMasterId</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getShowAs" name="method_getShowAs" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getShowAs()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getShowAs() : \Microsoft\Graph\Model\FreeBusyStatus</pre>
+                <p><em>Gets the showAs</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.FreeBusyStatus.html">\Microsoft\Graph\Model\FreeBusyStatus</a>
+                                            &mdash; <p>The showAs</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setShowAs" name="method_setShowAs" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setShowAs()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setShowAs(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the showAs</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The showAs</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getType" name="method_getType" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getType()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getType() : \Microsoft\Graph\Model\EventType</pre>
+                <p><em>Gets the type</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.EventType.html">\Microsoft\Graph\Model\EventType</a>
+                                            &mdash; <p>The type</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setType" name="method_setType" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setType()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setType(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the type</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The type</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAttendees" name="method_getAttendees" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAttendees()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAttendees() : \Microsoft\Graph\Model\AttendeesCollectionPage</pre>
+                <p><em>Gets the attendees</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\AttendeesCollectionPage
+                                            &mdash; <p>The attendees</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getOrganizer" name="method_getOrganizer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getOrganizer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getOrganizer() : \Microsoft\Graph\Model\Recipient</pre>
+                <p><em>Gets the organizer</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.Recipient.html">\Microsoft\Graph\Model\Recipient</a>
+                                            &mdash; <p>The organizer</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setOrganizer" name="method_setOrganizer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setOrganizer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setOrganizer(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the organizer</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The organizer</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getWebLink" name="method_getWebLink" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getWebLink()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getWebLink() : string</pre>
+                <p><em>Gets the webLink</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The webLink</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setWebLink" name="method_setWebLink" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setWebLink()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setWebLink(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the webLink</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The webLink</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getOnlineMeetingUrl" name="method_getOnlineMeetingUrl" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getOnlineMeetingUrl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getOnlineMeetingUrl() : string</pre>
+                <p><em>Gets the onlineMeetingUrl</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The onlineMeetingUrl</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setOnlineMeetingUrl" name="method_setOnlineMeetingUrl" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setOnlineMeetingUrl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setOnlineMeetingUrl(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the onlineMeetingUrl</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The onlineMeetingUrl</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCalendar" name="method_getCalendar" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCalendar()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCalendar() : \Microsoft\Graph\Model\Calendar</pre>
+                <p><em>Gets the calendar</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Microsoft.Graph.Model.Calendar.html">\Microsoft\Graph\Model\Calendar</a>
+                                            &mdash; <p>The calendar</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setCalendar" name="method_setCalendar" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setCalendar()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setCalendar(string  <span class="argument">$val</span>) : null</pre>
+                <p><em>Sets the calendar</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$val </td>
+                                <td><p>The calendar</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    null
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInstances" name="method_getInstances" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInstances()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInstances() : \Microsoft\Graph\Model\InstancesCollectionPage</pre>
+                <p><em>Gets the instances</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\InstancesCollectionPage
+                                            &mdash; <p>The instances</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getExtensions" name="method_getExtensions" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getExtensions()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getExtensions() : \Microsoft\Graph\Model\ExtensionsCollectionPage</pre>
+                <p><em>Gets the extensions</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\ExtensionsCollectionPage
+                                            &mdash; <p>The extensions</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAttachments" name="method_getAttachments" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAttachments()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAttachments() : \Microsoft\Graph\Model\AttachmentsCollectionPage</pre>
+                <p><em>Gets the attachments</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\AttachmentsCollectionPage
+                                            &mdash; <p>The attachments</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getSingleValueExtendedProperties" name="method_getSingleValueExtendedProperties" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getSingleValueExtendedProperties()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getSingleValueExtendedProperties() : \Microsoft\Graph\Model\SingleValueExtendedPropertiesCollectionPage</pre>
+                <p><em>Gets the singleValueExtendedProperties</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\SingleValueExtendedPropertiesCollectionPage
+                                            &mdash; <p>The singleValueExtendedProperties</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMultiValueExtendedProperties" name="method_getMultiValueExtendedProperties" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMultiValueExtendedProperties()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMultiValueExtendedProperties() : \Microsoft\Graph\Model\MultiValueExtendedPropertiesCollectionPage</pre>
+                <p><em>Gets the multiValueExtendedProperties</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Microsoft\Graph\Model\MultiValueExtendedPropertiesCollectionPage
+                                            &mdash; <p>The multiValueExtendedProperties</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Event.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Model\Event.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Microsoft.html">\Microsoft</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on October 25th, 2016 at 23:02.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

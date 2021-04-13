@@ -59,7 +59,7 @@ class GovernancePolicyTemplate extends Entity
     public function getPolicy()
     {
         if (array_key_exists("policy", $this->_propDict)) {
-            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\GovernancePolicy")) {
+            if (is_a($this->_propDict["policy"], "Beta\Microsoft\Graph\Model\GovernancePolicy")) {
                 return $this->_propDict["policy"];
             } else {
                 $this->_propDict["policy"] = new GovernancePolicy($this->_propDict["policy"]);
@@ -90,7 +90,7 @@ class GovernancePolicyTemplate extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\BusinessFlowSettings")) {
+            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\BusinessFlowSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new BusinessFlowSettings($this->_propDict["settings"]);

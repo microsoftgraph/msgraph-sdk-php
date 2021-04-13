@@ -59,7 +59,7 @@ class CalendarSharingMessage extends Message
     public function getSharingMessageAction()
     {
         if (array_key_exists("sharingMessageAction", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingMessageAction"], "\Beta\Microsoft\Graph\Model\CalendarSharingMessageAction")) {
+            if (is_a($this->_propDict["sharingMessageAction"], "Beta\Microsoft\Graph\Model\CalendarSharingMessageAction")) {
                 return $this->_propDict["sharingMessageAction"];
             } else {
                 $this->_propDict["sharingMessageAction"] = new CalendarSharingMessageAction($this->_propDict["sharingMessageAction"]);

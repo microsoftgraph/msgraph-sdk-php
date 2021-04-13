@@ -26,14 +26,14 @@ class IdentityUserFlowAttribute extends Entity
 {
     /**
     * Gets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
+    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are:string - denotes that the dataType for the identityUserFlowAttribute is a string. boolean - denotes that the dataType for the identityUserFlowAttribute is a Boolean.int64 - denotes that the dataType for the identityUserFlowAttribute is an integer.
     *
     * @return IdentityUserFlowAttributeDataType The dataType
     */
     public function getDataType()
     {
         if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeDataType")) {
+            if (is_a($this->_propDict["dataType"], "Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeDataType")) {
                 return $this->_propDict["dataType"];
             } else {
                 $this->_propDict["dataType"] = new IdentityUserFlowAttributeDataType($this->_propDict["dataType"]);
@@ -45,7 +45,7 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the dataType
-    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
+    * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are:string - denotes that the dataType for the identityUserFlowAttribute is a string. boolean - denotes that the dataType for the identityUserFlowAttribute is a Boolean.int64 - denotes that the dataType for the identityUserFlowAttribute is an integer.
     *
     * @param IdentityUserFlowAttributeDataType $val The dataType
     *
@@ -117,14 +117,14 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Gets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
+    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
     *
     * @return IdentityUserFlowAttributeType The userFlowAttributeType
     */
     public function getUserFlowAttributeType()
     {
         if (array_key_exists("userFlowAttributeType", $this->_propDict)) {
-            if (is_a($this->_propDict["userFlowAttributeType"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeType")) {
+            if (is_a($this->_propDict["userFlowAttributeType"], "Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeType")) {
                 return $this->_propDict["userFlowAttributeType"];
             } else {
                 $this->_propDict["userFlowAttributeType"] = new IdentityUserFlowAttributeType($this->_propDict["userFlowAttributeType"]);
@@ -136,7 +136,7 @@ class IdentityUserFlowAttribute extends Entity
     
     /**
     * Sets the userFlowAttributeType
-    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
+    * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn or custom.
     *
     * @param IdentityUserFlowAttributeType $val The userFlowAttributeType
     *

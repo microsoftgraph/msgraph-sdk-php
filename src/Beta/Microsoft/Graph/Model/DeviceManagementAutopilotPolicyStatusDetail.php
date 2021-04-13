@@ -33,7 +33,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     public function getComplianceStatus()
     {
         if (array_key_exists("complianceStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceStatus"], "\Beta\Microsoft\Graph\Model\DeviceManagementAutopilotPolicyComplianceStatus")) {
+            if (is_a($this->_propDict["complianceStatus"], "Beta\Microsoft\Graph\Model\DeviceManagementAutopilotPolicyComplianceStatus")) {
                 return $this->_propDict["complianceStatus"];
             } else {
                 $this->_propDict["complianceStatus"] = new DeviceManagementAutopilotPolicyComplianceStatus($this->_propDict["complianceStatus"]);
@@ -157,7 +157,7 @@ class DeviceManagementAutopilotPolicyStatusDetail extends Entity
     public function getPolicyType()
     {
         if (array_key_exists("policyType", $this->_propDict)) {
-            if (is_a($this->_propDict["policyType"], "\Beta\Microsoft\Graph\Model\DeviceManagementAutopilotPolicyType")) {
+            if (is_a($this->_propDict["policyType"], "Beta\Microsoft\Graph\Model\DeviceManagementAutopilotPolicyType")) {
                 return $this->_propDict["policyType"];
             } else {
                 $this->_propDict["policyType"] = new DeviceManagementAutopilotPolicyType($this->_propDict["policyType"]);

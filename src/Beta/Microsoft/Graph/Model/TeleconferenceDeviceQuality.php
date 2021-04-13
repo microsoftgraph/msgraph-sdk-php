@@ -257,7 +257,7 @@ class TeleconferenceDeviceQuality extends Entity
     public function getMediaQualityList()
     {
         if (array_key_exists("mediaQualityList", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaQualityList"], "\Beta\Microsoft\Graph\Model\TeleconferenceDeviceMediaQuality")) {
+            if (is_a($this->_propDict["mediaQualityList"], "Beta\Microsoft\Graph\Model\TeleconferenceDeviceMediaQuality")) {
                 return $this->_propDict["mediaQualityList"];
             } else {
                 $this->_propDict["mediaQualityList"] = new TeleconferenceDeviceMediaQuality($this->_propDict["mediaQualityList"]);

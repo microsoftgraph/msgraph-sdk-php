@@ -95,7 +95,7 @@ class DeviceCustomAttributeShellScript extends Entity
     public function getCustomAttributeType()
     {
         if (array_key_exists("customAttributeType", $this->_propDict)) {
-            if (is_a($this->_propDict["customAttributeType"], "\Beta\Microsoft\Graph\Model\DeviceCustomAttributeValueType")) {
+            if (is_a($this->_propDict["customAttributeType"], "Beta\Microsoft\Graph\Model\DeviceCustomAttributeValueType")) {
                 return $this->_propDict["customAttributeType"];
             } else {
                 $this->_propDict["customAttributeType"] = new DeviceCustomAttributeValueType($this->_propDict["customAttributeType"]);
@@ -277,7 +277,7 @@ class DeviceCustomAttributeShellScript extends Entity
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType")) {
+            if (is_a($this->_propDict["runAsAccount"], "Beta\Microsoft\Graph\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -433,7 +433,7 @@ class DeviceCustomAttributeShellScript extends Entity
     public function getRunSummary()
     {
         if (array_key_exists("runSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementScriptRunSummary")) {
+            if (is_a($this->_propDict["runSummary"], "Beta\Microsoft\Graph\Model\DeviceManagementScriptRunSummary")) {
                 return $this->_propDict["runSummary"];
             } else {
                 $this->_propDict["runSummary"] = new DeviceManagementScriptRunSummary($this->_propDict["runSummary"]);

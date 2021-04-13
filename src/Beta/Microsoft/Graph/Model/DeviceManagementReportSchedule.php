@@ -124,7 +124,7 @@ class DeviceManagementReportSchedule extends Entity
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat")) {
+            if (is_a($this->_propDict["format"], "Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new DeviceManagementReportFileFormat($this->_propDict["format"]);
@@ -186,7 +186,7 @@ class DeviceManagementReportSchedule extends Entity
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\DeviceManagementScheduledReportRecurrence")) {
+            if (is_a($this->_propDict["recurrence"], "Beta\Microsoft\Graph\Model\DeviceManagementScheduledReportRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new DeviceManagementScheduledReportRecurrence($this->_propDict["recurrence"]);

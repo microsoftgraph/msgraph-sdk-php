@@ -25,64 +25,63 @@ class SearchResponse extends Entity
 {
 
     /**
-    * Gets the queryAlterationResponse
+    * Gets the hitsContainers
+    * A collection of search results.
     *
-    * @return AlterationResponse The queryAlterationResponse
+    * @return SearchHitsContainer The hitsContainers
     */
-    public function getQueryAlterationResponse()
+    public function getHitsContainers()
     {
-        if (array_key_exists("queryAlterationResponse", $this->_propDict)) {
-            if (is_a($this->_propDict["queryAlterationResponse"], "\Beta\Microsoft\Graph\Model\AlterationResponse")) {
-                return $this->_propDict["queryAlterationResponse"];
+        if (array_key_exists("hitsContainers", $this->_propDict)) {
+            if (is_a($this->_propDict["hitsContainers"], "Beta\Microsoft\Graph\Model\SearchHitsContainer")) {
+                return $this->_propDict["hitsContainers"];
             } else {
-                $this->_propDict["queryAlterationResponse"] = new AlterationResponse($this->_propDict["queryAlterationResponse"]);
-                return $this->_propDict["queryAlterationResponse"];
+                $this->_propDict["hitsContainers"] = new SearchHitsContainer($this->_propDict["hitsContainers"]);
+                return $this->_propDict["hitsContainers"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the queryAlterationResponse
+    * Sets the hitsContainers
+    * A collection of search results.
     *
-    * @param AlterationResponse $val The value to assign to the queryAlterationResponse
+    * @param SearchHitsContainer $val The value to assign to the hitsContainers
     *
     * @return SearchResponse The SearchResponse
     */
-    public function setQueryAlterationResponse($val)
+    public function setHitsContainers($val)
     {
-        $this->_propDict["queryAlterationResponse"] = $val;
+        $this->_propDict["hitsContainers"] = $val;
          return $this;
     }
-
     /**
-    * Gets the value
+    * Gets the searchTerms
+    * Contains the search terms sent in the initial search query.
     *
-    * @return SearchResultSet The value
+    * @return string The searchTerms
     */
-    public function getValue()
+    public function getSearchTerms()
     {
-        if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\SearchResultSet")) {
-                return $this->_propDict["value"];
-            } else {
-                $this->_propDict["value"] = new SearchResultSet($this->_propDict["value"]);
-                return $this->_propDict["value"];
-            }
+        if (array_key_exists("searchTerms", $this->_propDict)) {
+            return $this->_propDict["searchTerms"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
-    * Sets the value
+    * Sets the searchTerms
+    * Contains the search terms sent in the initial search query.
     *
-    * @param SearchResultSet $val The value to assign to the value
+    * @param string $val The value of the searchTerms
     *
-    * @return SearchResponse The SearchResponse
+    * @return SearchResponse
     */
-    public function setValue($val)
+    public function setSearchTerms($val)
     {
-        $this->_propDict["value"] = $val;
-         return $this;
+        $this->_propDict["searchTerms"] = $val;
+        return $this;
     }
 }

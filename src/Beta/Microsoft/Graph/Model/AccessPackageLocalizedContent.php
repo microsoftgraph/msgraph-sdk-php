@@ -61,7 +61,7 @@ class AccessPackageLocalizedContent extends Entity
     public function getLocalizedTexts()
     {
         if (array_key_exists("localizedTexts", $this->_propDict)) {
-            if (is_a($this->_propDict["localizedTexts"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedText")) {
+            if (is_a($this->_propDict["localizedTexts"], "Beta\Microsoft\Graph\Model\AccessPackageLocalizedText")) {
                 return $this->_propDict["localizedTexts"];
             } else {
                 $this->_propDict["localizedTexts"] = new AccessPackageLocalizedText($this->_propDict["localizedTexts"]);

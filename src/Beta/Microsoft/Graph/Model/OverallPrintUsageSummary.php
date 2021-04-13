@@ -110,7 +110,7 @@ class OverallPrintUsageSummary extends Entity
     public function getTopPrinters()
     {
         if (array_key_exists("topPrinters", $this->_propDict)) {
-            if (is_a($this->_propDict["topPrinters"], "\Beta\Microsoft\Graph\Model\PrinterUsageSummary")) {
+            if (is_a($this->_propDict["topPrinters"], "Beta\Microsoft\Graph\Model\PrinterUsageSummary")) {
                 return $this->_propDict["topPrinters"];
             } else {
                 $this->_propDict["topPrinters"] = new PrinterUsageSummary($this->_propDict["topPrinters"]);
@@ -141,7 +141,7 @@ class OverallPrintUsageSummary extends Entity
     public function getTopUsers()
     {
         if (array_key_exists("topUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["topUsers"], "\Beta\Microsoft\Graph\Model\UserPrintUsageSummary")) {
+            if (is_a($this->_propDict["topUsers"], "Beta\Microsoft\Graph\Model\UserPrintUsageSummary")) {
                 return $this->_propDict["topUsers"];
             } else {
                 $this->_propDict["topUsers"] = new UserPrintUsageSummary($this->_propDict["topUsers"]);

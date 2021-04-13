@@ -33,7 +33,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationStringFormat")) {
+            if (is_a($this->_propDict["format"], "Beta\Microsoft\Graph\Model\DeviceManagementConfigurationStringFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new DeviceManagementConfigurationStringFormat($this->_propDict["format"]);

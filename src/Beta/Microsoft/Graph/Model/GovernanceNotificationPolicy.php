@@ -58,7 +58,7 @@ class GovernanceNotificationPolicy extends Entity
     public function getNotificationTemplates()
     {
         if (array_key_exists("notificationTemplates", $this->_propDict)) {
-            if (is_a($this->_propDict["notificationTemplates"], "\Beta\Microsoft\Graph\Model\GovernanceNotificationTemplate")) {
+            if (is_a($this->_propDict["notificationTemplates"], "Beta\Microsoft\Graph\Model\GovernanceNotificationTemplate")) {
                 return $this->_propDict["notificationTemplates"];
             } else {
                 $this->_propDict["notificationTemplates"] = new GovernanceNotificationTemplate($this->_propDict["notificationTemplates"]);

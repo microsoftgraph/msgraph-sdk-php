@@ -33,7 +33,7 @@ class RolePermission extends Entity
     public function getResourceActions()
     {
         if (array_key_exists("resourceActions", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceActions"], "\Microsoft\Graph\Model\ResourceAction")) {
+            if (is_a($this->_propDict["resourceActions"], "Microsoft\Graph\Model\ResourceAction")) {
                 return $this->_propDict["resourceActions"];
             } else {
                 $this->_propDict["resourceActions"] = new ResourceAction($this->_propDict["resourceActions"]);

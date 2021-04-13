@@ -55,7 +55,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Gets the addedOn
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @return \DateTime The addedOn
     */
@@ -74,7 +74,7 @@ class AccessPackageResource extends Entity
     
     /**
     * Sets the addedOn
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     *
     * @param \DateTime $val The addedOn
     *
@@ -326,7 +326,7 @@ class AccessPackageResource extends Entity
     public function getAccessPackageResourceEnvironment()
     {
         if (array_key_exists("accessPackageResourceEnvironment", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResourceEnvironment"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceEnvironment")) {
+            if (is_a($this->_propDict["accessPackageResourceEnvironment"], "Beta\Microsoft\Graph\Model\AccessPackageResourceEnvironment")) {
                 return $this->_propDict["accessPackageResourceEnvironment"];
             } else {
                 $this->_propDict["accessPackageResourceEnvironment"] = new AccessPackageResourceEnvironment($this->_propDict["accessPackageResourceEnvironment"]);

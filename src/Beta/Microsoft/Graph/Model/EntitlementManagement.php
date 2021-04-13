@@ -368,7 +368,7 @@ class EntitlementManagement extends Entity
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\EntitlementManagementSettings")) {
+            if (is_a($this->_propDict["settings"], "Beta\Microsoft\Graph\Model\EntitlementManagementSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new EntitlementManagementSettings($this->_propDict["settings"]);

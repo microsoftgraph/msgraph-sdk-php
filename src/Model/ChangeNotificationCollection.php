@@ -61,7 +61,7 @@ class ChangeNotificationCollection extends Entity
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Microsoft\Graph\Model\ChangeNotification")) {
+            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\ChangeNotification")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new ChangeNotification($this->_propDict["value"]);
