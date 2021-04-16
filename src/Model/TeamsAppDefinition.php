@@ -266,7 +266,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the bot
-    * The details of the bot specified in the Teams App manifest.
+    * The details of the bot specified in the Teams app manifest.
     *
     * @return TeamworkBot The bot
     */
@@ -285,7 +285,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the bot
-    * The details of the bot specified in the Teams App manifest.
+    * The details of the bot specified in the Teams app manifest.
     *
     * @param TeamworkBot $val The bot
     *
