@@ -287,34 +287,6 @@ class PolicyRoot implements \JsonSerializable
     
 
      /** 
-     * Gets the privateLinkResourcePolicies
-     *
-     * @return array The privateLinkResourcePolicies
-     */
-    public function getPrivateLinkResourcePolicies()
-    {
-        if (array_key_exists("privateLinkResourcePolicies", $this->_propDict)) {
-           return $this->_propDict["privateLinkResourcePolicies"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the privateLinkResourcePolicies
-    *
-    * @param PrivateLinkResourcePolicy $val The privateLinkResourcePolicies
-    *
-    * @return PolicyRoot
-    */
-    public function setPrivateLinkResourcePolicies($val)
-    {
-		$this->_propDict["privateLinkResourcePolicies"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the tokenIssuancePolicies
      *
      * @return array The tokenIssuancePolicies

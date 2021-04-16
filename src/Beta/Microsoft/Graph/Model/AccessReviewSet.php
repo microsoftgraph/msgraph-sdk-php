@@ -52,4 +52,32 @@ class AccessReviewSet extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the historyDefinitions
+     *
+     * @return array The historyDefinitions
+     */
+    public function getHistoryDefinitions()
+    {
+        if (array_key_exists("historyDefinitions", $this->_propDict)) {
+           return $this->_propDict["historyDefinitions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the historyDefinitions
+    *
+    * @param AccessReviewHistoryDefinition $val The historyDefinitions
+    *
+    * @return AccessReviewSet
+    */
+    public function setHistoryDefinitions($val)
+    {
+		$this->_propDict["historyDefinitions"] = $val;
+        return $this;
+    }
+    
 }
