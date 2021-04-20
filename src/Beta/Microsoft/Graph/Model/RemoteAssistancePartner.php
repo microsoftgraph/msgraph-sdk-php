@@ -121,7 +121,7 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Gets the onboardingStatus
-    * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
+    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @return RemoteAssistanceOnboardingStatus The onboardingStatus
     */
@@ -140,7 +140,7 @@ class RemoteAssistancePartner extends Entity
     
     /**
     * Sets the onboardingStatus
-    * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
+    * TBD. Possible values are: notOnboarded, onboarding, onboarded.
     *
     * @param RemoteAssistanceOnboardingStatus $val The onboardingStatus
     *

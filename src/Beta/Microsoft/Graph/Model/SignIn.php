@@ -55,7 +55,7 @@ class SignIn extends Entity
     
     /**
     * Gets the appDisplayName
-    * The application name displayed in the Azure Portal.
+    * App name displayed in the Azure Portal.
     *
     * @return string The appDisplayName
     */
@@ -70,7 +70,7 @@ class SignIn extends Entity
     
     /**
     * Sets the appDisplayName
-    * The application name displayed in the Azure Portal.
+    * App name displayed in the Azure Portal.
     *
     * @param string $val The appDisplayName
     *
@@ -84,7 +84,7 @@ class SignIn extends Entity
     
     /**
     * Gets the appId
-    * The application identifier in Azure Active Directory.
+    * Unique GUID representing the app ID in the Azure Active Directory.
     *
     * @return string The appId
     */
@@ -99,7 +99,7 @@ class SignIn extends Entity
     
     /**
     * Sets the appId
-    * The application identifier in Azure Active Directory.
+    * Unique GUID representing the app ID in the Azure Active Directory.
     *
     * @param string $val The appId
     *
@@ -289,7 +289,7 @@ class SignIn extends Entity
     
     /**
     * Gets the clientAppUsed
-    * The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP.
+    * Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP.
     *
     * @return string The clientAppUsed
     */
@@ -304,7 +304,7 @@ class SignIn extends Entity
     
     /**
     * Sets the clientAppUsed
-    * The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP.
+    * Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP.
     *
     * @param string $val The clientAppUsed
     *
@@ -318,7 +318,7 @@ class SignIn extends Entity
     
     /**
     * Gets the conditionalAccessStatus
-    * The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.
+    * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.
     *
     * @return ConditionalAccessStatus The conditionalAccessStatus
     */
@@ -337,7 +337,7 @@ class SignIn extends Entity
     
     /**
     * Sets the conditionalAccessStatus
-    * The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.
+    * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.
     *
     * @param ConditionalAccessStatus $val The conditionalAccessStatus
     *
@@ -351,7 +351,7 @@ class SignIn extends Entity
     
     /**
     * Gets the correlationId
-    * The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.
+    * The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity.
     *
     * @return string The correlationId
     */
@@ -366,7 +366,7 @@ class SignIn extends Entity
     
     /**
     * Sets the correlationId
-    * The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.
+    * The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity.
     *
     * @param string $val The correlationId
     *
@@ -380,7 +380,7 @@ class SignIn extends Entity
     
     /**
     * Gets the createdDateTime
-    * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The createdDateTime
     */
@@ -399,7 +399,7 @@ class SignIn extends Entity
     
     /**
     * Sets the createdDateTime
-    * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -413,7 +413,7 @@ class SignIn extends Entity
     
     /**
     * Gets the deviceDetail
-    * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.
+    * Device information from where the sign-in occurred; includes device ID, operating system, and browser.
     *
     * @return DeviceDetail The deviceDetail
     */
@@ -432,7 +432,7 @@ class SignIn extends Entity
     
     /**
     * Sets the deviceDetail
-    * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.
+    * Device information from where the sign-in occurred; includes device ID, operating system, and browser.
     *
     * @param DeviceDetail $val The deviceDetail
     *
@@ -500,7 +500,7 @@ class SignIn extends Entity
     
     /**
     * Gets the ipAddress
-    * The IP address of the client from where the sign-in occurred.
+    * IP address of the client used to sign in.
     *
     * @return string The ipAddress
     */
@@ -515,7 +515,7 @@ class SignIn extends Entity
     
     /**
     * Sets the ipAddress
-    * The IP address of the client from where the sign-in occurred.
+    * IP address of the client used to sign in.
     *
     * @param string $val The ipAddress
     *
@@ -556,7 +556,7 @@ class SignIn extends Entity
     
     /**
     * Gets the isInteractive
-    * Indicates whether a sign-in is interactive or not.
+    * Indicates if a sign-in is interactive or not.
     *
     * @return bool The isInteractive
     */
@@ -571,7 +571,7 @@ class SignIn extends Entity
     
     /**
     * Sets the isInteractive
-    * Indicates whether a sign-in is interactive or not.
+    * Indicates if a sign-in is interactive or not.
     *
     * @param bool $val The isInteractive
     *
@@ -585,7 +585,7 @@ class SignIn extends Entity
     
     /**
     * Gets the location
-    * The city, state, and 2 letter country code from where the sign-in occurred.
+    * Provides the city, state, and country code where the sign-in originated.
     *
     * @return SignInLocation The location
     */
@@ -604,7 +604,7 @@ class SignIn extends Entity
     
     /**
     * Sets the location
-    * The city, state, and 2 letter country code from where the sign-in occurred.
+    * Provides the city, state, and country code where the sign-in originated.
     *
     * @param SignInLocation $val The location
     *
@@ -737,7 +737,7 @@ class SignIn extends Entity
     
     /**
     * Gets the resourceDisplayName
-    * The name of the resource that the user signed in to.
+    * Name of the resource the user signed into.
     *
     * @return string The resourceDisplayName
     */
@@ -752,7 +752,7 @@ class SignIn extends Entity
     
     /**
     * Sets the resourceDisplayName
-    * The name of the resource that the user signed in to.
+    * Name of the resource the user signed into.
     *
     * @param string $val The resourceDisplayName
     *
@@ -766,7 +766,7 @@ class SignIn extends Entity
     
     /**
     * Gets the resourceId
-    * The identifier of the resource that the user signed in to.
+    * ID of the resource that the user signed into.
     *
     * @return string The resourceId
     */
@@ -781,7 +781,7 @@ class SignIn extends Entity
     
     /**
     * Sets the resourceId
-    * The identifier of the resource that the user signed in to.
+    * ID of the resource that the user signed into.
     *
     * @param string $val The resourceId
     *
@@ -822,7 +822,7 @@ class SignIn extends Entity
     
     /**
     * Gets the riskDetail
-    * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
     *
     * @return RiskDetail The riskDetail
     */
@@ -841,7 +841,7 @@ class SignIn extends Entity
     
     /**
     * Sets the riskDetail
-    * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
     *
     * @param RiskDetail $val The riskDetail
     *
@@ -856,7 +856,7 @@ class SignIn extends Entity
 
      /** 
      * Gets the riskEventTypes
-    * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+    * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.
      *
      * @return array The riskEventTypes
      */
@@ -871,7 +871,7 @@ class SignIn extends Entity
     
     /** 
     * Sets the riskEventTypes
-    * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+    * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.
     *
     * @param RiskEventType $val The riskEventTypes
     *
@@ -914,7 +914,7 @@ class SignIn extends Entity
     
     /**
     * Gets the riskLevelAggregated
-    * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
     *
     * @return RiskLevel The riskLevelAggregated
     */
@@ -933,7 +933,7 @@ class SignIn extends Entity
     
     /**
     * Sets the riskLevelAggregated
-    * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
     *
     * @param RiskLevel $val The riskLevelAggregated
     *
@@ -947,7 +947,7 @@ class SignIn extends Entity
     
     /**
     * Gets the riskLevelDuringSignIn
-    * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
     *
     * @return RiskLevel The riskLevelDuringSignIn
     */
@@ -966,7 +966,7 @@ class SignIn extends Entity
     
     /**
     * Sets the riskLevelDuringSignIn
-    * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+    * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
     *
     * @param RiskLevel $val The riskLevelDuringSignIn
     *
@@ -980,7 +980,7 @@ class SignIn extends Entity
     
     /**
     * Gets the riskState
-    * The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.
+    * Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @return RiskState The riskState
     */
@@ -999,7 +999,7 @@ class SignIn extends Entity
     
     /**
     * Sets the riskState
-    * The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.
+    * Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
     * @param RiskState $val The riskState
     *
@@ -1156,7 +1156,7 @@ class SignIn extends Entity
     
     /**
     * Gets the status
-    * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
+    * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
     *
     * @return SignInStatus The status
     */
@@ -1175,7 +1175,7 @@ class SignIn extends Entity
     
     /**
     * Sets the status
-    * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
+    * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
     *
     * @param SignInStatus $val The status
     *
@@ -1280,7 +1280,7 @@ class SignIn extends Entity
     
     /**
     * Gets the userDisplayName
-    * The display name of the user.
+    * Display name of the user that initiated the sign-in.
     *
     * @return string The userDisplayName
     */
@@ -1295,7 +1295,7 @@ class SignIn extends Entity
     
     /**
     * Sets the userDisplayName
-    * The display name of the user.
+    * Display name of the user that initiated the sign-in.
     *
     * @param string $val The userDisplayName
     *
@@ -1309,7 +1309,7 @@ class SignIn extends Entity
     
     /**
     * Gets the userId
-    * The identifier of the user.
+    * ID of the user that initiated the sign-in.
     *
     * @return string The userId
     */
@@ -1324,7 +1324,7 @@ class SignIn extends Entity
     
     /**
     * Sets the userId
-    * The identifier of the user.
+    * ID of the user that initiated the sign-in.
     *
     * @param string $val The userId
     *
@@ -1338,7 +1338,7 @@ class SignIn extends Entity
     
     /**
     * Gets the userPrincipalName
-    * The UPN of the user.
+    * User principal name of the user that initiated the sign-in.
     *
     * @return string The userPrincipalName
     */
@@ -1353,7 +1353,7 @@ class SignIn extends Entity
     
     /**
     * Sets the userPrincipalName
-    * The UPN of the user.
+    * User principal name of the user that initiated the sign-in.
     *
     * @param string $val The userPrincipalName
     *

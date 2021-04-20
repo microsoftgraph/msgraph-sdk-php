@@ -26,6 +26,7 @@ class TeamsAppIcon extends Entity
 {
     /**
     * Gets the webUrl
+    * The web URL that can be used for downloading the image.
     *
     * @return string The webUrl
     */
@@ -40,6 +41,7 @@ class TeamsAppIcon extends Entity
     
     /**
     * Sets the webUrl
+    * The web URL that can be used for downloading the image.
     *
     * @param string $val The webUrl
     *
@@ -53,6 +55,7 @@ class TeamsAppIcon extends Entity
     
     /**
     * Gets the hostedContent
+    * The contents of the app icon if the icon is hosted within the Teams infrastructure.
     *
     * @return TeamworkHostedContent The hostedContent
     */
@@ -71,6 +74,7 @@ class TeamsAppIcon extends Entity
     
     /**
     * Sets the hostedContent
+    * The contents of the app icon if the icon is hosted within the Teams infrastructure.
     *
     * @param TeamworkHostedContent $val The hostedContent
     *

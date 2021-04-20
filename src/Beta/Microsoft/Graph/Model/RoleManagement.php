@@ -84,6 +84,37 @@ class RoleManagement implements \JsonSerializable
     }
     
     /**
+    * Gets the cloudPC
+    *
+    * @return RbacApplicationMultiple The cloudPC
+    */
+    public function getCloudPC()
+    {
+        if (array_key_exists("cloudPC", $this->_propDict)) {
+            if (is_a($this->_propDict["cloudPC"], "\Beta\Microsoft\Graph\Model\RbacApplicationMultiple")) {
+                return $this->_propDict["cloudPC"];
+            } else {
+                $this->_propDict["cloudPC"] = new RbacApplicationMultiple($this->_propDict["cloudPC"]);
+                return $this->_propDict["cloudPC"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the cloudPC
+    *
+    * @param RbacApplicationMultiple $val The cloudPC
+    *
+    * @return RoleManagement
+    */
+    public function setCloudPC($val)
+    {
+        $this->_propDict["cloudPC"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the entitlementManagement
     * The RbacApplication for Entitlement Management
     *

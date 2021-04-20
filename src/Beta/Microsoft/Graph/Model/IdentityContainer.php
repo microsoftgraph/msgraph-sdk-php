@@ -169,6 +169,34 @@ class IdentityContainer implements \JsonSerializable
     
 
      /** 
+     * Gets the identityProviders
+     *
+     * @return array The identityProviders
+     */
+    public function getIdentityProviders()
+    {
+        if (array_key_exists("identityProviders", $this->_propDict)) {
+           return $this->_propDict["identityProviders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the identityProviders
+    *
+    * @param IdentityProviderBase $val The identityProviders
+    *
+    * @return IdentityContainer
+    */
+    public function setIdentityProviders($val)
+    {
+		$this->_propDict["identityProviders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userFlowAttributes
      *
      * @return array The userFlowAttributes

@@ -51,33 +51,38 @@ class StatusDetails extends StatusBase
         $this->_propDict["additionalDetails"] = $val;
         return $this;
     }
+
     /**
     * Gets the errorCategory
     * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
     *
-    * @return string The errorCategory
+    * @return ProvisioningStatusErrorCategory The errorCategory
     */
     public function getErrorCategory()
     {
         if (array_key_exists("errorCategory", $this->_propDict)) {
-            return $this->_propDict["errorCategory"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["errorCategory"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusErrorCategory")) {
+                return $this->_propDict["errorCategory"];
+            } else {
+                $this->_propDict["errorCategory"] = new ProvisioningStatusErrorCategory($this->_propDict["errorCategory"]);
+                return $this->_propDict["errorCategory"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the errorCategory
     * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
     *
-    * @param string $val The value of the errorCategory
+    * @param ProvisioningStatusErrorCategory $val The value to assign to the errorCategory
     *
-    * @return StatusDetails
+    * @return StatusDetails The StatusDetails
     */
     public function setErrorCategory($val)
     {
         $this->_propDict["errorCategory"] = $val;
-        return $this;
+         return $this;
     }
     /**
     * Gets the errorCode
