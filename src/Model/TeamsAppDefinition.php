@@ -208,7 +208,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @return string The teamsAppId
     */
@@ -223,7 +223,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @param string $val The teamsAppId
     *

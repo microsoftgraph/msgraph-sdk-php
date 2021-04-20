@@ -591,7 +591,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the memberOf
-    * Groups that this device is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups that this device is a member of. Read-only. Nullable.
      *
      * @return array The memberOf
      */
@@ -606,7 +606,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the memberOf
-    * Groups that this device is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups that this device is a member of. Read-only. Nullable.
     *
     * @param DirectoryObject $val The memberOf
     *
@@ -681,6 +681,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the transitiveMemberOf
+    * Groups that this device is a member of. This operation is transitive.
      *
      * @return array The transitiveMemberOf
      */
@@ -695,6 +696,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the transitiveMemberOf
+    * Groups that this device is a member of. This operation is transitive.
     *
     * @param DirectoryObject $val The transitiveMemberOf
     *

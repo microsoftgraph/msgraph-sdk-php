@@ -55,6 +55,37 @@ class PolicyRoot extends Entity
         return $this;
     }
     
+    /**
+    * Gets the authenticationFlowsPolicy
+    *
+    * @return AuthenticationFlowsPolicy The authenticationFlowsPolicy
+    */
+    public function getAuthenticationFlowsPolicy()
+    {
+        if (array_key_exists("authenticationFlowsPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationFlowsPolicy"], "\Microsoft\Graph\Model\AuthenticationFlowsPolicy")) {
+                return $this->_propDict["authenticationFlowsPolicy"];
+            } else {
+                $this->_propDict["authenticationFlowsPolicy"] = new AuthenticationFlowsPolicy($this->_propDict["authenticationFlowsPolicy"]);
+                return $this->_propDict["authenticationFlowsPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationFlowsPolicy
+    *
+    * @param AuthenticationFlowsPolicy $val The authenticationFlowsPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setAuthenticationFlowsPolicy($val)
+    {
+        $this->_propDict["authenticationFlowsPolicy"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the activityBasedTimeoutPolicies

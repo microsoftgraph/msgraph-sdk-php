@@ -53,6 +53,37 @@ class IdentityGovernance implements \JsonSerializable
     }
     
     /**
+    * Gets the accessReviews
+    *
+    * @return AccessReviewSet The accessReviews
+    */
+    public function getAccessReviews()
+    {
+        if (array_key_exists("accessReviews", $this->_propDict)) {
+            if (is_a($this->_propDict["accessReviews"], "\Microsoft\Graph\Model\AccessReviewSet")) {
+                return $this->_propDict["accessReviews"];
+            } else {
+                $this->_propDict["accessReviews"] = new AccessReviewSet($this->_propDict["accessReviews"]);
+                return $this->_propDict["accessReviews"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the accessReviews
+    *
+    * @param AccessReviewSet $val The accessReviews
+    *
+    * @return IdentityGovernance
+    */
+    public function setAccessReviews($val)
+    {
+        $this->_propDict["accessReviews"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the appConsent
     *
     * @return AppConsentApprovalRoute The appConsent
