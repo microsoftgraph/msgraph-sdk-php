@@ -17,8 +17,8 @@
 
 namespace Microsoft\Graph\Core;
 
-use GuzzleHttp\Exception\BadResponseException;
-use Microsoft\Graph\Exception\GraphException;
+use Microsoft\Graph\Exception\GraphRequestException;
+use Microsoft\Graph\Exception\GraphServerException;
 
 /**
  * Class ExceptionWrapper
@@ -31,16 +31,37 @@ use Microsoft\Graph\Exception\GraphException;
 class ExceptionWrapper
 {
     /**
-     * Wrap Guzzle BadResponseException which returns truncated exception messages for 4xx and 5xx responses.
+     * Wrap Guzzle's ClientException which is thrown on 4xx response while http_errors=true
+     * Adds full response body to exception message
+     *
+     * @param ClientException $ex
+     * @return GraphRequestException
+     */
+    public static function wrapGuzzleClientException(\GuzzleHttp\Exception\ClientException $ex)
+    {
+        if ($ex->getResponse()) {
+            $errMsg = "Received {$ex->getResponse()->getStatusCode()} for call to {$ex->getRequest()->getUri()}\nAPI response: {$ex->getResponse()->getBody()->getContents()}";
+        } else {
+            $errMsg = $ex->getMessage();
+        }
+        return new GraphRequestException($errMsg, $ex);
+    }
+
+    /**
+     * Wrap Guzzle ServerException thrown on 5xx response while http_errors=true
      * Adds response body to the exception message.
      *
-     * @param BadResponseException $ex
-     * @return GraphException containing HTTP response from Graph API
+     * @param ServerException $ex
+     * @return GraphServerException containing HTTP response from Graph API
      * 
      */
-    public static function wrapGuzzleBadResponseException(BadResponseException $ex)
+    public static function wrapGuzzleServerException(\GuzzleHttp\Exception\ServerException $ex)
     {
-        $errMsg = "Received {$ex->getResponse()->getStatusCode()} for call to {$ex->getRequest()->getUri()}\nAPI response: {$ex->getResponse()->getBody()->getContents()}";
-        return new GraphException($errMsg);
+        if ($ex->getResponse()) {
+            $errMsg = "Received {$ex->getResponse()->getStatusCode()} for call to {$ex->getRequest()->getUri()}\nAPI response: {$ex->getResponse()->getBody()->getContents()}";
+        } else {
+            $errMsg = $ex->getMessage();
+        }
+        return new GraphServerException($errMsg, $ex);
     }
 } 

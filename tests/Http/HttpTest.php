@@ -1,12 +1,11 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Microsoft\Graph\Graph;
 use Microsoft\Graph\Http\GraphRequest;
-use Microsoft\Graph\Exception\GraphException;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Client;
+use Microsoft\Graph\Exception\GraphRequestException;
 
 class HttpTest extends TestCase
 {
@@ -84,7 +83,7 @@ class HttpTest extends TestCase
 
     public function testInvalidVerb()
     {
-        $this->expectException(GraphException::class);
+        $this->expectException(GraphRequestException::class);
 
         $mock = new MockHandler([
             new Response(400, ['foo' => 'bar'])

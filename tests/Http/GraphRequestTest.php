@@ -3,7 +3,8 @@
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Core\GraphConstants;
-use Microsoft\Graph\Exception\GraphException;
+use Microsoft\Graph\Exception\GraphRequestException;
+use Microsoft\Graph\Exception\GraphServerException;
 use Microsoft\Graph\Graph;
 use Microsoft\Graph\Http\GraphRequest;
 use Microsoft\Graph\Http\Test\MockClientFactory;
@@ -204,7 +205,7 @@ class GraphRequestTest extends TestCase
 
     public function testExecuteWith4xxResponse()
     {
-        $this->expectException(GraphException::class);
+        $this->expectException(GraphRequestException::class);
         $mockResponse = array(new Response(400));
         $client = MockClientFactory::create(['http_errors' => true], $mockResponse);
         $this->requests[0]->execute($client);
@@ -212,7 +213,7 @@ class GraphRequestTest extends TestCase
 
     public function testExecuteWith5xxResponse()
     {
-        $this->expectException(GraphException::class);
+        $this->expectException(GraphServerException::class);
         $mockResponse = array(new Response(500));
         $client = MockClientFactory::create(['http_errors' => true], $mockResponse);
         $this->requests[0]->execute($client);
