@@ -158,10 +158,10 @@ class Graph
 	 *                                used to make queries against Graph
 	 * @throws Exception\GraphException
 	 */
-    public function createCollectionRequest($requestTypes, $endpoint)
+    public function createCollectionRequest($requestType, $endpoint)
     {
         return new GraphCollectionRequest(
-            $requestTypes,
+            $requestType,
             $endpoint,
             $this->_accessToken,
             $this->_baseUrl,
