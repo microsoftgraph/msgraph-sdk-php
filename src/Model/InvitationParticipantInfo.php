@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,15 +17,48 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
-class InvitationParticipantInfo extends ParticipantInfo
+class InvitationParticipantInfo extends Entity
 {
+
+    /**
+    * Gets the identity
+    * The identitySet associated with this invitation.
+    *
+    * @return IdentitySet The identity
+    */
+    public function getIdentity()
+    {
+        if (array_key_exists("identity", $this->_propDict)) {
+            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet")) {
+                return $this->_propDict["identity"];
+            } else {
+                $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
+                return $this->_propDict["identity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the identity
+    * The identitySet associated with this invitation.
+    *
+    * @param IdentitySet $val The value to assign to the identity
+    *
+    * @return InvitationParticipantInfo The InvitationParticipantInfo
+    */
+    public function setIdentity($val)
+    {
+        $this->_propDict["identity"] = $val;
+         return $this;
+    }
     /**
     * Gets the replacesCallId
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
     * @return string The replacesCallId
     */
@@ -41,6 +73,7 @@ class InvitationParticipantInfo extends ParticipantInfo
 
     /**
     * Sets the replacesCallId
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
     * @param string $val The value of the replacesCallId
     *

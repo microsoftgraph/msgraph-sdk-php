@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,15 +17,15 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class AudioConferencing extends Entity
 {
     /**
     * Gets the conferenceId
+    * The conference id of the online meeting.
     *
     * @return string The conferenceId
     */
@@ -41,6 +40,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the conferenceId
+    * The conference id of the online meeting.
     *
     * @param string $val The value of the conferenceId
     *
@@ -52,59 +52,8 @@ class AudioConferencing extends Entity
         return $this;
     }
     /**
-    * Gets the tollNumber
-    *
-    * @return string The tollNumber
-    */
-    public function getTollNumber()
-    {
-        if (array_key_exists("tollNumber", $this->_propDict)) {
-            return $this->_propDict["tollNumber"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tollNumber
-    *
-    * @param string $val The value of the tollNumber
-    *
-    * @return AudioConferencing
-    */
-    public function setTollNumber($val)
-    {
-        $this->_propDict["tollNumber"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the tollFreeNumber
-    *
-    * @return string The tollFreeNumber
-    */
-    public function getTollFreeNumber()
-    {
-        if (array_key_exists("tollFreeNumber", $this->_propDict)) {
-            return $this->_propDict["tollFreeNumber"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tollFreeNumber
-    *
-    * @param string $val The value of the tollFreeNumber
-    *
-    * @return AudioConferencing
-    */
-    public function setTollFreeNumber($val)
-    {
-        $this->_propDict["tollFreeNumber"] = $val;
-        return $this;
-    }
-    /**
     * Gets the dialinUrl
+    * A URL to the externally-accessible web page that contains dial-in information.
     *
     * @return string The dialinUrl
     */
@@ -119,6 +68,7 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the dialinUrl
+    * A URL to the externally-accessible web page that contains dial-in information.
     *
     * @param string $val The value of the dialinUrl
     *
@@ -127,6 +77,62 @@ class AudioConferencing extends Entity
     public function setDialinUrl($val)
     {
         $this->_propDict["dialinUrl"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tollFreeNumber
+    * The toll-free number that connects to the Audio Conference Provider.
+    *
+    * @return string The tollFreeNumber
+    */
+    public function getTollFreeNumber()
+    {
+        if (array_key_exists("tollFreeNumber", $this->_propDict)) {
+            return $this->_propDict["tollFreeNumber"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tollFreeNumber
+    * The toll-free number that connects to the Audio Conference Provider.
+    *
+    * @param string $val The value of the tollFreeNumber
+    *
+    * @return AudioConferencing
+    */
+    public function setTollFreeNumber($val)
+    {
+        $this->_propDict["tollFreeNumber"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tollNumber
+    * The toll number that connects to the Audio Conference Provider.
+    *
+    * @return string The tollNumber
+    */
+    public function getTollNumber()
+    {
+        if (array_key_exists("tollNumber", $this->_propDict)) {
+            return $this->_propDict["tollNumber"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tollNumber
+    * The toll number that connects to the Audio Conference Provider.
+    *
+    * @param string $val The value of the tollNumber
+    *
+    * @return AudioConferencing
+    */
+    public function setTollNumber($val)
+    {
+        $this->_propDict["tollNumber"] = $val;
         return $this;
     }
 }
