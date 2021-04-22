@@ -59,7 +59,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the azureADAppId
-    * The WebApplicationInfo.id from the Teams App manifest.
+    * The WebApplicationInfo.Id from the Teams app manifest.
     *
     * @return string The azureADAppId
     */
@@ -74,7 +74,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the azureADAppId
-    * The WebApplicationInfo.id from the Teams App manifest.
+    * The WebApplicationInfo.Id from the Teams app manifest.
     *
     * @param string $val The azureADAppId
     *
@@ -268,7 +268,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @return string The teamsAppId
     */
@@ -283,7 +283,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @param string $val The teamsAppId
     *
@@ -359,6 +359,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the colorIcon
+    * The color version of the Teams app's icon.
     *
     * @return TeamsAppIcon The colorIcon
     */
@@ -377,6 +378,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the colorIcon
+    * The color version of the Teams app's icon.
     *
     * @param TeamsAppIcon $val The colorIcon
     *
@@ -390,6 +392,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the outlineIcon
+    * The outline version of the Teams app's icon.
     *
     * @return TeamsAppIcon The outlineIcon
     */
@@ -408,6 +411,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the outlineIcon
+    * The outline version of the Teams app's icon.
     *
     * @param TeamsAppIcon $val The outlineIcon
     *

@@ -26,6 +26,7 @@ class TeamsUserActivityUserCounts extends Entity
 {
     /**
     * Gets the calls
+    * The number of users who participated in 1:1 calls.
     *
     * @return int The calls
     */
@@ -40,6 +41,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the calls
+    * The number of users who participated in 1:1 calls.
     *
     * @param int $val The calls
     *
@@ -53,6 +55,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Gets the meetings
+    * The number of users who participated in online meetings.
     *
     * @return int The meetings
     */
@@ -67,6 +70,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the meetings
+    * The number of users who participated in online meetings.
     *
     * @param int $val The meetings
     *
@@ -80,6 +84,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Gets the otherActions
+    * The number of users who were active but performed other activities than exposed action types offered in the report (sending or replying to channel messages and chat messages, scheduling or participating in 1:1 calls and meetings). Examples actions are when a user changes the Teams status or the Teams status message or opens a Channel Message post but does not reply.
     *
     * @return int The otherActions
     */
@@ -94,6 +99,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the otherActions
+    * The number of users who were active but performed other activities than exposed action types offered in the report (sending or replying to channel messages and chat messages, scheduling or participating in 1:1 calls and meetings). Examples actions are when a user changes the Teams status or the Teams status message or opens a Channel Message post but does not reply.
     *
     * @param int $val The otherActions
     *
@@ -107,6 +113,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Gets the privateChatMessages
+    * The number of users who posted message in a private chat.
     *
     * @return int The privateChatMessages
     */
@@ -121,6 +128,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the privateChatMessages
+    * The number of users who posted message in a private chat.
     *
     * @param int $val The privateChatMessages
     *
@@ -134,6 +142,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Gets the reportDate
+    * The date on which the users performed the activities.
     *
     * @return \DateTime The reportDate
     */
@@ -152,6 +161,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the reportDate
+    * The date on which the users performed the activities.
     *
     * @param \DateTime $val The reportDate
     *
@@ -165,6 +175,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -179,6 +190,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -192,6 +204,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -210,6 +223,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -223,6 +237,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Gets the teamChatMessages
+    * The number of users who posted message in a team chat.
     *
     * @return int The teamChatMessages
     */
@@ -237,6 +252,7 @@ class TeamsUserActivityUserCounts extends Entity
     
     /**
     * Sets the teamChatMessages
+    * The number of users who posted message in a team chat.
     *
     * @param int $val The teamChatMessages
     *

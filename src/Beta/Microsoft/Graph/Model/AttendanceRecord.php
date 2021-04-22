@@ -26,6 +26,7 @@ class AttendanceRecord extends Entity
 
     /**
     * Gets the attendanceIntervals
+    * List of time periods between joining and leaving.
     *
     * @return AttendanceInterval The attendanceIntervals
     */
@@ -44,6 +45,7 @@ class AttendanceRecord extends Entity
 
     /**
     * Sets the attendanceIntervals
+    * List of time periods between joining and leaving.
     *
     * @param AttendanceInterval $val The value to assign to the attendanceIntervals
     *
@@ -56,6 +58,7 @@ class AttendanceRecord extends Entity
     }
     /**
     * Gets the emailAddress
+    * Email address.
     *
     * @return string The emailAddress
     */
@@ -70,6 +73,7 @@ class AttendanceRecord extends Entity
 
     /**
     * Sets the emailAddress
+    * Email address.
     *
     * @param string $val The value of the emailAddress
     *
@@ -83,6 +87,7 @@ class AttendanceRecord extends Entity
 
     /**
     * Gets the identity
+    * Identifier, such as display name.
     *
     * @return Identity The identity
     */
@@ -101,6 +106,7 @@ class AttendanceRecord extends Entity
 
     /**
     * Sets the identity
+    * Identifier, such as display name.
     *
     * @param Identity $val The value to assign to the identity
     *
@@ -113,6 +119,7 @@ class AttendanceRecord extends Entity
     }
     /**
     * Gets the role
+    * Role of the attendee. Possible values are None, Attendee, Presenter, and Organizer.
     *
     * @return string The role
     */
@@ -127,6 +134,7 @@ class AttendanceRecord extends Entity
 
     /**
     * Sets the role
+    * Role of the attendee. Possible values are None, Attendee, Presenter, and Organizer.
     *
     * @param string $val The value of the role
     *
@@ -139,6 +147,7 @@ class AttendanceRecord extends Entity
     }
     /**
     * Gets the totalAttendanceInSeconds
+    * Total duration of the attendances in seconds.
     *
     * @return int The totalAttendanceInSeconds
     */
@@ -153,6 +162,7 @@ class AttendanceRecord extends Entity
 
     /**
     * Sets the totalAttendanceInSeconds
+    * Total duration of the attendances in seconds.
     *
     * @param int $val The value of the totalAttendanceInSeconds
     *

@@ -183,7 +183,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Gets the isSupervised
-    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/HT202837
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
     *
     * @return bool The isSupervised
     */
@@ -198,7 +198,7 @@ class ImportedAppleDeviceIdentity extends Entity
     
     /**
     * Sets the isSupervised
-    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/HT202837
+    * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
     *
     * @param bool $val The isSupervised
     *

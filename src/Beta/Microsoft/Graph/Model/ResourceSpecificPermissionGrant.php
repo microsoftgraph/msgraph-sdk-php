@@ -113,7 +113,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
     
     /**
     * Gets the permissionType
-    * The type of permission. Possible values are: Application,Delegated. Read-only.
+    * The type of permission. Possible values are: Application, Delegated. Read-only.
     *
     * @return string The permissionType
     */
@@ -128,7 +128,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
     
     /**
     * Sets the permissionType
-    * The type of permission. Possible values are: Application,Delegated. Read-only.
+    * The type of permission. Possible values are: Application, Delegated. Read-only.
     *
     * @param string $val The permissionType
     *

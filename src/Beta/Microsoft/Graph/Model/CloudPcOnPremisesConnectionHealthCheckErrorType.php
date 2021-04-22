@@ -35,6 +35,7 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const AD_JOIN_CHECK_INCORRECT_CREDENTIALS = "adJoinCheckIncorrectCredentials";
     const AD_JOIN_CHECK_ORGANIZATIONAL_UNIT_NOT_FOUND = "adJoinCheckOrganizationalUnitNotFound";
     const AD_JOIN_CHECK_ORGANIZATIONAL_UNIT_INCORRECT_FORMAT = "adJoinCheckOrganizationalUnitIncorrectFormat";
+    const AD_JOIN_CHECK_COMPUTER_OBJECT_ALREADY_EXISTS = "adJoinCheckComputerObjectAlreadyExists";
     const AD_JOIN_CHECK_UNKNOWN_ERROR = "adJoinCheckUnknownError";
     const ENDPOINT_CONNECTIVITY_CHECK_URL_NOT_WHITELISTED = "endpointConnectivityCheckUrlNotWhitelisted";
     const ENDPOINT_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "endpointConnectivityCheckUnknownError";

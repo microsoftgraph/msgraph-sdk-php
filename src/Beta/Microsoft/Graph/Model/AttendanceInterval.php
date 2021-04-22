@@ -25,6 +25,7 @@ class AttendanceInterval extends Entity
 {
     /**
     * Gets the durationInSeconds
+    * Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
     *
     * @return int The durationInSeconds
     */
@@ -39,6 +40,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Sets the durationInSeconds
+    * Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
     *
     * @param int $val The value of the durationInSeconds
     *
@@ -52,6 +54,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Gets the joinDateTime
+    * Time attendee joined in UTC.
     *
     * @return \DateTime The joinDateTime
     */
@@ -70,6 +73,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Sets the joinDateTime
+    * Time attendee joined in UTC.
     *
     * @param \DateTime $val The value to assign to the joinDateTime
     *
@@ -83,6 +87,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Gets the leaveDateTime
+    * Time attendee left in UTC.
     *
     * @return \DateTime The leaveDateTime
     */
@@ -101,6 +106,7 @@ class AttendanceInterval extends Entity
 
     /**
     * Sets the leaveDateTime
+    * Time attendee left in UTC.
     *
     * @param \DateTime $val The value to assign to the leaveDateTime
     *

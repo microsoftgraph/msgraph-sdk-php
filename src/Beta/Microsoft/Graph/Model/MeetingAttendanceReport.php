@@ -27,6 +27,7 @@ class MeetingAttendanceReport extends Entity
 
      /** 
      * Gets the attendanceRecords
+    * The list of attendance records.
      *
      * @return array The attendanceRecords
      */
@@ -41,6 +42,7 @@ class MeetingAttendanceReport extends Entity
     
     /** 
     * Sets the attendanceRecords
+    * The list of attendance records.
     *
     * @param AttendanceRecord $val The attendanceRecords
     *
