@@ -118,6 +118,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the applicationTemplateId
+    * Unique identifier of the applicationTemplate.
     *
     * @return string The applicationTemplateId
     */
@@ -132,6 +133,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the applicationTemplateId
+    * Unique identifier of the applicationTemplate.
     *
     * @param string $val The applicationTemplateId
     *
@@ -355,6 +357,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the isDeviceOnlyAuthSupported
+    * Specifies whether this application supports device authentication without a user. The default is false.
     *
     * @return bool The isDeviceOnlyAuthSupported
     */
@@ -369,6 +372,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the isDeviceOnlyAuthSupported
+    * Specifies whether this application supports device authentication without a user. The default is false.
     *
     * @param bool $val The isDeviceOnlyAuthSupported
     *
