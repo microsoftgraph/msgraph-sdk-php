@@ -248,6 +248,34 @@ class DeviceOperatingSystemSummary extends Entity
         return $this;
     }
     /**
+    * Gets the chromeOSCount
+    * Number of Chrome OS devices. Valid values 0 to 2147483647
+    *
+    * @return int The chromeOSCount
+    */
+    public function getChromeOSCount()
+    {
+        if (array_key_exists("chromeOSCount", $this->_propDict)) {
+            return $this->_propDict["chromeOSCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the chromeOSCount
+    * Number of Chrome OS devices. Valid values 0 to 2147483647
+    *
+    * @param int $val The value of the chromeOSCount
+    *
+    * @return DeviceOperatingSystemSummary
+    */
+    public function setChromeOSCount($val)
+    {
+        $this->_propDict["chromeOSCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the configMgrDeviceCount
     * Number of ConfigMgr managed devices.
     *

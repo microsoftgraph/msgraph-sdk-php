@@ -145,6 +145,39 @@ class WindowsFeatureUpdateProfile extends Entity
     }
     
     /**
+    * Gets the endOfSupportDate
+    * The last supported date for a feature update
+    *
+    * @return \DateTime The endOfSupportDate
+    */
+    public function getEndOfSupportDate()
+    {
+        if (array_key_exists("endOfSupportDate", $this->_propDict)) {
+            if (is_a($this->_propDict["endOfSupportDate"], "\DateTime")) {
+                return $this->_propDict["endOfSupportDate"];
+            } else {
+                $this->_propDict["endOfSupportDate"] = new \DateTime($this->_propDict["endOfSupportDate"]);
+                return $this->_propDict["endOfSupportDate"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the endOfSupportDate
+    * The last supported date for a feature update
+    *
+    * @param \DateTime $val The endOfSupportDate
+    *
+    * @return WindowsFeatureUpdateProfile
+    */
+    public function setEndOfSupportDate($val)
+    {
+        $this->_propDict["endOfSupportDate"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the featureUpdateVersion
     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
     *

@@ -141,6 +141,159 @@ class MicrosoftTunnelSite extends Entity
     }
     
     /**
+    * Gets the upgradeAutomatically
+    * The site's automatic upgrade setting. True for automatic upgrades, false for manual control
+    *
+    * @return bool The upgradeAutomatically
+    */
+    public function getUpgradeAutomatically()
+    {
+        if (array_key_exists("upgradeAutomatically", $this->_propDict)) {
+            return $this->_propDict["upgradeAutomatically"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the upgradeAutomatically
+    * The site's automatic upgrade setting. True for automatic upgrades, false for manual control
+    *
+    * @param bool $val The upgradeAutomatically
+    *
+    * @return MicrosoftTunnelSite
+    */
+    public function setUpgradeAutomatically($val)
+    {
+        $this->_propDict["upgradeAutomatically"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the upgradeAvailable
+    * True if an upgrade is available
+    *
+    * @return bool The upgradeAvailable
+    */
+    public function getUpgradeAvailable()
+    {
+        if (array_key_exists("upgradeAvailable", $this->_propDict)) {
+            return $this->_propDict["upgradeAvailable"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the upgradeAvailable
+    * True if an upgrade is available
+    *
+    * @param bool $val The upgradeAvailable
+    *
+    * @return MicrosoftTunnelSite
+    */
+    public function setUpgradeAvailable($val)
+    {
+        $this->_propDict["upgradeAvailable"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the upgradeWindowEndTime
+    * The site's upgrade window end time of day
+    *
+    * @return TimeOfDay The upgradeWindowEndTime
+    */
+    public function getUpgradeWindowEndTime()
+    {
+        if (array_key_exists("upgradeWindowEndTime", $this->_propDict)) {
+            if (is_a($this->_propDict["upgradeWindowEndTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["upgradeWindowEndTime"];
+            } else {
+                $this->_propDict["upgradeWindowEndTime"] = new TimeOfDay($this->_propDict["upgradeWindowEndTime"]);
+                return $this->_propDict["upgradeWindowEndTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the upgradeWindowEndTime
+    * The site's upgrade window end time of day
+    *
+    * @param TimeOfDay $val The upgradeWindowEndTime
+    *
+    * @return MicrosoftTunnelSite
+    */
+    public function setUpgradeWindowEndTime($val)
+    {
+        $this->_propDict["upgradeWindowEndTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the upgradeWindowStartTime
+    * The site's upgrade window start time of day
+    *
+    * @return TimeOfDay The upgradeWindowStartTime
+    */
+    public function getUpgradeWindowStartTime()
+    {
+        if (array_key_exists("upgradeWindowStartTime", $this->_propDict)) {
+            if (is_a($this->_propDict["upgradeWindowStartTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+                return $this->_propDict["upgradeWindowStartTime"];
+            } else {
+                $this->_propDict["upgradeWindowStartTime"] = new TimeOfDay($this->_propDict["upgradeWindowStartTime"]);
+                return $this->_propDict["upgradeWindowStartTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the upgradeWindowStartTime
+    * The site's upgrade window start time of day
+    *
+    * @param TimeOfDay $val The upgradeWindowStartTime
+    *
+    * @return MicrosoftTunnelSite
+    */
+    public function setUpgradeWindowStartTime($val)
+    {
+        $this->_propDict["upgradeWindowStartTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the upgradeWindowUtcOffsetInMinutes
+    * The site's timezone represented as a minute offset from UTC
+    *
+    * @return int The upgradeWindowUtcOffsetInMinutes
+    */
+    public function getUpgradeWindowUtcOffsetInMinutes()
+    {
+        if (array_key_exists("upgradeWindowUtcOffsetInMinutes", $this->_propDict)) {
+            return $this->_propDict["upgradeWindowUtcOffsetInMinutes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the upgradeWindowUtcOffsetInMinutes
+    * The site's timezone represented as a minute offset from UTC
+    *
+    * @param int $val The upgradeWindowUtcOffsetInMinutes
+    *
+    * @return MicrosoftTunnelSite
+    */
+    public function setUpgradeWindowUtcOffsetInMinutes($val)
+    {
+        $this->_propDict["upgradeWindowUtcOffsetInMinutes"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the microsoftTunnelConfiguration
     * The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
     *

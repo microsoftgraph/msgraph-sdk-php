@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UserExperienceAnalyticsNotAutopilotReadyDevice File
+* UserExperienceAnalyticsWorkFromAnywhereDevice File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* UserExperienceAnalyticsNotAutopilotReadyDevice class
+* UserExperienceAnalyticsWorkFromAnywhereDevice class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,11 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
+class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
 {
     /**
     * Gets the autoPilotProfileAssigned
-    * The intune device's autopilotProfileAssigned.
+    * The user experience analytics work from anywhere intune device's autopilotProfileAssigned.
     *
     * @return bool The autoPilotProfileAssigned
     */
@@ -41,11 +41,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the autoPilotProfileAssigned
-    * The intune device's autopilotProfileAssigned.
+    * The user experience analytics work from anywhere intune device's autopilotProfileAssigned.
     *
     * @param bool $val The autoPilotProfileAssigned
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setAutoPilotProfileAssigned($val)
     {
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Gets the autoPilotRegistered
-    * The intune device's autopilotRegistered.
+    * The user experience work from anywhere intune device's autopilotRegistered.
     *
     * @return bool The autoPilotRegistered
     */
@@ -70,11 +70,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the autoPilotRegistered
-    * The intune device's autopilotRegistered.
+    * The user experience work from anywhere intune device's autopilotRegistered.
     *
     * @param bool $val The autoPilotRegistered
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setAutoPilotRegistered($val)
     {
@@ -83,8 +83,37 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     }
     
     /**
+    * Gets the azureAdDeviceId
+    * The user experience work from anywhere azure Ad device Id.
+    *
+    * @return string The azureAdDeviceId
+    */
+    public function getAzureAdDeviceId()
+    {
+        if (array_key_exists("azureAdDeviceId", $this->_propDict)) {
+            return $this->_propDict["azureAdDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the azureAdDeviceId
+    * The user experience work from anywhere azure Ad device Id.
+    *
+    * @param string $val The azureAdDeviceId
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setAzureAdDeviceId($val)
+    {
+        $this->_propDict["azureAdDeviceId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the azureAdJoinType
-    * The intune device's azure Ad joinType.
+    * The user experience work from anywhere device's azure Ad joinType.
     *
     * @return string The azureAdJoinType
     */
@@ -99,11 +128,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the azureAdJoinType
-    * The intune device's azure Ad joinType.
+    * The user experience work from anywhere device's azure Ad joinType.
     *
     * @param string $val The azureAdJoinType
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setAzureAdJoinType($val)
     {
@@ -113,7 +142,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Gets the azureAdRegistered
-    * The intune device's azureAdRegistered.
+    * The user experience work from anywhere device's azureAdRegistered.
     *
     * @return bool The azureAdRegistered
     */
@@ -128,11 +157,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the azureAdRegistered
-    * The intune device's azureAdRegistered.
+    * The user experience work from anywhere device's azureAdRegistered.
     *
     * @param bool $val The azureAdRegistered
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setAzureAdRegistered($val)
     {
@@ -142,7 +171,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Gets the deviceName
-    * The intune device's name.
+    * The work from anywhere device's name.
     *
     * @return string The deviceName
     */
@@ -157,11 +186,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the deviceName
-    * The intune device's name.
+    * The work from anywhere device's name.
     *
     * @param string $val The deviceName
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setDeviceName($val)
     {
@@ -171,7 +200,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Gets the managedBy
-    * The intune device's managed by.
+    * The user experience work from anywhere management agent of the device.
     *
     * @return string The managedBy
     */
@@ -186,11 +215,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the managedBy
-    * The intune device's managed by.
+    * The user experience work from anywhere management agent of the device.
     *
     * @param string $val The managedBy
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setManagedBy($val)
     {
@@ -200,7 +229,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Gets the manufacturer
-    * The intune device's manufacturer.
+    * The user experience work from anywhere device's manufacturer.
     *
     * @return string The manufacturer
     */
@@ -215,11 +244,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the manufacturer
-    * The intune device's manufacturer.
+    * The user experience work from anywhere device's manufacturer.
     *
     * @param string $val The manufacturer
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setManufacturer($val)
     {
@@ -229,7 +258,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Gets the model
-    * The intune device's model.
+    * The user experience work from anywhere device's model.
     *
     * @return string The model
     */
@@ -244,11 +273,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the model
-    * The intune device's model.
+    * The user experience work from anywhere device's model.
     *
     * @param string $val The model
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setModel($val)
     {
@@ -257,8 +286,37 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     }
     
     /**
+    * Gets the ownership
+    * The user experience work from anywhere device's ownership.
+    *
+    * @return string The ownership
+    */
+    public function getOwnership()
+    {
+        if (array_key_exists("ownership", $this->_propDict)) {
+            return $this->_propDict["ownership"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ownership
+    * The user experience work from anywhere device's ownership.
+    *
+    * @param string $val The ownership
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setOwnership($val)
+    {
+        $this->_propDict["ownership"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the serialNumber
-    * The intune device's serial number.
+    * The user experience work from anywhere device's serial number.
     *
     * @return string The serialNumber
     */
@@ -273,11 +331,11 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the serialNumber
-    * The intune device's serial number.
+    * The user experience work from anywhere device's serial number.
     *
     * @param string $val The serialNumber
     *
-    * @return UserExperienceAnalyticsNotAutopilotReadyDevice
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
     */
     public function setSerialNumber($val)
     {

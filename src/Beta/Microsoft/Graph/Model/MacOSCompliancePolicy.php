@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSCompliancePolicy extends DeviceCompliancePolicy
 {
     /**
+    * Gets the advancedThreatProtectionRequiredSecurityLevel
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+    *
+    * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
+    */
+    public function getAdvancedThreatProtectionRequiredSecurityLevel()
+    {
+        if (array_key_exists("advancedThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
+            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+                return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
+            } else {
+                $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"]);
+                return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the advancedThreatProtectionRequiredSecurityLevel
+    * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+    *
+    * @param DeviceThreatProtectionLevel $val The advancedThreatProtectionRequiredSecurityLevel
+    *
+    * @return MacOSCompliancePolicy
+    */
+    public function setAdvancedThreatProtectionRequiredSecurityLevel($val)
+    {
+        $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deviceThreatProtectionEnabled
     * Require that devices have enabled device threat protection.
     *

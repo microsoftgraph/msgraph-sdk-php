@@ -207,6 +207,34 @@ class AccessReviewScheduleDefinition extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the fallbackReviewers
+     *
+     * @return array The fallbackReviewers
+     */
+    public function getFallbackReviewers()
+    {
+        if (array_key_exists("fallbackReviewers", $this->_propDict)) {
+           return $this->_propDict["fallbackReviewers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the fallbackReviewers
+    *
+    * @param AccessReviewReviewerScope $val The fallbackReviewers
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setFallbackReviewers($val)
+    {
+		$this->_propDict["fallbackReviewers"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the instanceEnumerationScope
     * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.

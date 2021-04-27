@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AzureAdRegisteredState File
+* DeviceManagementConfigurationChoiceSettingValueDefaultTemplate File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* AzureAdRegisteredState class
+* DeviceManagementConfigurationChoiceSettingValueDefaultTemplate class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AzureAdRegisteredState extends Enum
+class DeviceManagementConfigurationChoiceSettingValueDefaultTemplate extends Entity
 {
-    /**
-    * The Enum AzureAdRegisteredState
-    */
-    const NO = "no";
-    const YES = "yes";
-    const UNKNOWN = "unknown";
 }

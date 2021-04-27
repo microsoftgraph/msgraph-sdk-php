@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ExactMatchSensitiveContentLocation File
+* RoleAssignmentScheduleRequestFilterByCurrentUserOptions File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,11 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* ExactMatchSensitiveContentLocation class
+* RoleAssignmentScheduleRequestFilterByCurrentUserOptions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,13 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ExactMatchSensitiveContentLocation extends SensitiveContentLocationBase
+class RoleAssignmentScheduleRequestFilterByCurrentUserOptions extends Enum
 {
+    /**
+    * The Enum RoleAssignmentScheduleRequestFilterByCurrentUserOptions
+    */
+    const PRINCIPAL = "principal";
+    const CREATED_BY = "createdBy";
+    const APPROVER = "approver";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

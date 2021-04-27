@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class MicrosoftTunnelServer extends Entity
 {
     /**
+    * Gets the agentImageDigest
+    * The digest of the current agent image running on this server 
+    *
+    * @return string The agentImageDigest
+    */
+    public function getAgentImageDigest()
+    {
+        if (array_key_exists("agentImageDigest", $this->_propDict)) {
+            return $this->_propDict["agentImageDigest"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the agentImageDigest
+    * The digest of the current agent image running on this server 
+    *
+    * @param string $val The agentImageDigest
+    *
+    * @return MicrosoftTunnelServer
+    */
+    public function setAgentImageDigest($val)
+    {
+        $this->_propDict["agentImageDigest"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The MicrosoftTunnelServer's display name
     *
@@ -83,6 +112,35 @@ class MicrosoftTunnelServer extends Entity
     public function setLastCheckinDateTime($val)
     {
         $this->_propDict["lastCheckinDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the serverImageDigest
+    * The digest of the current server image running on this server 
+    *
+    * @return string The serverImageDigest
+    */
+    public function getServerImageDigest()
+    {
+        if (array_key_exists("serverImageDigest", $this->_propDict)) {
+            return $this->_propDict["serverImageDigest"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the serverImageDigest
+    * The digest of the current server image running on this server 
+    *
+    * @param string $val The serverImageDigest
+    *
+    * @return MicrosoftTunnelServer
+    */
+    public function setServerImageDigest($val)
+    {
+        $this->_propDict["serverImageDigest"] = $val;
         return $this;
     }
     

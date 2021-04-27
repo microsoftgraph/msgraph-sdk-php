@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UnifiedRoleEligibilityRequest File
+* UnifiedRoleEligibilityScheduleRequest File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* UnifiedRoleEligibilityRequest class
+* UnifiedRoleEligibilityScheduleRequest class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UnifiedRoleEligibilityRequest extends Request
+class UnifiedRoleEligibilityScheduleRequest extends Request
 {
     /**
     * Gets the action
@@ -43,7 +43,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param string $val The action
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setAction($val)
     {
@@ -70,7 +70,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param string $val The appScopeId
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setAppScopeId($val)
     {
@@ -97,7 +97,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param string $val The directoryScopeId
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setDirectoryScopeId($val)
     {
@@ -124,7 +124,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param bool $val The isValidationOnly
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setIsValidationOnly($val)
     {
@@ -151,7 +151,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param string $val The justification
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setJustification($val)
     {
@@ -178,7 +178,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param string $val The principalId
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setPrincipalId($val)
     {
@@ -205,7 +205,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param string $val The roleDefinitionId
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setRoleDefinitionId($val)
     {
@@ -236,7 +236,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param RequestSchedule $val The scheduleInfo
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setScheduleInfo($val)
     {
@@ -263,7 +263,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param string $val The targetScheduleId
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setTargetScheduleId($val)
     {
@@ -294,7 +294,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param TicketInfo $val The ticketInfo
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setTicketInfo($val)
     {
@@ -325,7 +325,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param AppScope $val The appScope
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setAppScope($val)
     {
@@ -356,7 +356,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param DirectoryObject $val The directoryScope
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setDirectoryScope($val)
     {
@@ -387,7 +387,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param DirectoryObject $val The principal
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setPrincipal($val)
     {
@@ -418,7 +418,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setRoleDefinition($val)
     {
@@ -449,7 +449,7 @@ class UnifiedRoleEligibilityRequest extends Request
     *
     * @param UnifiedRoleEligibilitySchedule $val The targetSchedule
     *
-    * @return UnifiedRoleEligibilityRequest
+    * @return UnifiedRoleEligibilityScheduleRequest
     */
     public function setTargetSchedule($val)
     {

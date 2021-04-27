@@ -55,6 +55,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
     
     /**
     * Gets the isPhoneOneTimePasswordAuthenticationEnabled
+    * The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
     *
     * @return bool The isPhoneOneTimePasswordAuthenticationEnabled
     */
@@ -69,6 +70,7 @@ class B2cAuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the isPhoneOneTimePasswordAuthenticationEnabled
+    * The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
     *
     * @param bool $val The isPhoneOneTimePasswordAuthenticationEnabled
     *
