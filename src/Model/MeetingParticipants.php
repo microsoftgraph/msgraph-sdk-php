@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,44 +17,12 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class MeetingParticipants extends Entity
 {
-
-    /**
-    * Gets the organizer
-    *
-    * @return MeetingParticipantInfo The organizer
-    */
-    public function getOrganizer()
-    {
-        if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\MeetingParticipantInfo")) {
-                return $this->_propDict["organizer"];
-            } else {
-                $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
-                return $this->_propDict["organizer"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the organizer
-    *
-    * @param MeetingParticipantInfo $val The value to assign to the organizer
-    *
-    * @return MeetingParticipants The MeetingParticipants
-    */
-    public function setOrganizer($val)
-    {
-        $this->_propDict["organizer"] = $val;
-         return $this;
-    }
 
     /**
     * Gets the attendees
@@ -65,7 +32,7 @@ class MeetingParticipants extends Entity
     public function getAttendees()
     {
         if (array_key_exists("attendees", $this->_propDict)) {
-            if (is_a($this->_propDict["attendees"], "Microsoft\Graph\Model\MeetingParticipantInfo")) {
+            if (is_a($this->_propDict["attendees"], "\Microsoft\Graph\Model\MeetingParticipantInfo")) {
                 return $this->_propDict["attendees"];
             } else {
                 $this->_propDict["attendees"] = new MeetingParticipantInfo($this->_propDict["attendees"]);
@@ -85,6 +52,37 @@ class MeetingParticipants extends Entity
     public function setAttendees($val)
     {
         $this->_propDict["attendees"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the organizer
+    *
+    * @return MeetingParticipantInfo The organizer
+    */
+    public function getOrganizer()
+    {
+        if (array_key_exists("organizer", $this->_propDict)) {
+            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\MeetingParticipantInfo")) {
+                return $this->_propDict["organizer"];
+            } else {
+                $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
+                return $this->_propDict["organizer"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the organizer
+    *
+    * @param MeetingParticipantInfo $val The value to assign to the organizer
+    *
+    * @return MeetingParticipants The MeetingParticipants
+    */
+    public function setOrganizer($val)
+    {
+        $this->_propDict["organizer"] = $val;
          return $this;
     }
 }

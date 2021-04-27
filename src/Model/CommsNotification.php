@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,23 +17,23 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class CommsNotification extends Entity
 {
 
     /**
     * Gets the changeType
+    * Possible values are: created, updated, deleted.
     *
     * @return ChangeType The changeType
     */
     public function getChangeType()
     {
         if (array_key_exists("changeType", $this->_propDict)) {
-            if (is_a($this->_propDict["changeType"], "Microsoft\Graph\Model\ChangeType")) {
+            if (is_a($this->_propDict["changeType"], "\Microsoft\Graph\Model\ChangeType")) {
                 return $this->_propDict["changeType"];
             } else {
                 $this->_propDict["changeType"] = new ChangeType($this->_propDict["changeType"]);
@@ -46,6 +45,7 @@ class CommsNotification extends Entity
 
     /**
     * Sets the changeType
+    * Possible values are: created, updated, deleted.
     *
     * @param ChangeType $val The value to assign to the changeType
     *
@@ -58,6 +58,7 @@ class CommsNotification extends Entity
     }
     /**
     * Gets the resourceUrl
+    * URI of the resource that was changed.
     *
     * @return string The resourceUrl
     */
@@ -72,6 +73,7 @@ class CommsNotification extends Entity
 
     /**
     * Sets the resourceUrl
+    * URI of the resource that was changed.
     *
     * @param string $val The value of the resourceUrl
     *

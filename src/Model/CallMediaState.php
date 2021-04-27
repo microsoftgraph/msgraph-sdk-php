@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,23 +17,23 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class CallMediaState extends Entity
 {
 
     /**
     * Gets the audio
+    * The audio media state. Possible values are: active, inactive, unknownFutureValue.
     *
     * @return MediaState The audio
     */
     public function getAudio()
     {
         if (array_key_exists("audio", $this->_propDict)) {
-            if (is_a($this->_propDict["audio"], "Microsoft\Graph\Model\MediaState")) {
+            if (is_a($this->_propDict["audio"], "\Microsoft\Graph\Model\MediaState")) {
                 return $this->_propDict["audio"];
             } else {
                 $this->_propDict["audio"] = new MediaState($this->_propDict["audio"]);
@@ -46,6 +45,7 @@ class CallMediaState extends Entity
 
     /**
     * Sets the audio
+    * The audio media state. Possible values are: active, inactive, unknownFutureValue.
     *
     * @param MediaState $val The value to assign to the audio
     *

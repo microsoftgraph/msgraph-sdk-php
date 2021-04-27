@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,46 +17,48 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class MediaStream extends Entity
 {
 
     /**
-    * Gets the mediaType
+    * Gets the direction
+    * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
     *
-    * @return Modality The mediaType
+    * @return MediaDirection The direction
     */
-    public function getMediaType()
+    public function getDirection()
     {
-        if (array_key_exists("mediaType", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaType"], "Microsoft\Graph\Model\Modality")) {
-                return $this->_propDict["mediaType"];
+        if (array_key_exists("direction", $this->_propDict)) {
+            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\MediaDirection")) {
+                return $this->_propDict["direction"];
             } else {
-                $this->_propDict["mediaType"] = new Modality($this->_propDict["mediaType"]);
-                return $this->_propDict["mediaType"];
+                $this->_propDict["direction"] = new MediaDirection($this->_propDict["direction"]);
+                return $this->_propDict["direction"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the mediaType
+    * Sets the direction
+    * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
     *
-    * @param Modality $val The value to assign to the mediaType
+    * @param MediaDirection $val The value to assign to the direction
     *
     * @return MediaStream The MediaStream
     */
-    public function setMediaType($val)
+    public function setDirection($val)
     {
-        $this->_propDict["mediaType"] = $val;
+        $this->_propDict["direction"] = $val;
          return $this;
     }
     /**
     * Gets the label
+    * The media stream label.
     *
     * @return string The label
     */
@@ -72,6 +73,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the label
+    * The media stream label.
     *
     * @param string $val The value of the label
     *
@@ -82,65 +84,42 @@ class MediaStream extends Entity
         $this->_propDict["label"] = $val;
         return $this;
     }
-    /**
-    * Gets the sourceId
-    *
-    * @return string The sourceId
-    */
-    public function getSourceId()
-    {
-        if (array_key_exists("sourceId", $this->_propDict)) {
-            return $this->_propDict["sourceId"];
-        } else {
-            return null;
-        }
-    }
 
     /**
-    * Sets the sourceId
+    * Gets the mediaType
+    * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
     *
-    * @param string $val The value of the sourceId
-    *
-    * @return MediaStream
+    * @return Modality The mediaType
     */
-    public function setSourceId($val)
+    public function getMediaType()
     {
-        $this->_propDict["sourceId"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the direction
-    *
-    * @return MediaDirection The direction
-    */
-    public function getDirection()
-    {
-        if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "Microsoft\Graph\Model\MediaDirection")) {
-                return $this->_propDict["direction"];
+        if (array_key_exists("mediaType", $this->_propDict)) {
+            if (is_a($this->_propDict["mediaType"], "\Microsoft\Graph\Model\Modality")) {
+                return $this->_propDict["mediaType"];
             } else {
-                $this->_propDict["direction"] = new MediaDirection($this->_propDict["direction"]);
-                return $this->_propDict["direction"];
+                $this->_propDict["mediaType"] = new Modality($this->_propDict["mediaType"]);
+                return $this->_propDict["mediaType"];
             }
         }
         return null;
     }
 
     /**
-    * Sets the direction
+    * Sets the mediaType
+    * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
     *
-    * @param MediaDirection $val The value to assign to the direction
+    * @param Modality $val The value to assign to the mediaType
     *
     * @return MediaStream The MediaStream
     */
-    public function setDirection($val)
+    public function setMediaType($val)
     {
-        $this->_propDict["direction"] = $val;
+        $this->_propDict["mediaType"] = $val;
          return $this;
     }
     /**
     * Gets the serverMuted
+    * Indicates whether the media is muted by the server.
     *
     * @return bool The serverMuted
     */
@@ -155,6 +134,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the serverMuted
+    * Indicates whether the media is muted by the server.
     *
     * @param bool $val The value of the serverMuted
     *
@@ -163,6 +143,34 @@ class MediaStream extends Entity
     public function setServerMuted($val)
     {
         $this->_propDict["serverMuted"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the sourceId
+    * The source ID.
+    *
+    * @return string The sourceId
+    */
+    public function getSourceId()
+    {
+        if (array_key_exists("sourceId", $this->_propDict)) {
+            return $this->_propDict["sourceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sourceId
+    * The source ID.
+    *
+    * @param string $val The value of the sourceId
+    *
+    * @return MediaStream
+    */
+    public function setSourceId($val)
+    {
+        $this->_propDict["sourceId"] = $val;
         return $this;
     }
 }

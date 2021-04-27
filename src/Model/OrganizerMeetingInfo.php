@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,10 +17,9 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class OrganizerMeetingInfo extends MeetingInfo
 {
@@ -37,13 +35,14 @@ class OrganizerMeetingInfo extends MeetingInfo
 
     /**
     * Gets the organizer
+    * The organizer Azure Active Directory identity.
     *
     * @return IdentitySet The organizer
     */
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new IdentitySet($this->_propDict["organizer"]);
@@ -55,6 +54,7 @@ class OrganizerMeetingInfo extends MeetingInfo
 
     /**
     * Sets the organizer
+    * The organizer Azure Active Directory identity.
     *
     * @param IdentitySet $val The value to assign to the organizer
     *

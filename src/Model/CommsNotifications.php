@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,23 +17,23 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class CommsNotifications extends Entity
 {
 
     /**
     * Gets the value
+    * The notification of a change in the resource.
     *
     * @return CommsNotification The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "Microsoft\Graph\Model\CommsNotification")) {
+            if (is_a($this->_propDict["value"], "\Microsoft\Graph\Model\CommsNotification")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new CommsNotification($this->_propDict["value"]);
@@ -46,6 +45,7 @@ class CommsNotifications extends Entity
 
     /**
     * Sets the value
+    * The notification of a change in the resource.
     *
     * @param CommsNotification $val The value to assign to the value
     *

@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 
@@ -19,16 +18,16 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 class OrgContact extends DirectoryObject
 {
 
      /** 
      * Gets the addresses
+    * Postal addresses for this organizational contact. For now a contact can only have one physical address.
      *
      * @return array The addresses
      */
@@ -43,6 +42,7 @@ class OrgContact extends DirectoryObject
     
     /** 
     * Sets the addresses
+    * Postal addresses for this organizational contact. For now a contact can only have one physical address.
     *
     * @param PhysicalOfficeAddress $val The addresses
     *
@@ -56,6 +56,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the companyName
+    * Name of the company that this organizational contact belong to.
     *
     * @return string The companyName
     */
@@ -70,6 +71,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the companyName
+    * Name of the company that this organizational contact belong to.
     *
     * @param string $val The companyName
     *
@@ -83,6 +85,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the department
+    * The name for the department in which the contact works.
     *
     * @return string The department
     */
@@ -97,6 +100,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the department
+    * The name for the department in which the contact works.
     *
     * @param string $val The department
     *
@@ -110,6 +114,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the displayName
+    * Display name for this organizational contact.
     *
     * @return string The displayName
     */
@@ -124,6 +129,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the displayName
+    * Display name for this organizational contact.
     *
     * @param string $val The displayName
     *
@@ -137,6 +143,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the givenName
+    * First name for this organizational contact.
     *
     * @return string The givenName
     */
@@ -151,6 +158,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the givenName
+    * First name for this organizational contact.
     *
     * @param string $val The givenName
     *
@@ -164,6 +172,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the jobTitle
+    * Job title for this organizational contact.
     *
     * @return string The jobTitle
     */
@@ -178,6 +187,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the jobTitle
+    * Job title for this organizational contact.
     *
     * @param string $val The jobTitle
     *
@@ -191,6 +201,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the mail
+    * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'.
     *
     * @return string The mail
     */
@@ -205,6 +216,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the mail
+    * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'.
     *
     * @param string $val The mail
     *
@@ -218,6 +230,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the mailNickname
+    * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact.
     *
     * @return string The mailNickname
     */
@@ -232,6 +245,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the mailNickname
+    * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact.
     *
     * @param string $val The mailNickname
     *
@@ -244,34 +258,8 @@ class OrgContact extends DirectoryObject
     }
     
     /**
-    * Gets the onPremisesSyncEnabled
-    *
-    * @return bool The onPremisesSyncEnabled
-    */
-    public function getOnPremisesSyncEnabled()
-    {
-        if (array_key_exists("onPremisesSyncEnabled", $this->_propDict)) {
-            return $this->_propDict["onPremisesSyncEnabled"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the onPremisesSyncEnabled
-    *
-    * @param bool $val The onPremisesSyncEnabled
-    *
-    * @return OrgContact
-    */
-    public function setOnPremisesSyncEnabled($val)
-    {
-        $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
-        return $this;
-    }
-    
-    /**
     * Gets the onPremisesLastSyncDateTime
+    * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -290,6 +278,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
+    * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -304,6 +293,7 @@ class OrgContact extends DirectoryObject
 
      /** 
      * Gets the onPremisesProvisioningErrors
+    * List of any synchronization provisioning errors for this organizational contact.
      *
      * @return array The onPremisesProvisioningErrors
      */
@@ -318,6 +308,7 @@ class OrgContact extends DirectoryObject
     
     /** 
     * Sets the onPremisesProvisioningErrors
+    * List of any synchronization provisioning errors for this organizational contact.
     *
     * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
     *
@@ -329,9 +320,39 @@ class OrgContact extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the onPremisesSyncEnabled
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).
+    *
+    * @return bool The onPremisesSyncEnabled
+    */
+    public function getOnPremisesSyncEnabled()
+    {
+        if (array_key_exists("onPremisesSyncEnabled", $this->_propDict)) {
+            return $this->_propDict["onPremisesSyncEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesSyncEnabled
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).
+    *
+    * @param bool $val The onPremisesSyncEnabled
+    *
+    * @return OrgContact
+    */
+    public function setOnPremisesSyncEnabled($val)
+    {
+        $this->_propDict["onPremisesSyncEnabled"] = boolval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the phones
+    * List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection.
      *
      * @return array The phones
      */
@@ -346,6 +367,7 @@ class OrgContact extends DirectoryObject
     
     /** 
     * Sets the phones
+    * List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection.
     *
     * @param Phone $val The phones
     *
@@ -359,6 +381,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the proxyAddresses
+    * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter.
     *
     * @return string The proxyAddresses
     */
@@ -373,6 +396,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the proxyAddresses
+    * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter.
     *
     * @param string $val The proxyAddresses
     *
@@ -386,6 +410,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Gets the surname
+    * Last name for this organizational contact.
     *
     * @return string The surname
     */
@@ -400,6 +425,7 @@ class OrgContact extends DirectoryObject
     
     /**
     * Sets the surname
+    * Last name for this organizational contact.
     *
     * @param string $val The surname
     *
@@ -411,40 +437,10 @@ class OrgContact extends DirectoryObject
         return $this;
     }
     
-    /**
-    * Gets the manager
-    *
-    * @return DirectoryObject The manager
-    */
-    public function getManager()
-    {
-        if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "Microsoft\Graph\Model\DirectoryObject")) {
-                return $this->_propDict["manager"];
-            } else {
-                $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);
-                return $this->_propDict["manager"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the manager
-    *
-    * @param DirectoryObject $val The manager
-    *
-    * @return OrgContact
-    */
-    public function setManager($val)
-    {
-        $this->_propDict["manager"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the directReports
+    * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable.
      *
      * @return array The directReports
      */
@@ -459,6 +455,7 @@ class OrgContact extends DirectoryObject
     
     /** 
     * Sets the directReports
+    * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable.
     *
     * @param DirectoryObject $val The directReports
     *
@@ -470,9 +467,43 @@ class OrgContact extends DirectoryObject
         return $this;
     }
     
+    /**
+    * Gets the manager
+    * The user or contact that is this contact's manager. Read-only.
+    *
+    * @return DirectoryObject The manager
+    */
+    public function getManager()
+    {
+        if (array_key_exists("manager", $this->_propDict)) {
+            if (is_a($this->_propDict["manager"], "\Microsoft\Graph\Model\DirectoryObject")) {
+                return $this->_propDict["manager"];
+            } else {
+                $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);
+                return $this->_propDict["manager"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the manager
+    * The user or contact that is this contact's manager. Read-only.
+    *
+    * @param DirectoryObject $val The manager
+    *
+    * @return OrgContact
+    */
+    public function setManager($val)
+    {
+        $this->_propDict["manager"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the memberOf
+    * Groups that this contact is a member of. Read-only. Nullable.
      *
      * @return array The memberOf
      */
@@ -487,6 +518,7 @@ class OrgContact extends DirectoryObject
     
     /** 
     * Sets the memberOf
+    * Groups that this contact is a member of. Read-only. Nullable.
     *
     * @param DirectoryObject $val The memberOf
     *

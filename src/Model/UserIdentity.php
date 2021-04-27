@@ -7,10 +7,9 @@
 *
 * @category  Library
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   GIT: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
 /**
@@ -18,69 +17,12 @@ namespace Microsoft\Graph\Model;
 *
 * @category  Model
 * @package   Microsoft.Graph
-* @copyright © Microsoft Corporation. All rights reserved.
+* @copyright (c) Microsoft Corporation. All rights reserved.
 * @license   https://opensource.org/licenses/MIT MIT License
-* @version   Release: 1.4.0
-* @link      https://graph.microsoft.io/
+* @link      https://graph.microsoft.com
 */
-class UserIdentity extends Entity
+class UserIdentity extends Identity
 {
-    /**
-    * Gets the id
-    * Unique identifier for the identity.
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * Unique identifier for the identity.
-    *
-    * @param string $val The value of the id
-    *
-    * @return UserIdentity
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the displayName
-    * The identity's display name. Note that this may not always be available or up-to-date.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * The identity's display name. Note that this may not always be available or up-to-date.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return UserIdentity
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
     /**
     * Gets the ipAddress
     * Indicates the client IP address used by user performing the activity (audit log only).
