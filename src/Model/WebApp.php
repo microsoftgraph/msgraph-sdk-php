@@ -26,7 +26,7 @@ class WebApp extends MobileApp
 {
     /**
     * Gets the appUrl
-    * The web app URL. This property cannot be PATCHed.
+    * The web app URL.
     *
     * @return string The appUrl
     */
@@ -41,7 +41,7 @@ class WebApp extends MobileApp
     
     /**
     * Sets the appUrl
-    * The web app URL. This property cannot be PATCHed.
+    * The web app URL.
     *
     * @param string $val The appUrl
     *

@@ -26,7 +26,7 @@ class DeviceEnrollmentConfiguration extends Entity
 {
     /**
     * Gets the createdDateTime
-    * Created date time in UTC of the device enrollment configuration
+    * Not yet documented
     *
     * @return \DateTime The createdDateTime
     */
@@ -45,7 +45,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the createdDateTime
-    * Created date time in UTC of the device enrollment configuration
+    * Not yet documented
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,7 +59,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the description
-    * The description of the device enrollment configuration
+    * Not yet documented
     *
     * @return string The description
     */
@@ -74,7 +74,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the description
-    * The description of the device enrollment configuration
+    * Not yet documented
     *
     * @param string $val The description
     *
@@ -88,7 +88,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the displayName
-    * The display name of the device enrollment configuration
+    * Not yet documented
     *
     * @return string The displayName
     */
@@ -103,7 +103,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the displayName
-    * The display name of the device enrollment configuration
+    * Not yet documented
     *
     * @param string $val The displayName
     *
@@ -117,7 +117,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Last modified date time in UTC of the device enrollment configuration
+    * Not yet documented
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -136,7 +136,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Last modified date time in UTC of the device enrollment configuration
+    * Not yet documented
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -150,7 +150,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the priority
-    * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
+    * Not yet documented
     *
     * @return int The priority
     */
@@ -165,7 +165,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the priority
-    * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
+    * Not yet documented
     *
     * @param int $val The priority
     *
@@ -179,7 +179,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the version
-    * The version of the device enrollment configuration
+    * Not yet documented
     *
     * @return int The version
     */
@@ -194,7 +194,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the version
-    * The version of the device enrollment configuration
+    * Not yet documented
     *
     * @param int $val The version
     *
@@ -209,7 +209,7 @@ class DeviceEnrollmentConfiguration extends Entity
 
      /** 
      * Gets the assignments
-    * The list of group assignments for the device configuration profile
+    * The list of group assignments for the device configuration profile.
      *
      * @return array The assignments
      */
@@ -224,7 +224,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /** 
     * Sets the assignments
-    * The list of group assignments for the device configuration profile
+    * The list of group assignments for the device configuration profile.
     *
     * @param EnrollmentConfigurationAssignment $val The assignments
     *

@@ -442,7 +442,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the mediaSizes
-    * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+    * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
     *
     * @return string The mediaSizes
     */
@@ -457,7 +457,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the mediaSizes
-    * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+    * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
     *
     * @param string $val The value of the mediaSizes
     *
@@ -470,7 +470,7 @@ class PrinterCapabilities extends Entity
     }
     /**
     * Gets the mediaTypes
-    * The media types supported by the printer. Valid values are described in the following table.
+    * The media types supported by the printer.
     *
     * @return string The mediaTypes
     */
@@ -485,7 +485,7 @@ class PrinterCapabilities extends Entity
 
     /**
     * Sets the mediaTypes
-    * The media types supported by the printer. Valid values are described in the following table.
+    * The media types supported by the printer.
     *
     * @param string $val The value of the mediaTypes
     *
