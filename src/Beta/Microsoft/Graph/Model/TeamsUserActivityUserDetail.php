@@ -26,6 +26,7 @@ class TeamsUserActivityUserDetail extends Entity
 {
     /**
     * Gets the adHocMeetingsAttendedCount
+    * The number of ad hoc meetings a user participated in.
     *
     * @return int The adHocMeetingsAttendedCount
     */
@@ -40,6 +41,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the adHocMeetingsAttendedCount
+    * The number of ad hoc meetings a user participated in.
     *
     * @param int $val The adHocMeetingsAttendedCount
     *
@@ -53,6 +55,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the adHocMeetingsOrganizedCount
+    * The number of ad hoc meetings a user organized.
     *
     * @return int The adHocMeetingsOrganizedCount
     */
@@ -67,6 +70,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the adHocMeetingsOrganizedCount
+    * The number of ad hoc meetings a user organized.
     *
     * @param int $val The adHocMeetingsOrganizedCount
     *
@@ -80,6 +84,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the assignedProducts
+    * Products the user assigned with.
     *
     * @return string The assignedProducts
     */
@@ -94,6 +99,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the assignedProducts
+    * Products the user assigned with.
     *
     * @param string $val The assignedProducts
     *
@@ -107,6 +113,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the audioDuration
+    * Audio duration the user participated in.
     *
     * @return Duration The audioDuration
     */
@@ -125,6 +132,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the audioDuration
+    * Audio duration the user participated in.
     *
     * @param Duration $val The audioDuration
     *
@@ -138,6 +146,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the callCount
+    * The number of 1:1 calls that the user participated in.
     *
     * @return int The callCount
     */
@@ -152,6 +161,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the callCount
+    * The number of 1:1 calls that the user participated in.
     *
     * @param int $val The callCount
     *
@@ -165,6 +175,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the deletedDate
+    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
     * @return \DateTime The deletedDate
     */
@@ -183,6 +194,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the deletedDate
+    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
     * @param \DateTime $val The deletedDate
     *
@@ -196,6 +208,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the hasOtherAction
+    * The User is active but has performed other activities than exposed action types offered in the report (sending or replying to channel messages and chat messages, scheduling or participating in 1:1 calls and meetings). Examples actions are when a user changes the Teams status or the Teams status message or opens a Channel Message post but does not reply.
     *
     * @return bool The hasOtherAction
     */
@@ -210,6 +223,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the hasOtherAction
+    * The User is active but has performed other activities than exposed action types offered in the report (sending or replying to channel messages and chat messages, scheduling or participating in 1:1 calls and meetings). Examples actions are when a user changes the Teams status or the Teams status message or opens a Channel Message post but does not reply.
     *
     * @param bool $val The hasOtherAction
     *
@@ -223,6 +237,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @return bool The isDeleted
     */
@@ -237,6 +252,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @param bool $val The isDeleted
     *
@@ -250,6 +266,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the isLicensed
+    * Whether the user has been assigned a Teams license.
     *
     * @return bool The isLicensed
     */
@@ -264,6 +281,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the isLicensed
+    * Whether the user has been assigned a Teams license.
     *
     * @param bool $val The isLicensed
     *
@@ -277,6 +295,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the lastActivityDate
+    * The last date that the user participated in a Microsoft Teams activity.
     *
     * @return \DateTime The lastActivityDate
     */
@@ -295,6 +314,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the lastActivityDate
+    * The last date that the user participated in a Microsoft Teams activity.
     *
     * @param \DateTime $val The lastActivityDate
     *
@@ -308,6 +328,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the meetingCount
+    * The number of online meetings that the user participated in.
     *
     * @return int The meetingCount
     */
@@ -322,6 +343,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the meetingCount
+    * The number of online meetings that the user participated in.
     *
     * @param int $val The meetingCount
     *
@@ -335,6 +357,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the meetingsAttendedCount
+    * The sum of the one-time scheduled, recurring, ad hoc and unclassified meetings a user participated in.
     *
     * @return int The meetingsAttendedCount
     */
@@ -349,6 +372,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the meetingsAttendedCount
+    * The sum of the one-time scheduled, recurring, ad hoc and unclassified meetings a user participated in.
     *
     * @param int $val The meetingsAttendedCount
     *
@@ -362,6 +386,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the meetingsOrganizedCount
+    * The sum of one-time scheduled, Recurring, ad hoc and unclassified meetings a user organized.
     *
     * @return int The meetingsOrganizedCount
     */
@@ -376,6 +401,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the meetingsOrganizedCount
+    * The sum of one-time scheduled, Recurring, ad hoc and unclassified meetings a user organized.
     *
     * @param int $val The meetingsOrganizedCount
     *
@@ -389,6 +415,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the privateChatMessageCount
+    * The number of unique messages that the user posted in a private chat.
     *
     * @return int The privateChatMessageCount
     */
@@ -403,6 +430,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the privateChatMessageCount
+    * The number of unique messages that the user posted in a private chat.
     *
     * @param int $val The privateChatMessageCount
     *
@@ -416,6 +444,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -430,6 +459,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -443,6 +473,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -461,6 +492,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -474,6 +506,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the scheduledOneTimeMeetingsAttendedCount
+    * The number of the one-time scheduled meetings a user participated in.
     *
     * @return int The scheduledOneTimeMeetingsAttendedCount
     */
@@ -488,6 +521,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the scheduledOneTimeMeetingsAttendedCount
+    * The number of the one-time scheduled meetings a user participated in.
     *
     * @param int $val The scheduledOneTimeMeetingsAttendedCount
     *
@@ -501,6 +535,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the scheduledOneTimeMeetingsOrganizedCount
+    * The number of one-time scheduled meetings a user organized.
     *
     * @return int The scheduledOneTimeMeetingsOrganizedCount
     */
@@ -515,6 +550,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the scheduledOneTimeMeetingsOrganizedCount
+    * The number of one-time scheduled meetings a user organized.
     *
     * @param int $val The scheduledOneTimeMeetingsOrganizedCount
     *
@@ -528,6 +564,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the scheduledRecurringMeetingsAttendedCount
+    * The number of the recurring meetings a user participated in.
     *
     * @return int The scheduledRecurringMeetingsAttendedCount
     */
@@ -542,6 +579,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the scheduledRecurringMeetingsAttendedCount
+    * The number of the recurring meetings a user participated in.
     *
     * @param int $val The scheduledRecurringMeetingsAttendedCount
     *
@@ -555,6 +593,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the scheduledRecurringMeetingsOrganizedCount
+    * The number of recurring meetings a user organized.
     *
     * @return int The scheduledRecurringMeetingsOrganizedCount
     */
@@ -569,6 +608,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the scheduledRecurringMeetingsOrganizedCount
+    * The number of recurring meetings a user organized.
     *
     * @param int $val The scheduledRecurringMeetingsOrganizedCount
     *
@@ -582,6 +622,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the screenShareDuration
+    * Screen sharing duration the user participated in.
     *
     * @return Duration The screenShareDuration
     */
@@ -600,6 +641,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the screenShareDuration
+    * Screen sharing duration the user participated in.
     *
     * @param Duration $val The screenShareDuration
     *
@@ -613,6 +655,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the teamChatMessageCount
+    * The number of unique messages that the user posted in a team chat.
     *
     * @return int The teamChatMessageCount
     */
@@ -627,6 +670,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the teamChatMessageCount
+    * The number of unique messages that the user posted in a team chat.
     *
     * @param int $val The teamChatMessageCount
     *
@@ -640,6 +684,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
     * @return string The userPrincipalName
     */
@@ -654,6 +699,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
     * @param string $val The userPrincipalName
     *
@@ -667,6 +713,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Gets the videoDuration
+    * Video duration the user participated in.
     *
     * @return Duration The videoDuration
     */
@@ -685,6 +732,7 @@ class TeamsUserActivityUserDetail extends Entity
     
     /**
     * Sets the videoDuration
+    * Video duration the user participated in.
     *
     * @param Duration $val The videoDuration
     *

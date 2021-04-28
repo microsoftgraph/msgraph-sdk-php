@@ -55,7 +55,6 @@ class OfficeConfiguration implements \JsonSerializable
 
      /** 
      * Gets the tenantCheckinStatuses
-    * List of office Client check-in status.
      *
      * @return array The tenantCheckinStatuses
      */
@@ -70,7 +69,6 @@ class OfficeConfiguration implements \JsonSerializable
     
     /** 
     * Sets the tenantCheckinStatuses
-    * List of office Client check-in status.
     *
     * @param OfficeClientCheckinStatus $val The tenantCheckinStatuses
     *
@@ -84,7 +82,6 @@ class OfficeConfiguration implements \JsonSerializable
     
     /**
     * Gets the tenantUserCheckinSummary
-    * Entity that describes tenant check-in statues
     *
     * @return OfficeUserCheckinSummary The tenantUserCheckinSummary
     */
@@ -103,7 +100,6 @@ class OfficeConfiguration implements \JsonSerializable
     
     /**
     * Sets the tenantUserCheckinSummary
-    * Entity that describes tenant check-in statues
     *
     * @param OfficeUserCheckinSummary $val The tenantUserCheckinSummary
     *
@@ -118,7 +114,6 @@ class OfficeConfiguration implements \JsonSerializable
 
      /** 
      * Gets the clientConfigurations
-    * List of office Client configuration.
      *
      * @return array The clientConfigurations
      */
@@ -133,7 +128,6 @@ class OfficeConfiguration implements \JsonSerializable
     
     /** 
     * Sets the clientConfigurations
-    * List of office Client configuration.
     *
     * @param OfficeClientConfiguration $val The clientConfigurations
     *

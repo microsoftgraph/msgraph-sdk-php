@@ -21,64 +21,8 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Initiator extends Entity
+class Initiator extends Identity
 {
-    /**
-    * Gets the displayName
-    * Name of the person or service that initiated the provisioning event.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * Name of the person or service that initiated the provisioning event.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return Initiator
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the id
-    * Uniquely identifies the person or service that initiated the provisioning event.
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * Uniquely identifies the person or service that initiated the provisioning event.
-    *
-    * @param string $val The value of the id
-    *
-    * @return Initiator
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the initiatorType

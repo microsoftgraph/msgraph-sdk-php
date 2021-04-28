@@ -173,7 +173,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the city
-    * The city in which the user is located. Returned only on $select. Supports $filter.
+    * The city in which the user is located. Maximum length is 128 characters. Returned only on $select. Supports $filter.
     *
     * @return string The city
     */
@@ -188,7 +188,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the city
-    * The city in which the user is located. Returned only on $select. Supports $filter.
+    * The city in which the user is located. Maximum length is 128 characters. Returned only on $select. Supports $filter.
     *
     * @param string $val The city
     *
@@ -260,7 +260,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the country
-    * The country/region in which the user is located; for example, 'US' or 'UK'. Returned only on $select. Supports $filter.
+    * The country/region in which the user is located; for example, 'US' or 'UK'. Maximum length is 128 characters. Returned only on $select. Supports $filter.
     *
     * @return string The country
     */
@@ -275,7 +275,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the country
-    * The country/region in which the user is located; for example, 'US' or 'UK'. Returned only on $select. Supports $filter.
+    * The country/region in which the user is located; for example, 'US' or 'UK'. Maximum length is 128 characters. Returned only on $select. Supports $filter.
     *
     * @param string $val The country
     *
@@ -351,7 +351,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the department
-    * The name for the department in which the user works. Returned only on $select. Supports $filter.
+    * The name for the department in which the user works. Maximum length is 64 characters.Returned only on $select. Supports $filter.
     *
     * @return string The department
     */
@@ -366,7 +366,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the department
-    * The name for the department in which the user works. Returned only on $select. Supports $filter.
+    * The name for the department in which the user works. Maximum length is 64 characters.Returned only on $select. Supports $filter.
     *
     * @param string $val The department
     *
@@ -380,7 +380,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Returned by default. Supports $filter and $orderby.
+    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter and $orderby.
     *
     * @return string The displayName
     */
@@ -395,7 +395,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Returned by default. Supports $filter and $orderby.
+    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter and $orderby.
     *
     * @param string $val The displayName
     *
@@ -624,7 +624,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the givenName
-    * The given name (first name) of the user. Returned by default. Supports $filter.
+    * The given name (first name) of the user. Maximum length is 64 characters. Returned by default. Supports $filter.
     *
     * @return string The givenName
     */
@@ -639,7 +639,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the givenName
-    * The given name (first name) of the user. Returned by default. Supports $filter.
+    * The given name (first name) of the user. Maximum length is 64 characters. Returned by default. Supports $filter.
     *
     * @param string $val The givenName
     *
@@ -741,7 +741,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the jobTitle
-    * The user's job title. Returned by default. Supports $filter.
+    * The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter.
     *
     * @return string The jobTitle
     */
@@ -756,7 +756,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the jobTitle
-    * The user's job title. Returned by default. Supports $filter.
+    * The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter.
     *
     * @param string $val The jobTitle
     *
@@ -891,7 +891,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mailNickname
-    * The mail alias for the user. This property must be specified when a user is created. Returned only on $select. Supports $filter.
+    * The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Returned only on $select. Supports $filter.
     *
     * @return string The mailNickname
     */
@@ -906,7 +906,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mailNickname
-    * The mail alias for the user. This property must be specified when a user is created. Returned only on $select. Supports $filter.
+    * The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Returned only on $select. Supports $filter.
     *
     * @param string $val The mailNickname
     *
@@ -949,7 +949,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the officeLocation
-    * The office location in the user's place of business. Returned by default.
+    * The office location in the user's place of business. Maximum length is 128 characters. Returned by default.
     *
     * @return string The officeLocation
     */
@@ -964,7 +964,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the officeLocation
-    * The office location in the user's place of business. Returned by default.
+    * The office location in the user's place of business. Maximum length is 128 characters. Returned by default.
     *
     * @param string $val The officeLocation
     *
@@ -1368,7 +1368,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the postalCode
-    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Returned only on $select.
+    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select.
     *
     * @return string The postalCode
     */
@@ -1383,7 +1383,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the postalCode
-    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Returned only on $select.
+    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select.
     *
     * @param string $val The postalCode
     *
@@ -1547,7 +1547,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the state
-    * The state or province in the user's address. Returned only on $select. Supports $filter.
+    * The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter.
     *
     * @return string The state
     */
@@ -1562,7 +1562,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the state
-    * The state or province in the user's address. Returned only on $select. Supports $filter.
+    * The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter.
     *
     * @param string $val The state
     *
@@ -1576,7 +1576,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the streetAddress
-    * The street address of the user's place of business. Returned only on $select.
+    * The street address of the user's place of business. Maximum length is 1024 characters. Returned only on $select.
     *
     * @return string The streetAddress
     */
@@ -1591,7 +1591,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the streetAddress
-    * The street address of the user's place of business. Returned only on $select.
+    * The street address of the user's place of business. Maximum length is 1024 characters. Returned only on $select.
     *
     * @param string $val The streetAddress
     *
@@ -1605,7 +1605,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the surname
-    * The user's surname (family name or last name). Returned by default. Supports $filter.
+    * The user's surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter.
     *
     * @return string The surname
     */
@@ -1620,7 +1620,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the surname
-    * The user's surname (family name or last name). Returned by default. Supports $filter.
+    * The user's surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter.
     *
     * @param string $val The surname
     *
@@ -1721,7 +1721,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mailboxSettings
-    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. Returned only on $select.
+    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. Returned only on $select. Supported only on the Get user API (GET /users/{id} or GET /me).
     *
     * @return MailboxSettings The mailboxSettings
     */
@@ -1740,7 +1740,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mailboxSettings
-    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. Returned only on $select.
+    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. Returned only on $select. Supported only on the Get user API (GET /users/{id} or GET /me).
     *
     * @param MailboxSettings $val The mailboxSettings
     *

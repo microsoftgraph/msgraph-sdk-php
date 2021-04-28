@@ -26,6 +26,7 @@ class TeamsDeviceUsageUserCounts extends Entity
 {
     /**
     * Gets the androidPhone
+    * The number of users who were active on the Teams mobile client for Android.
     *
     * @return int The androidPhone
     */
@@ -40,6 +41,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the androidPhone
+    * The number of users who were active on the Teams mobile client for Android.
     *
     * @param int $val The androidPhone
     *
@@ -53,6 +55,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the chromeOS
+    * The number of users who were active in the Teams desktop client on a ChromeOS computer.
     *
     * @return int The chromeOS
     */
@@ -67,6 +70,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the chromeOS
+    * The number of users who were active in the Teams desktop client on a ChromeOS computer.
     *
     * @param int $val The chromeOS
     *
@@ -80,6 +84,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the ios
+    * The number of users who were active on the Teams mobile client for iOS.
     *
     * @return int The ios
     */
@@ -94,6 +99,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the ios
+    * The number of users who were active on the Teams mobile client for iOS.
     *
     * @param int $val The ios
     *
@@ -107,6 +113,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the linux
+    * The number of users who were active in the Teams desktop client on a Linux computer.
     *
     * @return int The linux
     */
@@ -121,6 +128,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the linux
+    * The number of users who were active in the Teams desktop client on a Linux computer.
     *
     * @param int $val The linux
     *
@@ -134,6 +142,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the mac
+    * The number of users who were active in the Teams desktop client on a macOS computer.
     *
     * @return int The mac
     */
@@ -148,6 +157,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the mac
+    * The number of users who were active in the Teams desktop client on a macOS computer.
     *
     * @param int $val The mac
     *
@@ -161,6 +171,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the reportDate
+    * The date on which the users performed the activities.
     *
     * @return \DateTime The reportDate
     */
@@ -179,6 +190,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the reportDate
+    * The date on which the users performed the activities.
     *
     * @param \DateTime $val The reportDate
     *
@@ -192,6 +204,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -206,6 +219,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -219,6 +233,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -237,6 +252,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -250,6 +266,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the web
+    * The number of users who were active in the Teams web client on devices.
     *
     * @return int The web
     */
@@ -264,6 +281,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the web
+    * The number of users who were active in the Teams web client on devices.
     *
     * @param int $val The web
     *
@@ -277,6 +295,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the windows
+    * The number of users who were active in the Teams desktop client on a Windows-based computer.
     *
     * @return int The windows
     */
@@ -291,6 +310,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the windows
+    * The number of users who were active in the Teams desktop client on a Windows-based computer.
     *
     * @param int $val The windows
     *
@@ -304,6 +324,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Gets the windowsPhone
+    * The number of users who were active on the Teams mobile client for Windows phone.
     *
     * @return int The windowsPhone
     */
@@ -318,6 +339,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     
     /**
     * Sets the windowsPhone
+    * The number of users who were active on the Teams mobile client for Windows phone.
     *
     * @param int $val The windowsPhone
     *

@@ -113,7 +113,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Gets the azureAdRegistered
-    * The intune device's azureAdRegistered. Possible values are: no, yes, unknown.
+    * The intune device's azureAdRegistered.
     *
     * @return AzureAdRegisteredState The azureAdRegistered
     */
@@ -132,7 +132,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     
     /**
     * Sets the azureAdRegistered
-    * The intune device's azureAdRegistered. Possible values are: no, yes, unknown.
+    * The intune device's azureAdRegistered.
     *
     * @param AzureAdRegisteredState $val The azureAdRegistered
     *

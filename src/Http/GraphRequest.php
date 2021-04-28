@@ -293,7 +293,7 @@ class GraphRequest
     *
     * @param mixed $client The client to use in the request
     *
-    * @throws GraphException if response is invalid; if 4xx/5xx is returned and $http_errors is true
+    * @throws \GuzzleHttp\Exception\GuzzleException
     *
     * @return mixed object or array of objects
     *         of class $returnType
@@ -401,8 +401,9 @@ class GraphRequest
     * @param string $path   The path to download the file to
     * @param mixed  $client The client to use in the request
     *
-     * @throws GraphException if file path is invalid; if \GuzzleHttp\Exception\BadResponseException is thrown for 4xx/5xx responses
-     *
+    * @throws GraphException if file path is invalid
+    * @throws \GuzzleHttp\Exception\GuzzleException
+    *
     * @return null
     */
     public function download($path, $client = null)
@@ -444,8 +445,9 @@ class GraphRequest
     * @param string $path   The path of the file to upload
     * @param mixed  $client The client to use in the request
     *
-     * @throws GraphException if file is invalid
-     *
+    * @throws GraphException if file is invalid
+    * @throws \GuzzleHttp\Exception\GuzzleException
+    *
     * @return mixed DriveItem or array of DriveItems
     */
     public function upload($path, $client = null)

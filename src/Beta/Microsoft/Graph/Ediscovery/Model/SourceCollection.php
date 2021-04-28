@@ -418,7 +418,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     /** 
     * Sets the noncustodialSources
     *
-    * @param DataSource $val The noncustodialSources
+    * @param NoncustodialDataSource $val The noncustodialSources
     *
     * @return SourceCollection
     */

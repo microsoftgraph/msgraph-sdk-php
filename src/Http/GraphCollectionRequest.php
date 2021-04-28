@@ -97,6 +97,7 @@ class GraphCollectionRequest extends GraphRequest
 	 *
 	 * @return int the number of entries
 	 * @throws GraphException
+	 * @throws \GuzzleHttp\Exception\GuzzleException
 	 */
     public function count()
     {
@@ -142,10 +143,8 @@ class GraphCollectionRequest extends GraphRequest
 	/**
 	 * Gets the next page of results
 	 *
-	 * @param bool $prev When true, get the previous page
-	 *
 	 * @return array of objects of class $returnType
-	 * @throws GraphException
+	 * @throws \GuzzleHttp\Exception\GuzzleException
 	 */
     public function getPage()
     {
@@ -157,8 +156,6 @@ class GraphCollectionRequest extends GraphRequest
 
     /**
     * Sets the required query information to get a new page
-    *
-    * @param bool $prev Set to true for the previous page
     *
     * @return GraphCollectionRequest
     */

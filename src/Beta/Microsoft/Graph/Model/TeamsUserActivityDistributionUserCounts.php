@@ -26,6 +26,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
 {
     /**
     * Gets the calls
+    * The number of unique 1:1 calls that users participated in.
     *
     * @return int The calls
     */
@@ -40,6 +41,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Sets the calls
+    * The number of unique 1:1 calls that users participated in.
     *
     * @param int $val The calls
     *
@@ -53,6 +55,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Gets the meetings
+    * The number of unique online meetings that users participated in.
     *
     * @return int The meetings
     */
@@ -67,6 +70,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Sets the meetings
+    * The number of unique online meetings that users participated in.
     *
     * @param int $val The meetings
     *
@@ -80,6 +84,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Gets the privateChatMessages
+    * The number of unique messages that users posted in a private chat.
     *
     * @return int The privateChatMessages
     */
@@ -94,6 +99,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Sets the privateChatMessages
+    * The number of unique messages that users posted in a private chat.
     *
     * @param int $val The privateChatMessages
     *
@@ -107,6 +113,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -121,6 +128,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -134,6 +142,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -152,6 +161,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -165,6 +175,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Gets the teamChatMessages
+    * The number of unique messages that users posted in a team chat.
     *
     * @return int The teamChatMessages
     */
@@ -179,6 +190,7 @@ class TeamsUserActivityDistributionUserCounts extends Entity
     
     /**
     * Sets the teamChatMessages
+    * The number of unique messages that users posted in a team chat.
     *
     * @param int $val The teamChatMessages
     *

@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ProvisionedIdentity extends Entity
+class ProvisionedIdentity extends Identity
 {
 
     /**
@@ -55,62 +55,6 @@ class ProvisionedIdentity extends Entity
     {
         $this->_propDict["details"] = $val;
          return $this;
-    }
-    /**
-    * Gets the displayName
-    * Display name of the identity.
-    *
-    * @return string The displayName
-    */
-    public function getDisplayName()
-    {
-        if (array_key_exists("displayName", $this->_propDict)) {
-            return $this->_propDict["displayName"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the displayName
-    * Display name of the identity.
-    *
-    * @param string $val The value of the displayName
-    *
-    * @return ProvisionedIdentity
-    */
-    public function setDisplayName($val)
-    {
-        $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    /**
-    * Gets the id
-    * Uniquely identifies the identity.
-    *
-    * @return string The id
-    */
-    public function getId()
-    {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the id
-    * Uniquely identifies the identity.
-    *
-    * @param string $val The value of the id
-    *
-    * @return ProvisionedIdentity
-    */
-    public function setId($val)
-    {
-        $this->_propDict["id"] = $val;
-        return $this;
     }
     /**
     * Gets the identityType

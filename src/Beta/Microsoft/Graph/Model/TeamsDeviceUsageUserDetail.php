@@ -26,6 +26,7 @@ class TeamsDeviceUsageUserDetail extends Entity
 {
     /**
     * Gets the deletedDate
+    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
     * @return \DateTime The deletedDate
     */
@@ -44,6 +45,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the deletedDate
+    * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
     * @param \DateTime $val The deletedDate
     *
@@ -57,6 +59,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @return bool The isDeleted
     */
@@ -71,6 +74,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the isDeleted
+    * Whether this user has been deleted or soft deleted.
     *
     * @param bool $val The isDeleted
     *
@@ -84,6 +88,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the isLicensed
+    * Whether the user has been assigned a Teams license.
     *
     * @return bool The isLicensed
     */
@@ -98,6 +103,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the isLicensed
+    * Whether the user has been assigned a Teams license.
     *
     * @param bool $val The isLicensed
     *
@@ -111,6 +117,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the lastActivityDate
+    * The last date that the user participated in a Microsoft Teams activity.
     *
     * @return \DateTime The lastActivityDate
     */
@@ -129,6 +136,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the lastActivityDate
+    * The last date that the user participated in a Microsoft Teams activity.
     *
     * @param \DateTime $val The lastActivityDate
     *
@@ -142,6 +150,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the reportPeriod
+    * The number of days the report covers.
     *
     * @return string The reportPeriod
     */
@@ -156,6 +165,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the reportPeriod
+    * The number of days the report covers.
     *
     * @param string $val The reportPeriod
     *
@@ -169,6 +179,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the reportRefreshDate
+    * The latest date of the content.
     *
     * @return \DateTime The reportRefreshDate
     */
@@ -187,6 +198,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the reportRefreshDate
+    * The latest date of the content.
     *
     * @param \DateTime $val The reportRefreshDate
     *
@@ -200,6 +212,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usedAndroidPhone
+    * Whether the user was active on the Teams mobile client for Android.
     *
     * @return bool The usedAndroidPhone
     */
@@ -214,6 +227,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usedAndroidPhone
+    * Whether the user was active on the Teams mobile client for Android.
     *
     * @param bool $val The usedAndroidPhone
     *
@@ -227,6 +241,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usedChromeOS
+    * Whether the user was active in the Teams desktop client on a ChromeOS computer.
     *
     * @return bool The usedChromeOS
     */
@@ -241,6 +256,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usedChromeOS
+    * Whether the user was active in the Teams desktop client on a ChromeOS computer.
     *
     * @param bool $val The usedChromeOS
     *
@@ -254,6 +270,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usediOS
+    * Whether the user was active on the Teams mobile client for iOS.
     *
     * @return bool The usediOS
     */
@@ -268,6 +285,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usediOS
+    * Whether the user was active on the Teams mobile client for iOS.
     *
     * @param bool $val The usediOS
     *
@@ -281,6 +299,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usedLinux
+    * Whether the user was active in the Teams desktop client on a Linux computer.
     *
     * @return bool The usedLinux
     */
@@ -295,6 +314,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usedLinux
+    * Whether the user was active in the Teams desktop client on a Linux computer.
     *
     * @param bool $val The usedLinux
     *
@@ -308,6 +328,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usedMac
+    * Whether the user was active in the Teams desktop client on a macOS computer.
     *
     * @return bool The usedMac
     */
@@ -322,6 +343,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usedMac
+    * Whether the user was active in the Teams desktop client on a macOS computer.
     *
     * @param bool $val The usedMac
     *
@@ -335,6 +357,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usedWeb
+    * Whether the user was active in the Teams web client on devices.
     *
     * @return bool The usedWeb
     */
@@ -349,6 +372,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usedWeb
+    * Whether the user was active in the Teams web client on devices.
     *
     * @param bool $val The usedWeb
     *
@@ -362,6 +386,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usedWindows
+    * Whether the user was active in the Teams desktop client on a Windows-based computer.
     *
     * @return bool The usedWindows
     */
@@ -376,6 +401,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usedWindows
+    * Whether the user was active in the Teams desktop client on a Windows-based computer.
     *
     * @param bool $val The usedWindows
     *
@@ -389,6 +415,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the usedWindowsPhone
+    * Whether the user was active on the Teams mobile client for Windows phone.
     *
     * @return bool The usedWindowsPhone
     */
@@ -403,6 +430,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the usedWindowsPhone
+    * Whether the user was active on the Teams mobile client for Windows phone.
     *
     * @param bool $val The usedWindowsPhone
     *
@@ -416,6 +444,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
     * @return string The userPrincipalName
     */
@@ -430,6 +459,7 @@ class TeamsDeviceUsageUserDetail extends Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
     * @param string $val The userPrincipalName
     *

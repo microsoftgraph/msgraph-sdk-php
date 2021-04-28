@@ -59,7 +59,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. This property is required when a user is created. Returned only on $select. Supports $filter.
+    * true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
     *
     * @return bool The accountEnabled
     */
@@ -74,7 +74,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. This property is required when a user is created. Returned only on $select. Supports $filter.
+    * true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
     *
     * @param bool $val The accountEnabled
     *
@@ -88,7 +88,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the ageGroup
-    * Sets the age group of the user. Allowed values: null, minor, notAdult and adult. Refer to the legal age group property definitions for further information. Returned only on $select.
+    * Sets the age group of the user. Allowed values: null, minor, notAdult and adult. Refer to the legal age group property definitions for further information.
     *
     * @return string The ageGroup
     */
@@ -103,7 +103,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the ageGroup
-    * Sets the age group of the user. Allowed values: null, minor, notAdult and adult. Refer to the legal age group property definitions for further information. Returned only on $select.
+    * Sets the age group of the user. Allowed values: null, minor, notAdult and adult. Refer to the legal age group property definitions for further information.
     *
     * @param string $val The ageGroup
     *
@@ -118,7 +118,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the assignedLicenses
-    * The licenses that are assigned to the user. Not nullable. Supports $filter.
+    * The licenses that are assigned to the user. Returned only on $select. Not nullable. Supports $filter.
      *
      * @return array The assignedLicenses
      */
@@ -133,7 +133,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the assignedLicenses
-    * The licenses that are assigned to the user. Not nullable. Supports $filter.
+    * The licenses that are assigned to the user. Returned only on $select. Not nullable. Supports $filter.
     *
     * @param AssignedLicense $val The assignedLicenses
     *
@@ -148,7 +148,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the assignedPlans
-    * The plans that are assigned to the user. Returned only on $select. Read-only. Not nullable.
+    * The plans that are assigned to the user. Read-only. Not nullable.
      *
      * @return array The assignedPlans
      */
@@ -163,7 +163,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the assignedPlans
-    * The plans that are assigned to the user. Returned only on $select. Read-only. Not nullable.
+    * The plans that are assigned to the user. Read-only. Not nullable.
     *
     * @param AssignedPlan $val The assignedPlans
     *
@@ -177,7 +177,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the businessPhones
-    * The telephone numbers for the user. Only one number can be set for this property. Returned by default. Read-only for users synced from on-premises directory.
+    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default.
     *
     * @return string The businessPhones
     */
@@ -192,7 +192,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the businessPhones
-    * The telephone numbers for the user. Only one number can be set for this property. Returned by default. Read-only for users synced from on-premises directory.
+    * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default.
     *
     * @param string $val The businessPhones
     *
@@ -206,7 +206,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the city
-    * The city in which the user is located. Returned only on $select. Supports $filter.
+    * The city in which the user is located. Maximum length is 128 characters. Supports $filter.
     *
     * @return string The city
     */
@@ -221,7 +221,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the city
-    * The city in which the user is located. Returned only on $select. Supports $filter.
+    * The city in which the user is located. Maximum length is 128 characters. Supports $filter.
     *
     * @param string $val The city
     *
@@ -264,7 +264,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the consentProvidedForMinor
-    * Sets whether consent has been obtained for minors. Allowed values: null, granted, denied and notRequired. Refer to the legal age group property definitions for further information. Returned only on $select.
+    * Sets whether consent has been obtained for minors. Allowed values: null, granted, denied and notRequired. Refer to the legal age group property definitions for further information.
     *
     * @return string The consentProvidedForMinor
     */
@@ -279,7 +279,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the consentProvidedForMinor
-    * Sets whether consent has been obtained for minors. Allowed values: null, granted, denied and notRequired. Refer to the legal age group property definitions for further information. Returned only on $select.
+    * Sets whether consent has been obtained for minors. Allowed values: null, granted, denied and notRequired. Refer to the legal age group property definitions for further information.
     *
     * @param string $val The consentProvidedForMinor
     *
@@ -293,7 +293,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the country
-    * The country/region in which the user is located; for example, 'US' or 'UK'. Returned only on $select. Supports $filter.
+    * The country/region in which the user is located; for example, 'US' or 'UK'. Maximum length is 128 characters. Supports $filter.
     *
     * @return string The country
     */
@@ -308,7 +308,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the country
-    * The country/region in which the user is located; for example, 'US' or 'UK'. Returned only on $select. Supports $filter.
+    * The country/region in which the user is located; for example, 'US' or 'UK'. Maximum length is 128 characters. Supports $filter.
     *
     * @param string $val The country
     *
@@ -322,7 +322,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Returned only on $select. Read-only. Supports $filter.
+    * The created date of the user object.
     *
     * @return \DateTime The createdDateTime
     */
@@ -341,7 +341,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Returned only on $select. Read-only. Supports $filter.
+    * The created date of the user object.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -355,7 +355,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the creationType
-    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Returned only on $select. Read-only.
+    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
     *
     * @return string The creationType
     */
@@ -370,7 +370,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the creationType
-    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Returned only on $select. Read-only.
+    * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
     *
     * @param string $val The creationType
     *
@@ -384,7 +384,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the department
-    * The name for the department in which the user works. Returned only on $select. Supports $filter.
+    * The name for the department in which the user works. Maximum length is 64 characters. Supports $filter.
     *
     * @return string The department
     */
@@ -399,7 +399,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the department
-    * The name for the department in which the user works. Returned only on $select. Supports $filter.
+    * The name for the department in which the user works. Maximum length is 64 characters. Supports $filter.
     *
     * @param string $val The department
     *
@@ -441,7 +441,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Returned by default. Supports $filter and $orderby.
+    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter and $orderby.
     *
     * @return string The displayName
     */
@@ -456,7 +456,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Returned by default. Supports $filter and $orderby.
+    * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter and $orderby.
     *
     * @param string $val The displayName
     *
@@ -652,7 +652,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the faxNumber
-    * The fax number of the user. Returned only on $select.
+    * The fax number of the user.
     *
     * @return string The faxNumber
     */
@@ -667,7 +667,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the faxNumber
-    * The fax number of the user. Returned only on $select.
+    * The fax number of the user.
     *
     * @param string $val The faxNumber
     *
@@ -681,7 +681,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the givenName
-    * The given name (first name) of the user. Returned by default. Supports $filter.
+    * The given name (first name) of the user. Returned by default. Maximum length is 64 characters. Supports $filter.
     *
     * @return string The givenName
     */
@@ -696,7 +696,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the givenName
-    * The given name (first name) of the user. Returned by default. Supports $filter.
+    * The given name (first name) of the user. Returned by default. Maximum length is 64 characters. Supports $filter.
     *
     * @param string $val The givenName
     *
@@ -711,7 +711,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the identities
-    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Returned only on $select. Supports $filter.
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
      *
      * @return array The identities
      */
@@ -726,7 +726,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the identities
-    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Returned only on $select. Supports $filter.
+    * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
     *
     * @param ObjectIdentity $val The identities
     *
@@ -827,7 +827,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the jobTitle
-    * The user's job title. Returned by default. Supports $filter.
+    * The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter.
     *
     * @return string The jobTitle
     */
@@ -842,7 +842,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the jobTitle
-    * The user's job title. Returned by default. Supports $filter.
+    * The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter.
     *
     * @param string $val The jobTitle
     *
@@ -856,7 +856,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. Read-only.
+    * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The lastPasswordChangeDateTime
     */
@@ -875,7 +875,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. Read-only.
+    * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The lastPasswordChangeDateTime
     *
@@ -889,7 +889,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the legalAgeGroupClassification
-    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information. Returned only on $select.
+    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.
     *
     * @return string The legalAgeGroupClassification
     */
@@ -904,7 +904,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the legalAgeGroupClassification
-    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information. Returned only on $select.
+    * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.
     *
     * @param string $val The legalAgeGroupClassification
     *
@@ -919,7 +919,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the licenseAssignmentStates
-    * State of license assignments for this user. Returned only on $select. Read-only.
+    * State of license assignments for this user. Read-only.
      *
      * @return array The licenseAssignmentStates
      */
@@ -934,7 +934,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the licenseAssignmentStates
-    * State of license assignments for this user. Returned only on $select. Read-only.
+    * State of license assignments for this user. Read-only.
     *
     * @param LicenseAssignmentState $val The licenseAssignmentStates
     *
@@ -977,7 +977,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mailNickname
-    * The mail alias for the user. This property must be specified when a user is created. Returned only on $select. Supports $filter.
+    * The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Supports $filter.
     *
     * @return string The mailNickname
     */
@@ -992,7 +992,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mailNickname
-    * The mail alias for the user. This property must be specified when a user is created. Returned only on $select. Supports $filter.
+    * The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Supports $filter.
     *
     * @param string $val The mailNickname
     *
@@ -1006,7 +1006,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mobilePhone
-    * The primary cellular telephone number for the user. Returned by default. Read-only for users synced from on-premises directory.
+    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default.
     *
     * @return string The mobilePhone
     */
@@ -1021,7 +1021,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mobilePhone
-    * The primary cellular telephone number for the user. Returned by default. Read-only for users synced from on-premises directory.
+    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default.
     *
     * @param string $val The mobilePhone
     *
@@ -1064,7 +1064,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesDistinguishedName
-    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @return string The onPremisesDistinguishedName
     */
@@ -1079,7 +1079,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesDistinguishedName
-    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @param string $val The onPremisesDistinguishedName
     *
@@ -1093,7 +1093,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesDomainName
-    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @return string The onPremisesDomainName
     */
@@ -1108,7 +1108,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesDomainName
-    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @param string $val The onPremisesDomainName
     *
@@ -1122,7 +1122,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesExtensionAttributes
-    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
     *
     * @return OnPremisesExtensionAttributes The onPremisesExtensionAttributes
     */
@@ -1141,7 +1141,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesExtensionAttributes
-    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+    * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
     *
     * @param OnPremisesExtensionAttributes $val The onPremisesExtensionAttributes
     *
@@ -1155,7 +1155,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Returned only on $select. Supports $filter.
+    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
     *
     * @return string The onPremisesImmutableId
     */
@@ -1170,7 +1170,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesImmutableId
-    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Returned only on $select. Supports $filter.
+    * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
     *
     * @param string $val The onPremisesImmutableId
     *
@@ -1184,7 +1184,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime The onPremisesLastSyncDateTime
     */
@@ -1203,7 +1203,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesLastSyncDateTime
-    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. Read-only.
+    * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The onPremisesLastSyncDateTime
     *
@@ -1218,7 +1218,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the onPremisesProvisioningErrors
-    * Errors when using Microsoft synchronization product during provisioning. Returned only on $select.
+    * Errors when using Microsoft synchronization product during provisioning.
      *
      * @return array The onPremisesProvisioningErrors
      */
@@ -1233,7 +1233,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the onPremisesProvisioningErrors
-    * Errors when using Microsoft synchronization product during provisioning. Returned only on $select.
+    * Errors when using Microsoft synchronization product during provisioning.
     *
     * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
     *
@@ -1247,7 +1247,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesSamAccountName
-    * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @return string The onPremisesSamAccountName
     */
@@ -1262,7 +1262,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesSamAccountName
-    * Contains the on-premises sAMAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @param string $val The onPremisesSamAccountName
     *
@@ -1276,7 +1276,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Returned only on $select. Read-only.
+    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
     *
     * @return string The onPremisesSecurityIdentifier
     */
@@ -1291,7 +1291,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Returned only on $select. Read-only.
+    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
     *
     * @param string $val The onPremisesSecurityIdentifier
     *
@@ -1305,7 +1305,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned only on $select. Read-only.
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only
     *
     * @return bool The onPremisesSyncEnabled
     */
@@ -1320,7 +1320,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned only on $select. Read-only.
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -1334,7 +1334,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesUserPrincipalName
-    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @return string The onPremisesUserPrincipalName
     */
@@ -1349,7 +1349,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesUserPrincipalName
-    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Returned only on $select. Read-only.
+    * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
     *
     * @param string $val The onPremisesUserPrincipalName
     *
@@ -1363,7 +1363,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the otherMails
-    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].Returned only on $select.  Supports$filter.
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
     *
     * @return string The otherMails
     */
@@ -1378,7 +1378,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the otherMails
-    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].Returned only on $select.  Supports$filter.
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
     *
     * @param string $val The otherMails
     *
@@ -1392,7 +1392,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordPolicies
-    * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two may be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.Returned only on $select.
+    * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two may be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.
     *
     * @return string The passwordPolicies
     */
@@ -1407,7 +1407,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordPolicies
-    * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two may be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.Returned only on $select.
+    * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two may be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.
     *
     * @param string $val The passwordPolicies
     *
@@ -1421,7 +1421,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select.
+    * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @return PasswordProfile The passwordProfile
     */
@@ -1440,7 +1440,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Returned only on $select.
+    * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
     *
     * @param PasswordProfile $val The passwordProfile
     *
@@ -1454,7 +1454,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the postalCode
-    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Returned only on $select.
+    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters.
     *
     * @return string The postalCode
     */
@@ -1469,7 +1469,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the postalCode
-    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Returned only on $select.
+    * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters.
     *
     * @param string $val The postalCode
     *
@@ -1542,7 +1542,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the provisionedPlans
-    * The plans that are provisioned for the user. Returned only on $select. Read-only. Not nullable.
+    * The plans that are provisioned for the user. Read-only. Not nullable.
      *
      * @return array The provisionedPlans
      */
@@ -1557,7 +1557,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the provisionedPlans
-    * The plans that are provisioned for the user. Returned only on $select. Read-only. Not nullable.
+    * The plans that are provisioned for the user. Read-only. Not nullable.
     *
     * @param ProvisionedPlan $val The provisionedPlans
     *
@@ -1571,7 +1571,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the proxyAddresses
-    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'] The any operator is required for filter expressions on multi-valued properties. Returned only on $select. Read-only, Not nullable. Supports $filter.
+    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'] The any operator is required for filter expressions on multi-valued properties. Read-only, Not nullable. Supports $filter.
     *
     * @return string The proxyAddresses
     */
@@ -1586,7 +1586,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the proxyAddresses
-    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'] The any operator is required for filter expressions on multi-valued properties. Returned only on $select. Read-only, Not nullable. Supports $filter.
+    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'] The any operator is required for filter expressions on multi-valued properties. Read-only, Not nullable. Supports $filter.
     *
     * @param string $val The proxyAddresses
     *
@@ -1600,7 +1600,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the refreshTokensValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Returned only on $select. Read-only. Use invalidateAllRefreshTokens to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Returned only on $select. Read-only.
     *
     * @return \DateTime The refreshTokensValidFromDateTime
     */
@@ -1619,7 +1619,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the refreshTokensValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Returned only on $select. Read-only. Use invalidateAllRefreshTokens to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Returned only on $select. Read-only.
     *
     * @param \DateTime $val The refreshTokensValidFromDateTime
     *
@@ -1633,7 +1633,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the showInAddressList
-    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false. Returned only on $select.
+    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @return bool The showInAddressList
     */
@@ -1648,7 +1648,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the showInAddressList
-    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false. Returned only on $select.
+    * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
     *
     * @param bool $val The showInAddressList
     *
@@ -1662,7 +1662,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the signInSessionsValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Returned only on $select. Read-only. Use revokeSignInSessions to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
     *
     * @return \DateTime The signInSessionsValidFromDateTime
     */
@@ -1681,7 +1681,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the signInSessionsValidFromDateTime
-    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Returned only on $select. Read-only. Use revokeSignInSessions to reset.
+    * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
     *
     * @param \DateTime $val The signInSessionsValidFromDateTime
     *
@@ -1695,7 +1695,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the state
-    * The state or province in the user's address. Returned only on $select. Supports $filter.
+    * The state or province in the user's address. Maximum length is 128 characters. Supports $filter.
     *
     * @return string The state
     */
@@ -1710,7 +1710,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the state
-    * The state or province in the user's address. Returned only on $select. Supports $filter.
+    * The state or province in the user's address. Maximum length is 128 characters. Supports $filter.
     *
     * @param string $val The state
     *
@@ -1724,7 +1724,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the streetAddress
-    * The street address of the user's place of business. Returned only on $select.
+    * The street address of the user's place of business. Maximum length is 1024 characters.
     *
     * @return string The streetAddress
     */
@@ -1739,7 +1739,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the streetAddress
-    * The street address of the user's place of business. Returned only on $select.
+    * The street address of the user's place of business. Maximum length is 1024 characters.
     *
     * @param string $val The streetAddress
     *
@@ -1753,7 +1753,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the surname
-    * The user's surname (family name or last name). Returned by default. Supports $filter.
+    * The user's surname (family name or last name). Returned by default. Maximum length is 64 characters. Supports $filter.
     *
     * @return string The surname
     */
@@ -1768,7 +1768,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the surname
-    * The user's surname (family name or last name). Returned by default. Supports $filter.
+    * The user's surname (family name or last name). Returned by default. Maximum length is 64 characters. Supports $filter.
     *
     * @param string $val The surname
     *
@@ -1782,7 +1782,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the usageLocation
-    * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: 'US', 'JP', and 'GB'. Not nullable. Returned only on $select. Supports $filter.
+    * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
     *
     * @return string The usageLocation
     */
@@ -1797,7 +1797,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the usageLocation
-    * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: 'US', 'JP', and 'GB'. Not nullable. Returned only on $select. Supports $filter.
+    * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
     *
     * @param string $val The usageLocation
     *
@@ -1840,7 +1840,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userType
-    * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Returned only on $select. Supports $filter.
+    * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
     *
     * @return string The userType
     */
@@ -1855,7 +1855,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userType
-    * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Returned only on $select. Supports $filter.
+    * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
     *
     * @param string $val The userType
     *
@@ -1869,7 +1869,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mailboxSettings
-    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. Returned only on $select.
+    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone.Returned only on $select. Supported only on the Get user API (GET /users/{id} or GET /me).
     *
     * @return MailboxSettings The mailboxSettings
     */
@@ -1888,7 +1888,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mailboxSettings
-    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. Returned only on $select.
+    * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone.Returned only on $select. Supported only on the Get user API (GET /users/{id} or GET /me).
     *
     * @param MailboxSettings $val The mailboxSettings
     *
@@ -1931,7 +1931,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the aboutMe
-    * A freeform text entry field for the user to describe themselves. Returned only on $select.
+    * A freeform text entry field for the user to describe themselves.
     *
     * @return string The aboutMe
     */
@@ -1946,7 +1946,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the aboutMe
-    * A freeform text entry field for the user to describe themselves. Returned only on $select.
+    * A freeform text entry field for the user to describe themselves.
     *
     * @param string $val The aboutMe
     *
@@ -1960,7 +1960,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The birthday
     */
@@ -1979,7 +1979,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the birthday
-    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
+    * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The birthday
     *
@@ -2026,7 +2026,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the interests
-    * A list for the user to describe their interests. Returned only on $select.
+    * A list for the user to describe their interests.
     *
     * @return string The interests
     */
@@ -2041,7 +2041,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the interests
-    * A list for the user to describe their interests. Returned only on $select.
+    * A list for the user to describe their interests.
     *
     * @param string $val The interests
     *
@@ -2055,7 +2055,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mySite
-    * The URL for the user's personal site. Returned only on $select.
+    * The URL for the user's personal site.
     *
     * @return string The mySite
     */
@@ -2070,7 +2070,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mySite
-    * The URL for the user's personal site. Returned only on $select.
+    * The URL for the user's personal site.
     *
     * @param string $val The mySite
     *
@@ -2084,7 +2084,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the pastProjects
-    * A list for the user to enumerate their past projects. Returned only on $select.
+    * A list for the user to enumerate their past projects.
     *
     * @return string The pastProjects
     */
@@ -2099,7 +2099,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the pastProjects
-    * A list for the user to enumerate their past projects. Returned only on $select.
+    * A list for the user to enumerate their past projects.
     *
     * @param string $val The pastProjects
     *
@@ -2113,7 +2113,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the preferredName
-    * The preferred name for the user. Returned only on $select.
+    * The preferred name for the user.
     *
     * @return string The preferredName
     */
@@ -2128,7 +2128,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the preferredName
-    * The preferred name for the user. Returned only on $select.
+    * The preferred name for the user.
     *
     * @param string $val The preferredName
     *
@@ -2142,7 +2142,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the responsibilities
-    * A list for the user to enumerate their responsibilities. Returned only on $select.
+    * A list for the user to enumerate their responsibilities.
     *
     * @return string The responsibilities
     */
@@ -2157,7 +2157,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the responsibilities
-    * A list for the user to enumerate their responsibilities. Returned only on $select.
+    * A list for the user to enumerate their responsibilities.
     *
     * @param string $val The responsibilities
     *
@@ -2171,7 +2171,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the schools
-    * A list for the user to enumerate the schools they have attended. Returned only on $select.
+    * A list for the user to enumerate the schools they have attended.
     *
     * @return string The schools
     */
@@ -2186,7 +2186,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the schools
-    * A list for the user to enumerate the schools they have attended. Returned only on $select.
+    * A list for the user to enumerate the schools they have attended.
     *
     * @param string $val The schools
     *
@@ -2200,7 +2200,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the skills
-    * A list for the user to enumerate their skills. Returned only on $select.
+    * A list for the user to enumerate their skills.
     *
     * @return string The skills
     */
@@ -2215,7 +2215,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the skills
-    * A list for the user to enumerate their skills. Returned only on $select.
+    * A list for the user to enumerate their skills.
     *
     * @param string $val The skills
     *
@@ -2473,7 +2473,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the memberOf
-    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable.
+    * The groups and directory roles that the user is a member of. Read-only. Nullable.
      *
      * @return array The memberOf
      */
@@ -2488,7 +2488,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the memberOf
-    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable.
+    * The groups and directory roles that the user is a member of. Read-only. Nullable.
     *
     * @param DirectoryObject $val The memberOf
     *
@@ -2862,7 +2862,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the events
-    * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+    * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      *
      * @return array The events
      */
@@ -2877,7 +2877,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the events
-    * The user's events. Default is to show events under the Default Calendar. Read-only. Nullable.
+    * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
     *
     * @param Event $val The events
     *
@@ -3014,7 +3014,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the outlook
-    * Selective Outlook services available to the user. Read-only. Nullable.
+    * Read-only.
     *
     * @return OutlookUser The outlook
     */
@@ -3033,7 +3033,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the outlook
-    * Selective Outlook services available to the user. Read-only. Nullable.
+    * Read-only.
     *
     * @param OutlookUser $val The outlook
     *
@@ -3048,7 +3048,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the people
-    * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+    * People that are relevant to the user. Read-only. Nullable.
      *
      * @return array The people
      */
@@ -3063,7 +3063,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the people
-    * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
+    * People that are relevant to the user. Read-only. Nullable.
     *
     * @param Person $val The people
     *
@@ -3169,7 +3169,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the user. Nullable.
+    * The collection of open extensions defined for the user. Read-only. Nullable.
      *
      * @return array The extensions
      */
@@ -3184,7 +3184,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the user. Nullable.
+    * The collection of open extensions defined for the user. Read-only. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -3552,7 +3552,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the planner
-    * Selective Planner services available to the user. Read-only. Nullable.
+    * Entry-point to the Planner resource that might exist for a user. Read-only.
     *
     * @return PlannerUser The planner
     */
@@ -3571,7 +3571,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the planner
-    * Selective Planner services available to the user. Read-only. Nullable.
+    * Entry-point to the Planner resource that might exist for a user. Read-only.
     *
     * @param PlannerUser $val The planner
     *

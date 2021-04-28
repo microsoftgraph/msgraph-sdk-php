@@ -437,7 +437,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the messageType
-    * The type of chat message. The possible values are: message.
+    * The type of chat message. The possible value is: message.
     *
     * @return ChatMessageType The messageType
     */
@@ -456,7 +456,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the messageType
-    * The type of chat message. The possible values are: message.
+    * The type of chat message. The possible value is: message.
     *
     * @param ChatMessageType $val The messageType
     *
@@ -533,7 +533,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the replyToId
-    * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+    * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
     *
     * @return string The replyToId
     */
@@ -548,7 +548,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the replyToId
-    * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+    * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
     *
     * @param string $val The replyToId
     *
@@ -650,7 +650,7 @@ class ChatMessage extends Entity
 
      /** 
      * Gets the hostedContents
-    * Content in a message hosted by Microsoft Teams e.g. images, code snippets etc.
+    * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
      *
      * @return array The hostedContents
      */
@@ -665,7 +665,7 @@ class ChatMessage extends Entity
     
     /** 
     * Sets the hostedContents
-    * Content in a message hosted by Microsoft Teams e.g. images, code snippets etc.
+    * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
     *
     * @param ChatMessageHostedContent $val The hostedContents
     *

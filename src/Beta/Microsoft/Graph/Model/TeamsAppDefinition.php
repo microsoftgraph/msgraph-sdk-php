@@ -26,6 +26,7 @@ class TeamsAppDefinition extends Entity
 {
     /**
     * Gets the allowedInstallationScopes
+    * A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
     *
     * @return TeamsAppInstallationScopes The allowedInstallationScopes
     */
@@ -44,6 +45,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the allowedInstallationScopes
+    * A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
     *
     * @param TeamsAppInstallationScopes $val The allowedInstallationScopes
     *
@@ -57,7 +59,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the azureADAppId
-    * The WebApplicationInfo.id from the Teams App manifest.
+    * The WebApplicationInfo.Id from the Teams app manifest.
     *
     * @return string The azureADAppId
     */
@@ -72,7 +74,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the azureADAppId
-    * The WebApplicationInfo.id from the Teams App manifest.
+    * The WebApplicationInfo.Id from the Teams app manifest.
     *
     * @param string $val The azureADAppId
     *
@@ -266,7 +268,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @return string The teamsAppId
     */
@@ -281,7 +283,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the teamsAppId
-    * The id from the Teams App manifest.
+    * The ID from the Teams app manifest.
     *
     * @param string $val The teamsAppId
     *
@@ -324,7 +326,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Gets the bot
-    * The details of the bot specified in the Teams App manifest.
+    * The details of the bot specified in the Teams app manifest.
     *
     * @return TeamworkBot The bot
     */
@@ -343,7 +345,7 @@ class TeamsAppDefinition extends Entity
     
     /**
     * Sets the bot
-    * The details of the bot specified in the Teams App manifest.
+    * The details of the bot specified in the Teams app manifest.
     *
     * @param TeamworkBot $val The bot
     *
@@ -352,6 +354,72 @@ class TeamsAppDefinition extends Entity
     public function setBot($val)
     {
         $this->_propDict["bot"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the colorIcon
+    * The color version of the Teams app's icon.
+    *
+    * @return TeamsAppIcon The colorIcon
+    */
+    public function getColorIcon()
+    {
+        if (array_key_exists("colorIcon", $this->_propDict)) {
+            if (is_a($this->_propDict["colorIcon"], "\Beta\Microsoft\Graph\Model\TeamsAppIcon")) {
+                return $this->_propDict["colorIcon"];
+            } else {
+                $this->_propDict["colorIcon"] = new TeamsAppIcon($this->_propDict["colorIcon"]);
+                return $this->_propDict["colorIcon"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the colorIcon
+    * The color version of the Teams app's icon.
+    *
+    * @param TeamsAppIcon $val The colorIcon
+    *
+    * @return TeamsAppDefinition
+    */
+    public function setColorIcon($val)
+    {
+        $this->_propDict["colorIcon"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the outlineIcon
+    * The outline version of the Teams app's icon.
+    *
+    * @return TeamsAppIcon The outlineIcon
+    */
+    public function getOutlineIcon()
+    {
+        if (array_key_exists("outlineIcon", $this->_propDict)) {
+            if (is_a($this->_propDict["outlineIcon"], "\Beta\Microsoft\Graph\Model\TeamsAppIcon")) {
+                return $this->_propDict["outlineIcon"];
+            } else {
+                $this->_propDict["outlineIcon"] = new TeamsAppIcon($this->_propDict["outlineIcon"]);
+                return $this->_propDict["outlineIcon"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the outlineIcon
+    * The outline version of the Teams app's icon.
+    *
+    * @param TeamsAppIcon $val The outlineIcon
+    *
+    * @return TeamsAppDefinition
+    */
+    public function setOutlineIcon($val)
+    {
+        $this->_propDict["outlineIcon"] = $val;
         return $this;
     }
     

@@ -265,6 +265,68 @@ class ProvisioningObjectSummary extends Entity
         return $this;
     }
     
+    /**
+    * Gets the provisioningAction
+    *
+    * @return ProvisioningAction The provisioningAction
+    */
+    public function getProvisioningAction()
+    {
+        if (array_key_exists("provisioningAction", $this->_propDict)) {
+            if (is_a($this->_propDict["provisioningAction"], "\Beta\Microsoft\Graph\Model\ProvisioningAction")) {
+                return $this->_propDict["provisioningAction"];
+            } else {
+                $this->_propDict["provisioningAction"] = new ProvisioningAction($this->_propDict["provisioningAction"]);
+                return $this->_propDict["provisioningAction"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the provisioningAction
+    *
+    * @param ProvisioningAction $val The provisioningAction
+    *
+    * @return ProvisioningObjectSummary
+    */
+    public function setProvisioningAction($val)
+    {
+        $this->_propDict["provisioningAction"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the provisioningStatusInfo
+    *
+    * @return ProvisioningStatusInfo The provisioningStatusInfo
+    */
+    public function getProvisioningStatusInfo()
+    {
+        if (array_key_exists("provisioningStatusInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["provisioningStatusInfo"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusInfo")) {
+                return $this->_propDict["provisioningStatusInfo"];
+            } else {
+                $this->_propDict["provisioningStatusInfo"] = new ProvisioningStatusInfo($this->_propDict["provisioningStatusInfo"]);
+                return $this->_propDict["provisioningStatusInfo"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the provisioningStatusInfo
+    *
+    * @param ProvisioningStatusInfo $val The provisioningStatusInfo
+    *
+    * @return ProvisioningObjectSummary
+    */
+    public function setProvisioningStatusInfo($val)
+    {
+        $this->_propDict["provisioningStatusInfo"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the provisioningSteps
@@ -365,15 +427,15 @@ class ProvisioningObjectSummary extends Entity
     * Gets the sourceSystem
     * Details of source system of the object being provisioned.
     *
-    * @return ProvisioningSystemDetails The sourceSystem
+    * @return ProvisioningSystem The sourceSystem
     */
     public function getSourceSystem()
     {
         if (array_key_exists("sourceSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceSystem"], "\Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
+            if (is_a($this->_propDict["sourceSystem"], "\Beta\Microsoft\Graph\Model\ProvisioningSystem")) {
                 return $this->_propDict["sourceSystem"];
             } else {
-                $this->_propDict["sourceSystem"] = new ProvisioningSystemDetails($this->_propDict["sourceSystem"]);
+                $this->_propDict["sourceSystem"] = new ProvisioningSystem($this->_propDict["sourceSystem"]);
                 return $this->_propDict["sourceSystem"];
             }
         }
@@ -384,7 +446,7 @@ class ProvisioningObjectSummary extends Entity
     * Sets the sourceSystem
     * Details of source system of the object being provisioned.
     *
-    * @param ProvisioningSystemDetails $val The sourceSystem
+    * @param ProvisioningSystem $val The sourceSystem
     *
     * @return ProvisioningObjectSummary
     */
@@ -464,15 +526,15 @@ class ProvisioningObjectSummary extends Entity
     * Gets the targetSystem
     * Details of target system of the object being provisioned.
     *
-    * @return ProvisioningSystemDetails The targetSystem
+    * @return ProvisioningSystem The targetSystem
     */
     public function getTargetSystem()
     {
         if (array_key_exists("targetSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["targetSystem"], "\Beta\Microsoft\Graph\Model\ProvisioningSystemDetails")) {
+            if (is_a($this->_propDict["targetSystem"], "\Beta\Microsoft\Graph\Model\ProvisioningSystem")) {
                 return $this->_propDict["targetSystem"];
             } else {
-                $this->_propDict["targetSystem"] = new ProvisioningSystemDetails($this->_propDict["targetSystem"]);
+                $this->_propDict["targetSystem"] = new ProvisioningSystem($this->_propDict["targetSystem"]);
                 return $this->_propDict["targetSystem"];
             }
         }
@@ -483,7 +545,7 @@ class ProvisioningObjectSummary extends Entity
     * Sets the targetSystem
     * Details of target system of the object being provisioned.
     *
-    * @param ProvisioningSystemDetails $val The targetSystem
+    * @param ProvisioningSystem $val The targetSystem
     *
     * @return ProvisioningObjectSummary
     */

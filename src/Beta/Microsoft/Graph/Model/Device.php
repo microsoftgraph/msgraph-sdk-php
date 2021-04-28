@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @return bool The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. default is true.
+    * true if the account is enabled; otherwise, false. Required.
     *
     * @param bool $val The accountEnabled
     *
@@ -180,7 +180,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the deviceId
-    * Identifier set by Azure Device Registration Service at the time of registration.
+    * Unique identifier set by Azure Device Registration Service at the time of registration.
     *
     * @return string The deviceId
     */
@@ -195,7 +195,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the deviceId
-    * Identifier set by Azure Device Registration Service at the time of registration.
+    * Unique identifier set by Azure Device Registration Service at the time of registration.
     *
     * @param string $val The deviceId
     *
@@ -679,7 +679,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @return string The operatingSystemVersion
     */
@@ -694,7 +694,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * Operating system version of the device. Required.
+    * The version of the operating system on the device. Required.
     *
     * @param string $val The operatingSystemVersion
     *
@@ -828,7 +828,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @return string The trustType
     */
@@ -843,7 +843,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the trustType
-    * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+    * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
     *
     * @param string $val The trustType
     *
@@ -1032,6 +1032,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the usageRights
+    * Represents the usage rights a device has been granted.
      *
      * @return array The usageRights
      */
@@ -1046,6 +1047,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the usageRights
+    * Represents the usage rights a device has been granted.
     *
     * @param UsageRight $val The usageRights
     *
@@ -1060,7 +1062,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups that this device is a member of. Read-only. Nullable.
      *
      * @return array The memberOf
      */
@@ -1075,7 +1077,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the memberOf
-    * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+    * Groups that this device is a member of. Read-only. Nullable.
     *
     * @param DirectoryObject $val The memberOf
     *
@@ -1150,6 +1152,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the transitiveMemberOf
+    * Groups that the device is a member of. This operation is transitive.
      *
      * @return array The transitiveMemberOf
      */
@@ -1164,6 +1167,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the transitiveMemberOf
+    * Groups that the device is a member of. This operation is transitive.
     *
     * @param DirectoryObject $val The transitiveMemberOf
     *
@@ -1208,7 +1212,7 @@ class Device extends DirectoryObject
 
      /** 
      * Gets the commands
-    * Set of commands sent to this device
+    * Set of commands sent to this device.
      *
      * @return array The commands
      */
@@ -1223,7 +1227,7 @@ class Device extends DirectoryObject
     
     /** 
     * Sets the commands
-    * Set of commands sent to this device
+    * Set of commands sent to this device.
     *
     * @param Command $val The commands
     *

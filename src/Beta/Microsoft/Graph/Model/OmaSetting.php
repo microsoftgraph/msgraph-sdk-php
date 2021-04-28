@@ -81,7 +81,7 @@ class OmaSetting extends Entity
     }
     /**
     * Gets the isEncrypted
-    * Indicates whether the value field is encrypted.
+    * Indicates whether the value field is encrypted. This property is read-only.
     *
     * @return bool The isEncrypted
     */
@@ -96,7 +96,7 @@ class OmaSetting extends Entity
 
     /**
     * Sets the isEncrypted
-    * Indicates whether the value field is encrypted.
+    * Indicates whether the value field is encrypted. This property is read-only.
     *
     * @param bool $val The value of the isEncrypted
     *

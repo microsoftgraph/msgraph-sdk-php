@@ -35,7 +35,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem
 
     /**
     * Gets the pages
-    * Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
+    * Pages of Home Screen Layout Icons which must be Application Type. This collection can contain a maximum of 500 elements.
     *
     * @return IosHomeScreenFolderPage The pages
     */
@@ -54,7 +54,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem
 
     /**
     * Sets the pages
-    * Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
+    * Pages of Home Screen Layout Icons which must be Application Type. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenFolderPage $val The value to assign to the pages
     *
