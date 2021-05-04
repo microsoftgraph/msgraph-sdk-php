@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RoleEligibilityRequestFilterByCurrentUserOptions File
+* ExpirationRequirement File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* RoleEligibilityRequestFilterByCurrentUserOptions class
+* ExpirationRequirement class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RoleEligibilityRequestFilterByCurrentUserOptions extends Enum
+class ExpirationRequirement extends Enum
 {
     /**
-    * The Enum RoleEligibilityRequestFilterByCurrentUserOptions
+    * The Enum ExpirationRequirement
     */
-    const PRINCIPAL = "principal";
-    const CREATED_BY = "createdBy";
-    const APPROVER = "approver";
+    const REMEMBER_MULTIFACTOR_AUTHENTICATION_ON_TRUSTED_DEVICES = "rememberMultifactorAuthenticationOnTrustedDevices";
+    const TENANT_TOKEN_LIFETIME_POLICY = "tenantTokenLifetimePolicy";
+    const AUDIENCE_TOKEN_LIFETIME_POLICY = "audienceTokenLifetimePolicy";
+    const SIGN_IN_FREQUENCY_PERIODIC_REAUTHENTICATION = "signInFrequencyPeriodicReauthentication";
+    const NGC_MFA = "ngcMfa";
+    const SIGN_IN_FREQUENCY_EVERY_TIME = "signInFrequencyEveryTime";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

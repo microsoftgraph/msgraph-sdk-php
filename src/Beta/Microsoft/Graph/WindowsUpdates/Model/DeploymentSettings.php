@@ -26,6 +26,7 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the monitoring
+    * Settings governing conditions to monitor and automated actions to take.
     *
     * @return MonitoringSettings The monitoring
     */
@@ -44,6 +45,7 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the monitoring
+    * Settings governing conditions to monitor and automated actions to take.
     *
     * @param MonitoringSettings $val The value to assign to the monitoring
     *
@@ -57,6 +59,7 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the rollout
+    * Settings governing how the content is rolled out.
     *
     * @return RolloutSettings The rollout
     */
@@ -75,6 +78,7 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the rollout
+    * Settings governing how the content is rolled out.
     *
     * @param RolloutSettings $val The value to assign to the rollout
     *

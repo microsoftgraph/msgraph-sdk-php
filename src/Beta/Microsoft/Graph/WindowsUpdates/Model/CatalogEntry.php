@@ -26,6 +26,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the deployableUntilDateTime
+    * The date on which the content is no longer available to deploy using the service. Read-only.
     *
     * @return \DateTime The deployableUntilDateTime
     */
@@ -44,6 +45,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the deployableUntilDateTime
+    * The date on which the content is no longer available to deploy using the service. Read-only.
     *
     * @param \DateTime $val The deployableUntilDateTime
     *
@@ -57,6 +59,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name of the content. Read-only.
     *
     * @return string The displayName
     */
@@ -71,6 +74,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name of the content. Read-only.
     *
     * @param string $val The displayName
     *
@@ -84,6 +88,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the releaseDateTime
+    * The release date for the content. Read-only.
     *
     * @return \DateTime The releaseDateTime
     */
@@ -102,6 +107,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the releaseDateTime
+    * The release date for the content. Read-only.
     *
     * @param \DateTime $val The releaseDateTime
     *

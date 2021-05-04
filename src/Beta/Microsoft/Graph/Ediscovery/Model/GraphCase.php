@@ -312,6 +312,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the custodians
+    * Returns a list of case custodian objects for this case.  Nullable.
      *
      * @return array The custodians
      */
@@ -326,6 +327,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the custodians
+    * Returns a list of case custodian objects for this case.  Nullable.
     *
     * @param Custodian $val The custodians
     *
@@ -340,6 +342,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the legalHolds
+    * Returns a list of case legalHold objects for this case.  Nullable.
      *
      * @return array The legalHolds
      */
@@ -354,6 +357,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the legalHolds
+    * Returns a list of case legalHold objects for this case.  Nullable.
     *
     * @param LegalHold $val The legalHolds
     *
@@ -368,6 +372,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the noncustodialDataSources
+    * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      *
      * @return array The noncustodialDataSources
      */
@@ -382,6 +387,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the noncustodialDataSources
+    * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
     *
     * @param NoncustodialDataSource $val The noncustodialDataSources
     *
@@ -396,6 +402,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the operations
+    * Returns a list of case operation objects for this case. Nullable.
      *
      * @return array The operations
      */
@@ -410,6 +417,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the operations
+    * Returns a list of case operation objects for this case. Nullable.
     *
     * @param CaseOperation $val The operations
     *
@@ -424,6 +432,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the reviewSets
+    * Returns a list of reviewSet objects in the case. Read-only. Nullable.
      *
      * @return array The reviewSets
      */
@@ -438,6 +447,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the reviewSets
+    * Returns a list of reviewSet objects in the case. Read-only. Nullable.
     *
     * @param ReviewSet $val The reviewSets
     *

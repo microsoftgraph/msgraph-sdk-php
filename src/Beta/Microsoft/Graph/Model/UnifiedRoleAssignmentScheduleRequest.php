@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UnifiedRoleAssignmentRequest File
+* UnifiedRoleAssignmentScheduleRequest File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* UnifiedRoleAssignmentRequest class
+* UnifiedRoleAssignmentScheduleRequest class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UnifiedRoleAssignmentRequest extends Request
+class UnifiedRoleAssignmentScheduleRequest extends Request
 {
     /**
     * Gets the action
@@ -43,7 +43,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The action
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setAction($val)
     {
@@ -70,7 +70,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The appScopeId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setAppScopeId($val)
     {
@@ -97,7 +97,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The directoryScopeId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setDirectoryScopeId($val)
     {
@@ -124,7 +124,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param bool $val The isValidationOnly
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setIsValidationOnly($val)
     {
@@ -151,7 +151,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The justification
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setJustification($val)
     {
@@ -178,7 +178,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The principalId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setPrincipalId($val)
     {
@@ -205,7 +205,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The roleDefinitionId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setRoleDefinitionId($val)
     {
@@ -236,7 +236,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param RequestSchedule $val The scheduleInfo
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setScheduleInfo($val)
     {
@@ -263,7 +263,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The targetScheduleId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setTargetScheduleId($val)
     {
@@ -294,7 +294,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param TicketInfo $val The ticketInfo
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setTicketInfo($val)
     {
@@ -325,7 +325,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param UnifiedRoleEligibilitySchedule $val The activatedUsing
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setActivatedUsing($val)
     {
@@ -356,7 +356,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param AppScope $val The appScope
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setAppScope($val)
     {
@@ -387,7 +387,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param DirectoryObject $val The directoryScope
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setDirectoryScope($val)
     {
@@ -418,7 +418,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param DirectoryObject $val The principal
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setPrincipal($val)
     {
@@ -449,7 +449,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setRoleDefinition($val)
     {
@@ -480,7 +480,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param UnifiedRoleAssignmentSchedule $val The targetSchedule
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setTargetSchedule($val)
     {

@@ -25,6 +25,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the isEnabled
+    * Indicates whether email threading and near duplicate detection are enabled.
     *
     * @return bool The isEnabled
     */
@@ -39,6 +40,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isEnabled
+    * Indicates whether email threading and near duplicate detection are enabled.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -51,6 +53,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the maxWords
+    * See Minimum/maximum number of words to learn more.
     *
     * @return int The maxWords
     */
@@ -65,6 +68,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the maxWords
+    * See Minimum/maximum number of words to learn more.
     *
     * @param int $val The value of the maxWords
     *
@@ -77,6 +81,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the minWords
+    * See Minimum/maximum number of words to learn more.
     *
     * @return int The minWords
     */
@@ -91,6 +96,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the minWords
+    * See Minimum/maximum number of words to learn more.
     *
     * @param int $val The value of the minWords
     *
@@ -103,6 +109,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the similarityThreshold
+    * See Document and email similarity threshold to learn more.
     *
     * @return int The similarityThreshold
     */
@@ -117,6 +124,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the similarityThreshold
+    * See Document and email similarity threshold to learn more.
     *
     * @param int $val The value of the similarityThreshold
     *

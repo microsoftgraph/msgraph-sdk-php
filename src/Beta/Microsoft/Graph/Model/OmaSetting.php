@@ -135,4 +135,32 @@ class OmaSetting extends Entity
         $this->_propDict["omaUri"] = $val;
         return $this;
     }
+    /**
+    * Gets the secretReferenceValueId
+    * ReferenceId for looking up secret for decryption. This property is read-only.
+    *
+    * @return string The secretReferenceValueId
+    */
+    public function getSecretReferenceValueId()
+    {
+        if (array_key_exists("secretReferenceValueId", $this->_propDict)) {
+            return $this->_propDict["secretReferenceValueId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the secretReferenceValueId
+    * ReferenceId for looking up secret for decryption. This property is read-only.
+    *
+    * @param string $val The value of the secretReferenceValueId
+    *
+    * @return OmaSetting
+    */
+    public function setSecretReferenceValueId($val)
+    {
+        $this->_propDict["secretReferenceValueId"] = $val;
+        return $this;
+    }
 }

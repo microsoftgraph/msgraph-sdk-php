@@ -26,6 +26,7 @@ class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
 {
     /**
     * Gets the version
+    * The version of the feature update. Read-only.
     *
     * @return string The version
     */
@@ -40,6 +41,7 @@ class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
     
     /**
     * Sets the version
+    * The version of the feature update. Read-only.
     *
     * @param string $val The version
     *

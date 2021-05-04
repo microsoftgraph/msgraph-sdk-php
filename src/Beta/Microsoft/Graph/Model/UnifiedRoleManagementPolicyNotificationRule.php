@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementPolicyRule
 {
     /**
+    * Gets the isDefaultRecipientsEnabled
+    *
+    * @return bool The isDefaultRecipientsEnabled
+    */
+    public function getIsDefaultRecipientsEnabled()
+    {
+        if (array_key_exists("isDefaultRecipientsEnabled", $this->_propDict)) {
+            return $this->_propDict["isDefaultRecipientsEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDefaultRecipientsEnabled
+    *
+    * @param bool $val The isDefaultRecipientsEnabled
+    *
+    * @return UnifiedRoleManagementPolicyNotificationRule
+    */
+    public function setIsDefaultRecipientsEnabled($val)
+    {
+        $this->_propDict["isDefaultRecipientsEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the notificationLevel
     *
     * @return string The notificationLevel

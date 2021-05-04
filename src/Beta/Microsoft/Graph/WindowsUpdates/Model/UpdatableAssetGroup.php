@@ -27,6 +27,7 @@ class UpdatableAssetGroup extends UpdatableAsset
 
      /** 
      * Gets the members
+    * Members of the group. Read-only.
      *
      * @return array The members
      */
@@ -41,6 +42,7 @@ class UpdatableAssetGroup extends UpdatableAsset
     
     /** 
     * Sets the members
+    * Members of the group. Read-only.
     *
     * @param UpdatableAsset $val The members
     *

@@ -26,6 +26,7 @@ class SearchResultSet extends Entity
 
     /**
     * Gets the hitsContainers
+    * A collection of search results.
     *
     * @return SearchHitsContainer The hitsContainers
     */
@@ -44,6 +45,7 @@ class SearchResultSet extends Entity
 
     /**
     * Sets the hitsContainers
+    * A collection of search results.
     *
     * @param SearchHitsContainer $val The value to assign to the hitsContainers
     *
@@ -56,6 +58,7 @@ class SearchResultSet extends Entity
     }
     /**
     * Gets the searchTerms
+    * Contains the search terms sent in the initial search query.
     *
     * @return string The searchTerms
     */
@@ -70,6 +73,7 @@ class SearchResultSet extends Entity
 
     /**
     * Sets the searchTerms
+    * Contains the search terms sent in the initial search query.
     *
     * @param string $val The value of the searchTerms
     *

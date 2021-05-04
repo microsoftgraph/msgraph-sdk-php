@@ -263,6 +263,34 @@ class HardwareInformation extends Entity
          return $this;
     }
     /**
+    * Gets the esimIdentifier
+    * eSIM identifier
+    *
+    * @return string The esimIdentifier
+    */
+    public function getEsimIdentifier()
+    {
+        if (array_key_exists("esimIdentifier", $this->_propDict)) {
+            return $this->_propDict["esimIdentifier"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the esimIdentifier
+    * eSIM identifier
+    *
+    * @param string $val The value of the esimIdentifier
+    *
+    * @return HardwareInformation
+    */
+    public function setEsimIdentifier($val)
+    {
+        $this->_propDict["esimIdentifier"] = $val;
+        return $this;
+    }
+    /**
     * Gets the freeStorageSpace
     * Free storage space of the device.
     *

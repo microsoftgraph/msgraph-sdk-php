@@ -24,6 +24,34 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ManagedDevice extends Entity
 {
+
+     /** 
+     * Gets the cloudPcRemoteActionResults
+     *
+     * @return array The cloudPcRemoteActionResults
+     */
+    public function getCloudPcRemoteActionResults()
+    {
+        if (array_key_exists("cloudPcRemoteActionResults", $this->_propDict)) {
+           return $this->_propDict["cloudPcRemoteActionResults"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the cloudPcRemoteActionResults
+    *
+    * @param CloudPcRemoteActionResult $val The cloudPcRemoteActionResults
+    *
+    * @return ManagedDevice
+    */
+    public function setCloudPcRemoteActionResults($val)
+    {
+		$this->_propDict["cloudPcRemoteActionResults"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the aadRegistered
     * Whether the device is Azure Active Directory registered. This property is read-only.
@@ -2378,36 +2406,6 @@ class ManagedDevice extends Entity
     
 
      /** 
-     * Gets the deviceCompliancePolicyStates
-    * Device compliance policy states for this device.
-     *
-     * @return array The deviceCompliancePolicyStates
-     */
-    public function getDeviceCompliancePolicyStates()
-    {
-        if (array_key_exists("deviceCompliancePolicyStates", $this->_propDict)) {
-           return $this->_propDict["deviceCompliancePolicyStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceCompliancePolicyStates
-    * Device compliance policy states for this device.
-    *
-    * @param DeviceCompliancePolicyState $val The deviceCompliancePolicyStates
-    *
-    * @return ManagedDevice
-    */
-    public function setDeviceCompliancePolicyStates($val)
-    {
-		$this->_propDict["deviceCompliancePolicyStates"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the assignmentFilterEvaluationStatusDetails
     * Managed device mobile app configuration states for this device.
      *
@@ -2433,6 +2431,36 @@ class ManagedDevice extends Entity
     public function setAssignmentFilterEvaluationStatusDetails($val)
     {
 		$this->_propDict["assignmentFilterEvaluationStatusDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the deviceCompliancePolicyStates
+    * Device compliance policy states for this device.
+     *
+     * @return array The deviceCompliancePolicyStates
+     */
+    public function getDeviceCompliancePolicyStates()
+    {
+        if (array_key_exists("deviceCompliancePolicyStates", $this->_propDict)) {
+           return $this->_propDict["deviceCompliancePolicyStates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the deviceCompliancePolicyStates
+    * Device compliance policy states for this device.
+    *
+    * @param DeviceCompliancePolicyState $val The deviceCompliancePolicyStates
+    *
+    * @return ManagedDevice
+    */
+    public function setDeviceCompliancePolicyStates($val)
+    {
+		$this->_propDict["deviceCompliancePolicyStates"] = $val;
         return $this;
     }
     

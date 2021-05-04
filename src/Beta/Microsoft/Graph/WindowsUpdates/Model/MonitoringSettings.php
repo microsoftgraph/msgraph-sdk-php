@@ -26,6 +26,7 @@ class MonitoringSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the monitoringRules
+    * Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using 'or'.
     *
     * @return MonitoringRule The monitoringRules
     */
@@ -44,6 +45,7 @@ class MonitoringSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the monitoringRules
+    * Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using 'or'.
     *
     * @param MonitoringRule $val The value to assign to the monitoringRules
     *

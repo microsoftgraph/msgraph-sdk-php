@@ -59,7 +59,6 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the releasedBy
-    * User who moved the status of this submission to released.
     *
     * @return IdentitySet The releasedBy
     */
@@ -78,7 +77,6 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the releasedBy
-    * User who moved the status of this submission to released.
     *
     * @param IdentitySet $val The releasedBy
     *
@@ -92,7 +90,6 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the releasedDateTime
-    * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime The releasedDateTime
     */
@@ -111,7 +108,6 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the releasedDateTime
-    * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The releasedDateTime
     *

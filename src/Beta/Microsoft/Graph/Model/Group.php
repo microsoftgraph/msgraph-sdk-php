@@ -27,7 +27,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the assignedLabels
-    * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
+    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
      *
      * @return array The assignedLabels
      */
@@ -42,7 +42,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the assignedLabels
-    * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
+    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
     *
     * @param AssignedLabel $val The assignedLabels
     *
@@ -826,7 +826,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
-    * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
     *
     * @return string The preferredLanguage
     */
@@ -841,7 +841,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
-    * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
     *
     * @param string $val The preferredLanguage
     *
@@ -1033,7 +1033,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the theme
-    * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+    * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
     *
     * @return string The theme
     */
@@ -1048,7 +1048,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the theme
-    * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+    * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
     *
     * @param string $val The theme
     *
@@ -1655,6 +1655,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the permissionGrants
+    * The permission that has been granted for a group to a specific application.
      *
      * @return array The permissionGrants
      */
@@ -1669,6 +1670,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the permissionGrants
+    * The permission that has been granted for a group to a specific application.
     *
     * @param ResourceSpecificPermissionGrant $val The permissionGrants
     *

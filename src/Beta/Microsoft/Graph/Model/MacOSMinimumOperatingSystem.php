@@ -275,4 +275,32 @@ class MacOSMinimumOperatingSystem extends Entity
         $this->_propDict["v109"] = $val;
         return $this;
     }
+    /**
+    * Gets the v11_0
+    * Mac OS 11.0 or later.
+    *
+    * @return bool The v11_0
+    */
+    public function getV11_0()
+    {
+        if (array_key_exists("v110", $this->_propDict)) {
+            return $this->_propDict["v110"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v11_0
+    * Mac OS 11.0 or later.
+    *
+    * @param bool $val The value of the v11_0
+    *
+    * @return MacOSMinimumOperatingSystem
+    */
+    public function setV11_0($val)
+    {
+        $this->_propDict["v110"] = $val;
+        return $this;
+    }
 }
