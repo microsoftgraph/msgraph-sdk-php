@@ -8,6 +8,8 @@ on:
     branches: [ main, dev ]
   pull_request:
     branches: [ main, dev ]
+    # Add assigned to defaults as a hack to easily trigger code-gen PRs to run validation
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
   validate-pull-request:
