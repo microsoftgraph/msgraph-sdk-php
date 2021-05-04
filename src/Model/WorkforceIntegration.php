@@ -146,7 +146,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     
     /**
     * Gets the supportedEntities
-    * This property will replace supports in v1.0. We recommend that you use this property instead of supports. The supports property will still be supported in beta for the time being. Possible values are none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences. If selecting more than one value, all values must start with the first letter in uppercase.
+    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
     *
     * @return WorkforceIntegrationSupportedEntities The supportedEntities
     */
@@ -165,7 +165,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     
     /**
     * Sets the supportedEntities
-    * This property will replace supports in v1.0. We recommend that you use this property instead of supports. The supports property will still be supported in beta for the time being. Possible values are none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences. If selecting more than one value, all values must start with the first letter in uppercase.
+    * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
     *
     * @param WorkforceIntegrationSupportedEntities $val The supportedEntities
     *
