@@ -28,7 +28,7 @@ class DirectoryRoleTemplate extends DirectoryObject
     * Gets the description
     * The description to set for the directory role. Read-only.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DirectoryRoleTemplate extends DirectoryObject
     * Gets the displayName
     * The display name to set for the directory role. Read-only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {

@@ -27,12 +27,12 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime The lastActivityDate
+    * @return \DateTime|null The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -58,7 +58,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -85,12 +85,12 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -116,7 +116,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the usedAndroidPhone
     *
-    * @return bool The usedAndroidPhone
+    * @return bool|null The usedAndroidPhone
     */
     public function getUsedAndroidPhone()
     {
@@ -143,7 +143,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the usediPad
     *
-    * @return bool The usediPad
+    * @return bool|null The usediPad
     */
     public function getUsediPad()
     {
@@ -170,7 +170,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the usediPhone
     *
-    * @return bool The usediPhone
+    * @return bool|null The usediPhone
     */
     public function getUsediPhone()
     {
@@ -197,7 +197,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the usedWindows
     *
-    * @return bool The usedWindows
+    * @return bool|null The usedWindows
     */
     public function getUsedWindows()
     {
@@ -224,7 +224,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the usedWindowsPhone
     *
-    * @return bool The usedWindowsPhone
+    * @return bool|null The usedWindowsPhone
     */
     public function getUsedWindowsPhone()
     {
@@ -251,7 +251,7 @@ class SkypeForBusinessDeviceUsageUserDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

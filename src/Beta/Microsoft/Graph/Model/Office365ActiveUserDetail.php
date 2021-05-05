@@ -28,7 +28,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the assignedProducts
     * All the products assigned for the user.
     *
-    * @return string The assignedProducts
+    * @return string|null The assignedProducts
     */
     public function getAssignedProducts()
     {
@@ -57,12 +57,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the deletedDate
     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
-    * @return \DateTime The deletedDate
+    * @return \DateTime|null The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
                 return $this->_propDict["deletedDate"];
             } else {
                 $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
@@ -90,7 +90,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the displayName
     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the exchangeLastActivityDate
     * The date when user last read or sent email.
     *
-    * @return \DateTime The exchangeLastActivityDate
+    * @return \DateTime|null The exchangeLastActivityDate
     */
     public function getExchangeLastActivityDate()
     {
         if (array_key_exists("exchangeLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeLastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["exchangeLastActivityDate"], "\DateTime") || is_null($this->_propDict["exchangeLastActivityDate"])) {
                 return $this->_propDict["exchangeLastActivityDate"];
             } else {
                 $this->_propDict["exchangeLastActivityDate"] = new \DateTime($this->_propDict["exchangeLastActivityDate"]);
@@ -152,12 +152,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the exchangeLicenseAssignDate
     * The last date when the user was assigned an Exchange license.
     *
-    * @return \DateTime The exchangeLicenseAssignDate
+    * @return \DateTime|null The exchangeLicenseAssignDate
     */
     public function getExchangeLicenseAssignDate()
     {
         if (array_key_exists("exchangeLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeLicenseAssignDate"], "\DateTime")) {
+            if (is_a($this->_propDict["exchangeLicenseAssignDate"], "\DateTime") || is_null($this->_propDict["exchangeLicenseAssignDate"])) {
                 return $this->_propDict["exchangeLicenseAssignDate"];
             } else {
                 $this->_propDict["exchangeLicenseAssignDate"] = new \DateTime($this->_propDict["exchangeLicenseAssignDate"]);
@@ -185,7 +185,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the hasExchangeLicense
     * Whether the user has been assigned an Exchange license.
     *
-    * @return bool The hasExchangeLicense
+    * @return bool|null The hasExchangeLicense
     */
     public function getHasExchangeLicense()
     {
@@ -214,7 +214,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the hasOneDriveLicense
     * Whether the user has been assigned a OneDrive license.
     *
-    * @return bool The hasOneDriveLicense
+    * @return bool|null The hasOneDriveLicense
     */
     public function getHasOneDriveLicense()
     {
@@ -243,7 +243,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the hasSharePointLicense
     * Whether the user has been assigned a SharePoint license.
     *
-    * @return bool The hasSharePointLicense
+    * @return bool|null The hasSharePointLicense
     */
     public function getHasSharePointLicense()
     {
@@ -272,7 +272,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the hasSkypeForBusinessLicense
     * Whether the user has been assigned a Skype For Business license.
     *
-    * @return bool The hasSkypeForBusinessLicense
+    * @return bool|null The hasSkypeForBusinessLicense
     */
     public function getHasSkypeForBusinessLicense()
     {
@@ -301,7 +301,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the hasTeamsLicense
     * Whether the user has been assigned a Teams license.
     *
-    * @return bool The hasTeamsLicense
+    * @return bool|null The hasTeamsLicense
     */
     public function getHasTeamsLicense()
     {
@@ -330,7 +330,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the hasYammerLicense
     * Whether the user has been assigned a Yammer license.
     *
-    * @return bool The hasYammerLicense
+    * @return bool|null The hasYammerLicense
     */
     public function getHasYammerLicense()
     {
@@ -359,7 +359,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the isDeleted
     * Whether this user has been deleted or soft deleted.
     *
-    * @return bool The isDeleted
+    * @return bool|null The isDeleted
     */
     public function getIsDeleted()
     {
@@ -388,12 +388,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the oneDriveLastActivityDate
     * The date when user last viewed or edited files, shared files internally or externally, or synced files.
     *
-    * @return \DateTime The oneDriveLastActivityDate
+    * @return \DateTime|null The oneDriveLastActivityDate
     */
     public function getOneDriveLastActivityDate()
     {
         if (array_key_exists("oneDriveLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["oneDriveLastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["oneDriveLastActivityDate"], "\DateTime") || is_null($this->_propDict["oneDriveLastActivityDate"])) {
                 return $this->_propDict["oneDriveLastActivityDate"];
             } else {
                 $this->_propDict["oneDriveLastActivityDate"] = new \DateTime($this->_propDict["oneDriveLastActivityDate"]);
@@ -421,12 +421,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the oneDriveLicenseAssignDate
     * The last date when the user was assigned a OneDrive license.
     *
-    * @return \DateTime The oneDriveLicenseAssignDate
+    * @return \DateTime|null The oneDriveLicenseAssignDate
     */
     public function getOneDriveLicenseAssignDate()
     {
         if (array_key_exists("oneDriveLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["oneDriveLicenseAssignDate"], "\DateTime")) {
+            if (is_a($this->_propDict["oneDriveLicenseAssignDate"], "\DateTime") || is_null($this->_propDict["oneDriveLicenseAssignDate"])) {
                 return $this->_propDict["oneDriveLicenseAssignDate"];
             } else {
                 $this->_propDict["oneDriveLicenseAssignDate"] = new \DateTime($this->_propDict["oneDriveLicenseAssignDate"]);
@@ -454,12 +454,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -487,12 +487,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the sharePointLastActivityDate
     * The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
     *
-    * @return \DateTime The sharePointLastActivityDate
+    * @return \DateTime|null The sharePointLastActivityDate
     */
     public function getSharePointLastActivityDate()
     {
         if (array_key_exists("sharePointLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["sharePointLastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["sharePointLastActivityDate"], "\DateTime") || is_null($this->_propDict["sharePointLastActivityDate"])) {
                 return $this->_propDict["sharePointLastActivityDate"];
             } else {
                 $this->_propDict["sharePointLastActivityDate"] = new \DateTime($this->_propDict["sharePointLastActivityDate"]);
@@ -520,12 +520,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the sharePointLicenseAssignDate
     * The last date when the user was assigned a SharePoint license.
     *
-    * @return \DateTime The sharePointLicenseAssignDate
+    * @return \DateTime|null The sharePointLicenseAssignDate
     */
     public function getSharePointLicenseAssignDate()
     {
         if (array_key_exists("sharePointLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["sharePointLicenseAssignDate"], "\DateTime")) {
+            if (is_a($this->_propDict["sharePointLicenseAssignDate"], "\DateTime") || is_null($this->_propDict["sharePointLicenseAssignDate"])) {
                 return $this->_propDict["sharePointLicenseAssignDate"];
             } else {
                 $this->_propDict["sharePointLicenseAssignDate"] = new \DateTime($this->_propDict["sharePointLicenseAssignDate"]);
@@ -553,12 +553,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the skypeForBusinessLastActivityDate
     * The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
     *
-    * @return \DateTime The skypeForBusinessLastActivityDate
+    * @return \DateTime|null The skypeForBusinessLastActivityDate
     */
     public function getSkypeForBusinessLastActivityDate()
     {
         if (array_key_exists("skypeForBusinessLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["skypeForBusinessLastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["skypeForBusinessLastActivityDate"], "\DateTime") || is_null($this->_propDict["skypeForBusinessLastActivityDate"])) {
                 return $this->_propDict["skypeForBusinessLastActivityDate"];
             } else {
                 $this->_propDict["skypeForBusinessLastActivityDate"] = new \DateTime($this->_propDict["skypeForBusinessLastActivityDate"]);
@@ -586,12 +586,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the skypeForBusinessLicenseAssignDate
     * The last date when the user was assigned a Skype For Business license.
     *
-    * @return \DateTime The skypeForBusinessLicenseAssignDate
+    * @return \DateTime|null The skypeForBusinessLicenseAssignDate
     */
     public function getSkypeForBusinessLicenseAssignDate()
     {
         if (array_key_exists("skypeForBusinessLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["skypeForBusinessLicenseAssignDate"], "\DateTime")) {
+            if (is_a($this->_propDict["skypeForBusinessLicenseAssignDate"], "\DateTime") || is_null($this->_propDict["skypeForBusinessLicenseAssignDate"])) {
                 return $this->_propDict["skypeForBusinessLicenseAssignDate"];
             } else {
                 $this->_propDict["skypeForBusinessLicenseAssignDate"] = new \DateTime($this->_propDict["skypeForBusinessLicenseAssignDate"]);
@@ -619,12 +619,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the teamsLastActivityDate
     * The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
     *
-    * @return \DateTime The teamsLastActivityDate
+    * @return \DateTime|null The teamsLastActivityDate
     */
     public function getTeamsLastActivityDate()
     {
         if (array_key_exists("teamsLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsLastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["teamsLastActivityDate"], "\DateTime") || is_null($this->_propDict["teamsLastActivityDate"])) {
                 return $this->_propDict["teamsLastActivityDate"];
             } else {
                 $this->_propDict["teamsLastActivityDate"] = new \DateTime($this->_propDict["teamsLastActivityDate"]);
@@ -652,12 +652,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the teamsLicenseAssignDate
     * The last date when the user was assigned a Teams license.
     *
-    * @return \DateTime The teamsLicenseAssignDate
+    * @return \DateTime|null The teamsLicenseAssignDate
     */
     public function getTeamsLicenseAssignDate()
     {
         if (array_key_exists("teamsLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsLicenseAssignDate"], "\DateTime")) {
+            if (is_a($this->_propDict["teamsLicenseAssignDate"], "\DateTime") || is_null($this->_propDict["teamsLicenseAssignDate"])) {
                 return $this->_propDict["teamsLicenseAssignDate"];
             } else {
                 $this->_propDict["teamsLicenseAssignDate"] = new \DateTime($this->_propDict["teamsLicenseAssignDate"]);
@@ -685,7 +685,7 @@ class Office365ActiveUserDetail extends Entity
     * Gets the userPrincipalName
     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -714,12 +714,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the yammerLastActivityDate
     * The date when user last posted, read, or liked message.
     *
-    * @return \DateTime The yammerLastActivityDate
+    * @return \DateTime|null The yammerLastActivityDate
     */
     public function getYammerLastActivityDate()
     {
         if (array_key_exists("yammerLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["yammerLastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["yammerLastActivityDate"], "\DateTime") || is_null($this->_propDict["yammerLastActivityDate"])) {
                 return $this->_propDict["yammerLastActivityDate"];
             } else {
                 $this->_propDict["yammerLastActivityDate"] = new \DateTime($this->_propDict["yammerLastActivityDate"]);
@@ -747,12 +747,12 @@ class Office365ActiveUserDetail extends Entity
     * Gets the yammerLicenseAssignDate
     * The last date when the user was assigned a Yammer license.
     *
-    * @return \DateTime The yammerLicenseAssignDate
+    * @return \DateTime|null The yammerLicenseAssignDate
     */
     public function getYammerLicenseAssignDate()
     {
         if (array_key_exists("yammerLicenseAssignDate", $this->_propDict)) {
-            if (is_a($this->_propDict["yammerLicenseAssignDate"], "\DateTime")) {
+            if (is_a($this->_propDict["yammerLicenseAssignDate"], "\DateTime") || is_null($this->_propDict["yammerLicenseAssignDate"])) {
                 return $this->_propDict["yammerLicenseAssignDate"];
             } else {
                 $this->_propDict["yammerLicenseAssignDate"] = new \DateTime($this->_propDict["yammerLicenseAssignDate"]);

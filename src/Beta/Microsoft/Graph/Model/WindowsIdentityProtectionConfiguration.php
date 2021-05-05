@@ -28,7 +28,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the enhancedAntiSpoofingForFacialFeaturesEnabled
     * Boolean value used to enable enhanced anti-spoofing for facial feature recognition on Windows Hello face authentication.
     *
-    * @return bool The enhancedAntiSpoofingForFacialFeaturesEnabled
+    * @return bool|null The enhancedAntiSpoofingForFacialFeaturesEnabled
     */
     public function getEnhancedAntiSpoofingForFacialFeaturesEnabled()
     {
@@ -57,7 +57,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinExpirationInDays
     * Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
     *
-    * @return int The pinExpirationInDays
+    * @return int|null The pinExpirationInDays
     */
     public function getPinExpirationInDays()
     {
@@ -86,12 +86,12 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinLowercaseCharactersUsage
     * This value configures the use of lowercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
     *
-    * @return ConfigurationUsage The pinLowercaseCharactersUsage
+    * @return ConfigurationUsage|null The pinLowercaseCharactersUsage
     */
     public function getPinLowercaseCharactersUsage()
     {
         if (array_key_exists("pinLowercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "\Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "\Beta\Microsoft\Graph\Model\ConfigurationUsage") || is_null($this->_propDict["pinLowercaseCharactersUsage"])) {
                 return $this->_propDict["pinLowercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinLowercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinLowercaseCharactersUsage"]);
@@ -119,7 +119,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinMaximumLength
     * Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
     *
-    * @return int The pinMaximumLength
+    * @return int|null The pinMaximumLength
     */
     public function getPinMaximumLength()
     {
@@ -148,7 +148,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinMinimumLength
     * Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
     *
-    * @return int The pinMinimumLength
+    * @return int|null The pinMinimumLength
     */
     public function getPinMinimumLength()
     {
@@ -177,7 +177,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinPreviousBlockCount
     * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset. Valid values 0 to 50
     *
-    * @return int The pinPreviousBlockCount
+    * @return int|null The pinPreviousBlockCount
     */
     public function getPinPreviousBlockCount()
     {
@@ -206,7 +206,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinRecoveryEnabled
     * Boolean value that enables a user to change their PIN by using the Windows Hello for Business PIN recovery service.
     *
-    * @return bool The pinRecoveryEnabled
+    * @return bool|null The pinRecoveryEnabled
     */
     public function getPinRecoveryEnabled()
     {
@@ -235,12 +235,12 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinSpecialCharactersUsage
     * Controls the ability to use special characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
     *
-    * @return ConfigurationUsage The pinSpecialCharactersUsage
+    * @return ConfigurationUsage|null The pinSpecialCharactersUsage
     */
     public function getPinSpecialCharactersUsage()
     {
         if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "\Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "\Beta\Microsoft\Graph\Model\ConfigurationUsage") || is_null($this->_propDict["pinSpecialCharactersUsage"])) {
                 return $this->_propDict["pinSpecialCharactersUsage"];
             } else {
                 $this->_propDict["pinSpecialCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinSpecialCharactersUsage"]);
@@ -268,12 +268,12 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the pinUppercaseCharactersUsage
     * This value configures the use of uppercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
     *
-    * @return ConfigurationUsage The pinUppercaseCharactersUsage
+    * @return ConfigurationUsage|null The pinUppercaseCharactersUsage
     */
     public function getPinUppercaseCharactersUsage()
     {
         if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "\Beta\Microsoft\Graph\Model\ConfigurationUsage")) {
+            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "\Beta\Microsoft\Graph\Model\ConfigurationUsage") || is_null($this->_propDict["pinUppercaseCharactersUsage"])) {
                 return $this->_propDict["pinUppercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinUppercaseCharactersUsage"] = new ConfigurationUsage($this->_propDict["pinUppercaseCharactersUsage"]);
@@ -301,7 +301,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the securityDeviceRequired
     * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
     *
-    * @return bool The securityDeviceRequired
+    * @return bool|null The securityDeviceRequired
     */
     public function getSecurityDeviceRequired()
     {
@@ -330,7 +330,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the unlockWithBiometricsEnabled
     * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
     *
-    * @return bool The unlockWithBiometricsEnabled
+    * @return bool|null The unlockWithBiometricsEnabled
     */
     public function getUnlockWithBiometricsEnabled()
     {
@@ -359,7 +359,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the useCertificatesForOnPremisesAuthEnabled
     * Boolean value that enables Windows Hello for Business to use certificates to authenticate on-premise resources.
     *
-    * @return bool The useCertificatesForOnPremisesAuthEnabled
+    * @return bool|null The useCertificatesForOnPremisesAuthEnabled
     */
     public function getUseCertificatesForOnPremisesAuthEnabled()
     {
@@ -388,7 +388,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the useSecurityKeyForSignin
     * Boolean value used to enable the Windows Hello security key as a logon credential.
     *
-    * @return bool The useSecurityKeyForSignin
+    * @return bool|null The useSecurityKeyForSignin
     */
     public function getUseSecurityKeyForSignin()
     {
@@ -417,7 +417,7 @@ class WindowsIdentityProtectionConfiguration extends DeviceConfiguration
     * Gets the windowsHelloForBusinessBlocked
     * Boolean value that blocks Windows Hello for Business as a method for signing into Windows.
     *
-    * @return bool The windowsHelloForBusinessBlocked
+    * @return bool|null The windowsHelloForBusinessBlocked
     */
     public function getWindowsHelloForBusinessBlocked()
     {

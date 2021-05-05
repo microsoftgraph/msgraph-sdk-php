@@ -27,7 +27,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
     /**
     * Gets the claimValue
     *
-    * @return string The claimValue
+    * @return string|null The claimValue
     */
     public function getClaimValue()
     {
@@ -54,7 +54,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
     /**
     * Gets the isEnabled
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {

@@ -27,7 +27,7 @@ class ProviderTenantSetting extends Entity
     /**
     * Gets the azureTenantId
     *
-    * @return string The azureTenantId
+    * @return string|null The azureTenantId
     */
     public function getAzureTenantId()
     {
@@ -54,7 +54,7 @@ class ProviderTenantSetting extends Entity
     /**
     * Gets the enabled
     *
-    * @return bool The enabled
+    * @return bool|null The enabled
     */
     public function getEnabled()
     {
@@ -81,12 +81,12 @@ class ProviderTenantSetting extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -112,7 +112,7 @@ class ProviderTenantSetting extends Entity
     /**
     * Gets the provider
     *
-    * @return string The provider
+    * @return string|null The provider
     */
     public function getProvider()
     {
@@ -139,7 +139,7 @@ class ProviderTenantSetting extends Entity
     /**
     * Gets the vendor
     *
-    * @return string The vendor
+    * @return string|null The vendor
     */
     public function getVendor()
     {

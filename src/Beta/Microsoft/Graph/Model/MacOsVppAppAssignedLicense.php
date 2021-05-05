@@ -28,7 +28,7 @@ class MacOsVppAppAssignedLicense extends Entity
     * Gets the userEmailAddress
     * The user email address.
     *
-    * @return string The userEmailAddress
+    * @return string|null The userEmailAddress
     */
     public function getUserEmailAddress()
     {
@@ -57,7 +57,7 @@ class MacOsVppAppAssignedLicense extends Entity
     * Gets the userId
     * The user ID.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -86,7 +86,7 @@ class MacOsVppAppAssignedLicense extends Entity
     * Gets the userName
     * The user name.
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {
@@ -115,7 +115,7 @@ class MacOsVppAppAssignedLicense extends Entity
     * Gets the userPrincipalName
     * The user principal name.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

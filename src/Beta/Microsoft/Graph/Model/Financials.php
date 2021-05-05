@@ -39,7 +39,10 @@ class Financials implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-		$this->_propDict = $propDict;
+        if (!is_array($propDict)) {
+           $propDict = array();
+        }
+        $this->_propDict = $propDict;
     }
 
     /**
@@ -56,7 +59,7 @@ class Financials implements \JsonSerializable
      /** 
      * Gets the companies
      *
-     * @return array The companies
+     * @return array|null The companies
      */
     public function getCompanies()
     {
@@ -76,7 +79,7 @@ class Financials implements \JsonSerializable
     */
     public function setCompanies($val)
     {
-		$this->_propDict["companies"] = $val;
+        $this->_propDict["companies"] = $val;
         return $this;
     }
     
@@ -105,7 +108,7 @@ class Financials implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-	* Manually serialize DateTime into RFC3339 format
+    * Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

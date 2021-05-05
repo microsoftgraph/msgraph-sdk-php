@@ -28,7 +28,7 @@ class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration
     * Gets the enableExpeditedCheckin
     * Gets or sets whether to enable expedited device check-ins.
     *
-    * @return bool The enableExpeditedCheckin
+    * @return bool|null The enableExpeditedCheckin
     */
     public function getEnableExpeditedCheckin()
     {

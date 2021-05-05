@@ -27,12 +27,12 @@ class ProvisioningSystem extends Identity
     /**
     * Gets the details
     *
-    * @return DetailsInfo The details
+    * @return DetailsInfo|null The details
     */
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\DetailsInfo")) {
+            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\DetailsInfo") || is_null($this->_propDict["details"])) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new DetailsInfo($this->_propDict["details"]);

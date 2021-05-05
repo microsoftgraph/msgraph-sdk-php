@@ -28,7 +28,7 @@ class Office365ActivationsUserCounts extends Entity
     * Gets the activated
     * The number of users who have activated the product.
     *
-    * @return int The activated
+    * @return int|null The activated
     */
     public function getActivated()
     {
@@ -57,7 +57,7 @@ class Office365ActivationsUserCounts extends Entity
     * Gets the assigned
     * The number of users have been assigned for the product license.
     *
-    * @return int The assigned
+    * @return int|null The assigned
     */
     public function getAssigned()
     {
@@ -86,7 +86,7 @@ class Office365ActivationsUserCounts extends Entity
     * Gets the productType
     * The product type such as 'Microsoft 365 ProPlus' or 'Project Client'.
     *
-    * @return string The productType
+    * @return string|null The productType
     */
     public function getProductType()
     {
@@ -115,12 +115,12 @@ class Office365ActivationsUserCounts extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -148,7 +148,7 @@ class Office365ActivationsUserCounts extends Entity
     * Gets the sharedComputerActivation
     * The number of users who have used the product on a shared computer.
     *
-    * @return int The sharedComputerActivation
+    * @return int|null The sharedComputerActivation
     */
     public function getSharedComputerActivation()
     {

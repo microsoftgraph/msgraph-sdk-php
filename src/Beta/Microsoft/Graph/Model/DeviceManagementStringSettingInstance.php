@@ -28,7 +28,7 @@ class DeviceManagementStringSettingInstance extends DeviceManagementSettingInsta
     * Gets the value
     * The string value
     *
-    * @return string The value
+    * @return string|null The value
     */
     public function getValue()
     {

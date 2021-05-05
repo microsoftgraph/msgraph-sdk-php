@@ -28,12 +28,12 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the createdDateTime
     * DateTime the object was created.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the description
     * Admin provided description of the Device Configuration.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the displayName
     * Admin provided name of the device configuration.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the expirationDateTime
     * Optional profile expiration date and time.
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -152,12 +152,12 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -185,12 +185,12 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the payload
     * Payload. (UTF8 encoded byte array)
     *
-    * @return \GuzzleHttp\Psr7\Stream The payload
+    * @return \GuzzleHttp\Psr7\Stream|null The payload
     */
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["payload"])) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
@@ -218,7 +218,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the payloadFileName
     * Payload file name (.mobileprovision
     *
-    * @return string The payloadFileName
+    * @return string|null The payloadFileName
     */
     public function getPayloadFileName()
     {
@@ -247,7 +247,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this iOS LOB app provisioning configuration entity.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -276,7 +276,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     * Gets the version
     * Version of the device configuration.
     *
-    * @return int The version
+    * @return int|null The version
     */
     public function getVersion()
     {
@@ -306,7 +306,7 @@ class IosLobAppProvisioningConfiguration extends Entity
      * Gets the assignments
     * The associated group assignments for IosLobAppProvisioningConfiguration.
      *
-     * @return array The assignments
+     * @return array|null The assignments
      */
     public function getAssignments()
     {
@@ -327,7 +327,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -336,7 +336,7 @@ class IosLobAppProvisioningConfiguration extends Entity
      * Gets the deviceStatuses
     * The list of device installation states for this mobile app configuration.
      *
-     * @return array The deviceStatuses
+     * @return array|null The deviceStatuses
      */
     public function getDeviceStatuses()
     {
@@ -357,7 +357,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setDeviceStatuses($val)
     {
-		$this->_propDict["deviceStatuses"] = $val;
+        $this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
     
@@ -366,7 +366,7 @@ class IosLobAppProvisioningConfiguration extends Entity
      * Gets the groupAssignments
     * The associated group assignments.
      *
-     * @return array The groupAssignments
+     * @return array|null The groupAssignments
      */
     public function getGroupAssignments()
     {
@@ -387,7 +387,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setGroupAssignments($val)
     {
-		$this->_propDict["groupAssignments"] = $val;
+        $this->_propDict["groupAssignments"] = $val;
         return $this;
     }
     
@@ -396,7 +396,7 @@ class IosLobAppProvisioningConfiguration extends Entity
      * Gets the userStatuses
     * The list of user installation states for this mobile app configuration.
      *
-     * @return array The userStatuses
+     * @return array|null The userStatuses
      */
     public function getUserStatuses()
     {
@@ -417,7 +417,7 @@ class IosLobAppProvisioningConfiguration extends Entity
     */
     public function setUserStatuses($val)
     {
-		$this->_propDict["userStatuses"] = $val;
+        $this->_propDict["userStatuses"] = $val;
         return $this;
     }
     

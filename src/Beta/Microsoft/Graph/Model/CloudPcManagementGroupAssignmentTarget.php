@@ -36,7 +36,7 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
     * Gets the groupId
     * The id of the assignment's target group
     *
-    * @return string The groupId
+    * @return string|null The groupId
     */
     public function getGroupId()
     {

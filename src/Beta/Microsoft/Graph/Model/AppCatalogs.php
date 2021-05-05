@@ -39,7 +39,10 @@ class AppCatalogs implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-		$this->_propDict = $propDict;
+        if (!is_array($propDict)) {
+           $propDict = array();
+        }
+        $this->_propDict = $propDict;
     }
 
     /**
@@ -56,7 +59,7 @@ class AppCatalogs implements \JsonSerializable
      /** 
      * Gets the teamsApps
      *
-     * @return array The teamsApps
+     * @return array|null The teamsApps
      */
     public function getTeamsApps()
     {
@@ -76,7 +79,7 @@ class AppCatalogs implements \JsonSerializable
     */
     public function setTeamsApps($val)
     {
-		$this->_propDict["teamsApps"] = $val;
+        $this->_propDict["teamsApps"] = $val;
         return $this;
     }
     
@@ -105,7 +108,7 @@ class AppCatalogs implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-	* Manually serialize DateTime into RFC3339 format
+    * Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

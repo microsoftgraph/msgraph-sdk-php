@@ -28,7 +28,7 @@ class CloudPC extends Entity
     * Gets the displayName
     * The cloud PC display name.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class CloudPC extends Entity
     * Gets the imageDisplayName
     * Name of the OS image that's on the cloud PC.
     *
-    * @return string The imageDisplayName
+    * @return string|null The imageDisplayName
     */
     public function getImageDisplayName()
     {
@@ -86,12 +86,12 @@ class CloudPC extends Entity
     * Gets the lastModifiedDateTime
     * The cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -119,7 +119,7 @@ class CloudPC extends Entity
     * Gets the managedDeviceId
     * The cloud PC’s Intune device ID.
     *
-    * @return string The managedDeviceId
+    * @return string|null The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -148,7 +148,7 @@ class CloudPC extends Entity
     * Gets the managedDeviceName
     * The cloud PC’s Intune device name.
     *
-    * @return string The managedDeviceName
+    * @return string|null The managedDeviceName
     */
     public function getManagedDeviceName()
     {
@@ -177,7 +177,7 @@ class CloudPC extends Entity
     * Gets the provisioningPolicyId
     * The cloud PC's provisioning policy ID.
     *
-    * @return string The provisioningPolicyId
+    * @return string|null The provisioningPolicyId
     */
     public function getProvisioningPolicyId()
     {
@@ -206,7 +206,7 @@ class CloudPC extends Entity
     * Gets the servicePlanId
     * The cloud PC's service plan ID.
     *
-    * @return string The servicePlanId
+    * @return string|null The servicePlanId
     */
     public function getServicePlanId()
     {
@@ -235,7 +235,7 @@ class CloudPC extends Entity
     * Gets the servicePlanName
     * The cloud PC's service plan name.
     *
-    * @return string The servicePlanName
+    * @return string|null The servicePlanName
     */
     public function getServicePlanName()
     {
@@ -264,12 +264,12 @@ class CloudPC extends Entity
     * Gets the status
     * Status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed.
     *
-    * @return CloudPcStatus The status
+    * @return CloudPcStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\CloudPcStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\CloudPcStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CloudPcStatus($this->_propDict["status"]);
@@ -297,12 +297,12 @@ class CloudPC extends Entity
     * Gets the statusDetails
     * The details of the cloud PC status.
     *
-    * @return CloudPcStatusDetails The statusDetails
+    * @return CloudPcStatusDetails|null The statusDetails
     */
     public function getStatusDetails()
     {
         if (array_key_exists("statusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcStatusDetails")) {
+            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcStatusDetails") || is_null($this->_propDict["statusDetails"])) {
                 return $this->_propDict["statusDetails"];
             } else {
                 $this->_propDict["statusDetails"] = new CloudPcStatusDetails($this->_propDict["statusDetails"]);
@@ -330,7 +330,7 @@ class CloudPC extends Entity
     * Gets the userPrincipalName
     * The user principal name (UPN) of the user assigned to the cloud PC.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

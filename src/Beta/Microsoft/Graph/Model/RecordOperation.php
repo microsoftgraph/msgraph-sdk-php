@@ -28,12 +28,12 @@ class RecordOperation extends CommsOperation
     * Gets the completionReason
     * Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
     *
-    * @return RecordCompletionReason The completionReason
+    * @return RecordCompletionReason|null The completionReason
     */
     public function getCompletionReason()
     {
         if (array_key_exists("completionReason", $this->_propDict)) {
-            if (is_a($this->_propDict["completionReason"], "\Beta\Microsoft\Graph\Model\RecordCompletionReason")) {
+            if (is_a($this->_propDict["completionReason"], "\Beta\Microsoft\Graph\Model\RecordCompletionReason") || is_null($this->_propDict["completionReason"])) {
                 return $this->_propDict["completionReason"];
             } else {
                 $this->_propDict["completionReason"] = new RecordCompletionReason($this->_propDict["completionReason"]);
@@ -61,7 +61,7 @@ class RecordOperation extends CommsOperation
     * Gets the recordingAccessToken
     * The access token required to retrieve the recording.
     *
-    * @return string The recordingAccessToken
+    * @return string|null The recordingAccessToken
     */
     public function getRecordingAccessToken()
     {
@@ -90,7 +90,7 @@ class RecordOperation extends CommsOperation
     * Gets the recordingLocation
     * The location where the recording is located.
     *
-    * @return string The recordingLocation
+    * @return string|null The recordingLocation
     */
     public function getRecordingLocation()
     {

@@ -28,7 +28,7 @@ class EducationAssignmentSettings extends Entity
     * Gets the submissionAnimationDisabled
     * Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
     *
-    * @return bool The submissionAnimationDisabled
+    * @return bool|null The submissionAnimationDisabled
     */
     public function getSubmissionAnimationDisabled()
     {

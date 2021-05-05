@@ -28,7 +28,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
     * Gets the displayName
     * The display name for the profile.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class DeviceManagementDerivedCredentialSettings extends Entity
     * Gets the helpUrl
     * The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
     *
-    * @return string The helpUrl
+    * @return string|null The helpUrl
     */
     public function getHelpUrl()
     {
@@ -86,12 +86,12 @@ class DeviceManagementDerivedCredentialSettings extends Entity
     * Gets the issuer
     * The derived credential provider to use.
     *
-    * @return DeviceManagementDerivedCredentialIssuer The issuer
+    * @return DeviceManagementDerivedCredentialIssuer|null The issuer
     */
     public function getIssuer()
     {
         if (array_key_exists("issuer", $this->_propDict)) {
-            if (is_a($this->_propDict["issuer"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialIssuer")) {
+            if (is_a($this->_propDict["issuer"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialIssuer") || is_null($this->_propDict["issuer"])) {
                 return $this->_propDict["issuer"];
             } else {
                 $this->_propDict["issuer"] = new DeviceManagementDerivedCredentialIssuer($this->_propDict["issuer"]);
@@ -119,12 +119,12 @@ class DeviceManagementDerivedCredentialSettings extends Entity
     * Gets the notificationType
     * The methods used to inform the end user to open Company Portal to deliver Wi-Fi, VPN, or email profiles that use certificates to the device.
     *
-    * @return DeviceManagementDerivedCredentialNotificationType The notificationType
+    * @return DeviceManagementDerivedCredentialNotificationType|null The notificationType
     */
     public function getNotificationType()
     {
         if (array_key_exists("notificationType", $this->_propDict)) {
-            if (is_a($this->_propDict["notificationType"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialNotificationType")) {
+            if (is_a($this->_propDict["notificationType"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialNotificationType") || is_null($this->_propDict["notificationType"])) {
                 return $this->_propDict["notificationType"];
             } else {
                 $this->_propDict["notificationType"] = new DeviceManagementDerivedCredentialNotificationType($this->_propDict["notificationType"]);

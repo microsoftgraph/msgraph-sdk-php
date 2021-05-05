@@ -28,7 +28,7 @@ class InformationProtectionPolicy extends Entity
      /** 
      * Gets the labels
      *
-     * @return array The labels
+     * @return array|null The labels
      */
     public function getLabels()
     {
@@ -48,7 +48,7 @@ class InformationProtectionPolicy extends Entity
     */
     public function setLabels($val)
     {
-		$this->_propDict["labels"] = $val;
+        $this->_propDict["labels"] = $val;
         return $this;
     }
     

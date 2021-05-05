@@ -28,7 +28,7 @@ class SecurityBaselineState extends Entity
     * Gets the displayName
     * The display name of the security baseline
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class SecurityBaselineState extends Entity
     * Gets the securityBaselineTemplateId
     * The security baseline template id
     *
-    * @return string The securityBaselineTemplateId
+    * @return string|null The securityBaselineTemplateId
     */
     public function getSecurityBaselineTemplateId()
     {
@@ -86,12 +86,12 @@ class SecurityBaselineState extends Entity
     * Gets the state
     * Security baseline compliance state
     *
-    * @return SecurityBaselineComplianceState The state
+    * @return SecurityBaselineComplianceState|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SecurityBaselineComplianceState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SecurityBaselineComplianceState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SecurityBaselineComplianceState($this->_propDict["state"]);
@@ -119,7 +119,7 @@ class SecurityBaselineState extends Entity
     * Gets the userPrincipalName
     * User Principal Name
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -149,7 +149,7 @@ class SecurityBaselineState extends Entity
      * Gets the settingStates
     * The security baseline state for different settings for a device
      *
-     * @return array The settingStates
+     * @return array|null The settingStates
      */
     public function getSettingStates()
     {
@@ -170,7 +170,7 @@ class SecurityBaselineState extends Entity
     */
     public function setSettingStates($val)
     {
-		$this->_propDict["settingStates"] = $val;
+        $this->_propDict["settingStates"] = $val;
         return $this;
     }
     

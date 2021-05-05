@@ -27,7 +27,7 @@ class AllowedDataLocation extends Entity
     /**
     * Gets the appId
     *
-    * @return string The appId
+    * @return string|null The appId
     */
     public function getAppId()
     {
@@ -54,7 +54,7 @@ class AllowedDataLocation extends Entity
     /**
     * Gets the domain
     *
-    * @return string The domain
+    * @return string|null The domain
     */
     public function getDomain()
     {
@@ -81,7 +81,7 @@ class AllowedDataLocation extends Entity
     /**
     * Gets the isDefault
     *
-    * @return bool The isDefault
+    * @return bool|null The isDefault
     */
     public function getIsDefault()
     {
@@ -108,7 +108,7 @@ class AllowedDataLocation extends Entity
     /**
     * Gets the location
     *
-    * @return string The location
+    * @return string|null The location
     */
     public function getLocation()
     {

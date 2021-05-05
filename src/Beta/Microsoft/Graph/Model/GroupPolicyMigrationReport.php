@@ -28,12 +28,12 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the createdDateTime
     * The date and time at which the GroupPolicyMigrationReport was created.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the displayName
     * The name of Group Policy Object from the GPO Xml Content
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -90,12 +90,12 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the groupPolicyCreatedDateTime
     * The date and time at which the GroupPolicyMigrationReport was created.
     *
-    * @return \DateTime The groupPolicyCreatedDateTime
+    * @return \DateTime|null The groupPolicyCreatedDateTime
     */
     public function getGroupPolicyCreatedDateTime()
     {
         if (array_key_exists("groupPolicyCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["groupPolicyCreatedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["groupPolicyCreatedDateTime"], "\DateTime") || is_null($this->_propDict["groupPolicyCreatedDateTime"])) {
                 return $this->_propDict["groupPolicyCreatedDateTime"];
             } else {
                 $this->_propDict["groupPolicyCreatedDateTime"] = new \DateTime($this->_propDict["groupPolicyCreatedDateTime"]);
@@ -123,12 +123,12 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the groupPolicyLastModifiedDateTime
     * The date and time at which the GroupPolicyMigrationReport was last modified.
     *
-    * @return \DateTime The groupPolicyLastModifiedDateTime
+    * @return \DateTime|null The groupPolicyLastModifiedDateTime
     */
     public function getGroupPolicyLastModifiedDateTime()
     {
         if (array_key_exists("groupPolicyLastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["groupPolicyLastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["groupPolicyLastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["groupPolicyLastModifiedDateTime"])) {
                 return $this->_propDict["groupPolicyLastModifiedDateTime"];
             } else {
                 $this->_propDict["groupPolicyLastModifiedDateTime"] = new \DateTime($this->_propDict["groupPolicyLastModifiedDateTime"]);
@@ -156,7 +156,7 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the groupPolicyObjectId
     * The Group Policy Object GUID from GPO Xml content
     *
-    * @return string The groupPolicyObjectId
+    * @return string|null The groupPolicyObjectId
     */
     public function getGroupPolicyObjectId()
     {
@@ -185,12 +185,12 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the lastModifiedDateTime
     * The date and time at which the GroupPolicyMigrationReport was last modified.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -218,12 +218,12 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the migrationReadiness
     * The Intune coverage for the associated Group Policy Object file. Possible values are: none, partial, complete, error, notApplicable.
     *
-    * @return GroupPolicyMigrationReadiness The migrationReadiness
+    * @return GroupPolicyMigrationReadiness|null The migrationReadiness
     */
     public function getMigrationReadiness()
     {
         if (array_key_exists("migrationReadiness", $this->_propDict)) {
-            if (is_a($this->_propDict["migrationReadiness"], "\Beta\Microsoft\Graph\Model\GroupPolicyMigrationReadiness")) {
+            if (is_a($this->_propDict["migrationReadiness"], "\Beta\Microsoft\Graph\Model\GroupPolicyMigrationReadiness") || is_null($this->_propDict["migrationReadiness"])) {
                 return $this->_propDict["migrationReadiness"];
             } else {
                 $this->_propDict["migrationReadiness"] = new GroupPolicyMigrationReadiness($this->_propDict["migrationReadiness"]);
@@ -251,7 +251,7 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the ouDistinguishedName
     * The distinguished name of the OU.
     *
-    * @return string The ouDistinguishedName
+    * @return string|null The ouDistinguishedName
     */
     public function getOuDistinguishedName()
     {
@@ -280,7 +280,7 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the supportedSettingsCount
     * The number of Group Policy Settings supported by Intune.
     *
-    * @return int The supportedSettingsCount
+    * @return int|null The supportedSettingsCount
     */
     public function getSupportedSettingsCount()
     {
@@ -309,7 +309,7 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the supportedSettingsPercent
     * The Percentage of Group Policy Settings supported by Intune.
     *
-    * @return int The supportedSettingsPercent
+    * @return int|null The supportedSettingsPercent
     */
     public function getSupportedSettingsPercent()
     {
@@ -338,7 +338,7 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the targetedInActiveDirectory
     * The Targeted in AD property from GPO Xml Content
     *
-    * @return bool The targetedInActiveDirectory
+    * @return bool|null The targetedInActiveDirectory
     */
     public function getTargetedInActiveDirectory()
     {
@@ -367,7 +367,7 @@ class GroupPolicyMigrationReport extends Entity
     * Gets the totalSettingsCount
     * The total number of Group Policy Settings from GPO file.
     *
-    * @return int The totalSettingsCount
+    * @return int|null The totalSettingsCount
     */
     public function getTotalSettingsCount()
     {
@@ -397,7 +397,7 @@ class GroupPolicyMigrationReport extends Entity
      * Gets the groupPolicySettingMappings
     * A list of group policy settings to MDM/Intune mappings.
      *
-     * @return array The groupPolicySettingMappings
+     * @return array|null The groupPolicySettingMappings
      */
     public function getGroupPolicySettingMappings()
     {
@@ -418,7 +418,7 @@ class GroupPolicyMigrationReport extends Entity
     */
     public function setGroupPolicySettingMappings($val)
     {
-		$this->_propDict["groupPolicySettingMappings"] = $val;
+        $this->_propDict["groupPolicySettingMappings"] = $val;
         return $this;
     }
     
@@ -427,7 +427,7 @@ class GroupPolicyMigrationReport extends Entity
      * Gets the unsupportedGroupPolicyExtensions
     * A list of unsupported group policy extensions inside the Group Policy Object.
      *
-     * @return array The unsupportedGroupPolicyExtensions
+     * @return array|null The unsupportedGroupPolicyExtensions
      */
     public function getUnsupportedGroupPolicyExtensions()
     {
@@ -448,7 +448,7 @@ class GroupPolicyMigrationReport extends Entity
     */
     public function setUnsupportedGroupPolicyExtensions($val)
     {
-		$this->_propDict["unsupportedGroupPolicyExtensions"] = $val;
+        $this->_propDict["unsupportedGroupPolicyExtensions"] = $val;
         return $this;
     }
     

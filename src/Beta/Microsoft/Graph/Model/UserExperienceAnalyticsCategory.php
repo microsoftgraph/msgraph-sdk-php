@@ -29,7 +29,7 @@ class UserExperienceAnalyticsCategory extends Entity
      * Gets the insights
     * The insights for the user experience analytics category.
      *
-     * @return array The insights
+     * @return array|null The insights
      */
     public function getInsights()
     {
@@ -50,7 +50,7 @@ class UserExperienceAnalyticsCategory extends Entity
     */
     public function setInsights($val)
     {
-		$this->_propDict["insights"] = $val;
+        $this->_propDict["insights"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class UserExperienceAnalyticsCategory extends Entity
      * Gets the metricValues
     * The metric values for the user experience analytics category.
      *
-     * @return array The metricValues
+     * @return array|null The metricValues
      */
     public function getMetricValues()
     {
@@ -80,7 +80,7 @@ class UserExperienceAnalyticsCategory extends Entity
     */
     public function setMetricValues($val)
     {
-		$this->_propDict["metricValues"] = $val;
+        $this->_propDict["metricValues"] = $val;
         return $this;
     }
     

@@ -26,7 +26,7 @@ class ExcludeTarget extends Entity
     /**
     * Gets the id
     *
-    * @return string The id
+    * @return string|null The id
     */
     public function getId()
     {
@@ -53,12 +53,12 @@ class ExcludeTarget extends Entity
     /**
     * Gets the targetType
     *
-    * @return AuthenticationMethodTargetType The targetType
+    * @return AuthenticationMethodTargetType|null The targetType
     */
     public function getTargetType()
     {
         if (array_key_exists("targetType", $this->_propDict)) {
-            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType")) {
+            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType") || is_null($this->_propDict["targetType"])) {
                 return $this->_propDict["targetType"];
             } else {
                 $this->_propDict["targetType"] = new AuthenticationMethodTargetType($this->_propDict["targetType"]);

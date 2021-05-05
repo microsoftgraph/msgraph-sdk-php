@@ -28,7 +28,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the adminShowHostInfo
     * Whether to show admin host information on the login window.
     *
-    * @return bool The adminShowHostInfo
+    * @return bool|null The adminShowHostInfo
     */
     public function getAdminShowHostInfo()
     {
@@ -58,7 +58,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
      * Gets the appAssociatedDomains
     * Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
      *
-     * @return array The appAssociatedDomains
+     * @return array|null The appAssociatedDomains
      */
     public function getAppAssociatedDomains()
     {
@@ -79,7 +79,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     */
     public function setAppAssociatedDomains($val)
     {
-		$this->_propDict["appAssociatedDomains"] = $val;
+        $this->_propDict["appAssociatedDomains"] = $val;
         return $this;
     }
     
@@ -88,7 +88,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
      * Gets the associatedDomains
     * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      *
-     * @return array The associatedDomains
+     * @return array|null The associatedDomains
      */
     public function getAssociatedDomains()
     {
@@ -109,7 +109,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     */
     public function setAssociatedDomains($val)
     {
-		$this->_propDict["associatedDomains"] = $val;
+        $this->_propDict["associatedDomains"] = $val;
         return $this;
     }
     
@@ -117,7 +117,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the authorizedUsersListHidden
     * Whether to show the name and password dialog or a list of users on the login window.
     *
-    * @return bool The authorizedUsersListHidden
+    * @return bool|null The authorizedUsersListHidden
     */
     public function getAuthorizedUsersListHidden()
     {
@@ -146,7 +146,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the authorizedUsersListHideAdminUsers
     * Whether to hide admin users in the authorized users list on the login window.
     *
-    * @return bool The authorizedUsersListHideAdminUsers
+    * @return bool|null The authorizedUsersListHideAdminUsers
     */
     public function getAuthorizedUsersListHideAdminUsers()
     {
@@ -175,7 +175,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the authorizedUsersListHideLocalUsers
     * Whether to show only network and system users in the authorized users list on the login window.
     *
-    * @return bool The authorizedUsersListHideLocalUsers
+    * @return bool|null The authorizedUsersListHideLocalUsers
     */
     public function getAuthorizedUsersListHideLocalUsers()
     {
@@ -204,7 +204,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the authorizedUsersListHideMobileAccounts
     * Whether to hide mobile users in the authorized users list on the login window.
     *
-    * @return bool The authorizedUsersListHideMobileAccounts
+    * @return bool|null The authorizedUsersListHideMobileAccounts
     */
     public function getAuthorizedUsersListHideMobileAccounts()
     {
@@ -233,7 +233,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the authorizedUsersListIncludeNetworkUsers
     * Whether to show network users in the authorized users list on the login window.
     *
-    * @return bool The authorizedUsersListIncludeNetworkUsers
+    * @return bool|null The authorizedUsersListIncludeNetworkUsers
     */
     public function getAuthorizedUsersListIncludeNetworkUsers()
     {
@@ -262,7 +262,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the authorizedUsersListShowOtherManagedUsers
     * Whether to show other users in the authorized users list on the login window.
     *
-    * @return bool The authorizedUsersListShowOtherManagedUsers
+    * @return bool|null The authorizedUsersListShowOtherManagedUsers
     */
     public function getAuthorizedUsersListShowOtherManagedUsers()
     {
@@ -292,7 +292,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
      * Gets the autoLaunchItems
     * List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
      *
-     * @return array The autoLaunchItems
+     * @return array|null The autoLaunchItems
      */
     public function getAutoLaunchItems()
     {
@@ -313,7 +313,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     */
     public function setAutoLaunchItems($val)
     {
-		$this->_propDict["autoLaunchItems"] = $val;
+        $this->_propDict["autoLaunchItems"] = $val;
         return $this;
     }
     
@@ -321,7 +321,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the consoleAccessDisabled
     * Whether the Other user will disregard use of the `&amp;gt;console&amp;gt; special user name.
     *
-    * @return bool The consoleAccessDisabled
+    * @return bool|null The consoleAccessDisabled
     */
     public function getConsoleAccessDisabled()
     {
@@ -350,7 +350,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingBlockDeletion
     * Prevents content caches from purging content to free up disk space for other apps.
     *
-    * @return bool The contentCachingBlockDeletion
+    * @return bool|null The contentCachingBlockDeletion
     */
     public function getContentCachingBlockDeletion()
     {
@@ -380,7 +380,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
      * Gets the contentCachingClientListenRanges
     * A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
      *
-     * @return array The contentCachingClientListenRanges
+     * @return array|null The contentCachingClientListenRanges
      */
     public function getContentCachingClientListenRanges()
     {
@@ -401,7 +401,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     */
     public function setContentCachingClientListenRanges($val)
     {
-		$this->_propDict["contentCachingClientListenRanges"] = $val;
+        $this->_propDict["contentCachingClientListenRanges"] = $val;
         return $this;
     }
     
@@ -409,12 +409,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingClientPolicy
     * Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
     *
-    * @return MacOSContentCachingClientPolicy The contentCachingClientPolicy
+    * @return MacOSContentCachingClientPolicy|null The contentCachingClientPolicy
     */
     public function getContentCachingClientPolicy()
     {
         if (array_key_exists("contentCachingClientPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingClientPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingClientPolicy")) {
+            if (is_a($this->_propDict["contentCachingClientPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingClientPolicy") || is_null($this->_propDict["contentCachingClientPolicy"])) {
                 return $this->_propDict["contentCachingClientPolicy"];
             } else {
                 $this->_propDict["contentCachingClientPolicy"] = new MacOSContentCachingClientPolicy($this->_propDict["contentCachingClientPolicy"]);
@@ -442,7 +442,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingDataPath
     * The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
     *
-    * @return string The contentCachingDataPath
+    * @return string|null The contentCachingDataPath
     */
     public function getContentCachingDataPath()
     {
@@ -471,7 +471,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingDisableConnectionSharing
     * Disables internet connection sharing.
     *
-    * @return bool The contentCachingDisableConnectionSharing
+    * @return bool|null The contentCachingDisableConnectionSharing
     */
     public function getContentCachingDisableConnectionSharing()
     {
@@ -500,7 +500,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingEnabled
     * Enables content caching and prevents it from being disabled by the user.
     *
-    * @return bool The contentCachingEnabled
+    * @return bool|null The contentCachingEnabled
     */
     public function getContentCachingEnabled()
     {
@@ -529,7 +529,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingForceConnectionSharing
     * Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
     *
-    * @return bool The contentCachingForceConnectionSharing
+    * @return bool|null The contentCachingForceConnectionSharing
     */
     public function getContentCachingForceConnectionSharing()
     {
@@ -558,7 +558,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingKeepAwake
     * Prevent the device from sleeping if content caching is enabled.
     *
-    * @return bool The contentCachingKeepAwake
+    * @return bool|null The contentCachingKeepAwake
     */
     public function getContentCachingKeepAwake()
     {
@@ -587,7 +587,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingLogClientIdentities
     * Enables logging of IP addresses and ports of clients that request cached content.
     *
-    * @return bool The contentCachingLogClientIdentities
+    * @return bool|null The contentCachingLogClientIdentities
     */
     public function getContentCachingLogClientIdentities()
     {
@@ -616,7 +616,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingMaxSizeBytes
     * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
     *
-    * @return int The contentCachingMaxSizeBytes
+    * @return int|null The contentCachingMaxSizeBytes
     */
     public function getContentCachingMaxSizeBytes()
     {
@@ -645,7 +645,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingParents
     * A list of IP addresses representing parent content caches.
     *
-    * @return string The contentCachingParents
+    * @return string|null The contentCachingParents
     */
     public function getContentCachingParents()
     {
@@ -674,12 +674,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingParentSelectionPolicy
     * Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
     *
-    * @return MacOSContentCachingParentSelectionPolicy The contentCachingParentSelectionPolicy
+    * @return MacOSContentCachingParentSelectionPolicy|null The contentCachingParentSelectionPolicy
     */
     public function getContentCachingParentSelectionPolicy()
     {
         if (array_key_exists("contentCachingParentSelectionPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingParentSelectionPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingParentSelectionPolicy")) {
+            if (is_a($this->_propDict["contentCachingParentSelectionPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingParentSelectionPolicy") || is_null($this->_propDict["contentCachingParentSelectionPolicy"])) {
                 return $this->_propDict["contentCachingParentSelectionPolicy"];
             } else {
                 $this->_propDict["contentCachingParentSelectionPolicy"] = new MacOSContentCachingParentSelectionPolicy($this->_propDict["contentCachingParentSelectionPolicy"]);
@@ -708,7 +708,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
      * Gets the contentCachingPeerFilterRanges
     * A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
      *
-     * @return array The contentCachingPeerFilterRanges
+     * @return array|null The contentCachingPeerFilterRanges
      */
     public function getContentCachingPeerFilterRanges()
     {
@@ -729,7 +729,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     */
     public function setContentCachingPeerFilterRanges($val)
     {
-		$this->_propDict["contentCachingPeerFilterRanges"] = $val;
+        $this->_propDict["contentCachingPeerFilterRanges"] = $val;
         return $this;
     }
     
@@ -738,7 +738,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
      * Gets the contentCachingPeerListenRanges
     * A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
      *
-     * @return array The contentCachingPeerListenRanges
+     * @return array|null The contentCachingPeerListenRanges
      */
     public function getContentCachingPeerListenRanges()
     {
@@ -759,7 +759,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     */
     public function setContentCachingPeerListenRanges($val)
     {
-		$this->_propDict["contentCachingPeerListenRanges"] = $val;
+        $this->_propDict["contentCachingPeerListenRanges"] = $val;
         return $this;
     }
     
@@ -767,12 +767,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingPeerPolicy
     * Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
     *
-    * @return MacOSContentCachingPeerPolicy The contentCachingPeerPolicy
+    * @return MacOSContentCachingPeerPolicy|null The contentCachingPeerPolicy
     */
     public function getContentCachingPeerPolicy()
     {
         if (array_key_exists("contentCachingPeerPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingPeerPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingPeerPolicy")) {
+            if (is_a($this->_propDict["contentCachingPeerPolicy"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingPeerPolicy") || is_null($this->_propDict["contentCachingPeerPolicy"])) {
                 return $this->_propDict["contentCachingPeerPolicy"];
             } else {
                 $this->_propDict["contentCachingPeerPolicy"] = new MacOSContentCachingPeerPolicy($this->_propDict["contentCachingPeerPolicy"]);
@@ -800,7 +800,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingPort
     * Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
     *
-    * @return int The contentCachingPort
+    * @return int|null The contentCachingPort
     */
     public function getContentCachingPort()
     {
@@ -830,7 +830,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
      * Gets the contentCachingPublicRanges
     * A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
      *
-     * @return array The contentCachingPublicRanges
+     * @return array|null The contentCachingPublicRanges
      */
     public function getContentCachingPublicRanges()
     {
@@ -851,7 +851,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     */
     public function setContentCachingPublicRanges($val)
     {
-		$this->_propDict["contentCachingPublicRanges"] = $val;
+        $this->_propDict["contentCachingPublicRanges"] = $val;
         return $this;
     }
     
@@ -859,7 +859,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingShowAlerts
     * Display content caching alerts as system notifications.
     *
-    * @return bool The contentCachingShowAlerts
+    * @return bool|null The contentCachingShowAlerts
     */
     public function getContentCachingShowAlerts()
     {
@@ -888,12 +888,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the contentCachingType
     * Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
     *
-    * @return MacOSContentCachingType The contentCachingType
+    * @return MacOSContentCachingType|null The contentCachingType
     */
     public function getContentCachingType()
     {
         if (array_key_exists("contentCachingType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentCachingType"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingType")) {
+            if (is_a($this->_propDict["contentCachingType"], "\Beta\Microsoft\Graph\Model\MacOSContentCachingType") || is_null($this->_propDict["contentCachingType"])) {
                 return $this->_propDict["contentCachingType"];
             } else {
                 $this->_propDict["contentCachingType"] = new MacOSContentCachingType($this->_propDict["contentCachingType"]);
@@ -921,7 +921,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the loginWindowText
     * Custom text to be displayed on the login window.
     *
-    * @return string The loginWindowText
+    * @return string|null The loginWindowText
     */
     public function getLoginWindowText()
     {
@@ -950,7 +950,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the logOutDisabledWhileLoggedIn
     * Whether the Log Out menu item on the login window will be disabled while the user is logged in.
     *
-    * @return bool The logOutDisabledWhileLoggedIn
+    * @return bool|null The logOutDisabledWhileLoggedIn
     */
     public function getLogOutDisabledWhileLoggedIn()
     {
@@ -979,12 +979,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the macOSSingleSignOnExtension
     * Gets or sets a single sign-on extension profile.
     *
-    * @return MacOSSingleSignOnExtension The macOSSingleSignOnExtension
+    * @return MacOSSingleSignOnExtension|null The macOSSingleSignOnExtension
     */
     public function getMacOSSingleSignOnExtension()
     {
         if (array_key_exists("macOSSingleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["macOSSingleSignOnExtension"], "\Beta\Microsoft\Graph\Model\MacOSSingleSignOnExtension")) {
+            if (is_a($this->_propDict["macOSSingleSignOnExtension"], "\Beta\Microsoft\Graph\Model\MacOSSingleSignOnExtension") || is_null($this->_propDict["macOSSingleSignOnExtension"])) {
                 return $this->_propDict["macOSSingleSignOnExtension"];
             } else {
                 $this->_propDict["macOSSingleSignOnExtension"] = new MacOSSingleSignOnExtension($this->_propDict["macOSSingleSignOnExtension"]);
@@ -1012,7 +1012,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the powerOffDisabledWhileLoggedIn
     * Whether the Power Off menu item on the login window will be disabled while the user is logged in.
     *
-    * @return bool The powerOffDisabledWhileLoggedIn
+    * @return bool|null The powerOffDisabledWhileLoggedIn
     */
     public function getPowerOffDisabledWhileLoggedIn()
     {
@@ -1041,7 +1041,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the restartDisabled
     * Whether to hide the Restart button item on the login window.
     *
-    * @return bool The restartDisabled
+    * @return bool|null The restartDisabled
     */
     public function getRestartDisabled()
     {
@@ -1070,7 +1070,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the restartDisabledWhileLoggedIn
     * Whether the Restart menu item on the login window will be disabled while the user is logged in.
     *
-    * @return bool The restartDisabledWhileLoggedIn
+    * @return bool|null The restartDisabledWhileLoggedIn
     */
     public function getRestartDisabledWhileLoggedIn()
     {
@@ -1099,7 +1099,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the screenLockDisableImmediate
     * Whether to disable the immediate screen lock functions.
     *
-    * @return bool The screenLockDisableImmediate
+    * @return bool|null The screenLockDisableImmediate
     */
     public function getScreenLockDisableImmediate()
     {
@@ -1128,7 +1128,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the shutDownDisabled
     * Whether to hide the Shut Down button item on the login window.
     *
-    * @return bool The shutDownDisabled
+    * @return bool|null The shutDownDisabled
     */
     public function getShutDownDisabled()
     {
@@ -1157,7 +1157,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the shutDownDisabledWhileLoggedIn
     * Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
     *
-    * @return bool The shutDownDisabledWhileLoggedIn
+    * @return bool|null The shutDownDisabledWhileLoggedIn
     */
     public function getShutDownDisabledWhileLoggedIn()
     {
@@ -1186,12 +1186,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the singleSignOnExtension
     * Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
     *
-    * @return SingleSignOnExtension The singleSignOnExtension
+    * @return SingleSignOnExtension|null The singleSignOnExtension
     */
     public function getSingleSignOnExtension()
     {
         if (array_key_exists("singleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtension"], "\Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
+            if (is_a($this->_propDict["singleSignOnExtension"], "\Beta\Microsoft\Graph\Model\SingleSignOnExtension") || is_null($this->_propDict["singleSignOnExtension"])) {
                 return $this->_propDict["singleSignOnExtension"];
             } else {
                 $this->_propDict["singleSignOnExtension"] = new SingleSignOnExtension($this->_propDict["singleSignOnExtension"]);
@@ -1219,7 +1219,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the sleepDisabled
     * Whether to hide the Sleep menu item on the login window.
     *
-    * @return bool The sleepDisabled
+    * @return bool|null The sleepDisabled
     */
     public function getSleepDisabled()
     {
@@ -1248,12 +1248,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     * Gets the singleSignOnExtensionPkinitCertificate
     * PKINIT Certificate for the authentication with single sign-on extensions.
     *
-    * @return MacOSCertificateProfileBase The singleSignOnExtensionPkinitCertificate
+    * @return MacOSCertificateProfileBase|null The singleSignOnExtensionPkinitCertificate
     */
     public function getSingleSignOnExtensionPkinitCertificate()
     {
         if (array_key_exists("singleSignOnExtensionPkinitCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "\Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
+            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "\Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase") || is_null($this->_propDict["singleSignOnExtensionPkinitCertificate"])) {
                 return $this->_propDict["singleSignOnExtensionPkinitCertificate"];
             } else {
                 $this->_propDict["singleSignOnExtensionPkinitCertificate"] = new MacOSCertificateProfileBase($this->_propDict["singleSignOnExtensionPkinitCertificate"]);

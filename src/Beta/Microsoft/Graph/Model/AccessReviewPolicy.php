@@ -28,7 +28,7 @@ class AccessReviewPolicy extends Entity
     * Gets the description
     * Description for this policy. Read-only.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class AccessReviewPolicy extends Entity
     * Gets the displayName
     * Display name for this policy. Read-only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class AccessReviewPolicy extends Entity
     * Gets the isGroupOwnerManagementEnabled
     * If true, group owners can create and manage access reviews on groups they own.
     *
-    * @return bool The isGroupOwnerManagementEnabled
+    * @return bool|null The isGroupOwnerManagementEnabled
     */
     public function getIsGroupOwnerManagementEnabled()
     {

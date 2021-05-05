@@ -27,7 +27,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the isDefaultRecipientsEnabled
     *
-    * @return bool The isDefaultRecipientsEnabled
+    * @return bool|null The isDefaultRecipientsEnabled
     */
     public function getIsDefaultRecipientsEnabled()
     {
@@ -54,7 +54,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the notificationLevel
     *
-    * @return string The notificationLevel
+    * @return string|null The notificationLevel
     */
     public function getNotificationLevel()
     {
@@ -81,7 +81,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the notificationRecipients
     *
-    * @return string The notificationRecipients
+    * @return string|null The notificationRecipients
     */
     public function getNotificationRecipients()
     {
@@ -108,7 +108,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the notificationType
     *
-    * @return string The notificationType
+    * @return string|null The notificationType
     */
     public function getNotificationType()
     {
@@ -135,7 +135,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the recipientType
     *
-    * @return string The recipientType
+    * @return string|null The recipientType
     */
     public function getRecipientType()
     {

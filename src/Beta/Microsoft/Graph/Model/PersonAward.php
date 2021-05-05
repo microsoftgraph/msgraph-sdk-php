@@ -28,7 +28,7 @@ class PersonAward extends ItemFacet
     * Gets the description
     * Descpription of the award or honor.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class PersonAward extends ItemFacet
     * Gets the displayName
     * Name of the award or honor.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,12 +86,12 @@ class PersonAward extends ItemFacet
     * Gets the issuedDate
     * The date that the award or honor was granted.
     *
-    * @return \DateTime The issuedDate
+    * @return \DateTime|null The issuedDate
     */
     public function getIssuedDate()
     {
         if (array_key_exists("issuedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDate"], "\DateTime")) {
+            if (is_a($this->_propDict["issuedDate"], "\DateTime") || is_null($this->_propDict["issuedDate"])) {
                 return $this->_propDict["issuedDate"];
             } else {
                 $this->_propDict["issuedDate"] = new \DateTime($this->_propDict["issuedDate"]);
@@ -119,7 +119,7 @@ class PersonAward extends ItemFacet
     * Gets the issuingAuthority
     * Authority which granted the award or honor.
     *
-    * @return string The issuingAuthority
+    * @return string|null The issuingAuthority
     */
     public function getIssuingAuthority()
     {
@@ -148,7 +148,7 @@ class PersonAward extends ItemFacet
     * Gets the thumbnailUrl
     * URL referencing a thumbnail of the award or honor.
     *
-    * @return string The thumbnailUrl
+    * @return string|null The thumbnailUrl
     */
     public function getThumbnailUrl()
     {
@@ -177,7 +177,7 @@ class PersonAward extends ItemFacet
     * Gets the webUrl
     * URL referencing the award or honor.
     *
-    * @return string The webUrl
+    * @return string|null The webUrl
     */
     public function getWebUrl()
     {

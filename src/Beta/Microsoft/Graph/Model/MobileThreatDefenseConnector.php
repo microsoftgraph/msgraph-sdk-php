@@ -28,7 +28,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the allowPartnerToCollectIOSApplicationMetadata
     * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
     *
-    * @return bool The allowPartnerToCollectIOSApplicationMetadata
+    * @return bool|null The allowPartnerToCollectIOSApplicationMetadata
     */
     public function getAllowPartnerToCollectIOSApplicationMetadata()
     {
@@ -57,7 +57,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the androidDeviceBlockedOnMissingPartnerData
     * For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
-    * @return bool The androidDeviceBlockedOnMissingPartnerData
+    * @return bool|null The androidDeviceBlockedOnMissingPartnerData
     */
     public function getAndroidDeviceBlockedOnMissingPartnerData()
     {
@@ -86,7 +86,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the androidEnabled
     * For Android, set whether data from the data sync partner should be used during compliance evaluations
     *
-    * @return bool The androidEnabled
+    * @return bool|null The androidEnabled
     */
     public function getAndroidEnabled()
     {
@@ -115,7 +115,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the androidMobileApplicationManagementEnabled
     * For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
     *
-    * @return bool The androidMobileApplicationManagementEnabled
+    * @return bool|null The androidMobileApplicationManagementEnabled
     */
     public function getAndroidMobileApplicationManagementEnabled()
     {
@@ -144,7 +144,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the iosDeviceBlockedOnMissingPartnerData
     * For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
-    * @return bool The iosDeviceBlockedOnMissingPartnerData
+    * @return bool|null The iosDeviceBlockedOnMissingPartnerData
     */
     public function getIosDeviceBlockedOnMissingPartnerData()
     {
@@ -173,7 +173,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the iosEnabled
     * For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
     *
-    * @return bool The iosEnabled
+    * @return bool|null The iosEnabled
     */
     public function getIosEnabled()
     {
@@ -202,7 +202,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the iosMobileApplicationManagementEnabled
     * For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
     *
-    * @return bool The iosMobileApplicationManagementEnabled
+    * @return bool|null The iosMobileApplicationManagementEnabled
     */
     public function getIosMobileApplicationManagementEnabled()
     {
@@ -231,12 +231,12 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the lastHeartbeatDateTime
     * DateTime of last Heartbeat recieved from the Data Sync Partner
     *
-    * @return \DateTime The lastHeartbeatDateTime
+    * @return \DateTime|null The lastHeartbeatDateTime
     */
     public function getLastHeartbeatDateTime()
     {
         if (array_key_exists("lastHeartbeatDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime") || is_null($this->_propDict["lastHeartbeatDateTime"])) {
                 return $this->_propDict["lastHeartbeatDateTime"];
             } else {
                 $this->_propDict["lastHeartbeatDateTime"] = new \DateTime($this->_propDict["lastHeartbeatDateTime"]);
@@ -264,7 +264,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the macDeviceBlockedOnMissingPartnerData
     * For Mac, get or set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
-    * @return bool The macDeviceBlockedOnMissingPartnerData
+    * @return bool|null The macDeviceBlockedOnMissingPartnerData
     */
     public function getMacDeviceBlockedOnMissingPartnerData()
     {
@@ -293,7 +293,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the macEnabled
     * For Mac, get or set whether data from the data sync partner should be used during compliance evaluations
     *
-    * @return bool The macEnabled
+    * @return bool|null The macEnabled
     */
     public function getMacEnabled()
     {
@@ -322,12 +322,12 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the partnerState
     * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
     *
-    * @return MobileThreatPartnerTenantState The partnerState
+    * @return MobileThreatPartnerTenantState|null The partnerState
     */
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "\Beta\Microsoft\Graph\Model\MobileThreatPartnerTenantState")) {
+            if (is_a($this->_propDict["partnerState"], "\Beta\Microsoft\Graph\Model\MobileThreatPartnerTenantState") || is_null($this->_propDict["partnerState"])) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new MobileThreatPartnerTenantState($this->_propDict["partnerState"]);
@@ -355,7 +355,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the partnerUnresponsivenessThresholdInDays
     * Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
     *
-    * @return int The partnerUnresponsivenessThresholdInDays
+    * @return int|null The partnerUnresponsivenessThresholdInDays
     */
     public function getPartnerUnresponsivenessThresholdInDays()
     {
@@ -384,7 +384,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the partnerUnsupportedOsVersionBlocked
     * Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
     *
-    * @return bool The partnerUnsupportedOsVersionBlocked
+    * @return bool|null The partnerUnsupportedOsVersionBlocked
     */
     public function getPartnerUnsupportedOsVersionBlocked()
     {
@@ -413,7 +413,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the windowsDeviceBlockedOnMissingPartnerData
     * For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
     *
-    * @return bool The windowsDeviceBlockedOnMissingPartnerData
+    * @return bool|null The windowsDeviceBlockedOnMissingPartnerData
     */
     public function getWindowsDeviceBlockedOnMissingPartnerData()
     {
@@ -442,7 +442,7 @@ class MobileThreatDefenseConnector extends Entity
     * Gets the windowsEnabled
     * For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
     *
-    * @return bool The windowsEnabled
+    * @return bool|null The windowsEnabled
     */
     public function getWindowsEnabled()
     {

@@ -28,7 +28,7 @@ class AuditEvent extends Entity
     * Gets the activity
     * Friendly name of the activity.
     *
-    * @return string The activity
+    * @return string|null The activity
     */
     public function getActivity()
     {
@@ -57,12 +57,12 @@ class AuditEvent extends Entity
     * Gets the activityDateTime
     * The date time in UTC when the activity was performed.
     *
-    * @return \DateTime The activityDateTime
+    * @return \DateTime|null The activityDateTime
     */
     public function getActivityDateTime()
     {
         if (array_key_exists("activityDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["activityDateTime"], "\DateTime") || is_null($this->_propDict["activityDateTime"])) {
                 return $this->_propDict["activityDateTime"];
             } else {
                 $this->_propDict["activityDateTime"] = new \DateTime($this->_propDict["activityDateTime"]);
@@ -90,7 +90,7 @@ class AuditEvent extends Entity
     * Gets the activityOperationType
     * The HTTP operation type of the activity.
     *
-    * @return string The activityOperationType
+    * @return string|null The activityOperationType
     */
     public function getActivityOperationType()
     {
@@ -119,7 +119,7 @@ class AuditEvent extends Entity
     * Gets the activityResult
     * The result of the activity.
     *
-    * @return string The activityResult
+    * @return string|null The activityResult
     */
     public function getActivityResult()
     {
@@ -148,7 +148,7 @@ class AuditEvent extends Entity
     * Gets the activityType
     * The type of activity that was being performed.
     *
-    * @return string The activityType
+    * @return string|null The activityType
     */
     public function getActivityType()
     {
@@ -177,12 +177,12 @@ class AuditEvent extends Entity
     * Gets the actor
     * AAD user and application that are associated with the audit event.
     *
-    * @return AuditActor The actor
+    * @return AuditActor|null The actor
     */
     public function getActor()
     {
         if (array_key_exists("actor", $this->_propDict)) {
-            if (is_a($this->_propDict["actor"], "\Beta\Microsoft\Graph\Model\AuditActor")) {
+            if (is_a($this->_propDict["actor"], "\Beta\Microsoft\Graph\Model\AuditActor") || is_null($this->_propDict["actor"])) {
                 return $this->_propDict["actor"];
             } else {
                 $this->_propDict["actor"] = new AuditActor($this->_propDict["actor"]);
@@ -210,7 +210,7 @@ class AuditEvent extends Entity
     * Gets the category
     * Audit category.
     *
-    * @return string The category
+    * @return string|null The category
     */
     public function getCategory()
     {
@@ -239,7 +239,7 @@ class AuditEvent extends Entity
     * Gets the componentName
     * Component name.
     *
-    * @return string The componentName
+    * @return string|null The componentName
     */
     public function getComponentName()
     {
@@ -268,7 +268,7 @@ class AuditEvent extends Entity
     * Gets the correlationId
     * The client request Id that is used to correlate activity within the system.
     *
-    * @return string The correlationId
+    * @return string|null The correlationId
     */
     public function getCorrelationId()
     {
@@ -297,7 +297,7 @@ class AuditEvent extends Entity
     * Gets the displayName
     * Event display name.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -327,7 +327,7 @@ class AuditEvent extends Entity
      * Gets the resources
     * Resources being modified.
      *
-     * @return array The resources
+     * @return array|null The resources
      */
     public function getResources()
     {
@@ -348,7 +348,7 @@ class AuditEvent extends Entity
     */
     public function setResources($val)
     {
-		$this->_propDict["resources"] = $val;
+        $this->_propDict["resources"] = $val;
         return $this;
     }
     

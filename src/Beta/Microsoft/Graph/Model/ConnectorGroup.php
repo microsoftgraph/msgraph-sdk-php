@@ -28,12 +28,12 @@ class ConnectorGroup extends Entity
     * Gets the connectorGroupType
     * Indicates the type of hybrid agent. This pre-set by the system. Possible values are: applicationProxy. Read-only.
     *
-    * @return ConnectorGroupType The connectorGroupType
+    * @return ConnectorGroupType|null The connectorGroupType
     */
     public function getConnectorGroupType()
     {
         if (array_key_exists("connectorGroupType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectorGroupType"], "\Beta\Microsoft\Graph\Model\ConnectorGroupType")) {
+            if (is_a($this->_propDict["connectorGroupType"], "\Beta\Microsoft\Graph\Model\ConnectorGroupType") || is_null($this->_propDict["connectorGroupType"])) {
                 return $this->_propDict["connectorGroupType"];
             } else {
                 $this->_propDict["connectorGroupType"] = new ConnectorGroupType($this->_propDict["connectorGroupType"]);
@@ -61,7 +61,7 @@ class ConnectorGroup extends Entity
     * Gets the isDefault
     * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
     *
-    * @return bool The isDefault
+    * @return bool|null The isDefault
     */
     public function getIsDefault()
     {
@@ -90,7 +90,7 @@ class ConnectorGroup extends Entity
     * Gets the name
     * The name associated with the connectorGroup.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -119,12 +119,12 @@ class ConnectorGroup extends Entity
     * Gets the region
     * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
     *
-    * @return ConnectorGroupRegion The region
+    * @return ConnectorGroupRegion|null The region
     */
     public function getRegion()
     {
         if (array_key_exists("region", $this->_propDict)) {
-            if (is_a($this->_propDict["region"], "\Beta\Microsoft\Graph\Model\ConnectorGroupRegion")) {
+            if (is_a($this->_propDict["region"], "\Beta\Microsoft\Graph\Model\ConnectorGroupRegion") || is_null($this->_propDict["region"])) {
                 return $this->_propDict["region"];
             } else {
                 $this->_propDict["region"] = new ConnectorGroupRegion($this->_propDict["region"]);
@@ -153,7 +153,7 @@ class ConnectorGroup extends Entity
      * Gets the applications
     * Read-only. Nullable.
      *
-     * @return array The applications
+     * @return array|null The applications
      */
     public function getApplications()
     {
@@ -174,7 +174,7 @@ class ConnectorGroup extends Entity
     */
     public function setApplications($val)
     {
-		$this->_propDict["applications"] = $val;
+        $this->_propDict["applications"] = $val;
         return $this;
     }
     
@@ -183,7 +183,7 @@ class ConnectorGroup extends Entity
      * Gets the members
     * Read-only. Nullable.
      *
-     * @return array The members
+     * @return array|null The members
      */
     public function getMembers()
     {
@@ -204,7 +204,7 @@ class ConnectorGroup extends Entity
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
     

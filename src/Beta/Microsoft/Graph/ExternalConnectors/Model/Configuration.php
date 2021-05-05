@@ -26,7 +26,7 @@ class Configuration extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the authorizedAppIds
     *
-    * @return string The authorizedAppIds
+    * @return string|null The authorizedAppIds
     */
     public function getAuthorizedAppIds()
     {

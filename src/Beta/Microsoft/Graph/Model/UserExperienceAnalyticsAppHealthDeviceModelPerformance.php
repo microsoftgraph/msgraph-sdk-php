@@ -28,7 +28,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
     * Gets the activeDeviceCount
     * The number of active devices for the model. Valid values -2147483648 to 2147483647
     *
-    * @return int The activeDeviceCount
+    * @return int|null The activeDeviceCount
     */
     public function getActiveDeviceCount()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
     * Gets the deviceManufacturer
     * The manufacturer name of the device.
     *
-    * @return string The deviceManufacturer
+    * @return string|null The deviceManufacturer
     */
     public function getDeviceManufacturer()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
     * Gets the deviceModel
     * The model name of the device.
     *
-    * @return string The deviceModel
+    * @return string|null The deviceModel
     */
     public function getDeviceModel()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647
     *
-    * @return int The meanTimeToFailureInMinutes
+    * @return int|null The meanTimeToFailureInMinutes
     */
     public function getMeanTimeToFailureInMinutes()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
     * Gets the modelAppHealthScore
     * The app health score of the device model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
-    * @return float The modelAppHealthScore
+    * @return float|null The modelAppHealthScore
     */
     public function getModelAppHealthScore()
     {
@@ -165,7 +165,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
     */
     public function setModelAppHealthScore($val)
     {
-        $this->_propDict["modelAppHealthScore"] = $val;
+        $this->_propDict["modelAppHealthScore"] = floatval($val);
         return $this;
     }
     
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
     * Gets the modelAppHealthStatus
     * The overall app health status of the device model.
     *
-    * @return string The modelAppHealthStatus
+    * @return string|null The modelAppHealthStatus
     */
     public function getModelAppHealthStatus()
     {

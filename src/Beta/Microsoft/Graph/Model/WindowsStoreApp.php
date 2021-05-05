@@ -28,7 +28,7 @@ class WindowsStoreApp extends MobileApp
     * Gets the appStoreUrl
     * The Windows app store URL.
     *
-    * @return string The appStoreUrl
+    * @return string|null The appStoreUrl
     */
     public function getAppStoreUrl()
     {

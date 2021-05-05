@@ -28,7 +28,7 @@ class Presentation extends Entity
      /** 
      * Gets the comments
      *
-     * @return array The comments
+     * @return array|null The comments
      */
     public function getComments()
     {
@@ -48,7 +48,7 @@ class Presentation extends Entity
     */
     public function setComments($val)
     {
-		$this->_propDict["comments"] = $val;
+        $this->_propDict["comments"] = $val;
         return $this;
     }
     

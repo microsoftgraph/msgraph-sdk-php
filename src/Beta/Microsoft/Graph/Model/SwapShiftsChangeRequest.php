@@ -28,7 +28,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
     * Gets the recipientShiftId
     * ShiftId for the recipient user with whom the request is to swap.
     *
-    * @return string The recipientShiftId
+    * @return string|null The recipientShiftId
     */
     public function getRecipientShiftId()
     {

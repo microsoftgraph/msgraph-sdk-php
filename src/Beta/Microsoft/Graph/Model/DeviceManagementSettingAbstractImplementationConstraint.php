@@ -36,7 +36,7 @@ class DeviceManagementSettingAbstractImplementationConstraint extends DeviceMana
     * Gets the allowedAbstractImplementationDefinitionIds
     * List of value which means not configured for the setting
     *
-    * @return string The allowedAbstractImplementationDefinitionIds
+    * @return string|null The allowedAbstractImplementationDefinitionIds
     */
     public function getAllowedAbstractImplementationDefinitionIds()
     {

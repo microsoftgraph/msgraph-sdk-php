@@ -28,12 +28,12 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl
     * Gets the cloudAppSecurityType
     * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
     *
-    * @return CloudAppSecuritySessionControlType The cloudAppSecurityType
+    * @return CloudAppSecuritySessionControlType|null The cloudAppSecurityType
     */
     public function getCloudAppSecurityType()
     {
         if (array_key_exists("cloudAppSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["cloudAppSecurityType"], "\Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControlType")) {
+            if (is_a($this->_propDict["cloudAppSecurityType"], "\Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControlType") || is_null($this->_propDict["cloudAppSecurityType"])) {
                 return $this->_propDict["cloudAppSecurityType"];
             } else {
                 $this->_propDict["cloudAppSecurityType"] = new CloudAppSecuritySessionControlType($this->_propDict["cloudAppSecurityType"]);

@@ -27,7 +27,7 @@ class DateTimeTimeZone extends Entity
     * Gets the dateTime
     * A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
     *
-    * @return string The dateTime
+    * @return string|null The dateTime
     */
     public function getDateTime()
     {
@@ -55,7 +55,7 @@ class DateTimeTimeZone extends Entity
     * Gets the timeZone
     * Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
     *
-    * @return string The timeZone
+    * @return string|null The timeZone
     */
     public function getTimeZone()
     {

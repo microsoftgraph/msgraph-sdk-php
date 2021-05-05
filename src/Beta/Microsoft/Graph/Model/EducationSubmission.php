@@ -28,12 +28,12 @@ class EducationSubmission extends Entity
     * Gets the recipient
     * Who this submission is assigned to.
     *
-    * @return EducationSubmissionRecipient The recipient
+    * @return EducationSubmissionRecipient|null The recipient
     */
     public function getRecipient()
     {
         if (array_key_exists("recipient", $this->_propDict)) {
-            if (is_a($this->_propDict["recipient"], "\Beta\Microsoft\Graph\Model\EducationSubmissionRecipient")) {
+            if (is_a($this->_propDict["recipient"], "\Beta\Microsoft\Graph\Model\EducationSubmissionRecipient") || is_null($this->_propDict["recipient"])) {
                 return $this->_propDict["recipient"];
             } else {
                 $this->_propDict["recipient"] = new EducationSubmissionRecipient($this->_propDict["recipient"]);
@@ -60,12 +60,12 @@ class EducationSubmission extends Entity
     /**
     * Gets the releasedBy
     *
-    * @return IdentitySet The releasedBy
+    * @return IdentitySet|null The releasedBy
     */
     public function getReleasedBy()
     {
         if (array_key_exists("releasedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["releasedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["releasedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["releasedBy"])) {
                 return $this->_propDict["releasedBy"];
             } else {
                 $this->_propDict["releasedBy"] = new IdentitySet($this->_propDict["releasedBy"]);
@@ -91,12 +91,12 @@ class EducationSubmission extends Entity
     /**
     * Gets the releasedDateTime
     *
-    * @return \DateTime The releasedDateTime
+    * @return \DateTime|null The releasedDateTime
     */
     public function getReleasedDateTime()
     {
         if (array_key_exists("releasedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["releasedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["releasedDateTime"], "\DateTime") || is_null($this->_propDict["releasedDateTime"])) {
                 return $this->_propDict["releasedDateTime"];
             } else {
                 $this->_propDict["releasedDateTime"] = new \DateTime($this->_propDict["releasedDateTime"]);
@@ -123,7 +123,7 @@ class EducationSubmission extends Entity
     * Gets the resourcesFolderUrl
     * Folder where all file resources for this submission need to be stored.
     *
-    * @return string The resourcesFolderUrl
+    * @return string|null The resourcesFolderUrl
     */
     public function getResourcesFolderUrl()
     {
@@ -152,12 +152,12 @@ class EducationSubmission extends Entity
     * Gets the returnedBy
     * User who moved the status of this submission to returned.
     *
-    * @return IdentitySet The returnedBy
+    * @return IdentitySet|null The returnedBy
     */
     public function getReturnedBy()
     {
         if (array_key_exists("returnedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["returnedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["returnedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["returnedBy"])) {
                 return $this->_propDict["returnedBy"];
             } else {
                 $this->_propDict["returnedBy"] = new IdentitySet($this->_propDict["returnedBy"]);
@@ -185,12 +185,12 @@ class EducationSubmission extends Entity
     * Gets the returnedDateTime
     * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The returnedDateTime
+    * @return \DateTime|null The returnedDateTime
     */
     public function getReturnedDateTime()
     {
         if (array_key_exists("returnedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["returnedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["returnedDateTime"], "\DateTime") || is_null($this->_propDict["returnedDateTime"])) {
                 return $this->_propDict["returnedDateTime"];
             } else {
                 $this->_propDict["returnedDateTime"] = new \DateTime($this->_propDict["returnedDateTime"]);
@@ -218,12 +218,12 @@ class EducationSubmission extends Entity
     * Gets the status
     * Read-Only. Possible values are: working, submitted, released, returned.
     *
-    * @return EducationSubmissionStatus The status
+    * @return EducationSubmissionStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\EducationSubmissionStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\EducationSubmissionStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new EducationSubmissionStatus($this->_propDict["status"]);
@@ -251,12 +251,12 @@ class EducationSubmission extends Entity
     * Gets the submittedBy
     * User who moved the resource into the submitted state.
     *
-    * @return IdentitySet The submittedBy
+    * @return IdentitySet|null The submittedBy
     */
     public function getSubmittedBy()
     {
         if (array_key_exists("submittedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["submittedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["submittedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["submittedBy"])) {
                 return $this->_propDict["submittedBy"];
             } else {
                 $this->_propDict["submittedBy"] = new IdentitySet($this->_propDict["submittedBy"]);
@@ -284,12 +284,12 @@ class EducationSubmission extends Entity
     * Gets the submittedDateTime
     * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The submittedDateTime
+    * @return \DateTime|null The submittedDateTime
     */
     public function getSubmittedDateTime()
     {
         if (array_key_exists("submittedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["submittedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["submittedDateTime"], "\DateTime") || is_null($this->_propDict["submittedDateTime"])) {
                 return $this->_propDict["submittedDateTime"];
             } else {
                 $this->_propDict["submittedDateTime"] = new \DateTime($this->_propDict["submittedDateTime"]);
@@ -317,12 +317,12 @@ class EducationSubmission extends Entity
     * Gets the unsubmittedBy
     * User who moved the resource from submitted into the working state.
     *
-    * @return IdentitySet The unsubmittedBy
+    * @return IdentitySet|null The unsubmittedBy
     */
     public function getUnsubmittedBy()
     {
         if (array_key_exists("unsubmittedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["unsubmittedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["unsubmittedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["unsubmittedBy"])) {
                 return $this->_propDict["unsubmittedBy"];
             } else {
                 $this->_propDict["unsubmittedBy"] = new IdentitySet($this->_propDict["unsubmittedBy"]);
@@ -350,12 +350,12 @@ class EducationSubmission extends Entity
     * Gets the unsubmittedDateTime
     * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The unsubmittedDateTime
+    * @return \DateTime|null The unsubmittedDateTime
     */
     public function getUnsubmittedDateTime()
     {
         if (array_key_exists("unsubmittedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["unsubmittedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["unsubmittedDateTime"], "\DateTime") || is_null($this->_propDict["unsubmittedDateTime"])) {
                 return $this->_propDict["unsubmittedDateTime"];
             } else {
                 $this->_propDict["unsubmittedDateTime"] = new \DateTime($this->_propDict["unsubmittedDateTime"]);
@@ -384,7 +384,7 @@ class EducationSubmission extends Entity
      * Gets the outcomes
     * Read-Write. Nullable.
      *
-     * @return array The outcomes
+     * @return array|null The outcomes
      */
     public function getOutcomes()
     {
@@ -405,7 +405,7 @@ class EducationSubmission extends Entity
     */
     public function setOutcomes($val)
     {
-		$this->_propDict["outcomes"] = $val;
+        $this->_propDict["outcomes"] = $val;
         return $this;
     }
     
@@ -414,7 +414,7 @@ class EducationSubmission extends Entity
      * Gets the resources
     * Nullable.
      *
-     * @return array The resources
+     * @return array|null The resources
      */
     public function getResources()
     {
@@ -435,7 +435,7 @@ class EducationSubmission extends Entity
     */
     public function setResources($val)
     {
-		$this->_propDict["resources"] = $val;
+        $this->_propDict["resources"] = $val;
         return $this;
     }
     
@@ -444,7 +444,7 @@ class EducationSubmission extends Entity
      * Gets the submittedResources
     * Read-only. Nullable.
      *
-     * @return array The submittedResources
+     * @return array|null The submittedResources
      */
     public function getSubmittedResources()
     {
@@ -465,7 +465,7 @@ class EducationSubmission extends Entity
     */
     public function setSubmittedResources($val)
     {
-		$this->_propDict["submittedResources"] = $val;
+        $this->_propDict["submittedResources"] = $val;
         return $this;
     }
     

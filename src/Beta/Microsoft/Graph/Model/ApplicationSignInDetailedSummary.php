@@ -28,12 +28,12 @@ class ApplicationSignInDetailedSummary extends Entity
     * Gets the aggregatedEventDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime The aggregatedEventDateTime
+    * @return \DateTime|null The aggregatedEventDateTime
     */
     public function getAggregatedEventDateTime()
     {
         if (array_key_exists("aggregatedEventDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["aggregatedEventDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["aggregatedEventDateTime"], "\DateTime") || is_null($this->_propDict["aggregatedEventDateTime"])) {
                 return $this->_propDict["aggregatedEventDateTime"];
             } else {
                 $this->_propDict["aggregatedEventDateTime"] = new \DateTime($this->_propDict["aggregatedEventDateTime"]);
@@ -61,7 +61,7 @@ class ApplicationSignInDetailedSummary extends Entity
     * Gets the appDisplayName
     * Name of the application that the user signed in to.
     *
-    * @return string The appDisplayName
+    * @return string|null The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -90,7 +90,7 @@ class ApplicationSignInDetailedSummary extends Entity
     * Gets the appId
     * ID of the application that the user signed in to.
     *
-    * @return string The appId
+    * @return string|null The appId
     */
     public function getAppId()
     {
@@ -119,7 +119,7 @@ class ApplicationSignInDetailedSummary extends Entity
     * Gets the signInCount
     * Count of sign-ins made by the application.
     *
-    * @return int The signInCount
+    * @return int|null The signInCount
     */
     public function getSignInCount()
     {
@@ -148,12 +148,12 @@ class ApplicationSignInDetailedSummary extends Entity
     * Gets the status
     * Details of the sign-in status.
     *
-    * @return SignInStatus The status
+    * @return SignInStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\SignInStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\SignInStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SignInStatus($this->_propDict["status"]);

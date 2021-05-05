@@ -26,7 +26,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the appliedPolicies
     *
-    * @return string The appliedPolicies
+    * @return string|null The appliedPolicies
     */
     public function getAppliedPolicies()
     {
@@ -53,12 +53,12 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the checkinDateTime
     *
-    * @return \DateTime The checkinDateTime
+    * @return \DateTime|null The checkinDateTime
     */
     public function getCheckinDateTime()
     {
         if (array_key_exists("checkinDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["checkinDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["checkinDateTime"], "\DateTime") || is_null($this->_propDict["checkinDateTime"])) {
                 return $this->_propDict["checkinDateTime"];
             } else {
                 $this->_propDict["checkinDateTime"] = new \DateTime($this->_propDict["checkinDateTime"]);
@@ -83,7 +83,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the deviceName
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -109,7 +109,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the devicePlatform
     *
-    * @return string The devicePlatform
+    * @return string|null The devicePlatform
     */
     public function getDevicePlatform()
     {
@@ -135,7 +135,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the devicePlatformVersion
     *
-    * @return string The devicePlatformVersion
+    * @return string|null The devicePlatformVersion
     */
     public function getDevicePlatformVersion()
     {
@@ -161,7 +161,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the errorMessage
     *
-    * @return string The errorMessage
+    * @return string|null The errorMessage
     */
     public function getErrorMessage()
     {
@@ -187,7 +187,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the userId
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -213,7 +213,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -239,7 +239,7 @@ class OfficeClientCheckinStatus extends Entity
     /**
     * Gets the wasSuccessful
     *
-    * @return bool The wasSuccessful
+    * @return bool|null The wasSuccessful
     */
     public function getWasSuccessful()
     {

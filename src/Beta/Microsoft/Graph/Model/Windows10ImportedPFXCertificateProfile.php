@@ -28,12 +28,12 @@ class Windows10ImportedPFXCertificateProfile extends WindowsCertificateProfileBa
     * Gets the intendedPurpose
     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
     *
-    * @return IntendedPurpose The intendedPurpose
+    * @return IntendedPurpose|null The intendedPurpose
     */
     public function getIntendedPurpose()
     {
         if (array_key_exists("intendedPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["intendedPurpose"], "\Beta\Microsoft\Graph\Model\IntendedPurpose")) {
+            if (is_a($this->_propDict["intendedPurpose"], "\Beta\Microsoft\Graph\Model\IntendedPurpose") || is_null($this->_propDict["intendedPurpose"])) {
                 return $this->_propDict["intendedPurpose"];
             } else {
                 $this->_propDict["intendedPurpose"] = new IntendedPurpose($this->_propDict["intendedPurpose"]);
@@ -62,7 +62,7 @@ class Windows10ImportedPFXCertificateProfile extends WindowsCertificateProfileBa
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
-     * @return array The managedDeviceCertificateStates
+     * @return array|null The managedDeviceCertificateStates
      */
     public function getManagedDeviceCertificateStates()
     {
@@ -83,7 +83,7 @@ class Windows10ImportedPFXCertificateProfile extends WindowsCertificateProfileBa
     */
     public function setManagedDeviceCertificateStates($val)
     {
-		$this->_propDict["managedDeviceCertificateStates"] = $val;
+        $this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
     

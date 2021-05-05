@@ -27,7 +27,7 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the appScopeId
     *
-    * @return string The appScopeId
+    * @return string|null The appScopeId
     */
     public function getAppScopeId()
     {
@@ -54,12 +54,12 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the createdDateTime
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -85,7 +85,7 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the createdUsing
     *
-    * @return string The createdUsing
+    * @return string|null The createdUsing
     */
     public function getCreatedUsing()
     {
@@ -112,7 +112,7 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the directoryScopeId
     *
-    * @return string The directoryScopeId
+    * @return string|null The directoryScopeId
     */
     public function getDirectoryScopeId()
     {
@@ -139,12 +139,12 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the modifiedDateTime
     *
-    * @return \DateTime The modifiedDateTime
+    * @return \DateTime|null The modifiedDateTime
     */
     public function getModifiedDateTime()
     {
         if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -170,7 +170,7 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the principalId
     *
-    * @return string The principalId
+    * @return string|null The principalId
     */
     public function getPrincipalId()
     {
@@ -197,7 +197,7 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the roleDefinitionId
     *
-    * @return string The roleDefinitionId
+    * @return string|null The roleDefinitionId
     */
     public function getRoleDefinitionId()
     {
@@ -224,7 +224,7 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the status
     *
-    * @return string The status
+    * @return string|null The status
     */
     public function getStatus()
     {
@@ -251,12 +251,12 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the appScope
     *
-    * @return AppScope The appScope
+    * @return AppScope|null The appScope
     */
     public function getAppScope()
     {
         if (array_key_exists("appScope", $this->_propDict)) {
-            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope")) {
+            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope") || is_null($this->_propDict["appScope"])) {
                 return $this->_propDict["appScope"];
             } else {
                 $this->_propDict["appScope"] = new AppScope($this->_propDict["appScope"]);
@@ -282,12 +282,12 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the directoryScope
     *
-    * @return DirectoryObject The directoryScope
+    * @return DirectoryObject|null The directoryScope
     */
     public function getDirectoryScope()
     {
         if (array_key_exists("directoryScope", $this->_propDict)) {
-            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["directoryScope"])) {
                 return $this->_propDict["directoryScope"];
             } else {
                 $this->_propDict["directoryScope"] = new DirectoryObject($this->_propDict["directoryScope"]);
@@ -313,12 +313,12 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the principal
     *
-    * @return DirectoryObject The principal
+    * @return DirectoryObject|null The principal
     */
     public function getPrincipal()
     {
         if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["principal"])) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new DirectoryObject($this->_propDict["principal"]);
@@ -344,12 +344,12 @@ class UnifiedRoleScheduleBase extends Entity
     /**
     * Gets the roleDefinition
     *
-    * @return UnifiedRoleDefinition The roleDefinition
+    * @return UnifiedRoleDefinition|null The roleDefinition
     */
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition") || is_null($this->_propDict["roleDefinition"])) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new UnifiedRoleDefinition($this->_propDict["roleDefinition"]);

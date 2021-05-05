@@ -28,7 +28,7 @@ class GroupPolicyPresentationValueText extends GroupPolicyPresentationValue
     * Gets the value
     * A string value for the associated presentation.
     *
-    * @return string The value
+    * @return string|null The value
     */
     public function getValue()
     {

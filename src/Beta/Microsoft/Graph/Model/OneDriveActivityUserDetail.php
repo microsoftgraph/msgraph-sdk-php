@@ -27,7 +27,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the assignedProducts
     *
-    * @return string The assignedProducts
+    * @return string|null The assignedProducts
     */
     public function getAssignedProducts()
     {
@@ -54,12 +54,12 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the deletedDate
     *
-    * @return \DateTime The deletedDate
+    * @return \DateTime|null The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
                 return $this->_propDict["deletedDate"];
             } else {
                 $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
@@ -85,7 +85,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool The isDeleted
+    * @return bool|null The isDeleted
     */
     public function getIsDeleted()
     {
@@ -112,12 +112,12 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime The lastActivityDate
+    * @return \DateTime|null The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -143,7 +143,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -170,12 +170,12 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -201,7 +201,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the sharedExternallyFileCount
     *
-    * @return int The sharedExternallyFileCount
+    * @return int|null The sharedExternallyFileCount
     */
     public function getSharedExternallyFileCount()
     {
@@ -228,7 +228,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the sharedInternallyFileCount
     *
-    * @return int The sharedInternallyFileCount
+    * @return int|null The sharedInternallyFileCount
     */
     public function getSharedInternallyFileCount()
     {
@@ -255,7 +255,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the syncedFileCount
     *
-    * @return int The syncedFileCount
+    * @return int|null The syncedFileCount
     */
     public function getSyncedFileCount()
     {
@@ -282,7 +282,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -309,7 +309,7 @@ class OneDriveActivityUserDetail extends Entity
     /**
     * Gets the viewedOrEditedFileCount
     *
-    * @return int The viewedOrEditedFileCount
+    * @return int|null The viewedOrEditedFileCount
     */
     public function getViewedOrEditedFileCount()
     {

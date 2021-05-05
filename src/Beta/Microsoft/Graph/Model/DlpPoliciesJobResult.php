@@ -27,12 +27,12 @@ class DlpPoliciesJobResult extends Entity
     /**
     * Gets the matchingRules
     *
-    * @return MatchingDlpRule The matchingRules
+    * @return MatchingDlpRule|null The matchingRules
     */
     public function getMatchingRules()
     {
         if (array_key_exists("matchingRules", $this->_propDict)) {
-            if (is_a($this->_propDict["matchingRules"], "\Beta\Microsoft\Graph\Model\MatchingDlpRule")) {
+            if (is_a($this->_propDict["matchingRules"], "\Beta\Microsoft\Graph\Model\MatchingDlpRule") || is_null($this->_propDict["matchingRules"])) {
                 return $this->_propDict["matchingRules"];
             } else {
                 $this->_propDict["matchingRules"] = new MatchingDlpRule($this->_propDict["matchingRules"]);

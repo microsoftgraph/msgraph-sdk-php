@@ -28,7 +28,7 @@ class AuthenticationMethodTarget extends Entity
     * Gets the isRegistrationRequired
     * Determines if the user is enforced to register the authentication method.
     *
-    * @return bool The isRegistrationRequired
+    * @return bool|null The isRegistrationRequired
     */
     public function getIsRegistrationRequired()
     {
@@ -57,12 +57,12 @@ class AuthenticationMethodTarget extends Entity
     * Gets the targetType
     * Possible values are: user, group.
     *
-    * @return AuthenticationMethodTargetType The targetType
+    * @return AuthenticationMethodTargetType|null The targetType
     */
     public function getTargetType()
     {
         if (array_key_exists("targetType", $this->_propDict)) {
-            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType")) {
+            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType") || is_null($this->_propDict["targetType"])) {
                 return $this->_propDict["targetType"];
             } else {
                 $this->_propDict["targetType"] = new AuthenticationMethodTargetType($this->_propDict["targetType"]);

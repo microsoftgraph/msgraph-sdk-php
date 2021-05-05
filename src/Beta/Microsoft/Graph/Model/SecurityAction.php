@@ -28,7 +28,7 @@ class SecurityAction extends Entity
     * Gets the actionReason
     * Reason for invoking this action.
     *
-    * @return string The actionReason
+    * @return string|null The actionReason
     */
     public function getActionReason()
     {
@@ -57,7 +57,7 @@ class SecurityAction extends Entity
     * Gets the appId
     * The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
     *
-    * @return string The appId
+    * @return string|null The appId
     */
     public function getAppId()
     {
@@ -86,7 +86,7 @@ class SecurityAction extends Entity
     * Gets the azureTenantId
     * Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
     *
-    * @return string The azureTenantId
+    * @return string|null The azureTenantId
     */
     public function getAzureTenantId()
     {
@@ -114,7 +114,7 @@ class SecurityAction extends Entity
     /**
     * Gets the clientContext
     *
-    * @return string The clientContext
+    * @return string|null The clientContext
     */
     public function getClientContext()
     {
@@ -142,12 +142,12 @@ class SecurityAction extends Entity
     * Gets the completedDateTime
     * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The completedDateTime
+    * @return \DateTime|null The completedDateTime
     */
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["completedDateTime"], "\DateTime") || is_null($this->_propDict["completedDateTime"])) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
@@ -175,12 +175,12 @@ class SecurityAction extends Entity
     * Gets the createdDateTime
     * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -208,12 +208,12 @@ class SecurityAction extends Entity
     * Gets the errorInfo
     * Error info when the action fails.
     *
-    * @return ResultInfo The errorInfo
+    * @return ResultInfo|null The errorInfo
     */
     public function getErrorInfo()
     {
         if (array_key_exists("errorInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["errorInfo"], "\Beta\Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["errorInfo"], "\Beta\Microsoft\Graph\Model\ResultInfo") || is_null($this->_propDict["errorInfo"])) {
                 return $this->_propDict["errorInfo"];
             } else {
                 $this->_propDict["errorInfo"] = new ResultInfo($this->_propDict["errorInfo"]);
@@ -241,12 +241,12 @@ class SecurityAction extends Entity
     * Gets the lastActionDateTime
     * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The lastActionDateTime
+    * @return \DateTime|null The lastActionDateTime
     */
     public function getLastActionDateTime()
     {
         if (array_key_exists("lastActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime") || is_null($this->_propDict["lastActionDateTime"])) {
                 return $this->_propDict["lastActionDateTime"];
             } else {
                 $this->_propDict["lastActionDateTime"] = new \DateTime($this->_propDict["lastActionDateTime"]);
@@ -274,7 +274,7 @@ class SecurityAction extends Entity
     * Gets the name
     * Action name.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -304,7 +304,7 @@ class SecurityAction extends Entity
      * Gets the parameters
     * Collection of parameters (key-value pairs) necessary to invoke the action, e.g. URL or fileHash to block, etc.). Required
      *
-     * @return array The parameters
+     * @return array|null The parameters
      */
     public function getParameters()
     {
@@ -325,7 +325,7 @@ class SecurityAction extends Entity
     */
     public function setParameters($val)
     {
-		$this->_propDict["parameters"] = $val;
+        $this->_propDict["parameters"] = $val;
         return $this;
     }
     
@@ -334,7 +334,7 @@ class SecurityAction extends Entity
      * Gets the states
     * Collection of securityActionState to keep the history of an action.
      *
-     * @return array The states
+     * @return array|null The states
      */
     public function getStates()
     {
@@ -355,7 +355,7 @@ class SecurityAction extends Entity
     */
     public function setStates($val)
     {
-		$this->_propDict["states"] = $val;
+        $this->_propDict["states"] = $val;
         return $this;
     }
     
@@ -363,12 +363,12 @@ class SecurityAction extends Entity
     * Gets the status
     * Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
     *
-    * @return OperationStatus The status
+    * @return OperationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\OperationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -396,7 +396,7 @@ class SecurityAction extends Entity
     * Gets the user
     * The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
     *
-    * @return string The user
+    * @return string|null The user
     */
     public function getUser()
     {
@@ -425,12 +425,12 @@ class SecurityAction extends Entity
     * Gets the vendorInformation
     * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (e.g. vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
     *
-    * @return SecurityVendorInformation The vendorInformation
+    * @return SecurityVendorInformation|null The vendorInformation
     */
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation") || is_null($this->_propDict["vendorInformation"])) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

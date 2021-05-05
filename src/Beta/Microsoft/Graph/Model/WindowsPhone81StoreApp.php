@@ -28,7 +28,7 @@ class WindowsPhone81StoreApp extends MobileApp
     * Gets the appStoreUrl
     * The Windows Phone 8.1 app store URL.
     *
-    * @return string The appStoreUrl
+    * @return string|null The appStoreUrl
     */
     public function getAppStoreUrl()
     {

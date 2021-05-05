@@ -27,12 +27,12 @@ class DirectoryObject extends Entity
     /**
     * Gets the deletedDateTime
     *
-    * @return \DateTime The deletedDateTime
+    * @return \DateTime|null The deletedDateTime
     */
     public function getDeletedDateTime()
     {
         if (array_key_exists("deletedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["deletedDateTime"], "\DateTime") || is_null($this->_propDict["deletedDateTime"])) {
                 return $this->_propDict["deletedDateTime"];
             } else {
                 $this->_propDict["deletedDateTime"] = new \DateTime($this->_propDict["deletedDateTime"]);

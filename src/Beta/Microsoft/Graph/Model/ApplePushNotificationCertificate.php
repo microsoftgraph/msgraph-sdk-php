@@ -28,7 +28,7 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the appleIdentifier
     * Apple Id of the account used to create the MDM push certificate.
     *
-    * @return string The appleIdentifier
+    * @return string|null The appleIdentifier
     */
     public function getAppleIdentifier()
     {
@@ -57,7 +57,7 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the certificate
     * Not yet documented
     *
-    * @return string The certificate
+    * @return string|null The certificate
     */
     public function getCertificate()
     {
@@ -86,7 +86,7 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the certificateSerialNumber
     * Certificate serial number. This property is read-only.
     *
-    * @return string The certificateSerialNumber
+    * @return string|null The certificateSerialNumber
     */
     public function getCertificateSerialNumber()
     {
@@ -115,7 +115,7 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the certificateUploadFailureReason
     * The reason the certificate upload failed.
     *
-    * @return string The certificateUploadFailureReason
+    * @return string|null The certificateUploadFailureReason
     */
     public function getCertificateUploadFailureReason()
     {
@@ -144,7 +144,7 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the certificateUploadStatus
     * The certificate upload status.
     *
-    * @return string The certificateUploadStatus
+    * @return string|null The certificateUploadStatus
     */
     public function getCertificateUploadStatus()
     {
@@ -173,12 +173,12 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the expirationDateTime
     * The expiration date and time for Apple push notification certificate.
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -206,12 +206,12 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the lastModifiedDateTime
     * Last modified date and time for Apple push notification certificate.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -239,7 +239,7 @@ class ApplePushNotificationCertificate extends Entity
     * Gets the topicIdentifier
     * Topic Id.
     *
-    * @return string The topicIdentifier
+    * @return string|null The topicIdentifier
     */
     public function getTopicIdentifier()
     {

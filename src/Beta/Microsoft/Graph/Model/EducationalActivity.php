@@ -28,12 +28,12 @@ class EducationalActivity extends ItemFacet
     * Gets the completionMonthYear
     * The month and year the user graduated or completed the activity.
     *
-    * @return \DateTime The completionMonthYear
+    * @return \DateTime|null The completionMonthYear
     */
     public function getCompletionMonthYear()
     {
         if (array_key_exists("completionMonthYear", $this->_propDict)) {
-            if (is_a($this->_propDict["completionMonthYear"], "\DateTime")) {
+            if (is_a($this->_propDict["completionMonthYear"], "\DateTime") || is_null($this->_propDict["completionMonthYear"])) {
                 return $this->_propDict["completionMonthYear"];
             } else {
                 $this->_propDict["completionMonthYear"] = new \DateTime($this->_propDict["completionMonthYear"]);
@@ -61,12 +61,12 @@ class EducationalActivity extends ItemFacet
     * Gets the endMonthYear
     * The month and year the user completed the educational activity referenced.
     *
-    * @return \DateTime The endMonthYear
+    * @return \DateTime|null The endMonthYear
     */
     public function getEndMonthYear()
     {
         if (array_key_exists("endMonthYear", $this->_propDict)) {
-            if (is_a($this->_propDict["endMonthYear"], "\DateTime")) {
+            if (is_a($this->_propDict["endMonthYear"], "\DateTime") || is_null($this->_propDict["endMonthYear"])) {
                 return $this->_propDict["endMonthYear"];
             } else {
                 $this->_propDict["endMonthYear"] = new \DateTime($this->_propDict["endMonthYear"]);
@@ -94,12 +94,12 @@ class EducationalActivity extends ItemFacet
     * Gets the institution
     * Contains details of the institution studied at.
     *
-    * @return InstitutionData The institution
+    * @return InstitutionData|null The institution
     */
     public function getInstitution()
     {
         if (array_key_exists("institution", $this->_propDict)) {
-            if (is_a($this->_propDict["institution"], "\Beta\Microsoft\Graph\Model\InstitutionData")) {
+            if (is_a($this->_propDict["institution"], "\Beta\Microsoft\Graph\Model\InstitutionData") || is_null($this->_propDict["institution"])) {
                 return $this->_propDict["institution"];
             } else {
                 $this->_propDict["institution"] = new InstitutionData($this->_propDict["institution"]);
@@ -127,12 +127,12 @@ class EducationalActivity extends ItemFacet
     * Gets the program
     * Contains extended information about the program or course.
     *
-    * @return EducationalActivityDetail The program
+    * @return EducationalActivityDetail|null The program
     */
     public function getProgram()
     {
         if (array_key_exists("program", $this->_propDict)) {
-            if (is_a($this->_propDict["program"], "\Beta\Microsoft\Graph\Model\EducationalActivityDetail")) {
+            if (is_a($this->_propDict["program"], "\Beta\Microsoft\Graph\Model\EducationalActivityDetail") || is_null($this->_propDict["program"])) {
                 return $this->_propDict["program"];
             } else {
                 $this->_propDict["program"] = new EducationalActivityDetail($this->_propDict["program"]);
@@ -160,12 +160,12 @@ class EducationalActivity extends ItemFacet
     * Gets the startMonthYear
     * The month and year the user commenced the activity referenced.
     *
-    * @return \DateTime The startMonthYear
+    * @return \DateTime|null The startMonthYear
     */
     public function getStartMonthYear()
     {
         if (array_key_exists("startMonthYear", $this->_propDict)) {
-            if (is_a($this->_propDict["startMonthYear"], "\DateTime")) {
+            if (is_a($this->_propDict["startMonthYear"], "\DateTime") || is_null($this->_propDict["startMonthYear"])) {
                 return $this->_propDict["startMonthYear"];
             } else {
                 $this->_propDict["startMonthYear"] = new \DateTime($this->_propDict["startMonthYear"]);

@@ -28,7 +28,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the activeDeviceCount
     * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
     *
-    * @return int The activeDeviceCount
+    * @return int|null The activeDeviceCount
     */
     public function getActiveDeviceCount()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the appCrashCount
     * The number of crashes for the app. Valid values -2147483648 to 2147483647
     *
-    * @return int The appCrashCount
+    * @return int|null The appCrashCount
     */
     public function getAppCrashCount()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the appDisplayName
     * The friendly name of the application.
     *
-    * @return string The appDisplayName
+    * @return string|null The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the appName
     * The name of the application.
     *
-    * @return string The appName
+    * @return string|null The appName
     */
     public function getAppName()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the appPublisher
     * The publisher of the application.
     *
-    * @return string The appPublisher
+    * @return string|null The appPublisher
     */
     public function getAppPublisher()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the appUsageDuration
     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
     *
-    * @return int The appUsageDuration
+    * @return int|null The appUsageDuration
     */
     public function getAppUsageDuration()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
     *
-    * @return int The meanTimeToFailureInMinutes
+    * @return int|null The meanTimeToFailureInMinutes
     */
     public function getMeanTimeToFailureInMinutes()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the osBuildNumber
     * The os build number of the application.
     *
-    * @return string The osBuildNumber
+    * @return string|null The osBuildNumber
     */
     public function getOsBuildNumber()
     {
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
     * Gets the osVersion
     * The os version of the application.
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {

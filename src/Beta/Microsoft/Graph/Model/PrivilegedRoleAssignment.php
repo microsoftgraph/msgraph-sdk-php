@@ -28,12 +28,12 @@ class PrivilegedRoleAssignment extends Entity
     * Gets the expirationDateTime
     * The UTC DateTime when the temporary privileged role assignment will be expired. For permanent role assignment, the value is null.
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -61,7 +61,7 @@ class PrivilegedRoleAssignment extends Entity
     * Gets the isElevated
     * true if the role assignment is activated. false if the role assignment is deactivated.
     *
-    * @return bool The isElevated
+    * @return bool|null The isElevated
     */
     public function getIsElevated()
     {
@@ -90,7 +90,7 @@ class PrivilegedRoleAssignment extends Entity
     * Gets the resultMessage
     * Result message set by the service.
     *
-    * @return string The resultMessage
+    * @return string|null The resultMessage
     */
     public function getResultMessage()
     {
@@ -119,7 +119,7 @@ class PrivilegedRoleAssignment extends Entity
     * Gets the roleId
     * Role identifier. In GUID string format.
     *
-    * @return string The roleId
+    * @return string|null The roleId
     */
     public function getRoleId()
     {
@@ -148,7 +148,7 @@ class PrivilegedRoleAssignment extends Entity
     * Gets the userId
     * User identifier. In GUID string format.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -177,12 +177,12 @@ class PrivilegedRoleAssignment extends Entity
     * Gets the roleInfo
     * Read-only. Nullable. The associated role information.
     *
-    * @return PrivilegedRole The roleInfo
+    * @return PrivilegedRole|null The roleInfo
     */
     public function getRoleInfo()
     {
         if (array_key_exists("roleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleInfo"], "\Beta\Microsoft\Graph\Model\PrivilegedRole")) {
+            if (is_a($this->_propDict["roleInfo"], "\Beta\Microsoft\Graph\Model\PrivilegedRole") || is_null($this->_propDict["roleInfo"])) {
                 return $this->_propDict["roleInfo"];
             } else {
                 $this->_propDict["roleInfo"] = new PrivilegedRole($this->_propDict["roleInfo"]);

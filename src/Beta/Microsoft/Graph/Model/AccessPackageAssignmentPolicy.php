@@ -28,7 +28,7 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the accessPackageId
     * ID of the access package.
     *
-    * @return string The accessPackageId
+    * @return string|null The accessPackageId
     */
     public function getAccessPackageId()
     {
@@ -57,12 +57,12 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the accessReviewSettings
     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
     *
-    * @return AssignmentReviewSettings The accessReviewSettings
+    * @return AssignmentReviewSettings|null The accessReviewSettings
     */
     public function getAccessReviewSettings()
     {
         if (array_key_exists("accessReviewSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["accessReviewSettings"], "\Beta\Microsoft\Graph\Model\AssignmentReviewSettings")) {
+            if (is_a($this->_propDict["accessReviewSettings"], "\Beta\Microsoft\Graph\Model\AssignmentReviewSettings") || is_null($this->_propDict["accessReviewSettings"])) {
                 return $this->_propDict["accessReviewSettings"];
             } else {
                 $this->_propDict["accessReviewSettings"] = new AssignmentReviewSettings($this->_propDict["accessReviewSettings"]);
@@ -90,7 +90,7 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the canExtend
     * Indicates whether a user can extend the access package assignment duration after approval.
     *
-    * @return bool The canExtend
+    * @return bool|null The canExtend
     */
     public function getCanExtend()
     {
@@ -119,7 +119,7 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the createdBy
     * Read-only.
     *
-    * @return string The createdBy
+    * @return string|null The createdBy
     */
     public function getCreatedBy()
     {
@@ -148,12 +148,12 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -181,7 +181,7 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the description
     * The description of the policy.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -210,7 +210,7 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the displayName
     * The display name of the policy.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -239,7 +239,7 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the durationInDays
     * The number of days in which assignments from this policy last until they are expired.
     *
-    * @return int The durationInDays
+    * @return int|null The durationInDays
     */
     public function getDurationInDays()
     {
@@ -268,12 +268,12 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the expirationDateTime
     * The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -301,7 +301,7 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the modifiedBy
     * Read-only.
     *
-    * @return string The modifiedBy
+    * @return string|null The modifiedBy
     */
     public function getModifiedBy()
     {
@@ -330,12 +330,12 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The modifiedDateTime
+    * @return \DateTime|null The modifiedDateTime
     */
     public function getModifiedDateTime()
     {
         if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -364,7 +364,7 @@ class AccessPackageAssignmentPolicy extends Entity
      * Gets the questions
     * Questions that are posed to the  requestor.
      *
-     * @return array The questions
+     * @return array|null The questions
      */
     public function getQuestions()
     {
@@ -385,7 +385,7 @@ class AccessPackageAssignmentPolicy extends Entity
     */
     public function setQuestions($val)
     {
-		$this->_propDict["questions"] = $val;
+        $this->_propDict["questions"] = $val;
         return $this;
     }
     
@@ -393,12 +393,12 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the requestApprovalSettings
     * Who must approve requests for access package in this policy.
     *
-    * @return ApprovalSettings The requestApprovalSettings
+    * @return ApprovalSettings|null The requestApprovalSettings
     */
     public function getRequestApprovalSettings()
     {
         if (array_key_exists("requestApprovalSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["requestApprovalSettings"], "\Beta\Microsoft\Graph\Model\ApprovalSettings")) {
+            if (is_a($this->_propDict["requestApprovalSettings"], "\Beta\Microsoft\Graph\Model\ApprovalSettings") || is_null($this->_propDict["requestApprovalSettings"])) {
                 return $this->_propDict["requestApprovalSettings"];
             } else {
                 $this->_propDict["requestApprovalSettings"] = new ApprovalSettings($this->_propDict["requestApprovalSettings"]);
@@ -426,12 +426,12 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the requestorSettings
     * Who can request this access package from this policy.
     *
-    * @return RequestorSettings The requestorSettings
+    * @return RequestorSettings|null The requestorSettings
     */
     public function getRequestorSettings()
     {
         if (array_key_exists("requestorSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["requestorSettings"], "\Beta\Microsoft\Graph\Model\RequestorSettings")) {
+            if (is_a($this->_propDict["requestorSettings"], "\Beta\Microsoft\Graph\Model\RequestorSettings") || is_null($this->_propDict["requestorSettings"])) {
                 return $this->_propDict["requestorSettings"];
             } else {
                 $this->_propDict["requestorSettings"] = new RequestorSettings($this->_propDict["requestorSettings"]);
@@ -459,12 +459,12 @@ class AccessPackageAssignmentPolicy extends Entity
     * Gets the accessPackage
     * The access package with this policy. Read-only. Nullable.
     *
-    * @return AccessPackage The accessPackage
+    * @return AccessPackage|null The accessPackage
     */
     public function getAccessPackage()
     {
         if (array_key_exists("accessPackage", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackage"], "\Beta\Microsoft\Graph\Model\AccessPackage")) {
+            if (is_a($this->_propDict["accessPackage"], "\Beta\Microsoft\Graph\Model\AccessPackage") || is_null($this->_propDict["accessPackage"])) {
                 return $this->_propDict["accessPackage"];
             } else {
                 $this->_propDict["accessPackage"] = new AccessPackage($this->_propDict["accessPackage"]);
@@ -491,12 +491,12 @@ class AccessPackageAssignmentPolicy extends Entity
     /**
     * Gets the accessPackageCatalog
     *
-    * @return AccessPackageCatalog The accessPackageCatalog
+    * @return AccessPackageCatalog|null The accessPackageCatalog
     */
     public function getAccessPackageCatalog()
     {
         if (array_key_exists("accessPackageCatalog", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageCatalog"], "\Beta\Microsoft\Graph\Model\AccessPackageCatalog")) {
+            if (is_a($this->_propDict["accessPackageCatalog"], "\Beta\Microsoft\Graph\Model\AccessPackageCatalog") || is_null($this->_propDict["accessPackageCatalog"])) {
                 return $this->_propDict["accessPackageCatalog"];
             } else {
                 $this->_propDict["accessPackageCatalog"] = new AccessPackageCatalog($this->_propDict["accessPackageCatalog"]);

@@ -36,7 +36,7 @@ class WindowsAppIdentifier extends MobileAppIdentifier
     * Gets the windowsAppId
     * The identifier for an app, as specified in the app store.
     *
-    * @return string The windowsAppId
+    * @return string|null The windowsAppId
     */
     public function getWindowsAppId()
     {

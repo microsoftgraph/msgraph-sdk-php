@@ -28,7 +28,7 @@ class ExternalItem extends \Beta\Microsoft\Graph\Model\Entity
      /** 
      * Gets the acl
      *
-     * @return array The acl
+     * @return array|null The acl
      */
     public function getAcl()
     {
@@ -48,19 +48,19 @@ class ExternalItem extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setAcl($val)
     {
-		$this->_propDict["acl"] = $val;
+        $this->_propDict["acl"] = $val;
         return $this;
     }
     
     /**
     * Gets the content
     *
-    * @return ExternalItemContent The content
+    * @return ExternalItemContent|null The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContent")) {
+            if (is_a($this->_propDict["content"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContent") || is_null($this->_propDict["content"])) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = new ExternalItemContent($this->_propDict["content"]);
@@ -86,12 +86,12 @@ class ExternalItem extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the externalItemProperties
     *
-    * @return Properties The externalItemProperties
+    * @return Properties|null The externalItemProperties
     */
     public function getExternalItemProperties()
     {
         if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Properties")) {
+            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Properties") || is_null($this->_propDict["properties"])) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new Properties($this->_propDict["properties"]);

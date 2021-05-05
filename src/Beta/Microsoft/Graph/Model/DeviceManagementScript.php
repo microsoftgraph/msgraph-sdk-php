@@ -28,12 +28,12 @@ class DeviceManagementScript extends Entity
     * Gets the createdDateTime
     * The date and time the device management script was created. This property is read-only.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceManagementScript extends Entity
     * Gets the description
     * Optional description for the device management script.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class DeviceManagementScript extends Entity
     * Gets the displayName
     * Name of the device management script.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,7 +119,7 @@ class DeviceManagementScript extends Entity
     * Gets the enforceSignatureCheck
     * Indicate whether the script signature needs be checked.
     *
-    * @return bool The enforceSignatureCheck
+    * @return bool|null The enforceSignatureCheck
     */
     public function getEnforceSignatureCheck()
     {
@@ -148,7 +148,7 @@ class DeviceManagementScript extends Entity
     * Gets the fileName
     * Script file name.
     *
-    * @return string The fileName
+    * @return string|null The fileName
     */
     public function getFileName()
     {
@@ -177,12 +177,12 @@ class DeviceManagementScript extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the device management script was last modified. This property is read-only.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -210,7 +210,7 @@ class DeviceManagementScript extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for this PowerShellScript instance.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -239,7 +239,7 @@ class DeviceManagementScript extends Entity
     * Gets the runAs32Bit
     * A value indicating whether the PowerShell script should run as 32-bit
     *
-    * @return bool The runAs32Bit
+    * @return bool|null The runAs32Bit
     */
     public function getRunAs32Bit()
     {
@@ -268,12 +268,12 @@ class DeviceManagementScript extends Entity
     * Gets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
     *
-    * @return RunAsAccountType The runAsAccount
+    * @return RunAsAccountType|null The runAsAccount
     */
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType")) {
+            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType") || is_null($this->_propDict["runAsAccount"])) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -301,12 +301,12 @@ class DeviceManagementScript extends Entity
     * Gets the scriptContent
     * The script content.
     *
-    * @return \GuzzleHttp\Psr7\Stream The scriptContent
+    * @return \GuzzleHttp\Psr7\Stream|null The scriptContent
     */
     public function getScriptContent()
     {
         if (array_key_exists("scriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["scriptContent"])) {
                 return $this->_propDict["scriptContent"];
             } else {
                 $this->_propDict["scriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["scriptContent"]);
@@ -335,7 +335,7 @@ class DeviceManagementScript extends Entity
      * Gets the assignments
     * The list of group assignments for the device management script.
      *
-     * @return array The assignments
+     * @return array|null The assignments
      */
     public function getAssignments()
     {
@@ -356,7 +356,7 @@ class DeviceManagementScript extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -365,7 +365,7 @@ class DeviceManagementScript extends Entity
      * Gets the deviceRunStates
     * List of run states for this script across all devices.
      *
-     * @return array The deviceRunStates
+     * @return array|null The deviceRunStates
      */
     public function getDeviceRunStates()
     {
@@ -386,7 +386,7 @@ class DeviceManagementScript extends Entity
     */
     public function setDeviceRunStates($val)
     {
-		$this->_propDict["deviceRunStates"] = $val;
+        $this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     
@@ -395,7 +395,7 @@ class DeviceManagementScript extends Entity
      * Gets the groupAssignments
     * The list of group assignments for the device management script.
      *
-     * @return array The groupAssignments
+     * @return array|null The groupAssignments
      */
     public function getGroupAssignments()
     {
@@ -416,7 +416,7 @@ class DeviceManagementScript extends Entity
     */
     public function setGroupAssignments($val)
     {
-		$this->_propDict["groupAssignments"] = $val;
+        $this->_propDict["groupAssignments"] = $val;
         return $this;
     }
     
@@ -424,12 +424,12 @@ class DeviceManagementScript extends Entity
     * Gets the runSummary
     * Run summary for device management script.
     *
-    * @return DeviceManagementScriptRunSummary The runSummary
+    * @return DeviceManagementScriptRunSummary|null The runSummary
     */
     public function getRunSummary()
     {
         if (array_key_exists("runSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementScriptRunSummary")) {
+            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementScriptRunSummary") || is_null($this->_propDict["runSummary"])) {
                 return $this->_propDict["runSummary"];
             } else {
                 $this->_propDict["runSummary"] = new DeviceManagementScriptRunSummary($this->_propDict["runSummary"]);
@@ -458,7 +458,7 @@ class DeviceManagementScript extends Entity
      * Gets the userRunStates
     * List of run states for this script across all users.
      *
-     * @return array The userRunStates
+     * @return array|null The userRunStates
      */
     public function getUserRunStates()
     {
@@ -479,7 +479,7 @@ class DeviceManagementScript extends Entity
     */
     public function setUserRunStates($val)
     {
-		$this->_propDict["userRunStates"] = $val;
+        $this->_propDict["userRunStates"] = $val;
         return $this;
     }
     
