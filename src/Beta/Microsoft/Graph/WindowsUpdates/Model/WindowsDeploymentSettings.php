@@ -26,6 +26,7 @@ class WindowsDeploymentSettings extends DeploymentSettings
 
     /**
     * Gets the userExperience
+    * Settings governing the user's update experience on a device.
     *
     * @return UserExperienceSettings The userExperience
     */
@@ -44,6 +45,7 @@ class WindowsDeploymentSettings extends DeploymentSettings
 
     /**
     * Sets the userExperience
+    * Settings governing the user's update experience on a device.
     *
     * @param UserExperienceSettings $val The value to assign to the userExperience
     *

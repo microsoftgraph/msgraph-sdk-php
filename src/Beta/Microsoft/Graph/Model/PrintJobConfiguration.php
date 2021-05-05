@@ -328,7 +328,7 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the mediaSize
-    * The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+    * The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
     *
     * @return string The mediaSize
     */
@@ -343,7 +343,7 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the mediaSize
-    * The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+    * The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
     *
     * @param string $val The value of the mediaSize
     *
@@ -356,7 +356,7 @@ class PrintJobConfiguration extends Entity
     }
     /**
     * Gets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
+    * The default media (such as paper) type to print the document on.
     *
     * @return string The mediaType
     */
@@ -371,7 +371,7 @@ class PrintJobConfiguration extends Entity
 
     /**
     * Sets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
+    * The default media (such as paper) type to print the document on.
     *
     * @param string $val The value of the mediaType
     *

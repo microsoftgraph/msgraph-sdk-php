@@ -3996,6 +3996,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the nfcBlocked
+    * Disable NFC to prevent devices from pairing with other NFC-enabled devices. Available for iOS/iPadOS devices running 14.2 and later.
+    *
+    * @return bool The nfcBlocked
+    */
+    public function getNfcBlocked()
+    {
+        if (array_key_exists("nfcBlocked", $this->_propDict)) {
+            return $this->_propDict["nfcBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the nfcBlocked
+    * Disable NFC to prevent devices from pairing with other NFC-enabled devices. Available for iOS/iPadOS devices running 14.2 and later.
+    *
+    * @param bool $val The nfcBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setNfcBlocked($val)
+    {
+        $this->_propDict["nfcBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the notificationsBlockSettingsModification
     * Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
     *

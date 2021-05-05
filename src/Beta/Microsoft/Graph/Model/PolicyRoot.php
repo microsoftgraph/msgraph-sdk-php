@@ -370,6 +370,37 @@ class PolicyRoot implements \JsonSerializable
     }
     
     /**
+    * Gets the accessReviewPolicy
+    *
+    * @return AccessReviewPolicy The accessReviewPolicy
+    */
+    public function getAccessReviewPolicy()
+    {
+        if (array_key_exists("accessReviewPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["accessReviewPolicy"], "\Beta\Microsoft\Graph\Model\AccessReviewPolicy")) {
+                return $this->_propDict["accessReviewPolicy"];
+            } else {
+                $this->_propDict["accessReviewPolicy"] = new AccessReviewPolicy($this->_propDict["accessReviewPolicy"]);
+                return $this->_propDict["accessReviewPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the accessReviewPolicy
+    *
+    * @param AccessReviewPolicy $val The accessReviewPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setAccessReviewPolicy($val)
+    {
+        $this->_propDict["accessReviewPolicy"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the adminConsentRequestPolicy
     *
     * @return AdminConsentRequestPolicy The adminConsentRequestPolicy

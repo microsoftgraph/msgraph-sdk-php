@@ -384,6 +384,36 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the referredSettingInformationList
+    * List of referred setting information.
+     *
+     * @return array The referredSettingInformationList
+     */
+    public function getReferredSettingInformationList()
+    {
+        if (array_key_exists("referredSettingInformationList", $this->_propDict)) {
+           return $this->_propDict["referredSettingInformationList"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the referredSettingInformationList
+    * List of referred setting information.
+    *
+    * @param DeviceManagementConfigurationReferredSettingInformation $val The referredSettingInformationList
+    *
+    * @return DeviceManagementConfigurationSettingDefinition
+    */
+    public function setReferredSettingInformationList($val)
+    {
+		$this->_propDict["referredSettingInformationList"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the rootDefinitionId
     * Root setting definition if the setting is a child setting.

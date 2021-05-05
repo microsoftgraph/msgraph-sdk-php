@@ -26,6 +26,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the catalog
+    * Catalog of content that can be approved for deployment by the deployment service. Read-only.
     *
     * @return Catalog The catalog
     */
@@ -44,6 +45,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the catalog
+    * Catalog of content that can be approved for deployment by the deployment service. Read-only.
     *
     * @param Catalog $val The catalog
     *
@@ -58,6 +60,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the deployments
+    * Deployments created using the deployment service. Read-only.
      *
      * @return array The deployments
      */
@@ -72,6 +75,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the deployments
+    * Deployments created using the deployment service. Read-only.
     *
     * @param Deployment $val The deployments
     *
@@ -86,6 +90,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the updatableAssets
+    * Assets registered with the deployment service that can receive updates. Read-only.
      *
      * @return array The updatableAssets
      */
@@ -100,6 +105,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the updatableAssets
+    * Assets registered with the deployment service that can receive updates. Read-only.
     *
     * @param UpdatableAsset $val The updatableAssets
     *

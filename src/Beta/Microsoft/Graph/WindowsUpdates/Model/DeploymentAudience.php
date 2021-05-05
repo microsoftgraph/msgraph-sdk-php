@@ -27,6 +27,7 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the exclusions
+    * Specifies the assets to exclude from the audience.
      *
      * @return array The exclusions
      */
@@ -41,6 +42,7 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the exclusions
+    * Specifies the assets to exclude from the audience.
     *
     * @param UpdatableAsset $val The exclusions
     *
@@ -55,6 +57,7 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the members
+    * Specifies the assets to include in the audience.
      *
      * @return array The members
      */
@@ -69,6 +72,7 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the members
+    * Specifies the assets to include in the audience.
     *
     * @param UpdatableAsset $val The members
     *

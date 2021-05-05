@@ -26,6 +26,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Gets the attendees
+    * Information of the meeting attendees.
     *
     * @return MeetingParticipantInfo The attendees
     */
@@ -44,6 +45,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Sets the attendees
+    * Information of the meeting attendees.
     *
     * @param MeetingParticipantInfo $val The value to assign to the attendees
     *
@@ -57,7 +59,6 @@ class MeetingParticipants extends Entity
 
     /**
     * Gets the contributors
-    * For broadcast meeting only.
     *
     * @return MeetingParticipantInfo The contributors
     */
@@ -76,7 +77,6 @@ class MeetingParticipants extends Entity
 
     /**
     * Sets the contributors
-    * For broadcast meeting only.
     *
     * @param MeetingParticipantInfo $val The value to assign to the contributors
     *
@@ -90,6 +90,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Gets the organizer
+    * Information of the meeting organizer.
     *
     * @return MeetingParticipantInfo The organizer
     */
@@ -108,6 +109,7 @@ class MeetingParticipants extends Entity
 
     /**
     * Sets the organizer
+    * Information of the meeting organizer.
     *
     * @param MeetingParticipantInfo $val The value to assign to the organizer
     *
@@ -121,7 +123,6 @@ class MeetingParticipants extends Entity
 
     /**
     * Gets the producers
-    * For broadcast meeting only.
     *
     * @return MeetingParticipantInfo The producers
     */
@@ -140,7 +141,6 @@ class MeetingParticipants extends Entity
 
     /**
     * Sets the producers
-    * For broadcast meeting only.
     *
     * @param MeetingParticipantInfo $val The value to assign to the producers
     *

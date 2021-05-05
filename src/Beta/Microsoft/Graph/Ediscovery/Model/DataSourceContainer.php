@@ -26,6 +26,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdDateTime
+    * Created date and time of the dataSourceContainer entity.
     *
     * @return \DateTime The createdDateTime
     */
@@ -44,6 +45,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * Created date and time of the dataSourceContainer entity.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * Display name of the dataSourceContainer entity.
     *
     * @return string The displayName
     */
@@ -71,6 +74,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * Display name of the dataSourceContainer entity.
     *
     * @param string $val The displayName
     *
@@ -84,6 +88,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Last modified date and time of the dataSourceContainer.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -102,6 +107,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Last modified date and time of the dataSourceContainer.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -115,6 +121,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the releasedDateTime
+    * Date and time that the dataSourceContainer was released from the case.
     *
     * @return \DateTime The releasedDateTime
     */
@@ -133,6 +140,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the releasedDateTime
+    * Date and time that the dataSourceContainer was released from the case.
     *
     * @param \DateTime $val The releasedDateTime
     *
@@ -146,6 +154,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the status
+    * Latest status of the dataSourceContainer. Possible values are: Active, Released.
     *
     * @return DataSourceContainerStatus The status
     */
@@ -164,6 +173,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the status
+    * Latest status of the dataSourceContainer. Possible values are: Active, Released.
     *
     * @param DataSourceContainerStatus $val The status
     *

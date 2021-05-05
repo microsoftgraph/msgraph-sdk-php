@@ -25,6 +25,7 @@ class UserExperienceSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the daysUntilForcedReboot
+    * Specifies the number of days after an update is installed, during which the user of the device can control when the device restarts.
     *
     * @return int The daysUntilForcedReboot
     */
@@ -39,6 +40,7 @@ class UserExperienceSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the daysUntilForcedReboot
+    * Specifies the number of days after an update is installed, during which the user of the device can control when the device restarts.
     *
     * @param int $val The value of the daysUntilForcedReboot
     *

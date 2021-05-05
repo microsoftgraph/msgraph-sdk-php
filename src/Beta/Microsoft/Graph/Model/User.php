@@ -322,7 +322,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The created date of the user object.
+    * The created date of the user object. Supports $filter with the eq, lt, and ge operators.
     *
     * @return \DateTime The createdDateTime
     */
@@ -341,7 +341,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The created date of the user object.
+    * The created date of the user object. Supports $filter with the eq, lt, and ge operators.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -948,7 +948,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'.NOTE: While this property can contain accent characters, using them can cause access issues with other Microsoft applications for the user. Returned by default. Supports $filter and endsWith.
     *
     * @return string The mail
     */
@@ -963,7 +963,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
+    * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'.NOTE: While this property can contain accent characters, using them can cause access issues with other Microsoft applications for the user. Returned by default. Supports $filter and endsWith.
     *
     * @param string $val The mail
     *
@@ -1363,7 +1363,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the otherMails
-    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user.  Supports $filter.
     *
     * @return string The otherMails
     */
@@ -1378,7 +1378,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the otherMails
-    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
+    * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user.  Supports $filter.
     *
     * @param string $val The otherMails
     *
@@ -1811,7 +1811,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user. Returned by default. Supports $filter, $orderby, and endsWith.
     *
     * @return string The userPrincipalName
     */
@@ -1826,7 +1826,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userPrincipalName
-    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
+    * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user. Returned by default. Supports $filter, $orderby, and endsWith.
     *
     * @param string $val The userPrincipalName
     *

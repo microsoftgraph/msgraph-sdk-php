@@ -223,6 +223,39 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     }
     
     /**
+    * Gets the simultaneousMultiThreading
+    * Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
+    *
+    * @return Enablement The simultaneousMultiThreading
+    */
+    public function getSimultaneousMultiThreading()
+    {
+        if (array_key_exists("simultaneousMultiThreading", $this->_propDict)) {
+            if (is_a($this->_propDict["simultaneousMultiThreading"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["simultaneousMultiThreading"];
+            } else {
+                $this->_propDict["simultaneousMultiThreading"] = new Enablement($this->_propDict["simultaneousMultiThreading"]);
+                return $this->_propDict["simultaneousMultiThreading"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the simultaneousMultiThreading
+    * Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
+    *
+    * @param Enablement $val The simultaneousMultiThreading
+    *
+    * @return Windows10DeviceFirmwareConfigurationInterface
+    */
+    public function setSimultaneousMultiThreading($val)
+    {
+        $this->_propDict["simultaneousMultiThreading"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the virtualizationOfCpuAndIO
     * Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
     *
@@ -252,6 +285,39 @@ class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration
     public function setVirtualizationOfCpuAndIO($val)
     {
         $this->_propDict["virtualizationOfCpuAndIO"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsPlatformBinaryTable
+    * Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
+    *
+    * @return Enablement The windowsPlatformBinaryTable
+    */
+    public function getWindowsPlatformBinaryTable()
+    {
+        if (array_key_exists("windowsPlatformBinaryTable", $this->_propDict)) {
+            if (is_a($this->_propDict["windowsPlatformBinaryTable"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+                return $this->_propDict["windowsPlatformBinaryTable"];
+            } else {
+                $this->_propDict["windowsPlatformBinaryTable"] = new Enablement($this->_propDict["windowsPlatformBinaryTable"]);
+                return $this->_propDict["windowsPlatformBinaryTable"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the windowsPlatformBinaryTable
+    * Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
+    *
+    * @param Enablement $val The windowsPlatformBinaryTable
+    *
+    * @return Windows10DeviceFirmwareConfigurationInterface
+    */
+    public function setWindowsPlatformBinaryTable($val)
+    {
+        $this->_propDict["windowsPlatformBinaryTable"] = $val;
         return $this;
     }
     

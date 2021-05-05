@@ -26,6 +26,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the reasons
+    * Specifies the reasons the deployment has its state value. Read-only.
     *
     * @return DeploymentStateReason The reasons
     */
@@ -44,6 +45,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the reasons
+    * Specifies the reasons the deployment has its state value. Read-only.
     *
     * @param DeploymentStateReason $val The value to assign to the reasons
     *
@@ -57,6 +59,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the requestedValue
+    * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused.
     *
     * @return RequestedDeploymentStateValue The requestedValue
     */
@@ -75,6 +78,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the requestedValue
+    * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused.
     *
     * @param RequestedDeploymentStateValue $val The value to assign to the requestedValue
     *
@@ -88,6 +92,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the value
+    * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused. Read-only.
     *
     * @return DeploymentStateValue The value
     */
@@ -106,6 +111,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
+    * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused. Read-only.
     *
     * @param DeploymentStateValue $val The value to assign to the value
     *
