@@ -121,7 +121,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the subscriptionState
-    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @return DeviceManagementSubscriptionState The subscriptionState
     */
@@ -140,7 +140,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the subscriptionState
-    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @param DeviceManagementSubscriptionState $val The subscriptionState
     *
@@ -737,6 +737,66 @@ class DeviceManagement extends Entity
     public function setManagedDevices($val)
     {
 		$this->_propDict["managedDevices"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the importedWindowsAutopilotDeviceIdentities
+    * Collection of imported Windows autopilot devices.
+     *
+     * @return array The importedWindowsAutopilotDeviceIdentities
+     */
+    public function getImportedWindowsAutopilotDeviceIdentities()
+    {
+        if (array_key_exists("importedWindowsAutopilotDeviceIdentities", $this->_propDict)) {
+           return $this->_propDict["importedWindowsAutopilotDeviceIdentities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the importedWindowsAutopilotDeviceIdentities
+    * Collection of imported Windows autopilot devices.
+    *
+    * @param ImportedWindowsAutopilotDeviceIdentity $val The importedWindowsAutopilotDeviceIdentities
+    *
+    * @return DeviceManagement
+    */
+    public function setImportedWindowsAutopilotDeviceIdentities($val)
+    {
+		$this->_propDict["importedWindowsAutopilotDeviceIdentities"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the windowsAutopilotDeviceIdentities
+    * The Windows autopilot device identities contained collection.
+     *
+     * @return array The windowsAutopilotDeviceIdentities
+     */
+    public function getWindowsAutopilotDeviceIdentities()
+    {
+        if (array_key_exists("windowsAutopilotDeviceIdentities", $this->_propDict)) {
+           return $this->_propDict["windowsAutopilotDeviceIdentities"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsAutopilotDeviceIdentities
+    * The Windows autopilot device identities contained collection.
+    *
+    * @param WindowsAutopilotDeviceIdentity $val The windowsAutopilotDeviceIdentities
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsAutopilotDeviceIdentities($val)
+    {
+		$this->_propDict["windowsAutopilotDeviceIdentities"] = $val;
         return $this;
     }
     

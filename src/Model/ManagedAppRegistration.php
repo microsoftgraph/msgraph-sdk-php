@@ -388,7 +388,7 @@ class ManagedAppRegistration extends Entity
 
      /** 
      * Gets the appliedPolicies
-    * Zero or more policys already applied on the registered app when it last synchronized with managment service.
+    * Zero or more policys already applied on the registered app when it last synchronized with management service.
      *
      * @return array The appliedPolicies
      */
@@ -403,7 +403,7 @@ class ManagedAppRegistration extends Entity
     
     /** 
     * Sets the appliedPolicies
-    * Zero or more policys already applied on the registered app when it last synchronized with managment service.
+    * Zero or more policys already applied on the registered app when it last synchronized with management service.
     *
     * @param ManagedAppPolicy $val The appliedPolicies
     *
