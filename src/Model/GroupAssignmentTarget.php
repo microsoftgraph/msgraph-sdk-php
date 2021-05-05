@@ -36,7 +36,7 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget
     * Gets the groupId
     * The group Id that is the target of the assignment.
     *
-    * @return string The groupId
+    * @return string|null The groupId
     */
     public function getGroupId()
     {

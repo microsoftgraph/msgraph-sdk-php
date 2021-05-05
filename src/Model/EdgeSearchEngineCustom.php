@@ -36,7 +36,7 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase
     * Gets the edgeSearchEngineOpenSearchXmlUrl
     * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
     *
-    * @return string The edgeSearchEngineOpenSearchXmlUrl
+    * @return string|null The edgeSearchEngineOpenSearchXmlUrl
     */
     public function getEdgeSearchEngineOpenSearchXmlUrl()
     {

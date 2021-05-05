@@ -36,7 +36,7 @@ class IosHomeScreenApp extends IosHomeScreenItem
     * Gets the bundleID
     * BundleID of app
     *
-    * @return string The bundleID
+    * @return string|null The bundleID
     */
     public function getBundleID()
     {

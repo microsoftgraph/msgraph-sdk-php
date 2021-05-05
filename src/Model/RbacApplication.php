@@ -28,7 +28,7 @@ class RbacApplication extends Entity
      /** 
      * Gets the roleAssignments
      *
-     * @return array The roleAssignments
+     * @return array|null The roleAssignments
      */
     public function getRoleAssignments()
     {
@@ -48,7 +48,7 @@ class RbacApplication extends Entity
     */
     public function setRoleAssignments($val)
     {
-		$this->_propDict["roleAssignments"] = $val;
+        $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
     
@@ -56,7 +56,7 @@ class RbacApplication extends Entity
      /** 
      * Gets the roleDefinitions
      *
-     * @return array The roleDefinitions
+     * @return array|null The roleDefinitions
      */
     public function getRoleDefinitions()
     {
@@ -76,7 +76,7 @@ class RbacApplication extends Entity
     */
     public function setRoleDefinitions($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+        $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
     

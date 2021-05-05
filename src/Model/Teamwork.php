@@ -28,7 +28,7 @@ class Teamwork extends Entity
      /** 
      * Gets the workforceIntegrations
      *
-     * @return array The workforceIntegrations
+     * @return array|null The workforceIntegrations
      */
     public function getWorkforceIntegrations()
     {
@@ -48,7 +48,7 @@ class Teamwork extends Entity
     */
     public function setWorkforceIntegrations($val)
     {
-		$this->_propDict["workforceIntegrations"] = $val;
+        $this->_propDict["workforceIntegrations"] = $val;
         return $this;
     }
     

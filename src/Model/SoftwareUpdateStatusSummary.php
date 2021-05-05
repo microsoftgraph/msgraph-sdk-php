@@ -28,7 +28,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the compliantDeviceCount
     * Number of compliant devices.
     *
-    * @return int The compliantDeviceCount
+    * @return int|null The compliantDeviceCount
     */
     public function getCompliantDeviceCount()
     {
@@ -57,7 +57,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the compliantUserCount
     * Number of compliant users.
     *
-    * @return int The compliantUserCount
+    * @return int|null The compliantUserCount
     */
     public function getCompliantUserCount()
     {
@@ -86,7 +86,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the conflictDeviceCount
     * Number of conflict devices.
     *
-    * @return int The conflictDeviceCount
+    * @return int|null The conflictDeviceCount
     */
     public function getConflictDeviceCount()
     {
@@ -115,7 +115,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the conflictUserCount
     * Number of conflict users.
     *
-    * @return int The conflictUserCount
+    * @return int|null The conflictUserCount
     */
     public function getConflictUserCount()
     {
@@ -144,7 +144,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the displayName
     * The name of the policy.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -173,7 +173,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the errorDeviceCount
     * Number of devices had error.
     *
-    * @return int The errorDeviceCount
+    * @return int|null The errorDeviceCount
     */
     public function getErrorDeviceCount()
     {
@@ -202,7 +202,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the errorUserCount
     * Number of users had error.
     *
-    * @return int The errorUserCount
+    * @return int|null The errorUserCount
     */
     public function getErrorUserCount()
     {
@@ -231,7 +231,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the nonCompliantDeviceCount
     * Number of non compliant devices.
     *
-    * @return int The nonCompliantDeviceCount
+    * @return int|null The nonCompliantDeviceCount
     */
     public function getNonCompliantDeviceCount()
     {
@@ -260,7 +260,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the nonCompliantUserCount
     * Number of non compliant users.
     *
-    * @return int The nonCompliantUserCount
+    * @return int|null The nonCompliantUserCount
     */
     public function getNonCompliantUserCount()
     {
@@ -289,7 +289,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the notApplicableDeviceCount
     * Number of not applicable devices.
     *
-    * @return int The notApplicableDeviceCount
+    * @return int|null The notApplicableDeviceCount
     */
     public function getNotApplicableDeviceCount()
     {
@@ -318,7 +318,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the notApplicableUserCount
     * Number of not applicable users.
     *
-    * @return int The notApplicableUserCount
+    * @return int|null The notApplicableUserCount
     */
     public function getNotApplicableUserCount()
     {
@@ -347,7 +347,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the remediatedDeviceCount
     * Number of remediated devices.
     *
-    * @return int The remediatedDeviceCount
+    * @return int|null The remediatedDeviceCount
     */
     public function getRemediatedDeviceCount()
     {
@@ -376,7 +376,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the remediatedUserCount
     * Number of remediated users.
     *
-    * @return int The remediatedUserCount
+    * @return int|null The remediatedUserCount
     */
     public function getRemediatedUserCount()
     {
@@ -405,7 +405,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the unknownDeviceCount
     * Number of unknown devices.
     *
-    * @return int The unknownDeviceCount
+    * @return int|null The unknownDeviceCount
     */
     public function getUnknownDeviceCount()
     {
@@ -434,7 +434,7 @@ class SoftwareUpdateStatusSummary extends Entity
     * Gets the unknownUserCount
     * Number of unknown users.
     *
-    * @return int The unknownUserCount
+    * @return int|null The unknownUserCount
     */
     public function getUnknownUserCount()
     {
