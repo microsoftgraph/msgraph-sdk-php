@@ -566,6 +566,35 @@ class EducationAssignment extends Entity
     }
     
     /**
+    * Gets the resourcesFolderUrl
+    * Folder URL where all the file resources for this assignment are stored.
+    *
+    * @return string The resourcesFolderUrl
+    */
+    public function getResourcesFolderUrl()
+    {
+        if (array_key_exists("resourcesFolderUrl", $this->_propDict)) {
+            return $this->_propDict["resourcesFolderUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the resourcesFolderUrl
+    * Folder URL where all the file resources for this assignment are stored.
+    *
+    * @param string $val The resourcesFolderUrl
+    *
+    * @return EducationAssignment
+    */
+    public function setResourcesFolderUrl($val)
+    {
+        $this->_propDict["resourcesFolderUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
     * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
     *
@@ -595,6 +624,35 @@ class EducationAssignment extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the webUrl
+    * The deep link URL for the given assignment.
+    *
+    * @return string The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webUrl
+    * The deep link URL for the given assignment.
+    *
+    * @param string $val The webUrl
+    *
+    * @return EducationAssignment
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
         return $this;
     }
     

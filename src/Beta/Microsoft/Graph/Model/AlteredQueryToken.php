@@ -25,6 +25,7 @@ class AlteredQueryToken extends Entity
 {
     /**
     * Gets the length
+    * Defines the length of a changed segment.
     *
     * @return int The length
     */
@@ -39,6 +40,7 @@ class AlteredQueryToken extends Entity
 
     /**
     * Sets the length
+    * Defines the length of a changed segment.
     *
     * @param int $val The value of the length
     *
@@ -51,6 +53,7 @@ class AlteredQueryToken extends Entity
     }
     /**
     * Gets the offset
+    * Defines the offset of a changed segment.
     *
     * @return int The offset
     */
@@ -65,6 +68,7 @@ class AlteredQueryToken extends Entity
 
     /**
     * Sets the offset
+    * Defines the offset of a changed segment.
     *
     * @param int $val The value of the offset
     *
@@ -77,6 +81,7 @@ class AlteredQueryToken extends Entity
     }
     /**
     * Gets the suggestion
+    * Represents the corrected segment string.
     *
     * @return string The suggestion
     */
@@ -91,6 +96,7 @@ class AlteredQueryToken extends Entity
 
     /**
     * Sets the suggestion
+    * Represents the corrected segment string.
     *
     * @param string $val The value of the suggestion
     *

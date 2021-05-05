@@ -1460,6 +1460,66 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the reusablePolicySettings
+    * List of all reusable settings that can be referred in a policy
+     *
+     * @return array The reusablePolicySettings
+     */
+    public function getReusablePolicySettings()
+    {
+        if (array_key_exists("reusablePolicySettings", $this->_propDict)) {
+           return $this->_propDict["reusablePolicySettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the reusablePolicySettings
+    * List of all reusable settings that can be referred in a policy
+    *
+    * @param DeviceManagementReusablePolicySetting $val The reusablePolicySettings
+    *
+    * @return DeviceManagement
+    */
+    public function setReusablePolicySettings($val)
+    {
+		$this->_propDict["reusablePolicySettings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the reusableSettings
+    * List of all reusable settings
+     *
+     * @return array The reusableSettings
+     */
+    public function getReusableSettings()
+    {
+        if (array_key_exists("reusableSettings", $this->_propDict)) {
+           return $this->_propDict["reusableSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the reusableSettings
+    * List of all reusable settings
+    *
+    * @param DeviceManagementConfigurationSettingDefinition $val The reusableSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setReusableSettings($val)
+    {
+		$this->_propDict["reusableSettings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the complianceManagementPartners
     * The list of Compliance Management Partners configured by the tenant.
      *
@@ -2645,6 +2705,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the userExperienceAnalyticsDeviceScores
+    * User experience analytics device scores
+     *
+     * @return array The userExperienceAnalyticsDeviceScores
+     */
+    public function getUserExperienceAnalyticsDeviceScores()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceScores", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceScores"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsDeviceScores
+    * User experience analytics device scores
+    *
+    * @param UserExperienceAnalyticsDeviceScores $val The userExperienceAnalyticsDeviceScores
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceScores($val)
+    {
+		$this->_propDict["userExperienceAnalyticsDeviceScores"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userExperienceAnalyticsDeviceStartupHistory
     * User experience analytics device Startup History
      *
@@ -3006,6 +3096,36 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsScoreHistory($val)
     {
 		$this->_propDict["userExperienceAnalyticsScoreHistory"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsWorkFromAnywhereMetrics
+    * User experience analytics work from anywhere metrics.
+     *
+     * @return array The userExperienceAnalyticsWorkFromAnywhereMetrics
+     */
+    public function getUserExperienceAnalyticsWorkFromAnywhereMetrics()
+    {
+        if (array_key_exists("userExperienceAnalyticsWorkFromAnywhereMetrics", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereMetrics"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsWorkFromAnywhereMetrics
+    * User experience analytics work from anywhere metrics.
+    *
+    * @param UserExperienceAnalyticsWorkFromAnywhereMetric $val The userExperienceAnalyticsWorkFromAnywhereMetrics
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereMetrics($val)
+    {
+		$this->_propDict["userExperienceAnalyticsWorkFromAnywhereMetrics"] = $val;
         return $this;
     }
     

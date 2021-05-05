@@ -35,6 +35,7 @@ class AzureADDeviceRegistrationError extends UpdatableAssetError
 
     /**
     * Gets the reason
+    * The reason why the registration encountered an error. Possible values are: invalidGlobalDeviceId, invalidAzureADDeviceId, missingTrustType, invalidAzureADJoin.
     *
     * @return AzureADDeviceRegistrationErrorReason The reason
     */
@@ -53,6 +54,7 @@ class AzureADDeviceRegistrationError extends UpdatableAssetError
 
     /**
     * Sets the reason
+    * The reason why the registration encountered an error. Possible values are: invalidGlobalDeviceId, invalidAzureADDeviceId, missingTrustType, invalidAzureADJoin.
     *
     * @param AzureADDeviceRegistrationErrorReason $val The value to assign to the reason
     *

@@ -26,6 +26,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the content
+    * Specifies what content to deploy. Cannot be changed. Returned by default.
     *
     * @return DeployableContent The content
     */
@@ -44,6 +45,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the content
+    * Specifies what content to deploy. Cannot be changed. Returned by default.
     *
     * @param DeployableContent $val The content
     *
@@ -57,6 +59,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time the deployment was created. Returned by default. Read-only.
     *
     * @return \DateTime The createdDateTime
     */
@@ -75,6 +78,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time the deployment was created. Returned by default. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time the deployment was last modified. Returned by default. Read-only.
     *
     * @return \DateTime The lastModifiedDateTime
     */
@@ -106,6 +111,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time the deployment was last modified. Returned by default. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -119,6 +125,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the settings
+    * Settings specified on the specific deployment governing how to deploy content. Returned by default.
     *
     * @return DeploymentSettings The settings
     */
@@ -137,6 +144,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the settings
+    * Settings specified on the specific deployment governing how to deploy content. Returned by default.
     *
     * @param DeploymentSettings $val The settings
     *
@@ -150,6 +158,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the state
+    * Execution status of the deployment. Returned by default.
     *
     * @return DeploymentState The state
     */
@@ -168,6 +177,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the state
+    * Execution status of the deployment. Returned by default.
     *
     * @param DeploymentState $val The state
     *
@@ -181,6 +191,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the audience
+    * Specifies the audience to which content is deployed.
     *
     * @return DeploymentAudience The audience
     */
@@ -199,6 +210,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the audience
+    * Specifies the audience to which content is deployed.
     *
     * @param DeploymentAudience $val The audience
     *

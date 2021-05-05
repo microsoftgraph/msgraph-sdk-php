@@ -349,7 +349,7 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the mediaSize
-    * The default media size to use. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+    * The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
     *
     * @return string The mediaSize
     */
@@ -364,7 +364,7 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the mediaSize
-    * The default media size to use. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+    * The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
     *
     * @param string $val The value of the mediaSize
     *
@@ -377,7 +377,7 @@ class PrinterDefaults extends Entity
     }
     /**
     * Gets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
+    * The default media (such as paper) type to print the document on.
     *
     * @return string The mediaType
     */
@@ -392,7 +392,7 @@ class PrinterDefaults extends Entity
 
     /**
     * Sets the mediaType
-    * The default media (such as paper) type to print the document on. Valid values are described in the following table.
+    * The default media (such as paper) type to print the document on.
     *
     * @param string $val The value of the mediaType
     *

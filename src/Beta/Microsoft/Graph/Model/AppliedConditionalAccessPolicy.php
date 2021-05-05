@@ -173,6 +173,37 @@ class AppliedConditionalAccessPolicy extends Entity
         $this->_propDict["enforcedSessionControls"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the excludeRulesSatisfied
+    *
+    * @return ConditionalAccessRuleSatisfied The excludeRulesSatisfied
+    */
+    public function getExcludeRulesSatisfied()
+    {
+        if (array_key_exists("excludeRulesSatisfied", $this->_propDict)) {
+            if (is_a($this->_propDict["excludeRulesSatisfied"], "\Beta\Microsoft\Graph\Model\ConditionalAccessRuleSatisfied")) {
+                return $this->_propDict["excludeRulesSatisfied"];
+            } else {
+                $this->_propDict["excludeRulesSatisfied"] = new ConditionalAccessRuleSatisfied($this->_propDict["excludeRulesSatisfied"]);
+                return $this->_propDict["excludeRulesSatisfied"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the excludeRulesSatisfied
+    *
+    * @param ConditionalAccessRuleSatisfied $val The value to assign to the excludeRulesSatisfied
+    *
+    * @return AppliedConditionalAccessPolicy The AppliedConditionalAccessPolicy
+    */
+    public function setExcludeRulesSatisfied($val)
+    {
+        $this->_propDict["excludeRulesSatisfied"] = $val;
+         return $this;
+    }
     /**
     * Gets the id
     * An identifier of the conditional access policy.
@@ -200,6 +231,37 @@ class AppliedConditionalAccessPolicy extends Entity
     {
         $this->_propDict["id"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the includeRulesSatisfied
+    *
+    * @return ConditionalAccessRuleSatisfied The includeRulesSatisfied
+    */
+    public function getIncludeRulesSatisfied()
+    {
+        if (array_key_exists("includeRulesSatisfied", $this->_propDict)) {
+            if (is_a($this->_propDict["includeRulesSatisfied"], "\Beta\Microsoft\Graph\Model\ConditionalAccessRuleSatisfied")) {
+                return $this->_propDict["includeRulesSatisfied"];
+            } else {
+                $this->_propDict["includeRulesSatisfied"] = new ConditionalAccessRuleSatisfied($this->_propDict["includeRulesSatisfied"]);
+                return $this->_propDict["includeRulesSatisfied"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the includeRulesSatisfied
+    *
+    * @param ConditionalAccessRuleSatisfied $val The value to assign to the includeRulesSatisfied
+    *
+    * @return AppliedConditionalAccessPolicy The AppliedConditionalAccessPolicy
+    */
+    public function setIncludeRulesSatisfied($val)
+    {
+        $this->_propDict["includeRulesSatisfied"] = $val;
+         return $this;
     }
 
     /**

@@ -330,6 +330,39 @@ class DeviceManagementConfigurationPolicy extends Entity
         return $this;
     }
     
+    /**
+    * Gets the templateReference
+    * Template reference information
+    *
+    * @return DeviceManagementConfigurationPolicyTemplateReference The templateReference
+    */
+    public function getTemplateReference()
+    {
+        if (array_key_exists("templateReference", $this->_propDict)) {
+            if (is_a($this->_propDict["templateReference"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPolicyTemplateReference")) {
+                return $this->_propDict["templateReference"];
+            } else {
+                $this->_propDict["templateReference"] = new DeviceManagementConfigurationPolicyTemplateReference($this->_propDict["templateReference"]);
+                return $this->_propDict["templateReference"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the templateReference
+    * Template reference information
+    *
+    * @param DeviceManagementConfigurationPolicyTemplateReference $val The templateReference
+    *
+    * @return DeviceManagementConfigurationPolicy
+    */
+    public function setTemplateReference($val)
+    {
+        $this->_propDict["templateReference"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the assignments

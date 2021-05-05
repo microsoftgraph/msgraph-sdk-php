@@ -54,6 +54,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Gets the windows
+    * Entity that acts as a container for functionality. Read-only.
     *
     * @return Windows The windows
     */
@@ -72,6 +73,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Sets the windows
+    * Entity that acts as a container for functionality. Read-only.
     *
     * @param Windows $val The windows
     *

@@ -108,6 +108,34 @@ class AudioConferencing extends Entity
         return $this;
     }
     /**
+    * Gets the tollFreeNumbers
+    * List of toll-free numbers that are displayed in the meeting invite.
+    *
+    * @return string The tollFreeNumbers
+    */
+    public function getTollFreeNumbers()
+    {
+        if (array_key_exists("tollFreeNumbers", $this->_propDict)) {
+            return $this->_propDict["tollFreeNumbers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tollFreeNumbers
+    * List of toll-free numbers that are displayed in the meeting invite.
+    *
+    * @param string $val The value of the tollFreeNumbers
+    *
+    * @return AudioConferencing
+    */
+    public function setTollFreeNumbers($val)
+    {
+        $this->_propDict["tollFreeNumbers"] = $val;
+        return $this;
+    }
+    /**
     * Gets the tollNumber
     * The toll number that connects to the Audio Conference Provider.
     *
@@ -133,6 +161,34 @@ class AudioConferencing extends Entity
     public function setTollNumber($val)
     {
         $this->_propDict["tollNumber"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the tollNumbers
+    * List of toll numbers that are displayed in the meeting invite.
+    *
+    * @return string The tollNumbers
+    */
+    public function getTollNumbers()
+    {
+        if (array_key_exists("tollNumbers", $this->_propDict)) {
+            return $this->_propDict["tollNumbers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the tollNumbers
+    * List of toll numbers that are displayed in the meeting invite.
+    *
+    * @param string $val The value of the tollNumbers
+    *
+    * @return AudioConferencing
+    */
+    public function setTollNumbers($val)
+    {
+        $this->_propDict["tollNumbers"] = $val;
         return $this;
     }
 }

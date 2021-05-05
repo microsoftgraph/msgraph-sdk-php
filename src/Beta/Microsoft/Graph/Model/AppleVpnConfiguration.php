@@ -238,6 +238,64 @@ class AppleVpnConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the disconnectOnIdle
+    * Whether to disconnect after on-demand connection idles
+    *
+    * @return bool The disconnectOnIdle
+    */
+    public function getDisconnectOnIdle()
+    {
+        if (array_key_exists("disconnectOnIdle", $this->_propDict)) {
+            return $this->_propDict["disconnectOnIdle"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disconnectOnIdle
+    * Whether to disconnect after on-demand connection idles
+    *
+    * @param bool $val The disconnectOnIdle
+    *
+    * @return AppleVpnConfiguration
+    */
+    public function setDisconnectOnIdle($val)
+    {
+        $this->_propDict["disconnectOnIdle"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the disconnectOnIdleTimerInSeconds
+    * The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
+    *
+    * @return int The disconnectOnIdleTimerInSeconds
+    */
+    public function getDisconnectOnIdleTimerInSeconds()
+    {
+        if (array_key_exists("disconnectOnIdleTimerInSeconds", $this->_propDict)) {
+            return $this->_propDict["disconnectOnIdleTimerInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disconnectOnIdleTimerInSeconds
+    * The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
+    *
+    * @param int $val The disconnectOnIdleTimerInSeconds
+    *
+    * @return AppleVpnConfiguration
+    */
+    public function setDisconnectOnIdleTimerInSeconds($val)
+    {
+        $this->_propDict["disconnectOnIdleTimerInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the enablePerApp
     * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
     *

@@ -26,6 +26,7 @@ class NoncustodialDataSource extends DataSourceContainer
 {
     /**
     * Gets the applyHoldToSource
+    * Indicates if hold is applied to non-custodial data source (such as mailbox or site).
     *
     * @return bool The applyHoldToSource
     */
@@ -40,6 +41,7 @@ class NoncustodialDataSource extends DataSourceContainer
     
     /**
     * Sets the applyHoldToSource
+    * Indicates if hold is applied to non-custodial data source (such as mailbox or site).
     *
     * @param bool $val The applyHoldToSource
     *
@@ -53,6 +55,7 @@ class NoncustodialDataSource extends DataSourceContainer
     
     /**
     * Gets the dataSource
+    * User source or SharePoint site data source as non-custodial data source.
     *
     * @return DataSource The dataSource
     */
@@ -71,6 +74,7 @@ class NoncustodialDataSource extends DataSourceContainer
     
     /**
     * Sets the dataSource
+    * User source or SharePoint site data source as non-custodial data source.
     *
     * @param DataSource $val The dataSource
     *

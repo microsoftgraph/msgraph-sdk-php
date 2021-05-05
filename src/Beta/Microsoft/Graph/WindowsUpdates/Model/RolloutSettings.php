@@ -25,6 +25,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the devicesPerOffer
+    * Specifies the number of devices that are offered at the same time. Has no effect when endDateTime is set. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
     *
     * @return int The devicesPerOffer
     */
@@ -39,6 +40,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the devicesPerOffer
+    * Specifies the number of devices that are offered at the same time. Has no effect when endDateTime is set. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
     *
     * @param int $val The value of the devicesPerOffer
     *
@@ -51,6 +53,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the durationBetweenOffers
+    * Specifies duration between each set of devices being offered the update. Has an effect when endDateTime or devicesPerOffer are defined. Default value is P1D (1 day).
     *
     * @return string The durationBetweenOffers
     */
@@ -65,6 +68,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the durationBetweenOffers
+    * Specifies duration between each set of devices being offered the update. Has an effect when endDateTime or devicesPerOffer are defined. Default value is P1D (1 day).
     *
     * @param string $val The value of the durationBetweenOffers
     *
@@ -78,6 +82,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the endDateTime
+    * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
     *
     * @return \DateTime The endDateTime
     */
@@ -96,6 +101,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the endDateTime
+    * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -109,6 +115,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the startDateTime
+    * Date on which devices in the deployment start receiving the update. When not set, the deployment starts as soon as devices are assigned.
     *
     * @return \DateTime The startDateTime
     */
@@ -127,6 +134,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the startDateTime
+    * Date on which devices in the deployment start receiving the update. When not set, the deployment starts as soon as devices are assigned.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *

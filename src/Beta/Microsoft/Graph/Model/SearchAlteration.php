@@ -25,6 +25,7 @@ class SearchAlteration extends Entity
 {
     /**
     * Gets the alteredHighlightedQueryString
+    * Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
     *
     * @return string The alteredHighlightedQueryString
     */
@@ -39,6 +40,7 @@ class SearchAlteration extends Entity
 
     /**
     * Sets the alteredHighlightedQueryString
+    * Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is (/ue000, /ue001)
     *
     * @param string $val The value of the alteredHighlightedQueryString
     *
@@ -51,6 +53,7 @@ class SearchAlteration extends Entity
     }
     /**
     * Gets the alteredQueryString
+    * Defines the altered query string with spelling correction.
     *
     * @return string The alteredQueryString
     */
@@ -65,6 +68,7 @@ class SearchAlteration extends Entity
 
     /**
     * Sets the alteredQueryString
+    * Defines the altered query string with spelling correction.
     *
     * @param string $val The value of the alteredQueryString
     *
@@ -78,6 +82,7 @@ class SearchAlteration extends Entity
 
     /**
     * Gets the alteredQueryTokens
+    * Represents changed segments with respect to original query.
     *
     * @return AlteredQueryToken The alteredQueryTokens
     */
@@ -96,6 +101,7 @@ class SearchAlteration extends Entity
 
     /**
     * Sets the alteredQueryTokens
+    * Represents changed segments with respect to original query.
     *
     * @param AlteredQueryToken $val The value to assign to the alteredQueryTokens
     *

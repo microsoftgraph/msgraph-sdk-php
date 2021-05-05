@@ -80,4 +80,35 @@ class AccessReviewSet extends Entity
         return $this;
     }
     
+    /**
+    * Gets the policy
+    *
+    * @return AccessReviewPolicy The policy
+    */
+    public function getPolicy()
+    {
+        if (array_key_exists("policy", $this->_propDict)) {
+            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\AccessReviewPolicy")) {
+                return $this->_propDict["policy"];
+            } else {
+                $this->_propDict["policy"] = new AccessReviewPolicy($this->_propDict["policy"]);
+                return $this->_propDict["policy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the policy
+    *
+    * @param AccessReviewPolicy $val The policy
+    *
+    * @return AccessReviewSet
+    */
+    public function setPolicy($val)
+    {
+        $this->_propDict["policy"] = $val;
+        return $this;
+    }
+    
 }

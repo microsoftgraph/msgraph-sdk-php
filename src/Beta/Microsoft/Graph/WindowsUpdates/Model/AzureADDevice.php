@@ -27,6 +27,7 @@ class AzureADDevice extends UpdatableAsset
 
      /** 
      * Gets the enrollments
+    * Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
      *
      * @return array The enrollments
      */
@@ -41,6 +42,7 @@ class AzureADDevice extends UpdatableAsset
     
     /** 
     * Sets the enrollments
+    * Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
     *
     * @param UpdatableAssetEnrollment $val The enrollments
     *
@@ -55,6 +57,7 @@ class AzureADDevice extends UpdatableAsset
 
      /** 
      * Gets the errors
+    * Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
      *
      * @return array The errors
      */
@@ -69,6 +72,7 @@ class AzureADDevice extends UpdatableAsset
     
     /** 
     * Sets the errors
+    * Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
     *
     * @param UpdatableAssetError $val The errors
     *

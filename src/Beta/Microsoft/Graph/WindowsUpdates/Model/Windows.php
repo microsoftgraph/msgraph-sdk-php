@@ -26,6 +26,7 @@ class Windows extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the updates
+    * Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only.
     *
     * @return Updates The updates
     */
@@ -44,6 +45,7 @@ class Windows extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the updates
+    * Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only.
     *
     * @param Updates $val The updates
     *

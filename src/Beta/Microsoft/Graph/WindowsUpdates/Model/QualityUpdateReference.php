@@ -26,6 +26,7 @@ class QualityUpdateReference extends WindowsUpdateReference
 
     /**
     * Gets the classification
+    * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security.
     *
     * @return QualityUpdateClassification The classification
     */
@@ -44,6 +45,7 @@ class QualityUpdateReference extends WindowsUpdateReference
 
     /**
     * Sets the classification
+    * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security.
     *
     * @param QualityUpdateClassification $val The value to assign to the classification
     *
@@ -57,6 +59,7 @@ class QualityUpdateReference extends WindowsUpdateReference
 
     /**
     * Gets the releaseDateTime
+    * Specifies a quality update in the given servicingChannel with the given classification by date (i.e. the last update published on the specified date). Default value is security.
     *
     * @return \DateTime The releaseDateTime
     */
@@ -75,6 +78,7 @@ class QualityUpdateReference extends WindowsUpdateReference
 
     /**
     * Sets the releaseDateTime
+    * Specifies a quality update in the given servicingChannel with the given classification by date (i.e. the last update published on the specified date). Default value is security.
     *
     * @param \DateTime $val The value to assign to the releaseDateTime
     *

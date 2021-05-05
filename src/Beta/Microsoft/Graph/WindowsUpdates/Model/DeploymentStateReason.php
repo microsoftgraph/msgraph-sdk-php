@@ -26,6 +26,7 @@ class DeploymentStateReason extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the value
+    * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Read-only.
     *
     * @return DeploymentStateReasonValue The value
     */
@@ -44,6 +45,7 @@ class DeploymentStateReason extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
+    * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Read-only.
     *
     * @param DeploymentStateReasonValue $val The value to assign to the value
     *
