@@ -27,7 +27,7 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
     /**
     * Gets the enabledRules
     *
-    * @return string The enabledRules
+    * @return string|null The enabledRules
     */
     public function getEnabledRules()
     {

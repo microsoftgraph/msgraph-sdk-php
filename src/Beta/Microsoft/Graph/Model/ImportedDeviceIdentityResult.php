@@ -28,7 +28,7 @@ class ImportedDeviceIdentityResult extends ImportedDeviceIdentity
     * Gets the status
     * Status of imported device identity
     *
-    * @return bool The status
+    * @return bool|null The status
     */
     public function getStatus()
     {

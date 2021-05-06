@@ -36,7 +36,7 @@ class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the uninstallOnDeviceRemoval
     * Whether or not to uninstall the app when device is removed from Intune.
     *
-    * @return bool The uninstallOnDeviceRemoval
+    * @return bool|null The uninstallOnDeviceRemoval
     */
     public function getUninstallOnDeviceRemoval()
     {

@@ -28,7 +28,7 @@ class PrivilegedAccess extends Entity
     * Gets the displayName
     * The display name of the provider managed by PIM.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -58,7 +58,7 @@ class PrivilegedAccess extends Entity
      * Gets the resources
     * A collection of resources for the provider.
      *
-     * @return array The resources
+     * @return array|null The resources
      */
     public function getResources()
     {
@@ -79,7 +79,7 @@ class PrivilegedAccess extends Entity
     */
     public function setResources($val)
     {
-		$this->_propDict["resources"] = $val;
+        $this->_propDict["resources"] = $val;
         return $this;
     }
     
@@ -88,7 +88,7 @@ class PrivilegedAccess extends Entity
      * Gets the roleAssignmentRequests
     * A collection of role assignment requests for the provider.
      *
-     * @return array The roleAssignmentRequests
+     * @return array|null The roleAssignmentRequests
      */
     public function getRoleAssignmentRequests()
     {
@@ -109,7 +109,7 @@ class PrivilegedAccess extends Entity
     */
     public function setRoleAssignmentRequests($val)
     {
-		$this->_propDict["roleAssignmentRequests"] = $val;
+        $this->_propDict["roleAssignmentRequests"] = $val;
         return $this;
     }
     
@@ -118,7 +118,7 @@ class PrivilegedAccess extends Entity
      * Gets the roleAssignments
     * A collection of role assignments for the provider.
      *
-     * @return array The roleAssignments
+     * @return array|null The roleAssignments
      */
     public function getRoleAssignments()
     {
@@ -139,7 +139,7 @@ class PrivilegedAccess extends Entity
     */
     public function setRoleAssignments($val)
     {
-		$this->_propDict["roleAssignments"] = $val;
+        $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
     
@@ -148,7 +148,7 @@ class PrivilegedAccess extends Entity
      * Gets the roleDefinitions
     * A collection of role defintions for the provider.
      *
-     * @return array The roleDefinitions
+     * @return array|null The roleDefinitions
      */
     public function getRoleDefinitions()
     {
@@ -169,7 +169,7 @@ class PrivilegedAccess extends Entity
     */
     public function setRoleDefinitions($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+        $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
     
@@ -178,7 +178,7 @@ class PrivilegedAccess extends Entity
      * Gets the roleSettings
     * A collection of role settings for the provider.
      *
-     * @return array The roleSettings
+     * @return array|null The roleSettings
      */
     public function getRoleSettings()
     {
@@ -199,7 +199,7 @@ class PrivilegedAccess extends Entity
     */
     public function setRoleSettings($val)
     {
-		$this->_propDict["roleSettings"] = $val;
+        $this->_propDict["roleSettings"] = $val;
         return $this;
     }
     

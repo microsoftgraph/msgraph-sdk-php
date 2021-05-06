@@ -28,12 +28,12 @@ class ItemFacet extends Entity
     * Gets the allowedAudiences
     * The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
     *
-    * @return AllowedAudiences The allowedAudiences
+    * @return AllowedAudiences|null The allowedAudiences
     */
     public function getAllowedAudiences()
     {
         if (array_key_exists("allowedAudiences", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAudiences"], "\Beta\Microsoft\Graph\Model\AllowedAudiences")) {
+            if (is_a($this->_propDict["allowedAudiences"], "\Beta\Microsoft\Graph\Model\AllowedAudiences") || is_null($this->_propDict["allowedAudiences"])) {
                 return $this->_propDict["allowedAudiences"];
             } else {
                 $this->_propDict["allowedAudiences"] = new AllowedAudiences($this->_propDict["allowedAudiences"]);
@@ -61,12 +61,12 @@ class ItemFacet extends Entity
     * Gets the createdBy
     * Provides the identifier of the user and/or application that created the entity.
     *
-    * @return IdentitySet The createdBy
+    * @return IdentitySet|null The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -94,12 +94,12 @@ class ItemFacet extends Entity
     * Gets the createdDateTime
     * Provides the dateTimeOffset for when the entity was created.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -127,12 +127,12 @@ class ItemFacet extends Entity
     * Gets the inference
     * Contains inference detail if the entity is inferred by the creating or modifying application.
     *
-    * @return InferenceData The inference
+    * @return InferenceData|null The inference
     */
     public function getInference()
     {
         if (array_key_exists("inference", $this->_propDict)) {
-            if (is_a($this->_propDict["inference"], "\Beta\Microsoft\Graph\Model\InferenceData")) {
+            if (is_a($this->_propDict["inference"], "\Beta\Microsoft\Graph\Model\InferenceData") || is_null($this->_propDict["inference"])) {
                 return $this->_propDict["inference"];
             } else {
                 $this->_propDict["inference"] = new InferenceData($this->_propDict["inference"]);
@@ -159,7 +159,7 @@ class ItemFacet extends Entity
     /**
     * Gets the isSearchable
     *
-    * @return bool The isSearchable
+    * @return bool|null The isSearchable
     */
     public function getIsSearchable()
     {
@@ -187,12 +187,12 @@ class ItemFacet extends Entity
     * Gets the lastModifiedBy
     * Provides the identifier of the user and/or application that last modified the entity.
     *
-    * @return IdentitySet The lastModifiedBy
+    * @return IdentitySet|null The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["lastModifiedBy"])) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -220,12 +220,12 @@ class ItemFacet extends Entity
     * Gets the lastModifiedDateTime
     * Provides the dateTimeOffset for when the entity was created.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -253,12 +253,12 @@ class ItemFacet extends Entity
     * Gets the source
     * Where the values within an entity originated if synced from another service.
     *
-    * @return PersonDataSources The source
+    * @return PersonDataSources|null The source
     */
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\PersonDataSources")) {
+            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\PersonDataSources") || is_null($this->_propDict["source"])) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new PersonDataSources($this->_propDict["source"]);

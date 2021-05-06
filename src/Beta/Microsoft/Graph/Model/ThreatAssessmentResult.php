@@ -28,12 +28,12 @@ class ThreatAssessmentResult extends Entity
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class ThreatAssessmentResult extends Entity
     * Gets the message
     * The result message for each threat assessment.
     *
-    * @return string The message
+    * @return string|null The message
     */
     public function getMessage()
     {
@@ -90,12 +90,12 @@ class ThreatAssessmentResult extends Entity
     * Gets the resultType
     * The threat assessment result type. Possible values are: checkPolicy, rescan.
     *
-    * @return ThreatAssessmentResultType The resultType
+    * @return ThreatAssessmentResultType|null The resultType
     */
     public function getResultType()
     {
         if (array_key_exists("resultType", $this->_propDict)) {
-            if (is_a($this->_propDict["resultType"], "\Beta\Microsoft\Graph\Model\ThreatAssessmentResultType")) {
+            if (is_a($this->_propDict["resultType"], "\Beta\Microsoft\Graph\Model\ThreatAssessmentResultType") || is_null($this->_propDict["resultType"])) {
                 return $this->_propDict["resultType"];
             } else {
                 $this->_propDict["resultType"] = new ThreatAssessmentResultType($this->_propDict["resultType"]);

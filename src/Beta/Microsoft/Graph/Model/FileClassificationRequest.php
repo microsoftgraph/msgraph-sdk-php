@@ -27,12 +27,12 @@ class FileClassificationRequest extends Entity
     /**
     * Gets the file
     *
-    * @return \GuzzleHttp\Psr7\Stream The file
+    * @return \GuzzleHttp\Psr7\Stream|null The file
     */
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["file"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["file"])) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["file"]);
@@ -58,7 +58,7 @@ class FileClassificationRequest extends Entity
     /**
     * Gets the sensitiveTypeIds
     *
-    * @return string The sensitiveTypeIds
+    * @return string|null The sensitiveTypeIds
     */
     public function getSensitiveTypeIds()
     {

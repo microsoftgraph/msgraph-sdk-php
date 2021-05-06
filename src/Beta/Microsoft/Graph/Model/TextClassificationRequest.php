@@ -27,7 +27,7 @@ class TextClassificationRequest extends Entity
     /**
     * Gets the fileExtension
     *
-    * @return string The fileExtension
+    * @return string|null The fileExtension
     */
     public function getFileExtension()
     {
@@ -54,12 +54,12 @@ class TextClassificationRequest extends Entity
     /**
     * Gets the matchTolerancesToInclude
     *
-    * @return MlClassificationMatchTolerance The matchTolerancesToInclude
+    * @return MlClassificationMatchTolerance|null The matchTolerancesToInclude
     */
     public function getMatchTolerancesToInclude()
     {
         if (array_key_exists("matchTolerancesToInclude", $this->_propDict)) {
-            if (is_a($this->_propDict["matchTolerancesToInclude"], "\Beta\Microsoft\Graph\Model\MlClassificationMatchTolerance")) {
+            if (is_a($this->_propDict["matchTolerancesToInclude"], "\Beta\Microsoft\Graph\Model\MlClassificationMatchTolerance") || is_null($this->_propDict["matchTolerancesToInclude"])) {
                 return $this->_propDict["matchTolerancesToInclude"];
             } else {
                 $this->_propDict["matchTolerancesToInclude"] = new MlClassificationMatchTolerance($this->_propDict["matchTolerancesToInclude"]);
@@ -85,12 +85,12 @@ class TextClassificationRequest extends Entity
     /**
     * Gets the scopesToRun
     *
-    * @return SensitiveTypeScope The scopesToRun
+    * @return SensitiveTypeScope|null The scopesToRun
     */
     public function getScopesToRun()
     {
         if (array_key_exists("scopesToRun", $this->_propDict)) {
-            if (is_a($this->_propDict["scopesToRun"], "\Beta\Microsoft\Graph\Model\SensitiveTypeScope")) {
+            if (is_a($this->_propDict["scopesToRun"], "\Beta\Microsoft\Graph\Model\SensitiveTypeScope") || is_null($this->_propDict["scopesToRun"])) {
                 return $this->_propDict["scopesToRun"];
             } else {
                 $this->_propDict["scopesToRun"] = new SensitiveTypeScope($this->_propDict["scopesToRun"]);
@@ -116,7 +116,7 @@ class TextClassificationRequest extends Entity
     /**
     * Gets the sensitiveTypeIds
     *
-    * @return string The sensitiveTypeIds
+    * @return string|null The sensitiveTypeIds
     */
     public function getSensitiveTypeIds()
     {
@@ -143,7 +143,7 @@ class TextClassificationRequest extends Entity
     /**
     * Gets the text
     *
-    * @return string The text
+    * @return string|null The text
     */
     public function getText()
     {

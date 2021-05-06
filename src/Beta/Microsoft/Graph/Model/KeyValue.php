@@ -27,7 +27,7 @@ class KeyValue extends Entity
     * Gets the key
     * Key for the key-value pair.
     *
-    * @return string The key
+    * @return string|null The key
     */
     public function getKey()
     {
@@ -55,7 +55,7 @@ class KeyValue extends Entity
     * Gets the value
     * Value for the key-value pair.
     *
-    * @return string The value
+    * @return string|null The value
     */
     public function getValue()
     {

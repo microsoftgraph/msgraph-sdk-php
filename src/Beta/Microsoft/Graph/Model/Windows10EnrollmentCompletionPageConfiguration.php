@@ -28,7 +28,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the allowDeviceResetOnInstallFailure
     * Allow or block device reset on installation failure
     *
-    * @return bool The allowDeviceResetOnInstallFailure
+    * @return bool|null The allowDeviceResetOnInstallFailure
     */
     public function getAllowDeviceResetOnInstallFailure()
     {
@@ -57,7 +57,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the allowDeviceUseOnInstallFailure
     * Allow the user to continue using the device on installation failure
     *
-    * @return bool The allowDeviceUseOnInstallFailure
+    * @return bool|null The allowDeviceUseOnInstallFailure
     */
     public function getAllowDeviceUseOnInstallFailure()
     {
@@ -86,7 +86,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the allowLogCollectionOnInstallFailure
     * Allow or block log collection on installation failure
     *
-    * @return bool The allowLogCollectionOnInstallFailure
+    * @return bool|null The allowLogCollectionOnInstallFailure
     */
     public function getAllowLogCollectionOnInstallFailure()
     {
@@ -115,7 +115,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the blockDeviceSetupRetryByUser
     * Allow the user to retry the setup on installation failure
     *
-    * @return bool The blockDeviceSetupRetryByUser
+    * @return bool|null The blockDeviceSetupRetryByUser
     */
     public function getBlockDeviceSetupRetryByUser()
     {
@@ -144,7 +144,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the customErrorMessage
     * Set custom error message to show upon installation failure
     *
-    * @return string The customErrorMessage
+    * @return string|null The customErrorMessage
     */
     public function getCustomErrorMessage()
     {
@@ -173,7 +173,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the disableUserStatusTrackingAfterFirstUser
     * Only show installation progress for first user post enrollment
     *
-    * @return bool The disableUserStatusTrackingAfterFirstUser
+    * @return bool|null The disableUserStatusTrackingAfterFirstUser
     */
     public function getDisableUserStatusTrackingAfterFirstUser()
     {
@@ -202,7 +202,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the installProgressTimeoutInMinutes
     * Set installation progress timeout in minutes
     *
-    * @return int The installProgressTimeoutInMinutes
+    * @return int|null The installProgressTimeoutInMinutes
     */
     public function getInstallProgressTimeoutInMinutes()
     {
@@ -231,7 +231,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the selectedMobileAppIds
     * Selected applications to track the installation status
     *
-    * @return string The selectedMobileAppIds
+    * @return string|null The selectedMobileAppIds
     */
     public function getSelectedMobileAppIds()
     {
@@ -260,7 +260,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the showInstallationProgress
     * Show or hide installation progress to user
     *
-    * @return bool The showInstallationProgress
+    * @return bool|null The showInstallationProgress
     */
     public function getShowInstallationProgress()
     {
@@ -289,7 +289,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the trackInstallProgressForAutopilotOnly
     * Only show installation progress for Autopilot enrollment scenarios
     *
-    * @return bool The trackInstallProgressForAutopilotOnly
+    * @return bool|null The trackInstallProgressForAutopilotOnly
     */
     public function getTrackInstallProgressForAutopilotOnly()
     {

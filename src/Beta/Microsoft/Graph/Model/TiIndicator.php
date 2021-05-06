@@ -28,12 +28,12 @@ class TiIndicator extends Entity
     * Gets the action
     * The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
     *
-    * @return TiAction The action
+    * @return TiAction|null The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\TiAction")) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\TiAction") || is_null($this->_propDict["action"])) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new TiAction($this->_propDict["action"]);
@@ -61,7 +61,7 @@ class TiIndicator extends Entity
     * Gets the activityGroupNames
     * The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
     *
-    * @return string The activityGroupNames
+    * @return string|null The activityGroupNames
     */
     public function getActivityGroupNames()
     {
@@ -90,7 +90,7 @@ class TiIndicator extends Entity
     * Gets the additionalInformation
     * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
     *
-    * @return string The additionalInformation
+    * @return string|null The additionalInformation
     */
     public function getAdditionalInformation()
     {
@@ -119,7 +119,7 @@ class TiIndicator extends Entity
     * Gets the azureTenantId
     * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
     *
-    * @return string The azureTenantId
+    * @return string|null The azureTenantId
     */
     public function getAzureTenantId()
     {
@@ -148,7 +148,7 @@ class TiIndicator extends Entity
     * Gets the confidence
     * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
     *
-    * @return int The confidence
+    * @return int|null The confidence
     */
     public function getConfidence()
     {
@@ -177,7 +177,7 @@ class TiIndicator extends Entity
     * Gets the description
     * Brief description (100 characters or less) of the threat represented by the indicator. Required.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -206,12 +206,12 @@ class TiIndicator extends Entity
     * Gets the diamondModel
     * The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
     *
-    * @return DiamondModel The diamondModel
+    * @return DiamondModel|null The diamondModel
     */
     public function getDiamondModel()
     {
         if (array_key_exists("diamondModel", $this->_propDict)) {
-            if (is_a($this->_propDict["diamondModel"], "\Beta\Microsoft\Graph\Model\DiamondModel")) {
+            if (is_a($this->_propDict["diamondModel"], "\Beta\Microsoft\Graph\Model\DiamondModel") || is_null($this->_propDict["diamondModel"])) {
                 return $this->_propDict["diamondModel"];
             } else {
                 $this->_propDict["diamondModel"] = new DiamondModel($this->_propDict["diamondModel"]);
@@ -238,7 +238,7 @@ class TiIndicator extends Entity
     /**
     * Gets the domainName
     *
-    * @return string The domainName
+    * @return string|null The domainName
     */
     public function getDomainName()
     {
@@ -265,7 +265,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailEncoding
     *
-    * @return string The emailEncoding
+    * @return string|null The emailEncoding
     */
     public function getEmailEncoding()
     {
@@ -292,7 +292,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailLanguage
     *
-    * @return string The emailLanguage
+    * @return string|null The emailLanguage
     */
     public function getEmailLanguage()
     {
@@ -319,7 +319,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailRecipient
     *
-    * @return string The emailRecipient
+    * @return string|null The emailRecipient
     */
     public function getEmailRecipient()
     {
@@ -346,7 +346,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailSenderAddress
     *
-    * @return string The emailSenderAddress
+    * @return string|null The emailSenderAddress
     */
     public function getEmailSenderAddress()
     {
@@ -373,7 +373,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailSenderName
     *
-    * @return string The emailSenderName
+    * @return string|null The emailSenderName
     */
     public function getEmailSenderName()
     {
@@ -400,7 +400,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailSourceDomain
     *
-    * @return string The emailSourceDomain
+    * @return string|null The emailSourceDomain
     */
     public function getEmailSourceDomain()
     {
@@ -427,7 +427,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailSourceIpAddress
     *
-    * @return string The emailSourceIpAddress
+    * @return string|null The emailSourceIpAddress
     */
     public function getEmailSourceIpAddress()
     {
@@ -454,7 +454,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailSubject
     *
-    * @return string The emailSubject
+    * @return string|null The emailSubject
     */
     public function getEmailSubject()
     {
@@ -481,7 +481,7 @@ class TiIndicator extends Entity
     /**
     * Gets the emailXMailer
     *
-    * @return string The emailXMailer
+    * @return string|null The emailXMailer
     */
     public function getEmailXMailer()
     {
@@ -509,12 +509,12 @@ class TiIndicator extends Entity
     * Gets the expirationDateTime
     * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -542,7 +542,7 @@ class TiIndicator extends Entity
     * Gets the externalId
     * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
     *
-    * @return string The externalId
+    * @return string|null The externalId
     */
     public function getExternalId()
     {
@@ -570,12 +570,12 @@ class TiIndicator extends Entity
     /**
     * Gets the fileCompileDateTime
     *
-    * @return \DateTime The fileCompileDateTime
+    * @return \DateTime|null The fileCompileDateTime
     */
     public function getFileCompileDateTime()
     {
         if (array_key_exists("fileCompileDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["fileCompileDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["fileCompileDateTime"], "\DateTime") || is_null($this->_propDict["fileCompileDateTime"])) {
                 return $this->_propDict["fileCompileDateTime"];
             } else {
                 $this->_propDict["fileCompileDateTime"] = new \DateTime($this->_propDict["fileCompileDateTime"]);
@@ -601,12 +601,12 @@ class TiIndicator extends Entity
     /**
     * Gets the fileCreatedDateTime
     *
-    * @return \DateTime The fileCreatedDateTime
+    * @return \DateTime|null The fileCreatedDateTime
     */
     public function getFileCreatedDateTime()
     {
         if (array_key_exists("fileCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["fileCreatedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["fileCreatedDateTime"], "\DateTime") || is_null($this->_propDict["fileCreatedDateTime"])) {
                 return $this->_propDict["fileCreatedDateTime"];
             } else {
                 $this->_propDict["fileCreatedDateTime"] = new \DateTime($this->_propDict["fileCreatedDateTime"]);
@@ -632,12 +632,12 @@ class TiIndicator extends Entity
     /**
     * Gets the fileHashType
     *
-    * @return FileHashType The fileHashType
+    * @return FileHashType|null The fileHashType
     */
     public function getFileHashType()
     {
         if (array_key_exists("fileHashType", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHashType"], "\Beta\Microsoft\Graph\Model\FileHashType")) {
+            if (is_a($this->_propDict["fileHashType"], "\Beta\Microsoft\Graph\Model\FileHashType") || is_null($this->_propDict["fileHashType"])) {
                 return $this->_propDict["fileHashType"];
             } else {
                 $this->_propDict["fileHashType"] = new FileHashType($this->_propDict["fileHashType"]);
@@ -663,7 +663,7 @@ class TiIndicator extends Entity
     /**
     * Gets the fileHashValue
     *
-    * @return string The fileHashValue
+    * @return string|null The fileHashValue
     */
     public function getFileHashValue()
     {
@@ -690,7 +690,7 @@ class TiIndicator extends Entity
     /**
     * Gets the fileMutexName
     *
-    * @return string The fileMutexName
+    * @return string|null The fileMutexName
     */
     public function getFileMutexName()
     {
@@ -717,7 +717,7 @@ class TiIndicator extends Entity
     /**
     * Gets the fileName
     *
-    * @return string The fileName
+    * @return string|null The fileName
     */
     public function getFileName()
     {
@@ -744,7 +744,7 @@ class TiIndicator extends Entity
     /**
     * Gets the filePacker
     *
-    * @return string The filePacker
+    * @return string|null The filePacker
     */
     public function getFilePacker()
     {
@@ -771,7 +771,7 @@ class TiIndicator extends Entity
     /**
     * Gets the filePath
     *
-    * @return string The filePath
+    * @return string|null The filePath
     */
     public function getFilePath()
     {
@@ -798,7 +798,7 @@ class TiIndicator extends Entity
     /**
     * Gets the fileSize
     *
-    * @return int The fileSize
+    * @return int|null The fileSize
     */
     public function getFileSize()
     {
@@ -825,7 +825,7 @@ class TiIndicator extends Entity
     /**
     * Gets the fileType
     *
-    * @return string The fileType
+    * @return string|null The fileType
     */
     public function getFileType()
     {
@@ -853,12 +853,12 @@ class TiIndicator extends Entity
     * Gets the ingestedDateTime
     * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The ingestedDateTime
+    * @return \DateTime|null The ingestedDateTime
     */
     public function getIngestedDateTime()
     {
         if (array_key_exists("ingestedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["ingestedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["ingestedDateTime"], "\DateTime") || is_null($this->_propDict["ingestedDateTime"])) {
                 return $this->_propDict["ingestedDateTime"];
             } else {
                 $this->_propDict["ingestedDateTime"] = new \DateTime($this->_propDict["ingestedDateTime"]);
@@ -886,7 +886,7 @@ class TiIndicator extends Entity
     * Gets the isActive
     * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
     *
-    * @return bool The isActive
+    * @return bool|null The isActive
     */
     public function getIsActive()
     {
@@ -915,7 +915,7 @@ class TiIndicator extends Entity
     * Gets the killChain
     * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
     *
-    * @return string The killChain
+    * @return string|null The killChain
     */
     public function getKillChain()
     {
@@ -944,7 +944,7 @@ class TiIndicator extends Entity
     * Gets the knownFalsePositives
     * Scenarios in which the indicator may cause false positives. This should be human-readable text.
     *
-    * @return string The knownFalsePositives
+    * @return string|null The knownFalsePositives
     */
     public function getKnownFalsePositives()
     {
@@ -973,12 +973,12 @@ class TiIndicator extends Entity
     * Gets the lastReportedDateTime
     * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The lastReportedDateTime
+    * @return \DateTime|null The lastReportedDateTime
     */
     public function getLastReportedDateTime()
     {
         if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -1006,7 +1006,7 @@ class TiIndicator extends Entity
     * Gets the malwareFamilyNames
     * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
     *
-    * @return string The malwareFamilyNames
+    * @return string|null The malwareFamilyNames
     */
     public function getMalwareFamilyNames()
     {
@@ -1034,7 +1034,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkCidrBlock
     *
-    * @return string The networkCidrBlock
+    * @return string|null The networkCidrBlock
     */
     public function getNetworkCidrBlock()
     {
@@ -1061,7 +1061,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkDestinationAsn
     *
-    * @return int The networkDestinationAsn
+    * @return int|null The networkDestinationAsn
     */
     public function getNetworkDestinationAsn()
     {
@@ -1088,7 +1088,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkDestinationCidrBlock
     *
-    * @return string The networkDestinationCidrBlock
+    * @return string|null The networkDestinationCidrBlock
     */
     public function getNetworkDestinationCidrBlock()
     {
@@ -1115,7 +1115,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkDestinationIPv4
     *
-    * @return string The networkDestinationIPv4
+    * @return string|null The networkDestinationIPv4
     */
     public function getNetworkDestinationIPv4()
     {
@@ -1142,7 +1142,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkDestinationIPv6
     *
-    * @return string The networkDestinationIPv6
+    * @return string|null The networkDestinationIPv6
     */
     public function getNetworkDestinationIPv6()
     {
@@ -1169,7 +1169,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkDestinationPort
     *
-    * @return int The networkDestinationPort
+    * @return int|null The networkDestinationPort
     */
     public function getNetworkDestinationPort()
     {
@@ -1196,7 +1196,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkIPv4
     *
-    * @return string The networkIPv4
+    * @return string|null The networkIPv4
     */
     public function getNetworkIPv4()
     {
@@ -1223,7 +1223,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkIPv6
     *
-    * @return string The networkIPv6
+    * @return string|null The networkIPv6
     */
     public function getNetworkIPv6()
     {
@@ -1250,7 +1250,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkPort
     *
-    * @return int The networkPort
+    * @return int|null The networkPort
     */
     public function getNetworkPort()
     {
@@ -1277,7 +1277,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkProtocol
     *
-    * @return int The networkProtocol
+    * @return int|null The networkProtocol
     */
     public function getNetworkProtocol()
     {
@@ -1304,7 +1304,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkSourceAsn
     *
-    * @return int The networkSourceAsn
+    * @return int|null The networkSourceAsn
     */
     public function getNetworkSourceAsn()
     {
@@ -1331,7 +1331,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkSourceCidrBlock
     *
-    * @return string The networkSourceCidrBlock
+    * @return string|null The networkSourceCidrBlock
     */
     public function getNetworkSourceCidrBlock()
     {
@@ -1358,7 +1358,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkSourceIPv4
     *
-    * @return string The networkSourceIPv4
+    * @return string|null The networkSourceIPv4
     */
     public function getNetworkSourceIPv4()
     {
@@ -1385,7 +1385,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkSourceIPv6
     *
-    * @return string The networkSourceIPv6
+    * @return string|null The networkSourceIPv6
     */
     public function getNetworkSourceIPv6()
     {
@@ -1412,7 +1412,7 @@ class TiIndicator extends Entity
     /**
     * Gets the networkSourcePort
     *
-    * @return int The networkSourcePort
+    * @return int|null The networkSourcePort
     */
     public function getNetworkSourcePort()
     {
@@ -1440,7 +1440,7 @@ class TiIndicator extends Entity
     * Gets the passiveOnly
     * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
     *
-    * @return bool The passiveOnly
+    * @return bool|null The passiveOnly
     */
     public function getPassiveOnly()
     {
@@ -1469,7 +1469,7 @@ class TiIndicator extends Entity
     * Gets the severity
     * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
     *
-    * @return int The severity
+    * @return int|null The severity
     */
     public function getSeverity()
     {
@@ -1498,7 +1498,7 @@ class TiIndicator extends Entity
     * Gets the tags
     * A JSON array of strings that stores arbitrary tags/keywords.
     *
-    * @return string The tags
+    * @return string|null The tags
     */
     public function getTags()
     {
@@ -1527,7 +1527,7 @@ class TiIndicator extends Entity
     * Gets the targetProduct
     * A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
     *
-    * @return string The targetProduct
+    * @return string|null The targetProduct
     */
     public function getTargetProduct()
     {
@@ -1556,7 +1556,7 @@ class TiIndicator extends Entity
     * Gets the threatType
     * Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
     *
-    * @return string The threatType
+    * @return string|null The threatType
     */
     public function getThreatType()
     {
@@ -1585,12 +1585,12 @@ class TiIndicator extends Entity
     * Gets the tlpLevel
     * Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
     *
-    * @return TlpLevel The tlpLevel
+    * @return TlpLevel|null The tlpLevel
     */
     public function getTlpLevel()
     {
         if (array_key_exists("tlpLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["tlpLevel"], "\Beta\Microsoft\Graph\Model\TlpLevel")) {
+            if (is_a($this->_propDict["tlpLevel"], "\Beta\Microsoft\Graph\Model\TlpLevel") || is_null($this->_propDict["tlpLevel"])) {
                 return $this->_propDict["tlpLevel"];
             } else {
                 $this->_propDict["tlpLevel"] = new TlpLevel($this->_propDict["tlpLevel"]);
@@ -1617,7 +1617,7 @@ class TiIndicator extends Entity
     /**
     * Gets the url
     *
-    * @return string The url
+    * @return string|null The url
     */
     public function getUrl()
     {
@@ -1644,7 +1644,7 @@ class TiIndicator extends Entity
     /**
     * Gets the userAgent
     *
-    * @return string The userAgent
+    * @return string|null The userAgent
     */
     public function getUserAgent()
     {

@@ -36,7 +36,7 @@ class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the uninstallOnDeviceRemoval
     * Whether or not to uninstall the app when device is removed from Intune.
     *
-    * @return bool The uninstallOnDeviceRemoval
+    * @return bool|null The uninstallOnDeviceRemoval
     */
     public function getUninstallOnDeviceRemoval()
     {
@@ -64,7 +64,7 @@ class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the useDeviceLicensing
     * Whether or not to use device licensing.
     *
-    * @return bool The useDeviceLicensing
+    * @return bool|null The useDeviceLicensing
     */
     public function getUseDeviceLicensing()
     {

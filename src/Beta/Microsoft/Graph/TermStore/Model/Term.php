@@ -28,12 +28,12 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdDateTime
     * Date and time of term creation. Read-only
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -62,7 +62,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the descriptions
     * Description about term that is dependent on the languageTag
      *
-     * @return array The descriptions
+     * @return array|null The descriptions
      */
     public function getDescriptions()
     {
@@ -83,7 +83,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setDescriptions($val)
     {
-		$this->_propDict["descriptions"] = $val;
+        $this->_propDict["descriptions"] = $val;
         return $this;
     }
     
@@ -92,7 +92,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the labels
     * Label metadata for a term
      *
-     * @return array The labels
+     * @return array|null The labels
      */
     public function getLabels()
     {
@@ -113,7 +113,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setLabels($val)
     {
-		$this->_propDict["labels"] = $val;
+        $this->_propDict["labels"] = $val;
         return $this;
     }
     
@@ -121,12 +121,12 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lastModifiedDateTime
     * Last date and time of term modification. Read-only
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -155,7 +155,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the termProperties
     * Collection of properties on the term
      *
-     * @return array The termProperties
+     * @return array|null The termProperties
      */
     public function getTermProperties()
     {
@@ -176,7 +176,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setTermProperties($val)
     {
-		$this->_propDict["properties"] = $val;
+        $this->_propDict["properties"] = $val;
         return $this;
     }
     
@@ -185,7 +185,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the children
     * Children of current term
      *
-     * @return array The children
+     * @return array|null The children
      */
     public function getChildren()
     {
@@ -206,7 +206,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setChildren($val)
     {
-		$this->_propDict["children"] = $val;
+        $this->_propDict["children"] = $val;
         return $this;
     }
     
@@ -215,7 +215,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the relations
     * To indicate which terms are related to the current term as either pinned or reused
      *
-     * @return array The relations
+     * @return array|null The relations
      */
     public function getRelations()
     {
@@ -236,7 +236,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setRelations($val)
     {
-		$this->_propDict["relations"] = $val;
+        $this->_propDict["relations"] = $val;
         return $this;
     }
     
@@ -244,12 +244,12 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the set
     * The [set] in which the term is created
     *
-    * @return Set The set
+    * @return Set|null The set
     */
     public function getSet()
     {
         if (array_key_exists("set", $this->_propDict)) {
-            if (is_a($this->_propDict["set"], "\Beta\Microsoft\Graph\TermStore\Model\Set")) {
+            if (is_a($this->_propDict["set"], "\Beta\Microsoft\Graph\TermStore\Model\Set") || is_null($this->_propDict["set"])) {
                 return $this->_propDict["set"];
             } else {
                 $this->_propDict["set"] = new Set($this->_propDict["set"]);

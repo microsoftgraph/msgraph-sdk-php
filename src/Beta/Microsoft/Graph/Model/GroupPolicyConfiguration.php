@@ -28,12 +28,12 @@ class GroupPolicyConfiguration extends Entity
     * Gets the createdDateTime
     * The date and time the object was created.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class GroupPolicyConfiguration extends Entity
     * Gets the description
     * User provided description for the resource object.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class GroupPolicyConfiguration extends Entity
     * Gets the displayName
     * User provided name for the resource object.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class GroupPolicyConfiguration extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class GroupPolicyConfiguration extends Entity
     * Gets the roleScopeTagIds
     * The list of scope tags for the configuration.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -182,7 +182,7 @@ class GroupPolicyConfiguration extends Entity
      * Gets the assignments
     * The list of group assignments for the configuration.
      *
-     * @return array The assignments
+     * @return array|null The assignments
      */
     public function getAssignments()
     {
@@ -203,7 +203,7 @@ class GroupPolicyConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -212,7 +212,7 @@ class GroupPolicyConfiguration extends Entity
      * Gets the definitionValues
     * The list of enabled or disabled group policy definition values for the configuration.
      *
-     * @return array The definitionValues
+     * @return array|null The definitionValues
      */
     public function getDefinitionValues()
     {
@@ -233,7 +233,7 @@ class GroupPolicyConfiguration extends Entity
     */
     public function setDefinitionValues($val)
     {
-		$this->_propDict["definitionValues"] = $val;
+        $this->_propDict["definitionValues"] = $val;
         return $this;
     }
     

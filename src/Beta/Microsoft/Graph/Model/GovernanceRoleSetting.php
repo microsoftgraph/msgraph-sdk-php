@@ -29,7 +29,7 @@ class GovernanceRoleSetting extends Entity
      * Gets the adminEligibleSettings
     * The rule settings that are evaluated when an administrator tries to add an eligible role assignment.
      *
-     * @return array The adminEligibleSettings
+     * @return array|null The adminEligibleSettings
      */
     public function getAdminEligibleSettings()
     {
@@ -50,7 +50,7 @@ class GovernanceRoleSetting extends Entity
     */
     public function setAdminEligibleSettings($val)
     {
-		$this->_propDict["adminEligibleSettings"] = $val;
+        $this->_propDict["adminEligibleSettings"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class GovernanceRoleSetting extends Entity
      * Gets the adminMemberSettings
     * The rule settings that are evaluated when an administrator tries to add a direct member role assignment.
      *
-     * @return array The adminMemberSettings
+     * @return array|null The adminMemberSettings
      */
     public function getAdminMemberSettings()
     {
@@ -80,7 +80,7 @@ class GovernanceRoleSetting extends Entity
     */
     public function setAdminMemberSettings($val)
     {
-		$this->_propDict["adminMemberSettings"] = $val;
+        $this->_propDict["adminMemberSettings"] = $val;
         return $this;
     }
     
@@ -88,7 +88,7 @@ class GovernanceRoleSetting extends Entity
     * Gets the isDefault
     * Read-only. Indicate if the roleSetting is a default roleSetting
     *
-    * @return bool The isDefault
+    * @return bool|null The isDefault
     */
     public function getIsDefault()
     {
@@ -117,7 +117,7 @@ class GovernanceRoleSetting extends Entity
     * Gets the lastUpdatedBy
     * Read-only. The display name of the administrator who last updated the roleSetting.
     *
-    * @return string The lastUpdatedBy
+    * @return string|null The lastUpdatedBy
     */
     public function getLastUpdatedBy()
     {
@@ -146,12 +146,12 @@ class GovernanceRoleSetting extends Entity
     * Gets the lastUpdatedDateTime
     * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The lastUpdatedDateTime
+    * @return \DateTime|null The lastUpdatedDateTime
     */
     public function getLastUpdatedDateTime()
     {
         if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdatedDateTime"])) {
                 return $this->_propDict["lastUpdatedDateTime"];
             } else {
                 $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
@@ -179,7 +179,7 @@ class GovernanceRoleSetting extends Entity
     * Gets the resourceId
     * Required. The id of the resource that the role setting is associated with.
     *
-    * @return string The resourceId
+    * @return string|null The resourceId
     */
     public function getResourceId()
     {
@@ -208,7 +208,7 @@ class GovernanceRoleSetting extends Entity
     * Gets the roleDefinitionId
     * Required. The id of the role definition that the role setting is associated with.
     *
-    * @return string The roleDefinitionId
+    * @return string|null The roleDefinitionId
     */
     public function getRoleDefinitionId()
     {
@@ -238,7 +238,7 @@ class GovernanceRoleSetting extends Entity
      * Gets the userEligibleSettings
     * The rule settings that are evaluated when a user tries to add an eligible role assignment. The setting is not supported for now.
      *
-     * @return array The userEligibleSettings
+     * @return array|null The userEligibleSettings
      */
     public function getUserEligibleSettings()
     {
@@ -259,7 +259,7 @@ class GovernanceRoleSetting extends Entity
     */
     public function setUserEligibleSettings($val)
     {
-		$this->_propDict["userEligibleSettings"] = $val;
+        $this->_propDict["userEligibleSettings"] = $val;
         return $this;
     }
     
@@ -268,7 +268,7 @@ class GovernanceRoleSetting extends Entity
      * Gets the userMemberSettings
     * The rule settings that are evaluated when a user tries to activate his role assignment.
      *
-     * @return array The userMemberSettings
+     * @return array|null The userMemberSettings
      */
     public function getUserMemberSettings()
     {
@@ -289,7 +289,7 @@ class GovernanceRoleSetting extends Entity
     */
     public function setUserMemberSettings($val)
     {
-		$this->_propDict["userMemberSettings"] = $val;
+        $this->_propDict["userMemberSettings"] = $val;
         return $this;
     }
     
@@ -297,12 +297,12 @@ class GovernanceRoleSetting extends Entity
     * Gets the resource
     * Read-only. The associated resource for this role setting.
     *
-    * @return GovernanceResource The resource
+    * @return GovernanceResource|null The resource
     */
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource") || is_null($this->_propDict["resource"])) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -330,12 +330,12 @@ class GovernanceRoleSetting extends Entity
     * Gets the roleDefinition
     * Read-only. The role definition that is enforced with this role setting.
     *
-    * @return GovernanceRoleDefinition The roleDefinition
+    * @return GovernanceRoleDefinition|null The roleDefinition
     */
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\GovernanceRoleDefinition") || is_null($this->_propDict["roleDefinition"])) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);

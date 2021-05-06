@@ -28,7 +28,7 @@ class OnPremisesAgent extends Entity
     * Gets the externalIp
     * The external IP address as detected by the service for the agent machine. Read-only
     *
-    * @return string The externalIp
+    * @return string|null The externalIp
     */
     public function getExternalIp()
     {
@@ -57,7 +57,7 @@ class OnPremisesAgent extends Entity
     * Gets the machineName
     * The name of the machine that the aggent is running on. Read-only
     *
-    * @return string The machineName
+    * @return string|null The machineName
     */
     public function getMachineName()
     {
@@ -86,12 +86,12 @@ class OnPremisesAgent extends Entity
     * Gets the status
     * Possible values are: active, inactive.
     *
-    * @return AgentStatus The status
+    * @return AgentStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\AgentStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\AgentStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AgentStatus($this->_propDict["status"]);
@@ -119,7 +119,7 @@ class OnPremisesAgent extends Entity
      /** 
      * Gets the supportedPublishingTypes
      *
-     * @return array The supportedPublishingTypes
+     * @return array|null The supportedPublishingTypes
      */
     public function getSupportedPublishingTypes()
     {
@@ -139,7 +139,7 @@ class OnPremisesAgent extends Entity
     */
     public function setSupportedPublishingTypes($val)
     {
-		$this->_propDict["supportedPublishingTypes"] = $val;
+        $this->_propDict["supportedPublishingTypes"] = $val;
         return $this;
     }
     
@@ -148,7 +148,7 @@ class OnPremisesAgent extends Entity
      * Gets the agentGroups
     * List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
      *
-     * @return array The agentGroups
+     * @return array|null The agentGroups
      */
     public function getAgentGroups()
     {
@@ -169,7 +169,7 @@ class OnPremisesAgent extends Entity
     */
     public function setAgentGroups($val)
     {
-		$this->_propDict["agentGroups"] = $val;
+        $this->_propDict["agentGroups"] = $val;
         return $this;
     }
     

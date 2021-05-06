@@ -27,7 +27,7 @@ class DeviceManagementConfigurationPolicyTemplateReference extends Entity
     * Gets the templateDisplayName
     * Template Display Name of the referenced template. This property is read-only.
     *
-    * @return string The templateDisplayName
+    * @return string|null The templateDisplayName
     */
     public function getTemplateDisplayName()
     {
@@ -55,7 +55,7 @@ class DeviceManagementConfigurationPolicyTemplateReference extends Entity
     * Gets the templateDisplayVersion
     * Template Display Version of the referenced Template. This property is read-only.
     *
-    * @return string The templateDisplayVersion
+    * @return string|null The templateDisplayVersion
     */
     public function getTemplateDisplayVersion()
     {
@@ -84,12 +84,12 @@ class DeviceManagementConfigurationPolicyTemplateReference extends Entity
     * Gets the templateFamily
     * Template Family of the referenced Template. This property is read-only. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl.
     *
-    * @return DeviceManagementConfigurationTemplateFamily The templateFamily
+    * @return DeviceManagementConfigurationTemplateFamily|null The templateFamily
     */
     public function getTemplateFamily()
     {
         if (array_key_exists("templateFamily", $this->_propDict)) {
-            if (is_a($this->_propDict["templateFamily"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTemplateFamily")) {
+            if (is_a($this->_propDict["templateFamily"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTemplateFamily") || is_null($this->_propDict["templateFamily"])) {
                 return $this->_propDict["templateFamily"];
             } else {
                 $this->_propDict["templateFamily"] = new DeviceManagementConfigurationTemplateFamily($this->_propDict["templateFamily"]);
@@ -116,7 +116,7 @@ class DeviceManagementConfigurationPolicyTemplateReference extends Entity
     * Gets the templateId
     * Template id
     *
-    * @return string The templateId
+    * @return string|null The templateId
     */
     public function getTemplateId()
     {

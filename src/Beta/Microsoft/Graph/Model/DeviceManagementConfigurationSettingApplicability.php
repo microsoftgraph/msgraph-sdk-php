@@ -27,7 +27,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
     * Gets the description
     * description of the setting
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -56,12 +56,12 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
     * Gets the deviceMode
     * Device Mode that setting can be applied on. Possible values are: none, kiosk.
     *
-    * @return DeviceManagementConfigurationDeviceMode The deviceMode
+    * @return DeviceManagementConfigurationDeviceMode|null The deviceMode
     */
     public function getDeviceMode()
     {
         if (array_key_exists("deviceMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceMode"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationDeviceMode")) {
+            if (is_a($this->_propDict["deviceMode"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationDeviceMode") || is_null($this->_propDict["deviceMode"])) {
                 return $this->_propDict["deviceMode"];
             } else {
                 $this->_propDict["deviceMode"] = new DeviceManagementConfigurationDeviceMode($this->_propDict["deviceMode"]);
@@ -89,12 +89,12 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
     * Gets the platform
     * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
     *
-    * @return DeviceManagementConfigurationPlatforms The platform
+    * @return DeviceManagementConfigurationPlatforms|null The platform
     */
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
+            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms") || is_null($this->_propDict["platform"])) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new DeviceManagementConfigurationPlatforms($this->_propDict["platform"]);
@@ -122,12 +122,12 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
     * Gets the technologies
     * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager.
     *
-    * @return DeviceManagementConfigurationTechnologies The technologies
+    * @return DeviceManagementConfigurationTechnologies|null The technologies
     */
     public function getTechnologies()
     {
         if (array_key_exists("technologies", $this->_propDict)) {
-            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
+            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies") || is_null($this->_propDict["technologies"])) {
                 return $this->_propDict["technologies"];
             } else {
                 $this->_propDict["technologies"] = new DeviceManagementConfigurationTechnologies($this->_propDict["technologies"]);

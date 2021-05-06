@@ -36,7 +36,7 @@ class EdgeHomeButtonOpensCustomURL extends EdgeHomeButtonConfiguration
     * Gets the homeButtonCustomURL
     * The specific URL to load.
     *
-    * @return string The homeButtonCustomURL
+    * @return string|null The homeButtonCustomURL
     */
     public function getHomeButtonCustomURL()
     {

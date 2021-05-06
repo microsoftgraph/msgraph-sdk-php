@@ -28,7 +28,7 @@ class SecurityBaselineStateSummary extends Entity
     * Gets the conflictCount
     * Number of conflict devices
     *
-    * @return int The conflictCount
+    * @return int|null The conflictCount
     */
     public function getConflictCount()
     {
@@ -57,7 +57,7 @@ class SecurityBaselineStateSummary extends Entity
     * Gets the errorCount
     * Number of error devices
     *
-    * @return int The errorCount
+    * @return int|null The errorCount
     */
     public function getErrorCount()
     {
@@ -86,7 +86,7 @@ class SecurityBaselineStateSummary extends Entity
     * Gets the notApplicableCount
     * Number of not applicable devices
     *
-    * @return int The notApplicableCount
+    * @return int|null The notApplicableCount
     */
     public function getNotApplicableCount()
     {
@@ -115,7 +115,7 @@ class SecurityBaselineStateSummary extends Entity
     * Gets the notSecureCount
     * Number of not secure devices
     *
-    * @return int The notSecureCount
+    * @return int|null The notSecureCount
     */
     public function getNotSecureCount()
     {
@@ -144,7 +144,7 @@ class SecurityBaselineStateSummary extends Entity
     * Gets the secureCount
     * Number of secure devices
     *
-    * @return int The secureCount
+    * @return int|null The secureCount
     */
     public function getSecureCount()
     {
@@ -173,7 +173,7 @@ class SecurityBaselineStateSummary extends Entity
     * Gets the unknownCount
     * Number of unknown devices
     *
-    * @return int The unknownCount
+    * @return int|null The unknownCount
     */
     public function getUnknownCount()
     {

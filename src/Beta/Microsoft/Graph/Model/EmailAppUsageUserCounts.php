@@ -27,7 +27,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the imap4App
     *
-    * @return int The imap4App
+    * @return int|null The imap4App
     */
     public function getImap4App()
     {
@@ -54,7 +54,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the mailForMac
     *
-    * @return int The mailForMac
+    * @return int|null The mailForMac
     */
     public function getMailForMac()
     {
@@ -81,7 +81,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the otherForMobile
     *
-    * @return int The otherForMobile
+    * @return int|null The otherForMobile
     */
     public function getOtherForMobile()
     {
@@ -108,7 +108,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the outlookForMac
     *
-    * @return int The outlookForMac
+    * @return int|null The outlookForMac
     */
     public function getOutlookForMac()
     {
@@ -135,7 +135,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the outlookForMobile
     *
-    * @return int The outlookForMobile
+    * @return int|null The outlookForMobile
     */
     public function getOutlookForMobile()
     {
@@ -162,7 +162,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the outlookForWeb
     *
-    * @return int The outlookForWeb
+    * @return int|null The outlookForWeb
     */
     public function getOutlookForWeb()
     {
@@ -189,7 +189,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the outlookForWindows
     *
-    * @return int The outlookForWindows
+    * @return int|null The outlookForWindows
     */
     public function getOutlookForWindows()
     {
@@ -216,7 +216,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the pop3App
     *
-    * @return int The pop3App
+    * @return int|null The pop3App
     */
     public function getPop3App()
     {
@@ -243,12 +243,12 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime The reportDate
+    * @return \DateTime|null The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -274,7 +274,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -301,12 +301,12 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -332,7 +332,7 @@ class EmailAppUsageUserCounts extends Entity
     /**
     * Gets the smtpApp
     *
-    * @return int The smtpApp
+    * @return int|null The smtpApp
     */
     public function getSmtpApp()
     {

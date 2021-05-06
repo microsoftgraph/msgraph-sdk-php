@@ -28,7 +28,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     * Gets the bundleId
     * Bundle id for targeting.
     *
-    * @return string The bundleId
+    * @return string|null The bundleId
     */
     public function getBundleId()
     {
@@ -57,12 +57,12 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     * Gets the configurationXml
     * Configuration xml. (UTF8 encoded byte array)
     *
-    * @return \GuzzleHttp\Psr7\Stream The configurationXml
+    * @return \GuzzleHttp\Psr7\Stream|null The configurationXml
     */
     public function getConfigurationXml()
     {
         if (array_key_exists("configurationXml", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationXml"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["configurationXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["configurationXml"])) {
                 return $this->_propDict["configurationXml"];
             } else {
                 $this->_propDict["configurationXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["configurationXml"]);
@@ -90,7 +90,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     * Gets the fileName
     * Configuration file name (.plist
     *
-    * @return string The fileName
+    * @return string|null The fileName
     */
     public function getFileName()
     {

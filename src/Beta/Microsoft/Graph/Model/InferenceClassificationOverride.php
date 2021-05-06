@@ -28,12 +28,12 @@ class InferenceClassificationOverride extends Entity
     * Gets the classifyAs
     * Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
     *
-    * @return InferenceClassificationType The classifyAs
+    * @return InferenceClassificationType|null The classifyAs
     */
     public function getClassifyAs()
     {
         if (array_key_exists("classifyAs", $this->_propDict)) {
-            if (is_a($this->_propDict["classifyAs"], "\Beta\Microsoft\Graph\Model\InferenceClassificationType")) {
+            if (is_a($this->_propDict["classifyAs"], "\Beta\Microsoft\Graph\Model\InferenceClassificationType") || is_null($this->_propDict["classifyAs"])) {
                 return $this->_propDict["classifyAs"];
             } else {
                 $this->_propDict["classifyAs"] = new InferenceClassificationType($this->_propDict["classifyAs"]);
@@ -61,12 +61,12 @@ class InferenceClassificationOverride extends Entity
     * Gets the senderEmailAddress
     * The email address information of the sender for whom the override is created.
     *
-    * @return EmailAddress The senderEmailAddress
+    * @return EmailAddress|null The senderEmailAddress
     */
     public function getSenderEmailAddress()
     {
         if (array_key_exists("senderEmailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["senderEmailAddress"], "\Beta\Microsoft\Graph\Model\EmailAddress")) {
+            if (is_a($this->_propDict["senderEmailAddress"], "\Beta\Microsoft\Graph\Model\EmailAddress") || is_null($this->_propDict["senderEmailAddress"])) {
                 return $this->_propDict["senderEmailAddress"];
             } else {
                 $this->_propDict["senderEmailAddress"] = new EmailAddress($this->_propDict["senderEmailAddress"]);

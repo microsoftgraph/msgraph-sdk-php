@@ -28,7 +28,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     * Gets the connectionName
     * Connection name displayed to the user.
     *
-    * @return string The connectionName
+    * @return string|null The connectionName
     */
     public function getConnectionName()
     {
@@ -57,12 +57,12 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     * Gets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
     *
-    * @return \GuzzleHttp\Psr7\Stream The customXml
+    * @return \GuzzleHttp\Psr7\Stream|null The customXml
     */
     public function getCustomXml()
     {
         if (array_key_exists("customXml", $this->_propDict)) {
-            if (is_a($this->_propDict["customXml"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["customXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customXml"])) {
                 return $this->_propDict["customXml"];
             } else {
                 $this->_propDict["customXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["customXml"]);
@@ -91,7 +91,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
      * Gets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
-     * @return array The servers
+     * @return array|null The servers
      */
     public function getServers()
     {
@@ -112,7 +112,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     */
     public function setServers($val)
     {
-		$this->_propDict["servers"] = $val;
+        $this->_propDict["servers"] = $val;
         return $this;
     }
     

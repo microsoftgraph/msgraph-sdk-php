@@ -28,7 +28,7 @@ class MobileAppRelationship extends Entity
     * Gets the targetDisplayName
     * The target mobile app's display name.
     *
-    * @return string The targetDisplayName
+    * @return string|null The targetDisplayName
     */
     public function getTargetDisplayName()
     {
@@ -57,7 +57,7 @@ class MobileAppRelationship extends Entity
     * Gets the targetDisplayVersion
     * The target mobile app's display version.
     *
-    * @return string The targetDisplayVersion
+    * @return string|null The targetDisplayVersion
     */
     public function getTargetDisplayVersion()
     {
@@ -86,7 +86,7 @@ class MobileAppRelationship extends Entity
     * Gets the targetId
     * The target mobile app's app id.
     *
-    * @return string The targetId
+    * @return string|null The targetId
     */
     public function getTargetId()
     {
@@ -115,7 +115,7 @@ class MobileAppRelationship extends Entity
     * Gets the targetPublisher
     * The target mobile app's publisher.
     *
-    * @return string The targetPublisher
+    * @return string|null The targetPublisher
     */
     public function getTargetPublisher()
     {
@@ -144,12 +144,12 @@ class MobileAppRelationship extends Entity
     * Gets the targetType
     * The type of relationship indicating whether the target is a parent or child. Possible values are: child, parent.
     *
-    * @return MobileAppRelationshipType The targetType
+    * @return MobileAppRelationshipType|null The targetType
     */
     public function getTargetType()
     {
         if (array_key_exists("targetType", $this->_propDict)) {
-            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\MobileAppRelationshipType")) {
+            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\MobileAppRelationshipType") || is_null($this->_propDict["targetType"])) {
                 return $this->_propDict["targetType"];
             } else {
                 $this->_propDict["targetType"] = new MobileAppRelationshipType($this->_propDict["targetType"]);

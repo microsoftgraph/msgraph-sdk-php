@@ -28,7 +28,7 @@ class ItemInsightsSettings extends Entity
     * Gets the disabledForGroup
     * The ID of an Azure AD group, of which the members' item insights are disabled. Default is empty. Optional.
     *
-    * @return string The disabledForGroup
+    * @return string|null The disabledForGroup
     */
     public function getDisabledForGroup()
     {
@@ -57,7 +57,7 @@ class ItemInsightsSettings extends Entity
     * Gets the isEnabledInOrganization
     * true if organization item insights are enabled; false if organization item insights are disabled for all users without exceptions. Default is true. Optional.
     *
-    * @return bool The isEnabledInOrganization
+    * @return bool|null The isEnabledInOrganization
     */
     public function getIsEnabledInOrganization()
     {

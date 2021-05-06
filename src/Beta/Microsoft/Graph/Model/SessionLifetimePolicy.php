@@ -26,7 +26,7 @@ class SessionLifetimePolicy extends Entity
     /**
     * Gets the detail
     *
-    * @return string The detail
+    * @return string|null The detail
     */
     public function getDetail()
     {
@@ -53,12 +53,12 @@ class SessionLifetimePolicy extends Entity
     /**
     * Gets the expirationRequirement
     *
-    * @return ExpirationRequirement The expirationRequirement
+    * @return ExpirationRequirement|null The expirationRequirement
     */
     public function getExpirationRequirement()
     {
         if (array_key_exists("expirationRequirement", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationRequirement"], "\Beta\Microsoft\Graph\Model\ExpirationRequirement")) {
+            if (is_a($this->_propDict["expirationRequirement"], "\Beta\Microsoft\Graph\Model\ExpirationRequirement") || is_null($this->_propDict["expirationRequirement"])) {
                 return $this->_propDict["expirationRequirement"];
             } else {
                 $this->_propDict["expirationRequirement"] = new ExpirationRequirement($this->_propDict["expirationRequirement"]);

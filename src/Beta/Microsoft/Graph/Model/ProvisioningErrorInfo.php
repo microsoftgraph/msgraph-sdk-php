@@ -26,7 +26,7 @@ class ProvisioningErrorInfo extends Entity
     /**
     * Gets the additionalDetails
     *
-    * @return string The additionalDetails
+    * @return string|null The additionalDetails
     */
     public function getAdditionalDetails()
     {
@@ -53,12 +53,12 @@ class ProvisioningErrorInfo extends Entity
     /**
     * Gets the errorCategory
     *
-    * @return ProvisioningStatusErrorCategory The errorCategory
+    * @return ProvisioningStatusErrorCategory|null The errorCategory
     */
     public function getErrorCategory()
     {
         if (array_key_exists("errorCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["errorCategory"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusErrorCategory")) {
+            if (is_a($this->_propDict["errorCategory"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusErrorCategory") || is_null($this->_propDict["errorCategory"])) {
                 return $this->_propDict["errorCategory"];
             } else {
                 $this->_propDict["errorCategory"] = new ProvisioningStatusErrorCategory($this->_propDict["errorCategory"]);
@@ -83,7 +83,7 @@ class ProvisioningErrorInfo extends Entity
     /**
     * Gets the errorCode
     *
-    * @return string The errorCode
+    * @return string|null The errorCode
     */
     public function getErrorCode()
     {
@@ -109,7 +109,7 @@ class ProvisioningErrorInfo extends Entity
     /**
     * Gets the reason
     *
-    * @return string The reason
+    * @return string|null The reason
     */
     public function getReason()
     {
@@ -135,7 +135,7 @@ class ProvisioningErrorInfo extends Entity
     /**
     * Gets the recommendedAction
     *
-    * @return string The recommendedAction
+    * @return string|null The recommendedAction
     */
     public function getRecommendedAction()
     {

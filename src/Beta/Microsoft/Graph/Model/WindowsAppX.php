@@ -28,12 +28,12 @@ class WindowsAppX extends MobileLobApp
     * Gets the applicableArchitectures
     * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
     *
-    * @return WindowsArchitecture The applicableArchitectures
+    * @return WindowsArchitecture|null The applicableArchitectures
     */
     public function getApplicableArchitectures()
     {
         if (array_key_exists("applicableArchitectures", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitectures"], "\Beta\Microsoft\Graph\Model\WindowsArchitecture")) {
+            if (is_a($this->_propDict["applicableArchitectures"], "\Beta\Microsoft\Graph\Model\WindowsArchitecture") || is_null($this->_propDict["applicableArchitectures"])) {
                 return $this->_propDict["applicableArchitectures"];
             } else {
                 $this->_propDict["applicableArchitectures"] = new WindowsArchitecture($this->_propDict["applicableArchitectures"]);
@@ -61,7 +61,7 @@ class WindowsAppX extends MobileLobApp
     * Gets the identityName
     * The Identity Name.
     *
-    * @return string The identityName
+    * @return string|null The identityName
     */
     public function getIdentityName()
     {
@@ -90,7 +90,7 @@ class WindowsAppX extends MobileLobApp
     * Gets the identityPublisherHash
     * The Identity Publisher Hash.
     *
-    * @return string The identityPublisherHash
+    * @return string|null The identityPublisherHash
     */
     public function getIdentityPublisherHash()
     {
@@ -119,7 +119,7 @@ class WindowsAppX extends MobileLobApp
     * Gets the identityResourceIdentifier
     * The Identity Resource Identifier.
     *
-    * @return string The identityResourceIdentifier
+    * @return string|null The identityResourceIdentifier
     */
     public function getIdentityResourceIdentifier()
     {
@@ -148,7 +148,7 @@ class WindowsAppX extends MobileLobApp
     * Gets the identityVersion
     * The identity version.
     *
-    * @return string The identityVersion
+    * @return string|null The identityVersion
     */
     public function getIdentityVersion()
     {
@@ -177,7 +177,7 @@ class WindowsAppX extends MobileLobApp
     * Gets the isBundle
     * Whether or not the app is a bundle.
     *
-    * @return bool The isBundle
+    * @return bool|null The isBundle
     */
     public function getIsBundle()
     {
@@ -206,12 +206,12 @@ class WindowsAppX extends MobileLobApp
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
-    * @return WindowsMinimumOperatingSystem The minimumSupportedOperatingSystem
+    * @return WindowsMinimumOperatingSystem|null The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Beta\Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Beta\Microsoft\Graph\Model\WindowsMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);

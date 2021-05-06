@@ -27,7 +27,7 @@ class SkypeForBusinessParticipantActivityMinuteCounts extends Entity
     /**
     * Gets the audiovideo
     *
-    * @return int The audiovideo
+    * @return int|null The audiovideo
     */
     public function getAudiovideo()
     {
@@ -54,12 +54,12 @@ class SkypeForBusinessParticipantActivityMinuteCounts extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime The reportDate
+    * @return \DateTime|null The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -85,7 +85,7 @@ class SkypeForBusinessParticipantActivityMinuteCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -112,12 +112,12 @@ class SkypeForBusinessParticipantActivityMinuteCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);

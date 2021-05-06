@@ -27,7 +27,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the dataStoreId
     *
-    * @return string The dataStoreId
+    * @return string|null The dataStoreId
     */
     public function getDataStoreId()
     {
@@ -54,12 +54,12 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the processingCompletionDateTime
     *
-    * @return \DateTime The processingCompletionDateTime
+    * @return \DateTime|null The processingCompletionDateTime
     */
     public function getProcessingCompletionDateTime()
     {
         if (array_key_exists("processingCompletionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["processingCompletionDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["processingCompletionDateTime"], "\DateTime") || is_null($this->_propDict["processingCompletionDateTime"])) {
                 return $this->_propDict["processingCompletionDateTime"];
             } else {
                 $this->_propDict["processingCompletionDateTime"] = new \DateTime($this->_propDict["processingCompletionDateTime"]);
@@ -85,7 +85,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the remainingBlockCount
     *
-    * @return int The remainingBlockCount
+    * @return int|null The remainingBlockCount
     */
     public function getRemainingBlockCount()
     {
@@ -112,7 +112,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the remainingJobCount
     *
-    * @return int The remainingJobCount
+    * @return int|null The remainingJobCount
     */
     public function getRemainingJobCount()
     {
@@ -139,7 +139,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the state
     *
-    * @return string The state
+    * @return string|null The state
     */
     public function getState()
     {
@@ -166,7 +166,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the totalBlockCount
     *
-    * @return int The totalBlockCount
+    * @return int|null The totalBlockCount
     */
     public function getTotalBlockCount()
     {
@@ -193,7 +193,7 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the totalJobCount
     *
-    * @return int The totalJobCount
+    * @return int|null The totalJobCount
     */
     public function getTotalJobCount()
     {
@@ -220,12 +220,12 @@ class ExactMatchSessionBase extends ExactMatchJobBase
     /**
     * Gets the uploadCompletionDateTime
     *
-    * @return \DateTime The uploadCompletionDateTime
+    * @return \DateTime|null The uploadCompletionDateTime
     */
     public function getUploadCompletionDateTime()
     {
         if (array_key_exists("uploadCompletionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["uploadCompletionDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["uploadCompletionDateTime"], "\DateTime") || is_null($this->_propDict["uploadCompletionDateTime"])) {
                 return $this->_propDict["uploadCompletionDateTime"];
             } else {
                 $this->_propDict["uploadCompletionDateTime"] = new \DateTime($this->_propDict["uploadCompletionDateTime"]);

@@ -27,7 +27,7 @@ class UnifiedRoleManagementPolicy extends Entity
     /**
     * Gets the description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -54,7 +54,7 @@ class UnifiedRoleManagementPolicy extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -81,7 +81,7 @@ class UnifiedRoleManagementPolicy extends Entity
     /**
     * Gets the isOrganizationDefault
     *
-    * @return bool The isOrganizationDefault
+    * @return bool|null The isOrganizationDefault
     */
     public function getIsOrganizationDefault()
     {
@@ -108,12 +108,12 @@ class UnifiedRoleManagementPolicy extends Entity
     /**
     * Gets the lastModifiedBy
     *
-    * @return Identity The lastModifiedBy
+    * @return Identity|null The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["lastModifiedBy"])) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new Identity($this->_propDict["lastModifiedBy"]);
@@ -139,12 +139,12 @@ class UnifiedRoleManagementPolicy extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -170,7 +170,7 @@ class UnifiedRoleManagementPolicy extends Entity
     /**
     * Gets the scopeId
     *
-    * @return string The scopeId
+    * @return string|null The scopeId
     */
     public function getScopeId()
     {
@@ -197,7 +197,7 @@ class UnifiedRoleManagementPolicy extends Entity
     /**
     * Gets the scopeType
     *
-    * @return string The scopeType
+    * @return string|null The scopeType
     */
     public function getScopeType()
     {
@@ -225,7 +225,7 @@ class UnifiedRoleManagementPolicy extends Entity
      /** 
      * Gets the effectiveRules
      *
-     * @return array The effectiveRules
+     * @return array|null The effectiveRules
      */
     public function getEffectiveRules()
     {
@@ -245,7 +245,7 @@ class UnifiedRoleManagementPolicy extends Entity
     */
     public function setEffectiveRules($val)
     {
-		$this->_propDict["effectiveRules"] = $val;
+        $this->_propDict["effectiveRules"] = $val;
         return $this;
     }
     
@@ -253,7 +253,7 @@ class UnifiedRoleManagementPolicy extends Entity
      /** 
      * Gets the rules
      *
-     * @return array The rules
+     * @return array|null The rules
      */
     public function getRules()
     {
@@ -273,7 +273,7 @@ class UnifiedRoleManagementPolicy extends Entity
     */
     public function setRules($val)
     {
-		$this->_propDict["rules"] = $val;
+        $this->_propDict["rules"] = $val;
         return $this;
     }
     

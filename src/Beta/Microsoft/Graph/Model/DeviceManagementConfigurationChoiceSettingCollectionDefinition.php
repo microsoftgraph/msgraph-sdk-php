@@ -28,7 +28,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
     * Gets the maximumCount
     * Maximum number of choices in the collection. Valid values 1 to 100
     *
-    * @return int The maximumCount
+    * @return int|null The maximumCount
     */
     public function getMaximumCount()
     {
@@ -57,7 +57,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
     * Gets the minimumCount
     * Minimum number of choices in the collection. Valid values 1 to 100
     *
-    * @return int The minimumCount
+    * @return int|null The minimumCount
     */
     public function getMinimumCount()
     {

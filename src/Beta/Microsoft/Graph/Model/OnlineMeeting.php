@@ -27,12 +27,12 @@ class OnlineMeeting extends Entity
     /**
     * Gets the accessLevel
     *
-    * @return AccessLevel The accessLevel
+    * @return AccessLevel|null The accessLevel
     */
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "\Beta\Microsoft\Graph\Model\AccessLevel")) {
+            if (is_a($this->_propDict["accessLevel"], "\Beta\Microsoft\Graph\Model\AccessLevel") || is_null($this->_propDict["accessLevel"])) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new AccessLevel($this->_propDict["accessLevel"]);
@@ -59,12 +59,12 @@ class OnlineMeeting extends Entity
     * Gets the allowedPresenters
     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
-    * @return OnlineMeetingPresenters The allowedPresenters
+    * @return OnlineMeetingPresenters|null The allowedPresenters
     */
     public function getAllowedPresenters()
     {
         if (array_key_exists("allowedPresenters", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedPresenters"], "\Beta\Microsoft\Graph\Model\OnlineMeetingPresenters")) {
+            if (is_a($this->_propDict["allowedPresenters"], "\Beta\Microsoft\Graph\Model\OnlineMeetingPresenters") || is_null($this->_propDict["allowedPresenters"])) {
                 return $this->_propDict["allowedPresenters"];
             } else {
                 $this->_propDict["allowedPresenters"] = new OnlineMeetingPresenters($this->_propDict["allowedPresenters"]);
@@ -92,12 +92,12 @@ class OnlineMeeting extends Entity
     * Gets the alternativeRecording
     * The content stream of the alternative recording of a live event. Read-only.
     *
-    * @return \GuzzleHttp\Psr7\Stream The alternativeRecording
+    * @return \GuzzleHttp\Psr7\Stream|null The alternativeRecording
     */
     public function getAlternativeRecording()
     {
         if (array_key_exists("alternativeRecording", $this->_propDict)) {
-            if (is_a($this->_propDict["alternativeRecording"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["alternativeRecording"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["alternativeRecording"])) {
                 return $this->_propDict["alternativeRecording"];
             } else {
                 $this->_propDict["alternativeRecording"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["alternativeRecording"]);
@@ -125,12 +125,12 @@ class OnlineMeeting extends Entity
     * Gets the attendeeReport
     * The content stream of the attendee report of a live event. Read-only.
     *
-    * @return \GuzzleHttp\Psr7\Stream The attendeeReport
+    * @return \GuzzleHttp\Psr7\Stream|null The attendeeReport
     */
     public function getAttendeeReport()
     {
         if (array_key_exists("attendeeReport", $this->_propDict)) {
-            if (is_a($this->_propDict["attendeeReport"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["attendeeReport"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["attendeeReport"])) {
                 return $this->_propDict["attendeeReport"];
             } else {
                 $this->_propDict["attendeeReport"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["attendeeReport"]);
@@ -158,12 +158,12 @@ class OnlineMeeting extends Entity
     * Gets the audioConferencing
     * The phone access (dial-in) information for an online meeting. Read-only.
     *
-    * @return AudioConferencing The audioConferencing
+    * @return AudioConferencing|null The audioConferencing
     */
     public function getAudioConferencing()
     {
         if (array_key_exists("audioConferencing", $this->_propDict)) {
-            if (is_a($this->_propDict["audioConferencing"], "\Beta\Microsoft\Graph\Model\AudioConferencing")) {
+            if (is_a($this->_propDict["audioConferencing"], "\Beta\Microsoft\Graph\Model\AudioConferencing") || is_null($this->_propDict["audioConferencing"])) {
                 return $this->_propDict["audioConferencing"];
             } else {
                 $this->_propDict["audioConferencing"] = new AudioConferencing($this->_propDict["audioConferencing"]);
@@ -191,12 +191,12 @@ class OnlineMeeting extends Entity
     * Gets the broadcastSettings
     * Settings related to a live event
     *
-    * @return BroadcastMeetingSettings The broadcastSettings
+    * @return BroadcastMeetingSettings|null The broadcastSettings
     */
     public function getBroadcastSettings()
     {
         if (array_key_exists("broadcastSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["broadcastSettings"], "\Beta\Microsoft\Graph\Model\BroadcastMeetingSettings")) {
+            if (is_a($this->_propDict["broadcastSettings"], "\Beta\Microsoft\Graph\Model\BroadcastMeetingSettings") || is_null($this->_propDict["broadcastSettings"])) {
                 return $this->_propDict["broadcastSettings"];
             } else {
                 $this->_propDict["broadcastSettings"] = new BroadcastMeetingSettings($this->_propDict["broadcastSettings"]);
@@ -223,12 +223,12 @@ class OnlineMeeting extends Entity
     /**
     * Gets the canceledDateTime
     *
-    * @return \DateTime The canceledDateTime
+    * @return \DateTime|null The canceledDateTime
     */
     public function getCanceledDateTime()
     {
         if (array_key_exists("canceledDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["canceledDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["canceledDateTime"], "\DateTime") || is_null($this->_propDict["canceledDateTime"])) {
                 return $this->_propDict["canceledDateTime"];
             } else {
                 $this->_propDict["canceledDateTime"] = new \DateTime($this->_propDict["canceledDateTime"]);
@@ -255,7 +255,7 @@ class OnlineMeeting extends Entity
      /** 
      * Gets the capabilities
      *
-     * @return array The capabilities
+     * @return array|null The capabilities
      */
     public function getCapabilities()
     {
@@ -275,7 +275,7 @@ class OnlineMeeting extends Entity
     */
     public function setCapabilities($val)
     {
-		$this->_propDict["capabilities"] = $val;
+        $this->_propDict["capabilities"] = $val;
         return $this;
     }
     
@@ -283,12 +283,12 @@ class OnlineMeeting extends Entity
     * Gets the chatInfo
     * The chat information associated with this online meeting.
     *
-    * @return ChatInfo The chatInfo
+    * @return ChatInfo|null The chatInfo
     */
     public function getChatInfo()
     {
         if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "\Beta\Microsoft\Graph\Model\ChatInfo")) {
+            if (is_a($this->_propDict["chatInfo"], "\Beta\Microsoft\Graph\Model\ChatInfo") || is_null($this->_propDict["chatInfo"])) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -316,12 +316,12 @@ class OnlineMeeting extends Entity
     * Gets the creationDateTime
     * The meeting creation time in UTC. Read-only.
     *
-    * @return \DateTime The creationDateTime
+    * @return \DateTime|null The creationDateTime
     */
     public function getCreationDateTime()
     {
         if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime") || is_null($this->_propDict["creationDateTime"])) {
                 return $this->_propDict["creationDateTime"];
             } else {
                 $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
@@ -349,12 +349,12 @@ class OnlineMeeting extends Entity
     * Gets the endDateTime
     * The meeting end time in UTC.
     *
-    * @return \DateTime The endDateTime
+    * @return \DateTime|null The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -381,7 +381,7 @@ class OnlineMeeting extends Entity
     /**
     * Gets the entryExitAnnouncement
     *
-    * @return bool The entryExitAnnouncement
+    * @return bool|null The entryExitAnnouncement
     */
     public function getEntryExitAnnouncement()
     {
@@ -408,12 +408,12 @@ class OnlineMeeting extends Entity
     /**
     * Gets the expirationDateTime
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -440,7 +440,7 @@ class OnlineMeeting extends Entity
     * Gets the externalId
     * The external ID. A custom ID. Optional.
     *
-    * @return string The externalId
+    * @return string|null The externalId
     */
     public function getExternalId()
     {
@@ -469,7 +469,7 @@ class OnlineMeeting extends Entity
     * Gets the isBroadcast
     * Indicates if this is a live event.
     *
-    * @return bool The isBroadcast
+    * @return bool|null The isBroadcast
     */
     public function getIsBroadcast()
     {
@@ -497,7 +497,7 @@ class OnlineMeeting extends Entity
     /**
     * Gets the isCancelled
     *
-    * @return bool The isCancelled
+    * @return bool|null The isCancelled
     */
     public function getIsCancelled()
     {
@@ -525,7 +525,7 @@ class OnlineMeeting extends Entity
     * Gets the isEntryExitAnnounced
     * Whether or not to announce when callers join or leave.
     *
-    * @return bool The isEntryExitAnnounced
+    * @return bool|null The isEntryExitAnnounced
     */
     public function getIsEntryExitAnnounced()
     {
@@ -554,12 +554,12 @@ class OnlineMeeting extends Entity
     * Gets the joinInformation
     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
-    * @return ItemBody The joinInformation
+    * @return ItemBody|null The joinInformation
     */
     public function getJoinInformation()
     {
         if (array_key_exists("joinInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["joinInformation"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
+            if (is_a($this->_propDict["joinInformation"], "\Beta\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["joinInformation"])) {
                 return $this->_propDict["joinInformation"];
             } else {
                 $this->_propDict["joinInformation"] = new ItemBody($this->_propDict["joinInformation"]);
@@ -586,7 +586,7 @@ class OnlineMeeting extends Entity
     /**
     * Gets the joinUrl
     *
-    * @return string The joinUrl
+    * @return string|null The joinUrl
     */
     public function getJoinUrl()
     {
@@ -614,12 +614,12 @@ class OnlineMeeting extends Entity
     * Gets the lobbyBypassSettings
     * Specifies which participants can bypass the meeting   lobby.
     *
-    * @return LobbyBypassSettings The lobbyBypassSettings
+    * @return LobbyBypassSettings|null The lobbyBypassSettings
     */
     public function getLobbyBypassSettings()
     {
         if (array_key_exists("lobbyBypassSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["lobbyBypassSettings"], "\Beta\Microsoft\Graph\Model\LobbyBypassSettings")) {
+            if (is_a($this->_propDict["lobbyBypassSettings"], "\Beta\Microsoft\Graph\Model\LobbyBypassSettings") || is_null($this->_propDict["lobbyBypassSettings"])) {
                 return $this->_propDict["lobbyBypassSettings"];
             } else {
                 $this->_propDict["lobbyBypassSettings"] = new LobbyBypassSettings($this->_propDict["lobbyBypassSettings"]);
@@ -647,12 +647,12 @@ class OnlineMeeting extends Entity
     * Gets the participants
     * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
-    * @return MeetingParticipants The participants
+    * @return MeetingParticipants|null The participants
     */
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "\Beta\Microsoft\Graph\Model\MeetingParticipants")) {
+            if (is_a($this->_propDict["participants"], "\Beta\Microsoft\Graph\Model\MeetingParticipants") || is_null($this->_propDict["participants"])) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new MeetingParticipants($this->_propDict["participants"]);
@@ -680,12 +680,12 @@ class OnlineMeeting extends Entity
     * Gets the recording
     * The content stream of the recording of a live event. Read-only.
     *
-    * @return \GuzzleHttp\Psr7\Stream The recording
+    * @return \GuzzleHttp\Psr7\Stream|null The recording
     */
     public function getRecording()
     {
         if (array_key_exists("recording", $this->_propDict)) {
-            if (is_a($this->_propDict["recording"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["recording"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["recording"])) {
                 return $this->_propDict["recording"];
             } else {
                 $this->_propDict["recording"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["recording"]);
@@ -713,12 +713,12 @@ class OnlineMeeting extends Entity
     * Gets the startDateTime
     * The meeting start time in UTC.
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -746,7 +746,7 @@ class OnlineMeeting extends Entity
     * Gets the subject
     * The subject of the online meeting.
     *
-    * @return string The subject
+    * @return string|null The subject
     */
     public function getSubject()
     {
@@ -775,7 +775,7 @@ class OnlineMeeting extends Entity
     * Gets the videoTeleconferenceId
     * The video teleconferencing ID. Read-only.
     *
-    * @return string The videoTeleconferenceId
+    * @return string|null The videoTeleconferenceId
     */
     public function getVideoTeleconferenceId()
     {
@@ -803,12 +803,12 @@ class OnlineMeeting extends Entity
     /**
     * Gets the meetingAttendanceReport
     *
-    * @return MeetingAttendanceReport The meetingAttendanceReport
+    * @return MeetingAttendanceReport|null The meetingAttendanceReport
     */
     public function getMeetingAttendanceReport()
     {
         if (array_key_exists("meetingAttendanceReport", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingAttendanceReport"], "\Beta\Microsoft\Graph\Model\MeetingAttendanceReport")) {
+            if (is_a($this->_propDict["meetingAttendanceReport"], "\Beta\Microsoft\Graph\Model\MeetingAttendanceReport") || is_null($this->_propDict["meetingAttendanceReport"])) {
                 return $this->_propDict["meetingAttendanceReport"];
             } else {
                 $this->_propDict["meetingAttendanceReport"] = new MeetingAttendanceReport($this->_propDict["meetingAttendanceReport"]);

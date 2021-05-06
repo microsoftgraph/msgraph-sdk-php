@@ -27,7 +27,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     /**
     * Gets the assignmentType
     *
-    * @return string The assignmentType
+    * @return string|null The assignmentType
     */
     public function getAssignmentType()
     {
@@ -54,12 +54,12 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     /**
     * Gets the endDateTime
     *
-    * @return \DateTime The endDateTime
+    * @return \DateTime|null The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -85,7 +85,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     /**
     * Gets the memberType
     *
-    * @return string The memberType
+    * @return string|null The memberType
     */
     public function getMemberType()
     {
@@ -112,7 +112,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     /**
     * Gets the roleAssignmentOriginId
     *
-    * @return string The roleAssignmentOriginId
+    * @return string|null The roleAssignmentOriginId
     */
     public function getRoleAssignmentOriginId()
     {
@@ -139,7 +139,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     /**
     * Gets the roleAssignmentScheduleId
     *
-    * @return string The roleAssignmentScheduleId
+    * @return string|null The roleAssignmentScheduleId
     */
     public function getRoleAssignmentScheduleId()
     {
@@ -166,12 +166,12 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     /**
     * Gets the startDateTime
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -197,12 +197,12 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     /**
     * Gets the activatedUsing
     *
-    * @return UnifiedRoleEligibilityScheduleInstance The activatedUsing
+    * @return UnifiedRoleEligibilityScheduleInstance|null The activatedUsing
     */
     public function getActivatedUsing()
     {
         if (array_key_exists("activatedUsing", $this->_propDict)) {
-            if (is_a($this->_propDict["activatedUsing"], "\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleInstance")) {
+            if (is_a($this->_propDict["activatedUsing"], "\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleInstance") || is_null($this->_propDict["activatedUsing"])) {
                 return $this->_propDict["activatedUsing"];
             } else {
                 $this->_propDict["activatedUsing"] = new UnifiedRoleEligibilityScheduleInstance($this->_propDict["activatedUsing"]);

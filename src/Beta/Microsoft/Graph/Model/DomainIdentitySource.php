@@ -36,7 +36,7 @@ class DomainIdentitySource extends IdentitySource
     * Gets the displayName
     * The name of the identity source, typically also the domain name. Read only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -64,7 +64,7 @@ class DomainIdentitySource extends IdentitySource
     * Gets the domainName
     * The domain name. Read only.
     *
-    * @return string The domainName
+    * @return string|null The domainName
     */
     public function getDomainName()
     {

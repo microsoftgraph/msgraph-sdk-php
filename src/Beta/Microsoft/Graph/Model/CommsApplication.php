@@ -39,7 +39,10 @@ class CommsApplication implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-		$this->_propDict = $propDict;
+        if (!is_array($propDict)) {
+           $propDict = array();
+        }
+        $this->_propDict = $propDict;
     }
 
     /**
@@ -56,7 +59,7 @@ class CommsApplication implements \JsonSerializable
      /** 
      * Gets the calls
      *
-     * @return array The calls
+     * @return array|null The calls
      */
     public function getCalls()
     {
@@ -76,7 +79,7 @@ class CommsApplication implements \JsonSerializable
     */
     public function setCalls($val)
     {
-		$this->_propDict["calls"] = $val;
+        $this->_propDict["calls"] = $val;
         return $this;
     }
     
@@ -84,7 +87,7 @@ class CommsApplication implements \JsonSerializable
      /** 
      * Gets the onlineMeetings
      *
-     * @return array The onlineMeetings
+     * @return array|null The onlineMeetings
      */
     public function getOnlineMeetings()
     {
@@ -104,7 +107,7 @@ class CommsApplication implements \JsonSerializable
     */
     public function setOnlineMeetings($val)
     {
-		$this->_propDict["onlineMeetings"] = $val;
+        $this->_propDict["onlineMeetings"] = $val;
         return $this;
     }
     
@@ -133,7 +136,7 @@ class CommsApplication implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-	* Manually serialize DateTime into RFC3339 format
+    * Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

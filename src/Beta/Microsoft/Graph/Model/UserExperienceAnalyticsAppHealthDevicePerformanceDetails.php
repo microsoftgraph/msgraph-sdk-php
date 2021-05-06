@@ -28,7 +28,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
     * Gets the appDisplayName
     * The friendly name of the application for which the event occurred.
     *
-    * @return string The appDisplayName
+    * @return string|null The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
     * Gets the deviceDisplayName
     * The name of the device.
     *
-    * @return string The deviceDisplayName
+    * @return string|null The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
     * Gets the deviceId
     * The id of the device.
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -115,12 +115,12 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
     * Gets the eventDateTime
     * The time the event occurred.
     *
-    * @return \DateTime The eventDateTime
+    * @return \DateTime|null The eventDateTime
     */
     public function getEventDateTime()
     {
         if (array_key_exists("eventDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["eventDateTime"], "\DateTime") || is_null($this->_propDict["eventDateTime"])) {
                 return $this->_propDict["eventDateTime"];
             } else {
                 $this->_propDict["eventDateTime"] = new \DateTime($this->_propDict["eventDateTime"]);
@@ -148,7 +148,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
     * Gets the eventType
     * The type of the event.
     *
-    * @return string The eventType
+    * @return string|null The eventType
     */
     public function getEventType()
     {

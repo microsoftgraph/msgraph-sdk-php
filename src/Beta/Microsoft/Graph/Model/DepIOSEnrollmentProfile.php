@@ -28,7 +28,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the appearanceScreenDisabled
     * Indicates if Apperance screen is disabled
     *
-    * @return bool The appearanceScreenDisabled
+    * @return bool|null The appearanceScreenDisabled
     */
     public function getAppearanceScreenDisabled()
     {
@@ -57,7 +57,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the awaitDeviceConfiguredConfirmation
     * Indicates if the device will need to wait for configured confirmation
     *
-    * @return bool The awaitDeviceConfiguredConfirmation
+    * @return bool|null The awaitDeviceConfiguredConfirmation
     */
     public function getAwaitDeviceConfiguredConfirmation()
     {
@@ -86,7 +86,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the companyPortalVppTokenId
     * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
     *
-    * @return string The companyPortalVppTokenId
+    * @return string|null The companyPortalVppTokenId
     */
     public function getCompanyPortalVppTokenId()
     {
@@ -115,7 +115,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the deviceToDeviceMigrationDisabled
     * Indicates if Device To Device Migration is disabled
     *
-    * @return bool The deviceToDeviceMigrationDisabled
+    * @return bool|null The deviceToDeviceMigrationDisabled
     */
     public function getDeviceToDeviceMigrationDisabled()
     {
@@ -144,7 +144,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the enableSharedIPad
     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
     *
-    * @return bool The enableSharedIPad
+    * @return bool|null The enableSharedIPad
     */
     public function getEnableSharedIPad()
     {
@@ -173,7 +173,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the enableSingleAppEnrollmentMode
     * Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
     *
-    * @return bool The enableSingleAppEnrollmentMode
+    * @return bool|null The enableSingleAppEnrollmentMode
     */
     public function getEnableSingleAppEnrollmentMode()
     {
@@ -202,7 +202,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the expressLanguageScreenDisabled
     * Indicates if Express Language screen is disabled
     *
-    * @return bool The expressLanguageScreenDisabled
+    * @return bool|null The expressLanguageScreenDisabled
     */
     public function getExpressLanguageScreenDisabled()
     {
@@ -231,7 +231,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the homeButtonScreenDisabled
     * Indicates if home button sensitivity screen is disabled
     *
-    * @return bool The homeButtonScreenDisabled
+    * @return bool|null The homeButtonScreenDisabled
     */
     public function getHomeButtonScreenDisabled()
     {
@@ -260,7 +260,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the iMessageAndFaceTimeScreenDisabled
     * Indicates if iMessage and FaceTime screen is disabled
     *
-    * @return bool The iMessageAndFaceTimeScreenDisabled
+    * @return bool|null The iMessageAndFaceTimeScreenDisabled
     */
     public function getIMessageAndFaceTimeScreenDisabled()
     {
@@ -289,12 +289,12 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the iTunesPairingMode
     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
     *
-    * @return ITunesPairingMode The iTunesPairingMode
+    * @return ITunesPairingMode|null The iTunesPairingMode
     */
     public function getITunesPairingMode()
     {
         if (array_key_exists("iTunesPairingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["iTunesPairingMode"], "\Beta\Microsoft\Graph\Model\ITunesPairingMode")) {
+            if (is_a($this->_propDict["iTunesPairingMode"], "\Beta\Microsoft\Graph\Model\ITunesPairingMode") || is_null($this->_propDict["iTunesPairingMode"])) {
                 return $this->_propDict["iTunesPairingMode"];
             } else {
                 $this->_propDict["iTunesPairingMode"] = new ITunesPairingMode($this->_propDict["iTunesPairingMode"]);
@@ -323,7 +323,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
      * Gets the managementCertificates
     * Management certificates for Apple Configurator
      *
-     * @return array The managementCertificates
+     * @return array|null The managementCertificates
      */
     public function getManagementCertificates()
     {
@@ -344,7 +344,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     */
     public function setManagementCertificates($val)
     {
-		$this->_propDict["managementCertificates"] = $val;
+        $this->_propDict["managementCertificates"] = $val;
         return $this;
     }
     
@@ -352,7 +352,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the onBoardingScreenDisabled
     * Indicates if onboarding setup screen is disabled
     *
-    * @return bool The onBoardingScreenDisabled
+    * @return bool|null The onBoardingScreenDisabled
     */
     public function getOnBoardingScreenDisabled()
     {
@@ -381,7 +381,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the passCodeDisabled
     * Indicates if Passcode setup pane is disabled
     *
-    * @return bool The passCodeDisabled
+    * @return bool|null The passCodeDisabled
     */
     public function getPassCodeDisabled()
     {
@@ -410,7 +410,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the preferredLanguageScreenDisabled
     * Indicates if Preferred language screen is disabled
     *
-    * @return bool The preferredLanguageScreenDisabled
+    * @return bool|null The preferredLanguageScreenDisabled
     */
     public function getPreferredLanguageScreenDisabled()
     {
@@ -439,7 +439,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the restoreCompletedScreenDisabled
     * Indicates if Weclome screen is disabled
     *
-    * @return bool The restoreCompletedScreenDisabled
+    * @return bool|null The restoreCompletedScreenDisabled
     */
     public function getRestoreCompletedScreenDisabled()
     {
@@ -468,7 +468,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the restoreFromAndroidDisabled
     * Indicates if Restore from Android is disabled
     *
-    * @return bool The restoreFromAndroidDisabled
+    * @return bool|null The restoreFromAndroidDisabled
     */
     public function getRestoreFromAndroidDisabled()
     {
@@ -497,7 +497,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the sharedIPadMaximumUserCount
     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
-    * @return int The sharedIPadMaximumUserCount
+    * @return int|null The sharedIPadMaximumUserCount
     */
     public function getSharedIPadMaximumUserCount()
     {
@@ -526,7 +526,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the simSetupScreenDisabled
     * Indicates if the SIMSetup screen is disabled
     *
-    * @return bool The simSetupScreenDisabled
+    * @return bool|null The simSetupScreenDisabled
     */
     public function getSimSetupScreenDisabled()
     {
@@ -555,7 +555,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the softwareUpdateScreenDisabled
     * Indicates if the mandatory sofware update screen is disabled
     *
-    * @return bool The softwareUpdateScreenDisabled
+    * @return bool|null The softwareUpdateScreenDisabled
     */
     public function getSoftwareUpdateScreenDisabled()
     {
@@ -584,7 +584,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the updateCompleteScreenDisabled
     * Indicates if Weclome screen is disabled
     *
-    * @return bool The updateCompleteScreenDisabled
+    * @return bool|null The updateCompleteScreenDisabled
     */
     public function getUpdateCompleteScreenDisabled()
     {
@@ -613,7 +613,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the watchMigrationScreenDisabled
     * Indicates if the watch migration screen is disabled
     *
-    * @return bool The watchMigrationScreenDisabled
+    * @return bool|null The watchMigrationScreenDisabled
     */
     public function getWatchMigrationScreenDisabled()
     {
@@ -642,7 +642,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the welcomeScreenDisabled
     * Indicates if Weclome screen is disabled
     *
-    * @return bool The welcomeScreenDisabled
+    * @return bool|null The welcomeScreenDisabled
     */
     public function getWelcomeScreenDisabled()
     {
@@ -671,7 +671,7 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the zoomDisabled
     * Indicates if zoom setup pane is disabled
     *
-    * @return bool The zoomDisabled
+    * @return bool|null The zoomDisabled
     */
     public function getZoomDisabled()
     {

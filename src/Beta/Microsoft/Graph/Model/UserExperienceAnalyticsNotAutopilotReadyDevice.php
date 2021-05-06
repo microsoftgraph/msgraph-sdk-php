@@ -28,7 +28,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the autoPilotProfileAssigned
     * The intune device's autopilotProfileAssigned.
     *
-    * @return bool The autoPilotProfileAssigned
+    * @return bool|null The autoPilotProfileAssigned
     */
     public function getAutoPilotProfileAssigned()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the autoPilotRegistered
     * The intune device's autopilotRegistered.
     *
-    * @return bool The autoPilotRegistered
+    * @return bool|null The autoPilotRegistered
     */
     public function getAutoPilotRegistered()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the azureAdJoinType
     * The intune device's azure Ad joinType.
     *
-    * @return string The azureAdJoinType
+    * @return string|null The azureAdJoinType
     */
     public function getAzureAdJoinType()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the azureAdRegistered
     * The intune device's azureAdRegistered.
     *
-    * @return bool The azureAdRegistered
+    * @return bool|null The azureAdRegistered
     */
     public function getAzureAdRegistered()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the deviceName
     * The intune device's name.
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the managedBy
     * The intune device's managed by.
     *
-    * @return string The managedBy
+    * @return string|null The managedBy
     */
     public function getManagedBy()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the manufacturer
     * The intune device's manufacturer.
     *
-    * @return string The manufacturer
+    * @return string|null The manufacturer
     */
     public function getManufacturer()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the model
     * The intune device's model.
     *
-    * @return string The model
+    * @return string|null The model
     */
     public function getModel()
     {
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity
     * Gets the serialNumber
     * The intune device's serial number.
     *
-    * @return string The serialNumber
+    * @return string|null The serialNumber
     */
     public function getSerialNumber()
     {

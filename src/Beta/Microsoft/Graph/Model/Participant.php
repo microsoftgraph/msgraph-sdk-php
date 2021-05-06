@@ -28,12 +28,12 @@ class Participant extends Entity
     * Gets the info
     * Information about the participant.
     *
-    * @return ParticipantInfo The info
+    * @return ParticipantInfo|null The info
     */
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "\Beta\Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["info"], "\Beta\Microsoft\Graph\Model\ParticipantInfo") || is_null($this->_propDict["info"])) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new ParticipantInfo($this->_propDict["info"]);
@@ -61,7 +61,7 @@ class Participant extends Entity
     * Gets the isInLobby
     * true if the participant is in lobby.
     *
-    * @return bool The isInLobby
+    * @return bool|null The isInLobby
     */
     public function getIsInLobby()
     {
@@ -90,7 +90,7 @@ class Participant extends Entity
     * Gets the isMuted
     * true if the participant is muted (client or server muted).
     *
-    * @return bool The isMuted
+    * @return bool|null The isMuted
     */
     public function getIsMuted()
     {
@@ -120,7 +120,7 @@ class Participant extends Entity
      * Gets the mediaStreams
     * The list of media streams.
      *
-     * @return array The mediaStreams
+     * @return array|null The mediaStreams
      */
     public function getMediaStreams()
     {
@@ -141,7 +141,7 @@ class Participant extends Entity
     */
     public function setMediaStreams($val)
     {
-		$this->_propDict["mediaStreams"] = $val;
+        $this->_propDict["mediaStreams"] = $val;
         return $this;
     }
     
@@ -149,7 +149,7 @@ class Participant extends Entity
     * Gets the metadata
     * A blob of data provided by the participant in the roster.
     *
-    * @return string The metadata
+    * @return string|null The metadata
     */
     public function getMetadata()
     {
@@ -178,12 +178,12 @@ class Participant extends Entity
     * Gets the recordingInfo
     * Information about whether the participant has recording capability.
     *
-    * @return RecordingInfo The recordingInfo
+    * @return RecordingInfo|null The recordingInfo
     */
     public function getRecordingInfo()
     {
         if (array_key_exists("recordingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["recordingInfo"], "\Beta\Microsoft\Graph\Model\RecordingInfo")) {
+            if (is_a($this->_propDict["recordingInfo"], "\Beta\Microsoft\Graph\Model\RecordingInfo") || is_null($this->_propDict["recordingInfo"])) {
                 return $this->_propDict["recordingInfo"];
             } else {
                 $this->_propDict["recordingInfo"] = new RecordingInfo($this->_propDict["recordingInfo"]);

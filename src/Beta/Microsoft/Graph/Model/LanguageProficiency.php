@@ -28,7 +28,7 @@ class LanguageProficiency extends ItemFacet
     * Gets the displayName
     * Contains the long-form name for the language.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -56,12 +56,12 @@ class LanguageProficiency extends ItemFacet
     /**
     * Gets the proficiency
     *
-    * @return LanguageProficiencyLevel The proficiency
+    * @return LanguageProficiencyLevel|null The proficiency
     */
     public function getProficiency()
     {
         if (array_key_exists("proficiency", $this->_propDict)) {
-            if (is_a($this->_propDict["proficiency"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel")) {
+            if (is_a($this->_propDict["proficiency"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel") || is_null($this->_propDict["proficiency"])) {
                 return $this->_propDict["proficiency"];
             } else {
                 $this->_propDict["proficiency"] = new LanguageProficiencyLevel($this->_propDict["proficiency"]);
@@ -88,12 +88,12 @@ class LanguageProficiency extends ItemFacet
     * Gets the reading
     * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
-    * @return LanguageProficiencyLevel The reading
+    * @return LanguageProficiencyLevel|null The reading
     */
     public function getReading()
     {
         if (array_key_exists("reading", $this->_propDict)) {
-            if (is_a($this->_propDict["reading"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel")) {
+            if (is_a($this->_propDict["reading"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel") || is_null($this->_propDict["reading"])) {
                 return $this->_propDict["reading"];
             } else {
                 $this->_propDict["reading"] = new LanguageProficiencyLevel($this->_propDict["reading"]);
@@ -121,12 +121,12 @@ class LanguageProficiency extends ItemFacet
     * Gets the spoken
     * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
-    * @return LanguageProficiencyLevel The spoken
+    * @return LanguageProficiencyLevel|null The spoken
     */
     public function getSpoken()
     {
         if (array_key_exists("spoken", $this->_propDict)) {
-            if (is_a($this->_propDict["spoken"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel")) {
+            if (is_a($this->_propDict["spoken"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel") || is_null($this->_propDict["spoken"])) {
                 return $this->_propDict["spoken"];
             } else {
                 $this->_propDict["spoken"] = new LanguageProficiencyLevel($this->_propDict["spoken"]);
@@ -154,7 +154,7 @@ class LanguageProficiency extends ItemFacet
     * Gets the tag
     * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
     *
-    * @return string The tag
+    * @return string|null The tag
     */
     public function getTag()
     {
@@ -182,7 +182,7 @@ class LanguageProficiency extends ItemFacet
     /**
     * Gets the thumbnailUrl
     *
-    * @return string The thumbnailUrl
+    * @return string|null The thumbnailUrl
     */
     public function getThumbnailUrl()
     {
@@ -210,12 +210,12 @@ class LanguageProficiency extends ItemFacet
     * Gets the written
     * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
     *
-    * @return LanguageProficiencyLevel The written
+    * @return LanguageProficiencyLevel|null The written
     */
     public function getWritten()
     {
         if (array_key_exists("written", $this->_propDict)) {
-            if (is_a($this->_propDict["written"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel")) {
+            if (is_a($this->_propDict["written"], "\Beta\Microsoft\Graph\Model\LanguageProficiencyLevel") || is_null($this->_propDict["written"])) {
                 return $this->_propDict["written"];
             } else {
                 $this->_propDict["written"] = new LanguageProficiencyLevel($this->_propDict["written"]);

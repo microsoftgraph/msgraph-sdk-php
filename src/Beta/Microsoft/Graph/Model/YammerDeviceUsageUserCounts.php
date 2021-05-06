@@ -27,7 +27,7 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the androidPhone
     *
-    * @return int The androidPhone
+    * @return int|null The androidPhone
     */
     public function getAndroidPhone()
     {
@@ -54,7 +54,7 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the iPad
     *
-    * @return int The iPad
+    * @return int|null The iPad
     */
     public function getIPad()
     {
@@ -81,7 +81,7 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the iPhone
     *
-    * @return int The iPhone
+    * @return int|null The iPhone
     */
     public function getIPhone()
     {
@@ -108,7 +108,7 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the other
     *
-    * @return int The other
+    * @return int|null The other
     */
     public function getOther()
     {
@@ -135,12 +135,12 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime The reportDate
+    * @return \DateTime|null The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -166,7 +166,7 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -193,12 +193,12 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -224,7 +224,7 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the web
     *
-    * @return int The web
+    * @return int|null The web
     */
     public function getWeb()
     {
@@ -251,7 +251,7 @@ class YammerDeviceUsageUserCounts extends Entity
     /**
     * Gets the windowsPhone
     *
-    * @return int The windowsPhone
+    * @return int|null The windowsPhone
     */
     public function getWindowsPhone()
     {

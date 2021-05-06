@@ -27,12 +27,12 @@ class EducationSynchronizationProfileStatus extends Entity
     /**
     * Gets the lastActivityDateTime
     *
-    * @return \DateTime The lastActivityDateTime
+    * @return \DateTime|null The lastActivityDateTime
     */
     public function getLastActivityDateTime()
     {
         if (array_key_exists("lastActivityDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActivityDateTime"], "\DateTime") || is_null($this->_propDict["lastActivityDateTime"])) {
                 return $this->_propDict["lastActivityDateTime"];
             } else {
                 $this->_propDict["lastActivityDateTime"] = new \DateTime($this->_propDict["lastActivityDateTime"]);
@@ -59,12 +59,12 @@ class EducationSynchronizationProfileStatus extends Entity
     * Gets the lastSynchronizationDateTime
     * Represents the time when most recent changes have been observed in the directory.
     *
-    * @return \DateTime The lastSynchronizationDateTime
+    * @return \DateTime|null The lastSynchronizationDateTime
     */
     public function getLastSynchronizationDateTime()
     {
         if (array_key_exists("lastSynchronizationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSynchronizationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSynchronizationDateTime"], "\DateTime") || is_null($this->_propDict["lastSynchronizationDateTime"])) {
                 return $this->_propDict["lastSynchronizationDateTime"];
             } else {
                 $this->_propDict["lastSynchronizationDateTime"] = new \DateTime($this->_propDict["lastSynchronizationDateTime"]);
@@ -92,12 +92,12 @@ class EducationSynchronizationProfileStatus extends Entity
     * Gets the status
     * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError.
     *
-    * @return EducationSynchronizationStatus The status
+    * @return EducationSynchronizationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new EducationSynchronizationStatus($this->_propDict["status"]);

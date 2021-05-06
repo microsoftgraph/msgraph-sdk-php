@@ -28,7 +28,7 @@ class ExactMatchDataStore extends ExactMatchDataStoreBase
      /** 
      * Gets the sessions
      *
-     * @return array The sessions
+     * @return array|null The sessions
      */
     public function getSessions()
     {
@@ -48,7 +48,7 @@ class ExactMatchDataStore extends ExactMatchDataStoreBase
     */
     public function setSessions($val)
     {
-		$this->_propDict["sessions"] = $val;
+        $this->_propDict["sessions"] = $val;
         return $this;
     }
     

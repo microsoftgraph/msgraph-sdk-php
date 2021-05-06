@@ -28,7 +28,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     * Gets the phoneNumber
     * The phone number to text or call for authentication. Phone numbers use the format '+&amp;lt;country code&amp;gt; &amp;lt;number&amp;gt;x&amp;lt;extension&amp;gt;', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
     *
-    * @return string The phoneNumber
+    * @return string|null The phoneNumber
     */
     public function getPhoneNumber()
     {
@@ -57,12 +57,12 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     * Gets the phoneType
     * The type of this phone. Possible values are: mobile, alternateMobile, or office.
     *
-    * @return AuthenticationPhoneType The phoneType
+    * @return AuthenticationPhoneType|null The phoneType
     */
     public function getPhoneType()
     {
         if (array_key_exists("phoneType", $this->_propDict)) {
-            if (is_a($this->_propDict["phoneType"], "\Beta\Microsoft\Graph\Model\AuthenticationPhoneType")) {
+            if (is_a($this->_propDict["phoneType"], "\Beta\Microsoft\Graph\Model\AuthenticationPhoneType") || is_null($this->_propDict["phoneType"])) {
                 return $this->_propDict["phoneType"];
             } else {
                 $this->_propDict["phoneType"] = new AuthenticationPhoneType($this->_propDict["phoneType"]);
@@ -90,12 +90,12 @@ class PhoneAuthenticationMethod extends AuthenticationMethod
     * Gets the smsSignInState
     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
     *
-    * @return AuthenticationMethodSignInState The smsSignInState
+    * @return AuthenticationMethodSignInState|null The smsSignInState
     */
     public function getSmsSignInState()
     {
         if (array_key_exists("smsSignInState", $this->_propDict)) {
-            if (is_a($this->_propDict["smsSignInState"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodSignInState")) {
+            if (is_a($this->_propDict["smsSignInState"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodSignInState") || is_null($this->_propDict["smsSignInState"])) {
                 return $this->_propDict["smsSignInState"];
             } else {
                 $this->_propDict["smsSignInState"] = new AuthenticationMethodSignInState($this->_propDict["smsSignInState"]);

@@ -27,7 +27,7 @@ class Schema extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the baseType
     *
-    * @return string The baseType
+    * @return string|null The baseType
     */
     public function getBaseType()
     {
@@ -55,7 +55,7 @@ class Schema extends \Beta\Microsoft\Graph\Model\Entity
      /** 
      * Gets the schemaProperties
      *
-     * @return array The schemaProperties
+     * @return array|null The schemaProperties
      */
     public function getSchemaProperties()
     {
@@ -75,7 +75,7 @@ class Schema extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setSchemaProperties($val)
     {
-		$this->_propDict["properties"] = $val;
+        $this->_propDict["properties"] = $val;
         return $this;
     }
     

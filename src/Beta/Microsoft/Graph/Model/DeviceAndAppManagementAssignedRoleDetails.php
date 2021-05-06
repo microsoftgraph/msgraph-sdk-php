@@ -27,7 +27,7 @@ class DeviceAndAppManagementAssignedRoleDetails extends Entity
     * Gets the roleAssignmentIds
     * Role Assignment IDs for the specifc Role Assignments assigned to a user.
     *
-    * @return string The roleAssignmentIds
+    * @return string|null The roleAssignmentIds
     */
     public function getRoleAssignmentIds()
     {
@@ -55,7 +55,7 @@ class DeviceAndAppManagementAssignedRoleDetails extends Entity
     * Gets the roleDefinitionIds
     * Role Definition IDs for the specifc Role Definitions assigned to a user.
     *
-    * @return string The roleDefinitionIds
+    * @return string|null The roleDefinitionIds
     */
     public function getRoleDefinitionIds()
     {

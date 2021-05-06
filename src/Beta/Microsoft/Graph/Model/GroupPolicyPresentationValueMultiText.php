@@ -28,7 +28,7 @@ class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentationValue
     * Gets the values
     * A collection of non-empty strings for the associated presentation.
     *
-    * @return string The values
+    * @return string|null The values
     */
     public function getValues()
     {

@@ -28,12 +28,12 @@ class ConnectionOperation extends Entity
     * Gets the error
     * If status is failed, provides more information about the error that caused the failure.
     *
-    * @return PublicError The error
+    * @return PublicError|null The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\PublicError")) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\PublicError") || is_null($this->_propDict["error"])) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new PublicError($this->_propDict["error"]);
@@ -61,12 +61,12 @@ class ConnectionOperation extends Entity
     * Gets the status
     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
     *
-    * @return ConnectionOperationStatus The status
+    * @return ConnectionOperationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ConnectionOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ConnectionOperationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionOperationStatus($this->_propDict["status"]);

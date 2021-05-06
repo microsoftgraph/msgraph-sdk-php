@@ -28,12 +28,12 @@ class DeploymentStateReason extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the value
     * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Read-only.
     *
-    * @return DeploymentStateReasonValue The value
+    * @return DeploymentStateReasonValue|null The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentStateReasonValue")) {
+            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentStateReasonValue") || is_null($this->_propDict["value"])) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new DeploymentStateReasonValue($this->_propDict["value"]);

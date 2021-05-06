@@ -36,7 +36,7 @@ class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerGlobalPr
     * Gets the proxyAutoConfigURL
     * The proxy auto-config URL
     *
-    * @return string The proxyAutoConfigURL
+    * @return string|null The proxyAutoConfigURL
     */
     public function getProxyAutoConfigURL()
     {
