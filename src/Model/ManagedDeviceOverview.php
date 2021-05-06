@@ -28,12 +28,12 @@ class ManagedDeviceOverview extends Entity
     * Gets the deviceExchangeAccessStateSummary
     * Distribution of Exchange Access State in Intune
     *
-    * @return DeviceExchangeAccessStateSummary The deviceExchangeAccessStateSummary
+    * @return DeviceExchangeAccessStateSummary|null The deviceExchangeAccessStateSummary
     */
     public function getDeviceExchangeAccessStateSummary()
     {
         if (array_key_exists("deviceExchangeAccessStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary")) {
+            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary") || is_null($this->_propDict["deviceExchangeAccessStateSummary"])) {
                 return $this->_propDict["deviceExchangeAccessStateSummary"];
             } else {
                 $this->_propDict["deviceExchangeAccessStateSummary"] = new DeviceExchangeAccessStateSummary($this->_propDict["deviceExchangeAccessStateSummary"]);
@@ -61,12 +61,12 @@ class ManagedDeviceOverview extends Entity
     * Gets the deviceOperatingSystemSummary
     * Device operating system summary.
     *
-    * @return DeviceOperatingSystemSummary The deviceOperatingSystemSummary
+    * @return DeviceOperatingSystemSummary|null The deviceOperatingSystemSummary
     */
     public function getDeviceOperatingSystemSummary()
     {
         if (array_key_exists("deviceOperatingSystemSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceOperatingSystemSummary"], "\Microsoft\Graph\Model\DeviceOperatingSystemSummary")) {
+            if (is_a($this->_propDict["deviceOperatingSystemSummary"], "\Microsoft\Graph\Model\DeviceOperatingSystemSummary") || is_null($this->_propDict["deviceOperatingSystemSummary"])) {
                 return $this->_propDict["deviceOperatingSystemSummary"];
             } else {
                 $this->_propDict["deviceOperatingSystemSummary"] = new DeviceOperatingSystemSummary($this->_propDict["deviceOperatingSystemSummary"]);
@@ -94,7 +94,7 @@ class ManagedDeviceOverview extends Entity
     * Gets the dualEnrolledDeviceCount
     * The number of devices enrolled in both MDM and EAS
     *
-    * @return int The dualEnrolledDeviceCount
+    * @return int|null The dualEnrolledDeviceCount
     */
     public function getDualEnrolledDeviceCount()
     {
@@ -123,7 +123,7 @@ class ManagedDeviceOverview extends Entity
     * Gets the enrolledDeviceCount
     * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
     *
-    * @return int The enrolledDeviceCount
+    * @return int|null The enrolledDeviceCount
     */
     public function getEnrolledDeviceCount()
     {
@@ -152,7 +152,7 @@ class ManagedDeviceOverview extends Entity
     * Gets the mdmEnrolledCount
     * The number of devices enrolled in MDM
     *
-    * @return int The mdmEnrolledCount
+    * @return int|null The mdmEnrolledCount
     */
     public function getMdmEnrolledCount()
     {

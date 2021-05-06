@@ -27,12 +27,12 @@ class AgreementFileData extends Entity
     /**
     * Gets the data
     *
-    * @return \GuzzleHttp\Psr7\Stream The data
+    * @return \GuzzleHttp\Psr7\Stream|null The data
     */
     public function getData()
     {
         if (array_key_exists("data", $this->_propDict)) {
-            if (is_a($this->_propDict["data"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["data"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["data"])) {
                 return $this->_propDict["data"];
             } else {
                 $this->_propDict["data"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["data"]);

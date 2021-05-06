@@ -27,7 +27,7 @@ class LicenseAssignmentState extends Entity
     * Gets the assignedByGroup
     * The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
     *
-    * @return string The assignedByGroup
+    * @return string|null The assignedByGroup
     */
     public function getAssignedByGroup()
     {
@@ -55,7 +55,7 @@ class LicenseAssignmentState extends Entity
     * Gets the disabledPlans
     * The service plans that are disabled in this assignment. Read-Only.
     *
-    * @return string The disabledPlans
+    * @return string|null The disabledPlans
     */
     public function getDisabledPlans()
     {
@@ -83,7 +83,7 @@ class LicenseAssignmentState extends Entity
     * Gets the error
     * License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. Possible values: CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Others. For more information on how to identify and resolve license assignment errors see here.
     *
-    * @return string The error
+    * @return string|null The error
     */
     public function getError()
     {
@@ -111,7 +111,7 @@ class LicenseAssignmentState extends Entity
     * Gets the skuId
     * The unique identifier for the SKU. Read-Only.
     *
-    * @return string The skuId
+    * @return string|null The skuId
     */
     public function getSkuId()
     {
@@ -139,7 +139,7 @@ class LicenseAssignmentState extends Entity
     * Gets the state
     * Indicate the current state of this assignment. Read-Only. Possible values: Active, ActiveWithError, Disabled and Error.
     *
-    * @return string The state
+    * @return string|null The state
     */
     public function getState()
     {

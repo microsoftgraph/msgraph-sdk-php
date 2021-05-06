@@ -29,7 +29,7 @@ class IpNamedLocation extends NamedLocation
      * Gets the ipRanges
     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
      *
-     * @return array The ipRanges
+     * @return array|null The ipRanges
      */
     public function getIpRanges()
     {
@@ -50,7 +50,7 @@ class IpNamedLocation extends NamedLocation
     */
     public function setIpRanges($val)
     {
-		$this->_propDict["ipRanges"] = $val;
+        $this->_propDict["ipRanges"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class IpNamedLocation extends NamedLocation
     * Gets the isTrusted
     * True if this location is explicitly trusted.
     *
-    * @return bool The isTrusted
+    * @return bool|null The isTrusted
     */
     public function getIsTrusted()
     {

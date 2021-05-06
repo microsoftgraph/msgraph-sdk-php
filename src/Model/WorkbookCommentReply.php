@@ -28,7 +28,7 @@ class WorkbookCommentReply extends Entity
     * Gets the content
     * The content of a comment reply.
     *
-    * @return string The content
+    * @return string|null The content
     */
     public function getContent()
     {
@@ -57,7 +57,7 @@ class WorkbookCommentReply extends Entity
     * Gets the contentType
     * Indicates the type for the comment reply.
     *
-    * @return string The contentType
+    * @return string|null The contentType
     */
     public function getContentType()
     {

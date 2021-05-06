@@ -28,7 +28,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the allowSampleSharing
     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
     *
-    * @return bool The allowSampleSharing
+    * @return bool|null The allowSampleSharing
     */
     public function getAllowSampleSharing()
     {
@@ -57,7 +57,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the enableExpeditedTelemetryReporting
     * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
-    * @return bool The enableExpeditedTelemetryReporting
+    * @return bool|null The enableExpeditedTelemetryReporting
     */
     public function getEnableExpeditedTelemetryReporting()
     {

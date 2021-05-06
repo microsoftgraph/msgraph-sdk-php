@@ -27,7 +27,7 @@ class SettingSource extends Entity
     * Gets the displayName
     * Not yet documented
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class SettingSource extends Entity
     * Gets the id
     * Not yet documented
     *
-    * @return string The id
+    * @return string|null The id
     */
     public function getId()
     {

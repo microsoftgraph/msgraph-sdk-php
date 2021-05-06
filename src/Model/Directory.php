@@ -28,7 +28,7 @@ class Directory extends Entity
      /** 
      * Gets the administrativeUnits
      *
-     * @return array The administrativeUnits
+     * @return array|null The administrativeUnits
      */
     public function getAdministrativeUnits()
     {
@@ -48,7 +48,7 @@ class Directory extends Entity
     */
     public function setAdministrativeUnits($val)
     {
-		$this->_propDict["administrativeUnits"] = $val;
+        $this->_propDict["administrativeUnits"] = $val;
         return $this;
     }
     
@@ -57,7 +57,7 @@ class Directory extends Entity
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *
-     * @return array The deletedItems
+     * @return array|null The deletedItems
      */
     public function getDeletedItems()
     {
@@ -78,7 +78,7 @@ class Directory extends Entity
     */
     public function setDeletedItems($val)
     {
-		$this->_propDict["deletedItems"] = $val;
+        $this->_propDict["deletedItems"] = $val;
         return $this;
     }
     

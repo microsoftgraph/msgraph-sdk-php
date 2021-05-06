@@ -27,12 +27,12 @@ class EventMessageResponse extends EventMessage
     /**
     * Gets the proposedNewTime
     *
-    * @return TimeSlot The proposedNewTime
+    * @return TimeSlot|null The proposedNewTime
     */
     public function getProposedNewTime()
     {
         if (array_key_exists("proposedNewTime", $this->_propDict)) {
-            if (is_a($this->_propDict["proposedNewTime"], "\Microsoft\Graph\Model\TimeSlot")) {
+            if (is_a($this->_propDict["proposedNewTime"], "\Microsoft\Graph\Model\TimeSlot") || is_null($this->_propDict["proposedNewTime"])) {
                 return $this->_propDict["proposedNewTime"];
             } else {
                 $this->_propDict["proposedNewTime"] = new TimeSlot($this->_propDict["proposedNewTime"]);
@@ -58,12 +58,12 @@ class EventMessageResponse extends EventMessage
     /**
     * Gets the responseType
     *
-    * @return ResponseType The responseType
+    * @return ResponseType|null The responseType
     */
     public function getResponseType()
     {
         if (array_key_exists("responseType", $this->_propDict)) {
-            if (is_a($this->_propDict["responseType"], "\Microsoft\Graph\Model\ResponseType")) {
+            if (is_a($this->_propDict["responseType"], "\Microsoft\Graph\Model\ResponseType") || is_null($this->_propDict["responseType"])) {
                 return $this->_propDict["responseType"];
             } else {
                 $this->_propDict["responseType"] = new ResponseType($this->_propDict["responseType"]);

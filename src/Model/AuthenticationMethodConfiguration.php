@@ -28,12 +28,12 @@ class AuthenticationMethodConfiguration extends Entity
     * Gets the state
     * The state of the policy. Possible values are: enabled, disabled.
     *
-    * @return AuthenticationMethodState The state
+    * @return AuthenticationMethodState|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\AuthenticationMethodState")) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\AuthenticationMethodState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new AuthenticationMethodState($this->_propDict["state"]);

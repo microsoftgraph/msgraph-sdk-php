@@ -28,7 +28,7 @@ class UserActivity extends Entity
     * Gets the activationUrl
     * Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
     *
-    * @return string The activationUrl
+    * @return string|null The activationUrl
     */
     public function getActivationUrl()
     {
@@ -57,7 +57,7 @@ class UserActivity extends Entity
     * Gets the activitySourceHost
     * Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
     *
-    * @return string The activitySourceHost
+    * @return string|null The activitySourceHost
     */
     public function getActivitySourceHost()
     {
@@ -86,7 +86,7 @@ class UserActivity extends Entity
     * Gets the appActivityId
     * Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
     *
-    * @return string The appActivityId
+    * @return string|null The appActivityId
     */
     public function getAppActivityId()
     {
@@ -115,7 +115,7 @@ class UserActivity extends Entity
     * Gets the appDisplayName
     * Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
     *
-    * @return string The appDisplayName
+    * @return string|null The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -144,7 +144,7 @@ class UserActivity extends Entity
     * Gets the contentInfo
     * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
     *
-    * @return string The contentInfo
+    * @return string|null The contentInfo
     */
     public function getContentInfo()
     {
@@ -173,7 +173,7 @@ class UserActivity extends Entity
     * Gets the contentUrl
     * Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
     *
-    * @return string The contentUrl
+    * @return string|null The contentUrl
     */
     public function getContentUrl()
     {
@@ -202,12 +202,12 @@ class UserActivity extends Entity
     * Gets the createdDateTime
     * Set by the server. DateTime in UTC when the object was created on the server.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -235,12 +235,12 @@ class UserActivity extends Entity
     * Gets the expirationDateTime
     * Set by the server. DateTime in UTC when the object expired on the server.
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -268,7 +268,7 @@ class UserActivity extends Entity
     * Gets the fallbackUrl
     * Optional. URL used to launch the activity in a web-based app, if available.
     *
-    * @return string The fallbackUrl
+    * @return string|null The fallbackUrl
     */
     public function getFallbackUrl()
     {
@@ -297,12 +297,12 @@ class UserActivity extends Entity
     * Gets the lastModifiedDateTime
     * Set by the server. DateTime in UTC when the object was modified on the server.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -330,12 +330,12 @@ class UserActivity extends Entity
     * Gets the status
     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
     *
-    * @return Status The status
+    * @return Status|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\Status")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\Status") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new Status($this->_propDict["status"]);
@@ -363,7 +363,7 @@ class UserActivity extends Entity
     * Gets the userTimezone
     * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
     *
-    * @return string The userTimezone
+    * @return string|null The userTimezone
     */
     public function getUserTimezone()
     {
@@ -392,12 +392,12 @@ class UserActivity extends Entity
     * Gets the visualElements
     * Required. The object containing information to render the activity in the UX.
     *
-    * @return VisualInfo The visualElements
+    * @return VisualInfo|null The visualElements
     */
     public function getVisualElements()
     {
         if (array_key_exists("visualElements", $this->_propDict)) {
-            if (is_a($this->_propDict["visualElements"], "\Microsoft\Graph\Model\VisualInfo")) {
+            if (is_a($this->_propDict["visualElements"], "\Microsoft\Graph\Model\VisualInfo") || is_null($this->_propDict["visualElements"])) {
                 return $this->_propDict["visualElements"];
             } else {
                 $this->_propDict["visualElements"] = new VisualInfo($this->_propDict["visualElements"]);
@@ -426,7 +426,7 @@ class UserActivity extends Entity
      * Gets the historyItems
     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      *
-     * @return array The historyItems
+     * @return array|null The historyItems
      */
     public function getHistoryItems()
     {
@@ -447,7 +447,7 @@ class UserActivity extends Entity
     */
     public function setHistoryItems($val)
     {
-		$this->_propDict["historyItems"] = $val;
+        $this->_propDict["historyItems"] = $val;
         return $this;
     }
     

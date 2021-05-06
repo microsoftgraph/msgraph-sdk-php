@@ -28,12 +28,12 @@ class PrintOperation extends Entity
     * Gets the createdDateTime
     * The DateTimeOffset when the operation was created. Read-only.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,12 +61,12 @@ class PrintOperation extends Entity
     * Gets the status
     * The status of the operation. Read-only.
     *
-    * @return PrintOperationStatus The status
+    * @return PrintOperationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrintOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrintOperationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrintOperationStatus($this->_propDict["status"]);

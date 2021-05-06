@@ -27,7 +27,7 @@ class ModifiedProperty extends Entity
     * Gets the displayName
     * Indicates the property name of the target attribute that was changed.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class ModifiedProperty extends Entity
     * Gets the newValue
     * Indicates the updated value for the propery.
     *
-    * @return string The newValue
+    * @return string|null The newValue
     */
     public function getNewValue()
     {
@@ -83,7 +83,7 @@ class ModifiedProperty extends Entity
     * Gets the oldValue
     * Indicates the previous value (before the update) for the property.
     *
-    * @return string The oldValue
+    * @return string|null The oldValue
     */
     public function getOldValue()
     {

@@ -29,7 +29,7 @@ class OfficeGraphInsights extends Entity
      * Gets the shared
     * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      *
-     * @return array The shared
+     * @return array|null The shared
      */
     public function getShared()
     {
@@ -50,7 +50,7 @@ class OfficeGraphInsights extends Entity
     */
     public function setShared($val)
     {
-		$this->_propDict["shared"] = $val;
+        $this->_propDict["shared"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class OfficeGraphInsights extends Entity
      * Gets the trending
     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      *
-     * @return array The trending
+     * @return array|null The trending
      */
     public function getTrending()
     {
@@ -80,7 +80,7 @@ class OfficeGraphInsights extends Entity
     */
     public function setTrending($val)
     {
-		$this->_propDict["trending"] = $val;
+        $this->_propDict["trending"] = $val;
         return $this;
     }
     
@@ -89,7 +89,7 @@ class OfficeGraphInsights extends Entity
      * Gets the used
     * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      *
-     * @return array The used
+     * @return array|null The used
      */
     public function getUsed()
     {
@@ -110,7 +110,7 @@ class OfficeGraphInsights extends Entity
     */
     public function setUsed($val)
     {
-		$this->_propDict["used"] = $val;
+        $this->_propDict["used"] = $val;
         return $this;
     }
     

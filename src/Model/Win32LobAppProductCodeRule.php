@@ -36,7 +36,7 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule
     * Gets the productCode
     * The product code of the app.
     *
-    * @return string The productCode
+    * @return string|null The productCode
     */
     public function getProductCode()
     {
@@ -64,7 +64,7 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule
     * Gets the productVersion
     * The product version comparison value.
     *
-    * @return string The productVersion
+    * @return string|null The productVersion
     */
     public function getProductVersion()
     {
@@ -93,12 +93,12 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule
     * Gets the productVersionOperator
     * The product version comparison operator. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
-    * @return Win32LobAppRuleOperator The productVersionOperator
+    * @return Win32LobAppRuleOperator|null The productVersionOperator
     */
     public function getProductVersionOperator()
     {
         if (array_key_exists("productVersionOperator", $this->_propDict)) {
-            if (is_a($this->_propDict["productVersionOperator"], "\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
+            if (is_a($this->_propDict["productVersionOperator"], "\Microsoft\Graph\Model\Win32LobAppRuleOperator") || is_null($this->_propDict["productVersionOperator"])) {
                 return $this->_propDict["productVersionOperator"];
             } else {
                 $this->_propDict["productVersionOperator"] = new Win32LobAppRuleOperator($this->_propDict["productVersionOperator"]);

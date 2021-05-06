@@ -28,7 +28,7 @@ class ContentType extends Entity
     * Gets the description
     * The descriptive text for the item.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class ContentType extends Entity
     * Gets the group
     * The name of the group this content type belongs to. Helps organize related content types.
     *
-    * @return string The group
+    * @return string|null The group
     */
     public function getGroup()
     {
@@ -86,7 +86,7 @@ class ContentType extends Entity
     * Gets the hidden
     * Indicates whether the content type is hidden in the list's 'New' menu.
     *
-    * @return bool The hidden
+    * @return bool|null The hidden
     */
     public function getHidden()
     {
@@ -115,12 +115,12 @@ class ContentType extends Entity
     * Gets the inheritedFrom
     * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
     *
-    * @return ItemReference The inheritedFrom
+    * @return ItemReference|null The inheritedFrom
     */
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference")) {
+            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference") || is_null($this->_propDict["inheritedFrom"])) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -148,7 +148,7 @@ class ContentType extends Entity
     * Gets the name
     * The name of the content type.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -177,12 +177,12 @@ class ContentType extends Entity
     * Gets the order
     * Specifies the order in which the content type appears in the selection UI.
     *
-    * @return ContentTypeOrder The order
+    * @return ContentTypeOrder|null The order
     */
     public function getOrder()
     {
         if (array_key_exists("order", $this->_propDict)) {
-            if (is_a($this->_propDict["order"], "\Microsoft\Graph\Model\ContentTypeOrder")) {
+            if (is_a($this->_propDict["order"], "\Microsoft\Graph\Model\ContentTypeOrder") || is_null($this->_propDict["order"])) {
                 return $this->_propDict["order"];
             } else {
                 $this->_propDict["order"] = new ContentTypeOrder($this->_propDict["order"]);
@@ -210,7 +210,7 @@ class ContentType extends Entity
     * Gets the parentId
     * The unique identifier of the content type.
     *
-    * @return string The parentId
+    * @return string|null The parentId
     */
     public function getParentId()
     {
@@ -239,7 +239,7 @@ class ContentType extends Entity
     * Gets the readOnly
     * If true, the content type cannot be modified unless this value is first set to false.
     *
-    * @return bool The readOnly
+    * @return bool|null The readOnly
     */
     public function getReadOnly()
     {
@@ -268,7 +268,7 @@ class ContentType extends Entity
     * Gets the sealed
     * If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
     *
-    * @return bool The sealed
+    * @return bool|null The sealed
     */
     public function getSealed()
     {
@@ -298,7 +298,7 @@ class ContentType extends Entity
      * Gets the columnLinks
     * The collection of columns that are required by this content type
      *
-     * @return array The columnLinks
+     * @return array|null The columnLinks
      */
     public function getColumnLinks()
     {
@@ -319,7 +319,7 @@ class ContentType extends Entity
     */
     public function setColumnLinks($val)
     {
-		$this->_propDict["columnLinks"] = $val;
+        $this->_propDict["columnLinks"] = $val;
         return $this;
     }
     

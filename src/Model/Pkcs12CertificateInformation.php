@@ -27,7 +27,7 @@ class Pkcs12CertificateInformation extends Entity
     * Gets the isActive
     * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
     *
-    * @return bool The isActive
+    * @return bool|null The isActive
     */
     public function getIsActive()
     {
@@ -55,7 +55,7 @@ class Pkcs12CertificateInformation extends Entity
     * Gets the notAfter
     * The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
     *
-    * @return int The notAfter
+    * @return int|null The notAfter
     */
     public function getNotAfter()
     {
@@ -83,7 +83,7 @@ class Pkcs12CertificateInformation extends Entity
     * Gets the notBefore
     * The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
     *
-    * @return int The notBefore
+    * @return int|null The notBefore
     */
     public function getNotBefore()
     {
@@ -111,7 +111,7 @@ class Pkcs12CertificateInformation extends Entity
     * Gets the thumbprint
     * The certificate thumbprint.
     *
-    * @return string The thumbprint
+    * @return string|null The thumbprint
     */
     public function getThumbprint()
     {

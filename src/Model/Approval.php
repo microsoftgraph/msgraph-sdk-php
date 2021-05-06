@@ -29,7 +29,7 @@ class Approval extends Entity
      * Gets the stages
     * A collection of stages in the approval decision.
      *
-     * @return array The stages
+     * @return array|null The stages
      */
     public function getStages()
     {
@@ -50,7 +50,7 @@ class Approval extends Entity
     */
     public function setStages($val)
     {
-		$this->_propDict["stages"] = $val;
+        $this->_propDict["stages"] = $val;
         return $this;
     }
     

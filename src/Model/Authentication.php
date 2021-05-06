@@ -28,7 +28,7 @@ class Authentication extends Entity
      /** 
      * Gets the fido2Methods
      *
-     * @return array The fido2Methods
+     * @return array|null The fido2Methods
      */
     public function getFido2Methods()
     {
@@ -48,7 +48,7 @@ class Authentication extends Entity
     */
     public function setFido2Methods($val)
     {
-		$this->_propDict["fido2Methods"] = $val;
+        $this->_propDict["fido2Methods"] = $val;
         return $this;
     }
     
@@ -56,7 +56,7 @@ class Authentication extends Entity
      /** 
      * Gets the methods
      *
-     * @return array The methods
+     * @return array|null The methods
      */
     public function getMethods()
     {
@@ -76,7 +76,7 @@ class Authentication extends Entity
     */
     public function setMethods($val)
     {
-		$this->_propDict["methods"] = $val;
+        $this->_propDict["methods"] = $val;
         return $this;
     }
     
@@ -84,7 +84,7 @@ class Authentication extends Entity
      /** 
      * Gets the microsoftAuthenticatorMethods
      *
-     * @return array The microsoftAuthenticatorMethods
+     * @return array|null The microsoftAuthenticatorMethods
      */
     public function getMicrosoftAuthenticatorMethods()
     {
@@ -104,7 +104,7 @@ class Authentication extends Entity
     */
     public function setMicrosoftAuthenticatorMethods($val)
     {
-		$this->_propDict["microsoftAuthenticatorMethods"] = $val;
+        $this->_propDict["microsoftAuthenticatorMethods"] = $val;
         return $this;
     }
     
@@ -112,7 +112,7 @@ class Authentication extends Entity
      /** 
      * Gets the windowsHelloForBusinessMethods
      *
-     * @return array The windowsHelloForBusinessMethods
+     * @return array|null The windowsHelloForBusinessMethods
      */
     public function getWindowsHelloForBusinessMethods()
     {
@@ -132,7 +132,7 @@ class Authentication extends Entity
     */
     public function setWindowsHelloForBusinessMethods($val)
     {
-		$this->_propDict["windowsHelloForBusinessMethods"] = $val;
+        $this->_propDict["windowsHelloForBusinessMethods"] = $val;
         return $this;
     }
     
