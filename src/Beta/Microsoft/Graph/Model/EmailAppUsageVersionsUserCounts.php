@@ -27,7 +27,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the outlook2007
     *
-    * @return int The outlook2007
+    * @return int|null The outlook2007
     */
     public function getOutlook2007()
     {
@@ -54,7 +54,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the outlook2010
     *
-    * @return int The outlook2010
+    * @return int|null The outlook2010
     */
     public function getOutlook2010()
     {
@@ -81,7 +81,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the outlook2013
     *
-    * @return int The outlook2013
+    * @return int|null The outlook2013
     */
     public function getOutlook2013()
     {
@@ -108,7 +108,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the outlook2016
     *
-    * @return int The outlook2016
+    * @return int|null The outlook2016
     */
     public function getOutlook2016()
     {
@@ -135,7 +135,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the outlook2019
     *
-    * @return int The outlook2019
+    * @return int|null The outlook2019
     */
     public function getOutlook2019()
     {
@@ -162,7 +162,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the outlookM365
     *
-    * @return int The outlookM365
+    * @return int|null The outlookM365
     */
     public function getOutlookM365()
     {
@@ -189,7 +189,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -216,12 +216,12 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -247,7 +247,7 @@ class EmailAppUsageVersionsUserCounts extends Entity
     /**
     * Gets the undetermined
     *
-    * @return int The undetermined
+    * @return int|null The undetermined
     */
     public function getUndetermined()
     {

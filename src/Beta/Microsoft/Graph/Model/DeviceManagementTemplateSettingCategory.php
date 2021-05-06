@@ -29,7 +29,7 @@ class DeviceManagementTemplateSettingCategory extends DeviceManagementSettingCat
      * Gets the recommendedSettings
     * The settings this category contains
      *
-     * @return array The recommendedSettings
+     * @return array|null The recommendedSettings
      */
     public function getRecommendedSettings()
     {
@@ -50,7 +50,7 @@ class DeviceManagementTemplateSettingCategory extends DeviceManagementSettingCat
     */
     public function setRecommendedSettings($val)
     {
-		$this->_propDict["recommendedSettings"] = $val;
+        $this->_propDict["recommendedSettings"] = $val;
         return $this;
     }
     

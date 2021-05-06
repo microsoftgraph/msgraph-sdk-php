@@ -28,12 +28,12 @@ class ComanagementEligibleDevice extends Entity
     * Gets the clientRegistrationStatus
     * ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
     *
-    * @return DeviceRegistrationState The clientRegistrationStatus
+    * @return DeviceRegistrationState|null The clientRegistrationStatus
     */
     public function getClientRegistrationStatus()
     {
         if (array_key_exists("clientRegistrationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["clientRegistrationStatus"], "\Beta\Microsoft\Graph\Model\DeviceRegistrationState")) {
+            if (is_a($this->_propDict["clientRegistrationStatus"], "\Beta\Microsoft\Graph\Model\DeviceRegistrationState") || is_null($this->_propDict["clientRegistrationStatus"])) {
                 return $this->_propDict["clientRegistrationStatus"];
             } else {
                 $this->_propDict["clientRegistrationStatus"] = new DeviceRegistrationState($this->_propDict["clientRegistrationStatus"]);
@@ -61,7 +61,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the deviceName
     * DeviceName
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -90,12 +90,12 @@ class ComanagementEligibleDevice extends Entity
     * Gets the deviceType
     * DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
     *
-    * @return DeviceType The deviceType
+    * @return DeviceType|null The deviceType
     */
     public function getDeviceType()
     {
         if (array_key_exists("deviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceType"], "\Beta\Microsoft\Graph\Model\DeviceType")) {
+            if (is_a($this->_propDict["deviceType"], "\Beta\Microsoft\Graph\Model\DeviceType") || is_null($this->_propDict["deviceType"])) {
                 return $this->_propDict["deviceType"];
             } else {
                 $this->_propDict["deviceType"] = new DeviceType($this->_propDict["deviceType"]);
@@ -123,7 +123,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the entitySource
     * EntitySource
     *
-    * @return int The entitySource
+    * @return int|null The entitySource
     */
     public function getEntitySource()
     {
@@ -152,12 +152,12 @@ class ComanagementEligibleDevice extends Entity
     * Gets the managementAgents
     * ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
     *
-    * @return ManagementAgentType The managementAgents
+    * @return ManagementAgentType|null The managementAgents
     */
     public function getManagementAgents()
     {
         if (array_key_exists("managementAgents", $this->_propDict)) {
-            if (is_a($this->_propDict["managementAgents"], "\Beta\Microsoft\Graph\Model\ManagementAgentType")) {
+            if (is_a($this->_propDict["managementAgents"], "\Beta\Microsoft\Graph\Model\ManagementAgentType") || is_null($this->_propDict["managementAgents"])) {
                 return $this->_propDict["managementAgents"];
             } else {
                 $this->_propDict["managementAgents"] = new ManagementAgentType($this->_propDict["managementAgents"]);
@@ -185,12 +185,12 @@ class ComanagementEligibleDevice extends Entity
     * Gets the managementState
     * ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
     *
-    * @return ManagementState The managementState
+    * @return ManagementState|null The managementState
     */
     public function getManagementState()
     {
         if (array_key_exists("managementState", $this->_propDict)) {
-            if (is_a($this->_propDict["managementState"], "\Beta\Microsoft\Graph\Model\ManagementState")) {
+            if (is_a($this->_propDict["managementState"], "\Beta\Microsoft\Graph\Model\ManagementState") || is_null($this->_propDict["managementState"])) {
                 return $this->_propDict["managementState"];
             } else {
                 $this->_propDict["managementState"] = new ManagementState($this->_propDict["managementState"]);
@@ -218,7 +218,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the manufacturer
     * Manufacturer
     *
-    * @return string The manufacturer
+    * @return string|null The manufacturer
     */
     public function getManufacturer()
     {
@@ -247,7 +247,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the mdmStatus
     * MDMStatus
     *
-    * @return string The mdmStatus
+    * @return string|null The mdmStatus
     */
     public function getMdmStatus()
     {
@@ -276,7 +276,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the model
     * Model
     *
-    * @return string The model
+    * @return string|null The model
     */
     public function getModel()
     {
@@ -305,7 +305,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the osDescription
     * OSDescription
     *
-    * @return string The osDescription
+    * @return string|null The osDescription
     */
     public function getOsDescription()
     {
@@ -334,7 +334,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the osVersion
     * OSVersion
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -363,12 +363,12 @@ class ComanagementEligibleDevice extends Entity
     * Gets the ownerType
     * OwnerType. Possible values are: unknown, company, personal.
     *
-    * @return OwnerType The ownerType
+    * @return OwnerType|null The ownerType
     */
     public function getOwnerType()
     {
         if (array_key_exists("ownerType", $this->_propDict)) {
-            if (is_a($this->_propDict["ownerType"], "\Beta\Microsoft\Graph\Model\OwnerType")) {
+            if (is_a($this->_propDict["ownerType"], "\Beta\Microsoft\Graph\Model\OwnerType") || is_null($this->_propDict["ownerType"])) {
                 return $this->_propDict["ownerType"];
             } else {
                 $this->_propDict["ownerType"] = new OwnerType($this->_propDict["ownerType"]);
@@ -396,7 +396,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the referenceId
     * ReferenceId
     *
-    * @return string The referenceId
+    * @return string|null The referenceId
     */
     public function getReferenceId()
     {
@@ -425,7 +425,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the serialNumber
     * SerialNumber
     *
-    * @return string The serialNumber
+    * @return string|null The serialNumber
     */
     public function getSerialNumber()
     {
@@ -454,12 +454,12 @@ class ComanagementEligibleDevice extends Entity
     * Gets the status
     * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
     *
-    * @return ComanagementEligibleType The status
+    * @return ComanagementEligibleType|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComanagementEligibleType")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComanagementEligibleType") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComanagementEligibleType($this->_propDict["status"]);
@@ -487,7 +487,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the upn
     * UPN
     *
-    * @return string The upn
+    * @return string|null The upn
     */
     public function getUpn()
     {
@@ -516,7 +516,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the userEmail
     * UserEmail
     *
-    * @return string The userEmail
+    * @return string|null The userEmail
     */
     public function getUserEmail()
     {
@@ -545,7 +545,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the userId
     * UserId
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -574,7 +574,7 @@ class ComanagementEligibleDevice extends Entity
     * Gets the userName
     * UserName
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {

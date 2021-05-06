@@ -28,7 +28,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     * Gets the assignedUserPrincipalName
     * UPN of the user the device will be assigned
     *
-    * @return string The assignedUserPrincipalName
+    * @return string|null The assignedUserPrincipalName
     */
     public function getAssignedUserPrincipalName()
     {
@@ -57,7 +57,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     * Gets the groupTag
     * Group Tag of the Windows autopilot device.
     *
-    * @return string The groupTag
+    * @return string|null The groupTag
     */
     public function getGroupTag()
     {
@@ -86,12 +86,12 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     * Gets the hardwareIdentifier
     * Hardware Blob of the Windows autopilot device.
     *
-    * @return \GuzzleHttp\Psr7\Stream The hardwareIdentifier
+    * @return \GuzzleHttp\Psr7\Stream|null The hardwareIdentifier
     */
     public function getHardwareIdentifier()
     {
         if (array_key_exists("hardwareIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["hardwareIdentifier"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["hardwareIdentifier"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["hardwareIdentifier"])) {
                 return $this->_propDict["hardwareIdentifier"];
             } else {
                 $this->_propDict["hardwareIdentifier"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["hardwareIdentifier"]);
@@ -119,7 +119,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     * Gets the importId
     * The Import Id of the Windows autopilot device.
     *
-    * @return string The importId
+    * @return string|null The importId
     */
     public function getImportId()
     {
@@ -148,7 +148,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     * Gets the productKey
     * Product Key of the Windows autopilot device.
     *
-    * @return string The productKey
+    * @return string|null The productKey
     */
     public function getProductKey()
     {
@@ -177,7 +177,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     * Gets the serialNumber
     * Serial number of the Windows autopilot device.
     *
-    * @return string The serialNumber
+    * @return string|null The serialNumber
     */
     public function getSerialNumber()
     {
@@ -206,12 +206,12 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     * Gets the state
     * Current state of the imported device.
     *
-    * @return ImportedWindowsAutopilotDeviceIdentityState The state
+    * @return ImportedWindowsAutopilotDeviceIdentityState|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ImportedWindowsAutopilotDeviceIdentityState($this->_propDict["state"]);

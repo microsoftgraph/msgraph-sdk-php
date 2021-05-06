@@ -27,12 +27,12 @@ class AccessPackageResourceAttribute extends Entity
     /**
     * Gets the attributeDestination
     *
-    * @return AccessPackageResourceAttributeDestination The attributeDestination
+    * @return AccessPackageResourceAttributeDestination|null The attributeDestination
     */
     public function getAttributeDestination()
     {
         if (array_key_exists("attributeDestination", $this->_propDict)) {
-            if (is_a($this->_propDict["attributeDestination"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceAttributeDestination")) {
+            if (is_a($this->_propDict["attributeDestination"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceAttributeDestination") || is_null($this->_propDict["attributeDestination"])) {
                 return $this->_propDict["attributeDestination"];
             } else {
                 $this->_propDict["attributeDestination"] = new AccessPackageResourceAttributeDestination($this->_propDict["attributeDestination"]);
@@ -57,7 +57,7 @@ class AccessPackageResourceAttribute extends Entity
     /**
     * Gets the attributeName
     *
-    * @return string The attributeName
+    * @return string|null The attributeName
     */
     public function getAttributeName()
     {
@@ -84,12 +84,12 @@ class AccessPackageResourceAttribute extends Entity
     /**
     * Gets the attributeSource
     *
-    * @return AccessPackageResourceAttributeSource The attributeSource
+    * @return AccessPackageResourceAttributeSource|null The attributeSource
     */
     public function getAttributeSource()
     {
         if (array_key_exists("attributeSource", $this->_propDict)) {
-            if (is_a($this->_propDict["attributeSource"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceAttributeSource")) {
+            if (is_a($this->_propDict["attributeSource"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceAttributeSource") || is_null($this->_propDict["attributeSource"])) {
                 return $this->_propDict["attributeSource"];
             } else {
                 $this->_propDict["attributeSource"] = new AccessPackageResourceAttributeSource($this->_propDict["attributeSource"]);
@@ -114,7 +114,7 @@ class AccessPackageResourceAttribute extends Entity
     /**
     * Gets the id
     *
-    * @return string The id
+    * @return string|null The id
     */
     public function getId()
     {

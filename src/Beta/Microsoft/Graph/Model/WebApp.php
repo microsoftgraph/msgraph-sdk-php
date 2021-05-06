@@ -28,7 +28,7 @@ class WebApp extends MobileApp
     * Gets the appUrl
     * The web app URL.
     *
-    * @return string The appUrl
+    * @return string|null The appUrl
     */
     public function getAppUrl()
     {
@@ -57,7 +57,7 @@ class WebApp extends MobileApp
     * Gets the useManagedBrowser
     * Whether or not to use managed browser. This property is only applicable for Android and IOS.
     *
-    * @return bool The useManagedBrowser
+    * @return bool|null The useManagedBrowser
     */
     public function getUseManagedBrowser()
     {

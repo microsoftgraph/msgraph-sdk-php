@@ -29,7 +29,7 @@ class DeviceManagementSettingDefinition extends Entity
      * Gets the constraints
     * Collection of constraints for the setting value
      *
-     * @return array The constraints
+     * @return array|null The constraints
      */
     public function getConstraints()
     {
@@ -50,7 +50,7 @@ class DeviceManagementSettingDefinition extends Entity
     */
     public function setConstraints($val)
     {
-		$this->_propDict["constraints"] = $val;
+        $this->_propDict["constraints"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class DeviceManagementSettingDefinition extends Entity
      * Gets the dependencies
     * Collection of dependencies on other settings
      *
-     * @return array The dependencies
+     * @return array|null The dependencies
      */
     public function getDependencies()
     {
@@ -80,7 +80,7 @@ class DeviceManagementSettingDefinition extends Entity
     */
     public function setDependencies($val)
     {
-		$this->_propDict["dependencies"] = $val;
+        $this->_propDict["dependencies"] = $val;
         return $this;
     }
     
@@ -88,7 +88,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the description
     * The setting's description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -117,7 +117,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the displayName
     * The setting's display name
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -146,7 +146,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the documentationUrl
     * Url to setting documentation
     *
-    * @return string The documentationUrl
+    * @return string|null The documentationUrl
     */
     public function getDocumentationUrl()
     {
@@ -175,7 +175,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the headerSubtitle
     * subtitle of the setting header for more details about the category/section
     *
-    * @return string The headerSubtitle
+    * @return string|null The headerSubtitle
     */
     public function getHeaderSubtitle()
     {
@@ -204,7 +204,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the headerTitle
     * title of the setting header represents a category/section of a setting/settings
     *
-    * @return string The headerTitle
+    * @return string|null The headerTitle
     */
     public function getHeaderTitle()
     {
@@ -233,7 +233,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the isTopLevel
     * If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
     *
-    * @return bool The isTopLevel
+    * @return bool|null The isTopLevel
     */
     public function getIsTopLevel()
     {
@@ -262,7 +262,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the keywords
     * Keywords associated with the setting
     *
-    * @return string The keywords
+    * @return string|null The keywords
     */
     public function getKeywords()
     {
@@ -291,7 +291,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the placeholderText
     * Placeholder text as an example of valid input
     *
-    * @return string The placeholderText
+    * @return string|null The placeholderText
     */
     public function getPlaceholderText()
     {
@@ -320,12 +320,12 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the valueType
     * The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
     *
-    * @return DeviceManangementIntentValueType The valueType
+    * @return DeviceManangementIntentValueType|null The valueType
     */
     public function getValueType()
     {
         if (array_key_exists("valueType", $this->_propDict)) {
-            if (is_a($this->_propDict["valueType"], "\Beta\Microsoft\Graph\Model\DeviceManangementIntentValueType")) {
+            if (is_a($this->_propDict["valueType"], "\Beta\Microsoft\Graph\Model\DeviceManangementIntentValueType") || is_null($this->_propDict["valueType"])) {
                 return $this->_propDict["valueType"];
             } else {
                 $this->_propDict["valueType"] = new DeviceManangementIntentValueType($this->_propDict["valueType"]);

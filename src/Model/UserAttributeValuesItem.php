@@ -25,9 +25,9 @@ class UserAttributeValuesItem extends Entity
 {
     /**
     * Gets the isDefault
-    * Used to set the value as the default.
+    * Determines whether the value is set as the default.
     *
-    * @return bool The isDefault
+    * @return bool|null The isDefault
     */
     public function getIsDefault()
     {
@@ -40,7 +40,7 @@ class UserAttributeValuesItem extends Entity
 
     /**
     * Sets the isDefault
-    * Used to set the value as the default.
+    * Determines whether the value is set as the default.
     *
     * @param bool $val The value of the isDefault
     *
@@ -53,9 +53,9 @@ class UserAttributeValuesItem extends Entity
     }
     /**
     * Gets the name
-    * The display name of the property displayed to the end user in the user flow.
+    * The display name of the property displayed to the user in the user flow.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -68,7 +68,7 @@ class UserAttributeValuesItem extends Entity
 
     /**
     * Sets the name
-    * The display name of the property displayed to the end user in the user flow.
+    * The display name of the property displayed to the user in the user flow.
     *
     * @param string $val The value of the name
     *
@@ -83,7 +83,7 @@ class UserAttributeValuesItem extends Entity
     * Gets the value
     * The value that is set when this item is selected.
     *
-    * @return string The value
+    * @return string|null The value
     */
     public function getValue()
     {

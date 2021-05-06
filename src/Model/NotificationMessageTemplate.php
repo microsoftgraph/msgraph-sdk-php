@@ -26,14 +26,14 @@ class NotificationMessageTemplate extends Entity
 {
     /**
     * Gets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
-    * @return NotificationTemplateBrandingOptions The brandingOptions
+    * @return NotificationTemplateBrandingOptions|null The brandingOptions
     */
     public function getBrandingOptions()
     {
         if (array_key_exists("brandingOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["brandingOptions"], "\Microsoft\Graph\Model\NotificationTemplateBrandingOptions")) {
+            if (is_a($this->_propDict["brandingOptions"], "\Microsoft\Graph\Model\NotificationTemplateBrandingOptions") || is_null($this->_propDict["brandingOptions"])) {
                 return $this->_propDict["brandingOptions"];
             } else {
                 $this->_propDict["brandingOptions"] = new NotificationTemplateBrandingOptions($this->_propDict["brandingOptions"]);
@@ -45,7 +45,7 @@ class NotificationMessageTemplate extends Entity
     
     /**
     * Sets the brandingOptions
-    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+    * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
     *
     * @param NotificationTemplateBrandingOptions $val The brandingOptions
     *
@@ -61,7 +61,7 @@ class NotificationMessageTemplate extends Entity
     * Gets the defaultLocale
     * The default locale to fallback onto when the requested locale is not available.
     *
-    * @return string The defaultLocale
+    * @return string|null The defaultLocale
     */
     public function getDefaultLocale()
     {
@@ -90,7 +90,7 @@ class NotificationMessageTemplate extends Entity
     * Gets the displayName
     * Display name for the Notification Message Template.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class NotificationMessageTemplate extends Entity
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -153,7 +153,7 @@ class NotificationMessageTemplate extends Entity
      * Gets the localizedNotificationMessages
     * The list of localized messages for this Notification Message Template.
      *
-     * @return array The localizedNotificationMessages
+     * @return array|null The localizedNotificationMessages
      */
     public function getLocalizedNotificationMessages()
     {
@@ -174,7 +174,7 @@ class NotificationMessageTemplate extends Entity
     */
     public function setLocalizedNotificationMessages($val)
     {
-		$this->_propDict["localizedNotificationMessages"] = $val;
+        $this->_propDict["localizedNotificationMessages"] = $val;
         return $this;
     }
     

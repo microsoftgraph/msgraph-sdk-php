@@ -26,14 +26,14 @@ class Report extends Entity
 
     /**
     * Gets the content
-    * Report content; details vary by report type.
+    * Not yet documented
     *
-    * @return \GuzzleHttp\Psr7\Stream The content
+    * @return \GuzzleHttp\Psr7\Stream|null The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -45,7 +45,7 @@ class Report extends Entity
 
     /**
     * Sets the content
-    * Report content; details vary by report type.
+    * Not yet documented
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the content
     *

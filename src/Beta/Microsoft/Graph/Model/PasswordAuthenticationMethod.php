@@ -27,12 +27,12 @@ class PasswordAuthenticationMethod extends AuthenticationMethod
     /**
     * Gets the createdDateTime
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -59,12 +59,12 @@ class PasswordAuthenticationMethod extends AuthenticationMethod
     * Gets the creationDateTime
     * The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The creationDateTime
+    * @return \DateTime|null The creationDateTime
     */
     public function getCreationDateTime()
     {
         if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime") || is_null($this->_propDict["creationDateTime"])) {
                 return $this->_propDict["creationDateTime"];
             } else {
                 $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
@@ -92,7 +92,7 @@ class PasswordAuthenticationMethod extends AuthenticationMethod
     * Gets the password
     * For security, the password is always returned as null from a LIST or GET operation.
     *
-    * @return string The password
+    * @return string|null The password
     */
     public function getPassword()
     {

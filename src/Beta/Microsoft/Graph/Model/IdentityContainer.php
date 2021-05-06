@@ -39,7 +39,10 @@ class IdentityContainer implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-		$this->_propDict = $propDict;
+        if (!is_array($propDict)) {
+           $propDict = array();
+        }
+        $this->_propDict = $propDict;
     }
 
     /**
@@ -55,12 +58,12 @@ class IdentityContainer implements \JsonSerializable
     /**
     * Gets the conditionalAccess
     *
-    * @return ConditionalAccessRoot The conditionalAccess
+    * @return ConditionalAccessRoot|null The conditionalAccess
     */
     public function getConditionalAccess()
     {
         if (array_key_exists("conditionalAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccess"], "\Beta\Microsoft\Graph\Model\ConditionalAccessRoot")) {
+            if (is_a($this->_propDict["conditionalAccess"], "\Beta\Microsoft\Graph\Model\ConditionalAccessRoot") || is_null($this->_propDict["conditionalAccess"])) {
                 return $this->_propDict["conditionalAccess"];
             } else {
                 $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);
@@ -87,7 +90,7 @@ class IdentityContainer implements \JsonSerializable
      /** 
      * Gets the apiConnectors
      *
-     * @return array The apiConnectors
+     * @return array|null The apiConnectors
      */
     public function getApiConnectors()
     {
@@ -107,7 +110,7 @@ class IdentityContainer implements \JsonSerializable
     */
     public function setApiConnectors($val)
     {
-		$this->_propDict["apiConnectors"] = $val;
+        $this->_propDict["apiConnectors"] = $val;
         return $this;
     }
     
@@ -115,7 +118,7 @@ class IdentityContainer implements \JsonSerializable
      /** 
      * Gets the b2cUserFlows
      *
-     * @return array The b2cUserFlows
+     * @return array|null The b2cUserFlows
      */
     public function getB2cUserFlows()
     {
@@ -135,7 +138,7 @@ class IdentityContainer implements \JsonSerializable
     */
     public function setB2cUserFlows($val)
     {
-		$this->_propDict["b2cUserFlows"] = $val;
+        $this->_propDict["b2cUserFlows"] = $val;
         return $this;
     }
     
@@ -143,7 +146,7 @@ class IdentityContainer implements \JsonSerializable
      /** 
      * Gets the b2xUserFlows
      *
-     * @return array The b2xUserFlows
+     * @return array|null The b2xUserFlows
      */
     public function getB2xUserFlows()
     {
@@ -163,7 +166,7 @@ class IdentityContainer implements \JsonSerializable
     */
     public function setB2xUserFlows($val)
     {
-		$this->_propDict["b2xUserFlows"] = $val;
+        $this->_propDict["b2xUserFlows"] = $val;
         return $this;
     }
     
@@ -171,7 +174,7 @@ class IdentityContainer implements \JsonSerializable
      /** 
      * Gets the identityProviders
      *
-     * @return array The identityProviders
+     * @return array|null The identityProviders
      */
     public function getIdentityProviders()
     {
@@ -191,7 +194,7 @@ class IdentityContainer implements \JsonSerializable
     */
     public function setIdentityProviders($val)
     {
-		$this->_propDict["identityProviders"] = $val;
+        $this->_propDict["identityProviders"] = $val;
         return $this;
     }
     
@@ -199,7 +202,7 @@ class IdentityContainer implements \JsonSerializable
      /** 
      * Gets the userFlowAttributes
      *
-     * @return array The userFlowAttributes
+     * @return array|null The userFlowAttributes
      */
     public function getUserFlowAttributes()
     {
@@ -219,7 +222,7 @@ class IdentityContainer implements \JsonSerializable
     */
     public function setUserFlowAttributes($val)
     {
-		$this->_propDict["userFlowAttributes"] = $val;
+        $this->_propDict["userFlowAttributes"] = $val;
         return $this;
     }
     
@@ -227,7 +230,7 @@ class IdentityContainer implements \JsonSerializable
      /** 
      * Gets the userFlows
      *
-     * @return array The userFlows
+     * @return array|null The userFlows
      */
     public function getUserFlows()
     {
@@ -247,19 +250,19 @@ class IdentityContainer implements \JsonSerializable
     */
     public function setUserFlows($val)
     {
-		$this->_propDict["userFlows"] = $val;
+        $this->_propDict["userFlows"] = $val;
         return $this;
     }
     
     /**
     * Gets the continuousAccessEvaluationPolicy
     *
-    * @return ContinuousAccessEvaluationPolicy The continuousAccessEvaluationPolicy
+    * @return ContinuousAccessEvaluationPolicy|null The continuousAccessEvaluationPolicy
     */
     public function getContinuousAccessEvaluationPolicy()
     {
         if (array_key_exists("continuousAccessEvaluationPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["continuousAccessEvaluationPolicy"], "\Beta\Microsoft\Graph\Model\ContinuousAccessEvaluationPolicy")) {
+            if (is_a($this->_propDict["continuousAccessEvaluationPolicy"], "\Beta\Microsoft\Graph\Model\ContinuousAccessEvaluationPolicy") || is_null($this->_propDict["continuousAccessEvaluationPolicy"])) {
                 return $this->_propDict["continuousAccessEvaluationPolicy"];
             } else {
                 $this->_propDict["continuousAccessEvaluationPolicy"] = new ContinuousAccessEvaluationPolicy($this->_propDict["continuousAccessEvaluationPolicy"]);
@@ -307,7 +310,7 @@ class IdentityContainer implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-	* Manually serialize DateTime into RFC3339 format
+    * Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

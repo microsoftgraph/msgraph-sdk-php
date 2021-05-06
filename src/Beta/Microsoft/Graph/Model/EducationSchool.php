@@ -28,12 +28,12 @@ class EducationSchool extends EducationOrganization
     * Gets the address
     * Address of the school.
     *
-    * @return PhysicalAddress The address
+    * @return PhysicalAddress|null The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PhysicalAddress")) {
+            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["address"])) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -61,12 +61,12 @@ class EducationSchool extends EducationOrganization
     * Gets the createdBy
     * Entity who created the school.
     *
-    * @return IdentitySet The createdBy
+    * @return IdentitySet|null The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -94,7 +94,7 @@ class EducationSchool extends EducationOrganization
     * Gets the externalId
     * ID of school in syncing system.
     *
-    * @return string The externalId
+    * @return string|null The externalId
     */
     public function getExternalId()
     {
@@ -123,7 +123,7 @@ class EducationSchool extends EducationOrganization
     * Gets the externalPrincipalId
     * ID of principal in syncing system.
     *
-    * @return string The externalPrincipalId
+    * @return string|null The externalPrincipalId
     */
     public function getExternalPrincipalId()
     {
@@ -151,7 +151,7 @@ class EducationSchool extends EducationOrganization
     /**
     * Gets the fax
     *
-    * @return string The fax
+    * @return string|null The fax
     */
     public function getFax()
     {
@@ -179,7 +179,7 @@ class EducationSchool extends EducationOrganization
     * Gets the highestGrade
     * Highest grade taught.
     *
-    * @return string The highestGrade
+    * @return string|null The highestGrade
     */
     public function getHighestGrade()
     {
@@ -208,7 +208,7 @@ class EducationSchool extends EducationOrganization
     * Gets the lowestGrade
     * Lowest grade taught.
     *
-    * @return string The lowestGrade
+    * @return string|null The lowestGrade
     */
     public function getLowestGrade()
     {
@@ -237,7 +237,7 @@ class EducationSchool extends EducationOrganization
     * Gets the phone
     * Phone number of school.
     *
-    * @return string The phone
+    * @return string|null The phone
     */
     public function getPhone()
     {
@@ -266,7 +266,7 @@ class EducationSchool extends EducationOrganization
     * Gets the principalEmail
     * Email address of the principal.
     *
-    * @return string The principalEmail
+    * @return string|null The principalEmail
     */
     public function getPrincipalEmail()
     {
@@ -295,7 +295,7 @@ class EducationSchool extends EducationOrganization
     * Gets the principalName
     * Name of the principal.
     *
-    * @return string The principalName
+    * @return string|null The principalName
     */
     public function getPrincipalName()
     {
@@ -324,7 +324,7 @@ class EducationSchool extends EducationOrganization
     * Gets the schoolNumber
     * School Number.
     *
-    * @return string The schoolNumber
+    * @return string|null The schoolNumber
     */
     public function getSchoolNumber()
     {
@@ -352,12 +352,12 @@ class EducationSchool extends EducationOrganization
     /**
     * Gets the administrativeUnit
     *
-    * @return AdministrativeUnit The administrativeUnit
+    * @return AdministrativeUnit|null The administrativeUnit
     */
     public function getAdministrativeUnit()
     {
         if (array_key_exists("administrativeUnit", $this->_propDict)) {
-            if (is_a($this->_propDict["administrativeUnit"], "\Beta\Microsoft\Graph\Model\AdministrativeUnit")) {
+            if (is_a($this->_propDict["administrativeUnit"], "\Beta\Microsoft\Graph\Model\AdministrativeUnit") || is_null($this->_propDict["administrativeUnit"])) {
                 return $this->_propDict["administrativeUnit"];
             } else {
                 $this->_propDict["administrativeUnit"] = new AdministrativeUnit($this->_propDict["administrativeUnit"]);
@@ -385,7 +385,7 @@ class EducationSchool extends EducationOrganization
      * Gets the classes
     * Classes taught at the school. Nullable.
      *
-     * @return array The classes
+     * @return array|null The classes
      */
     public function getClasses()
     {
@@ -406,7 +406,7 @@ class EducationSchool extends EducationOrganization
     */
     public function setClasses($val)
     {
-		$this->_propDict["classes"] = $val;
+        $this->_propDict["classes"] = $val;
         return $this;
     }
     
@@ -415,7 +415,7 @@ class EducationSchool extends EducationOrganization
      * Gets the users
     * Users in the school. Nullable.
      *
-     * @return array The users
+     * @return array|null The users
      */
     public function getUsers()
     {
@@ -436,7 +436,7 @@ class EducationSchool extends EducationOrganization
     */
     public function setUsers($val)
     {
-		$this->_propDict["users"] = $val;
+        $this->_propDict["users"] = $val;
         return $this;
     }
     

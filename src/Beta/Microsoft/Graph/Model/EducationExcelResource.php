@@ -36,7 +36,7 @@ class EducationExcelResource extends EducationResource
     * Gets the fileUrl
     * Pointer to the Excel file object.
     *
-    * @return string The fileUrl
+    * @return string|null The fileUrl
     */
     public function getFileUrl()
     {

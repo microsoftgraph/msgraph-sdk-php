@@ -28,7 +28,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the alwaysOn
     * Whether or not to enable always-on VPN connection.
     *
-    * @return bool The alwaysOn
+    * @return bool|null The alwaysOn
     */
     public function getAlwaysOn()
     {
@@ -57,7 +57,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the alwaysOnLockdown
     * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
     *
-    * @return bool The alwaysOnLockdown
+    * @return bool|null The alwaysOnLockdown
     */
     public function getAlwaysOnLockdown()
     {
@@ -86,12 +86,12 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the authenticationMethod
     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
     *
-    * @return VpnAuthenticationMethod The authenticationMethod
+    * @return VpnAuthenticationMethod|null The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\VpnAuthenticationMethod") || is_null($this->_propDict["authenticationMethod"])) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -119,7 +119,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the connectionName
     * Connection name displayed to the user.
     *
-    * @return string The connectionName
+    * @return string|null The connectionName
     */
     public function getConnectionName()
     {
@@ -148,12 +148,12 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the connectionType
     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
     *
-    * @return AndroidWorkProfileVpnConnectionType The connectionType
+    * @return AndroidWorkProfileVpnConnectionType|null The connectionType
     */
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileVpnConnectionType") || is_null($this->_propDict["connectionType"])) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AndroidWorkProfileVpnConnectionType($this->_propDict["connectionType"]);
@@ -182,7 +182,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
      * Gets the customData
     * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      *
-     * @return array The customData
+     * @return array|null The customData
      */
     public function getCustomData()
     {
@@ -203,7 +203,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setCustomData($val)
     {
-		$this->_propDict["customData"] = $val;
+        $this->_propDict["customData"] = $val;
         return $this;
     }
     
@@ -212,7 +212,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
      * Gets the customKeyValueData
     * Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
      *
-     * @return array The customKeyValueData
+     * @return array|null The customKeyValueData
      */
     public function getCustomKeyValueData()
     {
@@ -233,7 +233,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setCustomKeyValueData($val)
     {
-		$this->_propDict["customKeyValueData"] = $val;
+        $this->_propDict["customKeyValueData"] = $val;
         return $this;
     }
     
@@ -241,7 +241,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the fingerprint
     * Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
     *
-    * @return string The fingerprint
+    * @return string|null The fingerprint
     */
     public function getFingerprint()
     {
@@ -270,7 +270,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.
     *
-    * @return string The microsoftTunnelSiteId
+    * @return string|null The microsoftTunnelSiteId
     */
     public function getMicrosoftTunnelSiteId()
     {
@@ -299,12 +299,12 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the proxyServer
     * Proxy server.
     *
-    * @return VpnProxyServer The proxyServer
+    * @return VpnProxyServer|null The proxyServer
     */
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\VpnProxyServer") || is_null($this->_propDict["proxyServer"])) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new VpnProxyServer($this->_propDict["proxyServer"]);
@@ -332,7 +332,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the realm
     * Realm when connection type is set to Pulse Secure.
     *
-    * @return string The realm
+    * @return string|null The realm
     */
     public function getRealm()
     {
@@ -361,7 +361,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the role
     * Role when connection type is set to Pulse Secure.
     *
-    * @return string The role
+    * @return string|null The role
     */
     public function getRole()
     {
@@ -391,7 +391,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
      * Gets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
-     * @return array The servers
+     * @return array|null The servers
      */
     public function getServers()
     {
@@ -412,7 +412,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setServers($val)
     {
-		$this->_propDict["servers"] = $val;
+        $this->_propDict["servers"] = $val;
         return $this;
     }
     
@@ -421,7 +421,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
      * Gets the targetedMobileApps
     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      *
-     * @return array The targetedMobileApps
+     * @return array|null The targetedMobileApps
      */
     public function getTargetedMobileApps()
     {
@@ -442,7 +442,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     */
     public function setTargetedMobileApps($val)
     {
-		$this->_propDict["targetedMobileApps"] = $val;
+        $this->_propDict["targetedMobileApps"] = $val;
         return $this;
     }
     
@@ -450,7 +450,7 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the targetedPackageIds
     * Targeted App package IDs.
     *
-    * @return string The targetedPackageIds
+    * @return string|null The targetedPackageIds
     */
     public function getTargetedPackageIds()
     {
@@ -479,12 +479,12 @@ class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration
     * Gets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
     *
-    * @return AndroidWorkProfileCertificateProfileBase The identityCertificate
+    * @return AndroidWorkProfileCertificateProfileBase|null The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileCertificateProfileBase") || is_null($this->_propDict["identityCertificate"])) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new AndroidWorkProfileCertificateProfileBase($this->_propDict["identityCertificate"]);

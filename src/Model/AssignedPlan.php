@@ -26,14 +26,14 @@ class AssignedPlan extends Entity
 
     /**
     * Gets the assignedDateTime
-    * The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime The assignedDateTime
+    * @return \DateTime|null The assignedDateTime
     */
     public function getAssignedDateTime()
     {
         if (array_key_exists("assignedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["assignedDateTime"], "\DateTime") || is_null($this->_propDict["assignedDateTime"])) {
                 return $this->_propDict["assignedDateTime"];
             } else {
                 $this->_propDict["assignedDateTime"] = new \DateTime($this->_propDict["assignedDateTime"]);
@@ -45,7 +45,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the assignedDateTime
-    * The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the assignedDateTime
     *
@@ -58,9 +58,9 @@ class AssignedPlan extends Entity
     }
     /**
     * Gets the capabilityStatus
-    * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+    * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
     *
-    * @return string The capabilityStatus
+    * @return string|null The capabilityStatus
     */
     public function getCapabilityStatus()
     {
@@ -73,7 +73,7 @@ class AssignedPlan extends Entity
 
     /**
     * Sets the capabilityStatus
-    * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+    * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
     *
     * @param string $val The value of the capabilityStatus
     *
@@ -88,7 +88,7 @@ class AssignedPlan extends Entity
     * Gets the service
     * The name of the service; for example, 'Exchange'.
     *
-    * @return string The service
+    * @return string|null The service
     */
     public function getService()
     {
@@ -116,7 +116,7 @@ class AssignedPlan extends Entity
     * Gets the servicePlanId
     * A GUID that identifies the service plan.
     *
-    * @return string The servicePlanId
+    * @return string|null The servicePlanId
     */
     public function getServicePlanId()
     {

@@ -27,7 +27,7 @@ class CustomerPaymentJournal extends Entity
     /**
     * Gets the balancingAccountId
     *
-    * @return string The balancingAccountId
+    * @return string|null The balancingAccountId
     */
     public function getBalancingAccountId()
     {
@@ -54,7 +54,7 @@ class CustomerPaymentJournal extends Entity
     /**
     * Gets the balancingAccountNumber
     *
-    * @return string The balancingAccountNumber
+    * @return string|null The balancingAccountNumber
     */
     public function getBalancingAccountNumber()
     {
@@ -81,7 +81,7 @@ class CustomerPaymentJournal extends Entity
     /**
     * Gets the code
     *
-    * @return string The code
+    * @return string|null The code
     */
     public function getCode()
     {
@@ -108,7 +108,7 @@ class CustomerPaymentJournal extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -135,12 +135,12 @@ class CustomerPaymentJournal extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -166,12 +166,12 @@ class CustomerPaymentJournal extends Entity
     /**
     * Gets the account
     *
-    * @return Account The account
+    * @return Account|null The account
     */
     public function getAccount()
     {
         if (array_key_exists("account", $this->_propDict)) {
-            if (is_a($this->_propDict["account"], "\Beta\Microsoft\Graph\Model\Account")) {
+            if (is_a($this->_propDict["account"], "\Beta\Microsoft\Graph\Model\Account") || is_null($this->_propDict["account"])) {
                 return $this->_propDict["account"];
             } else {
                 $this->_propDict["account"] = new Account($this->_propDict["account"]);
@@ -198,7 +198,7 @@ class CustomerPaymentJournal extends Entity
      /** 
      * Gets the customerPayments
      *
-     * @return array The customerPayments
+     * @return array|null The customerPayments
      */
     public function getCustomerPayments()
     {
@@ -218,7 +218,7 @@ class CustomerPaymentJournal extends Entity
     */
     public function setCustomerPayments($val)
     {
-		$this->_propDict["customerPayments"] = $val;
+        $this->_propDict["customerPayments"] = $val;
         return $this;
     }
     

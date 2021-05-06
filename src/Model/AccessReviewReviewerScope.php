@@ -27,7 +27,7 @@ class AccessReviewReviewerScope extends Entity
     * Gets the query
     * The query specifying who will be the reviewer. See table for examples.
     *
-    * @return string The query
+    * @return string|null The query
     */
     public function getQuery()
     {
@@ -53,9 +53,9 @@ class AccessReviewReviewerScope extends Entity
     }
     /**
     * Gets the queryRoot
-    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
+    * The type of query. Examples include MicrosoftGraph and ARM.
     *
-    * @return string The queryRoot
+    * @return string|null The queryRoot
     */
     public function getQueryRoot()
     {
@@ -68,7 +68,7 @@ class AccessReviewReviewerScope extends Entity
 
     /**
     * Sets the queryRoot
-    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
+    * The type of query. Examples include MicrosoftGraph and ARM.
     *
     * @param string $val The value of the queryRoot
     *
@@ -81,9 +81,9 @@ class AccessReviewReviewerScope extends Entity
     }
     /**
     * Gets the queryType
-    * The type of query. Examples include MicrosoftGraph and ARM.
+    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
     *
-    * @return string The queryType
+    * @return string|null The queryType
     */
     public function getQueryType()
     {
@@ -96,7 +96,7 @@ class AccessReviewReviewerScope extends Entity
 
     /**
     * Sets the queryType
-    * The type of query. Examples include MicrosoftGraph and ARM.
+    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
     *
     * @param string $val The value of the queryType
     *

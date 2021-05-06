@@ -37,12 +37,12 @@ class DeviceManagementConfigurationSimpleSettingInstance extends DeviceManagemen
     * Gets the simpleSettingValue
     * Simple setting instance value
     *
-    * @return DeviceManagementConfigurationSimpleSettingValue The simpleSettingValue
+    * @return DeviceManagementConfigurationSimpleSettingValue|null The simpleSettingValue
     */
     public function getSimpleSettingValue()
     {
         if (array_key_exists("simpleSettingValue", $this->_propDict)) {
-            if (is_a($this->_propDict["simpleSettingValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValue")) {
+            if (is_a($this->_propDict["simpleSettingValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValue") || is_null($this->_propDict["simpleSettingValue"])) {
                 return $this->_propDict["simpleSettingValue"];
             } else {
                 $this->_propDict["simpleSettingValue"] = new DeviceManagementConfigurationSimpleSettingValue($this->_propDict["simpleSettingValue"]);

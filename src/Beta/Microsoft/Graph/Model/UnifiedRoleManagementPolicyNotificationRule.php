@@ -25,9 +25,36 @@ namespace Beta\Microsoft\Graph\Model;
 class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementPolicyRule
 {
     /**
+    * Gets the isDefaultRecipientsEnabled
+    *
+    * @return bool|null The isDefaultRecipientsEnabled
+    */
+    public function getIsDefaultRecipientsEnabled()
+    {
+        if (array_key_exists("isDefaultRecipientsEnabled", $this->_propDict)) {
+            return $this->_propDict["isDefaultRecipientsEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isDefaultRecipientsEnabled
+    *
+    * @param bool $val The isDefaultRecipientsEnabled
+    *
+    * @return UnifiedRoleManagementPolicyNotificationRule
+    */
+    public function setIsDefaultRecipientsEnabled($val)
+    {
+        $this->_propDict["isDefaultRecipientsEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the notificationLevel
     *
-    * @return string The notificationLevel
+    * @return string|null The notificationLevel
     */
     public function getNotificationLevel()
     {
@@ -54,7 +81,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the notificationRecipients
     *
-    * @return string The notificationRecipients
+    * @return string|null The notificationRecipients
     */
     public function getNotificationRecipients()
     {
@@ -81,7 +108,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the notificationType
     *
-    * @return string The notificationType
+    * @return string|null The notificationType
     */
     public function getNotificationType()
     {
@@ -108,7 +135,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     /**
     * Gets the recipientType
     *
-    * @return string The recipientType
+    * @return string|null The recipientType
     */
     public function getRecipientType()
     {

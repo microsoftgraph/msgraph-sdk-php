@@ -29,7 +29,7 @@ class DeviceConfigurationConflictSummary extends Entity
      * Gets the conflictingDeviceConfigurations
     * The set of policies in conflict with the given setting
      *
-     * @return array The conflictingDeviceConfigurations
+     * @return array|null The conflictingDeviceConfigurations
      */
     public function getConflictingDeviceConfigurations()
     {
@@ -50,7 +50,7 @@ class DeviceConfigurationConflictSummary extends Entity
     */
     public function setConflictingDeviceConfigurations($val)
     {
-		$this->_propDict["conflictingDeviceConfigurations"] = $val;
+        $this->_propDict["conflictingDeviceConfigurations"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class DeviceConfigurationConflictSummary extends Entity
     * Gets the contributingSettings
     * The set of settings in conflict with the given policies
     *
-    * @return string The contributingSettings
+    * @return string|null The contributingSettings
     */
     public function getContributingSettings()
     {
@@ -87,7 +87,7 @@ class DeviceConfigurationConflictSummary extends Entity
     * Gets the deviceCheckinsImpacted
     * The count of checkins impacted by the conflicting policies and settings
     *
-    * @return int The deviceCheckinsImpacted
+    * @return int|null The deviceCheckinsImpacted
     */
     public function getDeviceCheckinsImpacted()
     {

@@ -28,7 +28,7 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase
     * Gets the isEnabled
     * If set to true, Azure Active Directory security defaults is enabled for the tenant.
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {

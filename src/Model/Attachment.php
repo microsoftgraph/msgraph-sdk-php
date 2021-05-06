@@ -28,7 +28,7 @@ class Attachment extends Entity
     * Gets the contentType
     * The MIME type.
     *
-    * @return string The contentType
+    * @return string|null The contentType
     */
     public function getContentType()
     {
@@ -57,7 +57,7 @@ class Attachment extends Entity
     * Gets the isInline
     * true if the attachment is an inline attachment; otherwise, false.
     *
-    * @return bool The isInline
+    * @return bool|null The isInline
     */
     public function getIsInline()
     {
@@ -86,12 +86,12 @@ class Attachment extends Entity
     * Gets the lastModifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -117,9 +117,9 @@ class Attachment extends Entity
     
     /**
     * Gets the name
-    * The display name of the attachment. This does not need to be the actual file name.
+    * The attachment's file name.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -132,7 +132,7 @@ class Attachment extends Entity
     
     /**
     * Sets the name
-    * The display name of the attachment. This does not need to be the actual file name.
+    * The attachment's file name.
     *
     * @param string $val The name
     *
@@ -148,7 +148,7 @@ class Attachment extends Entity
     * Gets the size
     * The length of the attachment in bytes.
     *
-    * @return int The size
+    * @return int|null The size
     */
     public function getSize()
     {

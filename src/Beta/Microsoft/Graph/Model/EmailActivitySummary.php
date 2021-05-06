@@ -27,7 +27,7 @@ class EmailActivitySummary extends Entity
     /**
     * Gets the read
     *
-    * @return int The read
+    * @return int|null The read
     */
     public function getRead()
     {
@@ -54,7 +54,7 @@ class EmailActivitySummary extends Entity
     /**
     * Gets the receive
     *
-    * @return int The receive
+    * @return int|null The receive
     */
     public function getReceive()
     {
@@ -81,12 +81,12 @@ class EmailActivitySummary extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime The reportDate
+    * @return \DateTime|null The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -112,7 +112,7 @@ class EmailActivitySummary extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -139,12 +139,12 @@ class EmailActivitySummary extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -170,7 +170,7 @@ class EmailActivitySummary extends Entity
     /**
     * Gets the send
     *
-    * @return int The send
+    * @return int|null The send
     */
     public function getSend()
     {

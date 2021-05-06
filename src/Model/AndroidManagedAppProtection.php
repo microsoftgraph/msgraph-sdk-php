@@ -26,9 +26,9 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
 {
     /**
     * Gets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android.
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
-    * @return string The customBrowserDisplayName
+    * @return string|null The customBrowserDisplayName
     */
     public function getCustomBrowserDisplayName()
     {
@@ -41,7 +41,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android.
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
     * @param string $val The customBrowserDisplayName
     *
@@ -55,9 +55,9 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the customBrowserPackageId
-    * Unique identifier of a custom browser to open weblink on Android.
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
-    * @return string The customBrowserPackageId
+    * @return string|null The customBrowserPackageId
     */
     public function getCustomBrowserPackageId()
     {
@@ -70,7 +70,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserPackageId
-    * Unique identifier of a custom browser to open weblink on Android.
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
     * @param string $val The customBrowserPackageId
     *
@@ -86,7 +86,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
     *
-    * @return int The deployedAppCount
+    * @return int|null The deployedAppCount
     */
     public function getDeployedAppCount()
     {
@@ -115,7 +115,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled
     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
     *
-    * @return bool The disableAppEncryptionIfDeviceEncryptionIsEnabled
+    * @return bool|null The disableAppEncryptionIfDeviceEncryptionIsEnabled
     */
     public function getDisableAppEncryptionIfDeviceEncryptionIsEnabled()
     {
@@ -144,7 +144,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     * Gets the encryptAppData
     * Indicates whether application data for managed apps should be encrypted
     *
-    * @return bool The encryptAppData
+    * @return bool|null The encryptAppData
     */
     public function getEncryptAppData()
     {
@@ -173,7 +173,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     * Gets the minimumRequiredPatchVersion
     * Define the oldest required Android security patch level a user can have to gain secure access to the app.
     *
-    * @return string The minimumRequiredPatchVersion
+    * @return string|null The minimumRequiredPatchVersion
     */
     public function getMinimumRequiredPatchVersion()
     {
@@ -202,7 +202,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     * Gets the minimumWarningPatchVersion
     * Define the oldest recommended Android security patch level a user can have for secure access to the app.
     *
-    * @return string The minimumWarningPatchVersion
+    * @return string|null The minimumWarningPatchVersion
     */
     public function getMinimumWarningPatchVersion()
     {
@@ -231,7 +231,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     * Gets the screenCaptureBlocked
     * Indicates whether a managed user can take screen captures of managed apps
     *
-    * @return bool The screenCaptureBlocked
+    * @return bool|null The screenCaptureBlocked
     */
     public function getScreenCaptureBlocked()
     {
@@ -261,7 +261,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
-     * @return array The apps
+     * @return array|null The apps
      */
     public function getApps()
     {
@@ -282,7 +282,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     */
     public function setApps($val)
     {
-		$this->_propDict["apps"] = $val;
+        $this->_propDict["apps"] = $val;
         return $this;
     }
     
@@ -290,12 +290,12 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
     *
-    * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
+    * @return ManagedAppPolicyDeploymentSummary|null The deploymentSummary
     */
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary") || is_null($this->_propDict["deploymentSummary"])) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

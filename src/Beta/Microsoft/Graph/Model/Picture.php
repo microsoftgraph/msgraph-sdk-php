@@ -27,12 +27,12 @@ class Picture extends Entity
     /**
     * Gets the content
     *
-    * @return \GuzzleHttp\Psr7\Stream The content
+    * @return \GuzzleHttp\Psr7\Stream|null The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -58,7 +58,7 @@ class Picture extends Entity
     /**
     * Gets the contentType
     *
-    * @return string The contentType
+    * @return string|null The contentType
     */
     public function getContentType()
     {
@@ -85,7 +85,7 @@ class Picture extends Entity
     /**
     * Gets the height
     *
-    * @return int The height
+    * @return int|null The height
     */
     public function getHeight()
     {
@@ -112,7 +112,7 @@ class Picture extends Entity
     /**
     * Gets the width
     *
-    * @return int The width
+    * @return int|null The width
     */
     public function getWidth()
     {

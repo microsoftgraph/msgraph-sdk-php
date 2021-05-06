@@ -27,7 +27,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     /**
     * Gets the policyId
     *
-    * @return string The policyId
+    * @return string|null The policyId
     */
     public function getPolicyId()
     {
@@ -54,7 +54,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     /**
     * Gets the roleDefinitionId
     *
-    * @return string The roleDefinitionId
+    * @return string|null The roleDefinitionId
     */
     public function getRoleDefinitionId()
     {
@@ -81,7 +81,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     /**
     * Gets the scopeId
     *
-    * @return string The scopeId
+    * @return string|null The scopeId
     */
     public function getScopeId()
     {
@@ -108,7 +108,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     /**
     * Gets the scopeType
     *
-    * @return string The scopeType
+    * @return string|null The scopeType
     */
     public function getScopeType()
     {
@@ -135,12 +135,12 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     /**
     * Gets the policy
     *
-    * @return UnifiedRoleManagementPolicy The policy
+    * @return UnifiedRoleManagementPolicy|null The policy
     */
     public function getPolicy()
     {
         if (array_key_exists("policy", $this->_propDict)) {
-            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\UnifiedRoleManagementPolicy")) {
+            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\UnifiedRoleManagementPolicy") || is_null($this->_propDict["policy"])) {
                 return $this->_propDict["policy"];
             } else {
                 $this->_propDict["policy"] = new UnifiedRoleManagementPolicy($this->_propDict["policy"]);

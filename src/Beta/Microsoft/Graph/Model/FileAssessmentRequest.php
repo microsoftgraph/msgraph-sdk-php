@@ -28,7 +28,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
     * Gets the contentData
     * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
     *
-    * @return string The contentData
+    * @return string|null The contentData
     */
     public function getContentData()
     {
@@ -57,7 +57,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest
     * Gets the fileName
     * The file name.
     *
-    * @return string The fileName
+    * @return string|null The fileName
     */
     public function getFileName()
     {

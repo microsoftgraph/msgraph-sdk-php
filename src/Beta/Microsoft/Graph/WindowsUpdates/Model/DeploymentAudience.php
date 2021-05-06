@@ -27,8 +27,9 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the exclusions
+    * Specifies the assets to exclude from the audience.
      *
-     * @return array The exclusions
+     * @return array|null The exclusions
      */
     public function getExclusions()
     {
@@ -41,6 +42,7 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the exclusions
+    * Specifies the assets to exclude from the audience.
     *
     * @param UpdatableAsset $val The exclusions
     *
@@ -48,15 +50,16 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setExclusions($val)
     {
-		$this->_propDict["exclusions"] = $val;
+        $this->_propDict["exclusions"] = $val;
         return $this;
     }
     
 
      /** 
      * Gets the members
+    * Specifies the assets to include in the audience.
      *
-     * @return array The members
+     * @return array|null The members
      */
     public function getMembers()
     {
@@ -69,6 +72,7 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the members
+    * Specifies the assets to include in the audience.
     *
     * @param UpdatableAsset $val The members
     *
@@ -76,7 +80,7 @@ class DeploymentAudience extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
     

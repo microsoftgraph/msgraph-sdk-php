@@ -36,7 +36,7 @@ class OmaSettingInteger extends OmaSetting
     * Gets the isReadOnly
     * By setting to true, the CSP (configuration service provider) specified in the OMA-URI will perform a get, instead of set
     *
-    * @return bool The isReadOnly
+    * @return bool|null The isReadOnly
     */
     public function getIsReadOnly()
     {
@@ -64,7 +64,7 @@ class OmaSettingInteger extends OmaSetting
     * Gets the value
     * Value.
     *
-    * @return int The value
+    * @return int|null The value
     */
     public function getValue()
     {

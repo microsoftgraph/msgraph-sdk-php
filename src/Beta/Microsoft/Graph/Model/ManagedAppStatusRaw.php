@@ -28,7 +28,7 @@ class ManagedAppStatusRaw extends ManagedAppStatus
     * Gets the content
     * Status report content.
     *
-    * @return string The content
+    * @return string|null The content
     */
     public function getContent()
     {

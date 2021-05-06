@@ -28,7 +28,7 @@ class WorkbookRangeBorder extends Entity
     * Gets the color
     * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange').
     *
-    * @return string The color
+    * @return string|null The color
     */
     public function getColor()
     {
@@ -55,9 +55,9 @@ class WorkbookRangeBorder extends Entity
     
     /**
     * Gets the sideIndex
-    * Constant value that indicates the specific side of the border. Possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+    * Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
     *
-    * @return string The sideIndex
+    * @return string|null The sideIndex
     */
     public function getSideIndex()
     {
@@ -70,7 +70,7 @@ class WorkbookRangeBorder extends Entity
     
     /**
     * Sets the sideIndex
-    * Constant value that indicates the specific side of the border. Possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+    * Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
     *
     * @param string $val The sideIndex
     *
@@ -84,9 +84,9 @@ class WorkbookRangeBorder extends Entity
     
     /**
     * Gets the style
-    * One of the constants of line style specifying the line style for the border. Possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+    * One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
     *
-    * @return string The style
+    * @return string|null The style
     */
     public function getStyle()
     {
@@ -99,7 +99,7 @@ class WorkbookRangeBorder extends Entity
     
     /**
     * Sets the style
-    * One of the constants of line style specifying the line style for the border. Possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+    * One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
     *
     * @param string $val The style
     *
@@ -113,9 +113,9 @@ class WorkbookRangeBorder extends Entity
     
     /**
     * Gets the weight
-    * Specifies the weight of the border around a range. Possible values are: Hairline, Thin, Medium, Thick.
+    * Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
     *
-    * @return string The weight
+    * @return string|null The weight
     */
     public function getWeight()
     {
@@ -128,7 +128,7 @@ class WorkbookRangeBorder extends Entity
     
     /**
     * Sets the weight
-    * Specifies the weight of the border around a range. Possible values are: Hairline, Thin, Medium, Thick.
+    * Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
     *
     * @param string $val The weight
     *

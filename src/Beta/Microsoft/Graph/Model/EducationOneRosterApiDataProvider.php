@@ -36,12 +36,12 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     /**
     * Gets the connectionSettings
     *
-    * @return EducationSynchronizationConnectionSettings The connectionSettings
+    * @return EducationSynchronizationConnectionSettings|null The connectionSettings
     */
     public function getConnectionSettings()
     {
         if (array_key_exists("connectionSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionSettings"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationConnectionSettings")) {
+            if (is_a($this->_propDict["connectionSettings"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationConnectionSettings") || is_null($this->_propDict["connectionSettings"])) {
                 return $this->_propDict["connectionSettings"];
             } else {
                 $this->_propDict["connectionSettings"] = new EducationSynchronizationConnectionSettings($this->_propDict["connectionSettings"]);
@@ -66,7 +66,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     /**
     * Gets the connectionUrl
     *
-    * @return string The connectionUrl
+    * @return string|null The connectionUrl
     */
     public function getConnectionUrl()
     {
@@ -93,12 +93,12 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     /**
     * Gets the customizations
     *
-    * @return EducationSynchronizationCustomizations The customizations
+    * @return EducationSynchronizationCustomizations|null The customizations
     */
     public function getCustomizations()
     {
         if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
+            if (is_a($this->_propDict["customizations"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations") || is_null($this->_propDict["customizations"])) {
                 return $this->_propDict["customizations"];
             } else {
                 $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);
@@ -123,7 +123,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     /**
     * Gets the providerName
     *
-    * @return string The providerName
+    * @return string|null The providerName
     */
     public function getProviderName()
     {
@@ -149,7 +149,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     /**
     * Gets the schoolsIds
     *
-    * @return string The schoolsIds
+    * @return string|null The schoolsIds
     */
     public function getSchoolsIds()
     {
@@ -175,7 +175,7 @@ class EducationOneRosterApiDataProvider extends EducationSynchronizationDataProv
     /**
     * Gets the termIds
     *
-    * @return string The termIds
+    * @return string|null The termIds
     */
     public function getTermIds()
     {

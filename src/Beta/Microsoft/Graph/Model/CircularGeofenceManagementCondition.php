@@ -28,7 +28,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     * Gets the latitude
     * Latitude in degrees, between -90 and +90 inclusive.
     *
-    * @return float The latitude
+    * @return float|null The latitude
     */
     public function getLatitude()
     {
@@ -49,7 +49,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     */
     public function setLatitude($val)
     {
-        $this->_propDict["latitude"] = $val;
+        $this->_propDict["latitude"] = floatval($val);
         return $this;
     }
     
@@ -57,7 +57,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     * Gets the longitude
     * Longitude in degrees, between -180 and +180 inclusive.
     *
-    * @return float The longitude
+    * @return float|null The longitude
     */
     public function getLongitude()
     {
@@ -78,7 +78,7 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     */
     public function setLongitude($val)
     {
-        $this->_propDict["longitude"] = $val;
+        $this->_propDict["longitude"] = floatval($val);
         return $this;
     }
     
@@ -86,32 +86,28 @@ class CircularGeofenceManagementCondition extends LocationManagementCondition
     * Gets the radiusInMeters
     * Radius in meters.
     *
-    * @return Single The radiusInMeters
+    * @return float|null The radiusInMeters
     */
     public function getRadiusInMeters()
     {
         if (array_key_exists("radiusInMeters", $this->_propDict)) {
-            if (is_a($this->_propDict["radiusInMeters"], "\Beta\Microsoft\Graph\Model\Single")) {
-                return $this->_propDict["radiusInMeters"];
-            } else {
-                $this->_propDict["radiusInMeters"] = new Single($this->_propDict["radiusInMeters"]);
-                return $this->_propDict["radiusInMeters"];
-            }
+            return $this->_propDict["radiusInMeters"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the radiusInMeters
     * Radius in meters.
     *
-    * @param Single $val The radiusInMeters
+    * @param float $val The radiusInMeters
     *
     * @return CircularGeofenceManagementCondition
     */
     public function setRadiusInMeters($val)
     {
-        $this->_propDict["radiusInMeters"] = $val;
+        $this->_propDict["radiusInMeters"] = floatval($val);
         return $this;
     }
     

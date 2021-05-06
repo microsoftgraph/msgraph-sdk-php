@@ -27,12 +27,12 @@ class TimeClockSettings extends Entity
     /**
     * Gets the approvedLocation
     *
-    * @return GeoCoordinates The approvedLocation
+    * @return GeoCoordinates|null The approvedLocation
     */
     public function getApprovedLocation()
     {
         if (array_key_exists("approvedLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["approvedLocation"], "\Beta\Microsoft\Graph\Model\GeoCoordinates")) {
+            if (is_a($this->_propDict["approvedLocation"], "\Beta\Microsoft\Graph\Model\GeoCoordinates") || is_null($this->_propDict["approvedLocation"])) {
                 return $this->_propDict["approvedLocation"];
             } else {
                 $this->_propDict["approvedLocation"] = new GeoCoordinates($this->_propDict["approvedLocation"]);

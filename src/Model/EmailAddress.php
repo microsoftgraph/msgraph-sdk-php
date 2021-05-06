@@ -25,9 +25,9 @@ class EmailAddress extends Entity
 {
     /**
     * Gets the address
-    * The email address of an entity instance.
+    * The email address of the person or entity.
     *
-    * @return string The address
+    * @return string|null The address
     */
     public function getAddress()
     {
@@ -40,7 +40,7 @@ class EmailAddress extends Entity
 
     /**
     * Sets the address
-    * The email address of an entity instance.
+    * The email address of the person or entity.
     *
     * @param string $val The value of the address
     *
@@ -53,9 +53,9 @@ class EmailAddress extends Entity
     }
     /**
     * Gets the name
-    * The display name of an entity instance.
+    * The display name of the person or entity.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -68,7 +68,7 @@ class EmailAddress extends Entity
 
     /**
     * Sets the name
-    * The display name of an entity instance.
+    * The display name of the person or entity.
     *
     * @param string $val The value of the name
     *

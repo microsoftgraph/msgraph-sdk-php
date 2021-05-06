@@ -27,8 +27,9 @@ class Catalog extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the entries
+    * Lists the content that you can approve for deployment. Read-only.
      *
-     * @return array The entries
+     * @return array|null The entries
      */
     public function getEntries()
     {
@@ -41,6 +42,7 @@ class Catalog extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the entries
+    * Lists the content that you can approve for deployment. Read-only.
     *
     * @param CatalogEntry $val The entries
     *
@@ -48,7 +50,7 @@ class Catalog extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setEntries($val)
     {
-		$this->_propDict["entries"] = $val;
+        $this->_propDict["entries"] = $val;
         return $this;
     }
     

@@ -28,7 +28,7 @@ class GroupPolicyDefinition extends Entity
     * Gets the categoryPath
     * The localized full category path for the policy.
     *
-    * @return string The categoryPath
+    * @return string|null The categoryPath
     */
     public function getCategoryPath()
     {
@@ -57,12 +57,12 @@ class GroupPolicyDefinition extends Entity
     * Gets the classType
     * Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
     *
-    * @return GroupPolicyDefinitionClassType The classType
+    * @return GroupPolicyDefinitionClassType|null The classType
     */
     public function getClassType()
     {
         if (array_key_exists("classType", $this->_propDict)) {
-            if (is_a($this->_propDict["classType"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionClassType")) {
+            if (is_a($this->_propDict["classType"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionClassType") || is_null($this->_propDict["classType"])) {
                 return $this->_propDict["classType"];
             } else {
                 $this->_propDict["classType"] = new GroupPolicyDefinitionClassType($this->_propDict["classType"]);
@@ -90,7 +90,7 @@ class GroupPolicyDefinition extends Entity
     * Gets the displayName
     * The localized policy name.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,7 +119,7 @@ class GroupPolicyDefinition extends Entity
     * Gets the explainText
     * The localized explanation or help text associated with the policy. The default value is empty.
     *
-    * @return string The explainText
+    * @return string|null The explainText
     */
     public function getExplainText()
     {
@@ -148,7 +148,7 @@ class GroupPolicyDefinition extends Entity
     * Gets the groupPolicyCategoryId
     * The category id of the parent category
     *
-    * @return string The groupPolicyCategoryId
+    * @return string|null The groupPolicyCategoryId
     */
     public function getGroupPolicyCategoryId()
     {
@@ -177,12 +177,12 @@ class GroupPolicyDefinition extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -210,12 +210,12 @@ class GroupPolicyDefinition extends Entity
     * Gets the policyType
     * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
     *
-    * @return GroupPolicyType The policyType
+    * @return GroupPolicyType|null The policyType
     */
     public function getPolicyType()
     {
         if (array_key_exists("policyType", $this->_propDict)) {
-            if (is_a($this->_propDict["policyType"], "\Beta\Microsoft\Graph\Model\GroupPolicyType")) {
+            if (is_a($this->_propDict["policyType"], "\Beta\Microsoft\Graph\Model\GroupPolicyType") || is_null($this->_propDict["policyType"])) {
                 return $this->_propDict["policyType"];
             } else {
                 $this->_propDict["policyType"] = new GroupPolicyType($this->_propDict["policyType"]);
@@ -243,7 +243,7 @@ class GroupPolicyDefinition extends Entity
     * Gets the supportedOn
     * Localized string used to specify what operating system or application version is affected by the policy.
     *
-    * @return string The supportedOn
+    * @return string|null The supportedOn
     */
     public function getSupportedOn()
     {
@@ -272,12 +272,12 @@ class GroupPolicyDefinition extends Entity
     * Gets the category
     * The group policy category associated with the definition.
     *
-    * @return GroupPolicyCategory The category
+    * @return GroupPolicyCategory|null The category
     */
     public function getCategory()
     {
         if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
+            if (is_a($this->_propDict["category"], "\Beta\Microsoft\Graph\Model\GroupPolicyCategory") || is_null($this->_propDict["category"])) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new GroupPolicyCategory($this->_propDict["category"]);
@@ -305,12 +305,12 @@ class GroupPolicyDefinition extends Entity
     * Gets the definitionFile
     * The group policy file associated with the definition.
     *
-    * @return GroupPolicyDefinitionFile The definitionFile
+    * @return GroupPolicyDefinitionFile|null The definitionFile
     */
     public function getDefinitionFile()
     {
         if (array_key_exists("definitionFile", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionFile"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
+            if (is_a($this->_propDict["definitionFile"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile") || is_null($this->_propDict["definitionFile"])) {
                 return $this->_propDict["definitionFile"];
             } else {
                 $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);
@@ -339,7 +339,7 @@ class GroupPolicyDefinition extends Entity
      * Gets the presentations
     * The group policy presentations associated with the definition.
      *
-     * @return array The presentations
+     * @return array|null The presentations
      */
     public function getPresentations()
     {
@@ -360,7 +360,7 @@ class GroupPolicyDefinition extends Entity
     */
     public function setPresentations($val)
     {
-		$this->_propDict["presentations"] = $val;
+        $this->_propDict["presentations"] = $val;
         return $this;
     }
     

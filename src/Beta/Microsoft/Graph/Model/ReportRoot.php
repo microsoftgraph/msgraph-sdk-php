@@ -28,7 +28,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the applicationSignInDetailedSummary
      *
-     * @return array The applicationSignInDetailedSummary
+     * @return array|null The applicationSignInDetailedSummary
      */
     public function getApplicationSignInDetailedSummary()
     {
@@ -48,19 +48,19 @@ class ReportRoot extends Entity
     */
     public function setApplicationSignInDetailedSummary($val)
     {
-		$this->_propDict["applicationSignInDetailedSummary"] = $val;
+        $this->_propDict["applicationSignInDetailedSummary"] = $val;
         return $this;
     }
     
     /**
     * Gets the authenticationMethods
     *
-    * @return AuthenticationMethodsRoot The authenticationMethods
+    * @return AuthenticationMethodsRoot|null The authenticationMethods
     */
     public function getAuthenticationMethods()
     {
         if (array_key_exists("authenticationMethods", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethods"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsRoot")) {
+            if (is_a($this->_propDict["authenticationMethods"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsRoot") || is_null($this->_propDict["authenticationMethods"])) {
                 return $this->_propDict["authenticationMethods"];
             } else {
                 $this->_propDict["authenticationMethods"] = new AuthenticationMethodsRoot($this->_propDict["authenticationMethods"]);
@@ -87,7 +87,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the credentialUserRegistrationDetails
      *
-     * @return array The credentialUserRegistrationDetails
+     * @return array|null The credentialUserRegistrationDetails
      */
     public function getCredentialUserRegistrationDetails()
     {
@@ -107,7 +107,7 @@ class ReportRoot extends Entity
     */
     public function setCredentialUserRegistrationDetails($val)
     {
-		$this->_propDict["credentialUserRegistrationDetails"] = $val;
+        $this->_propDict["credentialUserRegistrationDetails"] = $val;
         return $this;
     }
     
@@ -115,7 +115,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the userCredentialUsageDetails
      *
-     * @return array The userCredentialUsageDetails
+     * @return array|null The userCredentialUsageDetails
      */
     public function getUserCredentialUsageDetails()
     {
@@ -135,7 +135,7 @@ class ReportRoot extends Entity
     */
     public function setUserCredentialUsageDetails($val)
     {
-		$this->_propDict["userCredentialUsageDetails"] = $val;
+        $this->_propDict["userCredentialUsageDetails"] = $val;
         return $this;
     }
     
@@ -143,7 +143,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the dailyPrintUsageByPrinter
      *
-     * @return array The dailyPrintUsageByPrinter
+     * @return array|null The dailyPrintUsageByPrinter
      */
     public function getDailyPrintUsageByPrinter()
     {
@@ -163,7 +163,7 @@ class ReportRoot extends Entity
     */
     public function setDailyPrintUsageByPrinter($val)
     {
-		$this->_propDict["dailyPrintUsageByPrinter"] = $val;
+        $this->_propDict["dailyPrintUsageByPrinter"] = $val;
         return $this;
     }
     
@@ -171,7 +171,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the dailyPrintUsageByUser
      *
-     * @return array The dailyPrintUsageByUser
+     * @return array|null The dailyPrintUsageByUser
      */
     public function getDailyPrintUsageByUser()
     {
@@ -191,7 +191,7 @@ class ReportRoot extends Entity
     */
     public function setDailyPrintUsageByUser($val)
     {
-		$this->_propDict["dailyPrintUsageByUser"] = $val;
+        $this->_propDict["dailyPrintUsageByUser"] = $val;
         return $this;
     }
     
@@ -199,7 +199,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the dailyPrintUsageSummariesByPrinter
      *
-     * @return array The dailyPrintUsageSummariesByPrinter
+     * @return array|null The dailyPrintUsageSummariesByPrinter
      */
     public function getDailyPrintUsageSummariesByPrinter()
     {
@@ -219,7 +219,7 @@ class ReportRoot extends Entity
     */
     public function setDailyPrintUsageSummariesByPrinter($val)
     {
-		$this->_propDict["dailyPrintUsageSummariesByPrinter"] = $val;
+        $this->_propDict["dailyPrintUsageSummariesByPrinter"] = $val;
         return $this;
     }
     
@@ -227,7 +227,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the dailyPrintUsageSummariesByUser
      *
-     * @return array The dailyPrintUsageSummariesByUser
+     * @return array|null The dailyPrintUsageSummariesByUser
      */
     public function getDailyPrintUsageSummariesByUser()
     {
@@ -247,7 +247,7 @@ class ReportRoot extends Entity
     */
     public function setDailyPrintUsageSummariesByUser($val)
     {
-		$this->_propDict["dailyPrintUsageSummariesByUser"] = $val;
+        $this->_propDict["dailyPrintUsageSummariesByUser"] = $val;
         return $this;
     }
     
@@ -255,7 +255,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the monthlyPrintUsageByPrinter
      *
-     * @return array The monthlyPrintUsageByPrinter
+     * @return array|null The monthlyPrintUsageByPrinter
      */
     public function getMonthlyPrintUsageByPrinter()
     {
@@ -275,7 +275,7 @@ class ReportRoot extends Entity
     */
     public function setMonthlyPrintUsageByPrinter($val)
     {
-		$this->_propDict["monthlyPrintUsageByPrinter"] = $val;
+        $this->_propDict["monthlyPrintUsageByPrinter"] = $val;
         return $this;
     }
     
@@ -283,7 +283,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the monthlyPrintUsageByUser
      *
-     * @return array The monthlyPrintUsageByUser
+     * @return array|null The monthlyPrintUsageByUser
      */
     public function getMonthlyPrintUsageByUser()
     {
@@ -303,7 +303,7 @@ class ReportRoot extends Entity
     */
     public function setMonthlyPrintUsageByUser($val)
     {
-		$this->_propDict["monthlyPrintUsageByUser"] = $val;
+        $this->_propDict["monthlyPrintUsageByUser"] = $val;
         return $this;
     }
     
@@ -311,7 +311,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the monthlyPrintUsageSummariesByPrinter
      *
-     * @return array The monthlyPrintUsageSummariesByPrinter
+     * @return array|null The monthlyPrintUsageSummariesByPrinter
      */
     public function getMonthlyPrintUsageSummariesByPrinter()
     {
@@ -331,7 +331,7 @@ class ReportRoot extends Entity
     */
     public function setMonthlyPrintUsageSummariesByPrinter($val)
     {
-		$this->_propDict["monthlyPrintUsageSummariesByPrinter"] = $val;
+        $this->_propDict["monthlyPrintUsageSummariesByPrinter"] = $val;
         return $this;
     }
     
@@ -339,7 +339,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the monthlyPrintUsageSummariesByUser
      *
-     * @return array The monthlyPrintUsageSummariesByUser
+     * @return array|null The monthlyPrintUsageSummariesByUser
      */
     public function getMonthlyPrintUsageSummariesByUser()
     {
@@ -359,7 +359,7 @@ class ReportRoot extends Entity
     */
     public function setMonthlyPrintUsageSummariesByUser($val)
     {
-		$this->_propDict["monthlyPrintUsageSummariesByUser"] = $val;
+        $this->_propDict["monthlyPrintUsageSummariesByUser"] = $val;
         return $this;
     }
     

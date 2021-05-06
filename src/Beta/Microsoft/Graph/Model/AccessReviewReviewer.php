@@ -27,7 +27,7 @@ class AccessReviewReviewer extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -54,7 +54,7 @@ class AccessReviewReviewer extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

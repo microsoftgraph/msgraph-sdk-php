@@ -27,12 +27,12 @@ class Customer extends Entity
     /**
     * Gets the address
     *
-    * @return PostalAddressType The address
+    * @return PostalAddressType|null The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PostalAddressType")) {
+            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PostalAddressType") || is_null($this->_propDict["address"])) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PostalAddressType($this->_propDict["address"]);
@@ -58,7 +58,7 @@ class Customer extends Entity
     /**
     * Gets the blocked
     *
-    * @return string The blocked
+    * @return string|null The blocked
     */
     public function getBlocked()
     {
@@ -85,7 +85,7 @@ class Customer extends Entity
     /**
     * Gets the currencyCode
     *
-    * @return string The currencyCode
+    * @return string|null The currencyCode
     */
     public function getCurrencyCode()
     {
@@ -112,7 +112,7 @@ class Customer extends Entity
     /**
     * Gets the currencyId
     *
-    * @return string The currencyId
+    * @return string|null The currencyId
     */
     public function getCurrencyId()
     {
@@ -139,7 +139,7 @@ class Customer extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -166,7 +166,7 @@ class Customer extends Entity
     /**
     * Gets the email
     *
-    * @return string The email
+    * @return string|null The email
     */
     public function getEmail()
     {
@@ -193,12 +193,12 @@ class Customer extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -224,7 +224,7 @@ class Customer extends Entity
     /**
     * Gets the number
     *
-    * @return string The number
+    * @return string|null The number
     */
     public function getNumber()
     {
@@ -251,7 +251,7 @@ class Customer extends Entity
     /**
     * Gets the paymentMethodId
     *
-    * @return string The paymentMethodId
+    * @return string|null The paymentMethodId
     */
     public function getPaymentMethodId()
     {
@@ -278,7 +278,7 @@ class Customer extends Entity
     /**
     * Gets the paymentTermsId
     *
-    * @return string The paymentTermsId
+    * @return string|null The paymentTermsId
     */
     public function getPaymentTermsId()
     {
@@ -305,7 +305,7 @@ class Customer extends Entity
     /**
     * Gets the phoneNumber
     *
-    * @return string The phoneNumber
+    * @return string|null The phoneNumber
     */
     public function getPhoneNumber()
     {
@@ -332,7 +332,7 @@ class Customer extends Entity
     /**
     * Gets the shipmentMethodId
     *
-    * @return string The shipmentMethodId
+    * @return string|null The shipmentMethodId
     */
     public function getShipmentMethodId()
     {
@@ -359,7 +359,7 @@ class Customer extends Entity
     /**
     * Gets the taxAreaDisplayName
     *
-    * @return string The taxAreaDisplayName
+    * @return string|null The taxAreaDisplayName
     */
     public function getTaxAreaDisplayName()
     {
@@ -386,7 +386,7 @@ class Customer extends Entity
     /**
     * Gets the taxAreaId
     *
-    * @return string The taxAreaId
+    * @return string|null The taxAreaId
     */
     public function getTaxAreaId()
     {
@@ -413,7 +413,7 @@ class Customer extends Entity
     /**
     * Gets the taxLiable
     *
-    * @return bool The taxLiable
+    * @return bool|null The taxLiable
     */
     public function getTaxLiable()
     {
@@ -440,7 +440,7 @@ class Customer extends Entity
     /**
     * Gets the taxRegistrationNumber
     *
-    * @return string The taxRegistrationNumber
+    * @return string|null The taxRegistrationNumber
     */
     public function getTaxRegistrationNumber()
     {
@@ -467,7 +467,7 @@ class Customer extends Entity
     /**
     * Gets the type
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
@@ -494,7 +494,7 @@ class Customer extends Entity
     /**
     * Gets the website
     *
-    * @return string The website
+    * @return string|null The website
     */
     public function getWebsite()
     {
@@ -521,12 +521,12 @@ class Customer extends Entity
     /**
     * Gets the currency
     *
-    * @return Currency The currency
+    * @return Currency|null The currency
     */
     public function getCurrency()
     {
         if (array_key_exists("currency", $this->_propDict)) {
-            if (is_a($this->_propDict["currency"], "\Beta\Microsoft\Graph\Model\Currency")) {
+            if (is_a($this->_propDict["currency"], "\Beta\Microsoft\Graph\Model\Currency") || is_null($this->_propDict["currency"])) {
                 return $this->_propDict["currency"];
             } else {
                 $this->_propDict["currency"] = new Currency($this->_propDict["currency"]);
@@ -552,12 +552,12 @@ class Customer extends Entity
     /**
     * Gets the paymentMethod
     *
-    * @return PaymentMethod The paymentMethod
+    * @return PaymentMethod|null The paymentMethod
     */
     public function getPaymentMethod()
     {
         if (array_key_exists("paymentMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["paymentMethod"], "\Beta\Microsoft\Graph\Model\PaymentMethod")) {
+            if (is_a($this->_propDict["paymentMethod"], "\Beta\Microsoft\Graph\Model\PaymentMethod") || is_null($this->_propDict["paymentMethod"])) {
                 return $this->_propDict["paymentMethod"];
             } else {
                 $this->_propDict["paymentMethod"] = new PaymentMethod($this->_propDict["paymentMethod"]);
@@ -583,12 +583,12 @@ class Customer extends Entity
     /**
     * Gets the paymentTerm
     *
-    * @return PaymentTerm The paymentTerm
+    * @return PaymentTerm|null The paymentTerm
     */
     public function getPaymentTerm()
     {
         if (array_key_exists("paymentTerm", $this->_propDict)) {
-            if (is_a($this->_propDict["paymentTerm"], "\Beta\Microsoft\Graph\Model\PaymentTerm")) {
+            if (is_a($this->_propDict["paymentTerm"], "\Beta\Microsoft\Graph\Model\PaymentTerm") || is_null($this->_propDict["paymentTerm"])) {
                 return $this->_propDict["paymentTerm"];
             } else {
                 $this->_propDict["paymentTerm"] = new PaymentTerm($this->_propDict["paymentTerm"]);
@@ -615,7 +615,7 @@ class Customer extends Entity
      /** 
      * Gets the picture
      *
-     * @return array The picture
+     * @return array|null The picture
      */
     public function getPicture()
     {
@@ -635,19 +635,19 @@ class Customer extends Entity
     */
     public function setPicture($val)
     {
-		$this->_propDict["picture"] = $val;
+        $this->_propDict["picture"] = $val;
         return $this;
     }
     
     /**
     * Gets the shipmentMethod
     *
-    * @return ShipmentMethod The shipmentMethod
+    * @return ShipmentMethod|null The shipmentMethod
     */
     public function getShipmentMethod()
     {
         if (array_key_exists("shipmentMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["shipmentMethod"], "\Beta\Microsoft\Graph\Model\ShipmentMethod")) {
+            if (is_a($this->_propDict["shipmentMethod"], "\Beta\Microsoft\Graph\Model\ShipmentMethod") || is_null($this->_propDict["shipmentMethod"])) {
                 return $this->_propDict["shipmentMethod"];
             } else {
                 $this->_propDict["shipmentMethod"] = new ShipmentMethod($this->_propDict["shipmentMethod"]);

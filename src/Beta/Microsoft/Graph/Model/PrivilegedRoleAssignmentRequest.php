@@ -28,7 +28,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the assignmentState
     * The state of the assignment. The value can be Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
-    * @return string The assignmentState
+    * @return string|null The assignmentState
     */
     public function getAssignmentState()
     {
@@ -57,7 +57,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the duration
     * The duration of a role assignment.
     *
-    * @return string The duration
+    * @return string|null The duration
     */
     public function getDuration()
     {
@@ -86,7 +86,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the reason
     * The reason for the role assignment.
     *
-    * @return string The reason
+    * @return string|null The reason
     */
     public function getReason()
     {
@@ -115,12 +115,12 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the requestedDateTime
     * Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime The requestedDateTime
+    * @return \DateTime|null The requestedDateTime
     */
     public function getRequestedDateTime()
     {
         if (array_key_exists("requestedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["requestedDateTime"], "\DateTime") || is_null($this->_propDict["requestedDateTime"])) {
                 return $this->_propDict["requestedDateTime"];
             } else {
                 $this->_propDict["requestedDateTime"] = new \DateTime($this->_propDict["requestedDateTime"]);
@@ -148,7 +148,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the roleId
     * The id of the role.
     *
-    * @return string The roleId
+    * @return string|null The roleId
     */
     public function getRoleId()
     {
@@ -177,12 +177,12 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the schedule
     * The schedule object of the role assignment request.
     *
-    * @return GovernanceSchedule The schedule
+    * @return GovernanceSchedule|null The schedule
     */
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\GovernanceSchedule")) {
+            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\GovernanceSchedule") || is_null($this->_propDict["schedule"])) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new GovernanceSchedule($this->_propDict["schedule"]);
@@ -210,7 +210,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the status
     * Read-only.The status of the role assignment request. The value can be NotStarted,Completed,RequestedApproval,Scheduled,Approved,ApprovalDenied,ApprovalAborted,Cancelling,Cancelled,Revoked,RequestExpired.
     *
-    * @return string The status
+    * @return string|null The status
     */
     public function getStatus()
     {
@@ -239,7 +239,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the ticketNumber
     * The ticketNumber for the role assignment.
     *
-    * @return string The ticketNumber
+    * @return string|null The ticketNumber
     */
     public function getTicketNumber()
     {
@@ -268,7 +268,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the ticketSystem
     * The ticketSystem for the role assignment.
     *
-    * @return string The ticketSystem
+    * @return string|null The ticketSystem
     */
     public function getTicketSystem()
     {
@@ -297,7 +297,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the type
     * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators add users to roles;UserAdd: Users add role assignments.
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
@@ -326,7 +326,7 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the userId
     * The id of the user.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -355,12 +355,12 @@ class PrivilegedRoleAssignmentRequest extends Entity
     * Gets the roleInfo
     * The roleInfo object of the role assignment request.
     *
-    * @return PrivilegedRole The roleInfo
+    * @return PrivilegedRole|null The roleInfo
     */
     public function getRoleInfo()
     {
         if (array_key_exists("roleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleInfo"], "\Beta\Microsoft\Graph\Model\PrivilegedRole")) {
+            if (is_a($this->_propDict["roleInfo"], "\Beta\Microsoft\Graph\Model\PrivilegedRole") || is_null($this->_propDict["roleInfo"])) {
                 return $this->_propDict["roleInfo"];
             } else {
                 $this->_propDict["roleInfo"] = new PrivilegedRole($this->_propDict["roleInfo"]);

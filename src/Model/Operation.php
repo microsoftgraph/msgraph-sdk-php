@@ -28,12 +28,12 @@ class Operation extends Entity
     * Gets the createdDateTime
     * The start time of the operation.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,12 +61,12 @@ class Operation extends Entity
     * Gets the lastActionDateTime
     * The time of the last action of the operation.
     *
-    * @return \DateTime The lastActionDateTime
+    * @return \DateTime|null The lastActionDateTime
     */
     public function getLastActionDateTime()
     {
         if (array_key_exists("lastActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime") || is_null($this->_propDict["lastActionDateTime"])) {
                 return $this->_propDict["lastActionDateTime"];
             } else {
                 $this->_propDict["lastActionDateTime"] = new \DateTime($this->_propDict["lastActionDateTime"]);
@@ -92,14 +92,14 @@ class Operation extends Entity
     
     /**
     * Gets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
+    * The current status of the operation: notStarted, running, completed, failed
     *
-    * @return OperationStatus The status
+    * @return OperationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\OperationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);
@@ -111,7 +111,7 @@ class Operation extends Entity
     
     /**
     * Sets the status
-    * Possible values are: notStarted, running, completed, failed. Read-only.
+    * The current status of the operation: notStarted, running, completed, failed
     *
     * @param OperationStatus $val The status
     *

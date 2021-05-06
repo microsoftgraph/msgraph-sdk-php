@@ -29,7 +29,7 @@ class MobileAppContent extends Entity
      * Gets the containedApps
     * The collection of contained apps in a MobileLobApp acting as a package.
      *
-     * @return array The containedApps
+     * @return array|null The containedApps
      */
     public function getContainedApps()
     {
@@ -50,7 +50,7 @@ class MobileAppContent extends Entity
     */
     public function setContainedApps($val)
     {
-		$this->_propDict["containedApps"] = $val;
+        $this->_propDict["containedApps"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class MobileAppContent extends Entity
      * Gets the files
     * The list of files for this app content version.
      *
-     * @return array The files
+     * @return array|null The files
      */
     public function getFiles()
     {
@@ -80,7 +80,7 @@ class MobileAppContent extends Entity
     */
     public function setFiles($val)
     {
-		$this->_propDict["files"] = $val;
+        $this->_propDict["files"] = $val;
         return $this;
     }
     

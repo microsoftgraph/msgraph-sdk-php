@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RoleEligibilityRequestFilterByCurrentUserOptions File
+* ImportedWindowsAutopilotDeviceIdentityImportStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* RoleEligibilityRequestFilterByCurrentUserOptions class
+* ImportedWindowsAutopilotDeviceIdentityImportStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RoleEligibilityRequestFilterByCurrentUserOptions extends Enum
+class ImportedWindowsAutopilotDeviceIdentityImportStatus extends Enum
 {
     /**
-    * The Enum RoleEligibilityRequestFilterByCurrentUserOptions
+    * The Enum ImportedWindowsAutopilotDeviceIdentityImportStatus
     */
-    const PRINCIPAL = "principal";
-    const CREATED_BY = "createdBy";
-    const APPROVER = "approver";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const UNKNOWN = "unknown";
+    const PENDING = "pending";
+    const PARTIAL = "partial";
+    const COMPLETE = "complete";
+    const ERROR = "error";
 }

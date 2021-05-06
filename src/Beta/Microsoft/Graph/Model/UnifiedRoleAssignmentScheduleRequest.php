@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UnifiedRoleAssignmentRequest File
+* UnifiedRoleAssignmentScheduleRequest File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* UnifiedRoleAssignmentRequest class
+* UnifiedRoleAssignmentScheduleRequest class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,12 +22,12 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UnifiedRoleAssignmentRequest extends Request
+class UnifiedRoleAssignmentScheduleRequest extends Request
 {
     /**
     * Gets the action
     *
-    * @return string The action
+    * @return string|null The action
     */
     public function getAction()
     {
@@ -43,7 +43,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The action
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setAction($val)
     {
@@ -54,7 +54,7 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the appScopeId
     *
-    * @return string The appScopeId
+    * @return string|null The appScopeId
     */
     public function getAppScopeId()
     {
@@ -70,7 +70,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The appScopeId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setAppScopeId($val)
     {
@@ -81,7 +81,7 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the directoryScopeId
     *
-    * @return string The directoryScopeId
+    * @return string|null The directoryScopeId
     */
     public function getDirectoryScopeId()
     {
@@ -97,7 +97,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The directoryScopeId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setDirectoryScopeId($val)
     {
@@ -108,7 +108,7 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the isValidationOnly
     *
-    * @return bool The isValidationOnly
+    * @return bool|null The isValidationOnly
     */
     public function getIsValidationOnly()
     {
@@ -124,7 +124,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param bool $val The isValidationOnly
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setIsValidationOnly($val)
     {
@@ -135,7 +135,7 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the justification
     *
-    * @return string The justification
+    * @return string|null The justification
     */
     public function getJustification()
     {
@@ -151,7 +151,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The justification
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setJustification($val)
     {
@@ -162,7 +162,7 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the principalId
     *
-    * @return string The principalId
+    * @return string|null The principalId
     */
     public function getPrincipalId()
     {
@@ -178,7 +178,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The principalId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setPrincipalId($val)
     {
@@ -189,7 +189,7 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the roleDefinitionId
     *
-    * @return string The roleDefinitionId
+    * @return string|null The roleDefinitionId
     */
     public function getRoleDefinitionId()
     {
@@ -205,7 +205,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The roleDefinitionId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setRoleDefinitionId($val)
     {
@@ -216,12 +216,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the scheduleInfo
     *
-    * @return RequestSchedule The scheduleInfo
+    * @return RequestSchedule|null The scheduleInfo
     */
     public function getScheduleInfo()
     {
         if (array_key_exists("scheduleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
+            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule") || is_null($this->_propDict["scheduleInfo"])) {
                 return $this->_propDict["scheduleInfo"];
             } else {
                 $this->_propDict["scheduleInfo"] = new RequestSchedule($this->_propDict["scheduleInfo"]);
@@ -236,7 +236,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param RequestSchedule $val The scheduleInfo
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setScheduleInfo($val)
     {
@@ -247,7 +247,7 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the targetScheduleId
     *
-    * @return string The targetScheduleId
+    * @return string|null The targetScheduleId
     */
     public function getTargetScheduleId()
     {
@@ -263,7 +263,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param string $val The targetScheduleId
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setTargetScheduleId($val)
     {
@@ -274,12 +274,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the ticketInfo
     *
-    * @return TicketInfo The ticketInfo
+    * @return TicketInfo|null The ticketInfo
     */
     public function getTicketInfo()
     {
         if (array_key_exists("ticketInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["ticketInfo"], "\Beta\Microsoft\Graph\Model\TicketInfo")) {
+            if (is_a($this->_propDict["ticketInfo"], "\Beta\Microsoft\Graph\Model\TicketInfo") || is_null($this->_propDict["ticketInfo"])) {
                 return $this->_propDict["ticketInfo"];
             } else {
                 $this->_propDict["ticketInfo"] = new TicketInfo($this->_propDict["ticketInfo"]);
@@ -294,7 +294,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param TicketInfo $val The ticketInfo
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setTicketInfo($val)
     {
@@ -305,12 +305,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the activatedUsing
     *
-    * @return UnifiedRoleEligibilitySchedule The activatedUsing
+    * @return UnifiedRoleEligibilitySchedule|null The activatedUsing
     */
     public function getActivatedUsing()
     {
         if (array_key_exists("activatedUsing", $this->_propDict)) {
-            if (is_a($this->_propDict["activatedUsing"], "\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilitySchedule")) {
+            if (is_a($this->_propDict["activatedUsing"], "\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilitySchedule") || is_null($this->_propDict["activatedUsing"])) {
                 return $this->_propDict["activatedUsing"];
             } else {
                 $this->_propDict["activatedUsing"] = new UnifiedRoleEligibilitySchedule($this->_propDict["activatedUsing"]);
@@ -325,7 +325,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param UnifiedRoleEligibilitySchedule $val The activatedUsing
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setActivatedUsing($val)
     {
@@ -336,12 +336,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the appScope
     *
-    * @return AppScope The appScope
+    * @return AppScope|null The appScope
     */
     public function getAppScope()
     {
         if (array_key_exists("appScope", $this->_propDict)) {
-            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope")) {
+            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope") || is_null($this->_propDict["appScope"])) {
                 return $this->_propDict["appScope"];
             } else {
                 $this->_propDict["appScope"] = new AppScope($this->_propDict["appScope"]);
@@ -356,7 +356,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param AppScope $val The appScope
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setAppScope($val)
     {
@@ -367,12 +367,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the directoryScope
     *
-    * @return DirectoryObject The directoryScope
+    * @return DirectoryObject|null The directoryScope
     */
     public function getDirectoryScope()
     {
         if (array_key_exists("directoryScope", $this->_propDict)) {
-            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["directoryScope"])) {
                 return $this->_propDict["directoryScope"];
             } else {
                 $this->_propDict["directoryScope"] = new DirectoryObject($this->_propDict["directoryScope"]);
@@ -387,7 +387,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param DirectoryObject $val The directoryScope
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setDirectoryScope($val)
     {
@@ -398,12 +398,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the principal
     *
-    * @return DirectoryObject The principal
+    * @return DirectoryObject|null The principal
     */
     public function getPrincipal()
     {
         if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["principal"])) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new DirectoryObject($this->_propDict["principal"]);
@@ -418,7 +418,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param DirectoryObject $val The principal
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setPrincipal($val)
     {
@@ -429,12 +429,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the roleDefinition
     *
-    * @return UnifiedRoleDefinition The roleDefinition
+    * @return UnifiedRoleDefinition|null The roleDefinition
     */
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition") || is_null($this->_propDict["roleDefinition"])) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new UnifiedRoleDefinition($this->_propDict["roleDefinition"]);
@@ -449,7 +449,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setRoleDefinition($val)
     {
@@ -460,12 +460,12 @@ class UnifiedRoleAssignmentRequest extends Request
     /**
     * Gets the targetSchedule
     *
-    * @return UnifiedRoleAssignmentSchedule The targetSchedule
+    * @return UnifiedRoleAssignmentSchedule|null The targetSchedule
     */
     public function getTargetSchedule()
     {
         if (array_key_exists("targetSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["targetSchedule"], "\Beta\Microsoft\Graph\Model\UnifiedRoleAssignmentSchedule")) {
+            if (is_a($this->_propDict["targetSchedule"], "\Beta\Microsoft\Graph\Model\UnifiedRoleAssignmentSchedule") || is_null($this->_propDict["targetSchedule"])) {
                 return $this->_propDict["targetSchedule"];
             } else {
                 $this->_propDict["targetSchedule"] = new UnifiedRoleAssignmentSchedule($this->_propDict["targetSchedule"]);
@@ -480,7 +480,7 @@ class UnifiedRoleAssignmentRequest extends Request
     *
     * @param UnifiedRoleAssignmentSchedule $val The targetSchedule
     *
-    * @return UnifiedRoleAssignmentRequest
+    * @return UnifiedRoleAssignmentScheduleRequest
     */
     public function setTargetSchedule($val)
     {

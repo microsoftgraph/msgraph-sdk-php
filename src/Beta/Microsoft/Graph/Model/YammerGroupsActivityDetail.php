@@ -27,7 +27,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the groupDisplayName
     *
-    * @return string The groupDisplayName
+    * @return string|null The groupDisplayName
     */
     public function getGroupDisplayName()
     {
@@ -54,7 +54,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the groupType
     *
-    * @return string The groupType
+    * @return string|null The groupType
     */
     public function getGroupType()
     {
@@ -81,7 +81,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool The isDeleted
+    * @return bool|null The isDeleted
     */
     public function getIsDeleted()
     {
@@ -108,12 +108,12 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime The lastActivityDate
+    * @return \DateTime|null The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -139,7 +139,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the likedCount
     *
-    * @return int The likedCount
+    * @return int|null The likedCount
     */
     public function getLikedCount()
     {
@@ -166,7 +166,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the memberCount
     *
-    * @return int The memberCount
+    * @return int|null The memberCount
     */
     public function getMemberCount()
     {
@@ -193,7 +193,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the networkDisplayName
     *
-    * @return string The networkDisplayName
+    * @return string|null The networkDisplayName
     */
     public function getNetworkDisplayName()
     {
@@ -220,7 +220,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the office365Connected
     *
-    * @return bool The office365Connected
+    * @return bool|null The office365Connected
     */
     public function getOffice365Connected()
     {
@@ -247,7 +247,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the ownerPrincipalName
     *
-    * @return string The ownerPrincipalName
+    * @return string|null The ownerPrincipalName
     */
     public function getOwnerPrincipalName()
     {
@@ -274,7 +274,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the postedCount
     *
-    * @return int The postedCount
+    * @return int|null The postedCount
     */
     public function getPostedCount()
     {
@@ -301,7 +301,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the readCount
     *
-    * @return int The readCount
+    * @return int|null The readCount
     */
     public function getReadCount()
     {
@@ -328,7 +328,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -355,12 +355,12 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);

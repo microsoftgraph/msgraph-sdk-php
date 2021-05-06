@@ -28,12 +28,12 @@ class EducationRubric extends Entity
     * Gets the createdBy
     * The user who created this resource.
     *
-    * @return IdentitySet The createdBy
+    * @return IdentitySet|null The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -61,12 +61,12 @@ class EducationRubric extends Entity
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -94,12 +94,12 @@ class EducationRubric extends Entity
     * Gets the description
     * The description of this rubric.
     *
-    * @return EducationItemBody The description
+    * @return EducationItemBody|null The description
     */
     public function getDescription()
     {
         if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
+            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody") || is_null($this->_propDict["description"])) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new EducationItemBody($this->_propDict["description"]);
@@ -127,7 +127,7 @@ class EducationRubric extends Entity
     * Gets the displayName
     * The name of this rubric.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -156,12 +156,12 @@ class EducationRubric extends Entity
     * Gets the grading
     * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
     *
-    * @return EducationAssignmentGradeType The grading
+    * @return EducationAssignmentGradeType|null The grading
     */
     public function getGrading()
     {
         if (array_key_exists("grading", $this->_propDict)) {
-            if (is_a($this->_propDict["grading"], "\Beta\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
+            if (is_a($this->_propDict["grading"], "\Beta\Microsoft\Graph\Model\EducationAssignmentGradeType") || is_null($this->_propDict["grading"])) {
                 return $this->_propDict["grading"];
             } else {
                 $this->_propDict["grading"] = new EducationAssignmentGradeType($this->_propDict["grading"]);
@@ -189,12 +189,12 @@ class EducationRubric extends Entity
     * Gets the lastModifiedBy
     * The last user to modify the resource.
     *
-    * @return IdentitySet The lastModifiedBy
+    * @return IdentitySet|null The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["lastModifiedBy"])) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -222,12 +222,12 @@ class EducationRubric extends Entity
     * Gets the lastModifiedDateTime
     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -256,7 +256,7 @@ class EducationRubric extends Entity
      * Gets the levels
     * The collection of levels making up this rubric.
      *
-     * @return array The levels
+     * @return array|null The levels
      */
     public function getLevels()
     {
@@ -277,7 +277,7 @@ class EducationRubric extends Entity
     */
     public function setLevels($val)
     {
-		$this->_propDict["levels"] = $val;
+        $this->_propDict["levels"] = $val;
         return $this;
     }
     
@@ -286,7 +286,7 @@ class EducationRubric extends Entity
      * Gets the qualities
     * The collection of qualities making up this rubric.
      *
-     * @return array The qualities
+     * @return array|null The qualities
      */
     public function getQualities()
     {
@@ -307,7 +307,7 @@ class EducationRubric extends Entity
     */
     public function setQualities($val)
     {
-		$this->_propDict["qualities"] = $val;
+        $this->_propDict["qualities"] = $val;
         return $this;
     }
     

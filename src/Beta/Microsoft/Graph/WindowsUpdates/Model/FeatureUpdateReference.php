@@ -25,8 +25,9 @@ class FeatureUpdateReference extends WindowsUpdateReference
 {
     /**
     * Gets the version
+    * Specifies a feature update by version.
     *
-    * @return string The version
+    * @return string|null The version
     */
     public function getVersion()
     {
@@ -39,6 +40,7 @@ class FeatureUpdateReference extends WindowsUpdateReference
 
     /**
     * Sets the version
+    * Specifies a feature update by version.
     *
     * @param string $val The value of the version
     *

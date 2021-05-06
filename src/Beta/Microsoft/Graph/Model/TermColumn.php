@@ -27,7 +27,7 @@ class TermColumn extends Entity
     * Gets the allowMultipleValues
     * Specifies whether the column will allow more than one value
     *
-    * @return bool The allowMultipleValues
+    * @return bool|null The allowMultipleValues
     */
     public function getAllowMultipleValues()
     {
@@ -55,7 +55,7 @@ class TermColumn extends Entity
     * Gets the showFullyQualifiedName
     * Specifies whether to display the entire term path or only the term label.
     *
-    * @return bool The showFullyQualifiedName
+    * @return bool|null The showFullyQualifiedName
     */
     public function getShowFullyQualifiedName()
     {

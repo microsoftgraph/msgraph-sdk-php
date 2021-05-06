@@ -28,7 +28,7 @@ class PolicyBase extends DirectoryObject
     * Gets the description
     * Description for this policy.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class PolicyBase extends DirectoryObject
     * Gets the displayName
     * Display name for this policy.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {

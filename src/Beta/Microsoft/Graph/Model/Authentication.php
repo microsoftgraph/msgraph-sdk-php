@@ -28,7 +28,7 @@ class Authentication extends Entity
      /** 
      * Gets the emailMethods
      *
-     * @return array The emailMethods
+     * @return array|null The emailMethods
      */
     public function getEmailMethods()
     {
@@ -48,7 +48,7 @@ class Authentication extends Entity
     */
     public function setEmailMethods($val)
     {
-		$this->_propDict["emailMethods"] = $val;
+        $this->_propDict["emailMethods"] = $val;
         return $this;
     }
     
@@ -56,7 +56,7 @@ class Authentication extends Entity
      /** 
      * Gets the fido2Methods
      *
-     * @return array The fido2Methods
+     * @return array|null The fido2Methods
      */
     public function getFido2Methods()
     {
@@ -76,7 +76,7 @@ class Authentication extends Entity
     */
     public function setFido2Methods($val)
     {
-		$this->_propDict["fido2Methods"] = $val;
+        $this->_propDict["fido2Methods"] = $val;
         return $this;
     }
     
@@ -84,7 +84,7 @@ class Authentication extends Entity
      /** 
      * Gets the methods
      *
-     * @return array The methods
+     * @return array|null The methods
      */
     public function getMethods()
     {
@@ -104,7 +104,7 @@ class Authentication extends Entity
     */
     public function setMethods($val)
     {
-		$this->_propDict["methods"] = $val;
+        $this->_propDict["methods"] = $val;
         return $this;
     }
     
@@ -112,7 +112,7 @@ class Authentication extends Entity
      /** 
      * Gets the microsoftAuthenticatorMethods
      *
-     * @return array The microsoftAuthenticatorMethods
+     * @return array|null The microsoftAuthenticatorMethods
      */
     public function getMicrosoftAuthenticatorMethods()
     {
@@ -132,7 +132,7 @@ class Authentication extends Entity
     */
     public function setMicrosoftAuthenticatorMethods($val)
     {
-		$this->_propDict["microsoftAuthenticatorMethods"] = $val;
+        $this->_propDict["microsoftAuthenticatorMethods"] = $val;
         return $this;
     }
     
@@ -140,7 +140,7 @@ class Authentication extends Entity
      /** 
      * Gets the operations
      *
-     * @return array The operations
+     * @return array|null The operations
      */
     public function getOperations()
     {
@@ -160,7 +160,7 @@ class Authentication extends Entity
     */
     public function setOperations($val)
     {
-		$this->_propDict["operations"] = $val;
+        $this->_propDict["operations"] = $val;
         return $this;
     }
     
@@ -168,7 +168,7 @@ class Authentication extends Entity
      /** 
      * Gets the passwordlessMicrosoftAuthenticatorMethods
      *
-     * @return array The passwordlessMicrosoftAuthenticatorMethods
+     * @return array|null The passwordlessMicrosoftAuthenticatorMethods
      */
     public function getPasswordlessMicrosoftAuthenticatorMethods()
     {
@@ -188,7 +188,7 @@ class Authentication extends Entity
     */
     public function setPasswordlessMicrosoftAuthenticatorMethods($val)
     {
-		$this->_propDict["passwordlessMicrosoftAuthenticatorMethods"] = $val;
+        $this->_propDict["passwordlessMicrosoftAuthenticatorMethods"] = $val;
         return $this;
     }
     
@@ -196,7 +196,7 @@ class Authentication extends Entity
      /** 
      * Gets the passwordMethods
      *
-     * @return array The passwordMethods
+     * @return array|null The passwordMethods
      */
     public function getPasswordMethods()
     {
@@ -216,7 +216,7 @@ class Authentication extends Entity
     */
     public function setPasswordMethods($val)
     {
-		$this->_propDict["passwordMethods"] = $val;
+        $this->_propDict["passwordMethods"] = $val;
         return $this;
     }
     
@@ -224,7 +224,7 @@ class Authentication extends Entity
      /** 
      * Gets the phoneMethods
      *
-     * @return array The phoneMethods
+     * @return array|null The phoneMethods
      */
     public function getPhoneMethods()
     {
@@ -244,7 +244,7 @@ class Authentication extends Entity
     */
     public function setPhoneMethods($val)
     {
-		$this->_propDict["phoneMethods"] = $val;
+        $this->_propDict["phoneMethods"] = $val;
         return $this;
     }
     
@@ -252,7 +252,7 @@ class Authentication extends Entity
      /** 
      * Gets the temporaryAccessPassMethods
      *
-     * @return array The temporaryAccessPassMethods
+     * @return array|null The temporaryAccessPassMethods
      */
     public function getTemporaryAccessPassMethods()
     {
@@ -272,7 +272,7 @@ class Authentication extends Entity
     */
     public function setTemporaryAccessPassMethods($val)
     {
-		$this->_propDict["temporaryAccessPassMethods"] = $val;
+        $this->_propDict["temporaryAccessPassMethods"] = $val;
         return $this;
     }
     
@@ -280,7 +280,7 @@ class Authentication extends Entity
      /** 
      * Gets the windowsHelloForBusinessMethods
      *
-     * @return array The windowsHelloForBusinessMethods
+     * @return array|null The windowsHelloForBusinessMethods
      */
     public function getWindowsHelloForBusinessMethods()
     {
@@ -300,7 +300,7 @@ class Authentication extends Entity
     */
     public function setWindowsHelloForBusinessMethods($val)
     {
-		$this->_propDict["windowsHelloForBusinessMethods"] = $val;
+        $this->_propDict["windowsHelloForBusinessMethods"] = $val;
         return $this;
     }
     

@@ -28,7 +28,7 @@ class GroupPolicyPresentationValueBoolean extends GroupPolicyPresentationValue
     * Gets the value
     * An boolean value for the associated presentation.
     *
-    * @return bool The value
+    * @return bool|null The value
     */
     public function getValue()
     {

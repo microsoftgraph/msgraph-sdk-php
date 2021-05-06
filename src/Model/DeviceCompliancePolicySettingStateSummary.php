@@ -28,7 +28,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the compliantDeviceCount
     * Number of compliant devices
     *
-    * @return int The compliantDeviceCount
+    * @return int|null The compliantDeviceCount
     */
     public function getCompliantDeviceCount()
     {
@@ -57,7 +57,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the conflictDeviceCount
     * Number of conflict devices
     *
-    * @return int The conflictDeviceCount
+    * @return int|null The conflictDeviceCount
     */
     public function getConflictDeviceCount()
     {
@@ -86,7 +86,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the errorDeviceCount
     * Number of error devices
     *
-    * @return int The errorDeviceCount
+    * @return int|null The errorDeviceCount
     */
     public function getErrorDeviceCount()
     {
@@ -115,7 +115,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the nonCompliantDeviceCount
     * Number of NonCompliant devices
     *
-    * @return int The nonCompliantDeviceCount
+    * @return int|null The nonCompliantDeviceCount
     */
     public function getNonCompliantDeviceCount()
     {
@@ -144,7 +144,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the notApplicableDeviceCount
     * Number of not applicable devices
     *
-    * @return int The notApplicableDeviceCount
+    * @return int|null The notApplicableDeviceCount
     */
     public function getNotApplicableDeviceCount()
     {
@@ -171,14 +171,14 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     
     /**
     * Gets the platformType
-    * Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+    * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
     *
-    * @return PolicyPlatformType The platformType
+    * @return PolicyPlatformType|null The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Microsoft\Graph\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "\Microsoft\Graph\Model\PolicyPlatformType") || is_null($this->_propDict["platformType"])) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -190,7 +190,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     
     /**
     * Sets the platformType
-    * Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+    * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
     *
     * @param PolicyPlatformType $val The platformType
     *
@@ -206,7 +206,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the remediatedDeviceCount
     * Number of remediated devices
     *
-    * @return int The remediatedDeviceCount
+    * @return int|null The remediatedDeviceCount
     */
     public function getRemediatedDeviceCount()
     {
@@ -235,7 +235,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the setting
     * The setting class name and property name.
     *
-    * @return string The setting
+    * @return string|null The setting
     */
     public function getSetting()
     {
@@ -264,7 +264,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the settingName
     * Name of the setting.
     *
-    * @return string The settingName
+    * @return string|null The settingName
     */
     public function getSettingName()
     {
@@ -293,7 +293,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     * Gets the unknownDeviceCount
     * Number of unknown devices
     *
-    * @return int The unknownDeviceCount
+    * @return int|null The unknownDeviceCount
     */
     public function getUnknownDeviceCount()
     {
@@ -323,7 +323,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
      * Gets the deviceComplianceSettingStates
     * Not yet documented
      *
-     * @return array The deviceComplianceSettingStates
+     * @return array|null The deviceComplianceSettingStates
      */
     public function getDeviceComplianceSettingStates()
     {
@@ -344,7 +344,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     */
     public function setDeviceComplianceSettingStates($val)
     {
-		$this->_propDict["deviceComplianceSettingStates"] = $val;
+        $this->_propDict["deviceComplianceSettingStates"] = $val;
         return $this;
     }
     

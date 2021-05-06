@@ -28,7 +28,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     * Gets the compliantUserCount
     * Number of compliant users
     *
-    * @return int The compliantUserCount
+    * @return int|null The compliantUserCount
     */
     public function getCompliantUserCount()
     {
@@ -57,7 +57,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     * Gets the conflictUserCount
     * Number of conflict users
     *
-    * @return int The conflictUserCount
+    * @return int|null The conflictUserCount
     */
     public function getConflictUserCount()
     {
@@ -86,7 +86,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     * Gets the errorUserCount
     * Number of error users
     *
-    * @return int The errorUserCount
+    * @return int|null The errorUserCount
     */
     public function getErrorUserCount()
     {
@@ -115,7 +115,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     * Gets the nonCompliantUserCount
     * Number of NonCompliant users
     *
-    * @return int The nonCompliantUserCount
+    * @return int|null The nonCompliantUserCount
     */
     public function getNonCompliantUserCount()
     {
@@ -144,7 +144,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     * Gets the notApplicableUserCount
     * Number of not applicable users
     *
-    * @return int The notApplicableUserCount
+    * @return int|null The notApplicableUserCount
     */
     public function getNotApplicableUserCount()
     {
@@ -173,7 +173,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     * Gets the remediatedUserCount
     * Number of remediated users
     *
-    * @return int The remediatedUserCount
+    * @return int|null The remediatedUserCount
     */
     public function getRemediatedUserCount()
     {
@@ -202,7 +202,7 @@ class DeviceConfigurationUserStateSummary extends Entity
     * Gets the unknownUserCount
     * Number of unknown users
     *
-    * @return int The unknownUserCount
+    * @return int|null The unknownUserCount
     */
     public function getUnknownUserCount()
     {

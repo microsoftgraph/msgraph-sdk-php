@@ -29,7 +29,7 @@ class PlannerUser extends Entity
      * Gets the plans
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
-     * @return array The plans
+     * @return array|null The plans
      */
     public function getPlans()
     {
@@ -50,16 +50,16 @@ class PlannerUser extends Entity
     */
     public function setPlans($val)
     {
-		$this->_propDict["plans"] = $val;
+        $this->_propDict["plans"] = $val;
         return $this;
     }
     
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+    * Read-only. Nullable. Returns the plannerPlans shared with the user.
      *
-     * @return array The tasks
+     * @return array|null The tasks
      */
     public function getTasks()
     {
@@ -72,7 +72,7 @@ class PlannerUser extends Entity
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+    * Read-only. Nullable. Returns the plannerPlans shared with the user.
     *
     * @param PlannerTask $val The tasks
     *
@@ -80,7 +80,7 @@ class PlannerUser extends Entity
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
     

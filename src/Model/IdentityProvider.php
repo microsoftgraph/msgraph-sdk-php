@@ -26,9 +26,9 @@ class IdentityProvider extends Entity
 {
     /**
     * Gets the clientId
-    * The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+    * The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
     *
-    * @return string The clientId
+    * @return string|null The clientId
     */
     public function getClientId()
     {
@@ -41,7 +41,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the clientId
-    * The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+    * The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
     *
     * @param string $val The clientId
     *
@@ -55,9 +55,9 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+    * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
     *
-    * @return string The clientSecret
+    * @return string|null The clientSecret
     */
     public function getClientSecret()
     {
@@ -70,7 +70,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the clientSecret
-    * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+    * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
     *
     * @param string $val The clientSecret
     *
@@ -86,7 +86,7 @@ class IdentityProvider extends Entity
     * Gets the name
     * The display name of the identity provider. Not nullable.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -113,9 +113,9 @@ class IdentityProvider extends Entity
     
     /**
     * Gets the type
-    * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
+    * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
@@ -128,7 +128,7 @@ class IdentityProvider extends Entity
     
     /**
     * Sets the type
-    * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
+    * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
     *
     * @param string $val The type
     *

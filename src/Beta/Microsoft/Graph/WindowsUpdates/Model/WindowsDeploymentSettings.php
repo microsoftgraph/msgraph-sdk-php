@@ -26,13 +26,14 @@ class WindowsDeploymentSettings extends DeploymentSettings
 
     /**
     * Gets the userExperience
+    * Settings governing the user's update experience on a device.
     *
-    * @return UserExperienceSettings The userExperience
+    * @return UserExperienceSettings|null The userExperience
     */
     public function getUserExperience()
     {
         if (array_key_exists("userExperience", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperience"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\UserExperienceSettings")) {
+            if (is_a($this->_propDict["userExperience"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\UserExperienceSettings") || is_null($this->_propDict["userExperience"])) {
                 return $this->_propDict["userExperience"];
             } else {
                 $this->_propDict["userExperience"] = new UserExperienceSettings($this->_propDict["userExperience"]);
@@ -44,6 +45,7 @@ class WindowsDeploymentSettings extends DeploymentSettings
 
     /**
     * Sets the userExperience
+    * Settings governing the user's update experience on a device.
     *
     * @param UserExperienceSettings $val The value to assign to the userExperience
     *

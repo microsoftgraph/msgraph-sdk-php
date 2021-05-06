@@ -28,7 +28,7 @@ class DeviceCategory extends Entity
     * Gets the description
     * Optional description for the device category.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DeviceCategory extends Entity
     * Gets the displayName
     * Display name for the device category.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {

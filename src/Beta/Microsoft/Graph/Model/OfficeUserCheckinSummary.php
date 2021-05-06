@@ -26,7 +26,7 @@ class OfficeUserCheckinSummary extends Entity
     /**
     * Gets the failedUserCount
     *
-    * @return int The failedUserCount
+    * @return int|null The failedUserCount
     */
     public function getFailedUserCount()
     {
@@ -52,7 +52,7 @@ class OfficeUserCheckinSummary extends Entity
     /**
     * Gets the succeededUserCount
     *
-    * @return int The succeededUserCount
+    * @return int|null The succeededUserCount
     */
     public function getSucceededUserCount()
     {

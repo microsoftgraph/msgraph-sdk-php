@@ -36,12 +36,16 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const AD_JOIN_CHECK_ORGANIZATIONAL_UNIT_NOT_FOUND = "adJoinCheckOrganizationalUnitNotFound";
     const AD_JOIN_CHECK_ORGANIZATIONAL_UNIT_INCORRECT_FORMAT = "adJoinCheckOrganizationalUnitIncorrectFormat";
     const AD_JOIN_CHECK_COMPUTER_OBJECT_ALREADY_EXISTS = "adJoinCheckComputerObjectAlreadyExists";
+    const AD_JOIN_CHECK_ACCESS_DENIED = "adJoinCheckAccessDenied";
     const AD_JOIN_CHECK_UNKNOWN_ERROR = "adJoinCheckUnknownError";
-    const ENDPOINT_CONNECTIVITY_CHECK_URL_NOT_WHITELISTED = "endpointConnectivityCheckUrlNotWhitelisted";
+    const ENDPOINT_CONNECTIVITY_CHECK_CLOUD_PC_URL_NOT_ALLOW_LISTED = "endpointConnectivityCheckCloudPcUrlNotAllowListed";
+    const ENDPOINT_CONNECTIVITY_CHECK_WVD_URL_NOT_ALLOW_LISTED = "endpointConnectivityCheckWVDUrlNotAllowListed";
+    const ENDPOINT_CONNECTIVITY_CHECK_INTUNE_URL_NOT_ALLOW_LISTED = "endpointConnectivityCheckIntuneUrlNotAllowListed";
     const ENDPOINT_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "endpointConnectivityCheckUnknownError";
     const AAD_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "aadConnectivityCheckUnknownError";
     const RESOURCE_AVAILABILITY_CHECK_NO_SUBNET_IP = "resourceAvailabilityCheckNoSubnetIP";
     const RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_DISABLED = "resourceAvailabilityCheckSubscriptionDisabled";
+    const RESOURCE_AVAILABILITY_CHECK_UNSUPPORTED_V_NET_REGION = "resourceAvailabilityCheckUnsupportedVNetRegion";
     const RESOURCE_AVAILABILITY_CHECK_UNKNOWN_ERROR = "resourceAvailabilityCheckUnknownError";
     const PERMISSION_CHECK_NO_SUBSCRIPTION_READER_ROLE = "permissionCheckNoSubscriptionReaderRole";
     const PERMISSION_CHECK_NO_RESOURCE_GROUP_OWNER_ROLE = "permissionCheckNoResourceGroupOwnerRole";

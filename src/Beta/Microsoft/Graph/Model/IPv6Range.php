@@ -36,7 +36,7 @@ class IPv6Range extends IpRange
     * Gets the lowerAddress
     * Lower address
     *
-    * @return string The lowerAddress
+    * @return string|null The lowerAddress
     */
     public function getLowerAddress()
     {
@@ -64,7 +64,7 @@ class IPv6Range extends IpRange
     * Gets the upperAddress
     * Upper address
     *
-    * @return string The upperAddress
+    * @return string|null The upperAddress
     */
     public function getUpperAddress()
     {

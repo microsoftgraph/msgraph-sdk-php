@@ -36,7 +36,7 @@ class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipien
     * Gets the userId
     * User ID of the user to whom the submission is assigned.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {

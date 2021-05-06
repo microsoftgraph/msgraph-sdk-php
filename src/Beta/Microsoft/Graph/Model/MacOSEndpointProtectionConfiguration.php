@@ -28,12 +28,12 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionAutomaticSampleSubmission
     * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
-    * @return Enablement The advancedThreatProtectionAutomaticSampleSubmission
+    * @return Enablement|null The advancedThreatProtectionAutomaticSampleSubmission
     */
     public function getAdvancedThreatProtectionAutomaticSampleSubmission()
     {
         if (array_key_exists("advancedThreatProtectionAutomaticSampleSubmission", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"], "\Beta\Microsoft\Graph\Model\Enablement") || is_null($this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"])) {
                 return $this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"];
             } else {
                 $this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"] = new Enablement($this->_propDict["advancedThreatProtectionAutomaticSampleSubmission"]);
@@ -61,12 +61,12 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionCloudDelivered
     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
-    * @return Enablement The advancedThreatProtectionCloudDelivered
+    * @return Enablement|null The advancedThreatProtectionCloudDelivered
     */
     public function getAdvancedThreatProtectionCloudDelivered()
     {
         if (array_key_exists("advancedThreatProtectionCloudDelivered", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionCloudDelivered"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionCloudDelivered"], "\Beta\Microsoft\Graph\Model\Enablement") || is_null($this->_propDict["advancedThreatProtectionCloudDelivered"])) {
                 return $this->_propDict["advancedThreatProtectionCloudDelivered"];
             } else {
                 $this->_propDict["advancedThreatProtectionCloudDelivered"] = new Enablement($this->_propDict["advancedThreatProtectionCloudDelivered"]);
@@ -94,12 +94,12 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionDiagnosticDataCollection
     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
-    * @return Enablement The advancedThreatProtectionDiagnosticDataCollection
+    * @return Enablement|null The advancedThreatProtectionDiagnosticDataCollection
     */
     public function getAdvancedThreatProtectionDiagnosticDataCollection()
     {
         if (array_key_exists("advancedThreatProtectionDiagnosticDataCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionDiagnosticDataCollection"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionDiagnosticDataCollection"], "\Beta\Microsoft\Graph\Model\Enablement") || is_null($this->_propDict["advancedThreatProtectionDiagnosticDataCollection"])) {
                 return $this->_propDict["advancedThreatProtectionDiagnosticDataCollection"];
             } else {
                 $this->_propDict["advancedThreatProtectionDiagnosticDataCollection"] = new Enablement($this->_propDict["advancedThreatProtectionDiagnosticDataCollection"]);
@@ -127,7 +127,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionExcludedExtensions
     * A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
     *
-    * @return string The advancedThreatProtectionExcludedExtensions
+    * @return string|null The advancedThreatProtectionExcludedExtensions
     */
     public function getAdvancedThreatProtectionExcludedExtensions()
     {
@@ -156,7 +156,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionExcludedFiles
     * A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
     *
-    * @return string The advancedThreatProtectionExcludedFiles
+    * @return string|null The advancedThreatProtectionExcludedFiles
     */
     public function getAdvancedThreatProtectionExcludedFiles()
     {
@@ -185,7 +185,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionExcludedFolders
     * A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
     *
-    * @return string The advancedThreatProtectionExcludedFolders
+    * @return string|null The advancedThreatProtectionExcludedFolders
     */
     public function getAdvancedThreatProtectionExcludedFolders()
     {
@@ -214,7 +214,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionExcludedProcesses
     * A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
     *
-    * @return string The advancedThreatProtectionExcludedProcesses
+    * @return string|null The advancedThreatProtectionExcludedProcesses
     */
     public function getAdvancedThreatProtectionExcludedProcesses()
     {
@@ -243,12 +243,12 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the advancedThreatProtectionRealTime
     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
     *
-    * @return Enablement The advancedThreatProtectionRealTime
+    * @return Enablement|null The advancedThreatProtectionRealTime
     */
     public function getAdvancedThreatProtectionRealTime()
     {
         if (array_key_exists("advancedThreatProtectionRealTime", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionRealTime"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["advancedThreatProtectionRealTime"], "\Beta\Microsoft\Graph\Model\Enablement") || is_null($this->_propDict["advancedThreatProtectionRealTime"])) {
                 return $this->_propDict["advancedThreatProtectionRealTime"];
             } else {
                 $this->_propDict["advancedThreatProtectionRealTime"] = new Enablement($this->_propDict["advancedThreatProtectionRealTime"]);
@@ -276,7 +276,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultAllowDeferralUntilSignOut
     * Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
     *
-    * @return bool The fileVaultAllowDeferralUntilSignOut
+    * @return bool|null The fileVaultAllowDeferralUntilSignOut
     */
     public function getFileVaultAllowDeferralUntilSignOut()
     {
@@ -305,7 +305,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultDisablePromptAtSignOut
     * Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
     *
-    * @return bool The fileVaultDisablePromptAtSignOut
+    * @return bool|null The fileVaultDisablePromptAtSignOut
     */
     public function getFileVaultDisablePromptAtSignOut()
     {
@@ -334,7 +334,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultEnabled
     * Whether FileVault should be enabled or not.
     *
-    * @return bool The fileVaultEnabled
+    * @return bool|null The fileVaultEnabled
     */
     public function getFileVaultEnabled()
     {
@@ -363,7 +363,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultHidePersonalRecoveryKey
     * Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
     *
-    * @return bool The fileVaultHidePersonalRecoveryKey
+    * @return bool|null The fileVaultHidePersonalRecoveryKey
     */
     public function getFileVaultHidePersonalRecoveryKey()
     {
@@ -392,12 +392,12 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultInstitutionalRecoveryKeyCertificate
     * Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key.
     *
-    * @return \GuzzleHttp\Psr7\Stream The fileVaultInstitutionalRecoveryKeyCertificate
+    * @return \GuzzleHttp\Psr7\Stream|null The fileVaultInstitutionalRecoveryKeyCertificate
     */
     public function getFileVaultInstitutionalRecoveryKeyCertificate()
     {
         if (array_key_exists("fileVaultInstitutionalRecoveryKeyCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"])) {
                 return $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"];
             } else {
                 $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"]);
@@ -425,7 +425,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultInstitutionalRecoveryKeyCertificateFileName
     * File name of the institutional recovery key certificate to display in UI. (.der).
     *
-    * @return string The fileVaultInstitutionalRecoveryKeyCertificateFileName
+    * @return string|null The fileVaultInstitutionalRecoveryKeyCertificateFileName
     */
     public function getFileVaultInstitutionalRecoveryKeyCertificateFileName()
     {
@@ -454,7 +454,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultNumberOfTimesUserCanIgnore
     * Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
     *
-    * @return int The fileVaultNumberOfTimesUserCanIgnore
+    * @return int|null The fileVaultNumberOfTimesUserCanIgnore
     */
     public function getFileVaultNumberOfTimesUserCanIgnore()
     {
@@ -483,7 +483,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultPersonalRecoveryKeyHelpMessage
     * Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
     *
-    * @return string The fileVaultPersonalRecoveryKeyHelpMessage
+    * @return string|null The fileVaultPersonalRecoveryKeyHelpMessage
     */
     public function getFileVaultPersonalRecoveryKeyHelpMessage()
     {
@@ -512,7 +512,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultPersonalRecoveryKeyRotationInMonths
     * Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months.
     *
-    * @return int The fileVaultPersonalRecoveryKeyRotationInMonths
+    * @return int|null The fileVaultPersonalRecoveryKeyRotationInMonths
     */
     public function getFileVaultPersonalRecoveryKeyRotationInMonths()
     {
@@ -541,12 +541,12 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the fileVaultSelectedRecoveryKeyTypes
     * Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
     *
-    * @return MacOSFileVaultRecoveryKeyTypes The fileVaultSelectedRecoveryKeyTypes
+    * @return MacOSFileVaultRecoveryKeyTypes|null The fileVaultSelectedRecoveryKeyTypes
     */
     public function getFileVaultSelectedRecoveryKeyTypes()
     {
         if (array_key_exists("fileVaultSelectedRecoveryKeyTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["fileVaultSelectedRecoveryKeyTypes"], "\Beta\Microsoft\Graph\Model\MacOSFileVaultRecoveryKeyTypes")) {
+            if (is_a($this->_propDict["fileVaultSelectedRecoveryKeyTypes"], "\Beta\Microsoft\Graph\Model\MacOSFileVaultRecoveryKeyTypes") || is_null($this->_propDict["fileVaultSelectedRecoveryKeyTypes"])) {
                 return $this->_propDict["fileVaultSelectedRecoveryKeyTypes"];
             } else {
                 $this->_propDict["fileVaultSelectedRecoveryKeyTypes"] = new MacOSFileVaultRecoveryKeyTypes($this->_propDict["fileVaultSelectedRecoveryKeyTypes"]);
@@ -575,7 +575,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
      * Gets the firewallApplications
     * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
      *
-     * @return array The firewallApplications
+     * @return array|null The firewallApplications
      */
     public function getFirewallApplications()
     {
@@ -596,7 +596,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function setFirewallApplications($val)
     {
-		$this->_propDict["firewallApplications"] = $val;
+        $this->_propDict["firewallApplications"] = $val;
         return $this;
     }
     
@@ -604,7 +604,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the firewallBlockAllIncoming
     * Corresponds to the 'Block all incoming connections' option.
     *
-    * @return bool The firewallBlockAllIncoming
+    * @return bool|null The firewallBlockAllIncoming
     */
     public function getFirewallBlockAllIncoming()
     {
@@ -633,7 +633,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the firewallEnabled
     * Whether the firewall should be enabled or not.
     *
-    * @return bool The firewallEnabled
+    * @return bool|null The firewallEnabled
     */
     public function getFirewallEnabled()
     {
@@ -662,7 +662,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the firewallEnableStealthMode
     * Corresponds to 'Enable stealth mode.'
     *
-    * @return bool The firewallEnableStealthMode
+    * @return bool|null The firewallEnableStealthMode
     */
     public function getFirewallEnableStealthMode()
     {
@@ -691,12 +691,12 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the gatekeeperAllowedAppSource
     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
     *
-    * @return MacOSGatekeeperAppSources The gatekeeperAllowedAppSource
+    * @return MacOSGatekeeperAppSources|null The gatekeeperAllowedAppSource
     */
     public function getGatekeeperAllowedAppSource()
     {
         if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
-            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "\Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
+            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "\Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources") || is_null($this->_propDict["gatekeeperAllowedAppSource"])) {
                 return $this->_propDict["gatekeeperAllowedAppSource"];
             } else {
                 $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);
@@ -724,7 +724,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the gatekeeperBlockOverride
     * If set to true, the user override for Gatekeeper will be disabled.
     *
-    * @return bool The gatekeeperBlockOverride
+    * @return bool|null The gatekeeperBlockOverride
     */
     public function getGatekeeperBlockOverride()
     {

@@ -28,7 +28,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the appsAllowInstallFromUnknownSources
     * Indicates whether or not the user is allowed to enable to unknown sources setting.
     *
-    * @return bool The appsAllowInstallFromUnknownSources
+    * @return bool|null The appsAllowInstallFromUnknownSources
     */
     public function getAppsAllowInstallFromUnknownSources()
     {
@@ -57,7 +57,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the backupBlocked
     * Indicates whether or not to block backup service.
     *
-    * @return bool The backupBlocked
+    * @return bool|null The backupBlocked
     */
     public function getBackupBlocked()
     {
@@ -86,7 +86,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the bluetoothBlockConfiguration
     * Indicates whether or not to block a user from configuring bluetooth.
     *
-    * @return bool The bluetoothBlockConfiguration
+    * @return bool|null The bluetoothBlockConfiguration
     */
     public function getBluetoothBlockConfiguration()
     {
@@ -115,7 +115,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the bluetoothBlockContactSharing
     * Indicates whether or not to block a user from sharing contacts via bluetooth.
     *
-    * @return bool The bluetoothBlockContactSharing
+    * @return bool|null The bluetoothBlockContactSharing
     */
     public function getBluetoothBlockContactSharing()
     {
@@ -144,7 +144,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the bluetoothBlocked
     * Indicates whether or not to disable the use of bluetooth. When set to true, bluetooth cannot be enabled on the device.
     *
-    * @return bool The bluetoothBlocked
+    * @return bool|null The bluetoothBlocked
     */
     public function getBluetoothBlocked()
     {
@@ -173,7 +173,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the cameraBlocked
     * Indicates whether or not to disable the use of the camera.
     *
-    * @return bool The cameraBlocked
+    * @return bool|null The cameraBlocked
     */
     public function getCameraBlocked()
     {
@@ -202,7 +202,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the cellularBlockWiFiTethering
     * Indicates whether or not to block Wi-Fi tethering.
     *
-    * @return bool The cellularBlockWiFiTethering
+    * @return bool|null The cellularBlockWiFiTethering
     */
     public function getCellularBlockWiFiTethering()
     {
@@ -231,7 +231,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the factoryResetBlocked
     * Indicates whether or not the factory reset option in settings is disabled.
     *
-    * @return bool The factoryResetBlocked
+    * @return bool|null The factoryResetBlocked
     */
     public function getFactoryResetBlocked()
     {
@@ -260,7 +260,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the passwordMinimumLength
     * Indicates the minimum length of the password required on the device. Valid values 4 to 16
     *
-    * @return int The passwordMinimumLength
+    * @return int|null The passwordMinimumLength
     */
     public function getPasswordMinimumLength()
     {
@@ -289,7 +289,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity before the screen times out.
     *
-    * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
+    * @return int|null The passwordMinutesOfInactivityBeforeScreenTimeout
     */
     public function getPasswordMinutesOfInactivityBeforeScreenTimeout()
     {
@@ -318,12 +318,12 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the passwordRequiredType
     * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
     *
-    * @return AndroidDeviceOwnerRequiredPasswordType The passwordRequiredType
+    * @return AndroidDeviceOwnerRequiredPasswordType|null The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerRequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidDeviceOwnerRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -351,7 +351,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the passwordSignInFailureCountBeforeFactoryReset
     * Indicates the number of times a user can enter an incorrect password before the device is wiped. Valid values 4 to 11
     *
-    * @return int The passwordSignInFailureCountBeforeFactoryReset
+    * @return int|null The passwordSignInFailureCountBeforeFactoryReset
     */
     public function getPasswordSignInFailureCountBeforeFactoryReset()
     {
@@ -380,7 +380,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the screenCaptureBlocked
     * Indicates whether or not to disable the capability to take screenshots.
     *
-    * @return bool The screenCaptureBlocked
+    * @return bool|null The screenCaptureBlocked
     */
     public function getScreenCaptureBlocked()
     {
@@ -409,7 +409,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the securityAllowDebuggingFeatures
     * Indicates whether or not to block the user from enabling debugging features on the device.
     *
-    * @return bool The securityAllowDebuggingFeatures
+    * @return bool|null The securityAllowDebuggingFeatures
     */
     public function getSecurityAllowDebuggingFeatures()
     {
@@ -438,7 +438,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the storageAllowUsb
     * Indicates whether or not to block USB storage.
     *
-    * @return bool The storageAllowUsb
+    * @return bool|null The storageAllowUsb
     */
     public function getStorageAllowUsb()
     {
@@ -467,7 +467,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the storageBlockExternalMedia
     * Indicates whether or not to block external media.
     *
-    * @return bool The storageBlockExternalMedia
+    * @return bool|null The storageBlockExternalMedia
     */
     public function getStorageBlockExternalMedia()
     {
@@ -496,7 +496,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the storageBlockUsbFileTransfer
     * Indicates whether or not to block USB file transfer.
     *
-    * @return bool The storageBlockUsbFileTransfer
+    * @return bool|null The storageBlockUsbFileTransfer
     */
     public function getStorageBlockUsbFileTransfer()
     {
@@ -525,7 +525,7 @@ class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration
     * Gets the wifiBlockEditConfigurations
     * Indicates whether or not to block the user from editing the wifi connection settings.
     *
-    * @return bool The wifiBlockEditConfigurations
+    * @return bool|null The wifiBlockEditConfigurations
     */
     public function getWifiBlockEditConfigurations()
     {

@@ -28,12 +28,12 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     * Gets the allowDeviceHealthMonitoring
     * Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled.
     *
-    * @return Enablement The allowDeviceHealthMonitoring
+    * @return Enablement|null The allowDeviceHealthMonitoring
     */
     public function getAllowDeviceHealthMonitoring()
     {
         if (array_key_exists("allowDeviceHealthMonitoring", $this->_propDict)) {
-            if (is_a($this->_propDict["allowDeviceHealthMonitoring"], "\Beta\Microsoft\Graph\Model\Enablement")) {
+            if (is_a($this->_propDict["allowDeviceHealthMonitoring"], "\Beta\Microsoft\Graph\Model\Enablement") || is_null($this->_propDict["allowDeviceHealthMonitoring"])) {
                 return $this->_propDict["allowDeviceHealthMonitoring"];
             } else {
                 $this->_propDict["allowDeviceHealthMonitoring"] = new Enablement($this->_propDict["allowDeviceHealthMonitoring"]);
@@ -61,7 +61,7 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     * Gets the configDeviceHealthMonitoringCustomScope
     * Specifies custom set of events collected from the device where health monitoring is enabled
     *
-    * @return string The configDeviceHealthMonitoringCustomScope
+    * @return string|null The configDeviceHealthMonitoringCustomScope
     */
     public function getConfigDeviceHealthMonitoringCustomScope()
     {
@@ -90,12 +90,12 @@ class WindowsHealthMonitoringConfiguration extends DeviceConfiguration
     * Gets the configDeviceHealthMonitoringScope
     * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
     *
-    * @return WindowsHealthMonitoringScope The configDeviceHealthMonitoringScope
+    * @return WindowsHealthMonitoringScope|null The configDeviceHealthMonitoringScope
     */
     public function getConfigDeviceHealthMonitoringScope()
     {
         if (array_key_exists("configDeviceHealthMonitoringScope", $this->_propDict)) {
-            if (is_a($this->_propDict["configDeviceHealthMonitoringScope"], "\Beta\Microsoft\Graph\Model\WindowsHealthMonitoringScope")) {
+            if (is_a($this->_propDict["configDeviceHealthMonitoringScope"], "\Beta\Microsoft\Graph\Model\WindowsHealthMonitoringScope") || is_null($this->_propDict["configDeviceHealthMonitoringScope"])) {
                 return $this->_propDict["configDeviceHealthMonitoringScope"];
             } else {
                 $this->_propDict["configDeviceHealthMonitoringScope"] = new WindowsHealthMonitoringScope($this->_propDict["configDeviceHealthMonitoringScope"]);

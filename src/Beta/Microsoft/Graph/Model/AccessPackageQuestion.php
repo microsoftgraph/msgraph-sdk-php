@@ -27,7 +27,7 @@ class AccessPackageQuestion extends Entity
     * Gets the id
     * ID of the question.
     *
-    * @return string The id
+    * @return string|null The id
     */
     public function getId()
     {
@@ -55,7 +55,7 @@ class AccessPackageQuestion extends Entity
     * Gets the isRequired
     * Whether the requestor is required to supply an answer or not.
     *
-    * @return bool The isRequired
+    * @return bool|null The isRequired
     */
     public function getIsRequired()
     {
@@ -83,7 +83,7 @@ class AccessPackageQuestion extends Entity
     * Gets the sequence
     * Relative position of this question when displaying a list of questions to the requestor.
     *
-    * @return int The sequence
+    * @return int|null The sequence
     */
     public function getSequence()
     {
@@ -112,12 +112,12 @@ class AccessPackageQuestion extends Entity
     * Gets the text
     * The text of the question to show to the requestor.
     *
-    * @return AccessPackageLocalizedContent The text
+    * @return AccessPackageLocalizedContent|null The text
     */
     public function getText()
     {
         if (array_key_exists("text", $this->_propDict)) {
-            if (is_a($this->_propDict["text"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedContent")) {
+            if (is_a($this->_propDict["text"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedContent") || is_null($this->_propDict["text"])) {
                 return $this->_propDict["text"];
             } else {
                 $this->_propDict["text"] = new AccessPackageLocalizedContent($this->_propDict["text"]);

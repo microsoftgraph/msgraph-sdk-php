@@ -27,7 +27,7 @@ class UnifiedRbacResourceScope extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -54,7 +54,7 @@ class UnifiedRbacResourceScope extends Entity
     /**
     * Gets the scope
     *
-    * @return string The scope
+    * @return string|null The scope
     */
     public function getScope()
     {
@@ -81,7 +81,7 @@ class UnifiedRbacResourceScope extends Entity
     /**
     * Gets the type
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {

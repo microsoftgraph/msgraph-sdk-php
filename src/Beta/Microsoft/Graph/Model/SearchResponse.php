@@ -26,13 +26,14 @@ class SearchResponse extends Entity
 
     /**
     * Gets the queryAlterationResponse
+    * Provides details of query alteration response for spelling correction.
     *
-    * @return AlterationResponse The queryAlterationResponse
+    * @return AlterationResponse|null The queryAlterationResponse
     */
     public function getQueryAlterationResponse()
     {
         if (array_key_exists("queryAlterationResponse", $this->_propDict)) {
-            if (is_a($this->_propDict["queryAlterationResponse"], "\Beta\Microsoft\Graph\Model\AlterationResponse")) {
+            if (is_a($this->_propDict["queryAlterationResponse"], "\Beta\Microsoft\Graph\Model\AlterationResponse") || is_null($this->_propDict["queryAlterationResponse"])) {
                 return $this->_propDict["queryAlterationResponse"];
             } else {
                 $this->_propDict["queryAlterationResponse"] = new AlterationResponse($this->_propDict["queryAlterationResponse"]);
@@ -44,6 +45,7 @@ class SearchResponse extends Entity
 
     /**
     * Sets the queryAlterationResponse
+    * Provides details of query alteration response for spelling correction.
     *
     * @param AlterationResponse $val The value to assign to the queryAlterationResponse
     *
@@ -57,13 +59,14 @@ class SearchResponse extends Entity
 
     /**
     * Gets the value
+    * Represents results from a search query, and the terms used for the query.
     *
-    * @return SearchResultSet The value
+    * @return SearchResultSet|null The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\SearchResultSet")) {
+            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\SearchResultSet") || is_null($this->_propDict["value"])) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new SearchResultSet($this->_propDict["value"]);
@@ -75,6 +78,7 @@ class SearchResponse extends Entity
 
     /**
     * Sets the value
+    * Represents results from a search query, and the terms used for the query.
     *
     * @param SearchResultSet $val The value to assign to the value
     *

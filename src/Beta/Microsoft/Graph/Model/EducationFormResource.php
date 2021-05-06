@@ -36,7 +36,7 @@ class EducationFormResource extends EducationResource
     * Gets the editUrl
     * Teacher URL for the Form.
     *
-    * @return string The editUrl
+    * @return string|null The editUrl
     */
     public function getEditUrl()
     {
@@ -64,7 +64,7 @@ class EducationFormResource extends EducationResource
     * Gets the formId
     * Id of the Form.
     *
-    * @return string The formId
+    * @return string|null The formId
     */
     public function getFormId()
     {
@@ -92,7 +92,7 @@ class EducationFormResource extends EducationResource
     * Gets the isGroupForm
     * Whether the Form belongs to a class group.
     *
-    * @return bool The isGroupForm
+    * @return bool|null The isGroupForm
     */
     public function getIsGroupForm()
     {
@@ -120,7 +120,7 @@ class EducationFormResource extends EducationResource
     * Gets the originalFormId
     * Original id of the Form.
     *
-    * @return string The originalFormId
+    * @return string|null The originalFormId
     */
     public function getOriginalFormId()
     {
@@ -148,7 +148,7 @@ class EducationFormResource extends EducationResource
     * Gets the viewUrl
     * Student URL for the Form.
     *
-    * @return string The viewUrl
+    * @return string|null The viewUrl
     */
     public function getViewUrl()
     {

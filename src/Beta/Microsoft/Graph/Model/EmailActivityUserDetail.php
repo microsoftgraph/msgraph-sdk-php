@@ -27,7 +27,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the assignedProducts
     *
-    * @return string The assignedProducts
+    * @return string|null The assignedProducts
     */
     public function getAssignedProducts()
     {
@@ -54,12 +54,12 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the deletedDate
     *
-    * @return \DateTime The deletedDate
+    * @return \DateTime|null The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
                 return $this->_propDict["deletedDate"];
             } else {
                 $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
@@ -85,7 +85,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -112,7 +112,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool The isDeleted
+    * @return bool|null The isDeleted
     */
     public function getIsDeleted()
     {
@@ -139,12 +139,12 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime The lastActivityDate
+    * @return \DateTime|null The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -170,7 +170,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the readCount
     *
-    * @return int The readCount
+    * @return int|null The readCount
     */
     public function getReadCount()
     {
@@ -197,7 +197,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the receiveCount
     *
-    * @return int The receiveCount
+    * @return int|null The receiveCount
     */
     public function getReceiveCount()
     {
@@ -224,7 +224,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -251,12 +251,12 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -282,7 +282,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the sendCount
     *
-    * @return int The sendCount
+    * @return int|null The sendCount
     */
     public function getSendCount()
     {
@@ -309,7 +309,7 @@ class EmailActivityUserDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

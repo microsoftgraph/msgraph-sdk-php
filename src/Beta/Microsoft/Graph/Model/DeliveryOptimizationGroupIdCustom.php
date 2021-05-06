@@ -36,7 +36,7 @@ class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroupIdSourc
     * Gets the groupIdCustom
     * Specifies an arbitrary group ID that the device belongs to
     *
-    * @return string The groupIdCustom
+    * @return string|null The groupIdCustom
     */
     public function getGroupIdCustom()
     {

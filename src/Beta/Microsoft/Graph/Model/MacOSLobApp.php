@@ -28,7 +28,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the buildNumber
     * The build number of MacOS Line of Business (LoB) app.
     *
-    * @return string The buildNumber
+    * @return string|null The buildNumber
     */
     public function getBuildNumber()
     {
@@ -57,7 +57,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the bundleId
     * The bundle id.
     *
-    * @return string The bundleId
+    * @return string|null The bundleId
     */
     public function getBundleId()
     {
@@ -87,7 +87,7 @@ class MacOSLobApp extends MobileLobApp
      * Gets the childApps
     * The app list in this bundle package
      *
-     * @return array The childApps
+     * @return array|null The childApps
      */
     public function getChildApps()
     {
@@ -108,7 +108,7 @@ class MacOSLobApp extends MobileLobApp
     */
     public function setChildApps($val)
     {
-		$this->_propDict["childApps"] = $val;
+        $this->_propDict["childApps"] = $val;
         return $this;
     }
     
@@ -116,7 +116,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the identityVersion
     * The identity version.
     *
-    * @return string The identityVersion
+    * @return string|null The identityVersion
     */
     public function getIdentityVersion()
     {
@@ -145,7 +145,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the ignoreVersionDetection
     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
     *
-    * @return bool The ignoreVersionDetection
+    * @return bool|null The ignoreVersionDetection
     */
     public function getIgnoreVersionDetection()
     {
@@ -174,7 +174,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the installAsManaged
     * A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions).
     *
-    * @return bool The installAsManaged
+    * @return bool|null The installAsManaged
     */
     public function getInstallAsManaged()
     {
@@ -203,7 +203,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the md5Hash
     * The MD5 hash codes
     *
-    * @return string The md5Hash
+    * @return string|null The md5Hash
     */
     public function getMd5Hash()
     {
@@ -232,7 +232,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the md5HashChunkSize
     * The chunk size for MD5 hash
     *
-    * @return int The md5HashChunkSize
+    * @return int|null The md5HashChunkSize
     */
     public function getMd5HashChunkSize()
     {
@@ -261,12 +261,12 @@ class MacOSLobApp extends MobileLobApp
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
-    * @return MacOSMinimumOperatingSystem The minimumSupportedOperatingSystem
+    * @return MacOSMinimumOperatingSystem|null The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Beta\Microsoft\Graph\Model\MacOSMinimumOperatingSystem")) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Beta\Microsoft\Graph\Model\MacOSMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new MacOSMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -294,7 +294,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the versionNumber
     * The version number of MacOS Line of Business (LoB) app.
     *
-    * @return string The versionNumber
+    * @return string|null The versionNumber
     */
     public function getVersionNumber()
     {

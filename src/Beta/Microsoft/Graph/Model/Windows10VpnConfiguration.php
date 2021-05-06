@@ -29,7 +29,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
      * Gets the associatedApps
     * Associated Apps. This collection can contain a maximum of 10000 elements.
      *
-     * @return array The associatedApps
+     * @return array|null The associatedApps
      */
     public function getAssociatedApps()
     {
@@ -50,7 +50,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     */
     public function setAssociatedApps($val)
     {
-		$this->_propDict["associatedApps"] = $val;
+        $this->_propDict["associatedApps"] = $val;
         return $this;
     }
     
@@ -58,12 +58,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the authenticationMethod
     * Authentication method. Possible values are: certificate, usernameAndPassword, customEapXml, derivedCredential.
     *
-    * @return Windows10VpnAuthenticationMethod The authenticationMethod
+    * @return Windows10VpnAuthenticationMethod|null The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\Windows10VpnAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\Windows10VpnAuthenticationMethod") || is_null($this->_propDict["authenticationMethod"])) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new Windows10VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -91,12 +91,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the connectionType
     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect.
     *
-    * @return Windows10VpnConnectionType The connectionType
+    * @return Windows10VpnConnectionType|null The connectionType
     */
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\Windows10VpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\Windows10VpnConnectionType") || is_null($this->_propDict["connectionType"])) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new Windows10VpnConnectionType($this->_propDict["connectionType"]);
@@ -124,12 +124,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the cryptographySuite
     * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
     *
-    * @return CryptographySuite The cryptographySuite
+    * @return CryptographySuite|null The cryptographySuite
     */
     public function getCryptographySuite()
     {
         if (array_key_exists("cryptographySuite", $this->_propDict)) {
-            if (is_a($this->_propDict["cryptographySuite"], "\Beta\Microsoft\Graph\Model\CryptographySuite")) {
+            if (is_a($this->_propDict["cryptographySuite"], "\Beta\Microsoft\Graph\Model\CryptographySuite") || is_null($this->_propDict["cryptographySuite"])) {
                 return $this->_propDict["cryptographySuite"];
             } else {
                 $this->_propDict["cryptographySuite"] = new CryptographySuite($this->_propDict["cryptographySuite"]);
@@ -158,7 +158,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
      * Gets the dnsRules
     * DNS rules. This collection can contain a maximum of 1000 elements.
      *
-     * @return array The dnsRules
+     * @return array|null The dnsRules
      */
     public function getDnsRules()
     {
@@ -179,7 +179,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     */
     public function setDnsRules($val)
     {
-		$this->_propDict["dnsRules"] = $val;
+        $this->_propDict["dnsRules"] = $val;
         return $this;
     }
     
@@ -187,7 +187,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the dnsSuffixes
     * Specify DNS suffixes to add to the DNS search list to properly route short names.
     *
-    * @return string The dnsSuffixes
+    * @return string|null The dnsSuffixes
     */
     public function getDnsSuffixes()
     {
@@ -216,12 +216,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the eapXml
     * Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
     *
-    * @return \GuzzleHttp\Psr7\Stream The eapXml
+    * @return \GuzzleHttp\Psr7\Stream|null The eapXml
     */
     public function getEapXml()
     {
         if (array_key_exists("eapXml", $this->_propDict)) {
-            if (is_a($this->_propDict["eapXml"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["eapXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["eapXml"])) {
                 return $this->_propDict["eapXml"];
             } else {
                 $this->_propDict["eapXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["eapXml"]);
@@ -249,7 +249,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the enableAlwaysOn
     * Enable Always On mode.
     *
-    * @return bool The enableAlwaysOn
+    * @return bool|null The enableAlwaysOn
     */
     public function getEnableAlwaysOn()
     {
@@ -278,7 +278,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the enableConditionalAccess
     * Enable conditional access.
     *
-    * @return bool The enableConditionalAccess
+    * @return bool|null The enableConditionalAccess
     */
     public function getEnableConditionalAccess()
     {
@@ -307,7 +307,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the enableDeviceTunnel
     * Enable device tunnel.
     *
-    * @return bool The enableDeviceTunnel
+    * @return bool|null The enableDeviceTunnel
     */
     public function getEnableDeviceTunnel()
     {
@@ -336,7 +336,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the enableDnsRegistration
     * Enable IP address registration with internal DNS.
     *
-    * @return bool The enableDnsRegistration
+    * @return bool|null The enableDnsRegistration
     */
     public function getEnableDnsRegistration()
     {
@@ -365,7 +365,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the enableSingleSignOnWithAlternateCertificate
     * Enable single sign-on (SSO) with alternate certificate.
     *
-    * @return bool The enableSingleSignOnWithAlternateCertificate
+    * @return bool|null The enableSingleSignOnWithAlternateCertificate
     */
     public function getEnableSingleSignOnWithAlternateCertificate()
     {
@@ -394,7 +394,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the enableSplitTunneling
     * Enable split tunneling.
     *
-    * @return bool The enableSplitTunneling
+    * @return bool|null The enableSplitTunneling
     */
     public function getEnableSplitTunneling()
     {
@@ -423,7 +423,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the onlyAssociatedAppsCanUseConnection
     * Only associated Apps can use connection (per-app VPN).
     *
-    * @return bool The onlyAssociatedAppsCanUseConnection
+    * @return bool|null The onlyAssociatedAppsCanUseConnection
     */
     public function getOnlyAssociatedAppsCanUseConnection()
     {
@@ -452,12 +452,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the profileTarget
     * Profile target type. Possible values are: user, device, autoPilotDevice.
     *
-    * @return Windows10VpnProfileTarget The profileTarget
+    * @return Windows10VpnProfileTarget|null The profileTarget
     */
     public function getProfileTarget()
     {
         if (array_key_exists("profileTarget", $this->_propDict)) {
-            if (is_a($this->_propDict["profileTarget"], "\Beta\Microsoft\Graph\Model\Windows10VpnProfileTarget")) {
+            if (is_a($this->_propDict["profileTarget"], "\Beta\Microsoft\Graph\Model\Windows10VpnProfileTarget") || is_null($this->_propDict["profileTarget"])) {
                 return $this->_propDict["profileTarget"];
             } else {
                 $this->_propDict["profileTarget"] = new Windows10VpnProfileTarget($this->_propDict["profileTarget"]);
@@ -485,12 +485,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the proxyServer
     * Proxy Server.
     *
-    * @return Windows10VpnProxyServer The proxyServer
+    * @return Windows10VpnProxyServer|null The proxyServer
     */
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\Windows10VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\Windows10VpnProxyServer") || is_null($this->_propDict["proxyServer"])) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new Windows10VpnProxyServer($this->_propDict["proxyServer"]);
@@ -518,7 +518,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the rememberUserCredentials
     * Remember user credentials.
     *
-    * @return bool The rememberUserCredentials
+    * @return bool|null The rememberUserCredentials
     */
     public function getRememberUserCredentials()
     {
@@ -548,7 +548,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
      * Gets the routes
     * Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
      *
-     * @return array The routes
+     * @return array|null The routes
      */
     public function getRoutes()
     {
@@ -569,7 +569,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     */
     public function setRoutes($val)
     {
-		$this->_propDict["routes"] = $val;
+        $this->_propDict["routes"] = $val;
         return $this;
     }
     
@@ -577,12 +577,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the singleSignOnEku
     * Single sign-on Extended Key Usage (EKU).
     *
-    * @return ExtendedKeyUsage The singleSignOnEku
+    * @return ExtendedKeyUsage|null The singleSignOnEku
     */
     public function getSingleSignOnEku()
     {
         if (array_key_exists("singleSignOnEku", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnEku"], "\Beta\Microsoft\Graph\Model\ExtendedKeyUsage")) {
+            if (is_a($this->_propDict["singleSignOnEku"], "\Beta\Microsoft\Graph\Model\ExtendedKeyUsage") || is_null($this->_propDict["singleSignOnEku"])) {
                 return $this->_propDict["singleSignOnEku"];
             } else {
                 $this->_propDict["singleSignOnEku"] = new ExtendedKeyUsage($this->_propDict["singleSignOnEku"]);
@@ -610,7 +610,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the singleSignOnIssuerHash
     * Single sign-on issuer hash.
     *
-    * @return string The singleSignOnIssuerHash
+    * @return string|null The singleSignOnIssuerHash
     */
     public function getSingleSignOnIssuerHash()
     {
@@ -640,7 +640,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
      * Gets the trafficRules
     * Traffic rules. This collection can contain a maximum of 1000 elements.
      *
-     * @return array The trafficRules
+     * @return array|null The trafficRules
      */
     public function getTrafficRules()
     {
@@ -661,7 +661,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     */
     public function setTrafficRules($val)
     {
-		$this->_propDict["trafficRules"] = $val;
+        $this->_propDict["trafficRules"] = $val;
         return $this;
     }
     
@@ -669,7 +669,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the trustedNetworkDomains
     * Trusted Network Domains
     *
-    * @return string The trustedNetworkDomains
+    * @return string|null The trustedNetworkDomains
     */
     public function getTrustedNetworkDomains()
     {
@@ -698,7 +698,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the windowsInformationProtectionDomain
     * Windows Information Protection (WIP) domain to associate with this connection.
     *
-    * @return string The windowsInformationProtectionDomain
+    * @return string|null The windowsInformationProtectionDomain
     */
     public function getWindowsInformationProtectionDomain()
     {
@@ -727,12 +727,12 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     * Gets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
     *
-    * @return WindowsCertificateProfileBase The identityCertificate
+    * @return WindowsCertificateProfileBase|null The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\WindowsCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\WindowsCertificateProfileBase") || is_null($this->_propDict["identityCertificate"])) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new WindowsCertificateProfileBase($this->_propDict["identityCertificate"]);

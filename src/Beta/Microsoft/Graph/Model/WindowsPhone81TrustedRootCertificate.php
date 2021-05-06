@@ -28,7 +28,7 @@ class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration
     * Gets the certFileName
     * File name to display in UI.
     *
-    * @return string The certFileName
+    * @return string|null The certFileName
     */
     public function getCertFileName()
     {
@@ -57,12 +57,12 @@ class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration
     * Gets the trustedRootCertificate
     * Trusted Root Certificate
     *
-    * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
+    * @return \GuzzleHttp\Psr7\Stream|null The trustedRootCertificate
     */
     public function getTrustedRootCertificate()
     {
         if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["trustedRootCertificate"])) {
                 return $this->_propDict["trustedRootCertificate"];
             } else {
                 $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);

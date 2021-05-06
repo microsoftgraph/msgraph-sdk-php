@@ -28,12 +28,12 @@ class DeviceComplianceScriptDeviceState extends Entity
     * Gets the detectionState
     * Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
-    * @return RunState The detectionState
+    * @return RunState|null The detectionState
     */
     public function getDetectionState()
     {
         if (array_key_exists("detectionState", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionState"], "\Beta\Microsoft\Graph\Model\RunState")) {
+            if (is_a($this->_propDict["detectionState"], "\Beta\Microsoft\Graph\Model\RunState") || is_null($this->_propDict["detectionState"])) {
                 return $this->_propDict["detectionState"];
             } else {
                 $this->_propDict["detectionState"] = new RunState($this->_propDict["detectionState"]);
@@ -61,12 +61,12 @@ class DeviceComplianceScriptDeviceState extends Entity
     * Gets the expectedStateUpdateDateTime
     * The next timestamp of when the device compliance script is expected to execute
     *
-    * @return \DateTime The expectedStateUpdateDateTime
+    * @return \DateTime|null The expectedStateUpdateDateTime
     */
     public function getExpectedStateUpdateDateTime()
     {
         if (array_key_exists("expectedStateUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expectedStateUpdateDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expectedStateUpdateDateTime"], "\DateTime") || is_null($this->_propDict["expectedStateUpdateDateTime"])) {
                 return $this->_propDict["expectedStateUpdateDateTime"];
             } else {
                 $this->_propDict["expectedStateUpdateDateTime"] = new \DateTime($this->_propDict["expectedStateUpdateDateTime"]);
@@ -94,12 +94,12 @@ class DeviceComplianceScriptDeviceState extends Entity
     * Gets the lastStateUpdateDateTime
     * The last timestamp of when the device compliance script executed
     *
-    * @return \DateTime The lastStateUpdateDateTime
+    * @return \DateTime|null The lastStateUpdateDateTime
     */
     public function getLastStateUpdateDateTime()
     {
         if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime") || is_null($this->_propDict["lastStateUpdateDateTime"])) {
                 return $this->_propDict["lastStateUpdateDateTime"];
             } else {
                 $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
@@ -127,12 +127,12 @@ class DeviceComplianceScriptDeviceState extends Entity
     * Gets the lastSyncDateTime
     * The last time that Intune Managment Extension synced with Intune
     *
-    * @return \DateTime The lastSyncDateTime
+    * @return \DateTime|null The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -160,7 +160,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     * Gets the scriptError
     * Error from the detection script
     *
-    * @return string The scriptError
+    * @return string|null The scriptError
     */
     public function getScriptError()
     {
@@ -189,7 +189,7 @@ class DeviceComplianceScriptDeviceState extends Entity
     * Gets the scriptOutput
     * Output of the detection script
     *
-    * @return string The scriptOutput
+    * @return string|null The scriptOutput
     */
     public function getScriptOutput()
     {
@@ -218,12 +218,12 @@ class DeviceComplianceScriptDeviceState extends Entity
     * Gets the managedDevice
     * The managed device on which the device compliance script executed
     *
-    * @return ManagedDevice The managedDevice
+    * @return ManagedDevice|null The managedDevice
     */
     public function getManagedDevice()
     {
         if (array_key_exists("managedDevice", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDevice"], "\Beta\Microsoft\Graph\Model\ManagedDevice")) {
+            if (is_a($this->_propDict["managedDevice"], "\Beta\Microsoft\Graph\Model\ManagedDevice") || is_null($this->_propDict["managedDevice"])) {
                 return $this->_propDict["managedDevice"];
             } else {
                 $this->_propDict["managedDevice"] = new ManagedDevice($this->_propDict["managedDevice"]);

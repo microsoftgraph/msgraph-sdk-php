@@ -28,7 +28,7 @@ class GovernanceRoleDefinition extends Entity
     * Gets the displayName
     * The display name of the role definition.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class GovernanceRoleDefinition extends Entity
     * Gets the externalId
     * The external id of the role definition.
     *
-    * @return string The externalId
+    * @return string|null The externalId
     */
     public function getExternalId()
     {
@@ -86,7 +86,7 @@ class GovernanceRoleDefinition extends Entity
     * Gets the resourceId
     * Required. The id of the resource associated with the role definition.
     *
-    * @return string The resourceId
+    * @return string|null The resourceId
     */
     public function getResourceId()
     {
@@ -114,7 +114,7 @@ class GovernanceRoleDefinition extends Entity
     /**
     * Gets the templateId
     *
-    * @return string The templateId
+    * @return string|null The templateId
     */
     public function getTemplateId()
     {
@@ -142,12 +142,12 @@ class GovernanceRoleDefinition extends Entity
     * Gets the resource
     * Read-only. The associated resource for the role definition.
     *
-    * @return GovernanceResource The resource
+    * @return GovernanceResource|null The resource
     */
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource") || is_null($this->_propDict["resource"])) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -175,12 +175,12 @@ class GovernanceRoleDefinition extends Entity
     * Gets the roleSetting
     * The associated role setting for the role definition.
     *
-    * @return GovernanceRoleSetting The roleSetting
+    * @return GovernanceRoleSetting|null The roleSetting
     */
     public function getRoleSetting()
     {
         if (array_key_exists("roleSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["roleSetting"], "\Beta\Microsoft\Graph\Model\GovernanceRoleSetting")) {
+            if (is_a($this->_propDict["roleSetting"], "\Beta\Microsoft\Graph\Model\GovernanceRoleSetting") || is_null($this->_propDict["roleSetting"])) {
                 return $this->_propDict["roleSetting"];
             } else {
                 $this->_propDict["roleSetting"] = new GovernanceRoleSetting($this->_propDict["roleSetting"]);

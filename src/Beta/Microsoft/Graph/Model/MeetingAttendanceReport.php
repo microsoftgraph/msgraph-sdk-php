@@ -29,7 +29,7 @@ class MeetingAttendanceReport extends Entity
      * Gets the attendanceRecords
     * The list of attendance records.
      *
-     * @return array The attendanceRecords
+     * @return array|null The attendanceRecords
      */
     public function getAttendanceRecords()
     {
@@ -50,7 +50,7 @@ class MeetingAttendanceReport extends Entity
     */
     public function setAttendanceRecords($val)
     {
-		$this->_propDict["attendanceRecords"] = $val;
+        $this->_propDict["attendanceRecords"] = $val;
         return $this;
     }
     

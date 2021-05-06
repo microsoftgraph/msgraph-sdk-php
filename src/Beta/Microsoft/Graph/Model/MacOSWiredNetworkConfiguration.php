@@ -28,12 +28,12 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the authenticationMethod
     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
     *
-    * @return WiFiAuthenticationMethod The authenticationMethod
+    * @return WiFiAuthenticationMethod|null The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod")) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\WiFiAuthenticationMethod") || is_null($this->_propDict["authenticationMethod"])) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new WiFiAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -61,12 +61,12 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the eapFastConfiguration
     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
     *
-    * @return EapFastConfiguration The eapFastConfiguration
+    * @return EapFastConfiguration|null The eapFastConfiguration
     */
     public function getEapFastConfiguration()
     {
         if (array_key_exists("eapFastConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["eapFastConfiguration"], "\Beta\Microsoft\Graph\Model\EapFastConfiguration")) {
+            if (is_a($this->_propDict["eapFastConfiguration"], "\Beta\Microsoft\Graph\Model\EapFastConfiguration") || is_null($this->_propDict["eapFastConfiguration"])) {
                 return $this->_propDict["eapFastConfiguration"];
             } else {
                 $this->_propDict["eapFastConfiguration"] = new EapFastConfiguration($this->_propDict["eapFastConfiguration"]);
@@ -94,12 +94,12 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the eapType
     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
     *
-    * @return EapType The eapType
+    * @return EapType|null The eapType
     */
     public function getEapType()
     {
         if (array_key_exists("eapType", $this->_propDict)) {
-            if (is_a($this->_propDict["eapType"], "\Beta\Microsoft\Graph\Model\EapType")) {
+            if (is_a($this->_propDict["eapType"], "\Beta\Microsoft\Graph\Model\EapType") || is_null($this->_propDict["eapType"])) {
                 return $this->_propDict["eapType"];
             } else {
                 $this->_propDict["eapType"] = new EapType($this->_propDict["eapType"]);
@@ -127,7 +127,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the enableOuterIdentityPrivacy
     * Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
     *
-    * @return string The enableOuterIdentityPrivacy
+    * @return string|null The enableOuterIdentityPrivacy
     */
     public function getEnableOuterIdentityPrivacy()
     {
@@ -156,12 +156,12 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the networkInterface
     * Network interface. Possible values are: anyEthernet, firstActiveEthernet, secondActiveEthernet, thirdActiveEthernet, firstEthernet, secondEthernet, thirdEthernet.
     *
-    * @return WiredNetworkInterface The networkInterface
+    * @return WiredNetworkInterface|null The networkInterface
     */
     public function getNetworkInterface()
     {
         if (array_key_exists("networkInterface", $this->_propDict)) {
-            if (is_a($this->_propDict["networkInterface"], "\Beta\Microsoft\Graph\Model\WiredNetworkInterface")) {
+            if (is_a($this->_propDict["networkInterface"], "\Beta\Microsoft\Graph\Model\WiredNetworkInterface") || is_null($this->_propDict["networkInterface"])) {
                 return $this->_propDict["networkInterface"];
             } else {
                 $this->_propDict["networkInterface"] = new WiredNetworkInterface($this->_propDict["networkInterface"]);
@@ -189,7 +189,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the networkName
     * Network Name
     *
-    * @return string The networkName
+    * @return string|null The networkName
     */
     public function getNetworkName()
     {
@@ -218,12 +218,12 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the nonEapAuthenticationMethodForEapTtls
     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
     *
-    * @return NonEapAuthenticationMethodForEapTtlsType The nonEapAuthenticationMethodForEapTtls
+    * @return NonEapAuthenticationMethodForEapTtlsType|null The nonEapAuthenticationMethodForEapTtls
     */
     public function getNonEapAuthenticationMethodForEapTtls()
     {
         if (array_key_exists("nonEapAuthenticationMethodForEapTtls", $this->_propDict)) {
-            if (is_a($this->_propDict["nonEapAuthenticationMethodForEapTtls"], "\Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType")) {
+            if (is_a($this->_propDict["nonEapAuthenticationMethodForEapTtls"], "\Beta\Microsoft\Graph\Model\NonEapAuthenticationMethodForEapTtlsType") || is_null($this->_propDict["nonEapAuthenticationMethodForEapTtls"])) {
                 return $this->_propDict["nonEapAuthenticationMethodForEapTtls"];
             } else {
                 $this->_propDict["nonEapAuthenticationMethodForEapTtls"] = new NonEapAuthenticationMethodForEapTtlsType($this->_propDict["nonEapAuthenticationMethodForEapTtls"]);
@@ -251,7 +251,7 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the trustedServerCertificateNames
     * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
     *
-    * @return string The trustedServerCertificateNames
+    * @return string|null The trustedServerCertificateNames
     */
     public function getTrustedServerCertificateNames()
     {
@@ -280,12 +280,12 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the identityCertificateForClientAuthentication
     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
     *
-    * @return MacOSCertificateProfileBase The identityCertificateForClientAuthentication
+    * @return MacOSCertificateProfileBase|null The identityCertificateForClientAuthentication
     */
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\MacOSCertificateProfileBase") || is_null($this->_propDict["identityCertificateForClientAuthentication"])) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new MacOSCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -313,12 +313,12 @@ class MacOSWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the rootCertificateForServerValidation
     * Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
     *
-    * @return MacOSTrustedRootCertificate The rootCertificateForServerValidation
+    * @return MacOSTrustedRootCertificate|null The rootCertificateForServerValidation
     */
     public function getRootCertificateForServerValidation()
     {
         if (array_key_exists("rootCertificateForServerValidation", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificateForServerValidation"], "\Beta\Microsoft\Graph\Model\MacOSTrustedRootCertificate")) {
+            if (is_a($this->_propDict["rootCertificateForServerValidation"], "\Beta\Microsoft\Graph\Model\MacOSTrustedRootCertificate") || is_null($this->_propDict["rootCertificateForServerValidation"])) {
                 return $this->_propDict["rootCertificateForServerValidation"];
             } else {
                 $this->_propDict["rootCertificateForServerValidation"] = new MacOSTrustedRootCertificate($this->_propDict["rootCertificateForServerValidation"]);

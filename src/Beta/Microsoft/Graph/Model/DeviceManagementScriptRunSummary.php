@@ -28,7 +28,7 @@ class DeviceManagementScriptRunSummary extends Entity
     * Gets the errorDeviceCount
     * Error device count.
     *
-    * @return int The errorDeviceCount
+    * @return int|null The errorDeviceCount
     */
     public function getErrorDeviceCount()
     {
@@ -57,7 +57,7 @@ class DeviceManagementScriptRunSummary extends Entity
     * Gets the errorUserCount
     * Error user count.
     *
-    * @return int The errorUserCount
+    * @return int|null The errorUserCount
     */
     public function getErrorUserCount()
     {
@@ -86,7 +86,7 @@ class DeviceManagementScriptRunSummary extends Entity
     * Gets the successDeviceCount
     * Success device count.
     *
-    * @return int The successDeviceCount
+    * @return int|null The successDeviceCount
     */
     public function getSuccessDeviceCount()
     {
@@ -115,7 +115,7 @@ class DeviceManagementScriptRunSummary extends Entity
     * Gets the successUserCount
     * Success user count.
     *
-    * @return int The successUserCount
+    * @return int|null The successUserCount
     */
     public function getSuccessUserCount()
     {

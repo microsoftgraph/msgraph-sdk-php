@@ -28,7 +28,7 @@ class ConfigManagerCollection extends Entity
     * Gets the collectionIdentifier
     * The collection identifier in SCCM.
     *
-    * @return string The collectionIdentifier
+    * @return string|null The collectionIdentifier
     */
     public function getCollectionIdentifier()
     {
@@ -57,12 +57,12 @@ class ConfigManagerCollection extends Entity
     * Gets the createdDateTime
     * The created date.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -90,7 +90,7 @@ class ConfigManagerCollection extends Entity
     * Gets the displayName
     * The DisplayName.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,7 +119,7 @@ class ConfigManagerCollection extends Entity
     * Gets the hierarchyIdentifier
     * The Hierarchy Identifier.
     *
-    * @return string The hierarchyIdentifier
+    * @return string|null The hierarchyIdentifier
     */
     public function getHierarchyIdentifier()
     {
@@ -148,7 +148,7 @@ class ConfigManagerCollection extends Entity
     * Gets the hierarchyName
     * The HierarchyName.
     *
-    * @return string The hierarchyName
+    * @return string|null The hierarchyName
     */
     public function getHierarchyName()
     {
@@ -177,12 +177,12 @@ class ConfigManagerCollection extends Entity
     * Gets the lastModifiedDateTime
     * The last modified date.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);

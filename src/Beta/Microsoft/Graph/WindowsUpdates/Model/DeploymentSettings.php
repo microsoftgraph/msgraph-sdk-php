@@ -26,13 +26,14 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the monitoring
+    * Settings governing conditions to monitor and automated actions to take.
     *
-    * @return MonitoringSettings The monitoring
+    * @return MonitoringSettings|null The monitoring
     */
     public function getMonitoring()
     {
         if (array_key_exists("monitoring", $this->_propDict)) {
-            if (is_a($this->_propDict["monitoring"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\MonitoringSettings")) {
+            if (is_a($this->_propDict["monitoring"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\MonitoringSettings") || is_null($this->_propDict["monitoring"])) {
                 return $this->_propDict["monitoring"];
             } else {
                 $this->_propDict["monitoring"] = new MonitoringSettings($this->_propDict["monitoring"]);
@@ -44,6 +45,7 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the monitoring
+    * Settings governing conditions to monitor and automated actions to take.
     *
     * @param MonitoringSettings $val The value to assign to the monitoring
     *
@@ -57,13 +59,14 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the rollout
+    * Settings governing how the content is rolled out.
     *
-    * @return RolloutSettings The rollout
+    * @return RolloutSettings|null The rollout
     */
     public function getRollout()
     {
         if (array_key_exists("rollout", $this->_propDict)) {
-            if (is_a($this->_propDict["rollout"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\RolloutSettings")) {
+            if (is_a($this->_propDict["rollout"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\RolloutSettings") || is_null($this->_propDict["rollout"])) {
                 return $this->_propDict["rollout"];
             } else {
                 $this->_propDict["rollout"] = new RolloutSettings($this->_propDict["rollout"]);
@@ -75,6 +78,7 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the rollout
+    * Settings governing how the content is rolled out.
     *
     * @param RolloutSettings $val The value to assign to the rollout
     *

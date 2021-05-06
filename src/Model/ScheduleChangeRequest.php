@@ -27,12 +27,12 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the assignedTo
     *
-    * @return ScheduleChangeRequestActor The assignedTo
+    * @return ScheduleChangeRequestActor|null The assignedTo
     */
     public function getAssignedTo()
     {
         if (array_key_exists("assignedTo", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedTo"], "\Microsoft\Graph\Model\ScheduleChangeRequestActor")) {
+            if (is_a($this->_propDict["assignedTo"], "\Microsoft\Graph\Model\ScheduleChangeRequestActor") || is_null($this->_propDict["assignedTo"])) {
                 return $this->_propDict["assignedTo"];
             } else {
                 $this->_propDict["assignedTo"] = new ScheduleChangeRequestActor($this->_propDict["assignedTo"]);
@@ -58,12 +58,12 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the managerActionDateTime
     *
-    * @return \DateTime The managerActionDateTime
+    * @return \DateTime|null The managerActionDateTime
     */
     public function getManagerActionDateTime()
     {
         if (array_key_exists("managerActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["managerActionDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["managerActionDateTime"], "\DateTime") || is_null($this->_propDict["managerActionDateTime"])) {
                 return $this->_propDict["managerActionDateTime"];
             } else {
                 $this->_propDict["managerActionDateTime"] = new \DateTime($this->_propDict["managerActionDateTime"]);
@@ -89,7 +89,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the managerActionMessage
     *
-    * @return string The managerActionMessage
+    * @return string|null The managerActionMessage
     */
     public function getManagerActionMessage()
     {
@@ -116,7 +116,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the managerUserId
     *
-    * @return string The managerUserId
+    * @return string|null The managerUserId
     */
     public function getManagerUserId()
     {
@@ -143,12 +143,12 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the senderDateTime
     *
-    * @return \DateTime The senderDateTime
+    * @return \DateTime|null The senderDateTime
     */
     public function getSenderDateTime()
     {
         if (array_key_exists("senderDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["senderDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["senderDateTime"], "\DateTime") || is_null($this->_propDict["senderDateTime"])) {
                 return $this->_propDict["senderDateTime"];
             } else {
                 $this->_propDict["senderDateTime"] = new \DateTime($this->_propDict["senderDateTime"]);
@@ -174,7 +174,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the senderMessage
     *
-    * @return string The senderMessage
+    * @return string|null The senderMessage
     */
     public function getSenderMessage()
     {
@@ -201,7 +201,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the senderUserId
     *
-    * @return string The senderUserId
+    * @return string|null The senderUserId
     */
     public function getSenderUserId()
     {
@@ -228,12 +228,12 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     /**
     * Gets the state
     *
-    * @return ScheduleChangeState The state
+    * @return ScheduleChangeState|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ScheduleChangeState")) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ScheduleChangeState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ScheduleChangeState($this->_propDict["state"]);

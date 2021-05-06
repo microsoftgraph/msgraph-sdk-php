@@ -28,7 +28,7 @@ class PlannerProgressTaskBoardTaskFormat extends Entity
     * Gets the orderHint
     * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
     *
-    * @return string The orderHint
+    * @return string|null The orderHint
     */
     public function getOrderHint()
     {

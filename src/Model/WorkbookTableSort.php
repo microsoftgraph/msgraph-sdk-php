@@ -29,7 +29,7 @@ class WorkbookTableSort extends Entity
      * Gets the fields
     * Represents the current conditions used to last sort the table. Read-only.
      *
-     * @return array The fields
+     * @return array|null The fields
      */
     public function getFields()
     {
@@ -50,7 +50,7 @@ class WorkbookTableSort extends Entity
     */
     public function setFields($val)
     {
-		$this->_propDict["fields"] = $val;
+        $this->_propDict["fields"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class WorkbookTableSort extends Entity
     * Gets the matchCase
     * Represents whether the casing impacted the last sort of the table. Read-only.
     *
-    * @return bool The matchCase
+    * @return bool|null The matchCase
     */
     public function getMatchCase()
     {
@@ -85,9 +85,9 @@ class WorkbookTableSort extends Entity
     
     /**
     * Gets the method
-    * Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
     *
-    * @return string The method
+    * @return string|null The method
     */
     public function getMethod()
     {
@@ -100,7 +100,7 @@ class WorkbookTableSort extends Entity
     
     /**
     * Sets the method
-    * Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+    * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
     *
     * @param string $val The method
     *

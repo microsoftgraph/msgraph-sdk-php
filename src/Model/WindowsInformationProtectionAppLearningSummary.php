@@ -28,7 +28,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     * Gets the applicationName
     * Application Name
     *
-    * @return string The applicationName
+    * @return string|null The applicationName
     */
     public function getApplicationName()
     {
@@ -57,12 +57,12 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     * Gets the applicationType
     * Application Type. Possible values are: universal, desktop.
     *
-    * @return ApplicationType The applicationType
+    * @return ApplicationType|null The applicationType
     */
     public function getApplicationType()
     {
         if (array_key_exists("applicationType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationType"], "\Microsoft\Graph\Model\ApplicationType")) {
+            if (is_a($this->_propDict["applicationType"], "\Microsoft\Graph\Model\ApplicationType") || is_null($this->_propDict["applicationType"])) {
                 return $this->_propDict["applicationType"];
             } else {
                 $this->_propDict["applicationType"] = new ApplicationType($this->_propDict["applicationType"]);
@@ -90,7 +90,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     * Gets the deviceCount
     * Device Count
     *
-    * @return int The deviceCount
+    * @return int|null The deviceCount
     */
     public function getDeviceCount()
     {

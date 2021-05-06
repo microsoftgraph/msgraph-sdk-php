@@ -28,7 +28,7 @@ class DeviceShellScript extends Entity
     * Gets the blockExecutionNotifications
     * Does not notify the user a script is being executed
     *
-    * @return bool The blockExecutionNotifications
+    * @return bool|null The blockExecutionNotifications
     */
     public function getBlockExecutionNotifications()
     {
@@ -57,12 +57,12 @@ class DeviceShellScript extends Entity
     * Gets the createdDateTime
     * The date and time the device management script was created. This property is read-only.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -90,7 +90,7 @@ class DeviceShellScript extends Entity
     * Gets the description
     * Optional description for the device management script.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -119,7 +119,7 @@ class DeviceShellScript extends Entity
     * Gets the displayName
     * Name of the device management script.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -148,12 +148,12 @@ class DeviceShellScript extends Entity
     * Gets the executionFrequency
     * The interval for script to run. If not defined the script will run once
     *
-    * @return Duration The executionFrequency
+    * @return Duration|null The executionFrequency
     */
     public function getExecutionFrequency()
     {
         if (array_key_exists("executionFrequency", $this->_propDict)) {
-            if (is_a($this->_propDict["executionFrequency"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["executionFrequency"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["executionFrequency"])) {
                 return $this->_propDict["executionFrequency"];
             } else {
                 $this->_propDict["executionFrequency"] = new Duration($this->_propDict["executionFrequency"]);
@@ -181,7 +181,7 @@ class DeviceShellScript extends Entity
     * Gets the fileName
     * Script file name.
     *
-    * @return string The fileName
+    * @return string|null The fileName
     */
     public function getFileName()
     {
@@ -210,12 +210,12 @@ class DeviceShellScript extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the device management script was last modified. This property is read-only.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -243,7 +243,7 @@ class DeviceShellScript extends Entity
     * Gets the retryCount
     * Number of times for the script to be retried if it fails
     *
-    * @return int The retryCount
+    * @return int|null The retryCount
     */
     public function getRetryCount()
     {
@@ -272,7 +272,7 @@ class DeviceShellScript extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for this PowerShellScript instance.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -301,12 +301,12 @@ class DeviceShellScript extends Entity
     * Gets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
     *
-    * @return RunAsAccountType The runAsAccount
+    * @return RunAsAccountType|null The runAsAccount
     */
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType")) {
+            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType") || is_null($this->_propDict["runAsAccount"])) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -334,12 +334,12 @@ class DeviceShellScript extends Entity
     * Gets the scriptContent
     * The script content.
     *
-    * @return \GuzzleHttp\Psr7\Stream The scriptContent
+    * @return \GuzzleHttp\Psr7\Stream|null The scriptContent
     */
     public function getScriptContent()
     {
         if (array_key_exists("scriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["scriptContent"])) {
                 return $this->_propDict["scriptContent"];
             } else {
                 $this->_propDict["scriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["scriptContent"]);
@@ -368,7 +368,7 @@ class DeviceShellScript extends Entity
      * Gets the assignments
     * The list of group assignments for the device management script.
      *
-     * @return array The assignments
+     * @return array|null The assignments
      */
     public function getAssignments()
     {
@@ -389,7 +389,7 @@ class DeviceShellScript extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -398,7 +398,7 @@ class DeviceShellScript extends Entity
      * Gets the deviceRunStates
     * List of run states for this script across all devices.
      *
-     * @return array The deviceRunStates
+     * @return array|null The deviceRunStates
      */
     public function getDeviceRunStates()
     {
@@ -419,7 +419,7 @@ class DeviceShellScript extends Entity
     */
     public function setDeviceRunStates($val)
     {
-		$this->_propDict["deviceRunStates"] = $val;
+        $this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     
@@ -428,7 +428,7 @@ class DeviceShellScript extends Entity
      * Gets the groupAssignments
     * The list of group assignments for the device management script.
      *
-     * @return array The groupAssignments
+     * @return array|null The groupAssignments
      */
     public function getGroupAssignments()
     {
@@ -449,7 +449,7 @@ class DeviceShellScript extends Entity
     */
     public function setGroupAssignments($val)
     {
-		$this->_propDict["groupAssignments"] = $val;
+        $this->_propDict["groupAssignments"] = $val;
         return $this;
     }
     
@@ -457,12 +457,12 @@ class DeviceShellScript extends Entity
     * Gets the runSummary
     * Run summary for device management script.
     *
-    * @return DeviceManagementScriptRunSummary The runSummary
+    * @return DeviceManagementScriptRunSummary|null The runSummary
     */
     public function getRunSummary()
     {
         if (array_key_exists("runSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementScriptRunSummary")) {
+            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementScriptRunSummary") || is_null($this->_propDict["runSummary"])) {
                 return $this->_propDict["runSummary"];
             } else {
                 $this->_propDict["runSummary"] = new DeviceManagementScriptRunSummary($this->_propDict["runSummary"]);
@@ -491,7 +491,7 @@ class DeviceShellScript extends Entity
      * Gets the userRunStates
     * List of run states for this script across all users.
      *
-     * @return array The userRunStates
+     * @return array|null The userRunStates
      */
     public function getUserRunStates()
     {
@@ -512,7 +512,7 @@ class DeviceShellScript extends Entity
     */
     public function setUserRunStates($val)
     {
-		$this->_propDict["userRunStates"] = $val;
+        $this->_propDict["userRunStates"] = $val;
         return $this;
     }
     

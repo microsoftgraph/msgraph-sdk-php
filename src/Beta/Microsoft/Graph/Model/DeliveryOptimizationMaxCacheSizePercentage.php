@@ -36,7 +36,7 @@ class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimizationMax
     * Gets the maximumCacheSizePercentage
     * Specifies the maximum cache size that Delivery Optimization can utilize, as a percentage of disk size (1-100). Valid values 1 to 100
     *
-    * @return int The maximumCacheSizePercentage
+    * @return int|null The maximumCacheSizePercentage
     */
     public function getMaximumCacheSizePercentage()
     {

@@ -26,9 +26,9 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
 {
     /**
     * Gets the recipientShiftId
-    * Shift ID for the recipient user with whom the request is to swap.
+    * ShiftId for the recipient user with whom the request is to swap.
     *
-    * @return string The recipientShiftId
+    * @return string|null The recipientShiftId
     */
     public function getRecipientShiftId()
     {
@@ -41,7 +41,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest
     
     /**
     * Sets the recipientShiftId
-    * Shift ID for the recipient user with whom the request is to swap.
+    * ShiftId for the recipient user with whom the request is to swap.
     *
     * @param string $val The recipientShiftId
     *

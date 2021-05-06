@@ -27,7 +27,7 @@ class CalendarSharingMessage extends Message
     /**
     * Gets the canAccept
     *
-    * @return bool The canAccept
+    * @return bool|null The canAccept
     */
     public function getCanAccept()
     {
@@ -54,12 +54,12 @@ class CalendarSharingMessage extends Message
     /**
     * Gets the sharingMessageAction
     *
-    * @return CalendarSharingMessageAction The sharingMessageAction
+    * @return CalendarSharingMessageAction|null The sharingMessageAction
     */
     public function getSharingMessageAction()
     {
         if (array_key_exists("sharingMessageAction", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingMessageAction"], "\Microsoft\Graph\Model\CalendarSharingMessageAction")) {
+            if (is_a($this->_propDict["sharingMessageAction"], "\Microsoft\Graph\Model\CalendarSharingMessageAction") || is_null($this->_propDict["sharingMessageAction"])) {
                 return $this->_propDict["sharingMessageAction"];
             } else {
                 $this->_propDict["sharingMessageAction"] = new CalendarSharingMessageAction($this->_propDict["sharingMessageAction"]);
@@ -86,7 +86,7 @@ class CalendarSharingMessage extends Message
      /** 
      * Gets the sharingMessageActions
      *
-     * @return array The sharingMessageActions
+     * @return array|null The sharingMessageActions
      */
     public function getSharingMessageActions()
     {
@@ -106,14 +106,14 @@ class CalendarSharingMessage extends Message
     */
     public function setSharingMessageActions($val)
     {
-		$this->_propDict["sharingMessageActions"] = $val;
+        $this->_propDict["sharingMessageActions"] = $val;
         return $this;
     }
     
     /**
     * Gets the suggestedCalendarName
     *
-    * @return string The suggestedCalendarName
+    * @return string|null The suggestedCalendarName
     */
     public function getSuggestedCalendarName()
     {

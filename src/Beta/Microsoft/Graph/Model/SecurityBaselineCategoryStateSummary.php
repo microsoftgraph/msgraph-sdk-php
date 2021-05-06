@@ -28,7 +28,7 @@ class SecurityBaselineCategoryStateSummary extends SecurityBaselineStateSummary
     * Gets the displayName
     * The category name
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {

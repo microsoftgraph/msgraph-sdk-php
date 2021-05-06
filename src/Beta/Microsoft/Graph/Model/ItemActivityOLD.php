@@ -27,12 +27,12 @@ class ItemActivityOLD extends Entity
     /**
     * Gets the action
     *
-    * @return ItemActionSet The action
+    * @return ItemActionSet|null The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\ItemActionSet")) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\ItemActionSet") || is_null($this->_propDict["action"])) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new ItemActionSet($this->_propDict["action"]);
@@ -58,12 +58,12 @@ class ItemActivityOLD extends Entity
     /**
     * Gets the actor
     *
-    * @return IdentitySet The actor
+    * @return IdentitySet|null The actor
     */
     public function getActor()
     {
         if (array_key_exists("actor", $this->_propDict)) {
-            if (is_a($this->_propDict["actor"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["actor"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["actor"])) {
                 return $this->_propDict["actor"];
             } else {
                 $this->_propDict["actor"] = new IdentitySet($this->_propDict["actor"]);
@@ -89,12 +89,12 @@ class ItemActivityOLD extends Entity
     /**
     * Gets the times
     *
-    * @return ItemActivityTimeSet The times
+    * @return ItemActivityTimeSet|null The times
     */
     public function getTimes()
     {
         if (array_key_exists("times", $this->_propDict)) {
-            if (is_a($this->_propDict["times"], "\Beta\Microsoft\Graph\Model\ItemActivityTimeSet")) {
+            if (is_a($this->_propDict["times"], "\Beta\Microsoft\Graph\Model\ItemActivityTimeSet") || is_null($this->_propDict["times"])) {
                 return $this->_propDict["times"];
             } else {
                 $this->_propDict["times"] = new ItemActivityTimeSet($this->_propDict["times"]);
@@ -120,12 +120,12 @@ class ItemActivityOLD extends Entity
     /**
     * Gets the driveItem
     *
-    * @return DriveItem The driveItem
+    * @return DriveItem|null The driveItem
     */
     public function getDriveItem()
     {
         if (array_key_exists("driveItem", $this->_propDict)) {
-            if (is_a($this->_propDict["driveItem"], "\Beta\Microsoft\Graph\Model\DriveItem")) {
+            if (is_a($this->_propDict["driveItem"], "\Beta\Microsoft\Graph\Model\DriveItem") || is_null($this->_propDict["driveItem"])) {
                 return $this->_propDict["driveItem"];
             } else {
                 $this->_propDict["driveItem"] = new DriveItem($this->_propDict["driveItem"]);
@@ -151,12 +151,12 @@ class ItemActivityOLD extends Entity
     /**
     * Gets the listItem
     *
-    * @return ListItem The listItem
+    * @return ListItem|null The listItem
     */
     public function getListItem()
     {
         if (array_key_exists("listItem", $this->_propDict)) {
-            if (is_a($this->_propDict["listItem"], "\Beta\Microsoft\Graph\Model\ListItem")) {
+            if (is_a($this->_propDict["listItem"], "\Beta\Microsoft\Graph\Model\ListItem") || is_null($this->_propDict["listItem"])) {
                 return $this->_propDict["listItem"];
             } else {
                 $this->_propDict["listItem"] = new ListItem($this->_propDict["listItem"]);

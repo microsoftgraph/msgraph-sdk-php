@@ -27,12 +27,12 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     /**
     * Gets the endDateTime
     *
-    * @return \DateTime The endDateTime
+    * @return \DateTime|null The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -58,7 +58,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     /**
     * Gets the memberType
     *
-    * @return string The memberType
+    * @return string|null The memberType
     */
     public function getMemberType()
     {
@@ -85,7 +85,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     /**
     * Gets the roleEligibilityScheduleId
     *
-    * @return string The roleEligibilityScheduleId
+    * @return string|null The roleEligibilityScheduleId
     */
     public function getRoleEligibilityScheduleId()
     {
@@ -112,12 +112,12 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     /**
     * Gets the startDateTime
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

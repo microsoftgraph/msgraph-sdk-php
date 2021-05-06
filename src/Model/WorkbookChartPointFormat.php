@@ -28,12 +28,12 @@ class WorkbookChartPointFormat extends Entity
     * Gets the fill
     * Represents the fill format of a chart, which includes background formating information. Read-only.
     *
-    * @return WorkbookChartFill The fill
+    * @return WorkbookChartFill|null The fill
     */
     public function getFill()
     {
         if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "\Microsoft\Graph\Model\WorkbookChartFill")) {
+            if (is_a($this->_propDict["fill"], "\Microsoft\Graph\Model\WorkbookChartFill") || is_null($this->_propDict["fill"])) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookChartFill($this->_propDict["fill"]);

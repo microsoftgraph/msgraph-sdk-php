@@ -29,7 +29,7 @@ class ManagementCondition extends Entity
      * Gets the applicablePlatforms
     * The applicable platforms for this management condition.
      *
-     * @return array The applicablePlatforms
+     * @return array|null The applicablePlatforms
      */
     public function getApplicablePlatforms()
     {
@@ -50,7 +50,7 @@ class ManagementCondition extends Entity
     */
     public function setApplicablePlatforms($val)
     {
-		$this->_propDict["applicablePlatforms"] = $val;
+        $this->_propDict["applicablePlatforms"] = $val;
         return $this;
     }
     
@@ -58,12 +58,12 @@ class ManagementCondition extends Entity
     * Gets the createdDateTime
     * The time the management condition was created. Generated service side.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -91,7 +91,7 @@ class ManagementCondition extends Entity
     * Gets the description
     * The admin defined description of the management condition.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -120,7 +120,7 @@ class ManagementCondition extends Entity
     * Gets the displayName
     * The admin defined name of the management condition.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -149,7 +149,7 @@ class ManagementCondition extends Entity
     * Gets the eTag
     * ETag of the management condition. Updated service side.
     *
-    * @return string The eTag
+    * @return string|null The eTag
     */
     public function getETag()
     {
@@ -178,12 +178,12 @@ class ManagementCondition extends Entity
     * Gets the modifiedDateTime
     * The time the management condition was last modified. Updated service side.
     *
-    * @return \DateTime The modifiedDateTime
+    * @return \DateTime|null The modifiedDateTime
     */
     public function getModifiedDateTime()
     {
         if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -211,7 +211,7 @@ class ManagementCondition extends Entity
     * Gets the uniqueName
     * Unique name for the management condition. Used in management condition expressions.
     *
-    * @return string The uniqueName
+    * @return string|null The uniqueName
     */
     public function getUniqueName()
     {
@@ -241,7 +241,7 @@ class ManagementCondition extends Entity
      * Gets the managementConditionStatements
     * The management condition statements associated to the management condition.
      *
-     * @return array The managementConditionStatements
+     * @return array|null The managementConditionStatements
      */
     public function getManagementConditionStatements()
     {
@@ -262,7 +262,7 @@ class ManagementCondition extends Entity
     */
     public function setManagementConditionStatements($val)
     {
-		$this->_propDict["managementConditionStatements"] = $val;
+        $this->_propDict["managementConditionStatements"] = $val;
         return $this;
     }
     

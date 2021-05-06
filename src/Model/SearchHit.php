@@ -27,7 +27,7 @@ class SearchHit extends Entity
     * Gets the contentSource
     * The name of the content source which the externalItem is part of .
     *
-    * @return string The contentSource
+    * @return string|null The contentSource
     */
     public function getContentSource()
     {
@@ -55,7 +55,7 @@ class SearchHit extends Entity
     * Gets the hitId
     * The internal identifier for the item.
     *
-    * @return string The hitId
+    * @return string|null The hitId
     */
     public function getHitId()
     {
@@ -83,7 +83,7 @@ class SearchHit extends Entity
     * Gets the rank
     * The rank or the order of the result.
     *
-    * @return int The rank
+    * @return int|null The rank
     */
     public function getRank()
     {
@@ -111,7 +111,7 @@ class SearchHit extends Entity
     * Gets the summary
     * A summary of the result, if a summary is available.
     *
-    * @return string The summary
+    * @return string|null The summary
     */
     public function getSummary()
     {
@@ -139,12 +139,12 @@ class SearchHit extends Entity
     /**
     * Gets the resource
     *
-    * @return Entity The resource
+    * @return Entity|null The resource
     */
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\Entity")) {
+            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\Entity") || is_null($this->_propDict["resource"])) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new Entity($this->_propDict["resource"]);
