@@ -28,7 +28,7 @@ class Schedule extends Entity
     * Gets the enabled
     * Indicates whether the schedule is enabled for the team. Required.
     *
-    * @return bool The enabled
+    * @return bool|null The enabled
     */
     public function getEnabled()
     {
@@ -57,7 +57,7 @@ class Schedule extends Entity
     * Gets the offerShiftRequestsEnabled
     * Indicates whether offer shift requests are enabled for the schedule.
     *
-    * @return bool The offerShiftRequestsEnabled
+    * @return bool|null The offerShiftRequestsEnabled
     */
     public function getOfferShiftRequestsEnabled()
     {
@@ -86,7 +86,7 @@ class Schedule extends Entity
     * Gets the openShiftsEnabled
     * Indicates whether open shifts are enabled for the schedule.
     *
-    * @return bool The openShiftsEnabled
+    * @return bool|null The openShiftsEnabled
     */
     public function getOpenShiftsEnabled()
     {
@@ -115,12 +115,12 @@ class Schedule extends Entity
     * Gets the provisionStatus
     * The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
     *
-    * @return OperationStatus The provisionStatus
+    * @return OperationStatus|null The provisionStatus
     */
     public function getProvisionStatus()
     {
         if (array_key_exists("provisionStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["provisionStatus"], "\Microsoft\Graph\Model\OperationStatus")) {
+            if (is_a($this->_propDict["provisionStatus"], "\Microsoft\Graph\Model\OperationStatus") || is_null($this->_propDict["provisionStatus"])) {
                 return $this->_propDict["provisionStatus"];
             } else {
                 $this->_propDict["provisionStatus"] = new OperationStatus($this->_propDict["provisionStatus"]);
@@ -148,7 +148,7 @@ class Schedule extends Entity
     * Gets the provisionStatusCode
     * Additional information about why schedule provisioning failed.
     *
-    * @return string The provisionStatusCode
+    * @return string|null The provisionStatusCode
     */
     public function getProvisionStatusCode()
     {
@@ -177,7 +177,7 @@ class Schedule extends Entity
     * Gets the swapShiftsRequestsEnabled
     * Indicates whether swap shifts requests are enabled for the schedule.
     *
-    * @return bool The swapShiftsRequestsEnabled
+    * @return bool|null The swapShiftsRequestsEnabled
     */
     public function getSwapShiftsRequestsEnabled()
     {
@@ -206,7 +206,7 @@ class Schedule extends Entity
     * Gets the timeClockEnabled
     * Indicates whether time clock is enabled for the schedule.
     *
-    * @return bool The timeClockEnabled
+    * @return bool|null The timeClockEnabled
     */
     public function getTimeClockEnabled()
     {
@@ -235,7 +235,7 @@ class Schedule extends Entity
     * Gets the timeOffRequestsEnabled
     * Indicates whether time off requests are enabled for the schedule.
     *
-    * @return bool The timeOffRequestsEnabled
+    * @return bool|null The timeOffRequestsEnabled
     */
     public function getTimeOffRequestsEnabled()
     {
@@ -264,7 +264,7 @@ class Schedule extends Entity
     * Gets the timeZone
     * Indicates the time zone of the schedule team using tz database format. Required.
     *
-    * @return string The timeZone
+    * @return string|null The timeZone
     */
     public function getTimeZone()
     {
@@ -292,7 +292,7 @@ class Schedule extends Entity
     /**
     * Gets the workforceIntegrationIds
     *
-    * @return string The workforceIntegrationIds
+    * @return string|null The workforceIntegrationIds
     */
     public function getWorkforceIntegrationIds()
     {
@@ -320,7 +320,7 @@ class Schedule extends Entity
      /** 
      * Gets the offerShiftRequests
      *
-     * @return array The offerShiftRequests
+     * @return array|null The offerShiftRequests
      */
     public function getOfferShiftRequests()
     {
@@ -340,7 +340,7 @@ class Schedule extends Entity
     */
     public function setOfferShiftRequests($val)
     {
-		$this->_propDict["offerShiftRequests"] = $val;
+        $this->_propDict["offerShiftRequests"] = $val;
         return $this;
     }
     
@@ -348,7 +348,7 @@ class Schedule extends Entity
      /** 
      * Gets the openShiftChangeRequests
      *
-     * @return array The openShiftChangeRequests
+     * @return array|null The openShiftChangeRequests
      */
     public function getOpenShiftChangeRequests()
     {
@@ -368,7 +368,7 @@ class Schedule extends Entity
     */
     public function setOpenShiftChangeRequests($val)
     {
-		$this->_propDict["openShiftChangeRequests"] = $val;
+        $this->_propDict["openShiftChangeRequests"] = $val;
         return $this;
     }
     
@@ -376,7 +376,7 @@ class Schedule extends Entity
      /** 
      * Gets the openShifts
      *
-     * @return array The openShifts
+     * @return array|null The openShifts
      */
     public function getOpenShifts()
     {
@@ -396,7 +396,7 @@ class Schedule extends Entity
     */
     public function setOpenShifts($val)
     {
-		$this->_propDict["openShifts"] = $val;
+        $this->_propDict["openShifts"] = $val;
         return $this;
     }
     
@@ -405,7 +405,7 @@ class Schedule extends Entity
      * Gets the schedulingGroups
     * The logical grouping of users in the schedule (usually by role).
      *
-     * @return array The schedulingGroups
+     * @return array|null The schedulingGroups
      */
     public function getSchedulingGroups()
     {
@@ -426,7 +426,7 @@ class Schedule extends Entity
     */
     public function setSchedulingGroups($val)
     {
-		$this->_propDict["schedulingGroups"] = $val;
+        $this->_propDict["schedulingGroups"] = $val;
         return $this;
     }
     
@@ -435,7 +435,7 @@ class Schedule extends Entity
      * Gets the shifts
     * The shifts in the schedule.
      *
-     * @return array The shifts
+     * @return array|null The shifts
      */
     public function getShifts()
     {
@@ -456,7 +456,7 @@ class Schedule extends Entity
     */
     public function setShifts($val)
     {
-		$this->_propDict["shifts"] = $val;
+        $this->_propDict["shifts"] = $val;
         return $this;
     }
     
@@ -464,7 +464,7 @@ class Schedule extends Entity
      /** 
      * Gets the swapShiftsChangeRequests
      *
-     * @return array The swapShiftsChangeRequests
+     * @return array|null The swapShiftsChangeRequests
      */
     public function getSwapShiftsChangeRequests()
     {
@@ -484,7 +484,7 @@ class Schedule extends Entity
     */
     public function setSwapShiftsChangeRequests($val)
     {
-		$this->_propDict["swapShiftsChangeRequests"] = $val;
+        $this->_propDict["swapShiftsChangeRequests"] = $val;
         return $this;
     }
     
@@ -493,7 +493,7 @@ class Schedule extends Entity
      * Gets the timeOffReasons
     * The set of reasons for a time off in the schedule.
      *
-     * @return array The timeOffReasons
+     * @return array|null The timeOffReasons
      */
     public function getTimeOffReasons()
     {
@@ -514,7 +514,7 @@ class Schedule extends Entity
     */
     public function setTimeOffReasons($val)
     {
-		$this->_propDict["timeOffReasons"] = $val;
+        $this->_propDict["timeOffReasons"] = $val;
         return $this;
     }
     
@@ -522,7 +522,7 @@ class Schedule extends Entity
      /** 
      * Gets the timeOffRequests
      *
-     * @return array The timeOffRequests
+     * @return array|null The timeOffRequests
      */
     public function getTimeOffRequests()
     {
@@ -542,7 +542,7 @@ class Schedule extends Entity
     */
     public function setTimeOffRequests($val)
     {
-		$this->_propDict["timeOffRequests"] = $val;
+        $this->_propDict["timeOffRequests"] = $val;
         return $this;
     }
     
@@ -551,7 +551,7 @@ class Schedule extends Entity
      * Gets the timesOff
     * The instances of times off in the schedule.
      *
-     * @return array The timesOff
+     * @return array|null The timesOff
      */
     public function getTimesOff()
     {
@@ -572,7 +572,7 @@ class Schedule extends Entity
     */
     public function setTimesOff($val)
     {
-		$this->_propDict["timesOff"] = $val;
+        $this->_propDict["timesOff"] = $val;
         return $this;
     }
     

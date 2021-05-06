@@ -28,7 +28,7 @@ class ManagedMobileLobApp extends ManagedApp
     * Gets the committedContentVersion
     * The internal committed content version.
     *
-    * @return string The committedContentVersion
+    * @return string|null The committedContentVersion
     */
     public function getCommittedContentVersion()
     {
@@ -57,7 +57,7 @@ class ManagedMobileLobApp extends ManagedApp
     * Gets the fileName
     * The name of the main Lob application file.
     *
-    * @return string The fileName
+    * @return string|null The fileName
     */
     public function getFileName()
     {
@@ -86,7 +86,7 @@ class ManagedMobileLobApp extends ManagedApp
     * Gets the size
     * The total size, including all uploaded files.
     *
-    * @return int The size
+    * @return int|null The size
     */
     public function getSize()
     {
@@ -116,7 +116,7 @@ class ManagedMobileLobApp extends ManagedApp
      * Gets the contentVersions
     * The list of content versions for this app.
      *
-     * @return array The contentVersions
+     * @return array|null The contentVersions
      */
     public function getContentVersions()
     {
@@ -137,7 +137,7 @@ class ManagedMobileLobApp extends ManagedApp
     */
     public function setContentVersions($val)
     {
-		$this->_propDict["contentVersions"] = $val;
+        $this->_propDict["contentVersions"] = $val;
         return $this;
     }
     

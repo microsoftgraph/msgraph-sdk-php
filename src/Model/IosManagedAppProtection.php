@@ -28,12 +28,12 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the appDataEncryptionType
     * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
-    * @return ManagedAppDataEncryptionType The appDataEncryptionType
+    * @return ManagedAppDataEncryptionType|null The appDataEncryptionType
     */
     public function getAppDataEncryptionType()
     {
         if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "\Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "\Microsoft\Graph\Model\ManagedAppDataEncryptionType") || is_null($this->_propDict["appDataEncryptionType"])) {
                 return $this->_propDict["appDataEncryptionType"];
             } else {
                 $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
@@ -61,7 +61,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the customBrowserProtocol
     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
-    * @return string The customBrowserProtocol
+    * @return string|null The customBrowserProtocol
     */
     public function getCustomBrowserProtocol()
     {
@@ -90,7 +90,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
     *
-    * @return int The deployedAppCount
+    * @return int|null The deployedAppCount
     */
     public function getDeployedAppCount()
     {
@@ -119,7 +119,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the faceIdBlocked
     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
     *
-    * @return bool The faceIdBlocked
+    * @return bool|null The faceIdBlocked
     */
     public function getFaceIdBlocked()
     {
@@ -148,7 +148,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the minimumRequiredSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data.
     *
-    * @return string The minimumRequiredSdkVersion
+    * @return string|null The minimumRequiredSdkVersion
     */
     public function getMinimumRequiredSdkVersion()
     {
@@ -178,7 +178,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
-     * @return array The apps
+     * @return array|null The apps
      */
     public function getApps()
     {
@@ -199,7 +199,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     */
     public function setApps($val)
     {
-		$this->_propDict["apps"] = $val;
+        $this->_propDict["apps"] = $val;
         return $this;
     }
     
@@ -207,12 +207,12 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
     *
-    * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
+    * @return ManagedAppPolicyDeploymentSummary|null The deploymentSummary
     */
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
+            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary") || is_null($this->_propDict["deploymentSummary"])) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

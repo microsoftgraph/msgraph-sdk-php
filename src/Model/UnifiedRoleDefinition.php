@@ -28,7 +28,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the description
     * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the displayName
     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the isBuiltIn
     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
     *
-    * @return bool The isBuiltIn
+    * @return bool|null The isBuiltIn
     */
     public function getIsBuiltIn()
     {
@@ -115,7 +115,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the isEnabled
     * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {
@@ -144,7 +144,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the resourceScopes
     * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
     *
-    * @return string The resourceScopes
+    * @return string|null The resourceScopes
     */
     public function getResourceScopes()
     {
@@ -174,7 +174,7 @@ class UnifiedRoleDefinition extends Entity
      * Gets the rolePermissions
     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      *
-     * @return array The rolePermissions
+     * @return array|null The rolePermissions
      */
     public function getRolePermissions()
     {
@@ -195,7 +195,7 @@ class UnifiedRoleDefinition extends Entity
     */
     public function setRolePermissions($val)
     {
-		$this->_propDict["rolePermissions"] = $val;
+        $this->_propDict["rolePermissions"] = $val;
         return $this;
     }
     
@@ -203,7 +203,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the templateId
     * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
     *
-    * @return string The templateId
+    * @return string|null The templateId
     */
     public function getTemplateId()
     {
@@ -232,7 +232,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the version
     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
-    * @return string The version
+    * @return string|null The version
     */
     public function getVersion()
     {
@@ -261,7 +261,7 @@ class UnifiedRoleDefinition extends Entity
      /** 
      * Gets the inheritsPermissionsFrom
      *
-     * @return array The inheritsPermissionsFrom
+     * @return array|null The inheritsPermissionsFrom
      */
     public function getInheritsPermissionsFrom()
     {
@@ -281,7 +281,7 @@ class UnifiedRoleDefinition extends Entity
     */
     public function setInheritsPermissionsFrom($val)
     {
-		$this->_propDict["inheritsPermissionsFrom"] = $val;
+        $this->_propDict["inheritsPermissionsFrom"] = $val;
         return $this;
     }
     

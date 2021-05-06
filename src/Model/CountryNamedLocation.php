@@ -28,7 +28,7 @@ class CountryNamedLocation extends NamedLocation
     * Gets the countriesAndRegions
     * List of countries and/or regions in two-letter format specified by ISO 3166-2.
     *
-    * @return string The countriesAndRegions
+    * @return string|null The countriesAndRegions
     */
     public function getCountriesAndRegions()
     {
@@ -57,7 +57,7 @@ class CountryNamedLocation extends NamedLocation
     * Gets the includeUnknownCountriesAndRegions
     * True if IP addresses that don't map to a country or region should be included in the named location.
     *
-    * @return bool The includeUnknownCountriesAndRegions
+    * @return bool|null The includeUnknownCountriesAndRegions
     */
     public function getIncludeUnknownCountriesAndRegions()
     {

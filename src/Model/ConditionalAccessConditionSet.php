@@ -28,12 +28,12 @@ class ConditionalAccessConditionSet extends Entity
     * Gets the applications
     * Applications and user actions included in and excluded from the policy. Required.
     *
-    * @return ConditionalAccessApplications The applications
+    * @return ConditionalAccessApplications|null The applications
     */
     public function getApplications()
     {
         if (array_key_exists("applications", $this->_propDict)) {
-            if (is_a($this->_propDict["applications"], "\Microsoft\Graph\Model\ConditionalAccessApplications")) {
+            if (is_a($this->_propDict["applications"], "\Microsoft\Graph\Model\ConditionalAccessApplications") || is_null($this->_propDict["applications"])) {
                 return $this->_propDict["applications"];
             } else {
                 $this->_propDict["applications"] = new ConditionalAccessApplications($this->_propDict["applications"]);
@@ -61,12 +61,12 @@ class ConditionalAccessConditionSet extends Entity
     * Gets the clientAppTypes
     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
     *
-    * @return ConditionalAccessClientApp The clientAppTypes
+    * @return ConditionalAccessClientApp|null The clientAppTypes
     */
     public function getClientAppTypes()
     {
         if (array_key_exists("clientAppTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["clientAppTypes"], "\Microsoft\Graph\Model\ConditionalAccessClientApp")) {
+            if (is_a($this->_propDict["clientAppTypes"], "\Microsoft\Graph\Model\ConditionalAccessClientApp") || is_null($this->_propDict["clientAppTypes"])) {
                 return $this->_propDict["clientAppTypes"];
             } else {
                 $this->_propDict["clientAppTypes"] = new ConditionalAccessClientApp($this->_propDict["clientAppTypes"]);
@@ -94,12 +94,12 @@ class ConditionalAccessConditionSet extends Entity
     * Gets the locations
     * Locations included in and excluded from the policy.
     *
-    * @return ConditionalAccessLocations The locations
+    * @return ConditionalAccessLocations|null The locations
     */
     public function getLocations()
     {
         if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "\Microsoft\Graph\Model\ConditionalAccessLocations")) {
+            if (is_a($this->_propDict["locations"], "\Microsoft\Graph\Model\ConditionalAccessLocations") || is_null($this->_propDict["locations"])) {
                 return $this->_propDict["locations"];
             } else {
                 $this->_propDict["locations"] = new ConditionalAccessLocations($this->_propDict["locations"]);
@@ -127,12 +127,12 @@ class ConditionalAccessConditionSet extends Entity
     * Gets the platforms
     * Platforms included in and excluded from the policy.
     *
-    * @return ConditionalAccessPlatforms The platforms
+    * @return ConditionalAccessPlatforms|null The platforms
     */
     public function getPlatforms()
     {
         if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "\Microsoft\Graph\Model\ConditionalAccessPlatforms")) {
+            if (is_a($this->_propDict["platforms"], "\Microsoft\Graph\Model\ConditionalAccessPlatforms") || is_null($this->_propDict["platforms"])) {
                 return $this->_propDict["platforms"];
             } else {
                 $this->_propDict["platforms"] = new ConditionalAccessPlatforms($this->_propDict["platforms"]);
@@ -160,12 +160,12 @@ class ConditionalAccessConditionSet extends Entity
     * Gets the signInRiskLevels
     * Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
     *
-    * @return RiskLevel The signInRiskLevels
+    * @return RiskLevel|null The signInRiskLevels
     */
     public function getSignInRiskLevels()
     {
         if (array_key_exists("signInRiskLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["signInRiskLevels"], "\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["signInRiskLevels"], "\Microsoft\Graph\Model\RiskLevel") || is_null($this->_propDict["signInRiskLevels"])) {
                 return $this->_propDict["signInRiskLevels"];
             } else {
                 $this->_propDict["signInRiskLevels"] = new RiskLevel($this->_propDict["signInRiskLevels"]);
@@ -193,12 +193,12 @@ class ConditionalAccessConditionSet extends Entity
     * Gets the userRiskLevels
     * User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
     *
-    * @return RiskLevel The userRiskLevels
+    * @return RiskLevel|null The userRiskLevels
     */
     public function getUserRiskLevels()
     {
         if (array_key_exists("userRiskLevels", $this->_propDict)) {
-            if (is_a($this->_propDict["userRiskLevels"], "\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["userRiskLevels"], "\Microsoft\Graph\Model\RiskLevel") || is_null($this->_propDict["userRiskLevels"])) {
                 return $this->_propDict["userRiskLevels"];
             } else {
                 $this->_propDict["userRiskLevels"] = new RiskLevel($this->_propDict["userRiskLevels"]);
@@ -226,12 +226,12 @@ class ConditionalAccessConditionSet extends Entity
     * Gets the users
     * Users, groups, and roles included in and excluded from the policy. Required.
     *
-    * @return ConditionalAccessUsers The users
+    * @return ConditionalAccessUsers|null The users
     */
     public function getUsers()
     {
         if (array_key_exists("users", $this->_propDict)) {
-            if (is_a($this->_propDict["users"], "\Microsoft\Graph\Model\ConditionalAccessUsers")) {
+            if (is_a($this->_propDict["users"], "\Microsoft\Graph\Model\ConditionalAccessUsers") || is_null($this->_propDict["users"])) {
                 return $this->_propDict["users"];
             } else {
                 $this->_propDict["users"] = new ConditionalAccessUsers($this->_propDict["users"]);

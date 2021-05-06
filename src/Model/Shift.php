@@ -28,12 +28,12 @@ class Shift extends ChangeTrackedEntity
     * Gets the draftShift
     * The draft version of this shift that is viewable by managers. Required.
     *
-    * @return ShiftItem The draftShift
+    * @return ShiftItem|null The draftShift
     */
     public function getDraftShift()
     {
         if (array_key_exists("draftShift", $this->_propDict)) {
-            if (is_a($this->_propDict["draftShift"], "\Microsoft\Graph\Model\ShiftItem")) {
+            if (is_a($this->_propDict["draftShift"], "\Microsoft\Graph\Model\ShiftItem") || is_null($this->_propDict["draftShift"])) {
                 return $this->_propDict["draftShift"];
             } else {
                 $this->_propDict["draftShift"] = new ShiftItem($this->_propDict["draftShift"]);
@@ -61,7 +61,7 @@ class Shift extends ChangeTrackedEntity
     * Gets the schedulingGroupId
     * ID of the scheduling group the shift is part of. Required.
     *
-    * @return string The schedulingGroupId
+    * @return string|null The schedulingGroupId
     */
     public function getSchedulingGroupId()
     {
@@ -90,12 +90,12 @@ class Shift extends ChangeTrackedEntity
     * Gets the sharedShift
     * The shared version of this shift that is viewable by both employees and managers. Required.
     *
-    * @return ShiftItem The sharedShift
+    * @return ShiftItem|null The sharedShift
     */
     public function getSharedShift()
     {
         if (array_key_exists("sharedShift", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedShift"], "\Microsoft\Graph\Model\ShiftItem")) {
+            if (is_a($this->_propDict["sharedShift"], "\Microsoft\Graph\Model\ShiftItem") || is_null($this->_propDict["sharedShift"])) {
                 return $this->_propDict["sharedShift"];
             } else {
                 $this->_propDict["sharedShift"] = new ShiftItem($this->_propDict["sharedShift"]);
@@ -123,7 +123,7 @@ class Shift extends ChangeTrackedEntity
     * Gets the userId
     * ID of the user assigned to the shift. Required.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {

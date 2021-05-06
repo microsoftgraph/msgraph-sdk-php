@@ -28,12 +28,12 @@ class DeviceEnrollmentConfiguration extends Entity
     * Gets the createdDateTime
     * Not yet documented
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceEnrollmentConfiguration extends Entity
     * Gets the description
     * Not yet documented
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class DeviceEnrollmentConfiguration extends Entity
     * Gets the displayName
     * Not yet documented
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class DeviceEnrollmentConfiguration extends Entity
     * Gets the lastModifiedDateTime
     * Not yet documented
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class DeviceEnrollmentConfiguration extends Entity
     * Gets the priority
     * Not yet documented
     *
-    * @return int The priority
+    * @return int|null The priority
     */
     public function getPriority()
     {
@@ -181,7 +181,7 @@ class DeviceEnrollmentConfiguration extends Entity
     * Gets the version
     * Not yet documented
     *
-    * @return int The version
+    * @return int|null The version
     */
     public function getVersion()
     {
@@ -211,7 +211,7 @@ class DeviceEnrollmentConfiguration extends Entity
      * Gets the assignments
     * The list of group assignments for the device configuration profile.
      *
-     * @return array The assignments
+     * @return array|null The assignments
      */
     public function getAssignments()
     {
@@ -232,7 +232,7 @@ class DeviceEnrollmentConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
     

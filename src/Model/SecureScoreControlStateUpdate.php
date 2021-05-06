@@ -26,7 +26,7 @@ class SecureScoreControlStateUpdate extends Entity
     /**
     * Gets the assignedTo
     *
-    * @return string The assignedTo
+    * @return string|null The assignedTo
     */
     public function getAssignedTo()
     {
@@ -52,7 +52,7 @@ class SecureScoreControlStateUpdate extends Entity
     /**
     * Gets the comment
     *
-    * @return string The comment
+    * @return string|null The comment
     */
     public function getComment()
     {
@@ -78,7 +78,7 @@ class SecureScoreControlStateUpdate extends Entity
     /**
     * Gets the state
     *
-    * @return string The state
+    * @return string|null The state
     */
     public function getState()
     {
@@ -104,7 +104,7 @@ class SecureScoreControlStateUpdate extends Entity
     /**
     * Gets the updatedBy
     *
-    * @return string The updatedBy
+    * @return string|null The updatedBy
     */
     public function getUpdatedBy()
     {
@@ -131,12 +131,12 @@ class SecureScoreControlStateUpdate extends Entity
     /**
     * Gets the updatedDateTime
     *
-    * @return \DateTime The updatedDateTime
+    * @return \DateTime|null The updatedDateTime
     */
     public function getUpdatedDateTime()
     {
         if (array_key_exists("updatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["updatedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["updatedDateTime"], "\DateTime") || is_null($this->_propDict["updatedDateTime"])) {
                 return $this->_propDict["updatedDateTime"];
             } else {
                 $this->_propDict["updatedDateTime"] = new \DateTime($this->_propDict["updatedDateTime"]);

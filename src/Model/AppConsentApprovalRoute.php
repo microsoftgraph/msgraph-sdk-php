@@ -28,7 +28,7 @@ class AppConsentApprovalRoute extends Entity
      /** 
      * Gets the appConsentRequests
      *
-     * @return array The appConsentRequests
+     * @return array|null The appConsentRequests
      */
     public function getAppConsentRequests()
     {
@@ -48,7 +48,7 @@ class AppConsentApprovalRoute extends Entity
     */
     public function setAppConsentRequests($val)
     {
-		$this->_propDict["appConsentRequests"] = $val;
+        $this->_propDict["appConsentRequests"] = $val;
         return $this;
     }
     

@@ -28,7 +28,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the position
     * DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
     *
-    * @return string The position
+    * @return string|null The position
     */
     public function getPosition()
     {
@@ -57,7 +57,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the separator
     * String representing the separator used for the data labels on a chart.
     *
-    * @return string The separator
+    * @return string|null The separator
     */
     public function getSeparator()
     {
@@ -86,7 +86,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the showBubbleSize
     * Boolean value representing if the data label bubble size is visible or not.
     *
-    * @return bool The showBubbleSize
+    * @return bool|null The showBubbleSize
     */
     public function getShowBubbleSize()
     {
@@ -115,7 +115,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the showCategoryName
     * Boolean value representing if the data label category name is visible or not.
     *
-    * @return bool The showCategoryName
+    * @return bool|null The showCategoryName
     */
     public function getShowCategoryName()
     {
@@ -144,7 +144,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the showLegendKey
     * Boolean value representing if the data label legend key is visible or not.
     *
-    * @return bool The showLegendKey
+    * @return bool|null The showLegendKey
     */
     public function getShowLegendKey()
     {
@@ -173,7 +173,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the showPercentage
     * Boolean value representing if the data label percentage is visible or not.
     *
-    * @return bool The showPercentage
+    * @return bool|null The showPercentage
     */
     public function getShowPercentage()
     {
@@ -202,7 +202,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the showSeriesName
     * Boolean value representing if the data label series name is visible or not.
     *
-    * @return bool The showSeriesName
+    * @return bool|null The showSeriesName
     */
     public function getShowSeriesName()
     {
@@ -231,7 +231,7 @@ class WorkbookChartDataLabels extends Entity
     * Gets the showValue
     * Boolean value representing if the data label value is visible or not.
     *
-    * @return bool The showValue
+    * @return bool|null The showValue
     */
     public function getShowValue()
     {
@@ -260,12 +260,12 @@ class WorkbookChartDataLabels extends Entity
     * Gets the format
     * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
     *
-    * @return WorkbookChartDataLabelFormat The format
+    * @return WorkbookChartDataLabelFormat|null The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartDataLabelFormat")) {
+            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartDataLabelFormat") || is_null($this->_propDict["format"])) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartDataLabelFormat($this->_propDict["format"]);

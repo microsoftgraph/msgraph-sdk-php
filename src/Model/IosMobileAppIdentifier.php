@@ -36,7 +36,7 @@ class IosMobileAppIdentifier extends MobileAppIdentifier
     * Gets the bundleId
     * The identifier for an app, as specified in the app store.
     *
-    * @return string The bundleId
+    * @return string|null The bundleId
     */
     public function getBundleId()
     {
