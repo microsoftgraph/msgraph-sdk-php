@@ -7,7 +7,9 @@
 name: "tag dev branch"
 
 on:
-  pull_request: main
+  pull_request:
+    branches:
+      - main
 
 defaults:
   run:
