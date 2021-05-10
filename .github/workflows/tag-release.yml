@@ -20,10 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: 'dev'
     
     - name: Get SDK version and set OS env variable
       run: |
-        git checkout dev
         export SDK_VERSION=$(grep 'SDK_VERSION' src/Core/GraphConstants.php |  grep -oE '[0-9]+\.[0-9]+\.([0-9]+|[0-9]+-[a-z]+)')
         echo 'OS var SDK_VERSION is:'$SDK_VERSION
 
@@ -32,4 +33,4 @@ jobs:
         git branch
         if git tag $SDK_VERSION; then git push origin $SDK_VERSION; fi
         
-        
+
