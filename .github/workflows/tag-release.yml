@@ -27,4 +27,7 @@ jobs:
         echo 'OS var SDK_VERSION is:'$SDK_VERSION
 
     - name: Create tag if not exists
-      run: if git tag $SDK_VERSION; then git push origin $SDK_VERSION; fi
+      run: | 
+        git branch
+        if git tag $SDK_VERSION; then git push origin $SDK_VERSION; fi
+        
