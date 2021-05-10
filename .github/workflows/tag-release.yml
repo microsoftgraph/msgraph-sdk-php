@@ -7,7 +7,7 @@
 name: "tag dev branch"
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -20,9 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: 'dev'
-        fetch-depth: '0'
     
     - name: Get SDK version and set OS env variable
       run: |
@@ -31,10 +28,7 @@ jobs:
 
     - name: Create tag if not exists
       run: | 
-        git config --global user.email "GraphTooling@service.microsoft.com"
-        git config --global user.name "Microsoft Graph DevX Tooling"
-        git tag -a $SDK_VERSION HEAD -m "Latest tag"
-        git push origin $SDK_VERSION
+        git tag $SDK_VERSION && git push origin $SDK_VERSION
         
 
 
