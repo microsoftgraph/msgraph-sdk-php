@@ -24,6 +24,7 @@ jobs:
     - name: Get SDK version and set OS env variable
       run: |
         export SDK_VERSION=$(grep 'SDK_VERSION' src/Core/GraphConstants.php |  grep -oE '[0-9]+\.[0-9]+\.([0-9]+|[0-9]+-[a-z]+)')
+        echo 'OS var SDK_VERSION is:'$SDK_VERSION
 
     - name: Create tag if not exists
       run: if git tag $SDK_VERSION; then git push origin $SDK_VERSION; fi
