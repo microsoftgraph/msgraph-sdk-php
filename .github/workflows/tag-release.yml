@@ -31,12 +31,12 @@ jobs:
     - name: Create tag if not exists
       run: | 
         git tag $SDK_VERSION
-        git log
+        git tag
         git push origin $SDK_VERSION
         
 
 
 
-        
+
         
 
