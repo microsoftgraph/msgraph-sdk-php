@@ -31,7 +31,8 @@ jobs:
     - name: Create tag if not exists
       run: | 
         git branch
-        if git tag $SDK_VERSION; then git push origin $SDK_VERSION; fi
+        git tag $SDK_VERSION
+        git push origin $SDK_VERSION
         
 
 
