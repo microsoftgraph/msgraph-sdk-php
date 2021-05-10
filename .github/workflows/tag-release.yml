@@ -23,6 +23,7 @@ jobs:
     
     - name: Get SDK version and set OS env variable
       run: |
+        git checkout dev
         export SDK_VERSION=$(grep 'SDK_VERSION' src/Core/GraphConstants.php |  grep -oE '[0-9]+\.[0-9]+\.([0-9]+|[0-9]+-[a-z]+)')
         echo 'OS var SDK_VERSION is:'$SDK_VERSION
 
