@@ -35,6 +35,8 @@ jobs:
         git config --global user.name "Microsoft Graph DevX Tooling"
         git tag -a $SDK_VERSION HEAD -m "Latest tag"
         git push origin $SDK_VERSION
+
+        
         
 
 
